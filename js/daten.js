@@ -14,9 +14,14 @@ async function holeJson(pfad) {
 // Reihenfolge = Reihenfolge hier; die erste Datei mit vokabulare ist die
 // kanonische Vokabular-Quelle (weitere Blöcke tragen keins).
 const INHALTSDATEIEN = [
-  // Phase 1: Einsteiger-Gitarre. Weitere Phasen (Fortgeschritten/Experte,
-  // dann Bass/Drums/Gesang) einfach hier ergänzen — der Pool mischt sich selbst.
+  // Die erste Datei trägt das kanonische `vokabulare`; weitere Dateien mischen
+  // sich in denselben Pool (der Pool mischt sich selbst). Reihenfolge = Erzähl-
+  // reihenfolge (poolVergleicher), darum Gitarre zuerst, dann Bass/Drums/Gesang.
   'data/bausteine.einsteiger-gitarre.json',
+  'data/bausteine.fortgeschritten-gitarre.json',
+  'data/bausteine.einsteiger-bass.json',
+  'data/bausteine.einsteiger-schlagzeug.json',
+  'data/bausteine.einsteiger-gesang.json',
 ];
 
 export async function ladeDaten() {

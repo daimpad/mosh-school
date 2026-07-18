@@ -6,7 +6,7 @@
 import { schalteTeil } from '../aktionen.js';
 import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, untergrundVon, witterungVon } from '../daten.js';
 import { label, t, text } from '../i18n.js';
-import { absaetze, bausteinIcon, esc, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
+import { absaetze, bausteinIcon, domaeneIcon, esc, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
 import { stationImKontext } from '../pfade.js';
 import { diagnose, einstellungen } from '../zustand.js';
 
@@ -14,6 +14,7 @@ function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
   if (art === 'themen') return `#/pfad/themen/${parameter}`;
   if (art === 'spielform') return `#/pfad/spielform/${parameter}`;
+  if (art === 'stil') return `#/pfad/stil/${parameter}`;
   if (art === 'umgebung') return '#/pfad/umgebung';
   if (art === 'witterung' || art === 'untergrund') return `#/pfad/${art}/${parameter}`;
   if (art === 'individual') return '#/pfad/individual';
@@ -203,7 +204,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   ].join(' · ');
   const heroSektion = `
     <section class="marke-hero klein hue ${heroHue} baustein-hero">
-      <span class="marke-hero-icon">${bausteinIcon(b.id) || '<i class="fa-solid fa-feather" aria-hidden="true"></i>'}</span>
+      <span class="marke-hero-icon">${bausteinIcon(b.id) || domaeneIcon(domaenen[0]) || '<i class="fa-solid fa-feather" aria-hidden="true"></i>'}</span>
       <div class="marke-hero-text">
         <h1>${esc(label('baustein', b.id))}</h1>
         ${heroUntertitel ? `<p class="marke-hero-untertitel">${esc(heroUntertitel)}</p>` : ''}
