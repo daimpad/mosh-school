@@ -3,45 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Crossminton-Handbuch</title>
-  <meta name="description" content="Crossminton lernen — Schlag für Schlag: Technik, Taktik, Regeln, Training und Ausrüstung als kostenloses, werbefreies Handbuch. Läuft direkt im Browser, ohne Anmeldung.">
+  <title>mosh school</title>
+  <meta name="description" content="Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom. Kostenlos, werbefrei, direkt im Browser.">
   <meta name="author" content="Damian Paderta">
-  <meta name="theme-color" content="#f5f9fd">
-  <link rel="canonical" href="https://daimpad.github.io/crossminton-handbook/">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏸</text></svg>">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="canonical" href="https://daimpad.github.io/mosh-school/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎸</text></svg>">
   <link rel="apple-touch-icon" href="images/icon-180.png">
   <link rel="manifest" href="manifest.json">
 
   <!-- Social-Vorschau (Open Graph + Twitter/X) -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Crossminton-Handbuch">
+  <meta property="og:site_name" content="mosh school">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Crossminton-Handbuch — Crossminton lernen, Schlag für Schlag">
-  <meta property="og:description" content="Technik, Taktik, Regeln, Training und Ausrüstung als kostenloses, werbefreies Handbuch. Läuft direkt im Browser, ohne Anmeldung.">
-  <meta property="og:url" content="https://daimpad.github.io/crossminton-handbook/">
-  <meta property="og:image" content="https://daimpad.github.io/crossminton-handbook/images/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Crossminton-Handbuch — Crossminton lernen, Schlag für Schlag">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Crossminton-Handbuch — Crossminton lernen, Schlag für Schlag">
-  <meta name="twitter:description" content="Technik, Taktik, Regeln, Training und Ausrüstung als kostenloses, werbefreies Handbuch — im Browser, ohne Anmeldung.">
-  <meta name="twitter:image" content="https://daimpad.github.io/crossminton-handbook/images/og-image.png">
+  <meta property="og:title" content="mosh school — Extreme Metal spielen lernen">
+  <meta property="og:description" content="Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom — kostenlos, werbefrei, direkt im Browser.">
+  <meta property="og:url" content="https://daimpad.github.io/mosh-school/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="mosh school — Extreme Metal spielen lernen">
+  <meta name="twitter:description" content="Gitarre, Bass, Drums und Vocals für Extreme Metal — im Browser, ohne Anmeldung.">
 
   <!-- Strukturierte Daten (schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Crossminton-Handbuch",
-    "alternateName": "Crossminton lernen",
-    "url": "https://daimpad.github.io/crossminton-handbook/",
+    "name": "mosh school",
+    "url": "https://daimpad.github.io/mosh-school/",
     "inLanguage": "de",
-    "description": "Kostenloses, werbefreies Handbuch zum Crossminton-Lernen: Technik, Taktik, Regeln, Training und Ausrüstung.",
-    "image": "https://daimpad.github.io/crossminton-handbook/images/og-image.png",
-    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "description": "Extreme Metal spielen lernen: Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom.",
     "isAccessibleForFree": true,
-    "keywords": "Crossminton, Speedminton, Speeder, Technik, Taktik, Regeln, Training, Ausrüstung, Handbuch",
+    "keywords": "Metal, Extreme Metal, Hardcore, Metalcore, Death Metal, Black Metal, Doom, Gitarre, Bass, Schlagzeug, Growls, Screaming, lernen",
     "author": { "@type": "Person", "name": "Damian Paderta" }
   }
   </script>
@@ -54,13 +46,16 @@
   <script>
     (function () {
       try {
-        var z = JSON.parse(localStorage.getItem('crossminton.zustand.v1') || '{}');
+        var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
         var thema = z && z.einstellungen && z.einstellungen.thema;
-        if (thema === 'hell' || thema === 'dunkel') document.documentElement.dataset.theme = thema;
-        var dunkel = thema === 'dunkel' || (thema !== 'hell' && window.matchMedia
-          && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        var dunkel;
+        // mosh school ist düster per Default: ohne gespeicherte Wahl -> dunkel.
+        if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; dunkel = false; }
+        else if (thema === 'auto') { dunkel = osDunkel; }
+        else { document.documentElement.dataset.theme = 'dunkel'; dunkel = true; }
         var meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute('content', dunkel ? '#0f151c' : '#f5f9fd');
+        if (meta) meta.setAttribute('content', dunkel ? '#0b0b0c' : '#dcd8cd');
       } catch (e) {}
     })();
   </script>
@@ -85,7 +80,6 @@
   <link rel="modulepreload" href="js/ansichten/pfad.js">
   <link rel="modulepreload" href="js/ansichten/baustein.js">
   <link rel="modulepreload" href="js/ansichten/training.js">
-  <link rel="modulepreload" href="js/ansichten/regeln.js">
   <link rel="modulepreload" href="js/ansichten/info.js">
   <link rel="modulepreload" href="js/ansichten/profil.js">
   <link rel="modulepreload" href="js/ansichten/zielwahl.js">
@@ -96,7 +90,7 @@
     <div class="kopf-innen">
       <a class="marke" href="#/">
         <img class="marke-logo" src="assets/images/speeder.svg" alt="" width="32" height="32">
-        <span class="marke-text">Crossminton-Handbuch</span>
+        <span class="marke-text">mosh school</span>
       </a>
       <div class="kopf-rechts">
         <a class="kopf-suche" id="kopf-suche" href="#/suche" aria-label="Suche">
@@ -126,7 +120,7 @@
       <span class="nav-text">Lernen</span>
     </a>
     <a href="#/training" data-nav="training">
-      <i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i>
+      <i class="fa-solid fa-list-check" aria-hidden="true"></i>
       <span class="nav-text">Training</span>
     </a>
     <a href="#/profil" data-nav="profil">
@@ -157,12 +151,8 @@
         <span class="nav-text">Suche</span>
       </a>
       <a href="#/training" data-nav="training" class="menue-punkt">
-        <i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i>
+        <i class="fa-solid fa-list-check" aria-hidden="true"></i>
         <span class="nav-text">Training</span>
-      </a>
-      <a href="#/regeln" data-nav="regeln" class="menue-punkt">
-        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-        <span class="nav-text">Regeln</span>
       </a>
       <a href="#/profil" data-nav="profil" class="menue-punkt">
         <i class="fa-solid fa-user" aria-hidden="true"></i>
@@ -196,13 +186,10 @@
   <div id="dialog-wurzel"></div>
 
   <noscript>
-    <div style="max-width:44rem;margin:2rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.6;color:#16202b">
-      <h1>Crossminton-Handbuch</h1>
-      <p>Crossminton lernen — Schlag für Schlag. Ein kostenloses, werbefreies Handbuch mit kleinen Lern-Bausteinen zu
-        Technik, Taktik, Mentaltraining, Athletik, Regeln, Trainingsplanung, Doppel, Outdoor-Spiel und Ausrüstung
-        (Speeder, Schläger, Bespannung, Schuhe, Kleidung).</p>
-      <p>Die App läuft vollständig im Browser und speichert deinen Fortschritt lokal auf deinem Gerät. Bitte aktiviere
-        JavaScript, um das Handbuch zu nutzen.</p>
+    <div style="max-width:44rem;margin:2rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.6;color:#ece9e1;background:#0b0b0c">
+      <h1>mosh school</h1>
+      <p>Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals fuer Hardcore, Metalcore, Death, Black und Doom. Kleine Lern-Bausteine mit Uebe-Routinen, Genre-Achse und Trainingsplan.</p>
+      <p>Die App laeuft vollstaendig im Browser und speichert deinen Fortschritt lokal. Bitte aktiviere JavaScript.</p>
     </div>
   </noscript>
 

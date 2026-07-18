@@ -1,0 +1,552 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "gitarre",
+    "hinweis": "Phase-2-Inhalt (Fortgeschritten-Gitarre). Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel stehen inline in anzeigetitel und werden im Repo nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "tremolo_picking",
+      "anzeigetitel": {
+        "de": "Tremolo-Picking"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "wechselschlag"
+      ],
+      "erklaerteil": {
+        "de": "Tremolo-Picking ist nichts anderes als sehr schneller Wechselschlag auf einem einzelnen Ton oder einer Saite. Es erzeugt den treibenden, gleichmäßigen Klangteppich, der Death- und Black-Metal-Riffs ihr rasendes Tempo gibt.\n\nDer Schlüssel liegt in der Bewegungsökonomie, die du vom Wechselschlag schon kennst: Die Bewegung kommt aus dem Handgelenk, der Bewegungsradius bleibt winzig, die Pickspitze steht nur wenig über. Je kürzer der Weg, den das Pick zurücklegt, desto höher das Tempo bei gleicher Anstrengung.\n\nWichtiger als reine Geschwindigkeit ist die Gleichmäßigkeit: Alle Anschläge sollen gleich laut und gleich lang sein, sodass kein Puls entsteht, den du nicht willst. Ein sauberes langsames Tremolo ist mehr wert als ein schnelles, das flattert."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gleichmäßiges Tremolo halten",
+          "ziel": "Einen konstanten, dichten Tremolo-Strom auf einem Ton erzeugen.",
+          "schritte": [
+            "Wähle einen einzelnen gegriffenen Ton und schlage ihn im strengen Wechselschlag so schnell an, dass ein durchgehender Strom entsteht.",
+            "Bleib bewusst unter deinem Grenztempo, sodass jeder Anschlag noch gleich klingt.",
+            "Halte den Ton über vier bis acht Takte, ohne dass Lautstärke oder Dichte schwanken."
+          ],
+          "steigerung": "Erst die Dauer bei gleichem Tempo verlängern, dann das Tempo in kleinen Schritten anheben.",
+          "selbstkontrolle": "Der Tonstrom klingt gleichmäßig und dicht; es ist kein unbeabsichtigter Puls und kein Aussetzer zu hören."
+        }
+      }
+    },
+    {
+      "id": "schnelles_tremolo",
+      "anzeigetitel": {
+        "de": "Schnelles Tremolo (Black Metal)"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "tremolo_picking",
+        "saiten_daempfen"
+      ],
+      "erklaerteil": {
+        "de": "Im Black Metal wird das Tremolo zum Herzstück ganzer Riffs: Melodien werden nicht einzeln angeschlagen, sondern in rasendem Tremolo über lange Strecken gehalten. So entsteht die typische Wand aus Klang, über der sich die Melodie bewegt.\n\nBei sehr hohem Tempo entscheidet Lockerheit über alles. Sobald der Unterarm verkrampft, bricht die Geschwindigkeit ein und der Ton wird ungleichmäßig. Such ein Tempo, das du entspannt halten kannst, statt dich an die Grenze zu zwingen — Tempo wächst über Wochen, und Brennen oder Schmerz ist ein Stoppsignal, keine Trophäe.\n\nWeil bei diesem Tempo jede mitschwingende Saite zu Lärm wird, arbeitet das Abdämpfen ständig mit: Greifhand und Handballen halten alles still, was nicht klingen soll. Erst dann bleibt die Tremolo-Wand klar statt matschig."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Tremolo-Melodie halten",
+          "ziel": "Eine kurze Melodie im schnellen Tremolo sauber und locker halten.",
+          "schritte": [
+            "Wärme die Hände zuerst mit langsamem Tremolo auf, bevor du das Tempo suchst.",
+            "Spiel eine einfache Zwei- oder Dreiton-Melodie, jeden Ton im schnellen Tremolo gehalten.",
+            "Wechsle die Töne im Takt und lass das Tremolo dabei gleichmäßig weiterlaufen."
+          ],
+          "steigerung": "Die Melodie um weitere Töne verlängern und das Tempo nur anheben, solange die Hand locker bleibt.",
+          "selbstkontrolle": "Der Tremolo-Strom reißt beim Tonwechsel nicht ab, der Unterarm bleibt locker, und die Melodie ist klar herauszuhören."
+        }
+      }
+    },
+    {
+      "id": "tremolo_riffing",
+      "anzeigetitel": {
+        "de": "Tremolo-Riffing mit Akkordwechsel"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "tremolo_picking",
+        "powerchords"
+      ],
+      "erklaerteil": {
+        "de": "Ein Tremolo wird erst dann zum Riff, wenn sich unter der laufenden Anschlagbewegung etwas bewegt. Die Anschlaghand hält das Tremolo gleichmäßig durch, während die Greifhand die Töne oder Powerchords darunter wechselt.\n\nDie eigentliche Herausforderung ist die Entkopplung beider Hände: Die Anschlaghand darf ihren Rhythmus nicht verlieren, nur weil die Greifhand greift. Der Wechsel der Greifhand fällt idealerweise genau auf einen Anschlag, damit kein Loch und kein Verschleifen entsteht.\n\nDenk in Bausteinen: eine feste Zahl von Tremolo-Anschlägen pro Ton, dann sauber weiter zum nächsten. Wenn du die Wechsel zählst, bleibt das Riff im Timing, auch wenn das Tempo steigt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Tremolo über zwei Powerchords",
+          "ziel": "Das Tremolo beim Akkordwechsel ohne Unterbrechung durchziehen.",
+          "schritte": [
+            "Halte ein gleichmäßiges Tremolo auf dem Grundton eines Powerchords.",
+            "Wechsle nach einer festen Zahl von Anschlägen zum nächsten Powerchord, ohne die Anschlaghand zu stoppen.",
+            "Zähle die Anschläge pro Akkord mit, damit die Wechsel im Timing sitzen."
+          ],
+          "steigerung": "Mehr Akkorde in die Folge aufnehmen und die Zahl der Anschläge pro Akkord verkürzen.",
+          "selbstkontrolle": "Das Tremolo läuft beim Wechsel gleichmäßig weiter, und die Akkordwechsel sitzen genau auf dem Schlag."
+        }
+      }
+    },
+    {
+      "id": "doppel_galopp",
+      "anzeigetitel": {
+        "de": "Doppel-Galopp & Galopp-Varianten"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "galopp_rhythmus",
+        "downpicking"
+      ],
+      "erklaerteil": {
+        "de": "Der einfache Galopp ist die Tür zu einer ganzen Familie von Thrash-Rhythmen. Fortgeschritten wird es, wenn du seine Varianten sauber trennen kannst: den umgekehrten Galopp (zwei Sechzehntel plus Achtel statt Achtel plus zwei Sechzehntel) und dichtere Ketten, in denen Galopp-Figuren direkt aneinanderhängen.\n\nAkzente sind der Charakter dieser Muster. Der betonte Ton wird meist als kräftiger Abschlag gespielt, die schnellen Sechzehntel folgen als Ab- und Aufschlag. Genau dieser Wechsel aus betont und schnell treibt das Riff — und er verlangt exakt gleich lange Sechzehntel, sonst kippt der Galopp ins Stolpern.\n\nWeil hier viel mit Abschlägen auf den Betonungen gearbeitet wird, baut das auf deiner Downpicking-Ausdauer auf. Bleib locker im Unterarm und halte das Tempo dort, wo die Sechzehntel noch sauber sitzen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Galopp und Gegen-Galopp",
+          "ziel": "Standard- und umgekehrten Galopp sicher unterscheiden und verbinden.",
+          "schritte": [
+            "Spiel palm-gemutet zuerst den Standard-Galopp (unten-unten-oben) über mehrere Takte.",
+            "Wechsle dann zum umgekehrten Galopp: die zwei schnellen Töne zuerst, dann der betonte Achtel.",
+            "Verbinde beide, indem du taktweise zwischen ihnen wechselst, ohne das Tempo zu verlieren."
+          ],
+          "steigerung": "Die Galopp-Figuren zwischen zwei Tonhöhen bewegen und das Tempo in kleinen Schritten anheben.",
+          "selbstkontrolle": "Beide Varianten sind klar zu unterscheiden, die Sechzehntel bleiben gleich lang, und der Wechsel eilt nicht."
+        }
+      }
+    },
+    {
+      "id": "palm_mute_systeme",
+      "anzeigetitel": {
+        "de": "Tighte Palm-Mute-Systeme"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "palm_muting",
+        "chugs_riffing"
+      ],
+      "erklaerteil": {
+        "de": "Palm Muting kennst du als Grundtechnik — fortgeschritten wird es als System: bewusst gesetzte Betonungen, schnelle Wechsel zwischen gedämpft und offen und synkopierte Muster, die das Riff rhythmisch aufbrechen. Der Handballen wird zum Dynamik-Werkzeug, nicht nur zum Dämpfer.\n\nEntscheidend ist die Kontrolle über den Dämpfungsgrad. Etwas mehr Druck macht den Chug kürzer und perkussiver, etwas weniger lässt mehr Ton stehen. Wenn du diese Abstufung bewusst steuerst, bekommt eine Reihe gleicher Töne plötzlich Kontur.\n\nDie zweite Ebene ist das exakte An- und Abschalten der Dämpfung. Ein offener Akzent mitten in einer Chug-Reihe wirkt nur, wenn der Handballen im richtigen Moment kurz abhebt und sofort wieder auflegt. Präzision schlägt hier Tempo — ein tightes, mittelschnelles System klingt brutaler als ein hektisches."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gedämpft, offen, betont",
+          "ziel": "Dämpfung und Akzente innerhalb eines Riffs bewusst steuern.",
+          "schritte": [
+            "Spiel eine Reihe palm-gemuteter Sechzehntel auf der tiefen Saite in gleichmäßigem Puls.",
+            "Setze an festen Stellen einen offenen, betonten Ton, indem der Handballen kurz abhebt.",
+            "Variiere den Dämpfungsdruck, sodass manche Chugs kürzer und härter klingen als andere."
+          ],
+          "steigerung": "Die Akzente synkopisch verschieben (auf schwache Zählzeiten) und das Muster im Loop spielen.",
+          "selbstkontrolle": "Gedämpfte und offene Töne sind klar getrennt, die Akzente sitzen im Timing, und die Dämpfung schwankt nicht unbeabsichtigt."
+        }
+      }
+    },
+    {
+      "id": "string_skipping",
+      "anzeigetitel": {
+        "de": "String Skipping"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "wechselschlag"
+      ],
+      "erklaerteil": {
+        "de": "String Skipping heißt, beim Anschlag eine oder mehrere Saiten zu überspringen, statt nur zu benachbarten Saiten zu wechseln. So entstehen weite Intervallsprünge, die Riffs und Leads interessanter klingen lassen als reine Nachbarschaftsbewegungen.\n\nDie Schwierigkeit liegt in der Zielgenauigkeit der Anschlaghand: Das Pick muss die übersprungene Saite sauber überfliegen und die richtige treffen, ohne die dazwischenliegende anzustoßen. Kleine, kontrollierte Bewegungen und ein klarer Blick auf das Ziel helfen mehr als Kraft.\n\nGenauso wichtig ist das Abdämpfen: Die übersprungene Saite muss stumm bleiben. Greifhand und Handballen arbeiten mit, damit der Sprung sauber klingt und nicht die überflogene Saite mitrauscht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Saite überspringen",
+          "ziel": "Gezielt über eine Saite springen, ohne die Zwischensaite anzustoßen.",
+          "schritte": [
+            "Spiel abwechselnd einen Ton auf der tiefen E-Saite und einen auf der D-Saite, die A-Saite bleibt ausgelassen.",
+            "Dämpfe die übersprungene A-Saite mit der Greifhand ab, damit sie stumm bleibt.",
+            "Halte den Anschlag klein und ziele die Zielsaite bewusst an, zunächst langsam."
+          ],
+          "steigerung": "Größere Sprünge einbauen (zwei Saiten überspringen) und das Tempo im Wechselschlag anheben.",
+          "selbstkontrolle": "Nur die beiden gewollten Töne klingen, die übersprungene Saite bleibt stumm, und du triffst sicher."
+        }
+      }
+    },
+    {
+      "id": "pinch_harmonics",
+      "anzeigetitel": {
+        "de": "Pinch Harmonics (Squeals)"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "palm_muting"
+      ],
+      "erklaerteil": {
+        "de": "Pinch Harmonics — die kreischenden \"Squeals\" — entstehen, wenn der Daumen der Anschlaghand die Saite unmittelbar nach dem Pick ganz kurz berührt. Diese Berührung unterdrückt den Grundton und bringt einen hohen Oberton zum Klingen.\n\nDrei Dinge müssen zusammenkommen: ein verzerrter Sound, der die Obertöne trägt, der richtige Berührungspunkt entlang der Saite und ein knapp überstehendes Pick, damit der Daumen sofort nach dem Anschlag trifft. Verschiedene Punkte über den Pickups liefern verschiedene Obertöne — das findest du durch Ausprobieren.\n\nErwarte nicht, dass es sofort bei jedem Anschlag klappt. Such zuerst einen einzigen Punkt, an dem der Squeal zuverlässig kommt, und merk dir das Gefühl. Ein leichtes Vibrato danach lässt den Oberton singen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Den ersten Squeal finden",
+          "ziel": "An einer festen Stelle zuverlässig einen Pinch Harmonic auslösen.",
+          "schritte": [
+            "Stell einen verzerrten Sound ein und greife einen Ton auf der G- oder D-Saite.",
+            "Schlag mit knapp überstehendem Pick an und lass den Daumen die Saite direkt danach streifen.",
+            "Verschiebe die Anschlaghand in kleinen Schritten, bis ein hoher Oberton anspricht, und merk dir die Stelle."
+          ],
+          "steigerung": "Ein leichtes Vibrato mit der Greifhand hinzufügen und den Squeal auf weiteren Tönen suchen.",
+          "selbstkontrolle": "An deiner gefundenen Stelle kommt der Oberton zuverlässig statt nur des Grundtons."
+        }
+      }
+    },
+    {
+      "id": "legato",
+      "anzeigetitel": {
+        "de": "Legato: Hammer-on & Pull-off"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "greifhand_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Legato bedeutet, Töne allein mit der Greifhand zu erzeugen, ohne sie einzeln anzuschlagen. Beim Hammer-on schlägst du einen Finger kräftig genug auf den Bund, dass der Ton klingt; beim Pull-off ziehst du den Finger seitlich von der Saite und lässt sie so anklingen. Das ergibt fließende, weiche Läufe.\n\nDie Kraft dafür kommt aus einer präzisen, aber lockeren Bewegung, nicht aus roher Anspannung. Der Finger trifft dicht hinter dem Bund auf; beim Pull-off gibst du der Saite einen kleinen seitlichen Zupfimpuls, statt sie nur anzuheben. Sauberkeit entsteht durch Genauigkeit, nicht durch Gewalt.\n\nWeil die Greifhand hier härter arbeitet als gewohnt, gilt der Gesundheitsrahmen besonders: Wärm die Hand vorher auf, bau die Belastung langsam auf und stopp bei Ziehen oder Schmerz. Kurze, saubere Wiederholungen bringen dich weiter als langes Durchbeißen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Hammer-on und Pull-off sauber",
+          "ziel": "Töne allein mit der Greifhand klar zum Klingen bringen.",
+          "schritte": [
+            "Schlag einen gegriffenen Ton an und hämmere mit einem höheren Finger einen zweiten Ton auf derselben Saite, ohne erneut anzuschlagen.",
+            "Zieh den Finger danach seitlich weg (Pull-off), sodass der tiefere Ton wieder klingt.",
+            "Wiederhole die Kette langsam, bis beide Töne gleich laut klingen."
+          ],
+          "steigerung": "Längere Legato-Ketten über mehrere Finger bilden und erst dann das Tempo erhöhen.",
+          "selbstkontrolle": "Der gehämmerte und der gezogene Ton klingen klar und ähnlich laut wie der angeschlagene, ohne zu verstummen."
+        }
+      }
+    },
+    {
+      "id": "slides_bends",
+      "anzeigetitel": {
+        "de": "Slides & Bends im Metal"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "greifhand_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Slides und Bends bringen Ausdruck ins Spiel. Beim Slide gleitest du mit dem greifenden Finger über die Bünde von einem Ton zum nächsten, ohne abzusetzen; beim Bending drückst du die Saite quer über das Griffbrett und hebst so die Tonhöhe an.\n\nBeim Bending zählt die Intonation: Der Zielton muss stimmen, sonst klingt es schief. Hör dir den Zielton vorher an und zieh die Saite genau auf diese Höhe — meist einen Ganz- oder Halbton. Mehrere Finger schieben gemeinsam, das gibt Kraft und Kontrolle und schont den einzelnen Finger.\n\nSlides leben von der Zielgenauigkeit: Du landest sauber auf dem Zielbund, statt daneben. Beide Techniken sind die Basis für ausdrucksstarke Leads — und sie arbeiten mit Bewegung statt mit reiner Kraft. Bei Ziehen im Handgelenk gilt auch hier: Pause statt durchbeißen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Bending auf die richtige Höhe",
+          "ziel": "Eine Saite kontrolliert auf einen sauberen Zielton ziehen.",
+          "schritte": [
+            "Spiel zuerst den Zielton normal, damit du ihn im Ohr hast (z. B. zwei Bünde höher).",
+            "Greif den Ausgangston und zieh die Saite mit mehreren Fingern, bis die Tonhöhe den Zielton trifft.",
+            "Halte den gezogenen Ton kurz und prüfe, ob er wirklich stimmt."
+          ],
+          "steigerung": "Slides zwischen zwei Tönen hinzunehmen und Bends auf verschiedenen Saiten üben.",
+          "selbstkontrolle": "Der gezogene Ton trifft die Zielhöhe sauber, und Slides landen genau auf dem gewünschten Bund."
+        }
+      }
+    },
+    {
+      "id": "vibrato",
+      "anzeigetitel": {
+        "de": "Vibrato"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "doom"
+      ],
+      "voraussetzungen": [
+        "slides_bends"
+      ],
+      "erklaerteil": {
+        "de": "Vibrato macht aus einem stehenden Ton einen lebendigen. Du lässt die Tonhöhe gleichmäßig ein wenig schwanken, indem du die Saite rhythmisch leicht ziehst und wieder loslässt — verwandt mit dem Bending, nur klein und wiederholt.\n\nEntscheidend ist Kontrolle: gleichmäßige Geschwindigkeit und gleichmäßige Breite. Ein bewusst gesteuertes Vibrato klingt kräftig, ein nervöses Zittern dagegen unruhig. Die Bewegung kommt aus Handgelenk und Unterarm, nicht aus einem einzelnen zappelnden Finger.\n\nDie Breite ist ein Ausdrucksmittel: ein enges, schnelles Vibrato wirkt angespannt, ein weites, langsames — wie im Doom — schwer und drohend. Übe zuerst das enge, kontrollierte Vibrato, bevor du es weiter aufziehst; die Kontrolle bleibt in beiden Fällen die Grundlage."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gleichmäßiges Vibrato",
+          "ziel": "Einen gehaltenen Ton mit kontrolliertem, gleichmäßigem Vibrato versehen.",
+          "schritte": [
+            "Greif einen Ton und lass ihn zunächst gerade stehen.",
+            "Zieh die Saite rhythmisch leicht an und wieder zurück, sodass die Tonhöhe gleichmäßig schwankt.",
+            "Steuere die Bewegung aus dem Handgelenk und halte Geschwindigkeit und Breite konstant."
+          ],
+          "steigerung": "Das Vibrato bewusst enger und weiter gestalten und es an das Ende eines Bends anhängen.",
+          "selbstkontrolle": "Die Schwankung ist regelmäßig und gewollt, nicht zittrig, und du kannst die Breite bewusst verändern."
+        }
+      }
+    },
+    {
+      "id": "pentatonik_leads",
+      "anzeigetitel": {
+        "de": "Pentatonik & erste Leads"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "legato",
+        "wechselschlag"
+      ],
+      "erklaerteil": {
+        "de": "Die Moll-Pentatonik ist die meistgenutzte Tonleiter für Metal-Leads. Sie besteht aus fünf Tönen, die sich als bequem greifbare \"Box\" über die Saiten anordnen — einmal gelernt, ist die Form über das ganze Griffbrett verschiebbar.\n\nWeil in der Box keine unpassenden Nachbartöne liegen, kannst du früh anfangen, kurze Melodien und Licks zu bilden, ohne dich zu verspielen. Der Grundton auf der tiefen Saite legt die Tonart fest — dieselbe Form passt so zu jedem Riff, wenn du sie an den richtigen Bund schiebst.\n\nEin Lead wird erst durch Ausdruck lebendig. Verbinde die Töne mit dem, was du schon kannst: Hammer-ons und Pull-offs für fließende Läufe, Bends und Slides für Spannung. So wird aus einer Tonleiter Musik statt nur einer Fingerübung."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Pentatonik-Box und erstes Lick",
+          "ziel": "Die Moll-Pentatonik-Form sicher greifen und ein kurzes Lick bilden.",
+          "schritte": [
+            "Lerne die Moll-Pentatonik-Box in einer Lage und spiel sie langsam auf und ab.",
+            "Bau ein kurzes Lick aus vier bis sechs Tönen innerhalb der Box.",
+            "Verziere das Lick mit einem Hammer-on oder einem Bend, den du schon beherrschst."
+          ],
+          "steigerung": "Die Box an einen anderen Bund verschieben und das Lick über ein Riff im Hintergrund spielen.",
+          "selbstkontrolle": "Du greifst die Form ohne Suchen, dein Lick klingt musikalisch, und die Verzierung sitzt sauber."
+        }
+      }
+    },
+    {
+      "id": "dissonante_intervalle",
+      "anzeigetitel": {
+        "de": "Dissonante Intervalle & Tritonus"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "powerchords",
+        "tremolo_riffing"
+      ],
+      "erklaerteil": {
+        "de": "Nicht jeder Zusammenklang soll \"schön\" sein — im Death und Black Metal ist Dissonanz ein bewusstes Stilmittel. Der bekannteste Baustein ist der Tritonus, das Intervall genau in der Mitte der Oktave, das seit Jahrhunderten als besonders spannungsgeladen gilt.\n\nÜber den Powerchord hinaus arbeitest du hier mit Reibung: kleine Sekunden, Tritoni und schräge Intervalle, die absichtlich unaufgelöst stehen bleiben. Sie erzeugen den dunklen, bedrohlichen Charakter, der diese Stile prägt. Gerade weil sie unruhig klingen, brauchen sie einen klaren rhythmischen Rahmen, damit sie gewollt und nicht falsch wirken.\n\nDu kannst Dissonanzen als stehende Doppelgriffe setzen oder sie ins Tremolo-Riffing einbauen. Der Kontrast zwischen dissonanten und stabilen Stellen macht die Wirkung aus — ständige Reibung nutzt sich ab, gezielt gesetzt trifft sie."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Tritonus im Riff",
+          "ziel": "Dissonante Intervalle bewusst greifen und rhythmisch einbinden.",
+          "schritte": [
+            "Greif einen Grundton und dazu den Ton drei Ganztöne höher (Tritonus) als Doppelgriff.",
+            "Spiel den Doppelgriff palm-gemutet im festen Puls, damit er trotz Reibung tight klingt.",
+            "Setze ihn im Kontrast zu einem stabilen Powerchord, indem du zwischen beiden wechselst."
+          ],
+          "steigerung": "Den Tritonus ins Tremolo-Riffing übernehmen und weitere dissonante Intervalle ausprobieren.",
+          "selbstkontrolle": "Die Dissonanz klingt gewollt und rhythmisch fest, und der Kontrast zum stabilen Akkord ist deutlich hörbar."
+        }
+      }
+    },
+    {
+      "id": "sweep_picking_einstieg",
+      "anzeigetitel": {
+        "de": "Sweep-Picking-Einstieg"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "pentatonik_leads"
+      ],
+      "erklaerteil": {
+        "de": "Sweep Picking ist eine Technik für Arpeggien: Statt jede Saite einzeln anzuschlagen, führst du das Pick in einer einzigen, durchgehenden Bewegung über mehrere Saiten — wie ein langsamer, kontrollierter Rechen. Pro Saite klingt genau ein Ton.\n\nDer Trick liegt in der Greifhand. Sie \"rollt\" über die Saiten: Jeder Finger drückt seinen Ton und hebt sofort wieder ab, sobald der nächste kommt, damit nie zwei Töne zugleich klingen und ein sauberer Arpeggio-Lauf statt eines Akkords entsteht. Anschlag- und Greifhand müssen dafür exakt zusammenarbeiten.\n\nSweep Picking ist eine anspruchsvolle Technik — erwarte nicht, sie schnell zu beherrschen. Beginne extrem langsam, achte darauf, dass jeder einzelne Ton klar und getrennt klingt, und erhöhe das Tempo erst, wenn die Bewegung wirklich sauber sitzt. Sauberkeit steht hier kompromisslos vor Geschwindigkeit."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei-Saiten-Sweep",
+          "ziel": "Ein kleines Arpeggio in einer durchgehenden Anschlagbewegung sauber trennen.",
+          "schritte": [
+            "Wähle ein Arpeggio über drei Saiten mit einem Ton pro Saite.",
+            "Führe das Pick in einer einzigen Abwärtsbewegung über die drei Saiten.",
+            "Lass die Greifhand jeden Ton sofort abdämpfen, sobald der nächste klingt, und spiel extrem langsam."
+          ],
+          "steigerung": "Die Aufwärtsbewegung zurück ergänzen und erst dann das Tempo in kleinen Schritten anheben.",
+          "selbstkontrolle": "Jeder Ton des Arpeggios ist einzeln zu hören; es klingt kein zusammenhängender Akkord und kein Matsch."
+        }
+      }
+    },
+    {
+      "id": "rhythmus_lead_wechsel",
+      "anzeigetitel": {
+        "de": "Wechsel zwischen Rhythmus und Lead"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "pentatonik_leads",
+        "palm_mute_systeme"
+      ],
+      "erklaerteil": {
+        "de": "In einem Song bleibst du selten nur im Rhythmus oder nur im Lead — du wechselst zwischen beiden. Dieser Übergang ist eine eigene Fähigkeit: Von tighten, palm-gemuteten Chugs auf eine fließende Lead-Linie umzuschalten verlangt, dass beide Hände blitzschnell ihre Rolle wechseln.\n\nBeim Rhythmus liegt der Handballen dämpfend auf den Saiten, der Anschlag ist kurz und hart. Beim Lead löst sich der Handballen, der Anschlag wird weicher, und du nutzt Legato, Bends und Vibrato. Genau dieses Umstellen — Dämpfung lösen, Anschlagpunkt und Attack ändern — muss im Timing passieren, ohne Loch dazwischen.\n\nÜbe die Nahtstelle gezielt: die letzten Chugs vor dem Lead und die ersten Lead-Töne als eine Einheit. Wenn der Übergang sitzt, wirkt der Song wie aus einem Guss statt wie zwei aneinandergeklebte Teile."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von Chugs ins Lead",
+          "ziel": "Sauber und im Timing von Rhythmus- auf Lead-Spiel umschalten.",
+          "schritte": [
+            "Spiel zwei Takte palm-gemutete Chugs auf der tiefen Saite.",
+            "Wechsle direkt danach in ein kurzes Lead-Lick aus der Pentatonik-Box.",
+            "Achte darauf, dass der Handballen sich löst und der erste Lead-Ton genau im Timing kommt."
+          ],
+          "steigerung": "Auch den Rückweg üben (vom Lead zurück in die Chugs) und das Tempo erhöhen.",
+          "selbstkontrolle": "Der Übergang sitzt ohne Lücke, die Chugs sind gedämpft, und die Lead-Töne klingen offen und ausdrucksvoll."
+        }
+      }
+    },
+    {
+      "id": "handgesundheit_tempo",
+      "anzeigetitel": {
+        "de": "Handgelenk & Sehnen bei Tempo"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "tremolo_picking"
+      ],
+      "erklaerteil": {
+        "de": "Je höher das Tempo, desto mehr Wiederholungen laufen durch deine Sehnen und Handgelenke — und desto wichtiger wird der Schutz davor. Schnelles Tremolo, Downpicking und dichte Riffs sind Ausdauerbelastungen, die sich über eine Session aufsummieren, auch wenn im Moment nichts wehtut.\n\nDrei Prinzipien tragen dich langfristig: Wärm die Hände vor schnellem Spiel immer mit ein paar Minuten langsamem, lockerem Spielen auf. Bau Tempo und Dauer schrittweise über Wochen auf, nicht in einer einzelnen Session. Und behandle jedes Ziehen, Brennen oder Stechen im Handgelenk als Stoppsignal — dann Pause machen, nicht durchbeißen.\n\nSauberkeit und Lockerheit schützen zugleich: Wer verspannt und mit zu viel Kraft spielt, belastet die Sehnen unnötig und wird obendrein langsamer. Gute Technik ist auch Gesundheitsvorsorge."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beobachte in deinen nächsten schnellen Übe-Einheiten bewusst, wann sich deine Anschlaghand oder dein Handgelenk zu verspannen beginnt. An welcher Stelle einer Session taucht das erste Brennen auf? Plane feste kurze Pausen ein, bevor dieser Punkt kommt, und überlege, wie du Tempo und Dauer über die nächsten Wochen langsam steigerst, statt es an einem Tag zu erzwingen. Was ist dein persönliches Frühwarnzeichen, bei dem du sofort stoppst?"
+      }
+    },
+    {
+      "id": "mentale_temposteigerung",
+      "anzeigetitel": {
+        "de": "Tempo geduldig steigern"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Schneller werden ist im Metal weniger eine Frage von Talent als von Methode. Wer wahllos am Tempo dreht, spielt Fehler ein und stagniert; wer systematisch arbeitet, kommt verlässlich voran. Das Metronom bleibt dabei dein ehrlichster Maßstab — es zeigt, ob ein Tempo wirklich sitzt oder nur ungefähr.\n\nFortschritt verläuft nicht gleichmäßig, sondern in Stufen mit Plateaus dazwischen. Wochen ohne sichtbaren Sprung sind normal und kein Zeichen von Versagen — oft festigt sich in dieser Zeit gerade das, was du schon kannst. Der Schlüssel ist, sauber und in kleinen Schritten zu üben und ein Tempo erst zu verlassen, wenn es mehrfach fehlerfrei gelingt.\n\nGeduld ist hier eine Technik wie jede andere. Zehn langsame, fehlerfreie Wiederholungen bringen dich weiter als eine hektische schnelle, weil dein Körper einprägt, was du wiederholst — Sauberkeit ebenso wie Fehler."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir eine Übung vor, an der du gerade am Tempo arbeitest, und lege ehrlich fest, bei welchem Metronom-Tempo sie wirklich fehlerfrei sitzt. Wie klein ist der nächste Schritt, den du dir zutraust, ohne dass sich Fehler einschleichen? Notiere dir dieses Tempo, damit du beim nächsten Mal nicht zu hoch startest, und überlege, wie du mit einem Plateau umgehst, wenn tagelang kein Fortschritt sichtbar ist."
+      }
+    }
+  ]
+}

@@ -153,3 +153,12 @@
 .fa-calendar-days::before { content: '\f073'; }
 .fa-calendar-plus::before { content: '\f271'; }
 .fa-print::before { content: '\f02f'; }
+
+/* mosh school — Anton (OFL): kondensierte Poster-Schrift für Display-Headings. */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../assets/fonts/anton-regular.ttf) format('truetype');
+}

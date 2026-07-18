@@ -7,12 +7,10 @@ import { renderHeim } from './ansichten/heim.js';
 import { renderMitmachen, renderRechtstext, renderUeber } from './ansichten/info.js';
 import { renderOnboarding } from './ansichten/onboarding.js';
 import { renderPlan } from './ansichten/plan.js';
-import { renderIndividual, renderKompetenzpfad, renderSpielform, renderThemen, renderUmgebung } from './ansichten/pfad.js';
+import { renderIndividual, renderKompetenzpfad, renderSpielform, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
 import { renderProfil } from './ansichten/profil.js';
-import { renderRegeln } from './ansichten/regeln.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
-import { renderTurnier } from './ansichten/turnier.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
@@ -37,9 +35,7 @@ function aktualisiereNavigation(segmente) {
   const aktiv =
     segmente[0] === 'training' || segmente[0] === 'plan'
       ? 'training'
-      : segmente[0] === 'regeln' || segmente[0] === 'turnier'
-        ? 'regeln'
-        : segmente[0] === 'ueber'
+      : segmente[0] === 'ueber'
           ? 'ueber'
           : segmente[0] === 'mitmachen'
             ? 'mitmachen'
@@ -61,7 +57,7 @@ function aktualisiereNavigation(segmente) {
     else verweis.removeAttribute('aria-current');
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte).
-  const imMehr = ['suche', 'regeln', 'turnier', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]);
+  const imMehr = ['suche', 'stil', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
     mehr.classList.toggle('aktiv', imMehr);
@@ -76,7 +72,6 @@ function beschrifteRahmen() {
   const beschriftungen = {
     lernen: t('nav_lernen'),
     training: t('nav_training'),
-    regeln: t('nav_regeln'),
     suche: t('nav_suche'),
     ueber: t('nav_ueber'),
     mitmachen: t('nav_mitmachen'),
@@ -253,6 +248,8 @@ function rendern() {
     renderThemen(el, daten, segmente[2] ? decodeURIComponent(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'spielform') {
     renderSpielform(el, daten, segmente[2] ? decodeURIComponent(segmente[2]) : null);
+  } else if (segmente[0] === 'pfad' && segmente[1] === 'stil') {
+    renderStil(el, daten, segmente[2] ? decodeURIComponent(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'umgebung') {
     renderUmgebung(el, daten, null, null);
   } else if (segmente[0] === 'pfad' && (segmente[1] === 'witterung' || segmente[1] === 'untergrund')) {
@@ -265,10 +262,6 @@ function rendern() {
     renderTraining(el, daten, segmente[1] ? decodeURIComponent(segmente[1]) : null);
   } else if (segmente[0] === 'suche') {
     renderSuche(el, daten);
-  } else if (segmente[0] === 'regeln') {
-    renderRegeln(el, daten);
-  } else if (segmente[0] === 'turnier') {
-    renderTurnier(el, daten);
   } else if (segmente[0] === 'ueber') {
     renderUeber(el, daten);
   } else if (segmente[0] === 'mitmachen') {
