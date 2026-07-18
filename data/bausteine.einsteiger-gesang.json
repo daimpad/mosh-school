@@ -3,33 +3,47 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "einsteiger",
     "domaene": "gesang",
-    "hinweis": "Phase Einsteiger-Gesang (Extreme Vocals). Kein eigener vokabulare-Block — das Vokabular steht kanonisch in bausteine.einsteiger-gitarre.json. Der Gesundheitsrahmen hat Vorrang: Extreme Vocals nur schmerzfrei, immer mit Aufwärmen, viel Wasser, ohne Alkohol/Rauch vor dem Üben; bei Schmerz, Heiserkeit, Kratzen, Blut oder Stimmverlust sofort stoppen; anhaltende Beschwerden zum HNO-Arzt; für Extreme Vocals ist ein qualifizierter Vocal-Coach ausdrücklich empfohlen. Verzerrung entsteht durch Luft, Resonanz und die Taschenfalten, niemals durch Pressen aus dem Hals. Sichtbare Titel stehen inline in anzeigetitel und werden im Repo nach labels/de.json geliftet."
+    "hinweis": "Einsteiger-Gesang. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
   },
   "delta_bausteine": [],
   "bausteine": [
     {
-      "id": "warum_zuerst",
+      "id": "gesang_haltung_atmung",
       "anzeigetitel": {
-        "de": "Warum Technik und Gesundheit zuerst"
+        "de": "Haltung & Atmung"
       },
       "domaene": [
-        "koerper"
+        "gesang"
       ],
       "kompetenzstufe": [
         "einsteiger"
       ],
       "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "atemstuetze"
+      ],
       "erklaerteil": {
-        "de": "Extreme Vocals — Screaming und Growling — klingen roh, sind aber eine feine, erlernbare Technik. Der verzerrte Klang entsteht durch Luft und Resonanz und durch die sogenannten Taschenfalten oberhalb deiner echten Stimmbänder, niemals durch Pressen aus dem Hals oder rohe Kraft. Wer das ignoriert und einfach draufloskrächzt, schädigt seine Stimme — im schlimmsten Fall dauerhaft.\n\nDeshalb steht in diesem Kapitel die Gesundheit über allem. Die wichtigste Regel lautet: Es darf nie wehtun. Schmerz, Kratzen, Heiserkeit, ein pelziges Gefühl oder gar Blut sind Stoppsignale — dann hörst du sofort auf und schonst die Stimme. Kein Sound ist es wert, deine Stimme zu riskieren.\n\nExtreme Vocals lernst du am sichersten mit einem qualifizierten Vocal-Coach, der hören und sehen kann, was dir selbst entgeht. Dieses Handbuch gibt dir einen sicheren Einstieg und zeigt dir, worauf du achten musst — es ersetzt aber keinen Coach. Nimm dir Zeit: Saubere Technik entsteht über Wochen und Monate, nicht in einer einzigen Session."
+        "de": "Die Stimme ist ein Instrument, das du nicht anfassen kannst — umso wichtiger sind Haltung und Atmung als Grundlage. Steh oder sitz aufrecht, aber locker: Brustkorb offen, Schultern entspannt, Nacken frei. Eine verspannte Haltung überträgt sich sofort auf den Klang und auf den Hals.\n\nMetal-Gesang, ob clean oder verzerrt, entsteht aus der Atmung, nicht aus dem Hals. Atme tief in den Bauch, sodass sich die Flanken und der untere Rücken weiten, statt die Schultern hochzuziehen. Diese tiefe, ruhige Atmung ist die Basis für alles Weitere.\n\nGesundheit hat Vorrang: Gerade Extreme-Metal-Vocals bergen ein echtes Verletzungsrisiko. Nichts, was du singst, sollte im Hals kratzen oder wehtun — Schmerz ist immer ein Stoppsignal, kein Zeichen von Einsatz."
       },
-      "reflexionsaufgabe": {
-        "de": "Bevor du den ersten Scream probierst: Was ist dein Ziel, und über welchen Zeitraum willst du es erreichen? Nimm dir bewusst vor, jede Übung schmerzfrei zu halten und bei jedem Warnsignal sofort zu stoppen. Überlege ehrlich, ob du dir für die ersten Schritte eine Fachperson — einen Vocal-Coach — an die Seite holen kannst."
+      "uebungsteil": {
+        "de": {
+          "titel": "Ruhige Bauchatmung",
+          "ziel": "Tiefe, entspannte Atmung als Grundlage aufbauen.",
+          "schritte": [
+            "Steh oder sitz aufrecht und locker, eine Hand auf dem Bauch.",
+            "Atme langsam durch die Nase ein, sodass sich Bauch und Flanken weiten, nicht die Schultern.",
+            "Lass die Luft ruhig und kontrolliert wieder ausströmen."
+          ],
+          "steigerung": "Verlängere allmählich die Ausatmung, ohne zu pressen.",
+          "selbstkontrolle": "Die Schultern bleiben ruhig, der Bauch weitet sich; die Atmung fühlt sich entspannt an."
+        }
       }
     },
     {
       "id": "atemstuetze",
       "anzeigetitel": {
-        "de": "Atmung und Zwerchfellstütze"
+        "de": "Atemstütze"
       },
       "domaene": [
         "gesang"
@@ -39,61 +53,70 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "warum_zuerst"
+        "gesang_haltung_atmung"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "atemstuetze"
       ],
       "erklaerteil": {
-        "de": "Jeder gute Scream sitzt auf der Atmung. Die Kraft und die Verzerrung kommen aus dem Luftstrom, den dein Zwerchfell steuert, und nicht aus dem Hals. Wenn die Luft den Ton trägt, bleibt dein Kehlkopf locker, und du kannst kräftig klingen, ohne zu drücken.\n\nAtme tief in den Bauch, nicht in die Schultern. Beim Einatmen weitet sich die Bauchdecke, beim Tönen gibst du die Luft kontrolliert und gleichmäßig wieder ab. Diese „Stütze“ ist nichts anderes als ein bewusst dosierter, getragener Luftstrom — die Basis, auf der später jede Verzerrung aufbaut.\n\nÜbe die Atmung zuerst ganz ohne Verzerrung. Wenn die Luftführung sitzt, hast du das wichtigste Werkzeug für sicheres Screaming bereits in der Hand."
+        "de": "Die Atemstütze ist der kontrollierte Umgang mit dem Ausatemstrom — der Motor jeder gesunden Gesangstechnik. Statt die Luft einfach entweichen zu lassen, hältst du mit der Atemmuskulatur einen gleichmäßigen, dosierten Druck.\n\nDu spürst sie, wenn du gegen einen leichten Widerstand ausatmest (etwa auf einem lang gehaltenen „Ss“) und dabei die Bauchdecke bewusst führst. Dieser gestützte Luftstrom trägt den Ton — und im Extreme Metal trägt er später auch die Verzerrung. Ohne Stütze verlagert sich die Arbeit in den Hals, und genau das willst du vermeiden.\n\nDie Stütze ist keine Anspannung, sondern eine geführte Elastizität. Bleib locker im Hals und in den Schultern, während die Arbeit tiefer im Rumpf passiert."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Bauchatmung und getragener Luftstrom",
-          "ziel": "Ein tiefes, vom Zwerchfell gestütztes Ausatmen entwickeln, das einen Ton tragen kann.",
+          "titel": "Gestützter Luftstrom",
+          "ziel": "Einen gleichmäßigen, dosierten Ausatemstrom halten.",
           "schritte": [
-            "Leg eine Hand auf den Bauch und atme so ein, dass sich die Bauchdecke weitet, während die Schultern ruhig bleiben.",
-            "Atme auf einem gleichmäßigen „sss“ oder „fff“ langsam und kontrolliert wieder aus und spüre, wie der Bauch die Luft dosiert.",
-            "Wiederhole das entspannt über mehrere Atemzüge; der Hals bleibt dabei völlig locker."
+            "Atme ruhig in den Bauch ein.",
+            "Atme auf einem langen „Ss“ aus und halte das Geräusch gleichmäßig laut.",
+            "Spür, wie die Bauchmuskulatur den Luftstrom dosiert, während Hals und Schultern locker bleiben."
           ],
-          "steigerung": "Verlängere das Ausatmen Schritt für Schritt und halte den Luftstrom dabei gleichmäßig — ohne irgendwo zu pressen.",
-          "selbstkontrolle": "Der Bauch führt die Bewegung, die Schultern bleiben unten, und dein Hals fühlt sich beim Ausatmen entspannt an."
+          "steigerung": "Verlängere das „Ss“ und halte es über die ganze Ausatmung gleichmäßig.",
+          "selbstkontrolle": "Der Luftstrom bleibt gleichmäßig; die Arbeit passiert im Rumpf, nicht im Hals."
         }
       }
     },
     {
-      "id": "koerperhaltung",
+      "id": "stimmuebungen_sanft",
       "anzeigetitel": {
-        "de": "Körperhaltung und lockerer Hals"
+        "de": "Sanfte Stimmübungen"
       },
       "domaene": [
-        "koerper"
+        "gesang"
       ],
       "kompetenzstufe": [
         "einsteiger"
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "warum_zuerst"
+        "atemstuetze"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "stimmgesundheit",
+        "stimmsicherheit"
       ],
       "erklaerteil": {
-        "de": "Screaming gelingt nur mit einem freien, entspannten Hals. Ein verkrampfter Kiefer, ein hochgezogener Kehlkopf oder angespannte Nackenmuskeln sind mehr als hinderlich — sie sind das Einfallstor für Verletzungen. Deine Aufgabe ist, dem Klang buchstäblich Raum zu geben.\n\nSteh aufrecht, aber locker: Füße etwa schulterbreit, Schultern tief, Brustkorb offen, Kopf gerade über der Wirbelsäule. Der Kiefer hängt entspannt, die Zunge liegt ruhig. Achte darauf, dass du den Hals nie einziehst und den Kopf beim lauten Tönen nicht nach vorne schiebst.\n\nDiese Lockerheit ist keine einmalige Einstellung, sondern etwas, das du während des Übens immer wieder überprüfst. Sobald du irgendwo Enge spürst, ist das ein Zeichen, kurz innezuhalten und wieder loszulassen."
+        "de": "Bevor du singst, bringst du die Stimme mit sanften Übungen in Schwung — das schützt sie und macht sie beweglicher. Lippenflattern („Lip Trills“) und leises Summen sind ideal, weil sie die Stimmbänder schonend aktivieren.\n\n„Sirenen“ — ein sanftes Gleiten von tiefen zu hohen Tönen und zurück auf einem Summen oder „Ng“ — machen den gesamten Stimmumfang geschmeidig. Alles bleibt dabei leise und mühelos; es geht um Beweglichkeit, nicht um Kraft oder Lautstärke.\n\nDiese Übungen sind keine Nebensache: Eine geschmeidige, aufgewärmte Stimme klingt besser und ist deutlich weniger verletzungsanfällig."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Haltungs- und Kiefer-Check",
-          "ziel": "Eine aufrechte, entspannte Grundhaltung mit freiem Hals und lockerem Kiefer finden.",
+          "titel": "Lip Trills & Sirenen",
+          "ziel": "Die Stimme sanft aktivieren und beweglich machen.",
           "schritte": [
-            "Stell dich aufrecht hin, lass die Schultern bewusst sinken und öffne den Brustkorb leicht.",
-            "Lass den Unterkiefer locker fallen, als würdest du gleich gähnen, und spüre, wie sich der Rachen weitet.",
-            "Drehe und neige den Kopf ein paar Mal ganz sanft, um Nacken und Kehlkopf zu lockern."
+            "Lass die Lippen locker flattern und einen leisen Ton mitklingen.",
+            "Summe eine sanfte „Sirene“ von tief nach hoch und wieder zurück, ohne zu drücken.",
+            "Halte alles leise und mühelos; brich ab, sobald etwas kratzt oder anstrengt."
           ],
-          "steigerung": "Sprich in dieser Haltung ein paar entspannte Töne und achte darauf, dass Kiefer und Hals dabei locker bleiben.",
-          "selbstkontrolle": "Schultern und Kiefer sind locker, der Kehlkopf wird nicht hochgezogen, und du spürst keine Enge im Hals."
+          "steigerung": "Erweitere den Bereich der Sirene behutsam nach oben und unten, solange es mühelos bleibt.",
+          "selbstkontrolle": "Die Übungen fühlen sich leicht an; kein Kratzen, kein Druck im Hals."
         }
       }
     },
     {
-      "id": "aufwaermen_stimme",
+      "id": "tonhoehe_clean",
       "anzeigetitel": {
-        "de": "Die Stimme aufwärmen"
+        "de": "Tonhöhe treffen"
       },
       "domaene": [
         "gesang"
@@ -106,26 +129,248 @@
         "atemstuetze"
       ],
       "erklaerteil": {
-        "de": "Aufwärmen ist bei Extreme Vocals keine Kür, sondern Pflicht. Eine kalte Stimme ist verletzlich; ein paar Minuten sanftes Warmup bereiten Stimmbänder, Atmung und Muskulatur auf die Belastung vor. Ohne Aufwärmen kein Scream — diese Reihenfolge ist nicht verhandelbar.\n\nEin gutes Warmup bleibt leise und entspannt. Lippenflattern, leises Summen, sanfte Sirenen über einen bequemen Tonumfang und lockeres Gähnen bringen die Stimme auf Betriebstemperatur. Nichts davon soll anstrengen oder kratzen.\n\nPlane das Aufwärmen fest in jede Session ein, bevor du auch nur an Verzerrung denkst. Und genauso wichtig: Wärme dich am Ende mit denselben leisen Übungen wieder ab, damit sich die Stimme beruhigt."
+        "de": "Auch im Extreme Metal ist ein Gefühl für Tonhöhe wertvoll — für saubere Clean-Passagen, für Melodie und dafür, die Stimme bewusst zu steuern. Tonhöhe zu treffen heißt, einen gehörten Ton mit der eigenen Stimme genau nachzubilden.\n\nDu übst das am besten leise und auf einem Summen oder einem offenen Vokal. Hörst du einen Ton (etwa von einem Instrument oder einer App), gleitest du deine Stimme sanft dorthin, statt ihn zu „erraten“. Mit der Zeit trifft die Stimme genauer und schneller.\n\nBleib dabei entspannt: Tonhöhe kommt aus feiner Steuerung, nicht aus Druck. Ein sauber getroffener leiser Ton ist wertvoller als ein lauter, der daneben liegt."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Sanftes Stimm-Warmup",
-          "ziel": "Die Stimme leise und gründlich auf die Belastung vorbereiten.",
+          "titel": "Töne nachsingen",
+          "ziel": "Gehörte Tonhöhen sicher mit der Stimme treffen.",
           "schritte": [
-            "Beginne mit Lippenflattern („Brrr“) auf einem bequemen Ton und lass die Luft locker fließen.",
-            "Summe leise und gleite in sanften Sirenen langsam auf und ab, ohne die Ränder deines Tonumfangs zu erzwingen.",
-            "Nimm dir mehrere Minuten Zeit und steigere die Intensität nur, solange alles entspannt und schmerzfrei bleibt."
+            "Spiel oder such dir einen einzelnen Ton in bequemer Lage.",
+            "Summe ihn leise nach und gleite sanft zur richtigen Höhe.",
+            "Prüf mit dem Gehör (oder einem Stimmgerät bzw. einer App), ob du den Ton triffst."
           ],
-          "steigerung": "Erweitere den Tonumfang der Sirenen behutsam — aber nur so weit, wie es mühelos bleibt.",
-          "selbstkontrolle": "Die Stimme fühlt sich nach dem Warmup wärmer und beweglicher an, nichts kratzt, und du hast an keiner Stelle gedrückt."
+          "steigerung": "Sing kurze, einfache Tonfolgen nach und wechsle die Ausgangstöne.",
+          "selbstkontrolle": "Deine Stimme trifft den Zielton sauber und ohne zu drücken."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "resonanz_projektion",
+      "anzeigetitel": {
+        "de": "Resonanz & Projektion"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "atemstuetze"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "atemstuetze",
+        "stimmsicherheit"
+      ],
+      "erklaerteil": {
+        "de": "Lautstärke im Gesang entsteht nicht durch Schreien aus dem Hals, sondern durch Atemstütze und Resonanz — den Klang, der in Mund-, Rachen- und Kopfräumen verstärkt wird. Ein gut resonierender Ton trägt weit, ohne die Stimme zu belasten.\n\nDu findest Resonanz, indem du auf einem „Ng“ oder „Mm“ spürst, wo der Klang vibriert, und den Mundraum offen hältst. Wenn du lauter werden willst, kommt der Impuls aus mehr Stütze und Offenheit, nicht aus mehr Halsdruck.\n\nDieses Prinzip ist die Lebensversicherung des Metal-Sängers: Projektion aus Stütze und Resonanz schont die Stimme, gepresste Lautstärke aus dem Hals schädigt sie."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Tragfähiger Ton ohne Druck",
+          "ziel": "Lautstärke aus Stütze und Resonanz statt aus Halsdruck gewinnen.",
+          "schritte": [
+            "Summe ein „Ng“ oder „Mm“ und spür, wo der Klang vibriert.",
+            "Öffne den Mundraum zu einem Vokal und halte die Vibration.",
+            "Werde etwas lauter, indem du die Stütze erhöhst und offen bleibst — nicht durch Drücken im Hals."
+          ],
+          "steigerung": "Steigere die Lautstärke behutsam und achte darauf, dass der Hals dabei locker bleibt.",
+          "selbstkontrolle": "Der Ton wird tragfähiger, ohne dass der Hals sich anspannt oder kratzt."
         }
       }
     },
     {
-      "id": "hydration_hygiene",
+      "id": "artikulation_text",
       "anzeigetitel": {
-        "de": "Hydration und Stimmhygiene"
+        "de": "Artikulation & Textverständlichkeit"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "tonhoehe_clean"
+      ],
+      "erklaerteil": {
+        "de": "Gerade in Hardcore und Metalcore soll das Publikum den Text verstehen — und selbst tiefe Growls oder hohe Screams gewinnen an Wucht, wenn die Konsonanten klar sind. Artikulation ist die Arbeit von Lippen, Zunge und Kiefer, nicht des Halses.\n\nDeutliche Konsonanten geben dem Gesang Rhythmus und Biss, während offene Vokale den Ton tragen. Du übst das, indem du Text zunächst überdeutlich und langsam sprichst und dann in den Gesang überführst.\n\nEin klar artikulierter Text macht deine Vocals nicht nur verständlicher, sondern auch prägnanter — die Aussprache ist ein Ausdrucksmittel, kein bloßes Beiwerk."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Konsonanten schärfen",
+          "ziel": "Text klar und rhythmisch artikulieren.",
+          "schritte": [
+            "Sprich eine kurze Textzeile überdeutlich und langsam, mit betonten Konsonanten.",
+            "Achte darauf, dass Lippen, Zunge und Kiefer die Arbeit machen, nicht der Hals.",
+            "Übertrag die klare Artikulation in einen leisen, gesungenen Vortrag."
+          ],
+          "steigerung": "Steigere das Tempo der Zeile, ohne die Deutlichkeit zu verlieren.",
+          "selbstkontrolle": "Die Konsonanten sind klar hörbar; der Text bleibt auch schneller verständlich."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "rhythmus_phrasierung",
+      "anzeigetitel": {
+        "de": "Rhythmus & Phrasierung"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "tonhoehe_clean"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Vocals im Metal sind Teil des Rhythmus. Wann eine Silbe kommt und wie sie mit dem Riff und dem Beat zusammenfällt, entscheidet über die Wucht — besonders im rhythmisch getriebenen Thrash und Hardcore, wo der Gesang oft wie ein Schlaginstrument arbeitet.\n\nPhrasierung heißt, den Text bewusst über den Takt zu verteilen: betonte Silben auf Akzente, Pausen als Teil des Ausdrucks. Du übst das am besten zunächst rhythmisch gesprochen zum Klick, bevor Tonhöhe oder Verzerrung dazukommen.\n\nEin Text, der rhythmisch sitzt, zieht auch dann, wenn er schlicht ist — Timing ist im Metal-Gesang genauso wichtig wie an den Instrumenten."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Text zum Klick sprechen",
+          "ziel": "Silben rhythmisch präzise auf Beat und Riff setzen.",
+          "schritte": [
+            "Stell das Metronom auf ein moderates Tempo und sprich eine Textzeile rhythmisch mit.",
+            "Setz die betonten Silben bewusst auf die Zählzeiten oder Akzente.",
+            "Halte die Phrasierung über mehrere Durchgänge gleich, sodass sie sitzt."
+          ],
+          "steigerung": "Verschieb einzelne Silben auf Synkopen und pass die Phrasierung an ein konkretes Riff an.",
+          "selbstkontrolle": "Die Silben liegen präzise im Timing; betonte Silben fallen mit den Akzenten zusammen."
+        }
+      }
+    },
+    {
+      "id": "clean_im_metal",
+      "anzeigetitel": {
+        "de": "Clean-Gesang im Metal"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "doom",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "tonhoehe_clean"
+      ],
+      "erklaerteil": {
+        "de": "Nicht jeder Metal-Gesang ist verzerrt. Im Doom trägt oft eine klare, getragene Stimme die schwermütige Stimmung, und im Metalcore wechseln sich harsche Strophen häufig mit melodischen, clean gesungenen Refrains ab.\n\nClean-Gesang baut direkt auf den Grundlagen auf: Atemstütze, Resonanz und getroffene Tonhöhe. Er verlangt weniger Wucht, aber mehr Kontrolle über Ton und Melodie. Gerade der Kontrast zwischen clean und hart macht viele moderne Metal-Vocals interessant.\n\nÜbe Clean-Passagen entspannt und in bequemer Lage. Eine sichere, klare Stimme in mittlerer Höhe ist eine wertvolle Grundlage, egal wie hart die restlichen Parts sind."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Getragene Melodie singen",
+          "ziel": "Eine einfache Melodie clean, sicher und entspannt singen.",
+          "schritte": [
+            "Wähl eine kurze, einfache Melodie in bequemer Lage.",
+            "Sing sie mit Atemstütze und offener Resonanz, ohne zu drücken.",
+            "Achte auf saubere Tonhöhe und einen ruhigen, getragenen Klang."
+          ],
+          "steigerung": "Erweitere die Melodie oder singe sie zu einem langsamen, doom-artigen Begleitklang.",
+          "selbstkontrolle": "Die Melodie sitzt sauber und klingt entspannt; kein Drücken in hohen Tönen."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "dynamik_ausdruck",
+      "anzeigetitel": {
+        "de": "Dynamik & Ausdruck"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "resonanz_projektion"
+      ],
+      "erklaerteil": {
+        "de": "Ausdruck entsteht aus Kontrast: leise und laut, weich und hart, drängend und zurückgenommen. Eine Textzeile, die immer gleich klingt, verliert schnell ihre Wirkung — Dynamik gibt dem Gesang Leben.\n\nDu gestaltest sie über die Atemstütze: mehr Stütze und Offenheit für Intensität, weniger für Zurückhaltung. Auch Tempo, Betonung und kleine Pausen sind Ausdrucksmittel. Wichtig ist, dass Intensität aus Technik kommt und nicht aus Halsdruck.\n\nProbier bewusst verschiedene Intensitäten an derselben Zeile aus. So entwickelst du ein Gespür dafür, wie du eine Aussage stimmlich formst — der Kern von Bühnenpräsenz."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Eine Zeile, mehrere Intensitäten",
+          "ziel": "Ausdruck durch bewusste Dynamik gestalten.",
+          "schritte": [
+            "Sprich oder sing eine Textzeile einmal zurückgenommen und leise.",
+            "Wiederhole sie intensiver, indem du die Stütze erhöhst — nicht den Halsdruck.",
+            "Vergleich die Varianten und spür, wie sich die Wirkung verändert."
+          ],
+          "steigerung": "Gestalte innerhalb einer Zeile einen Verlauf von leise zu intensiv.",
+          "selbstkontrolle": "Die Intensität verändert sich hörbar, während der Hals locker bleibt."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "mikrofontechnik",
+      "anzeigetitel": {
+        "de": "Mikrofontechnik"
+      },
+      "domaene": [
+        "gesang",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "resonanz_projektion"
+      ],
+      "erklaerteil": {
+        "de": "Das Mikrofon ist Teil deines Instruments. Wie nah du herangehst und in welchem Winkel du singst, formt Klang und Lautstärke deutlich — der „Nahbesprechungseffekt“ macht den Ton bei geringem Abstand voller und bassiger.\n\nFür laute, intensive Parts nimmst du das Mikro oft etwas weiter weg oder singst leicht daran vorbei, um Übersteuern zu vermeiden; für leise Passagen gehst du näher heran. Ein bewusster Umgang mit dem Abstand ersetzt einen Teil der Lautstärkearbeit und schont so die Stimme.\n\nPraktisch wichtig ist außerdem, das Mikro nicht mit der Hand am Kopf zu umschließen (das fördert Rückkopplungen) und es ruhig und stabil zu führen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Abstand bewusst nutzen",
+          "ziel": "Klang und Lautstärke über den Mikrofonabstand steuern.",
+          "schritte": [
+            "Sing eine Zeile nah am Mikrofon und höre den volleren, bassigeren Klang.",
+            "Wiederhole sie mit etwas mehr Abstand für laute, intensive Stellen.",
+            "Wechsle bewusst zwischen nah (leise) und etwas ferner (laut), ohne den Ton zu verlieren."
+          ],
+          "steigerung": "Übe fließende Abstandswechsel innerhalb einer Phrase, passend zur Dynamik.",
+          "selbstkontrolle": "Du steuerst Klang und Pegel über den Abstand; keine Übersteuerung bei lauten Stellen."
+        }
+      }
+    },
+    {
+      "id": "aufwaermen_stimmgesundheit",
+      "anzeigetitel": {
+        "de": "Aufwärmen & Abwärmen der Stimme"
       },
       "domaene": [
         "koerper"
@@ -135,19 +380,49 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "warum_zuerst"
+        "gesang_haltung_atmung"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "stimmgesundheit"
       ],
       "erklaerteil": {
-        "de": "Deine Stimmbänder arbeiten am besten, wenn sie gut befeuchtet sind. Trink über den Tag verteilt reichlich Wasser, und zwar nicht erst kurz vor dem Üben, denn die Befeuchtung der Stimmlippen braucht Zeit. Eine trockene Stimme ist anfälliger und ermüdet schneller.\n\nZur Stimmhygiene gehört auch, was du meidest: Alkohol und Rauch vor dem Üben trocknen aus und reizen — beides hat vor einer Session nichts zu suchen. Auch lautes Sprechen in Lärm, zu wenig Schlaf oder ein Infekt machen die Stimme empfindlich.\n\nSei besonders vorsichtig, wenn du erkältet oder heiser bist: Dann ist die Stimme ohnehin schon belastet, und Screaming kann echten Schaden anrichten. An solchen Tagen gilt Schonung vor Ehrgeiz."
+        "de": "Die Stimme ist Muskelarbeit an einem empfindlichen Gewebe — Aufwärmen davor und Abwärmen danach sind kein Luxus, sondern Schutz. Vor dem Singen bringst du die Stimme mit sanften, leisen Übungen (Summen, Lip Trills, sanfte Sirenen) auf Betriebstemperatur; nach intensiven Parts hilft leises, entspanntes Abwärmen, die Stimme zu beruhigen.\n\nDas gilt für Extreme Metal doppelt: Verzerrte Vocals belasten stärker, also ist eine gut vorbereitete Stimme umso wichtiger. Als Prinzip gilt — leicht beginnen, allmählich steigern, auf Signale hören. Heiserkeit, Kratzen, Schmerz oder ein „belegtes“ Gefühl sind Warnzeichen, bei denen du aufhörst."
       },
       "reflexionsaufgabe": {
-        "de": "Wie sieht dein Trink- und Ruheverhalten an einem typischen Übungstag aus? Nimm dir vor, über den Tag genug Wasser zu trinken und vor dem Üben auf Alkohol und Rauch zu verzichten. Leg außerdem für dich fest, woran du erkennst, dass deine Stimme heute eher Ruhe braucht als eine Screaming-Session."
+        "de": "Überleg dir eine kurze, feste Routine zum Auf- und Abwärmen, die du vor und nach jedem Singen einhältst. Welche sanften Übungen nimmst du hinein, und woran willst du erkennen, dass deine Stimme noch nicht bereit ist oder eine Pause braucht?"
       }
     },
     {
-      "id": "grundstimme",
+      "id": "stimme_schuetzen_alltag",
       "anzeigetitel": {
-        "de": "Die saubere Grundstimme finden"
+        "de": "Stimme schützen: Ruhe, Flüssigkeit, Grenzen"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "aufwaermen_stimmgesundheit"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Ein großer Teil der Stimmgesundheit passiert außerhalb des Übens. Ausreichend Wasser hält die Schleimhäute geschmeidig; Schlaf und Ruhephasen lassen das Gewebe sich erholen. Wer heiser, erkältet oder verschleimt ist, singt besser nicht intensiv — schon gar nicht verzerrt.\n\nAuch die Dauer zählt: Kurze, konzentrierte Einheiten mit Pausen sind schonender als langes Durchsingen. Die Stimme verzeiht Überlastung schlechter als die Hände, weil du sie nicht abschütteln kannst, wenn sie müde ist.\n\nExtreme Vocals sind ein Grenzbereich. Ein ehrlicher Umgang mit den eigenen Grenzen — und im Zweifel professionelle Anleitung — ist kein Zeichen von Schwäche, sondern die Voraussetzung dafür, lange singen zu können."
+      },
+      "reflexionsaufgabe": {
+        "de": "Welche Alltagsfaktoren (Flüssigkeit, Schlaf, Krankheit, Session-Länge) beeinflussen deine Stimme am stärksten? Formulier für dich klare Grenzen — wann du nicht intensiv singst und wann du eine Session abbrichst."
+      }
+    },
+    {
+      "id": "verzerrung_prinzip",
+      "anzeigetitel": {
+        "de": "Verzerrung: das Prinzip"
       },
       "domaene": [
         "gesang"
@@ -158,90 +433,22 @@
       "typ": "micro",
       "voraussetzungen": [
         "atemstuetze",
-        "aufwaermen_stimme"
+        "resonanz_projektion"
       ],
       "erklaerteil": {
-        "de": "Bevor du verzerrst, brauchst du einen sauberen Ton darunter. Der entscheidende Gedanke bei gesundem Screaming: Die Verzerrung ist eine Schicht, die über einem klaren, gestützten Ton liegt. Wer keinen sauberen Ton hat, presst — und presst falsch.\n\nFinde deshalb zuerst eine entspannte, getragene Sprechstimme und einen bequemen gesungenen Ton. Er soll mühelos klingen, allein von der Atemstütze getragen, ohne jeden Druck im Hals. Genau dieses „mühelos“ ist der Maßstab, an dem du später auch jeden Scream misst.\n\nDiese Grundstimme ist dein sicherer Anker. Wann immer sich ein Scream eng oder schmerzhaft anfühlt, kehrst du zu diesem klaren, lockeren Ton zurück."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Klarer, getragener Ton",
-          "ziel": "Einen mühelosen, von der Atmung gestützten Grundton ohne Halsdruck erzeugen.",
-          "schritte": [
-            "Atme tief in den Bauch und sprich ein entspanntes, klangvolles „Hey“ auf einer bequemen Tonhöhe.",
-            "Halte den Vokal einige Sekunden als gesungenen Ton und lass ihn allein von der Atemstütze tragen.",
-            "Prüfe mit einer locker aufgelegten Hand am Hals, dass dort nichts eng wird und nichts drückt."
-          ],
-          "steigerung": "Bewege den Ton in kleinen Schritten über einen bequemen Tonumfang, ohne dass er angestrengt klingt.",
-          "selbstkontrolle": "Der Ton klingt klar und mühelos, die Atmung trägt ihn, und dein Hals bleibt völlig locker."
-        }
-      }
-    },
-    {
-      "id": "verzerrung_verstehen",
-      "anzeigetitel": {
-        "de": "Was Verzerrung wirklich ist"
-      },
-      "domaene": [
-        "gesang"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "grundstimme"
-      ],
-      "erklaerteil": {
-        "de": "Die verbreitetste und gefährlichste Fehlannahme über Screaming lautet, man müsse den Ton aus dem Hals „herauspressen“. Das Gegenteil ist richtig: Verzerrung entsteht durch Luft und Resonanz und durch das kontrollierte Mitschwingen von Gewebe oberhalb der echten Stimmbänder — den Taschenfalten (false vocal folds). Deine eigentlichen Stimmbänder dürfen dabei entspannt weiterschwingen.\n\nFür den Einstieg unterscheidet man grob zwei Wege. Beim False-Cord-Screaming erzeugen die Taschenfalten die Verzerrung, während der klare Ton darunter geschützt bleibt; das ist ein häufiger, vergleichsweise gutmütiger Einstieg. Beim Fry-Screaming baut der Klang auf einem knarrenden „Vocal Fry“ auf. Beide funktionieren einzig mit viel Luft und lockerem Hals.\n\nMerk dir den roten Faden für alles Folgende: Kraft kommt aus der Atmung, Klangfarbe aus der Resonanz, und nichts davon aus rohem Druck. Sobald du das Gefühl hast, etwas zu erzwingen, ist die Technik falsch — und das ist der Moment aufzuhören."
+        "de": "Harsche Metal-Vocals — Growls, Screams, Shouts — sind im Kern eine kontrollierte Verzerrung, die auf einem gesunden, gestützten Luftstrom „reitet“. Der raue Klang entsteht durch Schwingungen zusätzlicher Gewebe (etwa der Taschenfalten), nicht durch das Pressen oder Reiben der eigentlichen Stimmbänder.\n\nDas entscheidende Prinzip: Die Verzerrung darf nie aus Halsdruck oder Schmerz kommen. Richtig ausgeführt fühlt sich harscher Gesang tragfähig und weitgehend mühelos an; er kratzt nicht und tut nicht weh. Sobald es schmerzt, roh wird oder die Stimme danach heiser ist, läuft etwas falsch.\n\nDeshalb ist die Reihenfolge wichtig: erst Haltung, Atmung, Stütze und Resonanz — dann, sehr behutsam, die Verzerrung darauf. Und weil hier viel schiefgehen kann, ist die Begleitung durch eine erfahrene Lehrperson für harsche Vocals dringend zu empfehlen."
       },
       "reflexionsaufgabe": {
-        "de": "Beschreibe in eigenen Worten, wo ein Scream wirklich herkommt — aus der Luft und den Taschenfalten, nicht aus dem Pressen im Hals. Warum ist ein sauberer, gestützter Ton die Voraussetzung dafür? Und woran würdest du im Üben merken, dass du gerade doch presst, statt die Luft strömen zu lassen?"
-      }
+        "de": "Warum ist ein gestützter, entspannter Luftstrom die Voraussetzung dafür, harsche Vocals ohne Schaden zu erzeugen? Und welche konkreten Warnzeichen würdest du als Signal werten, sofort aufzuhören und dir fachkundige Anleitung zu holen?"
+      },
+      "spielziele": [
+        "verzerrungskontrolle"
+      ]
     },
     {
-      "id": "false_cord",
+      "id": "harsh_stile_ueberblick",
       "anzeigetitel": {
-        "de": "False-Cord-Screaming sicher einsteigen"
-      },
-      "domaene": [
-        "gesang"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "hardcore",
-        "metalcore",
-        "death_metal"
-      ],
-      "voraussetzungen": [
-        "verzerrung_verstehen",
-        "aufwaermen_stimme",
-        "grundstimme"
-      ],
-      "erklaerteil": {
-        "de": "False-Cord-Screaming ist für die meisten der sicherste Einstieg in die Verzerrung. Die Taschenfalten oberhalb der Stimmbänder erzeugen den rauen Klang, während dein eigentlicher Ton darunter geschützt weiterschwingt. Der Sound reicht vom Hardcore-Shout bis zum Metalcore-Scream.\n\nTaste dich ganz leise heran. Ein hilfreiches Bild ist ein leises, raues Knurren, wie ein sanftes, entspanntes Räuspern — winzig, luftig, ohne jede Kraft. Genau dieses kleine, lockere Geräusch ist der Keim des False-Cord-Screams. Von dort gibst du nach und nach etwas mehr Atemstütze dazu, niemals mehr Halsdruck.\n\nBleib die ganze Zeit leise und kurz. Ein einzelner, entspannter Scream-Ansatz von einer Sekunde ist mehr wert als jedes laute Ausprobieren. Wenn es kratzt, sticht oder die Stimme danach heiser klingt, hörst du sofort auf. Und weil man beim Erlernen der Verzerrung viel falsch machen kann, ist gerade hier ein Vocal-Coach Gold wert."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Leiser False-Cord-Ansatz",
-          "ziel": "Den rauen Klang der Taschenfalten leise und schmerzfrei entdecken — mit klarem Ton darunter.",
-          "schritte": [
-            "Wärm dich auf und finde zuerst deinen sauberen, gestützten Grundton.",
-            "Erzeuge ganz leise ein raues, luftiges Knurren, wie ein sanftes Räuspern — winzig und völlig ohne Kraft.",
-            "Lass diesen rauen Anteil höchstens ein bis zwei Sekunden auf dem gestützten Ton mitklingen und atme danach locker aus."
-          ],
-          "steigerung": "Gib nach und nach etwas mehr Atemstütze dazu, um den Klang zu tragen — nie mehr Druck im Hals, und immer nur, solange es mühelos bleibt.",
-          "selbstkontrolle": "Der Klang bleibt leise und mühelos, dein Hals fühlt sich danach nicht gereizt an, und deine klare Sprechstimme ist sofort wieder da. Beim kleinsten Kratzen: sofort stoppen."
-        }
-      }
-    },
-    {
-      "id": "fry_scream",
-      "anzeigetitel": {
-        "de": "Fry-Screaming sicher einsteigen"
+        "de": "Harsh-Vocal-Stile im Überblick"
       },
       "domaene": [
         "gesang"
@@ -252,33 +459,27 @@
       "typ": "micro",
       "stil": [
         "black_metal",
-        "death_metal"
+        "death_metal",
+        "hardcore",
+        "thrash"
       ],
       "voraussetzungen": [
-        "verzerrung_verstehen",
-        "aufwaermen_stimme"
+        "verzerrung_prinzip"
       ],
       "erklaerteil": {
-        "de": "Fry-Screaming baut auf dem „Vocal Fry“ auf — jenem tiefen, knarrenden Knattern, das deine Stimme ganz leise und ohne Anstrengung erzeugen kann. Dieses leise Knarren ist der Ausgangspunkt; mit Atemstütze getragen und über Resonanz verstärkt, wird daraus ein rauer Scream, wie man ihn im Black Metal und in Teilen des Death Metal hört.\n\nFinde zuerst den reinen Fry ganz ohne Kraft: ein leises, entspanntes Knarren am unteren Rand deiner Stimme, fast wie ein knatterndes „Aaah“ in Zeitlupe. Es darf sich nie angestrengt anfühlen. Erst wenn dieses lockere Knarren zuverlässig da ist, gibst du behutsam Luft und Resonanz dazu.\n\nAuch hier gilt: leise, kurz, schmerzfrei. Der Fry ist verführerisch, weil er schnell nach „echt“ klingt — und genau deshalb ist die Versuchung groß, ihn mit Druck lauter zu machen. Tu das nicht. Lautstärke kommt später aus Mikrofon und Resonanz. Bei Kratzen, Schmerz oder Heiserkeit stoppst du sofort und arbeitest im Zweifel mit einem Coach."
+        "de": "Harsche Vocals sind kein einheitliches Ding, sondern eine Familie von Klängen, die sich nach Genre unterscheiden. Grob lassen sich hohe, tiefe und mittlere Ausprägungen unterscheiden.\n\nHohe, kreischende Screams prägen den Black Metal; tiefe, gutturale Growls sind das Kennzeichen des Death Metal; mittlere, geschriene bis gebellte Vocals mit viel Textverständlichkeit finden sich in Hardcore und Thrash. Metalcore mischt oft mehrere davon und kombiniert sie mit Clean-Gesang.\n\nEs lohnt sich, diese Klangbilder bewusst zu hören und zu unterscheiden, bevor du selbst in eine Richtung gehst. Das Ziel ist nicht, alles sofort zu können, sondern zu wissen, welcher Klang zu deiner Musik passt — und dass jeder davon auf denselben gesunden Grundlagen aufbaut."
       },
-      "uebungsteil": {
-        "de": {
-          "titel": "Vom Vocal Fry zum leisen Scream",
-          "ziel": "Aus einem lockeren Vocal Fry einen leisen, schmerzfreien Scream-Ansatz entwickeln.",
-          "schritte": [
-            "Wärm dich auf und erzeuge einen ganz leisen, entspannten Vocal Fry — ein knarrendes Geräusch am unteren Rand der Stimme, völlig ohne Kraft.",
-            "Halte dieses lockere Knarren ein paar Sekunden und achte darauf, dass der Hals dabei entspannt bleibt.",
-            "Gib nun sanft etwas Atemstütze dazu, sodass das Knarren einen Hauch voller klingt — leise und nur für kurze Momente."
-          ],
-          "steigerung": "Trage den Fry mit etwas mehr Luft ein wenig länger, immer aus der Atmung heraus und nie über Halsdruck.",
-          "selbstkontrolle": "Das Knarren entsteht mühelos, ohne Enge im Hals; danach ist deine klare Stimme sofort wieder da. Sobald es kratzt oder schmerzt: aufhören."
-        }
-      }
+      "reflexionsaufgabe": {
+        "de": "Hör dir bewusst Beispiele für hohe, tiefe und mittlere harsche Vocals an. Welcher Klang passt zu der Musik, die du machen willst — und welche der Grundlagen (Stütze, Resonanz, Artikulation) wäre dafür wohl besonders wichtig?"
+      },
+      "spielziele": [
+        "verzerrungskontrolle"
+      ]
     },
     {
-      "id": "growls_shrieks",
+      "id": "sanfter_einstieg_verzerrung",
       "anzeigetitel": {
-        "de": "Tiefe Growls und hohe Shrieks"
+        "de": "Sanfter Einstieg in die Verzerrung"
       },
       "domaene": [
         "gesang"
@@ -289,88 +490,27 @@
       "typ": "micro",
       "stil": [
         "death_metal",
-        "doom",
         "black_metal"
       ],
       "voraussetzungen": [
-        "false_cord",
-        "fry_scream"
+        "verzerrung_prinzip",
+        "aufwaermen_stimmgesundheit"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "verzerrungskontrolle"
       ],
       "erklaerteil": {
-        "de": "Extreme Vocals decken einen weiten Bereich ab. Tiefe Growls — das gutturale Grollen des Death Metal und Doom — leben von tiefer Resonanz im Brust- und Rachenraum. Hohe Shrieks und Kreischer, typisch für den Black Metal, klingen schneidend und hell. Beide sind Klangfarben derselben Grundtechnik, nur in unterschiedlichen Lagen und Resonanzräumen.\n\nFür den Einstieg gilt: Die tiefe Richtung ist oft gutmütiger, weil sie mit lockerem, tiefem Klang und viel Luft arbeitet. Die hohen Shrieks sind reizvoll, verleiten aber besonders leicht zum Drücken und Erzwingen — und damit zur Überlastung. Nähere dich den Höhen erst, wenn tiefe und mittlere Screams zuverlässig mühelos gelingen.\n\nGanz gleich, in welche Richtung es dich zieht: Die Lage änderst du über Resonanz und Vokalform, nie über zusätzlichen Druck. Höhe ist kein Kraftakt. Wenn ein hoher Schrei nur mit Anstrengung und Enge geht, ist er schlicht noch nicht dran."
+        "de": "Wenn du harsche Vocals ausprobierst, gilt eine einzige Regel über allem: extrem behutsam und leise beginnen. Ein erster Zugang führt oft über sehr leise, raue Laute — etwa das Geräusch eines leisen, entspannten „Knarrens“ der Stimme oder eines gehauchten Fauchens — auf gestütztem Luftstrom, ohne jeden Druck.\n\nHalte solche Versuche kurz und leise. Es geht nicht darum, laut oder „brutal“ zu klingen, sondern darum, überhaupt ein rohes Klangelement zu finden, das sich mühelos anfühlt. Lautstärke und Intensität kommen erst viel später und ergeben sich aus Technik, nie aus Kraft.\n\nWeil beim harschen Gesang ohne Anleitung leicht Schaden entsteht, ist dieser Baustein bewusst als Prinzip gehalten, nicht als Trainingsplan: Brich sofort ab, wenn etwas kratzt, wehtut oder die Stimme heiser wird, und such dir für die eigentliche Technik eine erfahrene Lehrperson."
       },
       "reflexionsaufgabe": {
-        "de": "Welcher Klang reizt dich mehr — tiefe Growls oder hohe Shrieks? Überlege, warum gerade die hohen Lagen die größte Gefahr bergen, in Druck und Enge zu verfallen. Wie stellst du sicher, dass du die Lage über Resonanz suchst und nicht über Kraft — und ab wann würde sich das nach einer Aufgabe für einen Coach anfühlen?"
+        "de": "Formulier für deinen ersten Zugang zu harschen Vocals klare Sicherheitsregeln — etwa: leise, kurz, auf Stütze, sofort stoppen bei Kratzen oder Schmerz. Wie würdest du vorgehen, um eine erfahrene Lehrperson oder verlässliche Anleitung zu finden, bevor du intensiver wirst?"
       }
     },
     {
-      "id": "resonanz_statt_druck",
+      "id": "zur_musik_singen",
       "anzeigetitel": {
-        "de": "Lautstärke aus Resonanz, nicht aus Druck"
-      },
-      "domaene": [
-        "gesang"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "false_cord"
-      ],
-      "erklaerteil": {
-        "de": "Wer lauter werden will, drückt instinktiv mehr — und genau das ist der häufigste Weg in die Verletzung. Echte Durchsetzungskraft kommt aus Resonanz und einer stabilen Atemstütze: aus den Räumen in Brust, Rachen, Mund und Maske, die den Klang verstärken. Mehr Halsdruck macht dich dagegen nicht durchsetzungsfähiger, nur verletzungsanfälliger.\n\nStell dir vor, der Klang füllt den Raum vor dir, statt aus dem Hals herausgepresst zu werden. Wenn du Resonanz spürst — ein Kribbeln oder Brummen im Gesicht und im Brustkorb — trägt der Ton fast von allein. Der Hals bleibt dabei ein offenes Rohr und ist kein Kraftzentrum.\n\nDiese Umstellung ist der Kern gesunden Screamings. Später übernimmt zusätzlich das Mikrofon einen großen Teil der Lautstärke — umso weniger musst du selbst „liefern“. Laut wird der Sound durch Technik und Verstärkung, nicht durch Gewalt."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Klang in den Raum geben",
-          "ziel": "Präsenz und Fülle über Resonanz erzeugen, ohne den Hals stärker zu belasten.",
-          "schritte": [
-            "Erzeuge deinen leisen, sauberen Grundton und spüre mit einer Hand auf dem Brustbein das Mitschwingen.",
-            "Summe und suche das Kribbeln im Gesicht (der „Maske“) und lenke die Aufmerksamkeit dorthin, statt in den Hals.",
-            "Gib den Ton bewusst „in den Raum vor dir“, als wolltest du eine Wand in einigen Metern Abstand erreichen — mit Atemstütze, nicht mit Halsdruck."
-          ],
-          "steigerung": "Wechsle zwischen einer leisen und einer etwas präsenteren Version, wobei allein Atem und Resonanz den Unterschied machen — der Hals bleibt gleich locker.",
-          "selbstkontrolle": "Der Ton wirkt voller und präsenter, obwohl sich dein Hals nicht mehr anstrengt; die zusätzliche Präsenz kommt spürbar aus Atem und Resonanz."
-        }
-      }
-    },
-    {
-      "id": "mikrofontechnik",
-      "anzeigetitel": {
-        "de": "Mikrofontechnik für Screams"
-      },
-      "domaene": [
-        "gesang"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "resonanz_statt_druck"
-      ],
-      "erklaerteil": {
-        "de": "Das Mikrofon ist bei Extreme Vocals dein wichtigster Verbündeter für Lautstärke. Ein dynamisches Mikrofon, nah besungen und mit passender Verstärkung, nimmt selbst leise, kontrollierte Screams auf und macht sie durchsetzungsfähig. Das entlastet deine Stimme enorm — du musst nicht laut sein, das Mikrofon ist es.\n\nHalte das Mikrofon nah und gleichmäßig vor den Mund und lerne, den Abstand bewusst zu steuern: bei intensiveren Passagen etwas weiter weg, bei leisen näher heran. So bleibt der Pegel gleichmäßig, ohne dass du mit der Stimme nachhelfen musst. Der Griff ist ruhig, die Schultern bleiben locker.\n\nWenn du dich früh an diese Arbeitsteilung gewöhnst — du lieferst Klang und Kontrolle, das Mikrofon liefert Lautstärke — nimmst du enorm viel Druck aus dem Hals. Genau das ist der Sinn der Übung: sicher laut klingen, ohne selbst laut zu sein."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Nah und gleichmäßig ins Mikrofon",
-          "ziel": "Über den Mikrofonabstand einen konstanten, kräftigen Pegel bei leiser, sicherer Stimme erreichen.",
-          "schritte": [
-            "Halte ein dynamisches Mikrofon nah vor den Mund und erzeuge leise, mit deiner geübten und entspannten Technik, einen Scream direkt hinein.",
-            "Variiere bewusst den Abstand und höre über eine Aufnahme oder einen Monitor, wie sich Lautstärke und Klang verändern.",
-            "Finde den Abstand, bei dem ein leiser, mühelos erzeugter Scream bereits voll und präsent klingt."
-          ],
-          "steigerung": "Übe, bei wechselnder Intensität den Abstand so anzupassen, dass der Pegel gleichmäßig bleibt — die Stimme selbst bleibt leise und locker.",
-          "selbstkontrolle": "Die Aufnahme klingt kräftig und präsent, obwohl du mit sehr moderater, schmerzfreier Stimme gearbeitet hast."
-        }
-      }
-    },
-    {
-      "id": "phrasierung_timing",
-      "anzeigetitel": {
-        "de": "Phrasierung und Timing zur Band"
+        "de": "Zur Musik & zum Klick singen"
       },
       "domaene": [
         "mentales"
@@ -380,70 +520,16 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "false_cord",
-        "aufwaermen_stimme"
+        "rhythmus_phrasierung"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
       ],
       "erklaerteil": {
-        "de": "Ein Scream steht selten allein — er sitzt in einem Text, in einem Rhythmus, in einem Song. Wo du atmest, wie du Silben auf die Betonungen legst und wann du einsetzt, entscheidet darüber, ob deine Vocals mit der Band verschmelzen oder daneben liegen. Gutes Timing ist auch hier der Unterschied zwischen „tight“ und „matschig“.\n\nPlane deine Atmung wie ein Instrumentalist seine Phrasen: Lege bewusst fest, wo du Luft holst, damit dir nicht mitten in einer Zeile die Stütze ausgeht. Sprich einen Text zunächst rhythmisch und locker, bevor du ihn verzerrst — so trennst du die Frage „Wo sitzt was?“ von der Frage „Wie klingt es?“.\n\nÜbe langsam und zu einem Klick oder Playback. Tightes Timing entsteht durch viele saubere, entspannte Wiederholungen und nicht durch lautes Mitbrüllen. So bleibt auch die Stimme geschont, während du die musikalische Seite formst."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Text im Timing, erst klar, dann rau",
-          "ziel": "Phrasierung, Atempausen und Einsätze sauber zum Beat setzen — und dabei die Stimme schonen.",
-          "schritte": [
-            "Wähle eine kurze Textzeile und sprich sie rhythmisch und entspannt zu einem langsamen Klick, ganz ohne Verzerrung.",
-            "Markiere dir, an welchen Stellen du Luft holst, sodass die Atemstütze nie mitten in der Zeile ausgeht.",
-            "Lege erst danach — leise und mit deiner geübten Technik — eine dezente Verzerrung darüber, ohne das Timing zu verlieren."
-          ],
-          "steigerung": "Erhöhe das Tempo in kleinen Schritten oder nimm eine zweite Zeile dazu; bleib dabei leise und locker.",
-          "selbstkontrolle": "Die Einsätze sitzen im Timing, dir geht nie mitten in der Zeile die Luft aus, und die Verzerrung bleibt eine mühelose Schicht über einem klaren Text."
-        }
-      }
-    },
-    {
-      "id": "warnsignale",
-      "anzeigetitel": {
-        "de": "Warnsignale erkennen und sofort stoppen"
-      },
-      "domaene": [
-        "koerper"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "warum_zuerst",
-        "aufwaermen_stimme"
-      ],
-      "erklaerteil": {
-        "de": "Deine Stimme sendet klare Warnungen, wenn etwas nicht stimmt — du musst sie nur ernst nehmen. Schmerz beim oder nach dem Tönen, Kratzen, ein Brennen, Heiserkeit, eine belegte oder wegbrechende Stimme, das Gefühl eines Kloßes im Hals und erst recht Blut sind unmissverständliche Stoppsignale.\n\nDie Regel ist einfach und gilt ausnahmslos: Bei jedem dieser Zeichen hörst du sofort auf und schonst die Stimme — kein „nur noch einmal“, kein Durchbeißen. Screaming durch Schmerz hindurch macht aus einer kleinen Reizung schnell eine ernsthafte Verletzung. Heiserkeit nach dem Üben bedeutet, dass du zu viel oder falsch belastet hast.\n\nGenauso wichtig ist der Blick auf morgen: Wenn deine Sprechstimme am Tag danach noch angeschlagen ist, war die Session zu hart. Eine gesunde Technik hinterlässt keine lädierte Stimme. Halten Beschwerden über Tage an, gehörst du zu einer Fachärztin oder einem Facharzt für Hals-Nasen-Ohren."
+        "de": "Im Zusammenspiel muss der Gesang mit dem Rest der Band verzahnt sein — die Vocals sitzen auf dem Beat und den Riffs, nicht daneben. Das Üben zum Klick oder zur Aufnahme trainiert genau diese Verlässlichkeit.\n\nDas Prinzip gleicht dem der Instrumente: langsam und sauber phrasieren, das Tempo erst steigern, wenn die Phrasierung sitzt, und Timing bewusst behandeln. Weil der Gesang den Text trägt, fällt ein unsauberes Timing dem Publikum besonders auf.\n\nSo verbindest du die technischen Grundlagen mit der musikalischen Praxis: Eine gestützte, gesunde Stimme, die zusätzlich rhythmisch sicher sitzt, ist die Basis, auf der später Ausdruck und Härte aufbauen."
       },
       "reflexionsaufgabe": {
-        "de": "Präg dir deine persönliche Stopp-Liste ein: Schmerz, Kratzen, Brennen, Heiserkeit, Stimmverlust, Blut — bei jedem dieser Signale sofort aufhören. Woran erkennst du am Tag nach dem Üben, ob deine Session zu hart war? Und ab wann ist für dich der Punkt erreicht, zum HNO-Arzt zu gehen, statt weiterzumachen?"
-      }
-    },
-    {
-      "id": "pausen_regeneration",
-      "anzeigetitel": {
-        "de": "Pausen, Regeneration und wann zum Coach oder Arzt"
-      },
-      "domaene": [
-        "koerper"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "warum_zuerst",
-        "warnsignale"
-      ],
-      "erklaerteil": {
-        "de": "Die Stimme ist Muskulatur und empfindliches Gewebe zugleich — sie wird stärker in den Pausen, nicht während der Belastung. Kurze, regelmäßige Einheiten mit echten Ruhephasen bringen dich weiter und sicherer als seltene, lange Sessions. Für Extreme Vocals heißt das: lieber täglich ein paar Minuten sauber als einmal die Woche bis zur Erschöpfung.\n\nBaue innerhalb einer Session Pausen ein, wärme dich am Ende leise ab und gönne deiner Stimme nach intensivem Üben stimmschonende Tage. Auf akute Warnsignale folgt Stimmruhe, bis alles wieder völlig normal ist — und im Zweifel lieber einen Tag länger.\n\nUnd schließlich: Selbststudium hat Grenzen. Für Extreme Vocals ist eine qualifizierte Gesangslehrerin oder ein Vocal-Coach ausdrücklich zu empfehlen — sie hören und sehen Fehler, die dir entgehen, und bewahren dich vor Umwegen und Verletzungen. Halten Beschwerden an, treten sie wiederholt auf oder hast du Blut bemerkt, ist der Weg zum HNO-Arzt kein Rückschritt, sondern Teil verantwortungsvollen Übens."
-      },
-      "reflexionsaufgabe": {
-        "de": "Wie könnte ein gesunder Übungsrhythmus für dich aussehen — mit kurzen Einheiten, Pausen und stimmschonenden Tagen dazwischen? Überlege, welche zwei, drei Anlässe dich zu einem Vocal-Coach führen würden und welche zu einem HNO-Arzt. Und halte fest: Eine Pause ist kein Rückschritt, sondern die Voraussetzung dafür, dass deine Stimme lange hält."
+        "de": "Wie willst du üben, deine Phrasierung verlässlich auf Beat und Riff zu setzen — etwa zum Klick oder zu einer Aufnahme? Und woran merkst du, dass dein Timing im Zusammenspiel wirklich sitzt und nicht nur allein?"
       }
     }
   ]

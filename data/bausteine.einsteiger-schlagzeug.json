@@ -3,14 +3,14 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "einsteiger",
     "domaene": "schlagzeug",
-    "hinweis": "Phase-1-Startinhalt (Einsteiger-Schlagzeug). Das Vokabular ist zentral in bausteine.einsteiger-gitarre.json definiert; diese Datei trägt keinen eigenen vokabulare-Block. Sichtbare Titel stehen inline in anzeigetitel und werden im Repo nach labels/de.json geliftet."
+    "hinweis": "Einsteiger-Schlagzeug. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
   },
   "delta_bausteine": [],
   "bausteine": [
     {
-      "id": "sitzhaltung",
+      "id": "kit_sitzhaltung",
       "anzeigetitel": {
-        "de": "Sitzhaltung & Sitzposition"
+        "de": "Kit & Sitzhaltung"
       },
       "domaene": [
         "schlagzeug"
@@ -19,27 +19,30 @@
         "einsteiger"
       ],
       "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen"
+      ],
       "erklaerteil": {
-        "de": "Bevor du den ersten Schlag spielst, entscheidet deine Sitzposition darüber, wie locker und wie lange du spielen kannst. Beim schnellen Metal-Drumming arbeiten alle vier Gliedmaßen dauerhaft zusammen — das gelingt nur von einem stabilen, entspannten Sitz aus.\n\nStell den Hocker so hoch ein, dass deine Oberschenkel leicht nach unten abfallen: Die Hüfte sitzt etwas höher als die Knie, der Kniewinkel ist etwas offener als ein rechter Winkel. So bleiben die Beine beweglich und du behältst Kontrolle über die Pedale, ohne dich abstützen zu müssen.\n\nSitz aufrecht, das Gewicht mittig über dem Hocker, die Fußballen ruhen locker auf den Pedalen. Ein zu tiefer Sitz presst die Oberschenkel nach unten und blockiert die Fußarbeit, ein zu hoher nimmt dir Kraft. Der Rücken bleibt gerade und gelöst, nicht durchgedrückt."
+        "de": "Bevor ein Beat sitzt, entscheidet die Einrichtung des Kits darüber, wie entspannt und wie lange du spielen kannst. Die Höhe des Hockers ist der Ausgangspunkt: Die Oberschenkel fallen leicht nach unten ab, die Füße stehen locker auf den Pedalen, der Rücken bleibt aufrecht, ohne steif zu sein.\n\nTrommeln und Becken ordnest du so an, dass du sie ohne Strecken oder Verdrehen erreichst. Snare und Hi-Hat liegen zentral vor dir, die Toms in bequemer Reichweite. Alles, was du nur mit Verrenkung erreichst, kostet auf Dauer Kraft und geht auf die Gelenke.\n\nGesundheit hat Vorrang: Beim Extreme Metal spielst du oft schnell und lange. Eine Haltung, in der Schultern und Handgelenke locker bleiben, ist die Grundlage dafür — Verspannung oder Schmerz sind Signale, die Einrichtung oder Spielweise zu überprüfen."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Sitz-Check",
-          "ziel": "Eine stabile, entspannte Sitzposition finden, die du jedes Mal gleich einnimmst.",
+          "titel": "Kit ergonomisch einrichten",
+          "ziel": "Eine Sitz- und Kit-Position, in der alle Schläge ohne Strecken gelingen.",
           "schritte": [
-            "Setz dich mittig auf den Hocker und stell die Höhe so ein, dass deine Oberschenkel leicht nach unten abfallen.",
-            "Leg die Fußballen locker auf Bassdrum- und HiHat-Pedal, ohne Druck aufzubauen.",
-            "Prüfe, ob du beide Füße kurz anheben kannst, ohne mit dem Oberkörper zu kippen — dann sitzt du stabil."
+            "Stell die Hockerhöhe so ein, dass die Oberschenkel leicht abfallen und die Füße locker auf den Pedalen stehen.",
+            "Ordne Snare, Hi-Hat und Toms so an, dass du sie ohne Verdrehen des Oberkörpers erreichst.",
+            "Spiel locker ein paar Schläge auf jede Trommel und prüf, ob etwas nur mit Strecken erreichbar ist."
           ],
-          "steigerung": "Spiel ein paar einfache Schläge und achte darauf, dass der Oberkörper ruhig bleibt und nicht mitarbeitet.",
-          "selbstkontrolle": "Du sitzt aufrecht und mittig, die Oberschenkel fallen leicht ab, und du kannst die Füße frei bewegen, ohne das Gleichgewicht zu verlieren."
+          "steigerung": "Feile an der Anordnung, bis auch schnelle Wechsel zwischen den Trommeln entspannt gelingen.",
+          "selbstkontrolle": "Du erreichst alle Klangkörper ohne Strecken; Schultern und Rücken bleiben locker."
         }
       }
     },
     {
       "id": "stockhaltung",
       "anzeigetitel": {
-        "de": "Stockhaltung: Matched Grip"
+        "de": "Stockhaltung & Grip"
       },
       "domaene": [
         "schlagzeug"
@@ -49,29 +52,68 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "sitzhaltung"
+        "kit_sitzhaltung"
+      ],
+      "spielziele": [
+        "lockere_haende"
       ],
       "erklaerteil": {
-        "de": "Wie du die Sticks hältst, bestimmt Tempo, Kontrolle und Ausdauer. Für den Einstieg ist der Matched Grip die beste Wahl: Beide Hände halten den Stock gleich — anders als beim Traditional Grip, bei dem die Hände unterschiedlich greifen.\n\nDer wichtigste Punkt ist der Drehpunkt (Fulcrum): Daumen und Zeigefinger fassen den Stock locker etwa im hinteren Drittel, dort wo er ausbalanciert zurückfedert. Die übrigen Finger liegen leicht an und führen den Stock, sie klammern ihn nicht fest.\n\nHalte locker, nicht mit Kraft. Ein zu fester Griff würgt den natürlichen Rückschlag ab, macht dich langsamer und ermüdet die Hände. Der Stock soll in der Hand arbeiten können, nicht eingeklemmt sein."
+        "de": "Wie du die Sticks hältst, bestimmt Kontrolle, Tempo und wie schnell deine Hände ermüden. Verbreitet ist der „Matched Grip“, bei dem beide Hände die Sticks gleich fassen. Der Dreh- und Angelpunkt (Fulcrum) liegt zwischen Daumen und Zeigefinger; die übrigen Finger führen den Stick locker.\n\nEntscheidend ist ein lockerer Griff: Der Stick soll frei zurückschwingen können, statt fest umklammert zu werden. Ein zu fester Griff bremst das Tempo und ermüdet die Hände schnell — gerade im schnellen Metal ist Lockerheit keine Kür, sondern Voraussetzung.\n\nDenk an das Prinzip des freien Schlags: Du lässt den Stick auf das Fell fallen und den Rückprall arbeiten, statt jeden Schlag mit Kraft zu drücken."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Den Drehpunkt finden",
-          "ziel": "Den Stock locker am Balancepunkt halten und den Rückschlag zulassen.",
+          "titel": "Lockerer freier Schlag",
+          "ziel": "Ein entspannter Grip, der den Rückprall des Sticks nutzt.",
           "schritte": [
-            "Halte den Stick locker zwischen Daumen und Zeigefinger und lass ihn auf ein Übungspad oder die Snare fallen.",
-            "Verschiebe den Griffpunkt, bis der Stock am höchsten und gleichmäßigsten zurückspringt — das ist dein Drehpunkt.",
-            "Leg die restlichen Finger locker an und wiederhole einzelne Schläge mit beiden Händen gleich."
+            "Fass den Stick locker mit dem Fulcrum zwischen Daumen und Zeigefinger.",
+            "Lass den Stick auf die Snare fallen und beobachte, wie er von selbst zurückspringt.",
+            "Spiel gleichmäßige Schläge und halte die Hand dabei bewusst locker."
           ],
-          "steigerung": "Spiel langsame Einzelschläge im Wechsel (rechts, links) und achte darauf, dass beide Hände gleich klingen.",
-          "selbstkontrolle": "Der Stock federt von allein zurück, dein Griff bleibt locker, und beide Hände erzeugen den gleichen Klang."
+          "steigerung": "Nutze den Rückprall für schnellere, gleichmäßige Schläge, ohne den Griff zu verkrampfen.",
+          "selbstkontrolle": "Die Schläge klingen gleichmäßig, die Hände bleiben locker; bei Verkrampfung machst du Pause."
         }
       }
     },
     {
-      "id": "handgelenk_rebound",
+      "id": "fusstechnik",
       "anzeigetitel": {
-        "de": "Lockeres Handgelenk & Rebound"
+        "de": "Fußtechnik an der Bassdrum"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "kit_sitzhaltung"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "fuss_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Der Fuß an der Bassdrum funktioniert nach ähnlichen Prinzipien wie die Hände: Kontrolle und Entspannung schlagen rohe Kraft. Zwei Grundtechniken sind verbreitet — „Heel down“ (Ferse auf dem Pedal, Bewegung aus dem Fußgelenk) und „Heel up“ (Ferse angehoben, mehr Kraft aus dem Bein), das im schnellen Metal häufiger ist.\n\nWichtig ist ein gleichmäßiger, kontrollierter Tritt und ein lockeres Fußgelenk. Wer den Schlag verkrampft aus dem Bein presst, ermüdet schnell und verliert an Präzision. Ein lockerer, federnder Anschlag ist die Basis für spätere Geschwindigkeit.\n\nGesundheit hat Vorrang: Baue Tempo und Dauer schrittweise auf. Schmerz im Knie, Fußgelenk oder Schienbein ist ein Signal, langsamer zu machen oder zu pausieren."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gleichmäßige Bassdrum-Schläge",
+          "ziel": "Ein kontrollierter, entspannter Tritt aus dem Fußgelenk.",
+          "schritte": [
+            "Spiel gleichmäßige Viertel auf der Bassdrum, zunächst in ruhigem Tempo.",
+            "Achte auf einen lockeren, federnden Schlag statt eines gepressten.",
+            "Halte Lautstärke und Abstand der Schläge über mehrere Takte konstant."
+          ],
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und probier bei Bedarf Heel-up für mehr Geschwindigkeit.",
+          "selbstkontrolle": "Die Schläge klingen gleichmäßig; Bein und Fußgelenk bleiben entspannt, kein Schmerz."
+        }
+      }
+    },
+    {
+      "id": "puls_zaehlzeiten",
+      "anzeigetitel": {
+        "de": "Puls & Zählzeiten"
       },
       "domaene": [
         "schlagzeug"
@@ -83,30 +125,33 @@
       "voraussetzungen": [
         "stockhaltung"
       ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
       "erklaerteil": {
-        "de": "Metal-Drumming lebt von Geschwindigkeit, und Geschwindigkeit kommt aus dem Handgelenk, nicht aus dem ganzen Arm. Kleine, kontrollierte Bewegungen aus dem Handgelenk sind schneller und ausdauernder als Schläge aus dem Arm.\n\nGenauso wichtig ist der Rebound: Fell und Stock geben dir die Energie des Schlags zurück. Statt den Stock nach unten zu drücken und festzuhalten, lässt du ihn zurückspringen und fängst ihn locker wieder auf. Diese zurückgegebene Energie nutzt du — sie spart Kraft und ist der Schlüssel zu schnellen Doppelschlägen und Rolls.\n\nDenk an einen Ball, der auf dem Fell aufprallt: Du gibst den Impuls und lässt es geschehen. Je lockerer die Hand, desto besser federt der Stock. Verkrampfung ist hier der größte Bremsklotz — sie stoppt den Rückschlag und kostet dich Tempo."
+        "de": "Als Schlagzeuger:in bist du das Rückgrat des Timings — dafür musst du den Puls sicher fühlen und die Unterteilungen kennen. Ein Takt im 4/4 hat vier Zählzeiten; dazwischen liegen Achtel („und“) und Sechzehntel, die du zählst, um schnelle Figuren zu ordnen.\n\nÜbe von Anfang an mit einem Metronom. Der Klick macht hörbar, ob du wirklich im Puls bist, und trainiert dein inneres Zeitgefühl. Gerade im Metal, wo Tempo und Präzision zählen, ist ein stabiler Puls wichtiger als schnelle Hände.\n\nZähl beim Spielen laut oder innerlich mit. Das verbindet Bewegung und Zeitgefühl und hilft dir, komplexe Figuren später sauber einzuordnen."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Rebound spüren",
-          "ziel": "Den Rückschlag des Stocks nutzen, statt gegenzuhalten.",
+          "titel": "Zählen zum Klick",
+          "ziel": "Den Puls und seine Unterteilungen sicher fühlen.",
           "schritte": [
-            "Lass den Stock aus etwa zwanzig Zentimetern locker auf die Snare fallen und fang den ersten Rückspringer wieder auf.",
-            "Steuere danach mehrere gleichmäßige Rebounds hintereinander, nur aus dem Handgelenk.",
-            "Wechsle die Hände und achte darauf, dass die Bewegung klein bleibt und der Unterarm ruhig ist."
+            "Stell das Metronom auf ein ruhiges Tempo und zähl die Viertel laut mit (1-2-3-4).",
+            "Füge die Achtel hinzu (1-und-2-und ...) und schlag sie auf der Snare mit.",
+            "Wechsle zwischen Vierteln und Achteln, ohne den Puls zu verlieren."
           ],
-          "steigerung": "Spiel gleichmäßige Achtel zu einem langsamen Metronom, ganz aus dem Handgelenk, und halte die Bewegung so klein wie möglich.",
-          "selbstkontrolle": "Der Stock springt gleichmäßig zurück, deine Hand bleibt locker, und der Unterarm arbeitet nicht mit."
+          "steigerung": "Nimm Sechzehntel dazu und wechsle zwischen den Unterteilungen, während der Klick gleich bleibt.",
+          "selbstkontrolle": "Deine Schläge liegen exakt auf dem Klick; die Unterteilungen bleiben gleichmäßig."
         }
       }
     },
     {
-      "id": "aufwaermen",
+      "id": "rudiments_grundlage",
       "anzeigetitel": {
-        "de": "Aufwärmen vor dem Spielen"
+        "de": "Einzel- & Doppelschläge"
       },
       "domaene": [
-        "koerper"
+        "schlagzeug"
       ],
       "kompetenzstufe": [
         "einsteiger"
@@ -115,27 +160,30 @@
       "voraussetzungen": [
         "stockhaltung"
       ],
+      "spielziele": [
+        "riff_praezision"
+      ],
       "erklaerteil": {
-        "de": "Schnelles Spiel belastet Handgelenke, Sehnen und Unterarme — Aufwärmen ist am Schlagzeug kein Luxus, sondern Schutz vor Verletzungen. Ein paar Minuten langsames, lockeres Spielen bringen Hände und Muskulatur auf Betriebstemperatur, bevor du ans Tempo gehst.\n\nWärm dich vom Langsamen ins Schnellere: erst lockere Einzelschläge, dann etwas dichter, immer nur so schnell, wie es locker bleibt. Auch Füße und Schultern gehören dazu, denn beim Metal arbeitet der ganze Körper mit.\n\nDas wichtigste Prinzip: Schmerz ist ein Stoppsignal. Ziehen oder Stechen in Handgelenk, Unterarm oder Schienbein heißt Pause, nicht durchbeißen. Kaltes Loslegen mit hohem Tempo ist die häufigste Ursache für Überlastung."
+        "de": "Rudiments sind die Bewegungsbausteine des Schlagzeugs — kleine, festgelegte Schlagmuster, aus denen sich Fills, schnelle Hände und Blastbeats aufbauen. Die zwei wichtigsten Grundlagen sind der Einzelschlag (abwechselnd rechts–links) und der Doppelschlag (je zwei Schläge pro Hand).\n\nBeim Einzelschlag zählt Gleichmäßigkeit: Beide Hände sollen gleich laut und gleich getimt sein. Der Doppelschlag nutzt den Rückprall des Sticks, damit der zweite Schlag mit wenig Aufwand kommt — das spart Kraft und ermöglicht Tempo.\n\nÜbe diese Muster langsam und sauber auf der Snare oder einem Übungspad. Sie sind die Grundlage für fast alles Schnelle, das im Metal folgt."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Aufwärm-Routine",
-          "ziel": "Hände, Arme und Füße vor dem Üben locker und warm bekommen.",
+          "titel": "Single- und Double-Strokes",
+          "ziel": "Gleichmäßige Einzel- und Doppelschläge mit beiden Händen.",
           "schritte": [
-            "Kreise und lockere zuerst Handgelenke und Schultern ein paar Sekunden ohne Sticks.",
-            "Spiel dann langsame, gleichmäßige Einzelschläge auf der Snare und steigere die Dichte nur ganz allmählich.",
-            "Ergänze lockere Bassdrum- und HiHat-Schläge, bis sich Hände und Füße warm und beweglich anfühlen."
+            "Spiel Einzelschläge im Wechsel (R-L-R-L) gleichmäßig und langsam.",
+            "Wechsle zu Doppelschlägen (R-R-L-L) und nutze den Rückprall für den zweiten Schlag.",
+            "Halte bei beiden Mustern Lautstärke und Timing beider Hände gleich."
           ],
-          "steigerung": "Verlängere die Aufwärmzeit an intensiven Tagen und nimm die Füße mit einem langsamen Grundbeat dazu.",
-          "selbstkontrolle": "Deine Hände fühlen sich locker und beweglich an, nichts zieht oder sticht, und du bist bereit für höheres Tempo."
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und wechsle zwischen Einzel- und Doppelschlägen.",
+          "selbstkontrolle": "Rechte und linke Hand klingen gleich; die Muster bleiben gleichmäßig und im Timing."
         }
       }
     },
     {
       "id": "grundbeat",
       "anzeigetitel": {
-        "de": "Grundbeat: Kick, Snare, HiHat"
+        "de": "Metal-Grundbeat"
       },
       "domaene": [
         "schlagzeug"
@@ -146,29 +194,35 @@
       "typ": "micro",
       "voraussetzungen": [
         "stockhaltung",
-        "handgelenk_rebound"
+        "fusstechnik",
+        "puls_zaehlzeiten"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision",
+        "gliedmassen_unabhaengigkeit"
       ],
       "erklaerteil": {
-        "de": "Der Grundbeat ist das Fundament fast jedes Songs: Bassdrum, Snare und HiHat greifen ineinander. Die HiHat spielt durchgehende Achtel, die Snare den Backbeat auf den Zählzeiten 2 und 4, die Bassdrum betont die 1 und die 3.\n\nBei Rechtshändern führt die rechte Hand über Kreuz die HiHat, die linke Hand die Snare, der rechte Fuß die Bassdrum. Diese Überkreuz-Haltung fühlt sich anfangs ungewohnt an — das legt sich mit Wiederholung.\n\nGeh es langsam an und zerlege das Muster: erst HiHat allein, dann Snare dazu, zuletzt die Bassdrum. Wenn die drei Ebenen sauber zusammenlaufen, hast du die Grundlage, auf der alles Weitere aufbaut."
+        "de": "Der Grundbeat verbindet Hände und Fuß zum ersten vollständigen Groove: Die Hi-Hat spielt gleichmäßige Achtel, die Snare betont die Zählzeiten 2 und 4 (den „Backbeat“), die Bassdrum füllt die 1 und weitere Akzente.\n\nDieser Beat ist die Keimzelle fast aller Metal-Rhythmen. Beginne langsam und achte darauf, dass die drei Stimmen exakt zusammenpassen — besonders, dass Bassdrum und Hi-Hat sauber übereinanderliegen, wo sie gleichzeitig spielen.\n\nErst wenn der Grundbeat gleichmäßig und im Timing läuft, lohnen sich Varianten. Sauberkeit und Stabilität stehen über Tempo."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Der erste Groove",
-          "ziel": "Kick, Snare und HiHat zu einem gleichmäßigen Grundbeat verbinden.",
+          "titel": "Grundbeat aufbauen",
+          "ziel": "Hände und Fuß zu einem stabilen Groove verbinden.",
           "schritte": [
-            "Spiel durchgehende Achtel auf der HiHat und zähle laut 1 und 2 und 3 und 4 und.",
-            "Setz die Snare auf die 2 und die 4 dazu.",
-            "Ergänze die Bassdrum auf der 1 und der 3, bis alle drei Ebenen zusammenlaufen."
+            "Spiel gleichmäßige Achtel auf der Hi-Hat.",
+            "Füge die Snare auf den Zählzeiten 2 und 4 hinzu.",
+            "Ergänze die Bassdrum auf der 1 (und einer weiteren Zählzeit) und spiel alles langsam zusammen."
           ],
-          "steigerung": "Spiel den Groove mehrere Minuten am Stück, ohne dass er stockt, danach langsam zu einem Metronom.",
-          "selbstkontrolle": "HiHat, Snare und Bassdrum sitzen an ihren Plätzen, das Muster läuft gleichmäßig und ohne Aussetzer."
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und variiere die Bassdrum-Figur.",
+          "selbstkontrolle": "Alle drei Stimmen liegen sauber im Timing; gleichzeitige Schläge klingen als einer."
         }
       }
     },
     {
-      "id": "timing_klick",
+      "id": "koordination",
       "anzeigetitel": {
-        "de": "Timing mit dem Klick"
+        "de": "Koordination & Unabhängigkeit"
       },
       "domaene": [
         "schlagzeug"
@@ -180,27 +234,31 @@
       "voraussetzungen": [
         "grundbeat"
       ],
+      "spielziele": [
+        "riff_praezision",
+        "gliedmassen_unabhaengigkeit"
+      ],
       "erklaerteil": {
-        "de": "Am Schlagzeug bist du der Taktgeber der Band — dein Timing hält alles zusammen. Das Metronom, der Klick, ist dabei dein ehrlichster Trainingspartner: Es zeigt gnadenlos, wo du eilst oder schleppst.\n\nStell den Klick auf die Viertel und spiel deinen Grundbeat so, dass HiHat oder Snare genau mit dem Klick zusammenfallen. Anfangs hörst du dich vielleicht ständig neben dem Klick — das ist normal und genau der Lerneffekt.\n\nTightes Timing ist im schnellen Metal der Unterschied zwischen brachial und matschig. Übe deshalb lieber langsam und exakt auf dem Klick als schnell und ungenau. Sauberkeit im Timing trägt später jedes hohe Tempo."
+        "de": "Schlagzeugspielen heißt, mehrere Gliedmaßen gleichzeitig unterschiedliche Dinge tun zu lassen. Auf dem Grundbeat baust du diese Unabhängigkeit schrittweise aus, indem du eine Stimme veränderst, während die anderen konstant bleiben.\n\nDas Gehirn lernt solche Muster durch langsames, bewusstes Wiederholen. Wenn eine Variante nicht klappt, zerlegst du sie: erst zwei Gliedmaßen zusammen, dann die dritte dazu. Tempo hilft hier nicht — Wiederholung im langsamen Tempo schon.\n\nGute Koordination ist die Grundlage für die dichten, mehrstimmigen Rhythmen des Extreme Metal, bei denen Hände und Füße eng verzahnt arbeiten."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Auf dem Klick sitzen",
-          "ziel": "Den Grundbeat exakt zum Metronom spielen.",
+          "titel": "Bassdrum-Variationen über dem Beat",
+          "ziel": "Eine Stimme verändern, während die anderen stabil bleiben.",
           "schritte": [
-            "Stell das Metronom auf ein langsames Tempo und den Klick auf die Viertel.",
-            "Spiel den Grundbeat und höre, ob deine Schläge genau mit dem Klick zusammenfallen.",
-            "Achte darauf, ob du vor oder hinter dem Klick liegst, und korrigiere in kleinen Schritten."
+            "Spiel den Grundbeat und halte Hi-Hat und Snare konstant.",
+            "Verschieb die Bassdrum auf andere Unterteilungen (z. B. zusätzliche Achtel), ohne die anderen Stimmen zu stören.",
+            "Wenn es hakt, spiel erst Bassdrum und Hi-Hat allein zusammen, dann die Snare dazu."
           ],
-          "steigerung": "Lass den Klick nur auf die 2 und die 4 laufen, damit du mehr Timing selbst tragen musst.",
-          "selbstkontrolle": "Deine Schläge decken den Klick, statt daneben zu liegen — an den Betonungen verschwindet er fast unter deinem Schlag."
+          "steigerung": "Führe kleine Variationen bei Snare oder Hi-Hat ein, während der Rest läuft.",
+          "selbstkontrolle": "Die veränderte Stimme sitzt sauber, ohne dass die anderen aus dem Timing geraten."
         }
       }
     },
     {
-      "id": "bassdrum_kontrolle",
+      "id": "dynamik_akzente",
       "anzeigetitel": {
-        "de": "Bassdrum-Kontrolle: Heel-up"
+        "de": "Dynamik & Akzente"
       },
       "domaene": [
         "schlagzeug"
@@ -212,27 +270,31 @@
       "voraussetzungen": [
         "grundbeat"
       ],
+      "spielziele": [
+        "riff_praezision",
+        "definierter_anschlag"
+      ],
       "erklaerteil": {
-        "de": "Im Metal trägt der Fuß viel Last, deshalb lohnt sich saubere Bassdrum-Technik früh. Für Kraft und Tempo hat sich die Heel-up-Technik bewährt: Die Ferse ist angehoben, der Schlag kommt aus dem ganzen Bein, der Fußballen trifft das Pedal.\n\nBeim Heel-down bleibt die Ferse auf dem Pedal, der Schlag kommt nur aus dem Fußgelenk — kontrolliert, aber kraftärmer. Für schnelle, druckvolle Metal-Beats ist Heel-up meist die bessere Grundlage.\n\nEntscheidend ist auch hier Lockerheit: Der Schlag ist ein kontrollierter Impuls, kein Dauerdruck. Press den Schlägel nach dem Treffer nicht ins Fell, sondern arbeite mit einer entspannten, wiederholbaren Bewegung. Verkrampfte Beine ermüden schnell und werden nicht schneller."
+        "de": "Wie hart du triffst, formt den Klang des Kits ebenso wie die Wahl der Trommel. Akzente sind betonte, lautere Schläge; leise Zwischenschläge nennt man Ghost Notes. Der Kontrast zwischen beiden gibt einem Beat Kontur und Groove.\n\nAuf der Snare erzeugt ein „Rimshot“ — Stick trifft Fell und Rand gleichzeitig — einen besonders lauten, durchsetzungsfähigen Schlag, der im Metal oft den Backbeat trägt. Bewusst gesetzte Akzente lassen selbst einfache Beats druckvoll wirken.\n\nÜbe, Akzente und leise Schläge klar zu trennen. Diese Kontrolle über die Lautstärke ist ein eigenes Handwerk, das deinem Spiel Ausdruck gibt."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Gleichmäßige Bassdrum-Schläge",
-          "ziel": "Einzelne Bassdrum-Schläge kontrolliert und gleich laut spielen.",
+          "titel": "Akzente und Ghost Notes",
+          "ziel": "Laute und leise Schläge bewusst trennen.",
           "schritte": [
-            "Heb die Ferse leicht an und spiel gleichmäßige Viertel auf der Bassdrum aus einer lockeren Beinbewegung.",
-            "Achte darauf, dass jeder Schlag gleich laut ist und der Fuß danach wieder locker wird.",
-            "Spiel dazu die HiHat in Achteln, damit du ein Timing-Raster hast."
+            "Spiel gleichmäßige Sechzehntel auf der Snare, alle gleich leise.",
+            "Setz auf bestimmte Schläge (z. B. jede Zählzeit) einen deutlichen Akzent.",
+            "Halte die übrigen Schläge bewusst leise, sodass ein klarer Kontrast entsteht."
           ],
-          "steigerung": "Wechsle zwischen Vierteln und Achteln auf der Bassdrum und halte die Lautstärke konstant.",
-          "selbstkontrolle": "Jeder Bassdrum-Schlag klingt gleich, dein Bein bleibt zwischen den Schlägen locker, und nichts verkrampft."
+          "steigerung": "Verschieb die Akzente auf andere Positionen und probier einen Rimshot auf dem Backbeat.",
+          "selbstkontrolle": "Akzente und leise Schläge sind klar unterscheidbar; das Muster bleibt gleichmäßig."
         }
       }
     },
     {
-      "id": "rudiments_single_double",
+      "id": "double_bass",
       "anzeigetitel": {
-        "de": "Rudiments: Single & Double Strokes"
+        "de": "Double-Bass-Grundlage"
       },
       "domaene": [
         "schlagzeug"
@@ -241,63 +303,41 @@
         "einsteiger"
       ],
       "typ": "micro",
+      "stil": [
+        "death_metal",
+        "thrash",
+        "black_metal"
+      ],
       "voraussetzungen": [
-        "handgelenk_rebound"
+        "fusstechnik",
+        "grundbeat"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "fuss_ausdauer",
+        "double_bass_tempo"
       ],
       "erklaerteil": {
-        "de": "Rudiments sind die Vokabeln des Schlagzeugs — kleine Schlagfolgen, aus denen sich Grooves und Fills zusammensetzen. Zwei sind für den Anfang zentral: der Single Stroke und der Double Stroke.\n\nBeim Single Stroke wechseln sich die Hände bei jedem Schlag ab: rechts, links, rechts, links. Beim Double Stroke spielt jede Hand zwei Schläge: rechts, rechts, links, links — und genau hier nutzt du den Rebound, denn der zweite Schlag kommt aus dem Rückschlag des ersten.\n\nÜbe beide langsam und gleichmäßig mit dem Metronom. Ziel ist, dass beide Hände gleich stark und gleich sauber werden — die schwächere Hand holst du bewusst auf. Gleichmäßigkeit steht immer vor Tempo."
+        "de": "Die Doppel-Bassdrum — zwei Pedale oder ein Doppelpedal — ist ein Kennzeichen des Extreme Metal. Beide Füße wechseln sich ab und erzeugen einen durchgehenden, treibenden Puls unter dem Beat.\n\nDer Einstieg ist wie beim Wechselschlag der Hände: langsame, gleichmäßige Wechsel zwischen rechts und links, bei denen beide Füße gleich laut und gleich getimt klingen. Der schwächere Fuß ist anfangs ungleichmäßiger — genau daran arbeitest du im langsamen Tempo.\n\nGesundheit hat Vorrang: Double Bass belastet Beine und Fußgelenke deutlich. Baue Tempo und Dauer schrittweise auf, halte die Fußgelenke locker und leg bei Schmerz oder Verkrampfung eine Pause ein."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Singles und Doubles",
-          "ziel": "Single- und Double-Strokes gleichmäßig und mit beiden Händen gleich spielen.",
+          "titel": "Gleichmäßige Fuß-Wechsel",
+          "ziel": "Beide Füße gleich laut und gleich getimt wechseln.",
           "schritte": [
-            "Spiel Single Strokes (rechts, links, rechts, links) langsam und gleichmäßig zum Metronom.",
-            "Wechsle zu Double Strokes (rechts, rechts, links, links) und lass den zweiten Schlag aus dem Rebound kommen.",
-            "Achte darauf, dass alle Schläge gleich laut klingen, egal mit welcher Hand."
+            "Spiel zum Metronom gleichmäßige Achtel im Wechsel beider Füße (R-L-R-L), in ruhigem Tempo.",
+            "Hör hin, ob beide Füße gleich laut klingen, und gleich den schwächeren an.",
+            "Halte den Wechsel über mehrere Takte gleichmäßig, ohne zu verkrampfen."
           ],
-          "steigerung": "Erhöhe das Tempo in kleinen Schritten und nur, wenn beide Hände gleich sauber bleiben.",
-          "selbstkontrolle": "Die Schläge sind gleichmäßig, deine schwächere Hand klingt so sauber wie die starke, und die Doubles nutzen den Rückschlag."
-        }
-      }
-    },
-    {
-      "id": "fills_einfach",
-      "anzeigetitel": {
-        "de": "Einfache Fills"
-      },
-      "domaene": [
-        "schlagzeug"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "grundbeat",
-        "rudiments_single_double"
-      ],
-      "erklaerteil": {
-        "de": "Ein Fill ist eine kurze Unterbrechung des Grooves, meist am Ende einer Phrase — oft im vierten oder achten Takt. Er kündigt einen neuen Abschnitt an und gibt dem Song Struktur.\n\nEinfache Fills baust du aus dem, was du schon kannst: Single Strokes, über Snare und Toms verteilt. Ein typischer Anfänger-Fill ist eine Reihe gleichmäßiger Achtel oder Sechzehntel, die von der Snare über die Toms nach unten wandert.\n\nDer schwierigste Teil ist nicht der Fill selbst, sondern zurück in den Groove zu finden — sauber auf der 1 des nächsten Takts. Bleib im Timing, überhaste den Fill nicht und lande genau wieder im Beat."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Groove, Fill, zurück",
-          "ziel": "Aus dem Groove in einen Fill und sauber wieder in den Beat wechseln.",
-          "schritte": [
-            "Spiel drei Takte Grundbeat und im vierten Takt einen einfachen Fill aus gleichmäßigen Schlägen.",
-            "Wandere im Fill von der Snare über die Toms und lande genau auf der 1 des nächsten Takts wieder im Groove.",
-            "Wiederhole die Vier-Takt-Schleife, ohne dass der Fill das Tempo verändert."
-          ],
-          "steigerung": "Verteile den Fill über mehr Trommeln oder spiel ihn in Sechzehnteln, ohne zu eilen.",
-          "selbstkontrolle": "Der Fill bleibt im Timing, und du kommst sauber auf der 1 zurück in den Grundbeat."
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und leg unter die Fuß-Achtel einen einfachen Hand-Groove.",
+          "selbstkontrolle": "Beide Füße klingen gleich und liegen auf dem Klick; Beine und Fußgelenke bleiben locker."
         }
       }
     },
     {
       "id": "d_beat",
       "anzeigetitel": {
-        "de": "D-Beat (Hardcore/Crust)"
+        "de": "D-Beat"
       },
       "domaene": [
         "schlagzeug"
@@ -310,63 +350,32 @@
         "hardcore"
       ],
       "voraussetzungen": [
-        "grundbeat",
-        "timing_klick"
-      ],
-      "erklaerteil": {
-        "de": "Der D-Beat stammt aus dem Hardcore-Punk und der Crust-Szene und ist nach der Band Discharge benannt. Er ist ein treibender, rollender Beat, der ganze Subgenres geprägt hat und bis heute im Metal auftaucht.\n\nDas Grundgerüst ist der Grundbeat mit durchgehenden Achteln auf der HiHat und der Snare auf 2 und 4. Den typischen Vorwärtsdrang bekommt der D-Beat durch die Bassdrum, die zusätzlich zwischen den Backbeats schiebt — ein Extra-Schlag auf dem Und nach der 2 erzeugt das charakteristische Rollen.\n\nGefühl schlägt Notenschrift: Der D-Beat soll drängen und nach vorne ziehen. Halte ihn trotzdem gleichmäßig und locker — der Antrieb kommt aus der Wiederholung, nicht aus Krafteinsatz."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "D-Beat aufbauen",
-          "ziel": "Aus dem Grundbeat den treibenden D-Beat entwickeln.",
-          "schritte": [
-            "Spiel Achtel auf der HiHat und die Snare auf 2 und 4.",
-            "Setz die Bassdrum auf die 1, das Und nach der 2 und die 3, sodass ein rollendes Muster entsteht.",
-            "Spiel das Ganze langsam zum Klick, bis der treibende Charakter deutlich wird."
-          ],
-          "steigerung": "Erhöhe das Tempo in kleinen Schritten und halte den Beat dabei locker und gleichmäßig.",
-          "selbstkontrolle": "Der Beat rollt gleichmäßig nach vorne, Snare und HiHat bleiben stabil, und die Bassdrum schiebt hörbar zwischen den Backbeats."
-        }
-      }
-    },
-    {
-      "id": "tempo_halten",
-      "anzeigetitel": {
-        "de": "Tempo halten & steigern"
-      },
-      "domaene": [
-        "schlagzeug"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "timing_klick",
         "grundbeat"
       ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
       "erklaerteil": {
-        "de": "Ein Beat, der anzieht und wieder abfällt, klingt unruhig — konstantes Tempo zu halten ist eine eigene Fähigkeit. Und wer schneller werden will, steigert das Tempo systematisch, nicht mit einem großen Sprung.\n\nDie bewährte Methode ist die Metronom-Leiter: Du spielst ein Muster sauber bei einem Tempo, erhöhst dann um wenige BPM und spielst erneut, bis es wieder sitzt. Nur wenn zwei, drei Durchgänge fehlerfrei laufen, gehst du höher.\n\nWichtig ist, nicht dauerhaft am Limit zu üben. Verbring die meiste Zeit in einem Tempo, in dem du locker und sauber bleibst, und taste dich nur in kleinen Schritten nach oben. Sauberkeit bei mittlerem Tempo bringt dich weiter als hektisches Spiel am Anschlag."
+        "de": "Der D-Beat ist ein schneller, treibender Beat aus dem Hardcore-Punk und Crust, benannt nach der Band Discharge. Er prägt viele Hardcore- und Crust-nahe Metal-Stile und lebt von rohem, unerbittlichem Vorwärtsdruck.\n\nCharakteristisch ist das Zusammenspiel von Bassdrum und Snare in einem galoppierenden, durchgehenden Muster, über dem die Hi-Hat oder das Ride gleichmäßig läuft. Das Ergebnis ist ein Beat, der drängt, ohne kompliziert zu sein.\n\nWie immer gilt: erst langsam und sauber, dann schneller. Der Reiz des D-Beats liegt in seiner Energie, und die entsteht aus einem stabilen, treibenden Puls."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Die Metronom-Leiter",
-          "ziel": "Ein Tempo stabil halten und in kleinen Schritten steigern.",
+          "titel": "Treibendes D-Beat-Muster",
+          "ziel": "Das galoppierende Bassdrum-Snare-Muster gleichmäßig spielen.",
           "schritte": [
-            "Spiel deinen Grundbeat mehrere Minuten bei einem festen Tempo, ohne zu eilen oder zu schleppen.",
-            "Erhöhe das Metronom um zwei bis vier BPM und spiel das Muster erneut sauber.",
-            "Steig nur weiter, wenn zwei Durchgänge fehlerfrei sitzen; sonst bleib beim aktuellen Tempo."
+            "Spiel gleichmäßige Achtel auf der Hi-Hat als Grundlage.",
+            "Setz das treibende Wechselmuster aus Bassdrum und Snare darunter, zunächst langsam.",
+            "Achte darauf, dass Bassdrum und Snare exakt ineinandergreifen."
           ],
-          "steigerung": "Notiere dir dein sauberes Höchsttempo und arbeite über mehrere Sessions weiter nach oben.",
-          "selbstkontrolle": "Dein Tempo bleibt über die ganze Übung konstant, und du steigerst nur, wenn wirklich alles sitzt."
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten, bis der Beat drängt, ohne zu eiern.",
+          "selbstkontrolle": "Das Muster treibt gleichmäßig; Bassdrum und Snare liegen sauber im Timing."
         }
       }
     },
     {
-      "id": "doublebass_einstieg",
+      "id": "blastbeat",
       "anzeigetitel": {
-        "de": "Doublebass-Einstieg"
+        "de": "Blastbeat-Einführung"
       },
       "domaene": [
         "schlagzeug"
@@ -377,33 +386,77 @@
       "typ": "micro",
       "stil": [
         "death_metal",
-        "thrash"
+        "black_metal"
       ],
       "voraussetzungen": [
-        "bassdrum_kontrolle",
-        "timing_klick"
+        "koordination",
+        "rudiments_grundlage"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision",
+        "double_bass_tempo",
+        "gliedmassen_unabhaengigkeit"
       ],
       "erklaerteil": {
-        "de": "Doublebass — zwei Bassdrum-Schläge im Wechsel beider Füße — ist ein Markenzeichen des Metal. Gespielt wird es mit einem Doppelpedal oder zwei Bassdrums; die Füße wechseln sich ab: rechts, links, rechts, links.\n\nDer wichtigste Grundsatz für den Einstieg lautet: langsam und entspannt. Es geht zuerst nur darum, dass beide Füße gleich laut und gleichmäßig spielen — der schwächere Fuß muss den stärkeren einholen. Tempo kommt später von allein, wenn das Muster sauber und locker sitzt.\n\nVerspannung ist hier die Hauptfehlerquelle und ein echtes Verletzungsrisiko: Wer die Beine verkrampft oder die Schläger ins Fell presst, wird nicht schneller, sondern müde und riskiert Schmerzen in Schienbein und Fußgelenk. Bleib locker, halte das Tempo niedrig und stopp beim ersten Brennen. Prinzip vor Tempo."
+        "de": "Der Blastbeat ist der vielleicht bekannteste Extreme-Metal-Rhythmus: ein sehr schnelles, dichtes Muster, das Death Metal und Black Metal ihren Wall-of-Sound-Charakter gibt. In der verbreiteten Grundform wechseln sich Bassdrum und Snare in schnellen Einzelschlägen ab, während die Hi-Hat oder das Becken mitläuft.\n\nDer Blast ist Koordinations- und Ausdauerübung zugleich — deshalb näherst du dich ihm langsam. Du spielst das Muster zuerst in einem Tempo, in dem jeder Schlag sauber und gleichmäßig sitzt, und erhöhst erst dann. Ein langsam sauberer Blast wird schnell; ein schnell verspielter bleibt unsauber.\n\nGesundheit hat Vorrang: Das hohe Tempo verführt zu Verkrampfung. Halte Hände und Füße locker, steigere Tempo und Dauer schrittweise und pausiere bei Schmerz oder Verspannung."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Gleichmäßige Doublebass langsam",
-          "ziel": "Beide Füße im Wechsel gleich laut und locker spielen.",
+          "titel": "Langsamer Blast",
+          "ziel": "Das Blast-Grundmuster sauber und gleichmäßig aufbauen.",
           "schritte": [
-            "Stell ein langsames Metronom ein und spiel abwechselnd rechts, links auf der Bassdrum in Achteln.",
-            "Achte darauf, dass beide Füße exakt gleich laut sind und auf dem Klick landen.",
-            "Bleib bewusst weit unter deinem Limit und lass die Beine zwischen den Schlägen locker."
+            "Spiel im langsamen Tempo abwechselnd Bassdrum und Snare in gleichmäßigen Schlägen.",
+            "Lass eine Hand das Becken oder die Hi-Hat gleichmäßig mitspielen.",
+            "Achte darauf, dass jeder Schlag gleich laut und exakt getimt ist."
           ],
-          "steigerung": "Verlängere zuerst die Dauer bei gleichem Tempo, bevor du das Metronom in winzigen Schritten anhebst.",
-          "selbstkontrolle": "Beide Füße klingen gleich, das Muster sitzt auf dem Klick, und deine Beine bleiben locker statt zu verkrampfen — bei Brennen oder Ziehen machst du Pause."
+          "steigerung": "Erhöhe das Tempo erst in kleinen Schritten, wenn das Muster über mehrere Takte sauber läuft.",
+          "selbstkontrolle": "Bassdrum und Snare wechseln gleichmäßig und im Timing; Hände und Füße bleiben locker."
         }
       }
     },
     {
-      "id": "independence",
+      "id": "doom_feel",
       "anzeigetitel": {
-        "de": "Vier-Gliedmaßen-Koordination"
+        "de": "Langsames, schweres Spiel"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "doom"
+      ],
+      "voraussetzungen": [
+        "grundbeat"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Doom dreht das Tempo bewusst herunter — und langsames Spiel ist schwerer, als es klingt. Ohne treibende schnelle Bewegung fällt jede kleine Timing-Ungenauigkeit sofort auf, und die langen Abstände zwischen den Schlägen musst du aktiv halten.\n\nGewicht entsteht hier aus wuchtigen, gut platzierten Schlägen und aus Dynamik: Ein einzelner schwerer Backbeat mit voller Kraft und Ausklang wirkt mehr als viele schnelle Schläge. Du gibst den Trommeln Raum zu klingen.\n\nDas Metronom ist auch im Langsamen dein Freund: Es hilft dir, die langen Zwischenräume gleichmäßig zu füllen und den schweren Puls stabil zu halten."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Schwerer langsamer Beat",
+          "ziel": "Wuchtige Schläge exakt im langsamen Puls platzieren.",
+          "schritte": [
+            "Stell das Metronom auf ein langsames Tempo und spiel einen einfachen Beat mit vollen, kräftigen Schlägen.",
+            "Lass Trommeln und Becken bewusst ausklingen, bevor der nächste Schlag kommt.",
+            "Halte die langen Abstände exakt, sodass nichts schleppt oder vorzieht."
+          ],
+          "steigerung": "Arbeite mit Dynamik und probier schwere Fills, die den langsamen Puls betonen.",
+          "selbstkontrolle": "Trotz langsamem Tempo sitzt jeder Schlag; der Beat wirkt schwer und stabil."
+        }
+      }
+    },
+    {
+      "id": "fills",
+      "anzeigetitel": {
+        "de": "Fills & Übergänge"
       },
       "domaene": [
         "schlagzeug"
@@ -414,29 +467,33 @@
       "typ": "micro",
       "voraussetzungen": [
         "grundbeat",
-        "bassdrum_kontrolle"
+        "rudiments_grundlage"
+      ],
+      "spielziele": [
+        "riff_praezision",
+        "saubere_uebergaenge"
       ],
       "erklaerteil": {
-        "de": "Am Schlagzeug arbeiten vier Gliedmaßen gleichzeitig, aber nicht immer im selben Rhythmus. Diese Unabhängigkeit (Independence) ist die Fähigkeit, mit einer Hand oder einem Fuß etwas anderes zu spielen als mit den übrigen.\n\nDu baust sie schrittweise auf: Ein Teil des Musters läuft konstant als Ostinato — zum Beispiel HiHat und Snare des Grundbeats —, während du mit der Bassdrum verschiedene Muster darunterlegst. Nach und nach variierst du auch die anderen Gliedmaßen.\n\nGeh das ganz langsam an und zerlege jede neue Kombination, bis sie automatisch läuft. Independence entsteht durch geduldige Wiederholung: Was sich heute unmöglich anfühlt, wird mit langsamem Üben zur Selbstverständlichkeit."
+        "de": "Ein Fill ist eine kurze rhythmische Unterbrechung des Grooves, die meist Abschnitte verbindet — etwa den Übergang in einen neuen Teil. Aus den Einzel- und Doppelschlägen baust du einfache Fills über Snare und Toms.\n\nDie größte Hürde ist nicht das Fill selbst, sondern der saubere Übergang: zurück in den Beat zu finden, ohne den Puls zu verlieren. Deshalb zählst du durch und landest bewusst wieder auf der Eins.\n\nBeginne mit kurzen, einfachen Fills über ein bis zwei Zählzeiten. Ein knappes, sauberes Fill im Timing ist mehr wert als ein langes, das den Groove aus dem Tritt bringt."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Ostinato und Variation",
-          "ziel": "Ein konstantes Muster halten und eine Gliedmaße unabhängig variieren.",
+          "titel": "Einfaches Fill über die Toms",
+          "ziel": "Ein kurzes Fill spielen und sauber in den Beat zurückfinden.",
           "schritte": [
-            "Spiel HiHat in Achteln und die Snare auf 2 und 4 als gleichbleibendes Ostinato.",
-            "Leg mit der Bassdrum verschiedene einfache Muster darunter — erst auf 1 und 3, dann mit einem Extra-Schlag.",
-            "Halte das Ostinato stabil, während sich nur die Bassdrum verändert."
+            "Spiel drei Takte Grundbeat und im vierten Takt ein einfaches Fill über Snare und Toms.",
+            "Zähl während des Fills mit, damit du den Puls nicht verlierst.",
+            "Lande bewusst wieder auf der Eins des nächsten Takts im Grundbeat."
           ],
-          "steigerung": "Variiere statt der Bassdrum die HiHat-Hand oder tausche, welche Gliedmaße das Ostinato trägt.",
-          "selbstkontrolle": "Das Ostinato läuft gleichmäßig weiter, auch wenn du die Bassdrum veränderst — die Ebenen stören sich nicht."
+          "steigerung": "Verlängere das Fill oder verteile es über mehr Trommeln, ohne das Timing zu verlieren.",
+          "selbstkontrolle": "Das Fill sitzt im Timing, und du kommst sauber auf der Eins zurück in den Beat."
         }
       }
     },
     {
-      "id": "blastbeat_einstieg",
+      "id": "metalcore_groove",
       "anzeigetitel": {
-        "de": "Blastbeat-Einstieg"
+        "de": "Metalcore-Groove & Breakdown-Gefühl"
       },
       "domaene": [
         "schlagzeug"
@@ -446,35 +503,63 @@
       ],
       "typ": "micro",
       "stil": [
-        "black_metal",
-        "death_metal"
+        "metalcore"
       ],
       "voraussetzungen": [
-        "rudiments_single_double",
-        "timing_klick",
-        "independence"
+        "grundbeat",
+        "double_bass"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision",
+        "gliedmassen_unabhaengigkeit"
       ],
       "erklaerteil": {
-        "de": "Der Blastbeat ist der wohl extremste Beat im Metal und prägt Death Metal, Black Metal und Grindcore. Beim Einstieg zählt nur eines: das Prinzip verstehen, nicht das Tempo — und das geht ausschließlich langsam.\n\nDie geläufigste Form ist der traditionelle Blast als schneller Single Stroke: Die Hände wechseln sich zwischen HiHat und Snare ab, während die Bassdrum mit der HiHat-Hand mitläuft. Im Kern ist das ein Single-Stroke-Wechsel zwischen den Händen, kombiniert mit dem Fuß.\n\nSpiel das bewusst in extremer Zeitlupe. Es geht darum, die Koordination sauber zu verdrahten, nicht darum, schnell zu klingen. Verkrampfung ist der Feind: Sobald Hände oder Arme fest werden, wirst du langsamer und riskierst Überlastung. Bleib locker, bleib langsam — Tempo ist eine Frage von Wochen, nicht von Minuten."
+        "de": "Metalcore verbindet groovige, tighte Beats mit wuchtigen Breakdowns. Charakteristisch sind treibende Double-Bass-Figuren unter einem klaren Backbeat und betonte, mit den Gitarren verzahnte Akzente.\n\nIm Breakdown wird das Schlagzeug bewusst reduziert und schwer: wenige, betonte Schläge, die mit den gedämpften Gitarren-Chugs zusammenfallen. Hier zählt Tightness — dein Timing muss exakt mit dem Riff sitzen, damit der Part den nötigen Druck bekommt.\n\nÜbe zunächst den Wechsel zwischen einem treibenden Groove und einem reduzierten, schweren Part, und achte auf saubere, akzentuierte Schläge."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Blast in Zeitlupe",
-          "ziel": "Das Grundprinzip des Blastbeats langsam und entspannt koordinieren.",
+          "titel": "Groove und Breakdown wechseln",
+          "ziel": "Zwischen treibendem Beat und schwerem, akzentuiertem Part wechseln.",
           "schritte": [
-            "Stell ein sehr langsames Metronom ein und spiel Single Strokes im Wechsel zwischen HiHat-Hand und Snare-Hand.",
-            "Lass die Bassdrum jeweils zusammen mit der HiHat-Hand mitlaufen.",
-            "Bleib ganz langsam und achte nur darauf, dass die Koordination sauber und die Hände locker sind."
+            "Spiel einen Grundbeat mit einer einfachen Double-Bass-Figur darunter.",
+            "Wechsle zu einem reduzierten Part mit wenigen, betonten Schlägen auf die Zählzeiten.",
+            "Halte in beiden Teilen das Timing stabil und die Akzente klar."
           ],
-          "steigerung": "Erst wenn das Muster mühelos und locker sitzt, hebst du das Tempo in winzigen Schritten an.",
-          "selbstkontrolle": "Die Schläge greifen sauber ineinander, deine Hände und Arme bleiben locker, und du spielst bewusst weit unter deinem Limit — bei Verspannung stoppst du."
+          "steigerung": "Setz die betonten Schläge auf synkopierte Positionen, wie sie mit Gitarren-Chugs zusammenfallen würden.",
+          "selbstkontrolle": "Der Wechsel sitzt im Timing; die betonten Schläge sind klar und druckvoll."
         }
       }
     },
     {
-      "id": "ausdauer_gesundheit",
+      "id": "timing_klick",
       "anzeigetitel": {
-        "de": "Ausdauer & Überlastung vermeiden"
+        "de": "Zum Klick & zur Band spielen"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "puls_zaehlzeiten"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Das Schlagzeug ist die Zeitreferenz der Band — mehr als jedes andere Instrument trägst du die Verantwortung für ein stabiles Tempo. Deshalb ist das Üben mit dem Klick keine Nebensache, sondern Kern deiner Rolle.\n\nDas Prinzip: langsam und sauber üben, das Tempo erst erhöhen, wenn eine Figur wirklich sitzt, und Timing als eigene Fähigkeit behandeln. Wer ständig am Limit spielt, festigt vor allem seine Ungenauigkeiten — und im Metal, wo alle sich an dir orientieren, fällt das sofort auf."
+      },
+      "reflexionsaufgabe": {
+        "de": "Warum bringt dich sauberes, langsames Üben mit Klick langfristig schneller ans Ziel als dauerndes Spielen am Tempo-Limit? Und wie willst du deine Tempo-Schritte festhalten, damit dein Fortschritt beim Timing sichtbar wird und du merkst, wo dein wirklich sauberes Maximaltempo liegt?"
+      }
+    },
+    {
+      "id": "aufwaermen_gesundheit",
+      "anzeigetitel": {
+        "de": "Aufwärmen & Gesundheit am Kit"
       },
       "domaene": [
         "koerper"
@@ -484,14 +569,17 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "aufwaermen",
-        "doublebass_einstieg"
+        "kit_sitzhaltung"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "lockere_haende"
       ],
       "erklaerteil": {
-        "de": "Schnelles, langes Spielen fordert den Körper — Ausdauer am Schlagzeug baust du über Wochen auf, nicht in einer einzigen Session. Wer zu viel auf einmal will, riskiert Überlastung: Sehnenreizungen in Handgelenk und Unterarm, Beschwerden in Schienbein und Fußgelenk durch die Doublebass.\n\nDie Vorbeugung ist einfach und konsequent: aufwärmen, locker bleiben, Pausen einbauen und in kleinen Schritten steigern. Verspannung ist fast immer die Wurzel des Problems — sie macht dich langsamer und geht auf Dauer in Schmerz über.\n\nDas oberste Prinzip bleibt: Schmerz ist ein Stoppsignal. Ziehen, Stechen oder Brennen bedeutet Pause, nicht durchbeißen. Regelmäßige kurze Einheiten mit Pausen bringen dich weiter — und gesünder — als seltene, erschöpfende Marathon-Sessions."
+        "de": "Schnelles, kraftvolles Metal-Schlagzeug belastet Hände, Handgelenke, Beine, Fußgelenke und den Rücken zugleich — mehr als bei den meisten Instrumenten sind mehrere Körperregionen gefordert. Ein bewusster Umgang mit dieser Belastung gehört zum Handwerk.\n\nAls Prinzip gilt: mit leichten, langsamen Bewegungen beginnen, die Belastung allmählich steigern, Pausen einbauen und auf die Signale des Körpers hören. Normale Muskelermüdung klingt nach kurzer Pause ab; Schmerz, Taubheit, Kribbeln oder anhaltende Verspannung — ob in Händen, Beinen oder Rücken — sind Warnsignale, bei denen du unterbrichst und bei bleibenden Beschwerden fachkundigen Rat suchst."
       },
       "reflexionsaufgabe": {
-        "de": "Wie sind deine letzten Übe-Sessions verlaufen — an welchen Stellen wurden deine Hände oder Beine fest, und hast du darauf reagiert? Nimm dir vor, deine nächsten Einheiten mit einem Aufwärmen zu beginnen und bewusst Pausen einzuplanen, bevor Müdigkeit in Verspannung umschlägt. Woran würdest du merken, dass du für heute genug gespielt hast, und was hält dich bisher davon ab, rechtzeitig aufzuhören?"
+        "de": "Beim Schlagzeug sind gleich mehrere Körperregionen gefordert. Welche Signale willst du bei Händen, Beinen und Rücken als Warnung ernst nehmen, und was ist konkret dein Plan, wenn während des Spielens Schmerz auftritt?"
       }
     }
   ]
