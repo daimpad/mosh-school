@@ -3,7 +3,7 @@
 // Der Abschluss-Status ist ein erweiterbarer Zustandsraum: heute offen/erledigt,
 // „beherrscht" ist später nur ein weiterer Wert, keine Migration.
 
-const SPEICHER_KEY = 'crossminton.zustand.v1';
+const SPEICHER_KEY = 'moshschool.zustand.v1';
 const SCHEMA_VERSION = 1;
 
 let z = null;
@@ -16,7 +16,7 @@ function vorgabe() {
     diagnose: { stufe: null, trainer: false, herkunft: null, ziel: null },
     fortschritt: {},
     kontinuitaet: { gesamt: 0, jeEinheit: {} },
-    einstellungen: { sprache: 'de', transferKuerzelSichtbar: true, thema: 'auto' },
+    einstellungen: { sprache: 'de', transferKuerzelSichtbar: true, thema: 'dunkel' },
     // Persönlicher Trainingsplan (generiert, anpassbar): null = noch keiner erstellt.
     plan: null,
   };

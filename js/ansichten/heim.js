@@ -6,7 +6,7 @@
 
 import { label, t } from '../i18n.js';
 import { esc, markeHeroGross } from '../oberflaeche.js';
-import { spielformen, umgebungBausteine } from '../pfade.js';
+import { spielformen, stile, umgebungBausteine } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
 
@@ -57,7 +57,7 @@ export function renderHeim(el, daten) {
     : '';
 
   const trainingKachel = kachel({
-    href: '#/training', hue: 'pf-indigo', icon: 'fa-table-tennis-paddle-ball',
+    href: '#/training', hue: 'pf-indigo', icon: 'fa-list-check',
     titel: esc(t('pfad_training')),
     meta: ` <span class="chip">${esc(t('n_einheiten', { n: daten.einheiten.length }))}</span>`,
     text: esc(t('pfad_training_text')),
@@ -74,11 +74,15 @@ export function renderHeim(el, daten) {
       : '',
   });
 
-  const regelnKachel = kachel({
-    href: '#/regeln', hue: 'pf-schiefer', icon: 'fa-book-open',
-    titel: esc(t('nav_regeln')),
-    text: esc(t('regeln_kachel')),
-  });
+  const genres = stile(daten);
+  const genreKachel = genres.length > 0
+    ? kachel({
+        href: '#/pfad/stil', hue: 'pf-magenta', icon: 'fa-fire',
+        titel: esc(t('pfad_stil')),
+        meta: ` <span class="chip">${esc(t('n_genres', { n: genres.length }))}</span>`,
+        text: esc(t('pfad_stil_text')),
+      })
+    : '';
 
   const profilKachel = kachel({
     href: '#/profil', hue: 'pf-blau', icon: 'fa-user',
@@ -93,6 +97,7 @@ export function renderHeim(el, daten) {
     <div class="pfad-gitter">
       ${umgebungKachel}
       ${doppelKachel}
+      ${genreKachel}
       ${trainingKachel}
       ${individualKachel}
       ${profilKachel}

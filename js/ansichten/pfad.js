@@ -5,7 +5,7 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { label, t } from '../i18n.js';
 import { balkenHtml, bausteinIcon, entdeckenAktion, esc, heroKlein, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
-import { individualpfad, kompetenzpfad, spielformen, spielformpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
+import { individualpfad, kompetenzpfad, spielformen, spielformpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 
@@ -126,6 +126,29 @@ export function renderSpielform(el, daten, spielform) {
       : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, `spielform:${gewaehlt}`)}`;
   el.innerHTML = `
     ${heroKlein('fa-users', t('pfad_spielform'), t('pfad_spielform_text'), 'pf-magenta')}
+    ${inhalt}`;
+}
+
+// Genre-Achse (Stil): Hub über alle belegten Genres, dann je Genre alle Bausteine
+// quer über Instrumente und Stufen. Reine Perspektive über den Pool.
+export function renderStil(el, daten, stil) {
+  if (!stil) {
+    const zeilen = stile(daten)
+      .map(
+        (e) =>
+          `<a class="karte karte-link" href="#/pfad/stil/${esc(e.stil)}"><h3>${esc(label('stil', e.stil))}</h3><p class="leise">${esc(t('n_bausteine', { n: e.anzahl }))}</p></a>`,
+      )
+      .join('');
+    el.innerHTML = `${heroKlein('fa-fire', t('pfad_stil'), t('pfad_stil_text'), 'pf-magenta')}${zeilen || leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}`;
+    return;
+  }
+  const pfad = stilpfad(daten, stil);
+  const inhalt =
+    pfad.stationen.length === 0
+      ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
+      : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, `stil:${stil}`)}`;
+  el.innerHTML = `
+    ${heroKlein('fa-fire', label('stil', stil), t('pfad_stil_text'), 'pf-magenta')}
     ${inhalt}`;
 }
 
