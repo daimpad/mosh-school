@@ -178,6 +178,29 @@ export function spielformpfad(daten, spielform) {
   };
 }
 
+// Genre-Achse (Stil): Querschnitt über Instrumente UND Stufen — sammelt alle
+// Bausteine eines Genres (death_metal, black_metal, doom …) domänenübergreifend
+// zu einem Thema. Reine Pool-/Erzählreihenfolge, kein Modifikator. Es erscheinen
+// nur tatsächlich belegte Genres (analog zur Spielform-Achse: der Default fehlt).
+function stilVon(baustein) {
+  return Array.isArray(baustein.stil) ? baustein.stil : [];
+}
+
+export function stile(daten) {
+  return (daten.vokabulare.stil || [])
+    .map((stil) => ({ stil, anzahl: daten.bausteine.filter((b) => stilVon(b).includes(stil)).length }))
+    .filter((e) => e.anzahl > 0);
+}
+
+export function stilpfad(daten, stil) {
+  const menge = daten.bausteine.filter((b) => stilVon(b).includes(stil));
+  return {
+    art: 'stil',
+    stil,
+    stationen: zuStationen(daten, menge, poolVergleicher(daten), null),
+  };
+}
+
 // Umgebungs-Achse (Outdoor, Querschnitt): witterung und untergrund werden zu
 // Navigationsachsen — analog zur Spielform-Achse, aber ohne Cross-Sport-Modifikator
 // (Outdoor ist crossminton-eigen, kein Herkunftskonflikt → herkunft bleibt außen vor).
@@ -274,6 +297,7 @@ export function sequenzFuer(daten, kontext) {
   const [art, parameter] = String(kontext || 'kompetenz').split(':');
   if (art === 'themen') return themenpfad(daten, parameter);
   if (art === 'spielform') return spielformpfad(daten, parameter);
+  if (art === 'stil') return stilpfad(daten, parameter);
   if (art === 'umgebung') return umgebungspfad(daten);
   if (art === 'witterung') return umgebungspfad(daten, 'witterung', parameter);
   if (art === 'untergrund') return umgebungspfad(daten, 'untergrund', parameter);

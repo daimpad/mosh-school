@@ -349,3 +349,23 @@ export function bausteinIcon(bausteinId, klasse = '') {
   const icon = BAUSTEIN_ICONS[bausteinId];
   return icon ? `<i class="fa-solid ${icon} ${klasse}" aria-hidden="true"></i>` : '';
 }
+
+// Instrument-Icons als Inline-SVG (die FA-Subset-Schrift kennt kein Gitarre/Drum/
+// Mikro-Glyph, und ohne fonttools lässt sich das Subset nicht erweitern). currentColor
+// erbt die Medaillen-Hue. Fällt für Nicht-Instrument-Domänen auf ein FA-Icon zurück.
+const INSTRUMENT_SVG = {
+  gitarre:
+    '<svg class="dom-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 7c2-3 12-3 14 0 2 2.6-1.5 12-7 15C6.5 19 3 9.6 5 7Z"/></svg>',
+  bass:
+    '<svg class="dom-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8.5" y="2.5" width="7" height="19" rx="1.4"/><line x1="10.6" y1="2.5" x2="10.6" y2="21.5"/><line x1="13.4" y1="2.5" x2="13.4" y2="21.5"/></svg>',
+  schlagzeug:
+    '<svg class="dom-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="14" rx="8" ry="3.2"/><path d="M4 14v3c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2v-3"/><line x1="6" y1="10.5" x2="15" y2="3.8"/><line x1="18" y1="10.5" x2="9" y2="3.8"/></svg>',
+  gesang:
+    '<svg class="dom-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="9" y1="21.2" x2="15" y2="21.2"/></svg>',
+};
+
+export function domaeneIcon(domaene) {
+  if (INSTRUMENT_SVG[domaene]) return INSTRUMENT_SVG[domaene];
+  const fa = { koerper: 'fa-heart-pulse', mentales: 'fa-brain', theorie: 'fa-book-open', ausruestung: 'fa-toolbox' }[domaene];
+  return fa ? `<i class="fa-solid ${fa}" aria-hidden="true"></i>` : '';
+}

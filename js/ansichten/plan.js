@@ -154,6 +154,6 @@ export function renderPlan(el, daten) {
     };
     const stempel = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
     const ics = planAlsIcal(gespeicherterPlan(), beschriftung, stempel);
-    ladeHerunter('crossminton-trainingsplan.ics', ics, 'text/calendar;charset=utf-8');
+    ladeHerunter('moshschool-trainingsplan.ics', ics, 'text/calendar;charset=utf-8');
   });
 }

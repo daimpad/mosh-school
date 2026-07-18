@@ -1993,3 +1993,16 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
   --pf-sky: #a7dd6a; --pf-sky-weich: #17240f;
   --pf-schiefer: #b3afa5; --pf-schiefer-weich: #201f22;
 }
+
+/* mosh school — Display-Schrift Anton (kondensiert) für die großen Überschriften;
+   h3 (Karten-/Unterteil-Titel) bleiben in Rubik 700, damit längere Titel lesbar sind. */
+h1, h2, .marke-text, .marke-hero-text h1, .abschnitt-titel {
+  font-family: 'Anton', 'Oswald', 'Arial Narrow', 'Rubik', system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+h3 { font-family: 'Rubik', system-ui, sans-serif; font-weight: 700; }
+
+/* Instrument-SVGs in den Icon-Medaillen skalieren + einfärben (currentColor). */
+.dom-svg { width: 1.5rem; height: 1.5rem; display: block; }
+.marke-hero-icon .dom-svg { width: 1.7rem; height: 1.7rem; }
