@@ -1,0 +1,580 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "gitarre",
+    "hinweis": "Phase-1-Startinhalt (Einsteiger-Gitarre). Vokabular definiert die ganze App inkl. spaeterer Instrumente; hier ist nur Gitarre befuellt. Sichtbare Titel stehen inline in anzeigetitel und werden im Repo nach labels/de.json geliftet."
+  },
+  "vokabulare": {
+    "domaene": [
+      "gitarre",
+      "bass",
+      "schlagzeug",
+      "gesang",
+      "theorie",
+      "koerper",
+      "ausruestung",
+      "mentales"
+    ],
+    "kompetenzstufe": [
+      "einsteiger",
+      "fortgeschritten",
+      "experte",
+      "trainer"
+    ],
+    "baustein_typ": [
+      "micro"
+    ],
+    "stil": [
+      "hardcore",
+      "metalcore",
+      "thrash",
+      "death_metal",
+      "black_metal",
+      "doom"
+    ],
+    "spielziele": {
+      "tempo": [
+        "schnellerer_wechselschlag",
+        "downpicking_ausdauer",
+        "praezises_tremolo"
+      ],
+      "ton": [
+        "tighter_palm_mute",
+        "schwererer_ton",
+        "saubere_chugs"
+      ],
+      "timing": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ],
+      "gesundheit": [
+        "schmerzfrei_spielen",
+        "lockere_greifhand"
+      ]
+    }
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "grundhaltung",
+      "anzeigetitel": {
+        "de": "Grundhaltung & Gitarre halten"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "lockere_greifhand"
+      ],
+      "erklaerteil": {
+        "de": "Bevor der erste Ton kommt, entscheidet die Haltung darüber, wie schnell und wie lange du spielen kannst. Im Metal geht es um hohe Tempi über lange Songs — das gelingt nur mit lockeren Schultern, geradem Rücken und einer Gitarre, die stabil liegt, ohne dass du sie festhalten musst.\n\nStell den Gurt so ein, dass die Gitarre im Stehen ungefähr auf der gleichen Höhe sitzt wie im Sitzen. Hängt sie zu tief, sieht es zwar nach Bühne aus, aber dein Handgelenk knickt ab und ermüdet schnell. Beide Hände sollen frei beweglich bleiben, nichts trägt Gewicht ausser dem Gurt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Haltungs-Check",
+          "ziel": "Eine entspannte, wiederholbare Grundposition finden.",
+          "schritte": [
+            "Setz dich aufrecht hin, Gitarre auf dem rechten Bein (Rechtshänder), Hals leicht nach oben.",
+            "Locker die Schultern bewusst, lass die Anschlaghand über den Saiten hängen.",
+            "Steh auf, stell den Gurt auf die gleiche Gitarrenhöhe ein und prüfe, ob beide Handgelenke gerade bleiben."
+          ],
+          "steigerung": "Wechsle mehrfach zwischen Sitzen und Stehen, ohne dass sich die Handposition verändert.",
+          "selbstkontrolle": "Die Schultern sind unten, das Anschlag-Handgelenk knickt nicht ab, und du könntest die Hände loslassen, ohne dass die Gitarre wegrutscht."
+        }
+      }
+    },
+    {
+      "id": "greifhand_grundlagen",
+      "anzeigetitel": {
+        "de": "Die Greifhand"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "grundhaltung"
+      ],
+      "spielziele": [
+        "lockere_greifhand"
+      ],
+      "erklaerteil": {
+        "de": "Die Greifhand druckt die Saiten auf die Bünde — aber mit weit weniger Kraft, als die meisten Anfänger glauben. Du setzt mit der Fingerkuppe direkt hinter den Bund auf, nicht mittig im Feld, dann klingt der Ton sauber und du brauchst kaum Druck.\n\nDer Daumen liegt locker hinten am Hals als Gegenlager, nicht verkrampft umgeklammert. Je weniger Kraft du verschwendest, desto schneller und länger kannst du spielen — das ist die Grundlage für alles, was später im Tempo kommt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Finger pro Bund",
+          "ziel": "Saubere Töne mit minimalem Druck greifen.",
+          "schritte": [
+            "Leg auf der tiefen E-Saite Finger 1 bis 4 auf die Bünde 1 bis 4.",
+            "Spiel die Töne nacheinander an und achte darauf, dass jeder klar klingt.",
+            "Reduziere den Druck so weit, bis es gerade eben nicht mehr schnarrt."
+          ],
+          "steigerung": "Dieselbe Uebung über alle sechs Saiten, dann rückwärts (Finger 4 bis 1).",
+          "selbstkontrolle": "Jeder Ton klingt ohne Schnarren, und deine Greifhand fühlt sich locker an, nicht verkrampft."
+        }
+      }
+    },
+    {
+      "id": "anschlaghand_grundlagen",
+      "anzeigetitel": {
+        "de": "Die Anschlaghand & das Pick"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "grundhaltung"
+      ],
+      "erklaerteil": {
+        "de": "Im Metal kommt der Anschlag fast ausschliesslich aus dem Handgelenk, nicht aus dem ganzen Arm. Kleine, kontrollierte Bewegungen sind schneller und präziser als grosse Ausholbewegungen.\n\nHalte das Pick zwischen Daumen und Zeigefinger, mit nur wenig überstehender Spitze — so hast du Kontrolle und der Anschlag wird definiert. Ein etwas härteres Pick (ab ca. 1 mm) hilft bei tighten Riffs, weil es nicht durchfedert."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gleichmäßige Abschläge",
+          "ziel": "Einen konstanten, kontrollierten Anschlag aus dem Handgelenk entwickeln.",
+          "schritte": [
+            "Spiel die offene tiefe E-Saite in gleichmäßigen Abschlägen (nur nach unten).",
+            "Achte darauf, dass die Bewegung aus dem Handgelenk kommt, der Unterarm ruht.",
+            "Halte Lautstärke und Abstand der Anschläge über acht Takte konstant."
+          ],
+          "steigerung": "Zu einem langsamen Metronom spielen und das Tempo in kleinen Schritten anheben.",
+          "selbstkontrolle": "Alle Anschläge klingen gleich laut und gleichmäßig, der Unterarm bleibt ruhig."
+        }
+      }
+    },
+    {
+      "id": "saiten_daempfen",
+      "anzeigetitel": {
+        "de": "Saiten abdämpfen"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "greifhand_grundlagen",
+        "anschlaghand_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Mit viel Verzerrung wird jede ungewollt klingende Saite zum Problem — es raucht und pfeift. Sauberes Spiel im Metal ist zur Hälfte eine Frage des Abdämpfens, nicht des Greifens.\n\nZwei Hände arbeiten zusammen: Die Greifhand legt sich leicht an nicht gespielte Saiten, der Handballen der Anschlaghand dämpft die tiefen Saiten mit. So bleibt nur der Ton stehen, den du wirklich willst."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Ton, Rest still",
+          "ziel": "Einzelne Töne mit hoher Verzerrung sauber isolieren.",
+          "schritte": [
+            "Stell einen verzerrten Sound ein und spiel einen einzelnen Ton auf der G-Saite.",
+            "Dämpfe mit der Greifhand die umliegenden Saiten leicht ab.",
+            "Lege den Handballen so, dass die tiefen Saiten stumm bleiben."
+          ],
+          "steigerung": "Wechsle zwischen einzelnen Tönen auf verschiedenen Saiten, ohne dass Nebengeräusche entstehen.",
+          "selbstkontrolle": "Nur der gespielte Ton klingt; es gibt kein Rauschen oder Mitschwingen der Nachbarsaiten."
+        }
+      }
+    },
+    {
+      "id": "wechselschlag",
+      "anzeigetitel": {
+        "de": "Wechselschlag"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "anschlaghand_grundlagen"
+      ],
+      "spielziele": [
+        "schnellerer_wechselschlag"
+      ],
+      "erklaerteil": {
+        "de": "Wechselschlag heisst: abwechselnd nach unten und nach oben anschlagen. Er ist die Grundlage für schnelles Spiel, weil die Aufwärtsbewegung nicht verschenkt, sondern genutzt wird.\n\nEntscheidend ist ein kleiner Bewegungsradius — die Pickspitze bleibt nah an den Saiten. Wer weit ausholt, verliert Tempo und Kontrolle. Streng abwechselnd ab, auch wenn es anfangs langsamer geht als reines Abschlagen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Chromatik im Wechselschlag",
+          "ziel": "Down-Up sauber und gleichmäßig automatisieren.",
+          "schritte": [
+            "Spiel die Chromatik 1-2-3-4 auf der tiefen E-Saite streng abwechselnd (unten-oben).",
+            "Beginne so langsam, dass jeder Ton sitzt und der Wechsel stimmt.",
+            "Halte den Anschlag klein und dicht an den Saiten."
+          ],
+          "steigerung": "Metronom in 5-BPM-Schritten anheben; nur erhöhen, wenn zwei Durchgänge fehlerfrei sind.",
+          "selbstkontrolle": "Jeder zweite Anschlag ist wirklich ein Aufschlag, und das Klangbild bleibt gleichmäßig."
+        }
+      }
+    },
+    {
+      "id": "palm_muting",
+      "anzeigetitel": {
+        "de": "Palm Muting"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "death_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "anschlaghand_grundlagen"
+      ],
+      "spielziele": [
+        "tighter_palm_mute",
+        "saubere_chugs"
+      ],
+      "erklaerteil": {
+        "de": "Palm Muting ist das Fundament des Metal-Rhythmus: Der Handballen der Anschlaghand liegt leicht auf den Saiten nahe am Steg und dämpft sie, sodass ein enger, perkussiver \"Chug\" entsteht.\n\nEntscheidend ist die Position: zu weit vorne wird der Ton dumpf und tot, zu weit hinten verschwindet die Dämpfung. Du suchst den Punkt direkt am Steg, an dem der Ton noch Tonhöhe hat, aber kurz und tight klingt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Chug-Kontrolle am tiefen E",
+          "ziel": "Gleichmäßige, enge Dämpfung bei konstantem Anschlag.",
+          "schritte": [
+            "Handballen am Steg auflegen, tiefe Saite im Achtel-Puls anschlagen.",
+            "Handposition minimal vor/zurück schieben, bis der Ton kurz und definiert ist.",
+            "Vier Takte durchgehend spielen, ohne dass Lautstärke oder Dämpfung schwanken."
+          ],
+          "steigerung": "Tempo in 5-BPM-Schritten anheben; danach zwischen gedämpft und offen wechseln.",
+          "selbstkontrolle": "Jeder Chug klingt gleich laut und gleich kurz; keine schnarrenden oder offen klingenden Töne."
+        }
+      }
+    },
+    {
+      "id": "powerchords",
+      "anzeigetitel": {
+        "de": "Powerchords"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "hardcore",
+        "metalcore",
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "greifhand_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Der Powerchord ist der Baustein fast jedes Metal-Riffs: nur Grundton und Quinte, ohne Terz. Genau weil die Terz fehlt, bleibt er auch mit viel Verzerrung klar und matscht nicht — anders als ein voller Dur- oder Moll-Akkord.\n\nDie Form ist verschiebbar: Einmal gelernt, spielst du sie auf jedem Bund. Der Grundton auf der tiefen Saite gibt den Namen des Akkords vor."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei Powerchords sauber",
+          "ziel": "Die verschiebbare Form treffsicher und ohne Nebengeräusche greifen.",
+          "schritte": [
+            "Greif einen Powerchord mit Grundton auf der tiefen E-Saite (Finger 1 und 3/4).",
+            "Schlag nur die zwei bis drei zum Akkord gehörenden Saiten an, dämpfe den Rest.",
+            "Verschiebe die Form auf drei verschiedene Bünde und spiel sie jeweils sauber an."
+          ],
+          "steigerung": "Powerchords auch mit Grundton auf der A-Saite greifen und zwischen beiden wechseln.",
+          "selbstkontrolle": "Der Akkord klingt voll und klar, es klingen keine ungewollten Saiten mit."
+        }
+      }
+    },
+    {
+      "id": "powerchord_wechsel",
+      "anzeigetitel": {
+        "de": "Powerchords schnell wechseln"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "hardcore",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "powerchords"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Ein Riff lebt vom sauberen Wechsel zwischen Akkorden — im Timing, nicht irgendwann. Weil die Powerchord-Form gleich bleibt, ist der Wechsel vor allem eine Frage der Bewegungsökonomie: kurze Wege, frühes Loslassen, rechtzeitiges Ankommen.\n\nHeb die Greifhand beim Wechsel nur so weit, wie nötig, und ziel den nächsten Grundton früh an. So bleibt der Wechsel tight, auch wenn das Tempo steigt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei-Akkord-Wechsel im Puls",
+          "ziel": "Zwei Powerchords im Takt sauber und ohne Verzögerung wechseln.",
+          "schritte": [
+            "Wähle zwei Powerchords (z. B. auf Bund 3 und Bund 5).",
+            "Wechsle zu einem langsamen Metronom im Halbtakt hin und her.",
+            "Achte darauf, dass der neue Akkord genau auf dem Schlag klingt."
+          ],
+          "steigerung": "Wechselabstand auf jeden Schlag verkürzen, dann das Tempo erhöhen.",
+          "selbstkontrolle": "Der Wechsel sitzt im Timing; es gibt keine Lücke und kein Verschleifen zwischen den Akkorden."
+        }
+      }
+    },
+    {
+      "id": "downpicking",
+      "anzeigetitel": {
+        "de": "Downpicking"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "wechselschlag",
+        "palm_muting"
+      ],
+      "spielziele": [
+        "downpicking_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Reines Downpicking — nur Abschläge — klingt aggressiver und tighter als Wechselschlag, weil jeder Ton den gleichen Angriff hat. Es ist der Sound klassischer Thrash-Riffs, kostet aber Ausdauer.\n\nGenau deshalb baust du es langsam auf. Achte auf Lockerheit im Unterarm: Wenn er zu brennen beginnt, machst du eine Pause. Ausdauer entsteht über Wochen, nicht in einer Session — Schmerz ist ein Stoppsignal, kein Trainingsziel."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Downpicking-Ausdauer",
+          "ziel": "Gleichmäßige Abschläge über längere Strecken halten.",
+          "schritte": [
+            "Spiel palm-gemutete Achtel auf der tiefen Saite, ausschliesslich mit Abschlägen.",
+            "Halte das Tempo bewusst niedrig und die Bewegung klein.",
+            "Spiel so lange gleichmäßig, wie es locker bleibt, und stopp beim ersten Brennen."
+          ],
+          "steigerung": "Erst die Dauer bei gleichem Tempo verlängern, dann das Tempo minimal anheben.",
+          "selbstkontrolle": "Die Abschläge bleiben gleich stark, und der Unterarm bleibt locker statt zu verkrampfen."
+        }
+      }
+    },
+    {
+      "id": "galopp_rhythmus",
+      "anzeigetitel": {
+        "de": "Galopp-Rhythmus"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "downpicking",
+        "palm_muting"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Der Galopp — ein Achtel plus zwei Sechzehntel — ist eines der prägendsten Metal-Rhythmusmuster. Er treibt das Riff nach vorne und lebt von exakter Gleichmäßigkeit.\n\nDer typische Anschlag ist unten-unten-oben: Der betonte Achtel kommt als Abschlag, die zwei schnellen Sechzehntel als Ab- und Aufschlag. Palm Muting hält das Ganze tight."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Galopp am tiefen E",
+          "ziel": "Das Galopp-Muster gleichmäßig und im Timing spielen.",
+          "schritte": [
+            "Spiel palm-gemutet das Muster unten-unten-oben auf der tiefen Saite.",
+            "Zähle laut oder zu einem Metronom mit, damit die Sechzehntel gleich lang bleiben.",
+            "Wiederhole das Muster über mehrere Takte ohne zu eilen."
+          ],
+          "steigerung": "Den Galopp zwischen zwei Tonhöhen (Powerchord-Grundtöne) bewegen.",
+          "selbstkontrolle": "Die zwei schnellen Töne sind wirklich gleich lang, und das Muster eilt nicht."
+        }
+      }
+    },
+    {
+      "id": "dropped_tuning",
+      "anzeigetitel": {
+        "de": "Drop-Tunings & Stimmen"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "death_metal",
+        "doom"
+      ],
+      "voraussetzungen": [
+        "powerchords"
+      ],
+      "spielziele": [
+        "schwererer_ton"
+      ],
+      "erklaerteil": {
+        "de": "Viel Metal wird tiefer gestimmt — für mehr Wucht und weil sich die tiefe Saite dann leichter als Powerchord mit einem Finger greifen lässt. Beim Drop D senkst du nur die tiefe E-Saite einen Ganzton auf D.\n\nTiefer stimmen heisst auch: die Saiten werden schlaffer. Für dauerhaft tiefe Tunings lohnen sich dickere Saiten, sonst schnarrt und flattert es. Das ist ein Prinzip, kein fester Wert — welche Stärke passt, hängt von Gitarre und Tuning ab."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Auf Drop D stimmen",
+          "ziel": "Sicher auf Drop D umstimmen und den Ein-Finger-Powerchord nutzen.",
+          "schritte": [
+            "Stimme die tiefe E-Saite einen Ganzton herunter auf D (Vergleich mit der D-Saite eine Oktave höher).",
+            "Greif einen Powerchord auf den drei tiefen Saiten mit einem Finger quer über einen Bund.",
+            "Spiel dieselben Riff-Ideen wie zuvor, jetzt im tieferen Tuning."
+          ],
+          "steigerung": "Zwischen Standard und Drop D wechseln und prüfen, wie sicher du das Stimmen triffst.",
+          "selbstkontrolle": "Die Saite ist sauber auf D, und der Ein-Finger-Powerchord klingt klar."
+        }
+      }
+    },
+    {
+      "id": "chugs_riffing",
+      "anzeigetitel": {
+        "de": "Erstes Chug-Riff"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "palm_muting",
+        "powerchords",
+        "dropped_tuning"
+      ],
+      "spielziele": [
+        "saubere_chugs",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Jetzt setzt du die Bausteine zusammen: palm-gemutete Chugs auf der tiefen Saite, unterbrochen von Akzenten (offene Töne oder Powerchords). Genau dieses Spiel von tight und offen macht ein Riff spannend.\n\nDenk in kurzen Bausteinen: ein Grundmuster aus Chugs, dann ein Akzent, dann wieder Chugs. Sauberkeit vor Tempo — ein tightes langsames Riff klingt besser als ein hektisches, das auseinanderfällt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Vier-Takt-Riff",
+          "ziel": "Chugs und Akzente zu einem tighten kurzen Riff verbinden.",
+          "schritte": [
+            "Spiel drei palm-gemutete Chugs auf der tiefen Saite, dann einen betonten offenen Ton.",
+            "Wiederhole das Muster und setze am Ende einen Powerchord als Akzent.",
+            "Spiel die vier Takte im Loop zu einem langsamen Metronom."
+          ],
+          "steigerung": "Akzente variieren (andere Powerchords) und das Tempo schrittweise erhöhen.",
+          "selbstkontrolle": "Die Chugs sind tight und gleich, die Akzente sitzen im Timing, das Riff fällt nicht auseinander."
+        }
+      }
+    },
+    {
+      "id": "aufwaermen_haende",
+      "anzeigetitel": {
+        "de": "Hände aufwärmen & Handgesundheit"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "lockere_greifhand"
+      ],
+      "erklaerteil": {
+        "de": "Schnelles Spiel belastet Sehnen und Handgelenke — Aufwärmen ist im Metal keine Kür, sondern Selbstschutz. Ein paar Minuten lockeres, langsames Spielen bringen die Hände auf Betriebstemperatur, bevor es ans Tempo geht.\n\nDas wichtigste Prinzip: Schmerz ist ein Stoppsignal. Ziehen oder Stechen im Handgelenk bedeutet Pause, nicht durchbeissen. Kurze, regelmäßige Einheiten mit Pausen bringen dich weiter — und gesünder — als seltene lange Sessions."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie beginnst du deine nächsten drei Uebe-Sessions? Nimm dir vor, jede mit ein paar Minuten langsamem, lockerem Spielen zu eröffnen, und achte bewusst darauf, bei welchen Uebungen deine Hand zu verkrampfen beginnt. An welcher Stelle würde eine kurze Pause dir helfen, länger locker zu bleiben?"
+      }
+    },
+    {
+      "id": "lockerheit_spannung",
+      "anzeigetitel": {
+        "de": "Locker bleiben: Spannung vermeiden"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "aufwaermen_haende"
+      ],
+      "spielziele": [
+        "lockere_greifhand",
+        "schmerzfrei_spielen"
+      ],
+      "erklaerteil": {
+        "de": "Unnötige Spannung ist der größte Feind von Tempo und Gesundheit zugleich. Wer die Saiten zu fest greift oder das Pick verkrampft hält, wird nicht schneller, sondern langsamer — und riskiert Beschwerden.\n\nGewöhn dir an, während des Spielens kurz in die Hände \"hineinzuhören\": Schultern unten, Daumen locker, nur so viel Druck wie nötig. Diese Selbstwahrnehmung ist eine Fähigkeit, die du üben kannst wie jede andere."
+      },
+      "reflexionsaufgabe": {
+        "de": "Spiel eine dir vertraute Uebung und richte die Aufmerksamkeit nacheinander auf Schultern, Greifhand-Daumen und Pick-Griff. Wo hältst du mehr Spannung, als nötig wäre? Was passiert mit Klang und Tempo, wenn du bewusst loslässt?"
+      }
+    },
+    {
+      "id": "ueben_mit_klick",
+      "anzeigetitel": {
+        "de": "Mit Klick üben"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Das Metronom ist im Metal dein ehrlichster Trainingspartner. Es zeigt gnadenlos, wo du eilst oder schleppst — und genau das brauchst du, denn tightes Timing ist im hohen Tempo der Unterschied zwischen \"brutal\" und \"matschig\".\n\nDer Trick ist nicht, schnell zu starten, sondern langsam sauber zu spielen und das Tempo nur dann zu erhöhen, wenn es wirklich sitzt. Lieber zehn fehlerfreie Wiederholungen langsam als eine hektische schnelle."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir eines deiner Uebungsriffs vor und spiel es zu einem langsamen Klick. An welchen Stellen eilst du dem Klick voraus, an welchen fällst du zurück? Leg ein Tempo fest, bei dem alles sitzt, und ein nächstes Ziel-Tempo — in kleinen Schritten."
+      }
+    }
+  ]
+}
