@@ -8,9 +8,9 @@
   "delta_bausteine": [],
   "bausteine": [
     {
-      "id": "tremolo_picking",
+      "id": "tremolo_ausbau",
       "anzeigetitel": {
-        "de": "Tremolo-Picking"
+        "de": "Tremolo-Picking ausbauen"
       },
       "domaene": [
         "gitarre"
@@ -24,7 +24,7 @@
         "black_metal"
       ],
       "voraussetzungen": [
-        "wechselschlag"
+        "tremolo_picking"
       ],
       "erklaerteil": {
         "de": "Tremolo-Picking ist nichts anderes als sehr schneller Wechselschlag auf einem einzelnen Ton oder einer Saite. Es erzeugt den treibenden, gleichmäßigen Klangteppich, der Death- und Black-Metal-Riffs ihr rasendes Tempo gibt.\n\nDer Schlüssel liegt in der Bewegungsökonomie, die du vom Wechselschlag schon kennst: Die Bewegung kommt aus dem Handgelenk, der Bewegungsradius bleibt winzig, die Pickspitze steht nur wenig über. Je kürzer der Weg, den das Pick zurücklegt, desto höher das Tempo bei gleicher Anstrengung.\n\nWichtiger als reine Geschwindigkeit ist die Gleichmäßigkeit: Alle Anschläge sollen gleich laut und gleich lang sein, sodass kein Puls entsteht, den du nicht willst. Ein sauberes langsames Tremolo ist mehr wert als ein schnelles, das flattert."
@@ -59,8 +59,8 @@
         "black_metal"
       ],
       "voraussetzungen": [
-        "tremolo_picking",
-        "saiten_daempfen"
+        "tremolo_ausbau",
+        "palm_muting"
       ],
       "erklaerteil": {
         "de": "Im Black Metal wird das Tremolo zum Herzstück ganzer Riffs: Melodien werden nicht einzeln angeschlagen, sondern in rasendem Tremolo über lange Strecken gehalten. So entsteht die typische Wand aus Klang, über der sich die Melodie bewegt.\n\nBei sehr hohem Tempo entscheidet Lockerheit über alles. Sobald der Unterarm verkrampft, bricht die Geschwindigkeit ein und der Ton wird ungleichmäßig. Such ein Tempo, das du entspannt halten kannst, statt dich an die Grenze zu zwingen — Tempo wächst über Wochen, und Brennen oder Schmerz ist ein Stoppsignal, keine Trophäe.\n\nWeil bei diesem Tempo jede mitschwingende Saite zu Lärm wird, arbeitet das Abdämpfen ständig mit: Greifhand und Handballen halten alles still, was nicht klingen soll. Erst dann bleibt die Tremolo-Wand klar statt matschig."
@@ -96,7 +96,7 @@
         "death_metal"
       ],
       "voraussetzungen": [
-        "tremolo_picking",
+        "tremolo_ausbau",
         "powerchords"
       ],
       "erklaerteil": {
@@ -170,7 +170,7 @@
       ],
       "voraussetzungen": [
         "palm_muting",
-        "chugs_riffing"
+        "einfaches_riff"
       ],
       "erklaerteil": {
         "de": "Palm Muting kennst du als Grundtechnik — fortgeschritten wird es als System: bewusst gesetzte Betonungen, schnelle Wechsel zwischen gedämpft und offen und synkopierte Muster, die das Riff rhythmisch aufbrechen. Der Handballen wird zum Dynamik-Werkzeug, nicht nur zum Dämpfer.\n\nEntscheidend ist die Kontrolle über den Dämpfungsgrad. Etwas mehr Druck macht den Chug kürzer und perkussiver, etwas weniger lässt mehr Ton stehen. Wenn du diese Abstufung bewusst steuerst, bekommt eine Reihe gleicher Töne plötzlich Kontur.\n\nDie zweite Ebene ist das exakte An- und Abschalten der Dämpfung. Ein offener Akzent mitten in einer Chug-Reihe wirkt nur, wenn der Handballen im richtigen Moment kurz abhebt und sofort wieder auflegt. Präzision schlägt hier Tempo — ein tightes, mittelschnelles System klingt brutaler als ein hektisches."
@@ -520,7 +520,7 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "tremolo_picking"
+        "tremolo_ausbau"
       ],
       "erklaerteil": {
         "de": "Je höher das Tempo, desto mehr Wiederholungen laufen durch deine Sehnen und Handgelenke — und desto wichtiger wird der Schutz davor. Schnelles Tremolo, Downpicking und dichte Riffs sind Ausdauerbelastungen, die sich über eine Session aufsummieren, auch wenn im Moment nichts wehtut.\n\nDrei Prinzipien tragen dich langfristig: Wärm die Hände vor schnellem Spiel immer mit ein paar Minuten langsamem, lockerem Spielen auf. Bau Tempo und Dauer schrittweise über Wochen auf, nicht in einer einzelnen Session. Und behandle jedes Ziehen, Brennen oder Stechen im Handgelenk als Stoppsignal — dann Pause machen, nicht durchbeißen.\n\nSauberkeit und Lockerheit schützen zugleich: Wer verspannt und mit zu viel Kraft spielt, belastet die Sehnen unnötig und wird obendrein langsamer. Gute Technik ist auch Gesundheitsvorsorge."
