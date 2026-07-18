@@ -3,14 +3,14 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "einsteiger",
     "domaene": "bass",
-    "hinweis": "Phase-Startinhalt (Einsteiger-Bass). Das Vokabular ist in bausteine.einsteiger-gitarre.json definiert; diese Datei traegt nur Bass-Bausteine und keinen eigenen vokabulare-Block. Sichtbare Titel stehen inline in anzeigetitel und werden im Repo nach labels/de.json geliftet."
+    "hinweis": "Einsteiger-Bass. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
   },
   "delta_bausteine": [],
   "bausteine": [
     {
       "id": "bass_grundhaltung",
       "anzeigetitel": {
-        "de": "Bass halten & Grundhaltung"
+        "de": "Grundhaltung & Entspannung"
       },
       "domaene": [
         "bass"
@@ -19,27 +19,30 @@
         "einsteiger"
       ],
       "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen"
+      ],
       "erklaerteil": {
-        "de": "Bevor der erste Ton steht, entscheidet die Haltung darüber, wie schnell und wie lange du spielen kannst. Der Bass ist schwerer und hat eine längere Mensur als die Gitarre — die Griffe liegen weiter auseinander, die Saiten sind dicker. Im Metal spielst du schnelle Läufe über lange Sets; das gelingt nur mit lockeren Schultern, geradem Rücken und einem Instrument, das stabil hängt, ohne dass du es festhalten musst.\n\nStell den Gurt so ein, dass der Bass im Stehen ungefähr auf derselben Höhe sitzt wie im Sitzen. Hängt er zu tief, knickt dein Anschlag-Handgelenk ab und ermüdet in Minuten — was auf der Bühne lässig aussieht, kostet dich Tempo und Kontrolle. Beide Hände bleiben frei beweglich, das Gewicht trägt allein der Gurt."
+        "de": "Der Bass ist größer und schwerer als die Gitarre, die Mensur länger, die Saiten dicker — umso wichtiger ist eine Haltung, die deine Hände entlastet. Ziel ist ein neutrales Handgelenk der Greifhand, hängende Schultern und ein stabiler Kontakt des Instruments am Körper.\n\nIm Sitzen ruht der Korpus auf dem Oberschenkel, der Hals leicht angehoben, damit die Greifhand ohne Abknicken an die tiefen Lagen kommt. Im Stehen wählst du zum Üben eine Gurthöhe, bei der die Hände dieselbe Position wie im Sitzen finden — tief geschnallt sieht metal aus, belastet aber Handgelenk und Sehnen.\n\nGesundheit hat Vorrang: Verspannung, Taubheit oder Schmerz sind Signale zum Anhalten. Wegen des höheren Gewichts lohnt es sich, von Anfang an auf eine entspannte Grundhaltung zu achten."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Haltungs-Check am Bass",
-          "ziel": "Eine entspannte, wiederholbare Grundposition finden, die im Sitzen und Stehen gleich bleibt.",
+          "titel": "Neutrale Grundhaltung finden",
+          "ziel": "Eine Position, in der beide Hände trotz Instrumentengewicht locker arbeiten.",
           "schritte": [
-            "Setz dich aufrecht hin, den Bass-Korpus auf dem rechten Bein (Rechtshänder), den Hals leicht nach oben gerichtet.",
-            "Lass die Schultern bewusst sinken und die Anschlaghand locker über den Saiten hängen.",
-            "Steh auf, stell den Gurt auf dieselbe Basshöhe ein und prüfe, ob beide Handgelenke gerade bleiben."
+            "Setz dich aufrecht, leg den Bass-Korpus auf den Oberschenkel, Hals leicht angehoben.",
+            "Lass die Schultern fallen und prüf, ob das Greifhand-Handgelenk gerade bleibt.",
+            "Spiel eine leere Saite mehrmals locker und beobachte, ob Arm und Hand entspannt bleiben."
           ],
-          "steigerung": "Wechsle mehrmals zwischen Sitzen und Stehen, ohne dass sich die Position der Hände verändert.",
-          "selbstkontrolle": "Die Schultern sind unten, das Anschlag-Handgelenk knickt nicht ab, und du könntest kurz beide Hände lösen, ohne dass der Bass wegrutscht."
+          "steigerung": "Wiederhole im Stehen und finde die Gurthöhe, bei der die Handposition der im Sitzen entspricht.",
+          "selbstkontrolle": "Nach einigen Minuten fühlt sich nichts verspannt oder taub an; die Greifhand erreicht auch tiefe Lagen ohne Abknicken."
         }
       }
     },
     {
-      "id": "greifhand_bass",
+      "id": "bass_greifhand",
       "anzeigetitel": {
-        "de": "Die Greifhand am Bass"
+        "de": "Greifhand-Grundlagen"
       },
       "domaene": [
         "bass"
@@ -51,27 +54,66 @@
       "voraussetzungen": [
         "bass_grundhaltung"
       ],
+      "spielziele": [
+        "lockere_greifhand"
+      ],
       "erklaerteil": {
-        "de": "Die Greifhand drückt die Saiten auf die Bünde — aber mit deutlich weniger Kraft, als die meisten am Anfang glauben. Du setzt mit der Fingerkuppe direkt hinter den Bund auf, nicht mittig im Bundfeld; dann klingt der Ton sauber und du brauchst kaum Druck. Der Daumen liegt locker hinten am Hals als Gegenlager, nicht verkrampft um den Hals geklammert.\n\nAm Bass sind die Bünde weiter auseinander als an der Gitarre, gerade in den tiefen Lagen. Ein Finger pro Bund ist dort anfangs anstrengend — leg die Hand entspannt an und lass die Finger nah über den Saiten schweben, statt sie weit abzuspreizen. Je weniger Kraft du verschwendest, desto schneller und länger kannst du spielen."
+        "de": "Auf dem Bass sind die Bünde weiter auseinander als auf der Gitarre. Die Greifhand setzt die Fingerkuppen dicht am Bunddraht auf; der Daumen liegt locker hinter dem Hals als Gegenlager, nicht als Klammer.\n\nEin verbreiteter Ansatz ist „ein Finger pro Bund“, der die Hand ökonomisch hält. In den tiefen Lagen, wo die Abstände groß sind, darfst du die Hand aber ruhig verschieben, statt zu überdehnen — Überdehnung ist eine häufige Ursache für Verspannung.\n\nSaubere Töne entstehen aus Position und moderatem Druck, nicht aus Kraft. Schnarrt ein Ton, prüf zuerst die Nähe zum Bund, bevor du fester drückst."
       },
       "uebungsteil": {
         "de": {
           "titel": "Ein Finger pro Bund",
-          "ziel": "Saubere Töne mit minimalem Druck greifen, ohne die Hand zu verkrampfen.",
+          "ziel": "Kontrollierte, ökonomische Fingerbewegung über die weiten Bassbünde.",
           "schritte": [
-            "Leg auf der A-Saite die Finger 1 bis 4 nacheinander auf vier benachbarte Bünde in mittlerer Lage.",
-            "Spiel die Töne einzeln an und achte darauf, dass jeder klar klingt.",
-            "Reduziere den Druck so weit, bis es gerade eben nicht mehr schnarrt."
+            "Leg auf einer Saite vier Finger auf vier benachbarte Bünde (in einer mittleren Lage mit moderaten Abständen).",
+            "Spiel die vier Töne langsam und einzeln; jeder soll klar klingen.",
+            "Achte darauf, dass die Finger nah über den Saiten bleiben und die Hand locker ist."
           ],
-          "steigerung": "Dieselbe Übung über alle Saiten und danach rückwärts (Finger 4 bis 1); dann in tiefere Lagen mit größerem Bundabstand wandern.",
-          "selbstkontrolle": "Jeder Ton klingt ohne Schnarren, und die Greifhand fühlt sich locker an, nicht verkrampft."
+          "steigerung": "Verschieb die Übung in tiefere Lagen und lass die Hand mitwandern, statt zu überdehnen.",
+          "selbstkontrolle": "Jeder Ton klingt sauber; keine Überdehnung, keine Verspannung in der Hand."
         }
       }
     },
     {
-      "id": "fingeranschlag",
+      "id": "greifhand_daempfen",
       "anzeigetitel": {
-        "de": "Anschlag mit den Fingern"
+        "de": "Dämpfen mit der Greifhand"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_greifhand"
+      ],
+      "spielziele": [
+        "saubere_chugs",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Verzerrter Metal-Bass ist gnadenlos mit Nebengeräuschen: mitschwingende Saiten und ungewollte Töne verwaschen den tighten Sound. Die Greifhand ist dein wichtigstes Werkzeug gegen dieses Rauschen.\n\nGespielte Töne dämpfst du, indem du den Druck löst, ohne den Finger ganz abzuheben. Ungespielte Saiten legst du mit den flach liegenden Fingern oder der Handfläche ruhig — besonders die Saiten oberhalb der gerade gespielten. So bleibt nur klingend, was klingen soll.\n\nAuch beim Wechsel über die Saiten hilft die Greifhand, benachbarte Saiten stumm zu halten. Sauberkeit hier ist die Grundlage für definierte, tighte Basslinien."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Töne und Nachbarsaiten stummhalten",
+          "ziel": "Gespielte Töne kontrolliert dämpfen und Nebengeräusche vermeiden.",
+          "schritte": [
+            "Spiel einen Ton und dämpf ihn, indem du den Fingerdruck löst, ohne abzuheben.",
+            "Leg die freien Finger flach über die übrigen Saiten, sodass sie nicht mitschwingen.",
+            "Wechsle zwischen zwei Saiten und halte die jeweils nicht gespielte Saite stumm."
+          ],
+          "steigerung": "Spiel kurze, rhythmische Tonfolgen und sorg dafür, dass die Pausen wirklich still sind.",
+          "selbstkontrolle": "Nur die gespielte Saite klingt; keine mitschwingenden Nachbarsaiten, saubere Pausen."
+        }
+      }
+    },
+    {
+      "id": "fingerstyle",
+      "anzeigetitel": {
+        "de": "Zupftechnik (Wechselschlag)"
       },
       "domaene": [
         "bass"
@@ -83,27 +125,345 @@
       "voraussetzungen": [
         "bass_grundhaltung"
       ],
+      "spielziele": [
+        "schnellerer_wechselschlag"
+      ],
       "erklaerteil": {
-        "de": "Der klassische Bass-Anschlag im Metal kommt aus den Fingern: Du zupfst die Saite abwechselnd mit Zeige- und Mittelfinger an. Dieser Wechselschlag (i-m) ist die Grundlage für Tempo, denn keiner der beiden Finger muss zweimal hintereinander arbeiten — die Bewegung teilt sich auf.\n\nDer Daumen ruht als Anker auf dem Pickup oder auf der nächsttieferen Saite und wandert mit, wenn du die Saite wechselst. Zupf nicht nach oben von der Saite weg, sondern eher quer in Richtung des Korpus, so bleibt der Ton satt und gleichmäßig. Entscheidend ist die strenge Abwechslung: auch wenn es anfangs langsamer geht, spielst du konsequent Zeige-Mittel-Zeige-Mittel."
+        "de": "Fingerstyle ist die häufigste Anschlagtechnik am Bass: Du zupfst die Saiten mit Zeige- und Mittelfinger im steten Wechsel. Dieser „Wechselschlag der Finger“ ist die Grundlage für Gleichmäßigkeit und Tempo.\n\nDie Finger ziehen leicht in Richtung Korpus und stützen sich bei Bedarf am Daumen oder an der oberen Saite ab. Wichtig ist der konsequente Wechsel Zeige–Mittel, auch beim Saitenwechsel — sonst schleicht sich ein ungleichmäßiges Muster ein.\n\nWie beim Gitarren-Wechselschlag gilt: Erst wenn beide Finger gleich klingen, lohnt sich mehr Tempo. Gleichmäßigkeit steht vor Geschwindigkeit."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Wechselschlag i-m",
-          "ziel": "Zeige- und Mittelfinger gleichmäßig und streng abwechselnd einsetzen.",
+          "titel": "Zeige–Mittel im Wechsel",
+          "ziel": "Gleichmäßiges, wechselndes Zupfen beider Finger.",
           "schritte": [
-            "Zupf die offene A-Saite streng abwechselnd mit Zeige- und Mittelfinger.",
-            "Achte darauf, dass beide Finger gleich laut klingen — der Mittelfinger neigt dazu, kräftiger zu sein.",
-            "Halte den Daumen als Anker auf dem Pickup und die Bewegung klein."
+            "Zupf eine leere Saite abwechselnd mit Zeige- und Mittelfinger in gleichmäßigen Achteln.",
+            "Halte die Reihenfolge strikt ein, auch wenn du auf eine andere Saite wechselst.",
+            "Hör hin, ob beide Finger gleich laut und gleich sauber klingen."
           ],
-          "steigerung": "Zu einem langsamen Metronom spielen und das Tempo in kleinen Schritten anheben; danach über mehrere Saiten wechseln.",
-          "selbstkontrolle": "Man hört keinen Unterschied zwischen den beiden Fingern, und die Abwechslung bleibt auch beim Saitenwechsel erhalten."
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und übe Saitenwechsel bei durchlaufendem Wechsel.",
+          "selbstkontrolle": "Zeige- und Mittelfinger sind im Klang nicht zu unterscheiden; kein Stolpern beim Saitenwechsel."
         }
       }
     },
     {
-      "id": "plektrum_anschlag",
+      "id": "plektrum_technik",
       "anzeigetitel": {
-        "de": "Anschlag mit dem Plektrum"
+        "de": "Plektrum-Technik"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "hardcore",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "bass_grundhaltung"
+      ],
+      "spielziele": [
+        "schnellerer_wechselschlag",
+        "downpicking_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Viele Extreme-Metal-Bassist:innen greifen zum Plektrum: Es erzeugt einen härteren, definierten Anschlag mit mehr Attack, der sich unter verzerrten Gitarren besser durchsetzt. Im Thrash und Hardcore ist das oft der prägende Bass-Sound.\n\nDu hältst das Plektrum wie auf der Gitarre, mit kleiner überstehender Spitze, und schlägst aus dem Handgelenk. Reine Abschläge (Downpicking) klingen besonders tight und gleichmäßig, kosten aber Ausdauer; Wechselschlag erlaubt höheres Tempo.\n\nBaust du Downpicking-Ausdauer auf, dann schrittweise und nur so weit, wie die Hand locker bleibt — Verkrampfung ist ein Signal zur Pause, nicht zum Durchhalten."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Down- und Wechselschlag mit Pick",
+          "ziel": "Definierter, gleichmäßiger Anschlag mit dem Plektrum.",
+          "schritte": [
+            "Spiel gleichmäßige Achtel auf einer Saite, zunächst nur mit Abschlägen.",
+            "Achte auf konstante Lautstärke und eine kleine Bewegung aus dem Handgelenk.",
+            "Füge dann Aufschläge hinzu und halte den strikten Wechsel ein."
+          ],
+          "steigerung": "Steigere Tempo und Dauer in kleinen Schritten; bei Downpicking nur so lange, wie die Hand locker bleibt.",
+          "selbstkontrolle": "Der Anschlag klingt gleichmäßig und definiert; die Hand verkrampft nicht."
+        }
+      }
+    },
+    {
+      "id": "anschlagpunkt_ton",
+      "anzeigetitel": {
+        "de": "Anschlagpunkt & Ton"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "fingerstyle",
+        "plektrum_technik"
+      ],
+      "spielziele": [
+        "schwererer_ton"
+      ],
+      "erklaerteil": {
+        "de": "Wo du die Saite anschlägst, verändert den Klang deutlich. Nahe am Steg wird der Ton heller, drahtiger und aggressiver — gut, um im dichten Metal-Mix durchzukommen. Näher am Hals wird er runder und fetter, aber auch weniger definiert.\n\nFür schnelle, tighte Passagen wählen viele einen Punkt eher Richtung Steg, weil dort weniger Saitenbewegung präziser klingt. Für schwere, getragene Parts kann ein weicherer Anschlag Richtung Hals passen.\n\nExperimentiere bewusst mit der Position, statt sie dem Zufall zu überlassen — der Anschlagpunkt ist ein Klangregler, den du mit der Hand bedienst."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Anschlagpunkt hörbar machen",
+          "ziel": "Den Zusammenhang von Anschlagposition und Klang bewusst steuern.",
+          "schritte": [
+            "Spiel denselben Ton einmal nahe am Steg und einmal näher am Hals.",
+            "Hör auf den Unterschied: heller und drahtiger versus runder und fetter.",
+            "Wähl für eine schnelle Tonfolge bewusst die Position, die am definiertesten klingt."
+          ],
+          "steigerung": "Wechsle innerhalb einer Übung gezielt zwischen zwei Anschlagpunkten für verschiedene Parts.",
+          "selbstkontrolle": "Du hörst den Klangunterschied klar und triffst die gewünschte Position zuverlässig."
+        }
+      }
+    },
+    {
+      "id": "palm_muting_bass",
+      "anzeigetitel": {
+        "de": "Palm Muting am Bass"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "death_metal",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "plektrum_technik"
+      ],
+      "spielziele": [
+        "tighter_palm_mute"
+      ],
+      "erklaerteil": {
+        "de": "Auch am Bass dämpfst du mit dem Handballen der Anschlaghand nahe am Steg — das ergibt einen kurzen, kontrollierten, perkussiven Ton. Mit Plektrum gespielt, entsteht so ein enges, tightes Low-End, das sich eng an gedämpfte Gitarrenriffs anlegt.\n\nDie Position ist entscheidend: zu weit vorne wird der Ton dumpf, zu weit hinten verschwindet die Dämpfung. Du suchst den Punkt, an dem der Ton noch Tonhöhe und Druck hat, aber kurz bleibt.\n\nPalm Muting am Bass ist besonders in tighten Thrash- und Death-Metal-Passagen nützlich, wo der Bass die Gitarren stützen und nicht verwaschen soll."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gedämpfte Achtel am Steg",
+          "ziel": "Kurzer, kontrollierter Ton bei gleichmäßigem Anschlag.",
+          "schritte": [
+            "Leg den Handballen nahe am Steg auf und spiel die tiefe Saite in Achteln (Pick oder Finger).",
+            "Verschieb die Handposition minimal, bis der Ton kurz und definiert ist, aber noch Tonhöhe hat.",
+            "Spiel mehrere Takte gleichmäßig durch, ohne dass Dämpfung oder Lautstärke schwanken."
+          ],
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und wechsle zwischen gedämpft und offen.",
+          "selbstkontrolle": "Jeder Ton klingt gleich kurz und gleich laut; die Dämpfung bleibt konstant."
+        }
+      }
+    },
+    {
+      "id": "grundton_folgen",
+      "anzeigetitel": {
+        "de": "Grundtönen folgen"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal",
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "bass_greifhand"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Die Kernaufgabe des Basses im Metal ist es, das harmonische Fundament zu legen — meist folgt er den Grundtönen der Gitarrenriffs. Damit verbindet er Rhythmus und Harmonie und gibt dem Sound sein Gewicht.\n\nGerade im Black Metal folgt der Bass oft eng den schnellen Gitarrenlinien und treibt mit durchlaufenden Achteln oder Sechzehnteln. Im Thrash stützt er die Riffs und betont ihre Akzente. Du musst dafür heraushören, welcher Ton der jeweilige Grundton ist.\n\nZu Beginn reicht es, sauber den Grundtönen zu folgen und im Timing zu bleiben. Verzierungen kommen später — das verlässliche Fundament ist wichtiger als Betriebsamkeit."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Grundtönen eines Riffs folgen",
+          "ziel": "Die Grundtöne heraushören und sauber mitspielen.",
+          "schritte": [
+            "Nimm ein einfaches Gitarrenriff (oder eine Akkordfolge) und bestimm die Grundtöne.",
+            "Spiel diese Grundtöne im Rhythmus des Riffs auf dem Bass mit.",
+            "Achte darauf, jeden Grundton sauber und im Timing zu treffen."
+          ],
+          "steigerung": "Folge schnelleren Linien mit durchlaufenden Achteln und halte dabei das Timing.",
+          "selbstkontrolle": "Deine Töne passen harmonisch zum Riff und sitzen rhythmisch; nichts eiert."
+        }
+      }
+    },
+    {
+      "id": "schnelles_fingerspiel",
+      "anzeigetitel": {
+        "de": "Schnelles Fingerspiel"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "fingerstyle"
+      ],
+      "spielziele": [
+        "schnellerer_wechselschlag",
+        "praezises_tremolo"
+      ],
+      "erklaerteil": {
+        "de": "Death Metal verlangt oft schnelle, gleichmäßige Tonfolgen — mit dem wechselnden Zupfen aus Zeige- und Mittelfinger lässt sich das erreichen. Tempo entsteht aus Entspannung und kleiner Bewegung, nicht aus Kraft.\n\nDer häufigste Fehler ist Verkrampfung: Sie macht den Anschlag ungleichmäßig und bremst. Beginne bewusst langsam, halte die Finger locker und lass das Tempo aus der Gleichmäßigkeit wachsen. Ein sauberer, ebenmäßiger Fluss ist das Ziel, nicht ein hektisches Rasen.\n\nGesundheit hat Vorrang: Steigere Tempo und Dauer schrittweise und leg bei Brennen, Verkrampfung oder Schmerz eine Pause ein."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gleichmäßige schnelle Achtel",
+          "ziel": "Schnelles, entspanntes Fingerspiel bei gleichmäßigem Ton.",
+          "schritte": [
+            "Spiel auf einer Saite gleichmäßige Achtel im strikten Zeige–Mittel-Wechsel, zunächst in mäßigem Tempo.",
+            "Halte die Finger locker und die Bewegung klein.",
+            "Steigere das Tempo erst, wenn der Anschlag über mehrere Takte gleichmäßig bleibt."
+          ],
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und zieh die Figur später über Saitenwechsel.",
+          "selbstkontrolle": "Der Ton fließt gleichmäßig; bei Verkrampfung oder Brennen stoppst du und lockerst die Hand."
+        }
+      }
+    },
+    {
+      "id": "galopp_bass",
+      "anzeigetitel": {
+        "de": "Galopp am Bass"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "fingerstyle"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Der Galopp — eine längere Note gefolgt von zwei schnellen — ist auch am Bass ein Kennzeichen vieler Thrash- und Death-Metal-Linien. Auf dem Bass hat ihn vor allem der treibende Stil von Spielern wie Steve Harris geprägt.\n\nDu kannst ihn mit Fingern (etwa Mittel–Zeige–Mittel) oder mit dem Plektrum spielen. Entscheidend ist ein gleichmäßiger Puls: Die zwei schnellen Töne müssen exakt sitzen und dürfen nicht verschleppen, sonst verliert die Figur ihren Zug.\n\nÜbe den Galopp erst langsam und isoliert, bis das Muster automatisch läuft, und bau ihn dann ins Tempo und in Linien ein."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Galopp auf einer Saite",
+          "ziel": "Die Galopp-Figur gleichmäßig und treibend spielen.",
+          "schritte": [
+            "Spiel auf einer Saite die Figur: eine betonte Note, dann zwei schnelle.",
+            "Beginne langsam und zähl mit, damit die zwei schnellen Töne exakt sitzen.",
+            "Wiederhole die Figur über mehrere Takte, ohne zu schwanken."
+          ],
+          "steigerung": "Erhöhe das Tempo schrittweise und setz den Galopp später unter ein Riff.",
+          "selbstkontrolle": "Der Galopp klingt gleichmäßig und treibt; die schnellen Töne verschleppen nicht."
+        }
+      }
+    },
+    {
+      "id": "lock_zur_bassdrum",
+      "anzeigetitel": {
+        "de": "Zur Bassdrum locken"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "grundton_folgen"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Im Metal bilden Bass und Bassdrum eine Einheit: Wenn deine Töne mit den Fußtritten des Schlagzeugs zusammenfallen, entsteht der wuchtige, tighte Low-End-Punch, der den Stil ausmacht.\n\nDas heißt, du orientierst dich nicht nur an den Gitarren, sondern vor allem an der Bassdrum. Bei schnellen Double-Bass- oder Blast-Passagen bedeutet das, präzise auf die Kicks zu spielen — hier zeigt sich, ob dein Timing wirklich sitzt.\n\nWeil du oft allein übst, ersetzt das Metronom die Bassdrum: Der Klick ist dein Referenzpunkt, an dem du dieselbe Präzision trainierst."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Auf den Klick locken",
+          "ziel": "Töne exakt auf einen festen Puls setzen, wie auf die Bassdrum.",
+          "schritte": [
+            "Stell das Metronom auf ein moderates Tempo und behandle jeden Klick wie einen Kick.",
+            "Spiel Grundtöne exakt auf den Klick, sodass beide als ein Schlag klingen.",
+            "Prüf bei jedem Ton, ob du genau auf, vor oder hinter dem Klick liegst."
+          ],
+          "steigerung": "Übe schnellere, gleichmäßige Achtel- oder Sechzehntel-Muster präzise auf den Klick.",
+          "selbstkontrolle": "Deine Töne und der Klick verschmelzen; du hörst kein Flattern zwischen beiden."
+        }
+      }
+    },
+    {
+      "id": "doom_bass",
+      "anzeigetitel": {
+        "de": "Doom-Bass: schwer und getragen"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "doom"
+      ],
+      "voraussetzungen": [
+        "grundton_folgen",
+        "anschlagpunkt_ton"
+      ],
+      "spielziele": [
+        "schwererer_ton",
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Im Doom trägt der Bass viel vom Gewicht des Sounds. Statt Tempo zählen lange, satte Töne, die voll ausklingen, und viel Raum zwischen den Schlägen. Ein fetter, oft leicht angezerrter Ton füllt den Klang.\n\nGerade das langsame Tempo ist anspruchsvoll: Ohne treibende Bewegung fällt jedes ungenaue Timing sofort auf. Du musst die langen Töne bewusst halten und den nächsten Schlag exakt platzieren. Dynamik gibt den Linien zusätzliches Gewicht.\n\nDer Reiz liegt in Ruhe und Druck — ein einzelner, gut platzierter tiefer Ton kann mehr wirken als viele schnelle."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Getragene Grundtöne",
+          "ziel": "Lange, schwere Töne exakt im langsamen Puls platzieren.",
+          "schritte": [
+            "Spiel zum Metronom in langsamem Tempo eine Folge weniger Grundtöne.",
+            "Lass jeden Ton voll ausklingen und setz den nächsten genau auf die Zählzeit.",
+            "Variiere die Lautstärke, um den Tönen Gewicht zu geben."
+          ],
+          "steigerung": "Verlängere die Phrasen und arbeite bewusster mit Ausklang und Dynamik.",
+          "selbstkontrolle": "Trotz langsamem Tempo sitzt das Timing; die Töne klingen voll und satt."
+        }
+      }
+    },
+    {
+      "id": "einfache_basslinie",
+      "anzeigetitel": {
+        "de": "Einfache Basslinie zum Riff"
       },
       "domaene": [
         "bass"
@@ -118,358 +478,105 @@
         "metalcore"
       ],
       "voraussetzungen": [
+        "grundton_folgen",
+        "palm_muting_bass",
+        "greifhand_daempfen"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Jetzt fügst du die Bausteine zusammen: Du folgst den Grundtönen eines Riffs, hältst mit der Greifhand die Nebengeräusche in Schach und gibst dem Ganzen mit gedämpftem Anschlag Kontur.\n\nDer Schlüssel sind saubere Übergänge und stabiles Timing. Eine einfache, verlässliche Basslinie, die tight sitzt, ist mehr wert als eine komplizierte, die eiert. Genau an den Saitenwechseln und Akzenten zeigt sich, ob die Grundlagen greifen.\n\nÜbe die Linie erst langsam und ganz, bevor du das Tempo anziehst — eine langsam saubere Linie wird schnell, eine schnell unsaubere bleibt unsauber."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Basslinie zu einem kurzen Riff",
+          "ziel": "Grundtöne, Dämpfung und Timing zu einer tighten Linie verbinden.",
+          "schritte": [
+            "Wähl ein kurzes Riff und spiel seine Grundtöne im passenden Rhythmus.",
+            "Dämpf ungewollte Saiten mit der Greifhand und gib den Tönen mit leichtem Palm Muting Kontur.",
+            "Spiel die Linie langsam, bis Übergänge und Timing sauber laufen."
+          ],
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten und setz einzelne Akzente oder Durchgangstöne.",
+          "selbstkontrolle": "Die Linie sitzt tight zum Riff; saubere Übergänge, keine Nebengeräusche, stabiles Timing."
+        }
+      }
+    },
+    {
+      "id": "bass_ton_gear",
+      "anzeigetitel": {
+        "de": "Ton & Durchsetzen im Mix"
+      },
+      "domaene": [
+        "bass",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "anschlagpunkt_ton"
+      ],
+      "spielziele": [
+        "schwererer_ton"
+      ],
+      "erklaerteil": {
+        "de": "Im dichten Metal-Mix kämpft der Bass gegen tief gestimmte, verzerrte Gitarren um Platz. Damit er hörbar bleibt, hilft nicht nur mehr Tiefbass, sondern vor allem Präsenz in den Mitten und ein definierter Anschlag.\n\nDrei Stellschrauben greifen ineinander: die Spieltechnik (Pick-Attack, Anschlagpunkt), eine milde Verzerrung oder Anzerrung, die dem Ton Biss und Obertöne gibt, und die Klangregelung, bei der die Mitten oft entscheidender sind als der reine Tiefbass. Viele mischen einen cleanen tiefen Anteil mit einem angezerrten, mittigen Anteil.\n\nGewicht entsteht also aus dem Zusammenspiel von Hand und Ausrüstung, nicht aus einem einzelnen Regler."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wenn dein Bass im Bandkontext verschwindet: Woran könnte es liegen — an der Technik, der Anzerrung oder der Klangregelung? Überleg dir, in welcher Reihenfolge du diese drei Stellschrauben prüfen würdest und warum die Mitten für das Durchsetzen oft wichtiger sind als der Tiefbass."
+      }
+    },
+    {
+      "id": "bass_aufwaermen",
+      "anzeigetitel": {
+        "de": "Aufwärmen & Handgesundheit"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
         "bass_grundhaltung"
       ],
-      "erklaerteil": {
-        "de": "Neben den Fingern ist das Plektrum die zweite große Anschlagsart am Metal-Bass. Es liefert einen härteren, definierteren Attack, der sich gut gegen verzerrte Gitarren durchsetzt — deshalb greifen viele Thrash- und Death-Metal-Bassisten zum Pick. Fingerstyle klingt runder und wärmer, das Pick tighter und aggressiver; beides hat seinen Platz, und viele wechseln je nach Song.\n\nHalte das Plektrum fest zwischen Daumen und Zeigefinger, mit nur wenig überstehender Spitze. Die Bewegung kommt aus dem Handgelenk, nicht aus dem Arm. Für Wucht und Gleichmäßigkeit im tiefen Register sind reine Abschläge der Startpunkt; für Tempo kommt später der Wechselschlag dazu. Ein etwas festeres Pick überträgt die Energie direkter auf die dicken Basssaiten."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Gleichmäßige Abschläge mit dem Pick",
-          "ziel": "Einen konstanten, definierten Anschlag aus dem Handgelenk entwickeln.",
-          "schritte": [
-            "Spiel die tiefe E-Saite in gleichmäßigen Abschlägen, nur nach unten.",
-            "Lass die Bewegung aus dem Handgelenk kommen, der Unterarm ruht locker am Korpus.",
-            "Halte Lautstärke und Abstand der Anschläge über acht Takte konstant."
-          ],
-          "steigerung": "Zu einem langsamen Metronom spielen und danach abwechselnd anschlagen (unten-oben) für mehr Tempo.",
-          "selbstkontrolle": "Alle Anschläge klingen gleich laut und gleich hart, der Unterarm bleibt ruhig."
-        }
-      }
-    },
-    {
-      "id": "saiten_daempfen_bass",
-      "anzeigetitel": {
-        "de": "Saiten abdämpfen"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "voraussetzungen": [
-        "greifhand_bass",
-        "fingeranschlag"
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "lockere_greifhand"
       ],
       "erklaerteil": {
-        "de": "Sobald Zerre oder Overdrive im Spiel sind — und im Metal ist das die Regel — wird jede ungewollt klingende Saite zum Problem: es brummt, rauscht und schwingt mit. Sauberes Bass-Spiel ist zur Hälfte eine Frage des Abdämpfens, nicht des Greifens. Gerade bei viel Zerre rückt das Dämpfen ins Zentrum.\n\nBeide Hände arbeiten zusammen. Die Greifhand legt sich leicht an die nicht gespielten Saiten und stoppt deren Mitschwingen. Die Anschlaghand dämpft mit: Beim Fingerstyle bremst der ruhende Daumen oder ein abgelegter Finger die tieferen Saiten (die \"floating thumb\"-Idee — der Daumen wandert mit und deckt ab), beim Pick übernimmt der Handballen. So bleibt nur der Ton stehen, den du wirklich willst."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Ein Ton, Rest still",
-          "ziel": "Einzelne Töne mit Zerre sauber isolieren, ohne dass Nachbarsaiten mitklingen.",
-          "schritte": [
-            "Stell einen leicht verzerrten Sound ein und spiel einen einzelnen Ton auf der D-Saite.",
-            "Leg die freien Finger der Greifhand locker an die umliegenden Saiten.",
-            "Deck mit dem Daumen oder dem Handballen der Anschlaghand die tieferen Saiten ab, sodass sie stumm bleiben."
-          ],
-          "steigerung": "Wechsle zwischen einzelnen Tönen auf verschiedenen Saiten, ohne dass zwischendurch Nebengeräusche entstehen.",
-          "selbstkontrolle": "Nur der gespielte Ton klingt; die übrigen Saiten bleiben still, auch wenn du sie versehentlich streifst."
-        }
-      }
-    },
-    {
-      "id": "grundton_riffing",
-      "anzeigetitel": {
-        "de": "Grundton-Riffing: der Gitarre folgen"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "hardcore",
-        "metalcore",
-        "thrash"
-      ],
-      "voraussetzungen": [
-        "greifhand_bass",
-        "fingeranschlag"
-      ],
-      "erklaerteil": {
-        "de": "Die Kernaufgabe des Basses im Metal ist es meist, die Gitarre zu stützen: Du folgst dem Riff und spielst seine Grundtöne. Wenn die Gitarre einen Powerchord anschlägt, spielst du dessen Grundton eine Etage tiefer und gibst dem Riff sein Fundament. Du musst nicht jede Note der Gitarre kopieren — du hältst das tiefe Ende und zeichnest die Bewegung der Grundtöne nach.\n\nDafür musst du die Grundtöne schnell finden. Weil die Grundtöne der Gitarren-Powerchords oft auf der tiefen E- und A-Saite liegen, findest du dieselben Töne bequem auf deinen entsprechenden Saiten. Höre auf die tiefste Note des Gitarrenriffs — das ist fast immer dein Ton."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Grundtöne nachspielen",
-          "ziel": "Die Grundtöne eines einfachen Gitarrenriffs sicher finden und mitspielen.",
-          "schritte": [
-            "Nimm ein einfaches Riff aus zwei bis drei Powerchords (oder eine Aufnahme).",
-            "Bestimme den Grundton jedes Akkords und spiel nur diese Töne auf dem Bass mit.",
-            "Achte darauf, dass dein Ton genau dann wechselt, wenn die Gitarre den Akkord wechselt."
-          ],
-          "steigerung": "Das Riff im Tempo mitspielen und die Grundtöne durchgehend gleichmäßig anzupfen.",
-          "selbstkontrolle": "Deine Grundtöne liegen richtig, und der Wechsel passiert gemeinsam mit der Gitarre, nicht davor oder danach."
-        }
-      }
-    },
-    {
-      "id": "praezise_achtel",
-      "anzeigetitel": {
-        "de": "Präzise Achtel im Tempo"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "thrash",
-        "death_metal"
-      ],
-      "voraussetzungen": [
-        "grundton_riffing",
-        "saiten_daempfen_bass"
-      ],
-      "erklaerteil": {
-        "de": "Durchlaufende Achtel sind das Rückgrat vieler Metal-Basslinien — der treibende, gleichmäßige Puls unter dem Riff. Ob mit Fingern oder Pick: Jede Note soll gleich lang, gleich laut und exakt im Timing sitzen. Erst diese Gleichmäßigkeit macht die tiefe Wucht aus, die man mehr fühlt als hört.\n\nDas Metronom ist hier dein ehrlichster Partner. Es zeigt gnadenlos, wo du eilst oder schleppst. Starte langsam genug, dass wirklich jede Achtel sauber sitzt, und erhöhe das Tempo erst, wenn nichts mehr wackelt — lieber zehn fehlerfreie Wiederholungen langsam als eine hektische schnelle."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Gleichmäßige Achtel zum Klick",
-          "ziel": "Einen konstanten Achtel-Puls sauber im Timing halten.",
-          "schritte": [
-            "Stell ein langsames Metronom ein und zupf durchgehende Achtel auf der A-Saite.",
-            "Achte darauf, dass jede Note gleich laut und gleich lang klingt.",
-            "Halte den Puls über mehrere Takte, ohne schneller oder langsamer zu werden."
-          ],
-          "steigerung": "Das Tempo in 5-BPM-Schritten anheben; nur erhöhen, wenn zwei Durchgänge fehlerfrei sitzen.",
-          "selbstkontrolle": "Die Achtel liegen sauber auf dem Klick, und keine Note fällt aus der Reihe."
-        }
-      }
-    },
-    {
-      "id": "galopp_bass",
-      "anzeigetitel": {
-        "de": "Galopp mit Fingern oder Pick"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "thrash",
-        "death_metal"
-      ],
-      "voraussetzungen": [
-        "praezise_achtel"
-      ],
-      "erklaerteil": {
-        "de": "Der Galopp — ein Achtel plus zwei Sechzehntel — ist eines der prägendsten Rhythmusmuster im Metal, und der Bass spielt es oft parallel zur Gitarre mit. Er treibt das Riff nach vorn und lebt von exakt gleich langen Sechzehnteln.\n\nMit dem Pick spielst du das Muster typischerweise unten-unten-oben: der betonte Achtel als Abschlag, die zwei schnellen Sechzehntel als Ab- und Aufschlag. Mit den Fingern gelingt es über eine gleichmäßige Zeige-Mittel-Folge. In beiden Fällen hält leichtes Abdämpfen das Ganze tight und verhindert, dass die schnellen Töne verschwimmen."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Galopp auf einem Ton",
-          "ziel": "Das Galopp-Muster gleichmäßig und im Timing spielen.",
-          "schritte": [
-            "Spiel das Muster Achtel-Sechzehntel-Sechzehntel auf der E-Saite, leicht abgedämpft.",
-            "Zähle laut mit oder nutze ein Metronom, damit die zwei schnellen Töne wirklich gleich lang bleiben.",
-            "Wiederhole das Muster über mehrere Takte, ohne zu eilen."
-          ],
-          "steigerung": "Den Galopp zwischen zwei Grundtönen bewegen und langsam das Tempo erhöhen.",
-          "selbstkontrolle": "Die zwei Sechzehntel sind gleich lang, das Muster eilt nicht und bleibt tight."
-        }
-      }
-    },
-    {
-      "id": "drop_tuning_bass",
-      "anzeigetitel": {
-        "de": "Drop-Tuning am Bass"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "metalcore",
-        "death_metal",
-        "doom"
-      ],
-      "voraussetzungen": [
-        "grundton_riffing"
-      ],
-      "erklaerteil": {
-        "de": "Wie die Gitarre wird auch der Bass im Metal oft tiefer gestimmt — für mehr Wucht und um zum Tuning der Gitarre zu passen. Beim Drop D senkst du nur die tiefe E-Saite einen Ganzton auf D; die tiefe Note liegt dann eine Oktave unter dem Drop-D der Gitarre und lässt sich als Grundton bequem greifen.\n\nTiefer stimmen heißt aber auch: Die Saite wird schlaffer und neigt zum Schnarren und Flattern. Für dauerhaft tiefe Tunings lohnt sich ein dickerer Saitensatz, damit die Spannung stimmt. Das ist ein Prinzip, kein fester Wert — welche Stärke passt, hängt von Bass, Mensur und Tuning ab. Nach dem Umstimmen lohnt ein kurzer Blick auf die Saitenlage."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Auf Drop D stimmen",
-          "ziel": "Sicher auf Drop D umstimmen und den tiefen Grundton nutzen.",
-          "schritte": [
-            "Stimme die tiefe E-Saite einen Ganzton herunter auf D (Vergleich mit der D-Saite, eine Oktave höher).",
-            "Spiel die neue tiefe Saite an und prüfe, ob sie sauber klingt oder schnarrt.",
-            "Nutze den tiefen Grundton für ein einfaches Riff und höre, wie viel wuchtiger es klingt."
-          ],
-          "steigerung": "Zwischen Standard und Drop D wechseln und prüfen, wie sicher du das Stimmen triffst.",
-          "selbstkontrolle": "Die Saite ist sauber auf D gestimmt, und der tiefe Grundton klingt klar statt schnarrend."
-        }
-      }
-    },
-    {
-      "id": "lock_mit_bassdrum",
-      "anzeigetitel": {
-        "de": "Lock mit der Bassdrum"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "death_metal",
-        "metalcore",
-        "thrash"
-      ],
-      "voraussetzungen": [
-        "praezise_achtel"
-      ],
-      "erklaerteil": {
-        "de": "Was eine Metal-Rhythmusgruppe wirklich schwer klingen lässt, ist das \"Lock\": Bass und Bassdrum treffen gemeinsam. Wenn der Fuß des Schlagzeugers die Bassdrum tritt — bei schnellem Doublebass in dichter Folge —, landet dein Ton exakt auf demselben Punkt. Bass und Kick verschmelzen zu einer Einheit, die man im Bauch spürt.\n\nDafür hörst du nicht nur auf dich selbst, sondern auf das Schlagzeug. Richte deine Anschläge an der Bassdrum aus, nicht allein am Riff. Übst du für dich, ersetzt das Metronom den Fuß: Behandle den Klick wie die Bassdrum und leg deine Töne genau darauf. Dieses gemeinsame Zielen ist eine eigene Fähigkeit — und der Kern eines tighten Metal-Sounds."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Auf die Bassdrum locken",
-          "ziel": "Die eigenen Töne exakt mit einem Bassdrum-Puls zusammenfallen lassen.",
-          "schritte": [
-            "Nimm ein einfaches Bassdrum-Pattern (Drum-Track oder ein Metronom als Ersatz).",
-            "Spiel deine Grundtöne genau auf die Schläge der Bassdrum, nicht dazwischen.",
-            "Höre, ob Ton und Kick als ein Schlag verschmelzen oder ob sie auseinanderliegen."
-          ],
-          "steigerung": "Ein Pattern mit schnelleren Doublebass-Passagen wählen und auch dort jeden Kick treffen.",
-          "selbstkontrolle": "Bass und Bassdrum klingen wie ein einziger Schlag; du hörst kein Vor- oder Nachschleppen."
-        }
-      }
-    },
-    {
-      "id": "definierter_ton",
-      "anzeigetitel": {
-        "de": "Tighter, definierter Ton"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "death_metal",
-        "thrash"
-      ],
-      "voraussetzungen": [
-        "saiten_daempfen_bass",
-        "plektrum_anschlag"
-      ],
-      "erklaerteil": {
-        "de": "Ein tighter, definierter Ton entscheidet, ob der Bass im dichten Metal-Mix hörbar bleibt oder unter den Gitarren verschwindet. Der größte Teil davon kommt aus den Händen, nicht aus dem Verstärker: gleichmäßiger Anschlag, sauberes Abdämpfen und klare Töne ohne Schnarren sind die Basis. Erst darauf baut die Klangregelung auf.\n\nEin Anschlag näher am Steg klingt härter und definierter, näher am Hals runder und wärmer. Etwas Overdrive und präsente Mitten helfen dem Bass, sich neben verzerrten Gitarren durchzusetzen — aber sie ersetzen keine saubere Technik. Ein matschiger Anschlag bleibt auch mit gutem Amp matschig. Erst kommt die Hand, dann der Regler."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Gleicher Anschlag, klarer Ton",
-          "ziel": "Über eine Tonfolge einen konstanten, definierten Klang halten.",
-          "schritte": [
-            "Spiel eine einfache Tonfolge und achte darauf, dass jeder Ton gleich stark angeschlagen ist.",
-            "Vergleiche denselben Lauf einmal nah am Steg und einmal nah am Hals und höre den Unterschied.",
-            "Wähle die Position, die klar und definiert klingt, und halte den Anschlag über mehrere Durchgänge gleich."
-          ],
-          "steigerung": "Leichte Zerre dazuschalten und prüfen, ob die Töne trotzdem sauber und einzeln hörbar bleiben.",
-          "selbstkontrolle": "Jeder Ton klingt gleich kräftig und klar abgegrenzt; nichts verschwimmt oder schnarrt."
-        }
-      }
-    },
-    {
-      "id": "erstes_metal_riff",
-      "anzeigetitel": {
-        "de": "Erstes Metal-Bass-Riff"
-      },
-      "domaene": [
-        "bass"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "stil": [
-        "metalcore",
-        "death_metal"
-      ],
-      "voraussetzungen": [
-        "grundton_riffing",
-        "saiten_daempfen_bass",
-        "drop_tuning_bass",
-        "lock_mit_bassdrum"
-      ],
-      "erklaerteil": {
-        "de": "Jetzt setzt du die Bausteine zusammen: tiefe Grundtöne im Drop-Tuning, sauber abgedämpft, als gleichmäßige Achtel oder im Galopp, exakt auf die Bassdrum gelockt. Genau dieses Zusammenspiel — tight, tief und im Timing — macht eine Metal-Basslinie aus.\n\nDenk in kurzen Bausteinen: ein Grundmuster aus wiederholten Grundtönen, dann ein Akzent oder ein Wechsel des Grundtons, dann wieder das Muster. Sauberkeit vor Tempo — eine tighte, langsame Linie klingt schwerer als eine hektische, die auseinanderfällt. Spiel sie so oft im Loop, bis sie ohne Nachdenken sitzt."
-      },
-      "uebungsteil": {
-        "de": {
-          "titel": "Kurzes Bass-Riff im Loop",
-          "ziel": "Grundtöne, Dämpfung und Timing zu einer tighten kurzen Basslinie verbinden.",
-          "schritte": [
-            "Wähle zwei Grundtöne (z. B. im Drop D) und spiel je vier abgedämpfte Achtel pro Ton.",
-            "Setz am Ende des zweiten Takts einen betonten Akzent auf den Grundton.",
-            "Spiel die zwei Takte im Loop zu einem langsamen Metronom, das du wie die Bassdrum behandelst."
-          ],
-          "steigerung": "Ein Galopp-Muster einbauen und das Tempo schrittweise erhöhen, solange es tight bleibt.",
-          "selbstkontrolle": "Die Töne sind gleich und abgedämpft, der Akzent sitzt im Timing, und die Linie fällt auch im Loop nicht auseinander."
-        }
-      }
-    },
-    {
-      "id": "aufwaermen_bass",
-      "anzeigetitel": {
-        "de": "Hände aufwärmen & Handgesundheit"
-      },
-      "domaene": [
-        "koerper"
-      ],
-      "kompetenzstufe": [
-        "einsteiger"
-      ],
-      "typ": "micro",
-      "erklaerteil": {
-        "de": "Die dicken Basssaiten und schnelle Finger- oder Pick-Läufe belasten Sehnen und Handgelenke stärker, als man denkt — Aufwärmen ist im Metal kein Luxus, sondern Selbstschutz. Ein paar Minuten langsames, lockeres Spielen bringen die Hände auf Betriebstemperatur, bevor es ans Tempo geht. Kalte Hände in ein schnelles Riff zu zwingen, ist der direkte Weg zu Verspannung und Überlastung.\n\nDas wichtigste Prinzip: Schmerz ist ein Stoppsignal. Ziehen oder Stechen im Handgelenk oder Unterarm bedeutet Pause, nicht durchbeißen. Kurze, regelmäßige Einheiten mit Pausen bringen dich weiter — und gesünder — als seltene lange Sessions, in denen du dich verausgabst."
+        "de": "Dicke Saiten, weite Bünde und ein schweres Instrument fordern deine Hände — schnelle Death-Metal-Läufe oder langes Downpicking summieren die Belastung. Ein bewusster Umgang damit gehört zum Handwerk.\n\nAls Prinzip gilt: mit leichten, langsamen Bewegungen beginnen, die Belastung allmählich steigern, Pausen einbauen und auf die Signale deines Körpers hören. Normale Muskelermüdung klingt nach kurzer Pause ab; Schmerz, Taubheit, Kribbeln oder anhaltende Verspannung sind Warnsignale, bei denen du unterbrichst — und bei bleibenden Beschwerden fachkundigen Rat suchst."
       },
       "reflexionsaufgabe": {
-        "de": "Wie beginnst du deine nächsten drei Übe-Sessions? Nimm dir vor, jede mit ein paar Minuten langsamem, lockerem Spielen zu eröffnen, bevor du ans Tempo gehst. Achte bewusst darauf, an welcher Stelle deine Greif- oder Anschlaghand zu verkrampfen beginnt — und wo dir eine kurze Pause helfen würde, länger locker zu bleiben."
+        "de": "Der Bass belastet die Hände wegen Gewicht und Saitenstärke anders als die Gitarre. Woran willst du bei dir den Unterschied zwischen normaler Ermüdung und einem Warnsignal erkennen, und was ist konkret dein Plan, wenn du Schmerz bemerkst?"
       }
     },
     {
-      "id": "fingerkraft_ausdauer",
+      "id": "bass_timing_klick",
       "anzeigetitel": {
-        "de": "Fingerkraft & Ausdauer gesund aufbauen"
+        "de": "Üben mit dem Klick"
       },
       "domaene": [
-        "koerper"
+        "mentales"
       ],
       "kompetenzstufe": [
         "einsteiger"
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "aufwaermen_bass"
+        "fingerstyle"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
       ],
       "erklaerteil": {
-        "de": "Fingerstyle auf dicken Saiten und schnelle Basslinien verlangen Kraft und vor allem Ausdauer — beides baust du über Wochen auf, nicht in einer einzelnen Session. Der Reiz, sich durch lange schnelle Läufe zu quälen, ist groß, aber der Fortschritt kommt aus regelmäßiger, dosierter Wiederholung, nicht aus einmaliger Überanstrengung.\n\nWichtiger als rohe Kraft ist Lockerheit: Wer die Saiten zu fest greift oder zu hart zupft, wird nicht schneller, sondern langsamer — und riskiert Beschwerden. Nur so viel Kraft wie nötig, sonst locker. Und die Grenze ist klar: Wenn Finger oder Unterarm zu brennen beginnen, machst du eine Pause. Brennen ist ein Zeichen zum Aufhören, kein Trainingsziel."
+        "de": "Für den Bass ist Timing die zentrale Fähigkeit: Er verbindet Harmonie und Rhythmus und muss mit dem Schlagzeug verschmelzen. Ein Metronom macht dieses Timing hörbar und ehrlich.\n\nDer Kern des Prinzips: langsam und sauber üben, das Tempo erst erhöhen, wenn eine Figur wirklich sitzt, und Timing bewusst trainieren, nicht dem Zufall überlassen. Wer ständig am Limit spielt, festigt vor allem seine Ungenauigkeiten — beim Bass fällt das im Zusammenspiel sofort auf."
       },
       "reflexionsaufgabe": {
-        "de": "Beobachte in deinen nächsten Sessions, nach wie vielen Minuten schnellen Spielens deine Anschlaghand müde wird oder zu brennen beginnt. Was passiert mit Tempo und Ton, wenn du bewusst weniger fest zupfst und greifst? Leg für dich eine Dauer fest, die locker bleibt, und verlängere sie über die Wochen in kleinen Schritten — mit Pausen, sobald etwas zieht."
+        "de": "Warum ist sauberes, langsames Üben mit Klick für den Bass — der mit der Bassdrum verschmelzen soll — besonders wichtig? Und wie willst du deine Tempo-Schritte festhalten, damit du deinen Fortschritt beim Timing sichtbar machst?"
       }
     }
   ]
