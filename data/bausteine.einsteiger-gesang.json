@@ -461,7 +461,8 @@
         "black_metal",
         "death_metal",
         "hardcore",
-        "thrash"
+        "thrash",
+        "grindcore"
       ],
       "voraussetzungen": [
         "verzerrung_prinzip"

@@ -31,7 +31,10 @@
       "thrash",
       "death_metal",
       "black_metal",
-      "doom"
+      "doom",
+      "crust",
+      "grindcore",
+      "powerviolence"
     ],
     "spielziele": {
       "tempo": [
@@ -341,7 +344,8 @@
       "stil": [
         "thrash",
         "death_metal",
-        "hardcore"
+        "hardcore",
+        "crust"
       ],
       "voraussetzungen": [
         "palm_muting",
