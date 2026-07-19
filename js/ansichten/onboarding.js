@@ -26,7 +26,9 @@ function skipKandidaten(daten, stufe, herkunft) {
 }
 
 function schrittfolge(daten) {
-  const schritte = ['stufe', 'trainer', 'herkunft', 'ziel'];
+  // Herkunft nur anbieten, wenn es überhaupt Delta-Inhalte gibt — sonst wäre
+  // der Schritt eine Einzeloption „Keine Vorerfahrung" für alle.
+  const schritte = daten.herkuenfte.length > 0 ? ['stufe', 'trainer', 'herkunft', 'ziel'] : ['stufe', 'trainer', 'ziel'];
   if (assistent.herkunft && skipKandidaten(daten, assistent.stufe, assistent.herkunft).length > 0) {
     schritte.push('vormarkieren');
   }
@@ -34,7 +36,7 @@ function schrittfolge(daten) {
 }
 
 function stufenOptionenHtml(aktiv) {
-  return ['beginner', 'fortgeschritten', 'experte']
+  return ['einsteiger', 'fortgeschritten', 'experte']
     .map(
       (stufe) => `
       <label class="option-karte">

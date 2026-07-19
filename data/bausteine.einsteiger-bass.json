@@ -10,7 +10,7 @@
     {
       "id": "bass_grundhaltung",
       "anzeigetitel": {
-        "de": "Grundhaltung & Entspannung"
+        "de": "Bass: Grundhaltung & Entspannung"
       },
       "domaene": [
         "bass"
@@ -42,7 +42,7 @@
     {
       "id": "bass_greifhand",
       "anzeigetitel": {
-        "de": "Greifhand-Grundlagen"
+        "de": "Bass: Greifhand-Grundlagen"
       },
       "domaene": [
         "bass"
@@ -531,7 +531,7 @@
     {
       "id": "bass_aufwaermen",
       "anzeigetitel": {
-        "de": "Aufwärmen & Handgesundheit"
+        "de": "Bass: Aufwärmen & Handgesundheit"
       },
       "domaene": [
         "koerper"
@@ -557,7 +557,7 @@
     {
       "id": "bass_timing_klick",
       "anzeigetitel": {
-        "de": "Üben mit dem Klick"
+        "de": "Bass: Üben mit dem Klick"
       },
       "domaene": [
         "mentales"

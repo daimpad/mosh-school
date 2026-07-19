@@ -58,14 +58,14 @@ export function feedbackAktiv() {
 export async function aktiviereFeedback() {
   if (aktiv) return;
   aktiv = true;
-  ladeStil('vendor/kommentator/kommentare.css');
-  ladeStil('css/feedback.css'); // CI-Angleichung, NACH der Vendor-CSS
   try {
     await ladeSkript('vendor/kommentator/kommentare.js');
   } catch {
     aktiv = false;
     return;
   }
+  ladeStil('vendor/kommentator/kommentare.css');
+  ladeStil('css/feedback.css'); // CI-Angleichung, NACH der Vendor-CSS
   if (!window.Kommentare) {
     aktiv = false;
     return;

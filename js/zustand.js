@@ -41,6 +41,8 @@ function tiefMerge(basis, gespeichert) {
 function verschmelze(basis, gespeichert) {
   if (gespeichert == null || typeof gespeichert !== 'object') return basis;
   const ergebnis = tiefMerge(basis, gespeichert);
+  // Alt-Daten heben: die Fork-Stufe 'beginner' hieß im Vokabular nie so.
+  if (ergebnis.diagnose?.stufe === 'beginner') ergebnis.diagnose.stufe = 'einsteiger';
   ergebnis.schemaVersion = SCHEMA_VERSION;
   return ergebnis;
 }

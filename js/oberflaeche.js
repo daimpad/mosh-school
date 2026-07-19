@@ -216,7 +216,7 @@ export function wendeThemaAn(thema) {
     thema === 'dunkel' ||
     (thema !== 'hell' && window.matchMedia?.('(prefers-color-scheme: dark)').matches);
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.setAttribute('content', dunkel ? '#0f151c' : '#f5f9fd');
+  if (meta) meta.setAttribute('content', dunkel ? '#0f151c' : '#f2f6fc');
   // Optionale Mithörer (z. B. der Feedback-Kommentator) folgen dem Thema.
   window.dispatchEvent(new CustomEvent('app:thema', { detail: thema }));
 }

@@ -1232,6 +1232,111 @@
           "korrektur": "Die Landkarte zur Eintrittskarte machen: Vor dem Proben sagt jede Person die Zustandsfolge auswendig auf — zweimal dieselbe Antwort, sonst wird nicht gespielt. Kanten einzeln proben, Signale für die variablen Stellen festlegen, und den Fehlerfall aktiv üben: absichtlicher Patzer, alle spielen unbeirrt weiter. Der Song ist zu kurz für Reparaturen — das muss als Regel sitzen, nicht als Hoffnung."
         }
       }
+    },
+    {
+      "id": "fb_doom_drama_ungeduld",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_dramaturgie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die selbstgeschriebenen langen Songs wirken kurzatmig: Alle dreißig Sekunden passiert etwas Neues, die Trance stellt sich nie ein — oder das Gegenteil: Ein Riff läuft acht Minuten, und irgendwann hört niemand mehr zu.",
+          "ursache": "Das Verhältnis von Wiederholung und Ereignis ist nicht kalibriert: Entweder fehlt das Vertrauen in die Wiederholung (jede Angst vor Langeweile wird sofort mit einem Wechsel beantwortet), oder die Grenze zwischen Trance und Langeweile wurde nie bewusst gesucht — Wiederholung allein ist noch keine Dramaturgie.",
+          "korrektur": "Mit der Stoppuhr hören lassen: bei zwei, drei großen Doom-Songs die Abstände zwischen echten Veränderungen messen und daneben die eigene Skizze legen — der Unterschied ist meist drastisch. Dann die Übung umdrehen: im eigenen Material eine geplante Veränderung ersatzlos streichen und der Wiederholung doppelt so viel Zeit geben; anschließend prüfen, wo die Aufmerksamkeit wirklich kippt, und GENAU dort das kleine Ereignis setzen (ein Becken, eine zweite Stimme — nicht gleich ein neues Riff)."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_gewicht_verwechselt",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_sound_gewicht",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Sound soll schwer werden, aber er wird nur dichter: mehr Verzerrung, tieferes Tuning mit den alten dünnen Saiten — und das Ergebnis schlackert, matscht und wird im Bandkontext eher kleiner als größer.",
+          "ursache": "Die Doom-Schwere wird am falschen Regler gesucht: High-Gain-Kompression statt breiter, offener Zerre; Tiefe ohne die passende Saitenstärke; und die Rolle von Lautstärke und bewegter Luft im Klang wird ignoriert oder ohne Schutz gesucht. Das Rezept des Genres — Fuzz, dicke Saiten, Amp-Arbeit — ist schlicht nicht bekannt.",
+          "korrektur": "Das Hörexperiment an den Anfang stellen: einen klassischen Doom-Fuzz neben eine moderne High-Gain-Produktion legen und den Unterschied benennen lassen (breit-offen gegen komprimiert-dicht). Dann das Setup in dieser Reihenfolge anpassen: Saitenstärke zum Tuning, weniger Gain und dafür mehr Amp und Anschlag, Zerre eher breit als heiß. Und die Grundregel verankern: Wer Lautstärke als Klangfarbe nutzt, trägt Gehörschutz — ohne Ausnahme."
+        }
+      }
+    },
+    {
+      "id": "fb_hc_song_gestreckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_songwriting_direkt",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die eigenen Songs dauern vier Minuten, haben zwei Übergangsteile und ein langes Intro — und der Moment, für den der Song eigentlich existiert, geht in der Strecke unter.",
+          "ursache": "Konventionen aus anderen Genres werden ungeprüft übernommen: noch eine Strophe, ein vermittelnder Übergang, ein Outro — Teile, die nur existieren, weil man glaubt, dass Songs sie brauchen. Die Hardcore-Ökonomie (jeder Teil hat einen Job für die Energie im Raum) wurde nie als Maßstab angelegt.",
+          "korrektur": "Den Streichtest zur Methode machen: Für jeden Teil des Songs die Frage beantworten, was er für die Energie leistet — sammeln, entladen, bündeln. Jeder Teil ohne Antwort fliegt probeweise raus; fast immer wird der Song besser. Referenz-Anker setzen: zwei Klassiker unter zweieinhalb Minuten zerlegen und zählen, wie wenige Teile sie brauchen. Und den stärksten Moment zum Chef machen: Alles vor ihm bereitet ihn vor, nach ihm darf der Song einfach aufhören."
+        }
+      }
+    },
+    {
+      "id": "fb_hc_buehne_show",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_buehne_community",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Auftritt wirkt einstudiert: choreografierte Posen, Ansagen wie vom Zettel, Distanz zum Publikum — und der Raum bleibt kalt, obwohl die Songs sitzen. Oder das Gegenteil: Das Chaos ist echt, aber nach jeder Störung bricht das Set auseinander.",
+          "ursache": "Präsenz wird mit Inszenierung verwechselt (oder Echtheit mit Unvorbereitetheit): Es fehlt die Unterscheidung zwischen dem, was man vorbereiten kann — Songs im Stehen und in Bewegung, Wiedereinstieg nach Unterbrechungen, wer zählt ein — und dem, was echt sein muss: die Energie, die Ansagen, der Umgang mit dem Raum.",
+          "korrektur": "Die Probe realistisch machen: im Stehen, in Bewegung, mit absichtlichen Störungen (Mikroständer fällt, jemand patzt) — und der Wiedereinstieg wird geübt wie ein Songteil. Ansagen nicht skripten, aber die zwei wichtigen Situationen durchsprechen: Was sagen wir, wenn im Pit jemand stürzt? Was, wenn die Technik ausfällt? Dann live die Kontrolle abgeben, wo sie hingehört: Die Setlist ist das Gerüst, die Energie des Raums füllt sie."
+        }
+      }
+    },
+    {
+      "id": "fb_crust_dreck_ausrede",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_sound_dreck",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Unter der Soundwand ist nichts mehr zu erkennen: kein Riff zum Mitsingen, Bass und Gitarre ununterscheidbar, das Schlagzeug zugekleistert — und auf Nachfrage heißt es, das sei eben Crust.",
+          "ursache": "Die Ästhetik wird als Freibrief missverstanden: Der Dreck der Vorbilder ist kuratiert (Attack und Rhythmus kommen durch, die Rollen sind gestaffelt), der eigene ist flächendeckend. Oft steckt darunter ein zweites Problem: Unsauberes Spiel versteckt sich gern in der Wand — der Dreck kaschiert, statt zu färben.",
+          "korrektur": "Den Lesbarkeitstest von den Vorbildern lernen: am Referenz-Song zeigen, dass man trotz Kettensäge das Riff mitsingen und jeden Schlagzeugschlag orten kann — dann die eigene Aufnahme demselben Test unterziehen. Danach gezielt aufräumen: Rollen staffeln (wer hält welchen Frequenzbereich), an ein, zwei Stellen bewusst NICHT in den Dreck gehen, und die Passage einmal clean spielen lassen — was clean nicht steht, rettet auch die Zerre nicht."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_gestreckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_kompression",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Grind-Song dauert zwei Minuten: Intro, jedes Riff viermal wiederholt, ein Übergangstakt vor jedem Wechsel — die Verdichtung, die das Genre ausmacht, findet nicht statt.",
+          "ursache": "Song-Gewohnheiten aus dem klassischen Metal überleben im falschen Genre: Wiederholung zur Gewöhnung, Aufbau vor dem Höhepunkt, Vorbereitung vor jedem Wechsel. Die Grind-Logik — der Song beginnt auf dem Höhepunkt und jedes Element trägt mehrere Funktionen gleichzeitig — wurde gehört, aber nie aufs eigene Schreiben angewendet.",
+          "korrektur": "Die Sekunden-Analyse zur Pflicht machen: drei Klassiker unter einer Minute protokollieren (wie viele Ereignisse pro dreißig Sekunden?) und den eigenen Song daneben legen. Dann radikal kürzen als Experiment: den Zwei-Minuten-Song auf dreißig Sekunden eindampfen — was bleibt, ist fast immer die bessere Fassung. Prüffrage je Takt: Was leistet er, das kein anderer schon leistet? Keine Antwort, kein Takt."
+        }
+      }
+    },
+    {
+      "id": "fb_pv_beliebig",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_miniatur_dramaturgie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die selbstgebaute Miniatur springt wild zwischen Zuständen, aber die Wirkung bleibt aus: Nach dem dritten Wechsel stumpft alles ab, der Zeitlupen-Block kommt irgendwo und dauert irgendwie — Chaos ja, Schlag nein.",
+          "ursache": "Die Nichtvorbereitung wird mit Beliebigkeit verwechselt: Powerviolence verzichtet auf Übergänge, aber nicht auf Proportion. Ohne Gespür dafür, WANN der Sludge-Block maximal erdrückt (wenn die Raserei zu kippen droht) und wie lange die Spannung ihn trägt, ist jeder Schnitt nur ein weiterer Zufall — und Zufall nutzt sich ab.",
+          "korrektur": "Von den Klassikern die Proportionen ablesen lassen: Zustandsfolgen mit Stoppuhr protokollieren — wie viel Raserei steht wie viel Zeitlupe gegenüber, und wo genau sitzt der Block? Dann die eigene Miniatur als Zustandsfolge MIT Zeitangaben planen (auf Papier, vor dem Spielen): ein Zeitlupen-Block, bewusst platziert, exakt so lang, wie die Spannung trägt. Regel für die Revision: Wirkt ein Schnitt nicht, wird nicht der Schnitt weicher — es wird die Proportion verschoben."
+        }
+      }
     }
   ]
 }
