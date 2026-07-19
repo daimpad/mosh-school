@@ -6,114 +6,402 @@
     {
       "id": "e_standard",
       "instrument": "gitarre",
-      "saiten": ["E2", "A2", "D3", "G3", "B3", "E4"],
-      "genres": ["thrash", "hardcore", "black_metal", "crust"],
+      "saiten": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "genres": [
+        "thrash",
+        "hardcore",
+        "black_metal",
+        "crust"
+      ],
       "staerke": "09–46 bis 10–46",
-      "hinweis": { "de": "Der Klassiker: Thrash, Hardcore und Black Metal leben mehr von Tempo und Biss als von Tiefe — E-Standard bleibt dort bis heute Standard." }
+      "hinweis": {
+        "de": "Der Klassiker: Thrash, Hardcore und Black Metal leben mehr von Tempo und Biss als von Tiefe — E-Standard bleibt dort bis heute Standard."
+      }
     },
     {
       "id": "drop_d",
       "instrument": "gitarre",
-      "saiten": ["D2", "A2", "D3", "G3", "B3", "E4"],
-      "genres": ["hardcore", "metalcore", "sludge"],
+      "saiten": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "genres": [
+        "hardcore",
+        "metalcore",
+        "sludge"
+      ],
       "staerke": "10–46 bis 10–52",
-      "hinweis": { "de": "Der einfachste Einstieg in die Tiefe: nur die tiefste Saite einen Ganzton runter — Powerchords liegen dann auf einem Finger." }
+      "hinweis": {
+        "de": "Der einfachste Einstieg in die Tiefe: nur die tiefste Saite einen Ganzton runter — Powerchords liegen dann auf einem Finger."
+      }
     },
     {
       "id": "eb_standard",
       "instrument": "gitarre",
-      "saiten": ["Eb2", "Ab2", "Db3", "Gb3", "Bb3", "Eb4"],
-      "genres": ["thrash", "death_metal"],
+      "saiten": [
+        "Eb2",
+        "Ab2",
+        "Db3",
+        "Gb3",
+        "Bb3",
+        "Eb4"
+      ],
+      "genres": [
+        "thrash",
+        "death_metal"
+      ],
       "staerke": "10–46 bis 10–52",
-      "hinweis": { "de": "Einen Halbton tiefer: etwas mehr Gewicht bei fast unverändertem Spielgefühl — die halbe Thrash- und frühe Death-Geschichte steht hier." }
+      "hinweis": {
+        "de": "Einen Halbton tiefer: etwas mehr Gewicht bei fast unverändertem Spielgefühl — die halbe Thrash- und frühe Death-Geschichte steht hier."
+      }
     },
     {
       "id": "d_standard",
       "instrument": "gitarre",
-      "saiten": ["D2", "G2", "C3", "F3", "A3", "D4"],
-      "genres": ["death_metal", "doom", "sludge"],
+      "saiten": [
+        "D2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "genres": [
+        "death_metal",
+        "doom",
+        "sludge"
+      ],
       "staerke": "11–50 bis 12–54",
-      "hinweis": { "de": "Ein Ganzton tiefer als Standard: satt und schwer, aber alle Griffbilder bleiben gleich — beliebt von Death bis Sludge." }
+      "hinweis": {
+        "de": "Ein Ganzton tiefer als Standard: satt und schwer, aber alle Griffbilder bleiben gleich — beliebt von Death bis Sludge."
+      }
     },
     {
       "id": "drop_c",
       "instrument": "gitarre",
-      "saiten": ["C2", "G2", "C3", "F3", "A3", "D4"],
-      "genres": ["metalcore", "death_metal", "hardcore"],
+      "saiten": [
+        "C2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "genres": [
+        "metalcore",
+        "death_metal",
+        "hardcore"
+      ],
       "staerke": "11–54 bis 12–56",
-      "hinweis": { "de": "Das Arbeitstier des modernen Core: tief genug für Gewicht, straff genug für Tempo — ab hier sind dickere Saiten Pflicht." }
+      "hinweis": {
+        "de": "Das Arbeitstier des modernen Core: tief genug für Gewicht, straff genug für Tempo — ab hier sind dickere Saiten Pflicht."
+      }
     },
     {
       "id": "c_standard",
       "instrument": "gitarre",
-      "saiten": ["C2", "F2", "Bb2", "Eb3", "G3", "C4"],
-      "genres": ["doom", "sludge", "death_metal"],
+      "saiten": [
+        "C2",
+        "F2",
+        "Bb2",
+        "Eb3",
+        "G3",
+        "C4"
+      ],
+      "genres": [
+        "doom",
+        "sludge",
+        "death_metal"
+      ],
       "staerke": "12–56 bis 13–60",
-      "hinweis": { "de": "Zwei Ganztöne tiefer: die klassische Doom- und Sludge-Lage — massiv, dunkel, und nur mit dicken Saiten definiert." }
+      "hinweis": {
+        "de": "Zwei Ganztöne tiefer: die klassische Doom- und Sludge-Lage — massiv, dunkel, und nur mit dicken Saiten definiert."
+      }
     },
     {
       "id": "drop_b",
       "instrument": "gitarre",
-      "saiten": ["B1", "Gb2", "B2", "E3", "Ab3", "Db4"],
-      "genres": ["metalcore", "death_metal"],
+      "saiten": [
+        "B1",
+        "Gb2",
+        "B2",
+        "E3",
+        "Ab3",
+        "Db4"
+      ],
+      "genres": [
+        "metalcore",
+        "death_metal"
+      ],
       "staerke": "12–60 bis 13–62",
-      "hinweis": { "de": "Tiefes Core-Terrain: Breakdowns mit maximalem Gewicht — Intonation und Gate-Disziplin entscheiden hier über Matsch oder Wand." }
+      "hinweis": {
+        "de": "Tiefes Core-Terrain: Breakdowns mit maximalem Gewicht — Intonation und Gate-Disziplin entscheiden hier über Matsch oder Wand."
+      }
     },
     {
       "id": "b_standard_7",
       "instrument": "gitarre",
-      "saiten": ["B1", "E2", "A2", "D3", "G3", "B3", "E4"],
-      "genres": ["death_metal", "metalcore"],
+      "saiten": [
+        "B1",
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "genres": [
+        "death_metal",
+        "metalcore"
+      ],
       "staerke": "10–59 bis 10–62 (7-Saiter)",
-      "hinweis": { "de": "Die 7-Saiter-Antwort auf die Tiefe: die B-Saite kommt dazu, der Rest bleibt Standard — volle Tiefe ohne Verlust der hohen Lagen." }
+      "hinweis": {
+        "de": "Die 7-Saiter-Antwort auf die Tiefe: die B-Saite kommt dazu, der Rest bleibt Standard — volle Tiefe ohne Verlust der hohen Lagen."
+      }
     },
     {
       "id": "drop_a_7",
       "instrument": "gitarre",
-      "saiten": ["A1", "E2", "A2", "D3", "G3", "B3", "E4"],
-      "genres": ["metalcore"],
+      "saiten": [
+        "A1",
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "genres": [
+        "metalcore"
+      ],
       "staerke": "10–64 (7-Saiter)",
-      "hinweis": { "de": "Drop-Logik auf sieben Saiten: die tiefste nochmal einen Ganzton runter — modernes Deathcore-/Metalcore-Terrain, Baritone-Mensur hilft." }
+      "hinweis": {
+        "de": "Drop-Logik auf sieben Saiten: die tiefste nochmal einen Ganzton runter — modernes Deathcore-/Metalcore-Terrain, Baritone-Mensur hilft."
+      }
     },
     {
       "id": "bass_e_standard",
       "instrument": "bass",
-      "saiten": ["E1", "A1", "D2", "G2"],
-      "genres": ["thrash", "hardcore", "black_metal", "crust"],
+      "saiten": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "genres": [
+        "thrash",
+        "hardcore",
+        "black_metal",
+        "crust"
+      ],
       "staerke": "45–105",
-      "hinweis": { "de": "Bass-Standard: gestimmt wie die tiefen vier Gitarrensaiten, eine Oktave tiefer — Fundament für alles im Standard-Umfeld." }
+      "hinweis": {
+        "de": "Bass-Standard: gestimmt wie die tiefen vier Gitarrensaiten, eine Oktave tiefer — Fundament für alles im Standard-Umfeld."
+      }
     },
     {
       "id": "bass_drop_d",
       "instrument": "bass",
-      "saiten": ["D1", "A1", "D2", "G2"],
-      "genres": ["hardcore", "metalcore", "sludge"],
+      "saiten": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "genres": [
+        "hardcore",
+        "metalcore",
+        "sludge"
+      ],
       "staerke": "50–110",
-      "hinweis": { "de": "Folgt der Gitarre in Drop D — der tiefe Grundton liegt frei, der Rest bleibt vertraut." }
+      "hinweis": {
+        "de": "Folgt der Gitarre in Drop D — der tiefe Grundton liegt frei, der Rest bleibt vertraut."
+      }
     },
     {
       "id": "bass_d_standard",
       "instrument": "bass",
-      "saiten": ["D1", "G1", "C2", "F2"],
-      "genres": ["death_metal", "doom", "sludge"],
+      "saiten": [
+        "D1",
+        "G1",
+        "C2",
+        "F2"
+      ],
+      "genres": [
+        "death_metal",
+        "doom",
+        "sludge"
+      ],
       "staerke": "50–110 bis 55–110",
-      "hinweis": { "de": "Ganzton tiefer für die schweren Genres — ab hier lohnt sich der dickere Satz hörbar." }
+      "hinweis": {
+        "de": "Ganzton tiefer für die schweren Genres — ab hier lohnt sich der dickere Satz hörbar."
+      }
     },
     {
       "id": "bass_drop_c",
       "instrument": "bass",
-      "saiten": ["C1", "G1", "C2", "F2"],
-      "genres": ["metalcore", "death_metal"],
+      "saiten": [
+        "C1",
+        "G1",
+        "C2",
+        "F2"
+      ],
+      "genres": [
+        "metalcore",
+        "death_metal"
+      ],
       "staerke": "55–115",
-      "hinweis": { "de": "Das Core-Fundament: verzahnt mit Gitarren in Drop C — Definition kommt aus Saitenstärke und Anschlag, nicht aus dem EQ." }
+      "hinweis": {
+        "de": "Das Core-Fundament: verzahnt mit Gitarren in Drop C — Definition kommt aus Saitenstärke und Anschlag, nicht aus dem EQ."
+      }
     },
     {
       "id": "bass_b_5",
       "instrument": "bass",
-      "saiten": ["B0", "E1", "A1", "D2", "G2"],
-      "genres": ["death_metal", "metalcore"],
+      "saiten": [
+        "B0",
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "genres": [
+        "death_metal",
+        "metalcore"
+      ],
       "staerke": "45–130 (5-Saiter)",
-      "hinweis": { "de": "Der 5-Saiter: die tiefe H-Saite deckt fast alle Drop-Tunings der Gitarren ab, ohne umzustimmen — Details im Baustein zum Fünfsaiter." }
+      "hinweis": {
+        "de": "Der 5-Saiter: die tiefe H-Saite deckt fast alle Drop-Tunings der Gitarren ab, ohne umzustimmen — Details im Baustein zum Fünfsaiter."
+      }
+    }
+  ],
+  "intervalle": [
+    {
+      "id": "kleine_sekunde",
+      "halbtoene": [
+        0,
+        1
+      ],
+      "hinweis": {
+        "de": "Maximale Reibung — der Halbton direkt über dem Grundton. Das Gründungsintervall von Black Metal und Doom."
+      }
+    },
+    {
+      "id": "kleine_terz",
+      "halbtoene": [
+        0,
+        3
+      ],
+      "hinweis": {
+        "de": "Der dunkle, moll-typische Klang — Basis fast aller Metal-Melodik."
+      }
+    },
+    {
+      "id": "grosse_terz",
+      "halbtoene": [
+        0,
+        4
+      ],
+      "hinweis": {
+        "de": "Der helle, dur-typische Klang — im Metal seltener, weil er unter Verzerrung schnell süßlich wirkt."
+      }
+    },
+    {
+      "id": "quarte",
+      "halbtoene": [
+        0,
+        5
+      ],
+      "hinweis": {
+        "de": "Offen und stabil — die Quarte trägt viele Riffs und Sprünge."
+      }
+    },
+    {
+      "id": "tritonus",
+      "halbtoene": [
+        0,
+        6
+      ],
+      "hinweis": {
+        "de": "Der „Diabolus in musica“ — genau zwischen Quarte und Quinte, instabil und unheilvoll. Das Signatur-Intervall des Metal."
+      }
+    },
+    {
+      "id": "quinte",
+      "halbtoene": [
+        0,
+        7
+      ],
+      "hinweis": {
+        "de": "Stabil und kraftvoll — das Rückgrat des Powerchords."
+      }
+    },
+    {
+      "id": "oktave",
+      "halbtoene": [
+        0,
+        12
+      ],
+      "hinweis": {
+        "de": "„Derselbe Ton, nur höher“ — voll und rund, ohne jede Reibung."
+      }
+    }
+  ],
+  "akkorde": [
+    {
+      "id": "powerchord",
+      "halbtoene": [
+        0,
+        7,
+        12
+      ],
+      "hinweis": {
+        "de": "Grundton, Quinte, Oktave — keine Terz. Genau darum bleibt er unter Verzerrung klar statt matschig."
+      }
+    },
+    {
+      "id": "dur",
+      "halbtoene": [
+        0,
+        4,
+        7
+      ],
+      "hinweis": {
+        "de": "Grundton, große Terz, Quinte — hell. Voll gespielt unter High-Gain wird er schnell breiig; im Metal meist clean."
+      }
+    },
+    {
+      "id": "moll",
+      "halbtoene": [
+        0,
+        3,
+        7
+      ],
+      "hinweis": {
+        "de": "Grundton, kleine Terz, Quinte — dunkel. Der Grundklang der Metal-Harmonik, clean oder leicht angezerrt."
+      }
+    },
+    {
+      "id": "vermindert",
+      "halbtoene": [
+        0,
+        3,
+        6
+      ],
+      "hinweis": {
+        "de": "Kleine Terz plus Tritonus — maximal instabil und spannungsgeladen. Das Schock-Werkzeug für dissonante Passagen."
+      }
     }
   ]
 }

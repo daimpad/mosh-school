@@ -44,6 +44,32 @@ function spieleTon(frequenz) {
   osc.stop(jetzt + 1.7);
 }
 
+// Intervall/Akkord: mehrere Töne über einem Grundton gleichzeitig — so wird der
+// Klangcharakter (etwa die Reibung des Tritonus) hörbar. Grundton tiefes E (E2),
+// der klassische Metal-Bezugston. Halbtöne sind Offsets zum Grundton.
+function spieleAkkord(halbtoene, grundton = 'E2') {
+  const basis = frequenzVon(grundton);
+  if (!basis) return;
+  audioKontext = audioKontext || new (window.AudioContext || window.webkitAudioContext)();
+  if (audioKontext.state === 'suspended') audioKontext.resume();
+  const jetzt = audioKontext.currentTime;
+  const summe = audioKontext.createGain();
+  // Gesamtpegel auf die Stimmenzahl normieren, damit ein Akkord nicht übersteuert.
+  const pegel = 0.13 / Math.max(1, halbtoene.length);
+  summe.gain.setValueAtTime(0.0001, jetzt);
+  summe.gain.exponentialRampToValueAtTime(pegel, jetzt + 0.02);
+  summe.gain.exponentialRampToValueAtTime(0.0001, jetzt + 1.9);
+  summe.connect(audioKontext.destination);
+  for (const h of halbtoene) {
+    const osc = audioKontext.createOscillator();
+    osc.type = 'triangle';
+    osc.frequency.value = basis * 2 ** (h / 12);
+    osc.connect(summe);
+    osc.start(jetzt);
+    osc.stop(jetzt + 2);
+  }
+}
+
 // Notenanzeige: b als ♭, # als ♯ — die Oktavzahl bleibt Fachschreibweise.
 function notenText(note) {
   return note.replace('#', '♯').replace('b', '♭');
@@ -110,6 +136,27 @@ export function renderStimmungen(el, daten) {
       </section>`
     : '';
 
+  const klangKnopf = (art, eintrag) => `
+    <button type="button" class="chip chip-waehlbar klang-knopf" data-klang="${art}" data-halbtoene="${eintrag.halbtoene.join(',')}"
+      data-hinweis="${esc(text(eintrag.hinweis) || '')}"
+      aria-label="${esc(t(art === 'intervall' ? 'klang_intervall_aria' : 'klang_akkord_aria', { name: label(art, eintrag.id) }))}">
+      <i class="fa-solid fa-play" aria-hidden="true"></i> ${esc(label(art, eintrag.id))}
+    </button>`;
+  const intervalle = werkzeug.intervalle || [];
+  const akkorde = werkzeug.akkorde || [];
+  const klangSektion = intervalle.length || akkorde.length
+    ? `
+      <section class="klang-werkzeug">
+        <h2>${esc(t('klang_titel'))}</h2>
+        <p class="marke-hero-untertitel">${esc(t('klang_untertitel'))}</p>
+        <h3>${esc(t('klang_intervalle'))}</h3>
+        <p class="chip-zeile">${intervalle.map((e) => klangKnopf('intervall', e)).join(' ')}</p>
+        <h3>${esc(t('klang_akkorde'))}</h3>
+        <p class="chip-zeile">${akkorde.map((e) => klangKnopf('akkord', e)).join(' ')}</p>
+        <p class="klang-hinweis leise" aria-live="polite"></p>
+      </section>`
+    : '';
+
   el.innerHTML = `
     <article>
       <section class="marke-hero klein hue pf-teal">
@@ -122,6 +169,7 @@ export function renderStimmungen(el, daten) {
       <p class="chip-zeile">${instrumentKnoepfe}</p>
       <p class="chip-zeile">${stimmungsKnoepfe}</p>
       ${detail}
+      ${klangSektion}
       <p class="leise">${esc(t('stimm_hinweis_pegel'))}</p>
     </article>`;
 
@@ -140,5 +188,12 @@ export function renderStimmungen(el, daten) {
   }
   for (const saite of el.querySelectorAll('.saite')) {
     saite.addEventListener('click', () => spieleTon(frequenzVon(saite.dataset.note)));
+  }
+  const hinweisFeld = el.querySelector('.klang-hinweis');
+  for (const knopf of el.querySelectorAll('.klang-knopf')) {
+    knopf.addEventListener('click', () => {
+      spieleAkkord(knopf.dataset.halbtoene.split(',').map(Number));
+      if (hinweisFeld) hinweisFeld.textContent = knopf.dataset.hinweis;
+    });
   }
 }
