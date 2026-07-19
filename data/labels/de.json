@@ -488,7 +488,17 @@
     "modeler_reamping": "Modeler, Profiling & Reamping",
     "noise_management": "Noise-Management: die stille Profi-Disziplin",
     "backline_ausfallsicherheit": "Backline & Ausfallsicherheit",
-    "tuning_landkarte": "Tuning-Landkarte: Genres & Tiefen"
+    "tuning_landkarte": "Tuning-Landkarte: Genres & Tiefen",
+    "kit_ergonomie": "Kit-Aufbau & Ergonomie",
+    "felle_grundlagen": "Felle: Schlag- und Resonanzfell",
+    "drum_stimmen_basis": "Trommeln stimmen: die Grundlagen",
+    "becken_typen": "Beckentypen & ihre Rollen",
+    "felle_sound_genre": "Fellwahl & Sound nach Genre",
+    "daempfung_definition": "Dämpfung & Definition",
+    "fussmaschinen": "Fußmaschinen: Einzel & Doppel",
+    "hardware_stabilitaet": "Hardware & Stabilität",
+    "trigger_edrums": "Trigger, E-Drums & Sampling",
+    "drums_wartung_backup": "Wartung & Ausfallsicherheit am Set"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -753,6 +763,20 @@
     "chugs_breakdown": "Chugs im Breakdown: gedämpfte Schläge (Blöcke mit Dämpfstrich) und bewusste Stille — die Lücken gehören zum Riff.",
     "plektrum_technik": "Wechselschlag am Bass: dieselbe Ab-/Auf-Logik wie an der Gitarre, mit mehr Masse pro Anschlag auf der dicken Saite.",
     "sludge_erstes_riff": "Das erste Sludge-Riff: zwei schwere Akkorde mit vollem Ausklang — die Riegel markieren das bewusste Abstoppen vor dem nächsten Schlag.",
-    "pv_stopp_spiel": "Das Stopp-Spiel: Beat läuft, harter letzter Schlag (Riegel), gezählte Stille (Ringe), entschlossener Wiedereinstieg (großer Punkt)."
+    "pv_stopp_spiel": "Das Stopp-Spiel: Beat läuft, harter letzter Schlag (Riegel), gezählte Stille (Ringe), entschlossener Wiedereinstieg (großer Punkt).",
+    "intervalle_grundlagen": "Intervalle auf dem Halbton-Lineal: Grundton und Oktave (gefüllt) rahmen den Abstand; die Quinte (Ring, 7 Halbtöne) klingt stabil, die kleine Sekunde (kleiner Ring, 1 Halbton) reibt dicht am Grundton.",
+    "powerchord_theorie": "Der Powerchord: Grundton, Quinte und Oktave klingen (gefüllt) — die Terz (x) bleibt bewusst weg, damit unter Verzerrung nichts matscht.",
+    "moll_phrygisch": "Phrygisch: Der eine Halbton über dem Grundton (die tiefe zweite Stufe, gefüllt) macht die Skala dunkler als natürliches Moll — die weiteren Stufen als Ringe.",
+    "tritonus_dissonanz": "Der Tritonus (gefüllt, 6 Halbtöne) liegt genau zwischen Quarte und Quinte (Ringe) — drei Ganztöne über dem Grundton, das instabile Intervall.",
+    "taktarten_unterteilungen": "Unterteilungen über denselben 4/4-Takt: von oben Viertel, Achtel, Sechzehntel, Triolen — hohe Striche markieren die Zählzeiten.",
+    "ungerade_takte_theorie": "Der 7/8-Takt als Kette 2+2+3: Die Klammern zeigen die Gruppen, die gefüllten Punkte die betonten Gruppenanfänge — „kurz-kurz-lang\".",
+    "polyrhythmik_theorie": "Polyrhythmus 3 gegen 4: Beide Figuren teilen Anfang und Ende (senkrechte Ränder) und treffen sich nur dort — oben drei, unten vier gleiche Abstände.",
+    "songstruktur_breakdown": "Energieprofil eines Songs: Intro, Strophe, Refrain, Bridge und Breakdown als Blöcke wachsender und fallender Höhe — der Breakdown als höchster Ausschlag.",
+    "double_bass_sechzehntel": "Durchgehende Double-Bass-Sechzehntel: die Kick (Punkte) auf allen 16 Sechzehnteln, Snare (Ringe) auf 2 und 4, Hi-Hat (x) auf den Vierteln.",
+    "blast_varianten": "Blast-Varianten: oben der Traditional Blast (Kick und Snare im Wechsel), unten der Hammer Blast (Kick und Snare gleichzeitig) — gleiche Dichte, andere Verteilung.",
+    "felle_grundlagen": "Trommel im Querschnitt: dickes Schlagfell oben (worauf du spielst), dünnes Resonanzfell unten (formt den Ausklang), der Kessel dazwischen.",
+    "drum_stimmen_basis": "Stimmen von oben: die Schrauben ringsum werden über Kreuz (Pfeile) gleichmäßig gespannt — erst wenn alle denselben Ton geben, schwingt das Fell sauber.",
+    "becken_typen": "Beckentypen auf der Ständer-Linie: Hi-Hat-Paar, Crash, das große Ride und das umgedrehte China (rechts) — Größe und Form bestimmen die Rolle.",
+    "fussmaschinen": "Die Fußmaschine: Trittbrett und Feder (Zickzack) treiben den Schlägel am Drehpunkt gegen das Fell — Federspannung und Schlägel-Härte formen Tempo und Attack."
   }
 }
