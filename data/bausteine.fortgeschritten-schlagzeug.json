@@ -1,0 +1,456 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "schlagzeug",
+    "hinweis": "Fortgeschritten-Schlagzeug. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "blast_varianten",
+      "anzeigetitel": {
+        "de": "Blastbeat-Varianten"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "blastbeat"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "gliedmassen_unabhaengigkeit"
+      ],
+      "erklaerteil": {
+        "de": "Der Blastbeat ist eine Familie, keine einzelne Figur. Beim Traditional Blast wechseln sich Snare und Bassdrum ab — das kennst du. Beim Bomb Blast (auch Hammer Blast) schlagen Snare und Bassdrum gleichzeitig zu, was massiver und schwerer klingt. Und je nachdem, ob die Hand mit der Hi-Hat oder dem Ride unisono oder versetzt läuft, ändert sich der Charakter erneut.\n\nJede Variante hat ihren Platz: Der Traditional Blast flirrt und rast, der Bomb Blast walzt. Black Metal setzt oft auf das Flirren, Death Metal gern auf die Walze. Wer beide sauber trennen kann, wählt nach Wirkung statt nach Gewohnheit.\n\nÜbe die Varianten getrennt und langsam, bevor du sie mischst — gerade der Wechsel von versetzt auf unisono verführt die Gliedmaßen zum Verschmieren. Sauber heißt: Jeder Schlag ist einer Variante eindeutig zuzuordnen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Traditional und Bomb trennen",
+          "ziel": "Beide Blast-Grundformen sauber unterscheiden und wechseln.",
+          "schritte": [
+            "Spiel den Traditional Blast (Snare und Bassdrum im Wechsel) langsam und gleichmäßig über mehrere Takte.",
+            "Wechsle zum Bomb Blast: Snare und Bassdrum schlagen exakt gleichzeitig, die Hand läuft weiter mit.",
+            "Wechsle taktweise zwischen beiden Formen, ohne dass Übergangsschläge verschmieren."
+          ],
+          "steigerung": "Das Tempo in kleinen Schritten anheben und die Ride-Hand versetzt statt unisono führen.",
+          "selbstkontrolle": "Jeder Takt ist eindeutig als Traditional oder Bomb erkennbar; gleichzeitige Schläge klingen als einer."
+        }
+      }
+    },
+    {
+      "id": "blast_ausdauer",
+      "anzeigetitel": {
+        "de": "Blast-Ausdauer aufbauen"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "blastbeat"
+      ],
+      "spielziele": [
+        "lockere_haende",
+        "fuss_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Einen Blast zwei Takte zu spielen ist Technik — ihn zwei Minuten zu halten ist Ausdauer. Die kommt nicht aus Kraft, sondern aus Ökonomie: kleine Bewegungen, lockere Handgelenke und Fußgelenke, und ein Atem, der weiterläuft, statt sich festzuhalten. Viele verlieren den Blast nicht, weil die Muskeln versagen, sondern weil sie unbemerkt die Luft anhalten und verkrampfen.\n\nBaue Ausdauer in Intervallen auf: Blast-Passagen von kontrollierter Länge, dazwischen bewusst lockere Grooves zur Erholung. Die Blast-Strecken wachsen von Woche zu Woche — nicht innerhalb einer Session.\n\nGesundheit hat Vorrang: Brennende Unterarme, ein taubes Schienbein oder ein verhärteter Nacken sind Stoppsignale, keine Meilensteine. Wer regelmäßig verkrampft endet, übt zu schnell oder zu lange — beides bremst den Fortschritt mehr, als es ihn fördert."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Blast-Intervalle",
+          "ziel": "Blast-Strecken kontrolliert verlängern, ohne Verkrampfung.",
+          "schritte": [
+            "Spiel vier Takte Blast in einem Tempo, das sicher sitzt, danach vier Takte lockeren Grundbeat.",
+            "Wiederhole den Wechsel mehrere Runden und beobachte Hände, Füße, Nacken und Atem.",
+            "Beende die Übung, sobald die Lockerheit kippt — und notiere Tempo und Rundenzahl."
+          ],
+          "steigerung": "Erst die Blast-Strecke verlängern (sechs, acht Takte), erst danach das Tempo anheben.",
+          "selbstkontrolle": "Der letzte Blast-Takt klingt wie der erste; du atmest durchgehend und bleibst locker."
+        }
+      }
+    },
+    {
+      "id": "double_bass_sechzehntel",
+      "anzeigetitel": {
+        "de": "Durchgehende Double-Bass-Sechzehntel"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "double_bass"
+      ],
+      "spielziele": [
+        "double_bass_tempo",
+        "fuss_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Der durchlaufende Sechzehntel-Teppich der Doppel-Bassdrum ist das Fundament unzähliger Death- und Metalcore-Passagen: Beide Füße wechseln lückenlos, während die Hände darüber einen normalen Beat spielen. Was einfach klingt, ist eine doppelte Aufgabe — der Teppich muss maschinengleich laufen und darf trotzdem die Hände nicht mitreißen.\n\nDer Schlüssel ist der schwächere Fuß. Fast immer hinkt er in Lautstärke und Timing minimal hinterher, und genau diese Differenz macht den Teppich wellig. Übe deshalb gezielt Passagen, die mit dem schwachen Fuß beginnen, und höre auf Gleichheit statt auf Geschwindigkeit.\n\nAchte auf die Balance zwischen Fußgelenk und Bein: Dauerhaftes Spielen aus dem ganzen Bein ermüdet schnell. Ein federnder, lockerer Wechsel mit aktivem Fußgelenk trägt weiter — und klingt gleichmäßiger."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Teppich unter dem Beat",
+          "ziel": "Lückenlose Sechzehntel der Füße unter einem stabilen Hand-Beat.",
+          "schritte": [
+            "Spiel zum Klick durchgehende Fuß-Sechzehntel in ruhigem Tempo und prüf die Gleichheit beider Füße.",
+            "Leg darüber Achtel auf der Hi-Hat oder dem Ride, dann die Snare auf 2 und 4.",
+            "Hör gezielt auf den schwächeren Fuß und gleiche Lautstärke und Timing an."
+          ],
+          "steigerung": "Tempo in kleinen Schritten anheben; Passagen bewusst mit dem schwachen Fuß beginnen.",
+          "selbstkontrolle": "Der Teppich klingt maschinengleich; der Hand-Beat bleibt davon unbeeindruckt im Timing."
+        }
+      }
+    },
+    {
+      "id": "double_bass_patterns",
+      "anzeigetitel": {
+        "de": "Double-Bass-Figuren & Akzente"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "double_bass_sechzehntel"
+      ],
+      "spielziele": [
+        "double_bass_tempo",
+        "gliedmassen_unabhaengigkeit"
+      ],
+      "erklaerteil": {
+        "de": "Der durchgehende Teppich ist erst der Anfang — richtig musikalisch wird die Doppel-Bassdrum mit Figuren: kurze Sechzehntel-Gruppen, die den Gitarren-Riffs folgen, Galopp-Muster mit den Füßen und gezielte Lücken, die Akzente erst möglich machen. Moderne Metalcore-Drummer spielen mit den Füßen Rhythmen, keine Flächen.\n\nDie Herausforderung: Eine Fuß-Figur beginnt und endet mitten im Takt, und die Hände dürfen davon nichts mitbekommen. Zerlege jede Figur deshalb in Zählsilben („2-e-und“) und übe sie zuerst ohne Hände, dann unter einem simplen Beat.\n\nPausen sind Teil der Figur. Ein sauberer Stopp der Füße — beide ruhen wirklich — trennt die Gruppen und gibt dem Muster seine Kontur. Wer die Lücken verschmiert, verliert den Riff-Bezug."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Fuß-Gruppen nach Zählzeiten",
+          "ziel": "Kurze Double-Bass-Gruppen exakt platzieren und sauber stoppen.",
+          "schritte": [
+            "Übe eine Vierergruppe Sechzehntel der Füße, die auf der „und“ beginnt — zuerst ohne Hände, laut mitgezählt.",
+            "Setz die Gruppe unter einen einfachen Hand-Beat, ohne dass Hi-Hat oder Snare wackeln.",
+            "Bau bewusste Lücken ein: Gruppe, Stopp, Gruppe — die Stopps sind so exakt wie die Schläge."
+          ],
+          "steigerung": "Figuren an ein echtes Riff anlehnen (Aufnahme oder programmiert) und Startpunkte variieren.",
+          "selbstkontrolle": "Jede Gruppe beginnt und endet exakt auf ihrer Unterteilung; der Hand-Beat bleibt stabil."
+        }
+      }
+    },
+    {
+      "id": "skank_beat",
+      "anzeigetitel": {
+        "de": "Skank-Beat (Thrash-Beat)"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "d_beat"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "lockere_haende"
+      ],
+      "erklaerteil": {
+        "de": "Der Skank-Beat ist der Motor des Thrash: Snare und Bassdrum wechseln sich in schnellen Achteln ab (Kick auf den Zählzeiten, Snare auf den „und“s), während die Hi-Hat- oder Ride-Hand mitläuft. Er ist der kleine, hektische Bruder des D-Beats — und die Vorstufe zum Blast, mit dem er die Wechselmechanik teilt.\n\nSeine Tücke liegt im Tempo: Thrash-Tempi verlangen, dass die Snare-Hand entspannt aus dem Handgelenk peitscht, nicht aus dem Arm drischt. Wer drischt, wird langsamer und lauter zugleich — der Beat soll aber treiben, nicht walzen.\n\nDer Skank lebt außerdem von seiner Berechenbarkeit. Er ist bewusst simpel, damit das Riff glänzen kann. Stabilität über Minuten schlägt jede Variation — ein Thrash-Song verzeiht keinen wandernden Puls."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Treibenden Skank stabilisieren",
+          "ziel": "Den Kick-Snare-Wechsel in Achteln über lange Strecken stabil halten.",
+          "schritte": [
+            "Spiel zum Klick: Bassdrum auf die Zählzeiten, Snare auf die „und“s, Hand läuft in Achteln mit.",
+            "Halte den Beat über sechzehn Takte und prüf, ob Snare-Schläge gleich laut bleiben.",
+            "Achte darauf, dass die Snare-Bewegung aus dem Handgelenk kommt und der Arm ruhig bleibt."
+          ],
+          "steigerung": "Tempo in 5-BPM-Schritten Richtung Thrash anheben; am Phrasenende ein kurzes Fill einbauen und sauber zurückkommen.",
+          "selbstkontrolle": "Der Beat treibt gleichmäßig ohne Tempodrift; Hände und Schultern bleiben locker."
+        }
+      }
+    },
+    {
+      "id": "drums_ghostnotes",
+      "anzeigetitel": {
+        "de": "Ghost Notes im Metal-Groove"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "dynamik_akzente"
+      ],
+      "spielziele": [
+        "definierter_anschlag"
+      ],
+      "erklaerteil": {
+        "de": "Ghost Notes — sehr leise Snare-Schläge zwischen den Hauptschlägen — sind das Geheimnis von Grooves, die „rollen“ statt stampfen. Im Metal tauchen sie in Halftime-Passagen, Mid-Tempo-Grooves und überall dort auf, wo ein Beat menschlich atmen soll, ohne an Härte zu verlieren.\n\nDie Technik ist reine Dynamikkontrolle: Der Stick fällt aus wenigen Zentimetern für die Ghost Note, holt für den Backbeat aber voll aus. Beide Bewegungen müssen in derselben Hand nahtlos wechseln — das ist die eigentliche Übung, nicht das Muster.\n\nWirksam sind Ghost Notes durch Kontrast. Sind sie zu laut, wird der Beat wuselig; richtig dosiert spürt man sie mehr, als man sie hört. Nimm dich auf: Auf der Aufnahme zeigt sich sofort, ob die Abstufung stimmt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Rollen statt stampfen",
+          "ziel": "Leise Zwischenschläge und volle Backbeats in einer Hand vereinen.",
+          "schritte": [
+            "Spiel einen Grundbeat und setz auf ausgewählte Sechzehntel-Lücken sehr leise Snare-Schläge.",
+            "Halte den Backbeat auf 2 und 4 voll und unverändert laut.",
+            "Nimm dich auf und prüf den Kontrast: Die Ghost Notes sollen fühlbar, aber kaum hörbar sein."
+          ],
+          "steigerung": "Ghost-Note-Positionen variieren und das Muster in einen Halftime-Groove übertragen.",
+          "selbstkontrolle": "Backbeat und Ghost Notes sind klar getrennt; der Groove rollt, ohne unruhig zu werden."
+        }
+      }
+    },
+    {
+      "id": "herta_verzierungen",
+      "anzeigetitel": {
+        "de": "Hertas & Rudiment-Verzierungen"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "rudiments_grundlage"
+      ],
+      "spielziele": [
+        "riff_praezision",
+        "lockere_haende"
+      ],
+      "erklaerteil": {
+        "de": "Die Herta ist ein kleines Rudiment mit großer Wirkung: zwei sehr schnelle Schläge, gefolgt von zwei normalen — ein „Stolperer“, der Fills und Blast-Übergängen ihren rollenden Charakter gibt. Zusammen mit Flams (zwei fast gleichzeitige Schläge) und Drags erweitert sie dein Vokabular über Singles und Doubles hinaus.\n\nDiese Verzierungen leben von der exakten Platzierung: Die schnellen Schläge der Herta sind Zweiunddreißigstel vor einem stabilen Puls, kein undefiniertes Gewusel. Übe sie deshalb zuerst isoliert aufs Pad, mit Metronom, bis das Muster wie ein einziges Wort klingt.\n\nIm Kit verteilt entfalten Hertas ihren Reiz: die schnellen Schläge auf der Snare, die normalen auf den Toms — schon rollt ein Fill, das mit reinen Singles unmöglich wäre."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Herta als ein Wort",
+          "ziel": "Die Herta-Figur präzise und entspannt in den Puls setzen.",
+          "schritte": [
+            "Übe die Figur (zwei schnelle, zwei normale Schläge) langsam auf dem Pad, mit Metronom und laut gezählt.",
+            "Wiederhole sie, bis sie wie ein zusammenhängendes Wort klingt, nicht wie vier Einzelschläge.",
+            "Verteil die Figur im Kit: schnelle Schläge auf der Snare, normale auf den Toms."
+          ],
+          "steigerung": "Hertas in ein Ein-Takt-Fill einbauen und mit Flams am Fill-Anfang kombinieren.",
+          "selbstkontrolle": "Die Figur sitzt exakt im Puls und klingt rund; die Hände bleiben dabei locker."
+        }
+      }
+    },
+    {
+      "id": "triolen_fills",
+      "anzeigetitel": {
+        "de": "Triolen- & Sextolen-Fills"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "fills",
+        "taktarten_unterteilungen"
+      ],
+      "spielziele": [
+        "saubere_uebergaenge"
+      ],
+      "erklaerteil": {
+        "de": "Fills in Triolen (drei Schläge pro Zählzeit) und Sextolen (sechs) rollen anders als gerade Sechzehntel — runder, drängender, mit einem Sog, der Übergänge dramatischer macht. Genau deshalb sind sie im Metal so beliebt: Ein Sextolen-Fill über die Toms kündigt den nächsten Teil an wie ein heranrollendes Gewitter.\n\nDie Schwierigkeit ist der Wechsel des Zählgefühls: Aus dem geraden Beat heraus muss dein inneres Raster für die Dauer des Fills auf Dreiergruppen umschalten — und am Ende exakt auf der geraden Eins landen. Wer das Raster nicht wirklich wechselt, spielt verwaschene Sechzehntel mit Triolen-Gefühl.\n\nZähl die Dreiergruppen laut („1-trio-le, 2-trio-le“), bis der Wechsel selbstverständlich wird. Der gerade Beat davor und danach ist Teil der Übung — ohne saubere Landung ist das schönste Fill wertlos."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Rollendes Dreier-Fill",
+          "ziel": "Triolen-Fills aus dem geraden Beat heraus spielen und exakt landen.",
+          "schritte": [
+            "Spiel drei Takte Grundbeat und im vierten ein Triolen-Fill über Snare und Toms, laut gezählt.",
+            "Achte auf gleichmäßige Dreiergruppen — jede Zählzeit trägt exakt drei Schläge.",
+            "Lande bewusst auf der Eins des nächsten Takts und nimm den Grundbeat sofort wieder auf."
+          ],
+          "steigerung": "Auf Sextolen verdichten und das Fill mit einem Beckenakzent auf der Landung abschließen.",
+          "selbstkontrolle": "Das Fill rollt hörbar in Dreiergruppen, und die Landung auf der Eins sitzt punktgenau."
+        }
+      }
+    },
+    {
+      "id": "halftime_china",
+      "anzeigetitel": {
+        "de": "Half-Time & China-Akzente"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "metalcore_groove"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "definierter_anschlag"
+      ],
+      "erklaerteil": {
+        "de": "Half-Time ist ein Trick mit großer Wirkung: Das Tempo bleibt gleich, aber die Snare rückt von 2-und-4 auf die 3 — und plötzlich fühlt sich alles doppelt so schwer und halb so schnell an. Breakdowns leben von genau diesem Gefühl, ohne dass die Band tatsächlich langsamer wird.\n\nDas China-Becken ist der Klang dazu: trashig, böse, explosiv. In Half-Time-Passagen ersetzt es oft die Hi-Hat und markiert die schweren Schläge — meist zusammen mit der Bassdrum und exakt auf den Akzenten des Riffs. Sein greller Attack verzeiht kein unsauberes Timing.\n\nÜbe den Wechsel zwischen Normal- und Half-Time-Feel als bewusste Umschaltung: gleiche Zählzeit, neues Gewicht. Wer beim Umschalten das Tempo verändert, hat den Trick noch nicht — der Klick deckt das gnadenlos auf."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Feel umschalten, Tempo halten",
+          "ziel": "Zwischen Normal- und Half-Time wechseln, ohne das Tempo zu bewegen.",
+          "schritte": [
+            "Spiel vier Takte Grundbeat (Snare auf 2 und 4) zum Klick.",
+            "Schalte für vier Takte auf Half-Time um: Snare auf die 3, schwere Bassdrum, breite Akzente.",
+            "Wechsle mehrmals hin und her und prüf am Klick, dass das Tempo exakt gleich bleibt."
+          ],
+          "steigerung": "Im Half-Time-Teil das China (oder Crash) statt der Hi-Hat führen und Akzente aufs Riff setzen.",
+          "selbstkontrolle": "Der Wechsel fühlt sich nach halbem Tempo an, obwohl der Klick unverändert weiterläuft."
+        }
+      }
+    },
+    {
+      "id": "tempo_wechsel_drums",
+      "anzeigetitel": {
+        "de": "Tempo- & Feel-Wechsel setzen"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "grundbeat",
+        "d_beat"
+      ],
+      "spielziele": [
+        "saubere_uebergaenge",
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Extreme-Metal-Songs springen: vom Blast in den Groove, vom D-Beat in den Breakdown, von rasend zu walzend. Als Schlagzeuger:in setzt du diese Schnitte — und ein Schnitt wirkt nur, wenn er auf den Punkt kommt. Eine halbe Zählzeit Unschärfe, und aus dem Bruch wird ein Unfall.\n\nDas Handwerk dahinter: Du kennst den letzten Schlag des alten Teils und den ersten des neuen, und dazwischen liegt nichts Ungeplantes. Oft hilft ein kurzes Signal — ein Fill, ein Beckenakzent, eine markante Bassdrum-Figur —, das die Band hörbar in den Wechsel führt.\n\nÜbe Wechsel als eigenes Element, nicht als Nebenprodukt: zwei Feels, ein definierter Übergangspunkt, viele Wiederholungen. Die Sicherheit an diesen Nahtstellen unterscheidet eine tighte Band von einer, die zusammen auseinanderfällt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Nahtstellen drillen",
+          "ziel": "Definierte Wechsel zwischen zwei Feels exakt auf den Punkt spielen.",
+          "schritte": [
+            "Wähle zwei Feels (z. B. D-Beat und Half-Time-Groove) und leg den Wechselpunkt fest — etwa nach vier Takten.",
+            "Spiel den Wechsel im Loop: vier Takte A, Umschalten auf der Eins, vier Takte B, zurück.",
+            "Setz vor den Wechsel ein kurzes Ankündigungs-Fill und prüf, ob die Landung exakt bleibt."
+          ],
+          "steigerung": "Unregelmäßige Wechselpunkte üben (nach drei oder sechs Takten) und die Feels stärker kontrastieren.",
+          "selbstkontrolle": "Jeder Wechsel sitzt auf der Eins; vor und nach der Naht ist das Timing unverändert stabil."
+        }
+      }
+    },
+    {
+      "id": "polyrhythmik_einstieg",
+      "anzeigetitel": {
+        "de": "Polyrhythmik-Einstieg: 3 über 4"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "koordination"
+      ],
+      "spielziele": [
+        "gliedmassen_unabhaengigkeit"
+      ],
+      "erklaerteil": {
+        "de": "Polyrhythmik heißt: Zwei Raster laufen gleichzeitig — etwa drei gleichmäßige Schläge einer Hand gegen vier der anderen. Im modernen Metal (und überall, wo es progressiv wird) erzeugen solche Überlagerungen das Gefühl, dass etwas „verschoben“ ist, obwohl alles exakt stimmt.\n\nDer Einstieg ist die Drei-über-vier-Figur. Der Trick: Du lernst sie zuerst als zusammengesetztes Muster („beide – rechts – links – rechts …“), nicht als zwei getrennte Ströme. Erst wenn das Muster mechanisch sitzt, beginnst du, beide Stimmen als eigenständig zu hören.\n\nGeduld gehört dazu: Polyrhythmen fühlen sich anfangs falsch an, weil das Gehirn ein Raster bevorzugt. Genau dieses Aushalten zweier Wahrheiten ist die Fähigkeit, die du hier trainierst — sie zahlt auf jede komplexe Koordination ein."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei gegen vier",
+          "ziel": "Die 3-über-4-Figur mechanisch sicher und hörbar als zwei Stimmen spielen.",
+          "schritte": [
+            "Klatsch oder spiel das zusammengesetzte Muster langsam und laut gezählt, bis es flüssig läuft.",
+            "Verteil die Stimmen: eine Hand spielt die Vierergruppe, die andere die Dreiergruppe.",
+            "Wechsle den Fokus deines Hörens bewusst zwischen beiden Stimmen, während das Muster läuft."
+          ],
+          "steigerung": "Die Dreier-Stimme in den Fuß legen oder die Figur über zwei Takte zum Klick strecken.",
+          "selbstkontrolle": "Das Muster läuft stabil, und du kannst benennen, welche Stimme gerade auf welcher Zählzeit liegt."
+        }
+      }
+    },
+    {
+      "id": "drums_koerper_ausdauer",
+      "anzeigetitel": {
+        "de": "Ganzkörper-Ausdauer & Ergonomie"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "aufwaermen_gesundheit"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "fuss_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Extreme-Metal-Drumming ist Hochleistungssport: Blasts, Double-Bass-Teppiche und lange Sets fordern Herz-Kreislauf, Rumpf und alle vier Gliedmaßen gleichzeitig. Auf fortgeschrittenem Niveau entscheidet der Körper mit, wie weit die Technik trägt.\n\nDrei Stellschrauben zahlen direkt aufs Spielen ein: Grundlagenausdauer (alles, was den Puls über längere Zeit moderat fordert), ein stabiler Rumpf, der die Sitzposition über Stunden hält, und bewusste Erholung — Schlaf, Pausen zwischen intensiven Sessions, Flüssigkeit. Das Prinzip lautet allmähliche Steigerung, nicht Härte: Der Körper passt sich in Wochen an, nicht in Sessions.\n\nWarnsignale bleiben Warnsignale, egal wie fortgeschritten du bist: Schmerz in Gelenken oder Rücken, Taubheit, Kribbeln oder Erschöpfung, die nicht abklingt, heißen unterbrechen, Belastung prüfen — und bei anhaltenden Beschwerden fachkundigen Rat holen. Trainingslehre gehört zum Drumming wie das Metronom."
+      },
+      "reflexionsaufgabe": {
+        "de": "Sieh dir dein Spielpensum einer typischen Woche an: Wo liegen die intensiven Sessions, wo die Erholung, und was tust du außerhalb des Kits für Ausdauer und Rumpf? Leg zwei konkrete, kleine Änderungen fest — etwa eine Ausdauer-Einheit pro Woche und eine feste Pausenregel für lange Sessions."
+      }
+    }
+  ]
+}
