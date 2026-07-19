@@ -468,7 +468,19 @@
     "sludge_erstes_riff": "Das erste Sludge-Riff",
     "pv_stopp_spiel": "Das Stopp-Spiel",
     "crust_gitarre_saege": "Crust-Gitarre: die Säge führen",
-    "crust_bass_wand": "Crust-Bass: die zweite Säge"
+    "crust_bass_wand": "Crust-Bass: die zweite Säge",
+    "signalkette_grundlagen": "Signalkette: vom Instrument zum Ton",
+    "verzerrer_typen": "Verzerrung: Overdrive, Distortion, Fuzz",
+    "saiten_tunings_standards": "Saiten & Tunings: die Standards",
+    "proberaum_pegel": "Proberaum-Pegel & Gehörschutz",
+    "sound_thrash_attack": "Thrash-Sound: Attack & Biss",
+    "sound_death_wall": "Death-Metal-Sound: die Wand",
+    "sound_black_frost": "Black-Metal-Sound: Frost & Fläche",
+    "sound_core_tight": "Core-Sound: tight & modern",
+    "pedalboard_logik": "Pedalboard-Logik: die Reihenfolge",
+    "modeler_reamping": "Modeler, Profiling & Reamping",
+    "noise_management": "Noise-Management: die stille Profi-Disziplin",
+    "backline_ausfallsicherheit": "Backline & Ausfallsicherheit"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
