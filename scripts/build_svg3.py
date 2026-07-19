@@ -31,6 +31,10 @@ def RECT(x, y, w_, h, filled=True):
         return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w_:.1f}" height="{h:.1f}" rx="2.5" fill="currentColor" stroke="none"/>'
     return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w_:.1f}" height="{h:.1f}" rx="2.5" stroke-width="3"/>'
 
+def TRI(pts):
+    p = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    return f'<polygon points="{p}" fill="currentColor" stroke="none"/>'
+
 def ARC(cx, cy, r, a0, a1, w=3):
     x0 = cx + r * math.cos(math.radians(a0)); y0 = cy - r * math.sin(math.radians(a0))
     x1 = cx + r * math.cos(math.radians(a1)); y1 = cy - r * math.sin(math.radians(a1))
@@ -138,12 +142,132 @@ S["doom_band_zeitgefuehl"] = [
     P(wavepath(16, 104, 86, 8, 1.5, step=2.2), 3.5),
 ]
 
-DOOM_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
-            "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
-            "doom_sound_gewicht", "doom_band_zeitgefuehl"]
-assert sorted(DOOM_IDS) == sorted(S), sorted(set(DOOM_IDS) ^ set(S))
+# ================= HARDCORE-VERTIEFUNG (stil-hardcore, fortgeschritten) =================
+# Hardcore: kantig, synkopiert, körperlich — Akzente gegen den Beat, Kollektiv-Motive.
 
-for bid in DOOM_IDS:
+# Groove & Bounce: Beat-Grundlinie mit synkopierten schweren Blöcken — die Lücken
+# gehören zum Riff.
+S["hardcore_groove_bounce"] = [
+    L(12, 90, 108, 90, 2.5),
+    RECT(16, 62, 16, 22, filled=True),
+    RECT(44, 62, 10, 22, filled=True),
+    RECT(70, 42, 16, 42, filled=True),
+    RECT(96, 62, 10, 22, filled=True),
+]
+# Der Motor: durchgehende schwere Achtel-Striche, zwei mit der Kick verzahnte
+# Akzent-Keile darunter.
+S["hardcore_bass_motor"] = [
+    *[L(16 + i * 13, 48, 16 + i * 13, 72, 5) for i in range(8)],
+    TRI([(29, 84), (37, 84), (33, 94)]),
+    TRI([(81, 84), (89, 84), (85, 94)]),
+]
+# Energie kontrollieren: dichter schneller Beat kippt an einer harten Kante in
+# den halb so dichten Stomp — gleiche Grundlinie, halbierte Dichte.
+S["hardcore_drums_energie"] = [
+    L(12, 76, 108, 76, 2.5),
+    *[L(16 + i * 8, 76, 16 + i * 8, 56, 3) for i in range(6)],
+    L(62, 40, 62, 96, 3.5),
+    L(76, 76, 76, 46, 6),
+    L(98, 76, 98, 46, 6),
+]
+# Gang-Shouts: drei Stimmen (aufsteigende Striche) unter einem gemeinsamen
+# Ruf-Bogen — ein Schlag, viele Kehlen.
+S["hardcore_gangshouts"] = [
+    L(38, 92, 38, 62, 5),
+    L(60, 92, 60, 54, 5),
+    L(82, 92, 82, 62, 5),
+    ARC(60, 58, 38, 30, 150, 3),
+]
+# Songwriting direkt: ein kurzer, kompromissloser Pfad — geradeaus, harte Ecke,
+# Schluss auf dem Punkt.
+S["hardcore_songwriting_direkt"] = [
+    P("M14,48 L74,48 L74,84 L98,84", 4.5),
+    C(104, 84, 4.5, fill=True),
+]
+# Bühne & Community: Kreis aus Punkten um ein Zentrum — durchlässige Grenze,
+# ein Punkt gehört zu beiden Welten.
+S["hardcore_buehne_community"] = [
+    C(60, 60, 9, fill=True),
+    *[C(60 + 34 * math.cos(math.radians(a)), 60 - 34 * math.sin(math.radians(a)), 4, fill=True)
+      for a in (20, 70, 110, 160, 200, 250, 290, 340)],
+]
+
+# ================= CRUST / GRINDCORE / POWERVIOLENCE (stil-punk-extrem) =================
+
+# D-Beat als Dauerlauf: das Galopp-Paar-Muster läuft ununterbrochen über die
+# volle Breite — Konstanz als Motiv.
+S["crust_dbeat_ausbau"] = [
+    L(12, 82, 108, 82, 2.5),
+    *[L(x, 82, x, 58, 4) for pair in range(4) for x in (18 + pair * 24, 26 + pair * 24)],
+    C(60, 96, 3, fill=True),
+]
+# Dreck mit Absicht: maximal raue, sägende Doppellinie — die Kettensäge.
+S["crust_sound_dreck"] = [
+    P(roughpath(12, 108, 48, 10, step=2.6, seed=42), 3.5),
+    P(roughpath(12, 108, 76, 10, step=2.6, seed=43), 3.5),
+]
+# Rau & dringlich: eine rufende Welle mit rauer Kante — Sprechgesang mit
+# Schmirgel, kein geformtes Monster.
+S["crust_vocals_rau"] = [
+    P(roughpath(16, 104, 60, 7, step=3.0, seed=17, env=lambda t: 0.5 + 0.5 * math.sin(math.pi * t)), 4),
+    ARC(60, 66, 34, 200, 340, 2),
+]
+# Radikale Reduktion: dichte Tremolo-Fläche bricht hart in einen einzelnen
+# schweren Block — zwei Riffs, nichts dazwischen.
+S["grind_riff_reduktion"] = [
+    P(wavepath(14, 66, 60, 9, 5, step=1.4), 2),
+    RECT(76, 46, 28, 28, filled=True),
+]
+# Tief-Hoch-Wechsel: schwere tiefe Welle und raue hohe Welle im harten Wechsel —
+# eine Stütze, zwei Register.
+S["grind_vocals_wechsel"] = [
+    P(wavepath(14, 56, 78, 10, 1.6, step=1.8), 5),
+    P(roughpath(64, 106, 40, 7, step=2.4, seed=23), 2.2),
+    L(60, 30, 60, 90, 2),
+]
+# Der komprimierte Song: alles auf kleinstem Raum — ein dichter Block aus
+# Ereignis-Strichen, drumherum nichts.
+S["grind_kompression"] = [
+    RECT(38, 44, 44, 32, filled=False),
+    *[L(44 + i * 6, 50, 44 + i * 6, 70, 3) for i in range(6)],
+    L(12, 60, 30, 60, 2),
+    L(90, 60, 108, 60, 2),
+]
+# Start-Stopp-Präzision: dichte Fläche, harte Lücke, schwerer Einzelblock —
+# die Kante ist das Ereignis.
+S["pv_start_stopp"] = [
+    P(wavepath(14, 54, 60, 9, 4, step=1.4), 2),
+    L(58, 36, 58, 84, 3.5),
+    RECT(72, 48, 14, 24, filled=True),
+    L(94, 36, 94, 84, 3.5),
+]
+# Dramaturgie der Miniatur: Zustandsfolge als Blöcke verschiedener Dichte mit
+# harten Schnitten — keine Übergänge.
+S["pv_miniatur_dramaturgie"] = [
+    RECT(14, 52, 22, 16, filled=True),
+    RECT(44, 40, 10, 40, filled=True),
+    RECT(62, 58, 30, 10, filled=True),
+    RECT(100, 44, 6, 32, filled=True),
+]
+# Gemeinsame Abrisskanten: zwei Linien springen an derselben Kante gemeinsam
+# auf ein neues Niveau — alle wissen den Wechsel.
+S["pv_band_abrisskanten"] = [
+    P("M12,44 L56,44 L56,76 L108,76", 3.5),
+    P("M12,56 L56,56 L56,88 L108,88", 3.5),
+    C(56, 32, 4, 2.5),
+]
+
+TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
+                "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
+                "doom_sound_gewicht", "doom_band_zeitgefuehl",
+                "hardcore_groove_bounce", "hardcore_bass_motor", "hardcore_drums_energie",
+                "hardcore_gangshouts", "hardcore_songwriting_direkt", "hardcore_buehne_community",
+                "crust_dbeat_ausbau", "crust_sound_dreck", "crust_vocals_rau",
+                "grind_riff_reduktion", "grind_vocals_wechsel", "grind_kompression",
+                "pv_start_stopp", "pv_miniatur_dramaturgie", "pv_band_abrisskanten"]
+assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
+
+for bid in TRANCHE3_IDS:
     svg = make(S[bid])
     ET.fromstring(svg)
     with open(os.path.join(OUT, f"{bid}.svg"), "w", encoding="utf-8") as f:
@@ -178,4 +302,4 @@ for fb in FEHLERBILDER:
         f.write(svg)
     erzeugt += 1
 
-print(f"{len(DOOM_IDS)} Doom-SVGs + {erzeugt} Fehlerbild-SVGs (Tranche 3) erzeugt, alle XML-wohlgeformt.")
+print(f"{len(TRANCHE3_IDS)} Genre-SVGs + {erzeugt} Fehlerbild-SVGs (Tranche 3) erzeugt, alle XML-wohlgeformt.")
