@@ -39,6 +39,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.stil-einsteiger.json',
   'data/bausteine.sound-gear.json',
   'data/bausteine.drums-gear.json',
+  'data/bausteine.stil-deathcore.json',
 ];
 
 export async function ladeDaten() {

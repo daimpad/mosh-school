@@ -506,7 +506,13 @@
     "fussmaschinen": "Fußmaschinen: Einzel & Doppel",
     "hardware_stabilitaet": "Hardware & Stabilität",
     "trigger_edrums": "Trigger, E-Drums & Sampling",
-    "drums_wartung_backup": "Wartung & Ausfallsicherheit am Set"
+    "drums_wartung_backup": "Wartung & Ausfallsicherheit am Set",
+    "deathcore_breakdown_wucht": "Deathcore-Gitarre: der Breakdown als Waffe",
+    "deathcore_bass_fundament": "Deathcore-Bass: das tiefe Fundament",
+    "deathcore_gravity_blast": "Deathcore-Drums: Blast, Gravity & Breakdown",
+    "deathcore_gutturals_squeals": "Deathcore-Vocals: Gutturals, Highs & Squeals",
+    "deathcore_riff_dissonanz": "Deathcore-Riffing: Dissonanz & Slam",
+    "deathcore_dynamik_dramaturgie": "Deathcore-Dramaturgie: Chaos & Entladung"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -660,7 +666,8 @@
       "crust": "Crust",
       "grindcore": "Grindcore",
       "powerviolence": "Powerviolence",
-      "sludge": "Sludge"
+      "sludge": "Sludge",
+      "deathcore": "Deathcore"
     },
     "stimmung": {
       "e_standard": "E-Standard",

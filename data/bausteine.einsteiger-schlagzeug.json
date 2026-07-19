@@ -388,7 +388,8 @@
       "stil": [
         "death_metal",
         "black_metal",
-        "grindcore"
+        "grindcore",
+        "deathcore"
       ],
       "voraussetzungen": [
         "koordination",
@@ -505,7 +506,8 @@
       ],
       "typ": "micro",
       "stil": [
-        "metalcore"
+        "metalcore",
+        "deathcore"
       ],
       "voraussetzungen": [
         "grundbeat",
