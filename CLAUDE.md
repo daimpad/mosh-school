@@ -135,6 +135,19 @@ Tokens**, nie harte Farben.
   Strichstärke = Gewicht · Rauigkeit (seeded Jitter) = Verzerrung/Harsh · Hohlkreise =
   Ghost Notes · Grid-Dichtewechsel = Tempo-/Metrik-Wechsel. Neue Bausteine ohne Grafik
   meldet `scripts/validate.py` als Warnung; vorproduzierte IDs (künftige Sets) sind okay.
+- **Lehrgrafiken** (Tranche 4, `scripts/build_svg4.py` → `data/lehrgrafiken.json`):
+  breite Erklär-Schemata (viewBox 240×120 — Beat-Raster, Griffbilder, Anschlagsmuster),
+  die die Baustein-Ansicht als `<figure>` nach dem Erklärteil rendert (Registry
+  `setzeLehrgrafiken()` → `lehrgrafik()`), optional je Baustein-ID. Textfrei/i18n-neutral —
+  die Legende liefert `label('lehrgrafik', id)` aus `labels/de.json` (Abschnitt
+  `lehrgrafiken`, von Hand gepflegt wie Einheiten-Titel). Beat-Raster-Konvention:
+  oben Hi-Hat (x), Mitte Snare (Hohlkreis), unten Kick (Punkt); Viertel = hohe,
+  Achtel = kurze Rasterstriche.
+- **Werkzeuge:** Das Stimmungs-Werkzeug (`#/stimmungen`, `js/ansichten/stimmungen.js`)
+  ist eine interaktive Referenz mit WebAudio-Tönen; seine Daten (kuratierte Tunings mit
+  Genre-Zuordnung aus dem `stil`-Vokabular) liegen in `data/tunings.json`, die sichtbaren
+  Namen unter `vokabeln.stimmung` in `labels/de.json`. Referenzbereich wie Regeln —
+  NICHT im Baustein-Pool, kein Fortschritt.
 
 ## Sprache & Sicherheit
 

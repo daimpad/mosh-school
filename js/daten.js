@@ -41,15 +41,20 @@ const INHALTSDATEIEN = [
 ];
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, regeln, appInfo, turnierregeln, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, regeln, appInfo, turnierregeln, tunings, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/regeln.json'),
     holeJson('data/app-info.json'),
     holeJson('data/turnierregeln.json'),
+    holeJson('data/tunings.json'),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
-  return baueIndizes(inhaltDateien, einheiten, fehlerbilder, regeln, appInfo, turnierregeln);
+  const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, regeln, appInfo, turnierregeln);
+  // Werkzeug-Daten (Stimmungs-Referenz): eigener Referenzbereich, NICHT im
+  // Baustein-Pool — kein Fortschritt, keine Voraussetzungen.
+  daten.tunings = { meta: tunings?._meta || {}, stimmungen: tunings?.stimmungen || [] };
+  return daten;
 }
 
 export function hatUebungsteil(baustein) {
