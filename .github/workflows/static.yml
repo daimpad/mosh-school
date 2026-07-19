@@ -33,6 +33,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # Pages beim ersten Lauf selbst aktivieren (statt manuell in den
+          # Repo-Einstellungen) — der Workflow hat dafür die pages:write-Rechte.
+          enablement: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
