@@ -1,0 +1,181 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "ausruestung",
+    "hinweis": "Sound-&-Gear-Kapitel: zwölf Ausrüstungs-Bausteine über drei Stufen. Einsteiger legt die genre-neutralen Grundlagen (Signalkette, Verzerrer-Typen, Saiten/Tunings, Pegel & Gehörschutz), Fortgeschritten fächert die Genre-Sounds über stil-Tags auf (Thrash/Death/Black/Core — Doom und Crust tragen ihre Sound-Bausteine bereits in den stil-Dateien), Experte behandelt Profi-Standards (Modeler/Reamping, Noise-Management, Backline). Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "signalkette_grundlagen",
+      "anzeigetitel": { "de": "Signalkette: vom Instrument zum Ton" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Jeder Metal-Sound ist eine Kette: Instrument → (Pedale) → Verstärker-Vorstufe → Endstufe → Lautsprecher — und bei Aufnahmen danach noch Mikrofon oder DI. Wer diese Kette einmal verstanden hat, kann jeden Sound gezielt verändern und jeden Fehler systematisch finden, statt ratlos an Reglern zu drehen.\n\nZwei Prinzipien tragen alles. Erstens: Die Kette ist seriell — jedes Glied bekommt nur, was das vorige liefert. Ein schlecht eingestelltes erstes Glied kann kein späteres reparieren; deshalb wird von vorn nach hinten eingestellt (erst Instrument und Anschlag, dann Zerre, dann Klangregelung). Zweitens: Gain-Staging — an jeder Stufe entscheidet sich, wie viel Pegel weitergereicht wird. Zu wenig rauscht, zu viel zerrt unkontrolliert dort, wo es nicht soll.\n\nFür die Fehlersuche gilt der Halbierungs-Trick: Kette in der Mitte trennen (etwa direkt in den Amp spielen) — ist der Fehler weg, liegt er in der vorderen Hälfte; so grenzt du jedes Problem in Minuten ein. Kabel sind dabei häufiger schuld als Geräte."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kartiere dein eigenes Setup (oder das des Proberaums) als Kette auf Papier: jedes Glied vom Instrument bis zum Lautsprecher, inklusive aller Kabel. Notier zu jedem Glied, was es mit dem Signal macht — und welchen Regler du dort hast.\n\nGeh die Kette dann von vorn nach hinten durch: An welcher Stelle entsteht bei dir die Verzerrung? Wo würdest du zuerst trennen, wenn plötzlich kein Ton mehr käme? Und ehrlich: Welches Glied deiner Kette hast du noch nie bewusst eingestellt — und was würdest du dort ab jetzt anders machen?"
+      }
+    },
+    {
+      "id": "verzerrer_typen",
+      "anzeigetitel": { "de": "Verzerrung: Overdrive, Distortion, Fuzz" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "voraussetzungen": ["signalkette_grundlagen"],
+      "erklaerteil": {
+        "de": "„Verzerrt“ ist nicht gleich verzerrt — die drei Grundfamilien klingen und reagieren völlig unterschiedlich. Overdrive ist die mildeste: Sie komprimiert weich, reagiert stark auf den Anschlag und wird im Metal selten allein benutzt — dafür ständig als Boost VOR einem verzerrten Amp (dazu später mehr). Distortion ist die klassische Metal-Zerre: hart, komprimiert, konturiert — von Thrash bis Metalcore der Standard. Fuzz ist die wildeste: breit, sägend, fast synthetisch — die Farbe von Doom, Sludge und Teilen des Crust.\n\nDie vierte Quelle wird oft vergessen: der verzerrte Amp selbst. High-Gain-Verstärker erzeugen ihre Zerre in der Vorstufe, und die meisten modernen Metal-Sounds kommen genau daher — Pedale formen dann nur noch nach. Welche Quelle du nutzt, prägt auch das Spielgefühl: Amp-Zerre und Overdrive reagieren dynamisch auf deinen Anschlag, extreme Distortion und Fuzz bügeln die Dynamik eher glatt.\n\nAls Faustregel für die Genre-Landkarte: Thrash/Death/Black/Core leben von Distortion oder High-Gain-Amps, Doom/Sludge/Crust von Fuzz und aufgerissenen Amps. Die Genre-Bausteine dieses Kapitels vertiefen das."
+      },
+      "reflexionsaufgabe": {
+        "de": "Mach den Hörvergleich: Such dir je einen typischen Song mit Overdrive-/Amp-Sound (klassischer Hardrock genügt), mit klassischer Metal-Distortion (Thrash) und mit Fuzz (Doom/Stoner). Beschreib die Zerre jeweils in drei Worten — hart/weich, glatt/sägend, eng/breit.\n\nWenn du Zugriff auf ein Instrument mit Zerre hast: Spiel denselben Powerchord einmal sanft und einmal hart an. Reagiert dein Sound auf den Unterschied — oder klingt beides gleich? Überleg dann: Welche der drei Familien erzeugt DEIN aktuelles Setup, und passt das zu dem Genre, das du eigentlich spielen willst?"
+      }
+    },
+    {
+      "id": "saiten_tunings_standards",
+      "anzeigetitel": { "de": "Saiten & Tunings: die Standards" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "voraussetzungen": ["drop_tuning"],
+      "erklaerteil": {
+        "de": "Tuning und Saitenstärke gehören zusammen — das ist der am häufigsten ignorierte Gear-Standard im Metal. Je tiefer die Stimmung, desto weniger Spannung hat dieselbe Saite: Sie schlackert, klingt undefiniert und intoniert schlecht. Die Lösung ist mechanisch simpel: dickere Saiten für tiefere Tunings. Als grobe Landkarte für Gitarre: Standard/Drop D mit 10er-Satz, ab Drop C eher 11–12er, für die ganz tiefen Core- und Death-Tunings 13er aufwärts oder Baritone-Mensuren. Am Bass gilt dasselbe Prinzip eine Etage tiefer.\n\nDer zweite Standard ist Frische und Pflege: Tote Saiten klingen dumpf und intonieren schlechter — für Präzisions-Genres (Thrash, Death, Core) wechseln viele vor jeder Aufnahme; im Proberaum reicht ein Rhythmus nach Gehör und Gefühl. Nach jedem Wechsel und jedem Tuning-Wechsel: dehnen, stimmen, Oktavreinheit prüfen (gegriffener 12. Bund gegen Flageolett) — sonst stimmt das Instrument nur in der Nullposition.\n\nUnd der dritte: ein Stimmgerät, das immer in der Kette ist. Verstimmt geübt ist doppelt geübt — das Ohr lernt die falschen Höhen mit."
+      },
+      "reflexionsaufgabe": {
+        "de": "Prüf dein eigenes Setup gegen die Standards: Welches Tuning spielst du, welche Saitenstärke ist aufgezogen — und passt das Paar zusammen? Wenn du es nicht weißt: Finde es heraus (Verpackung, Messschieber, Fachgeschäft). Prüf auch die Oktavreinheit am 12. Bund.\n\nÜberleg dann für dein Ziel-Genre: Welches Tuning ist dort üblich (hör nach oder recherchier zwei, drei Referenzbands) — und was müsstest du an Saiten ändern, um dorthin zu kommen? Notier dir als Ergebnis einen konkreten Satz: Tuning X, Saitenstärke Y, Wechselrhythmus Z."
+      }
+    },
+    {
+      "id": "proberaum_pegel",
+      "anzeigetitel": { "de": "Proberaum-Pegel & Gehörschutz" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Das wichtigste Ausrüstungsteil im Metal kostet keine dreißig Euro und wird am häufigsten vergessen: Gehörschutz. Ein Metal-Proberaum liegt regelmäßig über 100 dB — Pegel, bei denen das Gehör in Minuten Schaden nimmt, und Hörschaden ist nicht heilbar. Tinnitus und Hochtonverlust beenden mehr Musikerkarrieren als jede Bandkrise. Deshalb ist die Regel nicht verhandelbar: Im Proberaum und auf Konzerten wird Gehörschutz getragen — immer, von allen.\n\nDie Standards: Einfache Schaumstoff-Stöpsel schützen, verfärben den Klang aber stark. Musiker-Gehörschutz mit linearem Filter (ab etwa 20–30 Euro) senkt alle Frequenzen gleichmäßig — die Band klingt normal, nur leiser. Wer dauerhaft spielt, investiert irgendwann in angepasste Otoplastiken. Wichtig: von Anfang an mit Schutz proben, dann fehlt auch nichts — das Ohr mischt sich schnell neu ein.\n\nDer zweite Hebel ist der Pegel selbst: Amps auf Ohrhöhe statt auf den Boden gerichtet (dann muss niemand „lauter als das Schienbein“ drehen), Lautstärke-Wettrüsten in der Band ansprechen statt mitmachen, und bei Klingeln oder Wattegefühl nach der Probe das Ohr ernst nehmen — das ist eine Warnung, keine Gewöhnungsphase. Bei anhaltenden Ohrgeräuschen: ärztlich abklären lassen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Mach die Bestandsaufnahme: Hast du Gehörschutz — und trägst du ihn wirklich bei jeder Probe? Wenn nein: Was hält dich ab (Klang, Gewohnheit, Gruppendruck), und welches Argument aus dem Erklärteil setzt du dem entgegen? Besorg dir konkret in dieser Woche einen Musiker-Gehörschutz mit Filter, falls noch keiner da ist.\n\nSchau dir außerdem euren Proberaum an: Wohin strahlen die Amps? Wer dreht auf, wenn wer aufdreht? Skizzier eine Aufstellung, bei der sich alle hören, ohne dass einer gewinnt — und sprich sie bei der nächsten Probe an. Und ehrlich: Hattest du nach Proben schon Klingeln oder Druck auf den Ohren? Wenn ja — nimm es als das, was es ist: die letzte Warnung vor dem Schaden."
+      }
+    },
+    {
+      "id": "sound_thrash_attack",
+      "anzeigetitel": { "de": "Thrash-Sound: Attack & Biss" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["thrash"],
+      "voraussetzungen": ["verzerrer_typen", "downpicking"],
+      "erklaerteil": {
+        "de": "Der Thrash-Sound ist ein Präzisionswerkzeug: mittleres bis hohes Gain, aber immer so viel Attack, dass jedes heruntergepickte Achtel als eigener Schlag knallt. Historisch prägend war das Mitten-Scooping — Mitten raus, Bässe und Höhen rein — das den klassischen aggressiv-hohlen Achtziger-Sound erzeugt. Der Standard-Trick, der bis heute jede Thrash- und Extreme-Metal-Produktion prägt, kam ebenfalls aus dieser Zeit: ein Overdrive (klassisch der Tubescreamer) VOR dem verzerrten Amp — nicht für mehr Zerre, sondern als Tightener: Er beschneidet den Tiefbass vor der Verzerrung, strafft den Attack und macht schnelle Riffs konturiert.\n\nDie Falle des Genres kennt der Sound-Architektur-Baustein: Scooping klingt allein riesig und verschwindet im Bandkontext, weil die Mitten fehlen, in denen sich Gitarren behaupten. Der moderne Thrash-Kompromiss: dezent scoopen, den Biss über Anschlag und Boost holen, und im Zweifel Mitten rein statt Gain rauf.\n\nStandards in Kürze: Distortion oder High-Gain-Amp plus Overdrive-Boost, eher klassische Tunings (E-Standard/Drop D — Thrash lebt nicht von Tiefe, sondern von Geschwindigkeit), frische Saiten für den Attack."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör einen klassischen Achtziger-Thrash-Sound gegen eine moderne Thrash- oder Death-Produktion: Wo hörst du das Scooping (hohl, badewannenförmig), wo die gestrafften Mitten? Welcher Sound setzt sich in der jeweiligen Band besser durch?\n\nWenn du ein Setup zur Hand hast: Stell deinen Zerrsound ein und spiel acht heruntergepickte gedämpfte Achtel. Dreh dann testweise die Mitten deutlich rein und wieder raus — bei welcher Einstellung bleibt jeder Anschlag als Ereignis lesbar? Und falls ein Overdrive-Pedal da ist: Häng es mit wenig Gain und viel Level vor die Zerre und vergleich den Attack. Genau dieser Unterschied ist der berühmteste Trick des Genres."
+      }
+    },
+    {
+      "id": "sound_death_wall",
+      "anzeigetitel": { "de": "Death-Metal-Sound: die Wand" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["verzerrer_typen", "drop_tuning"],
+      "erklaerteil": {
+        "de": "Death Metal hat zwei ikonische Sound-Schulen. Die schwedische: ein simples Distortion-Pedal (berühmt: das HM-2) mit allen Reglern am Anschlag in einen cleanen bis angezerrten Amp — die „Kettensäge“, breit, sägend, sofort erkennbar; bis heute ein bewusst eingesetzter Retro-Trick, auch weit außerhalb Schwedens. Die moderne Schule: sehr straffer High-Gain-Amp, Overdrive als Tightener davor (der Thrash-Trick, hier Pflicht), Noise Gate dahinter — maximal konturiert, damit tiefe Tunings und hohes Tempo lesbar bleiben.\n\nDenn Tiefe ist das zweite Merkmal: Drop C bis Drop A und tiefer verlangen die Saiten-Standards aus dem Grundlagen-Baustein doppelt — dicke Sätze, saubere Oktavreinheit, präzise Intonation. Je tiefer und schneller, desto weniger Gain verträgt der Sound tatsächlich: Die Wand entsteht aus Tightness und Doppelspur, nicht aus Sättigung.\n\nStandards in Kürze: straffer High-Gain oder HM-2-Ästhetik als bewusste Wahl, Boost davor, Gate dahinter, dicke Saiten fürs tiefe Tuning — und der Bass übernimmt das Fundament, damit die Gitarren konturiert bleiben können."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör die beiden Schulen im Vergleich: einen klassischen Schwedentod-Song (Kettensäge) gegen eine moderne technische Death-Produktion. Beschreib den Unterschied: breit-sägend gegen eng-konturiert — und überleg, welche Songs mit dem jeweils anderen Sound NICHT funktionieren würden.\n\nPrüf dann dein eigenes Setup gegen die Standards: Passt deine Saitenstärke zu deinem Tuning? Hast du eine Möglichkeit zu boosten und zu gaten — und wenn nicht: Was davon würde deinem Sound am meisten helfen? Formulier als Ergebnis deine eigene Death-Kette als eine Zeile: Instrument → … → Amp."
+      }
+    },
+    {
+      "id": "sound_black_frost",
+      "anzeigetitel": { "de": "Black-Metal-Sound: Frost & Fläche" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["verzerrer_typen"],
+      "erklaerteil": {
+        "de": "Der Black-Metal-Sound kehrt die Metal-Logik um: Statt fett und tief ist er bewusst dünn, höhenreich und kalt — eine sirrende Fläche, über der Tremolo-Riffs wie Nebel stehen. Technisch heißt das: viel Zerre, aber wenig Tiefbass und wenig Kompression; die Höhen bleiben offen, auch wenn es harsch wird. Der historische Lo-Fi-Klang (aufgenommen mit billigstem Gerät) war zuerst Not, wurde dann Ästhetik — heute ist er eine WAHL, die man trifft oder eben nicht: Es gibt gefrorene Garagen-Produktionen und glasklare moderne Black-Alben, beide gültig.\n\nDas zweite Werkzeug ist Raum: Hall und Ambience sind im Black Metal fast ein Instrument — die Fläche entsteht, wenn Tremolo-Picking und Nachklang ineinander verschwimmen. Deshalb funktioniert hier, was sonst verboten ist: Hall auf verzerrten Rhythmusgitarren.\n\nStandards in Kürze: Zerre höhenreich und offen statt straff-komprimiert (klassische Distortion vor kaltem Clean-Amp funktioniert gut), Standard- bis moderate Tunings, Hall/Raum bewusst dosiert — und die Produktionsästhetik (roh oder klar) als Genre-Entscheidung, nicht als Zufall."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör einen klassischen rohen Neunziger-Black-Song gegen eine moderne, sauber produzierte Black-Metal-Platte. Was leistet die Lo-Fi-Ästhetik im alten Sound — Distanz, Kälte, Entrücktheit? Und was gewinnt bzw. verliert die moderne Klarheit?\n\nWenn du ein Setup hast: Bau testweise einen Frost-Sound — Zerre rein, Bässe deutlich raus, Höhen offen, falls vorhanden etwas Hall — und spiel eine Tremolo-Linie. Vergleich mit deinem normalen Sound: Wie verändert allein die Klangregelung den Charakter desselben Riffs? Entscheide bewusst: Welche Produktionsästhetik passt zu der Musik, die DU machen willst?"
+      }
+    },
+    {
+      "id": "sound_core_tight",
+      "anzeigetitel": { "de": "Core-Sound: tight & modern" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["metalcore", "hardcore"],
+      "voraussetzungen": ["verzerrer_typen", "chugs_breakdown"],
+      "erklaerteil": {
+        "de": "Der moderne Core-Sound ist die konsequenteste Form der Tightness-Kette: tiefes Tuning (Drop C bis Drop G#), Overdrive-Boost vor straffem High-Gain, und — nicht verhandelbar — ein Noise Gate, das zwischen den Chugs absolute Stille erzwingt. Der charakteristische Breakdown-Klang („djenty“ bis „chuggy“) entsteht genau aus diesem Kontrast: maximal dichter Anschlag, dann nichts. Das Gate sitzt dabei am besten im Einschleifweg des Amps oder nach der Zerre — es soll die verzerrten Nebengeräusche schneiden, nicht dein Instrument.\n\nDie zweite Besonderheit: Kein Genre hat Amp-Modeling so früh und vollständig übernommen. Profiler und Modeler sind im Core live wie im Studio Standard — konsistenter Sound an jedem Ort, Presets pro Song, direktes Signal ans Pult. Die Röhren-Frage ist hier längst eine Geschmacks-, keine Glaubensfrage mehr.\n\nStandards in Kürze: dicke Saiten für die tiefen Drops (Standards-Baustein!), Boost + High-Gain oder Modeler-Preset, Gate hart eingestellt, präzise Doppelspur — und im Hardcore-Zweig darf alles etwas rauer und mittiger sein: Da zählt der Raum-Sound der Band mehr als die Studio-Präzision."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör einen modernen Metalcore-Breakdown und achte nur auf die Pausen: Wie still ist es zwischen den Chugs? Genau diese Stille ist das Gate. Vergleich dann mit einem klassischen Hardcore-Song — wo ist der Core-Sound chirurgisch, wo lebt er von Räudigkeit?\n\nPrüf dein Setup: Hast du ein Gate (Pedal, Amp, Modeler-Block) — und wo sitzt es in der Kette? Wenn du eines hast: Stell es einmal bewusst zu hart ein (Ton wird abgewürgt) und einmal zu weich (rauscht), und such den Punkt dazwischen. Wenn nicht: Überleg anhand deiner Musik, ob dir Boost oder Gate mehr fehlen würde — und was der nächste sinnvolle Baustein deiner Kette wäre."
+      }
+    },
+    {
+      "id": "pedalboard_logik",
+      "anzeigetitel": { "de": "Pedalboard-Logik: die Reihenfolge" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["signalkette_grundlagen", "verzerrer_typen"],
+      "erklaerteil": {
+        "de": "Die Reihenfolge auf dem Pedalboard ist keine Geschmacksfrage, sondern Physik: Jedes Pedal verarbeitet, was das vorige liefert. Der bewährte Standard von vorn nach hinten: Stimmgerät zuerst (bekommt das saubere Signal und schaltet stumm) → Filter/Wah → Kompressor → Boost/Overdrive → Distortion/Fuzz → Noise Gate → Modulation (Chorus/Phaser) → Delay und Hall ganz ans Ende. Die Logik dahinter: Zerre VOR Delay/Hall verzerrt nur den Ton — Delay/Hall vor der Zerre verzerrt auch jede Wiederholung zu Brei.\n\nZwei Metal-Spezialitäten: Der Boost sitzt VOR der Hauptzerre (er soll den Amp anschieben — der Tightener-Trick aus den Genre-Bausteinen). Und wer einen Amp mit Einschleifweg (FX-Loop) nutzt, legt Modulation, Delay und Hall dorthin — der Loop sitzt NACH der Amp-Vorstufenzerre, genau wo diese Effekte hingehören. Das Gate kann doppelt sinnvoll sein: vor dem Amp gegen Einstreuungen, im Loop gegen das Vorstufenrauschen.\n\nRegeln darf man brechen — aber erst, wenn man sie kennt: Fuzz etwa mag es oft ganz vorn direkt nach der Gitarre. Wichtig ist, dass jede Abweichung eine hörbare Entscheidung ist, kein Zufall der Verkabelung."
+      },
+      "reflexionsaufgabe": {
+        "de": "Zeichne dein aktuelles Board (oder ein geplantes) mit jedem Glied auf und vergleich es mit der Standard-Reihenfolge: Wo weichst du ab — und weißt du, warum? Wenn du irgendwo unsicher bist: Steck die zwei fraglichen Pedale testweise um und hör den Unterschied mit demselben Riff.\n\nFalls dein Amp einen Einschleifweg hat und du ihn nicht nutzt: Probier Delay/Hall einmal im Loop statt vor dem Amp — gerade mit viel Zerre ist das der deutlichste Einzel-Unterschied, den ein Board-Umbau machen kann. Notier als Ergebnis deine Soll-Kette als eine Zeile — sie ist ab jetzt dein Verkabelungs-Standard."
+      }
+    },
+    {
+      "id": "modeler_reamping",
+      "anzeigetitel": { "de": "Modeler, Profiling & Reamping" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["gitarren_sound_architektur", "recording_tightness"],
+      "erklaerteil": {
+        "de": "Auf Profi-Niveau ist die Röhren-oder-digital-Frage entschieden: beides ist gültig, und die Entscheidung fällt nach Arbeitsweise, nicht nach Ideologie. Modeler und Profiler liefern konsistenten Sound an jedem Ort, Presets je Song, Direktsignal ans Pult ohne Mikrofonierung — deshalb dominieren sie Live-Rigs im modernen Metal. Röhren-Amps liefern das Spielgefühl und den bewegten Klang eines echten Lautsprechers im Raum — deshalb leben sie im Studio und in traditionsbewussten Genres weiter. Viele Profis fahren hybrid: Modeler live, Röhre im Studio, oder Röhren-Vorstufe mit digitaler Boxen-Simulation.\n\nDer wichtigste Studio-Standard dahinter heißt Reamping: Beim Aufnehmen wird IMMER auch das cleane DI-Signal mitgeschnitten. Damit lässt sich jede Gitarrenspur später durch jeden beliebigen Amp, Modeler oder jedes Plugin schicken — die Sound-Entscheidung wird von der Performance entkoppelt. Ein perfekt eingespielter Take ist nie mehr durch einen schlechten Sound ruiniert, und Sound-Experimente kosten keine neuen Takes.\n\nStandards in Kürze: DI-Box oder Interface-Split gehört in jede Aufnahme-Kette; Presets werden im Bandkontext gebaut, nicht solo (die Sound-Architektur-Regel gilt digital genauso); und wer live digital fährt, hat sein Direktsignal-Setup mit dem Pult geprobt, bevor es zählt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ordne dich selbst ein: Was spielst du aktuell (Röhre, Transistor, Modeler, Plugin) — und ist das eine bewusste Entscheidung nach Arbeitsweise oder historischer Zufall? Lies dazu zwei, drei aktuelle Rig-Beschreibungen von Bands deines Genres: Was fahren die live, was im Studio?\n\nFür die nächste eigene Aufnahme: Plan die DI-Spur konkret ein — womit splittest du das Signal, wo landet es in der Session? Wenn du schon einmal aufgenommen hast, ohne DI mitzuschneiden: Welcher Take hätte vom Reamping profitiert? Und wenn du live digital spielst oder es planst: Schreib die drei Dinge auf, die beim Soundcheck mit Direktsignal anders laufen als mit Amp — und wie du sie probst."
+      }
+    },
+    {
+      "id": "noise_management",
+      "anzeigetitel": { "de": "Noise-Management: die stille Profi-Disziplin" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["pedalboard_logik", "gitarren_sound_architektur"],
+      "erklaerteil": {
+        "de": "Was Profi-Rigs von Hobby-Setups unterscheidet, hört man am deutlichsten, wenn NICHTS gespielt wird: Stille. High-Gain verstärkt alles — Einstreuungen, Brummschleifen, Pedal-Rauschen, Single-Coil-Surren — um denselben Faktor wie das Riff. Noise-Management ist deshalb keine Kosmetik, sondern Voraussetzung für die Stopps, Gates und harten Kanten des Genres.\n\nDie Quellen und ihre Gegenmittel, in der Reihenfolge der Häufigkeit: Brummschleifen entstehen, wenn Geräte über mehrere Steckdosen(-leisten) geerdet sind — alles an EINE Stromversorgung, im hartnäckigen Fall trennt eine DI mit Ground-Lift. Einstreuungen fangen sich Pickups und billige Kabel: Abstand zu Netzteilen, Dimmern und Bildschirmen, kurze und geschirmte Kabelwege, beim Instrument notfalls Abschirmung nachrüsten. Pedal-Rauschen summiert sich über die Kette: jedes Glied prüfen (Halbierungs-Trick aus dem Signalketten-Baustein), unnötige Always-on-Pedale rauswerfen, sauberes Mehrfach-Netzteil statt Daisy-Chain. Erst NACH diesen Ursachen kommt das Gate — es kaschiert Rauschen, es beseitigt es nicht.\n\nDer Profi-Standard ist ein Ritual: Vor jedem Konzert und jeder Session einmal die Kette bei vollem Gain schweigen lassen und zuhören. Was da rauscht, brummt oder pfeift, wird gefunden und behoben — nicht weggegated."
+      },
+      "reflexionsaufgabe": {
+        "de": "Mach den Stille-Test mit deinem Setup: volles Gain, Saiten abgedämpft, dreißig Sekunden zuhören. Notier alles, was du hörst — Brummen (tief, konstant), Rauschen (breitbandig), Surren (ändert sich beim Drehen mit dem Instrument?), Pfeifen. Ordne jede Störung einer der Quellen aus dem Erklärteil zu.\n\nBehebe dann die größte Quelle konkret: Stromversorgung zusammenlegen, Kabelweg ändern, das eine rauschende Pedal identifizieren. Miss den Fortschritt mit einem zweiten Stille-Test. Und zum Schluss: Wo steht dein Gate — kaschiert es gerade ein Problem, das du jetzt beheben könntest?"
+      }
+    },
+    {
+      "id": "backline_ausfallsicherheit",
+      "anzeigetitel": { "de": "Backline & Ausfallsicherheit" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["proberaum_pegel", "signalkette_grundlagen"],
+      "erklaerteil": {
+        "de": "Live gilt ein anderes Gesetz als im Proberaum: Nicht der beste Sound gewinnt, sondern der, der den ganzen Abend funktioniert. Ausfallsicherheit ist eine Planungsdisziplin — und der Unterschied zwischen einer Panne und einem abgebrochenen Set ist fast immer Vorbereitung, nicht Glück.\n\nDie Standards, nach Instrument: Saiten reißen — ein zweites, gestimmtes Instrument auf der Bühne ist der einzige Ersatz, der in Songlänge funktioniert. Sticks brechen — die Reserve hängt griffbereit AM Set, nicht in der Tasche hinter der Bühne. Kabel sterben zuerst — mindestens ein geprüftes Ersatzkabel pro Signalweg. Amps fallen aus — wer digital fährt, hat sein Direktsignal als Plan B ohnehin; wer Röhre spielt, kennt die Leih-Optionen der anderen Bands des Abends (fragen kostet nichts und ist Standard-Kultur). Netzteile, Sicherungen, Ersatz-Batterien: eine kleine Kiste, einmal gepackt, immer dabei.\n\nUnd der wichtigste Standard ist ein Ablauf, kein Gerät: Der Line-Check vor dem Set prüft jede Kette einmal komplett — und beim Ausfall IM Song gilt die Powerviolence-Regel für die ganze Band: weiterspielen, nie stoppen. Drei Leute, die weiterspielen, überbrücken jede Minute, die die vierte zum Umstecken braucht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Schreib deine persönliche Ausfall-Matrix: Liste die drei wahrscheinlichsten Ausfälle für DEIN Instrument (Saite, Stick, Kabel, Fell, Funkstrecke …) und daneben, was aktuell dein Plan B wäre — ehrlich, inklusive „hab keinen“. Pack anschließend die Lücken: Was gehört in deine Notfall-Kiste, was fehlt noch?\n\nSprich außerdem mit deiner Band den Ausfall-Moment durch: Wer spielt weiter, wer zählt neu ein, was ist das Zeichen für „Song abbrechen“ im äußersten Fall? Einmal besprochen verliert der Moment seinen Schrecken. Und wenn ihr das nächste Mal spielt: Beobachte beim Line-Check bewusst, welche Kette NICHT geprüft wurde — genau die fällt erfahrungsgemäß aus."
+      }
+    }
+  ]
+}
