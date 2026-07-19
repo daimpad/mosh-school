@@ -43,9 +43,13 @@ def pool_ids():
 def main():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
+    lehr_out = os.path.join(HERE, '_svg_lehre')
+    if os.path.isdir(lehr_out):
+        shutil.rmtree(lehr_out)
     runpy.run_path(os.path.join(HERE, 'build_svg.py'))
     runpy.run_path(os.path.join(HERE, 'build_svg2.py'))
     runpy.run_path(os.path.join(HERE, 'build_svg3.py'))
+    runpy.run_path(os.path.join(HERE, 'build_svg4.py'))
 
     grafiken = {}
     for name in sorted(os.listdir(OUT)):
@@ -59,6 +63,19 @@ def main():
         json.dump(grafiken, f, ensure_ascii=False, indent=1, sort_keys=True)
         f.write('\n')
 
+    # Lehrgrafiken (Tranche 4) getrennt buendeln: breite Erklaer-Schemata fuer die
+    # Baustein-Ansicht, Registry setzeLehrgrafiken() -> lehrgrafik().
+    lehrgrafiken = {}
+    for name in sorted(os.listdir(lehr_out)):
+        if not name.endswith('.svg'):
+            continue
+        with open(os.path.join(lehr_out, name), encoding='utf-8') as f:
+            lehrgrafiken[name[:-4]] = f.read()
+    lehr_ziel = os.path.join(ROOT, 'data/lehrgrafiken.json')
+    with open(lehr_ziel, 'w', encoding='utf-8') as f:
+        json.dump(lehrgrafiken, f, ensure_ascii=False, indent=1, sort_keys=True)
+        f.write('\n')
+
     pool = pool_ids()
     with open(os.path.join(ROOT, 'data/fehlerbilder.json'), encoding='utf-8') as f:
         fb_ids = {fb['id'] for fb in json.load(f)['fehlerbild_bausteine']}
@@ -69,6 +86,9 @@ def main():
     print(f'data/grafiken.json: {len(grafiken)} Grafiken ({kb:.0f} KB)')
     print(f'  Pool: {len(pool)} Bausteine, davon ohne Grafik: {ohne_grafik or "keine"}')
     print(f'  Fehlerbilder: {len(fb_ids)}, davon ohne Grafik: {fb_ohne_grafik or "keine"}')
+    lehr_waisen = sorted(set(lehrgrafiken) - pool)
+    print(f'data/lehrgrafiken.json: {len(lehrgrafiken)} Lehrgrafiken'
+          + (f' (ohne Baustein: {", ".join(lehr_waisen)})' if lehr_waisen else ''))
     if vorproduziert:
         print(f'  vorproduziert (noch kein Baustein): {", ".join(vorproduziert)}')
     if ohne_grafik or fb_ohne_grafik:

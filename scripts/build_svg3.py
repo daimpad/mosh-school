@@ -437,6 +437,14 @@ S["noise_management"] = [
     RECT(52, 44, 16, 32, filled=False),
     L(68, 60, 108, 60, 3),
 ]
+# Tuning-Landkarte: vier Saitenlagen absteigender Höhe — die Genres wohnen
+# auf verschiedenen Tiefen-Stufen.
+S["tuning_landkarte"] = [
+    L(14, 34, 62, 34, 2),
+    L(38, 54, 86, 54, 3),
+    L(58, 74, 106, 74, 4.5),
+    L(14, 94, 106, 94, 6),
+]
 # Backline-Ausfallsicherheit: der Hauptweg läuft — darunter liegt der
 # gestrichelte Ersatzweg bereit.
 S["backline_ausfallsicherheit"] = [
@@ -461,7 +469,7 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "signalkette_grundlagen", "verzerrer_typen", "saiten_tunings_standards",
                 "proberaum_pegel", "sound_thrash_attack", "sound_death_wall",
                 "sound_black_frost", "sound_core_tight", "pedalboard_logik",
-                "modeler_reamping", "noise_management", "backline_ausfallsicherheit"]
+                "modeler_reamping", "noise_management", "backline_ausfallsicherheit", "tuning_landkarte"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
