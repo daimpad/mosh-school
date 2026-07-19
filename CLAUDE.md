@@ -120,6 +120,17 @@ Tokens**, nie harte Farben.
 - **Icons:** Font Awesome Solid ist ein **lokales Subset** — neue Codepoints rendern als Tofu
   und lassen sich hier nicht nachziehen. Instrument-Symbole liegen daher als **Inline-SVG**
   (`INSTRUMENT_SVG` + `domaeneIcon()` in `js/oberflaeche.js`); Baustein-Icons in `BAUSTEIN_ICONS`.
+- **Baustein-Grafiken:** Jeder Baustein hat eine abstrakte, monochrome SVG-Grafik
+  (`data/grafiken.json`, `{id: "<svg…>"}`). Quelle der Wahrheit sind die deterministischen
+  Generatoren `scripts/build_svg.py`/`build_svg2.py`; `python3 scripts/build_grafiken.py`
+  führt beide aus und bündelt das JSON — **Motive dort korrigieren und neu generieren, nie
+  SVGs/Bundle von Hand editieren**. Die Grafiken nutzen ausschließlich `currentColor` und
+  wirken deshalb **nur inline** (Registry `setzeGrafiken()` → `bausteinIcon()` in
+  `js/oberflaeche.js`) — nie als `<img src>` einbinden. Formvokabular: Punkte = Puls ·
+  Striche = gedämpft · Wellen = klingend · Bögen = Resonanz/Atem/Rebound · Ticks = Zeit ·
+  Strichstärke = Gewicht · Rauigkeit (seeded Jitter) = Verzerrung/Harsh · Hohlkreise =
+  Ghost Notes · Grid-Dichtewechsel = Tempo-/Metrik-Wechsel. Neue Bausteine ohne Grafik
+  meldet `scripts/validate.py` als Warnung; vorproduzierte IDs (künftige Sets) sind okay.
 
 ## Sprache & Sicherheit
 

@@ -198,6 +198,18 @@ def main():
             for treffer in UMLAUT_VERDACHT.finditer(txt):
                 umlaut.append(f'{fid}: ASCII-Umlaut-Verdacht "{treffer.group(0)}"')
 
+    # Baustein-Grafiken (data/grafiken.json, generiert via scripts/build_grafiken.py):
+    # jeder Baustein soll eine Grafik tragen; ueberzaehlige IDs sind vorproduziert
+    # (kuenftige Sets) und nur eine Info, kein Fehler.
+    try:
+        grafiken = set(lade('data/grafiken.json'))
+    except FileNotFoundError:
+        grafiken = set()
+        warnung.append('data/grafiken.json fehlt (scripts/build_grafiken.py laufen lassen)')
+    if grafiken:
+        for bid in sorted(idset - grafiken):
+            warnung.append(f'{bid}: keine Baustein-Grafik (scripts/build_svg*.py ergaenzen + build_grafiken.py)')
+
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
     offen = {b['id']: 0 for b in bausteine}
