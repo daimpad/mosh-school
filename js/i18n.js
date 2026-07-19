@@ -71,6 +71,7 @@ const LABEL_PFADE = {
   baustein: (id) => ['bausteine', id],
   fehlerbild: (id) => ['fehlerbilder', id],
   grafik: (id) => ['grafiken', id],
+  lehrgrafik: (id) => ['lehrgrafiken', id],
   einheit: (id) => ['trainingseinheiten', id],
   spielziel_bereich: (id) => ['spielziele', 'bereiche', id],
   spielziel_faktor: (id) => ['spielziele', 'faktoren', id],

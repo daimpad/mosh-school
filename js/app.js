@@ -9,13 +9,14 @@ import { renderOnboarding } from './ansichten/onboarding.js';
 import { renderPlan } from './ansichten/plan.js';
 import { renderIndividual, renderKompetenzpfad, renderSpielform, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
 import { renderProfil } from './ansichten/profil.js';
+import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, sprache, t, text } from './i18n.js';
-import { esc, setzeGrafiken, wendeThemaAn } from './oberflaeche.js';
+import { esc, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung } from './zustand.js';
 
 let daten = null;
@@ -43,6 +44,8 @@ function aktualisiereNavigation(segmente) {
               ? 'profil'
               : segmente[0] === 'suche'
                 ? 'suche'
+                : segmente[0] === 'stimmungen'
+                  ? 'stimmungen'
                 : 'lernen';
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const istAktiv = verweis.dataset.nav === aktiv;
@@ -58,7 +61,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte).
   const imMehr =
-    ['suche', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
+    ['suche', 'stimmungen', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
     (segmente[0] === 'pfad' && segmente[1] === 'stil');
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -85,6 +88,7 @@ function beschrifteRahmen() {
     lernen: t('nav_lernen'),
     training: t('nav_training'),
     suche: t('nav_suche'),
+    stimmungen: t('nav_stimmungen'),
     ueber: t('nav_ueber'),
     mitmachen: t('nav_mitmachen'),
     profil: t('nav_profil'),
@@ -274,6 +278,8 @@ function rendern() {
     renderTraining(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'suche') {
     renderSuche(el, daten);
+  } else if (segmente[0] === 'stimmungen') {
+    renderStimmungen(el, daten);
   } else if (segmente[0] === 'ueber') {
     renderUeber(el, daten);
   } else if (segmente[0] === 'mitmachen') {
@@ -309,6 +315,9 @@ async function boot() {
   const el = document.getElementById('ansicht');
   // Baustein-Grafiken laufen beiläufig mit: Fehlt die Datei, bleibt die Registry
   // leer und bausteinIcon fällt auf die FA-/Domänen-Icons zurück (kein Bruch).
+  const lehrgrafikenLaden = fetch('data/lehrgrafiken.json')
+    .then((a) => (a.ok ? a.json() : {}))
+    .catch(() => ({}));
   const grafikenLaden = fetch('data/grafiken.json')
     .then((antwort) => (antwort.ok ? antwort.json() : {}))
     .catch(() => ({}));
@@ -316,6 +325,7 @@ async function boot() {
     await initI18n(einstellungen().sprache);
     daten = await ladeDaten();
     setzeGrafiken(await grafikenLaden);
+    setzeLehrgrafiken(await lehrgrafikenLaden);
   } catch (fehler) {
     try {
       await initI18n('de');
