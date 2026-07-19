@@ -453,6 +453,85 @@ S["backline_ausfallsicherheit"] = [
     C(108, 48, 4, fill=True),
 ]
 
+# ================= DRUMS-GEAR-KAPITEL (schlagzeug+ausruestung) =================
+# Kreise = Trommeln/Becken · Radiallinien = Stimmschrauben · Bögen = Ausklang.
+
+# Kit-Ergonomie: drei Trommeln bequem um den Spielpunkt gruppiert.
+S["kit_ergonomie"] = [
+    C(60, 78, 12, 3),
+    C(34, 50, 10, 2.5),
+    C(86, 50, 10, 2.5),
+    C(60, 78, 3, fill=True),
+]
+# Felle: Trommel im Querschnitt — Schlagfell oben, Resonanzfell unten (dünner).
+S["felle_grundlagen"] = [
+    L(24, 40, 96, 40, 5),
+    L(24, 80, 96, 80, 2.5),
+    L(24, 40, 24, 80, 2),
+    L(96, 40, 96, 80, 2),
+]
+# Stimmen: Trommel von oben mit Stimmschrauben im Kreis — über Kreuz gespannt.
+S["drum_stimmen_basis"] = [
+    C(60, 60, 30, 3),
+    *[C(60 + 30 * math.cos(math.radians(a)), 60 - 30 * math.sin(math.radians(a)), 4, fill=True)
+      for a in range(0, 360, 45)],
+]
+# Beckentypen: drei Becken verschiedener Größe (Hi-Hat-Paar, Crash, Ride) auf
+# der Ständer-Linie.
+S["becken_typen"] = [
+    L(12, 92, 108, 92, 2),
+    ARC(30, 60, 16, 200, 340, 3), ARC(30, 66, 16, 200, 340, 2),
+    L(30, 66, 30, 92, 2.5),
+    ARC(66, 54, 12, 200, 340, 3), L(66, 60, 66, 92, 2.5),
+    ARC(96, 58, 20, 200, 340, 3.5), L(96, 66, 96, 92, 2.5),
+]
+# Fellwahl nach Genre: dieselbe Trommel zweimal — kurzer Attack (Punkt) gegen
+# langen Ausklang (Bogen).
+S["felle_sound_genre"] = [
+    C(34, 60, 16, 2.5), C(34, 60, 4, fill=True),
+    C(84, 60, 16, 2.5),
+    ARC(84, 60, 24, 300, 60, 2),
+    ARC(84, 60, 30, 310, 50, 1.5),
+]
+# Dämpfung & Definition: Trommelkreis mit Dämpf-Punkt am Rand — der wilde
+# Oberton (raue Kurve) wird gezähmt.
+S["daempfung_definition"] = [
+    C(60, 60, 28, 3),
+    RECT(78, 44, 8, 8, filled=True),
+    P(roughpath(40, 80, 60, 5, step=3.0, seed=111), 1.8),
+]
+# Fußmaschinen: Trittbrett, Feder (Zickzack) und Schlägel am Drehpunkt.
+S["fussmaschinen"] = [
+    L(20, 88, 60, 80, 5),
+    C(60, 80, 4, fill=True),
+    P("M60,80 L74,44", 3.5),
+    C(74, 40, 6, fill=True),
+    P("M84,84 L88,74 L84,66 L88,58 L84,50", 2),
+]
+# Hardware & Stabilität: breit gespreiztes Dreibein — steht bombenfest.
+S["hardware_stabilitaet"] = [
+    L(60, 20, 60, 68, 4),
+    L(60, 68, 30, 100, 3.5),
+    L(60, 68, 90, 100, 3.5),
+    L(60, 68, 60, 100, 3.5),
+    L(48, 84, 72, 84, 2),
+]
+# Trigger & E-Drums: Trommel mit Sensor am Rand, aus dem ein Signal-Impuls
+# (Rechteck-Welle) austritt.
+S["trigger_edrums"] = [
+    C(44, 60, 24, 2.5),
+    RECT(62, 54, 8, 12, filled=True),
+    P("M70,60 L78,60 L78,46 L86,46 L86,60 L94,60 L94,46 L102,46", 2.5),
+]
+# Wartung & Ausfallsicherheit: das Set steht — daneben liegt das Ersatzteil
+# (Stick-Paar) griffbereit.
+S["drums_wartung_backup"] = [
+    C(46, 62, 22, 3),
+    C(46, 62, 3, fill=True),
+    L(84, 40, 96, 92, 4),
+    L(94, 40, 106, 92, 4),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -469,7 +548,10 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "signalkette_grundlagen", "verzerrer_typen", "saiten_tunings_standards",
                 "proberaum_pegel", "sound_thrash_attack", "sound_death_wall",
                 "sound_black_frost", "sound_core_tight", "pedalboard_logik",
-                "modeler_reamping", "noise_management", "backline_ausfallsicherheit", "tuning_landkarte"]
+                "modeler_reamping", "noise_management", "backline_ausfallsicherheit", "tuning_landkarte",
+                "kit_ergonomie", "felle_grundlagen", "drum_stimmen_basis", "becken_typen",
+                "felle_sound_genre", "daempfung_definition", "fussmaschinen", "hardware_stabilitaet",
+                "trigger_edrums", "drums_wartung_backup"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
