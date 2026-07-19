@@ -54,7 +54,13 @@ export async function ladeDaten() {
   const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, regeln, appInfo, turnierregeln);
   // Werkzeug-Daten (Stimmungs-Referenz): eigener Referenzbereich, NICHT im
   // Baustein-Pool — kein Fortschritt, keine Voraussetzungen.
-  daten.tunings = { meta: tunings?._meta || {}, stimmungen: tunings?.stimmungen || [] };
+  daten.tunings = {
+    meta: tunings?._meta || {},
+    stimmungen: tunings?.stimmungen || [],
+    intervalle: tunings?.intervalle || [],
+    akkorde: tunings?.akkorde || [],
+    skalen: tunings?.skalen || [],
+  };
   return daten;
 }
 
