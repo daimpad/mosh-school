@@ -168,6 +168,36 @@ def main():
             for treffer in UMLAUT_VERDACHT.finditer(txt):
                 umlaut.append(f'{eid}: ASCII-Umlaut-Verdacht "{treffer.group(0)}"')
 
+    # Fehlerbilder (Trainer-Layer, Spez. 5): eigene Entitaeten mit Relation zum
+    # Basisbaustein, drei Erklaerfelder (symptom/ursache/korrektur), Trainer-Stufe,
+    # kein eigener Uebungsteil. Spiegelt pruefeDaten (js/daten.js).
+    fbs = lade('data/fehlerbilder.json').get('fehlerbild_bausteine') or []
+    fb_titel = lade('data/labels/de.json').get('fehlerbilder') or {}
+    fb_ids = [fb.get('id') for fb in fbs]
+    if len(fb_ids) != len(set(fb_ids)):
+        fehler.append('fehlerbilder: doppelte Fehlerbild-ids')
+    for fb in fbs:
+        fid = fb.get('id') or '<ohne id>'
+        if fid in idset:
+            fehler.append(f'{fid}: Fehlerbild-id kollidiert mit einem Basisbaustein')
+        if fb.get('typ') != 'fehlerbild':
+            fehler.append(f'{fid}: typ "{fb.get("typ")}" statt "fehlerbild"')
+        if fb.get('basis_baustein') not in idset:
+            fehler.append(f'{fid}: Basisbaustein "{fb.get("basis_baustein")}" existiert nicht')
+        if 'trainer' not in (fb.get('kompetenzstufe') or []):
+            fehler.append(f'{fid}: Fehlerbild ohne Trainer-Stufe')
+        if fb.get('uebungsteil') is not None:
+            fehler.append(f'{fid}: Fehlerbild mit eigenem Uebungsteil (Trainer-Layer-Regel)')
+        inhalt = (fb.get('erklaerteil') or {}).get('de') or {}
+        for feld in ('symptom', 'ursache', 'korrektur'):
+            if not isinstance(inhalt.get(feld), str) or not inhalt.get(feld).strip():
+                fehler.append(f'{fid}: Erklaerfeld "{feld}" fehlt oder ist leer')
+        if fid not in fb_titel:
+            warnung.append(f'{fid}: Fehlerbild-Titel fehlt in labels/de.json (Abschnitt fehlerbilder)')
+        for txt in sichtbare_texte(fb):
+            for treffer in UMLAUT_VERDACHT.finditer(txt):
+                umlaut.append(f'{fid}: ASCII-Umlaut-Verdacht "{treffer.group(0)}"')
+
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
     offen = {b['id']: 0 for b in bausteine}

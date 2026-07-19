@@ -429,7 +429,20 @@
     "set_pacing": "Set-Planung & Pacing",
     "stimm_regeneration": "Regeneration & Warnzeichen"
   },
-  "fehlerbilder": {},
+  "fehlerbilder": {
+    "fb_palm_muting_position": "Palm Muting: Position verrutscht",
+    "fb_wechselschlag_aufschlag": "Wechselschlag: schwacher Aufschlag",
+    "fb_downpicking_arm": "Downpicking: Kraft aus dem Arm",
+    "fb_fingerstyle_galopp": "Fingerstyle: ungewolltes Galoppieren",
+    "fb_bass_nebengeraeusche": "Dämpfung: Nebengeräusche unter Zerre",
+    "fb_bass_klick_flattern": "Timing: Flattern gegen den Klick",
+    "fb_grundbeat_flam": "Grundbeat: ungewollter Flam",
+    "fb_double_bass_hinkt": "Double Bass: ein Fuß hinkt",
+    "fb_blast_verschmiert": "Blastbeat: verschmiert über der Kontrollgrenze",
+    "fb_stuetze_halsdruck": "Stütze: Lautstärke aus dem Hals",
+    "fb_verzerrung_gepresst": "Verzerrung: gepresst statt getragen",
+    "fb_intonation_daneben": "Intonation: Töne systematisch daneben"
+  },
   "grafiken": {},
   "vokabeln": {
     "domaene": {
@@ -554,6 +567,10 @@
     "drums_groove_fundament": "Drums: Groove-Fundament",
     "drums_speed_koordination": "Drums: Speed & Koordination",
     "vocals_stimme_stuetze": "Vocals: Stimme & Stütze",
-    "vocals_rhythmus_ausdruck": "Vocals: Rhythmus & Ausdruck"
+    "vocals_rhythmus_ausdruck": "Vocals: Rhythmus & Ausdruck",
+    "gitarre_tremolo_werkstatt": "Gitarre: Tremolo-Werkstatt",
+    "bass_speed_praezision": "Bass: Speed & Präzision",
+    "drums_blast_werkstatt": "Drums: Blast-Werkstatt",
+    "vocals_harsh_werkstatt": "Vocals: Harsh-Werkstatt"
   }
 }

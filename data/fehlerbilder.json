@@ -1,3 +1,187 @@
 {
-  "fehlerbild_bausteine": []
+  "_meta": {
+    "hinweis": "Trainer-Layer (Spez. 5): Fehlerbilder sind eigene Entitäten mit Relation zum Basisbaustein — nie eigene Station, in-situ nur in der Trainer-Perspektive sichtbar. Drei Felder je Fehlerbild: Symptom → Ursache → Korrektur. Sichtbare Titel stehen in labels/de.json unter fehlerbilder."
+  },
+  "fehlerbild_bausteine": [
+    {
+      "id": "fb_palm_muting_position",
+      "typ": "fehlerbild",
+      "basis_baustein": "palm_muting",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Chugs klingen dumpf und tonlos — oder umgekehrt fast offen, kaum gedämpft. Der Klang wechselt von Wiederholung zu Wiederholung.",
+          "ursache": "Der Handballen liegt zu weit vorn Richtung Hals (Ton stirbt ab) oder zu weit hinter dem Steg (Dämpfung greift nicht). Oft wandert die Hand unbemerkt während des Spielens.",
+          "korrektur": "Die Position als Suchaufgabe stellen: Handballen direkt am Steg aufsetzen und in Millimeterschritten nach vorn schieben, bis der Ton kurz ist, aber noch Tonhöhe hat. Diesen Punkt mehrfach neu finden lassen — erst wenn er reproduzierbar sitzt, Tempo und Muster dazunehmen."
+        }
+      }
+    },
+    {
+      "id": "fb_wechselschlag_aufschlag",
+      "typ": "fehlerbild",
+      "basis_baustein": "wechselschlag",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ab- und Aufschlag klingen unterschiedlich: Der Aufschlag ist leiser, unsauberer oder verhakt sich — besonders beim Saitenwechsel entsteht ein Stolpern.",
+          "ursache": "Der Aufschlag wird als bloßer Rückweg gedacht statt als vollwertiger Anschlag. Dazu kommen oft eine zu große Bewegung und zu viel überstehende Pickspitze, die beim Aufschlag verkantet.",
+          "korrektur": "Tempo deutlich reduzieren und die Aufschläge isoliert betonen lassen (nur Aufschläge, dann wieder im Wechsel). Auf kleine Handgelenksbewegung und knappe Pickspitze achten. Hörkontrolle: Erst wenn Ab- und Aufschlag nicht mehr unterscheidbar sind, das Tempo anheben."
+        }
+      }
+    },
+    {
+      "id": "fb_downpicking_arm",
+      "typ": "fehlerbild",
+      "basis_baustein": "downpicking",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Tempo bricht nach wenigen Takten ein, der Unterarm brennt oder verhärtet, die Anschläge werden ungleichmäßig — die Person versucht, mit Anspannung dagegenzuhalten.",
+          "ursache": "Die Bewegung kommt aus dem ganzen Arm statt aus dem Handgelenk, das Einstiegstempo liegt über der lockeren Kontrollgrenze, und das Pick wird verkrampft festgehalten.",
+          "korrektur": "Sofort unterbrechen — Brennen ist ein Stoppsignal, kein Trainingsreiz. Tempo weit genug senken, dass die Bewegung klein und locker bleibt, und Dauer vor Tempo steigern (erst länger locker, dann schneller). Feste Pausenregeln vereinbaren; bei wiederkehrenden Beschwerden ärztlichen Rat empfehlen."
+        }
+      }
+    },
+    {
+      "id": "fb_fingerstyle_galopp",
+      "typ": "fehlerbild",
+      "basis_baustein": "fingerstyle",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Gerade Achtel klingen ungewollt wie ein Galopp: Die Töne kommen paarweise gruppiert, ein Finger ist hörbar lauter oder früher als der andere.",
+          "ursache": "Zeige- und Mittelfinger sind unterschiedlich stark und schnell, und beim Saitenwechsel bricht die strikte Wechsel-Reihenfolge — derselbe Finger zupft zweimal hintereinander.",
+          "korrektur": "Sehr langsam mit Fokus auf Lautstärke-Gleichheit üben, dabei laut mitzählen. Den schwächeren Finger gezielt angleichen (nicht den stärkeren zurücknehmen). Saitenwechsel isoliert üben und die Reihenfolge dabei streng beibehalten — Kontrolle per Aufnahme."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_nebengeraeusche",
+      "typ": "fehlerbild",
+      "basis_baustein": "greifhand_daempfen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Unter Verzerrung rauscht und dröhnt es: Nachbarsaiten schwingen mit, Pausen sind nicht still, die Linie klingt verwaschen statt tight.",
+          "ursache": "Die freien Finger der Greifhand liegen nicht auf den ungespielten Saiten, gespielte Töne werden nicht aktiv beendet, und die tiefen Saiten bleiben beim Spiel auf höheren ungedämpft.",
+          "korrektur": "Die Zerre bewusst als Lupe nutzen: leise, langsame Figuren mit vollem Fokus auf Stille zwischen den Tönen. Flache Fingerauflage auf den Nachbarsaiten als Standard etablieren und den Druck-Lösen-Reflex (Ton beenden ohne Abheben) isoliert üben."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_klick_flattern",
+      "typ": "fehlerbild",
+      "basis_baustein": "lock_zur_bassdrum",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bass und Klick (oder Bassdrum) verschmelzen nicht: Man hört ein Flattern oder Echo, die Töne liegen mal knapp vor, mal knapp hinter dem Schlag.",
+          "ursache": "Der Anschlag wird nach Gefühl irgendwo in die Nähe des Schlags gesetzt statt bewusst auf ihn; oft ist das Tempo zu hoch, um die Abweichung überhaupt zu hören.",
+          "korrektur": "Tempo stark reduzieren, sodass jeder Treffer einzeln beurteilbar ist. Die Vorstellung schärfen: Der eigene Attack soll den Klick „schlucken“ — klingt der Klick durch, war der Ton daneben. Mit Aufnahmen arbeiten und erst bei stabiler Verschmelzung schneller werden."
+        }
+      }
+    },
+    {
+      "id": "fb_grundbeat_flam",
+      "typ": "fehlerbild",
+      "basis_baustein": "grundbeat",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bassdrum und Hi-Hat (oder Snare und Becken) treffen nicht exakt zusammen — statt eines Schlags hört man einen kurzen Doppelschlag (Flam), der den Beat unsauber macht.",
+          "ursache": "Die Gliedmaßen starten aus unterschiedlichen Höhen und Entfernungen und werden nicht als ein gemeinsamer Impuls gedacht, sondern nacheinander ausgelöst.",
+          "korrektur": "Die betroffenen Stimmenpaare isoliert üben: nur Bassdrum plus Hi-Hat, sehr langsam, mit dem Bild eines gemeinsamen „Landens“. Ausgangspositionen angleichen (Stick- und Fußhöhe), Aufnahme als Kontrolle, und erst bei sauberem Unisono die dritte Stimme dazunehmen."
+        }
+      }
+    },
+    {
+      "id": "fb_double_bass_hinkt",
+      "typ": "fehlerbild",
+      "basis_baustein": "double_bass",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Double-Bass-Lauf humpelt: Ein Fuß ist lauter oder setzt früher an, aus geraden Sechzehnteln wird ein ungewolltes Galoppieren.",
+          "ursache": "Der schwächere Fuß hinkt in Kraft und Kontrolle hinterher; häufig verstärken ungleich eingestellte Pedale (Federspannung, Schlägelweg) oder gemischte Techniken (ein Fuß heel-up, einer heel-down) das Problem.",
+          "korrektur": "Zuerst die Mechanik prüfen: beide Pedale identisch einstellen. Dann Läufe konsequent mit dem schwachen Fuß beginnen lassen und in langsamem Tempo auf Lautstärke-Gleichheit hören. Kurze, saubere Strecken vor langen — die Gleichheit wächst über Wochen."
+        }
+      }
+    },
+    {
+      "id": "fb_blast_verschmiert",
+      "typ": "fehlerbild",
+      "basis_baustein": "blastbeat",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Blast klingt wie ein einziges Rauschen: Snare und Bassdrum sind nicht mehr als getrennte Schläge zu hören, das Tempo schwankt, die Person verkrampft sichtbar.",
+          "ursache": "Das Tempo liegt über der aktuellen Kontrollgrenze — die Bewegungen werden zu groß, die Gliedmaßen laufen auseinander, und Verkrampfung frisst die Präzision vollends.",
+          "korrektur": "Das Tempo so weit senken, dass jeder einzelne Schlag definiert hörbar ist — das ist oft deutlich langsamer, als das Ego möchte. Von dort in kleinen Schritten steigern, in Intervallen mit Erholungsphasen arbeiten und Lockerheit als Abbruchkriterium vereinbaren: Kippt sie, endet der Durchgang."
+        }
+      }
+    },
+    {
+      "id": "fb_stuetze_halsdruck",
+      "typ": "fehlerbild",
+      "basis_baustein": "atemstuetze",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Mehr Lautstärke entsteht hörbar im Hals: Der Ton wird gepresst und eng, die Stimme ermüdet schnell, nach dem Üben kratzt es oder die Stimme klingt belegt.",
+          "ursache": "Die Stütze bricht unter Belastung zusammen — die Atmung rutscht in Schultern und Brust, und der fehlende Druck aus dem Rumpf wird durch Enge im Hals ersetzt.",
+          "korrektur": "Sofort zurück zu den Grundlagen: leise Ss- und Summ-Übungen mit Hand auf dem Bauch, bis der gestützte Luftstrom wieder trägt. Lautstärke nur aus Stütze und Resonanz aufbauen, nie über den Hals. Kratzen oder Heiserkeit sind Stoppsignale — bei Wiederholung Pause verordnen und bei anhaltenden Beschwerden fachkundigen (HNO-)Rat empfehlen."
+        }
+      }
+    },
+    {
+      "id": "fb_verzerrung_gepresst",
+      "typ": "fehlerbild",
+      "basis_baustein": "sanfter_einstieg_verzerrung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Verzerrung klingt gequetscht und flach statt voll und breit; die Person wird schnell heiser, räuspert sich häufig oder klagt über ein raues Gefühl im Hals.",
+          "ursache": "Der raue Klang wird mit Druck auf die Stimmlippen erzeugt statt mit Luftstrom und Resonanz — meist, weil zu früh zu laut probiert wird und der leise, mühelose Zugang übersprungen wurde.",
+          "korrektur": "Sofort stoppen — dieses Muster schadet. Zurück zum Prinzip: erst gestützter Luftstrom, dann sehr leise, kurze raue Impulse, die sich mühelos anfühlen. Lautstärke für Wochen deckeln. Für den weiteren Aufbau ausdrücklich eine erfahrene Lehrperson empfehlen; bei Heiserkeit über mehrere Tage HNO-ärztlich abklären lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_intonation_daneben",
+      "typ": "fehlerbild",
+      "basis_baustein": "tonhoehe_clean",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Gesungene Töne liegen systematisch knapp daneben — meist zu tief — oder erreichen die Zielhöhe erst nach hörbarem „Anschleichen“ von unten.",
+          "ursache": "Es fehlt eine klare Klangvorstellung vor dem Ton: Gesungen wird zuerst, gehört danach. Anspannung und zu leises, zaghaftes Ansetzen verstärken das Absacken.",
+          "korrektur": "Vor jedem Ton die Referenz bewusst hören (Instrument oder App) und den Ton innerlich vorstellen, bevor er klingt. Mit leisen Sirenen gezielt zur Zielhöhe gleiten, dann den Ton direkt treffen lassen. Aufnahmen und ein Stimmgerät machen die Abweichung sichtbar und den Fortschritt messbar."
+        }
+      }
+    }
+  ]
 }
