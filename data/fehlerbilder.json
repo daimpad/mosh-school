@@ -752,6 +752,276 @@
           "korrektur": "Lass den Resonanzraum öffnen, nicht die Lautstärke erhöhen: lockerer Kiefer, Zunge vorn, mit Vokalfarben experimentieren, die dem Growl Raum geben — alles zunächst leise und auf Stütze. Verständlichkeit per Aufnahme prüfen (kommt der Text an?) und Projektion als Ergebnis von Resonanz und Stütze rahmen, nie von Druck. Bei Enge- oder Kratzgefühl gilt die Stoppregel; den Feinaufbau mit einer erfahrenen Lehrperson begleiten lassen."
         }
       }
+    },
+    {
+      "id": "fb_intervalle_nur_griffbild",
+      "typ": "fehlerbild",
+      "basis_baustein": "intervalle_grundlagen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach dem Griffbild gefragt sitzt alles — aber rein nach Gehör werden Quinte und Oktave verwechselt, und ohne Instrument in der Hand kann die übende Person gar kein Intervall benennen.",
+          "ursache": "Die Intervalle wurden visuell als Griffmuster gelernt, nicht als Klangcharaktere. Das Auge hat die Arbeit übernommen, die eigentlich das Ohr machen soll — die Verbindung von Name zu Klang wurde nie geknüpft.",
+          "korrektur": "Instrument bewusst weglegen: Jedes Intervall an ein Referenzriff koppeln (Quinte = Powerchord-Fundament, kleine Sekunde = Reibung im Black-Metal-Riff) und in kurzen Hörrunden abfragen. Erst singen oder summen, dann greifen — wer ein Intervall vorsingen kann, bevor die Finger es finden, hat es wirklich."
+        }
+      }
+    },
+    {
+      "id": "fb_unterteilungen_puls_zieht",
+      "typ": "fehlerbild",
+      "basis_baustein": "taktarten_unterteilungen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Wechsel von Achteln zu Sechzehnteln wird das Grundtempo schneller, bei Triolen holpert es — die übende Person empfindet dichtere Unterteilungen als „schneller spielen“ statt als mehr Töne pro Schlag.",
+          "ursache": "Puls und Unterteilung sind nicht getrennt: Gezählt werden die Töne statt der Schläge. Sobald mehr Töne kommen, beschleunigt der innere Puls mit, weil er an den Tönen hängt statt an der Zählzeit.",
+          "korrektur": "Den Puls externalisieren: Metronom oder Fuß hält die Viertel, dazu werden die Unterteilungen mit Silben gesprochen (1-und, 1-e-und-e, 1-o-le) und geklatscht — erst ohne Instrument. Dann Wechsel in Schleifen üben: zwei Takte Achtel, zwei Takte Triolen, zwei Takte Sechzehntel, während der Fuß unbeirrt Viertel tritt. Der Fuß darf nie mitziehen."
+        }
+      }
+    },
+    {
+      "id": "fb_powerchord_verbot",
+      "typ": "fehlerbild",
+      "basis_baustein": "powerchord_theorie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "„Im Metal spielt man keine Terzen“ wird als Gesetz aufgesagt — gleichzeitig kann die übende Person nicht erklären, warum ihr voller Akkord unter High-Gain matscht, und meidet auch da Terzen, wo sie großartig klingen würden (clean, Zwischenteile).",
+          "ursache": "Die Faustregel wurde als Verbot gelernt statt als Physik verstanden: Verzerrung erzeugt zu jedem Intervall Kombinationstöne, und je mehr unterschiedliche Intervalle klingen, desto dichter der Brei. Ohne dieses Warum bleibt nur ein auswendig gelerntes Dogma.",
+          "korrektur": "Das Hörexperiment machen lassen statt die Regel wiederholen: denselben Dur-Akkord erst clean, dann mit viel Gain anspielen — und daneben den Powerchord. Der Unterschied erklärt sich selbst. Danach die Umkehrung zeigen: clean oder mit wenig Zerre sind Terzen ein Werkzeug, kein Tabu. Die Regel wird zur Entscheidung: Wie viel Intervall verträgt mein Zerrgrad?"
+        }
+      }
+    },
+    {
+      "id": "fb_phrygisch_muster",
+      "typ": "fehlerbild",
+      "basis_baustein": "moll_phrygisch",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die phrygische Skala wird flüssig auf und ab gespielt, aber die Riffs klingen kein bisschen dunkler als vorher — der besondere Charakter der Tonleiter kommt nicht heraus.",
+          "ursache": "Phrygisch wurde als Fingersatz-Muster gelernt, nicht als der eine entscheidende Ton: die tiefergelegte zweite Stufe direkt über dem Grundton. Wer die Skala nur durchläuft, betont diesen Halbton nicht — und dann ist Phrygisch von Moll praktisch nicht zu unterscheiden.",
+          "korrektur": "Auf zwei Töne reduzieren: nur Grundton und kleine Sekunde, im Wechsel pendeln lassen, bis die Reibung im Ohr ist. Dann schrittweise Töne der Skala dazunehmen, aber jede Phrase auf dem Grundton enden und die b2 als Würze gezielt setzen lassen. Zum Gegencheck dieselbe Phrase einmal mit großer, einmal mit kleiner Sekunde spielen — hörbar machen, was der eine Ton ändert."
+        }
+      }
+    },
+    {
+      "id": "fb_riff_monoton_zerfahren",
+      "typ": "fehlerbild",
+      "basis_baustein": "riff_baukasten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Selbstgebaute Riffs kippen in eines von zwei Extremen: Entweder läuft dieselbe Zelle endlos durch und langweilt, oder jede Wiederholung bringt neues Material und nichts bleibt hängen.",
+          "ursache": "Das Bauprinzip Kern plus Variation ist nicht verinnerlicht: Es fehlt das Gespür dafür, dass Wiederholung die Wiedererkennbarkeit baut und die Variation nur die Langeweile bricht — nicht umgekehrt. Oft wird außerdem zuerst über Töne nachgedacht statt über Rhythmus.",
+          "korrektur": "Mit einer Schablone arbeiten lassen: dreimal Kern, einmal Antwort (3+1). Das Riff zuerst nur klatschen — trägt der Rhythmus allein, bevor ein einziger Ton feststeht? Dann Vorbilder zerlegen: zwei Lieblingsriffs auf Kernlänge, Wiederholungszahl und Variationsstelle abklopfen und die gefundene Struktur aufs eigene Riff übertragen."
+        }
+      }
+    },
+    {
+      "id": "fb_tempo_ohne_anker",
+      "typ": "fehlerbild",
+      "basis_baustein": "tempo_genres",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "BPM-Angaben bleiben abstrakt: Das Übetempo wird zufällig gewählt, Steigerungspläne sind unrealistisch, und auf die Frage „wie schnell ist 180?“ kommt Raten statt einer Vorstellung.",
+          "ursache": "Tempo existiert nur als Zahl auf dem Metronom, nicht als Körpergefühl. Es fehlen innere Referenzpunkte — Songs, deren Tempo man kennt und fühlt —, an denen sich neue Zahlen verorten lassen.",
+          "korrektur": "Tempo-Anker bauen: je Genre-Bereich einen Referenzsong festlegen (Doom-Kriechen, Midtempo-Groove, Thrash-Galopp, Blast-Bereich) und dessen BPM nachschlagen. Dann das Schätzspiel zur Routine machen: Song anhören, Tempo schätzen, mit Metronom nachmessen. Nach wenigen Wochen sitzt ein Raster, in dem jede BPM-Zahl ein Gefühl hat."
+        }
+      }
+    },
+    {
+      "id": "fb_polyrhythmik_begriffe",
+      "typ": "fehlerbild",
+      "basis_baustein": "polyrhythmik_theorie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Polyrhythmus und Polymetrik werden durcheinander erklärt: Eine verschobene Dreier-Figur über 4/4 wird „drei gegen vier“ genannt, oder ein echtes drei-gegen-vier wird als wandernde Figur beschrieben. In der Probe redet man aneinander vorbei.",
+          "ursache": "Beide Konzepte sind unter demselben Etikett „poly“ abgelegt, ohne die Kernfrage zu trennen: Beim Polyrhythmus teilen zwei Unterteilungen denselben Zeitraum und treffen sich auf jeder Eins — bei der Polymetrik wandert eine ungerade Figur über den Puls und trifft die Eins erst nach mehreren Takten wieder.",
+          "korrektur": "Je Begriff ein klatschbares Minimalbeispiel verankern: drei gegen vier mit beiden Händen (gemeinsame Eins jede Runde) gegen eine Dreiergruppe aus Achteln über 4/4 (die Eins wandert). Dann als Testfrage etablieren: „Treffen sich die Einsen jedes Mal?“ — Ja heißt Polyrhythmus, Nein heißt Polymetrik. Erst wenn die Unterscheidung am Körper sitzt, die Fachwörter benutzen."
+        }
+      }
+    },
+    {
+      "id": "fb_ungerade_gezaehlt",
+      "typ": "fehlerbild",
+      "basis_baustein": "ungerade_takte_theorie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im 7/8 wird hörbar bis sieben gezählt: Bei langsamem Tempo geht es gerade noch, sobald es schneller wird, reißt der Groove ab oder es rutscht eine Acht hinein.",
+          "ursache": "Der Takt wird als Zahlenfolge behandelt statt als Kette aus Zweier- und Dreiergruppen. Mitzählen bindet Aufmerksamkeit und skaliert nicht mit dem Tempo — die Gruppierung (2+2+3) wäre fühlbar, aber sie wurde nie zum Körpergefühl gemacht.",
+          "korrektur": "Vom Zählen auf Silben umstellen: „kurz-kurz-lang“ sprechen, dazu gehen oder klatschen, bis die Kette ohne Nachdenken läuft — komplett ohne Instrument. Dann dieselbe Kette aufs Instrument übertragen und die Gruppenanfänge betonen. Verschiedene Drehungen (3+2+2, 2+3+2) als eigene Wörter üben, nicht als neue Rechnung."
+        }
+      }
+    },
+    {
+      "id": "fb_transkription_tonjagd",
+      "typ": "fehlerbild",
+      "basis_baustein": "gehoer_transkription",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Heraushören wird sofort Ton für Ton gejagt: Nach zwanzig Minuten stehen drei unsichere Töne, der Rhythmus ist falsch, die Motivation im Keller — und am Ende wird doch der Tab gegoogelt.",
+          "ursache": "Die Trichter-Methode wird übersprungen: Wer mit den Tonhöhen anfängt, arbeitet an der schwersten Ebene zuerst und ohne Gerüst. Form und Rhythmus — die viel schneller zu fassen sind und die Tonsuche massiv erleichtern — bleiben ungenutzt.",
+          "korrektur": "Die Reihenfolge zum Ritual machen: erst die Form (wie viele Teile, was wiederholt sich?), dann den Rhythmus klatschen, bis er sitzt, dann den Grundton suchen und zuletzt die Melodiekontur (rauf, runter, Sprung?) in Töne übersetzen. Kleine Häppchen loopen statt das ganze Riff am Stück. Der Fortschritt pro Schritt hält die Motivation — und das Ergebnis stimmt."
+        }
+      }
+    },
+    {
+      "id": "fb_modulation_kippt_weg",
+      "typ": "fehlerbild",
+      "basis_baustein": "metrische_modulation",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Übergang klingt wie unkontrolliertes Schneller- oder Langsamerwerden: Nach dem Kipp stimmt das neue Tempo nicht, und die Band findet sich erst nach ein paar Takten wieder.",
+          "ursache": "Die Pivot-Unterteilung wird nicht vorbereitet: Der Wechsel wird als abrupter Tempowechsel behandelt statt als Umdeutung einer schon klingenden Unterteilung. Wer die Triole nicht schon hört und fühlt, bevor sie zur neuen Viertel wird, kann sie nicht übernehmen — er springt und landet irgendwo.",
+          "korrektur": "Den Pivot hörbar machen, bevor er Puls wird: In den Takten vor dem Wechsel die Zielunterteilung mitklatschen oder mitsprechen, dann auf ein Signal den Puls umdeuten. Beide Tempi vorher einzeln mit Metronom verankern und das Verhältnis laut benennen (etwa Viertel wird zu punktierter Viertel, 3:2). Erst wenn der Kipp allein klatschend sitzt, ans Instrument."
+        }
+      }
+    },
+    {
+      "id": "fb_metronom_gemieden",
+      "typ": "fehlerbild",
+      "basis_baustein": "metronom_prinzip",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Klick wird still weggelassen: „Mit Metronom klingt alles kaputt.“ Geübt wird ohne — und im Zusammenspiel mit anderen fällt dann auf, dass das Timing schwimmt.",
+          "ursache": "Das Metronom ist als Richter erlebt worden, nicht als Partner: Das Übetempo war von Anfang an zu hoch, jeder Klick wurde zur Fehlermeldung, und das Erfolgserlebnis blieb aus. Die Vermeidung schützt vor der Rückmeldung — und konserviert genau das Problem.",
+          "korrektur": "Den Einstieg neu rahmen: Tempo drastisch senken, bis Mitspielen mühelos gelingt — das erste Ziel ist das Erfolgserlebnis, nicht die Zieltempo-Zahl. Den Klick musikalisch machen: auf halbes Tempo oder auf die Zählzeiten 2 und 4 stellen, sodass er wie ein Bandkollege groovt statt zu ticken. Kurze Einheiten mit klarem Ende — fünf gute Minuten mit Klick schlagen eine halbe Stunde dagegen."
+        }
+      }
+    },
+    {
+      "id": "fb_temposteigerung_sprunghaft",
+      "typ": "fehlerbild",
+      "basis_baustein": "mentale_temposteigerung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Trotz vieler Übestunden stagniert das Maximaltempo — oder es steigt auf dem Papier, aber bei jedem ernsthaften Durchlauf schleichen sich dieselben Fehler ein.",
+          "ursache": "Am Tempo wird wahllos gedreht: große BPM-Sprünge, gestartet oberhalb des sauberen Basistempos, kein Protokoll. So werden Fehler mit eintrainiert — das Tempo wächst schneller als die Kontrolle, und die eingeschliffenen Ungenauigkeiten bilden das eigentliche Plateau.",
+          "korrektur": "Die Methode vor die Motivation stellen: erst das ehrliche Basistempo messen (das höchste Tempo mit null Fehlern), von dort in kleinen Schritten steigern und bei jedem Patzer eine Stufe zurück. Fortschritt schriftlich festhalten — die Kurve über Wochen zeigt, dass kleine Schritte schneller sind als Sprünge. Phasen unterhalb des Maximums einplanen, in denen Klang und Lockerheit das Ziel sind, nicht die Zahl."
+        }
+      }
+    },
+    {
+      "id": "fb_set_verheizt",
+      "typ": "fehlerbild",
+      "basis_baustein": "set_pacing",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die ersten Songs des Sets oder der Probe sind stark — danach bricht die Leistung ein: Die Stimme wird rau, die Arme werden schwer, die letzten Songs sind Schadensbegrenzung.",
+          "ursache": "Das Set ist als Aneinanderreihung einzelner Songs geplant, jeder für sich auf Anschlag. Es fehlt die Belastungs-Dramaturgie: keine Erholungsinseln, die fordernden Stücke geballt am Anfang, und der Adrenalinschub des Auftritts verführt zusätzlich zum Überziehen.",
+          "korrektur": "Die Setlist als Belastungskurve planen: jeden Song ehrlich nach Anstrengung einstufen und die schwersten Stücke verteilen statt stapeln — nach jedem Maximum eine Erholungsinsel. Das ganze Set mindestens einmal am Stück durchspielen, um die reale Kurve zu erleben, und bewusst unterhalb des Maximums starten: Wer bei Song drei noch Reserven hat, hat richtig geplant. Bei stimmlicher Heiserkeit gilt wie immer die Stoppregel."
+        }
+      }
+    },
+    {
+      "id": "fb_kaltstart",
+      "typ": "fehlerbild",
+      "basis_baustein": "aufwaermen_handgesundheit",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Session beginnt direkt mit schnellen Riffs im Zieltempo. Nach kurzer Zeit verspannen Hand und Unterarm, die Präzision fällt ab — und nach intensiven Tagen melden sich Ermüdung oder Ziehen im Handgelenk.",
+          "ursache": "Aufwärmen ist als verlorene Übezeit gerahmt: Die Motivation zieht sofort zum eigentlichen Material, und solange nichts wehtut, scheint der Kaltstart zu funktionieren. Die Belastung summiert sich aber unbemerkt — gerade bei gedämpftem, schnellem Spiel mit viel Wiederholung.",
+          "korrektur": "Das Aufwärmen zum festen ersten Programmpunkt machen und als Teil des Trainings rahmen, nicht als Vorspiel: wenige Minuten langsames, lockeres Spielen mit großen Bewegungen, erst dann Tempo und Dämpfung dazu. Die ersten Minuten bewusst unterhalb der Anstrengungsschwelle halten. Bei Schmerz oder Taubheit sofort stoppen — und bei wiederkehrenden Beschwerden ärztlich abklären lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_stimme_alltagslast",
+      "typ": "fehlerbild",
+      "basis_baustein": "stimme_schuetzen_alltag",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Gesangstechnik ist sauber, geübt wird maßvoll — trotzdem ist die Stimme oft schon vor der Probe müde, rau oder belegt.",
+          "ursache": "Die Belastung passiert außerhalb des Übens und bleibt unsichtbar: lautes Reden über Musik oder im Job, häufiges Räuspern, Flüstern (das die Stimmlippen mehr belastet, als es sich anfühlt), wenig Wasser, wenig Schlaf, trockene Luft. Die Übe-Bilanz stimmt — die Tages-Bilanz nicht.",
+          "korrektur": "Eine Alltags-Inventur machen lassen: zwei, drei Tage lang notieren, wann die Stimme außerhalb des Übens arbeitet und wann sie sich rau anfühlt. Dann gezielt ersetzen: schlucken oder summen statt räuspern, normal leise sprechen statt flüstern, Wasser griffbereit, stimmliche Ruhephasen vor Proben einplanen. Hält die Heiserkeit trotz allem an, gehört sie zur Abklärung in die HNO-Praxis — nicht in die nächste Session."
+        }
+      }
+    },
+    {
+      "id": "fb_drums_dauervollgas",
+      "typ": "fehlerbild",
+      "basis_baustein": "drums_koerper_ausdauer",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Jede Session wird auf Anschlag gespielt, trotzdem wächst die Ausdauer nicht: Blast- und Double-Bass-Passagen brechen nach derselben Zeit ein wie vor Monaten, und nach den Sessions bleiben Erschöpfung oder ein Zwicken in Armen und Beinen.",
+          "ursache": "Belastung ohne Steuerung: Immer Vollgas trainiert vor allem das Verkrampfen — unter Dauerermüdung greift der Körper zu Kraft statt Technik, der Rebound geht verloren, und ohne Erholungsphasen fehlt der Reiz-Erholungs-Zyklus, aus dem Ausdauer überhaupt entsteht.",
+          "korrektur": "Wie im Sport strukturieren: intensive Passagen in Intervallen mit echten Pausen statt als Dauerfeuer, dazwischen Technikblöcke in moderatem Tempo, in denen Lockerheit und Rebound das Ziel sind. Belastung über die Woche planen — auf harte Tage folgen leichte. Einbrechende Technik ist das Stoppsignal, nicht der Wille; bei anhaltenden Schmerzen ärztlich abklären lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_gain_wand",
+      "typ": "fehlerbild",
+      "basis_baustein": "gitarren_sound_architektur",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Allein im Zimmer klingt der Sound riesig — im Bandgefüge verschwindet die Gitarre: kein Attack, keine Definition, die Riffs verschwimmen zu einer breiigen Fläche, und als Reaktion wird noch mehr aufgedreht.",
+          "ursache": "Zu viel Gain und ausgehöhlte Mitten: Ab einem Punkt macht mehr Zerre den Ton nicht härter, sondern kleiner — Kompression frisst den Anschlag, und die herausgedrehten Mitten sind genau der Frequenzbereich, in dem sich eine Gitarre im Mix behauptet. Beurteilt wurde der Sound solo statt im Bandkontext.",
+          "korrektur": "Im Bandkontext (oder zu einer Aufnahme) einstellen lassen, nie allein: Gain schrittweise zurücknehmen, bis palm-gemutete Achtel wieder als einzelne Anschläge lesbar sind — das ist der Attack-Test. Dann Mitten hineindrehen, auch wenn es solo ungewohnt klingt. Als Merksatz verankern: Härte kommt aus Anschlag und Tightness, nicht aus dem Gain-Regler."
+        }
+      }
+    },
+    {
+      "id": "fb_monitoring_drueckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "vocals_live_monitoring",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In der Probe hält die Stimme mühelos — live ist sie nach wenigen Songs rau oder weg. Auf der Bühne wird sichtbar gegen die Lautstärke angekämpft: angespannter Hals, immer dichter ans Mikrofon, immer mehr Druck.",
+          "ursache": "Die Person hört sich selbst nicht: Ohne verlässliches Monitoring fehlt die Rückkopplung, leise Verzerrung wirkt im Bühnenlärm wie nichts — also wird gepresst, um sich zu spüren. Nicht die Technik versagt, die Hörsituation zwingt sie in den Druck.",
+          "korrektur": "Monitoring zur nicht verhandelbaren Voraussetzung machen: Beim Soundcheck zuerst die eigene Stimme im Monitor einfordern — laut genug, dass leises Verzerren hörbar bleibt; wo möglich In-Ears oder eine feste Wedge-Position nutzen. Als Regel verankern: Wenn ich mich nicht höre, wird der Monitor lauter, nicht die Stimme. Kratzen oder Engegefühl heißt sofort zurückschalten — und wiederkehrende Heiserkeit nach Shows gehört in die HNO-Praxis, den Aufbau begleitet eine erfahrene Lehrperson."
+        }
+      }
     }
   ]
 }
