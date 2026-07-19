@@ -257,8 +257,8 @@ function pruefeDaten(daten) {
     for (const wetter of b.witterung || []) {
       if (!inVokabular(voka.witterung, wetter)) w.push(`${b.id}: unbekannte Witterung "${wetter}"`);
     }
-    if (b.typ === 'micro' && domaenenVon(b).includes('technik') && !hatUebungsteil(b)) {
-      w.push(`${b.id}: Technik-Baustein ohne Übungsteil`);
+    if (b.typ === 'micro' && !hatUebungsteil(b) && !hatReflexionsaufgabe(b)) {
+      w.push(`${b.id}: weder Übungs- noch Reflexionsteil`);
     }
     if (hatReflexionsaufgabe(b) && typeof b.reflexionsaufgabe.de !== 'string') {
       w.push(`${b.id}: reflexionsaufgabe.de fehlt oder ist kein Text`);

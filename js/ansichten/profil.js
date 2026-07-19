@@ -31,7 +31,7 @@ function zeile(schluessel, begriff, wert) {
 
 function editorHtml(daten, d) {
   if (offen === 'stufe') {
-    const optionen = ['beginner', 'fortgeschritten', 'experte']
+    const optionen = ['einsteiger', 'fortgeschritten', 'experte']
       .map(
         (stufe) => `
         <label class="option-karte">

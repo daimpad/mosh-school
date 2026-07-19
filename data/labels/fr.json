@@ -55,7 +55,7 @@
     "keine_angabe": "",
     "frage_stufe": "",
     "frage_trainer": "",
-    "anker_beginner": "",
+    "anker_einsteiger": "",
     "anker_fortgeschritten": "",
     "anker_experte": "",
     "trainer_ja": "",
@@ -258,7 +258,8 @@
     "speicher_warnung": "",
     "pfad_stil": "",
     "pfad_stil_text": "",
-    "n_genres": ""
+    "n_genres": "",
+    "skip_link": ""
   },
   "bausteine": {
     "grundhaltung": "",
