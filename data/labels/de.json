@@ -475,7 +475,15 @@
     "kontrapunkt_stimmfuehrung": "Kontrapunkt & Stimmführung",
     "klangregie_arrangement": "Klangregie: das Band-Arrangement dirigieren",
     "produktionswissen_frequenz": "Produktionswissen: Frequenzen & Maskierung",
-    "werkanalyse_repertoire": "Werkanalyse & Repertoire-Denken"
+    "werkanalyse_repertoire": "Werkanalyse & Repertoire-Denken",
+    "doom_sustain_feedback": "Doom-Gitarre: Sustain & Feedback",
+    "doom_bass_fuzz": "Doom-Bass: Fuzz & Fundament",
+    "doom_drums_zeitdehnung": "Doom-Drums: Zeit dehnen",
+    "doom_vocals_getragen": "Doom-Vocals: getragen & schwer",
+    "doom_harmonik": "Doom-Harmonik: die Sprache der Schwere",
+    "doom_dramaturgie": "Doom-Dramaturgie: Spannung über Länge",
+    "doom_sound_gewicht": "Doom-Sound: Gewicht statt Gain",
+    "doom_band_zeitgefuehl": "Gemeinsames Zeitgefühl im Schlepptempo"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",

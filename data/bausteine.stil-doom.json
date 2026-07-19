@@ -1,0 +1,197 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-doom",
+    "hinweis": "Genre-Vertiefung Doom: acht Bausteine quer durch die Domänen, alle mit stil:[doom] — sie bündeln den Genre-Pfad, klassifizieren aber nichts um. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel stehen inline in anzeigetitel und werden im Repo nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "doom_sustain_feedback",
+      "anzeigetitel": { "de": "Doom-Gitarre: Sustain & Feedback" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["doom_riffing", "vibrato"],
+      "erklaerteil": {
+        "de": "Im Doom ist der ausklingende Ton das eigentliche Instrument. Zwischen den Anschlägen liegt so viel Zeit, dass jeder Ton eine Geschichte erzählen muss: wie er beginnt, wie er steht, wie er endet. Sustain ist dabei Handarbeit — ein satter, entschlossener Anschlag, eine Greifhand, die den Ton aktiv hält statt nur festzudrücken, und ein Vibrato, das erst spät ins Sustain einsetzt und den Ton am Leben hält, wenn er zu sterben beginnt.\n\nDie zweite Stufe ist kontrolliertes Feedback: Steht genug Lautstärke im Raum, kippt ein gehaltener Ton irgendwann in einen singenden Oberton. Das ist im Doom kein Unfall, sondern ein Werkzeug — der Punkt, an dem das Instrument von allein weiterklingt. Kontrollierbar wird er über die Position zum Verstärker (Abstand und Winkel verändern, welcher Oberton anspringt) und über die Dämpfung: Alles, was nicht klingen soll, muss konsequent abgestoppt sein, sonst kippt nicht ein Ton, sondern ein Brei.\n\nFeedback braucht Lautstärke — und Lautstärke braucht Schutz. Gehörschutz ist bei dieser Arbeit nicht verhandelbar, und die Übezeiten bei hoher Lautstärke bleiben kurz."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der lange Ton",
+          "ziel": "Einen einzelnen Ton über seine volle Länge formen — und ihn bei Gelegenheit kontrolliert ins Feedback führen.",
+          "schritte": [
+            "Wähle einen tiefen Ton und schlag ihn satt an. Hör ihm bis zum völligen Verklingen zu, ohne irgendetwas zu tun — das ist deine Referenz, wie lang der Ton von allein trägt.",
+            "Wiederhole den Ton und setz erst in der zweiten Hälfte des Ausklangs ein breites, langsames Vibrato — der Ton soll hörbar länger leben als in Schritt 1.",
+            "Spiel eine Zwei-Takt-Phrase aus doom_riffing und gestalte jeden langen Ton bewusst: Anschlag, stehen lassen, spätes Vibrato. Kein Ton darf einfach nur passieren.",
+            "Wenn du mit Verstärker und ausreichend Lautstärke übst: Halte einen Ton, dreh dich langsam zum Amp und such den Punkt, an dem er in einen Oberton kippt. Merk dir Position und Abstand — und beende das Feedback bewusst durch Abdämpfen."
+          ],
+          "steigerung": "Bau das Feedback als geplantes Ereignis in eine Phrase ein: letzter Ton der Runde kippt, klingt zwei Schläge als Oberton und wird auf die Eins der nächsten Runde abgedämpft.",
+          "selbstkontrolle": "Nimm die Phrase auf: Trägt jeder lange Ton bis zum nächsten Anschlag, oder entstehen tote Lücken? Kippt das Feedback dort, wo du es willst — und endet es, wenn du es beendest?"
+        }
+      }
+    },
+    {
+      "id": "doom_bass_fuzz",
+      "anzeigetitel": { "de": "Doom-Bass: Fuzz & Fundament" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["doom_bass", "bass_ton_gear"],
+      "erklaerteil": {
+        "de": "Im Doom trägt der Bass oft nicht nur das Fundament, sondern die halbe Wand: Viele klassische Doom-Sounds bestehen aus einem massiv verzerrten Bass, über dem die Gitarre fast schlank wirkt. Fuzz ist dabei die typische Farbe — eine breite, sägende Verzerrung, die den Ton riesig macht, ihm aber gleichzeitig Definition und Tiefbass stehlen kann.\n\nDie Kunst ist die Balance: Genug Zerre, dass der Ton trägt und drückt, aber genug sauberes Fundament, dass die Band noch auf etwas steht. Praktisch heißt das, auf drei Dinge zu hören: Bleibt der Attack jedes Tons erkennbar (oder verschluckt der Fuzz den Anschlag)? Bleibt das Tief stabil (oder pumpt es)? Und bleibt der Ausklang kontrolliert (verzerrte lange Töne rauschen und wollen ins Chaos kippen — die Dämpfung arbeitet im Doom mehr als die Anschlagshand)?\n\nIm Zusammenspiel gilt: Absprechen, wer das Tief hält. Sind Bass und Gitarren gleichzeitig maximal verzerrt und maximal tief, entsteht Brei — die großen Doom-Sounds staffeln die Rollen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Wand mit Fundament",
+          "ziel": "Einen verzerrten Doom-Bassteil spielen, der groß klingt und trotzdem definiert bleibt.",
+          "schritte": [
+            "Spiel eine langsame Linie aus doom_bass zuerst clean und nimm sie auf — das ist deine Referenz für Attack und Tonlänge.",
+            "Spiel dieselbe Linie mit deiner Verzerrung (Fuzz, Overdrive oder Amp-Zerre) und vergleich mit der Aufnahme: Sind die Anschläge noch als einzelne Ereignisse hörbar?",
+            "Reduzier die Zerre schrittweise, bis Attack und Tonhöhe wieder klar erkennbar sind — dieser Punkt ist meist deutlich niedriger, als es sich allein anfühlt.",
+            "Übe die Ausklänge: Lass jeden langen Ton bis kurz vor den nächsten stehen und stopp ihn dann bewusst ab. Verzerrte Saiten klingen weiter, bis du sie stoppst — die Dämpfung gehört zur Linie."
+          ],
+          "steigerung": "Falls du eine Möglichkeit für zwei Signalwege hast (Zerrpedal mit Clean-Blend, zwei Spuren beim Aufnehmen): Misch einen cleanen Tief-Anteil unter die Zerre und vergleich, wie viel stabiler das Fundament steht.",
+          "selbstkontrolle": "Hör die Aufnahme auf kleinen Lautsprechern ab: Erkennst du jede Tonhöhe und jeden Anschlag? Wenn die Linie nur noch Fläche ist, war es zu viel Zerre — nicht zu wenig Lautstärke."
+        }
+      }
+    },
+    {
+      "id": "doom_drums_zeitdehnung",
+      "anzeigetitel": { "de": "Doom-Drums: Zeit dehnen" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["doom_feel", "tempo_wechsel_drums"],
+      "erklaerteil": {
+        "de": "Unter 60 BPM wird jeder Schlag zum Ereignis — und jede Ungenauigkeit zur Katastrophe. Die Abstände zwischen den Schlägen sind so groß, dass sich das Tempo nicht mehr von allein trägt: Ohne ein inneres Netz schwimmst du zwischen zwei Backbeats einfach davon. Dieses Netz ist die stille Unterteilung — Achtel oder Triolen, die im Kopf oder in einer kleinen Körperbewegung weiterlaufen, während die Hände schweigen.\n\nDie zweite Doom-Disziplin ist das Weglassen: Ein Fill, das im Midtempo selbstverständlich wäre, zerstört im Schlepptempo die Schwere. Doom-Fills sind wenige, schwere Schläge, die den Raum betonen, statt ihn zu füllen — oft ist die stärkste Entscheidung, gar nichts zu spielen und das Becken arbeiten zu lassen.\n\nApropos Becken: Im Doom sind Crashes und Rides Klangflächen. Ein Crash auf der Eins darf zwei Takte lang ausklingen und trägt dabei den Raum zwischen den Schlägen — wer es früh abstoppt, verschenkt das halbe Instrument."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Netz unter der Zeitlupe",
+          "ziel": "Einen Groove bei 50–60 BPM stabil halten und die Räume bewusst gestalten.",
+          "schritte": [
+            "Stell das Metronom auf 55 BPM, Klick auf jede Viertel. Spiel einen einfachen schweren Groove (Kick auf 1, Snare auf 3) und zähl die Achtel dabei laut mit — das laute Zählen ist dein Netz.",
+            "Verlagere das Zählen nach innen: gleiche Übung, Unterteilung nur noch im Kopf oder als kleine Fußspitzen-Bewegung.",
+            "Dünn den Klick aus: nur noch auf 1 und 3, dann nur auf die 1. Das Netz muss die wachsenden Lücken überbrücken — driftest du, geh eine Stufe zurück.",
+            "Gestalte die Räume: Spiel vier Takte nur mit Kick, Snare und einem Crash auf der Eins, das du voll ausklingen lässt. Widersteh jedem Impuls, die Lücken zu füllen."
+          ],
+          "steigerung": "Bau ein Doom-Fill: maximal drei schwere Schläge am Taktende, mit bewusstem Raum davor. Nimm auf und prüf, ob das Fill die Schwere verstärkt oder das Tempo anschiebt.",
+          "selbstkontrolle": "Nimm vier Takte mit Klick nur auf der Eins auf und miss nach: Sitzen deine Backbeats, oder wanderst du? Klingt das Crash aus, oder erstickst du es aus Gewohnheit?"
+        }
+      }
+    },
+    {
+      "id": "doom_vocals_getragen",
+      "anzeigetitel": { "de": "Doom-Vocals: getragen & schwer" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["clean_im_metal", "growl_resonanz"],
+      "erklaerteil": {
+        "de": "Doom-Gesang lebt von der Länge: getragene Klargesangs-Linien, die über langsamen Riffs stehen, oder tiefe Death-Doom-Growls, die sich über Takte ziehen. Beides stellt dieselbe Kernfrage — reicht die Luft? Bei 50 BPM ist eine Vier-Takt-Phrase gefühlt endlos, und wer sie ohne Plan beginnt, presst am Ende.\n\nDie Antwort ist Phrasierungs-Ökonomie: Atemstellen bewusst setzen (und lieber eine mehr als eine zu wenig), Phrasen so anlegen, dass das Ende leichter ist als der Anfang, und die Stütze über die ganze Länge aktiv halten statt sie am Phrasenende zusammenbrechen zu lassen. Für getragene Growls gilt zusätzlich: Die Verzerrung entsteht wie immer aus Luft und Resonanz, nie aus Druck — eine lange Phrase mit Pressen ist doppelt schädlich, weil die Belastung mit jeder Sekunde steigt.\n\nGesundheitsrahmen wie immer, im Doom besonders: alles zuerst leise und kurz aufbauen, bei Kratzen, Engegefühl oder Ermüdung sofort stoppen, und den Aufbau langer verzerrter Phrasen von einer erfahrenen Lehrperson begleiten lassen. Bei anhaltender Heiserkeit gehört die Stimme in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die lange Phrase",
+          "ziel": "Eine getragene Phrase über langsamem Tempo mit geplanter Atmung tragen — ohne am Ende zu pressen.",
+          "schritte": [
+            "Wärm die Stimme wie gewohnt auf. Sprich eine zweizeilige Textpassage im Rhythmus eines langsamen Riffs (um 55 BPM) und markier dir, wo du natürlich atmen willst.",
+            "Sing die Passage clean, leise und getragen, mit genau den geplanten Atemstellen. Achte darauf, dass die Stütze bis zum letzten Ton aktiv bleibt — das Phrasenende soll so ruhig klingen wie der Anfang.",
+            "Verlängere schrittweise: erst zwei Takte pro Atembogen, dann drei. Sobald das Ende angestrengt klingt oder du Druck aufbaust, geh eine Stufe zurück — die Grenze verschiebt sich über Wochen, nicht in einer Session.",
+            "Nur wenn getragene Cleans stabil sind und du bereits sicher verzerrst: Übertrag EINE kurze Phrase leise in deinen Growl-Ansatz. Gleiche Regeln — Luft und Resonanz statt Druck, sofort stoppen bei Kratzen oder Enge."
+          ],
+          "steigerung": "Sing die Passage über eine Aufnahme oder ein geloopte Riff und gestalte die Dynamik über die Phrase: leiser Beginn, Schwerpunkt in der Mitte, ruhiges Ende.",
+          "selbstkontrolle": "Nimm dich auf: Klingen die Phrasenenden frei oder gequetscht? Fühlt sich der Hals nach der Übung neutral an? Wenn nicht, war die Phrase zu lang oder zu laut — kürzen und leiser werden, nicht durchbeißen."
+        }
+      }
+    },
+    {
+      "id": "doom_harmonik",
+      "anzeigetitel": { "de": "Doom-Harmonik: die Sprache der Schwere" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["tritonus_dissonanz", "moll_phrygisch"],
+      "erklaerteil": {
+        "de": "Doom klingt nicht nur langsam — er klingt nach einem eigenen harmonischen Vokabular. Die Zutaten sind überschaubar: der Tritonus als Gründungsintervall des Genres, das Pendel zwischen Grundton und kleiner Sekunde oder kleiner Terz, absteigende Halbtonrückungen und Moll- und Phrygisch-Färbungen, die in Zeitlupe erst richtig wirken.\n\nDenn das ist der eigentliche Punkt: Im Doom verändert die Dauer die Wirkung. Eine Reibung, die im Thrash als Durchgangston vorbeihuscht, steht im Doom sekundenlang im Raum — sie wird vom Effekt zum Zustand. Deshalb funktionieren im Doom so einfache Mittel: Zwei Akkorde, die sich einen Halbton bewegen, tragen einen ganzen Songteil, weil jeder Wechsel ein Ereignis ist.\n\nWer Doom schreiben oder verstehen will, hört deshalb auf die Ökonomie: Wie wenige Töne bewegt das Riff — und wie viel Gewicht bekommt jede einzelne Bewegung?"
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Töne, volle Wirkung",
+          "ziel": "Die typischen Doom-Intervalle hörend erkennen und ihre Wirkung in Zeitlupe erleben.",
+          "schritte": [
+            "Spiel oder sing das Pendel Grundton–kleine Sekunde in zwei Tempi: einmal zügig als Achtelbewegung, einmal extrem langsam mit vier Schlägen pro Ton. Beschreib den Unterschied der Wirkung in einem Satz.",
+            "Wiederhole das Experiment mit dem Tritonus: Grundton anspielen, Tritonus dazu — erst kurz, dann lang stehen lassen. Wann kippt die Reibung von interessant zu bedrohlich?",
+            "Hör einen langsamen Doom-Song deiner Wahl und identifiziere das harmonische Grundmaterial: Wie viele verschiedene Töne oder Akkorde trägt das Hauptriff? Notier die Bewegung (Halbton runter? Tritonus-Sprung? Pendel?).",
+            "Bau selbst ein Miniatur-Doom-Riff aus maximal drei Tönen, davon mindestens eine Reibung (kleine Sekunde oder Tritonus) — und spiel es so langsam, dass jede Bewegung ein Ereignis ist."
+          ],
+          "steigerung": "Ersetz in deinem Miniatur-Riff die Reibung durch eine reine Quinte und vergleich: Was verliert das Riff? So hörst du, wie viel Arbeit das eine dissonante Intervall leistet.",
+          "selbstkontrolle": "Kannst du bei drei fremden Doom-Riffs benennen, welches Intervall die Schwere erzeugt? Wenn du nur „klingt dunkel“ sagen kannst, wiederhole Schritt 1 und 2 mit mehr Geduld pro Ton."
+        }
+      }
+    },
+    {
+      "id": "doom_dramaturgie",
+      "anzeigetitel": { "de": "Doom-Dramaturgie: Spannung über Länge" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["songstruktur_breakdown", "arrangement_dichte"],
+      "erklaerteil": {
+        "de": "Doom-Songs sind oft acht, zwölf, zwanzig Minuten lang — und leben von einer Dramaturgie, die mit Pop-Strukturen nichts mehr zu tun hat: Wiederholung wird zur Trance, minimale Veränderung zum Großereignis, und die Dynamik bewegt sich in langen Bögen statt in Strophe-Refrain-Sprüngen.\n\nDas Handwerk dahinter ist eine Ökonomie der Ereignisse: Je länger ein Riff unverändert arbeitet, desto größer wirkt die kleinste Veränderung — ein zusätzliches Becken, eine zweite Gitarrenstimme, ein Oktavsprung im Bass können nach zwei Minuten Wiederholung wie ein Ausbruch wirken. Die Kunst liegt darin, die Grenze zwischen Trance und Langeweile zu spüren: den Punkt, an dem die Wiederholung gerade noch trägt, und dort — und erst dort — das nächste Ereignis zu setzen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir einen langen Doom-Song vor (acht Minuten oder mehr) und kartiere ihn beim Hören: Notier auf einer Zeitleiste, wann sich WIRKLICH etwas ändert — ein neues Riff, eine neue Klangfarbe, ein Tempo- oder Dynamikwechsel, der Einsatz des Gesangs. Miss die Abstände: Wie lange lässt der Song ein einzelnes Riff arbeiten, bevor er es verändert? Und wie klein sind die Veränderungen, die trotzdem wie Ereignisse wirken?\n\nÜberleg zum Schluss: An welcher Stelle wäre dir als Hörer fast langweilig geworden — und womit fängt der Song dich genau dort wieder ein? Wenn du selbst schreibst: Wo könntest du in deinem Material eine Veränderung WEGLASSEN und der Wiederholung mehr Zeit geben?"
+      }
+    },
+    {
+      "id": "doom_sound_gewicht",
+      "anzeigetitel": { "de": "Doom-Sound: Gewicht statt Gain" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["drop_tuning", "bass_ton_gear"],
+      "erklaerteil": {
+        "de": "Der Doom-Sound ist ein eigenes Rezept: Statt der eng kontrollierten High-Gain-Zerre des Death Metal dominieren Fuzz und aufgerissene Amps — Verzerrung, die breit, rau und ungezähmt klingt. Dazu kommen tiefe Stimmungen mit entsprechend dicken Saiten (sonst schlackert die Tiefe nur), und ein Element, das oft unterschätzt wird: Lautstärke als Klangfarbe. Viele Doom-Bands spielen laut, weil bewegte Luft und einsetzendes Feedback Teil des Sounds sind, nicht Dekoration.\n\nUnd nicht verhandelbar: Wer mit Lautstärke als Klangelement arbeitet, trägt Gehörschutz — bei jeder Probe, ohne Ausnahme. Ein Doom-Sound ist es nicht wert, ihn in zehn Jahren nur noch mit Tinnitus zu hören."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör dir zwei sehr unterschiedliche schwere Sounds an — etwa einen klassischen Doom-Fuzz und eine moderne Metalcore-Produktion — und beschreib den Unterschied in eigenen Worten: Wo sitzt die Verzerrung (breit und rau gegen kontrolliert und komprimiert)? Was macht der Tiefbass (offen wummernd gegen straff)? Wie viel Raum und Ausklang ist hörbar?\n\nÜberleg dann für dein eigenes Setup: Mit welchen Mitteln kämst du dem Doom-Gewicht am nächsten — weniger Gain, aber mehr Amp-Arbeit? Dickere Saiten fürs tiefe Tuning? Welche Rolle bekämen Bass und Gitarre in deiner Wand — und wer von beiden hält das Tief?"
+      }
+    },
+    {
+      "id": "doom_band_zeitgefuehl",
+      "anzeigetitel": { "de": "Gemeinsames Zeitgefühl im Schlepptempo" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["doom"],
+      "voraussetzungen": ["metronom_prinzip", "doom_feel"],
+      "erklaerteil": {
+        "de": "Langsam zusammen ist schwerer als schnell zusammen. Bei hohem Tempo trägt der Puls die Band fast von allein — im Schlepptempo dagegen liegen zwischen den gemeinsamen Ereignissen Sekunden, in denen jede Person ihrem eigenen Zeitgefühl ausgeliefert ist. Ob eine Doom-Band erdrückend tight oder betrunken klingt, entscheidet sich genau in diesen Lücken.\n\nDas Werkzeug dagegen ist eine geteilte Unterteilung: Alle in der Band fühlen dasselbe innere Raster (meist Achtel oder Triolen), auch wenn niemand es spielt. Dazu kommen Rituale, die das Raster synchronisieren — ein Einzählen im Unterteilungs-Tempo statt in Vierteln, ein gemeinsamer Atem vor dem ersten Schlag, und die Vereinbarung, WER in welchem Teil die Zeit führt (meist das Schlagzeug, aber in beckenlosen Passagen wandert die Führung).\n\nUnd schließlich: hören statt schauen. Wer im Schlepptempo auf die Hände der anderen wartet, ist immer zu spät — die Synchronisation läuft über das gemeinsame Raster im Ohr, nicht über das Auge."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gemeinsam durch die Lücke",
+          "ziel": "Mit mindestens einer weiteren Person (oder einer Aufnahme) ein Schlepptempo stabil teilen.",
+          "schritte": [
+            "Stellt ein Metronom auf 55 BPM und klatscht zu zweit nur die Eins jedes Taktes — die drei Schläge dazwischen überbrückt jede Person mit ihrer stillen Unterteilung. Hört, wie exakt eure Einsen aufeinanderliegen.",
+            "Zählt euch gegenseitig im Unterteilungs-Tempo ein (also in Achteln: „eins-und-zwei-und …“) und startet eine einfache geklatschte Figur ohne Metronom. Vier Takte halten, dann vergleichen: seid ihr noch zusammen?",
+            "Übertragt das auf eure Instrumente mit einem simplen Riff oder Groove im Schlepptempo: erst mit Klick, dann ohne. Verabredet vorher, wer die Zeit führt.",
+            "Übt den schwersten Moment: den Wiedereinstieg nach einer Generalpause. Ein Takt Stille bei 55 BPM ist lang — alle halten das Raster innerlich und treffen die nächste Eins gemeinsam."
+          ],
+          "steigerung": "Spielt denselben Teil einmal bewusst OHNE verabredete Führung und hört euch die Aufnahme an — meist wird sofort klar, warum die Führungsabsprache den Unterschied macht.",
+          "selbstkontrolle": "Nehmt die Übung auf: Liegen die gemeinsamen Schläge wirklich übereinander, oder franst jede Eins aus? Wird das Tempo über vier Takte ohne Klick schneller? Wenn ja, ist das Raster noch nicht geteilt — zurück zu Schritt 1."
+        }
+      }
+    }
+  ]
+}
