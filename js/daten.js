@@ -59,6 +59,7 @@ export async function ladeDaten() {
     stimmungen: tunings?.stimmungen || [],
     intervalle: tunings?.intervalle || [],
     akkorde: tunings?.akkorde || [],
+    skalen: tunings?.skalen || [],
   };
   return daten;
 }
