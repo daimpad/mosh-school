@@ -386,6 +386,198 @@
           }
         ]
       }
+    },
+    {
+      "id": "gitarre_tremolo_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Tremolo-Ausbau bis zum Riffing"
+      },
+      "beschreibung": {
+        "de": "Die Tremolo-Session für Fortgeschrittene: vom gleichmäßigen Strom über die schnelle Melodie bis zum Riffing mit Akkordwechseln. Lockerheit ist das Abbruchkriterium — kippt sie, endet der Durchgang."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "wechselschlag",
+            "hinweis": {
+              "de": "Langsam einschwingen: kleine Bewegung, gleich laute Ab- und Aufschläge."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "tremolo_ausbau",
+            "hinweis": {
+              "de": "Bewusst unter dem Grenztempo bleiben — Dichte vor Geschwindigkeit."
+            }
+          },
+          {
+            "baustein": "schnelles_tremolo",
+            "hinweis": {
+              "de": "Erst aufwärmen, dann das Tempo suchen; Abdämpfen arbeitet ständig mit."
+            }
+          },
+          {
+            "baustein": "tremolo_riffing",
+            "hinweis": {
+              "de": "Anschläge pro Akkord mitzählen, damit die Wechsel exakt sitzen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Mit Minimaldruck ausklingen — die Hände locker in den Feierabend."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_speed_praezision",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Drei Finger, synchrone Hände, Tremolo"
+      },
+      "beschreibung": {
+        "de": "Die Tempo-Session am Bass: Drei-Finger-Zyklus egalisieren, Hände synchronisieren und den dichten Tonstrom halten. Tempo wächst aus Gleichmäßigkeit, nicht aus Kraft."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Locker einspielen — beide Finger gleich laut, mäßiges Tempo."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "bass_dreifinger",
+            "hinweis": {
+              "de": "Auf den leisesten Finger hören und gezielt angleichen."
+            }
+          },
+          {
+            "baustein": "bass_hand_sync",
+            "hinweis": {
+              "de": "Staccato als Test: Jeder Ton bleibt voll und definiert."
+            }
+          },
+          {
+            "baustein": "bass_tremolo",
+            "hinweis": {
+              "de": "Kleiner Anschlag, dichter Strom — unter dem Grenztempo bleiben."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "bass_ghostnotes",
+            "hinweis": {
+              "de": "Leise perkussive Figuren zum Runterkommen — Pausen wirklich still."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_blast_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Blast-Varianten, Fuß-Teppich, Ausdauer"
+      },
+      "beschreibung": {
+        "de": "Die Blast-Session: Traditional und Bomb sauber trennen, den Sechzehntel-Teppich der Füße glätten und Ausdauer in Intervallen aufbauen. Verkrampfung beendet den Durchgang — immer."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Singles und Doubles langsam — beide Hände gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "blast_varianten",
+            "hinweis": {
+              "de": "Jeder Takt ist eindeutig Traditional oder Bomb — nichts dazwischen."
+            }
+          },
+          {
+            "baustein": "double_bass_sechzehntel",
+            "hinweis": {
+              "de": "Auf den schwächeren Fuß hören; Gleichheit vor Tempo."
+            }
+          },
+          {
+            "baustein": "blast_ausdauer",
+            "hinweis": {
+              "de": "Intervalle: vier Takte Blast, vier Takte lockerer Groove."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_feel",
+            "hinweis": {
+              "de": "Langsam und schwer ausklingen — jeder Schlag sitzt."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_harsh_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Fry, Taschenfalten und Artikulation — leise und sicher"
+      },
+      "beschreibung": {
+        "de": "Die Harsh-Session mit striktem Sicherheitsrahmen: alles leise und kurz, nichts darf kratzen oder wehtun. Auf- und Abwärmen sind Pflichtteile — und für den Intensitätsaufbau gehört eine Lehrperson an deine Seite."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Gründlich aufwärmen: Lip Trills und Sirenen, alles mühelos."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "fry_verzerrung",
+            "hinweis": {
+              "de": "Der Fry fühlt sich an wie Ausruhen — erst dann behutsam aufladen."
+            }
+          },
+          {
+            "baustein": "false_cord_ansatz",
+            "hinweis": {
+              "de": "Gehauchtes Fauchen, offener Rachen; bei jeder Enge sofort stoppen."
+            }
+          },
+          {
+            "baustein": "harsh_artikulation",
+            "hinweis": {
+              "de": "Der Mund artikuliert, der Hals bleibt frei — leise Übungsintensität."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft abwärmen: leises Summen, bis sich die Stimme neutral anfühlt."
+            }
+          }
+        ]
+      }
     }
   ]
 }
