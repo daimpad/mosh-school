@@ -1,0 +1,458 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "bass",
+    "hinweis": "Fortgeschritten-Bass. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "bass_dreifinger",
+      "anzeigetitel": {
+        "de": "Drei-Finger-Technik"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "schnelles_fingerspiel"
+      ],
+      "spielziele": [
+        "schnellerer_wechselschlag"
+      ],
+      "erklaerteil": {
+        "de": "Wenn zwei Finger ans Tempolimit kommen, nimmt der dritte die Arbeit auf: Beim Drei-Finger-Zupfen wechseln Ring-, Mittel- und Zeigefinger in fester Reihenfolge. Drei Anschläge pro Zyklus statt zwei — das senkt die Belastung jedes einzelnen Fingers und öffnet die Tür zu Death-Metal-Tempi, die mit zwei Fingern verkrampft enden würden.\n\nDie Hürde ist die Gleichmäßigkeit: Der Ringfinger ist anfangs leiser und langsamer als seine Nachbarn. Deshalb übst du die Reihenfolge zuerst extrem langsam und hörst auf die Lautstärke jedes Anschlags, nicht auf das Tempo. Ein hörbares Dreier-Galoppieren ist das häufigste Anzeichen, dass ein Finger hinterherhinkt.\n\nBeachte auch die Zähllogik: Drei Finger über gerade Sechzehntel bedeutet, dass die Betonung durch die Finger wandert. Das ist gewollt — die Zählzeit hältst du im Kopf, nicht in der Hand."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Dreier-Zyklus egalisieren",
+          "ziel": "Ring-, Mittel- und Zeigefinger gleich laut und gleich getimt wechseln.",
+          "schritte": [
+            "Zupf auf einer Saite langsam die feste Folge Ring–Mittel–Zeige und hör auf die Lautstärke jedes Fingers.",
+            "Spiel gerade Achtel mit dem Dreier-Zyklus und zähl laut mit, damit die Zählzeit nicht mit dem Fingerwechsel verrutscht.",
+            "Gleiche gezielt den leisesten Finger an, statt die anderen lauter zu machen."
+          ],
+          "steigerung": "Tempo in kleinen Schritten anheben und den Zyklus über Saitenwechsel ziehen.",
+          "selbstkontrolle": "Kein hörbares Galoppieren; alle drei Finger klingen gleich, und der Puls bleibt stabil."
+        }
+      }
+    },
+    {
+      "id": "bass_downpicking",
+      "anzeigetitel": {
+        "de": "Downpicking-Ausdauer am Bass"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "plektrum_technik"
+      ],
+      "spielziele": [
+        "downpicking_ausdauer",
+        "tighter_palm_mute"
+      ],
+      "erklaerteil": {
+        "de": "Reine Abschläge mit dem Pick sind am Bass noch fordernder als an der Gitarre: dickere Saiten, mehr Widerstand, mehr Masse in der Bewegung. Dafür liefert Bass-Downpicking genau den harten, gleichförmigen Attack, der Thrash- und Hardcore-Riffs ihren Druck gibt — jede Note klingt identisch, nichts schaukelt.\n\nAusdauer entsteht hier ausschließlich über Ökonomie: kleine Bewegung aus dem Handgelenk, lockerer Pick-Griff, und ein Tempo, das du über Minuten halten kannst, statt Sekunden. Sobald der Unterarm zubrennt, ist das keine Trainingszone, sondern ein Stoppsignal — Pausen und Wochen bauen die Ausdauer auf, nicht das Durchbeißen.\n\nKombiniere die Abschläge früh mit Palm Muting: Der gedämpfte, kurze Ton verzeiht Ungleichmäßigkeiten weniger und macht Fortschritt sofort hörbar."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gedämpfte Down-Achtel halten",
+          "ziel": "Gleichmäßige Abschläge über längere Strecken bei lockerer Hand.",
+          "schritte": [
+            "Spiel palm-gemutete Achtel auf der tiefen Saite, ausschließlich mit Abschlägen, in einem bequemen Tempo.",
+            "Halte Lautstärke und Tonlänge über acht Takte konstant und beobachte die Spannung im Unterarm.",
+            "Leg eine Pause ein, sobald es brennt — und notiere Tempo und Dauer, die locker machbar waren."
+          ],
+          "steigerung": "Erst die Dauer bei gleichem Tempo verlängern, dann das Tempo in 5-BPM-Schritten anheben.",
+          "selbstkontrolle": "Alle Anschläge klingen identisch; der Unterarm bleibt locker, und du hörst rechtzeitig auf."
+        }
+      }
+    },
+    {
+      "id": "bass_galopp_varianten",
+      "anzeigetitel": {
+        "de": "Galopp-Varianten & Ketten"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "galopp_bass"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Aus dem einfachen Galopp wird eine Sprache, sobald du seine Varianten beherrschst: den umgekehrten Galopp (die zwei schnellen Töne zuerst), durchlaufende Galopp-Ketten ohne Lücke und Mischformen, in denen sich beide abwechseln. Viele klassische Thrash- und Death-Linien bestehen aus genau diesen Zellen.\n\nDie Präzisionsfrage ist immer dieselbe: Sind die zwei schnellen Töne exakt gleich lang, und sitzt der betonte Ton genau auf der Zählzeit? Beim Aneinanderketten kommt die Nahtstelle dazu — der Übergang von einer Zelle zur nächsten darf weder eilen noch schleppen.\n\nOb du mit Fingern oder Pick spielst, ist Geschmackssache; wichtig ist, dass die gewählte Anschlagfolge fest bleibt und nicht mitten in der Kette wechselt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Galopp-Zellen verketten",
+          "ziel": "Standard- und Umkehr-Galopp sauber trennen und lückenlos verbinden.",
+          "schritte": [
+            "Spiel den Standard-Galopp über mehrere Takte und prüf die Länge der schnellen Töne.",
+            "Wechsle zum umgekehrten Galopp und halte die Betonung exakt auf der Zählzeit.",
+            "Verkette beide taktweise im Wechsel, ohne dass an der Nahtstelle eine Lücke entsteht."
+          ],
+          "steigerung": "Die Ketten zwischen zwei Tonhöhen bewegen und das Tempo schrittweise anheben.",
+          "selbstkontrolle": "Beide Varianten sind klar unterscheidbar, und die Übergänge sitzen ohne Stolpern im Puls."
+        }
+      }
+    },
+    {
+      "id": "bass_tremolo",
+      "anzeigetitel": {
+        "de": "Tremolo am Bass"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "plektrum_technik",
+        "schnelles_fingerspiel"
+      ],
+      "spielziele": [
+        "praezises_tremolo"
+      ],
+      "erklaerteil": {
+        "de": "Im Black Metal folgt der Bass oft den flirrenden Tremolo-Linien der Gitarren — als dichter, durchgehender Tonstrom auf einer Note. Mit dem Pick heißt das sehr schneller Wechselschlag; mit Fingern ein enger Zwei- oder Drei-Finger-Wechsel. Beides funktioniert, beides verlangt vor allem eines: Lockerheit.\n\nDie dicken Saiten schlucken hektische Bewegungen. Halte den Anschlag klein und lass die Saite arbeiten, statt sie zu prügeln — ein gleichmäßiger, mittellauter Strom trägt weiter als einzelne harte Schläge mit Löchern dazwischen.\n\nWie bei allem Schnellen gilt: Das Tremolo muss in einem Tempo stehen, das du entspannt halten kannst. Verkrampfung macht den Strom ungleichmäßig und die Hand müde; Tempo wächst aus Wochen gleichmäßigen Übens."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Dichten Tonstrom halten",
+          "ziel": "Ein gleichmäßiges Tremolo auf einem Ton über mehrere Takte halten.",
+          "schritte": [
+            "Wähle einen gegriffenen Ton in bequemer Lage und erzeuge mit deiner Anschlagtechnik einen durchgehenden Strom.",
+            "Bleib bewusst unter dem Grenztempo, sodass jeder Anschlag gleich laut bleibt.",
+            "Halte den Strom über vier Takte und wechsle dann im Takt auf einen zweiten Ton, ohne abzureißen."
+          ],
+          "steigerung": "Eine kurze Zwei- oder Dreiton-Linie im Tremolo spielen und die Dauer verlängern.",
+          "selbstkontrolle": "Der Strom klingt dicht und gleichmäßig; Hand und Unterarm bleiben spürbar locker."
+        }
+      }
+    },
+    {
+      "id": "bass_ghostnotes",
+      "anzeigetitel": {
+        "de": "Ghost Notes & perkussives Spiel"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "fingerstyle",
+        "greifhand_daempfen"
+      ],
+      "spielziele": [
+        "definierter_anschlag",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Ghost Notes sind gedämpfte, tonlose Anschläge — die Greifhand liegt auf der Saite, ohne zu drücken, und der Anschlag erzeugt nur ein perkussives „Tuck“. Zwischen die eigentlichen Töne gesetzt, verwandeln sie eine statische Linie in einen Groove, der atmet.\n\nDie Kunst liegt im Kontrast: Echte Töne klar und voll, Ghost Notes deutlich leiser und komplett tonlos. Wenn die gedämpften Schläge halb mitklingen, wird die Linie matschig — hier zahlt sich deine Dämpfungsarbeit aus der Greifhand direkt aus.\n\nIm Metal setzen Ghost Notes Akzente zwischen den Kicks und füllen Lücken, ohne harmonisch etwas zu verändern. Sparsam eingesetzt geben sie auch harten, geraden Linien einen menschlichen Puls."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Tuck zwischen den Tönen",
+          "ziel": "Ghost Notes klar von vollen Tönen trennen und gezielt platzieren.",
+          "schritte": [
+            "Leg die Greifhand ohne Druck auf eine Saite und zupf — es soll nur ein tonloses „Tuck“ entstehen.",
+            "Spiel eine einfache Achtellinie und ersetze einzelne Töne durch Ghost Notes.",
+            "Achte darauf, dass volle Töne und Ghost Notes in Lautstärke und Klang klar getrennt bleiben."
+          ],
+          "steigerung": "Ghost Notes auf Sechzehntel-Zwischenpositionen setzen und den Groove zum Klick prüfen.",
+          "selbstkontrolle": "Die Ghost Notes sind tonlos und leiser; die Linie groovt, ohne zu verwaschen."
+        }
+      }
+    },
+    {
+      "id": "bass_synkopen",
+      "anzeigetitel": {
+        "de": "Synkopen & Off-Beat-Locks"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "lock_zur_bassdrum"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Moderne Metalcore- und Hardcore-Riffs leben von Synkopen: Akzente, die zwischen den Zählzeiten sitzen und genau deshalb ziehen. Für den Bass heißt das, nicht mehr nur auf die Zählzeiten zu spielen, sondern verschobene Kicks exakt mitzutreffen — das berühmte „Lock“ mit der Bassdrum auf Off-Beats.\n\nSynkopen sicher zu treffen ist vor allem Zählarbeit. Du zerlegst den Takt in Sechzehntel und weißt für jeden Akzent, auf welcher Unterteilung er liegt („2-und“, „3-e“). Was du benennen kannst, kannst du treffen; was du nur ungefähr fühlst, eiert.\n\nDie Pausen sind dabei so wichtig wie die Töne: Zwischen den synkopierten Schlägen muss echte Stille stehen, sonst verliert der Akzent seine Kante. Dämpfung und Timing arbeiten hier zusammen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Off-Beat-Akzente treffen",
+          "ziel": "Synkopierte Schläge exakt auf benannte Unterteilungen setzen.",
+          "schritte": [
+            "Zähl zum Klick laut Sechzehntel (1-e-und-e …) und klatsch zuerst nur die geplante Synkopen-Figur.",
+            "Spiel die Figur dann auf einem Ton und benenne für jeden Akzent seine Unterteilung.",
+            "Sorg für echte Stille zwischen den Schlägen, indem du sofort wieder abdämpfst."
+          ],
+          "steigerung": "Die Figur mit einer aufgenommenen Bassdrum-Spur oder einem programmierten Beat locken.",
+          "selbstkontrolle": "Jeder Akzent sitzt exakt auf seiner Unterteilung; zwischen den Schlägen ist es still."
+        }
+      }
+    },
+    {
+      "id": "bass_akkordspiel",
+      "anzeigetitel": {
+        "de": "Powerchords & Doppelgriffe am Bass"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "doom",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "grundton_folgen"
+      ],
+      "spielziele": [
+        "schwererer_ton"
+      ],
+      "erklaerteil": {
+        "de": "Auch der Bass kann Akkorde: Grundton plus Quinte oder die Oktave als Doppelgriff machen den Ton breiter und massiver — ein Werkzeug, das Doom-Bands für erdrückende Flächen nutzen und Hardcore-Bässe für aggressive Akzente.\n\nIn tiefen Lagen wird das schnell matschig, deshalb gilt: sparsam einsetzen, eher in mittleren Lagen greifen und dem Akkord Raum zum Klingen geben. Ein einzelner, breit klingender Powerchord an der richtigen Stelle wirkt mehr als eine ganze Linie davon.\n\nTechnisch zählt die Sauberkeit: Beide Saiten müssen gleichzeitig und gleich laut klingen, umliegende Saiten bleiben stumm. Mit Zerre verstärkt sich jeder Fehler — und jede gelungene Breite."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Breite Akzente setzen",
+          "ziel": "Powerchords und Oktaven am Bass sauber und wuchtig spielen.",
+          "schritte": [
+            "Greif in mittlerer Lage Grundton plus Quinte und schlag beide Saiten gleichzeitig an.",
+            "Lass den Klang voll ausstehen und prüf, ob beide Töne gleich laut sind und nichts mitschnarrt.",
+            "Setz den Akkord als Akzent in eine einfache Grundton-Linie — etwa auf die Eins jedes zweiten Takts."
+          ],
+          "steigerung": "Mit der Oktave als Alternative arbeiten und die Akzente auf synkopierte Positionen verschieben.",
+          "selbstkontrolle": "Der Akkord klingt breit und klar; die restliche Linie bleibt davon unberührt."
+        }
+      }
+    },
+    {
+      "id": "bass_slides_legato",
+      "anzeigetitel": {
+        "de": "Slides, Hammer-ons & Pull-offs"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_greifhand"
+      ],
+      "spielziele": [
+        "saubere_uebergaenge"
+      ],
+      "erklaerteil": {
+        "de": "Nicht jeder Ton braucht einen Anschlag. Beim Slide rutschst du mit gedrücktem Finger zur Zieltonhöhe, beim Hammer-on schlägt ein Finger den nächsten Ton auf die Saite, beim Pull-off zieht er ihn ab. Diese Legato-Techniken verbinden Töne zu fließenden Linien — und geben dem Bass Gesanglichkeit zwischen den harten Anschlägen.\n\nAm Bass verlangen sie mehr Fingerkraft als an der Gitarre, weil die Saiten dicker sind. Die Lösung ist nicht mehr Druck, sondern Präzision: Der hämmernde Finger trifft dicht am Bund, der abziehende Finger zupft die Saite leicht an, statt nur loszulassen.\n\nSlides sind zudem ein Ausdrucksmittel: Ein kurzer Rutsch in den Zielton macht einen Linienanfang lebendig, ein langer Slide über den Hals wird zum dramatischen Effekt. Dosiert eingesetzt heben sie eine Linie vom reinen Grundton-Pochen ab."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Töne verbinden statt anschlagen",
+          "ziel": "Slides, Hammer-ons und Pull-offs sauber und hörbar spielen.",
+          "schritte": [
+            "Zupf einen Ton und hämmere den zwei Bünde höheren Ton dazu — beide sollen gleich laut klingen.",
+            "Zieh den oberen Finger mit einem leichten Zupfer ab (Pull-off), sodass der untere Ton klar erklingt.",
+            "Verbinde zwei Töne mit einem Slide und lande exakt auf der Zieltonhöhe."
+          ],
+          "steigerung": "Kurze Linien bauen, die Anschläge und Legato mischen — etwa Slide in den Takt, Hammer-on als Verzierung.",
+          "selbstkontrolle": "Gehämmerte und gezogene Töne sind klar hörbar; Slides landen treffsicher auf dem Zielton."
+        }
+      }
+    },
+    {
+      "id": "bass_fills_uebergaenge",
+      "anzeigetitel": {
+        "de": "Fills & Übergänge in der Linie"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "einfache_basslinie",
+        "bass_slides_legato"
+      ],
+      "spielziele": [
+        "saubere_uebergaenge",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Ein Bass-Fill ist eine kurze Abweichung von der Linie — meist am Ende einer Phrase, um in den nächsten Teil überzuleiten. Gute Fills kündigen den Wechsel an, ohne das Fundament zu verlassen: Sie starten aus der Linie, laufen über wenige Töne und landen punktgenau auf der Eins des neuen Teils.\n\nDas Material dafür hast du schon: Durchgangstöne aus der Tonleiter, chromatische Annäherungen an den Zielton, Slides und Hammer-ons. Ein Fill aus drei Tönen, das sicher landet, schlägt jede virtuose Kaskade, die die Eins verfehlt.\n\nDenk vom Ziel her: Erst steht fest, auf welchem Ton der nächste Teil beginnt, dann baust du den kurzen Weg dorthin. So bleibt das Fill funktional — es dient dem Song, nicht der Show."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Vom Fill auf die Eins landen",
+          "ziel": "Kurze Übergänge bauen, die exakt auf dem Zielton des nächsten Teils landen.",
+          "schritte": [
+            "Spiel vier Takte einer einfachen Grundton-Linie und leg den Zielton des fünften Takts fest.",
+            "Bau im vierten Takt einen Übergang aus zwei, drei Tönen, der auf diesen Zielton zuläuft.",
+            "Spiel das Ganze zum Klick und prüf, ob die Landung exakt auf der Eins sitzt."
+          ],
+          "steigerung": "Chromatische Annäherung und Slides in den Übergang einbauen; das Fill rhythmisch variieren.",
+          "selbstkontrolle": "Die Linie bleibt stabil, das Fill kündigt den Wechsel an, und die Eins sitzt punktgenau."
+        }
+      }
+    },
+    {
+      "id": "bass_blast_begleitung",
+      "anzeigetitel": {
+        "de": "Blasts & hohe Tempi begleiten"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "bass_tremolo",
+        "lock_zur_bassdrum"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "praezises_tremolo"
+      ],
+      "erklaerteil": {
+        "de": "Wenn das Schlagzeug blastet, muss der Bass eine Entscheidung treffen: jede Kick mitspielen, auf einen dichten Tremolo-Strom wechseln oder bewusst auf halbe Zeit gehen und das Fundament breit halten. Alle drei sind legitim — entscheidend ist, dass es eine Entscheidung ist und kein Zufall.\n\nBei sehr hohen Tempi ist Mitspielen jeder einzelnen Kick oft weder machbar noch sinnvoll hörbar. Der durchgehende Strom (Tremolo oder schnelle Wechselschläge) liefert dieselbe Energie bei besserer Kontrolle; die Half-Time-Variante gibt dem Chaos einen Anker. Höre auf Aufnahmen deiner Lieblingsbands, wie unterschiedlich Bässe Blasts lösen.\n\nWas immer du wählst: Das Timing zur Bassdrum bleibt heilig. Auch ein Strom muss auf den Zählzeiten mit den Kicks verschmelzen, sonst reibt sich das Low-End und der Druck geht verloren."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei Strategien gegen den Blast",
+          "ziel": "Blast-Passagen mit bewusst gewählter Strategie stabil begleiten.",
+          "schritte": [
+            "Programmiere oder wähle einen schnellen Beat (oder nutze ein Metronom in hohem Tempo) als Blast-Ersatz.",
+            "Begleite ihn nacheinander mit durchgehendem Strom, mit Half-Time-Grundtönen und — wenn machbar — mit einzelnen Kicks.",
+            "Vergleich, welche Variante bei diesem Tempo stabil bleibt und am meisten Druck erzeugt."
+          ],
+          "steigerung": "Innerhalb einer Passage kontrolliert zwischen zwei Strategien wechseln, ohne das Timing zu verlieren.",
+          "selbstkontrolle": "Jede Variante läuft stabil im Timing; der Wechsel zwischen ihnen ist eine bewusste, saubere Entscheidung."
+        }
+      }
+    },
+    {
+      "id": "bass_hand_sync",
+      "anzeigetitel": {
+        "de": "Hand-Synchronisation bei Tempo"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "schnelles_fingerspiel"
+      ],
+      "spielziele": [
+        "riff_praezision",
+        "lockere_haende"
+      ],
+      "erklaerteil": {
+        "de": "Bei hohem Tempo entscheidet nicht die schnellste Hand, sondern die Synchronisation beider: Der Greif-Finger muss exakt in dem Moment sitzen, in dem der Anschlag kommt. Schon wenige Millisekunden Versatz machen den Ton stumpf, schnarrend oder halb tot — der häufigste Grund, warum schnelle Läufe „unsauber“ klingen, obwohl beide Hände einzeln schnell genug wären.\n\nSynchronisation übst du paradoxerweise langsam: In einem Tempo, in dem du den Kontaktmoment beider Hände bewusst spüren kannst, brennt sich das richtige Timing ein. Beim Beschleunigen bleibt dann das Muster erhalten.\n\nEin bewährter Test ist das Staccato-Spiel: jeder Ton kurz und deutlich, mit bewusstem Treffen beider Hände. Wird es schneller und die Töne verschwimmen, bist du über dem Tempo, in dem die Hände wirklich zusammen sind."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Kontaktmoment spüren",
+          "ziel": "Greif- und Anschlaghand bei steigendem Tempo exakt synchron halten.",
+          "schritte": [
+            "Spiel eine einfache Vier-Ton-Figur sehr langsam und spür bewusst, wie Greifen und Anschlag zusammenfallen.",
+            "Spiel dieselbe Figur staccato — jeder Ton kurz, deutlich und voll.",
+            "Erhöhe das Tempo nur so weit, wie jeder Ton klar definiert bleibt."
+          ],
+          "steigerung": "Die Figur über Saitenwechsel und Lagenwechsel ausdehnen; Aufnahmen machen und kritisch anhören.",
+          "selbstkontrolle": "Kein Ton klingt stumpf oder halb; auch bei Tempo bleibt jeder Anschlag voll und definiert."
+        }
+      }
+    },
+    {
+      "id": "bass_koerper_tempo",
+      "anzeigetitel": {
+        "de": "Belastung bei hohem Tempo"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_aufwaermen"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "lockere_haende"
+      ],
+      "erklaerteil": {
+        "de": "Drei-Finger-Zupfen, Downpicking-Ketten, Tremolo — die fortgeschrittenen Bass-Techniken sind Ausdauersport für Hände und Unterarme. Mit dem Tempo steigt die Belastung schneller, als es sich anfühlt: Sehnen und Sehnenscheiden quittieren Überlastung oft erst Stunden später.\n\nDas Prinzip bleibt dasselbe wie am Anfang, nur wichtiger: gründlich aufwärmen, Tempo und Dauer in kleinen Schritten steigern, Pausen fest einplanen und Lockerheit als oberste Kontrollinstanz behandeln. Neu dazu kommt die Dosierung über die Woche — nach einer intensiven Tempo-Session braucht dieselbe Muskulatur Erholung, bevor sie wieder ans Limit geht.\n\nSchmerz, Kribbeln, Taubheit oder ein Brennen, das nach der Pause wiederkommt, sind Warnsignale: Spielen unterbrechen, Belastung senken, und bei anhaltenden Beschwerden ärztlichen Rat suchen. Kein Riff ist eine Sehnenscheidenentzündung wert."
+      },
+      "reflexionsaufgabe": {
+        "de": "Plane deine nächste Übe-Woche auf Papier: Welche Sessions arbeiten am Tempo, welche an ruhigeren Themen, und wo liegen die Pausentage für Hände und Unterarme? Leg außerdem fest, bei welchen Signalen du eine Tempo-Session sofort abbrichst — bevor du in der Situation entscheiden musst."
+      }
+    }
+  ]
+}
