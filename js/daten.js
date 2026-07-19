@@ -22,6 +22,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.einsteiger-bass.json',
   'data/bausteine.einsteiger-schlagzeug.json',
   'data/bausteine.einsteiger-gesang.json',
+  'data/bausteine.einsteiger-theorie.json',
 ];
 
 export async function ladeDaten() {
