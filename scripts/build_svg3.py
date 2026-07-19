@@ -350,6 +350,101 @@ S["crust_bass_wand"] = [
     P(roughpath(12, 108, 72, 7, step=2.8, seed=67), 5),
 ]
 
+# ================= SOUND-&-GEAR-KAPITEL (ausruestung) =================
+# Kästen = Geräte/Kettenglieder · Linien = Signalweg · Rauigkeit = Zerre/Noise ·
+# Ticks/Balken = Pegel · Bögen = Raum.
+
+# Signalkette: drei Kettenglieder, seriell verbunden — vom Instrument zum Ton.
+S["signalkette_grundlagen"] = [
+    L(12, 60, 26, 60, 2.5),
+    RECT(26, 48, 20, 24, filled=False),
+    L(46, 60, 58, 60, 2.5),
+    RECT(58, 48, 20, 24, filled=False),
+    L(78, 60, 90, 60, 2.5),
+    RECT(90, 48, 20, 24, filled=True),
+]
+# Verzerrer-Typen: dieselbe Welle dreimal — clean, geclippt, zersägt.
+S["verzerrer_typen"] = [
+    P(wavepath(14, 106, 34, 8, 2.2, step=2.0), 2.2),
+    P("M14,62 L24,54 L34,54 L38,70 L48,70 L52,54 L62,54 L66,70 L76,70 L80,54 L90,54 L94,70 L106,70", 2.5),
+    P(roughpath(14, 106, 94, 8, step=2.4, seed=77), 3),
+]
+# Saiten & Tunings: vier Saiten wachsender Stärke — Tuning und Stärke gehören zusammen.
+S["saiten_tunings_standards"] = [
+    L(14, 36, 106, 36, 1.5),
+    L(14, 54, 106, 54, 2.5),
+    L(14, 72, 106, 72, 4),
+    L(14, 90, 106, 90, 6),
+]
+# Proberaum-Pegel: Schallkeil trifft auf den Schutzbalken — die Wellen dahinter
+# bleiben klein.
+S["proberaum_pegel"] = [
+    TRI([(14, 46), (14, 74), (52, 60)]),
+    ARC(52, 60, 14, -35, 35, 2.5),
+    ARC(52, 60, 22, -35, 35, 2),
+    L(84, 36, 84, 84, 6),
+    ARC(90, 60, 8, -30, 30, 2),
+]
+# Thrash-Attack: harte Zickzack-Kante über einem straffen Tick-Raster.
+S["sound_thrash_attack"] = [
+    P("M14,52 L30,32 L46,52 L62,32 L78,52 L94,32 L106,44", 3.5),
+    *[L(20 + i * 12, 72, 20 + i * 12, 88, 3.5) for i in range(7)],
+]
+# Death-Wand: massiver Block mit rau gesägter Oberkante.
+S["sound_death_wall"] = [
+    RECT(18, 56, 84, 36, filled=True),
+    P(roughpath(18, 102, 50, 6, step=2.6, seed=83), 3),
+]
+# Black-Frost: dünne, aufsteigende raue Linien — sirrende Fläche, offener Raum.
+S["sound_black_frost"] = [
+    P(roughpath(14, 96, 78, 4, step=3.0, seed=91, env=lambda t: 0.5 + 0.5 * t), 1.8),
+    P(roughpath(20, 102, 58, 4, step=3.0, seed=92, env=lambda t: 0.5 + 0.5 * t), 1.8),
+    P(roughpath(26, 108, 38, 4, step=3.0, seed=93, env=lambda t: 0.5 + 0.5 * t), 1.8),
+]
+# Core-tight: dichte Chug-Blöcke, dazwischen vom Gate erzwungene absolute Stille.
+S["sound_core_tight"] = [
+    RECT(14, 48, 18, 24, filled=True),
+    RECT(38, 48, 10, 24, filled=True),
+    L(56, 40, 56, 80, 2),
+    L(64, 40, 64, 80, 2),
+    RECT(72, 48, 18, 24, filled=True),
+    RECT(96, 48, 10, 24, filled=True),
+]
+# Pedalboard-Logik: Kettenglieder in Reihe, das letzte hängt im Loop-Bogen.
+S["pedalboard_logik"] = [
+    L(12, 66, 20, 66, 2),
+    RECT(20, 56, 16, 20, filled=False),
+    L(36, 66, 44, 66, 2),
+    RECT(44, 56, 16, 20, filled=False),
+    L(60, 66, 68, 66, 2),
+    RECT(68, 56, 16, 20, filled=True),
+    ARC(76, 44, 22, 20, 160, 2),
+    C(96, 40, 4, 2.2),
+]
+# Modeler & Reamping: ein Signal teilt sich auf zwei Wege — Amp (gefüllt) und
+# Modeler (Umriss), beide gültig.
+S["modeler_reamping"] = [
+    L(14, 60, 44, 60, 2.5),
+    C(44, 60, 4, fill=True),
+    P("M44,60 L66,40", 2.5),
+    P("M44,60 L66,80", 2.5),
+    RECT(66, 28, 26, 22, filled=True),
+    RECT(66, 70, 26, 22, filled=False),
+]
+# Noise-Management: raues Signal läuft durch die Kette und kommt sauber heraus.
+S["noise_management"] = [
+    P(roughpath(12, 52, 60, 9, step=2.6, seed=97), 2.5),
+    RECT(52, 44, 16, 32, filled=False),
+    L(68, 60, 108, 60, 3),
+]
+# Backline-Ausfallsicherheit: der Hauptweg läuft — darunter liegt der
+# gestrichelte Ersatzweg bereit.
+S["backline_ausfallsicherheit"] = [
+    L(12, 48, 108, 48, 4),
+    *[L(14 + i * 16, 78, 22 + i * 16, 78, 3) for i in range(6)],
+    C(108, 48, 4, fill=True),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -362,7 +457,11 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "grind_blast_uebergaenge", "grind_bass_verzahnung",
                 "genrekunde_extreme_familie", "sludge_erstes_riff", "pv_stopp_spiel",
                 "pv_vocals_ausbruch", "pv_gitarre_zustaende",
-                "crust_gitarre_saege", "crust_bass_wand"]
+                "crust_gitarre_saege", "crust_bass_wand",
+                "signalkette_grundlagen", "verzerrer_typen", "saiten_tunings_standards",
+                "proberaum_pegel", "sound_thrash_attack", "sound_death_wall",
+                "sound_black_frost", "sound_core_tight", "pedalboard_logik",
+                "modeler_reamping", "noise_management", "backline_ausfallsicherheit"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
