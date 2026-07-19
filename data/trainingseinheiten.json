@@ -770,6 +770,54 @@
           }
         ]
       }
+    },
+    {
+      "id": "theorie_gehoer_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Gehör & Theorie: Hören, Zählen, Zerlegen"
+      },
+      "beschreibung": {
+        "de": "Die instrumentenfreie Werkstatt: Intervall-Referenzen auffrischen, erweiterte Farben und metrische Kippmomente hören, Stimmführung bauen — und zum Ausklang ein Riff nach Gehör zerlegen. Nur Ohren, Hände und ein Abspielgerät nötig."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "intervalle_grundlagen",
+            "hinweis": {
+              "de": "Einhören: Oktave, Quinte und kleine Sekunde als Referenzen abrufen."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "erweiterte_harmonik",
+            "hinweis": {
+              "de": "Die Farben add9, sus4 und maj7 blind erkennen — Stimmung in einem Wort benennen."
+            }
+          },
+          {
+            "baustein": "metrische_modulation",
+            "hinweis": {
+              "de": "Die Triole zum neuen Puls kippen lassen — und zurück."
+            }
+          },
+          {
+            "baustein": "kontrapunkt_stimmfuehrung",
+            "hinweis": {
+              "de": "Zwei Linien, drei Zustände: gegen, parallel, unisono — hörbar gestalten."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "gehoer_transkription",
+            "hinweis": {
+              "de": "Zum Ausklang ein langsames, klares Riff durch den Trichter ziehen — Doom eignet sich."
+            }
+          }
+        ]
+      }
     }
   ]
 }
