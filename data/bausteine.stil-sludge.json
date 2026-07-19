@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-sludge",
+    "hinweis": "Genre-Achse Sludge: drei Bausteine, die zusammen mit Retags (Doom-Sustain/Fuzz, Crust-Sound, Halftime-China) den sludge-Pfad tragen — langsam wie Doom, wütend wie Hardcore. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json (dort ist der stil-Wert ergänzt)."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "sludge_riffing_dreck",
+      "anzeigetitel": { "de": "Sludge-Riffing: langsam & giftig" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["sludge"],
+      "voraussetzungen": ["doom_riffing", "hardcore_groove_bounce"],
+      "erklaerteil": {
+        "de": "Sludge nimmt das Doom-Tempo und tauscht die Erhabenheit gegen Wut: Die Riffs sind langsam, aber sie stehen nicht majestätisch im Raum — sie kriechen, kippen und beißen. Die Zutaten dafür kommen aus beiden Elternwelten: das Gewicht und die langen Töne aus dem Doom, die Attitüde, die Synkopen und der körperliche Groove aus dem Hardcore.\n\nKlanglich lebt Sludge-Riffing vom kontrollierten Dreck: angerissene Bendings, die bewusst nicht ganz sauber landen, dissonante Doppelgriffe, Noise-Anteile zwischen den Tönen — Saitengeräusch, angerissenes Feedback, das Kratzen des Plektrums. Was im klassischen Doom Makel wäre, ist hier Vokabular. Trotzdem gilt: Der Dreck sitzt AUF einem stabilen Zeitgerüst. Ein Sludge-Riff, das schlampig gemeint ist, aber schlampig gespielt wird, klingt nur schlampig.\n\nDie Referenz ist die NOLA-Schule und ihre Nachbarn: Riffs, die wie Hardcore-Riffs gebaut, aber auf halbe Geschwindigkeit gezogen und in Zerre getaucht sind."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Kriechen mit Biss",
+          "ziel": "Ein langsames Riff mit kontrolliertem Dreck spielen — wütend im Klang, präzise in der Zeit.",
+          "schritte": [
+            "Nimm ein simples Hardcore-artiges Riff (oder bau eines aus zwei Powerchords mit einer Synkope) und spiel es zuerst im Originaltempo, dann auf die Hälfte gezogen (um 60 BPM) zum Klick — gleiche Akzente, gleiche Pausen, nur gedehnt.",
+            "Gib dem gedehnten Riff Gewicht: satter Anschlag, volle Ausklänge, Palm Mutes nur als Kontrast. Achte darauf, dass die Synkopen auch in Zeitlupe als Akzente lesbar bleiben.",
+            "Füge den Dreck dosiert hinzu: ein angerissenes Bending, das bewusst leicht unter dem Zielton bleibt, ein dissonanter Doppelgriff auf dem schwersten Schlag, hörbares Rutschgeräusch zwischen zwei Lagen. Ein Element pro Durchlauf — nicht alle gleichzeitig.",
+            "Nimm zwei Versionen auf: einmal sauber, einmal mit Dreck — die Zeit muss in beiden identisch sitzen. Der Unterschied darf nur im Klang liegen, nie im Timing."
+          ],
+          "steigerung": "Lass das Riff am Phrasenende in kurzes Feedback oder offenes Saitenrauschen kippen und hol es auf der nächsten Eins wieder ein — der Noise wird Teil der Phrase.",
+          "selbstkontrolle": "Hör die Dreck-Version gegen den Klick ab: Sitzen alle Akzente noch exakt? Wenn der Dreck das Timing aufweicht, war es zu viel auf einmal — zurück zu einem Element."
+        }
+      }
+    },
+    {
+      "id": "sludge_drums_hinterm_beat",
+      "anzeigetitel": { "de": "Sludge-Drums: hinter dem Beat" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["sludge"],
+      "voraussetzungen": ["doom_feel", "halftime_china"],
+      "erklaerteil": {
+        "de": "Sludge-Drumming hat ein Geheimnis, das man hört, aber selten benennt: Der Backbeat sitzt bewusst spät. Dieses Spielen hinter dem Beat — die Snare eine Winzigkeit nach dem mathematischen Punkt — erzeugt das zähe, schleppende Gefühl, als würde der Song gegen Widerstand anspielen. Das ist etwas anderes als langsamer werden: Das Tempo bleibt konstant, nur die Platzierung einzelner Schläge verschiebt sich kontrolliert nach hinten.\n\nDas ist eine Präzisionsdisziplin: Wer einfach ungenau spielt, klingt nicht zäh, sondern wackelig. Die Kick hält meist die objektive Zeit (oft mit dem Bass verzahnt), während Snare und manchmal die Hi-Hat-Achtel das Schleppen tragen. Der Abstand ist winzig und konstant — und genau die Konstanz unterscheidet Stilmittel von Fehler.\n\nDazu kommt die Sludge-Dynamik: wuchtige Halftime-Grooves, China- und Crash-Flächen als Schmutzschicht, Fills wie Einstürze — wenige schwere Schläge, die eher fallen als laufen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Kontrolliert schleppen",
+          "ziel": "Einen Halftime-Groove mit konstant später Snare spielen — zäh, aber nicht wackelig.",
+          "schritte": [
+            "Spiel einen simplen Halftime-Groove (um 65 BPM) zum Klick mit mathematisch exakter Snare und nimm ihn auf — das ist die Referenz „auf dem Punkt“.",
+            "Verschieb NUR die Snare minimal nach hinten: Denk sie als „in den Schlag hineinfallen lassen“ statt treffen. Kick und Hi-Hat bleiben exakt. Nimm auch das auf.",
+            "Vergleich beide Aufnahmen: Version 2 muss zäher KLINGEN, aber genauso stabil wirken. Wackelt sie, war die Verschiebung ungleichmäßig — der Abstand muss bei jeder Snare derselbe sein.",
+            "Bau die Sludge-Schicht dazu: China oder Crash als Ride-Ersatz, ein Zwei-Schlag-Fill, das schwer fällt statt läuft. Das Schleppen der Snare bleibt dabei unangetastet."
+          ],
+          "steigerung": "Übe das Umschalten: vier Takte exakt auf dem Punkt, vier Takte geschleppt, ohne dass sich das Grundtempo ändert — wer beides gezielt setzen kann, besitzt das Stilmittel wirklich.",
+          "selbstkontrolle": "Leg die geschleppte Aufnahme übers Raster einer DAW oder hör sie gegen den Klick: Ist die Kick auf dem Punkt und die Snare konstant dahinter? Driftet das Gesamttempo, schleppt nicht die Snare — du wirst langsamer."
+        }
+      }
+    },
+    {
+      "id": "sludge_vocals_verzweiflung",
+      "anzeigetitel": { "de": "Sludge-Vocals: der raue Schrei" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["sludge"],
+      "voraussetzungen": ["false_cord_ansatz", "harsh_artikulation"],
+      "erklaerteil": {
+        "de": "Sludge-Vocals klingen nach offener Verzweiflung: ein hoher, rauer, gequält wirkender Schrei, der über den zähen Riffs steht — näher am Schreien als am geformten Growl, oft mit hörbarer Anstrengung als Ästhetik. Genau hier lauert die Falle: Das QUÄLENDE darf im Klang liegen, niemals in der Kehle. Ein Stil, der nach Schmerz klingt, muss schmerzfrei produziert werden — alles andere ist keine Kunst, sondern Verschleiß.\n\nDie gesunde Grundlage ist dieselbe wie bei allen harschen Stilen: False-Cord-Verzerrung auf stabiler Stütze, offener Rachen, die Höhe über Kopfresonanz und Luftführung statt über Druck. Die sludge-typische Färbung — hell, roh, klagend — entsteht über Vokalfarben (offene, helle Vokale), sprechnahe Artikulation und dosierte Rauheit, nicht über tatsächliches Pressen.\n\nGesundheitsrahmen strikt: Dieser Stil verführt wie kein zweiter zum ehrlichen Schreien. Leise und kurz aufbauen, nach jeder Session die Sprechstimme prüfen, bei Kratzen oder Engegefühl sofort stoppen, Aufbau mit einer erfahrenen Lehrperson — und anhaltende Heiserkeit gehört in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Klingt gequält, bleibt frei",
+          "ziel": "Den hohen, rauen Sludge-Schrei auf gesunder Basis anlegen — Anstrengung als Klangfarbe, nicht als Zustand.",
+          "schritte": [
+            "Wärm die Stimme gründlich auf. Ruf eine kurze Phrase zuerst clean und hell in bequemer höherer Lage — wie ein dringlicher Klageruf, aus der Stütze, völlig mühelos.",
+            "Gib dem Ruf einen Hauch False-Cord-Rauheit bei niedriger Lautstärke — ein raues, helles Flüster-Schreien. Such die klagende Färbung über offene Vokale (a/ä), nicht über mehr Druck.",
+            "Leg die Phrase über ein sehr langsames Riff (Aufnahme oder Loop, um 60 BPM): lange Silben, bewusste Atemstellen, viel Raum zwischen den Phrasen — Sludge-Vocals müssen die Dehnung aushalten, ohne zuzudrücken.",
+            "Mach nach jeder kurzen Einheit den Sprechtest: ein normaler Satz in Alltagsstimme. Klingt er belegt oder rau, war es zu viel — Session beenden, beim nächsten Mal leiser und kürzer."
+          ],
+          "steigerung": "Arbeite die Verzweiflungs-Dynamik heraus: dieselbe Phrase einmal als erschöpftes, leises Raunen und einmal als voller Klageschrei — beide Male aus derselben freien Grundlage, nur mit mehr Luft und Raum, nie mit mehr Hals.",
+          "selbstkontrolle": "Auf der Aufnahme: Klingt der Schrei gequält, während sich das Singen frei anfühlt? Genau diese Lücke ist das Ziel. Fühlt sich die Kehle mit an, ist die Reihenfolge verrutscht — zurück zu Schritt 1, leiser."
+        }
+      }
+    }
+  ]
+}
