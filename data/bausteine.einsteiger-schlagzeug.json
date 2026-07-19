@@ -347,7 +347,8 @@
       ],
       "typ": "micro",
       "stil": [
-        "hardcore"
+        "hardcore",
+        "crust"
       ],
       "voraussetzungen": [
         "grundbeat"
@@ -386,7 +387,8 @@
       "typ": "micro",
       "stil": [
         "death_metal",
-        "black_metal"
+        "black_metal",
+        "grindcore"
       ],
       "voraussetzungen": [
         "koordination",

@@ -818,6 +818,102 @@
           }
         ]
       }
+    },
+    {
+      "id": "doom_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Doom: Schwere gemeinsam bauen"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für alle Instrumente: Erst wird das gemeinsame Zeitgefühl im Schlepptempo verankert, dann arbeitet jede Person an ihrer Doom-Disziplin — ausklingende Töne, gedehnte Zeit, verzerrtes Fundament — und zum Schluss schärft die Harmonik das Ohr für die Sprache der Schwere."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "doom_band_zeitgefuehl",
+            "hinweis": {
+              "de": "Als Einstieg gemeinsam (oder mit Aufnahme) das 55-BPM-Raster verankern — alles Weitere der Session lebt von diesem geteilten Puls."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "doom_sustain_feedback",
+            "hinweis": {
+              "de": "Gitarre: Jeden langen Ton bewusst gestalten. Feedback nur, wenn Lautstärke und Gehörschutz es hergeben."
+            }
+          },
+          {
+            "baustein": "doom_drums_zeitdehnung",
+            "hinweis": {
+              "de": "Schlagzeug: Klick schrittweise ausdünnen — das stille Netz aus der Erwärmung trägt jetzt allein."
+            }
+          },
+          {
+            "baustein": "doom_bass_fuzz",
+            "hinweis": {
+              "de": "Bass: Die Zerre so weit zurücknehmen, dass Attack und Tonhöhe lesbar bleiben — im Zweifel entscheidet die Aufnahme, nicht das Gefühl."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_harmonik",
+            "hinweis": {
+              "de": "Zum Abschluss die Ohren: das Pendel und der Tritonus in Zeitlupe — wer mag, baut die Miniatur aus drei Tönen direkt mit den Sounds der Session."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "hardcore_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Hardcore: Bounce, Drive und der gemeinsame Ruf"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für den Hardcore-Kern: Der D-Beat bringt den Motor auf Temperatur, dann bauen Gitarre, Bass und Schlagzeug den Stomp mit seinen Kanten — und zum Schluss kommt die Gemeinschaftsdisziplin: Gang-Shouts, präzise und stimmgesund."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "d_beat",
+            "hinweis": {
+              "de": "In bequemem Tempo einlaufen — der Beat soll federn, nicht kämpfen. Wer nicht trommelt, klatscht das Pattern mit."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "hardcore_groove_bounce",
+            "hinweis": {
+              "de": "Gitarre: Die Pausen sind das Riff. Im Stehen spielen — wenn der Körper nicht mitgeht, weiter vereinfachen."
+            }
+          },
+          {
+            "baustein": "hardcore_bass_motor",
+            "hinweis": {
+              "de": "Bass: Zwei Minuten Achtel mit konstantem Attack — die Aufnahme gegen den Klick ist der ehrliche Prüfstein."
+            }
+          },
+          {
+            "baustein": "hardcore_drums_energie",
+            "hinweis": {
+              "de": "Schlagzeug: Die Wechselkanten schnell/Stomp zehnmal am Stück — Energie hoch, Viertel unverrückbar."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "hardcore_gangshouts",
+            "hinweis": {
+              "de": "Zum Abschluss alle zusammen: kurze Parolen, exakt auf den Schlag, aus der Stütze — leise beginnen, bei Kratzen sofort stoppen."
+            }
+          }
+        ]
+      }
     }
   ]
 }

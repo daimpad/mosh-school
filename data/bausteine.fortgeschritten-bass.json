@@ -59,7 +59,8 @@
       "typ": "micro",
       "stil": [
         "thrash",
-        "hardcore"
+        "hardcore",
+        "crust"
       ],
       "voraussetzungen": [
         "plektrum_technik"
@@ -365,7 +366,8 @@
       "typ": "micro",
       "stil": [
         "death_metal",
-        "black_metal"
+        "black_metal",
+        "grindcore"
       ],
       "voraussetzungen": [
         "bass_tremolo",
