@@ -454,6 +454,80 @@
           "selbstkontrolle": "Nimm die Kette auf und bewerte nur die Schnitte: Klingt zwischen letztem A-Schlag und erstem B-Akkord wirklich nichts nach? Steht das B-Tempo sofort, wenn du es mit dem Metronom nachmisst — oder erst nach einem Takt?"
         }
       }
+    },
+    {
+      "id": "crust_gitarre_saege",
+      "anzeigetitel": {
+        "de": "Crust-Gitarre: die Säge führen"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "downpicking",
+        "crust_sound_dreck"
+      ],
+      "erklaerteil": {
+        "de": "Die Crust-Gitarre ist ein Ausdauerinstrument: simple Powerchord-Folgen, überwiegend heruntergepickt, unter einer sägenden Zerre — und das über ganze Songs ohne Verschnaufpause. Die Kunst liegt nicht in den Griffen, sondern in der rechten Hand: Der Anschlag muss über Minuten gleich hart, gleich lang und exakt mit dem D-Beat verzahnt bleiben. Eine müde werdende Anschlagshand hört man im Crust sofort, weil nichts sie versteckt.\n\nZwei Dinge halten die Säge im Schnitt: Erstens die Ökonomie — Downpicking aus einem lockeren Handgelenk mit kleiner Bewegung, nicht aus dem Unterarm gestemmt; wo das Tempo dauerhaft über der eigenen Downpicking-Grenze liegt, ist strikter Wechselschlag die ehrlichere Wahl, solange die Akzente weiter nach unten klingen. Zweitens die Dämpfungsdisziplin: Unter der breiten Zerre wachsen alle Nebengeräusche mit — die nicht gespielten Saiten brauchen ständige Kontrolle, sonst sägt es nicht, es rauscht.\n\nUnd wie beim D-Beat-Dauerlauf gilt: Belastung steigern statt erzwingen, bei Ziehen oder Brennen im Unterarm pausieren — und bei wiederkehrenden Beschwerden ärztlich abklären lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der lange Schnitt",
+          "ziel": "Eine simple Crust-Riff-Folge über Minuten mit konstantem Anschlag und sauberer Dämpfung halten.",
+          "schritte": [
+            "Bau eine Zwei-Akkord-Folge (Powerchords, etwa im D-Beat-Tempo um 160 BPM) und spiel sie zwei Minuten am Stück heruntergepickt zum Klick. Fokus: kleine Bewegung, lockeres Handgelenk, Schultern unten.",
+            "Nimm die zwei Minuten auf und vergleich Anfang und Ende wie beim D-Beat-Dauerlauf: Ist der letzte Takt genauso hart und pünktlich wie der erste — oder wird der Anschlag flacher und eilig?",
+            "Kontrollier die Dämpfung unter Zerre: Stopp mitten im Lauf für einen Schlag alle Saiten ab — es muss SOFORT still sein. Wenn es nachrauscht, arbeitet die Dämpfung nicht mit; bau diesen Stopp alle acht Takte ein, bis Stille auf Kommando sitzt.",
+            "Verzahn dich mit dem Beat: Spiel die Folge über einen D-Beat-Loop (oder mit Schlagzeug) und akzentuier exakt die Snare-Schläge mit. Gitarre und Beat müssen wie ein Instrument klingen."
+          ],
+          "steigerung": "Verlängere auf drei, vier Minuten im selben Tempo, bevor du schneller wirst — und markier wie beim Dauerlauf die Stellen, an denen du unbewusst Kraft aufbaust, um genau dort zu lockern.",
+          "selbstkontrolle": "Auf der Aufnahme: Bleiben alle Anschläge über die volle Dauer gleich laut? Ist zwischen den Riffs echte Stille statt Rauschteppich? Brennende Unterarme heißen: Bewegung zu groß oder zu verkrampft — kürzer üben, lockerer spielen."
+        }
+      }
+    },
+    {
+      "id": "crust_bass_wand",
+      "anzeigetitel": {
+        "de": "Crust-Bass: die zweite Säge"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "bass_downpicking",
+        "crust_sound_dreck"
+      ],
+      "erklaerteil": {
+        "de": "Im Crust ist der Bass keine Begleitung, sondern die zweite Säge: oft genauso verzerrt wie die Gitarre, oft mit Plektrum gespielt, und im klassischen Zwei-Sägen-Sound trägt er die halbe Wand. Das unterscheidet die Rolle von fast allen anderen Genres — der Crust-Bass darf breit, rau und präsent sein, ohne sich zu entschuldigen.\n\nGenau deshalb braucht er Disziplin an zwei Stellen. Erstens die Rollenabsprache aus dem Sound-Baustein, praktisch angewandt: Wenn beide Saiteninstrumente verzerrt dieselben Achtel spielen, entscheidet die Staffelung (wer hält das Tief, wer die Mitten-Kante), ob eine Wand entsteht oder Brei. Zweitens das Timing: Zwei verzerrte Sägen, die nicht exakt übereinanderliegen, klingen doppelt schlampig — der Bass verzahnt sich mit der Kick, und die Gitarre lehnt sich an beide.\n\nUnd wenn die Gitarre ausschert — Feedback, ein kurzes Lead, ein ausgelassener Takt — hält der Bass die Säge allein am Laufen: Diese Momente tragen im Crust die ganze Band."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Sägen, eine Wand",
+          "ziel": "Die verzerrte Bass-Linie exakt mit Beat und Gitarre verzahnen — Wand statt Brei.",
+          "schritte": [
+            "Spiel eine treibende Achtel-Linie (D-Beat-Tempo, um 160 BPM) mit deiner Zerre zwei Minuten zum Klick. Prüf auf der Aufnahme zuerst die eigene Konstanz: gleicher Attack, stabile Zeit, kein Vorlaufen.",
+            "Leg die Linie über einen D-Beat-Loop und verzahn dich mit der Kick: Die Bass-Noten auf Kick-Schlägen bekommen den Akzent, der Rest bleibt gleichmäßig — Bass und Kick sollen wie ein Schlag klingen.",
+            "Spiel dieselbe Linie zu einer verzerrten Gitarren-Aufnahme (oder mit Gitarrist): Hör auf kleinen Lautsprechern ab, ob zwei unterscheidbare Sägen klingen oder eine Masse. Wenn Masse: Zerre am Bass etwas zurück oder Rollen staffeln — nicht lauter drehen.",
+            "Übe den Alleinträger-Moment: vier Takte mit Gitarre, vier Takte, in denen die Gitarre schweigt (Aufnahme stummschalten). Deine Säge muss allein genauso treiben — gleiche Zeit, gleicher Druck."
+          ],
+          "steigerung": "Wechsle innerhalb der Linie zwischen exakter Gitarren-Doppelung und einer eigenen Figur (Oktave, ein Durchgang zum nächsten Grundton) — die Wand darf sich bewegen, solange die Verzahnung mit der Kick steht.",
+          "selbstkontrolle": "Auf der Aufnahme mit allen Instrumenten: Kannst du den Bass als eigene Kante hören UND das Riff der Gitarre noch mitsingen? Im Alleinträger-Teil: Bleibt das Tempo exakt, oder sackt es, sobald die Gitarre fehlt?"
+        }
+      }
     }
   ]
 }
