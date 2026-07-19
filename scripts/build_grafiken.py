@@ -3,9 +3,12 @@
 """Bündelt die abstrakten Baustein-Grafiken nach data/grafiken.json.
 
 Quelle der Wahrheit sind die deterministischen Generatoren build_svg.py
-(Tranche 1: Einsteiger, 64) und build_svg2.py (Tranche 2: Fortgeschritten/
-Experte + Theorie, 108) — Motiv-Korrekturen dort vornehmen und neu
-generieren, nie SVGs oder das Bundle von Hand editieren.
+(Tranche 1: Einsteiger, 64), build_svg2.py (Tranche 2: Fortgeschritten/
+Experte + Theorie, 108) und build_svg3.py (Tranche 3: Doom-Vertiefung +
+Fehlerbild-Grafiken, komponiert aus Basis-Motiv und Riss) — Motiv-
+Korrekturen dort vornehmen und neu generieren, nie SVGs oder das Bundle
+von Hand editieren. Tranche 3 liest die Ausgaben von 1/2 und muss zuletzt
+laufen.
 
     python3 scripts/build_grafiken.py
 
@@ -42,6 +45,7 @@ def main():
         shutil.rmtree(OUT)
     runpy.run_path(os.path.join(HERE, 'build_svg.py'))
     runpy.run_path(os.path.join(HERE, 'build_svg2.py'))
+    runpy.run_path(os.path.join(HERE, 'build_svg3.py'))
 
     grafiken = {}
     for name in sorted(os.listdir(OUT)):
@@ -56,14 +60,18 @@ def main():
         f.write('\n')
 
     pool = pool_ids()
+    with open(os.path.join(ROOT, 'data/fehlerbilder.json'), encoding='utf-8') as f:
+        fb_ids = {fb['id'] for fb in json.load(f)['fehlerbild_bausteine']}
     ohne_grafik = sorted(pool - set(grafiken))
-    vorproduziert = sorted(set(grafiken) - pool)
+    fb_ohne_grafik = sorted(fb_ids - set(grafiken))
+    vorproduziert = sorted(set(grafiken) - pool - fb_ids)
     kb = os.path.getsize(ziel) / 1024
     print(f'data/grafiken.json: {len(grafiken)} Grafiken ({kb:.0f} KB)')
     print(f'  Pool: {len(pool)} Bausteine, davon ohne Grafik: {ohne_grafik or "keine"}')
+    print(f'  Fehlerbilder: {len(fb_ids)}, davon ohne Grafik: {fb_ohne_grafik or "keine"}')
     if vorproduziert:
         print(f'  vorproduziert (noch kein Baustein): {", ".join(vorproduziert)}')
-    if ohne_grafik:
+    if ohne_grafik or fb_ohne_grafik:
         raise SystemExit(1)
 
 

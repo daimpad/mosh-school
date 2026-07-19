@@ -32,6 +32,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.einsteiger-theorie.json',
   'data/bausteine.fortgeschritten-theorie.json',
   'data/bausteine.experte-theorie.json',
+  'data/bausteine.stil-doom.json',
 ];
 
 export async function ladeDaten() {
