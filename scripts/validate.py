@@ -168,6 +168,45 @@ def main():
             for treffer in UMLAUT_VERDACHT.finditer(txt):
                 umlaut.append(f'{eid}: ASCII-Umlaut-Verdacht "{treffer.group(0)}"')
 
+    # Delta-Bausteine (Transfer-Layer, Spez. 4.2/5): Ersetzen bei passender
+    # Herkunft NUR den Erklaerteil des Basisbausteins. Spiegelt pruefeDaten:
+    # Basis existiert, Herkunft im Vokabular + Label, kein eigener Uebungsteil,
+    # Buendelungs-Verweise aufloesbar, keine doppelte Ersetzung je Basis::Herkunft.
+    # Zusaetzlich: der Basisbaustein listet die Herkunft in transfer_herkunft
+    # (sonst fehlt der sichtbare Chip in der Baustein-Ansicht).
+    deltas = [d for fn in dateien for d in (lade(fn).get('delta_bausteine') or [])]
+    herkunft_labels = lade('data/labels/de.json').get('vokabeln', {}).get('transfer_herkunft') or {}
+    delta_ids = {d.get('id') for d in deltas}
+    delta_schluessel = set()
+    for dl in deltas:
+        did = dl.get('id') or '<ohne id>'
+        basis = von_id_pool.get(dl.get('basis_baustein'))
+        if basis is None:
+            fehler.append(f'{did}: Basisbaustein "{dl.get("basis_baustein")}" existiert nicht')
+        herkunft = dl.get('ersetzt_bei_herkunft')
+        if not gueltig(voka.get('transfer_herkunft'), herkunft):
+            fehler.append(f'{did}: unbekannte Herkunft "{herkunft}"')
+        if herkunft not in herkunft_labels:
+            fehler.append(f'{did}: Herkunft "{herkunft}" ohne Label (vokabeln.transfer_herkunft)')
+        if dl.get('eigener_uebungsteil') or dl.get('uebungsteil'):
+            fehler.append(f'{did}: Delta mit eigenem Uebungsteil verletzt die Delta-Uebungsregel (Spez. 5)')
+        if not ((dl.get('erklaerteil') or {}).get('de') or '').strip():
+            fehler.append(f'{did}: erklaerteil.de fehlt oder ist leer')
+        schluessel = f'{dl.get("basis_baustein")}::{herkunft}'
+        if schluessel in delta_schluessel:
+            fehler.append(f'{did}: doppelte Ersetzung fuer {schluessel}')
+        delta_schluessel.add(schluessel)
+        for verweis in dl.get('delta_buendelung') or []:
+            if verweis not in delta_ids:
+                fehler.append(f'{did}: Buendelungs-Verweis "{verweis}" existiert nicht')
+        if basis is not None and herkunft not in (basis.get('transfer_herkunft') or []):
+            warnung.append(f'{did}: Basis "{basis["id"]}" listet Herkunft {herkunft} nicht in transfer_herkunft (Chip fehlt)')
+        for txt in sichtbare_texte(dl):
+            for treffer in UMLAUT_VERDACHT.finditer(txt):
+                umlaut.append(f'{did}: ASCII-Umlaut-Verdacht "{treffer.group(0)}"')
+    if deltas:
+        print(f'  Deltas: {len(deltas)} ueber {len({d.get("ersetzt_bei_herkunft") for d in deltas})} Herkuenfte')
+
     # Fehlerbilder (Trainer-Layer, Spez. 5): eigene Entitaeten mit Relation zum
     # Basisbaustein, drei Erklaerfelder (symptom/ursache/korrektur), Trainer-Stufe,
     # kein eigener Uebungsteil. Spiegelt pruefeDaten (js/daten.js).

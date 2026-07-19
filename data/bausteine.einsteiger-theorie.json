@@ -5,7 +5,32 @@
     "domaene": "theorie",
     "hinweis": "Einsteiger-Theorie: instrumentenunabhängiges Grundwissen für Metal (Intervalle, Skalen-Farben, Rhythmus, Tempo, Songbau). Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
   },
-  "delta_bausteine": [],
+  "delta_bausteine": [
+    {
+      "id": "delta_klv_intervalle",
+      "basis_baustein": "intervalle_grundlagen",
+      "ersetzt_bei_herkunft": "KLV",
+      "erklaerteil": {
+        "de": "Vom Klavier kennst du Intervalle als sichtbare Abstände: eine Quinte sind sieben Halbtöne, auf der Tastatur direkt ablesbar. Dieses Wissen trägt komplett — was Metal dazulegt, ist eine andere Gewichtung: Hier zählen vor allem drei Klangcharaktere. Die Oktave („derselbe Ton, nur höher“), die Quinte als stabiles Kraftintervall (der Powerchord besteht nur aus ihr) und die kleine Sekunde als maximale Reibung — das Gründungsintervall von Black Metal und Doom.\n\nDie Umstellung für dich ist der Weg vom Auge zum Ohr: Auf der Tastatur SIEHST du Intervalle, im Bandkontext musst du sie HÖREN — im verzerrten Riff, ohne Tasten vor dir. Nutze dein Klavier als Brücke: Spiel die drei Kernintervalle bewusst an, sing sie nach, und such sie dann in Riffs wieder. Dein Vorsprung: Du musst nichts Neues verstehen, nur Vertrautes in eine neue Klangwelt übersetzen.\n\nAls Anker helfen Referenzriffs — die Quinte ist jeder Powerchord, die kleine Sekunde jede böse Halbton-Reibung über dem Grundton."
+      }
+    },
+    {
+      "id": "delta_klv_taktarten",
+      "basis_baustein": "taktarten_unterteilungen",
+      "ersetzt_bei_herkunft": "KLV",
+      "erklaerteil": {
+        "de": "Notenwerte und Taktarten kennst du aus dem Klavierunterricht — Viertel, Achtel, Sechzehntel, Triolen sind für dich Lesestoff, kein Neuland. Was Metal verlangt, ist eine andere Ebene: Die Unterteilungen müssen bei hohem Tempo KÖRPERLICH abrufbar sein, nicht nur lesbar. Ein Blastbeat bei 220 BPM fragt nicht, ob du Sechzehntel notieren kannst — er fragt, ob dein Puls stabil bleibt, während sich die Dichte verdoppelt.\n\nDie typische Klavier-Falle ist dabei dieselbe wie überall: Beim Wechsel von Achteln zu Triolen zieht das Grundtempo mit, weil das Zählen an den Tönen hängt statt am Puls. Metal trainiert das mit Silbensprache und Körper-Puls (Fuß hält die Viertel, Stimme spricht die Unterteilung) — Werkzeuge, die dir mit deiner Lese-Grundlage schnell zufliegen.\n\nDein Vorsprung: Du weißt schon, WAS passiert. Der Baustein übt, es bei Metal-Tempi zu FÜHLEN — vom Blatt in den Körper."
+      }
+    },
+    {
+      "id": "delta_drm_taktarten",
+      "basis_baustein": "taktarten_unterteilungen",
+      "ersetzt_bei_herkunft": "DRM",
+      "erklaerteil": {
+        "de": "Als Schlagzeuger bist du hier im Heimspiel: Unterteilungen sind dein Handwerk, und den Unterschied zwischen Achteln, Sechzehnteln und Triolen hast du in den Händen, nicht nur im Kopf. Dieser Baustein ist für dich weniger Lernstoff als Übersetzungsarbeit — die Frage ist nicht, ob du Unterteilungen fühlst, sondern ob du sie auch OHNE dein Instrument abrufen und benennen kannst: beim Riff-Schreiben, im Gespräch mit der Band, beim Hören.\n\nZwei Dinge lohnen sich trotzdem: Erstens die Vokabeln — wer einem Gitarristen erklären kann, dass sein Galopp ein Achtel-plus-zwei-Sechzehntel-Muster ist, spart Proben-Zeit. Zweitens die Gegenprobe: Sing oder klopf die Unterteilungswechsel auf dem Tisch, während der Fuß die Viertel hält — ganz ohne Set. Wenn das so stabil ist wie hinter den Drums, gehört dir der Baustein.\n\nNutz deinen Vorsprung als Anker für die Band: Du bist die Referenz, an der sich alle Unterteilungen ausrichten."
+      }
+    }
+  ],
   "bausteine": [
     {
       "id": "intervalle_grundlagen",
@@ -34,7 +59,10 @@
           "steigerung": "Lass dir die drei Intervalle in zufälliger Reihenfolge vorspielen (App oder eine zweite Person) und benenne sie nur nach Gehör.",
           "selbstkontrolle": "Du erkennst die drei Intervalle zuverlässig, ohne hinzusehen."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "KLV"
+      ]
     },
     {
       "id": "powerchord_theorie",
@@ -150,7 +178,11 @@
           "steigerung": "Klatsch das Galopp-Muster (Achtel + zwei Sechzehntel) über mehrere Takte gleichmäßig.",
           "selbstkontrolle": "Du wechselst zwischen den Unterteilungen, ohne aus dem Puls zu fallen."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "KLV",
+        "DRM"
+      ]
     },
     {
       "id": "tempo_genres",

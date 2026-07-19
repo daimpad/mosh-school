@@ -1052,6 +1052,54 @@
           }
         ]
       }
+    },
+    {
+      "id": "genre_schnupper",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Vier Genres in einer Session: D-Beat, Sludge, Stopps, Doom"
+      },
+      "beschreibung": {
+        "de": "Die Schnupper-Werkstatt für die Genre-Familie: Nach dem Einlaufen probierst du drei sehr unterschiedliche Spielgefühle — den treibenden D-Beat, das schwere Sludge-Riff und das präzise Stopp-Spiel — und lässt die Session im Doom-Tempo ausklingen. Instrumente lassen sich stationsweise tauschen; nimm, was da ist."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Locker einlaufen — der Grundbeat ist die Basis, auf der gleich alles aufbaut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "d_beat",
+            "hinweis": {
+              "de": "Das Tempo-Gefühl der schnellen Linie: treibend, aber nie hetzend."
+            }
+          },
+          {
+            "baustein": "sludge_erstes_riff",
+            "hinweis": {
+              "de": "Der Gegenpol: zwei Akkorde, volles Gewicht — langsam sauber ist schwerer als schnell schlampig."
+            }
+          },
+          {
+            "baustein": "pv_stopp_spiel",
+            "hinweis": {
+              "de": "Präzision als Spiel: letzter Schlag, gezählte Stille, entschlossener Wiedereinstieg."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_riffing",
+            "hinweis": {
+              "de": "Im Schlepptempo ausklingen — lange Töne, viel Raum, Puls ruhig werden lassen."
+            }
+          }
+        ]
+      }
     }
   ]
 }
