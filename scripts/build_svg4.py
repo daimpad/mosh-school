@@ -9,6 +9,7 @@ bleiben textfrei (i18n-neutral) — die Legende liefert die figcaption aus
 labels/de.json (Abschnitt lehrgrafiken). Konventionen der Beat-Raster:
 oberste Zeile Hi-Hat (x-Kreuze), Mitte Snare (Hohlkreise), unten Kick
 (gefüllte Kreise); Viertel als hohe, Achtel als kurze Rasterstriche."""
+import math
 import os
 import xml.etree.ElementTree as ET
 
@@ -36,6 +37,16 @@ def X(cx, cy, r=4, w=2):
 def TRI(pts):
     p = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
     return f'<polygon points="{p}" fill="currentColor" stroke="none"/>'
+
+def P(d, w=2):
+    return f'<path d="{d}" stroke-width="{w}"/>'
+
+def ARC(cx, cy, r, a0, a1, w=2):
+    x0 = cx + r * math.cos(math.radians(a0)); y0 = cy - r * math.sin(math.radians(a0))
+    x1 = cx + r * math.cos(math.radians(a1)); y1 = cy - r * math.sin(math.radians(a1))
+    large = 1 if abs(a1 - a0) > 180 else 0
+    sweep = 0 if a1 > a0 else 1
+    return f'<path d="M{x0:.1f},{y0:.1f} A{r:.1f},{r:.1f} 0 {large} {sweep} {x1:.1f},{y1:.1f}" stroke-width="{w}"/>'
 
 def RECT(x, y, w_, h, filled=True, rx=2):
     if filled:
@@ -153,9 +164,157 @@ S["pv_stopp_spiel"] = (
     + [C(spalte(6), 64, 8, fill=True)]
 )
 
+# ---------- Halbton-Lineal (Theorie: Intervalle, Skalen) ----------
+RX0, RX1, RY = 24, 228, 66
+def hpos(i, n=12):
+    return RX0 + (RX1 - RX0) * i / n
+def lineal(n=12, markante=(0, 12)):
+    teile = [L(RX0, RY, RX1, RY, 2)]
+    for i in range(n + 1):
+        x = hpos(i, n)
+        h = 13 if i in markante else 6
+        teile.append(L(x, RY, x, RY - h, 2 if i in markante else 1))
+    return teile
+def grad(i, r=6, fill=False, n=12):
+    return C(hpos(i, n), RY + 16, r, 2.5, fill=fill)
+
+# Intervalle: Halbton-Lineal, Grundton (0) und Oktave (12) gefüllt, Quinte (7)
+# als Ring, kleine Sekunde (1) als kleiner Ring dicht am Grundton.
+S["intervalle_grundlagen"] = (
+    lineal(markante=(0, 7, 12))
+    + [grad(0, 7, fill=True), grad(12, 7, fill=True), grad(7, 6), grad(1, 4)]
+    + [ARC(hpos(3.5), RY - 6, hpos(7) - hpos(0), 200, 340, 1.5)]
+)
+# Powerchord-Theorie: Grundton + Quinte + Oktave gefüllt, die Terz (4) fehlt
+# bewusst — mit x markiert.
+S["powerchord_theorie"] = (
+    lineal(markante=(0, 7, 12))
+    + [grad(0, 7, fill=True), grad(7, 7, fill=True), grad(12, 7, fill=True)]
+    + [X(hpos(4), RY + 16, 5)]
+)
+# Moll vs. Phrygisch: Grundton und die tiefe zweite Stufe (1) direkt daneben —
+# der eine Halbton, der Phrygisch dunkel macht.
+S["moll_phrygisch"] = (
+    lineal(markante=(0, 1, 12))
+    + [grad(0, 7, fill=True), grad(1, 6, fill=True)]
+    + [L(hpos(0), RY + 30, hpos(1), RY + 30, 3)]
+    + [grad(i, 4) for i in (3, 5, 7, 8, 10)]
+)
+# Tritonus: genau zwischen Quarte (5) und Quinte (7) — drei Ganztöne über dem
+# Grundton, das instabile Intervall.
+S["tritonus_dissonanz"] = (
+    lineal(markante=(0, 6, 12))
+    + [grad(0, 7, fill=True), grad(6, 7, fill=True)]
+    + [grad(5, 4), grad(7, 4)]
+    + [ARC(hpos(3), RY - 6, hpos(6) - hpos(0), 200, 340, 1.5)]
+)
+
+# ---------- Rhythmus-Schemata ----------
+# Taktarten-Unterteilungen: vier Zeilen über denselben 4/4-Takt — Viertel,
+# Achtel, Sechzehntel, Triolen.
+def unterteilung(y, n, gruppe=None):
+    teile = [L(24, y, 228, y, 1.5)]
+    for i in range(n):
+        x = 24 + (228 - 24) * (i + 0.5) / n
+        hoch = 12 if (gruppe and i % gruppe == 0) or (not gruppe and i == 0) else 8
+        teile.append(L(x, y, x, y - hoch, 2.5 if hoch == 12 else 1.5))
+    return teile
+S["taktarten_unterteilungen"] = (
+    unterteilung(26, 4) + unterteilung(56, 8, 2)
+    + unterteilung(86, 16, 4) + unterteilung(116, 12, 3)
+)
+# Ungerade Takte: 7/8 als Kette 2+2+3 — Gruppenanfänge betont (gefüllt),
+# Klammern zeigen die Gruppierung.
+def sieben():
+    teile = [L(24, 70, 228, 70, 2)]
+    xs = [24 + (228 - 24) * (i + 0.5) / 7 for i in range(7)]
+    for i, x in enumerate(xs):
+        stark = i in (0, 2, 4)
+        teile.append(C(x, 70, 6 if stark else 4, 2.5, fill=stark))
+    for a, b in ((0, 1), (2, 3), (4, 6)):
+        teile.append(L(xs[a] - 6, 52, xs[b] + 6, 52, 2))
+        teile.append(L(xs[a] - 6, 52, xs[a] - 6, 58, 2))
+        teile.append(L(xs[b] + 6, 52, xs[b] + 6, 58, 2))
+    return teile
+S["ungerade_takte_theorie"] = sieben()
+# Polyrhythmik: 3 gegen 4 — beide teilen Anfang und Ende, treffen sich nur dort.
+S["polyrhythmik_theorie"] = (
+    [L(24, 44, 228, 44, 1.5)]
+    + [C(24 + (228 - 24) * i / 3, 44, 6, fill=True) for i in range(4)]
+    + [L(24, 92, 228, 92, 1.5)]
+    + [C(24 + (228 - 24) * i / 4, 92, 6, 2.5) for i in range(5)]
+    + [L(24, 40, 24, 96, 2), L(228, 40, 228, 96, 2)]
+)
+# Songstruktur: Energieprofil über die Zeit — Intro, Strophe, Refrain, Bridge,
+# Breakdown als Blöcke wachsender/fallender Höhe.
+S["songstruktur_breakdown"] = (
+    [L(20, 108, 228, 108, 1.5)]
+    + [RECT(24, 84, 30, 24, filled=True), RECT(60, 60, 30, 48, filled=True),
+       RECT(100, 40, 30, 68, filled=True), RECT(140, 68, 30, 40, filled=True),
+       RECT(184, 24, 34, 84, filled=True)]
+)
+
+# ---------- Drum-Technik ----------
+# Double-Bass-Sechzehntel: durchgehende Kick auf allen 16 Sechzehnteln, Snare
+# auf 2 und 4, Hi-Hat auf den Vierteln.
+S["double_bass_sechzehntel"] = beat_schema(hh=[0, 4, 8, 12], sn=[4, 12], bd=list(range(16)), n=16)
+# Blastbeat-Varianten: oben Traditional (Kick/Snare im Wechsel), unten Hammer
+# (Kick und Snare gleichzeitig) — dieselbe Dichte, andere Verteilung.
+S["blast_varianten"] = (
+    [L(24, 42, 228, 42, 1.5)]
+    + [C(24 + (228 - 24) * (i + 0.5) / 8, 42, 5, fill=(i % 2 == 0)) for i in range(8)]
+    + [C(24 + (228 - 24) * (i + 0.5) / 8, 42, 5, 2) for i in range(8) if i % 2 == 1]
+    + [L(24, 94, 228, 94, 1.5)]
+    + [C(24 + (228 - 24) * (i + 0.5) / 4, 88, 5, 2) for i in range(4)]
+    + [C(24 + (228 - 24) * (i + 0.5) / 4, 100, 5, fill=True) for i in range(4)]
+)
+
+# ---------- Drum-Gear-Schemata ----------
+# Felle: Trommel im Querschnitt — dickes Schlagfell oben, dünnes Resonanzfell
+# unten, der Kessel dazwischen.
+S["felle_grundlagen"] = [
+    L(60, 34, 180, 34, 6),
+    L(60, 90, 180, 90, 2.5),
+    L(60, 34, 60, 90, 2),
+    L(180, 34, 180, 90, 2),
+    ARC(120, 62, 30, 210, 330, 1.2),
+]
+# Stimmen: Trommel von oben, Stimmschrauben im Kreis — die Pfeile zeigen das
+# Spannen über Kreuz.
+S["drum_stimmen_basis"] = (
+    [C(120, 62, 40, 2.5)]
+    + [C(120 + 40 * math.cos(math.radians(a)), 62 - 40 * math.sin(math.radians(a)), 4, fill=True)
+       for a in range(0, 360, 45)]
+    + [L(96, 38, 144, 86, 1.5), L(144, 38, 96, 86, 1.5)]
+)
+# Beckentypen: Hi-Hat-Paar, Crash, Ride, China (umgedreht) — je Größe und
+# Form unterscheidbar auf der Ständer-Linie.
+S["becken_typen"] = [
+    L(20, 100, 228, 100, 1.5),
+    ARC(50, 54, 20, 200, 340, 2.5), ARC(50, 60, 20, 200, 340, 1.8), L(50, 60, 50, 100, 2),
+    ARC(104, 50, 16, 200, 340, 2.5), L(104, 56, 104, 100, 2),
+    ARC(156, 46, 26, 200, 340, 3), L(156, 54, 156, 100, 2),
+    ARC(204, 60, 18, 20, 160, 2.5), L(204, 56, 204, 100, 2),
+]
+# Fußmaschine: Trittbrett, Feder (Zickzack) und Schlägel am Drehpunkt — der
+# Pfeil zeigt den Schlag gegen das Fell.
+S["fussmaschinen"] = [
+    L(40, 96, 120, 84, 6),
+    C(120, 84, 5, fill=True),
+    P("M120,84 L150,40", 4),
+    C(154, 34, 8, fill=True),
+    P("M164,96 L172,80 L164,66 L172,52 L164,40", 2.5),
+    L(178, 40, 200, 40, 5),
+    TRI([(154, 34), (170, 30), (166, 40)]),
+]
+
 ALLE = ["grundbeat", "d_beat", "blastbeat", "skank_beat", "powerchords", "palm_muting",
         "drop_tuning", "tremolo_picking", "chugs_breakdown", "plektrum_technik",
-        "sludge_erstes_riff", "pv_stopp_spiel"]
+        "sludge_erstes_riff", "pv_stopp_spiel",
+        "intervalle_grundlagen", "powerchord_theorie", "moll_phrygisch", "tritonus_dissonanz",
+        "taktarten_unterteilungen", "ungerade_takte_theorie", "polyrhythmik_theorie",
+        "songstruktur_breakdown", "double_bass_sechzehntel", "blast_varianten",
+        "felle_grundlagen", "drum_stimmen_basis", "becken_typen", "fussmaschinen"]
 assert sorted(ALLE) == sorted(S), sorted(set(ALLE) ^ set(S))
 
 for bid in ALLE:

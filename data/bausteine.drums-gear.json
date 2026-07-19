@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "ausruestung",
+    "hinweis": "Drums-Gear-Kapitel: zehn Bausteine über drei Stufen, Domäne schlagzeug+ausruestung (wie drums_recording) — sie erscheinen in der Schlagzeug- UND der Ausrüstungs-Facette. Ergänzt das saitenlastige Sound-&-Gear-Kapitel um die Schlagzeug-Seite: Kit-Ergonomie, Felle & Stimmen, Becken, Dämpfung, Fußmaschinen, Hardware, Trigger. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "kit_ergonomie",
+      "anzeigetitel": { "de": "Kit-Aufbau & Ergonomie" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "voraussetzungen": ["kit_sitzhaltung"],
+      "erklaerteil": {
+        "de": "Beim Metal-Schlagzeug ist der Aufbau kein Geschmack, sondern Technik-Voraussetzung: Extreme Tempi verzeihen keinen Weg, der zu weit ist, und keinen Winkel, der die Handgelenke abknickt. Ein durchdachtes Set spart Bewegung — und Bewegung, die du sparst, ist Ausdauer, die du gewinnst.\n\nDie Grundregeln: Alles Wichtige in bequemer Reichweite, ohne dass du dich streckst. Die Snare zwischen den Beinen auf einer Höhe, bei der die Unterarme locker leicht abfallen. Die Toms flach genug geneigt, dass du sie ohne Handgelenks-Knick mittig triffst (steile „Wände“ aus vielen Toms sehen martialisch aus, kosten aber Zeit und Präzision). Die Hi-Hat und die wichtigsten Becken so, dass der Arm nicht dauerhaft über Schulterhöhe arbeitet. Und die Pedale mittig unter den Beinen, im natürlichen Winkel der Oberschenkel.\n\nDer Test ist immer derselbe: Setz dich ans Set, schließ die Augen und spiel eine einfache Figur. Was du blind triffst und was sich mühelos anfühlt, sitzt richtig. Was du suchen musst oder wofür du dich verrenkst, gehört näher oder flacher. Ein ergonomisches Set beugt außerdem Überlastung vor — die Gesundheit fängt beim Aufbau an."
+      },
+      "reflexionsaufgabe": {
+        "de": "Setz dich an dein Set (oder ein geliehenes) und geh jedes Element einzeln durch: Snare, Hi-Hat, jedes Tom, jedes Becken, beide Pedale. Frag bei jedem: Erreiche ich das mittig, ohne mich zu strecken oder das Handgelenk abzuknicken? Notier, was sich verrenkt anfühlt.\n\nÄndere dann EINE Sache — das, was am unbequemsten war — und spiel fünf Minuten. Besser? Behalte es. Mach den Blind-Test: einfache Figur mit geschlossenen Augen. Und überleg ehrlich: Hast du Elemente im Set, die nur wegen der Optik dort sind, wo sie sind — und wäre eine flachere, engere Anordnung nicht schneller und gesünder?"
+      }
+    },
+    {
+      "id": "felle_grundlagen",
+      "anzeigetitel": { "de": "Felle: Schlag- und Resonanzfell" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Das Fell ist am Schlagzeug, was die Saite an der Gitarre ist: das schwingende Element, das den Ton macht — und der billigste große Hebel für deinen Sound. Zwei sitzen auf jeder Trommel: das Schlagfell oben (worauf du spielst) und das Resonanzfell unten (das mitschwingt und den Ausklang formt).\n\nDie Grundunterscheidungen: Aufgeraut (coated) klingt wärmer und kürzer, mit mehr Attack-Definition — der Metal-Standard für Snare und oft für Toms. Klar (clear) klingt offener, lauter und obertonreicher. Einlagig (1-ply) ist sensibel und offen; doppellagig (2-ply, oft mit Öl-Dämpfung) ist robuster, kürzer und kontrollierter — für hartes, schnelles Metal-Spiel die verbreitete Wahl, weil es weniger unkontrollierte Obertöne wirft und mehr aushält.\n\nDas Resonanzfell ist meist dünner und klar. Faustregel für den Anfang: Schlagfelle doppellagig (Haltbarkeit und Kontrolle), Snare-Schlagfell aufgeraut. Wichtig ist vor allem, dass die Felle nicht durchgespielt und ausgebeult sind — ein totes Fell klingt tot und lässt sich nicht mehr sauber stimmen, egal wie gut das Set ist."
+      },
+      "reflexionsaufgabe": {
+        "de": "Inventarisiere die Felle deines Sets (oder des Proberaum-Sets): Welche Trommel trägt oben was — aufgeraut oder klar, ein- oder doppellagig? Sind sie noch gut, oder ausgebeult und stumpf? Drück in die Mitte jedes Schlagfells: Eine sichtbare bleibende Delle heißt, das Fell ist durch.\n\nÜberleg dann für dein Spiel: Klingt deine Snare zu obertonreich und undefiniert (dann wäre ein aufgerautes, evtl. doppellagiges Schlagfell ein Gewinn) oder zu tot? Welches EINE Fell würdest du als Erstes tauschen, um den größten Sound-Sprung zu bekommen — und warum genau dieses?"
+      }
+    },
+    {
+      "id": "drum_stimmen_basis",
+      "anzeigetitel": { "de": "Trommeln stimmen: die Grundlagen" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "voraussetzungen": ["felle_grundlagen"],
+      "erklaerteil": {
+        "de": "„Schlagzeug stimmen“ klingt nach Geheimwissen, ist aber ein erlernbarer Handgriff — und der Unterschied zwischen einem Set, das nach nassem Karton klingt, und einem, das trägt. Der Kern: Jede Trommel hat ringsum Stimmschrauben, und die müssen gleichmäßig gespannt sein, damit das Fell sauber schwingt statt zu wummern oder zu scheppern.\n\nDie Methode: Neues Fell auflegen, Schrauben handfest andrehen, dann über Kreuz (nie im Kreis!) in kleinen Schritten spannen — gegenüberliegende Schrauben nacheinander, wie beim Radwechsel am Auto. Zum Feinstimmen tippst du mit dem Stock etwa zwei Zentimeter vor jeder Schraube ans Fell und hörst die Tonhöhe: Alle Schrauben sollen denselben Ton geben. Ist eine tiefer, nachziehen. Erst wenn das Fell rundum gleich klingt, stimmst du Schlag- und Resonanzfell gegeneinander auf die gewünschte Tonhöhe.\n\nFür Metal gilt grob: Toms eher mittel bis tief für Wucht, aber straff genug für Definition; die Snare meist knackig-mittel. Wichtiger als die genaue Tonhöhe ist die Sauberkeit — ein gleichmäßig gestimmtes Fell klingt bei jeder Höhe besser als ein schiefes."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm eine Trommel (am besten ein Tom) und mach den Gleichmäßigkeits-Test: Tipp mit dem Stock zwei Zentimeter vor jeder Stimmschraube ans Fell und hör die Tonhöhen im Kreis. Gleich oder ungleich? Wenn ungleich: Zieh die tiefsten Schrauben über Kreuz vorsichtig nach, bis alle denselben Ton geben.\n\nStimm dann bewusst einmal höher und einmal tiefer und hör den Unterschied im Charakter — wo sitzt für dich der beste Metal-Sound dieser Trommel? Und ehrlich: Hast du dein Set je selbst gestimmt, oder spielst du auf dem, was zufällig drauf war? Wenn Letzteres — genau hier liegt gratis Sound."
+      }
+    },
+    {
+      "id": "becken_typen",
+      "anzeigetitel": { "de": "Beckentypen & ihre Rollen" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Becken sind die Stimme des Sets nach oben hin — und jedes hat eine klare Rolle. Die Grundausstattung: Die Hi-Hat (zwei Becken auf einem Ständer, per Fuß geöffnet und geschlossen) hält den Puls und liefert alles von tickend-geschlossen bis zischend-offen. Das Ride ist das große, dickere Becken für durchgehende, definierte Schläge — im Metal auch als treibendes Puls-Instrument in schnellen Parts. Crashes sind die Ausrufezeichen: kurzer, explosiver Akzent, der schnell verklingt.\n\nDie Metal-Spezialisten: Das China (oft umgedreht montiert) klingt trashig, roh und schneidend — das Signatur-Becken für Blast-Parts und Breakdown-Akzente, weil es sich durch die dichteste Wand schneidet. Splashes sind kleine, kurze Crashes für schnelle Farbtupfer. Stacks (zwei aufeinander montierte Becken) liefern einen kurzen, elektronisch wirkenden „Chick“, sehr beliebt im modernen Core.\n\nBeim Kauf gilt: Dickere, größere Becken sind lauter und tragen im lauten Metal-Umfeld besser als dünne (die im Bandkontext schnell untergehen). Und wie Felle sind Becken Verschleißteile mit Vorsicht: Ein Riss beginnt oft klein am Rand — regelmäßig prüfen, denn ein gerissenes Becken klingt nicht nur schlecht, es kann auch weiterreißen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geh dein Becken-Setup (oder das des Proberaums) durch und ordne jedem Becken seine Rolle zu: Was hält den Puls, was setzt Akzente, was schneidet durch? Fehlt dir für dein Genre ein Typ — etwa ein China für Blast-Akzente oder ein Stack für moderne Core-Sounds?\n\nPrüf außerdem alle Ränder auf beginnende Risse (kleine Kerben, Haarlinien). Und hör bewusst hin: Gehen deine Crashes im Bandsound unter? Dann sind sie vielleicht zu dünn für dein Umfeld. Notier dir das EINE Becken, das dein Setup als Nächstes sinnvoll ergänzen oder ersetzen würde."
+      }
+    },
+    {
+      "id": "felle_sound_genre",
+      "anzeigetitel": { "de": "Fellwahl & Sound nach Genre" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["felle_grundlagen", "drum_stimmen_basis"],
+      "erklaerteil": {
+        "de": "Welchen Drum-Sound ein Genre will, entscheidet sich stark an Fellen und Stimmung — und die Extreme des Metal ziehen in entgegengesetzte Richtungen. Death und Black Metal (und Blast-lastiges überhaupt) brauchen Attack und Trennung: hoch gestimmte, gedämpfte Toms und eine knackige Snare, damit bei 250 BPM jeder Schlag als Einzelereignis lesbar bleibt. Die berüchtigte „klickende“ Bassdrum kommt genau daher — hart, hoch, stark gedämpft, oft mit Attack-Verstärkung, damit sie sich durch die Gitarrenwand schneidet. Doom und Sludge wollen das Gegenteil: tief, offen, lang ausklingend — hier ist das Wummern der ausschwingenden Toms Teil der Schwere.\n\nDie Werkzeuge sind dieselben, nur anders eingestellt: Doppellagige oder gedämpfte Schlagfelle plus straffere Stimmung geben Attack und Kürze; einlagige, tiefer gestimmte Felle geben Offenheit und Länge. Die Bassdrum bekommt für schnelles Spiel meist ein Loch im Resonanzfell und ein Dämpfkissen (kurzer, definierter Punch); für Doom darf sie offener bleiben.\n\nDie Regel dahinter ist dieselbe wie beim Gitarren-Sound: Der Kontext entscheidet. Ein Sound, der solo im Proberaum großartig wummert, kann im dichten Blast-Mix zu Brei werden — und umgekehrt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör die Drum-Sounds deiner zwei Lieblings-Genres bewusst im Vergleich: Wie klingen die Toms (kurz-definiert gegen offen-wummernd)? Wie die Bassdrum (klickend-schneidend gegen tief-dumpf)? Beschreib den Unterschied in eigenen Worten.\n\nPrüf dann dein eigenes Set gegen dein Ziel-Genre: Passt deine aktuelle Stimmung dazu — oder spielst du Doom-offene Toms zu Blast-Riffs (oder umgekehrt)? Stimm testweise EINE Trommel in die Richtung deines Genres um und spiel eine typische Figur dazu. Und die ehrliche Frage: Beurteilst du deinen Drum-Sound solo oder im Bandkontext — denn nur der Bandkontext zählt."
+      }
+    },
+    {
+      "id": "daempfung_definition",
+      "anzeigetitel": { "de": "Dämpfung & Definition" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["drum_stimmen_basis"],
+      "erklaerteil": {
+        "de": "Dämpfung ist beim Metal-Schlagzeug, was die Dämpfungshand an der Gitarre ist: die Kontrolle über das, was NICHT klingen soll. Unkontrollierte Obertöne und langes Nachschwingen, die solo noch charmant wirken, werden im dichten, schnellen Mix zu Matsch — Dämpfung schafft die Trennung, die schnelles Spiel lesbar macht.\n\nDie Werkzeuge, von sanft nach stark: Gel-Pads (Moongel) auf dem Fellrand nehmen gezielt Obertöne, ohne den Ton zu ersticken — der flexibelste Alltagshelfer. Dämpfringe (auf oder unter dem Fell) wirken stärker und gleichmäßiger. In der Bassdrum sitzt meist ein Kissen, das ans Fell reicht, für kurzen Punch. Vorsicht ist die Regel: Zu viel Dämpfung tötet den Ton, statt ihn zu formen — das Ziel ist Definition, nicht Stille. Immer mit dem kleinsten Mittel anfangen und nur so viel dämpfen, wie der Kontext braucht.\n\nEine wichtige Grenze: Dämpfung ersetzt keine Stimmung. Ein schief gestimmtes Fell klingt auch gedämpft schlecht — erst sauber stimmen, dann gezielt dämpfen. Wer zuerst dämpft, kaschiert nur das Stimmproblem."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm deine Snare oder ein Tom und mach den Test in dieser Reihenfolge: Erst prüfen, ob es sauber gestimmt ist (gleichmäßiger Ton rundum). Dann UNGEDÄMPFT anspielen und den Nachklang bewusst anhören — zu viel wildes Nachschwingen? Jetzt ein kleines Stück Dämpfung (Gel-Pad oder auch nur ein Stück Tape) an den Rand setzen und vergleichen.\n\nSuch den Punkt, an dem die störenden Obertöne weg sind, aber der Ton noch lebt — und merk dir, wie WENIG dafür nötig war. Überleg zum Schluss: Dämpfst du irgendwo aktuell ein Problem weg, das eigentlich ein Stimmproblem ist? Nimm dort die Dämpfung raus und stimm stattdessen sauber."
+      }
+    },
+    {
+      "id": "fussmaschinen",
+      "anzeigetitel": { "de": "Fußmaschinen: Einzel & Doppel" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["fusstechnik", "double_bass"],
+      "erklaerteil": {
+        "de": "Für schnelles Metal-Spiel ist die Fußmaschine kein Zubehör, sondern ein Hochleistungswerkzeug — und ihre Einstellung entscheidet mit über dein Tempo. Für Double Bass gibt es zwei Wege: eine Doppelfußmaschine (zwei Schlägel an einem Pedalpaar, an EINER Bassdrum) oder zwei einzelne Maschinen an zwei Bassdrums. Die Doppelmaschine ist verbreiteter, günstiger und live einfacher — der Standard-Einstieg.\n\nDie entscheidenden Einstellschrauben: Die Federspannung bestimmt, wie schnell der Schlägel zurückkommt — straffer heißt schnelleres Rebound, aber mehr Kraftaufwand; lockerer heißt leichter, aber träger. Es gibt kein „richtig“, nur dein Optimum, das du erspielst. Der Schlägel-Typ (Filz weich/warm, Kunststoff oder Holz hart/klickend) formt den Attack — für die schneidende Metal-Bassdrum oft härter. Und die Ketten-/Direktanbindung sowie der Winkel des Trittbretts beeinflussen das Gefühl.\n\nZwei Techniken bauen darauf auf, die die Maschine mitträgt: Heel-up (Ferse hoch, Kraft aus dem Bein — mehr Wucht) und die Heel-Toe- oder Sliding-Technik für Höchsttempo. Wichtig: Erst die Grundeinstellung finden, in der sich einfaches Spiel mühelos anfühlt, DANN Tempo aufbauen — eine falsch eingestellte Maschine trainiert Verkrampfung ein. Und wie bei allem Extremtempo: Belastung steigern statt erzwingen, bei Schmerz im Schienbein oder Fußgelenk pausieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geh die Einstellungen deiner Fußmaschine durch — kennst du deine aktuelle Federspannung und deinen Schlägel-Typ überhaupt? Verstell die Federspannung testweise deutlich in beide Richtungen und spiel dieselbe einfache Double-Bass-Figur: Bei welcher Spannung fühlt sich das Rebound für DICH am müheslosesten an?\n\nHör dann auf den Attack: Schneidet deine Bassdrum durch, oder verschwindet sie? Ein härterer Schlägel oder etwas Attack-Verstärkung am Fell könnte helfen. Und ehrlich: Baust du Tempo auf einer Maschine auf, die sich schon bei langsamem Spiel zäh anfühlt? Dann liegt dein Plateau vielleicht an der Einstellung, nicht an dir — und bei Schmerz gilt immer die Stoppregel."
+      }
+    },
+    {
+      "id": "hardware_stabilitaet",
+      "anzeigetitel": { "de": "Hardware & Stabilität" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["kit_ergonomie"],
+      "erklaerteil": {
+        "de": "Metal wird laut und hart gespielt — und Hardware, die dabei wandert, kostet dich Präzision und Nerven. Stative, Halterungen und Pedale müssen die Wucht extremer Schläge aushalten, ohne sich zu verstellen. Wackelnde Becken, ein kriechendes Bassdrum-Pedal oder eine Snare, die im Set langsam abrutscht, sind keine Kleinigkeiten: Sie zwingen dich zu ständigen Korrekturen und untergraben genau die Reproduzierbarkeit, von der schnelles Spiel lebt.\n\nDie Standards: Für hartes Spiel doppelstrebige (double-braced) Stative statt der wackligen Einsteiger-Ware — sie stehen bombenfest. Die Bassdrum bekommt Spikes oder einen Teppich-Anker, damit sie beim Double-Bass-Spiel nicht nach vorn wandert (das häufigste Ärgernis überhaupt). Für größere Setups hält ein Rack (statt vieler Einzelstative) alles konsistent an derselben Stelle — besonders wertvoll, wenn du an wechselnden Orten spielst und dein Set schnell und identisch aufbauen willst. Memory-Locks (Klemmringe) an allen verstellbaren Rohren sorgen dafür, dass nach dem Transport alles wieder genau dort sitzt.\n\nDas Prinzip ist Reproduzierbarkeit: Ein Set, das jeden Abend identisch und stabil steht, ist ein Set, auf dem du dich aufs Spielen konzentrieren kannst statt aufs Nachjustieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Spiel eine Minute hart und schnell — vor allem Double Bass — und beobachte danach: Ist etwas gewandert? Steht die Bassdrum noch am selben Fleck, sitzen die Becken im selben Winkel, ist die Snare-Höhe unverändert? Genau die Elemente, die wandern, sind deine Schwachstellen.\n\nPrüf dann konkret: Hast du einen Anker gegen das Vorwandern der Bassdrum? Sind deine Stative doppelstrebig oder wackeln sie? Setz — falls vorhanden — Memory-Locks an die wichtigsten Rohre und teste, ob nach einem Ab- und Aufbau alles wieder gleich sitzt. Notier die EINE Hardware-Schwachstelle, die dich am häufigsten zum Nachjustieren zwingt, und wie du sie behebst."
+      }
+    },
+    {
+      "id": "trigger_edrums",
+      "anzeigetitel": { "de": "Trigger, E-Drums & Sampling" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["felle_sound_genre", "drums_recording"],
+      "erklaerteil": {
+        "de": "Auf Profi-Niveau im modernen Metal führt an Triggern kaum ein Weg vorbei — und wie bei der Modeler-Frage der Gitarristen ist das keine Glaubens-, sondern eine Werkzeug-Entscheidung. Ein Trigger ist ein kleiner Sensor am Fell, der jeden Schlag in ein elektrisches Signal wandelt; ein Modul spielt daraufhin ein Sample ab oder verstärkt den akustischen Schlag. Der Grund ist praktisch: Bei Blast-Tempo und im Kampf gegen eine Wand aus verzerrten Gitarren liefert eine akustische Bassdrum oft nicht genug konsistenten Attack — der getriggerte oder mit Sample gestützte Klang schneidet zuverlässig durch, Schlag für Schlag identisch.\n\nDie Bandbreite reicht von dezent bis total: Trigger nur zur Attack-Verstärkung des echten Klangs; Sample-Blend (akustisch plus Sample gemischt) als Studio- und Live-Standard; bis zum vollständigen Ersatz durch ein E-Drum-Set. Jede Stufe hat ihren Platz — entscheidend ist, dass die Wahl bewusst zum Kontext passt (leiser Proberaum, lautes Live, kontrolliertes Studio).\n\nDie Fallstricke sind real und gehören zum Expertenwissen: Fehltrigger und Doppeltrigger (ein Schlag löst zwei Samples aus) bei schlechter Einstellung, „Maschinengewehr-Effekt“ durch immer identische Samples ohne Dynamik, und die Gefahr, hinter der Perfektion des Samples die eigene Spielsauberkeit zu verstecken. Der Grundsatz bleibt: Der Trigger verstärkt gutes Spiel — er ersetzt es nicht. Und Gehörschutz gilt hier wie überall."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör bei drei Produktionen deines Genres bewusst auf die Bassdrum: Klingt jeder Schlag exakt gleich (starkes Sampling/Triggering) oder atmet sie (akustisch oder dezenter Blend)? Was passt zu der Musik, die DU machen willst — die chirurgische Konsistenz oder die lebendige Akustik?\n\nÜberleg für dein eigenes Spiel: Wo würdest du Trigger einsetzen — nur zur Attack-Stützung der Bassdrum, als Blend, gar nicht? Und die ehrliche Kontrollfrage: Wenn du deine Double-Bass-Figur OHNE Trigger auf ein Fell spielst und aufnimmst — sind die Schläge sauber und gleichmäßig, oder würde das Sample gerade eine unsaubere Technik kaschieren? Genau das ist der Test, ob Trigger dich verstärken oder nur verstecken würden."
+      }
+    },
+    {
+      "id": "drums_wartung_backup",
+      "anzeigetitel": { "de": "Wartung & Ausfallsicherheit am Set" },
+      "domaene": ["schlagzeug", "ausruestung"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["hardware_stabilitaet", "backline_ausfallsicherheit"],
+      "erklaerteil": {
+        "de": "Das Schlagzeug hat mehr bewegliche Verschleißteile als jedes andere Bandinstrument — und live gilt dieselbe Regel wie für die ganze Backline: Nicht das beste Set gewinnt, sondern das, das den Abend übersteht. Ein gerissenes Fell mitten im Set, ein gebrochenes Becken oder eine kaputte Fußmaschinen-Feder beendet ohne Vorbereitung deinen Auftritt.\n\nDie Standards, nach Wahrscheinlichkeit: Sticks brechen zuerst und am häufigsten — mehrere Paare griffbereit AM Set (im Stick-Bag am Floor-Tom), nie in der Tasche hinter der Bühne. Snare-Schlagfelle reißen bei hartem Spiel — ein gestimmtes Ersatzfell (plus Stimmschlüssel, der immer dabei ist) gehört ins Gepäck. Fußmaschinen-Federn und -Schlägel sind Verschleiß — Ersatzteile und im Zweifel eine ganze Reserve-Maschine. Becken reißen selten spontan, aber ein Riss kündigt sich an: regelmäßig die Ränder prüfen, ein rissiges Becken vor der Show tauschen. Filze, Flügelmuttern und Teppich-Reserven wiegen nichts und fehlen im Ernstfall genau dann.\n\nDazu die Routine: Vor der Show einmal alle Schrauben und Klemmen auf festen Sitz prüfen (Vibration lockert alles), den Stimmschlüssel griffbereit haben — und den Ausfall-Plan mit der Band teilen. Reißt dir ein Fell mitten im Song, gilt die Weiterspielen-Regel für die anderen: Sie überbrücken, du löst das Problem beim nächsten Break oder spielst notfalls reduziert weiter."
+      },
+      "reflexionsaufgabe": {
+        "de": "Schreib deine Drum-Ausfall-Matrix: die vier wahrscheinlichsten Ausfälle (Stick, Snare-Fell, Feder/Schlägel, Becken) und daneben ehrlich deinen aktuellen Plan B — inklusive „hab keinen“. Pack dann konkret deine Notfall-Kiste: Was fehlt an Ersatz-Sticks, gestimmtem Reserve-Fell, Stimmschlüssel, Kleinteilen?\n\nMach außerdem den Festigkeits-Check: Geh vor der nächsten Probe einmal alle Klemmen und Schrauben durch — wie viele waren locker? Und besprich mit der Band den Fell-reißt-mitten-im-Song-Fall: Wer überbrückt wie, was ist das Zeichen, dass du kurz raus musst? Einmal geklärt, ist es im Ernstfall Routine statt Panik."
+      }
+    }
+  ]
+}

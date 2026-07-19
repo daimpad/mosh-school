@@ -488,7 +488,17 @@
     "modeler_reamping": "",
     "noise_management": "",
     "backline_ausfallsicherheit": "",
-    "tuning_landkarte": ""
+    "tuning_landkarte": "",
+    "kit_ergonomie": "",
+    "felle_grundlagen": "",
+    "drum_stimmen_basis": "",
+    "becken_typen": "",
+    "felle_sound_genre": "",
+    "daempfung_definition": "",
+    "fussmaschinen": "",
+    "hardware_stabilitaet": "",
+    "trigger_edrums": "",
+    "drums_wartung_backup": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -753,6 +763,20 @@
     "chugs_breakdown": "",
     "plektrum_technik": "",
     "sludge_erstes_riff": "",
-    "pv_stopp_spiel": ""
+    "pv_stopp_spiel": "",
+    "intervalle_grundlagen": "",
+    "powerchord_theorie": "",
+    "moll_phrygisch": "",
+    "tritonus_dissonanz": "",
+    "taktarten_unterteilungen": "",
+    "ungerade_takte_theorie": "",
+    "polyrhythmik_theorie": "",
+    "songstruktur_breakdown": "",
+    "double_bass_sechzehntel": "",
+    "blast_varianten": "",
+    "felle_grundlagen": "",
+    "drum_stimmen_basis": "",
+    "becken_typen": "",
+    "fussmaschinen": ""
   }
 }
