@@ -20,8 +20,11 @@ const INHALTSDATEIEN = [
   'data/bausteine.einsteiger-gitarre.json',
   'data/bausteine.fortgeschritten-gitarre.json',
   'data/bausteine.einsteiger-bass.json',
+  'data/bausteine.fortgeschritten-bass.json',
   'data/bausteine.einsteiger-schlagzeug.json',
+  'data/bausteine.fortgeschritten-schlagzeug.json',
   'data/bausteine.einsteiger-gesang.json',
+  'data/bausteine.fortgeschritten-gesang.json',
   'data/bausteine.einsteiger-theorie.json',
 ];
 
