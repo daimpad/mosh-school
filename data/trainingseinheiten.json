@@ -1,4 +1,391 @@
 {
-  "_meta": {},
-  "trainingseinheiten": []
+  "_meta": {
+    "hinweis": "Kuratierte Trainingseinheiten (Spez. 6.4): geordnete Referenzen auf Übungsteile bestehender Bausteine, gegliedert in Erwärmung → Hauptteil → Ausklang. Sichtbare Titel stehen in labels/de.json unter trainingseinheiten."
+  },
+  "trainingseinheiten": [
+    {
+      "id": "gitarre_riff_fundament",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Palm Muting, Powerchords und das erste Riff"
+      },
+      "beschreibung": {
+        "de": "Eine kompakte Session für das Riff-Fundament: Du wärmst die Hände auf, arbeitest an Dämpfung und Akkorden und setzt beides zu einem kurzen Riff zusammen."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Langsam und leise — die Chromatik ist dein Aufwärmprogramm, kein Tempotest."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "palm_muting",
+            "hinweis": {
+              "de": "Such den Punkt am Steg jedes Mal neu, statt die gestrige Position blind zu übernehmen."
+            }
+          },
+          {
+            "baustein": "powerchords",
+            "hinweis": {
+              "de": "Prüf jeden Akkord einzeln: Klingen alle gewollten Töne — und nur die?"
+            }
+          },
+          {
+            "baustein": "einfaches_riff",
+            "hinweis": {
+              "de": "Setz Chugs und Akkorde zu zwei Takten zusammen — Tempo bewusst niedrig."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Zum Abschluss bewusst mit Minimaldruck spielen — locker aufhören, nicht ausgepowert."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gitarre_tempo_tightness",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Wechselschlag, Downpicking und Galopp"
+      },
+      "beschreibung": {
+        "de": "Die Tempo-Session: kontrollierter Anschlag, Ausdauer in kleinen Dosen und die Galopp-Figur. Sauberkeit steht über Geschwindigkeit — Schmerz oder Brennen heißt Pause."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "anschlaghand_grundlagen",
+            "hinweis": {
+              "de": "Gleichmäßige Achtel auf der leeren Saite, Bewegung klein — erst warm werden, dann Tempo."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "wechselschlag",
+            "hinweis": {
+              "de": "Metronom an; erhöhe erst, wenn zwei Durchgänge fehlerfrei sind."
+            }
+          },
+          {
+            "baustein": "downpicking",
+            "hinweis": {
+              "de": "Stopp beim ersten Brennen im Unterarm — Ausdauer wächst über Wochen, nicht in einer Session."
+            }
+          },
+          {
+            "baustein": "galopp_rhythmus",
+            "hinweis": {
+              "de": "Zähl die Figur laut mit, bis das Muster automatisch läuft."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "tremolo_picking",
+            "hinweis": {
+              "de": "Nur mäßiges Tempo: Lockerheit spüren und entspannt ausklingen lassen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_fundament_timing",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Fingerstyle, Grundtöne und Timing zur Bassdrum"
+      },
+      "beschreibung": {
+        "de": "Die Kern-Session für Bass: gleichmäßiges Zupfen, Grundtönen folgen und die Töne exakt auf den Puls setzen — die Basis für tightes Low-End."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Ein Finger pro Bund in mittlerer Lage — ruhig, sauber, ohne Überdehnung."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Streng Zeige–Mittel im Wechsel, auch beim Saitenwechsel."
+            }
+          },
+          {
+            "baustein": "grundton_folgen",
+            "hinweis": {
+              "de": "Nimm ein einfaches Riff oder eine Akkordfolge als Vorlage."
+            }
+          },
+          {
+            "baustein": "lock_zur_bassdrum",
+            "hinweis": {
+              "de": "Behandle jeden Klick wie einen Kick: Ton und Klick sollen verschmelzen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "greifhand_daempfen",
+            "hinweis": {
+              "de": "Leise, kurze Figuren — die Pausen wirklich still werden lassen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_attack_tightness",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Plektrum, Palm Muting und die erste Basslinie"
+      },
+      "beschreibung": {
+        "de": "Attack-Session für den durchsetzungsfähigen Metal-Bass: definierter Pick-Anschlag, kontrollierte Dämpfung und eine komplette Linie zum Riff."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Locker einspielen in mäßigem Tempo — beide Finger gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "plektrum_technik",
+            "hinweis": {
+              "de": "Erst nur Abschläge, dann strikter Wechsel — Lautstärke konstant halten."
+            }
+          },
+          {
+            "baustein": "palm_muting_bass",
+            "hinweis": {
+              "de": "Handballen-Position suchen, bis der Ton kurz bleibt, aber noch Tonhöhe hat."
+            }
+          },
+          {
+            "baustein": "einfache_basslinie",
+            "hinweis": {
+              "de": "Langsam und ganz durchspielen, bevor du das Tempo anziehst."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "anschlagpunkt_ton",
+            "hinweis": {
+              "de": "Zum Schluss bewusst Klangfarben vergleichen — Steg gegen Hals."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_groove_fundament",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Puls, Grundbeat und das erste Fill"
+      },
+      "beschreibung": {
+        "de": "Die Groove-Session: sicheres Zählen zum Klick, der Metal-Grundbeat und ein kurzes Fill mit sauberer Landung auf der Eins."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stockhaltung",
+            "hinweis": {
+              "de": "Freie Schläge auf Snare oder Pad — den Rückprall arbeiten lassen."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "puls_zaehlzeiten",
+            "hinweis": {
+              "de": "Laut mitzählen; das Metronom bleibt in ruhigem Tempo."
+            }
+          },
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Stimme für Stimme aufbauen: erst Hi-Hat, dann Snare, dann Bassdrum."
+            }
+          },
+          {
+            "baustein": "fills",
+            "hinweis": {
+              "de": "Kurzes Fill im vierten Takt — bewusst wieder auf der Eins landen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "dynamik_akzente",
+            "hinweis": {
+              "de": "Leise Sechzehntel mit wenigen Akzenten — Kontrolle statt Kraft."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_speed_koordination",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Rudiments, Double Bass und Unabhängigkeit"
+      },
+      "beschreibung": {
+        "de": "Die Speed-Session in gesunden Dosen: gleichmäßige Hände, gleichmäßige Füße und Koordination über dem Beat. Tempo wächst aus Lockerheit — bei Schmerz sofort pausieren."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Singles und Doubles langsam — beide Hände gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "fusstechnik",
+            "hinweis": {
+              "de": "Gleichmäßige Viertel auf der Bassdrum, Fußgelenk locker."
+            }
+          },
+          {
+            "baustein": "double_bass",
+            "hinweis": {
+              "de": "Beide Füße gleich laut — den schwächeren gezielt angleichen."
+            }
+          },
+          {
+            "baustein": "koordination",
+            "hinweis": {
+              "de": "Eine Stimme variieren, während der Rest stabil weiterläuft."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_feel",
+            "hinweis": {
+              "de": "Langsamer, schwerer Beat zum Runterkommen — jeder Schlag sitzt."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_stimme_stuetze",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Atmung, Stütze und Resonanz"
+      },
+      "beschreibung": {
+        "de": "Die Grundlagen-Session für die Stimme: ruhige Atmung, gestützter Luftstrom und tragfähiger Ton ohne Halsdruck. Nichts darf kratzen oder wehtun — Schmerz ist ein Stoppsignal."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "gesang_haltung_atmung",
+            "hinweis": {
+              "de": "Aufrecht und locker; die Atmung geht in Bauch und Flanken, nicht in die Schultern."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "atemstuetze",
+            "hinweis": {
+              "de": "Langes „Ss“ gleichmäßig halten — die Arbeit passiert im Rumpf, nicht im Hals."
+            }
+          },
+          {
+            "baustein": "resonanz_projektion",
+            "hinweis": {
+              "de": "Lauter nur über Stütze und Offenheit — nie über Druck im Hals."
+            }
+          },
+          {
+            "baustein": "tonhoehe_clean",
+            "hinweis": {
+              "de": "Leise Töne sauber treffen; ein Instrument oder eine App liefert die Referenz."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Leise Lip Trills und Sirenen zum Abwärmen — alles bleibt mühelos."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_rhythmus_ausdruck",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Artikulation, Phrasierung und Dynamik"
+      },
+      "beschreibung": {
+        "de": "Die Performance-Session: klarer Text, Silben exakt auf dem Beat und Ausdruck über bewusste Dynamik — mit sanftem Ein- und Ausklang für die Stimmgesundheit."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft aufwärmen — nichts darf kratzen oder anstrengen."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "artikulation_text",
+            "hinweis": {
+              "de": "Die Textzeile erst überdeutlich sprechen, dann in den Gesang überführen."
+            }
+          },
+          {
+            "baustein": "rhythmus_phrasierung",
+            "hinweis": {
+              "de": "Betonte Silben bewusst auf die Zählzeiten setzen — zum Klick."
+            }
+          },
+          {
+            "baustein": "dynamik_ausdruck",
+            "hinweis": {
+              "de": "Eine Zeile in mehreren Intensitäten — der Hals bleibt dabei locker."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "clean_im_metal",
+            "hinweis": {
+              "de": "Eine ruhige, getragene Melodie in bequemer Lage zum Ausklang."
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

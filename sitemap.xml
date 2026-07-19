@@ -4,7 +4,7 @@
      wird diese Sitemap um alle Bausteine, Regeln und Pfade erweitert. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://daimpad.github.io/crossminton-handbook/</loc>
+    <loc>https://daimpad.github.io/mosh-school/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

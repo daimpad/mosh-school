@@ -80,7 +80,7 @@ export async function aktiviereFeedback() {
     themeToggle: false, // das Thema steuert die App, nicht der Kommentator
     theme: kommentatorThema(),
     email: KONTAKT_EMAIL,
-    emailSubject: 'Feedback Crossminton-Handbuch',
+    emailSubject: 'Feedback mosh school',
   });
   // Thema mitführen, wenn es im Menü/Profil umgeschaltet wird (wendeThemaAn
   // sendet 'app:thema'). Fehler ignorieren — der Kommentator ist optional.

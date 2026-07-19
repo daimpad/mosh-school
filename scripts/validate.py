@@ -138,6 +138,36 @@ def main():
             for treffer in UMLAUT_VERDACHT.finditer(txt):
                 umlaut.append(f'{bid}: ASCII-Umlaut-Verdacht "{treffer.group(0)}"')
 
+    # Trainingseinheiten (Spez. 6.4): Referenzen zeigen auf existierende Bausteine
+    # MIT Uebungsteil; kompetenzstufe aus dem Vokabular; Titel im Label-File
+    # (Abschnitt trainingseinheiten — lift.py hebt nur Baustein-Titel, Einheiten
+    # werden von Hand gelabelt). Spiegelt pruefeDaten (js/daten.js).
+    einheiten = lade('data/trainingseinheiten.json').get('trainingseinheiten') or []
+    einheit_titel = lade('data/labels/de.json').get('trainingseinheiten') or {}
+    von_id_pool = {b['id']: b for b in bausteine}
+    e_ids = [e.get('id') for e in einheiten]
+    if len(e_ids) != len(set(e_ids)):
+        fehler.append('trainingseinheiten: doppelte Einheiten-ids')
+    for e in einheiten:
+        eid = e.get('id') or '<ohne id>'
+        if not gueltig(voka.get('kompetenzstufe'), e.get('kompetenzstufe')):
+            fehler.append(f'{eid}: unbekannte kompetenzstufe "{e.get("kompetenzstufe")}"')
+        refs = [ref for phase in ('erwaermung', 'hauptteil', 'ausklang')
+                for ref in (e.get('phasen') or {}).get(phase, [])]
+        if not refs:
+            fehler.append(f'{eid}: keine Baustein-Referenzen in den Phasen')
+        for ref in refs:
+            ziel = von_id_pool.get(ref.get('baustein'))
+            if ziel is None:
+                fehler.append(f'{eid}: referenzierter Baustein "{ref.get("baustein")}" existiert nicht')
+            elif ziel.get('uebungsteil') is None:
+                fehler.append(f'{eid}: Baustein "{ref.get("baustein")}" hat keinen Uebungsteil')
+        if eid not in einheit_titel:
+            warnung.append(f'{eid}: Einheiten-Titel fehlt in labels/de.json (Abschnitt trainingseinheiten)')
+        for txt in sichtbare_texte(e):
+            for treffer in UMLAUT_VERDACHT.finditer(txt):
+                umlaut.append(f'{eid}: ASCII-Umlaut-Verdacht "{treffer.group(0)}"')
+
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
     offen = {b['id']: 0 for b in bausteine}

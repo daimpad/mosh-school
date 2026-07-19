@@ -383,7 +383,15 @@
     "verzerrung_prinzip": "",
     "harsh_stile_ueberblick": "",
     "sanfter_einstieg_verzerrung": "",
-    "zur_musik_singen": ""
+    "zur_musik_singen": "",
+    "intervalle_grundlagen": "",
+    "powerchord_theorie": "",
+    "moll_phrygisch": "",
+    "tritonus_dissonanz": "",
+    "taktarten_unterteilungen": "",
+    "tempo_genres": "",
+    "songstruktur_breakdown": "",
+    "riff_baukasten": ""
   },
   "fehlerbilder": {},
   "grafiken": {},
@@ -502,5 +510,14 @@
       "motivation_sicherheit_halten": ""
     }
   },
-  "trainingseinheiten": {}
+  "trainingseinheiten": {
+    "gitarre_riff_fundament": "",
+    "gitarre_tempo_tightness": "",
+    "bass_fundament_timing": "",
+    "bass_attack_tightness": "",
+    "drums_groove_fundament": "",
+    "drums_speed_koordination": "",
+    "vocals_stimme_stuetze": "",
+    "vocals_rhythmus_ausdruck": ""
+  }
 }
