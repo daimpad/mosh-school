@@ -35,7 +35,8 @@
       "crust",
       "grindcore",
       "powerviolence",
-      "sludge"
+      "sludge",
+      "deathcore"
     ],
     "spielziele": {
       "tempo": [
@@ -466,7 +467,8 @@
       "stil": [
         "metalcore",
         "death_metal",
-        "doom"
+        "doom",
+        "deathcore"
       ],
       "voraussetzungen": [
         "powerchords"
@@ -546,7 +548,8 @@
       "typ": "micro",
       "stil": [
         "metalcore",
-        "hardcore"
+        "hardcore",
+        "deathcore"
       ],
       "voraussetzungen": [
         "palm_muting"
