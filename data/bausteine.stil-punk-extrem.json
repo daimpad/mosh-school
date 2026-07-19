@@ -124,7 +124,7 @@
       ],
       "voraussetzungen": [
         "tremolo_riffing",
-        "chromatik_atonalitaet"
+        "dissonante_intervalle"
       ],
       "erklaerteil": {
         "de": "Grindcore-Riffs sind Werkzeuge, keine Kunstwerke: kurze chromatische Zellen, Tremolo-Flächen, dissonante Rutscher — gebaut für maximale Wirkung in minimaler Zeit. Ein Grind-Song hat oft nur zwei, drei Riffs, und keins davon will schön sein. Die Ästhetik ist die Reduktion selbst: Was in dreißig Sekunden nicht wirkt, fliegt raus.\n\nTechnisch verlangt das Genre vor allem zwei Umschaltungen: vom Tremolo-Teppich unter dem Blast in den geraden, stampfenden Part — und das abrupt, ohne Übergangstakt. Die rechte Hand wechselt dabei zwischen maximaler Dichte und schwerem Einzelanschlag; die linke hält die Zellen simpel genug, dass sie auch bei absurdem Tempo greifbar bleiben. Chromatik ist dabei Freund, nicht Verlegenheit: Halbtonrutscher und enge Cluster sind das melodische Vokabular des Grind.\n\nWer von Death Metal oder Thrash kommt, muss vor allem verlernen: kein Ausspielen, keine Wiederholungsschleifen, kein Aufbau — das Riff sagt seinen Satz und der nächste kommt."
@@ -378,6 +378,154 @@
           ],
           "steigerung": "Verkürze im Blast-Teil das Raster schrittweise Richtung Sechzehntel — aber nur so weit, wie die Wand stabil bleibt. Sobald es flattert, zurück: Ein sauberes Achtel-Fundament schlägt jedes unsaubere Sechzehntel-Gedoppel.",
           "selbstkontrolle": "Hör die Aufnahme einmal nur auf Bass und Kick ab: eine Textur oder zwei konkurrierende? Und im Halftime-Teil: Übernimmt der Bass hörbar die Führung, oder bleibt er Textur? Beides muss unterscheidbar sein."
+        }
+      }
+    },
+    {
+      "id": "pv_vocals_ausbruch",
+      "anzeigetitel": {
+        "de": "Powerviolence-Vocals: Ausbrüche in Serie"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "false_cord_ansatz",
+        "harsh_artikulation"
+      ],
+      "erklaerteil": {
+        "de": "Powerviolence-Vocals sind Ausbrüche: kurze, hektische Schrei-Salven, die mit den Schnitten der Musik kommen und gehen — zwei Sekunden Vollgas, harter Stopp, Zeitlupen-Brüllen im Sludge-Teil, wieder Salve. Diese Sprunghaftigkeit ist stimmlich anspruchsvoller, als sie klingt: Viele kurze Attacken hintereinander verführen dazu, jede einzelne mit einem Druckstoß aus dem Hals zu starten — und genau diese harten Stimmeinsätze summieren sich schneller zu Verschleiß als eine lange Phrase.\n\nDie gesunde Lösung ist der vorbereitete Einsatz: Vor jeder Salve steht ein kurzer, bewusster Atem-Impuls aus der Stütze — der Ton beginnt auf Luft, nicht auf Druck. Die Härte des Ausbruchs entsteht durch Artikulation und Entschlossenheit (harte Konsonanten, exakte Silben auf dem Schlag), nicht durch Anschlag im Kehlkopf. Und zwischen den Salven ist die Stille deine Verbündete: kurz lösen, atmen, neu ansetzen — die Pausen gehören zur Technik, nicht zur Erholung vom Fehler.\n\nGesundheitsrahmen strikt: Salven-Training ist intensiv — kurze Einheiten, leiser Aufbau, nach jeder Runde der Sprechtest. Bei Kratzen oder Engegefühl sofort stoppen, den Aufbau von einer erfahrenen Lehrperson begleiten lassen, bei anhaltender Heiserkeit in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Salve und Stille",
+          "ziel": "Kurze Schrei-Ausbrüche mit vorbereitetem Einsatz in schneller Folge setzen — ohne harte Stimmeinsätze.",
+          "schritte": [
+            "Wärm die Stimme gründlich auf. Sprich eine kurze Zwei-Sekunden-Phrase (vier bis sechs Silben) zuerst rhythmisch exakt im Sprechton, mit einem bewussten Atem-Impuls davor.",
+            "Steiger zur leisen Harsh-Salve: Atem-Impuls, dann die Phrase als kurzer, entschlossener Ausbruch auf False-Cord-Basis — der Ton beginnt auf Luft. Danach zwei, drei Sekunden bewusste Stille mit Lösen und Atmen.",
+            "Setz vier Salven in Folge mit gleichbleibender Qualität: Jede beginnt vorbereitet, keine wird härter angesetzt als die vorige. Die Stille zwischen den Salven ist Teil der Übung — nie hineinhetzen.",
+            "Leg die Salven auf Musik: über einen schnellen Loop oder eine Aufnahme an festen Stellen einsetzen und an den Schnitten hart stoppen. Timing und vorbereiteter Einsatz zählen — Lautstärke kommt zuletzt."
+          ],
+          "steigerung": "Übe den Registerwechsel im Powerviolence-Stil: Salve hoch, Schnitt, ein getragenes tiefes Brüllen im Zeitlupen-Feel, Schnitt, wieder Salve — jeder Zustand beginnt mit seinem eigenen vorbereiteten Einsatz.",
+          "selbstkontrolle": "Hör die Aufnahme ab: Beginnt jede Salve sauber oder mit einem hörbaren Knall im Stimmeinsatz? Und der Sprechtest nach der Einheit: Klingt die Alltagsstimme frei? Wenn die vierte Salve härter ansetzt als die erste, war die Serie zu lang — kürzen."
+        }
+      }
+    },
+    {
+      "id": "pv_gitarre_zustaende",
+      "anzeigetitel": {
+        "de": "Powerviolence-Gitarre: Zustände schalten"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "tremolo_riffing",
+        "doom_riffing"
+      ],
+      "erklaerteil": {
+        "de": "Die Powerviolence-Gitarre lebt in zwei Welten gleichzeitig: rasendes Geschrammel — dichte, treibende Akkord-Flächen im Blast-Tempo — und erdrückende Sludge-Blöcke in Zeitlupe. Beides für sich ist machbar; die Disziplin des Genres ist der Schnitt dazwischen: kein Übergangston, kein Ausklingen, kein Anlauf. Der letzte schnelle Schlag wird abgestoppt, und der erste schwere Akkord des Zeitlupen-Teils steht sofort mit vollem Gewicht.\n\nTechnisch sind das zwei Umschaltungen in einem Moment: Die Anschlagshand wechselt von maximaler Dichte auf schweren Einzelanschlag, und die Dämpfung wechselt die Rolle — im schnellen Teil hält sie das Geschrammel kontrolliert, am Schnitt würgt sie alles ab, im langsamen Teil gibt sie den Akkorden Raum. Wie beim Schlagzeug gilt: Das neue Tempo steht aus dem Gedächtnis, nicht aus einer Umrechnung — beide Zustände müssen als Körpergefühl abrufbar sein.\n\nWer von Grind kommt, kennt die Schnitte schon — die Powerviolence-Zutat ist die Extremspreizung: Die Zustände liegen so weit auseinander, dass jeder Wechsel wie ein Genrewechsel wirkt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Welten, ein Schlag",
+          "ziel": "Zwischen Blast-Geschrammel und Sludge-Block auf den Schlag wechseln — abgestoppt, ohne Anlauf.",
+          "schritte": [
+            "Definier Zustand A: zwei Takte dichtes Tremolo- oder Schrammel-Riff auf einem Powerchord in deinem sicheren Schnelltempo. Spiel A mehrfach einzeln an, bis das Tempo als Gefühl steht.",
+            "Definier Zustand B: zwei Takte Zeitlupen-Riff (um 55 BPM) aus einem oder zwei schweren, voll ausklingenden Powerchords. Auch B einzeln verankern — inklusive Klick-Kontrolle.",
+            "Übe NUR den Schnitt A→B: letzter schneller Schlag, sofortiges Abdämpfen, erster schwerer Akkord exakt auf dem nächsten definierten Schlag. Zehnmal hintereinander, jede Wiederholung mit voller Entschlossenheit.",
+            "Übe die Gegenrichtung B→A: Aus dem ausklingenden schweren Akkord ohne Anlauf ins volle Geschrammel — der erste schnelle Takt darf weder hetzen noch stolpern. Dann beide Richtungen verketten: A–B–A–Stopp."
+          ],
+          "steigerung": "Lass eine zweite Person die Wechsel per Handzeichen auslösen oder würfle die Reihenfolge — unvorhersehbare Schnitte sind die Live-Realität des Genres.",
+          "selbstkontrolle": "Nimm die Kette auf und bewerte nur die Schnitte: Klingt zwischen letztem A-Schlag und erstem B-Akkord wirklich nichts nach? Steht das B-Tempo sofort, wenn du es mit dem Metronom nachmisst — oder erst nach einem Takt?"
+        }
+      }
+    },
+    {
+      "id": "crust_gitarre_saege",
+      "anzeigetitel": {
+        "de": "Crust-Gitarre: die Säge führen"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "downpicking",
+        "crust_sound_dreck"
+      ],
+      "erklaerteil": {
+        "de": "Die Crust-Gitarre ist ein Ausdauerinstrument: simple Powerchord-Folgen, überwiegend heruntergepickt, unter einer sägenden Zerre — und das über ganze Songs ohne Verschnaufpause. Die Kunst liegt nicht in den Griffen, sondern in der rechten Hand: Der Anschlag muss über Minuten gleich hart, gleich lang und exakt mit dem D-Beat verzahnt bleiben. Eine müde werdende Anschlagshand hört man im Crust sofort, weil nichts sie versteckt.\n\nZwei Dinge halten die Säge im Schnitt: Erstens die Ökonomie — Downpicking aus einem lockeren Handgelenk mit kleiner Bewegung, nicht aus dem Unterarm gestemmt; wo das Tempo dauerhaft über der eigenen Downpicking-Grenze liegt, ist strikter Wechselschlag die ehrlichere Wahl, solange die Akzente weiter nach unten klingen. Zweitens die Dämpfungsdisziplin: Unter der breiten Zerre wachsen alle Nebengeräusche mit — die nicht gespielten Saiten brauchen ständige Kontrolle, sonst sägt es nicht, es rauscht.\n\nUnd wie beim D-Beat-Dauerlauf gilt: Belastung steigern statt erzwingen, bei Ziehen oder Brennen im Unterarm pausieren — und bei wiederkehrenden Beschwerden ärztlich abklären lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der lange Schnitt",
+          "ziel": "Eine simple Crust-Riff-Folge über Minuten mit konstantem Anschlag und sauberer Dämpfung halten.",
+          "schritte": [
+            "Bau eine Zwei-Akkord-Folge (Powerchords, etwa im D-Beat-Tempo um 160 BPM) und spiel sie zwei Minuten am Stück heruntergepickt zum Klick. Fokus: kleine Bewegung, lockeres Handgelenk, Schultern unten.",
+            "Nimm die zwei Minuten auf und vergleich Anfang und Ende wie beim D-Beat-Dauerlauf: Ist der letzte Takt genauso hart und pünktlich wie der erste — oder wird der Anschlag flacher und eilig?",
+            "Kontrollier die Dämpfung unter Zerre: Stopp mitten im Lauf für einen Schlag alle Saiten ab — es muss SOFORT still sein. Wenn es nachrauscht, arbeitet die Dämpfung nicht mit; bau diesen Stopp alle acht Takte ein, bis Stille auf Kommando sitzt.",
+            "Verzahn dich mit dem Beat: Spiel die Folge über einen D-Beat-Loop (oder mit Schlagzeug) und akzentuier exakt die Snare-Schläge mit. Gitarre und Beat müssen wie ein Instrument klingen."
+          ],
+          "steigerung": "Verlängere auf drei, vier Minuten im selben Tempo, bevor du schneller wirst — und markier wie beim Dauerlauf die Stellen, an denen du unbewusst Kraft aufbaust, um genau dort zu lockern.",
+          "selbstkontrolle": "Auf der Aufnahme: Bleiben alle Anschläge über die volle Dauer gleich laut? Ist zwischen den Riffs echte Stille statt Rauschteppich? Brennende Unterarme heißen: Bewegung zu groß oder zu verkrampft — kürzer üben, lockerer spielen."
+        }
+      }
+    },
+    {
+      "id": "crust_bass_wand",
+      "anzeigetitel": {
+        "de": "Crust-Bass: die zweite Säge"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "bass_downpicking",
+        "crust_sound_dreck"
+      ],
+      "erklaerteil": {
+        "de": "Im Crust ist der Bass keine Begleitung, sondern die zweite Säge: oft genauso verzerrt wie die Gitarre, oft mit Plektrum gespielt, und im klassischen Zwei-Sägen-Sound trägt er die halbe Wand. Das unterscheidet die Rolle von fast allen anderen Genres — der Crust-Bass darf breit, rau und präsent sein, ohne sich zu entschuldigen.\n\nGenau deshalb braucht er Disziplin an zwei Stellen. Erstens die Rollenabsprache aus dem Sound-Baustein, praktisch angewandt: Wenn beide Saiteninstrumente verzerrt dieselben Achtel spielen, entscheidet die Staffelung (wer hält das Tief, wer die Mitten-Kante), ob eine Wand entsteht oder Brei. Zweitens das Timing: Zwei verzerrte Sägen, die nicht exakt übereinanderliegen, klingen doppelt schlampig — der Bass verzahnt sich mit der Kick, und die Gitarre lehnt sich an beide.\n\nUnd wenn die Gitarre ausschert — Feedback, ein kurzes Lead, ein ausgelassener Takt — hält der Bass die Säge allein am Laufen: Diese Momente tragen im Crust die ganze Band."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Sägen, eine Wand",
+          "ziel": "Die verzerrte Bass-Linie exakt mit Beat und Gitarre verzahnen — Wand statt Brei.",
+          "schritte": [
+            "Spiel eine treibende Achtel-Linie (D-Beat-Tempo, um 160 BPM) mit deiner Zerre zwei Minuten zum Klick. Prüf auf der Aufnahme zuerst die eigene Konstanz: gleicher Attack, stabile Zeit, kein Vorlaufen.",
+            "Leg die Linie über einen D-Beat-Loop und verzahn dich mit der Kick: Die Bass-Noten auf Kick-Schlägen bekommen den Akzent, der Rest bleibt gleichmäßig — Bass und Kick sollen wie ein Schlag klingen.",
+            "Spiel dieselbe Linie zu einer verzerrten Gitarren-Aufnahme (oder mit Gitarrist): Hör auf kleinen Lautsprechern ab, ob zwei unterscheidbare Sägen klingen oder eine Masse. Wenn Masse: Zerre am Bass etwas zurück oder Rollen staffeln — nicht lauter drehen.",
+            "Übe den Alleinträger-Moment: vier Takte mit Gitarre, vier Takte, in denen die Gitarre schweigt (Aufnahme stummschalten). Deine Säge muss allein genauso treiben — gleiche Zeit, gleicher Druck."
+          ],
+          "steigerung": "Wechsle innerhalb der Linie zwischen exakter Gitarren-Doppelung und einer eigenen Figur (Oktave, ein Durchgang zum nächsten Grundton) — die Wand darf sich bewegen, solange die Verzahnung mit der Kick steht.",
+          "selbstkontrolle": "Auf der Aufnahme mit allen Instrumenten: Kannst du den Bass als eigene Kante hören UND das Riff der Gitarre noch mitsingen? Im Alleinträger-Teil: Bleibt das Tempo exakt, oder sackt es, sobald die Gitarre fehlt?"
         }
       }
     }

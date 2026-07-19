@@ -15,12 +15,14 @@ import { sucheBausteine } from '../suche.js';
 let letzteAnfrage = '';
 
 const DOMAENE_HUE = {
-  technik: 'pf-blau',
-  taktik: 'pf-indigo',
-  mentales: 'pf-violett',
-  athletik_kondition: 'pf-teal',
-  ausruestung: 'pf-schiefer',
-  trainingsgestaltung: 'pf-magenta',
+  gitarre: 'pf-magenta',
+  bass: 'pf-schiefer',
+  schlagzeug: 'pf-indigo',
+  gesang: 'pf-violett',
+  theorie: 'pf-blau',
+  koerper: 'pf-sky',
+  ausruestung: 'pf-teal',
+  mentales: 'pf-blau',
 };
 
 // In-Kontext-Rückweg passend zum Baustein: Outdoor bleibt in der Umgebungs-Achse,
@@ -34,12 +36,16 @@ function kontextFuer(baustein) {
 // Treffer-Terme im (escapten) Ausschnitt markieren. Ein kombinierter Ausdruck
 // in einem Durchgang — so entstehen keine verschachtelten <mark> bei Überlappung.
 function hervorheben(roh, terme) {
-  const html = esc(roh);
   const sichere = terme
     .filter((term) => term.length >= 2)
     .map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-  if (sichere.length === 0) return html;
-  return html.replace(new RegExp(`(${sichere.join('|')})`, 'gi'), '<mark>$1</mark>');
+  if (sichere.length === 0) return esc(roh);
+  // Erst im Rohtext matchen, dann teilstückweise escapen — sonst kann ein Term
+  // (z. B. „amp") mitten in einer HTML-Entity des escapten Texts treffen.
+  return roh
+    .split(new RegExp(`(${sichere.join('|')})`, 'gi'))
+    .map((teil, i) => (i % 2 === 1 ? `<mark>${esc(teil)}</mark>` : esc(teil)))
+    .join('');
 }
 
 function metaZeile(baustein) {
