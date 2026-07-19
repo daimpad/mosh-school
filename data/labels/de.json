@@ -503,7 +503,12 @@
     "grind_bass_verzahnung": "Grind-Bass: Verzahnung im Extremtempo",
     "sludge_riffing_dreck": "Sludge-Riffing: langsam & giftig",
     "sludge_drums_hinterm_beat": "Sludge-Drums: hinter dem Beat",
-    "sludge_vocals_verzweiflung": "Sludge-Vocals: der raue Schrei"
+    "sludge_vocals_verzweiflung": "Sludge-Vocals: der raue Schrei",
+    "pv_vocals_ausbruch": "Powerviolence-Vocals: Ausbrüche in Serie",
+    "pv_gitarre_zustaende": "Powerviolence-Gitarre: Zustände schalten",
+    "genrekunde_extreme_familie": "Genrekunde: die extreme Familie",
+    "sludge_erstes_riff": "Das erste Sludge-Riff",
+    "pv_stopp_spiel": "Das Stopp-Spiel"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -587,7 +592,14 @@
     "fb_grind_schnitt_franst": "Grind-Riffing: die Schnitte fransen",
     "fb_grind_register_bruch": "Grind-Vocals: der Wechsel bricht die Basis",
     "fb_pv_kante_kleckert": "Powerviolence: die Kante kleckert",
-    "fb_pv_karte_fehlt": "Powerviolence: die Landkarte fehlt"
+    "fb_pv_karte_fehlt": "Powerviolence: die Landkarte fehlt",
+    "fb_doom_drama_ungeduld": "Doom-Dramaturgie: die Ungeduld",
+    "fb_doom_gewicht_verwechselt": "Doom-Sound: Gewicht mit Gain verwechselt",
+    "fb_hc_song_gestreckt": "Hardcore-Songwriting: gestreckt statt direkt",
+    "fb_hc_buehne_show": "Hardcore live: Show statt Ernsthaftigkeit",
+    "fb_crust_dreck_ausrede": "Crust-Sound: Dreck als Ausrede",
+    "fb_grind_gestreckt": "Grind-Dramaturgie: die gestreckte Miniatur",
+    "fb_pv_beliebig": "Powerviolence: Schnitte ohne Proportion"
   },
   "grafiken": {},
   "vokabeln": {
