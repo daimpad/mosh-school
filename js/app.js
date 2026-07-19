@@ -15,7 +15,7 @@ import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, sprache, t, text } from './i18n.js';
-import { esc, wendeThemaAn } from './oberflaeche.js';
+import { esc, setzeGrafiken, wendeThemaAn } from './oberflaeche.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung } from './zustand.js';
 
 let daten = null;
@@ -295,9 +295,15 @@ function rendern() {
 async function boot() {
   ladeZustand();
   const el = document.getElementById('ansicht');
+  // Baustein-Grafiken laufen beiläufig mit: Fehlt die Datei, bleibt die Registry
+  // leer und bausteinIcon fällt auf die FA-/Domänen-Icons zurück (kein Bruch).
+  const grafikenLaden = fetch('data/grafiken.json')
+    .then((antwort) => (antwort.ok ? antwort.json() : {}))
+    .catch(() => ({}));
   try {
     await initI18n(einstellungen().sprache);
     daten = await ladeDaten();
+    setzeGrafiken(await grafikenLaden);
   } catch (fehler) {
     try {
       await initI18n('de');
