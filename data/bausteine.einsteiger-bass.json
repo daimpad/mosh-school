@@ -5,7 +5,44 @@
     "domaene": "bass",
     "hinweis": "Einsteiger-Bass. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
   },
-  "delta_bausteine": [],
+  "delta_bausteine": [
+    {
+      "id": "delta_git_plektrum_technik",
+      "basis_baustein": "plektrum_technik",
+      "ersetzt_bei_herkunft": "GIT",
+      "delta_buendelung": [
+        "delta_git_bass_greifhand",
+        "delta_git_palm_muting_bass"
+      ],
+      "erklaerteil": {
+        "de": "Als Gitarrist bringst du die Plektrum-Grundlagen komplett mit: Haltung, Anschlagswinkel, Wechselschlag — alles gilt am Bass weiter. Was sich ändert, ist die Physik: Die Saiten sind dicker, schwingen weiter aus und brauchen mehr Anschlagsmasse. Ein Gitarren-Anschlag klingt am Bass dünn; der Ton entsteht aus einer etwas größeren Bewegung mit mehr Arm-Beteiligung und einem festeren Plektrum.\n\nZweite Umstellung: das Zeitgefühl. Der Bass-Ton spricht träger an als eine Gitarrensaite — bei schnellen Linien musst du minimal früher „denken“, damit der Ton auf dem Schlag SITZT statt auf ihm zu beginnen. Genau das übt der Baustein: gleichmäßige Achtel, bis Anschlag und Klick verschmelzen.\n\nDein Vorteil: Wechselschlag und Plektrumskontrolle musst du nicht neu lernen, nur neu dosieren. Nimm dir bewusst Zeit für den satten Einzelton — der Rest deiner Technik zieht nach."
+      }
+    },
+    {
+      "id": "delta_git_bass_greifhand",
+      "basis_baustein": "bass_greifhand",
+      "ersetzt_bei_herkunft": "GIT",
+      "delta_buendelung": [
+        "delta_git_plektrum_technik",
+        "delta_git_palm_muting_bass"
+      ],
+      "erklaerteil": {
+        "de": "Deine Greifhand kennt das Prinzip von der Gitarre: ein Finger pro Bund, Daumen hinten als Gegenlager, Kraft nur so viel wie nötig. Am Bass skaliert alles hoch — die Mensur ist länger, die Bünde liegen weiter auseinander, die Saiten sind dicker. Die Ein-Finger-pro-Bund-Regel wird dadurch in den tiefen Lagen zur Dehnübung; völlig legitim ist dort die Drei-Finger-Aufteilung (Zeige-, Mittel-, kleiner Finger), bis die Spreizung gewachsen ist.\n\nWichtigster Unterschied: die Kraft-Ökonomie. Dickere Saiten verführen zum Pressen — aber wie an der Gitarre gilt: kurz vor dem Bund greifen, dann reicht wenig Druck. Wer mit Gewalt greift, verkrampft in Minuten. Und der Daumen wandert mit: Bei den weiten Lagenwechseln des Basses bleibt er beweglich hinter dem Hals statt festgeklammert.\n\nDein Lagen- und Griffbrett-Verständnis überträgt sich eins zu eins — die tiefen vier Saiten des Basses sind gestimmt wie deine tiefen vier, eine Oktave tiefer. Du orientierst dich also sofort. Neu ist nur der Maßstab."
+      }
+    },
+    {
+      "id": "delta_git_palm_muting_bass",
+      "basis_baustein": "palm_muting_bass",
+      "ersetzt_bei_herkunft": "GIT",
+      "delta_buendelung": [
+        "delta_git_plektrum_technik",
+        "delta_git_bass_greifhand"
+      ],
+      "erklaerteil": {
+        "de": "Palm Muting beherrschst du von der Gitarre — Handballen an den Steg, gedämpfter Punch statt offenem Klang. Am Bass funktioniert es identisch, aber die Dosis ist eine andere: Die dicken Saiten reagieren empfindlicher auf den Auflagedruck. Ein Hauch zu viel, und der Ton verliert seine Tonhöhe komplett; ein Hauch zu wenig, und nichts ist gedämpft. Das Fenster ist schmaler als an der Gitarre.\n\nDazu kommt die Rolle im Bandsound: An der Gitarre ist Palm Muting oft ein Riff-Effekt — am Bass formt es das Fundament. Ein leicht gedämpfter Bass-Achtellauf klingt definierter und sitzt besser im Mix als offene Saiten, gerade unter verzerrten Gitarren. Viele Metal-Bassisten spielen deshalb fast dauerhaft mit leichter Dämpfung.\n\nDein Startvorteil ist das Bewegungsgefühl; neu kalibrierst du den Druck. Der Baustein führt dich mit der Millimeter-Suche zum Punkt, an dem der Ton kurz, fett und tonal bleibt."
+      }
+    }
+  ],
   "bausteine": [
     {
       "id": "bass_grundhaltung",
@@ -72,7 +109,10 @@
           "steigerung": "Verschieb die Übung in tiefere Lagen und lass die Hand mitwandern, statt zu überdehnen.",
           "selbstkontrolle": "Jeder Ton klingt sauber; keine Überdehnung, keine Verspannung in der Hand."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "GIT"
+      ]
     },
     {
       "id": "greifhand_daempfen",
@@ -184,7 +224,10 @@
           "steigerung": "Steigere Tempo und Dauer in kleinen Schritten; bei Downpicking nur so lange, wie die Hand locker bleibt.",
           "selbstkontrolle": "Der Anschlag klingt gleichmäßig und definiert; die Hand verkrampft nicht."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "GIT"
+      ]
     },
     {
       "id": "anschlagpunkt_ton",
@@ -260,7 +303,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und wechsle zwischen gedämpft und offen.",
           "selbstkontrolle": "Jeder Ton klingt gleich kurz und gleich laut; die Dämpfung bleibt konstant."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "GIT"
+      ]
     },
     {
       "id": "grundton_folgen",

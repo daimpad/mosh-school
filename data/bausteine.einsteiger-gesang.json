@@ -5,7 +5,30 @@
     "domaene": "gesang",
     "hinweis": "Einsteiger-Gesang. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
   },
-  "delta_bausteine": [],
+  "delta_bausteine": [
+    {
+      "id": "delta_kla_atemstuetze",
+      "basis_baustein": "atemstuetze",
+      "ersetzt_bei_herkunft": "KLA",
+      "delta_buendelung": [
+        "delta_kla_clean_im_metal"
+      ],
+      "erklaerteil": {
+        "de": "Mit klassischer Gesangsausbildung bringst du das Fundament dieses Bausteins fertig mit: Zwerchfellatmung, aktive Stütze, der Ton auf dem Atem — all das ist deine Muttersprache. Die Stütze im Metal ist KEINE andere Technik: Es ist dieselbe Körperarbeit, nur im Dienst einer anderen Ästhetik.\n\nWas sich verschiebt, sind die Anforderungen drumherum: Metal-Gesang passiert oft im Stehen in Bewegung, gegen laute Instrumente, in kurzen druckvollen Phrasen statt langer Legato-Bögen — und später, bei verzerrten Stilen, wird deine stabile Stütze zur Sicherheitsleine, denn jede gesunde Verzerrung entsteht auf genau dem Luftstrom, den du schon kontrollierst. Sängerinnen und Sänger mit klassischer Basis lernen harsche Techniken oft schneller UND gesünder.\n\nNutz den Baustein als Transfer-Check: Funktioniert deine Stütze auch im Stehen mit gebeugten Knien, beim rhythmischen Sprechen, bei kurzen Rufen? Wenn ja, bist du hier fertig — dein nächster Schritt ist die Übersetzung in die Metal-Klangwelt."
+      }
+    },
+    {
+      "id": "delta_kla_clean_im_metal",
+      "basis_baustein": "clean_im_metal",
+      "ersetzt_bei_herkunft": "KLA",
+      "delta_buendelung": [
+        "delta_kla_atemstuetze"
+      ],
+      "erklaerteil": {
+        "de": "Klarer Gesang im Metal ist für dich als klassisch ausgebildete Stimme naheliegendes Terrain — getragene Doom-Linien und melodische Metalcore-Refrains leben von genau der Tonkontrolle, die du mitbringst. Trotzdem ist es eine Übersetzung, keine Kopie: Die Klangideale unterscheiden sich.\n\nDrei Verschiebungen sind typisch. Erstens das Vibrato: Klassisch ist es Dauerzustand, im Metal ein gezieltes Gestaltungsmittel — viele Linien stehen gerade und setzen Vibrato erst spät im Ton ein. Zweitens die Platzierung: Statt maximalem Trageklang für den unverstärkten Saal singst du am Mikrofon — Intimität und Schärfe sind möglich, die das klassische Ideal vermeidet. Drittens die Sprache der Phrasierung: rhythmisch kantiger, sprechnäher, oft gegen den Beat gesetzt statt über ihn hinweggebunden.\n\nDein Weg durch den Baustein: Sing die Übungen zuerst „klassisch“, dann bewusst metal — gerader Ton, späteres Vibrato, härtere Konsonanten. Der Unterschied, den du dabei hörst, ist genau die Übersetzung, um die es geht."
+      }
+    }
+  ],
   "bausteine": [
     {
       "id": "gesang_haltung_atmung",
@@ -74,7 +97,10 @@
           "steigerung": "Verlängere das „Ss“ und halte es über die ganze Ausatmung gleichmäßig.",
           "selbstkontrolle": "Der Luftstrom bleibt gleichmäßig; die Arbeit passiert im Rumpf, nicht im Hals."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "KLA"
+      ]
     },
     {
       "id": "stimmuebungen_sanft",
@@ -297,6 +323,9 @@
       },
       "spielziele": [
         "stimmsicherheit"
+      ],
+      "transfer_herkunft": [
+        "KLA"
       ]
     },
     {
