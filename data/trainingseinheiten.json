@@ -914,6 +914,144 @@
           }
         ]
       }
+    },
+    {
+      "id": "grind_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Grindcore: Dichte, Nähte und der Registerwechsel"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für kontrollierte Raserei: Der Blast wird warm angespielt, dann arbeiten Gitarre, Schlagzeug und Bass an Reduktion, Nähten und Verzahnung — und zum Schluss übt die Stimme den Tief-Hoch-Wechsel. Kurze intensive Blöcke, echte Pausen, Gehörschutz auf."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "blastbeat",
+            "hinweis": {
+              "de": "In entspanntem Tempo einlaufen — Lockerheit vor Geschwindigkeit, die Session wird noch schnell genug."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "grind_riff_reduktion",
+            "hinweis": {
+              "de": "Gitarre: die Dreißig-Sekunden-Miniatur bauen — harte Schnitte, kein Füllmaterial."
+            }
+          },
+          {
+            "baustein": "grind_blast_uebergaenge",
+            "hinweis": {
+              "de": "Schlagzeug: nur die Nähte üben — zehn Wiederholungen pro Kante, der erste Schlag nach dem Wechsel zählt."
+            }
+          },
+          {
+            "baustein": "grind_bass_verzahnung",
+            "hinweis": {
+              "de": "Bass: Skelett-Töne auf die Kick legen — die Wand steht, wenn Bass und Double Bass eine Textur sind."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grind_vocals_wechsel",
+            "hinweis": {
+              "de": "Zum Abschluss die Stimme, bewusst leise: Tief-Hoch-Wechsel mit großem Abstand — Tempo kommt über Wochen, nicht heute."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "crust_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Crust: der unerbittliche Lauf"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für Ausdauer mit Haltung: Der D-Beat läuft sich warm, dann bauen Schlagzeug, Bass und Stimme den räudigen Dauerdruck — und der Ausklang gehört den Händen, die den Lauf bezahlt haben."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "d_beat",
+            "hinweis": {
+              "de": "Locker einlaufen, deutlich unter Zieltempo — der Dauerlauf kommt gleich noch."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "crust_dbeat_ausbau",
+            "hinweis": {
+              "de": "Schlagzeug: Konstanz vor Tempo — zwei Minuten am Stück, Anfang und Ende der Aufnahme müssen gleich klingen."
+            }
+          },
+          {
+            "baustein": "bass_downpicking",
+            "hinweis": {
+              "de": "Bass: der treibende Downpicking-Motor unter dem D-Beat — gleicher Attack auf jeder Note."
+            }
+          },
+          {
+            "baustein": "downpicking",
+            "hinweis": {
+              "de": "Gitarre: Downpicking als Crust-Fundament — Härte aus dem Handgelenk, Lockerheit vor Dauer."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "crust_vocals_rau",
+            "hinweis": {
+              "de": "Zum Abschluss die Stimme, bewusst leise und kurz: dringlich, nicht gepresst — bei Kratzen sofort stoppen, danach Hände und Stimme ausruhen lassen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pv_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Powerviolence: Kanten schleifen"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für Abrisskanten: Erst werden Tempo- und Feel-Wechsel als Grundlage aufgefrischt, dann die Kanten einzeln geschliffen und als Band reproduzierbar gemacht — zum Schluss prüft das Metronom ehrlich, was die Wechsel mit dem Tempogedächtnis gemacht haben."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "tempo_wechsel_drums",
+            "hinweis": {
+              "de": "Die Wechsel-Grundlagen in moderatem Tempo auffrischen — noch mit verwandten Tempi, die harten Sprünge kommen gleich."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "pv_start_stopp",
+            "hinweis": {
+              "de": "Die Kanten einzeln: fester letzter Schlag, definierte Stille, entschlossener erster Schlag — zehnmal dieselbe Stelle."
+            }
+          },
+          {
+            "baustein": "pv_band_abrisskanten",
+            "hinweis": {
+              "de": "Mit der Band (oder zu zweit): Landkarte aufsagen, Kanten verketten, den Fehlerfall proben — nie zurückspringen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_band_zeitgefuehl",
+            "hinweis": {
+              "de": "Zum Abschluss das geteilte Raster in der Zeitlupe prüfen — genau das Tempogedächtnis, von dem die Abrisskanten leben."
+            }
+          }
+        ]
+      }
     }
   ]
 }

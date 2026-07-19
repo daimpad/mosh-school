@@ -498,7 +498,12 @@
     "grind_kompression": "",
     "pv_start_stopp": "",
     "pv_miniatur_dramaturgie": "",
-    "pv_band_abrisskanten": ""
+    "pv_band_abrisskanten": "",
+    "grind_blast_uebergaenge": "",
+    "grind_bass_verzahnung": "",
+    "sludge_riffing_dreck": "",
+    "sludge_drums_hinterm_beat": "",
+    "sludge_vocals_verzweiflung": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -568,7 +573,21 @@
     "fb_stimme_alltagslast": "",
     "fb_drums_dauervollgas": "",
     "fb_gain_wand": "",
-    "fb_monitoring_drueckt": ""
+    "fb_monitoring_drueckt": "",
+    "fb_doom_ton_stirbt": "",
+    "fb_doom_fuzz_brei": "",
+    "fb_doom_drums_gefuellt": "",
+    "fb_doom_vocals_gepresst": "",
+    "fb_bounce_durchgenagelt": "",
+    "fb_motor_zieht": "",
+    "fb_energie_ins_tempo": "",
+    "fb_gangshout_hals": "",
+    "fb_dbeat_verkrampft": "",
+    "fb_crust_vocals_druck": "",
+    "fb_grind_schnitt_franst": "",
+    "fb_grind_register_bruch": "",
+    "fb_pv_kante_kleckert": "",
+    "fb_pv_karte_fehlt": ""
   },
   "grafiken": {},
   "vokabeln": {
@@ -631,7 +650,8 @@
       "doom": "",
       "crust": "",
       "grindcore": "",
-      "powerviolence": ""
+      "powerviolence": "",
+      "sludge": ""
     }
   },
   "spielziele": {
@@ -708,6 +728,9 @@
     "vocals_experte_werkstatt": "",
     "theorie_gehoer_werkstatt": "",
     "doom_werkstatt": "",
-    "hardcore_werkstatt": ""
+    "hardcore_werkstatt": "",
+    "grind_werkstatt": "",
+    "crust_werkstatt": "",
+    "pv_werkstatt": ""
   }
 }

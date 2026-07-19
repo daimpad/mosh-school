@@ -35,6 +35,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.stil-doom.json',
   'data/bausteine.stil-hardcore.json',
   'data/bausteine.stil-punk-extrem.json',
+  'data/bausteine.stil-sludge.json',
 ];
 
 export async function ladeDaten() {

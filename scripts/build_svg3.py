@@ -257,6 +257,44 @@ S["pv_band_abrisskanten"] = [
     C(56, 32, 4, 2.5),
 ]
 
+# ================= SLUDGE (stil-sludge) + GRIND-VERTIEFUNG =================
+
+# Langsam & giftig: eine schwere, langsame Welle mit rauer Dreckkante obenauf —
+# Doom-Gewicht mit Hardcore-Biss.
+S["sludge_riffing_dreck"] = [
+    P(wavepath(14, 106, 70, 12, 1.5, step=2.0), 5),
+    P(roughpath(30, 92, 42, 6, step=3.0, seed=51), 2.2),
+]
+# Hinter dem Beat: Raster-Ticks auf der Zeitlinie, die schweren Backbeat-Schläge
+# konstant knapp NACH dem Raster — kontrolliertes Schleppen.
+S["sludge_drums_hinterm_beat"] = [
+    L(12, 72, 108, 72, 2.5),
+    *[L(20 + i * 22, 72, 20 + i * 22, 56, 2) for i in range(5)],
+    L(47, 72, 47, 40, 6),
+    L(91, 72, 91, 40, 6),
+]
+# Der raue Schrei: eine hohe, aufsteigende raue Linie unter einem weiten
+# Atembogen — klingt gequält, bleibt getragen.
+S["sludge_vocals_verzweiflung"] = [
+    ARC(60, 64, 40, 20, 160, 2),
+    P(roughpath(18, 102, 74, 7, step=2.8, seed=37, env=lambda t: 0.4 + 0.6 * t), 4),
+]
+# Blast-Übergänge: zwei Raster verschiedener Dichte, an der Naht ein
+# markierter Schaltpunkt — die Naht ist das Ereignis.
+S["grind_blast_uebergaenge"] = [
+    L(12, 74, 108, 74, 2.5),
+    *[L(16 + i * 7, 74, 16 + i * 7, 54, 2.5) for i in range(6)],
+    C(60, 64, 5, 2.5),
+    *[L(70 + i * 12, 74, 70 + i * 12, 46, 4) for i in range(4)],
+]
+# Verzahnung im Extremtempo: schwere Skelett-Striche greifen exakt in die
+# Lücken einer feinen Textur — zwei Stimmen, eine Wand.
+S["grind_bass_verzahnung"] = [
+    *[L(18 + i * 24, 42, 18 + i * 24, 66, 6) for i in range(4)],
+    *[L(30 + i * 24, 54, 30 + i * 24, 78, 2.2) for i in range(4)],
+    L(12, 90, 108, 90, 2.5),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -264,7 +302,9 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "hardcore_gangshouts", "hardcore_songwriting_direkt", "hardcore_buehne_community",
                 "crust_dbeat_ausbau", "crust_sound_dreck", "crust_vocals_rau",
                 "grind_riff_reduktion", "grind_vocals_wechsel", "grind_kompression",
-                "pv_start_stopp", "pv_miniatur_dramaturgie", "pv_band_abrisskanten"]
+                "pv_start_stopp", "pv_miniatur_dramaturgie", "pv_band_abrisskanten",
+                "sludge_riffing_dreck", "sludge_drums_hinterm_beat", "sludge_vocals_verzweiflung",
+                "grind_blast_uebergaenge", "grind_bass_verzahnung"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
