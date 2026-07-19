@@ -459,7 +459,15 @@
     "vocal_identitaet": "",
     "vocals_studio": "",
     "vocals_live_monitoring": "",
-    "vocals_tour_haushalt": ""
+    "vocals_tour_haushalt": "",
+    "modi_im_metal": "",
+    "harmonisch_moll_exotik": "",
+    "akkordfolgen_metal": "",
+    "ungerade_takte_theorie": "",
+    "polyrhythmik_theorie": "",
+    "tonartwechsel_dramaturgie": "",
+    "gehoer_transkription": "",
+    "arrangement_dichte": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -603,6 +611,10 @@
     "gitarre_tremolo_werkstatt": "",
     "bass_speed_praezision": "",
     "drums_blast_werkstatt": "",
-    "vocals_harsh_werkstatt": ""
+    "vocals_harsh_werkstatt": "",
+    "gitarre_experte_werkstatt": "",
+    "bass_experte_werkstatt": "",
+    "drums_experte_werkstatt": "",
+    "vocals_experte_werkstatt": ""
   }
 }
