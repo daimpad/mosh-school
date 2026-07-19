@@ -55,7 +55,7 @@
     "keine_angabe": "Keine Angabe",
     "frage_stufe": "Wo stehst du an deinem Instrument?",
     "frage_trainer": "Lernst du auch, um es anderen beizubringen?",
-    "anker_beginner": "Du fängst gerade an oder hast erst ein paar Mal gespielt. Riffs, Beats oder Screams fühlen sich noch ungewohnt an — du willst die Grundlagen an deinem Instrument von Grund auf lernen.",
+    "anker_einsteiger": "Du fängst gerade an oder hast erst ein paar Mal gespielt. Riffs, Beats oder Screams fühlen sich noch ungewohnt an — du willst die Grundlagen an deinem Instrument von Grund auf lernen.",
     "anker_fortgeschritten": "Du spielst einfache Riffs oder Beats zuverlässig im Takt. Die Grundtechniken sitzen im Grundsatz, und du hältst ein Stück durch. Jetzt willst du schneller, tighter und variabler werden.",
     "anker_experte": "Du beherrschst dein Instrument sicher im Bandkontext und gestaltest Songs aktiv mit. Tempo, Dynamik und Sound setzt du bewusst ein. Du suchst den Feinschliff und stilistische Tiefe.",
     "trainer_ja": "Ja — Trainer-Perspektive freischalten",
@@ -248,7 +248,7 @@
     "suche_titel": "Suche",
     "suche_intro": "Finde einen Baustein nach Stichwort — quer durch alle Themen.",
     "suche_feld_label": "Suchbegriff eingeben",
-    "suche_platzhalter": "Technik, Aufschlag, Doppel, Wind …",
+    "suche_platzhalter": "Palm Muting, Blastbeat, Growl, Doom …",
     "suche_start": "Tippe einen Begriff ein — oder stöbere direkt nach Thema:",
     "suche_treffer": "{n} Treffer",
     "suche_keine_treffer": "Nichts gefunden für „{q}“. Versuch einen anderen Begriff oder stöbere nach Thema.",
@@ -258,7 +258,8 @@
     "speicher_warnung": "Hinweis: Der Browser erlaubt kein dauerhaftes Speichern (z. B. privater Modus). Fortschritt geht beim Schließen verloren.",
     "pfad_stil": "Genres",
     "pfad_stil_text": "Death, Black, Doom & Co. — quer über alle Instrumente und Stufen.",
-    "n_genres": "{n} Genres"
+    "n_genres": "{n} Genres",
+    "skip_link": "Zum Inhalt springen"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",

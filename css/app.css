@@ -733,7 +733,7 @@ a.karte-link {
 /* Kompetenzstufen-Chips: Blau-Intensitätsrampe (Einsteiger hell → Experte tief).
    Bewusst KEINE Ampel-Signalfarben — Rot/Gelb/Grün bleiben dem Status vorbehalten. */
 .chip-stufe { border-color: transparent; font-weight: 600; }
-.chip-stufe-beginner { background: var(--stufe-1-flaeche); color: var(--stufe-1-text); }
+.chip-stufe-einsteiger { background: var(--stufe-1-flaeche); color: var(--stufe-1-text); }
 .chip-stufe-fortgeschritten { background: var(--stufe-2-flaeche); color: var(--stufe-2-text); }
 .chip-stufe-experte { background: var(--stufe-3-flaeche); color: var(--stufe-3-text); }
 .chip-stufe-trainer { background: var(--flaeche-2); color: var(--tinte-2); border-color: var(--linie-stark); }

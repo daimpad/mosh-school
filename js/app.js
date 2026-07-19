@@ -57,7 +57,9 @@ function aktualisiereNavigation(segmente) {
     else verweis.removeAttribute('aria-current');
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte).
-  const imMehr = ['suche', 'stil', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]);
+  const imMehr =
+    ['suche', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
+    (segmente[0] === 'pfad' && segmente[1] === 'stil');
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
     mehr.classList.toggle('aktiv', imMehr);
@@ -66,8 +68,18 @@ function aktualisiereNavigation(segmente) {
   }
 }
 
+function sicherDecode(wert) {
+  try {
+    return decodeURIComponent(wert);
+  } catch {
+    return wert;
+  }
+}
+
 function beschrifteRahmen() {
   document.title = t('app_titel');
+  const zumInhalt = document.querySelector('.zum-inhalt');
+  if (zumInhalt) zumInhalt.textContent = t('skip_link');
   document.querySelector('.marke-text').textContent = t('app_titel');
   const beschriftungen = {
     lernen: t('nav_lernen'),
@@ -245,21 +257,21 @@ function rendern() {
   } else if (segmente[0] === 'pfad' && segmente[1] === 'kompetenz') {
     renderKompetenzpfad(el, daten, segmente[2] || null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'themen') {
-    renderThemen(el, daten, segmente[2] ? decodeURIComponent(segmente[2]) : null);
+    renderThemen(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'spielform') {
-    renderSpielform(el, daten, segmente[2] ? decodeURIComponent(segmente[2]) : null);
+    renderSpielform(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'stil') {
-    renderStil(el, daten, segmente[2] ? decodeURIComponent(segmente[2]) : null);
+    renderStil(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'umgebung') {
     renderUmgebung(el, daten, null, null);
   } else if (segmente[0] === 'pfad' && (segmente[1] === 'witterung' || segmente[1] === 'untergrund')) {
-    renderUmgebung(el, daten, segmente[1], segmente[2] ? decodeURIComponent(segmente[2]) : null);
+    renderUmgebung(el, daten, segmente[1], segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'individual') {
     renderIndividual(el, daten);
   } else if (segmente[0] === 'plan') {
     renderPlan(el, daten);
   } else if (segmente[0] === 'training') {
-    renderTraining(el, daten, segmente[1] ? decodeURIComponent(segmente[1]) : null);
+    renderTraining(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'suche') {
     renderSuche(el, daten);
   } else if (segmente[0] === 'ueber') {
@@ -271,7 +283,7 @@ function rendern() {
   } else if (segmente[0] === 'datenschutz') {
     renderRechtstext(el, daten, 'datenschutz');
   } else if (segmente[0] === 'baustein' && segmente[1]) {
-    renderBaustein(el, daten, decodeURIComponent(segmente[1]), query.get('kontext') || 'kompetenz');
+    renderBaustein(el, daten, sicherDecode(segmente[1]), query.get('kontext') || 'kompetenz');
   } else if (segmente[0] === 'profil') {
     renderProfil(el, daten);
   } else {

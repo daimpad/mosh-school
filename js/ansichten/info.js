@@ -111,6 +111,10 @@ export function renderMitmachen(el, daten) {
     const knopf = ereignis.currentTarget;
     knopf.disabled = true;
     await aktiviereFeedback();
+    if (!feedbackAktiv()) {
+      knopf.disabled = false;
+      return;
+    }
     const bereich = el.querySelector('#feedback-bereich');
     if (bereich) bereich.innerHTML = `<p class="bestaetigung">${esc(text(fb.aktiv) ?? '')}</p>`;
   });
