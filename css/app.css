@@ -2015,3 +2015,21 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .marke-hero-icon svg.grafik-icon { width: 2.1rem; height: 2.1rem; vertical-align: 0; }
 .such-medaille svg.grafik-icon { width: 1.35rem; height: 1.35rem; vertical-align: 0; }
 .fb-karte h3 svg.grafik-icon { width: 1.6em; height: 1.6em; vertical-align: -0.4em; }
+
+/* Lehrgrafiken: breite Erklär-Schemata im Erklärteil (Tranche 4). */
+.lehrgrafik { margin: 1.1rem 0 1.4rem; }
+.lehrgrafik .lehrgrafik-svg { display: block; width: 100%; max-width: 460px; height: auto; color: var(--tinte); }
+.lehrgrafik figcaption { font-size: 0.85rem; color: var(--tinte-2); margin-top: 0.4rem; max-width: 460px; }
+
+/* Stimmungs-Werkzeug */
+.chip-waehlbar { cursor: pointer; background: var(--flaeche); font: inherit; font-size: 0.72rem; }
+.chip-waehlbar svg { width: 1em; height: 1em; vertical-align: -0.15em; }
+.stimm-detail { margin-top: 1.2rem; }
+.stimm-saiten { display: flex; flex-direction: column; gap: 0.35rem; margin: 1rem 0; max-width: 460px; }
+.saite { display: flex; align-items: center; gap: 0.7rem; background: var(--flaeche); border: 1px solid var(--linie-stark); border-radius: 2px; padding: 0.45rem 0.7rem; cursor: pointer; color: var(--tinte); font: inherit; }
+.saite:hover { border-color: var(--primaer, var(--tinte)); }
+.saite-note { font-weight: 700; min-width: 2.6rem; text-align: left; }
+.saite svg { flex: 1; height: 12px; }
+.stimm-fakten { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; margin: 0.8rem 0; }
+.stimm-fakten dt { font-weight: 700; }
+.stimm-fakten dd { margin: 0; }

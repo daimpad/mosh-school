@@ -259,7 +259,14 @@
     "pfad_stil": "Genres",
     "pfad_stil_text": "Death, Black, Doom & Co. — quer über alle Instrumente und Stufen.",
     "n_genres": "{n} Genres",
-    "skip_link": "Zum Inhalt springen"
+    "skip_link": "Zum Inhalt springen",
+    "nav_stimmungen": "Stimmungen",
+    "stimm_untertitel": "Tunings der Genres — mit Referenztönen, Saiten-Empfehlung und Genre-Landkarte. Tipp eine Saite an, um den Zielton zu hören.",
+    "stimm_staerke": "Saitenstärke-Empfehlung",
+    "stimm_genres": "Typisch in",
+    "stimm_saite_aria": "Referenzton {note} anspielen",
+    "stimm_hinweis_pegel": "Referenztöne bewusst leise abspielen — und beim Stimmen am Instrument gilt wie immer: Gehörschutz, sobald der Amp läuft.",
+    "lehrgrafik_titel": "Schema"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
@@ -480,7 +487,8 @@
     "pedalboard_logik": "Pedalboard-Logik: die Reihenfolge",
     "modeler_reamping": "Modeler, Profiling & Reamping",
     "noise_management": "Noise-Management: die stille Profi-Disziplin",
-    "backline_ausfallsicherheit": "Backline & Ausfallsicherheit"
+    "backline_ausfallsicherheit": "Backline & Ausfallsicherheit",
+    "tuning_landkarte": "Tuning-Landkarte: Genres & Tiefen"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -635,6 +643,22 @@
       "grindcore": "Grindcore",
       "powerviolence": "Powerviolence",
       "sludge": "Sludge"
+    },
+    "stimmung": {
+      "e_standard": "E-Standard",
+      "drop_d": "Drop D",
+      "eb_standard": "Es-Standard (Eb)",
+      "d_standard": "D-Standard",
+      "drop_c": "Drop C",
+      "c_standard": "C-Standard",
+      "drop_b": "Drop B",
+      "b_standard_7": "B-Standard (7-Saiter)",
+      "drop_a_7": "Drop A (7-Saiter)",
+      "bass_e_standard": "Bass: E-Standard",
+      "bass_drop_d": "Bass: Drop D",
+      "bass_d_standard": "Bass: D-Standard",
+      "bass_drop_c": "Bass: Drop C",
+      "bass_b_5": "Bass: 5-Saiter (B)"
     }
   },
   "spielziele": {
@@ -716,5 +740,19 @@
     "crust_werkstatt": "Crust-Werkstatt",
     "pv_werkstatt": "Powerviolence-Werkstatt",
     "genre_schnupper": "Genres: Schnupper-Werkstatt"
+  },
+  "lehrgrafiken": {
+    "grundbeat": "Grundbeat im Achtel-Raster: oben Hi-Hat (x), Mitte Snare (Ring), unten Kick (Punkt) — Snare auf 2 und 4, Kick auf 1 und 3.",
+    "d_beat": "D-Beat: das Galopp-Muster — Kick auf 1, 3 und 3-und, Snare auf 2 und 4, Hi-Hat in Achteln.",
+    "blastbeat": "Traditional Blast: Kick und Snare wechseln sich auf jedem Achtel ab, die Hi-Hat läuft mit der Snare.",
+    "skank_beat": "Skank-Beat: Kick auf 1 und 3, Snare auf 2 und 4 — die Hi-Hat markiert nur die Viertel.",
+    "powerchords": "Powerchord-Griffbild: Grundton plus Quinte (und Oktave) auf den tiefen Saiten — die x markieren die stumm gehaltenen Saiten.",
+    "palm_muting": "Palm Muting von der Seite: Der Handballen liegt direkt am Steg (Block rechts) — der Pfeil zeigt die Millimeter-Suche nach vorn.",
+    "drop_tuning": "Drop-Tuning: Nur die tiefste (dickste) Saite wird tiefer gestimmt — der Pfeil an der Mechanik zeigt die Richtung.",
+    "tremolo_picking": "Tremolo-Picking: dichter Wechselschlag — Ab- und Aufschlag wechseln sich auf jeder Note ab.",
+    "chugs_breakdown": "Chugs im Breakdown: gedämpfte Schläge (Blöcke mit Dämpfstrich) und bewusste Stille — die Lücken gehören zum Riff.",
+    "plektrum_technik": "Wechselschlag am Bass: dieselbe Ab-/Auf-Logik wie an der Gitarre, mit mehr Masse pro Anschlag auf der dicken Saite.",
+    "sludge_erstes_riff": "Das erste Sludge-Riff: zwei schwere Akkorde mit vollem Ausklang — die Riegel markieren das bewusste Abstoppen vor dem nächsten Schlag.",
+    "pv_stopp_spiel": "Das Stopp-Spiel: Beat läuft, harter letzter Schlag (Riegel), gezählte Stille (Ringe), entschlossener Wiedereinstieg (großer Punkt)."
   }
 }

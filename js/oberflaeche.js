@@ -353,6 +353,19 @@ export function setzeGrafiken(map) {
   GRAFIKEN = map || {};
 }
 
+// Lehrgrafiken (data/lehrgrafiken.json, Tranche 4): breite Erklär-Schemata
+// (Beat-Raster, Griffbilder, Anschlagsmuster) für die Baustein-Ansicht.
+// Textfrei/i18n-neutral — die Legende liefert label('lehrgrafik', id).
+let LEHRGRAFIKEN = {};
+export function setzeLehrgrafiken(map) {
+  LEHRGRAFIKEN = map || {};
+}
+
+export function lehrgrafik(bausteinId) {
+  const svg = LEHRGRAFIKEN[bausteinId];
+  return svg ? svg.replace('<svg ', '<svg class="lehrgrafik-svg" ') : '';
+}
+
 export function bausteinIcon(bausteinId, klasse = '') {
   const grafik = GRAFIKEN[bausteinId];
   if (grafik) return grafik.replace('<svg ', `<svg class="grafik-icon ${klasse}" `);

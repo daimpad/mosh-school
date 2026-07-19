@@ -6,7 +6,7 @@
 import { schalteTeil } from '../aktionen.js';
 import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, untergrundVon, witterungVon } from '../daten.js';
 import { label, t, text } from '../i18n.js';
-import { absaetze, bausteinIcon, domaeneIcon, esc, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
+import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
 import { stationImKontext } from '../pfade.js';
 import { diagnose, einstellungen } from '../zustand.js';
 
@@ -210,6 +210,10 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
         ${heroUntertitel ? `<p class="marke-hero-untertitel">${esc(heroUntertitel)}</p>` : ''}
       </div>
     </section>`;
+  const schema = lehrgrafik(b.id);
+  const schemaSektion = schema
+    ? `<figure class="lehrgrafik">${schema}<figcaption>${esc(label('lehrgrafik', b.id))}</figcaption></figure>`
+    : '';
   const chipZeile = metaChips || transferChips
     ? `<p class="chip-zeile">${metaChips}${metaChips && transferChips ? ' <span class="chip-trenner">·</span> ' : ''}${transferChips}</p>`
     : '';
@@ -294,6 +298,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${chipZeile}
       ${voraussetzungsBanner(station, kontext)}
       ${erklaerSektion}
+      ${schemaSektion}
       ${uebungsSektion}
       ${reflexionsSektion}
       ${trainerLayerHtml(daten, b)}

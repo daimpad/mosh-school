@@ -259,7 +259,14 @@
     "pfad_stil": "",
     "pfad_stil_text": "",
     "n_genres": "",
-    "skip_link": ""
+    "skip_link": "",
+    "nav_stimmungen": "",
+    "stimm_untertitel": "",
+    "stimm_staerke": "",
+    "stimm_genres": "",
+    "stimm_saite_aria": "",
+    "stimm_hinweis_pegel": "",
+    "lehrgrafik_titel": ""
   },
   "bausteine": {
     "grundhaltung": "",
@@ -480,7 +487,8 @@
     "pedalboard_logik": "",
     "modeler_reamping": "",
     "noise_management": "",
-    "backline_ausfallsicherheit": ""
+    "backline_ausfallsicherheit": "",
+    "tuning_landkarte": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -635,6 +643,22 @@
       "grindcore": "",
       "powerviolence": "",
       "sludge": ""
+    },
+    "stimmung": {
+      "e_standard": "",
+      "drop_d": "",
+      "eb_standard": "",
+      "d_standard": "",
+      "drop_c": "",
+      "c_standard": "",
+      "drop_b": "",
+      "b_standard_7": "",
+      "drop_a_7": "",
+      "bass_e_standard": "",
+      "bass_drop_d": "",
+      "bass_d_standard": "",
+      "bass_drop_c": "",
+      "bass_b_5": ""
     }
   },
   "spielziele": {
@@ -716,5 +740,19 @@
     "crust_werkstatt": "",
     "pv_werkstatt": "",
     "genre_schnupper": ""
+  },
+  "lehrgrafiken": {
+    "grundbeat": "",
+    "d_beat": "",
+    "blastbeat": "",
+    "skank_beat": "",
+    "powerchords": "",
+    "palm_muting": "",
+    "drop_tuning": "",
+    "tremolo_picking": "",
+    "chugs_breakdown": "",
+    "plektrum_technik": "",
+    "sludge_erstes_riff": "",
+    "pv_stopp_spiel": ""
   }
 }
