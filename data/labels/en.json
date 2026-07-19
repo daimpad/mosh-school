@@ -483,7 +483,22 @@
     "doom_harmonik": "",
     "doom_dramaturgie": "",
     "doom_sound_gewicht": "",
-    "doom_band_zeitgefuehl": ""
+    "doom_band_zeitgefuehl": "",
+    "hardcore_groove_bounce": "",
+    "hardcore_bass_motor": "",
+    "hardcore_drums_energie": "",
+    "hardcore_gangshouts": "",
+    "hardcore_songwriting_direkt": "",
+    "hardcore_buehne_community": "",
+    "crust_dbeat_ausbau": "",
+    "crust_sound_dreck": "",
+    "crust_vocals_rau": "",
+    "grind_riff_reduktion": "",
+    "grind_vocals_wechsel": "",
+    "grind_kompression": "",
+    "pv_start_stopp": "",
+    "pv_miniatur_dramaturgie": "",
+    "pv_band_abrisskanten": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -613,7 +628,10 @@
       "thrash": "",
       "death_metal": "",
       "black_metal": "",
-      "doom": ""
+      "doom": "",
+      "crust": "",
+      "grindcore": "",
+      "powerviolence": ""
     }
   },
   "spielziele": {
@@ -688,6 +706,8 @@
     "bass_experte_werkstatt": "",
     "drums_experte_werkstatt": "",
     "vocals_experte_werkstatt": "",
-    "theorie_gehoer_werkstatt": ""
+    "theorie_gehoer_werkstatt": "",
+    "doom_werkstatt": "",
+    "hardcore_werkstatt": ""
   }
 }

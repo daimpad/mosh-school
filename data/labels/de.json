@@ -483,7 +483,22 @@
     "doom_harmonik": "Doom-Harmonik: die Sprache der Schwere",
     "doom_dramaturgie": "Doom-Dramaturgie: Spannung über Länge",
     "doom_sound_gewicht": "Doom-Sound: Gewicht statt Gain",
-    "doom_band_zeitgefuehl": "Gemeinsames Zeitgefühl im Schlepptempo"
+    "doom_band_zeitgefuehl": "Gemeinsames Zeitgefühl im Schlepptempo",
+    "hardcore_groove_bounce": "Hardcore-Riffing: Groove & Bounce",
+    "hardcore_bass_motor": "Hardcore-Bass: der Motor",
+    "hardcore_drums_energie": "Hardcore-Drums: Energie kontrollieren",
+    "hardcore_gangshouts": "Gang-Shouts & Mitgröl-Parts",
+    "hardcore_songwriting_direkt": "Hardcore-Songwriting: direkt & dringlich",
+    "hardcore_buehne_community": "Bühne & Community: Hardcore live",
+    "crust_dbeat_ausbau": "Crust: D-Beat als Dauerlauf",
+    "crust_sound_dreck": "Crust-Sound: Dreck mit Absicht",
+    "crust_vocals_rau": "Crust-Vocals: rau & dringlich",
+    "grind_riff_reduktion": "Grindcore-Riffing: radikale Reduktion",
+    "grind_vocals_wechsel": "Grind-Vocals: Tief-Hoch-Wechsel",
+    "grind_kompression": "Grind-Dramaturgie: der komprimierte Song",
+    "pv_start_stopp": "Powerviolence: Start-Stopp-Präzision",
+    "pv_miniatur_dramaturgie": "Powerviolence: Dramaturgie der Miniatur",
+    "pv_band_abrisskanten": "Gemeinsame Abrisskanten proben"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -613,7 +628,10 @@
       "thrash": "Thrash",
       "death_metal": "Death Metal",
       "black_metal": "Black Metal",
-      "doom": "Doom"
+      "doom": "Doom",
+      "crust": "Crust",
+      "grindcore": "Grindcore",
+      "powerviolence": "Powerviolence"
     }
   },
   "spielziele": {
@@ -688,6 +706,8 @@
     "bass_experte_werkstatt": "Bass: Experten-Werkstatt",
     "drums_experte_werkstatt": "Drums: Experten-Werkstatt",
     "vocals_experte_werkstatt": "Vocals: Experten-Werkstatt",
-    "theorie_gehoer_werkstatt": "Theorie: Gehör-Werkstatt"
+    "theorie_gehoer_werkstatt": "Theorie: Gehör-Werkstatt",
+    "doom_werkstatt": "Doom-Werkstatt",
+    "hardcore_werkstatt": "Hardcore-Werkstatt"
   }
 }

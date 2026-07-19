@@ -21,7 +21,8 @@
       "typ": "micro",
       "stil": [
         "death_metal",
-        "black_metal"
+        "black_metal",
+        "grindcore"
       ],
       "voraussetzungen": [
         "blastbeat"
@@ -61,7 +62,8 @@
       "typ": "micro",
       "stil": [
         "death_metal",
-        "black_metal"
+        "black_metal",
+        "grindcore"
       ],
       "voraussetzungen": [
         "blastbeat"
@@ -389,7 +391,10 @@
           "steigerung": "Unregelmäßige Wechselpunkte üben (nach drei oder sechs Takten) und die Feels stärker kontrastieren.",
           "selbstkontrolle": "Jeder Wechsel sitzt auf der Eins; vor und nach der Naht ist das Timing unverändert stabil."
         }
-      }
+      },
+      "stil": [
+        "powerviolence"
+      ]
     },
     {
       "id": "polyrhythmik_einstieg",

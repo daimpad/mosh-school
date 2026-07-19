@@ -33,6 +33,8 @@ const INHALTSDATEIEN = [
   'data/bausteine.fortgeschritten-theorie.json',
   'data/bausteine.experte-theorie.json',
   'data/bausteine.stil-doom.json',
+  'data/bausteine.stil-hardcore.json',
+  'data/bausteine.stil-punk-extrem.json',
 ];
 
 export async function ladeDaten() {
