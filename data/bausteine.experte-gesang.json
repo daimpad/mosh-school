@@ -1,0 +1,272 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "experte",
+    "domaene": "gesang",
+    "hinweis": "Experte-Gesang (Extreme Vocals). Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Gesundheitsrahmen strikt: Prinzip statt riskanter Dosierung, leise/kurz aufbauen, bei Schmerz/Kratzen sofort stoppen, Lehrperson und HNO-Arzt empfohlen. Sichtbare Titel werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "harsh_range_erweiterung",
+      "anzeigetitel": {
+        "de": "Verzerrungs-Range erweitern"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "growl_resonanz",
+        "scream_hoehe"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle"
+      ],
+      "erklaerteil": {
+        "de": "Wer Growl und hellen Scream einzeln beherrscht, kann beginnen, den Raum dazwischen und darüber hinaus zu erschließen: tiefere Gutturals, höhere Shrieks und alle Schattierungen der Mitte. Die Range wächst dabei nicht durch mehr Kraft, sondern durch feinere Steuerung derselben Stellschrauben — Kehlkopfposition, Rachenweite, Vokalfarbe, Stützdruck.\n\nArbeite von den sicheren Zentren nach außen: Vom stabilen Growl in kleinen Schritten tiefer, vom sicheren Scream in kleinen Schritten höher — und bei jedem Schritt gilt die Mühelosigkeit als Grenze. Extrembereiche, die sich nur mit Druck erreichen lassen, sind noch nicht dran; sie werden von den Rändern des Sicheren aus langsam eingemeindet.\n\nGesundheit hat Vorrang, gerade an den Rändern: Die Extreme der Range sind die verletzungsanfälligsten Register. Kurze, leise Erkundungen mit viel Pause, konsequente Selbstkontrolle per Aufnahme — und für die Erweiterung nach ganz unten oder ganz oben ist die Begleitung durch eine erfahrene Lehrperson der einzig seriöse Weg."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von den Zentren zu den Rändern",
+          "ziel": "Die verzerrte Range in kleinen, mühelosen Schritten erweitern.",
+          "schritte": [
+            "Wärm gründlich auf und etabliere deinen sichersten Growl- und deinen sichersten Scream-Klang (kurz, leise).",
+            "Verschiebe den Growl in zwei, drei kleinen Stufen dunkler/tiefer — nur über mehr Raum, nie über Druck; brich ab, sobald es Anstrengung wird.",
+            "Verschiebe den Scream analog in kleinen Stufen heller/höher und dokumentiere per Aufnahme, wo die mühelose Grenze heute liegt."
+          ],
+          "steigerung": "Die Grenzbereiche über Wochen behutsam ausdehnen — Fortschritt misst sich in Mühelosigkeit, nicht in Extremen.",
+          "selbstkontrolle": "Jede erreichte Stufe fühlt sich so leicht an wie dein Zentrum; keinerlei Kratzen, Druck oder Heiserkeit danach."
+        }
+      }
+    },
+    {
+      "id": "harsh_texturen",
+      "anzeigetitel": {
+        "de": "Texturen mischen & Übergänge"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "fry_verzerrung",
+        "false_cord_ansatz"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle",
+        "saubere_uebergaenge"
+      ],
+      "erklaerteil": {
+        "de": "Fry und False Cord sind keine getrennten Welten, sondern Pole eines Spektrums: Profis mischen die Mechanismen — ein False-Cord-Fundament mit Fry-Anteil obenauf, ein Scream, der von rau nach fast tonal kippt — und wechseln fließend innerhalb einer Phrase. Genau diese Texturarbeit macht Vocals lebendig, wo reine Ein-Klang-Growls monoton werden.\n\nDer Weg dahin führt über bewusste Gegenüberstellung: dieselbe Silbe erst im reinen Fry, dann im reinen False Cord, dann als Mischung — leise, kurz, mit voller Aufmerksamkeit auf das Körpergefühl. Mit der Zeit entsteht ein inneres Mischpult: mehr „Knistern“, mehr „Breite“, mehr Ton, stufenlos geregelt.\n\nDie Übergänge sind der heikelste Teil: Der Wechsel zwischen Mechanismen darf nie über einen Druckstoß laufen. Fließend heißt: über den Atem und die Resonanz gleiten, nie über den Hals stemmen. Wo ein Übergang nur mit Ruck gelingt, fehlt noch eine Zwischenstufe — zurück und feiner auflösen; im Zweifel gehört diese Arbeit in Begleitung einer Lehrperson."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Inneres Mischpult",
+          "ziel": "Zwischen Verzerrungs-Texturen stufenlos und drucklos wechseln.",
+          "schritte": [
+            "Trag eine Silbe nacheinander im reinen Fry und im reinen False-Cord-Ansatz vor — beide leise und mühelos.",
+            "Suche die Mischform: Beginne im Fry und lass behutsam die Breite des False Cord dazukommen, wie ein Regler.",
+            "Gleite innerhalb einer gehaltenen Silbe einmal von Textur A nach B und zurück — ohne jeden Ruck; bei Enge sofort stoppen."
+          ],
+          "steigerung": "Die Texturwechsel auf eine kurze Textzeile legen und dramaturgisch einsetzen (Vers-Anfang weich, Ende breit).",
+          "selbstkontrolle": "Die Übergänge sind hörbar fließend und fühlbar drucklos; die Stimme bleibt nach der Übung frisch."
+        }
+      }
+    },
+    {
+      "id": "harsh_rhythmische_praezision",
+      "anzeigetitel": {
+        "de": "Vocals als Perkussionsinstrument"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "harsh_phrasierung_atmung"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Auf Experten-Niveau werden harsche Vocals zum Perkussionsinstrument: Silben sitzen auf Sechzehntel-Positionen wie Snare-Schläge, Phrasen laufen triolisch gegen den geraden Beat, und im modernen Death Metal doppeln Vocal-Patterns die Gitarren-Rhythmik Silbe für Schlag. Das verlangt dieselbe rhythmische Ausbildung wie an einem Instrument.\n\nDas Werkzeug ist die gesprochene Vorstufe: Jede rhythmisch anspruchsvolle Passage wird zuerst als reiner Sprechrhythmus zum Klick gemeistert — inklusive Triolen, Synkopen und Pausen —, bevor Verzerrung dazukommt. Die Verzerrung darf die Präzision nie bezahlen: Wird das Timing unter Verzerrung schlechter, ist die Passage stimmlich noch zu teuer und wird leiser geübt.\n\nDie Königsklasse ist das Spiel gegen den Beat: eine triolische Vocal-Phrase über geraden Riffs oder eine Phrase, die über die Taktgrenze zieht und erst auf der übernächsten Eins landet. Wer so phrasiert, nutzt denselben Effekt wie polymetrische Riffs — Spannung durch Reibung, Erlösung durch den Treffpunkt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Triolen gegen den Beat",
+          "ziel": "Rhythmisch komplexe Vocal-Phrasen präzise zum Klick setzen.",
+          "schritte": [
+            "Sprich eine Textzeile in gleichmäßigen Triolen über einem geraden Klick, laut gezählt und ohne Verzerrung.",
+            "Verschiebe einzelne Silben auf Synkopen und halte die Phrasierung über mehrere Durchgänge exakt gleich.",
+            "Leg erst dann deinen (leisen) harschen Ansatz darüber — und prüf per Aufnahme, ob das Timing gehalten hat."
+          ],
+          "steigerung": "Eine Phrase über die Taktgrenze ziehen und bewusst erst auf der übernächsten Eins landen lassen.",
+          "selbstkontrolle": "Gesprochene und verzerrte Version sitzen identisch im Raster; die Verzerrung kostet hörbar keine Präzision."
+        }
+      }
+    },
+    {
+      "id": "harsh_projektion_band",
+      "anzeigetitel": {
+        "de": "Durchsetzung im Bandkontext"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "harsh_dynamik_intensitaet"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle",
+        "atemstuetze"
+      ],
+      "erklaerteil": {
+        "de": "Der gefährlichste Moment für jede Metal-Stimme ist die laute Umgebung: Gegen eine Wand aus verzerrten Gitarren und Blastbeats verführt der Instinkt zum Dagegen-Anbrüllen — und genau das ruiniert Technik und Stimme. Durchsetzung entsteht im Bandkontext nicht durch Lautstärke, sondern durch Klangfarbe (mittige, bissige Anteile schneiden durch den Mix), Artikulation und das Vertrauen in die Anlage.\n\nDie Kernkompetenz ist Entkopplung: Deine gefühlte Anstrengung darf nicht an die Umgebungslautstärke gekoppelt sein. Das trainierst du gezielt — dieselbe Passage bei leiser, mittlerer und lauter Begleitung mit identischer Technik und identischem Körpergefühl. Was sich im lauten Durchgang plötzlich anstrengender anfühlt, ist dein Warnsignal.\n\nDazu gehört die Umgebungs-Hygiene: Wer sich nicht hört, drückt. Monitoring (idealerweise In-Ears) ist für Extreme Vocals Stimmschutz, nicht Luxus — und eine Bandprobe, in der die Vocals unhörbar sind, ist eine Probe, in der die Stimme verheizt wird."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Entkopplungs-Training",
+          "ziel": "Die Technik von der Umgebungslautstärke entkoppeln.",
+          "schritte": [
+            "Trag eine harsche Passage (leise Übungsintensität) ohne Begleitung vor und merk dir das Körpergefühl.",
+            "Wiederhole sie über leiser, dann lauter Playback-Begleitung (Kopfhörer) — Technik und Anstrengung bleiben identisch.",
+            "Nimm alle Durchgänge auf und vergleich: Klingt der laute Durchgang gepresster, war die Kopplung am Werk — zurück eine Stufe."
+          ],
+          "steigerung": "Das Training in die Bandprobe tragen: Monitoring einfordern und die Passage dort mit demselben Körpergefühl singen.",
+          "selbstkontrolle": "Anstrengung und Klang sind in allen Lautstärke-Umgebungen gleich; kein Nach-Druck im lauten Kontext."
+        }
+      }
+    },
+    {
+      "id": "vocal_identitaet",
+      "anzeigetitel": {
+        "de": "Die eigene Stimme finden"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "harsh_stile_ueberblick"
+      ],
+      "spielziele": [
+        "stimmsicherheit"
+      ],
+      "erklaerteil": {
+        "de": "Am Anfang lernt jeder durch Nachahmung — irgendwann aber stellt sich die Experten-Frage: Wie klinge eigentlich ich? Die großen Stimmen des Genres sind nicht die technisch vielseitigsten, sondern die wiedererkennbarsten. Identität entsteht aus der Kombination weniger Entscheidungen: bevorzugte Texturen, typische Phrasierung, ein charakteristischer Umgang mit Sprache und Dynamik.\n\nDer Weg dorthin ist paradox: erst tiefer in die Vorbilder hinein, dann heraus. Analysiere zwei, drei prägende Stimmen präzise — was genau macht sie erkennbar? Tonlage, Textur, Timing, Vokalfärbung? Dann inventarisiere dich selbst mit demselben Blick: Welche deiner Eigenheiten tauchen in jeder Aufnahme auf, egal was du imitierst? Das sind die Rohdiamanten.\n\nIdentität ist auch Mut zur Beschränkung: lieber zwei Texturen, die unverkennbar dir gehören, als zehn geliehene. Die Entscheidung, was du nicht machst, formt den Stil genauso wie das, was du machst."
+      },
+      "reflexionsaufgabe": {
+        "de": "Analysiere zwei Stimmen, die dich geprägt haben: Benenne für jede drei konkrete Merkmale, die sie sofort erkennbar machen. Hör dann drei eigene Aufnahmen aus verschiedenen Phasen und suche die Konstanten — was klingt immer nach dir? Formuliere daraus in zwei Sätzen, was deine stimmliche Identität heute ist und in welche eine Richtung du sie schärfen willst."
+      }
+    },
+    {
+      "id": "vocals_studio",
+      "anzeigetitel": {
+        "de": "Studio-Vocals: Takes, Doubles, Haushalt"
+      },
+      "domaene": [
+        "gesang",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "vocal_aufnahme_feedback"
+      ],
+      "spielziele": [
+        "stimmsicherheit",
+        "stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Studio-Vocals sind Haushalten mit einer endlichen Ressource: Anders als eine Gitarre wird die Stimme mit jedem intensiven Take müder — und der zwanzigste Growl-Take klingt nicht besser als der dritte, sondern flacher. Profis planen Sessions deshalb rückwärts: die stimmlich teuersten Parts zuerst (nach dem Einsingen), Cleans und leise Passagen ans Ende, harte Pausen-Slots dazwischen.\n\nDie zweite Studio-Realität sind Doubles und Layer: Harsh-Parts werden oft doppelt oder dreifach gestapelt (Hauptspur plus Oktav- oder Textur-Layer), was Präzision verlangt — die Layer müssen in Timing und Phrasierung deckungsgleich sein, sonst wird der Stack matschig statt massiv. Das ist dieselbe Disziplin wie Gitarren-Doubletracking: reproduzierbar statt ungefähr.\n\nUnd schließlich die Abbruch-Ehrlichkeit: Wenn die Stimme kippt — Growls werden dünner, es braucht mehr Druck für dasselbe Ergebnis —, ist der Take-Tag vorbei, egal was der Plan sagt. Ein zweiter Session-Tag ist billiger als eine erzwungene Spur, die heiser klingt, und unbezahlbar billiger als eine geschädigte Stimme."
+      },
+      "reflexionsaufgabe": {
+        "de": "Plane eine fiktive (oder echte) Recording-Session für drei Songs auf Papier: In welcher Reihenfolge nimmst du die Parts auf, wo liegen Pausen und Einsingen, und bei welchen Anzeichen brichst du ab? Simuliere außerdem einen Double: Nimm dieselbe harshe Zeile zweimal auf, leg sie übereinander und beurteile, wie deckungsgleich deine Takes wirklich sind."
+      }
+    },
+    {
+      "id": "vocals_live_monitoring",
+      "anzeigetitel": {
+        "de": "Live: Monitoring als Stimmschutz"
+      },
+      "domaene": [
+        "gesang",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "mikrofon_harsh"
+      ],
+      "spielziele": [
+        "stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Die meisten Stimmschäden im Metal passieren live — und ihr häufigster Auslöser ist banal: Die Person hört sich nicht und drückt dagegen. Monitoring ist deshalb für Extreme Vocals keine Komfortfrage, sondern die wichtigste einzelne Schutzmaßnahme. Wer sich klar hört, singt mit Technik; wer gegen die Wand aus Sound anschreit, verheizt in einem Set, was Monate Aufbau gekostet hat.\n\nIn-Ears sind der Goldstandard: konstanter eigener Mix, Schutz vor der Bühnenlautstärke (Gehörschutz!), und die Stimme bleibt auch beim fünften Gig der Woche steuerbar. Wer mit Wedges arbeitet, verhandelt seinen Mix aktiv — „mehr Stimme auf den Monitor“ ist keine Diva-Bitte, sondern Arbeitsschutz. Und beim Soundcheck wird die lauteste Song-Passage getestet, nicht die bequemste.\n\nDazu gehört das Umfeld: Absprachen mit der Band über Bühnenlautstärke, ein Plan B für Monitoring-Ausfälle (Position näher an der Drum-Hi-Hat, reduzierte Intensität statt Druck) und die Disziplin, einen technisch kaputten Abend stimmlich nicht retten zu wollen. Ein Set auf Sparflamme ist professionell — eine ruinierte Stimme ist es nicht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Rekonstruiere deinen letzten lauten Auftritt oder Probendurchlauf: Konntest du dich durchgehend hören, und was hat dein Körper getan, als nicht? Erstelle deine Monitoring-Checkliste für den nächsten Gig (Mix-Ansage, Soundcheck-Passage, Plan B bei Ausfall) — und entscheide, welchen Schritt Richtung In-Ears oder besserem Monitormix du konkret gehst."
+      }
+    },
+    {
+      "id": "vocals_tour_haushalt",
+      "anzeigetitel": {
+        "de": "Tour-Haushalt: viele Shows, eine Stimme"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "set_pacing",
+        "stimm_regeneration"
+      ],
+      "spielziele": [
+        "stimmgesundheit",
+        "schmerzfrei_spielen"
+      ],
+      "erklaerteil": {
+        "de": "Mehrere Shows pro Woche sind die härteste Prüfung für eine Extreme-Metal-Stimme — hier entscheidet nicht die Technik des besten Abends, sondern der Haushalt über die ganze Strecke. Die Rechnung ist unbestechlich: Was ein Abend an Substanz kostet, muss vor dem nächsten regeneriert sein, sonst beginnt jede Show mit einem Defizit, das sich aufzinst.\n\nDie Stellschrauben außerhalb der Bühne wiegen dabei am schwersten: konsequente Stimmruhe zwischen den Shows (das laute Reden im Van und auf der Aftershow kostet oft mehr als das Set), Schlaf als nicht verhandelbare Größe, Flüssigkeit, und ein tägliches, kurzes Auf- und Abwärm-Ritual als fester Anker. Kranke Tage sind Sondersituationen: Mit angeschlagener Stimme intensiv zu singen ist das größte Einzelrisiko überhaupt — hier helfen nur Reduktion, Umbau des Sets oder die Absage.\n\nProfis kennen zudem ihre Frühwarnzeichen aus Erfahrung: das bestimmte Gefühl am Morgen, die Tonlücke, das schnellere Ermüden — und sie haben für jedes ein Protokoll. Wer erst reagiert, wenn die Stimme weg ist, hat die Tour verloren. Eine begleitende HNO-/Stimmärztin, die die eigene Stimme kennt, gehört auf diesem Niveau zur Ausstattung wie das Mikrofon."
+      },
+      "reflexionsaufgabe": {
+        "de": "Entwirf deinen Tour-Tag als Stundenplan aus Stimm-Sicht: Wann sind Ruhefenster, wann Auf- und Abwärmen, welche Regeln gelten für Van, Aftershow und Schlaf? Definiere außerdem drei persönliche Frühwarnzeichen und für jedes ein konkretes Protokoll (reduzieren, umbauen, pausieren) — und ab welchem Punkt eine Show für dich nicht mehr verantwortbar ist."
+      }
+    }
+  ]
+}
