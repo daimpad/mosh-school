@@ -70,9 +70,40 @@
         "lockere_haende",
         "stimmgesundheit"
       ]
-    }
+    },
+    "transfer_herkunft": [
+      "GIT",
+      "BAS",
+      "DRM",
+      "VOC",
+      "KLV",
+      "KLA"
+    ]
   },
-  "delta_bausteine": [],
+  "delta_bausteine": [
+    {
+      "id": "delta_bas_powerchords",
+      "basis_baustein": "powerchords",
+      "ersetzt_bei_herkunft": "BAS",
+      "delta_buendelung": [
+        "delta_bas_downpicking"
+      ],
+      "erklaerteil": {
+        "de": "Vom Bass kommend kennst du das halbe Terrain schon: Grundtöne greifen, Lagen wechseln, die tiefen Saiten kontrollieren. Der Powerchord ist der nächste Schritt — statt eines Einzeltons greifst du Grundton und Quinte gleichzeitig, meist auf zwei benachbarten Saiten. Dein Lagengefühl vom Bass überträgt sich direkt: Das Powerchord-Muster ist verschiebbar wie deine Grundton-Positionen, nur mit einem Finger mehr.\n\nZwei Dinge sind wirklich neu. Erstens die Dämpfung nach oben: Am Bass klingt meist nur die gegriffene Saite — an der Gitarre musst du die vier ungenutzten Saiten aktiv stumm halten (Zeigefinger legt sich flach an, die Anschlagshand hilft), sonst klingt jeder Akkord verwaschen. Zweitens die geringere Saitenspannung: Du brauchst deutlich weniger Kraft als am Bass — wer mit Bass-Kraft greift, drückt die Saiten scharf und verstimmt den Akkord.\n\nDein Vorteil: Dein Timing und dein Tiefton-Gehör sind schon trainiert. Konzentrier dich auf die saubere Zwei-Saiten-Form — der Rest ist für dich Wiederholung."
+      }
+    },
+    {
+      "id": "delta_bas_downpicking",
+      "basis_baustein": "downpicking",
+      "ersetzt_bei_herkunft": "BAS",
+      "delta_buendelung": [
+        "delta_bas_powerchords"
+      ],
+      "erklaerteil": {
+        "de": "Downpicking kennst du vom Bass — vielleicht sogar als härteste Ausdauerdisziplin deines Instruments. Die gute Nachricht: Die Bewegungslogik ist identisch (jeder Anschlag von oben, Kraft aus dem lockeren Handgelenk, Ökonomie schlägt Wucht). Die Umstellung liegt im Maßstab: Gitarrensaiten sind dünner und liegen enger, der Weg pro Anschlag ist kürzer, und du triffst meist zwei Saiten (den Powerchord) statt einer.\n\nPraktisch heißt das: weniger Kraft, mehr Präzision. Die Bewegung wird kleiner, als sich vom Bass richtig anfühlt — lass das Plektrum knapp über den Saiten arbeiten statt weit auszuholen. Und die Dämpfung wechselt die Rolle: Am Bass dämpfst du vor allem Nachbarsaiten, an der Gitarre kommt das Palm Muting als eigenes Klangwerkzeug dazu, das du beim Downpicking dauerhaft dosierst.\n\nDeine Bass-Ausdauer ist ein echter Startvorteil — die Muskulatur ist da. Was du neu kalibrierst, ist die Feinheit."
+      }
+    }
+  ],
   "bausteine": [
     {
       "id": "grundhaltung",
@@ -328,7 +359,10 @@
           "steigerung": "Wechsle zügig zwischen zwei Powerchords und kombiniere sie später mit Palm Muting.",
           "selbstkontrolle": "Alle Töne des Akkords klingen zusammen; keine Nebengeräusche von ungewollten Saiten."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "BAS"
+      ]
     },
     {
       "id": "downpicking",
@@ -371,7 +405,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und verlängere die Dauer nur, solange die Hand locker bleibt.",
           "selbstkontrolle": "Jeder Abschlag klingt gleich; spürst du Brennen oder Verkrampfung, legst du eine Pause ein."
         }
-      }
+      },
+      "transfer_herkunft": [
+        "BAS"
+      ]
     },
     {
       "id": "tremolo_picking",
