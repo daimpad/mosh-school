@@ -9,12 +9,23 @@
   "bausteine": [
     {
       "id": "crust_dbeat_ausbau",
-      "anzeigetitel": { "de": "Crust: D-Beat als Dauerlauf" },
-      "domaene": ["schlagzeug"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Crust: D-Beat als Dauerlauf"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["crust"],
-      "voraussetzungen": ["d_beat", "drums_koerper_ausdauer"],
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "d_beat",
+        "drums_koerper_ausdauer"
+      ],
       "erklaerteil": {
         "de": "Crust nimmt den D-Beat und macht ihn zum Marathon: Der Beat läuft rau und unerbittlich durch ganze Songs, oft ohne die Entlastungsteile, die ein Hardcore-Song bietet. Die Herausforderung ist nicht das Pattern — das sitzt aus dem D-Beat-Baustein —, sondern die Konstanz: gleichbleibende Energie über Minuten, ohne zu verkrampfen und ohne dass der Beat ausfranst.\n\nDer Schlüssel ist Ökonomie in der Bewegung: Wer den D-Beat mit maximaler Kraft pro Schlag spielt, hält keine zwei Songs durch. Die Lautstärke kommt aus Technik und Entschlossenheit — lockere Handgelenke, Rebound nutzen, die Kraft aus dem Zentrum statt aus den Armen. Fills bleiben minimal: ein, zwei Schläge als Ansage, dann zurück in den Lauf. Der Crust-Charme liegt gerade darin, dass fast nichts den Beat unterbricht.\n\nWie bei allem Ausdauer-Drumming gilt: Belastung steuern, Pausen einplanen, bei anhaltendem Zwicken in Armen oder Handgelenken ärztlich abklären lassen — und Gehörschutz ist bei dieser Musik ohnehin gesetzt."
       },
@@ -35,12 +46,23 @@
     },
     {
       "id": "crust_sound_dreck",
-      "anzeigetitel": { "de": "Crust-Sound: Dreck mit Absicht" },
-      "domaene": ["ausruestung"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Crust-Sound: Dreck mit Absicht"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["crust"],
-      "voraussetzungen": ["bass_ton_gear"],
+      "stil": [
+        "crust",
+        "sludge"
+      ],
+      "voraussetzungen": [
+        "bass_ton_gear"
+      ],
       "erklaerteil": {
         "de": "Der Crust-Sound ist bewusst räudig: sägende, breite Verzerrung auf Gitarre UND Bass, wenig Politur, viel Kante. Das ist kein Unvermögen, sondern Ästhetik mit Tradition — der Sound soll nach Keller, Proberaum und Dringlichkeit klingen, nicht nach Studio. Berühmt ist die skandinavische Schule, die einen simplen Verzerrer mit allen Reglern am Anschlag zum Markenzeichen machte: die Kettensäge.\n\nTrotzdem ist auch Dreck ein Handwerk: Ein räudiger Sound, der funktioniert, bleibt im Bandkontext lesbar — die Riffs erkennbar, der Bass als eigenes Fundament hörbar, das Schlagzeug nicht zugekleistert. Die Kunst ist, an den richtigen Stellen unsauber zu sein: viel Zerre und raue Kanten ja, aber Attack und Rhythmus müssen durchkommen. Und weil im Crust oft beide Saiteninstrumente stark verzerrt sind, gilt umso mehr: absprechen, wer welchen Frequenzbereich hält.\n\nDazu gehört der DIY-Gedanke: Crust-Sounds entstehen traditionell aus dem, was da ist — günstige Pedale, geliehene Amps, Improvisation. Die Haltung ist Teil des Genres."
       },
@@ -50,12 +72,23 @@
     },
     {
       "id": "crust_vocals_rau",
-      "anzeigetitel": { "de": "Crust-Vocals: rau & dringlich" },
-      "domaene": ["gesang"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Crust-Vocals: rau & dringlich"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["crust"],
-      "voraussetzungen": ["harsh_stile_ueberblick", "false_cord_ansatz"],
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "harsh_stile_ueberblick",
+        "false_cord_ansatz"
+      ],
       "erklaerteil": {
         "de": "Crust-Vocals sitzen zwischen den Welten: rauer als Hardcore-Shouts, aber nicht so tief und geformt wie Death-Metal-Growls — ein dringliches, angeraut-gebrülltes Rufen, das mehr nach Wut als nach Technik klingt. Genau deshalb ist die Technik dahinter so wichtig: Diese Rauheit MUSS aus Luft und Resonanz kommen, nicht aus dem Kehlkopf. Ein gepresstes Crust-Brüllen ist der schnellste Weg zu einer beschädigten Stimme.\n\nDer gesunde Ansatz ist derselbe wie bei allen harschen Stilen: Die Verzerrung entsteht über den False-Cord-Mechanismus — viel Stütze, offener Rachen, die Rauheit als Beigabe auf einem stabilen Luftstrom. Die crust-typische Färbung entsteht durch die mittlere Lage und die rufende, sprechnahe Artikulation: Es klingt wie dringliches Rufen mit Schmirgel, nicht wie ein geformtes Monster.\n\nGesundheitsrahmen strikt: leise und kurz aufbauen, nie in Heiserkeit hineinüben, bei Kratzen oder Engegefühl sofort stoppen. Den Aufbau begleitet idealerweise eine Lehrperson, die harsche Stile kennt — und anhaltende Heiserkeit gehört in die HNO-Praxis."
       },
@@ -76,12 +109,23 @@
     },
     {
       "id": "grind_riff_reduktion",
-      "anzeigetitel": { "de": "Grindcore-Riffing: radikale Reduktion" },
-      "domaene": ["gitarre"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Grindcore-Riffing: radikale Reduktion"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["grindcore"],
-      "voraussetzungen": ["tremolo_riffing", "chromatik_atonalitaet"],
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "tremolo_riffing",
+        "chromatik_atonalitaet"
+      ],
       "erklaerteil": {
         "de": "Grindcore-Riffs sind Werkzeuge, keine Kunstwerke: kurze chromatische Zellen, Tremolo-Flächen, dissonante Rutscher — gebaut für maximale Wirkung in minimaler Zeit. Ein Grind-Song hat oft nur zwei, drei Riffs, und keins davon will schön sein. Die Ästhetik ist die Reduktion selbst: Was in dreißig Sekunden nicht wirkt, fliegt raus.\n\nTechnisch verlangt das Genre vor allem zwei Umschaltungen: vom Tremolo-Teppich unter dem Blast in den geraden, stampfenden Part — und das abrupt, ohne Übergangstakt. Die rechte Hand wechselt dabei zwischen maximaler Dichte und schwerem Einzelanschlag; die linke hält die Zellen simpel genug, dass sie auch bei absurdem Tempo greifbar bleiben. Chromatik ist dabei Freund, nicht Verlegenheit: Halbtonrutscher und enge Cluster sind das melodische Vokabular des Grind.\n\nWer von Death Metal oder Thrash kommt, muss vor allem verlernen: kein Ausspielen, keine Wiederholungsschleifen, kein Aufbau — das Riff sagt seinen Satz und der nächste kommt."
       },
@@ -102,12 +146,23 @@
     },
     {
       "id": "grind_vocals_wechsel",
-      "anzeigetitel": { "de": "Grind-Vocals: Tief-Hoch-Wechsel" },
-      "domaene": ["gesang"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Grind-Vocals: Tief-Hoch-Wechsel"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["grindcore"],
-      "voraussetzungen": ["growl_resonanz", "scream_hoehe"],
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "growl_resonanz",
+        "scream_hoehe"
+      ],
       "erklaerteil": {
         "de": "Grindcore-Vocals leben vom Kontrast in schneller Folge: tiefe Growls und hohe, kreischende Screams wechseln oft im Sekundentakt — manchmal beantworten sich zwei Vocal-Spuren, live macht eine Person beides. Dieser ständige Registerwechsel ist die eigentliche Schwierigkeit: Beide Ansätze müssen einzeln so stabil sein, dass die Stimme beim Umschalten nicht die gesunde Grundlage verliert.\n\nDer Kern ist die getrennte Verankerung: Das Tief kommt aus Weite und Resonanzraum, das Hoch aus Luftführung und Kopfresonanz — beide aus derselben Stütze, keins aus dem Hals. Beim schnellen Wechsel bleibt die Stütze das Kontinuum; nur der Resonanzraum schaltet um. Wer beim Umschalten Druck aufbaut, um den Kontrast zu erzwingen, verschleißt doppelt.\n\nUnd Grind-Tempo heißt Ökonomie: kurze Phrasen, bewusste Atemstellen, kein Dauerfeuer ohne Pause. Gesundheitsrahmen strikt — beides erst einzeln leise sichern, Wechsel langsam aufbauen, bei Kratzen sofort stoppen, Begleitung durch eine erfahrene Lehrperson, bei Beschwerden HNO."
       },
@@ -128,12 +183,23 @@
     },
     {
       "id": "grind_kompression",
-      "anzeigetitel": { "de": "Grind-Dramaturgie: der komprimierte Song" },
-      "domaene": ["theorie"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Grind-Dramaturgie: der komprimierte Song"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["grindcore"],
-      "voraussetzungen": ["songstruktur_breakdown", "arrangement_dichte"],
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "songstruktur_breakdown",
+        "arrangement_dichte"
+      ],
       "erklaerteil": {
         "de": "Grindcore ist Songwriting unter Extremdruck: Ein Song darf sechzig, dreißig, manchmal drei Sekunden dauern — und muss trotzdem ein Ereignis sein. Das erzwingt eine eigene Dramaturgie: keine Intros, keine Wiederholung zur Gewöhnung, kein Aufbau. Ein Grind-Song beginnt auf dem Höhepunkt und behauptet ihn, bis er abbricht.\n\nDas Werkzeug dahinter ist Kompression: Jedes Element — Riffwechsel, Tempowechsel, Vocal-Einsatz — übernimmt gleichzeitig mehrere Funktionen. Der Blast-Teil ist Strophe UND Eskalation, der eine stampfende Takt ist Breakdown UND Schluss. Was in einem normalen Song über vier Minuten verteilt liegt, passiert hier in dreißig Sekunden — oder gar nicht.\n\nInteressant ist der Blick auf die Albumebene: Viele Grind-Alben funktionieren als EIN Werk aus zwanzig Miniaturen, mit bewusst gesetzten längeren Songs als Ankerpunkten. Die Dramaturgie wandert vom Song aufs Album."
       },
@@ -143,12 +209,23 @@
     },
     {
       "id": "pv_start_stopp",
-      "anzeigetitel": { "de": "Powerviolence: Start-Stopp-Präzision" },
-      "domaene": ["schlagzeug"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Powerviolence: Start-Stopp-Präzision"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["powerviolence"],
-      "voraussetzungen": ["blastbeat", "tempo_wechsel_drums"],
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "blastbeat",
+        "tempo_wechsel_drums"
+      ],
       "erklaerteil": {
         "de": "Powerviolence ist das Genre der Abrisskante: Blast-Passagen brechen ohne Vorwarnung in Zeitlupen-Sludge, ein Song stoppt mitten im Takt, startet doppelt so schnell wieder und ist nach vierzig Sekunden vorbei. Was nach Chaos klingt, ist das Gegenteil: Die Wirkung entsteht nur, wenn die Wechsel auf den Schlag genau sitzen — schlampige Abrisse klingen nach Fehler, präzise nach Absicht.\n\nFür das Schlagzeug heißt das: Jeder Wechsel ist eine einstudierte Kante mit klarem letzten Schlag und klarem ersten Schlag — dazwischen nichts. Die Tempi der Teile sind feste Größen, keine Verwandtschaften: Anders als bei der metrischen Modulation springt Powerviolence oft in unverwandte Tempi, und das neue Tempo muss aus dem Gedächtnis stehen, nicht aus einer Umrechnung.\n\nDas Üben verschiebt sich damit vom Durchspielen zum Kanten-Training: Nicht der Blast ist schwer und nicht der Sludge-Teil — schwer sind die zwei Schläge dazwischen."
       },
@@ -169,12 +246,23 @@
     },
     {
       "id": "pv_miniatur_dramaturgie",
-      "anzeigetitel": { "de": "Powerviolence: Dramaturgie der Miniatur" },
-      "domaene": ["theorie"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Powerviolence: Dramaturgie der Miniatur"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["powerviolence"],
-      "voraussetzungen": ["songstruktur_breakdown", "tempo_genres"],
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "songstruktur_breakdown",
+        "tempo_genres"
+      ],
       "erklaerteil": {
         "de": "Powerviolence baut seine Songs aus Kontrast statt aus Entwicklung: extremes Tempo gegen extreme Langsamkeit, Dichte gegen Stille, hektisch gegen erdrückend — und all das in Songs, die selten die Minute überschreiten. Wo Grindcore einen Höhepunkt behauptet, springt Powerviolence zwischen Zuständen: Der Sludge-Teil ist kein Breakdown, der vorbereitet wird, sondern ein Schnitt in eine andere Welt.\n\nDas dramaturgische Prinzip ist die Nichtvorbereitung: Genau weil nichts angekündigt wird, wirkt jeder Wechsel wie ein Schlag. Daraus folgt eine harte Regel für das Schreiben: Übergänge sind verboten. Jeder Teil endet, der nächste beginnt — wer einen Vermittlungstakt einbaut, verliert die Wirkung des Genres.\n\nDie Balance ist trotzdem heikel: Reiner Zufall nutzt sich ab. Die guten Powerviolence-Songs setzen ihre Schnitte mit Gespür für Proportion — der Zeitlupen-Teil kommt, wenn die Raserei gerade zu kippen droht, und dauert exakt so lang, wie die Spannung trägt."
       },
@@ -184,12 +272,23 @@
     },
     {
       "id": "pv_band_abrisskanten",
-      "anzeigetitel": { "de": "Gemeinsame Abrisskanten proben" },
-      "domaene": ["mentales"],
-      "kompetenzstufe": ["fortgeschritten"],
+      "anzeigetitel": {
+        "de": "Gemeinsame Abrisskanten proben"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
       "typ": "micro",
-      "stil": ["powerviolence"],
-      "voraussetzungen": ["metronom_prinzip", "doom_band_zeitgefuehl"],
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "metronom_prinzip",
+        "doom_band_zeitgefuehl"
+      ],
       "erklaerteil": {
         "de": "Eine Band, die Powerviolence spielt, hat kein Sicherheitsnetz: Die Songs sind zu kurz und zu sprunghaft, als dass man sich im Spielen finden könnte — jeder Wechsel muss von allen gleichzeitig gewusst werden. Das verschiebt die Probenarbeit: Statt Songs zu durchlaufen, probt man Kanten — dieselbe Stelle zehnmal, bis der Schnitt sitzt.\n\nDrei Werkzeuge machen die Wechsel gemeinsam: Erstens die Landkarte im Kopf — jede Person kann die Zustandsfolge des Songs auswendig aufsagen, inklusive der Taktzahlen. Zweitens definierte Signale für die Stellen, die live variabel sind: ein Blick, eine Schulterbewegung, ein markierter Schlag. Drittens das gemeinsame Tempogedächtnis: Die Tempi der Teile werden als feste Referenzen geprobt (notfalls mit Referenzsong im Ohr), damit nach dem Stopp alle im SELBEN neuen Tempo landen.\n\nUnd mental gilt: Ein verpatzter Schnitt wird nicht repariert, sondern übersprungen — wer im Vierzig-Sekunden-Song zurückspringt, macht aus einem kleinen Fehler einen großen."
       },
@@ -205,6 +304,80 @@
           ],
           "steigerung": "Verkettet drei Kanten zu einer Miniatur und lasst die Reihenfolge von einer Person spontan ansagen — Landkarte, Signale und Tempogedächtnis arbeiten dann gleichzeitig.",
           "selbstkontrolle": "Frag nach der Probe jede Person nach der Zustandsfolge des Stücks — kommt zweimal dieselbe Antwort? Und auf der Aufnahme: Sind die Einsätze nach den Stopps ein gemeinsamer Schlag oder ein Kleckern?"
+        }
+      }
+    },
+    {
+      "id": "grind_blast_uebergaenge",
+      "anzeigetitel": {
+        "de": "Grind-Drums: Blast-Übergänge"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "blast_varianten",
+        "tempo_wechsel_drums"
+      ],
+      "erklaerteil": {
+        "de": "Ein Grind-Song wechselt seine Gangarten im Sekundentakt: Traditional Blast, Hammer Blast, schneller Punk-Beat, stampfender Halftime-Takt — und wieder zurück. Die einzelnen Formen sitzen aus den Blast-Bausteinen; die Grind-Disziplin ist der Übergang. Jeder Wechsel muss auf dem Schlag passieren, ohne Anlauf und ohne Einbruch der Intensität: Die Energie bleibt konstant, nur die Form schaltet um.\n\nTechnisch heißt das: Die Umschaltung wird als eigenes Ereignis geübt, nicht als Nebenprodukt. Jede Blast-Form hat ihre eigene Bewegungsverteilung (einhändig getrieben, wechselseitig, mit oder ohne Double Bass) — beim Wechsel müssen Hände und Füße ihre Rollen in einem einzigen Schlag neu sortieren. Der häufigste Fehler ist ein Mikro-Zögern an der Naht, das bei Grind-Tempo sofort als Loch hörbar wird.\n\nUnd wie immer bei Extremtempo: Lockerheit vor Kraft, kurze intensive Übungsblöcke mit echten Pausen, Gehörschutz — und bei anhaltendem Zwicken in Handgelenken oder Armen ärztlich abklären lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Nahtlos schalten",
+          "ziel": "Zwischen zwei Blast-Formen und einem Kontrast-Feel auf dem Schlag wechseln — ohne Loch, ohne Anlauf.",
+          "schritte": [
+            "Wähle zwei Blast-Formen, die du einzeln sicher spielst, und ein Kontrast-Feel (schneller Punk-Beat oder Halftime-Stomp). Spiel jede Form vier Takte einzeln zum Klick in einem Tempo, das entspannt sitzt.",
+            "Übe die erste Naht isoliert: zwei Takte Form A, Wechsel, zwei Takte Form B — zehnmal am Stück. Konzentrier dich nur auf den einen Schlag, an dem die Bewegungsverteilung umspringt.",
+            "Nimm die Übung auf und such das Mikro-Zögern: Ist der erste Schlag nach der Naht genauso laut und pünktlich wie alle anderen? Meist fehlt ihm zuerst die Lautstärke, nicht die Zeit.",
+            "Verkette alle drei Formen in fester Reihenfolge (A–B–Kontrast–A) mit je zwei Takten und halte die Intensität konstant — der Kontrast-Teil ist keine Pause, sondern eine andere Farbe derselben Energie."
+          ],
+          "steigerung": "Verkürze die Blöcke auf einen Takt pro Form — Grind-Realität. Erst wenn die Nähte bei entspanntem Tempo sauber sind, das Tempo in kleinen Schritten anheben.",
+          "selbstkontrolle": "Zähl auf der Aufnahme die Nähte, die ein Loch oder einen leisen ersten Schlag haben. Ziel: null. Und ehrlich prüfen: Bleibt das Grundtempo über die ganze Kette konstant, oder schiebt jede Naht ein paar BPM nach?"
+        }
+      }
+    },
+    {
+      "id": "grind_bass_verzahnung",
+      "anzeigetitel": {
+        "de": "Grind-Bass: Verzahnung im Extremtempo"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "bass_blast_begleitung",
+        "bass_hand_sync"
+      ],
+      "erklaerteil": {
+        "de": "Im Grindcore hat der Bass eine undankbare und entscheidende Rolle: Bei Blast-Tempo kann niemand hören, ob du jede Sechzehntel der Gitarre mitspielst — aber jeder hört, ob das Fundament steht. Die Grind-Lösung ist Reduktion mit System: Der Bass spielt die Skelett-Töne der Gitarrenzelle (Grundton, Zieltöne der chromatischen Rutscher) in einem Raster, das er wirklich sauber halten kann — Achtel statt Sechzehntel sind völlig legitim, wenn sie wie eine Wand stehen.\n\nEntscheidend ist die Verzahnung mit der Kick: Bei Blast-Tempo verschmelzen Bass und Double Bass zu einer Textur. Wer gegeneinander arbeitet, erzeugt Flattern; wer sich verzahnt, erzeugt die Grind-typische Dampfwalze. Praktisch heißt das: Das Bass-Raster wird auf das Kick-Muster gelegt, nicht auf die Gitarre.\n\nUnd in den stampfenden Kontrast-Teilen dreht sich die Rolle um: Plötzlich ist der Bass hörbar und trägt den Groove — die Umschaltung zwischen Textur-Rolle und Träger-Rolle ist die eigentliche Grind-Bass-Kunst."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Skelett statt Sechzehntel",
+          "ziel": "Eine Blast-Passage mit reduziertem, kick-verzahntem Raster begleiten und im Kontrast-Teil hörbar den Groove übernehmen.",
+          "schritte": [
+            "Nimm eine schnelle Riff-Zelle (eigene oder aus grind_riff_reduktion) und bestimme ihre Skelett-Töne: Grundton plus die ein, zwei Zieltöne, auf denen die Zelle landet.",
+            "Spiel zu einem Blast- oder schnellen Beat (Drum-Loop oder Metronom) NUR diese Skelett-Töne in stabilen Achteln. Widersteh dem Reflex, die Gitarre zu doppeln — deine Aufgabe ist die Wand.",
+            "Verzahne dich mit der Kick: Akzentuiere die Bass-Noten, die auf Kick-Schlägen liegen, und halte den Rest gleichmäßig. Nimm auf und prüf, ob Bass und Kick als EINE Textur klingen.",
+            "Übe den Rollenwechsel: vier Takte Blast-Textur, dann harter Schnitt in zwei Takte stampfenden Halftime — dort spielst du weniger Noten, aber jede trägt. Der Schnitt selbst muss auf dem Schlag sitzen."
+          ],
+          "steigerung": "Verkürze im Blast-Teil das Raster schrittweise Richtung Sechzehntel — aber nur so weit, wie die Wand stabil bleibt. Sobald es flattert, zurück: Ein sauberes Achtel-Fundament schlägt jedes unsaubere Sechzehntel-Gedoppel.",
+          "selbstkontrolle": "Hör die Aufnahme einmal nur auf Bass und Kick ab: eine Textur oder zwei konkurrierende? Und im Halftime-Teil: Übernimmt der Bass hörbar die Führung, oder bleibt er Textur? Beides muss unterscheidbar sein."
         }
       }
     }

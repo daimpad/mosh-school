@@ -1022,6 +1022,216 @@
           "korrektur": "Monitoring zur nicht verhandelbaren Voraussetzung machen: Beim Soundcheck zuerst die eigene Stimme im Monitor einfordern — laut genug, dass leises Verzerren hörbar bleibt; wo möglich In-Ears oder eine feste Wedge-Position nutzen. Als Regel verankern: Wenn ich mich nicht höre, wird der Monitor lauter, nicht die Stimme. Kratzen oder Engegefühl heißt sofort zurückschalten — und wiederkehrende Heiserkeit nach Shows gehört in die HNO-Praxis, den Aufbau begleitet eine erfahrene Lehrperson."
         }
       }
+    },
+    {
+      "id": "fb_doom_ton_stirbt",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_sustain_feedback",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Zwischen den Anschlägen entstehen tote Lücken: Der Ton verhungert, bevor der nächste kommt — oder er kippt in unkontrolliertes Feedback, das die ganze Phrase zukleistert.",
+          "ursache": "Der Ton wird angeschlagen und dann sich selbst überlassen: kein aktives Halten der Greifhand, kein spätes Vibrato, keine bewusste Dämpfungsarbeit. Beim Feedback fehlt die Kontrolle über Position und Abstopp-Moment — es passiert, statt gesetzt zu werden.",
+          "korrektur": "Den einzelnen Ton zur Übung machen: anschlagen, bis zum Verklingen zuhören, dann dieselbe Länge mit spätem Vibrato hörbar überbieten. Feedback als geplantes Ereignis rahmen — Position zum Amp suchen, Kipppunkt merken, Abdämpfen auf einen definierten Schlag. Erst wenn ein Ton eine Geschichte erzählt, zurück in die Phrase."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_fuzz_brei",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_bass_fuzz",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der verzerrte Bass klingt allein riesig, aber in der Band ist nur noch Fläche: keine erkennbaren Anschläge, keine Tonhöhen, das Fundament pumpt und rauscht.",
+          "ursache": "Zu viel Zerre und keine Dämpfungsarbeit: Der Fuzz verschluckt Attack und Tiefe, die verzerrten Ausklänge laufen unkontrolliert ineinander — und weil es sich allein groß anfühlt, wird eher noch mehr aufgedreht. Oft halten zusätzlich Bass und Gitarre gleichzeitig maximal tief und maximal verzerrt dieselbe Rolle.",
+          "korrektur": "Die Clean-Referenz einführen: dieselbe Linie erst clean aufnehmen, dann mit Zerre — die Zerre so weit zurücknehmen, bis Attack und Tonhöhe wieder erkennbar sind. Ausklänge aktiv abdämpfen lassen (die Dämpfung gehört zur Linie). Auf Bandebene die Rollen staffeln: absprechen, wer das Tief hält — und das Urteil immer der Aufnahme auf kleinen Lautsprechern überlassen."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_drums_gefuellt",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_drums_zeitdehnung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Schwere kommt nicht: Zwischen die langsamen Schläge rutschen Fills, Ghost-Notes und Beckenschläge, die Crashes werden früh abgestoppt — der Groove klingt beschäftigt statt erdrückend.",
+          "ursache": "Die Stille wird als Unsicherheit erlebt und gefüllt: Ohne stabiles inneres Netz fühlt sich der leere Raum zwischen den Backbeats bedrohlich an, und die Hände beruhigen die Nerven mit zusätzlichen Schlägen. Dazu die Midtempo-Gewohnheit, jedes Taktende mit einem Fill zu markieren.",
+          "korrektur": "Das Netz vor dem Weglassen trainieren: laut mitgezählte Unterteilung, dann still, dann Klick ausdünnen — erst wenn die Zeit ohne Füllung trägt, verschwindet der Drang. Dann die Radikalkur: vier Takte nur Kick, Snare und ein voll ausklingendes Crash, jeder Impuls zum Füllen wird registriert, aber nicht gespielt. Fills auf maximal drei schwere Schläge rationieren und ihre Wirkung auf der Aufnahme vergleichen."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_vocals_gepresst",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_vocals_getragen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die langen getragenen Phrasen beginnen frei und enden gequetscht: Die letzten Töne klingen eng, die Stütze bricht hörbar ein, nach der Probe ist die Stimme müde oder rau.",
+          "ursache": "Die Phrase ist länger als der Atemplan: Es wird ohne gesetzte Atemstellen begonnen und am Ende mit Druck kompensiert, was an Luft fehlt. Bei getragenen Growls steigt die Belastung zusätzlich mit jeder gepressten Sekunde — die Grenze verschiebt sich nicht in einer Session, wird aber in einer Session überzogen.",
+          "korrektur": "Atemstellen VOR dem Singen markieren lassen — lieber eine mehr als eine zu wenig — und die Phrase so anlegen, dass das Ende leichter ist als der Anfang. Phrasenlänge nur in Wochenschritten steigern; klingt ein Ende angestrengt, sofort eine Stufe zurück. Der Prüfstein ist die Aufnahme: Phrasenende so ruhig wie der Anfang? Bei Müdigkeit oder Rauheit gilt die Stoppregel, bei Wiederkehr die HNO-Abklärung."
+        }
+      }
+    },
+    {
+      "id": "fb_bounce_durchgenagelt",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_groove_bounce",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Riff wird technisch sauber gespielt, aber niemand bewegt sich: Alle Achtel sind gleich laut, die Pausen klingen nach, und das Ganze klingt nach Thrash im falschen Tempo statt nach Stomp.",
+          "ursache": "Die Lücken werden nicht als Teil des Riffs behandelt: schlampige Dämpfung lässt die Pausen zuwachsen, Akzente und Nicht-Akzente sind gleichberechtigt, und die Synkopen werden dem Beat angeglichen statt gegen ihn gesetzt. Der Körper spielt nicht mit — im Sitzen geübt, im Kopf gezählt.",
+          "korrektur": "Das Riff über die Pausen aufbauen: erst durchgehende gedämpfte Achtel, dann gezielt Schläge streichen und die Stille knallen lassen — die Dämpfung ist die halbe Miete. Akzente bewusst überzeichnen (die Synkope lauter als alles andere), dann zurücknehmen. Und die Körperprobe zur Pflicht machen: im Stehen spielen; wenn der eigene Kopf nicht nickt, weiter vereinfachen statt weiter üben."
+        }
+      }
+    },
+    {
+      "id": "fb_motor_zieht",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_bass_motor",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die treibenden Achtel werden über die Minuten schneller: Am Songanfang sitzt der Bass, am Ende drückt er vor dem Schlagzeug — und im Alleinträger-Moment (Gitarren-Break) kippt das Tempo hörbar nach vorn.",
+          "ursache": "Drive wird mit Eile verwechselt: Der Wunsch zu schieben landet im Tempo statt im Attack. Meist fehlt die Aufnahme-Kontrolle — das Ziehen fühlt sich von innen wie Energie an und fällt erst im Vergleich mit dem Klick auf.",
+          "korrektur": "Die Zwei-Minuten-Messung zum Ritual machen: durchgehende Achtel aufnehmen und gegen den Klick abhören — das Ziel ist Druck bei stabiler Zeit, und der Druck kommt aus konstantem, hartem Anschlag, nicht aus Beschleunigung. Den Alleinträger-Moment isoliert üben: Band-Aufnahme ausblenden und prüfen, ob die eigene Zeit steht. Merksatz: Schieben heißt lauter und entschlossener, nie früher."
+        }
+      }
+    },
+    {
+      "id": "fb_energie_ins_tempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_drums_energie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Je energischer der Song, desto schneller wird er: Nach dem Stomp ist der schnelle Teil plötzlich flotter als davor, und am Set-Ende liegen die Songs spürbar über ihrem Tempo.",
+          "ursache": "Energie und Tempo sind nicht getrennt: Die Erregung des Moments — Publikum, Adrenalin, laute Gitarren — wandert unbemerkt in die Hände. Die Übergänge sind die Leckstellen: Jeder Wechsel wird zum kleinen Beschleuniger, weil der erste Takt des neuen Teils ungeprüft übernommen wird.",
+          "korrektur": "Die Wechselkanten mit Klick drillen: schnell in den Stomp und zurück, zehnmal am Stück, und der erste Takt nach jedem Wechsel wird bewusst kontrolliert — er neigt zum Hetzen. Dann den Ernstfall simulieren: bewusst aufgedreht spielen (laute Aufnahme, Stehprobe) und hinterher messen, ob die Energie ins Tempo gesickert ist. Ziel-Formulierung fürs Team: Energie hoch, Viertel unverrückbar."
+        }
+      }
+    },
+    {
+      "id": "fb_gangshout_hals",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_gangshouts",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach wenigen Shouts wird die Stimme rau, der Ruf klingt gequetscht statt wuchtig — und im Ensemble kleckern die Silben, statt als ein Schlag zu treffen.",
+          "ursache": "Gerufen wird mit dem Hals statt mit dem Körper: kein Stütz-Impuls, enger Rachen, zu lange und zu laute Töne. Dazu fehlt die rhythmische Verabredung — jeder ruft gefühlt richtig, aber niemand exakt auf dem Schlag.",
+          "korrektur": "Die Rufe neu verankern: erst im Sprechton rhythmisch exakt zum Klick, dann halblaut aus der Stütze (Impuls aus der Körpermitte, kurze entschlossene Silben), Lautstärke nur so weit, wie es mühelos bleibt. Timing vor Wucht: Silben wie perkussive Schläge behandeln und im Ensemble auf EINEN gemeinsamen Schlag hin üben. Kratzen oder Heiserkeit heißt sofort leiser — und Aufwärmen gilt auch für Shouts."
+        }
+      }
+    },
+    {
+      "id": "fb_dbeat_verkrampft",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_dbeat_ausbau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach zwei Minuten D-Beat steigt die Schulter, die Schläge werden härter, aber leiser wirksam — und am Ende der Aufnahme eilt der Beat oder franst aus, während die Unterarme brennen.",
+          "ursache": "Konstanz wird mit Dauermaximalkraft verwechselt: Jeder Schlag wird aus den Armen gestemmt statt aus Technik und Rebound geholt. Unter Ermüdung greift der Körper zu noch mehr Kraft — die Spirale aus Verkrampfung, Lautstärkeverlust und Timing-Drift dreht sich zu.",
+          "korrektur": "Ökonomie vor Dauer, Dauer vor Tempo: kurze Läufe mit bewusster Lockerheits-Kontrolle (Schultern unten, Handgelenke federn, Atmung ruhig), erst dann verlängern. Auf der Aufnahme Anfang gegen Ende vergleichen — gleich laut, gleich pünktlich? Die Stellen markieren, an denen Kraft aufgebaut wird, und genau dort lockern statt leiser werden. Bei anhaltendem Brennen oder Zwicken: Pause und ärztliche Abklärung statt Durchbeißen."
+        }
+      }
+    },
+    {
+      "id": "fb_crust_vocals_druck",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_vocals_rau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das raue Brüllen funktioniert nur laut: Leise ist die Färbung weg, nach einer Probe ist die Stimme heiser, und die Rauheit klingt von Tag zu Tag anders.",
+          "ursache": "Die Dringlichkeit wird körperlich erzwungen: Statt False-Cord-Rauheit auf stabilem Luftstrom trägt Kehlkopf-Druck die Färbung. Dass es nur laut geht, ist das Leitsymptom — echte Technik ist in jeder Lautstärke verfügbar, Druck braucht Pegel.",
+          "korrektur": "Zurück auf die leise Basis: der clean gerufene Zuruf aus der Stütze, dann ein Hauch Rauheit als Flüster-Brüllen — die Färbung muss bei niedriger Lautstärke entstehen, sonst trägt noch der Druck. Kurze Einheiten, nach jeder der Sprechtest (klingt die Alltagsstimme frei?). In Heiserkeit wird nie hineingeübt; hält sie an, gehört sie in die HNO-Praxis, und der Aufbau an die Seite einer Lehrperson."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_schnitt_franst",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_riff_reduktion",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Miniatur hat alles — Tremolo-Fläche, Stampf-Kontrast — aber die Wechsel klingen nach Übergang: ein Nachklingen hier, ein Zögern da, und die Wirkung des harten Schnitts ist weg.",
+          "ursache": "Der Schnitt wird nicht als eigenes Ereignis geübt: Die Aufmerksamkeit liegt auf den Teilen statt auf der Naht. Unsaubere Dämpfung lässt Teil A in Teil B hineinklingen, und die Umstellung der Anschlagshand (dicht auf schwer) kostet eine Mikropause, die bei Grind-Dichte sofort hörbar ist.",
+          "korrektur": "Die Naht isoliert drillen: nur die letzten zwei Schläge von A und die ersten zwei von B, zehnmal am Stück — dazwischen absolute Stille, konsequent abgedämpft. Dann die Miniatur aufnehmen und ausschließlich die Schnitte bewerten: kein Nachklingen, kein Zögern, kein Ritardando. Der Prüfsatz: Der Schnitt selbst ist der Effekt — was ihn weich macht, fliegt raus."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_register_bruch",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_vocals_wechsel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Einzeln sitzen beide Register — aber im schnellen Wechsel wird das Hoch gepresst oder das Tief eng, und nach Grind-Tempo-Passagen ist die Stimme spürbar strapaziert.",
+          "ursache": "Der Kontrast wird erzwungen: Beim Umschalten baut die Kehle Druck auf, um den Registerwechsel zu markieren, statt nur den Resonanzraum umzuschalten. Meist ist der Abstand zu früh zu klein geworden — das Tempo des Songs diktiert den Wechsel, bevor die Technik ihn hergibt.",
+          "korrektur": "Den Abstand wieder vergrößern: Phrase tief, bewusster Atem, Phrase hoch — mit Sekunden Luft dazwischen, beide leise und frei. Die Stütze als Kontinuum rahmen: Sie bleibt, nur der Raum schaltet. Verkürzt wird der Abstand in Wochenschritten und nur, solange beide Seiten frei klingen — klingt ein Register nach dem Wechsel enger, ist das die Warnlampe. Songtempo ist das letzte Kriterium, nicht das erste."
+        }
+      }
+    },
+    {
+      "id": "fb_pv_kante_kleckert",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_start_stopp",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Abrisse wirken nicht: Nach dem Stopp kommt der neue Teil zögernd, das neue Tempo stimmt erst nach zwei Takten, und was Absicht sein soll, klingt nach Patzer.",
+          "ursache": "Die Teile wurden geübt, die Kanten nicht: Der letzte und der erste Schlag sind niemandes Fokus. Dazu fehlt das Tempogedächtnis — das neue Tempo wird aus dem alten geschätzt statt als feste Referenz abgerufen, und bei unverwandten Tempi geht die Schätzung daneben.",
+          "korrektur": "Das Üben umdrehen: nicht Durchläufe, sondern Kanten — zwei Takte vor dem Wechsel rein, zwei danach raus, zehnmal. Jedes Teil-Tempo einzeln mit Klick als Gefühl verankern (notfalls mit Referenzsong im Ohr) und nach dem Stopp aus dem Gedächtnis abrufen. Auf der Aufnahme zählt nur eines: Liegt der erste Schlag des neuen Teils exakt — und im richtigen Tempo?"
+        }
+      }
+    },
+    {
+      "id": "fb_pv_karte_fehlt",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_band_abrisskanten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Live und in der Probe dasselbe Bild: Bei jedem dritten Wechsel schaut sich die Band an, einer springt zurück, um einen Patzer zu reparieren — und aus einem Vierzig-Sekunden-Song wird eine Baustelle.",
+          "ursache": "Das Stück existiert nur als Muskelgedächtnis, nicht als geteilte Landkarte: Niemand kann die Zustandsfolge mit Taktzahlen aufsagen, Signale für variable Stellen sind nicht verabredet, und die Regel für den Fehlerfall (weiterspielen, nie zurückspringen) wurde nie explizit gemacht.",
+          "korrektur": "Die Landkarte zur Eintrittskarte machen: Vor dem Proben sagt jede Person die Zustandsfolge auswendig auf — zweimal dieselbe Antwort, sonst wird nicht gespielt. Kanten einzeln proben, Signale für die variablen Stellen festlegen, und den Fehlerfall aktiv üben: absichtlicher Patzer, alle spielen unbeirrt weiter. Der Song ist zu kurz für Reparaturen — das muss als Regel sitzen, nicht als Hoffnung."
+        }
+      }
     }
   ]
 }
