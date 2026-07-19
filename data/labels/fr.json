@@ -429,7 +429,20 @@
     "set_pacing": "",
     "stimm_regeneration": ""
   },
-  "fehlerbilder": {},
+  "fehlerbilder": {
+    "fb_palm_muting_position": "",
+    "fb_wechselschlag_aufschlag": "",
+    "fb_downpicking_arm": "",
+    "fb_fingerstyle_galopp": "",
+    "fb_bass_nebengeraeusche": "",
+    "fb_bass_klick_flattern": "",
+    "fb_grundbeat_flam": "",
+    "fb_double_bass_hinkt": "",
+    "fb_blast_verschmiert": "",
+    "fb_stuetze_halsdruck": "",
+    "fb_verzerrung_gepresst": "",
+    "fb_intonation_daneben": ""
+  },
   "grafiken": {},
   "vokabeln": {
     "domaene": {
@@ -554,6 +567,10 @@
     "drums_groove_fundament": "",
     "drums_speed_koordination": "",
     "vocals_stimme_stuetze": "",
-    "vocals_rhythmus_ausdruck": ""
+    "vocals_rhythmus_ausdruck": "",
+    "gitarre_tremolo_werkstatt": "",
+    "bass_speed_praezision": "",
+    "drums_blast_werkstatt": "",
+    "vocals_harsh_werkstatt": ""
   }
 }
