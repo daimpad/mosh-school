@@ -578,6 +578,198 @@
           }
         ]
       }
+    },
+    {
+      "id": "gitarre_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Blast-Tempo, Sweeps und Studio-Präzision"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session: kontrollierte Ausflüge über die Tempogrenze, Sweep-Feinbau und Reproduzierbarkeit auf Studio-Niveau. Lockerheit bleibt das Abbruchkriterium."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "wechselschlag",
+            "hinweis": {
+              "de": "Langsam einschwingen — kleine Bewegung, beide Richtungen gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "blast_tempo_riffing",
+            "hinweis": {
+              "de": "Kurze Ausflüge über die Grenze, sofort zurück ins Kontrolltempo."
+            }
+          },
+          {
+            "baustein": "sweep_ausbau",
+            "hinweis": {
+              "de": "Zeitlupe: ein Ton zur Zeit, das Rolling entscheidet."
+            }
+          },
+          {
+            "baustein": "recording_tightness",
+            "hinweis": {
+              "de": "Zwei Takes übereinander — Flatterstellen sind deine Übe-Liste."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "lead_phrasierung",
+            "hinweis": {
+              "de": "Singen, dann spielen — ruhig und musikalisch ausklingen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Tapping, Extremtempo und Kontrapunkt"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session am Bass: Zweihand-Technik, Effizienz an der Tempogrenze und kompositorisches Denken. Video- und Audio-Selbstkontrolle gehören dazu."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Locker einspielen — beide Finger gleich laut, mäßiges Tempo."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "bass_tapping",
+            "hinweis": {
+              "de": "Dämpfungsplan zuerst — Stille zwischen den Zyklen."
+            }
+          },
+          {
+            "baustein": "bass_extremtempo",
+            "hinweis": {
+              "de": "Zeitlupen-Video ansehen, dann kurze Grenz-Ausflüge."
+            }
+          },
+          {
+            "baustein": "bass_kontrapunkt",
+            "hinweis": {
+              "de": "Anker treffen, dazwischen bewusst eigene Wege gehen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "bass_mikrotiming",
+            "hinweis": {
+              "de": "Feinhören zum Schluss: vor, auf, hinter dem Schlag — leise und konzentriert."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Extremtempo-Füße, Polymetrik, ungerade Takte"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session am Kit: eine Fußtechnik isoliert anbahnen, wandernde Zellen über stabilem Puls und krumme Takte, die grooven. Federnd statt gestampft — Schmerz beendet den Durchgang."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Singles und Doubles langsam — Hände auf Betriebstemperatur."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "double_bass_extremtempo",
+            "hinweis": {
+              "de": "Eine Technik, kurze Zyklen, großzügige Pausen."
+            }
+          },
+          {
+            "baustein": "drums_polymetrik",
+            "hinweis": {
+              "de": "Die Sieben-Zelle laut zählen, der Vierer wankt nicht."
+            }
+          },
+          {
+            "baustein": "ungerade_takte_drums",
+            "hinweis": {
+              "de": "Kurz-kurz-lang sprechen, bis der 7/8 groovt."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "drums_dynamik_architektur",
+            "hinweis": {
+              "de": "Ruhig ausklingen: Intensitätsebenen bewusst durchfahren."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Range, Texturen und rhythmische Präzision — leise und sicher"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session für Extreme Vocals mit striktem Sicherheitsrahmen: alles leise, kurz und mühelos; Auf- und Abwärmen sind Pflicht, und die Range-Arbeit gehört langfristig in Begleitung einer Lehrperson."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Gründlich aufwärmen — Lip Trills und Sirenen, alles mühelos."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "harsh_range_erweiterung",
+            "hinweis": {
+              "de": "Von den sicheren Zentren in kleinen Stufen zu den Rändern — nie über Druck."
+            }
+          },
+          {
+            "baustein": "harsh_texturen",
+            "hinweis": {
+              "de": "Das innere Mischpult: Übergänge fließend, ohne jeden Ruck."
+            }
+          },
+          {
+            "baustein": "harsh_rhythmische_praezision",
+            "hinweis": {
+              "de": "Erst sprechen, dann verzerren — das Timing zahlt nie die Zeche."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft abwärmen, bis sich die Stimme neutral anfühlt."
+            }
+          }
+        ]
+      }
     }
   ]
 }

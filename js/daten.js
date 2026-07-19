@@ -30,6 +30,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.fortgeschritten-gesang.json',
   'data/bausteine.experte-gesang.json',
   'data/bausteine.einsteiger-theorie.json',
+  'data/bausteine.fortgeschritten-theorie.json',
 ];
 
 export async function ladeDaten() {

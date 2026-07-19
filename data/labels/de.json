@@ -459,7 +459,15 @@
     "vocal_identitaet": "Die eigene Stimme finden",
     "vocals_studio": "Studio-Vocals: Takes, Doubles, Haushalt",
     "vocals_live_monitoring": "Live: Monitoring als Stimmschutz",
-    "vocals_tour_haushalt": "Tour-Haushalt: viele Shows, eine Stimme"
+    "vocals_tour_haushalt": "Tour-Haushalt: viele Shows, eine Stimme",
+    "modi_im_metal": "Modi: die dunkle Farbpalette",
+    "harmonisch_moll_exotik": "Harmonisch Moll & exotische Skalen",
+    "akkordfolgen_metal": "Akkordfolgen: warum Riffs funktionieren",
+    "ungerade_takte_theorie": "Ungerade Takte: Zweier und Dreier",
+    "polyrhythmik_theorie": "Polyrhythmus vs. Polymetrik",
+    "tonartwechsel_dramaturgie": "Tonartwechsel als Dramaturgie",
+    "gehoer_transkription": "Riffs heraushören: Transkription",
+    "arrangement_dichte": "Arrangement: Dichte, Register, Raum"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -603,6 +611,10 @@
     "gitarre_tremolo_werkstatt": "Gitarre: Tremolo-Werkstatt",
     "bass_speed_praezision": "Bass: Speed & Präzision",
     "drums_blast_werkstatt": "Drums: Blast-Werkstatt",
-    "vocals_harsh_werkstatt": "Vocals: Harsh-Werkstatt"
+    "vocals_harsh_werkstatt": "Vocals: Harsh-Werkstatt",
+    "gitarre_experte_werkstatt": "Gitarre: Experten-Werkstatt",
+    "bass_experte_werkstatt": "Bass: Experten-Werkstatt",
+    "drums_experte_werkstatt": "Drums: Experten-Werkstatt",
+    "vocals_experte_werkstatt": "Vocals: Experten-Werkstatt"
   }
 }
