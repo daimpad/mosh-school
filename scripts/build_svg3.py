@@ -295,6 +295,47 @@ S["grind_bass_verzahnung"] = [
     L(12, 90, 108, 90, 2.5),
 ]
 
+# ================= GENRE-EINSTEIGER + PV-VERTIEFUNG =================
+
+# Genrekunde: eine Wurzel verzweigt in eine schnelle (dichte Ticks) und eine
+# langsame Linie (schwerer Strich) — die Landkarte der Familie.
+S["genrekunde_extreme_familie"] = [
+    L(60, 96, 60, 66, 4),
+    P("M60,66 L34,46", 3), P("M60,66 L86,46", 3),
+    *[L(22 + i * 8, 40, 22 + i * 8, 26, 2.5) for i in range(4)],
+    L(78, 33, 104, 33, 6),
+]
+# Das erste Sludge-Riff: zwei schwere Blöcke mit breiter Lücke — zwei Akkorde,
+# volles Gewicht, die Stille dazwischen gehört dazu.
+S["sludge_erstes_riff"] = [
+    RECT(16, 48, 30, 26, filled=True),
+    RECT(74, 56, 30, 26, filled=True),
+    L(12, 92, 108, 92, 2.5),
+]
+# Das Stopp-Spiel: laufender Puls, harte Lücke mit Hohlkreisen (gezählte
+# Stille), entschlossener Wiedereinstieg.
+S["pv_stopp_spiel"] = [
+    *[L(16 + i * 9, 74, 16 + i * 9, 52, 3.5) for i in range(4)],
+    C(60, 63, 4, 2.2), C(74, 63, 4, 2.2),
+    L(88, 74, 88, 44, 6),
+    L(12, 74, 108, 74, 2.5),
+]
+# Ausbrüche in Serie: kurze steile Salven-Spitzen mit Stille dazwischen,
+# darunter der ruhige Stütz-Bogen — vorbereiteter Einsatz.
+S["pv_vocals_ausbruch"] = [
+    TRI([(20, 68), (28, 68), (24, 40)]),
+    TRI([(48, 68), (56, 68), (52, 40)]),
+    TRI([(76, 68), (84, 68), (80, 40)]),
+    ARC(60, 76, 40, 200, 340, 2.5),
+]
+# Zustände schalten: dichte Fläche und massiver Block, getrennt durch eine
+# harte Schnittkante — zwei Welten, ein Schlag.
+S["pv_gitarre_zustaende"] = [
+    P(wavepath(14, 52, 60, 9, 4.5, step=1.4), 2),
+    L(58, 34, 58, 86, 4),
+    RECT(68, 44, 36, 32, filled=True),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -304,7 +345,9 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "grind_riff_reduktion", "grind_vocals_wechsel", "grind_kompression",
                 "pv_start_stopp", "pv_miniatur_dramaturgie", "pv_band_abrisskanten",
                 "sludge_riffing_dreck", "sludge_drums_hinterm_beat", "sludge_vocals_verzweiflung",
-                "grind_blast_uebergaenge", "grind_bass_verzahnung"]
+                "grind_blast_uebergaenge", "grind_bass_verzahnung",
+                "genrekunde_extreme_familie", "sludge_erstes_riff", "pv_stopp_spiel",
+                "pv_vocals_ausbruch", "pv_gitarre_zustaende"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
