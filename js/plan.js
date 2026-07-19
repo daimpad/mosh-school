@@ -97,7 +97,7 @@ export function planAlsIcal(plan, beschriftung, jetztStempel) {
   const zeilen = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Crossminton-Handbuch//Trainingsplan//DE',
+    'PRODID:-//mosh school//Trainingsplan//DE',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
   ];
@@ -107,11 +107,11 @@ export function planAlsIcal(plan, beschriftung, jetztStempel) {
     const ende = plusTage(s.datum, 1).replace(/-/g, '');
     zeilen.push(
       'BEGIN:VEVENT',
-      `UID:cmh-${tag}-${i}@crossminton-handbuch`,
+      `UID:msh-${tag}-${i}@mosh-school`,
       `DTSTAMP:${jetztStempel}`,
       `DTSTART;VALUE=DATE:${tag}`,
       `DTEND;VALUE=DATE:${ende}`,
-      `SUMMARY:${icalEscape('Crossminton – ' + (b.titel || s.einheit))}`,
+      `SUMMARY:${icalEscape('mosh school – ' + (b.titel || s.einheit))}`,
       `DESCRIPTION:${icalEscape(b.schwerpunkt || '')}`,
       'END:VEVENT',
     );
