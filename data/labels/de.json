@@ -266,7 +266,13 @@
     "stimm_genres": "Typisch in",
     "stimm_saite_aria": "Referenzton {note} anspielen",
     "stimm_hinweis_pegel": "Referenztöne bewusst leise abspielen — und beim Stimmen am Instrument gilt wie immer: Gehörschutz, sobald der Amp läuft.",
-    "lehrgrafik_titel": "Schema"
+    "lehrgrafik_titel": "Schema",
+    "klang_titel": "Intervalle & Akkorde hören",
+    "klang_intervalle": "Intervalle",
+    "klang_akkorde": "Akkorde",
+    "klang_untertitel": "Vom tiefen E gespielt — tipp an, um den Klangcharakter zu hören. Der Tritonus ist der berühmte „Diabolus“.",
+    "klang_intervall_aria": "Intervall {name} anspielen",
+    "klang_akkord_aria": "Akkord {name} anspielen"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
@@ -669,6 +675,21 @@
       "bass_d_standard": "Bass: D-Standard",
       "bass_drop_c": "Bass: Drop C",
       "bass_b_5": "Bass: 5-Saiter (B)"
+    },
+    "intervall": {
+      "kleine_sekunde": "Kleine Sekunde",
+      "kleine_terz": "Kleine Terz",
+      "grosse_terz": "Große Terz",
+      "quarte": "Quarte",
+      "tritonus": "Tritonus",
+      "quinte": "Quinte",
+      "oktave": "Oktave"
+    },
+    "akkord": {
+      "powerchord": "Powerchord",
+      "dur": "Dur-Akkord",
+      "moll": "Moll-Akkord",
+      "vermindert": "Verminderter Akkord"
     }
   },
   "spielziele": {
