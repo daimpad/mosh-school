@@ -335,6 +335,20 @@ S["pv_gitarre_zustaende"] = [
     L(58, 34, 58, 86, 4),
     RECT(68, 44, 36, 32, filled=True),
 ]
+# Die Säge führen: eine lange, gleichmäßig raue Schnittlinie mit Abwärts-Keilen —
+# Downpicking-Ausdauer unter Zerre.
+S["crust_gitarre_saege"] = [
+    P(roughpath(12, 108, 56, 8, step=2.8, seed=61), 3.5),
+    TRI([(28, 74), (36, 74), (32, 88)]),
+    TRI([(56, 74), (64, 74), (60, 88)]),
+    TRI([(84, 74), (92, 74), (88, 88)]),
+]
+# Die zweite Säge: zwei parallele raue Linien, die untere schwerer — exakt
+# übereinander, eine Wand.
+S["crust_bass_wand"] = [
+    P(roughpath(12, 108, 44, 7, step=2.8, seed=67), 2.5),
+    P(roughpath(12, 108, 72, 7, step=2.8, seed=67), 5),
+]
 
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
@@ -347,7 +361,8 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "sludge_riffing_dreck", "sludge_drums_hinterm_beat", "sludge_vocals_verzweiflung",
                 "grind_blast_uebergaenge", "grind_bass_verzahnung",
                 "genrekunde_extreme_familie", "sludge_erstes_riff", "pv_stopp_spiel",
-                "pv_vocals_ausbruch", "pv_gitarre_zustaende"]
+                "pv_vocals_ausbruch", "pv_gitarre_zustaende",
+                "crust_gitarre_saege", "crust_bass_wand"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
