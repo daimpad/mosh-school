@@ -35,7 +35,18 @@ function ladeHerunter(name, inhalt, mime) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function konfigHtml(vorgabe) {
+function konfigHtml(vorgabe, mitSpielform) {
+  // Spielform ist eine dormante Achse: Solange alle Einheiten „einzel" sind
+  // (kein doppel-Bestand), bleibt die Auswahl ausgeblendet — wie die Heim-Kacheln.
+  const spielformFeld = mitSpielform
+    ? `
+        <label class="plan-feld"><span>${esc(t('plan_spielform'))}</span>
+          <select id="plan-spielform">
+            <option value="alle">${esc(t('plan_spielform_alle'))}</option>
+            <option value="einzel"${vorgabe.spielform === 'einzel' ? ' selected' : ''}>${esc(label('spielform', 'einzel'))}</option>
+            <option value="doppel"${vorgabe.spielform === 'doppel' ? ' selected' : ''}>${esc(label('spielform', 'doppel'))}</option>
+          </select></label>`
+    : '';
   return `
     <form class="karte plan-konfig" id="plan-form">
       <h2>${esc(t('plan_erstellen'))}</h2>
@@ -46,13 +57,7 @@ function konfigHtml(vorgabe) {
         <label class="plan-feld"><span>${esc(t('plan_pro_woche'))}</span>
           <input type="number" id="plan-pro-woche" min="1" max="4" value="${vorgabe.einheitenProWoche}"></label>
         <label class="plan-feld"><span>${esc(t('plan_start'))}</span>
-          <input type="date" id="plan-start" value="${vorgabe.startISO}"></label>
-        <label class="plan-feld"><span>${esc(t('plan_spielform'))}</span>
-          <select id="plan-spielform">
-            <option value="alle">${esc(t('plan_spielform_alle'))}</option>
-            <option value="einzel"${vorgabe.spielform === 'einzel' ? ' selected' : ''}>${esc(label('spielform', 'einzel'))}</option>
-            <option value="doppel"${vorgabe.spielform === 'doppel' ? ' selected' : ''}>${esc(label('spielform', 'doppel'))}</option>
-          </select></label>
+          <input type="date" id="plan-start" value="${vorgabe.startISO}"></label>${spielformFeld}
       </div>
       <div class="knopf-zeile" style="justify-content:flex-start">
         <button type="submit" class="knopf knopf-primaer"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('plan_generieren'))}</button>
@@ -110,11 +115,12 @@ export function renderPlan(el, daten) {
     ? { wochen: p.wochen, einheitenProWoche: p.einheitenProWoche, startISO: p.startISO, spielform: p.spielform }
     : { wochen: 4, einheitenProWoche: 2, startISO: naechsterMontagISO(), spielform: 'alle' };
   const wenige = planbareEinheiten(daten, 'alle').length === 0;
+  const mitSpielform = daten.einheiten.some((e) => (e.spielform || 'einzel') === 'doppel');
 
   el.innerHTML = `
     ${heroKlein('fa-calendar-days', t('plan_titel'), t('plan_kachel_text'), 'pf-indigo')}
     ${wenige ? `<div class="karte"><p class="leise">${esc(t('plan_keine_einheiten'))}</p></div>` : ''}
-    ${konfigHtml(vorgabe)}
+    ${konfigHtml(vorgabe, mitSpielform)}
     ${p ? planHtml(daten, p) : ''}`;
 
   const form = el.querySelector('#plan-form');
@@ -124,7 +130,7 @@ export function renderPlan(el, daten) {
       wochen: Number(el.querySelector('#plan-wochen').value),
       einheitenProWoche: Number(el.querySelector('#plan-pro-woche').value),
       startISO: el.querySelector('#plan-start').value || naechsterMontagISO(),
-      spielform: el.querySelector('#plan-spielform').value,
+      spielform: el.querySelector('#plan-spielform')?.value || 'alle',
     };
     setzePlan(erzeugePlan(daten, konfig));
     neuRendern();

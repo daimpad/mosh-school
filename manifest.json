@@ -1,16 +1,16 @@
 {
-  "name": "Crossminton-Handbuch",
-  "short_name": "Crossminton",
-  "description": "Crossminton lernen — Schlag für Schlag: Technik, Taktik, Regeln, Training und Ausrüstung. Kostenlos, werbefrei, im Browser.",
+  "name": "mosh school",
+  "short_name": "mosh school",
+  "description": "Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom. Kostenlos, werbefrei, im Browser.",
   "lang": "de",
   "dir": "ltr",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f2f6fc",
-  "theme_color": "#38a4f1",
-  "categories": ["education", "sports"],
+  "background_color": "#0b0b0c",
+  "theme_color": "#0b0b0c",
+  "categories": ["education", "music"],
   "icons": [
     { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }

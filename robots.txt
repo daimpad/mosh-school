@@ -1,5 +1,5 @@
-# Crossminton-Handbuch — alle Inhalte sind öffentlich und dürfen indexiert werden.
+# mosh school — alle Inhalte sind öffentlich und dürfen indexiert werden.
 User-agent: *
 Allow: /
 
-Sitemap: https://daimpad.github.io/crossminton-handbook/sitemap.xml
+Sitemap: https://daimpad.github.io/mosh-school/sitemap.xml
