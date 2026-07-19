@@ -99,7 +99,7 @@ function trainerLayerHtml(daten, baustein) {
         .join(' ');
       return `
         <article class="fb-karte">
-          <h3><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> ${esc(label('fehlerbild', fb.id))}</h3>
+          <h3>${bausteinIcon(fb.id) || '<i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>'} ${esc(label('fehlerbild', fb.id))}</h3>
           ${feld('fa-eye', t('fb_symptom'), inhalt.symptom)}
           ${feld('fa-magnifying-glass', t('fb_ursache'), inhalt.ursache)}
           ${feld('fa-comment-dots', t('fb_korrektur'), inhalt.korrektur)}

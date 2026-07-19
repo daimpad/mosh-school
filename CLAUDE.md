@@ -122,9 +122,13 @@ Tokens**, nie harte Farben.
   (`INSTRUMENT_SVG` + `domaeneIcon()` in `js/oberflaeche.js`); Baustein-Icons in `BAUSTEIN_ICONS`.
 - **Baustein-Grafiken:** Jeder Baustein hat eine abstrakte, monochrome SVG-Grafik
   (`data/grafiken.json`, `{id: "<svg…>"}`). Quelle der Wahrheit sind die deterministischen
-  Generatoren `scripts/build_svg.py`/`build_svg2.py`; `python3 scripts/build_grafiken.py`
-  führt beide aus und bündelt das JSON — **Motive dort korrigieren und neu generieren, nie
-  SVGs/Bundle von Hand editieren**. Die Grafiken nutzen ausschließlich `currentColor` und
+  Generatoren `scripts/build_svg.py`/`build_svg2.py`/`build_svg3.py`;
+  `python3 scripts/build_grafiken.py` führt sie in dieser Reihenfolge aus und bündelt das
+  JSON — **Motive dort korrigieren und neu generieren, nie SVGs/Bundle von Hand editieren**.
+  Auch **Fehlerbilder** tragen Grafiken (Trainer-Layer): Tranche 3 komponiert sie
+  deterministisch aus dem abgeblendeten Basis-Motiv plus gezacktem Riss (Seed =
+  `crc32(fehlerbild_id)`) — sie werden nie einzeln gezeichnet, sondern folgen dem
+  Basisbaustein automatisch. Die Grafiken nutzen ausschließlich `currentColor` und
   wirken deshalb **nur inline** (Registry `setzeGrafiken()` → `bausteinIcon()` in
   `js/oberflaeche.js`) — nie als `<img src>` einbinden. Formvokabular: Punkte = Puls ·
   Striche = gedämpft · Wellen = klingend · Bögen = Resonanz/Atem/Rebound · Ticks = Zeit ·
