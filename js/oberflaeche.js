@@ -345,7 +345,17 @@ const BAUSTEIN_ICONS = {
   griff_und_griffband: 'fa-hand',
 };
 
+// Abstrakte Baustein-Grafiken (data/grafiken.json, generiert via
+// scripts/build_grafiken.py): Registry wird beim Boot gesetzt. Die SVGs nutzen
+// currentColor und wirken deshalb NUR inline — nie als <img src> einbinden.
+let GRAFIKEN = {};
+export function setzeGrafiken(map) {
+  GRAFIKEN = map || {};
+}
+
 export function bausteinIcon(bausteinId, klasse = '') {
+  const grafik = GRAFIKEN[bausteinId];
+  if (grafik) return grafik.replace('<svg ', `<svg class="grafik-icon ${klasse}" `);
   const icon = BAUSTEIN_ICONS[bausteinId];
   return icon ? `<i class="fa-solid ${icon} ${klasse}" aria-hidden="true"></i>` : '';
 }
