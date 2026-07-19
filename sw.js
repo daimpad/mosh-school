@@ -69,6 +69,7 @@ const SHELL = [
   'data/bausteine.experte-gesang.json',
   'data/bausteine.einsteiger-theorie.json',
   'data/bausteine.fortgeschritten-theorie.json',
+  'data/bausteine.experte-theorie.json',
   'data/fehlerbilder.json',
   'data/grafiken.json',
   'data/regeln.json',

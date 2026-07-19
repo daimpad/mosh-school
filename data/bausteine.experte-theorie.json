@@ -1,0 +1,242 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "experte",
+    "domaene": "theorie",
+    "hinweis": "Experte-Theorie: instrumentenunabhängige Vertiefung (erweiterte Harmonik, Chromatik, Modulation, metrische Modulation, Kontrapunkt, Klangregie, Produktionswissen, Werkanalyse). Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "erweiterte_harmonik",
+      "anzeigetitel": {
+        "de": "Erweiterte Harmonik jenseits der Quinte"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "akkordfolgen_metal"
+      ],
+      "erklaerteil": {
+        "de": "Der Powerchord ist das Fundament — aber die interessantesten Metal-Harmonien entstehen, wenn du ihm gezielt Farben beimischst: Die hinzugefügte None (add9) macht einen Akkord weit und melancholisch, die Sus-Varianten (Quarte oder Sekunde statt Terz) erzeugen schwebende Spannung, und eine große Septime über dem Grundton klingt unheilvoll schön. Moderner Post-Black-Metal und progressiver Death Metal leben von genau diesen Erweiterungen.\n\nUnter Verzerrung gilt die bekannte Physik verschärft: Je mehr Töne, desto mehr Reibung. Erweiterte Akkorde funktionieren verzerrt am besten weit gelagert (die Zusatzfarbe eine Oktave höher statt direkt neben dem Grundton) oder in Passagen mit weniger Gain. Die Entscheidung „welche Farbe, wie gelagert, wie viel Zerre“ ist eine einzige Gestaltungsfrage mit drei Reglern.\n\nHöre Erweiterungen als Emotionen, nicht als Zahlen: add9 = Weite, sus4 = Aufschub, maj7 = schöner Schrecken. Wer die Farben am Klang erkennt, setzt sie beim Schreiben gezielt ein — ein einziger erweiterter Akkord an der richtigen Stelle verändert die Temperatur eines ganzen Riffs."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Farben über dem Powerchord",
+          "ziel": "add9, sus4 und maj7 am Klang erkennen und gezielt einsetzen.",
+          "schritte": [
+            "Spiel (oder lass dir vorspielen) einen Powerchord und füge nacheinander None, Quarte und große Septime hinzu — benenne die Stimmung jeder Farbe in einem Wort.",
+            "Vergleich jede Erweiterung eng gelagert und weit gelagert (Zusatzton eine Oktave höher) — erst clean, dann verzerrt.",
+            "Wähle die Variante, die verzerrt am klarsten trägt, und setz sie als Ereignis in eine Vier-Takt-Folge aus reinen Powerchords."
+          ],
+          "steigerung": "Dieselbe Folge mit zwei verschiedenen Farben an derselben Stelle vergleichen und die Wirkung beschreiben.",
+          "selbstkontrolle": "Du erkennst die drei Farben blind und kannst begründen, welche Lagerung unter Zerre überlebt."
+        }
+      }
+    },
+    {
+      "id": "chromatik_atonalitaet",
+      "anzeigetitel": {
+        "de": "Chromatik & atonale Ansätze"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "tritonus_dissonanz",
+        "modi_im_metal"
+      ],
+      "erklaerteil": {
+        "de": "Dissonanter Death Metal und avantgardistischer Black Metal verlassen bewusst das Terrain der Tonleitern: Chromatische Zellen (Halbtonschritte in beliebiger Richtung), Intervallketten ohne tonales Zentrum und Akkorde, die keiner Tonart mehr gehorchen. Bands wie Gorguts, Ulcerate oder Deathspell Omega haben daraus eine eigene Sprache gemacht — kontrolliertes Chaos, nicht Beliebigkeit.\n\nDer Unterschied zwischen atonal-gestaltet und einfach falsch liegt in der Konsequenz: Auch ohne Tonart braucht die Musik wiedererkennbare Zellen, bewusste Kontraste und rhythmische Anker. Ein atonales Riff funktioniert, wenn seine Intervallstruktur konsistent ist (etwa eine wiederkehrende Kombination aus Halbton und Tritonus) und die Wiederholung dem Ohr Halt gibt, den die Harmonik verweigert.\n\nFür die meisten Songs ist Atonalität ein Gewürz: eine chromatische Überleitung, ein tonartfreier Breakdown als Störmoment, bevor die dunkle Tonalität zurückkehrt. Wer beides beherrscht — Zentrum und dessen Auflösung —, kann Unbehagen als Werkzeug dosieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör dir ein bewusst dissonantes Stück an (etwa von Gorguts oder Deathspell Omega) und such nach dem Halt: Welche Zellen, Wiederholungen oder rhythmischen Anker geben dir Orientierung, obwohl die Tonart fehlt? Skizziere dann, an welcher einen Stelle eines konventionellen Songs ein atonales Störmoment die größte Wirkung hätte — und warum es dort mehr wäre als Lärm."
+      }
+    },
+    {
+      "id": "modulation_vertieft",
+      "anzeigetitel": {
+        "de": "Modulation vertieft: Wege in die neue Tonart"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "tonartwechsel_dramaturgie"
+      ],
+      "erklaerteil": {
+        "de": "Der harte Schnitt ist eine Modulationstechnik — aber nicht die einzige. Der Pivot-Akkord ist die elegante Variante: ein Klang, der in alter und neuer Tonart zuhause ist, dient als Drehtür — das Ohr merkt erst hinterher, dass es den Raum gewechselt hat. Im Metal funktioniert das besonders gut über geteilte Powerchords, weil ohne Terz mehr Deutungen offenstehen.\n\nDazu kommen die schleichenden Wege: eine chromatisch absteigende Basslinie, die die neue Tonart ansteuert, oder ein Riff, das seine eigene Transposition schrittweise vorbereitet, indem einzelne Töne schon zur Zieltonart gehören. Solche Übergänge erzeugen Sog statt Schock — das Gegenstück zur Rückung.\n\nDie Expertenfrage ist nie „Kann ich modulieren?“, sondern „Welcher Weg passt zur Dramaturgie?“: Schock (Schnitt), Sog (chromatische Vorbereitung) oder Eleganz (Pivot). Wer alle drei Wege kennt, wählt nach Wirkung — und erkennt beim Hören sofort, welchen Weg ein Song genommen hat."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei Wege, ein Ziel",
+          "ziel": "Schnitt, Pivot und chromatische Vorbereitung unterscheiden und bauen.",
+          "schritte": [
+            "Nimm eine kurze Folge in einer Ausgangstonart und wechsle in die Zieltonart (kleine Terz höher) einmal als harten Schnitt.",
+            "Bau denselben Wechsel mit einem Pivot: Finde einen Powerchord, der in beiden Tonarten Sinn ergibt, und lass ihn die Drehtür sein.",
+            "Bau den Wechsel als Sog: eine absteigende chromatische Linie (gespielt oder gesungen), die auf dem neuen Grundton landet."
+          ],
+          "steigerung": "Hör Songs mit Tonartwechseln und bestimme nach Gehör, welcher der drei Wege benutzt wurde.",
+          "selbstkontrolle": "Alle drei Varianten sind klanglich klar unterscheidbar, und du kannst ihre Wirkung benennen."
+        }
+      }
+    },
+    {
+      "id": "metrische_modulation",
+      "anzeigetitel": {
+        "de": "Metrische Modulation"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "polyrhythmik_theorie",
+        "ungerade_takte_theorie"
+      ],
+      "erklaerteil": {
+        "de": "Die metrische Modulation ist der raffinierteste Tempo-Trick der Musik: Eine Unterteilung des alten Tempos wird zur Zählzeit des neuen. Das klassische Beispiel — die Triole wird zur neuen Viertel: Was eben noch „drei auf einen Schlag“ war, ist plötzlich der Puls selbst, und der Song läuft im Verhältnis 3:2 schneller, ohne dass irgendwo ein Bruch zu hören wäre.\n\nProgressive Metal-Bands nutzen das für Übergänge, die sich wie Verwandlungen anfühlen: Das Tempo kippt organisch, weil das Ohr die Brücke — die gemeinsame Unterteilung — schon kennt, bevor sie zum neuen Puls wird. Der Effekt ist das Gegenteil des harten Schnitts: nicht Schock, sondern Morphing.\n\nPraktisch entsteht die Modulation in drei Schritten: die Brücken-Unterteilung im alten Tempo etablieren (hörbar machen!), sie einen Moment lang als Hauptereignis behandeln, dann den neuen Puls darauf aufbauen. Wer das als Zählübung beherrscht, erkennt metrische Modulationen beim Hören — und kann sie im Songwriting als Geheimwaffe einsetzen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die Triole wird zur Viertel",
+          "ziel": "Eine metrische Modulation klatschen und den Tempokipp bewusst vollziehen.",
+          "schritte": [
+            "Klatsch Viertel zu einem Klick und sprich Triolen darüber („1-o-le“), bis beide stabil nebeneinander stehen.",
+            "Verlagere den Fokus: Klatsch jetzt die Triolen als Hauptschläge, während der alte Klick weiterläuft — spür, wie sich ein neues, schnelleres Tempo etabliert.",
+            "Lass den alten Klick los (Metronom stoppen oder ignorieren) und zähl im neuen Tempo weiter — die Modulation ist vollzogen."
+          ],
+          "steigerung": "Den umgekehrten Weg üben (neues Tempo zurück ins alte) und das Verhältnis benennen (3:2).",
+          "selbstkontrolle": "Der Übergang fühlt sich wie ein organisches Kippen an, und du kannst jederzeit sagen, in welchem Tempo du gerade bist."
+        }
+      }
+    },
+    {
+      "id": "kontrapunkt_stimmfuehrung",
+      "anzeigetitel": {
+        "de": "Kontrapunkt & Stimmführung"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "akkordfolgen_metal",
+        "arrangement_dichte"
+      ],
+      "erklaerteil": {
+        "de": "Wenn zwei Gitarren (oder Gitarre und Bass) nicht dasselbe spielen, sondern eigenständige Linien, die zusammen Harmonie ergeben, betreibst du Kontrapunkt — die älteste Kompositionstechnik der westlichen Musik, und im melodischen Black Metal und Prog-Death allgegenwärtig. Zwei einfache Linien, gut geführt, klingen größer als eine komplexe.\n\nDie Grundprinzipien sind erstaunlich schlicht: Gegenbewegung (eine Stimme steigt, die andere fällt) erzeugt Weite und Unabhängigkeit; parallele Terzen und Sexten klingen süß-melodisch (das klassische Twin-Guitar-Ornament); parallele Quinten klingen archaisch-mächtig — im klassischen Kontrapunkt verboten, im Metal ein Stilmittel. Und: Jede Stimme muss allein singbar sein, sonst ist sie keine Stimme, sondern Begleitgeklimper.\n\nDenk beim Schreiben in Fragen: Wo laufen die Stimmen zusammen (Unisono als Kraftmoment), wo auseinander (Spannung), wo parallel (Glanz)? Die Verteilung dieser drei Zustände über einen Part ist die eigentliche Kompositionsarbeit — und der Grund, warum manche Twin-Leads erhaben klingen und andere nur doppelt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Linien, drei Zustände",
+          "ziel": "Gegenbewegung, Parallelen und Unisono bewusst als Gestaltungszustände einsetzen.",
+          "schritte": [
+            "Schreibe (oder singe) eine einfache Acht-Ton-Linie als erste Stimme — sie muss allein funktionieren.",
+            "Setz eine zweite Stimme dagegen: erst vier Töne in Gegenbewegung, dann vier in parallelen Terzen.",
+            "Spiel oder singe beide zusammen (Aufnahme/Loop) und markiere, wo Weite, wo Glanz entsteht."
+          ],
+          "steigerung": "Einen Unisono-Moment als Kraftpunkt einbauen und die Wirkung des Auseinandergehens danach beschreiben.",
+          "selbstkontrolle": "Beide Stimmen sind einzeln singbar, und die Zustandswechsel (gegen/parallel/unisono) sind hörbar gestaltet."
+        }
+      }
+    },
+    {
+      "id": "klangregie_arrangement",
+      "anzeigetitel": {
+        "de": "Klangregie: das Band-Arrangement dirigieren"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "arrangement_dichte"
+      ],
+      "erklaerteil": {
+        "de": "Auf Expertenniveau wird Arrangement zur Klangregie: Du denkst nicht mehr in „wer spielt was“, sondern in Klangbildern pro Songmoment — und verteilst dann die Rollen so, dass genau dieses Bild entsteht. Der Breakdown, der wie ein einziges Monster klingt (alle im Unisono, Oktaven gestaffelt), das Black-Metal-Finale, das wie ein Orchester wogt (Tremolo-Flächen in drei Lagen), die Doom-Passage, die erdrückt (alles tief, nichts füllt die Mitte — die Leere ist der Druck).\n\nDie Werkzeuge: Registerstaffelung (wer besetzt Tiefe, Mitte, Höhe?), Dichte-Choreografie (wann verdichtet sich das Bild, wann reißt es auf?), Doppelungs-Entscheidungen (Unisono = Masse, Oktaven = Größe, Harmonie = Farbe) und der gezielte Einsatz von Silhouetten — Momente, in denen ein einziges Instrument den ganzen Raum bekommt.\n\nDie beste Übung ist das Umhören: Nimm einen Song, den du für „einfach dick“ gehalten hast, und zerlege, was jede Spur wirklich tut. Fast immer entdeckst du Regie — Instrumente, die schweigen, damit andere größer wirken; Doppelungen, die nur im Refrain dazukommen; eine Mitte, die bewusst freigehalten wird. Genau diese Entscheidungen machst du künftig selbst."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wähle einen Song deiner Lieblingsband und beschreibe für drei kontrastierende Momente das Klangbild in je einem Satz (etwa: „ein Monster im Unisono“, „wogendes Orchester“, „einsame Silhouette“). Rekonstruiere dann, mit welchen Regie-Entscheidungen (Register, Dichte, Doppelung, Schweigen) jedes Bild erzeugt wird — und entwirf für einen eigenen Part das Klangbild ZUERST, bevor du an Noten denkst."
+      }
+    },
+    {
+      "id": "produktionswissen_frequenz",
+      "anzeigetitel": {
+        "de": "Produktionswissen: Frequenzen & Maskierung"
+      },
+      "domaene": [
+        "theorie",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "arrangement_dichte"
+      ],
+      "erklaerteil": {
+        "de": "Warum klingen manche Metal-Mixe erdrückend klar und andere wie eine Wand aus Brei? Die Antwort heißt fast immer Maskierung: Zwei Klänge, die dieselben Frequenzen besetzen, löschen sich gegenseitig die Konturen. Bassdrum und Bass streiten um die Tiefe, Gitarrenwände und Vocals um die Mitten, Becken und Verzerrungs-Fizz um die Höhen — und wer den Streit nicht schlichtet, bekommt Matsch, egal wie gut gespielt wurde.\n\nDie Grundwerkzeuge der Schlichtung: Jedem Element einen Frequenz-Schwerpunkt zuweisen (der Bass bekommt den Tiefbass, die Bassdrum den Klick-Attack darüber — oder umgekehrt, aber entschieden); Platz schaffen durch Wegnehmen statt Aufdrehen (die Gitarren im Tiefbass beschneiden macht den Bass groß); und verstehen, dass Lautheit im Mix aus Frequenz-Platz entsteht, nicht aus dem Fader.\n\nDieses Wissen zahlt direkt in dein Spielen und Schreiben ein: Ein Riff, das live matscht, ist oft ein Arrangement-Problem (alle im selben Register), das kein Mischpult retten kann. Wer Frequenzen denkt, schreibt Parts, die sich von selbst mischen — die halbe Produktion passiert im Proberaum."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm eine Probe- oder Demo-Aufnahme deiner Band (oder baue mit Playbacks eine Vollband-Situation) und identifiziere die zwei schlimmsten Maskierungs-Zonen: Welche Elemente streiten dort um dieselben Frequenzen? Entwirf für beide eine Schlichtung, die OHNE Mischpult auskommt — durch Registerwechsel, Oktavierung, Weglassen oder andere Sounds — und beschreibe, was sich dadurch am Arrangement ändert."
+      }
+    },
+    {
+      "id": "werkanalyse_repertoire",
+      "anzeigetitel": {
+        "de": "Werkanalyse & Repertoire-Denken"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "gehoer_transkription",
+        "songstruktur_breakdown"
+      ],
+      "erklaerteil": {
+        "de": "Die letzte Stufe der Theorie ist die Synthese: ganze Werke systematisch lesen. Eine Werkanalyse fragt nicht nur „welche Riffs?“, sondern: Wie ist der Song gebaut (Form), womit arbeitet er (Material — Skalen, Rhythmuszellen, Klangbilder), wie entsteht seine Dramaturgie (Energie-Kurve, Kontraste, der eine Moment, auf den alles zuläuft) — und was davon macht die Band unverwechselbar? Wer zehn Songs einer großen Band so zerlegt, versteht ihr Geheimnis besser als jedes Interview es verraten würde.\n\nDaraus wächst Repertoire-Denken: eine persönliche, wachsende Bibliothek analysierter Werke, aus der du beim Schreiben schöpfst — nicht als Kopie, sondern als verstandenes Prinzip. „Wie löst Band X den Übergang vom Blast in den Breakdown?“ ist eine beantwortbare Frage, wenn die Analyse im Regal liegt.\n\nDie Methode bleibt der Trichter, nur größer: erst die Form als Blöcke skizzieren (Hören ohne Instrument!), dann pro Block Material und Klangbild notieren, zuletzt die Detailanalyse einzelner Schlüsselstellen per Transkription. Eine Seite pro Song genügt — die Disziplin liegt im Dranbleiben, nicht im Umfang."
+      },
+      "reflexionsaufgabe": {
+        "de": "Starte deine Analyse-Bibliothek: Wähle einen Song, der dich seit Jahren nicht loslässt, und erstelle die Ein-Seiten-Analyse — Formblöcke, Material pro Block, Energie-Kurve und die eine Schlüsselstelle, die du per Transkription im Detail verstehst. Formuliere zum Schluss das übertragbare Prinzip in einem Satz („Was hier funktioniert, ist …“) — und leg fest, welche zwei Songs als Nächstes ins Regal kommen."
+      }
+    }
+  ]
+}
