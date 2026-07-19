@@ -70,6 +70,30 @@ function spieleAkkord(halbtoene, grundton = 'E2') {
   }
 }
 
+// Skala/Modus: dieselben Halbton-Offsets nacheinander aufwärts — so wird der
+// melodische Charakter (etwa der finstere Halbton-Auftakt von Phrygisch) hörbar.
+function spieleSequenz(halbtoene, grundton = 'E2') {
+  const basis = frequenzVon(grundton);
+  if (!basis) return;
+  audioKontext = audioKontext || new (window.AudioContext || window.webkitAudioContext)();
+  if (audioKontext.state === 'suspended') audioKontext.resume();
+  const start = audioKontext.currentTime;
+  const dauer = 0.22;
+  halbtoene.forEach((h, i) => {
+    const t0 = start + i * dauer;
+    const osc = audioKontext.createOscillator();
+    const huelle = audioKontext.createGain();
+    osc.type = 'triangle';
+    osc.frequency.value = basis * 2 ** (h / 12);
+    huelle.gain.setValueAtTime(0.0001, t0);
+    huelle.gain.exponentialRampToValueAtTime(0.12, t0 + 0.02);
+    huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer * 0.95);
+    osc.connect(huelle).connect(audioKontext.destination);
+    osc.start(t0);
+    osc.stop(t0 + dauer);
+  });
+}
+
 // Notenanzeige: b als ♭, # als ♯ — die Oktavzahl bleibt Fachschreibweise.
 function notenText(note) {
   return note.replace('#', '♯').replace('b', '♭');
@@ -136,23 +160,29 @@ export function renderStimmungen(el, daten) {
       </section>`
     : '';
 
-  const klangKnopf = (art, eintrag) => `
-    <button type="button" class="chip chip-waehlbar klang-knopf" data-klang="${art}" data-halbtoene="${eintrag.halbtoene.join(',')}"
+  // art bestimmt Label-Gruppe + aria-Text; spielart entscheidet die Wiedergabe
+  // (akkord = gleichzeitig, sequenz = aufwärts).
+  const ARIA = { intervall: 'klang_intervall_aria', akkord: 'klang_akkord_aria', skala: 'klang_skala_aria' };
+  const klangKnopf = (art, spielart, eintrag) => `
+    <button type="button" class="chip chip-waehlbar klang-knopf" data-spielart="${spielart}" data-halbtoene="${eintrag.halbtoene.join(',')}"
       data-hinweis="${esc(text(eintrag.hinweis) || '')}"
-      aria-label="${esc(t(art === 'intervall' ? 'klang_intervall_aria' : 'klang_akkord_aria', { name: label(art, eintrag.id) }))}">
+      aria-label="${esc(t(ARIA[art], { name: label(art, eintrag.id) }))}">
       <i class="fa-solid fa-play" aria-hidden="true"></i> ${esc(label(art, eintrag.id))}
     </button>`;
   const intervalle = werkzeug.intervalle || [];
   const akkorde = werkzeug.akkorde || [];
-  const klangSektion = intervalle.length || akkorde.length
+  const skalen = werkzeug.skalen || [];
+  const klangSektion = intervalle.length || akkorde.length || skalen.length
     ? `
       <section class="klang-werkzeug">
         <h2>${esc(t('klang_titel'))}</h2>
         <p class="marke-hero-untertitel">${esc(t('klang_untertitel'))}</p>
         <h3>${esc(t('klang_intervalle'))}</h3>
-        <p class="chip-zeile">${intervalle.map((e) => klangKnopf('intervall', e)).join(' ')}</p>
+        <p class="chip-zeile">${intervalle.map((e) => klangKnopf('intervall', 'akkord', e)).join(' ')}</p>
         <h3>${esc(t('klang_akkorde'))}</h3>
-        <p class="chip-zeile">${akkorde.map((e) => klangKnopf('akkord', e)).join(' ')}</p>
+        <p class="chip-zeile">${akkorde.map((e) => klangKnopf('akkord', 'akkord', e)).join(' ')}</p>
+        <h3>${esc(t('klang_skalen'))}</h3>
+        <p class="chip-zeile">${skalen.map((e) => klangKnopf('skala', 'sequenz', e)).join(' ')}</p>
         <p class="klang-hinweis leise" aria-live="polite"></p>
       </section>`
     : '';
@@ -192,7 +222,9 @@ export function renderStimmungen(el, daten) {
   const hinweisFeld = el.querySelector('.klang-hinweis');
   for (const knopf of el.querySelectorAll('.klang-knopf')) {
     knopf.addEventListener('click', () => {
-      spieleAkkord(knopf.dataset.halbtoene.split(',').map(Number));
+      const halbtoene = knopf.dataset.halbtoene.split(',').map(Number);
+      if (knopf.dataset.spielart === 'sequenz') spieleSequenz(halbtoene);
+      else spieleAkkord(halbtoene);
       if (hinweisFeld) hinweisFeld.textContent = knopf.dataset.hinweis;
     });
   }

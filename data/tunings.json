@@ -403,5 +403,117 @@
         "de": "Kleine Terz plus Tritonus — maximal instabil und spannungsgeladen. Das Schock-Werkzeug für dissonante Passagen."
       }
     }
+  ],
+  "skalen": [
+    {
+      "id": "moll_natuerlich",
+      "halbtoene": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Natürliches Moll (Äolisch) — die dunkle Grundtonleiter fast aller Metal-Riffs und -Melodien."
+      }
+    },
+    {
+      "id": "dorisch",
+      "halbtoene": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        9,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Dorisch — Moll mit heller großer Sexte, etwas offener und rockiger; im Groove- und Death-Metal beliebt."
+      }
+    },
+    {
+      "id": "phrygisch",
+      "halbtoene": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Phrygisch — natürliches Moll mit tiefer zweiter Stufe; der Halbton über dem Grundton macht es finster. Kernfarbe von Thrash und Death."
+      }
+    },
+    {
+      "id": "phrygisch_dominant",
+      "halbtoene": [
+        0,
+        1,
+        4,
+        5,
+        7,
+        8,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Phrygisch-Dominant — die exotische, „spanische“ Färbung aus dem Harmonisch Moll: große Terz über dunklem Fundament, viel in orientalisch angehauchtem Death und Black."
+      }
+    },
+    {
+      "id": "harmonisch_moll",
+      "halbtoene": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        12
+      ],
+      "hinweis": {
+        "de": "Harmonisch Moll — Moll mit erhöhter siebter Stufe; der große Sprung zur Leitton-Septime klingt dramatisch und neoklassisch."
+      }
+    },
+    {
+      "id": "lokrisch",
+      "halbtoene": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        8,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Lokrisch — die instabilste Kirchentonart mit verminderter Quinte (Tritonus über dem Grundton). Maximale Spannung für dissonante Passagen."
+      }
+    },
+    {
+      "id": "moll_pentatonik",
+      "halbtoene": [
+        0,
+        3,
+        5,
+        7,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Moll-Pentatonik — fünf Töne ohne Halbtöne, die Basis von Groove-Metal-Riffs und blues-getränkten Leads."
+      }
+    }
   ]
 }
