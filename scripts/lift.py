@@ -63,18 +63,27 @@ def main():
     titel = de.setdefault('bausteine', {})
 
     neu = []
+    pool_ids = set()
     for fn in inhaltsdateien():
         for b in lade(fn).get('bausteine', []):
+            pool_ids.add(b['id'])
             t = (b.get('anzeigetitel') or {}).get('de')
             if not t:
                 continue
             if b['id'] not in titel:
                 neu.append(b['id'])
             titel[b['id']] = t
+    # Waisen entfernen: Titel ohne Baustein im Pool (Renames/entfernte Inhalte)
+    # bleiben sonst für immer liegen und propagieren in die en/fr/pl-Skelette.
+    waisen = sorted(k for k in titel if k not in pool_ids)
+    for k in waisen:
+        del titel[k]
     schreibe('data/labels/de.json', de)
-    print(f'de.json: {len(titel)} Baustein-Titel ({len(neu)} neu)')
+    print(f'de.json: {len(titel)} Baustein-Titel ({len(neu)} neu, {len(waisen)} Waisen entfernt)')
     if neu:
         print('  neu:', ', '.join(neu))
+    if waisen:
+        print('  entfernt:', ', '.join(waisen))
 
     for lang in ZIELSPRACHEN:
         rel = f'data/labels/{lang}.json'
