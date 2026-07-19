@@ -2006,3 +2006,11 @@ h3 { font-family: 'Rubik', system-ui, sans-serif; font-weight: 700; }
 /* Instrument-SVGs in den Icon-Medaillen skalieren + einfärben (currentColor). */
 .dom-svg { width: 1.5rem; height: 1.5rem; display: block; }
 .marke-hero-icon .dom-svg { width: 1.7rem; height: 1.7rem; }
+
+/* Abstrakte Baustein-Grafiken (data/grafiken.json, inline via bausteinIcon):
+   currentColor erbt die Kontextfarbe; Größen je Einsatzort. Die Grafiken sind
+   quadratisch (viewBox 120) und ersetzen die FA-Baustein-Icons. */
+svg.grafik-icon { width: 1.25em; height: 1.25em; vertical-align: -0.25em; }
+svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -0.5rem; }
+.marke-hero-icon svg.grafik-icon { width: 2.1rem; height: 2.1rem; vertical-align: 0; }
+.such-medaille svg.grafik-icon { width: 1.35rem; height: 1.35rem; vertical-align: 0; }
