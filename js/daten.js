@@ -40,6 +40,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.sound-gear.json',
   'data/bausteine.drums-gear.json',
   'data/bausteine.stil-deathcore.json',
+  'data/bausteine.stil-djent.json',
 ];
 
 export async function ladeDaten() {
