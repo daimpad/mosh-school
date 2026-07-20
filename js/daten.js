@@ -43,6 +43,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.stil-djent.json',
   'data/bausteine.stil-stoner-post.json',
   'data/bausteine.genreuebergreifend.json',
+  'data/bausteine.experte-vertiefung.json',
 ];
 
 export async function ladeDaten() {
