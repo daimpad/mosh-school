@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "koerper-mentales",
+    "hinweis": "Vertiefung der Querschnitts-Domänen Körper (Gehörschutz, Ergonomie, Überlastungs-Prävention, Athletik) und Mentales (Lampenfieber, Fokus, Motivation/Disziplin, Plateaus). Acht Bausteine, alle mit Reflexionsaufgabe (Wissens-/Reflexions-Domänen). Gesundheitsrahmen bei Gehör und Überlastung. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "gehoerschutz_tinnitus",
+      "anzeigetitel": { "de": "Gehör schützen: Lautstärke & Tinnitus" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["aufwaermen_gesundheit"],
+      "erklaerteil": {
+        "de": "Das Gehör ist das wichtigste und zugleich verletzlichste Werkzeug jedes Musikers — und im Metal, wo Lautstärke Teil der Kunst ist, besonders gefährdet. Ein einmal geschädigtes Gehör erholt sich nicht: Hörverlust und Tinnitus (das dauerhafte Klingeln oder Rauschen) sind nicht heilbar, nur vermeidbar. Deshalb ist Gehörschutz kein Zeichen von Weichheit, sondern die Bedingung dafür, ein Leben lang zu spielen und überhaupt noch zu hören, was man tut.\n\nDrei Dinge zählen. Erstens die Dosis: Gehörschäden entstehen aus Lautstärke MAL Zeit — lauter heißt kürzer, und schon ein durchschnittlicher Proberaum oder Verstärker liegt in einem Bereich, der nach einiger Zeit schädigt. Zweitens der richtige Schutz: gute Musiker-Ohrstöpsel senken den Pegel gleichmäßig über alle Frequenzen, sodass man noch differenziert hört (anders als Schaumstoff, der die Höhen wegnimmt und den Sound verfälscht) — man kann also mit Schutz besser spielen als ohne. Drittens die Pausen: Regelmäßige Ruhephasen für die Ohren (Stille nach der Probe, kein Kopfhörer-Dauerbeschallung danach) geben dem Gehör Erholung.\n\nTinnitus ist das deutlichste Warnsignal: Ein Klingeln nach der Probe bedeutet, dass es zu laut war. Wer das ignoriert, riskiert, dass es bleibt. Bei anhaltendem Klingeln, dumpfem Hören oder Ohrenschmerzen gehört das zur HNO-Ärztin — je früher, desto besser."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geh deine Hörgewohnheiten ehrlich durch: Wie laut ist dein üblicher Proberaum/Verstärker, und wie lange spielst du am Stück ohne Schutz? Klingelt es danach manchmal in den Ohren — und was hast du bisher damit gemacht?\n\nPlane drei konkrete Schritte: Erstens, besorg dir gute Musiker-Ohrstöpsel (mit gleichmäßiger Dämpfung) und leg sie dorthin, wo du sie garantiert dabeihast. Zweitens, führ eine Pausen-Regel ein (z. B. Ohren-Ruhe direkt nach der Probe, kein sofortiger Kopfhörer). Drittens, definier dein Stopp-/Warnsignal: Ab welchem Zeichen (Klingeln, dumpfes Hören) reduzierst du sofort und gehst bei Anhalten zur HNO-Praxis? Schreib es auf — und probier den Schutz eine Probe lang wirklich aus: Spielst du damit schlechter oder eigentlich klarer?"
+      }
+    },
+    {
+      "id": "koerperhaltung_ergonomie",
+      "anzeigetitel": { "de": "Haltung & Ergonomie am Instrument" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "voraussetzungen": ["aufwaermen_gesundheit"],
+      "erklaerteil": {
+        "de": "Wie du am Instrument sitzt, stehst und es hältst, entscheidet über Jahre mit — nicht nur über Bequemlichkeit, sondern über Schmerzfreiheit und darüber, wie frei du spielen kannst. Verspannungen in Nacken, Schultern und Rücken kommen selten vom Spielen selbst, sondern von einer Haltung, die die Muskeln unnötig arbeiten lässt. Und was sich als kleine Fehlhaltung anfühlt, wird über tausende Übestunden zum Problem.\n\nDie Grundprinzipien sind für alle Instrumente ähnlich. Der Körper bleibt möglichst neutral und locker: Schultern tief und entspannt (nicht hochgezogen), Handgelenke möglichst gerade (nicht abgeknickt), der Rücken aufgerichtet, aber nicht steif. An der Gitarre/am Bass entscheidet die Gurthöhe: zu tief sieht cool aus, zwingt aber das Handgelenk in einen ungünstigen Winkel — im Sitzen und Stehen sollte die Position ähnlich sein. Am Schlagzeug bestimmen Hockerhöhe und Anordnung, ob die Gliedmaßen frei arbeiten. Bei Vocals trägt eine aufrechte, offene Haltung die Atemstütze.\n\nDie Faustregel: Was regelmäßig schmerzt oder taub wird, ist ein Haltungs- oder Ergonomie-Signal, kein Preis, den man zahlen muss. Kleine Anpassungen früh sparen große Probleme später."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dich beim Üben auf (Video von der Seite und von vorn) und schau ehrlich hin: Sind deine Schultern hochgezogen? Knickt ein Handgelenk ab? Ist der Rücken rund oder verdreht? Zwingt dich die Gurthöhe (bei Gitarre/Bass) in einen ungünstigen Winkel?\n\nBenenne die zwei auffälligsten Punkte und je eine konkrete Korrektur (Gurt höher, Hocker anders, Schultern bewusst senken, Bildschirm/Noten auf Augenhöhe). Probier die Korrektur eine Übe-Session lang und achte auf den Unterschied. Und die Signalfrage: Wo verspannt oder schmerzt es regelmäßig — und welche Haltungsänderung könnte die Ursache sein? Bei anhaltenden Beschwerden trotz Korrektur: ärztlich oder physiotherapeutisch abklären."
+      }
+    },
+    {
+      "id": "ueberlastung_praevention",
+      "anzeigetitel": { "de": "Überlastung erkennen & vermeiden" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["handgesundheit_tempo"],
+      "erklaerteil": {
+        "de": "Je mehr und je intensiver man übt, desto größer die Gefahr der Überlastung — vor allem an Händen, Handgelenken und Unterarmen, aber auch an Füßen (Drummer) und der Stimme. Überlastungsschäden (Sehnenreizungen, Karpaltunnel-Beschwerden, Sehnenscheidenentzündungen) entstehen schleichend und werden oft zu lange weggespielt, bis sie chronisch werden und zur echten Zwangspause führen. Prävention ist ungleich leichter als Heilung.\n\nDrei Prinzipien schützen. Erstens die Dosierung: nicht die Gesamtzeit macht krank, sondern zu viel Intensität ohne Pausen. Kurze, konzentrierte Blöcke mit echten Erholungspausen sind gesünder und effektiver als stundenlanges Draufhalten. Zweitens die Technik: Überlastung entsteht fast immer aus Verkrampfung und übermäßiger Kraft — Lockerheit und effiziente, kleine Bewegungen entlasten. Wer gegen das Tempo ankämpft, überlastet. Drittens die Warnsignale ernst nehmen: Ziehen, Brennen, Taubheit, Kribbeln oder Schmerz sind keine Zeichen von Fleiß, sondern die Notbremse — sofort stoppen, nicht wegspielen.\n\nDazu kommen Aufwärmen vor und lockeres Ausklingen nach der Session, sowie Regeneration (Schlaf, Pausentage). Bei anhaltenden Beschwerden gehört das früh ärztlich oder physiotherapeutisch abgeklärt — eine chronische Sehnenreizung kann Monate kosten."
+      },
+      "reflexionsaufgabe": {
+        "de": "Analysiere deine Übe-Belastung: Wie lange spielst du am Stück ohne Pause, und wie fühlen sich Hände/Unterarme (bzw. Füße, Stimme) danach an? Übst du in Erschöpfung weiter, wo Technik zu Verkrampfung wird?\n\nLeg drei Präventionsregeln fest: eine Pausen-Struktur (z. B. kurze Blöcke mit echten Pausen statt Marathon), ein Aufwärm-/Ausklang-Ritual, und dein persönliches Stopp-Signal — bei welchem Zeichen (Ziehen, Brennen, Taubheit, Kribbeln) hörst du sofort auf, statt es wegzuspielen? Schreib das Signal auf. Und die ehrliche Frage: Gibt es eine Beschwerde, die du gerade schon zu lange ignorierst? Wenn ja, plane den Gang zur Ärztin/Physiotherapie — früh, nicht wenn es chronisch ist."
+      }
+    },
+    {
+      "id": "athletik_grundlage",
+      "anzeigetitel": { "de": "Athletik als Basis: Ausdauer & Beweglichkeit" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["set_pacing"],
+      "erklaerteil": {
+        "de": "Extreme Metal ist körperlich anspruchsvoll — nicht nur für Schlagzeuger. Ein ganzes Set stehend und in Bewegung durchzuspielen, dichte Riffs über Minuten zu halten, extreme Vocals über einen langen Bogen zu tragen: All das ist Ausdauerarbeit, und eine gewisse allgemeine Fitness macht es leichter, sicherer und schmerzfreier. Man muss kein Leistungssportler werden, aber eine belastbare Basis zahlt sich direkt am Instrument aus.\n\nDrei Bereiche helfen am meisten. Erstens die Ausdauer: eine bessere Grundkondition (Herz-Kreislauf) sorgt dafür, dass ein intensives Set nicht schon nach der Hälfte in Erschöpfung kippt — und Erschöpfung ist die Hauptquelle von Verkrampfung und Fehlern. Zweitens die Rumpfstabilität: Ein stabiler Rumpf trägt Haltung und Atemstütze und entlastet die Gliedmaßen (besonders für Drummer und Sänger relevant). Drittens die Beweglichkeit: lockere, bewegliche Schultern, Handgelenke, Hüften und Sprunggelenke geben Bewegungsfreiheit und beugen Verspannungen vor.\n\nDas Ziel ist nicht Muskelmasse, sondern Belastbarkeit und Lockerheit. Schon moderate, regelmäßige Bewegung neben dem Üben — Ausdauer, etwas Kräftigung, Dehnen/Mobilität — verbessert Durchhaltevermögen und Regeneration spürbar. Wie immer gilt: bei gesundheitlichen Vorbelastungen vorher ärztlich abklären und behutsam aufbauen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Schätz deine körperliche Basis realistisch ein: Kippt ein intensives Set oder eine lange Übe-Session bei dir in Erschöpfung — und wo zuerst (Atem, Arme, Beine, Konzentration)? Bewegst du dich neben dem Üben überhaupt regelmäßig?\n\nWähle EINEN der drei Bereiche (Ausdauer, Rumpf, Beweglichkeit), der dir am meisten bringen würde, und plane eine kleine, realistische Gewohnheit dazu (nicht ein überambitioniertes Programm, das du nach einer Woche aufgibst) — etwas, das du zwei-, dreimal die Woche wirklich machst. Beobachte über ein paar Wochen: Hält dein Durchhaltevermögen am Instrument länger? Verkrampfst du später? Bei Vorerkrankungen oder Beschwerden vorher ärztlich abklären."
+      }
+    },
+    {
+      "id": "lampenfieber",
+      "anzeigetitel": { "de": "Lampenfieber & Auftrittsnervosität" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["set_pacing"],
+      "erklaerteil": {
+        "de": "Fast jeder Musiker kennt Lampenfieber — das Herzrasen, die zittrigen Hände, der leere Kopf vor oder auf der Bühne. Es ist keine Schwäche, sondern eine körperliche Stressreaktion, und die gute Nachricht ist: Man kann lernen, mit ihr umzugehen, sodass sie nicht mehr blockiert, sondern sogar Energie liefert. Die Aufregung verschwindet nie ganz — das Ziel ist, sie zu kanalisieren statt zu bekämpfen.\n\nDrei Ansätze helfen. Erstens die Vorbereitung: Sicherheit ist das beste Gegenmittel. Was so oft geübt wurde, dass es auch ohne Kopf funktioniert (im Körper sitzt), trägt auch, wenn die Nerven flattern — deshalb probt man die kritischen Stellen bis zur Übersicherheit. Zweitens der Körper: Die Stressreaktion lässt sich über den Körper beeinflussen — ruhige, tiefe Atmung, bewusstes Lockern der Schultern, eine feste Vor-Auftritts-Routine geben dem Nervensystem Halt. Drittens die Umdeutung: Dieselbe körperliche Erregung (Herzklopfen, Adrenalin) kann man als Angst ODER als Vorfreude/Energie deuten — die Umdeutung verändert, wie sie sich anfühlt und auswirkt.\n\nUnd die Entlastung: Das Publikum kommt, um mitgerissen zu werden, nicht um Fehler zu zählen. Kleine Patzer fallen kaum auf, wenn die Energie stimmt — im Metal trägt die Haltung mehr als die technische Perfektion."
+      },
+      "reflexionsaufgabe": {
+        "de": "Erinnere dich an eine Situation mit starkem Lampenfieber: Wie hat es sich körperlich gezeigt (Hände, Atem, Kopf), und was hat es mit deinem Spiel gemacht? Was hast du in dem Moment gedacht?\n\nBau dir eine kleine Strategie: Erstens, benenne die ein, zwei Stellen im Set, die du bis zur Übersicherheit proben solltest, damit sie auch mit flatternden Nerven sitzen. Zweitens, entwirf eine kurze Vor-Auftritts-Routine (Atmung, Lockern, ein fester Ablauf), die du jedes Mal gleich machst. Drittens, üb die Umdeutung: Formulier den Satz, mit dem du das Herzklopfen als Energie statt als Angst deutest. Prüf beim nächsten Auftritt (oder einer geübten Bühnensituation), ob die Routine hilft — und pass sie an."
+      }
+    },
+    {
+      "id": "fokus_konzentration",
+      "anzeigetitel": { "de": "Fokus & Konzentration beim Üben" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "voraussetzungen": ["metronom_prinzip"],
+      "erklaerteil": {
+        "de": "Wie gut man übt, hängt weniger an der Zeit als an der Aufmerksamkeit. Eine halbe Stunde konzentriertes, bewusstes Üben bringt mehr als zwei Stunden nebenbei mit halbem Kopf. Denn Können entsteht durch aufmerksame Wiederholung — das Gehirn lernt genau das, worauf man achtet. Wer zerstreut übt, festigt auch die Fehler.\n\nDrei Dinge schärfen den Fokus. Erstens die Ablenkungen weg: Handy außer Reichweite, Benachrichtigungen aus, eine klare Übe-Umgebung. Schon die bloße Anwesenheit des Handys frisst Aufmerksamkeit. Zweitens ein klares Ziel pro Block: nicht einfach spielen, sondern EINE Sache verbessern wollen (diese Stelle sauberer, dieses Tempo halten) — ein Ziel gibt der Aufmerksamkeit eine Richtung. Drittens kurze, intensive Blöcke: Volle Konzentration lässt sich nicht stundenlang halten; mehrere fokussierte Blöcke mit echten Pausen schlagen einen langen, zerfasernden.\n\nEin einfacher Test für echten Fokus: Kannst du nach jeder Wiederholung sagen, was besser oder schlechter war? Wenn nicht, hast du gespielt, nicht geübt. Bewusstes Zuhören bei sich selbst ist der Kern von Konzentration."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beobachte eine typische Übe-Session ehrlich: Wie oft schweifst du ab (Handy, Gedanken), und übst du mit einem klaren Ziel oder spielst du einfach vor dich hin? Kannst du nach den Wiederholungen sagen, was besser wurde?\n\nProbier eine fokussierte Gegen-Session: Handy außer Reichweite, ein einziges klares Ziel für einen kurzen Block (z. B. 15 Minuten), und nach jeder Wiederholung bewusst bewerten, was passiert ist. Vergleich danach: Hast du in der kürzeren, fokussierten Zeit mehr erreicht als sonst in der doppelten? Leg fest, wie du künftig deine Übe-Zeit in fokussierte Blöcke mit klaren Zielen und echten Pausen teilst."
+      }
+    },
+    {
+      "id": "motivation_disziplin",
+      "anzeigetitel": { "de": "Motivation, Disziplin & Dranbleiben" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["set_pacing"],
+      "erklaerteil": {
+        "de": "Am Instrument besser zu werden ist ein langes Spiel, und die größte Hürde ist selten Talent, sondern Dranbleiben. Motivation allein trägt nicht weit genug — sie kommt und geht. Was trägt, sind Gewohnheiten und ein Verhältnis zum Üben, das auch die unlustigen Tage übersteht. Wer das versteht, spielt in fünf Jahren noch; wer auf Motivation wartet, hört meist auf.\n\nDrei Prinzipien helfen. Erstens Gewohnheit vor Motivation: Ein fester, kleiner Übe-Rhythmus (lieber täglich kurz als selten lang) macht das Üben zur Selbstverständlichkeit, für die man keine Willenskraft mehr aufbringen muss. Kleine, erreichbare Einstiegshürden (das Instrument liegt griffbereit) helfen mehr als große Vorsätze. Zweitens sichtbarer Fortschritt: Ziele, die klein und konkret genug sind, um sie zu erreichen und abzuhaken, geben das Erfolgserlebnis, das motiviert — vage Fernziele frustrieren eher. Drittens der Umgang mit Durststrecken: Fortschritt verläuft nicht linear, sondern in Sprüngen mit langen Plateaus dazwischen (dazu ein eigener Baustein). Wer weiß, dass Plateaus normal sind, hört dort nicht auf.\n\nUnd die Verbindung zum Warum: An zähen Tagen hilft die Erinnerung, warum man überhaupt spielt — die Musik, die einen gepackt hat. Das Ziel ist nicht Selbstkasteiung, sondern eine tragfähige, freudvolle Beziehung zum eigenen Fortschritt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Schau auf dein Üben der letzten Wochen: Übst du regelmäßig oder in Schüben mit langen Löchern? Wartest du auf Motivation, oder hast du eine Gewohnheit? Was hält dich am ehesten ab?\n\nBau eine tragfähige Struktur: Erstens, leg einen kleinen, realistischen Übe-Rhythmus fest (lieber kurz und oft) und senke die Einstiegshürde (Instrument griffbereit). Zweitens, formulier ein konkretes, erreichbares Ziel für die nächsten zwei Wochen, das du abhaken kannst. Drittens, schreib in einem Satz dein Warum auf — was dich an dieser Musik gepackt hat — und leg es dorthin, wo du es an zähen Tagen siehst. Prüf nach zwei Wochen: Hat die Gewohnheit besser getragen als die Motivation?"
+      }
+    },
+    {
+      "id": "plateau_ueberwinden",
+      "anzeigetitel": { "de": "Plateaus & Stillstand überwinden" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["uebe_architektur"],
+      "erklaerteil": {
+        "de": "Irgendwann trifft es jeden: Man übt weiter wie immer, aber es wird nicht mehr besser. Das Plateau — die Phase des gefühlten Stillstands — ist einer der häufigsten Gründe aufzugeben, dabei ist es ein normaler und sogar notwendiger Teil des Lernens. Verstehen, was ein Plateau ist und wie man es durchbricht, unterscheidet die, die weiterkommen, von denen, die stecken bleiben.\n\nDrei Einsichten helfen. Erstens: Plateaus sind oft Konsolidierung, keine Sackgasse — der Körper festigt das Gelernte, bevor der nächste Sprung kommt; ein Teil des Stillstands ist unsichtbarer Fortschritt. Zweitens: Echter Stillstand kommt meist daher, dass man immer dasselbe auf dieselbe Weise übt — die Gewohnheit, die einen hergebracht hat, trägt nicht weiter. Der Ausweg ist, den Ansatz zu ändern: das Problem zerlegen, langsamer und bewusster üben, eine andere Übe-Methode wählen, gezielt die Schwäche statt der Stärke trainieren, oder sich von außen (Lehrperson, Aufnahme) zeigen lassen, was man selbst nicht hört. Drittens: Manchmal hilft Abstand — eine kurze Pause oder ein Wechsel des Materials, damit der Kopf frei wird.\n\nDie Kunst ist die ehrliche Diagnose: Übe ich wirklich an dem, was mich blockiert — oder umgehe ich es und wiederhole, was ich schon kann? Plateaus durchbricht man selten mit mehr vom Gleichen, sondern mit gezielter, anders angesetzter Arbeit an der konkreten Schwäche."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir eine Fähigkeit vor, bei der du gerade feststeckst, und diagnostizier ehrlich: Übst du wirklich an dem, was dich blockiert — oder wiederholst du vor allem, was du schon kannst, und umgehst die eigentliche Schwäche? Übst du seit Langem auf immer dieselbe Weise?\n\nWähle bewusst einen anderen Ansatz für genau diese Schwäche: das Problem in kleinere Teile zerlegen, deutlich langsamer und bewusster üben, eine andere Methode wählen, oder dir von einer Lehrperson/Aufnahme zeigen lassen, was du selbst nicht hörst. Plane zusätzlich, ob eine kurze Pause oder ein Materialwechsel gerade helfen würde. Prüf nach ein, zwei Wochen mit dem neuen Ansatz: Bewegt sich etwas — und war es Konsolidierung (unsichtbarer Fortschritt) oder echter Stillstand durch Immer-dasselbe?"
+      }
+    }
+  ]
+}

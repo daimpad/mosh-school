@@ -849,6 +849,58 @@ S["gitarre_improvisation"] = [
     L(66, 66, 78, 66, 2),
 ]
 
+# ================= KÖRPER & MENTALES (Querschnitts-Vertiefung) =================
+# Gesundheit und Kopf: Gehör, Haltung, Warnung, Puls; Fokus, Nerven, Stufen, Plateau.
+
+# Gehörschutz: lauschendes Ohr, laute raue Welle wird zur gedämpften kleinen,
+# dazu der Schutz-Ring (Stöpsel).
+S["gehoerschutz_tinnitus"] = [
+    ARC(30, 60, 16, 60, 300, 4), C(30, 60, 4, fill=True),
+    P(roughpath(50, 78, 48, 12, step=2.2, seed=701), 2.2),
+    P(wavepath(86, 108, 60, 4, 2, step=2.0), 2),
+    C(72, 40, 7, 2.5),
+]
+# Haltung & Ergonomie: neutrale, ausgerichtete Achse — Kopf, waagrechte Schultern
+# und Hüfte, gerade Wirbelsäule.
+S["koerperhaltung_ergonomie"] = [
+    C(60, 24, 8, 3),
+    L(60, 32, 60, 84, 3),
+    L(42, 44, 78, 44, 3),
+    L(48, 72, 72, 72, 3),
+    L(42, 44, 38, 66, 2), L(78, 44, 82, 66, 2),
+]
+# Überlastung vermeiden: Warndreieck mit Ausrufezeichen.
+S["ueberlastung_praevention"] = [
+    P("M60,24 L102,94 L18,94 Z", 3),
+    L(60, 50, 60, 74, 4.5),
+    C(60, 84, 3, fill=True),
+]
+# Athletik als Basis: eine Herzschlag-/Ausdauer-Linie.
+S["athletik_grundlage"] = [
+    L(12, 64, 42, 64, 2),
+    P("M42,64 L50,64 L56,38 L64,92 L72,64 L80,64", 2.8),
+    L(80, 64, 108, 64, 2),
+]
+# Lampenfieber: nervöses Zittern links, ruhige Atembögen rechts.
+S["lampenfieber"] = [
+    P(roughpath(14, 54, 52, 14, step=1.8, seed=711), 2.2),
+    ARC(80, 64, 24, 200, 340, 2.5),
+    ARC(80, 64, 33, 210, 330, 1.8),
+]
+# Fokus & Konzentration: eine Zielscheibe.
+S["fokus_konzentration"] = [
+    C(60, 60, 30, 2), C(60, 60, 18, 2.5), C(60, 60, 6, fill=True),
+]
+# Motivation & Disziplin: eine gleichmäßig ansteigende Treppe (Gewohnheit).
+S["motivation_disziplin"] = [
+    P("M14,96 L34,96 L34,78 L54,78 L54,60 L74,60 L74,42 L94,42 L94,24 L108,24", 2.5),
+]
+# Plateau überwinden: Anstieg, langes Plateau, dann Durchbruch nach oben (Pfeil).
+S["plateau_ueberwinden"] = [
+    P("M14,88 L36,56 L84,54 L98,52 L108,24", 2.5),
+    L(108, 24, 100, 28, 2), L(108, 24, 103, 33, 2),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -883,7 +935,10 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "set_ueber_genres",
                 "gitarre_tapping_legato", "gitarre_kunstharmonics", "bass_lead_melodisch",
                 "drums_lineares_spiel", "harsh_uebergaenge_nahtlos", "harsh_arrangement_schichten",
-                "komposition_langform", "gitarre_improvisation"]
+                "komposition_langform", "gitarre_improvisation",
+                "gehoerschutz_tinnitus", "koerperhaltung_ergonomie", "ueberlastung_praevention",
+                "athletik_grundlage", "lampenfieber", "fokus_konzentration",
+                "motivation_disziplin", "plateau_ueberwinden"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
