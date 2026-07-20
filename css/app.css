@@ -2077,13 +2077,19 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 
 .tab-raster, .drum-raster { border-collapse: collapse; font-variant-numeric: tabular-nums; }
 .tab-raster th, .drum-raster th { text-align: right; padding: 0 0.6rem 0 0; font-weight: 700; font-size: 0.78rem; color: var(--tinte-2); white-space: nowrap; }
+/* Zeilenkopf (Saite/Spur) bleibt beim horizontalen Scrollen des Rasters stehen. */
+.tab-saite, .drum-spur { position: sticky; left: 0; z-index: 1; background: var(--flaeche); }
 .tab-zelle { width: 1.55rem; height: 1.5rem; text-align: center; font-weight: 700; font-size: 0.82rem; border-bottom: 2px solid var(--linie-stark); color: var(--tinte); }
 .tab-zelle.tab-treffer { color: var(--primaer-tief); }
 .drum-spur { font-size: 0.72rem !important; }
 .drum-zelle { width: 1.4rem; height: 1.4rem; text-align: center; border: 1px solid var(--linie); }
-.drum-zelle span { display: inline-block; width: 0.7rem; height: 0.7rem; vertical-align: middle; }
-.drum-an.drum-kick span, .drum-an.drum-crash span { background: var(--primaer); border-radius: 50%; }
-.drum-an.drum-crash span { border-radius: 2px; transform: rotate(45deg); }
-.drum-an.drum-snare span { border: 2px solid var(--primaer); border-radius: 50%; }
-.drum-an.drum-hihat span { background: var(--tinte-2); width: 0.55rem; height: 0.55rem; border-radius: 1px; }
-.tab-zelle.schritt-aktiv, .drum-zelle.schritt-aktiv { background: var(--primaer-weich); }
+/* Symbol je Spur — Beat-Raster-Konvention: Hi-Hat ×, Snare ○ (hohl), Kick ●,
+   China/Crash ◆. Klar unterscheidbare Glyphen statt formähnlicher Flächen. */
+.drum-mark { display: inline-block; font-size: 0.95rem; line-height: 1; color: var(--primaer); }
+.drum-an.drum-hihat .drum-mark { color: var(--tinte-2); }
+.drum-an.drum-hihat .drum-mark::before { content: "\2715"; }
+.drum-an.drum-snare .drum-mark::before { content: "\25CB"; }
+.drum-an.drum-kick .drum-mark::before { content: "\25CF"; }
+.drum-an.drum-crash .drum-mark::before { content: "\25C6"; }
+/* Laufende Spalte: neutrale Fläche + Akzentrahmen statt Rot-auf-Rot (Kontrast). */
+.tab-zelle.schritt-aktiv, .drum-zelle.schritt-aktiv { background: var(--flaeche-2); box-shadow: inset 0 0 0 2px var(--primaer); }

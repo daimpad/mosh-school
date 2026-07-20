@@ -285,7 +285,7 @@ function rendern() {
   } else if (segmente[0] === 'stimmungen') {
     renderStimmungen(el, daten);
   } else if (segmente[0] === 'patterns') {
-    renderPatterns(el, daten);
+    renderPatterns(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'ueber') {
     renderUeber(el, daten);
   } else if (segmente[0] === 'mitmachen') {
