@@ -524,7 +524,14 @@
     "postmetal_drums_crescendo": "Post-Metal-Drums: Groove, Dynamik & Aufbau",
     "postmetal_vocals_dynamik": "Post-Metal-Vocals: Atmosphäre, Klimax & Maß",
     "stoner_riff_harmonik": "Stoner-Theorie: Riff-Ökonomie & Bluesfarbe",
-    "postmetal_langform_geduld": "Post-Metal-Dramaturgie: Langform & Geduld"
+    "postmetal_langform_geduld": "Post-Metal-Dramaturgie: Langform & Geduld",
+    "genre_hoeren_erkennen": "Genres am Klang erkennen",
+    "genre_fusion_crossover": "Crossover & Fusion: Genres mischen",
+    "transfer_riff_genrefarbe": "Gitarre: ein Riff, mehrere Genres",
+    "transfer_groove_genrefarbe": "Drums: einen Groove umfärben",
+    "transfer_bass_rollen": "Bass: die Rolle wechseln",
+    "transfer_vocals_genrefarbe": "Vocals: Register nach Genre",
+    "set_ueber_genres": "Ein Set über Genres bauen"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
