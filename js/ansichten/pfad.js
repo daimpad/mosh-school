@@ -180,12 +180,16 @@ export function renderUmgebung(el, daten, achse, wert) {
     alle.stationen.length === 0
       ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
       : `${balkenHtml(projektion(alle.stationen.map((s) => s.baustein)))}${stationslisteHtml(alle.stationen, 'umgebung')}`;
+  // Facetten-Sektionen nur zeigen, wenn tatsächlich Werte belegt sind — so bleibt
+  // eine unbelegte Facette (z. B. Untergrund) ohne leere Überschrift.
+  const witt = witterungen(daten);
+  const unter = untergruende(daten);
+  const facettenSektion = (titel, eintraege, achsenName) =>
+    eintraege.length ? `<h2>${esc(t(titel))}</h2>${achsenKarten(eintraege, achsenName)}` : '';
   el.innerHTML = `
-    ${heroKlein('fa-mountain', t('pfad_umgebung'), t('pfad_umgebung_text'), 'pf-sky')}
-    <h2>${esc(t('umgebung_wetter'))}</h2>
-    ${achsenKarten(witterungen(daten), 'witterung')}
-    <h2>${esc(t('umgebung_boden'))}</h2>
-    ${achsenKarten(untergruende(daten), 'untergrund')}
+    ${heroKlein('fa-users', t('pfad_umgebung'), t('pfad_umgebung_text'), 'pf-sky')}
+    ${facettenSektion('umgebung_wetter', witt, 'witterung')}
+    ${facettenSektion('umgebung_boden', unter, 'untergrund')}
     <h2>${esc(t('umgebung_alle'))}</h2>
     ${liste}`;
 }
