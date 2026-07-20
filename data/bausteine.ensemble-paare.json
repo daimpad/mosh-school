@@ -1,0 +1,492 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "ensemble",
+    "hinweis": "Ensemble-Paare (Zusammenspiel): paarweise Übungs-Bausteine für Gitarre+Bass (duo_gb_*), Bass+Schlagzeug (duo_bd_*) und Gitarre+Gesang (duo_gv_*). Jeder trägt BEIDE beteiligten Domänen (mehrwertige domaene) und erscheint so in beiden Instrument-Ansichten. Alle mit Übungsteil, kein neuer Vokabelwert (kompetenzstufe fortgeschritten). Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "duo_gb_lock",
+      "anzeigetitel": {
+        "de": "Gitarre & Bass: gemeinsames Locking"
+      },
+      "domaene": [
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "einfaches_riff",
+        "grundton_folgen",
+        "palm_muting_bass"
+      ],
+      "erklaerteil": {
+        "de": "Gitarre und Bass bilden im Metal die Riff-Maschine: Wenn ihre Anschläge exakt zusammenfallen, entsteht ein einziger, wuchtiger Ton statt zweier ungefährer. „Tight“ heißt genau das — nicht schneller, sondern gleichzeitig.\n\nGelockt wird auf zwei Ebenen: der Anschlagsmoment (beide treffen die Saite im selben Sekundenbruchteil) und die Länge (beide dämpfen gleichzeitig ab). Weil der Bass tiefer und träger klingt, fällt schon eine minimale Verschiebung als Verwaschung auf. Der gemeinsame Klick ist die neutrale Instanz, an der sich beide ausrichten — nicht einer am anderen.\n\nÜbt zuerst langsam und einstimmig dasselbe Riff. Erst wenn es als ein Instrument klingt, lohnt das Tempo."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Riff, ein Ton",
+          "ziel": "Anschlag und Dämpfung von Gitarre und Bass zur Deckung bringen.",
+          "schritte": [
+            "Wählt ein kurzes, gedämpftes Riff, das beide unisono spielen, und stellt einen gemeinsamen Klick ein.",
+            "Spielt es langsam und hört auf einen einzigen Attack — hört ihr zwei getrennte Anschläge, liegt jemand vor oder hinter dem Klick.",
+            "Nehmt einen Durchgang auf und prüft gemeinsam, wessen Anschlag früher oder später kommt."
+          ],
+          "steigerung": "Erhöht das Tempo in kleinen Schritten und baut gedämpfte Pausen ein, die beide exakt gleich lang halten.",
+          "selbstkontrolle": "In der Aufnahme klingt das Riff wie ein Instrument; Anschläge und Pausen fallen zusammen."
+        }
+      },
+      "stil": [
+        "thrash",
+        "death_metal"
+      ],
+      "spielziele": [
+        "riff_praezision",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "duo_gb_frequenztrennung",
+      "anzeigetitel": {
+        "de": "Gitarre & Bass: Frequenzen aufteilen"
+      },
+      "domaene": [
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "powerchords",
+        "anschlagpunkt_ton",
+        "bass_ton_gear"
+      ],
+      "erklaerteil": {
+        "de": "Zwei tief gestimmte, verzerrte Instrumente konkurrieren um denselben Raum — teilen sie ihn nicht auf, wird der Sound zu Matsch. Die Faustregel: Der Bass besetzt das Fundament, die Gitarre die Mitten. Gemeinsam ergeben sie das Gewicht, das keine der beiden allein hat.\n\nPraktisch heißt das, Ton und Anschlag aufeinander abzustimmen: Spielt der Bass sehr tief und rund, gewinnt die Gitarre durch mittige Präsenz und Definition; ist die Gitarre extrem tief gestimmt, braucht der Bass Anzerrung und Mitten, um nicht zu verschwinden. Wer wo Platz macht, ist eine gemeinsame Entscheidung, keine Frage der Lautstärke.\n\nHört euren Zusammenklang bewusst als eine Fläche und fragt: Ist jedes Instrument noch trennbar, oder verschmilzt alles zu Dröhnen?"
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Wer besetzt welchen Raum",
+          "ziel": "Ton und Anschlag so abstimmen, dass beide trennbar bleiben.",
+          "schritte": [
+            "Spielt dieselbe tiefe Passage gemeinsam und hört, ob Bass und Gitarre unterscheidbar sind.",
+            "Verändert nacheinander je einen Parameter (Anschlagpunkt, Anzerrung, Tiefen- oder Mittenanteil) und hört, ob die Trennung besser wird.",
+            "Legt gemeinsam fest, wer die Tiefen trägt und wer die Mitten, und spielt die Passage erneut."
+          ],
+          "steigerung": "Wechselt in einen Part, in dem der Bass eine eigene Linie spielt, und haltet die Trennung auch dort.",
+          "selbstkontrolle": "Ihr könnt beide Instrumente im Zusammenklang heraushören; nichts verschwindet im Dröhnen."
+        }
+      },
+      "spielziele": [
+        "schwererer_ton",
+        "definierter_anschlag"
+      ]
+    },
+    {
+      "id": "duo_gb_chug_sync",
+      "anzeigetitel": {
+        "de": "Gitarre & Bass: Chugs synchron dämpfen"
+      },
+      "domaene": [
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "chugs_breakdown",
+        "palm_muting_bass"
+      ],
+      "erklaerteil": {
+        "de": "Gedämpfte Chugs leben von ihrer Kürze — und zwei Instrumente, die unterschiedlich lang dämpfen, verwaschen den perkussiven Effekt sofort. Bei Breakdown-Parts ist die Synchronität von Gitarre und Bass deshalb entscheidend.\n\nSynchron heißt hier nicht nur gleichzeitig anschlagen, sondern gleichzeitig aufhören: Beide Handballen legen die Saiten im selben Moment still, sodass die Pausen zwischen den Chugs absolut schwarz sind. Genau in diesen Pausen entscheidet sich, ob ein Breakdown drückt oder schwimmt.\n\nWeil das Schlagzeug diese Parts oft mitakzentuiert, richtet ihr euch als Einheit an dessen Kick aus — Bass und Gitarre als eine Stimme über dem Beat."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Schwarze Pausen zu zweit",
+          "ziel": "Chugs und Pausen von Gitarre und Bass exakt gleich lang halten.",
+          "schritte": [
+            "Spielt ein einfaches Chug-Muster gemeinsam, langsam und gedämpft.",
+            "Achtet nicht nur auf den gemeinsamen Anschlag, sondern auf das gemeinsame Abdämpfen — die Pause muss von beiden gleichzeitig kommen.",
+            "Nehmt es auf und prüft, ob in den Pausen wirklich Stille herrscht oder ein Instrument nachklingt."
+          ],
+          "steigerung": "Verschiebt einzelne Chugs auf Synkopen und haltet die Synchronität; richtet euch dabei an der Bassdrum aus.",
+          "selbstkontrolle": "Die Pausen sind bei beiden gleich schwarz; das Muster klingt wie ein Instrument."
+        }
+      },
+      "stil": [
+        "metalcore",
+        "hardcore",
+        "death_metal"
+      ],
+      "spielziele": [
+        "saubere_chugs",
+        "tighter_palm_mute",
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_gb_rollen_riff",
+      "anzeigetitel": {
+        "de": "Gitarre & Bass: Verdopplung oder Gegenstimme"
+      },
+      "domaene": [
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "einfaches_riff",
+        "grundton_folgen",
+        "bass_akkordspiel"
+      ],
+      "erklaerteil": {
+        "de": "Der Bass hat zwei Grundrollen: Er kann das Gitarrenriff verdoppeln — maximale Wucht, ein Klotz — oder eine eigene Linie spielen, die den Grundton hält oder gegen das Riff läuft — mehr Breite und Bewegung. Beides ist richtig; die Frage ist, was der Song braucht.\n\nVerdopplung passt, wenn ein Riff mit voller Härte stehen soll. Eine Gegenstimme oder ein gehaltener Grundton öffnet Raum, wenn die Gitarre viele Noten spielt oder ein Part atmen soll. Viele starke Songs wechseln bewusst zwischen beidem — im Vers eigenständig, im Refrain verdoppelt.\n\nDie Entscheidung trefft ihr gemeinsam und pro Part. Sie ist ein Arrangement-Werkzeug, kein Automatismus."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Rollen, ein Part",
+          "ziel": "Verdopplung und Gegenstimme bewusst gegenüberstellen.",
+          "schritte": [
+            "Spielt ein Riff einmal komplett unisono, wobei der Bass die Gitarre verdoppelt.",
+            "Spielt denselben Part erneut, wobei der Bass nur die Grundtöne hält oder eine einfache Gegenbewegung macht.",
+            "Vergleicht beide Fassungen und beschreibt, was die jeweilige Rolle mit dem Part macht."
+          ],
+          "steigerung": "Baut einen Übergang, in dem der Bass an einer festen Stelle von Gegenstimme in Verdopplung wechselt.",
+          "selbstkontrolle": "Ihr hört den Unterschied klar und könnt begründen, welche Rolle zu welchem Part passt."
+        }
+      },
+      "spielziele": [
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_bd_kick_lock",
+      "anzeigetitel": {
+        "de": "Bass & Drums: an die Bassdrum koppeln"
+      },
+      "domaene": [
+        "bass",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "lock_zur_bassdrum",
+        "grundbeat",
+        "double_bass"
+      ],
+      "erklaerteil": {
+        "de": "Bass und Schlagzeug sind die Rhythmusgruppe — ihr gemeinsamer Kern ist die Kopplung von Basston und Bassdrum. Kommen beide im selben Moment, entsteht der tighte, wuchtige Low-End-Punch, der den Metal trägt. Fallen sie auseinander, klingt das Fundament weich und ungenau.\n\nDas heißt nicht, dass der Bass jede Kick doppeln muss — sondern dass die gemeinsamen Schläge exakt zusammenfallen. Der Drummer gibt mit dem Fuß die Referenz, der Bass legt seinen Ton genau darauf. Umgekehrt hört der Drummer, ob der Bass trägt, und passt die Kick-Dynamik an.\n\nÜbt das isoliert: nur Bass und Bassdrum, ohne den Rest. Erst wenn diese Achse steht, kommt der Beat obendrauf."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Bass auf die Kick",
+          "ziel": "Basston und Bassdrum zur Deckung bringen.",
+          "schritte": [
+            "Der Drummer spielt eine einfache Bassdrum-Figur zum Klick, der Bass legt seine Töne exakt auf jede Kick.",
+            "Hört auf einen gemeinsamen Impuls — klingt es wie ein Schlag oder wie zwei dicht aufeinanderfolgende?",
+            "Lasst die anderen Stimmen zunächst weg und nehmt nur diese Achse auf."
+          ],
+          "steigerung": "Nehmt eine schnellere oder synkopierte Kick-Figur und haltet die Kopplung; legt danach den vollen Beat darüber.",
+          "selbstkontrolle": "Basston und Kick verschmelzen zu einem Impuls; kein Flattern zwischen beiden."
+        }
+      },
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_bd_pocket_klick",
+      "anzeigetitel": {
+        "de": "Bass & Drums: die Pocket zum Klick"
+      },
+      "domaene": [
+        "bass",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_timing_klick",
+        "timing_klick",
+        "puls_zaehlzeiten"
+      ],
+      "erklaerteil": {
+        "de": "„Pocket“ nennt man das gemeinsame Zeitgefühl der Rhythmusgruppe — den Ort, an dem Bass und Schlagzeug so verzahnt sitzen, dass der Groove trägt. Sie entsteht nicht dadurch, dass jeder für sich zum Klick spielt, sondern dass beide dasselbe Zeitgefühl teilen.\n\nDer Klick ist der neutrale Schiedsrichter: Statt sich gegenseitig nachzujagen, richten sich beide an derselben Referenz aus. Ein häufiger Fehler ist, dass einer führt und der andere folgt — dann schleppt oder eilt das Ganze. Ziel ist, dass beide gleichberechtigt auf dem Klick liegen.\n\nWeil das Schlagzeug die Band-Zeit vorgibt, trägt der Drummer hier besondere Verantwortung; der Bass macht die Pocket hörbar, indem er sie mit Ton füllt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gemeinsam auf dem Klick",
+          "ziel": "Ein geteiltes Zeitgefühl statt gegenseitigen Nachjagens.",
+          "schritte": [
+            "Spielt eine einfache Figur gemeinsam zum Klick, jeder mit voller Aufmerksamkeit auf dem Klick statt aufeinander.",
+            "Reduziert das Metronom testweise auf jeden zweiten Schlag — bleibt ihr zusammen, sitzt die Pocket.",
+            "Nehmt es auf und prüft, ob ihr gemeinsam vor, auf oder hinter dem Klick liegt."
+          ],
+          "steigerung": "Lasst den Klick nur noch auf Zählzeit 1 laufen und haltet das Timing über den ganzen Takt.",
+          "selbstkontrolle": "Beide liegen zusammen auf dem Klick; auch bei reduziertem Metronom bleibt der Groove stabil."
+        }
+      },
+      "spielziele": [
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "duo_bd_akzente_breaks",
+      "anzeigetitel": {
+        "de": "Bass & Drums: Akzente und Breaks zusammen"
+      },
+      "domaene": [
+        "bass",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "dynamik_akzente",
+        "bass_synkopen",
+        "fills"
+      ],
+      "erklaerteil": {
+        "de": "Nichts entlarvt eine wacklige Rhythmusgruppe so wie ein Break — der Moment, in dem alle gemeinsam stoppen, einen Akzent setzen oder wieder einsteigen. Sitzt er, wirkt die Band wie ein Körper; sitzt er nicht, stolpert alles.\n\nGemeinsame Akzente und Stops müssen als eine Bewegung gedacht werden: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg. Der kritischste Punkt ist die Eins nach dem Break — dort treffen sich beide wieder, und dort zeigt sich, ob der Puls während der Stille gehalten wurde.\n\nÜbt Breaks isoliert, nicht die ganzen Parts: die zwei Takte um den Break herum in Schleife, mit durchlaufendem inneren Zählen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gemeinsam stoppen und einsteigen",
+          "ziel": "Akzente und Breaks als eine Bewegung setzen.",
+          "schritte": [
+            "Spielt einen einfachen Groove und baut an einer festen Stelle einen gemeinsamen Stop von einer Zählzeit ein.",
+            "Zählt beide während der Stille innerlich weiter und steigt exakt gemeinsam auf der nächsten Eins wieder ein.",
+            "Nehmt es auf und prüft, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+          ],
+          "steigerung": "Verlängert die Pause oder setzt einen gemeinsamen Akzent mitten hinein, den beide exakt gleich platzieren.",
+          "selbstkontrolle": "Stop und Wiedereinstieg fallen zusammen; die Eins nach dem Break sitzt bei beiden."
+        }
+      },
+      "spielziele": [
+        "saubere_uebergaenge",
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_bd_blast_begleitung",
+      "anzeigetitel": {
+        "de": "Bass & Drums: schnelle Kick-Muster gemeinsam"
+      },
+      "domaene": [
+        "bass",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_blast_begleitung",
+        "blastbeat",
+        "double_bass"
+      ],
+      "erklaerteil": {
+        "de": "In schnellen Death- und Black-Metal-Parts stellt sich die Frage, wie der Bass zu Blastbeats und Double-Bass-Gewittern steht. Jede einzelne Kick mitzuspielen ist bei hohem Tempo weder nötig noch immer möglich — entscheidend ist, dass Bass und Schlagzeug dieselbe rhythmische Kontur teilen.\n\nOft trägt der Bass die harmonische Linie in gleichmäßigen Achteln oder Sechzehnteln, während die Füße dichter spielen; an den Akzenten und Wechseln aber treffen sich beide punktgenau. Wichtig ist Klarheit darüber, welche Schläge gemeinsam sind und welche nur das Schlagzeug trägt.\n\nGesundheit gilt für beide: Solche Tempi baut ihr über Wochen auf, nicht in einer Session — bei Verkrampfung in Händen oder Füßen wird pausiert."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Kontur statt jeder Kick",
+          "ziel": "Bei hohem Tempo dieselbe rhythmische Kontur teilen.",
+          "schritte": [
+            "Der Drummer spielt eine langsame Blast- oder Double-Bass-Figur, der Bass legt eine gleichmäßige Linie darüber.",
+            "Legt gemeinsam fest, welche Schläge Akzente sind, die beide punktgenau treffen.",
+            "Spielt den Part so, dass diese gemeinsamen Punkte exakt sitzen, auch wenn der Bass nicht jede Kick doppelt."
+          ],
+          "steigerung": "Erhöht das Tempo in kleinen Schritten über mehrere Übe-Einheiten und haltet die gemeinsamen Akzente.",
+          "selbstkontrolle": "Die Akzente fallen exakt zusammen; Hände und Füße bleiben locker — sonst wird pausiert."
+        }
+      },
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "spielziele": [
+        "double_bass_tempo",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "duo_gv_phrasierung_luecken",
+      "anzeigetitel": {
+        "de": "Gitarre & Gesang: Phrasierung in die Lücken"
+      },
+      "domaene": [
+        "gitarre",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "rhythmus_phrasierung",
+        "einfaches_riff"
+      ],
+      "erklaerteil": {
+        "de": "Gitarre und Gesang teilen sich denselben Vordergrund — spielen beide gleichzeitig viele Ereignisse, überlagern sie sich zu Brei. Die klassische Lösung ist Wechselwirkung: Die Stimme phrasiert in die Lücken des Riffs, das Riff lässt Raum für die Gesangslinie.\n\nDas ist ein Call-and-Response im Kleinen: ein Riff-Motiv, dann eine Gesangsphrase, dann wieder das Riff. Wo die Stimme lange Linien trägt, hält die Gitarre oft ein einfacheres, offeneres Muster; wo die Gitarre ein komplexes Riff spielt, lässt die Stimme Platz. Diese Absprache ist Arrangement-Arbeit, keine Frage von Können.\n\nGeht einen Part gemeinsam durch und markiert, wer wann im Vordergrund steht — bewusst, nicht zufällig."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Riff und Stimme im Wechsel",
+          "ziel": "Gesang und Gitarre so verzahnen, dass sie sich nicht überlagern.",
+          "schritte": [
+            "Nehmt einen Part, in dem Riff und Gesang bisher gleichzeitig laufen, und markiert die Lücken im Riff.",
+            "Legt die Gesangsphrasen bewusst in diese Lücken, sodass ein Wechsel aus Riff und Stimme entsteht.",
+            "Spielt den Part gemeinsam und hört, ob beide Ebenen klar bleiben."
+          ],
+          "steigerung": "Baut eine Stelle, an der Riff und Stimme bewusst gleichzeitig laufen — als Kontrast zum Wechsel.",
+          "selbstkontrolle": "Riff und Gesang sind durchgehend getrennt hörbar; nichts verschwimmt."
+        }
+      },
+      "spielziele": [
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_gv_dynamik_aufbau",
+      "anzeigetitel": {
+        "de": "Gitarre & Gesang: gemeinsame Dynamik & Aufbau"
+      },
+      "domaene": [
+        "gitarre",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "dynamik_ausdruck",
+        "powerchords",
+        "chugs_breakdown"
+      ],
+      "erklaerteil": {
+        "de": "Ein Song lebt von Spannungsverläufen — und Gitarre und Gesang bauen sie am wirkungsvollsten gemeinsam auf. Kippt ein zurückgenommener Vers in einen intensiven Refrain, müssen beide denselben Verlauf tragen, sonst zieht einer, während der andere hält.\n\nDynamik ist dabei mehr als laut und leise: ein cleaner, offener Gitarrenpart unter ruhigem Gesang, der in dichte, verzerrte Wände unter harschen Vocals umschlägt. Der Umschlagpunkt ist eine gemeinsame Entscheidung — beide zünden im selben Moment. Ein Aufbau, den nur einer spielt, verpufft.\n\nPlant die Verläufe bewusst pro Song: Wo ist es am leersten, wo am dichtesten, und kommen beide dort zusammen an?"
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gemeinsam aufbauen",
+          "ziel": "Einen Spannungsverlauf von Gitarre und Gesang zusammen tragen.",
+          "schritte": [
+            "Nehmt einen Vers-Refrain-Übergang und legt gemeinsam fest, wo die Intensität steigt.",
+            "Spielt den Vers bewusst zurückgenommen (offener Gitarrenpart, ruhiger Gesang) und zündet den Refrain am selben Punkt.",
+            "Prüft, ob der Umschlag als eine Bewegung wirkt oder ob einer zu früh oder zu spät kommt."
+          ],
+          "steigerung": "Baut einen mehrstufigen Aufbau über mehrere Parts, den beide gemeinsam steigern.",
+          "selbstkontrolle": "Der Intensitätswechsel wirkt wie aus einem Guss; beide erreichen den Höhepunkt gemeinsam."
+        }
+      }
+    },
+    {
+      "id": "duo_gv_tonart_melodie",
+      "anzeigetitel": {
+        "de": "Gitarre & Gesang: Melodie über dem Riff"
+      },
+      "domaene": [
+        "gitarre",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "clean_im_metal",
+        "tonhoehe_clean",
+        "powerchords",
+        "moll_phrygisch"
+      ],
+      "erklaerteil": {
+        "de": "Für clean gesungene Passagen — im Doom tragend, im Metalcore oft der Refrain — muss die Gesangsmelodie zur Harmonik der Gitarre passen. Die Stimme sucht Töne, die zu den gespielten Powerchords und zur Tonart des Riffs gehören, statt daneben zu liegen.\n\nDas verlangt keine tiefe Theorie, aber ein gemeinsames Fundament: Die Gitarre kennt Grundton und Tonart des Parts, die Stimme findet darin sichere Zieltöne — oft den Grundton oder Töne der zugrunde liegenden Skala. Ein gehaltener Powerchord ist ein dankbarer Ausgangspunkt, weil er die Terz offen lässt und der Stimme so Dur- wie Moll-Färbung erlaubt.\n\nArbeitet die Melodie gemeinsam heraus: Die Gitarre gibt den harmonischen Rahmen, die Stimme bewegt sich sicher darin."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Sichere Töne über dem Akkord",
+          "ziel": "Eine Clean-Melodie finden, die zur Harmonik der Gitarre passt.",
+          "schritte": [
+            "Die Gitarre spielt eine einfache, langsame Powerchord-Folge und nennt den Grundton.",
+            "Die Stimme sucht dazu sichere Zieltöne — beginnt beim Grundton und tastet sich zu Tönen vor, die stimmig klingen.",
+            "Haltet die gefundene Melodie fest und singt sie sicher über die Akkordfolge."
+          ],
+          "steigerung": "Erweitert die Folge oder wechselt die Tonart und übertragt das Vorgehen auf den neuen Rahmen.",
+          "selbstkontrolle": "Die Melodie klingt durchgehend stimmig zur Gitarre; keine Töne liegen hörbar daneben."
+        }
+      },
+      "stil": [
+        "doom",
+        "metalcore"
+      ],
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "duo_gv_vocals_timing_riff",
+      "anzeigetitel": {
+        "de": "Gitarre & Gesang: Harsh-Timing aufs Riff"
+      },
+      "domaene": [
+        "gitarre",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "rhythmus_phrasierung",
+        "chugs_breakdown",
+        "zur_musik_singen"
+      ],
+      "erklaerteil": {
+        "de": "In Hardcore und Metalcore sind harsche Vocals oft ein rhythmisches Instrument: Sie sitzen auf den Akzenten des Riffs und verstärken dessen Wucht. Fällt eine geschriene Silbe mit einem Chug zusammen, treffen zwei Schläge als einer — das ist der Kern eines drückenden Breakdown-Vocals.\n\nEntscheidend ist gemeinsames Timing: Die Stimme richtet ihre betonten Silben an den Akzenten der Gitarre aus, nicht ungefähr, sondern punktgenau. Weil beide auf denselben rhythmischen Anker — oft die Bassdrum — zielen, entsteht ein Zusammenspiel, das tighter wirkt als jedes Instrument allein.\n\nDer Gesundheitsrahmen bleibt: Auch im Zusammenspiel entsteht Härte aus Technik und Stütze, nie aus Druck — Kratzen oder Schmerz beenden die Einheit."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Silbe auf den Akzent",
+          "ziel": "Betonte Silben punktgenau auf die Riff-Akzente legen.",
+          "schritte": [
+            "Die Gitarre spielt ein einfaches, akzentuiertes Chug-Muster, langsam.",
+            "Die Stimme legt betonte Silben (zunächst gesprochen, dann leise verzerrt) exakt auf die Akzente der Gitarre.",
+            "Nehmt es auf und prüft, ob Silbe und Chug als ein Schlag zusammenfallen."
+          ],
+          "steigerung": "Verschiebt Akzente auf Synkopen und haltet die gemeinsame Platzierung; richtet euch an der Bassdrum aus.",
+          "selbstkontrolle": "Betonte Silben und Riff-Akzente fallen zusammen; die Stimme bleibt mühelos, ohne Druck."
+        }
+      },
+      "stil": [
+        "metalcore",
+        "hardcore"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ]
+    }
+  ]
+}

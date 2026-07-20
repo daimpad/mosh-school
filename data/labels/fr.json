@@ -573,7 +573,24 @@
     "kontext_aufnahme_tightness": "",
     "kontext_aufnahme_vorbereitung": "",
     "kontext_solo_struktur": "",
-    "kontext_solo_ohne_band": ""
+    "kontext_solo_ohne_band": "",
+    "duo_gb_lock": "",
+    "duo_gb_frequenztrennung": "",
+    "duo_gb_chug_sync": "",
+    "duo_gb_rollen_riff": "",
+    "duo_bd_kick_lock": "",
+    "duo_bd_pocket_klick": "",
+    "duo_bd_akzente_breaks": "",
+    "duo_bd_blast_begleitung": "",
+    "duo_gv_phrasierung_luecken": "",
+    "duo_gv_dynamik_aufbau": "",
+    "duo_gv_tonart_melodie": "",
+    "duo_gv_vocals_timing_riff": "",
+    "band_gruenden": "",
+    "erste_proben_struktur": "",
+    "proberaum_einrichten": "",
+    "proberaum_ausruestung": "",
+    "gehoerschutz_lautstaerke": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -680,7 +697,19 @@
     "fb_transfer_riff_gleich": "",
     "fb_transfer_groove_tempo": "",
     "fb_transfer_bass_rolle": "",
-    "fb_transfer_vocals_stapeln": ""
+    "fb_transfer_vocals_stapeln": "",
+    "fb_duo_gb_flam": "",
+    "fb_duo_gb_matsch": "",
+    "fb_duo_gb_pausen_versetzt": "",
+    "fb_duo_gb_rollen_unklar": "",
+    "fb_duo_bd_kick_desync": "",
+    "fb_duo_bd_driftet": "",
+    "fb_duo_bd_break_stolpert": "",
+    "fb_duo_bd_blast_verliert": "",
+    "fb_duo_gv_ueberlagert": "",
+    "fb_duo_gv_vocals_hinterm_riff": "",
+    "fb_duo_gv_melodie_daneben": "",
+    "fb_duo_gv_aufbau_einseitig": ""
   },
   "grafiken": {},
   "vokabeln": {
@@ -886,7 +915,8 @@
     "djent_drums": "",
     "deathcore_bass": "",
     "experte_gitarre_lead": "",
-    "deathcore_vocals": ""
+    "deathcore_vocals": "",
+    "erste_gemeinsame_probe": ""
   },
   "lehrgrafiken": {
     "grundbeat": "",
