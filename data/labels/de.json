@@ -564,7 +564,15 @@
     "harsh_uebergaenge_nahtlos": "Vocals: nahtlose Register-Übergänge",
     "harsh_arrangement_schichten": "Vocals: Schichten arrangieren",
     "komposition_langform": "Theorie: Langform & Arrangement komponieren",
-    "gitarre_improvisation": "Gitarre: Improvisation über Riffs"
+    "gitarre_improvisation": "Gitarre: Improvisation über Riffs",
+    "gehoerschutz_tinnitus": "Gehör schützen: Lautstärke & Tinnitus",
+    "koerperhaltung_ergonomie": "Haltung & Ergonomie am Instrument",
+    "ueberlastung_praevention": "Überlastung erkennen & vermeiden",
+    "athletik_grundlage": "Athletik als Basis: Ausdauer & Beweglichkeit",
+    "lampenfieber": "Lampenfieber & Auftrittsnervosität",
+    "fokus_konzentration": "Fokus & Konzentration beim Üben",
+    "motivation_disziplin": "Motivation, Disziplin & Dranbleiben",
+    "plateau_ueberwinden": "Plateaus & Stillstand überwinden"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
