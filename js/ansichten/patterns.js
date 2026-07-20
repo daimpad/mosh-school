@@ -15,11 +15,36 @@ let aktivesGenre = null;
 let audioKontext = null;
 let rauschPuffer = null;
 let laufTimer = [];
+// Alle eingeplanten Klangquellen der laufenden Wiedergabe — damit ein neuer Start
+// oder der Stopp-Knopf die noch geplanten Töne abbrechen kann (sonst Überlagerung).
+let aktiveKlaenge = [];
+
+function reduziert() {
+  return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+}
 
 function holeKontext() {
   audioKontext = audioKontext || new (window.AudioContext || window.webkitAudioContext)();
   if (audioKontext.state === 'suspended') audioKontext.resume();
   return audioKontext;
+}
+
+// Merkt eine Klangquelle für den späteren Abbruch vor.
+function merke(quelle) {
+  aktiveKlaenge.push(quelle);
+  return quelle;
+}
+
+// Bricht alle noch geplanten/laufenden Töne ab (idempotent).
+function stoppeKlang() {
+  for (const quelle of aktiveKlaenge) {
+    try {
+      quelle.stop();
+    } catch {
+      /* schon gestoppt/beendet — egal */
+    }
+  }
+  aktiveKlaenge = [];
 }
 
 // Ein Sekunde weißes Rauschen, einmal erzeugt — Basis für Snare/Hi-Hat/China.
@@ -44,6 +69,7 @@ function spieleNote(ctx, frequenz, t0, dauer, pegel) {
   osc.connect(huelle).connect(ctx.destination);
   osc.start(t0);
   osc.stop(t0 + dauer * 1.6);
+  merke(osc);
 }
 
 // --- Drum-Stimmen (synthetisch) ---
@@ -58,6 +84,7 @@ function kick(ctx, t0) {
   osc.connect(huelle).connect(ctx.destination);
   osc.start(t0);
   osc.stop(t0 + 0.18);
+  merke(osc);
 }
 
 function rauschStimme(ctx, t0, { typ, frequenz, guete, dauer, pegel }) {
@@ -73,6 +100,7 @@ function rauschStimme(ctx, t0, { typ, frequenz, guete, dauer, pegel }) {
   quelle.connect(filter).connect(huelle).connect(ctx.destination);
   quelle.start(t0);
   quelle.stop(t0 + dauer + 0.02);
+  merke(quelle);
 }
 
 function snare(ctx, t0) {
@@ -110,10 +138,12 @@ function stoppeLauf() {
 }
 
 // Markiert die laufende Spalte im Raster mit; rein visuell, an die Audio-Zeit
-// gekoppelt. Bei erneutem Start werden alte Timer verworfen.
+// gekoppelt. Bei erneutem Start werden alte Timer verworfen. Bei
+// prefers-reduced-motion bleibt die Wandermarkierung aus (Ton läuft trotzdem).
 function markiereLauf(karte, ctx, start, step, anzahl) {
   stoppeLauf();
   for (const zelle of karte.querySelectorAll('.schritt-aktiv')) zelle.classList.remove('schritt-aktiv');
+  if (reduziert()) return;
   for (let i = 0; i < anzahl; i++) {
     const verzoegerung = Math.max(0, (start + i * step - ctx.currentTime) * 1000);
     laufTimer.push(
@@ -132,6 +162,7 @@ function markiereLauf(karte, ctx, start, step, anzahl) {
 }
 
 function spieleTab(pattern, karte) {
+  stoppeKlang();
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
   const start = ctx.currentTime + 0.07;
@@ -147,14 +178,16 @@ function spieleTab(pattern, karte) {
 }
 
 function spieleDrums(pattern, karte) {
+  stoppeKlang();
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
   const start = ctx.currentTime + 0.07;
-  const anzahl = Math.max(...SPUR_ORDNUNG.map((s) => pattern.spuren[s]?.length || 0));
+  const spuren = pattern.spuren || {};
+  const anzahl = Math.max(0, ...SPUR_ORDNUNG.map((s) => spuren[s]?.length || 0));
   for (let i = 0; i < anzahl; i++) {
     const t0 = start + i * step;
     for (const spur of SPUR_ORDNUNG) {
-      if (pattern.spuren[spur]?.[i]) DRUM_STIMME[spur](ctx, t0);
+      if (spuren[spur]?.[i]) DRUM_STIMME[spur](ctx, t0);
     }
   }
   markiereLauf(karte, ctx, start, step, anzahl);
@@ -183,16 +216,24 @@ function tabRasterHtml(pattern) {
 }
 
 function drumRasterHtml(pattern) {
-  const spuren = SPUR_ORDNUNG.filter((s) => pattern.spuren[s]?.some((v) => v));
-  const anzahl = Math.max(...spuren.map((s) => pattern.spuren[s].length));
+  const daten = pattern.spuren || {};
+  const spuren = SPUR_ORDNUNG.filter((s) => daten[s]?.some((v) => v));
+  const anzahl = spuren.length ? Math.max(...spuren.map((s) => daten[s].length)) : 0;
+  const pause = t('pattern_pause');
   const reihen = spuren
     .map((spur) => {
+      const spurName = t('pattern_spur_' + spur);
       const zellen = [];
       for (let i = 0; i < anzahl; i++) {
-        const an = pattern.spuren[spur][i];
-        zellen.push(`<td class="drum-zelle${an ? ` drum-an drum-${spur}` : ''}" data-schritt="${i}"><span aria-hidden="true"></span></td>`);
+        const an = daten[spur][i];
+        // Sichtbar: CSS-Form (aria-hidden). Für Screenreader: Spurname bei Treffer,
+        // sonst „Pause" — sonst wäre das Drum-Raster eine Tabelle aus leeren Zellen.
+        const srText = an ? spurName : pause;
+        zellen.push(
+          `<td class="drum-zelle${an ? ` drum-an drum-${spur}` : ''}" data-schritt="${i}"><span aria-hidden="true"></span><span class="nur-sr">${esc(srText)}</span></td>`
+        );
       }
-      return `<tr><th scope="row" class="drum-spur">${esc(t('pattern_spur_' + spur))}</th>${zellen.join('')}</tr>`;
+      return `<tr><th scope="row" class="drum-spur">${esc(spurName)}</th>${zellen.join('')}</tr>`;
     })
     .join('');
   return `<table class="drum-raster" aria-label="${esc(t('pattern_drum_aria'))}"><tbody>${reihen}</tbody></table>`;
@@ -227,7 +268,7 @@ export function renderPatterns(el, daten) {
   const genreKnoepfe = genres
     .map(
       (g) => `
-      <button type="button" class="chip chip-waehlbar ${g === aktivesGenre ? 'chip-akzent' : ''}" data-genre="${esc(g)}">
+      <button type="button" class="chip chip-waehlbar ${g === aktivesGenre ? 'chip-akzent' : ''}" data-genre="${esc(g)}" aria-pressed="${g === aktivesGenre}">
         ${esc(label('stil', g))}
       </button>`
     )
@@ -248,15 +289,34 @@ export function renderPatterns(el, daten) {
         </div>
       </section>
       <p class="chip-zeile">${genreKnoepfe}</p>
-      <p class="chip-zeile">${genreLink}</p>
+      <p class="chip-zeile">
+        ${genreLink}
+        <button type="button" class="chip chip-waehlbar pattern-stopp" hidden>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i> ${esc(t('pattern_stopp'))}
+        </button>
+      </p>
+      <p class="leise pattern-status" role="status" aria-live="polite"></p>
       <div class="pattern-liste">${karten}</div>
       <p class="leise">${esc(t('pattern_hinweis_pegel'))}</p>
     </article>`;
+
+  const status = el.querySelector('.pattern-status');
+  const stoppKnopf = el.querySelector('.pattern-stopp');
+
+  function beende() {
+    stoppeKlang();
+    stoppeLauf();
+    for (const zelle of el.querySelectorAll('.schritt-aktiv')) zelle.classList.remove('schritt-aktiv');
+    if (status) status.textContent = '';
+    if (stoppKnopf) stoppKnopf.hidden = true;
+  }
 
   for (const knopf of el.querySelectorAll('[data-genre]')) {
     knopf.addEventListener('click', () => {
       aktivesGenre = knopf.dataset.genre;
       renderPatterns(el, daten);
+      // Fokus nach dem Neu-Rendern auf den nun aktiven Chip zurückholen.
+      el.querySelector(`[data-genre="${CSS.escape(aktivesGenre)}"]`)?.focus();
     });
   }
   for (const knopf of el.querySelectorAll('.pattern-play')) {
@@ -266,6 +326,9 @@ export function renderPatterns(el, daten) {
       if (!pattern) return;
       if (pattern.typ === 'drums') spieleDrums(pattern, karte);
       else spieleTab(pattern, karte);
+      if (status) status.textContent = t('pattern_spielt', { name: text(pattern.titel) });
+      if (stoppKnopf) stoppKnopf.hidden = false;
     });
   }
+  if (stoppKnopf) stoppKnopf.addEventListener('click', beende);
 }

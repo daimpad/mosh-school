@@ -129,7 +129,7 @@ export function renderStimmungen(el, daten) {
   const instrumentKnoepfe = ['gitarre', 'bass']
     .map(
       (inst) => `
-      <button type="button" class="chip chip-waehlbar ${aktivesInstrument === inst ? 'chip-akzent' : ''}" data-instrument="${inst}">
+      <button type="button" class="chip chip-waehlbar ${aktivesInstrument === inst ? 'chip-akzent' : ''}" data-instrument="${inst}" aria-pressed="${aktivesInstrument === inst}">
         ${domaeneIcon(inst)} ${esc(label('domaene', inst))}
       </button>`
     )
@@ -138,7 +138,7 @@ export function renderStimmungen(el, daten) {
   const stimmungsKnoepfe = verfuegbar
     .map(
       (s) => `
-      <button type="button" class="chip chip-waehlbar ${s.id === aktiveStimmung ? 'chip-akzent' : ''}" data-stimmung="${esc(s.id)}">
+      <button type="button" class="chip chip-waehlbar ${s.id === aktiveStimmung ? 'chip-akzent' : ''}" data-stimmung="${esc(s.id)}" aria-pressed="${s.id === aktiveStimmung}">
         ${esc(label('stimmung', s.id))}
       </button>`
     )
@@ -208,12 +208,15 @@ export function renderStimmungen(el, daten) {
       aktivesInstrument = knopf.dataset.instrument;
       aktiveStimmung = null;
       renderStimmungen(el, daten);
+      // Fokus nach dem Neu-Rendern auf den nun aktiven Chip zurückholen.
+      el.querySelector(`[data-instrument="${CSS.escape(aktivesInstrument)}"]`)?.focus();
     });
   }
   for (const knopf of el.querySelectorAll('[data-stimmung]')) {
     knopf.addEventListener('click', () => {
       aktiveStimmung = knopf.dataset.stimmung;
       renderStimmungen(el, daten);
+      el.querySelector(`[data-stimmung="${CSS.escape(aktiveStimmung)}"]`)?.focus();
     });
   }
   for (const saite of el.querySelectorAll('.saite')) {
