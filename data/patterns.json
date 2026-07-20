@@ -10,243 +10,1616 @@
       "genre": "thrash",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Thrash-Riff: gedämpfter Galopp" },
-      "stimmung": ["E2", "A2", "D3", "G3", "B3", "E4"],
+      "titel": {
+        "de": "Thrash-Riff: gedämpfter Galopp"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
       "bpm": 190,
       "schritte": [
-        [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 3 }],
-        [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 1 }], [{ "saite": 0, "bund": 0 }]
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ]
       ],
-      "hinweis": { "de": "Treibende, tight palm-gemutete Achtel auf der tiefen E-Saite mit chromatischen Ausflügen (G, F) — mit hartem Downpicking gespielt. Der Motor des Thrash." }
+      "hinweis": {
+        "de": "Treibende, tight palm-gemutete Achtel auf der tiefen E-Saite mit chromatischen Ausflügen (G, F) — mit hartem Downpicking gespielt. Der Motor des Thrash."
+      }
     },
     {
       "id": "thrash_skank_beat",
       "genre": "thrash",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Thrash-Beat: der Skank" },
+      "titel": {
+        "de": "Thrash-Beat: der Skank"
+      },
       "bpm": 190,
       "spuren": {
-        "hihat": [1, 1, 1, 1, 1, 1, 1, 1],
-        "snare": [0, 1, 0, 1, 0, 1, 0, 1],
-        "kick": [1, 0, 1, 0, 1, 0, 1, 0]
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "kick": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
       },
-      "hinweis": { "de": "Der schnelle Zweier-Beat (Skank): Kick und Snare wechseln sich auf den Achteln ab, die Hi-Hat treibt gerade durch. Bei hohem Tempo das Rückgrat des Thrash." }
+      "hinweis": {
+        "de": "Der schnelle Zweier-Beat (Skank): Kick und Snare wechseln sich auf den Achteln ab, die Hi-Hat treibt gerade durch. Bei hohem Tempo das Rückgrat des Thrash."
+      }
     },
     {
       "id": "death_tremolo_riff",
       "genre": "death_metal",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Death-Riff: Tremolo & Chromatik" },
-      "stimmung": ["D2", "A2", "D3", "G3", "B3", "E4"],
+      "titel": {
+        "de": "Death-Riff: Tremolo & Chromatik"
+      },
+      "stimmung": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
       "bpm": 200,
       "schritte": [
-        [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 1 }], [{ "saite": 0, "bund": 0 }],
-        [{ "saite": 0, "bund": 3 }], [{ "saite": 0, "bund": 3 }], [{ "saite": 0, "bund": 2 }], [{ "saite": 0, "bund": 1 }]
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ]
       ],
-      "hinweis": { "de": "Schnelles Tremolo-Picking mit chromatischen Halbtonrückungen auf der tiefen Saite (Drop D) — unheimlich und dicht. Sehr gleichmäßig und tight picken." }
+      "hinweis": {
+        "de": "Schnelles Tremolo-Picking mit chromatischen Halbtonrückungen auf der tiefen Saite (Drop D) — unheimlich und dicht. Sehr gleichmäßig und tight picken."
+      }
     },
     {
       "id": "death_blast_beat",
       "genre": "death_metal",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Death-Beat: der Blast" },
+      "titel": {
+        "de": "Death-Beat: der Blast"
+      },
       "bpm": 200,
       "spuren": {
-        "hihat": [1, 0, 1, 0, 1, 0, 1, 0],
-        "snare": [0, 1, 0, 1, 0, 1, 0, 1],
-        "kick": [1, 1, 1, 1, 1, 1, 1, 1]
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "snare": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "kick": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
       },
-      "hinweis": { "de": "Der klassische Blastbeat: Hi-Hat und Snare wechseln im Sechzehntel, die Kick läuft als durchgehender Teppich darunter. Lockerheit vor Kraft, in kurzen Blöcken üben." }
+      "hinweis": {
+        "de": "Der klassische Blastbeat: Hi-Hat und Snare wechseln im Sechzehntel, die Kick läuft als durchgehender Teppich darunter. Lockerheit vor Kraft, in kurzen Blöcken üben."
+      }
     },
     {
       "id": "black_tremolo_riff",
       "genre": "black_metal",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Black-Riff: kalte Tremolo-Melodie" },
-      "stimmung": ["E2", "A2", "D3", "G3", "B3", "E4"],
+      "titel": {
+        "de": "Black-Riff: kalte Tremolo-Melodie"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
       "bpm": 210,
       "schritte": [
-        [{ "saite": 1, "bund": 2 }], [{ "saite": 1, "bund": 5 }], [{ "saite": 1, "bund": 3 }], [{ "saite": 1, "bund": 2 }],
-        [{ "saite": 1, "bund": 0 }], [{ "saite": 1, "bund": 3 }], [{ "saite": 1, "bund": 2 }], [{ "saite": 1, "bund": 0 }]
+        [
+          {
+            "saite": 1,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ]
       ],
-      "hinweis": { "de": "Eine tremolo-gepickte Melodie auf der A-Saite, die über die Akkorde schwebt — Atmosphäre statt Wucht. Der Ton bleibt schneidend und dünn, nicht tief." }
+      "hinweis": {
+        "de": "Eine tremolo-gepickte Melodie auf der A-Saite, die über die Akkorde schwebt — Atmosphäre statt Wucht. Der Ton bleibt schneidend und dünn, nicht tief."
+      }
     },
     {
       "id": "doom_powerchords",
       "genre": "doom",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Doom-Riff: schwere Powerchords" },
-      "stimmung": ["D2", "A2", "D3", "G3", "B3", "E4"],
+      "titel": {
+        "de": "Doom-Riff: schwere Powerchords"
+      },
+      "stimmung": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
       "bpm": 62,
       "schritte": [
-        [{ "saite": 0, "bund": 0 }, { "saite": 1, "bund": 0 }], [], [], [],
-        [{ "saite": 0, "bund": 3 }, { "saite": 1, "bund": 3 }], [], [{ "saite": 0, "bund": 1 }, { "saite": 1, "bund": 1 }], []
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          },
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ],
+        []
       ],
-      "hinweis": { "de": "Wenige, schwere Powerchords, jeder voll ausgehalten mit weiter Lücke davor — das Gewicht kommt aus dem langsamen Tempo und dem Ausklang, nicht aus vielen Tönen." }
+      "hinweis": {
+        "de": "Wenige, schwere Powerchords, jeder voll ausgehalten mit weiter Lücke davor — das Gewicht kommt aus dem langsamen Tempo und dem Ausklang, nicht aus vielen Tönen."
+      }
     },
     {
       "id": "doom_halftime_beat",
       "genre": "doom",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Doom-Beat: zäher Halftime" },
+      "titel": {
+        "de": "Doom-Beat: zäher Halftime"
+      },
       "bpm": 62,
       "spuren": {
-        "hihat": [1, 0, 1, 0, 1, 0, 1, 0],
-        "snare": [0, 0, 0, 0, 1, 0, 0, 0],
-        "kick": [1, 0, 0, 0, 0, 0, 0, 0]
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
       },
-      "hinweis": { "de": "Ganz weit ausgelegter Halftime: Kick auf die Eins, Snare erst auf die Drei, viel Raum dazwischen. Der Beat muss die Schwere tragen, nicht füllen." }
+      "hinweis": {
+        "de": "Ganz weit ausgelegter Halftime: Kick auf die Eins, Snare erst auf die Drei, viel Raum dazwischen. Der Beat muss die Schwere tragen, nicht füllen."
+      }
     },
     {
       "id": "hardcore_dbeat",
       "genre": "hardcore",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Hardcore-Beat: der D-Beat" },
+      "titel": {
+        "de": "Hardcore-Beat: der D-Beat"
+      },
       "bpm": 165,
       "spuren": {
-        "hihat": [1, 1, 1, 1, 1, 1, 1, 1],
-        "snare": [0, 0, 1, 0, 0, 0, 1, 0],
-        "kick": [1, 0, 0, 1, 1, 0, 0, 1]
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
       },
-      "hinweis": { "de": "Der treibende D-Beat aus dem Punk: die Kick-Snare-Verzahnung schiebt nach vorn, roh und direkt. Motor von Hardcore, Crust und D-Beat." }
+      "hinweis": {
+        "de": "Der treibende D-Beat aus dem Punk: die Kick-Snare-Verzahnung schiebt nach vorn, roh und direkt. Motor von Hardcore, Crust und D-Beat."
+      }
     },
     {
       "id": "hardcore_chug_riff",
       "genre": "hardcore",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Hardcore-Riff: Chugs mit Stopps" },
-      "stimmung": ["D2", "A2", "D3", "G3", "B3", "E4"],
+      "titel": {
+        "de": "Hardcore-Riff: Chugs mit Stopps"
+      },
+      "stimmung": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
       "bpm": 165,
       "schritte": [
-        [{ "saite": 0, "bund": 0 }, { "saite": 1, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [], [{ "saite": 0, "bund": 0 }],
-        [{ "saite": 0, "bund": 0 }, { "saite": 1, "bund": 0 }], [], [{ "saite": 0, "bund": 0 }], []
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        []
       ],
-      "hinweis": { "de": "Gedämpfte Chugs mit bewussten Stopps — die Lücke ist Teil des Grooves. Entschlossener Anschlag, sauberes Abstoppen, körperlicher Bounce." }
+      "hinweis": {
+        "de": "Gedämpfte Chugs mit bewussten Stopps — die Lücke ist Teil des Grooves. Entschlossener Anschlag, sauberes Abstoppen, körperlicher Bounce."
+      }
     },
     {
       "id": "metalcore_breakdown_riff",
       "genre": "metalcore",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Metalcore-Riff: Breakdown-Chugs" },
-      "stimmung": ["D2", "A2", "D3", "G3", "B3", "E4"],
+      "titel": {
+        "de": "Metalcore-Riff: Breakdown-Chugs"
+      },
+      "stimmung": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
       "bpm": 140,
       "schritte": [
-        [{ "saite": 0, "bund": 0 }], [], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }],
-        [], [{ "saite": 0, "bund": 0 }], [], [{ "saite": 0, "bund": 3 }, { "saite": 1, "bund": 3 }]
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ]
       ],
-      "hinweis": { "de": "Synkopierte, gedämpfte Chugs mit viel Stille — der Breakdown lebt vom Kontrast aus Schlag und Lücke. Tight gemutet, jeder Ton knallt und ist sofort tot." }
+      "hinweis": {
+        "de": "Synkopierte, gedämpfte Chugs mit viel Stille — der Breakdown lebt vom Kontrast aus Schlag und Lücke. Tight gemutet, jeder Ton knallt und ist sofort tot."
+      }
     },
     {
       "id": "metalcore_groove_beat",
       "genre": "metalcore",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Metalcore-Beat: bouncender Groove" },
+      "titel": {
+        "de": "Metalcore-Beat: bouncender Groove"
+      },
       "bpm": 140,
       "spuren": {
-        "hihat": [1, 1, 1, 1, 1, 1, 1, 1],
-        "snare": [0, 0, 1, 0, 0, 0, 1, 0],
-        "kick": [1, 0, 0, 1, 0, 1, 0, 0]
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
       },
-      "hinweis": { "de": "Synkopierte, bouncende Kick-Akzente unter einem klaren Backbeat — der Groove, der zum Mitwippen und Moshen einlädt." }
+      "hinweis": {
+        "de": "Synkopierte, bouncende Kick-Akzente unter einem klaren Backbeat — der Groove, der zum Mitwippen und Moshen einlädt."
+      }
     },
     {
       "id": "djent_polymeter_riff",
       "genre": "djent",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Djent-Riff: Fünfer-Gruppierung" },
-      "stimmung": ["C2", "G2", "C3", "F3", "A3", "D4"],
+      "titel": {
+        "de": "Djent-Riff: Fünfer-Gruppierung"
+      },
+      "stimmung": [
+        "C2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
       "bpm": 120,
       "schritte": [
-        [{ "saite": 0, "bund": 3 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }],
-        [{ "saite": 0, "bund": 3 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }],
-        [{ "saite": 0, "bund": 3 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }],
-        [{ "saite": 0, "bund": 3 }], [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }]
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ]
       ],
-      "hinweis": { "de": "Perkussive Chugs auf sehr tiefer Saite (Drop C), betont in Fünfer- und Dreier-Paketen (5+5+3+3) über 16 Achteln — die Betonung wandert über den geraden Puls. Djent-Polymetrik." }
+      "hinweis": {
+        "de": "Perkussive Chugs auf sehr tiefer Saite (Drop C), betont in Fünfer- und Dreier-Paketen (5+5+3+3) über 16 Achteln — die Betonung wandert über den geraden Puls. Djent-Polymetrik."
+      }
     },
     {
       "id": "djent_polymeter_beat",
       "genre": "djent",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Djent-Beat: gerader Boden, verschobene Kick" },
+      "titel": {
+        "de": "Djent-Beat: gerader Boden, verschobene Kick"
+      },
       "bpm": 120,
       "spuren": {
-        "hihat": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        "snare": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
-        "kick": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0]
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
       },
-      "hinweis": { "de": "Die Hi-Hat hält stur den geraden Achtelpuls, während die Kick den Fünfer-Gruppen der Gitarre folgt (1, 6, 11, 14). Gerader Boden, wandernde Betonung." }
+      "hinweis": {
+        "de": "Die Hi-Hat hält stur den geraden Achtelpuls, während die Kick den Fünfer-Gruppen der Gitarre folgt (1, 6, 11, 14). Gerader Boden, wandernde Betonung."
+      }
     },
     {
       "id": "deathcore_breakdown_riff",
       "genre": "deathcore",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Deathcore-Riff: der Absturz" },
-      "stimmung": ["C2", "G2", "C3", "F3", "A3", "D4"],
+      "titel": {
+        "de": "Deathcore-Riff: der Absturz"
+      },
+      "stimmung": [
+        "C2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
       "bpm": 100,
       "schritte": [
-        [{ "saite": 0, "bund": 0 }], [], [], [],
-        [{ "saite": 0, "bund": 0 }], [{ "saite": 0, "bund": 0 }], [], [],
-        [], [{ "saite": 0, "bund": 0 }], [], [],
-        [{ "saite": 0, "bund": 0 }], [], [{ "saite": 0, "bund": 0 }], []
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        []
       ],
-      "hinweis": { "de": "Extrem tiefe (Drop C), gedämpfte Einzelschläge mit maximaler Stille dazwischen und synkopierten Akzenten — der Breakdown als Waffe. Ohne saubere Dämpfung wird es Matsch." }
+      "hinweis": {
+        "de": "Extrem tiefe (Drop C), gedämpfte Einzelschläge mit maximaler Stille dazwischen und synkopierten Akzenten — der Breakdown als Waffe. Ohne saubere Dämpfung wird es Matsch."
+      }
     },
     {
       "id": "deathcore_breakdown_beat",
       "genre": "deathcore",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Deathcore-Beat: Breakdown mit China" },
+      "titel": {
+        "de": "Deathcore-Beat: Breakdown mit China"
+      },
       "bpm": 100,
       "spuren": {
-        "crash": [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0],
-        "hihat": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        "snare": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        "kick": [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0]
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "hihat": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
       },
-      "hinweis": { "de": "Jeder Gitarren-Chug des Breakdowns mit Kick und China-Akzent exakt mitgetroffen, die Stille dazwischen bleibt leer. Wucht durch Präzision, nicht durch Füllen." }
+      "hinweis": {
+        "de": "Jeder Gitarren-Chug des Breakdowns mit Kick und China-Akzent exakt mitgetroffen, die Stille dazwischen bleibt leer. Wucht durch Präzision, nicht durch Füllen."
+      }
     },
     {
       "id": "grind_blast_beat",
       "genre": "grindcore",
       "domaene": "schlagzeug",
       "typ": "drums",
-      "titel": { "de": "Grind-Beat: rasender Blast" },
+      "titel": {
+        "de": "Grind-Beat: rasender Blast"
+      },
       "bpm": 240,
       "spuren": {
-        "hihat": [1, 0, 1, 0, 1, 0, 1, 0],
-        "snare": [1, 0, 1, 0, 1, 0, 1, 0],
-        "kick": [0, 1, 0, 1, 0, 1, 0, 1]
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "snare": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
       },
-      "hinweis": { "de": "Der Grind-Blast bei extremem Tempo: Hände (Snare) und Fuß (Kick) wechseln sich im Sechzehntel ab, maximale Verdichtung. Nur in kurzen Blöcken, Gehörschutz, Lockerheit vor Kraft." }
+      "hinweis": {
+        "de": "Der Grind-Blast bei extremem Tempo: Hände (Snare) und Fuß (Kick) wechseln sich im Sechzehntel ab, maximale Verdichtung. Nur in kurzen Blöcken, Gehörschutz, Lockerheit vor Kraft."
+      }
     },
     {
       "id": "stoner_fuzz_groove",
       "genre": "stoner_post",
       "domaene": "gitarre",
       "typ": "tab",
-      "titel": { "de": "Stoner-Riff: fuzziger Groove" },
-      "stimmung": ["D2", "A2", "D3", "G3", "B3", "E4"],
+      "titel": {
+        "de": "Stoner-Riff: fuzziger Groove"
+      },
+      "stimmung": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
       "bpm": 108,
       "schritte": [
-        [{ "saite": 0, "bund": 0 }, { "saite": 1, "bund": 0 }], [], [{ "saite": 0, "bund": 3 }], [{ "saite": 0, "bund": 5 }],
-        [{ "saite": 0, "bund": 3 }, { "saite": 1, "bund": 3 }], [], [{ "saite": 0, "bund": 0 }], []
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        []
       ],
-      "hinweis": { "de": "Ein groovender Riff mit Lücke und bluesiger Bewegung, fuzzig und mittig — der Riff regiert. Leicht hinter dem Puls gespielt, lustvoll wiederholt." }
+      "hinweis": {
+        "de": "Ein groovender Riff mit Lücke und bluesiger Bewegung, fuzzig und mittig — der Riff regiert. Leicht hinter dem Puls gespielt, lustvoll wiederholt."
+      }
+    },
+    {
+      "id": "thrash_bass_gallop",
+      "genre": "thrash",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Thrash-Bass: gedämpfter Galopp"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 190,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Folgt dem Gitarren-Galopp mit hartem Downpicking auf der tiefen Saite — treibend und tight, das Fundament des Thrash-Motors."
+      }
+    },
+    {
+      "id": "death_bass_tremolo",
+      "genre": "death_metal",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Death-Bass: schnelles Skelett"
+      },
+      "stimmung": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 200,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Verzahnt sich als schnelles, gleichmäßiges Skelett mit der Double Bass; Definition und Attack zählen mehr als Melodie (Drop D)."
+      }
+    },
+    {
+      "id": "doom_bass_schwer",
+      "genre": "doom",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Doom-Bass: schweres Fundament"
+      },
+      "stimmung": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 62,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Wenige, sehr schwere, voll ausgehaltene Grundtöne mit weiter Lücke — das Gewicht kommt aus dem Tempo und dem Ausklang, nicht aus vielen Noten."
+      }
+    },
+    {
+      "id": "hardcore_bass_motor",
+      "genre": "hardcore",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Hardcore-Bass: der Motor"
+      },
+      "stimmung": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 165,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Satt und direkt nach vorn schiebende Achtel auf dem Grundton — der Bass als treibender Motor unter dem Groove."
+      }
+    },
+    {
+      "id": "metalcore_bass_lock",
+      "genre": "metalcore",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Metalcore-Bass: Breakdown-Lock"
+      },
+      "stimmung": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 140,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Verzahnt die synkopierten Breakdown-Akzente exakt mit Kick und Gitarre — die Lücke ist Teil des Grooves, jeder Ton sitzt auf dem Schlag."
+      }
+    },
+    {
+      "id": "djent_bass_verschoben",
+      "genre": "djent",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Djent-Bass: verschobene Betonung"
+      },
+      "stimmung": [
+        "C1",
+        "G1",
+        "C2",
+        "F2"
+      ],
+      "bpm": 120,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Lockt die betonten Chugs der Fünfer-Gruppierung (5+5+3+3) exakt mit Kick und Gitarre; der gerade Puls bleibt im Fuß (Drop C)."
+      }
+    },
+    {
+      "id": "deathcore_bass_absturz",
+      "genre": "deathcore",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Deathcore-Bass: tiefes Fundament"
+      },
+      "stimmung": [
+        "C1",
+        "G1",
+        "C2",
+        "F2"
+      ],
+      "bpm": 100,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Extrem tiefe, definierte Grundtöne exakt unter den Breakdown-Chugs, mit maximaler Stille dazwischen — Gewicht durch Präzision (Drop C)."
+      }
+    },
+    {
+      "id": "stoner_bass_groove",
+      "genre": "stoner_post",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Stoner-Bass: fuzziger Groove"
+      },
+      "stimmung": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 108,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Ein beweglicher, fuzziger Groove mit Lücke und kleinem Lauf — der Bass antwortet dem Riff, statt nur mitzulaufen, leicht hinter dem Puls (Drop D)."
+      }
     }
   ]
 }
