@@ -40,7 +40,7 @@ export function renderHeim(el, daten) {
 
   const umgebungKachel = umgebung.length > 0
     ? kachel({
-        href: '#/pfad/umgebung', hue: 'pf-sky', icon: 'fa-mountain',
+        href: '#/pfad/umgebung', hue: 'pf-sky', icon: 'fa-users',
         titel: esc(t('pfad_umgebung')),
         meta: ` <span class="chip">${esc(t('n_bausteine', { n: umgebung.length }))}</span>`,
         text: esc(t('pfad_umgebung_text')),

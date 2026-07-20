@@ -23,7 +23,14 @@
       "trainer"
     ],
     "baustein_typ": [
-      "micro"
+      "micro",
+      "umgebungs_baustein"
+    ],
+    "witterung": [
+      "proberaum",
+      "buehne",
+      "aufnahme",
+      "solo"
     ],
     "stil": [
       "hardcore",
