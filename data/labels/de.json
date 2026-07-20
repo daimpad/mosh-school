@@ -75,11 +75,11 @@
     "pfad_themen_text": "Wähle dein Instrument und arbeite dich durch.",
     "pfad_spielform": "Das Doppel",
     "pfad_spielform_text": "Das ganze Doppel als Querschnittsthema — quer über Taktik, Kondition und Mentales.",
-    "pfad_umgebung": "Draußen spielen",
-    "pfad_umgebung_text": "Üben und Spielen außerhalb des Proberaums.",
-    "umgebung_wetter": "Nach Wetter",
+    "pfad_umgebung": "Kontext",
+    "pfad_umgebung_text": "Wo und wie du spielst: Proberaum, Bühne, Aufnahme, Solo — die Bausteine, die quer zu Stufe und Instrument in jeder Spielsituation zählen.",
+    "umgebung_wetter": "Nach Situation",
     "umgebung_boden": "Nach Boden",
-    "umgebung_alle": "Die ganze Outdoor-Reihe",
+    "umgebung_alle": "Alle Kontext-Bausteine",
     "pfad_individual": "Individualpfad",
     "pfad_individual_text": "Nur die Bausteine, die auf dein gewähltes Ziel einzahlen.",
     "pfad_training": "Trainingspfad",
@@ -572,7 +572,15 @@
     "lampenfieber": "Lampenfieber & Auftrittsnervosität",
     "fokus_konzentration": "Fokus & Konzentration beim Üben",
     "motivation_disziplin": "Motivation, Disziplin & Dranbleiben",
-    "plateau_ueberwinden": "Plateaus & Stillstand überwinden"
+    "plateau_ueberwinden": "Plateaus & Stillstand überwinden",
+    "kontext_proberaum_effizienz": "Proberaum: die Zeit wirklich nutzen",
+    "kontext_proberaum_zusammenspiel": "Proberaum: aufeinander hören",
+    "kontext_buehne_praesenz": "Bühne: Präsenz & Energie",
+    "kontext_buehne_ablauf": "Bühne: Soundcheck & Ablauf",
+    "kontext_aufnahme_tightness": "Aufnahme: für die Ewigkeit spielen",
+    "kontext_aufnahme_vorbereitung": "Aufnahme: Vorbereitung & Pre-Production",
+    "kontext_solo_struktur": "Solo-Üben: allein wirklich vorankommen",
+    "kontext_solo_ohne_band": "Solo-Üben: Timing ohne Band halten"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -722,10 +730,10 @@
       "kunstrasen": "Kunstrasen"
     },
     "witterung": {
-      "wind": "Wind",
-      "sonne_blendung": "Sonne & Blendung",
-      "naesse": "Nässe",
-      "hitze": "Hitze"
+      "proberaum": "Proberaum",
+      "buehne": "Bühne",
+      "aufnahme": "Aufnahme",
+      "solo": "Solo-Üben"
     },
     "abschluss_status": {
       "offen": "offen",

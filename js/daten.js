@@ -45,6 +45,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.genreuebergreifend.json',
   'data/bausteine.experte-vertiefung.json',
   'data/bausteine.koerper-mentales.json',
+  'data/bausteine.kontext.json',
 ];
 
 export async function ladeDaten() {
