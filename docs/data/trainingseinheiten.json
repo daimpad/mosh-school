@@ -1467,9 +1467,9 @@
       "phasen": {
         "erwaermung": [
           {
-            "baustein": "greifhand_grundlagen",
+            "baustein": "rudiments_grundlage",
             "hinweis": {
-              "de": "Locker und ohne Tempo — die Greifhand wach machen, bevor es ums Zusammenspiel geht."
+              "de": "Ein paar Minuten Einzel- und Doppelschläge, damit die Hände am Set locker sind."
             }
           },
           {
@@ -1479,15 +1479,9 @@
             }
           },
           {
-            "baustein": "rudiments_grundlage",
+            "baustein": "greifhand_grundlagen",
             "hinweis": {
-              "de": "Ein paar Minuten Einzel- und Doppelschläge, damit die Hände am Set locker sind."
-            }
-          },
-          {
-            "baustein": "atemstuetze",
-            "hinweis": {
-              "de": "Für die Stimme: ruhig auf die Atemstütze einstimmen, bevor es laut wird."
+              "de": "Locker und ohne Tempo — die Greifhand wach machen, bevor es ums Zusammenspiel geht."
             }
           }
         ],
