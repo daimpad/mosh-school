@@ -3,7 +3,7 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "fortgeschritten",
     "domaene": "stil-djent",
-    "hinweis": "Genre-Achse Djent / Prog-Metalcore: sechs Bausteine quer durch die Domänen, alle stil:[djent]. Zusammen mit Retags bestehender Bausteine (djent_technik, polyrhythmik_theorie, ungerade_takte_theorie, polyrhythmik_einstieg, ungerade_takte_drums, clean_harsh_wechsel) trägt sie den Pfad. Der neue Gitarren-Baustein ist der fortgeschrittene On-Ramp zum Experten-Baustein djent_technik. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+    "hinweis": "Genre-Achse Djent / Prog-Metalcore: acht Bausteine quer durch die Domänen, alle stil:[djent] — inkl. Sound/Gear (Ausrüstung) und Körper/Präzision zur Vertiefung auf Doom-Niveau. Zusammen mit Retags bestehender Bausteine (djent_technik, polyrhythmik_theorie, ungerade_takte_theorie, polyrhythmik_einstieg, ungerade_takte_drums, clean_harsh_wechsel) trägt sie den Pfad. Der Gitarren-Baustein djent_gitarre_pocket ist der fortgeschrittene On-Ramp zum Experten-Baustein djent_technik. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
   },
   "delta_bausteine": [],
   "bausteine": [
@@ -139,6 +139,36 @@
       },
       "reflexionsaufgabe": {
         "de": "Analysiere einen Djent- oder Prog-Metalcore-Song, den du stark findest, als Dichtekurve: Zeichne über die Zeit auf, wann es dicht und perkussiv wird (die verschobenen Riffs) und wann es sich öffnet (Clean, Flächen, Melodie). Wie viel Raum gibt es wirklich — und macht gerade der Raum die dichten Teile stärker?\n\nÜberleg für dich oder deine Band: Habt ihr Teile, in denen zu viel Komplexität auf einmal die Wirkung abstumpft? Wo könntet ihr Raum schaffen, damit der nächste dichte Teil doppelt trifft? Und ganz praktisch: Probt ihr die Übergänge zwischen dicht und offen gezielt — den gemeinsamen Absprung in die Weite und den Wiedereinstieg in den verschobenen Groove auf den Schlag genau — oder hofft ihr, dass der Puls schon zusammenhält? Nimm dir den einen Übergang vor, der am wackligsten sitzt, und plan, wie ihr ihn als Kollektiv sauber trefft."
+      }
+    },
+    {
+      "id": "djent_sound_gear",
+      "anzeigetitel": { "de": "Djent-Sound: Attack, Definition & Tightness" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["sound_core_tight", "saiten_tunings_standards"],
+      "erklaerteil": {
+        "de": "Der Djent-Sound ist zu einem großen Teil ein Ton der Ansprache: Das perkussive „dj-ent“ entsteht nicht nur aus der Hand, sondern aus einer Kette, die den Anschlag-Transienten betont und die tiefe Saite zugleich definiert hält. Ohne den richtigen Ton verpufft selbst das sauberste verschobene Riff zu Matsch.\n\nVier Bausteine formen ihn. Erstens die Basis: erweiterte Tonumfänge (Sieben-/Achtsaiter) oder sehr tiefe Drop-Stimmungen — und dazu zwingend passend dicke Saiten, damit die tiefste Saite Spannung und Kontur behält statt zu schlackern. Zweitens die Zerre: eher moderat und tight als maximal. Djent lebt von Definition; zu viel Gain verschmiert die Kante, die den Chug perkussiv macht. Drittens der Attack: ein betonter oberer Mittenbereich (oft ein Tubescreamer-artiger Boost vor dem Amp) lässt den Pick-Transienten durchstechen — das ist der eigentliche „Klick“ des Djent. Viertens die Tightness: ein sauber eingestelltes Noise Gate hält die Staccato-Chugs kurz und trocken, und ein definierter, präziser Kick am Schlagzeug verzahnt sich mit den Akzenten, statt in der Tiefe zu verschwimmen.\n\nDer rote Faden: Djent ist ein Ton der Kontrolle, nicht der Masse. Alles zielt darauf, den einzelnen perkussiven Anschlag hörbar und tight zu machen — und wie immer gilt: Der Sound verstärkt eine saubere Hand, er ersetzt sie nicht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör drei Djent-/Prog-Metalcore-Produktionen gezielt auf die Ansprache: Wie stark sticht der Pick-Attack durch (der „Klick“)? Wie definiert bleibt die tiefste Saite trotz der Tiefe? Wie tight und trocken sind die Staccato-Chugs?\n\nGeh dann deine eigene Kette durch (oder plane sie): Passt die Saitenstärke zur Stimmung, oder schlackert die Tiefe? Ist dein Gain wirklich tight, oder wollig-zu-viel? Betont deine Kette den Attack (Boost/obere Mitten), sodass der Chug perkussiv wird? Und der ehrliche Test: Klingt ein einzelner Chug trocken und definiert — oder brauchst du das Gate, um unsaubere Dämpfung zu kaschieren? Notier die eine Stellschraube (Saiten, Gain, Attack-Boost, Gate), die deinen Djent-Ton am meisten schärfen würde."
+      }
+    },
+    {
+      "id": "djent_koerper_praezision",
+      "anzeigetitel": { "de": "Djent-Körper: Präzision aus Lockerheit" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["handgesundheit_tempo", "aufwaermen_handgesundheit"],
+      "erklaerteil": {
+        "de": "Djent ist körperlich eine Falle: Weil alles so präzise und tight sein muss, verführt es zum Verkrampfen — und Verkrampfung ist genau das, was die Präzision zerstört und die Sehnen belastet. Die eigentliche Fähigkeit des Djent-Spielers ist paradox: locker bleiben, um tight zu sein.\n\nDrei Zusammenhänge. Erstens die Hand-Ökonomie: Die dichten, perkussiven Anschläge und das ständige Dämpfen belasten Handgelenk und Unterarm. Der Schlüssel ist eine minimale, effiziente Bewegung — kleine, lockere Anschläge statt kraftvoller großer. Wer mit Kraft gegen das Tempo ankämpft, verkrampft und verliert beides: Groove und Gesundheit. Zweitens der mentale Druck: Das Mitzählen der verschobenen Gruppierungen erzeugt Anspannung, die sich in Schultern, Nacken und Greifhand fortsetzt. Die verschobene Metrik muss ins Körpergefühl wandern (der gerade Puls im Fuß), damit der Kopf loslässt und der Körper locker bleibt. Drittens die Grundlagen: Aufwärmen vor jeder Session, Lockerheit vor Kraft, Gehörschutz bei Bandlautstärke — und bei Ziehen, Taubheit oder Kribbeln in Hand oder Unterarm sofort stoppen.\n\nDer Grundsatz: Tightness kommt aus Entspannung, nicht aus Anspannung. Kurze, konzentrierte Blöcke, in denen du bewusst locker bleibst, bringen mehr als langes verbissenes Üben — und bei anhaltenden Beschwerden gehört das ärztlich oder physiotherapeutisch abgeklärt, bevor aus Verspannung eine chronische Überlastung wird."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beobachte dich beim Üben eines verschobenen Djent-Riffs ehrlich: Wo verkrampfst du, sobald es tight werden soll — in der Anschlagshand, der Greifhand, den Schultern, dem Kiefer? Wird dein Anschlag mit steigendem Tempo größer und kraftvoller (falsch) oder kleiner und lockerer (richtig)?\n\nProbier den Gegentest: Spiel dasselbe Muster bewusst so locker und leise wie möglich, mit minimaler Bewegung, und halte den geraden Puls im Fuß statt im Kopf. Wird es dadurch tighter? Benenne dann deine zwei größten Anspannungs-Stellen und je eine konkrete Gegenmaßnahme (kleinere Bewegung, Schultern senken, Puls in den Fuß, Pause). Und die Sicherheitsfrage: Hast du ein klares Stopp-Signal bei Ziehen oder Kribbeln in Hand/Unterarm — und hältst du dich daran? Schreib es dir auf. Bei anhaltenden Beschwerden ärztlich abklären."
       }
     }
   ]
