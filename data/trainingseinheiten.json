@@ -1100,6 +1100,360 @@
           }
         ]
       }
+    },
+    {
+      "id": "deathcore_gitarre",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Breakdown-Gitarre"
+      },
+      "beschreibung": {
+        "de": "Chugs und Powerchord als Waffe: Du wärmst die Greifhand auf, festigst die Dämpfung und baust daraus einen wuchtigen, synkopierten Breakdown mit echter Stille."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Langsam und locker — nur Aufwärmen, kein Tempotest."
+            }
+          },
+          {
+            "baustein": "palm_muting",
+            "hinweis": {
+              "de": "Such den Dämpfpunkt am Steg jedes Mal neu; der Ton knallt und ist sofort tot."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "chugs_breakdown",
+            "hinweis": {
+              "de": "Wenige Töne, viel Stille — spür den Kontrast aus Schlag und Lücke."
+            }
+          },
+          {
+            "baustein": "deathcore_breakdown_wucht",
+            "hinweis": {
+              "de": "Übe zuerst nur die Kante vom schnellen Teil in den ersten schweren Schlag."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Locker ausklingen lassen: minimaler Greifdruck, Hände bewusst entspannen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "djent_gitarre",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Pocket & Polymetrik (Gitarre)"
+      },
+      "beschreibung": {
+        "de": "Perkussive Chugs über geradem Puls: Aufwärmen, tighte Palm-Mute-Systeme, dann verschobene Gruppierungen, die im Körper sitzen statt im Kopf."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker und leise starten."
+            }
+          },
+          {
+            "baustein": "palm_mute_systeme",
+            "hinweis": {
+              "de": "Tight und trocken — der einzelne Chug muss knallen und tot sein."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "djent_gitarre_pocket",
+            "hinweis": {
+              "de": "Den Viertelpuls mit dem Fuß mittippen, während die Hand die Fünfer spielt."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Ausklingen mit minimaler Bewegung — Lockerheit ist der Djent-Kern."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoner_gitarre",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "fuzziger Groove (Gitarre)"
+      },
+      "beschreibung": {
+        "de": "Der Riff regiert: Aufwärmen, Downpicking-Kondition, dann ein fuzziger Groove mit bewusster Lücke, leicht hinter dem Puls und lustvoll wiederholt."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker aufwärmen."
+            }
+          },
+          {
+            "baustein": "downpicking",
+            "hinweis": {
+              "de": "Gleichmäßiger, entschlossener Abschlag — die Basis für den Groove."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "stoner_riff_fuzz",
+            "hinweis": {
+              "de": "Leicht hinter dem Klick spielen und die Lücke wirklich stehen lassen; jede Runde minimal variieren."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Entspannt ausklingen, Hände lockern."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "deathcore_drums",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Blast & Breakdown (Drums)"
+      },
+      "beschreibung": {
+        "de": "Dichte gegen Wucht: Aufwärmen, Blast-Varianten sichern, dann auf den Schlag zwischen Blast-Teppich und schwerem Breakdown umschalten. Gehörschutz, Lockerheit vor Kraft."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Locker und gleichmäßig aufwärmen."
+            }
+          },
+          {
+            "baustein": "double_bass",
+            "hinweis": {
+              "de": "Fuß entspannt, Schläge gleich laut — kein Kraftakt."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "blast_varianten",
+            "hinweis": {
+              "de": "In kurzen Blöcken, Lockerheit vor Tempo."
+            }
+          },
+          {
+            "baustein": "deathcore_gravity_blast",
+            "hinweis": {
+              "de": "Schaltvorgang üben: harter Schnitt vom Blast in den Breakdown, exakt auf dem Schlag."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Ruhig ausklingen, Lockerheit prüfen, Ohren schonen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "djent_drums",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Polymetrik (Drums)"
+      },
+      "beschreibung": {
+        "de": "Gerader Boden, wandernde Betonung: Koordination aufwärmen, Sechzehntel-Fundament festigen, dann die Kick in die Fünfer-Gruppen legen, während die Hände gerade bleiben."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "koordination",
+            "hinweis": {
+              "de": "Locker aufwärmen, Unabhängigkeit wecken."
+            }
+          },
+          {
+            "baustein": "double_bass_sechzehntel",
+            "hinweis": {
+              "de": "Gleichmäßiger, kontrollierter Fuß — die Basis für die verschobene Kick."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "djent_drums_polymetrik",
+            "hinweis": {
+              "de": "Hi-Hat bewusst stur gerade halten, während die Kick wandert; bei jedem Ausreißer zurück zum geraden Boden."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Ruhig und gerade ausklingen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "deathcore_bass",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "tiefes Fundament (Bass)"
+      },
+      "beschreibung": {
+        "de": "Definition in der Tiefe: Greifhand und Dämpfung aufwärmen, dann ein tiefes, definiertes Fundament, das die Breakdown-Akzente exakt mit der Gitarre trifft."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Locker aufwärmen, sauber greifen."
+            }
+          },
+          {
+            "baustein": "palm_muting_bass",
+            "hinweis": {
+              "de": "Dämpfung sichern — Attack und Kontur statt Wummern."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "deathcore_bass_fundament",
+            "hinweis": {
+              "de": "Auf kleinen Lautsprechern prüfen, ob jede Tonhöhe erkennbar bleibt; Akzente exakt mit der Gitarre."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grundton_folgen",
+            "hinweis": {
+              "de": "Ruhig ausklingen, sauber den Grundtönen folgen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "experte_gitarre_lead",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Lead-Gitarre (Tapping & Harmonics)"
+      },
+      "beschreibung": {
+        "de": "Ausdruck und Sauberkeit: Aufwärmen und Phrasierung, dann fließendes Legato/Tapping und Pinch-Harmonics als Geste — gleichmäßig vor schnell."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Gründlich und locker aufwärmen — Legato verlangt lockere Finger."
+            }
+          },
+          {
+            "baustein": "lead_phrasierung",
+            "hinweis": {
+              "de": "Phrasierung wecken: Motiv, Betonung, Atempause."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "gitarre_tapping_legato",
+            "hinweis": {
+              "de": "Jeden Ton gleich laut wie angeschlagen; Dämpfung beider Hände, dann erst Tempo."
+            }
+          },
+          {
+            "baustein": "gitarre_kunstharmonics",
+            "hinweis": {
+              "de": "Den Sweet Spot reproduzierbar treffen und mit Bending/Vibrato zur Geste machen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "gitarre_improvisation",
+            "hinweis": {
+              "de": "Kreativer Ausklang: aus wenig Material über ein Riff frei phrasieren."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "deathcore_vocals",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Gutturals & Squeals (Vocals)"
+      },
+      "beschreibung": {
+        "de": "Breite ohne Verschleiß: gründlich aufwärmen, einzeln und leise sichern, die Register behutsam anlegen. Nach jeder Einheit Sprechtest, bei Kratzen sofort stoppen — Squeals nur mit Lehrperson."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft und leise aufwärmen — nie in Heiserkeit hinein."
+            }
+          },
+          {
+            "baustein": "atemstuetze",
+            "hinweis": {
+              "de": "Die Stütze ist die Basis für alle Register; aus Luft und Resonanz, nicht aus Druck."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "deathcore_gutturals_squeals",
+            "hinweis": {
+              "de": "Register einzeln und leise; Pig-Squeals nur mit Lehrperson. Bei Engegefühl sofort stoppen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "tonhoehe_clean",
+            "hinweis": {
+              "de": "Ruhiger Ausklang auf einer sauberen Clean-Linie; danach Sprechtest, bei Heiserkeit HNO."
+            }
+          }
+        ]
+      }
     }
   ]
 }
