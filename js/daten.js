@@ -42,6 +42,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.stil-deathcore.json',
   'data/bausteine.stil-djent.json',
   'data/bausteine.stil-stoner-post.json',
+  'data/bausteine.genreuebergreifend.json',
 ];
 
 export async function ladeDaten() {
