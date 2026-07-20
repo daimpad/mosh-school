@@ -637,6 +637,54 @@ S["djent_dramaturgie_raum"] = [
     P(wavepath(72, 106, 62, 12, 1.0, step=2.0), 3),
 ]
 
+# ================= STONER / POST-METAL-ACHSE (stil-stoner_post, fortgeschritten) =====
+# Stoner: fuzziger Groove, Riff-Ökonomie, Bluesfarbe (Rauigkeit + Punkte + Bögen).
+# Post-Metal: Dynamik & Langform — anschwellende Hüllkurven von der Stille zur Wand.
+
+# Fuzz, Groove & Riff: gefuzzte Textur über wenigen schweren Chugs mit einer
+# bewussten Lücke, abgeschlossen von einem Blues-Bending-Bogen.
+S["stoner_riff_fuzz"] = [
+    P(roughpath(16, 92, 42, 5, step=2.6, seed=311), 2.2),
+    RECT(20, 58, 12, 24, filled=True), RECT(40, 58, 12, 24, filled=True),
+    RECT(78, 58, 12, 24, filled=True),
+    ARC(70, 70, 12, 30, 150, 2.5),
+]
+# Fuzz-Bass: schweres warmes Fundament, darüber eine bewegte, gefuzzte Linie,
+# darauf der Groove-Puls (Punkte).
+S["stoner_bass_fuzz_groove"] = [
+    L(14, 84, 106, 84, 6),
+    P(roughpath(16, 104, 56, 8, step=3.0, seed=317), 2.5),
+    C(30, 84, 3, fill=True), C(60, 84, 3, fill=True), C(90, 84, 3, fill=True),
+]
+# Groove, Dynamik & Aufbau: anschwellende Ticks (leise → laut, Crescendo),
+# früh ein paar leise Ghost Notes (Hohlkreise).
+S["postmetal_drums_crescendo"] = [
+    L(12, 90, 108, 90, 2),
+    *[L(16 + i * 8, 90, 16 + i * 8, 90 - (6 + i * 4.5), 2 + i * 0.35) for i in range(12)],
+    C(24, 80, 3, 1.5), C(40, 76, 3, 1.5),
+]
+# Atmosphäre & Klimax: ruhige Clean-Welle links, ein einzelner rauer
+# Klimax-Ausbruch rechts, darüber ein weiter Atembogen.
+S["postmetal_vocals_dynamik"] = [
+    P(wavepath(14, 80, 62, 8, 1.5, step=2.0), 2.5),
+    ARC(48, 44, 30, 200, 340, 1.6),
+    P(roughpath(86, 106, 60, 20, step=2.2, seed=331), 3),
+]
+# Riff-Ökonomie & Bluesfarbe: wenige Töne (Punkte) auf einer Linie, dazwischen
+# ein Bending-Bogen in die Blue Note.
+S["stoner_riff_harmonik"] = [
+    L(14, 78, 106, 78, 2),
+    C(24, 78, 5, fill=True), C(52, 78, 5, fill=True), C(88, 78, 5, fill=True),
+    ARC(70, 78, 18, 20, 160, 2.5),
+    ARC(24, 64, 8, 30, 150, 1.8),
+]
+# Langform & Geduld: eine lange, geduldig anschwellende Welle von der Stille bis
+# zur Wand (gefülltem Block) am Ende.
+S["postmetal_langform_geduld"] = [
+    P(wavepath(14, 100, 62, 30, 3, step=1.6, env=lambda t: 0.1 + 0.9 * t), 2.5),
+    RECT(96, 40, 10, 44, filled=True),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -660,7 +708,9 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "deathcore_breakdown_wucht", "deathcore_bass_fundament", "deathcore_gravity_blast",
                 "deathcore_gutturals_squeals", "deathcore_riff_dissonanz", "deathcore_dynamik_dramaturgie",
                 "djent_gitarre_pocket", "djent_bass_lock", "djent_drums_polymetrik",
-                "djent_vocals_dynamik", "djent_theorie_polymetrik", "djent_dramaturgie_raum"]
+                "djent_vocals_dynamik", "djent_theorie_polymetrik", "djent_dramaturgie_raum",
+                "stoner_riff_fuzz", "stoner_bass_fuzz_groove", "postmetal_drums_crescendo",
+                "postmetal_vocals_dynamik", "stoner_riff_harmonik", "postmetal_langform_geduld"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
