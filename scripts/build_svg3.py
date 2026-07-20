@@ -901,6 +901,64 @@ S["plateau_ueberwinden"] = [
     L(108, 24, 100, 28, 2), L(108, 24, 103, 33, 2),
 ]
 
+# ================= KONTEXT (umgewidmete Umgebungs-Achse) =================
+# Spielsituationen: Proberaum, Bühne, Aufnahme, Solo.
+
+# Proberaum-Effizienz: eine Uhr — die Zeit gezielt nutzen.
+S["kontext_proberaum_effizienz"] = [
+    C(60, 60, 34, 3),
+    L(60, 60, 60, 36, 3),
+    L(60, 60, 80, 68, 2.5),
+    C(60, 60, 3, fill=True),
+]
+# Zusammenspiel: zwei einander zugewandte Ohren/Bögen mit gemeinsamem Punkt.
+S["kontext_proberaum_zusammenspiel"] = [
+    ARC(38, 60, 20, 300, 60, 3.5),
+    ARC(82, 60, 20, 120, 240, 3.5),
+    C(60, 60, 4, fill=True),
+    C(60, 60, 12, 1.5), C(60, 60, 18, 1.5),
+]
+# Bühnenpräsenz: eine Figur mit Ausstrahlung auf der Bühne.
+S["kontext_buehne_praesenz"] = [
+    L(20, 96, 100, 96, 3),
+    C(60, 40, 8, 3),
+    L(60, 48, 60, 78, 3),
+    L(60, 56, 44, 66, 2.5), L(60, 56, 76, 66, 2.5),
+    L(60, 78, 48, 96, 2.5), L(60, 78, 72, 96, 2.5),
+    L(42, 30, 36, 22, 2), L(78, 30, 84, 22, 2), L(60, 24, 60, 14, 2),
+]
+# Soundcheck & Ablauf: eine Signalkette aus Blöcken und Pfeilen.
+S["kontext_buehne_ablauf"] = [
+    RECT(14, 52, 18, 16, filled=False),
+    P("M33,60 L44,60", 2.5), L(44, 60, 40, 57, 2), L(44, 60, 40, 63, 2),
+    RECT(46, 52, 18, 16, filled=False),
+    P("M65,60 L76,60", 2.5), L(76, 60, 72, 57, 2), L(76, 60, 72, 63, 2),
+    RECT(78, 52, 18, 16, filled=False),
+]
+# Aufnahme-Tightness: Töne exakt auf dem Raster.
+S["kontext_aufnahme_tightness"] = [
+    *[L(20 + i * 18, 32, 20 + i * 18, 88, 1.5) for i in range(5)],
+    L(14, 60, 106, 60, 2),
+    *[C(20 + i * 18, 60, 3.5, fill=True) for i in range(5)],
+]
+# Vorbereitung: eine Checkliste (Häkchen vor Zeilen).
+S["kontext_aufnahme_vorbereitung"] = [
+    *[L(42, 36 + i * 20, 100, 36 + i * 20, 2.5) for i in range(3)],
+    *[P(f"M20,{36 + i * 20} L27,{42 + i * 20} L36,{28 + i * 20}", 2.5) for i in range(3)],
+]
+# Solo-Struktur: eine Figur plus geordnete Plan-Blöcke.
+S["kontext_solo_struktur"] = [
+    C(30, 40, 8, 3), L(30, 48, 30, 76, 3),
+    L(30, 56, 22, 66, 2.5), L(30, 56, 38, 66, 2.5),
+    RECT(52, 78, 12, 12, filled=True), RECT(70, 66, 12, 24, filled=True), RECT(88, 54, 12, 36, filled=True),
+]
+# Solo ohne Band: ein Metronom (Pendel).
+S["kontext_solo_ohne_band"] = [
+    P("M46,96 L60,28 L74,96 Z", 3),
+    L(60, 92, 78, 44, 3),
+    C(78, 44, 4, fill=True),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -938,7 +996,11 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "komposition_langform", "gitarre_improvisation",
                 "gehoerschutz_tinnitus", "koerperhaltung_ergonomie", "ueberlastung_praevention",
                 "athletik_grundlage", "lampenfieber", "fokus_konzentration",
-                "motivation_disziplin", "plateau_ueberwinden"]
+                "motivation_disziplin", "plateau_ueberwinden",
+                "kontext_proberaum_effizienz", "kontext_proberaum_zusammenspiel",
+                "kontext_buehne_praesenz", "kontext_buehne_ablauf",
+                "kontext_aufnahme_tightness", "kontext_aufnahme_vorbereitung",
+                "kontext_solo_struktur", "kontext_solo_ohne_band"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:

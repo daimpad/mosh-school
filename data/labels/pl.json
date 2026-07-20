@@ -572,7 +572,15 @@
     "lampenfieber": "",
     "fokus_konzentration": "",
     "motivation_disziplin": "",
-    "plateau_ueberwinden": ""
+    "plateau_ueberwinden": "",
+    "kontext_proberaum_effizienz": "",
+    "kontext_proberaum_zusammenspiel": "",
+    "kontext_buehne_praesenz": "",
+    "kontext_buehne_ablauf": "",
+    "kontext_aufnahme_tightness": "",
+    "kontext_aufnahme_vorbereitung": "",
+    "kontext_solo_struktur": "",
+    "kontext_solo_ohne_band": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -722,10 +730,10 @@
       "kunstrasen": ""
     },
     "witterung": {
-      "wind": "",
-      "sonne_blendung": "",
-      "naesse": "",
-      "hitze": ""
+      "proberaum": "",
+      "buehne": "",
+      "aufnahme": "",
+      "solo": ""
     },
     "abschluss_status": {
       "offen": "",
@@ -881,7 +889,15 @@
     "grind_werkstatt": "",
     "crust_werkstatt": "",
     "pv_werkstatt": "",
-    "genre_schnupper": ""
+    "genre_schnupper": "",
+    "deathcore_gitarre": "",
+    "djent_gitarre": "",
+    "stoner_gitarre": "",
+    "deathcore_drums": "",
+    "djent_drums": "",
+    "deathcore_bass": "",
+    "experte_gitarre_lead": "",
+    "deathcore_vocals": ""
   },
   "lehrgrafiken": {
     "grundbeat": "",

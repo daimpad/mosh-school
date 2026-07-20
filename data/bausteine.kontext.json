@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "kontext",
+    "hinweis": "Kontext-Achse (umgewidmete Umgebungs-Achse aus dem Fork): Querschnitt-Bausteine (typ umgebungs_baustein), die nicht an einer Stufe hängen, sondern an der Spielsituation — Proberaum, Bühne, Aufnahme, Solo-Üben. Über die witterung-Facette gruppiert (Werte im kanonischen vokabulare). Alle mit Reflexionsaufgabe. Kein Vokabular-Block hier."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "kontext_proberaum_effizienz",
+      "anzeigetitel": { "de": "Proberaum: die Zeit wirklich nutzen" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["proberaum"],
+      "erklaerteil": {
+        "de": "Proberaumzeit ist knapp und teuer — und trotzdem versickert sie oft in Warten, Herumjammen und Diskussionen, statt dass am Ende etwas Besseres steht. Eine Probe ist kein Konzert und kein gemütliches Zusammensein, sondern gemeinsame, gezielte Arbeit. Wer das ernst nimmt, kommt mit weniger Proben weiter als eine Band, die doppelt so oft ziellos zusammensitzt.\n\nDrei Dinge machen den Unterschied. Erstens die Vorbereitung: Wer seinen Part zu Hause übt, verschwendet die gemeinsame Zeit nicht damit, allein Noten zu lernen — der Proberaum ist für das Zusammenspiel da, nicht fürs Einzelüben. Zweitens ein Ziel pro Probe: Was soll am Ende sitzen (dieser Übergang, dieser neue Teil, dieser Song von vorn bis hinten)? Ein klares Ziel gibt der Probe Richtung. Drittens die Struktur: aufbauen und stimmen, kurz aufwärmen, dann konzentriert am Ziel arbeiten (die schweren Stellen zuerst, nicht immer den Anfang), am Schluss vielleicht zur Belohnung durchspielen.\n\nUnd die Ehrlichkeit: Aufnehmen (auch nur mit dem Handy) zeigt gnadenlos, was wirklich sitzt und was man sich nur einbildet. Eine Probe, aus der eine konkrete Verbesserung mitgeht, war eine gute Probe."
+      },
+      "reflexionsaufgabe": {
+        "de": "Denk an eure letzten Proben: Wie viel Zeit ging in Warten, Einzelüben und Diskussion, wie viel in konzentriertes Zusammenspiel? Kamt ihr mit einem klaren Ziel — oder habt ihr vor allem gespielt, was schon sitzt?\n\nPlant die nächste Probe bewusst: Einigt euch vorher (kurz per Nachricht) auf EIN Ziel und darauf, dass jeder seinen Part vorbereitet mitbringt. Legt einen groben Ablauf fest (Aufbau, kurzes Warmspielen, die schwerste Stelle zuerst, dann der Rest). Nehmt einen Teil mit dem Handy auf und hört rein: Sitzt es wirklich? Prüft danach ehrlich: War diese Probe produktiver als die davor — und was nehmt ihr als feste Gewohnheit mit?"
+      }
+    },
+    {
+      "id": "kontext_proberaum_zusammenspiel",
+      "anzeigetitel": { "de": "Proberaum: aufeinander hören" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["proberaum"],
+      "erklaerteil": {
+        "de": "Eine Band ist mehr als mehrere Leute, die gleichzeitig ihren Part spielen — sie ist ein Zusammenspiel, das nur entsteht, wenn man aufeinander hört. Gerade im lauten, dichten Metal ist das schwer: Jeder ist mit dem eigenen anspruchsvollen Part beschäftigt, und die Lautstärke erschwert das Hören zusätzlich. Trotzdem entscheidet genau das über den Unterschied zwischen einer Ansammlung von Einzelspielern und einer Band, die als Einheit groovt.\n\nDrei Dinge helfen. Erstens die Lautstärke im Griff: Wenn alle auf Maximum spielen, hört niemand mehr die anderen — eine vernünftige, ausgewogene Proberaum-Lautstärke (und Gehörschutz) ist die Voraussetzung fürs Zuhören. Zweitens die Achsen im Zusammenspiel kennen: Schlagzeug und Bass bilden das rhythmische Fundament, auf das sich alle beziehen; wer weiß, wem er gerade folgt (der Gitarrist der Kick, der Sänger dem Riff), spielt tighter. Drittens die Kommunikation: klare Ansagen (Einzähler, Blicke, Zeichen für Übergänge) statt Hoffen, dass es schon passt — besonders an den verletzlichen Stellen wie Breakdowns und Tempowechseln.\n\nUnd die Haltung: Nicht der lauteste oder schnellste macht die beste Band, sondern die, die zusammen atmet. Zuhören ist eine aktive Fähigkeit, die man üben kann."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beobachte dich in der nächsten Probe: Hörst du die anderen wirklich, oder bist du in deinem eigenen Part gefangen? Auf wen beziehst du dich rhythmisch — und stimmt das mit dem überein, was die Musik gerade braucht?\n\nProbiert bewusst Zusammenspiel: Nehmt die Lautstärke so weit zurück, dass ihr euch gegenseitig hört, und spielt einen Song, bei dem jeder bewusst auf eine andere Person hört (die Gitarre auf die Kick, der Bass auf die Snare, der Gesang aufs Riff). Klärt für die kritischen Übergänge (Breakdown, Tempowechsel) ein klares Zeichen. Prüft danach: Klingt es tighter und mehr wie eine Einheit? Welche eine Kommunikations-Gewohnheit nehmt ihr fest mit?"
+      }
+    },
+    {
+      "id": "kontext_buehne_praesenz",
+      "anzeigetitel": { "de": "Bühne: Präsenz & Energie" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["buehne"],
+      "erklaerteil": {
+        "de": "Live zählt nicht nur, WAS du spielst, sondern WIE du es rüberbringst. Eine Band, die technisch perfekt, aber regungslos spielt, reißt niemanden mit; eine mit Präsenz und Energie kann kleine Patzer fast unsichtbar machen. Im Metal, wo die Musik von Intensität lebt, ist die körperliche Energie auf der Bühne Teil der Kunst — das Publikum spiegelt, was von der Bühne kommt.\n\nDrei Dinge tragen die Präsenz. Erstens die Körpersprache: aufrechte, raumgreifende Haltung, Bewegung, Blickkontakt mit dem Publikum und der Band — Energie, die man sieht, überträgt sich. Zweitens die Balance aus Präsenz und Präzision: Headbangen und Bewegung dürfen das Spiel nicht ruinieren; die Kunst ist, so viel Energie zu zeigen, wie man geben kann, ohne dass die Hände oder das Timing leiden (das probt man, statt es dem Zufall zu überlassen). Drittens die Haltung zu Fehlern: Weiterspielen, nicht zusammenzucken — ein Patzer, den man souverän überspielt, fällt kaum auf; einer, bei dem man erschrickt, umso mehr.\n\nUnd die Gesundheit: Bei aller Energie gelten Gehörschutz und ein kontrolliertes Headbangen (aus dem Oberkörper, nicht ruckartig aus dem Nacken) — die Bühne ist kein Grund, den Körper zu ruinieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Schau dir (falls vorhanden) ein Video von euch live an — oder stell dir eure Bühnenwirkung ehrlich vor: Kommt Energie rüber, oder steht ihr eher regungslos und in euch gekehrt? Ruiniert Bewegung bei dir manchmal das Spiel?\n\nÜbt Präsenz bewusst: Spiel einen Song im Proberaum stehend und mit voller Bühnenenergie (Bewegung, Kopf hoch, als wäre Publikum da) und prüf, ob dein Spiel trotzdem sauber bleibt — wo es leidet, dosier die Bewegung so, dass Energie UND Präzision zusammengehen. Leg für dich fest: eine konkrete Sache, die deine Bühnenpräsenz verbessert (Blick hoch, eine bestimmte Bewegung, souveräner Umgang mit Patzern). Und die Sicherheitsfrage: Ist dein Headbangen kontrolliert und trägst du Gehörschutz?"
+      }
+    },
+    {
+      "id": "kontext_buehne_ablauf",
+      "anzeigetitel": { "de": "Bühne: Soundcheck & Ablauf" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["buehne"],
+      "erklaerteil": {
+        "de": "Ein guter Auftritt beginnt lange vor dem ersten Ton — beim Soundcheck und in der Vorbereitung. Wer Technik und Ablauf im Griff hat, kann sich auf der Bühne aufs Spielen konzentrieren, statt mit Problemen zu kämpfen. Gerade im Metal, wo viel Lautstärke, tiefe Frequenzen und komplexe Signalketten zusammenkommen, entscheidet die Vorbereitung über einen souveränen oder chaotischen Abend.\n\nDrei Dinge sind zentral. Erstens das Monitoring: Du musst dich und die anderen hören, sonst spielst du blind — beim Soundcheck klar sagen, was du im Monitor brauchst (meist die eigene Stimme/das eigene Instrument plus Schlagzeug/Bass als Anker). Wer sich nicht hört, spielt unsauber. Zweitens die Ausfallsicherheit: Ersatzsaiten, Ersatzkabel, Ersatzsticks, ein gestimmtes Zweitinstrument, ein aufgeräumtes Pedalboard — was kaputtgehen kann, geht irgendwann kaputt, und Vorbereitung entscheidet, ob das den Abend killt oder nur eine Zwischenfrage ist. Drittens der Ablauf: eine geübte Setlist, klare Übergänge zwischen den Songs (wer zählt ein, wer sagt an), effizientes Auf- und Abbauen aus Rücksicht auf die anderen Bands.\n\nUnd der Gehörschutz gehört zur Bühnentechnik dazu — bei diesen Pegeln nicht optional, sondern Voraussetzung."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geh euren letzten Auftritt (oder einen geplanten) durch: Hast du dich auf der Bühne gehört — und wenn nicht, hast du beim Soundcheck klar gesagt, was du im Monitor brauchst? Was ging schief oder hätte schiefgehen können (Kabel, Saite, Stimmung, Übergänge)?\n\nBau dir eine Bühnen-Checkliste: Was brauchst du im Monitor (in einem Satz für den Soundcheck), welche Ersatzteile gehören griffbereit ins Gepäck, und wie sind die Übergänge zwischen euren Songs geregelt (wer zählt ein, wer sagt an)? Plane außerdem den Gehörschutz ein. Prüf beim nächsten Mal, ob die Checkliste den Abend souveräner macht — und ergänze, was gefehlt hat."
+      }
+    },
+    {
+      "id": "kontext_aufnahme_tightness",
+      "anzeigetitel": { "de": "Aufnahme: für die Ewigkeit spielen" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["experte"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["aufnahme"],
+      "erklaerteil": {
+        "de": "Eine Aufnahme ist unbarmherzig: Was live in der Energie untergeht, steht auf der Konserve für immer da und wird beim hundertsten Hören zum Ärgernis. Für die Aufnahme zu spielen ist deshalb eine eigene Disziplin — es verlangt eine Präzision und Konstanz, die man im Proberaum selten braucht, und ein Verständnis dafür, wie der Aufnahmeprozess funktioniert.\n\nDrei Dinge zählen besonders. Erstens die Tightness zum Klick: Fast alle modernen Metal-Produktionen entstehen zum Metronom, und die Instrumente müssen sehr genau darauf sitzen — nicht nur der Schlagzeuger, sondern alle, denn Ungenauigkeiten summieren sich und werden im Zusammenklang hörbar. Das übt man gezielt, lange bevor die Aufnahme läuft. Zweitens die Konstanz: Ein Riff muss über alle Wiederholungen gleich klingen (gleicher Anschlag, gleiche Dämpfung), weil Teile geschnitten und wiederholt werden — Schwankungen fallen auf. Drittens die Vorbereitung des Materials: Wer seine Parts wirklich sicher beherrscht (auch die schweren Stellen isoliert), spart teure Studiozeit und Nerven; die Aufnahme ist nicht der Ort, einen Part erst zu lernen.\n\nUnd die Gelassenheit: Aufnehmen ist Handwerk in kleinen Häppchen, nicht der eine perfekte Durchlauf. Wer das weiß, verkrampft weniger und wird tighter."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dich selbst zum Klick auf (Handy reicht) und hör gnadenlos hin: Wie tight sitzt du wirklich auf dem Metronom — und klingt ein wiederholtes Riff jedes Mal gleich, oder schwankt Anschlag und Dämpfung? Wo würdest du im Studio Zeit und Nerven verlieren?\n\nWähle die eine Stelle (oder den einen Song), die du als Nächstes aufnehmen würdest, und bereite sie auf Aufnahme-Niveau vor: sehr genau zum Klick, über viele Wiederholungen konstant, die schweren Stellen isoliert gesichert. Nimm dich erneut auf und vergleich. Prüf die Kernfrage: Würde das auf einer Konserve auch beim zehnten Hören noch überzeugen — oder hörst du Ungenauigkeiten, an denen du vor der Aufnahme arbeiten solltest?"
+      }
+    },
+    {
+      "id": "kontext_aufnahme_vorbereitung",
+      "anzeigetitel": { "de": "Aufnahme: Vorbereitung & Pre-Production" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["experte"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["aufnahme"],
+      "erklaerteil": {
+        "de": "Die beste Aufnahme entsteht, bevor das Mikrofon steht — in der Pre-Production. Wer unvorbereitet ins Studio geht, verbrennt Geld und bekommt trotzdem ein schlechteres Ergebnis. Vorbereitung heißt, alle Entscheidungen, die man vorher treffen kann, auch vorher zu treffen, damit im Studio nur noch das beste Spiel eingefangen werden muss.\n\nDrei Bereiche gehören dazu. Erstens die Arrangements: Die Songs sollten fertig und erprobt sein — Struktur, Übergänge, welche Gitarrenspur wo liegt, wo Vocal-Schichten kommen. Vieles klärt sich beim Aufnehmen einer groben Demo (auch zu Hause), an der man hört, was trägt und was fehlt. Zweitens der Sound: Tunings, Saitenstärken, welche Verzerrung, welche Amp-Einstellung — je klarer die Klangvorstellung vorher, desto zielgerichteter die Aufnahme (auch wenn im Studio noch feinjustiert wird). Drittens die Ökonomie: Was wird zum Klick gespielt, in welcher Reihenfolge nimmt man auf (meist Schlagzeug zuerst als Fundament), wer muss wann da sein — ein Plan spart Zeit und Stress.\n\nUnd der ehrliche Blick: Eine Demo-Aufnahme deckt Schwächen im Songwriting und im Spiel auf, die man live überhört. Sie zu nutzen, bevor es ernst (und teuer) wird, ist der halbe Weg zu einer guten Produktion."
+      },
+      "reflexionsaufgabe": {
+        "de": "Stell dir vor, ihr geht in vier Wochen ins Studio (oder nehmt selbst auf): Wie fertig sind eure Songs wirklich — Arrangements, Übergänge, Schichten? Wie klar ist eure Klangvorstellung (Tunings, Zerre, welche Spuren)? Habt ihr einen Ablaufplan?\n\nMach eine Pre-Production im Kleinen: Nehmt einen Song als grobe Demo auf (auch daheim, zum Klick) und hört gemeinsam kritisch rein — was trägt, was fehlt, welche Stelle ist noch nicht fertig? Legt daraus drei Dinge fest, die vor einer echten Aufnahme geklärt sein müssen (ein Arrangement-Detail, eine Sound-Entscheidung, ein Stück, das noch sicherer werden muss). Prüf die Kernfrage: Was würde euch im Studio am meisten Zeit kosten — und könnt ihr das vorher lösen?"
+      }
+    },
+    {
+      "id": "kontext_solo_struktur",
+      "anzeigetitel": { "de": "Solo-Üben: allein wirklich vorankommen" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["solo"],
+      "erklaerteil": {
+        "de": "Der größte Teil des Fortschritts passiert allein — nicht in der Probe, sondern beim täglichen Üben zu Hause. Genau deshalb entscheidet die Qualität des Solo-Übens über fast alles. Und allein zu üben ist schwerer, als es klingt: Niemand gibt Struktur vor, niemand hört zu, und die Versuchung, einfach zu spielen, was schon geht, ist groß.\n\nDrei Dinge machen das Solo-Üben effektiv. Erstens die Struktur: eine grobe Routine (aufwärmen, an einer konkreten Schwäche arbeiten, etwas festigen, was schon fast sitzt, zum Schluss frei spielen zur Belohnung) gibt der Zeit Richtung — statt ziellos vor sich hin zu spielen. Zweitens die ehrliche Selbstkontrolle: Weil niemand zuhört, ist die eigene Aufnahme (Handy) der beste Lehrer — sie zeigt gnadenlos, was wirklich sitzt und was man sich nur einbildet. Drittens die richtige Herausforderung: an der Grenze des Könnens üben, wo es gerade noch geht — nicht im Bereich, der schon sicher ist (langweilt, bringt nichts), und nicht weit darüber (frustriert, festigt Fehler).\n\nUnd die Nachhaltigkeit: Lieber täglich kurz und konzentriert als selten lang und zerstreut. Das Solo-Üben ist der Ort, an dem aus Vorsätzen Können wird — wenn es Struktur und Ehrlichkeit hat."
+      },
+      "reflexionsaufgabe": {
+        "de": "Schau auf dein Solo-Üben: Hat es eine Struktur, oder spielst du meist einfach, was dir gerade einfällt (und was schon geht)? Kontrollierst du dich ehrlich — etwa per Aufnahme — oder verlässt du dich aufs Gefühl?\n\nBau dir eine einfache Übe-Routine für die nächste Woche: aufwärmen, eine konkrete Schwäche gezielt bearbeiten, etwas Fast-Sitzendes festigen, kurz frei spielen. Nimm einmal in der Woche eine Stelle auf und hör ehrlich hin. Prüf die Kernfrage: Übst du an deiner Wachstumsgrenze (dort, wo es gerade noch geht) — oder zu leicht (Komfort) bzw. zu schwer (Frust)? Pass die Routine so an, dass sie dich wirklich fordert, aber tragbar bleibt."
+      }
+    },
+    {
+      "id": "kontext_solo_ohne_band",
+      "anzeigetitel": { "de": "Solo-Üben: Timing ohne Band halten" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "umgebungs_baustein",
+      "witterung": ["solo"],
+      "erklaerteil": {
+        "de": "Allein zu üben hat eine Tücke: Ohne Band fehlt der gemeinsame Puls, und man gewöhnt sich leicht an, das eigene Timing schleifen zu lassen — man zieht bei den einfachen Stellen an und schleppt bei den schweren, ohne es zu merken. Wer nur solo und ohne Referenz übt, festigt oft ein wackliges Timing, das dann in der Band auffliegt. Genau deshalb muss man allein bewusst gegen dieses Driften arbeiten.\n\nDrei Werkzeuge helfen. Erstens der Klick: konsequent zum Metronom zu üben ist die wichtigste Timing-Schule — er deckt gnadenlos auf, wo man zieht oder schleppt, und trainiert einen stabilen inneren Puls. Anfangs unbequem, aber unersetzlich. Zweitens Play-alongs und Backing-Tracks: zu einer Aufnahme (dem eigenen Song, einem Backing-Track) zu spielen simuliert die Band und zwingt dazu, sich in ein bestehendes Timing einzufügen, statt das eigene durchzudrücken. Drittens die Selbstaufnahme über den Klick: erst auf der Aufnahme hört man, ob man wirklich draufsaß — das Gefühl beim Spielen täuscht oft.\n\nUnd das Ziel dahinter: Ein Timing, das allein zum Klick stabil ist, trägt auch in der Band. Wer solo diszipliniert am Puls arbeitet, ist der zuverlässige Anker, den jede Band braucht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Prüf dein Solo-Timing ehrlich: Übst du regelmäßig zum Klick — oder meist frei? Ziehst du bei einfachen Stellen an und schleppst bei schweren? Woher weißt du, dass du wirklich draufsitzt (Gefühl reicht nicht)?\n\nMach den Test: Spiel eine Stelle, die du gut kennst, zum Metronom und nimm dich auf. Hör hin — sitzt du über die ganze Stelle stabil, oder driftest du bei bestimmten Passagen? Nimm dann eine Passage gezielt mit Klick und/oder einem Play-along vor, bis sie stabil liegt. Prüf die Kernfrage: Bleibt dein Puls auch dort stabil, wo es technisch schwer wird — oder verrät genau da dein Timing die Schwäche? Leg fest, wie du den Klick zum festen Teil deines Solo-Übens machst."
+      }
+    }
+  ]
+}
