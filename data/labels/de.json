@@ -287,6 +287,9 @@
     "pattern_spur_snare": "Snare",
     "pattern_spur_kick": "Kick",
     "pattern_zum_pfad": "Zum {name}-Pfad",
+    "pattern_pause": "Pause",
+    "pattern_stopp": "Stopp",
+    "pattern_spielt": "Spielt: {name}",
     "pattern_hinweis_pegel": "Die synthetischen Klänge sind bewusst schlicht — sie zeigen Rhythmus und Tonfolge, nicht den echten Sound. Bewusst leise abspielen; am Instrument gilt wie immer Gehörschutz, sobald der Amp läuft."
   },
   "bausteine": {
