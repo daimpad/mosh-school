@@ -1337,6 +1337,246 @@
           "korrektur": "Von den Klassikern die Proportionen ablesen lassen: Zustandsfolgen mit Stoppuhr protokollieren — wie viel Raserei steht wie viel Zeitlupe gegenüber, und wo genau sitzt der Block? Dann die eigene Miniatur als Zustandsfolge MIT Zeitangaben planen (auf Papier, vor dem Spielen): ein Zeitlupen-Block, bewusst platziert, exakt so lang, wie die Spannung trägt. Regel für die Revision: Wirkt ein Schnitt nicht, wird nicht der Schnitt weicher — es wird die Proportion verschoben."
         }
       }
+    },
+    {
+      "id": "fb_deathcore_breakdown_matsch",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_breakdown_wucht",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Breakdown klingt nach Brei statt nach einzelnen, schweren Schlägen — zwischen den Chugs rauscht die tiefe Saite weiter, die Kante vom schnellen Teil in den Breakdown franst.",
+          "ursache": "Die Dämpfhand arbeitet nicht sauber: Die Saite wird zwischen den Schlägen nicht abgestoppt, und der erste schwere Schlag sitzt nicht exakt auf der Kante. Oft wird das Noise Gate als Ersatz für saubere Technik missverstanden.",
+          "korrektur": "Nur die Kante isolieren: vier Takte schneller Teil, winzige bewusste Pause, dann EIN schwerer Schlag exakt auf der Eins — zehnmal. Danach den Breakdown aus wenigen Tönen mit echter Stille bauen; die Greif-/Dämpfhand muss zwischen den Schlägen greifen. Gate erst zuschalten, wenn es OHNE Gate schon halbwegs sauber ist."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_bass_wummern",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_bass_fundament",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In extremer Tiefe wird der Bass zu undefiniertem Wummern; auf kleinen Lautsprechern ist keine Tonhöhe mehr erkennbar, und die Breakdown-Akzente verschmieren mit der Gitarre.",
+          "ursache": "Zu dünne Saiten für die tiefe Stimmung (die Saite schlackert) und/oder fehlender Attack — der Ton hat keinen Anschlagskern, der durch die Dichte sticht. Die Akzente sitzen nicht exakt auf denselben Schlägen wie die Gitarre.",
+          "korrektur": "Saitenstärke an die Stimmung anpassen, Attack aus hartem Plektrum oder angezerrtem Ton holen und auf kleinen Lautsprechern gegenprüfen: Bleibt jede Tonhöhe erkennbar? Die Breakdown-Akzente langsam mit der Gitarre verzahnen, bis sie als EIN Schlag klingen — nicht Lautstärke, sondern Definition ist das Ziel."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_gravity_holpert",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_gravity_blast",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Gravity Blast klingt ungleichmäßig — die zwei Schläge aus einer Handbewegung sind unterschiedlich laut, das Tempo eiert.",
+          "ursache": "Es wird zu früh beschleunigt, bevor die schaukelnde Stock-Bewegung (Spitze/Kante am Fell) sauber und gleichmäßig sitzt. Kraft ersetzt die Technik, die Bewegung verkrampft.",
+          "korrektur": "Die Schaukelbewegung getrennt und sehr langsam üben: ein Schlag mit der Spitze, einer mit der Kante — erst wenn beide gleich laut und gleichmäßig sind, minimal beschleunigen. Lockerheit vor Tempo; bei Verkrampfung sofort zurück ins langsame Tempo."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_vocals_pressen",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_gutturals_squeals",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Gutturals klingen gepresst und werden schnell heiser; nach kurzer Zeit kratzt die Alltagsstimme. Der Registerwechsel tief-hoch verstärkt das Pressen.",
+          "ursache": "Die Verzerrung kommt aus Kehlkopf-Druck statt aus Weite und Resonanz; die Stütze wird beim schnellen Wechsel aufgegeben. Häufig wird zu laut und in Heiserkeit hineingeübt.",
+          "korrektur": "Alles einzeln und leise aus Resonanz und Luft aufbauen, nie in Heiserkeit üben; nach jeder Einheit den Sprechtest. Registerwechsel mit großem Abstand üben, die Stütze bleibt aktiv. Diese Techniken gehören an die Seite einer erfahrenen Lehrperson — bei Kratzen oder Engegefühl sofort stoppen, anhaltende Heiserkeit in die HNO-Praxis."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_pocket_verrechnet",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_gitarre_pocket",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die verschobenen Chug-Gruppen klingen gezählt und steif — der Groove will sich nicht einstellen, das Ganze wirkt wie Mathematik statt Musik.",
+          "ursache": "Der gerade Grundpuls geht verloren: Er sitzt nur im Kopf (mitzählen) statt im Körper, deshalb kippt das Muster in Verkrampfung. Oft wird der Anschlag mit steigendem Tempo größer und härter.",
+          "korrektur": "Den Viertelpuls mit dem Fuß mittippen, während die Hand die Gruppierung spielt — solange der Fuß gerade bleibt, groovt es. Anschlag klein und locker halten; erst wenn das Nicken von allein kommt, das Tempo erhöhen."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_bass_verschmiert",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_bass_lock",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bass und Gitarre driften in den verschobenen Gruppen auseinander; die Betonungen fransen, der Lock fehlt.",
+          "ursache": "Der Bass spielt blind gleichmäßige Achtel, statt die betonten Chugs mitzudenken — die Verzahnung mit Kick und Gitarre ist nicht exakt.",
+          "korrektur": "Nur die Akzente spielen (nicht jede Achtel), langsam mit Kick und Gitarre, bis Bass und Gitarre auf den Betonungen EIN Schlag sind. Synkopen genau dort setzen, wo die Gitarre sie setzt; Tempo erst steigern, wenn der Lock sitzt."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_drums_fuss_zieht",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_drums_polymetrik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Sobald die Kick in die verschobene Gruppierung geht, wackelt die eigentlich gerade Hi-Hat mit — der gerade Boden ist weg.",
+          "ursache": "Hände und Fuß sind nicht unabhängig: Die Kick-Verschiebung zieht die Hi-Hat vom geraden Puls weg, statt dass der Boden stur weiterläuft.",
+          "korrektur": "Zuerst nur geraden Hi-Hat-Puls plus Backbeat sichern, bis er mühelos liegt. Dann die Kick sehr langsam in die Fünfer-Gruppe setzen, während die Hände bewusst stur bleiben — bei jedem Ausreißer zurück zum geraden Boden ohne Kick."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_vocals_wechsel",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_vocals_dynamik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Sprung zwischen zartem Clean und hartem Harsh verspannt die Stimme; die Clean-Linie klingt nach einem Harsh-Teil unruhig und eng.",
+          "ursache": "Der harte Wechsel wird ohne Abstand und ohne Stütze genommen; die Kehle bleibt vom Harsh-Teil eng, wenn der Clean einsetzt.",
+          "korrektur": "Beide Register einzeln und leise sichern, dann den Wechsel mit großem Abstand üben: Clean — bewusster Atem, Kehle offen — Harsh, jeweils leise. Die Stütze bleibt in beiden aktiv; Tempo erst steigern, wenn beide nach dem Wechsel frei bleiben (Sprechtest)."
+        }
+      }
+    },
+    {
+      "id": "fb_stoner_riff_steif",
+      "typ": "fehlerbild",
+      "basis_baustein": "stoner_riff_fuzz",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der fuzzige Riff klingt korrekt, aber tot — er zwingt nicht zum Mitwippen, die Wiederholung langweilt.",
+          "ursache": "Der Anschlag sitzt zu weit vorn im Puls (gehetzt), die bewusste Lücke im Riff fehlt oder wird zugespielt, und jede Runde klingt exakt gleich.",
+          "korrektur": "Den Riff leicht hinter dem Klick spielen, entspannt statt getrieben, und die Lücke wirklich stehen lassen. Jede Runde minimal variieren (Anschlagshärte, eine Betonung, ein Ghost-Ton); auf der Aufnahme prüfen: Nickt der Kopf?"
+        }
+      }
+    },
+    {
+      "id": "fb_stoner_bass_matsch",
+      "typ": "fehlerbild",
+      "basis_baustein": "stoner_bass_fuzz_groove",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der bewegliche Bass verschwindet im Fuzz — die kleinen Läufe und Bendings sind nicht mehr hörbar, es bleibt ein wolliger Teppich.",
+          "ursache": "Zu viel Fuzz ohne Mitten-Definition; der Anschlag hat keinen Kern, mit dem sich die Bewegung durchsetzt.",
+          "korrektur": "Mitten präsent lassen und Attack aus dem Anschlag holen; im Zweifel etwas weniger Fuzz. Die bewegte Linie einmal cleaner und einmal gefuzzt vergleichen — bleibt die Bewegung im Fuzz hörbar? Fehlt sie, ist es Definition, nicht Lautstärke."
+        }
+      }
+    },
+    {
+      "id": "fb_postmetal_drums_zu_frueh",
+      "typ": "fehlerbild",
+      "basis_baustein": "postmetal_drums_crescendo",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Aufbau kommt oben an, aber es ist keine Luft mehr da — der Crescendo springt in Stufen statt zu wachsen, die Wand wirkt nicht.",
+          "ursache": "Der leise Teil war nicht wirklich leise, deshalb fehlt der Raum nach oben; die Steigerung ist ungleichmäßig, und aus Ungeduld wird zu früh alles gegeben.",
+          "korrektur": "Die Grundebene wirklich leise und trotzdem tight spielen (Sticks nah am Fell) — das ist die schwerste und wichtigste Stufe. Dann über viele Takte gleichmäßig wachsen und den Höhepunkt bewusst hinauszögern; Geduld ist die eigentliche Übung."
+        }
+      }
+    },
+    {
+      "id": "fb_postmetal_vocals_dauer",
+      "typ": "fehlerbild",
+      "basis_baustein": "postmetal_vocals_dynamik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der große Klimax-Schrei trifft nicht — entweder gibt es zu viele davon, oder der eine kostet die Stimme und klingt danach heiser.",
+          "ursache": "Dauerbeschallung statt Maß: Der raue Ton wird zu oft und aus Alles-Geben gesetzt, statt zurückzuhalten; oft kommt er aus Druck statt aus Luft und Resonanz.",
+          "korrektur": "Zurückhalten üben: eine ruhige Clean-Passage, die in EINEN gezielten Ausbruch mündet — das Maß trägt, nicht die Dauerintensität. Den rauen Ton einzeln und leise aus Luft/Resonanz sichern; nach jeder Einheit Sprechtest, bei Kratzen sofort stoppen, im Zweifel Lehrperson/HNO."
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_riff_gleich",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_riff_genrefarbe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Derselbe Riff soll in mehreren Genre-Farben klingen, aber zwei oder mehr Behandlungen klingen praktisch identisch.",
+          "ursache": "Ein klangbestimmender Parameter wurde nicht umgeschaltet — meist Dämpfung, Ausklang oder Feel; die Töne ändern sich, die Behandlung nicht.",
+          "korrektur": "Pro Genre den entscheidenden Parameter benennen (Tempo, Palm-Mute/offen, Ausklang, Feel) und bewusst umstellen. Die Farben nacheinander aufnehmen und blind zuordnen lassen: Erkennt man die Genres an der Behandlung, obwohl die Töne gleich sind?"
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_groove_tempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_groove_genrefarbe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Umfärben eines Grooves durch mehrere Genre-Feels driftet das Grundtempo — beim Blast zieht es an, beim Sludge schleppt es.",
+          "ursache": "Tempo und Feel werden als dasselbe behandelt; die Verteilung von Kick/Snare wird gewechselt, aber der Grundpuls nicht als eigene, konstante Größe gehalten.",
+          "korrektur": "Ein Klick läuft stur durch alle Feels; jeder Groove wird gegen denselben Puls gespielt. Auf der Aufnahme prüfen, ob das Grundtempo über alle Wechsel konstant bleibt — Feel entsteht aus der Verteilung, nicht aus der Geschwindigkeit."
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_bass_rolle",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_bass_rollen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Dieselbe Linie soll verschiedene Genre-Rollen tragen (Gewicht, Skelett, Lock, Stimme, Motor), klingt aber in allen Rollen gleich.",
+          "ursache": "Es werden Töne gespielt statt Haltung: Der Rollenwechsel (was die Musik gerade vom Bass braucht) wird nicht umgesetzt — Anschlag, Ausklang und Dichte bleiben unverändert.",
+          "korrektur": "Jede Rolle einzeln über ihre Haltung definieren: Doom-Gewicht (wenige, sehr schwere, gehaltene Töne), Grind-Skelett (schnell, verzahnt, Attack), Djent-Lock (exakt auf die Akzente), Stoner-Stimme (beweglich, fuzzig), Hardcore-Motor (treibend). Aufnehmen und prüfen, ob man den Haltungswechsel hört, obwohl die Töne gleich bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_vocals_stapeln",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_vocals_genrefarbe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Zuordnen der Register zu Genres werden neue, fordernde Techniken auf einmal gestapelt; die Stimme wird schnell eng und müde.",
+          "ursache": "Die Übung wird als Freibrief missverstanden, unsichere Register gleichzeitig zu üben — statt nur zwischen bereits gesund beherrschten Registern umzuschalten.",
+          "korrektur": "Nur mit Registern arbeiten, die einzeln und mühelos sitzen; die Übung ist Zuordnung, kein Neuland. Neue Register einzeln und angeleitet aufbauen. Nach jeder Einheit Sprechtest; jedes Enger-Werden ist die Warnlampe — leiser, im Zweifel stoppen."
+        }
+      }
     }
   ]
 }
