@@ -1454,6 +1454,72 @@
           }
         ]
       }
+    },
+    {
+      "id": "erste_gemeinsame_probe",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Als Einheit zusammenfinden — erst koppeln Bass und Bassdrum, dann werden Gitarre und Bass zu einem Ton."
+      },
+      "beschreibung": {
+        "de": "Die erste Probe, in der ihr als Einheit zusammenfindet — nicht über fertige Songs, sondern über das Fundament. Zuerst wärmt jeder für sich auf; dann koppelt ihr Bass und Bassdrum, findet ein gemeinsames Timing zum Klick und bringt schließlich Gitarre und Bass zu einem Ton zusammen. Zum Ausklang spielt ihr locker und leise mit den Rollen im Riff, statt weiter auf Präzision zu drillen. Ziel des Tages ist nicht Repertoire, sondern das Gefühl, als ein Körper zu spielen."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker und ohne Tempo — die Greifhand wach machen, bevor es ums Zusammenspiel geht."
+            }
+          },
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Kurz für sich: saubere Greifhand am Bass, damit der Ton im Duo später trägt."
+            }
+          },
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Ein paar Minuten Einzel- und Doppelschläge, damit die Hände am Set locker sind."
+            }
+          },
+          {
+            "baustein": "atemstuetze",
+            "hinweis": {
+              "de": "Für die Stimme: ruhig auf die Atemstütze einstimmen, bevor es laut wird."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "duo_bd_kick_lock",
+            "hinweis": {
+              "de": "Nur Bass und Bassdrum, ohne Rest — bis Ton und Kick zu einem Impuls verschmelzen."
+            }
+          },
+          {
+            "baustein": "duo_bd_pocket_klick",
+            "hinweis": {
+              "de": "Beide gleichberechtigt auf den Klick, nicht aufeinander — die Pocket entsteht gemeinsam."
+            }
+          },
+          {
+            "baustein": "duo_gb_lock",
+            "hinweis": {
+              "de": "Ein Riff, ein Ton: Gitarre und Bass auf denselben Attack und dieselbe Dämpfung bringen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "duo_gb_rollen_riff",
+            "hinweis": {
+              "de": "Locker ausklingen: Verdopplung gegen eigene Linie hören, ohne auf Präzision zu drillen."
+            }
+          }
+        ]
+      }
     }
   ]
 }

@@ -959,6 +959,125 @@ S["kontext_solo_ohne_band"] = [
     C(78, 44, 4, fill=True),
 ]
 
+# ================= ENSEMBLE-PAARE (Zusammenspiel, fortgeschritten) =================
+# Zwei Instrumente = zwei Spuren; Thema ist ihre Ausrichtung/Verzahnung. Senkrechte
+# Verbinder = Gleichzeitigkeit, Punkte = Puls, Striche = gedämpft, Wellen = klingend,
+# Rauigkeit = harsh, Strichstärke = Gewicht, Hohlkreise = Ghost/andere Stimme.
+
+# Gitarre & Bass Locking: zwei Spuren, Anschläge exakt senkrecht verkoppelt.
+S["duo_gb_lock"] = [L(14, 46, 106, 46, 2.5), L(14, 84, 106, 84, 2.5)]
+for x in (32, 60, 88):
+    S["duo_gb_lock"] += [C(x, 46, 4.5, fill=True), C(x, 84, 4.5, fill=True), L(x, 46, x, 84, 2)]
+
+# Frequenztrennung: oben dichte Mitten (Gitarre), unten schwere, langsame Tiefe (Bass).
+S["duo_gb_frequenztrennung"] = [
+    P(wavepath(14, 106, 44, 9, 3.5, step=2.0), 3),
+    P(wavepath(14, 106, 84, 15, 1.2, step=2.0), 6),
+]
+
+# Chugs synchron: zwei Spuren kurzer, gedämpfter Dashes in denselben Spalten, mit
+# schwarzer Pause in der Mitte.
+S["duo_gb_chug_sync"] = []
+for x in (24, 40, 56, 80, 96):
+    S["duo_gb_chug_sync"] += [L(x, 40, x, 56, 6), L(x, 80, x, 96, 6)]
+
+# Verdopplung oder Gegenstimme: oben das Riff, unten erst deckungsgleich, dann als
+# eigene Linie divergierend (Umschaltpunkt markiert).
+S["duo_gb_rollen_riff"] = [
+    L(14, 48, 106, 48, 4),
+    L(14, 80, 58, 80, 3.5),
+    P(wavepath(58, 106, 80, 11, 1.5, step=2.0), 3.5),
+    L(58, 44, 58, 86, 1.5),
+]
+
+# Bass an die Kick koppeln: schwere, verschmolzene Low-End-Impulse auf der Zeitlinie.
+S["duo_bd_kick_lock"] = [L(12, 86, 108, 86, 2.5)]
+for x in (30, 60, 90):
+    S["duo_bd_kick_lock"] += [C(x, 86, 8, fill=True), L(x, 78, x, 50, 6)]
+
+# Pocket zum Klick: Klick-Raster; Bass (voll) und Drum (hohl) sitzen auf denselben Spalten.
+S["duo_bd_pocket_klick"] = [L(12, 84, 108, 84, 2.5)]
+for x in (24, 44, 64, 84, 104):
+    S["duo_bd_pocket_klick"].append(L(x, 84, x, 72, 2))
+for x in (44, 84):
+    S["duo_bd_pocket_klick"] += [C(x, 60, 5, fill=True), C(x, 46, 5, 2.5)]
+
+# Akzente & Breaks: Puls, Bruch (Leerraum), dann ein gemeinsamer Akzent auf der Eins.
+S["duo_bd_akzente_breaks"] = [L(12, 84, 108, 84, 2.5)]
+for x in (22, 34, 46):
+    S["duo_bd_akzente_breaks"].append(C(x, 84, 4, fill=True))
+S["duo_bd_akzente_breaks"] += [C(84, 84, 7, fill=True), L(84, 78, 84, 46, 6), TRI([(79, 48), (89, 48), (84, 38)])]
+
+# Blast-Begleitung: dichte Kicks unten, wenige Bass-Akzente oben auf einzelne Schläge.
+S["duo_bd_blast_begleitung"] = [L(12, 92, 108, 92, 2.5)]
+for i in range(14, 107, 8):
+    S["duo_bd_blast_begleitung"].append(L(i, 92, i, 76, 3))
+S["duo_bd_blast_begleitung"].append(L(14, 44, 106, 44, 2.5))
+for x in (30, 62, 94):
+    S["duo_bd_blast_begleitung"] += [C(x, 44, 5, fill=True), L(x, 50, x, 74, 2)]
+
+# Phrasierung in die Lücken: Riff-Blöcke oben, Gesangswellen unten dazwischen.
+S["duo_gv_phrasierung_luecken"] = []
+for x in (22, 60, 98):
+    S["duo_gv_phrasierung_luecken"] += [L(x - 6, 44, x - 6, 60, 5), L(x, 44, x, 60, 5), L(x + 6, 44, x + 6, 60, 5)]
+S["duo_gv_phrasierung_luecken"] += [P(wavepath(34, 50, 84, 10, 1.0, step=2.0), 3.5), P(wavepath(72, 88, 84, 10, 1.0, step=2.0), 3.5)]
+
+# Gemeinsame Dynamik: beide Spuren wachsen zur gemeinsamen Spitze (Aufbau).
+S["duo_gv_dynamik_aufbau"] = [
+    P(wavepath(14, 100, 44, 16, 3.0, step=2.0, env=lambda t: 0.12 + 0.88 * t), 3),
+    P(wavepath(14, 100, 86, 16, 3.0, step=2.0, env=lambda t: 0.12 + 0.88 * t), 3),
+    L(104, 40, 104, 90, 5),
+]
+
+# Melodie über dem Riff: Powerchord (zwei Liegetöne), Melodie landet auf einem Zielton.
+S["duo_gv_tonart_melodie"] = [
+    L(16, 74, 104, 74, 5), L(16, 90, 104, 90, 5),
+    P(wavepath(16, 96, 46, 12, 1.5, step=2.0), 3),
+    C(96, 46, 5, fill=True), L(96, 50, 96, 74, 1.5),
+]
+
+# Harsh-Timing aufs Riff: raue Silben (oben) exakt auf den Riff-Akzenten (unten).
+S["duo_gv_vocals_timing_riff"] = [L(14, 86, 106, 86, 2.5)]
+for x in (30, 60, 90):
+    S["duo_gv_vocals_timing_riff"] += [L(x, 86, x, 64, 6), P(roughline(x - 8, 40, x + 8, 40, 4, step=3.0, seed=x), 3), L(x, 44, x, 62, 2)]
+
+# ================= BAND & PROBERAUM (Einstieg, einsteiger) =================
+# Band gründen: vier verbundene Personen-Knoten im Ring, gemeinsames Ziel in der Mitte.
+S["band_gruenden"] = [
+    C(60, 30, 6, fill=True), C(30, 62, 6, fill=True), C(90, 62, 6, fill=True), C(60, 94, 6, fill=True),
+    L(60, 30, 30, 62, 2.5), L(30, 62, 60, 94, 2.5), L(60, 94, 90, 62, 2.5), L(90, 62, 60, 30, 2.5),
+    C(60, 62, 4, 2.5),
+]
+# Erste Proben: ein Ablauf in drei Abschnitten — Aufwärmen (Punkt), Arbeit (Ticks), Durchlauf (Haken).
+S["erste_proben_struktur"] = [
+    RECT(14, 50, 92, 24, filled=False),
+    L(44, 50, 44, 74, 2.5), L(74, 50, 74, 74, 2.5),
+    C(29, 62, 3.5, fill=True),
+    L(52, 56, 52, 68, 3), L(59, 56, 59, 68, 3), L(66, 56, 66, 68, 3),
+    P("M80,62 L86,68 L100,55", 3),
+]
+# Proberaum einrichten: Raum, Band im Halbkreis mit Sichtlinie, Wand-Absorption (Hatch).
+S["proberaum_einrichten"] = [
+    RECT(14, 24, 92, 72, filled=False),
+    C(60, 44, 4, fill=True), C(36, 64, 4, fill=True), C(84, 64, 4, fill=True), C(60, 82, 4, fill=True),
+    ARC(60, 64, 20, 20, 160, 1.5),
+    L(18, 30, 24, 36, 1.5), L(18, 42, 24, 48, 1.5), L(18, 54, 24, 60, 1.5),
+]
+# Proberaum-Ausrüstung: zwei Amp-Stacks, ein Monitor-Keil, PA-Schall.
+S["proberaum_ausruestung"] = [
+    RECT(20, 52, 26, 40, filled=False), L(20, 64, 46, 64, 2),
+    RECT(54, 52, 26, 40, filled=False), L(54, 64, 80, 64, 2),
+    TRI([(90, 92), (108, 92), (90, 74)]),
+    ARC(99, 40, 10, -60, 60, 2), ARC(99, 40, 16, -60, 60, 1.5),
+]
+# Gehörschutz & Lautstärke: lauter Schall links, Schutz-Barriere, gedämpfter Rest, Stöpsel.
+S["gehoerschutz_lautstaerke"] = [
+    ARC(18, 60, 14, -55, 55, 3), ARC(18, 60, 24, -55, 55, 2.5), ARC(18, 60, 34, -55, 55, 2),
+    L(60, 30, 60, 90, 5),
+    ARC(102, 60, 10, 125, 235, 2),
+    C(72, 60, 5, fill=True),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -1000,7 +1119,12 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "kontext_proberaum_effizienz", "kontext_proberaum_zusammenspiel",
                 "kontext_buehne_praesenz", "kontext_buehne_ablauf",
                 "kontext_aufnahme_tightness", "kontext_aufnahme_vorbereitung",
-                "kontext_solo_struktur", "kontext_solo_ohne_band"]
+                "kontext_solo_struktur", "kontext_solo_ohne_band",
+                "duo_gb_lock", "duo_gb_frequenztrennung", "duo_gb_chug_sync", "duo_gb_rollen_riff",
+                "duo_bd_kick_lock", "duo_bd_pocket_klick", "duo_bd_akzente_breaks", "duo_bd_blast_begleitung",
+                "duo_gv_phrasierung_luecken", "duo_gv_dynamik_aufbau", "duo_gv_tonart_melodie", "duo_gv_vocals_timing_riff",
+                "band_gruenden", "erste_proben_struktur", "proberaum_einrichten", "proberaum_ausruestung",
+                "gehoerschutz_lautstaerke"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
