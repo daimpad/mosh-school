@@ -290,6 +290,9 @@
     "pattern_pause": "Pause",
     "pattern_stopp": "Stopp",
     "pattern_spielt": "Spielt: {name}",
+    "pattern_tempo": "Tempo",
+    "pattern_tempo_aria": "Tempo in Prozent (50 bis 150)",
+    "pattern_loop": "Loop",
     "pattern_hinweis_pegel": "Die synthetischen Klänge sind bewusst schlicht — sie zeigen Rhythmus und Tonfolge, nicht den echten Sound. Bewusst leise abspielen; am Instrument gilt wie immer Gehörschutz, sobald der Amp läuft."
   },
   "bausteine": {

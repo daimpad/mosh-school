@@ -15,6 +15,9 @@ let aktivesGenre = null;
 let audioKontext = null;
 let rauschPuffer = null;
 let laufTimer = [];
+let tempoFaktor = 1; // globaler Tempo-Regler (0.5–1.5), skaliert alle Patterns
+let loopAn = false; // Loop-Schalter: Pattern wiederholt bis Stopp
+let loopTimer = null;
 // Alle eingeplanten Klangquellen der laufenden Wiedergabe — damit ein neuer Start
 // oder der Stopp-Knopf die noch geplanten Töne abbrechen kann (sonst Überlagerung).
 let aktiveKlaenge = [];
@@ -35,8 +38,12 @@ function merke(quelle) {
   return quelle;
 }
 
-// Bricht alle noch geplanten/laufenden Töne ab (idempotent).
+// Bricht alle noch geplanten/laufenden Töne ab (idempotent) und stoppt den Loop.
 function stoppeKlang() {
+  if (loopTimer) {
+    clearTimeout(loopTimer);
+    loopTimer = null;
+  }
   for (const quelle of aktiveKlaenge) {
     try {
       quelle.stop();
@@ -129,7 +136,7 @@ const DRUM_STIMME = { kick, snare, hihat, crash };
 const SPUR_ORDNUNG = ['crash', 'hihat', 'snare', 'kick'];
 
 function schrittDauer(pattern) {
-  return 30 / pattern.bpm; // eine Achtel in Sekunden
+  return 30 / (pattern.bpm * tempoFaktor); // eine Achtel in Sekunden, mit Tempo-Regler
 }
 
 function stoppeLauf() {
@@ -161,8 +168,9 @@ function markiereLauf(karte, ctx, start, step, anzahl) {
   );
 }
 
-function spieleTab(pattern, karte) {
-  stoppeKlang();
+// Plant eine Runde ein (ohne vorher zu stoppen) und gibt Timing + Schrittzahl
+// zurück, damit der Loop die nächste Runde am Ende neu planen kann.
+function planeTab(pattern, karte) {
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
   const start = ctx.currentTime + 0.07;
@@ -175,10 +183,10 @@ function spieleTab(pattern, karte) {
     }
   });
   markiereLauf(karte, ctx, start, step, pattern.schritte.length);
+  return { step, anzahl: pattern.schritte.length };
 }
 
-function spieleDrums(pattern, karte) {
-  stoppeKlang();
+function planeDrums(pattern, karte) {
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
   const start = ctx.currentTime + 0.07;
@@ -191,6 +199,23 @@ function spieleDrums(pattern, karte) {
     }
   }
   markiereLauf(karte, ctx, start, step, anzahl);
+  return { step, anzahl };
+}
+
+// Eine Runde spielen und — wenn Loop an ist — am Ende die nächste planen.
+function laufeEinmal(pattern, karte) {
+  const { step, anzahl } = pattern.typ === 'drums' ? planeDrums(pattern, karte) : planeTab(pattern, karte);
+  if (loopAn && anzahl > 0) {
+    loopTimer = setTimeout(() => {
+      if (loopAn) laufeEinmal(pattern, karte);
+    }, Math.round(anzahl * step * 1000));
+  }
+}
+
+// Frischer Start: laufende Wiedergabe abbrechen, dann eine Runde (ggf. Loop).
+function startePattern(pattern, karte) {
+  stoppeKlang();
+  laufeEinmal(pattern, karte);
 }
 
 // --- Rendern ---
@@ -291,6 +316,15 @@ export function renderPatterns(el, daten, genreParam) {
         </div>
       </section>
       <p class="chip-zeile">${genreKnoepfe}</p>
+      <div class="pattern-steuerung">
+        <label class="pattern-tempo-feld">${esc(t('pattern_tempo'))}
+          <input type="range" class="pattern-tempo" min="50" max="150" step="10" value="${Math.round(tempoFaktor * 100)}" aria-label="${esc(t('pattern_tempo_aria'))}">
+          <span class="pattern-tempo-wert" aria-live="polite">${Math.round(tempoFaktor * 100)} %</span>
+        </label>
+        <button type="button" class="chip chip-waehlbar pattern-loop ${loopAn ? 'chip-akzent' : ''}" aria-pressed="${loopAn}">
+          <i class="fa-solid fa-repeat" aria-hidden="true"></i> ${esc(t('pattern_loop'))}
+        </button>
+      </div>
       <p class="chip-zeile">
         ${genreLink}
         <button type="button" class="chip chip-waehlbar pattern-stopp" hidden>
@@ -330,11 +364,28 @@ export function renderPatterns(el, daten, genreParam) {
       const karte = knopf.closest('.pattern-karte');
       const pattern = sichtbar.find((p) => p.id === karte.dataset.pattern);
       if (!pattern) return;
-      if (pattern.typ === 'drums') spieleDrums(pattern, karte);
-      else spieleTab(pattern, karte);
+      startePattern(pattern, karte);
       if (status) status.textContent = t('pattern_spielt', { name: text(pattern.titel) });
       if (stoppKnopf) stoppKnopf.hidden = false;
     });
   }
   if (stoppKnopf) stoppKnopf.addEventListener('click', beende);
+
+  const tempoRegler = el.querySelector('.pattern-tempo');
+  const tempoWert = el.querySelector('.pattern-tempo-wert');
+  if (tempoRegler) {
+    tempoRegler.addEventListener('input', () => {
+      tempoFaktor = Number(tempoRegler.value) / 100;
+      if (tempoWert) tempoWert.textContent = `${tempoRegler.value} %`;
+    });
+  }
+  const loopKnopf = el.querySelector('.pattern-loop');
+  if (loopKnopf) {
+    loopKnopf.addEventListener('click', () => {
+      loopAn = !loopAn;
+      loopKnopf.classList.toggle('chip-akzent', loopAn);
+      loopKnopf.setAttribute('aria-pressed', String(loopAn));
+      // Loop ausschalten stoppt nicht sofort — die laufende Runde spielt aus.
+    });
+  }
 }
