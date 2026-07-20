@@ -584,6 +584,59 @@ S["deathcore_dynamik_dramaturgie"] = [
     RECT(80, 66, 26, 24, filled=True),
 ]
 
+# ================= DJENT-ACHSE (stil-djent, fortgeschritten) =================
+# Djent / Prog-Metalcore: gerader Puls unten, verschobene Gruppierung oben —
+# perkussive Chugs (gefüllte Blöcke), ungerade Pakete (5+3), Kontrast Dichte↔Raum.
+
+# Pocket, Chug & Polymetrik: gleichmäßiger Puls (Ticks) unten, darüber verschobene
+# Chug-Pakete (5er + 3er) als kurze schwere Blöcke.
+S["djent_gitarre_pocket"] = [
+    L(12, 92, 108, 92, 2),
+    *[L(16 + i * 12, 92, 16 + i * 12, 86, 2) for i in range(8)],
+    *[RECT(16 + i * 9, 44, 5, 26, filled=True) for i in range(5)],
+    *[RECT(74 + i * 9, 44, 5, 26, filled=True) for i in range(3)],
+]
+# Lock, Tiefe & Groove: schweres tiefes Fundament, darauf exakt verzahnte
+# Akzent-Blöcke in ungerader Verteilung (Lock-Marker zur Grundlinie).
+S["djent_bass_lock"] = [
+    L(12, 90, 108, 90, 7),
+    RECT(20, 52, 10, 30, filled=True), RECT(46, 52, 10, 30, filled=True),
+    RECT(64, 52, 10, 30, filled=True), RECT(90, 52, 10, 30, filled=True),
+    L(25, 90, 25, 82, 2), L(51, 90, 51, 82, 2), L(69, 90, 69, 82, 2), L(95, 90, 95, 82, 2),
+]
+# Polymetrik, Pocket & Ghost Notes: oben gerader Hi-Hat-Puls, unten verschobene
+# Kick (Punkte, 5+3), dazwischen Ghost Notes (Hohlkreise).
+S["djent_drums_polymetrik"] = [
+    L(12, 34, 108, 34, 2),
+    *[L(16 + i * 12, 34, 16 + i * 12, 26, 2.5) for i in range(8)],
+    L(12, 92, 108, 92, 2),
+    *[C(16 + i * 9, 92, 3, fill=True) for i in range(5)],
+    *[C(74 + i * 9, 92, 3, fill=True) for i in range(3)],
+    C(40, 63, 4, 2), C(82, 63, 4, 2),
+]
+# Clean, Harsh & Phrasierung: ruhiger langer Clean-Bogen oben, raue Harsh-Linie
+# unten, dazwischen der Atembogen.
+S["djent_vocals_dynamik"] = [
+    P(wavepath(14, 106, 44, 12, 1.0, step=2.0), 3),
+    ARC(60, 64, 30, 200, 340, 1.8),
+    P(roughpath(14, 106, 86, 8, step=2.4, seed=211), 2.5),
+]
+# Polymetrik & Gruppierung: gleichmäßiges Puls-Raster (16 Ticks), darüber die
+# Gruppierungs-Bögen 5+5+3+3 — ungerade Betonung über geradem Boden.
+S["djent_theorie_polymetrik"] = [
+    L(12, 84, 108, 84, 2),
+    *[L(14 + i * 6, 84, 14 + i * 6, 74, 2) for i in range(16)],
+    ARC(26, 72, 13, 20, 160, 2), ARC(56, 72, 13, 20, 160, 2),
+    ARC(80, 72, 7, 20, 160, 2), ARC(98, 72, 7, 20, 160, 2),
+]
+# Härte & Raum: links dichter, harter Chug-Cluster, rechts offener Raum mit einer
+# einzelnen klingenden Welle — der Kontrast trägt die Musik.
+S["djent_dramaturgie_raum"] = [
+    *[RECT(16 + i * 8, 46, 5, 34, filled=True) for i in range(5)],
+    L(64, 32, 64, 92, 2.5),
+    P(wavepath(72, 106, 62, 12, 1.0, step=2.0), 3),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -605,7 +658,9 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "felle_sound_genre", "daempfung_definition", "fussmaschinen", "hardware_stabilitaet",
                 "trigger_edrums", "drums_wartung_backup",
                 "deathcore_breakdown_wucht", "deathcore_bass_fundament", "deathcore_gravity_blast",
-                "deathcore_gutturals_squeals", "deathcore_riff_dissonanz", "deathcore_dynamik_dramaturgie"]
+                "deathcore_gutturals_squeals", "deathcore_riff_dissonanz", "deathcore_dynamik_dramaturgie",
+                "djent_gitarre_pocket", "djent_bass_lock", "djent_drums_polymetrik",
+                "djent_vocals_dynamik", "djent_theorie_polymetrik", "djent_dramaturgie_raum"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:

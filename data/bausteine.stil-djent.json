@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-djent",
+    "hinweis": "Genre-Achse Djent / Prog-Metalcore: sechs Bausteine quer durch die Domänen, alle stil:[djent]. Zusammen mit Retags bestehender Bausteine (djent_technik, polyrhythmik_theorie, ungerade_takte_theorie, polyrhythmik_einstieg, ungerade_takte_drums, clean_harsh_wechsel) trägt sie den Pfad. Der neue Gitarren-Baustein ist der fortgeschrittene On-Ramp zum Experten-Baustein djent_technik. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "djent_gitarre_pocket",
+      "anzeigetitel": { "de": "Djent-Gitarre: Pocket, Chug & Polymetrik" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["palm_mute_systeme", "chugs_breakdown"],
+      "erklaerteil": {
+        "de": "Djent ist zuerst ein Klang und dann eine Rhythmik. Der Klang: ein extrem tight palm-gedämpfter Einzelanschlag auf einer tiefen Saite (Drop-Tuning, oft Sieben- oder Achtsaiter), so kurz und perkussiv, dass er eher wie ein Schlaginstrument als wie ein Ton wirkt — das lautmalerische „dj-ent“. Damit das trägt, muss die Dämpfung absolut sitzen: Der Ton knallt an und ist sofort tot, kein Nachklingen, kein Matsch. Zerre eher moderat und tight als maximal — zu viel Gain frisst die Definition, die das Genre ausmacht.\n\nDie Rhythmik ist das Herz. Über einem geraden 4/4-Puls (den Drums und dein eigenes Nicken halten) gruppierst du die Chugs in ungeraden Paketen — Fünfer, Siebener, Dreier —, sodass die Betonung über die Taktgrenze wandert und sich erst nach mehreren Takten wieder mit der Eins trifft. Das ist Polymetrik: ein Muster gegen den Grundpuls verschoben. Der Reiz entsteht genau aus der Spannung zwischen dem, was du spielst, und dem geraden Puls darunter — nicht daraus, den Puls zu verlieren.\n\nDeshalb ist die eigentliche Fähigkeit nicht Schnelligkeit, sondern Pocket: den Groove tight und entspannt im Puls sitzen lassen, während das Muster darüber verschoben läuft. Wer den Grundpuls im Körper behält (Fuß, Nacken), kann die wildeste Gruppierung spielen und klingt trotzdem groovy statt verrechnet. Dieser Baustein ist der fortgeschrittene Einstieg — die volle Extended-Range-Technik vertiefst du später im Experten-Baustein zur Djent-Technik."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Verschobene Pakete über geradem Puls",
+          "ziel": "Tight gedämpfte Chugs in ungeraden Gruppen über einen geraden 4/4-Klick spielen, ohne den Puls zu verlieren.",
+          "schritte": [
+            "Stell das Metronom auf einen bequemen 4/4-Puls (um 100 BPM, Klick auf die Viertel). Spiel zuerst nur gleichmäßige gedämpfte Achtel auf der tiefen Saite — jeder Anschlag knallt und ist sofort tot. Prüf auf einer Aufnahme: Ist zwischen den Anschlägen wirklich Stille?",
+            "Gruppier die Achtel in Fünfer-Pakete: fünf Chugs, dann eine Achtel Pause, wieder fünf — betone jeweils den ersten Chug jeder Gruppe. Der Klick läuft stur weiter; deine Betonung wandert über den Takt und trifft die Eins erst nach mehreren Takten wieder.",
+            "Halt den Puls im Körper: Tipp den Viertel-Puls mit dem Fuß mit, während die Hand die Fünfer spielt. Solange der Fuß gerade bleibt, sitzt der Groove — driftet der Fuß, bist du im Muster verloren.",
+            "Wechsel die Gruppengröße: vier Takte Fünfer, vier Takte Siebener, zurück zu geraden Achteln. Jeder Wechsel sitzt auf dem Schlag, der Grundpuls bleibt konstant."
+          ],
+          "steigerung": "Leg einen einfachen Clean- oder Lead-Ton über das Ende jeder Phrase — der Kontrast zwischen dem perkussiven Chug-Teil und einem klingenden Ton ist die halbe Djent-Ästhetik. Oder spiel dasselbe Muster eine Terz höher als Akzentnote statt reinem Grundton.",
+          "selbstkontrolle": "Nimm dich mit Klick auf: Bleibt der Grundpuls hörbar gerade, während deine Betonung wandert? Knallt jeder Chug und ist tot, oder rauscht die tiefe Saite nach? Und der Ehrlichkeits-Test: Nickt dein Kopf zum Groove — oder zählst du krampfhaft mit? Wenn du zählen musst, ist das Muster noch nicht im Körper — zurück zu Schritt 3."
+        }
+      }
+    },
+    {
+      "id": "djent_bass_lock",
+      "anzeigetitel": { "de": "Djent-Bass: Lock, Tiefe & Groove" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["lock_zur_bassdrum", "bass_synkopen"],
+      "erklaerteil": {
+        "de": "Im Djent ist der Bass der Kitt zwischen der perkussiven Gitarre und der Kick — und oft der Ort, an dem der Groove überhaupt erst hörbar wird. Weil die Gitarren-Chugs so kurz und trocken sind, trägt der Bass das tonale Fundament unter dem Muster: Er hält die Tiefe, während die Gitarre schlägt. Zwei Aufgaben zugleich, und beide verlangen Präzision statt Lautstärke.\n\nDie erste ist der Lock: Deine Anschläge müssen exakt mit der Kick und den Gitarren-Akzenten zusammenfallen, sonst verschmiert die verschobene Gruppierung zu Brei. Bei den ungeraden Paketen heißt das, die Betonungen mitzudenken, nicht blind Achtel zu spielen — du bist Teil des Grooves, nicht Begleitung darunter. Die zweite ist die Definition in der Tiefe: Bei diesen Tunings (Drop, oft Fünfsaiter) braucht der tiefe Ton Attack und Kontur, sonst wummert er. Ein angezerrter oder mit cleanem Anteil gemischter Ton und dicke Saiten sind hier Standard.\n\nEin Genre-Detail: Viele Djent-Bassisten spielen mit Plektrum oder aggressivem Fingeranschlag für den perkussiven Attack, der sich mit der Gitarre verzahnt — und lassen zugleich Raum, wo die Musik atmet. Weniger Noten, exakt platziert, schlägt eine volle Linie, die den Groove zukleistert."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Schlag mit Kick und Gitarre",
+          "ziel": "Die tiefe Bass-Linie exakt mit Kick und Gitarren-Akzenten verzahnen — auch über verschobene Gruppierungen.",
+          "schritte": [
+            "Stimm tief (Drop, passende Saiten) und spiel zu einem Kick-Pattern (Aufnahme oder Metronom auf die betonten Schläge) nur die Grundtöne — jeder Anschlag mit Attack, exakt auf der Kick. Prüf auf kleinen Lautsprechern, ob die Tonhöhe erkennbar bleibt.",
+            "Nimm ein Fünfer-Gitarrenmuster (Aufnahme oder mitgedacht) und spiel die betonten Chugs mit: nicht jede Achtel, nur die Akzente. Spiel es langsam, bis Bass und Gitarre auf den Akzenten EIN Schlag sind.",
+            "Bau eine Synkope ein: Verschieb einen Ton auf eine Und-Zeit, genau dort, wo die Gitarre es auch tut. Der Groove drückt gegen den Puls, bleibt aber tight — nimm auf und prüf die Kante.",
+            "Reduzier bewusst: Lass in einem Takt Raum (nur ein tiefer, langer Ton auf der Eins), dann wieder das verzahnte Muster. Der Kontrast aus Dichte und Raum ist Djent-Groove."
+          ],
+          "steigerung": "Spiel dieselbe Linie einmal mit Plektrum (perkussiver Attack) und einmal mit Fingern (runder) und hör, was sich mit der Gitarre besser verzahnt. Oder misch einen cleanen Tief-Anteil unter die Zerre und vergleich die Definition.",
+          "selbstkontrolle": "Hör die Aufnahme mit Kick und Gitarre: Fallen Bass-Akzente und Gitarren-Chugs als EIN Schlag zusammen, oder franst es? Bleibt der tiefe Ton als eigene Tonhöhe hörbar, oder wird er zu Wummern? Wummern heißt Attack oder Saitenstärke fehlt — nicht Lautstärke."
+        }
+      }
+    },
+    {
+      "id": "djent_drums_polymetrik",
+      "anzeigetitel": { "de": "Djent-Drums: Polymetrik, Pocket & Ghost Notes" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["polyrhythmik_einstieg", "double_bass_sechzehntel"],
+      "erklaerteil": {
+        "de": "Djent-Drumming hat eine Doppelrolle: den geraden Puls halten, den alle brauchen — und zugleich die verschobenen Gitarren-Akzente mitspielen, damit der Groove Kontur bekommt. Der Trick ist, beides gleichzeitig zu tun: Die Hi-Hat (oder Ride) markiert oft stur den geraden Viertel- oder Achtelpuls, während Kick und Snare die ungeraden Gruppierungen der Gitarre nachzeichnen. So bleibt der Boden gerade, während darüber das Muster wandert — genau das macht Djent groovy statt verrechnet.\n\nDie Kick ist dabei das Werkzeug für die Verzahnung: Sie sitzt exakt auf den Gitarren-Chugs, auch wenn die auf ungerade Und-Zeiten fallen. Das verlangt einen präzisen, kontrollierten Fuß (das Sechzehntel-Fundament) und die Fähigkeit, die Kick-Schläge frei über den Takt zu platzieren, statt sturer Muster. Dazu kommen Ghost Notes auf der Snare — leise Zwischenschläge, die den Groove atmen lassen und den Pocket-Charakter erzeugen, für den das Genre lebt.\n\nDie eigentliche Kunst ist der Pocket: locker und tight zugleich, nie gehetzt. Bei allem, was nach Tempo und Kraft aussieht, gilt auch hier: Lockerheit vor Kraft, kurze intensive Blöcke mit echten Pausen, Gehörschutz — und bei anhaltendem Zwicken in Hand- oder Fußgelenken ärztlich abklären."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gerader Boden, verschobene Kick",
+          "ziel": "Über einem geraden Hi-Hat-Puls die Kick auf ungerade Gitarren-Akzente setzen und mit Ghost Notes atmen lassen.",
+          "schritte": [
+            "Spiel eine gerade Hi-Hat auf die Achtel und einen einfachen Backbeat (Snare auf 2 und 4) zum Klick, bis er mühelos und locker sitzt. Das ist dein gerader Boden — er darf sich durch nichts verschieben.",
+            "Setz die Kick in ein Fünfer-Muster: Die Kick markiert die betonten Chugs (denk dir ein Djent-Gitarrenmuster), während Hi-Hat und Snare stur gerade bleiben. Langsam anfangen — die Hände halten den Puls, der Fuß wandert.",
+            "Streu Ghost Notes ein: leise Snare-Schläge zwischen den Hauptschlägen, gerade so laut, dass sie den Groove füllen, ohne den Backbeat zu überdecken. Nimm auf und prüf, ob es atmet oder verstopft.",
+            "Schalte auf Kommando: vier Takte Groove mit verschobener Kick, harter Schnitt in vier Takte gerade (alles auf dem Raster), zurück. Der gerade Puls bleibt über alle Wechsel identisch."
+          ],
+          "steigerung": "Wechsel die Gruppengröße der Kick (Fünfer → Siebener) ohne den Hi-Hat-Puls zu ändern. Oder verschieb die Ride auf eine ungerade Gruppierung und lass die Kick gerade — die umgekehrte Polymetrik.",
+          "selbstkontrolle": "Nimm auf: Bleibt die Hi-Hat wirklich stur gerade, während die Kick wandert — oder zieht der Fuß die Hände mit? Klingen die Ghost Notes wie Atmen oder wie Fehler? Und der Pocket-Test: Groovt es, oder klingt es gerechnet? Gerechnet heißt, der gerade Boden wackelt noch — zurück zu Schritt 1."
+        }
+      }
+    },
+    {
+      "id": "djent_vocals_dynamik",
+      "anzeigetitel": { "de": "Prog-Metalcore-Vocals: Clean, Harsh & Phrasierung" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["clean_harsh_wechsel", "scream_hoehe"],
+      "erklaerteil": {
+        "de": "Progressiver Metalcore und die melodische Seite des Djent leben von der Dynamik zwischen zwei Welten: schneidenden Harsh-Vocals über den perkussiven Riffs und tragenden Clean-Vocals über den offenen, atmosphärischen Teilen. Der Reiz ist der Kontrast — und die Herausforderung ist, beide Register gesund zu beherrschen und sauber zwischen ihnen zu wechseln.\n\nHandwerklich sind das zwei Baustellen. Der Clean-Gesang trägt oft die Melodie und muss über komplexen, verschobenen Rhythmen sitzen: Die Phrasierung ist hier die eigentliche Kunst — die Gesangslinie kann bewusst gegen die ungerade Metrik der Instrumente laufen (ein ruhiger, langer Bogen über einem hektischen Muster) oder sie nachzeichnen. Das verlangt ein sicheres inneres Zeitgefühl, damit die Melodie schwebt statt zu stolpern. Der Harsh-Teil bleibt, was er in jedem Genre ist: Verzerrung aus Luft und Resonanz, nicht aus Kehlkopf-Druck.\n\nDer Gesundheitsrahmen ist beim Wechsel besonders wichtig, weil der Sprung zwischen zartem Clean und hartem Harsh die Stimme fordert: gründlich aufwärmen, beide Register einzeln und leise sichern, bevor du sie im Song kombinierst. Nie in Heiserkeit hineinüben, nach jeder Einheit den Sprechtest, bei Kratzen oder Engegefühl sofort stoppen — und die Harsh-Techniken gehören an die Seite einer erfahrenen Lehrperson, anhaltende Heiserkeit in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Welten, ein Song",
+          "ziel": "Clean- und Harsh-Register gesund halten, sauber wechseln und die Clean-Melodie über verschobene Metrik phrasieren.",
+          "schritte": [
+            "Wärm gründlich auf. Sichere einzeln und leise: eine ruhige Clean-Phrase mit sicherer Tonhöhe, einen Harsh-Ton aus Luft und Resonanz. Beide müssen mühelos sein, bevor du sie kombinierst.",
+            "Übe den Wechsel mit Abstand: Clean-Phrase — bewusster Atem, Kehle bleibt offen — Harsh-Phrase, jeweils leise. Der harte Sprung darf die Clean-Stimme nicht verspannen; die Stütze bleibt in beiden Registern aktiv.",
+            "Leg eine ruhige Clean-Melodie über ein verschobenes Instrumental-Muster (Aufnahme in ungerader Gruppierung): Sing zuerst einen langen, ruhigen Bogen quer über das hektische Muster — die Melodie schwebt, sie zählt nicht mit.",
+            "Setz dann Harsh-Vocals gezielt auf die dichten Riff-Teile und Clean auf die offenen Teile — an festen Stellen über einen Loop, Timing und Gesundheit vor Lautstärke."
+          ],
+          "steigerung": "Erst wenn beide Register über Wochen stabil und beschwerdefrei sind, den Wechsel Richtung Songtempo beschleunigen — immer nur so schnell, wie beide frei bleiben. Für die Phrasierung: Sing dieselbe Clean-Melodie einmal mit der Metrik laufend und einmal bewusst dagegen und hör den Unterschied.",
+          "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Bleibt die Clean-Stimme nach einem Harsh-Teil genauso klar wie vorher? Schwebt die Melodie über dem verschobenen Muster, oder stolperst du mit? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen."
+        }
+      }
+    },
+    {
+      "id": "djent_theorie_polymetrik",
+      "anzeigetitel": { "de": "Djent-Theorie: Polymetrik & Gruppierung" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["polyrhythmik_theorie", "ungerade_takte_theorie"],
+      "erklaerteil": {
+        "de": "Djent klingt kompliziert, folgt aber einer einfachen Idee: Ein gerader Grundpuls (meist 4/4) bleibt konstant, und darüber werden die Schläge in Paketen gruppiert, deren Länge nicht in den Takt aufgeht. Spielst du Achtel in Fünfer-Gruppen über einen 4/4-Takt, wandert die Betonung jedes Mal um eine Achtel weiter und trifft die Eins erst nach fünf Takten wieder. Das ist Polymetrik — ein Muster gegen den Puls verschoben —, und sie ist der theoretische Kern des Genres.\n\nDer entscheidende Begriff ist Gruppierung: Man ändert nicht die Taktart, sondern nur, wie die Noten innerhalb des geraden Takts betont werden. Ein Muster aus 5+5+3+3 Achteln füllt genau einen Takt aus 16 Achteln (also zwei 4/4-Takte zu 8), fühlt sich aber völlig ungerade an, obwohl der Puls stur gerade bleibt. Genau diese Spannung — ungerade Betonung über geradem Boden — ist der Effekt. Wichtig ist, dass die Summe wieder aufgeht: Nur dann kehrt das Muster zur Eins zurück und groovt, statt sich zu verlaufen.\n\nWer Djent schreiben will, denkt in zwei Ebenen zugleich: unten der Puls, der nie wackelt, oben die Gruppierung, die wandert. Die Kunst ist nicht, möglichst kompliziert zu sein, sondern die Verschiebung so zu bauen, dass sie sich auflöst und der Hörer den Groove spürt, ohne mitzählen zu müssen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei Djent- oder Prog-Metalcore-Songs vor und versuch, die Gruppierung zu hören: Bleibt der Grundpuls (Hi-Hat, dein Nicken) gerade, während die Gitarren-Betonung wandert? Kannst du die Paketlänge schätzen — sind es Fünfer, Siebener, oder ein Wechsel?\n\nBau dann selbst eine Gruppierung auf Papier oder am Instrument: Schreib 16 Achtel (zwei 4/4-Takte) und teil sie in ein ungerades Muster, das aufgeht — etwa 5+5+3+3 oder 7+5+4. Klopf den geraden Viertel-Puls mit dem Fuß und die Gruppierung mit der Hand. Prüf die Kernfrage: Kehrt deine Betonung sauber zur Eins zurück (geht die Summe auf)? Und fühlt es sich ungerade an, obwohl der Fuß stur gerade bleibt? Wenn die Summe nicht aufgeht, verläuft sich das Muster — genau daran arbeitet die Djent-Theorie."
+      }
+    },
+    {
+      "id": "djent_dramaturgie_raum",
+      "anzeigetitel": { "de": "Djent-Dramaturgie: Härte & Raum" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["djent"],
+      "voraussetzungen": ["set_pacing"],
+      "erklaerteil": {
+        "de": "Djent und progressiver Metalcore leben nicht nur von der Härte, sondern vom Wechsel zwischen Härte und Raum. Die perkussiven, verschobenen Riffs sind dicht und fordernd — und sie wirken nur, wenn ihnen offene, atmosphärische Teile gegenüberstehen: klingende Clean-Gitarren, weite Flächen, Melodie. Ist alles gleich dicht und komplex, ermüdet das Ohr, und die Verschiebungen werden zu bloßer Rechnerei. Der Kontrast macht die Musik.\n\nDramaturgisch heißt das dreierlei. Erstens Dosierung: Nicht jeder Takt braucht die vertrackteste Gruppierung; ein klares, groovendes Muster, richtig platziert, trifft härter als eine Aneinanderreihung von Komplexität. Zweitens der Raum als Gegengewicht: Die offenen Teile sind kein Füllmaterial, sondern laden die dichten Teile auf — nach der Weite trifft der nächste Chug doppelt. Drittens der gemeinsame Puls: Weil die Muster verschoben laufen, muss die Band den geraden Boden als Kollektiv halten — verliert einer den Puls, kippt der Groove für alle in Chaos.\n\nMental ist die Kunst, im Komplexen locker zu bleiben: Die Verschiebungen dürfen nicht zu Verkrampfung und Mitzählen führen, sondern müssen im Körper sitzen, damit Raum für Ausdruck bleibt. Das entsteht nur, wenn die Band genau die Übergänge zwischen dicht und offen probt — der Absprung in die Weite und der gemeinsame Wiedereinstieg in den Groove sind die Stellen, an denen sich Präzision und Gefühl treffen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Analysiere einen Djent- oder Prog-Metalcore-Song, den du stark findest, als Dichtekurve: Zeichne über die Zeit auf, wann es dicht und perkussiv wird (die verschobenen Riffs) und wann es sich öffnet (Clean, Flächen, Melodie). Wie viel Raum gibt es wirklich — und macht gerade der Raum die dichten Teile stärker?\n\nÜberleg für dich oder deine Band: Habt ihr Teile, in denen zu viel Komplexität auf einmal die Wirkung abstumpft? Wo könntet ihr Raum schaffen, damit der nächste dichte Teil doppelt trifft? Und ganz praktisch: Probt ihr die Übergänge zwischen dicht und offen gezielt — den gemeinsamen Absprung in die Weite und den Wiedereinstieg in den verschobenen Groove auf den Schlag genau — oder hofft ihr, dass der Puls schon zusammenhält? Nimm dir den einen Übergang vor, der am wackligsten sitzt, und plan, wie ihr ihn als Kollektiv sauber trefft."
+      }
+    }
+  ]
+}

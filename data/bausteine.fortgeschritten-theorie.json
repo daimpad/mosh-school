@@ -119,6 +119,9 @@
         "fortgeschritten"
       ],
       "typ": "micro",
+      "stil": [
+        "djent"
+      ],
       "voraussetzungen": [
         "taktarten_unterteilungen"
       ],
@@ -155,7 +158,8 @@
       ],
       "typ": "micro",
       "stil": [
-        "metalcore"
+        "metalcore",
+        "djent"
       ],
       "voraussetzungen": [
         "taktarten_unterteilungen"
