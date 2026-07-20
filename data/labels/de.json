@@ -573,7 +573,24 @@
     "kontext_aufnahme_tightness": "Aufnahme: für die Ewigkeit spielen",
     "kontext_aufnahme_vorbereitung": "Aufnahme: Vorbereitung & Pre-Production",
     "kontext_solo_struktur": "Solo-Üben: allein wirklich vorankommen",
-    "kontext_solo_ohne_band": "Solo-Üben: Timing ohne Band halten"
+    "kontext_solo_ohne_band": "Solo-Üben: Timing ohne Band halten",
+    "duo_gb_lock": "Gitarre & Bass: gemeinsames Locking",
+    "duo_gb_frequenztrennung": "Gitarre & Bass: Frequenzen aufteilen",
+    "duo_gb_chug_sync": "Gitarre & Bass: Chugs synchron dämpfen",
+    "duo_gb_rollen_riff": "Gitarre & Bass: Verdopplung oder Gegenstimme",
+    "duo_bd_kick_lock": "Bass & Drums: an die Bassdrum koppeln",
+    "duo_bd_pocket_klick": "Bass & Drums: die Pocket zum Klick",
+    "duo_bd_akzente_breaks": "Bass & Drums: Akzente und Breaks zusammen",
+    "duo_bd_blast_begleitung": "Bass & Drums: schnelle Kick-Muster gemeinsam",
+    "duo_gv_phrasierung_luecken": "Gitarre & Gesang: Phrasierung in die Lücken",
+    "duo_gv_dynamik_aufbau": "Gitarre & Gesang: gemeinsame Dynamik & Aufbau",
+    "duo_gv_tonart_melodie": "Gitarre & Gesang: Melodie über dem Riff",
+    "duo_gv_vocals_timing_riff": "Gitarre & Gesang: Harsh-Timing aufs Riff",
+    "band_gruenden": "Band gründen: Rollen, Ziele, Verbindlichkeit",
+    "erste_proben_struktur": "Erste Proben: Struktur & Zusammenspiel",
+    "proberaum_einrichten": "Proberaum einrichten: Raum, Akustik, Aufstellung",
+    "proberaum_ausruestung": "Proberaum-Ausrüstung: Backline, PA, Monitore",
+    "gehoerschutz_lautstaerke": "Gehörschutz & Lautstärke im Proberaum"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -680,7 +697,19 @@
     "fb_transfer_riff_gleich": "Genre-Farben: Riff klingt überall gleich",
     "fb_transfer_groove_tempo": "Genre-Grooves: Tempo driftet",
     "fb_transfer_bass_rolle": "Bass-Rollen: Töne statt Haltung",
-    "fb_transfer_vocals_stapeln": "Register-Wechsel: zu viel auf einmal"
+    "fb_transfer_vocals_stapeln": "Register-Wechsel: zu viel auf einmal",
+    "fb_duo_gb_flam": "Gitarre & Bass: Anschläge flammen",
+    "fb_duo_gb_matsch": "Gitarre & Bass: Tiefen matschen",
+    "fb_duo_gb_pausen_versetzt": "Gitarre & Bass: Pausen nicht deckungsgleich",
+    "fb_duo_gb_rollen_unklar": "Gitarre & Bass: Rolle unentschieden",
+    "fb_duo_bd_kick_desync": "Bass & Drums: Bass neben der Kick",
+    "fb_duo_bd_driftet": "Bass & Drums: Rhythmusgruppe eilt oder schleppt",
+    "fb_duo_bd_break_stolpert": "Bass & Drums: Break stolpert",
+    "fb_duo_bd_blast_verliert": "Bass & Drums: Bass verliert die Kontur",
+    "fb_duo_gv_ueberlagert": "Gitarre & Gesang: alles gleichzeitig",
+    "fb_duo_gv_vocals_hinterm_riff": "Gitarre & Gesang: Vocals hängen hinterm Riff",
+    "fb_duo_gv_melodie_daneben": "Gitarre & Gesang: Clean-Melodie liegt daneben",
+    "fb_duo_gv_aufbau_einseitig": "Gitarre & Gesang: Aufbau nur von einem"
   },
   "grafiken": {},
   "vokabeln": {
@@ -886,7 +915,8 @@
     "djent_drums": "Djent: Polymetrik (Drums)",
     "deathcore_bass": "Deathcore: tiefes Fundament (Bass)",
     "experte_gitarre_lead": "Experte: Lead-Gitarre (Tapping & Harmonics)",
-    "deathcore_vocals": "Deathcore: Gutturals & Squeals (Vocals)"
+    "deathcore_vocals": "Deathcore: Gutturals & Squeals (Vocals)",
+    "erste_gemeinsame_probe": "Erste gemeinsame Probe: zusammen tight werden"
   },
   "lehrgrafiken": {
     "grundbeat": "Grundbeat im Achtel-Raster: oben Hi-Hat (x), Mitte Snare (Ring), unten Kick (Punkt) — Snare auf 2 und 4, Kick auf 1 und 3.",
