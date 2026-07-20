@@ -546,7 +546,9 @@
     "transfer_vocals_genrefarbe": "",
     "set_ueber_genres": "",
     "deathcore_sound_gear": "",
-    "deathcore_koerper_intensitaet": ""
+    "deathcore_koerper_intensitaet": "",
+    "djent_sound_gear": "",
+    "djent_koerper_praezision": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
