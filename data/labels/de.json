@@ -544,7 +544,9 @@
     "transfer_groove_genrefarbe": "Drums: einen Groove umfärben",
     "transfer_bass_rollen": "Bass: die Rolle wechseln",
     "transfer_vocals_genrefarbe": "Vocals: Register nach Genre",
-    "set_ueber_genres": "Ein Set über Genres bauen"
+    "set_ueber_genres": "Ein Set über Genres bauen",
+    "deathcore_sound_gear": "Deathcore-Sound: Tiefe, Gate & Definition",
+    "deathcore_koerper_intensitaet": "Deathcore-Körper: Intensität ohne Verschleiß"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
