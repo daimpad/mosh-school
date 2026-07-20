@@ -685,6 +685,65 @@ S["postmetal_langform_geduld"] = [
     RECT(96, 40, 10, 44, filled=True),
 ]
 
+# ================= GENRE-ÜBERGREIFEND (genreuebergreifend, gemischt) =================
+# Meta-Ebene quer zu den Genres: hören/unterscheiden, verschmelzen, dieselbe Idee
+# (Riff, Groove, Rolle, Register) in mehreren Genre-Farben, Set-Bogen über Genres.
+
+# Genres am Klang erkennen: ein lauschender Bogen links, rechts drei klar
+# unterscheidbare Signaturen (klingend, rau, gepulst).
+S["genre_hoeren_erkennen"] = [
+    ARC(34, 60, 18, 60, 300, 4), C(34, 60, 5, fill=True),
+    P(wavepath(56, 106, 40, 7, 2.5, step=2.0), 2),
+    P(roughpath(56, 106, 62, 7, step=2.4, seed=401), 2),
+    *[L(58 + i * 8, 86, 58 + i * 8, 76, 3) for i in range(7)],
+]
+# Crossover & Fusion: zwei Linien laufen zusammen und verschmelzen zu einer
+# schwereren.
+S["genre_fusion_crossover"] = [
+    P("M12,40 L56,60", 3),
+    P("M12,80 L56,60", 3),
+    C(56, 60, 5, fill=True),
+    P("M56,60 L108,60", 5),
+]
+# Ein Riff, mehrere Genres: dasselbe Drei-Ton-Motiv in drei Behandlungen
+# (tight, schwer/weit, dreckig).
+S["transfer_riff_genrefarbe"] = [
+    *[RECT(16 + i * 7, 28, 4, 14, filled=True) for i in range(3)],
+    *[RECT(16 + i * 16, 52, 8, 20, filled=True) for i in range(3)],
+    *[RECT(16 + i * 10, 88, 5, 14, filled=True) for i in range(3)],
+    P(roughpath(14, 44, 84, 4, step=2.2, seed=411), 1.6),
+]
+# Einen Groove umfärben: dieselbe Zeitachse, drei Verteilungen — gleichmäßig,
+# sparsam (Halftime), dicht (Blast).
+S["transfer_groove_genrefarbe"] = [
+    L(14, 34, 106, 34, 1.5), *[C(20 + i * 12, 34, 2.5, fill=True) for i in range(8)],
+    L(14, 62, 106, 62, 1.5), C(22, 62, 3, fill=True), C(60, 62, 3, fill=True), C(98, 62, 3, fill=True),
+    L(14, 90, 106, 90, 1.5), *[C(18 + i * 6, 90, 2, fill=True) for i in range(16)],
+]
+# Die Rolle wechseln: durchgehendes Fundament, darüber drei Rollen-Marker —
+# Gewicht (Block), Skelett (Punkte), bewegliche Stimme (raue Linie).
+S["transfer_bass_rollen"] = [
+    L(14, 88, 106, 88, 6),
+    RECT(16, 40, 22, 20, filled=True),
+    *[C(48 + i * 5, 50, 2.5, fill=True) for i in range(7)],
+    P(roughpath(84, 106, 50, 7, step=2.4, seed=421), 2.2),
+]
+# Register nach Genre: drei Stimmfarben — tief/getragen (schwere Welle), hohe
+# Screams (Spitzen), rauer Shout (raue Linie).
+S["transfer_vocals_genrefarbe"] = [
+    P(wavepath(14, 106, 40, 6, 1.2, step=2.0), 4),
+    *[L(20 + i * 12, 66, 26 + i * 12, 54, 2.5) for i in range(7)],
+    P(roughpath(14, 106, 88, 7, step=2.2, seed=431), 2.2),
+]
+# Ein Set über Genres: eine Energiekurve über die Zeit, darunter kontrastierende
+# Genre-Blöcke unterschiedlicher Dichte.
+S["set_ueber_genres"] = [
+    P("M12,88 L30,50 L48,70 L70,32 L92,60 L108,44", 2.5),
+    *[L(16 + i * 3, 100, 16 + i * 3, 92, 2) for i in range(6)],
+    RECT(52, 92, 14, 8, filled=True),
+    *[C(80 + i * 6, 96, 2, fill=True) for i in range(4)],
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -710,7 +769,10 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "djent_gitarre_pocket", "djent_bass_lock", "djent_drums_polymetrik",
                 "djent_vocals_dynamik", "djent_theorie_polymetrik", "djent_dramaturgie_raum",
                 "stoner_riff_fuzz", "stoner_bass_fuzz_groove", "postmetal_drums_crescendo",
-                "postmetal_vocals_dynamik", "stoner_riff_harmonik", "postmetal_langform_geduld"]
+                "postmetal_vocals_dynamik", "stoner_riff_harmonik", "postmetal_langform_geduld",
+                "genre_hoeren_erkennen", "genre_fusion_crossover", "transfer_riff_genrefarbe",
+                "transfer_groove_genrefarbe", "transfer_bass_rollen", "transfer_vocals_genrefarbe",
+                "set_ueber_genres"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
