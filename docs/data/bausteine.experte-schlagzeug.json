@@ -1,0 +1,298 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "experte",
+    "domaene": "schlagzeug",
+    "hinweis": "Experte-Schlagzeug. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "blast_spezialformen",
+      "anzeigetitel": {
+        "de": "Blast-Spezialformen im Überblick"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal",
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "blast_varianten",
+        "blast_ausdauer"
+      ],
+      "spielziele": [
+        "lockere_haende",
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Jenseits von Traditional und Bomb existiert ein Zoo von Spezialformen: der Gravity Blast (die Hand nutzt den Spannreifen als Hebel für zwei Schläge pro Bewegung), One-Handed-Techniken über Rebound-Kontrolle und Freehand, und Hyperblasts jenseits der 280 BPM. Sie alle kaufen Geschwindigkeit mit Technik statt mit Kraft.\n\nBevor du eine Spezialform aufbaust, lohnt die ehrliche Frage nach dem Zweck: Ein sauberer Traditional Blast bei 240 schlägt musikalisch fast immer einen wackligen Gravity bei 300. Spezialformen sind Werkzeuge für konkrete Parts — nicht Trophäen. Wer sie lernt, lernt sie wie neue Rudiments: isoliert, in Zeitlupe, am Pad.\n\nGesundheit hat Vorrang: Gerade Gravity- und One-Hand-Techniken laden bei falscher Ausführung Handgelenk und Daumensattel massiv. Ohne saubere Rebound-Grundlage und schrittweisen Aufbau sind sie ein Verletzungsrisiko — Schmerz im Handgelenk beendet das Experiment sofort, und für die Feinform ist Video-Selbstkontrolle oder ein Coach dringend zu empfehlen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Rebound-Vorstufe zum Gravity",
+          "ziel": "Die Hebel-Mechanik gefahrlos in Zeitlupe verstehen und anbahnen.",
+          "schritte": [
+            "Übe am Pad zuerst kontrollierte Doppelschläge aus reinem Rebound — die Grundlage jeder Spezialform.",
+            "Leg die Hand an den Snare-Spannreifen und vollziehe die Gravity-Wippbewegung in Zeitlupe nach, ohne Tempoanspruch.",
+            "Spiel kurze Zyklen (vier Bewegungen), prüf das Handgelenk auf Lockerheit und pausiere großzügig."
+          ],
+          "steigerung": "Erst wenn die Wippe mühelos ist, Zyklen verlängern — Tempo kommt Wochen später, nie am ersten Tag.",
+          "selbstkontrolle": "Kein Druckschmerz in Handgelenk oder Daumen; die Bewegung fühlt sich nach Hebel an, nicht nach Kraft."
+        }
+      }
+    },
+    {
+      "id": "double_bass_extremtempo",
+      "anzeigetitel": {
+        "de": "Double Bass an der Tempogrenze"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "double_bass_patterns"
+      ],
+      "spielziele": [
+        "double_bass_tempo",
+        "fuss_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Jenseits von 220 BPM stoßen die Grundtechniken an Grenzen, und die Extremtempo-Techniken übernehmen: Swivel (die Ferse pendelt seitlich und nutzt die Beinrotation), Heel-Toe (zwei Schläge pro Fußbewegung — Ballen, dann Spitze) und fein austarierte Federspannungen, die den Schlägel arbeiten lassen. Alle folgen demselben Prinzip wie schnelle Hände: Hebel und Rückprall statt Muskelkraft.\n\nWelche Technik trägt, ist individuell — Fußgröße, Pedal, Sitzhöhe spielen hinein. Deshalb gilt: eine Technik wählen, isoliert in Zeitlupe aufbauen und erst ins Kit integrieren, wenn sie ohne Nachdenken läuft. Der häufigste Fehler ist das Mischen halbfertiger Techniken unter Zeitdruck.\n\nGesundheit hat Vorrang: Extremtempi der Füße belasten Achillessehne, Schienbein und Hüfte. Aufwärmen ist Pflicht, Steigerungen bleiben klein, und ziehende Schmerzen — besonders im Schienbein — sind ein Stoppsignal, das ernst genommen wird. Ausdauer an der Grenze wächst über Monate."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Eine Technik, ein Monat",
+          "ziel": "Eine Extremtempo-Fußtechnik isoliert und gesund anbahnen.",
+          "schritte": [
+            "Wähle EINE Technik (Swivel oder Heel-Toe) und vollziehe die Bewegung ohne Tempo am Pedal nach.",
+            "Übe kurze Zyklen mit Metronom weit unter dem Zieltempo, beide Füße getrennt, dann im Wechsel.",
+            "Integriere sie erst ins Kit (Hände dazu), wenn die Bewegung automatisch läuft — und dokumentiere dein sauberes Maximum wöchentlich."
+          ],
+          "steigerung": "Die Technik in kurzen Ausflügen an echte Songpassagen anlegen; Erholungstakte fest einplanen.",
+          "selbstkontrolle": "Die Bewegung bleibt federnd statt gestampft; keine ziehenden Schmerzen in Schienbein oder Achillessehne."
+        }
+      }
+    },
+    {
+      "id": "drums_polymetrik",
+      "anzeigetitel": {
+        "de": "Polymetrik & verschobene Riffs"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "polyrhythmik_einstieg"
+      ],
+      "spielziele": [
+        "gliedmassen_unabhaengigkeit",
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Polymetrik ist das Markenzeichen des modernen Prog- und Djent-Metal: Ein Riff von ungerader Länge — sagen wir sieben Sechzehntel — wiederholt sich über einem geraden 4/4-Puls und „wandert“ dadurch bei jeder Wiederholung an eine andere Stelle des Takts, bis sich alles nach mehreren Takten wieder trifft. Das Schlagzeug hält dabei meist den geraden Puls (Backbeat!), während eine Gliedmaße — oft die Kick — dem wandernden Riff folgt.\n\nDer Schlüssel ist das doppelte Bewusstsein: Du fühlst den geraden Takt als Heimat und kennst gleichzeitig die Länge der wandernden Zelle. Zähl die Zelle als eigene Einheit („1-2-3-4-5-6-7“) über dem laufenden Vierer, bis beide gleichzeitig existieren können — genau die Fähigkeit, die du bei „3 über 4“ aufgebaut hast, nur größer.\n\nMusikalisch ist der Treffpunkt das Ereignis: Nach dem Auseinanderlaufen landen Riff und Takt wieder gemeinsam auf der Eins — je länger die Reise, desto größer die Erlösung. Markiere diesen Punkt mit einem Akzent, und das Publikum spürt die Mathematik, ohne sie zu verstehen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Sieben über vier",
+          "ziel": "Eine wandernde Sieben-Zelle über stabilem 4/4 spielen.",
+          "schritte": [
+            "Halte mit den Händen einen simplen 4/4-Beat (Hi-Hat-Achtel, Snare auf 2 und 4).",
+            "Spiel mit der Kick eine sich wiederholende Sieben-Sechzehntel-Zelle (z. B. Schlag auf 1, 4, 6 der Zelle) und lass sie wandern.",
+            "Zähl laut die Zelle, während der Beat läuft, und setz beim Wieder-Treffen auf der Eins einen Crash-Akzent."
+          ],
+          "steigerung": "Die Zellenlänge variieren (fünf, neun) oder die Zelle in die Snare-Hand legen, während die Kick den Puls hält.",
+          "selbstkontrolle": "Der 4/4-Beat wankt nicht, die Zelle bleibt exakt gleich lang, und der Treffpunkt landet vorhersagbar."
+        }
+      }
+    },
+    {
+      "id": "ungerade_takte_drums",
+      "anzeigetitel": {
+        "de": "Ungerade Taktarten im Metal"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "djent"
+      ],
+      "voraussetzungen": [
+        "tempo_wechsel_drums",
+        "taktarten_unterteilungen"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "5/4, 7/8, 9/8 — ungerade Taktarten klingen kompliziert, funktionieren aber über einen einfachen Trick: Sie zerfallen in Gruppen aus Zweiern und Dreiern. Ein 7/8 ist fast immer 2+2+3 (oder 3+2+2), ein 5/4 ist 3+2 oder 2+3. Wer die Gruppierung kennt, zählt nicht mehr sieben Schläge, sondern fühlt „kurz-kurz-lang“ — und plötzlich groovt der krumme Takt.\n\nDer Beat baut sich entlang der Gruppen: Kick auf die Gruppenanfänge, Snare als Backbeat-Ersatz an die markanteste Stelle, Hi-Hat läuft durch. So bekommt der ungerade Takt ein wiedererkennbares Gesicht statt ein gezähltes Rätsel — Tool, Meshuggah und unzählige Prog-Death-Bands bauen genau darauf.\n\nÜbergänge sind die Königsdisziplin: der Wechsel von 4/4 in 7/8 und zurück, ohne dass die Band stolpert. Hier hilft ein durchlaufender gemeinsamer Nenner (die Achtel bleibt konstant!) und ein markantes Signal am Wechselpunkt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "7/8 als kurz-kurz-lang",
+          "ziel": "Einen ungeraden Takt als Gruppen fühlen und stabil grooven.",
+          "schritte": [
+            "Sprich und klatsch 2+2+3 („kurz-kurz-laaang“), bis die Gruppierung selbstverständlich pulsiert.",
+            "Bau den Beat: Kick auf die drei Gruppenanfänge, Snare auf den Anfang der Dreiergruppe, Hi-Hat-Achtel durchlaufend.",
+            "Spiel vier Takte 4/4 und wechsle nahtlos in vier Takte 7/8 — die Achtel bleibt dabei exakt konstant."
+          ],
+          "steigerung": "Die Gruppierung umstellen (3+2+2) und hören, wie derselbe Takt ein anderes Gesicht bekommt.",
+          "selbstkontrolle": "Der 7/8 groovt, statt gezählt zu klingen; beim Wechsel aus dem 4/4 wankt die Achtel nicht."
+        }
+      }
+    },
+    {
+      "id": "drums_dynamik_architektur",
+      "anzeigetitel": {
+        "de": "Dynamik-Architektur eines Songs"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "doom",
+        "black_metal",
+        "stoner_post"
+      ],
+      "voraussetzungen": [
+        "drums_ghostnotes",
+        "doom_feel"
+      ],
+      "spielziele": [
+        "definierter_anschlag"
+      ],
+      "erklaerteil": {
+        "de": "Auch der brutalste Song lebt von Dynamik — nur ist sie im Metal oft strukturell statt leise: Ein Blast wirkt doppelt, wenn davor ein reduzierter Teil stand; ein Doom-Riff erdrückt mehr, wenn die Becken vorher schwiegen. Als Schlagzeuger:in bist du der Dynamik-Architekt des Songs, denn nichts steuert wahrgenommene Intensität so stark wie das Drumming.\n\nDie Werkzeuge: Beckenwahl (Hi-Hat geschlossen vs. offenes Crash-Ride ist ein Intensitätssprung ohne Tempoänderung), Schlagstärke-Ebenen, Dichte (Achtel vs. Sechzehntel), und das mächtigste — Weglassen. Ein Part ohne Bassdrum, ein Break in völlige Stille, ein einzelner Takt nur Snare: Verweigerung erzeugt Fallhöhe.\n\nDenk in einer Intensitätskurve über den ganzen Song: Wo ist der niedrigste Punkt, wo der höchste, und steigt es dazwischen wirklich — oder läuft alles auf 90 %? Die ehrlichste Prüfung ist eine Aufnahme des ganzen Songs, gehört mit der einen Frage: Langweilt sich mein Ohr, weil alles gleich intensiv ist?"
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Intensitätskurve bauen",
+          "ziel": "Einen Song-Ablauf mit bewussten Dynamik-Ebenen gestalten.",
+          "schritte": [
+            "Nimm einen Song (eigenen oder Playalong) und zeichne seine Teile als Intensitätskurve von 1 bis 10.",
+            "Ordne jeder Ebene konkrete Mittel zu: Beckenwahl, Dichte, Schlagstärke, Weglass-Elemente.",
+            "Spiel den Ablauf und nimm ihn auf — prüfe, ob die Kurve hörbar ist, nicht nur gedacht."
+          ],
+          "steigerung": "Denselben Song mit einer anderen Kurve spielen (z. B. später Höhepunkt) und die Wirkungen vergleichen.",
+          "selbstkontrolle": "Auf der Aufnahme sind mindestens drei klar unterscheidbare Intensitätsebenen zu hören."
+        }
+      }
+    },
+    {
+      "id": "drums_fill_sprache",
+      "anzeigetitel": {
+        "de": "Eigene Fill-Sprache entwickeln"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "triolen_fills",
+        "herta_verzierungen"
+      ],
+      "spielziele": [
+        "saubere_uebergaenge"
+      ],
+      "erklaerteil": {
+        "de": "Irgendwann spielst du nicht mehr Fills, sondern deine Fills: ein persönliches Vokabular aus Figuren, die du in jeder Lage abrufen und kombinieren kannst. Der Weg dorthin ist systematisch — Sammeln, Zerlegen, Neu-Kombinieren — und unterscheidet den Stilisten vom Pattern-Spieler.\n\nBau dein Vokabular als Baukasten: kurze Zellen (eine Herta, eine Sechzehntel-Gruppe über zwei Toms, ein Flam-Akzent), die du frei aneinanderreihst, statt auswendig gelernter Ein-Takt-Fills. Übe Zellen einzeln in allen Tempi, dann würfle Kombinationen — auch bewusst „falsche“, aus denen oft die interessantesten Übergänge entstehen.\n\nDie zweite Zutat ist Kontext-Disziplin: Ein Fill dient dem Übergang, und sein wichtigster Ton ist die Landung. Entwickle deshalb jede neue Zelle immer im Beat-Kontext (drei Takte Groove, ein Takt Fill), nie isoliert — sonst baust du ein Vokabular, das im Song nicht spricht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zellen-Baukasten",
+          "ziel": "Aus wiederverwendbaren Zellen frei kombinierte Fills bauen.",
+          "schritte": [
+            "Sammle fünf Zellen (je eine halbe bis eine Zählzeit): z. B. Herta, Tom-Gruppe, Flam, Kick-Einwurf, Snare-Sechzehntel.",
+            "Übe jede Zelle einzeln im Beat-Kontext: drei Takte Groove, Fill aus genau dieser Zelle, Landung auf der Eins.",
+            "Kombiniere dann je zwei Zellen zu Ein-Takt-Fills — auch ungewohnte Paarungen bewusst ausprobieren."
+          ],
+          "steigerung": "Zellen-Kombinationen auf Zuruf (oder per Würfel) spielen, ohne den Groove zu verlieren.",
+          "selbstkontrolle": "Jede Kombination landet exakt auf der Eins; die Fills klingen nach dir statt nach dem Lehrbuch."
+        }
+      }
+    },
+    {
+      "id": "drums_recording",
+      "anzeigetitel": {
+        "de": "Studio-Drums: Klick, Samples, Ehrlichkeit"
+      },
+      "domaene": [
+        "schlagzeug",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "timing_klick"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Im Studio zählt anderes als live: Konsistenz schlägt Energie. Jeder Schlag wird konserviert und hundertfach gehört — ungleiche Snare-Schläge, wandernde Tempi und verwaschene Becken-Übergänge, die live niemandem auffallen, werden auf der Aufnahme zur Dauerbelastung. Deshalb bereitet man Studio-Takes anders vor: Klick-Disziplin über ganze Songs, Schlagstärke-Konsistenz und ein Kit, das gestimmt und entdröhnt ist.\n\nModerne Metal-Produktionen arbeiten fast immer mit Sample-Unterstützung (Kick und Snare werden verstärkt oder ersetzt) und teils mit Editing. Das ist kein Betrug, sondern Ästhetik — aber es verschiebt die Frage: Was muss ich wirklich sauber spielen? Antwort: das Timing und die Dynamik-Struktur. Samples retten den Klang eines Schlags, nie seinen Zeitpunkt.\n\nDie beste Studio-Vorbereitung ist die Heim-Simulation: ganze Songs am Stück zum Klick, aufgenommen und mit dem Raster verglichen. Wer vor der Session weiß, wo er schleppt, verliert im Studio keine teuren Stunden."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm einen kompletten Song zum Klick auf (Handy reicht) und hör ihn mit Studio-Ohren: Wo schwankt das Tempo, wo sind Schläge ungleich laut, welche Übergänge verwaschen? Erstelle daraus deine persönliche Studio-Vorbereitungs-Liste — die drei Punkte, die du vor einer echten Aufnahme-Session gezielt üben würdest."
+      }
+    },
+    {
+      "id": "drums_athletik_langzeit",
+      "anzeigetitel": {
+        "de": "Langzeit-Athletik & Gehörschutz"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "drums_koerper_ausdauer"
+      ],
+      "spielziele": [
+        "schmerzfrei_spielen"
+      ],
+      "erklaerteil": {
+        "de": "Wer Extreme Metal über Jahre trommeln will, trainiert wie ein Athlet in einer Langzeit-Karriere: mit Belastungsplanung statt Dauervollgas. Das heißt Phasen — intensive Wochen vor Aufnahmen oder Touren, bewusst reduzierte danach — und eine Grundfitness (Ausdauer, Rumpf, Beweglichkeit), die unabhängig vom Kit gepflegt wird. Der Körper ist das Instrument, das du nicht nachkaufen kannst.\n\nDas gilt doppelt fürs Gehör: Schlagzeug erreicht Pegel, die ungeschützt in Jahren zu bleibendem Tinnitus und Hörverlust führen — bei Trommlern eher die Regel als die Ausnahme. Angepasster Gehörschutz mit linearer Dämpfung (oder gut sitzende In-Ears) ist keine Option, sondern Berufsausstattung; er gehört zu jeder Probe, jedem Gig, jeder Session.\n\nUnd wie immer: Warnsignale ernst nehmen. Anhaltende Gelenkschmerzen, Rückenprobleme, Piepen im Ohr nach der Probe — das sind keine Begleiterscheinungen des Genres, sondern Aufträge, etwas zu ändern, und bei Bestehen der Weg zu Fachleuten (Orthopädie, HNO/Audiologie)."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ehrliche Bestandsaufnahme: Trägst du bei jeder Probe und jedem Gig Gehörschutz — und wenn nein, was hält dich ab? Skizziere außerdem deine Belastung der letzten drei Monate (intensive und ruhige Phasen) und plane die nächsten drei mit bewussten Erholungsfenstern. Welche eine Anschaffung oder Gewohnheit würde deine Langzeit-Karriere am meisten schützen?"
+      }
+    }
+  ]
+}

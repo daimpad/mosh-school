@@ -1,0 +1,1762 @@
+{
+  "_meta": {
+    "hinweis": "Trainer-Layer (Spez. 5): Fehlerbilder sind eigene Entitäten mit Relation zum Basisbaustein — nie eigene Station, in-situ nur in der Trainer-Perspektive sichtbar. Drei Felder je Fehlerbild: Symptom → Ursache → Korrektur. Sichtbare Titel stehen in labels/de.json unter fehlerbilder."
+  },
+  "fehlerbild_bausteine": [
+    {
+      "id": "fb_palm_muting_position",
+      "typ": "fehlerbild",
+      "basis_baustein": "palm_muting",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Chugs klingen dumpf und tonlos — oder umgekehrt fast offen, kaum gedämpft. Der Klang wechselt von Wiederholung zu Wiederholung.",
+          "ursache": "Der Handballen liegt zu weit vorn Richtung Hals (Ton stirbt ab) oder zu weit hinter dem Steg (Dämpfung greift nicht). Oft wandert die Hand unbemerkt während des Spielens.",
+          "korrektur": "Die Position als Suchaufgabe stellen: Handballen direkt am Steg aufsetzen und in Millimeterschritten nach vorn schieben, bis der Ton kurz ist, aber noch Tonhöhe hat. Diesen Punkt mehrfach neu finden lassen — erst wenn er reproduzierbar sitzt, Tempo und Muster dazunehmen."
+        }
+      }
+    },
+    {
+      "id": "fb_wechselschlag_aufschlag",
+      "typ": "fehlerbild",
+      "basis_baustein": "wechselschlag",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ab- und Aufschlag klingen unterschiedlich: Der Aufschlag ist leiser, unsauberer oder verhakt sich — besonders beim Saitenwechsel entsteht ein Stolpern.",
+          "ursache": "Der Aufschlag wird als bloßer Rückweg gedacht statt als vollwertiger Anschlag. Dazu kommen oft eine zu große Bewegung und zu viel überstehende Pickspitze, die beim Aufschlag verkantet.",
+          "korrektur": "Tempo deutlich reduzieren und die Aufschläge isoliert betonen lassen (nur Aufschläge, dann wieder im Wechsel). Auf kleine Handgelenksbewegung und knappe Pickspitze achten. Hörkontrolle: Erst wenn Ab- und Aufschlag nicht mehr unterscheidbar sind, das Tempo anheben."
+        }
+      }
+    },
+    {
+      "id": "fb_downpicking_arm",
+      "typ": "fehlerbild",
+      "basis_baustein": "downpicking",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Tempo bricht nach wenigen Takten ein, der Unterarm brennt oder verhärtet, die Anschläge werden ungleichmäßig — die Person versucht, mit Anspannung dagegenzuhalten.",
+          "ursache": "Die Bewegung kommt aus dem ganzen Arm statt aus dem Handgelenk, das Einstiegstempo liegt über der lockeren Kontrollgrenze, und das Pick wird verkrampft festgehalten.",
+          "korrektur": "Sofort unterbrechen — Brennen ist ein Stoppsignal, kein Trainingsreiz. Tempo weit genug senken, dass die Bewegung klein und locker bleibt, und Dauer vor Tempo steigern (erst länger locker, dann schneller). Feste Pausenregeln vereinbaren; bei wiederkehrenden Beschwerden ärztlichen Rat empfehlen."
+        }
+      }
+    },
+    {
+      "id": "fb_fingerstyle_galopp",
+      "typ": "fehlerbild",
+      "basis_baustein": "fingerstyle",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Gerade Achtel klingen ungewollt wie ein Galopp: Die Töne kommen paarweise gruppiert, ein Finger ist hörbar lauter oder früher als der andere.",
+          "ursache": "Zeige- und Mittelfinger sind unterschiedlich stark und schnell, und beim Saitenwechsel bricht die strikte Wechsel-Reihenfolge — derselbe Finger zupft zweimal hintereinander.",
+          "korrektur": "Sehr langsam mit Fokus auf Lautstärke-Gleichheit üben, dabei laut mitzählen. Den schwächeren Finger gezielt angleichen (nicht den stärkeren zurücknehmen). Saitenwechsel isoliert üben und die Reihenfolge dabei streng beibehalten — Kontrolle per Aufnahme."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_nebengeraeusche",
+      "typ": "fehlerbild",
+      "basis_baustein": "greifhand_daempfen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Unter Verzerrung rauscht und dröhnt es: Nachbarsaiten schwingen mit, Pausen sind nicht still, die Linie klingt verwaschen statt tight.",
+          "ursache": "Die freien Finger der Greifhand liegen nicht auf den ungespielten Saiten, gespielte Töne werden nicht aktiv beendet, und die tiefen Saiten bleiben beim Spiel auf höheren ungedämpft.",
+          "korrektur": "Die Zerre bewusst als Lupe nutzen: leise, langsame Figuren mit vollem Fokus auf Stille zwischen den Tönen. Flache Fingerauflage auf den Nachbarsaiten als Standard etablieren und den Druck-Lösen-Reflex (Ton beenden ohne Abheben) isoliert üben."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_klick_flattern",
+      "typ": "fehlerbild",
+      "basis_baustein": "lock_zur_bassdrum",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bass und Klick (oder Bassdrum) verschmelzen nicht: Man hört ein Flattern oder Echo, die Töne liegen mal knapp vor, mal knapp hinter dem Schlag.",
+          "ursache": "Der Anschlag wird nach Gefühl irgendwo in die Nähe des Schlags gesetzt statt bewusst auf ihn; oft ist das Tempo zu hoch, um die Abweichung überhaupt zu hören.",
+          "korrektur": "Tempo stark reduzieren, sodass jeder Treffer einzeln beurteilbar ist. Die Vorstellung schärfen: Der eigene Attack soll den Klick „schlucken“ — klingt der Klick durch, war der Ton daneben. Mit Aufnahmen arbeiten und erst bei stabiler Verschmelzung schneller werden."
+        }
+      }
+    },
+    {
+      "id": "fb_grundbeat_flam",
+      "typ": "fehlerbild",
+      "basis_baustein": "grundbeat",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bassdrum und Hi-Hat (oder Snare und Becken) treffen nicht exakt zusammen — statt eines Schlags hört man einen kurzen Doppelschlag (Flam), der den Beat unsauber macht.",
+          "ursache": "Die Gliedmaßen starten aus unterschiedlichen Höhen und Entfernungen und werden nicht als ein gemeinsamer Impuls gedacht, sondern nacheinander ausgelöst.",
+          "korrektur": "Die betroffenen Stimmenpaare isoliert üben: nur Bassdrum plus Hi-Hat, sehr langsam, mit dem Bild eines gemeinsamen „Landens“. Ausgangspositionen angleichen (Stick- und Fußhöhe), Aufnahme als Kontrolle, und erst bei sauberem Unisono die dritte Stimme dazunehmen."
+        }
+      }
+    },
+    {
+      "id": "fb_double_bass_hinkt",
+      "typ": "fehlerbild",
+      "basis_baustein": "double_bass",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Double-Bass-Lauf humpelt: Ein Fuß ist lauter oder setzt früher an, aus geraden Sechzehnteln wird ein ungewolltes Galoppieren.",
+          "ursache": "Der schwächere Fuß hinkt in Kraft und Kontrolle hinterher; häufig verstärken ungleich eingestellte Pedale (Federspannung, Schlägelweg) oder gemischte Techniken (ein Fuß heel-up, einer heel-down) das Problem.",
+          "korrektur": "Zuerst die Mechanik prüfen: beide Pedale identisch einstellen. Dann Läufe konsequent mit dem schwachen Fuß beginnen lassen und in langsamem Tempo auf Lautstärke-Gleichheit hören. Kurze, saubere Strecken vor langen — die Gleichheit wächst über Wochen."
+        }
+      }
+    },
+    {
+      "id": "fb_blast_verschmiert",
+      "typ": "fehlerbild",
+      "basis_baustein": "blastbeat",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Blast klingt wie ein einziges Rauschen: Snare und Bassdrum sind nicht mehr als getrennte Schläge zu hören, das Tempo schwankt, die Person verkrampft sichtbar.",
+          "ursache": "Das Tempo liegt über der aktuellen Kontrollgrenze — die Bewegungen werden zu groß, die Gliedmaßen laufen auseinander, und Verkrampfung frisst die Präzision vollends.",
+          "korrektur": "Das Tempo so weit senken, dass jeder einzelne Schlag definiert hörbar ist — das ist oft deutlich langsamer, als das Ego möchte. Von dort in kleinen Schritten steigern, in Intervallen mit Erholungsphasen arbeiten und Lockerheit als Abbruchkriterium vereinbaren: Kippt sie, endet der Durchgang."
+        }
+      }
+    },
+    {
+      "id": "fb_stuetze_halsdruck",
+      "typ": "fehlerbild",
+      "basis_baustein": "atemstuetze",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Mehr Lautstärke entsteht hörbar im Hals: Der Ton wird gepresst und eng, die Stimme ermüdet schnell, nach dem Üben kratzt es oder die Stimme klingt belegt.",
+          "ursache": "Die Stütze bricht unter Belastung zusammen — die Atmung rutscht in Schultern und Brust, und der fehlende Druck aus dem Rumpf wird durch Enge im Hals ersetzt.",
+          "korrektur": "Sofort zurück zu den Grundlagen: leise Ss- und Summ-Übungen mit Hand auf dem Bauch, bis der gestützte Luftstrom wieder trägt. Lautstärke nur aus Stütze und Resonanz aufbauen, nie über den Hals. Kratzen oder Heiserkeit sind Stoppsignale — bei Wiederholung Pause verordnen und bei anhaltenden Beschwerden fachkundigen (HNO-)Rat empfehlen."
+        }
+      }
+    },
+    {
+      "id": "fb_verzerrung_gepresst",
+      "typ": "fehlerbild",
+      "basis_baustein": "sanfter_einstieg_verzerrung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Verzerrung klingt gequetscht und flach statt voll und breit; die Person wird schnell heiser, räuspert sich häufig oder klagt über ein raues Gefühl im Hals.",
+          "ursache": "Der raue Klang wird mit Druck auf die Stimmlippen erzeugt statt mit Luftstrom und Resonanz — meist, weil zu früh zu laut probiert wird und der leise, mühelose Zugang übersprungen wurde.",
+          "korrektur": "Sofort stoppen — dieses Muster schadet. Zurück zum Prinzip: erst gestützter Luftstrom, dann sehr leise, kurze raue Impulse, die sich mühelos anfühlen. Lautstärke für Wochen deckeln. Für den weiteren Aufbau ausdrücklich eine erfahrene Lehrperson empfehlen; bei Heiserkeit über mehrere Tage HNO-ärztlich abklären lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_intonation_daneben",
+      "typ": "fehlerbild",
+      "basis_baustein": "tonhoehe_clean",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Gesungene Töne liegen systematisch knapp daneben — meist zu tief — oder erreichen die Zielhöhe erst nach hörbarem „Anschleichen“ von unten.",
+          "ursache": "Es fehlt eine klare Klangvorstellung vor dem Ton: Gesungen wird zuerst, gehört danach. Anspannung und zu leises, zaghaftes Ansetzen verstärken das Absacken.",
+          "korrektur": "Vor jedem Ton die Referenz bewusst hören (Instrument oder App) und den Ton innerlich vorstellen, bevor er klingt. Mit leisen Sirenen gezielt zur Zielhöhe gleiten, dann den Ton direkt treffen lassen. Aufnahmen und ein Stimmgerät machen die Abweichung sichtbar und den Fortschritt messbar."
+        }
+      }
+    },
+    {
+      "id": "fb_tremolo_flattert",
+      "typ": "fehlerbild",
+      "basis_baustein": "tremolo_picking",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Tremolo-Strom flattert: Die Dichte schwankt, einzelne Anschläge fallen heraus, und nach kurzer Zeit wird die Bewegung sichtbar größer und härter.",
+          "ursache": "Das Tempo liegt über der lockeren Kontrollgrenze — die Hand kompensiert mit Kraft und Ausholbewegung, was den Strom erst recht ungleichmäßig macht.",
+          "korrektur": "Deutlich unter das Grenztempo zurückgehen, bis der Strom über vier Takte völlig gleichmäßig läuft. Die Bewegung bewusst verkleinern (Pickspitze knapp, Handgelenk locker) und Dauer vor Tempo steigern. Als Kontrolle Aufnahmen nutzen — Flattern hört man dort sofort."
+        }
+      }
+    },
+    {
+      "id": "fb_powerchord_nebensaiten",
+      "typ": "fehlerbild",
+      "basis_baustein": "powerchords",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Powerchord klingt unsauber: Nachbarsaiten klingen mit, einzelne Akkordtöne schnarren oder fehlen, und unter Verzerrung wird daraus Matsch.",
+          "ursache": "Die Dämpfkanten fehlen — Zeigefinger und Handballen legen sich nicht an die ungespielten Saiten — und die Fingerkuppen sitzen zu weit vom Bund entfernt.",
+          "korrektur": "Den Akkord in Zeitlupe aufbauen lassen: erst Fingerpositionen dicht am Bund prüfen, dann bewusst die Dämpfkanten anlegen (Zeigefinger berührt die hohe Nachbarsaite, Ballen die tiefen). Jede Saite einzeln anschlagen: Gewollte klingen, ungewollte sind stumm — erst dann als Akkord."
+        }
+      }
+    },
+    {
+      "id": "fb_galopp_kippt",
+      "typ": "fehlerbild",
+      "basis_baustein": "galopp_rhythmus",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Galopp kippt: Die zwei schnellen Töne sind ungleich lang oder rutschen an die falsche Position, und über mehrere Takte wandert die Figur aus dem Puls.",
+          "ursache": "Die Figur wird gefühlt statt gezählt, und die Anschlagfolge wechselt unbemerkt von Wiederholung zu Wiederholung — dadurch verschiebt sich die Betonung.",
+          "korrektur": "Zurück auf ein langsames Tempo mit lautem Mitzählen und fester Anschlagfolge (unten-unten-oben). Die Figur isoliert über viele Wiederholungen loopen, bevor Tonwechsel dazukommen. Ein Metronom auf den Zählzeiten deckt jedes Wandern sofort auf."
+        }
+      }
+    },
+    {
+      "id": "fb_sweep_akkordbrei",
+      "typ": "fehlerbild",
+      "basis_baustein": "sweep_picking_einstieg",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Arpeggio klingt wie ein zerbrochener Akkord: Mehrere Töne klingen ineinander, statt sauber nacheinander zu erklingen.",
+          "ursache": "Die Greiffinger bleiben nach ihrem Ton liegen, statt sofort zu lösen — und beim Barré fehlt das Rolling, sodass zwei Saiten gleichzeitig klingen.",
+          "korrektur": "Radikale Zeitlupe: Jeder Ton wird einzeln beurteilt — klingt er allein? Das Löse-Timing der Finger als eigene Übung behandeln (Ton endet, wenn der nächste beginnt) und das Rolling isoliert am Barré üben. Tempo erst anheben, wenn in Zeitlupe nie zwei Töne gleichzeitig klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_riff_nahtstellen",
+      "typ": "fehlerbild",
+      "basis_baustein": "einfaches_riff",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Riff zerfällt an den Übergängen: Zwischen gedämpften Chugs und offenen Akkorden entsteht eine Lücke oder ein Stolpern, obwohl beide Teile einzeln sauber laufen.",
+          "ursache": "Die Nahtstellen wurden nie isoliert geübt — der Handballen hebt zu spät oder zu früh ab, und die Greifhand kommt beim Akkordwechsel nicht rechtzeitig an.",
+          "korrektur": "Die Naht als eigene Übung: nur die letzten zwei Chugs plus den ersten Akkord loopen, langsam, mit Fokus auf den Handballen-Moment. Dann die umgekehrte Naht (Akkord zurück zu Chugs). Erst wenn beide Nähte sitzen, wieder das ganze Riff — die Lücke ist dann meist verschwunden."
+        }
+      }
+    },
+    {
+      "id": "fb_pick_verhakt",
+      "typ": "fehlerbild",
+      "basis_baustein": "plektrum_technik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Plektrum verhakt sich in den dicken Saiten: Der Anschlag stolpert, einzelne Töne knallen lauter heraus, und bei Tempo reißt die Kette ab.",
+          "ursache": "Zu viel überstehende Pickspitze, ein verkrampfter Griff und ein zu steiler Eintauchwinkel — das Pick taucht zu tief in die Saite ein, statt über sie zu streichen.",
+          "korrektur": "Griff und Spitze neu einstellen: nur wenige Millimeter Spitze, lockerer Daumen-Zeigefinger-Griff, und das Pick leicht angewinkelt über die Saite führen. In langsamen Achteln das Gefühl von „Durchstreichen statt Einhaken“ etablieren, erst dann Tempo aufbauen."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_druck_intonation",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_greifhand",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Töne klingen scharf oder leicht verstimmt, obwohl das Instrument gestimmt ist — besonders in tiefen Lagen; dazu Verspannung in Daumen und Handrücken.",
+          "ursache": "Zu viel Fingerdruck zieht die dicken Saiten aus der Stimmung (besonders bei tiefen Tunings), und in den weiten tiefen Lagen wird überdehnt statt die Hand zu verschieben.",
+          "korrektur": "Den Minimaldruck-Test machen lassen: Druck langsam steigern, bis der Ton gerade klar wird — dieser Punkt ist das Ziel, nicht mehr. Mit dem Stimmgerät hörbar machen, wie Überdruck den Ton schärft. In tiefen Lagen die Hand aktiv mitwandern lassen statt zu spreizen."
+        }
+      }
+    },
+    {
+      "id": "fb_galopp_bass_ungleich",
+      "typ": "fehlerbild",
+      "basis_baustein": "galopp_bass",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Galopp-Figur treibt nicht: Die zwei schnellen Töne sind mal zu kurz, mal zu lang, und der Puls wirkt zäh statt vorwärtsdrängend.",
+          "ursache": "Die schnellen Töne werden als unkontrollierter „Doppelwischer“ gespielt statt als zwei exakt platzierte Anschläge, und die Anschlagfolge (Finger oder Pick) wechselt unbemerkt.",
+          "korrektur": "Die Figur in Zeitlupe zerlegen: betonter Ton — Pause im Kopf — zwei bewusst einzelne schnelle Töne. Laut mitzählen und eine feste Fingerfolge (z. B. Mittel–Zeige–Mittel) verabreden. Erst wenn zehn Wiederholungen identisch klingen, das Tempo in kleinen Schritten anheben."
+        }
+      }
+    },
+    {
+      "id": "fb_tapping_droehnt",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_tapping",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Tapping-Passage dröhnt: Unter den getappten Tönen klingen Leersaiten mit, und zwischen den Zyklen steht ein Klangteppich statt Stille.",
+          "ursache": "Es fehlt der Dämpfungsplan — beide Hände konzentrieren sich auf ihre Töne, aber niemand ist für die ungespielten Saiten zuständig.",
+          "korrektur": "Vor der Technik die Zuständigkeiten klären: Welche Finger welcher Hand liegen wann auf welchen Saiten? Die Übung umdrehen — erst „Stille halten“ mit beiden Händen auf allen Saiten, dann einzelne Taps aus dieser Dämpf-Grundstellung heraus. Aufnahme als Kontrolle: Zwischen den Zyklen muss echte Stille stehen."
+        }
+      }
+    },
+    {
+      "id": "fb_klammergriff",
+      "typ": "fehlerbild",
+      "basis_baustein": "stockhaltung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Klang ist gepresst und flach, schnelle Passagen ermüden sofort, und der Stick prallt kaum zurück — jeder Schlag muss aktiv herausgehoben werden.",
+          "ursache": "Der Stick wird umklammert: Alle Finger pressen, das Fulcrum ist verspannt, und der natürliche Rückprall wird abgewürgt, sodass jede Bewegung doppelt kostet.",
+          "korrektur": "Zurück zum freien Fall: Den Stick aus geringer Höhe auf das Fell fallen lassen und den Rückprall beobachten — die Finger führen nur, sie halten nicht fest. Das lockere Fulcrum (Daumen–Zeigefinger) isoliert spüren lassen, dann langsame gleichmäßige Schläge, bei denen der Stick sichtbar zurückspringt."
+        }
+      }
+    },
+    {
+      "id": "fb_fuss_stampft",
+      "typ": "fehlerbild",
+      "basis_baustein": "fusstechnik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Bassdrum-Schläge klingen gestampft und ungleich laut; das Bein ermüdet schnell, und bei Tempo verhärtet sich die ganze Fußbewegung.",
+          "ursache": "Der Schlag kommt aus dem ganzen Bein mit angespanntem Fußgelenk — das Pedal wird getreten wie eine Treppe, statt federnd gespielt zu werden.",
+          "korrektur": "Das Fußgelenk als Motor etablieren: In ruhigem Tempo Viertel spielen, bei denen die Ferse (heel-up) locker mitfedert und der Schlägel nach dem Schlag sofort zurückkommt. Das Bild „das Pedal spielt mit dir“ nutzen — der Rückweg gehört zur Bewegung. Tempo erst steigern, wenn die Federung hörbar gleichmäßig ist."
+        }
+      }
+    },
+    {
+      "id": "fb_fill_eins_verfehlt",
+      "typ": "fehlerbild",
+      "basis_baustein": "fills",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach dem Fill wackelt der Wiedereinstieg: Die Eins kommt zu früh oder zu spät, und die Band (oder der Klick) läuft für einen Moment auseinander.",
+          "ursache": "Während des Fills wird nicht weitergezählt — das Fill hat sein eigenes Tempo, und die Länge wird gefühlt statt gewusst.",
+          "korrektur": "Das Fill rückwärts planen lassen: Erst steht fest, was auf der Eins passiert (z. B. Crash + Kick), dann wird das Fill als exakte Füllung der verbleibenden Zählzeiten gebaut. Laut durchzählen, in halbem Tempo üben, und die Landung isoliert loopen: letzte Fill-Zählzeit plus Eins, zwanzig Mal."
+        }
+      }
+    },
+    {
+      "id": "fb_dbeat_zerfaellt",
+      "typ": "fehlerbild",
+      "basis_baustein": "d_beat",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der D-Beat verliert seinen Galopp: Kick und Snare greifen nicht mehr ineinander, das Muster klingt nach zwei getrennten Stimmen statt nach einem treibenden Motor.",
+          "ursache": "Beide Gliedmaßen wurden nur gemeinsam im Zieltempo geübt — die Verzahnung ist nie langsam automatisiert worden, und unter Tempo bricht die Koordination auf.",
+          "korrektur": "Das Muster in halbem Tempo neu verzahnen: Kick und Snare zunächst allein, dann zusammen, mit lautem Zählen der Positionen. Auf die Nahtstellen hören (wo folgt Snare direkt auf Kick?) und diese Übergänge isoliert loopen. Tempo in 5-BPM-Schritten zurückholen — der Galopp muss in jedem Tempo hörbar bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_ghost_zu_laut",
+      "typ": "fehlerbild",
+      "basis_baustein": "drums_ghostnotes",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Groove wird wuselig statt rollend: Die Ghost Notes sind fast so laut wie der Backbeat, und der Kontrast, der den Groove ausmacht, fehlt.",
+          "ursache": "Beide Dynamikstufen kommen aus derselben Stickhöhe — die Hand kennt nur eine Fallhöhe, und leise wird über Abbremsen statt über weniger Höhe versucht.",
+          "korrektur": "Die zwei Höhen physisch trennen: Ghost Notes aus wenigen Zentimetern fallen lassen, Backbeat mit vollem Weg — beide Höhen einzeln üben, dann im Wechsel in einer Hand. Aufnahme als Test: Die Ghost Notes sollen fühlbar, aber kaum hörbar sein; sonst Stickhöhe weiter reduzieren."
+        }
+      }
+    },
+    {
+      "id": "fb_hochatmung",
+      "typ": "fehlerbild",
+      "basis_baustein": "gesang_haltung_atmung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Einatmen heben sich sichtbar Schultern und Brustkorb; die Atemzüge sind kurz, hörbar und reichen nicht für ganze Phrasen — der Hals übernimmt die fehlende Kontrolle.",
+          "ursache": "Hochatmung: Die Luft wird in den oberen Brustkorb gezogen statt in Bauch und Flanken — häufig verstärkt durch Aufregung und angespannte Haltung.",
+          "korrektur": "Zurück auf die Basis: im Liegen oder mit Hand auf dem Bauch atmen, bis sich Bauch und Flanken weiten, während die Schultern still bleiben. Vor jeder Übung zwei bewusste Tiefatemzüge als Ritual. Erst wenn die Tiefatmung im Stehen selbstverständlich ist, wieder an Ton und Verzerrung arbeiten."
+        }
+      }
+    },
+    {
+      "id": "fb_artikulation_verkrampft",
+      "typ": "fehlerbild",
+      "basis_baustein": "artikulation_text",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Text wird nur verständlich, wenn die Person „härter singt“: Die Verständlichkeit wird über Druck und Lautstärke erzwungen, und der Hals ermüdet dabei hörbar.",
+          "ursache": "Lippen, Zunge und Kiefer arbeiten zu wenig — die Artikulation ist statisch, und der Hals kompensiert die fehlende Deutlichkeit mit mehr Intensität.",
+          "korrektur": "Die Zuständigkeit zurückverlagern: Den Text übertrieben deutlich und leise sprechen lassen (Kiefer fällt, Lippen formen aktiv), dann dieselbe Mundarbeit unverändert in den Gesang übernehmen — bei gleicher, moderater Lautstärke. Regel etablieren: Wird Text unverständlich, arbeitet der Mund mehr, nie der Hals."
+        }
+      }
+    },
+    {
+      "id": "fb_fry_wird_druck",
+      "typ": "fehlerbild",
+      "basis_baustein": "fry_verzerrung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Fry verliert seine Mühelosigkeit: Aus dem entspannten Knarren wird ein gepresster, enger Klang, und nach dem Üben fühlt sich die Stimme rau oder belegt an.",
+          "ursache": "Beim „Aufladen“ wurde zu schnell zu viel Energie gegeben — statt Stütze und Resonanz zu erhöhen, drückt die Person im Hals nach, und der sichere Einstieg kippt ins Schädliche.",
+          "korrektur": "Sofort zurück auf null: Nur noch das reine, leise Knarren üben, bis es sich wieder wie Ausruhen anfühlt — tagelang, wenn nötig. Das Aufladen dann in winzigen Schritten und ausschließlich über die Atemstütze; bei jedem Anflug von Enge eine Stufe zurück. Bleibt das Kippen wiederholbar, gehört der Aufbau in die Hände einer erfahrenen Lehrperson; bei anhaltender Rauigkeit HNO-ärztlich abklären."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_klebt_am_clean",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_harsh_wechsel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach harschen Passagen klingt der Clean-Gesang gepresst, brüchig oder zu tief gefärbt — die Härte „klebt“ am Ansatz, und saubere Melodien gelingen erst nach längerer Pause.",
+          "ursache": "Der Registerwechsel geschieht ohne Reset: Spannung und Rachenstellung des Harsh werden in den Clean mitgenommen, meist weil die Übergänge unter Zeitdruck oder ohne Pause geübt werden.",
+          "korrektur": "Den Reset als eigene Fähigkeit üben: Nach jeder harschen Phrase eine bewusste Pause mit Nachatmer, lockerem Kiefer und einem leisen, fast zu weichen ersten Clean-Ton. Die Pausen anfangs übertrieben lang wählen und erst mit sicherem Reset verkürzen. Bleibt der Clean dauerhaft belegt, Pensum reduzieren — das ist ein Ermüdungszeichen, kein Übe-Auftrag."
+        }
+      }
+    },
+    {
+      "id": "fb_legato_verschluckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "legato",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei Hammer-ons und Pull-offs sind die gebundenen Töne deutlich leiser als die angeschlagenen; mit steigendem Tempo verschwinden einzelne ganz, die Linie klingt löchrig.",
+          "ursache": "Der Hammer-on kommt aus zu geringer Fallhöhe oder trifft ungenau, der Pull-off wird nach oben abgehoben statt leicht seitlich abgezogen — der gebundene Ton bekommt keine eigene Energie.",
+          "korrektur": "Lass Zweiton-Paare (angeschlagen → gebunden) in Zeitlupe üben, mit dem ausdrücklichen Ziel gleicher Lautstärke beider Töne. Den Pull-off als kleines seitliches Anzupfen ausführen lassen und das per Aufnahme kontrollieren. Vereinbare: Tempo wird erst gesteigert, wenn angeschlagene und gebundene Töne über eine ganze Linie nicht mehr zu unterscheiden sind."
+        }
+      }
+    },
+    {
+      "id": "fb_vibrato_unruhig",
+      "typ": "fehlerbild",
+      "basis_baustein": "vibrato",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Vibrato ist ein schnelles, flaches Zittern; Weite und Geschwindigkeit wechseln unkontrolliert, jeder lange Ton klingt anders.",
+          "ursache": "Die Bewegung kommt aus den Fingern statt aus einer geführten Handgelenksrotation, und es gibt kein bewusstes Ziel für Auslenkung und Tempo — das Vibrato passiert, statt gestaltet zu werden.",
+          "korrektur": "Koppel das Vibrato ans Metronom: eine definierte Zahl gleichmäßiger Auslenkungen pro Schlag in langsamem Tempo üben lassen, aus der Rotation des Handgelenks. Danach Weite und Geschwindigkeit als getrennte Parameter variieren lassen (schmal/breit, langsam/schnell). Erst freigeben, wenn die übende Person ein angesagtes Vibrato reproduzieren kann."
+        }
+      }
+    },
+    {
+      "id": "fb_skipping_mitklingen",
+      "typ": "fehlerbild",
+      "basis_baustein": "string_skipping",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Überspringen klingt die ausgelassene Saite mit oder wird versehentlich gestreift; auf Aufnahmen liegt ein leises Klingeln unter der Linie.",
+          "ursache": "Die Anschlagbewegung ist zu groß und trifft die Zwischensaite, und für die übersprungene Saite existiert keine Dämpfungsstrategie — weder Handballen noch freie Greiffinger legen sie still.",
+          "korrektur": "Verlangsame die Figur stark und lass die Dämpfung explizit mitplanen: Handballen führt über den tiefen, flach aufliegende Greiffinger über den hohen Saiten mit. Per Aufnahme mit Verzerrung kontrollieren lassen — dort ist jedes Mitklingen hörbar. Tempo in kleinen Schritten, die Stille der Zwischensaite bleibt das Kriterium."
+        }
+      }
+    },
+    {
+      "id": "fb_dreifinger_ungleich",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_dreifinger",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im Dreifinger-Lauf ist regelmäßig derselbe Anschlag lauter oder kommt früher — es entsteht ein ungewolltes rhythmisches Hinken im Dreierzyklus.",
+          "ursache": "Meist ist der Ringfinger schwächer entwickelt oder der Übergang des Zyklus zurück zum ersten Finger ungleich; das höhere Tempo verdeckt die Ungleichheit nur, statt sie zu beheben.",
+          "korrektur": "Isoliere den schwachen Übergang: Fingerpaare und Permutationen langsam üben lassen, den Akzent bewusst auf den schwächsten Finger legen. Gleichheit per Aufnahme hörbar machen und das Tempo deckeln, bis alle drei Anschläge in Lautstärke und Abstand identisch sind — erst dann den vollen Lauf wieder freigeben."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_hand_desync",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_hand_sync",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ab einem bestimmten Tempo treffen Greif- und Anschlagimpuls nicht mehr zusammen: Töne knacken, schnarren oder klingen doppelt; darunter ist alles sauber.",
+          "ursache": "Beide Hände wurden getrennt schneller, ihre Synchronisation aber nicht — meist eilt die Anschlaghand der Greifhand voraus, und die Tonentstehung fällt zwischen die Impulse.",
+          "korrektur": "Bestimme gemeinsam das letzte Tempo, bei dem alles sauber ist, und mach es zum Arbeitspunkt. Von dort in sehr kleinen Metronomschritten steigern lassen, mit Fokus auf das Gefühl des gemeinsamen Impulses beider Hände. Vereinbare, dass knackende oder doppelnde Töne sofort einen Schritt zurück bedeuten — Synchronisation ist das Kriterium, nicht die Zahl auf dem Metronom."
+        }
+      }
+    },
+    {
+      "id": "fb_synkopen_begradigt",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_synkopen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Off-Beat-Töne wandern hörbar Richtung Zählzeit; die Linie klingt begradigt und verliert ihren Zug, besonders im Zusammenspiel mit dem Schlagzeug.",
+          "ursache": "Der Puls wird nicht aktiv unterteilt — ohne innerlich gefühlte Sechzehntel zieht die schwere Zählzeit die Synkope wie ein Magnet an sich heran.",
+          "korrektur": "Lass die Unterteilung laut mitzählen oder klatschen, bevor gespielt wird, und leg den Klick zeitweise auf die Off-Beats, sodass die Synkope zur Referenz wird. In langsamem Tempo die Spannung zwischen Zählzeit und Synkope bewusst aushalten lassen; per Aufnahme gegen ein Raster kontrollieren, bis die Off-Beats stabil sitzen."
+        }
+      }
+    },
+    {
+      "id": "fb_double_zweiter_schlag",
+      "typ": "fehlerbild",
+      "basis_baustein": "rudiments_grundlage",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei Doppelschlägen (R-R-L-L) ist der zweite Schlag jeder Hand deutlich leiser; bei Tempo verschwimmt er zu einem Nachklappern.",
+          "ursache": "Der Rückprall wird nicht genutzt: Der zweite Schlag wird aus dem Handgelenk nachgedrückt statt aus dem Rebound geführt — oft verstärkt durch einen zu festen Griff, der den Stick am Zurückspringen hindert.",
+          "korrektur": "Zurück zum Rebound: den Stick fallen lassen und den zweiten Schlag nur mit den Fingern aus dem Rückprall führen lassen, zunächst ohne Tempoanspruch. Dann den Akzent gezielt auf den zweiten Schlag legen lassen, bis beide gleich laut sind. Griffdruck beobachten — verkrampfte Hände sind hier fast immer Teil der Ursache."
+        }
+      }
+    },
+    {
+      "id": "fb_koordination_mitziehen",
+      "typ": "fehlerbild",
+      "basis_baustein": "koordination",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Sobald die Bassdrum-Figur variiert, ändert sich unwillkürlich auch das Hi-Hat-Muster oder die Snare verrutscht — die Variation einer Stimme zieht die anderen mit.",
+          "ursache": "Der Beat wurde als eine Gesamtbewegung gelernt, nicht als unabhängige Stimmen; das motorische Muster koppelt die Gliedmaßen, sobald eine davon ausschert.",
+          "korrektur": "Bau das Muster schichtweise neu auf: die konstanten Stimmen allein laufen lassen, dann paarweise kombinieren, die Variation zunächst in Zeitlupe hinzufügen. Wenn es kippt, eine Schicht zurück statt Wiederholung im Fehler. Vereinbare als Kriterium, dass die konstanten Stimmen während der Variation nachweislich (Aufnahme) unverändert bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_zieht_vor",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_feel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im langsamen Beat kommen die Schläge systematisch zu früh; die Lücken zwischen den Schlägen schrumpfen, das Schwere geht verloren.",
+          "ursache": "Die langen Abstände werden nicht aktiv unterteilt — die innere Unruhe füllt die Stille, indem sie den nächsten Schlag vorzieht. Je leerer der Takt, desto stärker der Sog.",
+          "korrektur": "Lass die Zwischenräume hörbar machen: Achtel oder Sechzehntel innerlich (oder anfangs laut) mitzählen, zeitweise den Klick auf die Unterteilung statt auf die Viertel legen. Mit Aufnahmen gegen den Klick arbeiten, bis die übende Person das Vorziehen selbst hört. Das Warten auf den Schlag als eigene Fähigkeit benennen und üben lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_scream_gequetscht",
+      "typ": "fehlerbild",
+      "basis_baustein": "scream_hoehe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In der Höhe wird der Scream dünn, gepresst und eng; sichtbar schieben Hals und Kiefer nach, danach folgt oft Räuspern oder ein raues Gefühl.",
+          "ursache": "Die Höhe wird über Druck gesucht statt über Stütze und Ansatz — der Hals übernimmt Arbeit, die die Atemführung leisten müsste. Das ist nicht nur ein Klangproblem, sondern ein Belastungsrisiko.",
+          "korrektur": "Unterbrich sofort und führe zurück auf leise, mühelose Höhe: kurze, leise Versuche auf voller Stütze, deutlich unterhalb der Problemlage, nur allmählich aufwärts. Vereinbare eine harte Regel: Kratzen, Räusperzwang oder Rauigkeit beenden die Harsh-Arbeit für den Tag. Empfiehl ausdrücklich die Begleitung durch eine erfahrene Lehrperson; bei wiederkehrenden Beschwerden ärztliche Abklärung (HNO) ansprechen."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_atemnot",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_phrasierung_atmung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Phrasenenden brechen ab oder kippen in Druck; mitten in der Zeile ist hörbares, hastiges Nachschnappen zu beobachten.",
+          "ursache": "Die Atmung ist nicht in die Phrasierung eingeplant — Einatmungen sind zu knapp oder zu hoch, und die Verzerrung verbraucht spürbar mehr Luft als cleaner Gesang, was die Planung zusätzlich verschärft.",
+          "korrektur": "Lass Atemstellen ausdrücklich in den Text eintragen und die Phrasen zunächst gesprochen mit genau diesen Atmungen durchgehen. Danach leise und kurz in die verzerrte Fassung übertragen, mit tiefer, ruhiger Einatmung an den geplanten Stellen. Kriterium: Das Phrasenende trägt noch auf Stütze, ohne dass Druck nachgeschoben wird."
+        }
+      }
+    },
+    {
+      "id": "fb_heiserkeit_signal",
+      "typ": "fehlerbild",
+      "basis_baustein": "stimm_regeneration",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach Harsh-Einheiten ist die Stimme wiederholt belegt oder heiser, teils bis zum nächsten Tag; die Sprechstimme klingt verändert.",
+          "ursache": "Die Gesamtdosis oder die Technik überlastet die Stimme: zu lange oder zu laute Einheiten, Verzerrung mit Druckanteil, fehlendes Auf- und Abwärmen — Heiserkeit ist das Überlastungssignal des Gewebes, kein Trainingseffekt.",
+          "korrektur": "Setz die Harsh-Arbeit sofort aus und vereinbare Regeneration: Stimmschonung, keine intensiven Einheiten, Wiedereinstieg erst bei vollständig klarer Stimme und dann leise und kurz. Die Technik gemeinsam mit einer erfahrenen Lehrperson überprüfen, bevor die Intensität zurückkehrt. Bei anhaltender oder wiederkehrender Heiserkeit ausdrücklich zur ärztlichen Abklärung (HNO) raten — das ist Fürsorge, keine Formalie."
+        }
+      }
+    },
+    {
+      "id": "fb_pinch_zufallstreffer",
+      "typ": "fehlerbild",
+      "basis_baustein": "pinch_harmonics",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Oberton-Quietschen kommt nur gelegentlich und nie auf Ansage; meist klingt statt des Harmonics ein normaler oder abgedämpfter Ton.",
+          "ursache": "Der Daumen berührt die Saite nach dem Plektrumanschlag nicht, zu lang oder an einer Stelle ohne nutzbaren Obertonknoten — und die Anschlagposition wird nicht als Variable begriffen: Die ergiebigen Zonen liegen je nach gegriffenem Ton an unterschiedlichen Stellen zwischen Steg und Hals.",
+          "korrektur": "Lass in Zeitlupe den Bewegungsablauf isolieren: Anschlag und sofortiger, kurzer Daumenkontakt als eine Bewegung. Dann bei gehaltenem Ton die Anschlagzone systematisch in kleinen Schritten Richtung Hals abwandern lassen und die Treffpunkte markieren. Trefferquote messbar machen (z. B. zehn Versuche pro Zone) und erst bei verlässlicher Quote ins Riff einbauen — Steg-Tonabnehmer und ausreichend Verzerrung als Rahmenbedingung prüfen."
+        }
+      }
+    },
+    {
+      "id": "fb_chug_pausen_bluten",
+      "typ": "fehlerbild",
+      "basis_baustein": "chugs_breakdown",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Zwischen den Chugs herrscht keine Stille: Saiten klingen nach, Obertöne stehen im Raum, der Breakdown-Groove wirkt verwaschen statt tight — auf Aufnahmen deutlich hörbar.",
+          "ursache": "Das Abdämpfen ist nicht als eigene, aktiv gespielte Bewegung geplant: Die Anschlaghand hebt nach dem Chug ab, statt aufzuliegen, und die Greifhand löst den Druck, ohne die Saiten stillzulegen — die Pause passiert passiv statt aktiv.",
+          "korrektur": "Definiere die Pause als eigenes Ereignis: Nach jedem Chug legen beide Hände die Saiten still (Handballen bleibt auf, Greiffinger liegen flach). In langsamem Tempo mit Verzerrung üben und aufnehmen lassen — Kriterium ist absolute Stille zwischen den Schlägen. Erst wenn die Pausen schwarz sind, Tempo und Synkopen zurückholen."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_downpicking_einbruch",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_downpicking",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach wenigen Takten bricht das Tempo ein: Die Abschläge werden ungleichmäßig, der Unterarm verhärtet sichtbar, die übende Person kompensiert mit Schulterbewegung.",
+          "ursache": "Die Bewegung ist zu groß und kommt zunehmend aus Arm statt Handgelenk; dazu wird am Dauerlimit geübt, sodass sich Verkrampfung statt Ausdauer aufbaut. Auf den dicken Basssaiten summiert sich das schneller als auf der Gitarre.",
+          "korrektur": "Verkleinere zuerst die Bewegung: lockeres Handgelenk, minimaler Weg, moderates Tempo. Ausdauer dann als Intervallarbeit aufbauen lassen — kurze, saubere Blöcke mit echten Pausen, Steigerung über Wochen statt innerhalb einer Session. Vereinbare Warnsignale ausdrücklich: Brennen, Verhärtung oder ausstrahlender Schmerz im Unterarm beenden die Übung sofort; bei wiederkehrenden Beschwerden ärztlichen Rat empfehlen."
+        }
+      }
+    },
+    {
+      "id": "fb_fuenfsaiter_matscht",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_fuenfsaiter",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die tiefe H-Saite klingt undefiniert und wummernd, schnarrt bei kräftigem Anschlag und verschwindet im Bandkontext als konturloses Dröhnen.",
+          "ursache": "Meist wirken Technik und Material zusammen: Der Anschlag sitzt zu weit Richtung Hals und zu weich, die schwingende dicke Saite wird nirgends gedämpft — und das Setup (Saitenstärke, Saitenlage, Tonabnehmerhöhe) ist nicht auf die tiefe Saite eingerichtet.",
+          "korrektur": "Trenne die Faktoren: Zuerst den Anschlagpunkt Richtung Steg verlegen und mit kontrollierter, kompakter Kraft spielen lassen — dort gewinnt die H-Saite Definition. Parallel die Dämpfungsroutine auf die zusätzliche Saite erweitern (Daumen oder Handkante legt sie still). Bleibt der Ton matt, das Setup prüfen lassen: ausreichende Saitenstärke und passende Saitenlage sind bei tiefer Stimmung keine Geschmacksfrage, sondern Voraussetzung."
+        }
+      }
+    },
+    {
+      "id": "fb_triolen_verflachen",
+      "typ": "fehlerbild",
+      "basis_baustein": "triolen_fills",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im Fill verlieren die Triolen ihre Rundung: Sie klingen wie ungleichmäßige Sechzehntel, und das Fill landet zu früh oder zu spät auf der Eins.",
+          "ursache": "Der Wechsel der Unterteilung wird nicht innerlich vollzogen — die Hände spielen drei Schläge, aber das Zeitgefühl bleibt im Sechzehntelraster; die Triole wird gedehnt oder gestaucht, statt gleichmäßig gedrittelt.",
+          "korrektur": "Lass den Unterteilungswechsel isoliert üben, ohne Kit-Choreografie: auf der Snare zum Klick zwischen Vierteln, Achteln, Triolen und Sechzehnteln wechseln, mit lautem Mitzählen der Triole. Erst wenn der Wechsel im Zeitgefühl sitzt, das Fill zurückholen — Kriterium ist die exakt getroffene Eins nach dem Fill, per Aufnahme geprüft."
+        }
+      }
+    },
+    {
+      "id": "fb_tempowechsel_reisst",
+      "typ": "fehlerbild",
+      "basis_baustein": "tempo_wechsel_drums",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "An den Übergängen — etwa von Halftime in den Blast oder zurück — entsteht ein Loch oder ein Temposprung: Der erste Takt des neuen Teils eiert, die Band stolpert hinterher.",
+          "ursache": "Der Wechsel wird als Bruch behandelt statt als Übergang: Das neue Feel wird nicht innerlich vorgehört, der letzte Takt vor dem Wechsel ist ungeplant, und oft fehlt ein gemeinsamer Puls, der beide Teile verbindet.",
+          "korrektur": "Lass die Übergänge isoliert üben, nicht die Teile: jeweils zwei Takte vor und nach dem Wechsel als eigene Übung in Schleife, mit durchlaufendem Klick als verbindendem Puls. Den letzten Takt vor dem Wechsel als Anker gestalten (definierte Figur, die den neuen Teil ankündigt) und das neue Feel während des alten innerlich mitzählen lassen. Kriterium: Der erste Schlag des neuen Teils sitzt so sicher wie jeder andere."
+        }
+      }
+    },
+    {
+      "id": "fb_falsecord_verhaucht",
+      "typ": "fehlerbild",
+      "basis_baustein": "false_cord_ansatz",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Verzerrung klingt luftig und dünn, trägt nicht — und die übende Person schiebt hörbar mehr Luft nach, wonach die Stimme trocken wird oder kratzt.",
+          "ursache": "Der Ansatz verwechselt Luftmenge mit Klang: Statt eines kompakten, gestützten Grundtons, dem die Taschenfalten-Rauigkeit beigemischt wird, wird Luft durch einen offenen Ansatz gepresst — das erschöpft die Stimme, ohne Verzerrung zu erzeugen.",
+          "korrektur": "Führe zurück auf den kompakten Kern: erst ein leiser, klarer, gestützter Ton, dann die Rauigkeit in kleinster Dosis beimischen lassen — leise, kurz, mühelos. Mehr Luft ist nie die Lösung; wird der Klang nur mit Schub tragfähig, ist der Ansatz falsch. Vereinbare die bekannten Stoppregeln (Kratzen, Trockenheit, Räusperzwang beenden die Einheit) und empfiehl für den False-Cord-Aufbau ausdrücklich eine erfahrene Lehrperson."
+        }
+      }
+    },
+    {
+      "id": "fb_growl_verschluckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "growl_resonanz",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Growl klingt dumpf und textlos, wie im Hals verschluckt; im Proberaum verschwindet er hinter den Instrumenten, obwohl die übende Person laut arbeitet.",
+          "ursache": "Tief wird mit dunkel-gedeckt verwechselt: Die Zunge zieht sich zurück, der Mundraum schließt sich, die Resonanzräume werden eng — der Klang verliert genau die Mitten und Konsonanten, die ihn tragen und verständlich machen würden.",
+          "korrektur": "Lass den Resonanzraum öffnen, nicht die Lautstärke erhöhen: lockerer Kiefer, Zunge vorn, mit Vokalfarben experimentieren, die dem Growl Raum geben — alles zunächst leise und auf Stütze. Verständlichkeit per Aufnahme prüfen (kommt der Text an?) und Projektion als Ergebnis von Resonanz und Stütze rahmen, nie von Druck. Bei Enge- oder Kratzgefühl gilt die Stoppregel; den Feinaufbau mit einer erfahrenen Lehrperson begleiten lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_intervalle_nur_griffbild",
+      "typ": "fehlerbild",
+      "basis_baustein": "intervalle_grundlagen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach dem Griffbild gefragt sitzt alles — aber rein nach Gehör werden Quinte und Oktave verwechselt, und ohne Instrument in der Hand kann die übende Person gar kein Intervall benennen.",
+          "ursache": "Die Intervalle wurden visuell als Griffmuster gelernt, nicht als Klangcharaktere. Das Auge hat die Arbeit übernommen, die eigentlich das Ohr machen soll — die Verbindung von Name zu Klang wurde nie geknüpft.",
+          "korrektur": "Instrument bewusst weglegen: Jedes Intervall an ein Referenzriff koppeln (Quinte = Powerchord-Fundament, kleine Sekunde = Reibung im Black-Metal-Riff) und in kurzen Hörrunden abfragen. Erst singen oder summen, dann greifen — wer ein Intervall vorsingen kann, bevor die Finger es finden, hat es wirklich."
+        }
+      }
+    },
+    {
+      "id": "fb_unterteilungen_puls_zieht",
+      "typ": "fehlerbild",
+      "basis_baustein": "taktarten_unterteilungen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Wechsel von Achteln zu Sechzehnteln wird das Grundtempo schneller, bei Triolen holpert es — die übende Person empfindet dichtere Unterteilungen als „schneller spielen“ statt als mehr Töne pro Schlag.",
+          "ursache": "Puls und Unterteilung sind nicht getrennt: Gezählt werden die Töne statt der Schläge. Sobald mehr Töne kommen, beschleunigt der innere Puls mit, weil er an den Tönen hängt statt an der Zählzeit.",
+          "korrektur": "Den Puls externalisieren: Metronom oder Fuß hält die Viertel, dazu werden die Unterteilungen mit Silben gesprochen (1-und, 1-e-und-e, 1-o-le) und geklatscht — erst ohne Instrument. Dann Wechsel in Schleifen üben: zwei Takte Achtel, zwei Takte Triolen, zwei Takte Sechzehntel, während der Fuß unbeirrt Viertel tritt. Der Fuß darf nie mitziehen."
+        }
+      }
+    },
+    {
+      "id": "fb_powerchord_verbot",
+      "typ": "fehlerbild",
+      "basis_baustein": "powerchord_theorie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "„Im Metal spielt man keine Terzen“ wird als Gesetz aufgesagt — gleichzeitig kann die übende Person nicht erklären, warum ihr voller Akkord unter High-Gain matscht, und meidet auch da Terzen, wo sie großartig klingen würden (clean, Zwischenteile).",
+          "ursache": "Die Faustregel wurde als Verbot gelernt statt als Physik verstanden: Verzerrung erzeugt zu jedem Intervall Kombinationstöne, und je mehr unterschiedliche Intervalle klingen, desto dichter der Brei. Ohne dieses Warum bleibt nur ein auswendig gelerntes Dogma.",
+          "korrektur": "Das Hörexperiment machen lassen statt die Regel wiederholen: denselben Dur-Akkord erst clean, dann mit viel Gain anspielen — und daneben den Powerchord. Der Unterschied erklärt sich selbst. Danach die Umkehrung zeigen: clean oder mit wenig Zerre sind Terzen ein Werkzeug, kein Tabu. Die Regel wird zur Entscheidung: Wie viel Intervall verträgt mein Zerrgrad?"
+        }
+      }
+    },
+    {
+      "id": "fb_phrygisch_muster",
+      "typ": "fehlerbild",
+      "basis_baustein": "moll_phrygisch",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die phrygische Skala wird flüssig auf und ab gespielt, aber die Riffs klingen kein bisschen dunkler als vorher — der besondere Charakter der Tonleiter kommt nicht heraus.",
+          "ursache": "Phrygisch wurde als Fingersatz-Muster gelernt, nicht als der eine entscheidende Ton: die tiefergelegte zweite Stufe direkt über dem Grundton. Wer die Skala nur durchläuft, betont diesen Halbton nicht — und dann ist Phrygisch von Moll praktisch nicht zu unterscheiden.",
+          "korrektur": "Auf zwei Töne reduzieren: nur Grundton und kleine Sekunde, im Wechsel pendeln lassen, bis die Reibung im Ohr ist. Dann schrittweise Töne der Skala dazunehmen, aber jede Phrase auf dem Grundton enden und die b2 als Würze gezielt setzen lassen. Zum Gegencheck dieselbe Phrase einmal mit großer, einmal mit kleiner Sekunde spielen — hörbar machen, was der eine Ton ändert."
+        }
+      }
+    },
+    {
+      "id": "fb_riff_monoton_zerfahren",
+      "typ": "fehlerbild",
+      "basis_baustein": "riff_baukasten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Selbstgebaute Riffs kippen in eines von zwei Extremen: Entweder läuft dieselbe Zelle endlos durch und langweilt, oder jede Wiederholung bringt neues Material und nichts bleibt hängen.",
+          "ursache": "Das Bauprinzip Kern plus Variation ist nicht verinnerlicht: Es fehlt das Gespür dafür, dass Wiederholung die Wiedererkennbarkeit baut und die Variation nur die Langeweile bricht — nicht umgekehrt. Oft wird außerdem zuerst über Töne nachgedacht statt über Rhythmus.",
+          "korrektur": "Mit einer Schablone arbeiten lassen: dreimal Kern, einmal Antwort (3+1). Das Riff zuerst nur klatschen — trägt der Rhythmus allein, bevor ein einziger Ton feststeht? Dann Vorbilder zerlegen: zwei Lieblingsriffs auf Kernlänge, Wiederholungszahl und Variationsstelle abklopfen und die gefundene Struktur aufs eigene Riff übertragen."
+        }
+      }
+    },
+    {
+      "id": "fb_tempo_ohne_anker",
+      "typ": "fehlerbild",
+      "basis_baustein": "tempo_genres",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "BPM-Angaben bleiben abstrakt: Das Übetempo wird zufällig gewählt, Steigerungspläne sind unrealistisch, und auf die Frage „wie schnell ist 180?“ kommt Raten statt einer Vorstellung.",
+          "ursache": "Tempo existiert nur als Zahl auf dem Metronom, nicht als Körpergefühl. Es fehlen innere Referenzpunkte — Songs, deren Tempo man kennt und fühlt —, an denen sich neue Zahlen verorten lassen.",
+          "korrektur": "Tempo-Anker bauen: je Genre-Bereich einen Referenzsong festlegen (Doom-Kriechen, Midtempo-Groove, Thrash-Galopp, Blast-Bereich) und dessen BPM nachschlagen. Dann das Schätzspiel zur Routine machen: Song anhören, Tempo schätzen, mit Metronom nachmessen. Nach wenigen Wochen sitzt ein Raster, in dem jede BPM-Zahl ein Gefühl hat."
+        }
+      }
+    },
+    {
+      "id": "fb_polyrhythmik_begriffe",
+      "typ": "fehlerbild",
+      "basis_baustein": "polyrhythmik_theorie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Polyrhythmus und Polymetrik werden durcheinander erklärt: Eine verschobene Dreier-Figur über 4/4 wird „drei gegen vier“ genannt, oder ein echtes drei-gegen-vier wird als wandernde Figur beschrieben. In der Probe redet man aneinander vorbei.",
+          "ursache": "Beide Konzepte sind unter demselben Etikett „poly“ abgelegt, ohne die Kernfrage zu trennen: Beim Polyrhythmus teilen zwei Unterteilungen denselben Zeitraum und treffen sich auf jeder Eins — bei der Polymetrik wandert eine ungerade Figur über den Puls und trifft die Eins erst nach mehreren Takten wieder.",
+          "korrektur": "Je Begriff ein klatschbares Minimalbeispiel verankern: drei gegen vier mit beiden Händen (gemeinsame Eins jede Runde) gegen eine Dreiergruppe aus Achteln über 4/4 (die Eins wandert). Dann als Testfrage etablieren: „Treffen sich die Einsen jedes Mal?“ — Ja heißt Polyrhythmus, Nein heißt Polymetrik. Erst wenn die Unterscheidung am Körper sitzt, die Fachwörter benutzen."
+        }
+      }
+    },
+    {
+      "id": "fb_ungerade_gezaehlt",
+      "typ": "fehlerbild",
+      "basis_baustein": "ungerade_takte_theorie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im 7/8 wird hörbar bis sieben gezählt: Bei langsamem Tempo geht es gerade noch, sobald es schneller wird, reißt der Groove ab oder es rutscht eine Acht hinein.",
+          "ursache": "Der Takt wird als Zahlenfolge behandelt statt als Kette aus Zweier- und Dreiergruppen. Mitzählen bindet Aufmerksamkeit und skaliert nicht mit dem Tempo — die Gruppierung (2+2+3) wäre fühlbar, aber sie wurde nie zum Körpergefühl gemacht.",
+          "korrektur": "Vom Zählen auf Silben umstellen: „kurz-kurz-lang“ sprechen, dazu gehen oder klatschen, bis die Kette ohne Nachdenken läuft — komplett ohne Instrument. Dann dieselbe Kette aufs Instrument übertragen und die Gruppenanfänge betonen. Verschiedene Drehungen (3+2+2, 2+3+2) als eigene Wörter üben, nicht als neue Rechnung."
+        }
+      }
+    },
+    {
+      "id": "fb_transkription_tonjagd",
+      "typ": "fehlerbild",
+      "basis_baustein": "gehoer_transkription",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Heraushören wird sofort Ton für Ton gejagt: Nach zwanzig Minuten stehen drei unsichere Töne, der Rhythmus ist falsch, die Motivation im Keller — und am Ende wird doch der Tab gegoogelt.",
+          "ursache": "Die Trichter-Methode wird übersprungen: Wer mit den Tonhöhen anfängt, arbeitet an der schwersten Ebene zuerst und ohne Gerüst. Form und Rhythmus — die viel schneller zu fassen sind und die Tonsuche massiv erleichtern — bleiben ungenutzt.",
+          "korrektur": "Die Reihenfolge zum Ritual machen: erst die Form (wie viele Teile, was wiederholt sich?), dann den Rhythmus klatschen, bis er sitzt, dann den Grundton suchen und zuletzt die Melodiekontur (rauf, runter, Sprung?) in Töne übersetzen. Kleine Häppchen loopen statt das ganze Riff am Stück. Der Fortschritt pro Schritt hält die Motivation — und das Ergebnis stimmt."
+        }
+      }
+    },
+    {
+      "id": "fb_modulation_kippt_weg",
+      "typ": "fehlerbild",
+      "basis_baustein": "metrische_modulation",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Übergang klingt wie unkontrolliertes Schneller- oder Langsamerwerden: Nach dem Kipp stimmt das neue Tempo nicht, und die Band findet sich erst nach ein paar Takten wieder.",
+          "ursache": "Die Pivot-Unterteilung wird nicht vorbereitet: Der Wechsel wird als abrupter Tempowechsel behandelt statt als Umdeutung einer schon klingenden Unterteilung. Wer die Triole nicht schon hört und fühlt, bevor sie zur neuen Viertel wird, kann sie nicht übernehmen — er springt und landet irgendwo.",
+          "korrektur": "Den Pivot hörbar machen, bevor er Puls wird: In den Takten vor dem Wechsel die Zielunterteilung mitklatschen oder mitsprechen, dann auf ein Signal den Puls umdeuten. Beide Tempi vorher einzeln mit Metronom verankern und das Verhältnis laut benennen (etwa Viertel wird zu punktierter Viertel, 3:2). Erst wenn der Kipp allein klatschend sitzt, ans Instrument."
+        }
+      }
+    },
+    {
+      "id": "fb_metronom_gemieden",
+      "typ": "fehlerbild",
+      "basis_baustein": "metronom_prinzip",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Klick wird still weggelassen: „Mit Metronom klingt alles kaputt.“ Geübt wird ohne — und im Zusammenspiel mit anderen fällt dann auf, dass das Timing schwimmt.",
+          "ursache": "Das Metronom ist als Richter erlebt worden, nicht als Partner: Das Übetempo war von Anfang an zu hoch, jeder Klick wurde zur Fehlermeldung, und das Erfolgserlebnis blieb aus. Die Vermeidung schützt vor der Rückmeldung — und konserviert genau das Problem.",
+          "korrektur": "Den Einstieg neu rahmen: Tempo drastisch senken, bis Mitspielen mühelos gelingt — das erste Ziel ist das Erfolgserlebnis, nicht die Zieltempo-Zahl. Den Klick musikalisch machen: auf halbes Tempo oder auf die Zählzeiten 2 und 4 stellen, sodass er wie ein Bandkollege groovt statt zu ticken. Kurze Einheiten mit klarem Ende — fünf gute Minuten mit Klick schlagen eine halbe Stunde dagegen."
+        }
+      }
+    },
+    {
+      "id": "fb_temposteigerung_sprunghaft",
+      "typ": "fehlerbild",
+      "basis_baustein": "mentale_temposteigerung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Trotz vieler Übestunden stagniert das Maximaltempo — oder es steigt auf dem Papier, aber bei jedem ernsthaften Durchlauf schleichen sich dieselben Fehler ein.",
+          "ursache": "Am Tempo wird wahllos gedreht: große BPM-Sprünge, gestartet oberhalb des sauberen Basistempos, kein Protokoll. So werden Fehler mit eintrainiert — das Tempo wächst schneller als die Kontrolle, und die eingeschliffenen Ungenauigkeiten bilden das eigentliche Plateau.",
+          "korrektur": "Die Methode vor die Motivation stellen: erst das ehrliche Basistempo messen (das höchste Tempo mit null Fehlern), von dort in kleinen Schritten steigern und bei jedem Patzer eine Stufe zurück. Fortschritt schriftlich festhalten — die Kurve über Wochen zeigt, dass kleine Schritte schneller sind als Sprünge. Phasen unterhalb des Maximums einplanen, in denen Klang und Lockerheit das Ziel sind, nicht die Zahl."
+        }
+      }
+    },
+    {
+      "id": "fb_set_verheizt",
+      "typ": "fehlerbild",
+      "basis_baustein": "set_pacing",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die ersten Songs des Sets oder der Probe sind stark — danach bricht die Leistung ein: Die Stimme wird rau, die Arme werden schwer, die letzten Songs sind Schadensbegrenzung.",
+          "ursache": "Das Set ist als Aneinanderreihung einzelner Songs geplant, jeder für sich auf Anschlag. Es fehlt die Belastungs-Dramaturgie: keine Erholungsinseln, die fordernden Stücke geballt am Anfang, und der Adrenalinschub des Auftritts verführt zusätzlich zum Überziehen.",
+          "korrektur": "Die Setlist als Belastungskurve planen: jeden Song ehrlich nach Anstrengung einstufen und die schwersten Stücke verteilen statt stapeln — nach jedem Maximum eine Erholungsinsel. Das ganze Set mindestens einmal am Stück durchspielen, um die reale Kurve zu erleben, und bewusst unterhalb des Maximums starten: Wer bei Song drei noch Reserven hat, hat richtig geplant. Bei stimmlicher Heiserkeit gilt wie immer die Stoppregel."
+        }
+      }
+    },
+    {
+      "id": "fb_kaltstart",
+      "typ": "fehlerbild",
+      "basis_baustein": "aufwaermen_handgesundheit",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Session beginnt direkt mit schnellen Riffs im Zieltempo. Nach kurzer Zeit verspannen Hand und Unterarm, die Präzision fällt ab — und nach intensiven Tagen melden sich Ermüdung oder Ziehen im Handgelenk.",
+          "ursache": "Aufwärmen ist als verlorene Übezeit gerahmt: Die Motivation zieht sofort zum eigentlichen Material, und solange nichts wehtut, scheint der Kaltstart zu funktionieren. Die Belastung summiert sich aber unbemerkt — gerade bei gedämpftem, schnellem Spiel mit viel Wiederholung.",
+          "korrektur": "Das Aufwärmen zum festen ersten Programmpunkt machen und als Teil des Trainings rahmen, nicht als Vorspiel: wenige Minuten langsames, lockeres Spielen mit großen Bewegungen, erst dann Tempo und Dämpfung dazu. Die ersten Minuten bewusst unterhalb der Anstrengungsschwelle halten. Bei Schmerz oder Taubheit sofort stoppen — und bei wiederkehrenden Beschwerden ärztlich abklären lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_stimme_alltagslast",
+      "typ": "fehlerbild",
+      "basis_baustein": "stimme_schuetzen_alltag",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Gesangstechnik ist sauber, geübt wird maßvoll — trotzdem ist die Stimme oft schon vor der Probe müde, rau oder belegt.",
+          "ursache": "Die Belastung passiert außerhalb des Übens und bleibt unsichtbar: lautes Reden über Musik oder im Job, häufiges Räuspern, Flüstern (das die Stimmlippen mehr belastet, als es sich anfühlt), wenig Wasser, wenig Schlaf, trockene Luft. Die Übe-Bilanz stimmt — die Tages-Bilanz nicht.",
+          "korrektur": "Eine Alltags-Inventur machen lassen: zwei, drei Tage lang notieren, wann die Stimme außerhalb des Übens arbeitet und wann sie sich rau anfühlt. Dann gezielt ersetzen: schlucken oder summen statt räuspern, normal leise sprechen statt flüstern, Wasser griffbereit, stimmliche Ruhephasen vor Proben einplanen. Hält die Heiserkeit trotz allem an, gehört sie zur Abklärung in die HNO-Praxis — nicht in die nächste Session."
+        }
+      }
+    },
+    {
+      "id": "fb_drums_dauervollgas",
+      "typ": "fehlerbild",
+      "basis_baustein": "drums_koerper_ausdauer",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Jede Session wird auf Anschlag gespielt, trotzdem wächst die Ausdauer nicht: Blast- und Double-Bass-Passagen brechen nach derselben Zeit ein wie vor Monaten, und nach den Sessions bleiben Erschöpfung oder ein Zwicken in Armen und Beinen.",
+          "ursache": "Belastung ohne Steuerung: Immer Vollgas trainiert vor allem das Verkrampfen — unter Dauerermüdung greift der Körper zu Kraft statt Technik, der Rebound geht verloren, und ohne Erholungsphasen fehlt der Reiz-Erholungs-Zyklus, aus dem Ausdauer überhaupt entsteht.",
+          "korrektur": "Wie im Sport strukturieren: intensive Passagen in Intervallen mit echten Pausen statt als Dauerfeuer, dazwischen Technikblöcke in moderatem Tempo, in denen Lockerheit und Rebound das Ziel sind. Belastung über die Woche planen — auf harte Tage folgen leichte. Einbrechende Technik ist das Stoppsignal, nicht der Wille; bei anhaltenden Schmerzen ärztlich abklären lassen."
+        }
+      }
+    },
+    {
+      "id": "fb_gain_wand",
+      "typ": "fehlerbild",
+      "basis_baustein": "gitarren_sound_architektur",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Allein im Zimmer klingt der Sound riesig — im Bandgefüge verschwindet die Gitarre: kein Attack, keine Definition, die Riffs verschwimmen zu einer breiigen Fläche, und als Reaktion wird noch mehr aufgedreht.",
+          "ursache": "Zu viel Gain und ausgehöhlte Mitten: Ab einem Punkt macht mehr Zerre den Ton nicht härter, sondern kleiner — Kompression frisst den Anschlag, und die herausgedrehten Mitten sind genau der Frequenzbereich, in dem sich eine Gitarre im Mix behauptet. Beurteilt wurde der Sound solo statt im Bandkontext.",
+          "korrektur": "Im Bandkontext (oder zu einer Aufnahme) einstellen lassen, nie allein: Gain schrittweise zurücknehmen, bis palm-gemutete Achtel wieder als einzelne Anschläge lesbar sind — das ist der Attack-Test. Dann Mitten hineindrehen, auch wenn es solo ungewohnt klingt. Als Merksatz verankern: Härte kommt aus Anschlag und Tightness, nicht aus dem Gain-Regler."
+        }
+      }
+    },
+    {
+      "id": "fb_monitoring_drueckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "vocals_live_monitoring",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In der Probe hält die Stimme mühelos — live ist sie nach wenigen Songs rau oder weg. Auf der Bühne wird sichtbar gegen die Lautstärke angekämpft: angespannter Hals, immer dichter ans Mikrofon, immer mehr Druck.",
+          "ursache": "Die Person hört sich selbst nicht: Ohne verlässliches Monitoring fehlt die Rückkopplung, leise Verzerrung wirkt im Bühnenlärm wie nichts — also wird gepresst, um sich zu spüren. Nicht die Technik versagt, die Hörsituation zwingt sie in den Druck.",
+          "korrektur": "Monitoring zur nicht verhandelbaren Voraussetzung machen: Beim Soundcheck zuerst die eigene Stimme im Monitor einfordern — laut genug, dass leises Verzerren hörbar bleibt; wo möglich In-Ears oder eine feste Wedge-Position nutzen. Als Regel verankern: Wenn ich mich nicht höre, wird der Monitor lauter, nicht die Stimme. Kratzen oder Engegefühl heißt sofort zurückschalten — und wiederkehrende Heiserkeit nach Shows gehört in die HNO-Praxis, den Aufbau begleitet eine erfahrene Lehrperson."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_ton_stirbt",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_sustain_feedback",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Zwischen den Anschlägen entstehen tote Lücken: Der Ton verhungert, bevor der nächste kommt — oder er kippt in unkontrolliertes Feedback, das die ganze Phrase zukleistert.",
+          "ursache": "Der Ton wird angeschlagen und dann sich selbst überlassen: kein aktives Halten der Greifhand, kein spätes Vibrato, keine bewusste Dämpfungsarbeit. Beim Feedback fehlt die Kontrolle über Position und Abstopp-Moment — es passiert, statt gesetzt zu werden.",
+          "korrektur": "Den einzelnen Ton zur Übung machen: anschlagen, bis zum Verklingen zuhören, dann dieselbe Länge mit spätem Vibrato hörbar überbieten. Feedback als geplantes Ereignis rahmen — Position zum Amp suchen, Kipppunkt merken, Abdämpfen auf einen definierten Schlag. Erst wenn ein Ton eine Geschichte erzählt, zurück in die Phrase."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_fuzz_brei",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_bass_fuzz",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der verzerrte Bass klingt allein riesig, aber in der Band ist nur noch Fläche: keine erkennbaren Anschläge, keine Tonhöhen, das Fundament pumpt und rauscht.",
+          "ursache": "Zu viel Zerre und keine Dämpfungsarbeit: Der Fuzz verschluckt Attack und Tiefe, die verzerrten Ausklänge laufen unkontrolliert ineinander — und weil es sich allein groß anfühlt, wird eher noch mehr aufgedreht. Oft halten zusätzlich Bass und Gitarre gleichzeitig maximal tief und maximal verzerrt dieselbe Rolle.",
+          "korrektur": "Die Clean-Referenz einführen: dieselbe Linie erst clean aufnehmen, dann mit Zerre — die Zerre so weit zurücknehmen, bis Attack und Tonhöhe wieder erkennbar sind. Ausklänge aktiv abdämpfen lassen (die Dämpfung gehört zur Linie). Auf Bandebene die Rollen staffeln: absprechen, wer das Tief hält — und das Urteil immer der Aufnahme auf kleinen Lautsprechern überlassen."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_drums_gefuellt",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_drums_zeitdehnung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Schwere kommt nicht: Zwischen die langsamen Schläge rutschen Fills, Ghost-Notes und Beckenschläge, die Crashes werden früh abgestoppt — der Groove klingt beschäftigt statt erdrückend.",
+          "ursache": "Die Stille wird als Unsicherheit erlebt und gefüllt: Ohne stabiles inneres Netz fühlt sich der leere Raum zwischen den Backbeats bedrohlich an, und die Hände beruhigen die Nerven mit zusätzlichen Schlägen. Dazu die Midtempo-Gewohnheit, jedes Taktende mit einem Fill zu markieren.",
+          "korrektur": "Das Netz vor dem Weglassen trainieren: laut mitgezählte Unterteilung, dann still, dann Klick ausdünnen — erst wenn die Zeit ohne Füllung trägt, verschwindet der Drang. Dann die Radikalkur: vier Takte nur Kick, Snare und ein voll ausklingendes Crash, jeder Impuls zum Füllen wird registriert, aber nicht gespielt. Fills auf maximal drei schwere Schläge rationieren und ihre Wirkung auf der Aufnahme vergleichen."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_vocals_gepresst",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_vocals_getragen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die langen getragenen Phrasen beginnen frei und enden gequetscht: Die letzten Töne klingen eng, die Stütze bricht hörbar ein, nach der Probe ist die Stimme müde oder rau.",
+          "ursache": "Die Phrase ist länger als der Atemplan: Es wird ohne gesetzte Atemstellen begonnen und am Ende mit Druck kompensiert, was an Luft fehlt. Bei getragenen Growls steigt die Belastung zusätzlich mit jeder gepressten Sekunde — die Grenze verschiebt sich nicht in einer Session, wird aber in einer Session überzogen.",
+          "korrektur": "Atemstellen VOR dem Singen markieren lassen — lieber eine mehr als eine zu wenig — und die Phrase so anlegen, dass das Ende leichter ist als der Anfang. Phrasenlänge nur in Wochenschritten steigern; klingt ein Ende angestrengt, sofort eine Stufe zurück. Der Prüfstein ist die Aufnahme: Phrasenende so ruhig wie der Anfang? Bei Müdigkeit oder Rauheit gilt die Stoppregel, bei Wiederkehr die HNO-Abklärung."
+        }
+      }
+    },
+    {
+      "id": "fb_bounce_durchgenagelt",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_groove_bounce",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Riff wird technisch sauber gespielt, aber niemand bewegt sich: Alle Achtel sind gleich laut, die Pausen klingen nach, und das Ganze klingt nach Thrash im falschen Tempo statt nach Stomp.",
+          "ursache": "Die Lücken werden nicht als Teil des Riffs behandelt: schlampige Dämpfung lässt die Pausen zuwachsen, Akzente und Nicht-Akzente sind gleichberechtigt, und die Synkopen werden dem Beat angeglichen statt gegen ihn gesetzt. Der Körper spielt nicht mit — im Sitzen geübt, im Kopf gezählt.",
+          "korrektur": "Das Riff über die Pausen aufbauen: erst durchgehende gedämpfte Achtel, dann gezielt Schläge streichen und die Stille knallen lassen — die Dämpfung ist die halbe Miete. Akzente bewusst überzeichnen (die Synkope lauter als alles andere), dann zurücknehmen. Und die Körperprobe zur Pflicht machen: im Stehen spielen; wenn der eigene Kopf nicht nickt, weiter vereinfachen statt weiter üben."
+        }
+      }
+    },
+    {
+      "id": "fb_motor_zieht",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_bass_motor",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die treibenden Achtel werden über die Minuten schneller: Am Songanfang sitzt der Bass, am Ende drückt er vor dem Schlagzeug — und im Alleinträger-Moment (Gitarren-Break) kippt das Tempo hörbar nach vorn.",
+          "ursache": "Drive wird mit Eile verwechselt: Der Wunsch zu schieben landet im Tempo statt im Attack. Meist fehlt die Aufnahme-Kontrolle — das Ziehen fühlt sich von innen wie Energie an und fällt erst im Vergleich mit dem Klick auf.",
+          "korrektur": "Die Zwei-Minuten-Messung zum Ritual machen: durchgehende Achtel aufnehmen und gegen den Klick abhören — das Ziel ist Druck bei stabiler Zeit, und der Druck kommt aus konstantem, hartem Anschlag, nicht aus Beschleunigung. Den Alleinträger-Moment isoliert üben: Band-Aufnahme ausblenden und prüfen, ob die eigene Zeit steht. Merksatz: Schieben heißt lauter und entschlossener, nie früher."
+        }
+      }
+    },
+    {
+      "id": "fb_energie_ins_tempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_drums_energie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Je energischer der Song, desto schneller wird er: Nach dem Stomp ist der schnelle Teil plötzlich flotter als davor, und am Set-Ende liegen die Songs spürbar über ihrem Tempo.",
+          "ursache": "Energie und Tempo sind nicht getrennt: Die Erregung des Moments — Publikum, Adrenalin, laute Gitarren — wandert unbemerkt in die Hände. Die Übergänge sind die Leckstellen: Jeder Wechsel wird zum kleinen Beschleuniger, weil der erste Takt des neuen Teils ungeprüft übernommen wird.",
+          "korrektur": "Die Wechselkanten mit Klick drillen: schnell in den Stomp und zurück, zehnmal am Stück, und der erste Takt nach jedem Wechsel wird bewusst kontrolliert — er neigt zum Hetzen. Dann den Ernstfall simulieren: bewusst aufgedreht spielen (laute Aufnahme, Stehprobe) und hinterher messen, ob die Energie ins Tempo gesickert ist. Ziel-Formulierung fürs Team: Energie hoch, Viertel unverrückbar."
+        }
+      }
+    },
+    {
+      "id": "fb_gangshout_hals",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_gangshouts",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach wenigen Shouts wird die Stimme rau, der Ruf klingt gequetscht statt wuchtig — und im Ensemble kleckern die Silben, statt als ein Schlag zu treffen.",
+          "ursache": "Gerufen wird mit dem Hals statt mit dem Körper: kein Stütz-Impuls, enger Rachen, zu lange und zu laute Töne. Dazu fehlt die rhythmische Verabredung — jeder ruft gefühlt richtig, aber niemand exakt auf dem Schlag.",
+          "korrektur": "Die Rufe neu verankern: erst im Sprechton rhythmisch exakt zum Klick, dann halblaut aus der Stütze (Impuls aus der Körpermitte, kurze entschlossene Silben), Lautstärke nur so weit, wie es mühelos bleibt. Timing vor Wucht: Silben wie perkussive Schläge behandeln und im Ensemble auf EINEN gemeinsamen Schlag hin üben. Kratzen oder Heiserkeit heißt sofort leiser — und Aufwärmen gilt auch für Shouts."
+        }
+      }
+    },
+    {
+      "id": "fb_dbeat_verkrampft",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_dbeat_ausbau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach zwei Minuten D-Beat steigt die Schulter, die Schläge werden härter, aber leiser wirksam — und am Ende der Aufnahme eilt der Beat oder franst aus, während die Unterarme brennen.",
+          "ursache": "Konstanz wird mit Dauermaximalkraft verwechselt: Jeder Schlag wird aus den Armen gestemmt statt aus Technik und Rebound geholt. Unter Ermüdung greift der Körper zu noch mehr Kraft — die Spirale aus Verkrampfung, Lautstärkeverlust und Timing-Drift dreht sich zu.",
+          "korrektur": "Ökonomie vor Dauer, Dauer vor Tempo: kurze Läufe mit bewusster Lockerheits-Kontrolle (Schultern unten, Handgelenke federn, Atmung ruhig), erst dann verlängern. Auf der Aufnahme Anfang gegen Ende vergleichen — gleich laut, gleich pünktlich? Die Stellen markieren, an denen Kraft aufgebaut wird, und genau dort lockern statt leiser werden. Bei anhaltendem Brennen oder Zwicken: Pause und ärztliche Abklärung statt Durchbeißen."
+        }
+      }
+    },
+    {
+      "id": "fb_crust_vocals_druck",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_vocals_rau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das raue Brüllen funktioniert nur laut: Leise ist die Färbung weg, nach einer Probe ist die Stimme heiser, und die Rauheit klingt von Tag zu Tag anders.",
+          "ursache": "Die Dringlichkeit wird körperlich erzwungen: Statt False-Cord-Rauheit auf stabilem Luftstrom trägt Kehlkopf-Druck die Färbung. Dass es nur laut geht, ist das Leitsymptom — echte Technik ist in jeder Lautstärke verfügbar, Druck braucht Pegel.",
+          "korrektur": "Zurück auf die leise Basis: der clean gerufene Zuruf aus der Stütze, dann ein Hauch Rauheit als Flüster-Brüllen — die Färbung muss bei niedriger Lautstärke entstehen, sonst trägt noch der Druck. Kurze Einheiten, nach jeder der Sprechtest (klingt die Alltagsstimme frei?). In Heiserkeit wird nie hineingeübt; hält sie an, gehört sie in die HNO-Praxis, und der Aufbau an die Seite einer Lehrperson."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_schnitt_franst",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_riff_reduktion",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Miniatur hat alles — Tremolo-Fläche, Stampf-Kontrast — aber die Wechsel klingen nach Übergang: ein Nachklingen hier, ein Zögern da, und die Wirkung des harten Schnitts ist weg.",
+          "ursache": "Der Schnitt wird nicht als eigenes Ereignis geübt: Die Aufmerksamkeit liegt auf den Teilen statt auf der Naht. Unsaubere Dämpfung lässt Teil A in Teil B hineinklingen, und die Umstellung der Anschlagshand (dicht auf schwer) kostet eine Mikropause, die bei Grind-Dichte sofort hörbar ist.",
+          "korrektur": "Die Naht isoliert drillen: nur die letzten zwei Schläge von A und die ersten zwei von B, zehnmal am Stück — dazwischen absolute Stille, konsequent abgedämpft. Dann die Miniatur aufnehmen und ausschließlich die Schnitte bewerten: kein Nachklingen, kein Zögern, kein Ritardando. Der Prüfsatz: Der Schnitt selbst ist der Effekt — was ihn weich macht, fliegt raus."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_register_bruch",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_vocals_wechsel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Einzeln sitzen beide Register — aber im schnellen Wechsel wird das Hoch gepresst oder das Tief eng, und nach Grind-Tempo-Passagen ist die Stimme spürbar strapaziert.",
+          "ursache": "Der Kontrast wird erzwungen: Beim Umschalten baut die Kehle Druck auf, um den Registerwechsel zu markieren, statt nur den Resonanzraum umzuschalten. Meist ist der Abstand zu früh zu klein geworden — das Tempo des Songs diktiert den Wechsel, bevor die Technik ihn hergibt.",
+          "korrektur": "Den Abstand wieder vergrößern: Phrase tief, bewusster Atem, Phrase hoch — mit Sekunden Luft dazwischen, beide leise und frei. Die Stütze als Kontinuum rahmen: Sie bleibt, nur der Raum schaltet. Verkürzt wird der Abstand in Wochenschritten und nur, solange beide Seiten frei klingen — klingt ein Register nach dem Wechsel enger, ist das die Warnlampe. Songtempo ist das letzte Kriterium, nicht das erste."
+        }
+      }
+    },
+    {
+      "id": "fb_pv_kante_kleckert",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_start_stopp",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Abrisse wirken nicht: Nach dem Stopp kommt der neue Teil zögernd, das neue Tempo stimmt erst nach zwei Takten, und was Absicht sein soll, klingt nach Patzer.",
+          "ursache": "Die Teile wurden geübt, die Kanten nicht: Der letzte und der erste Schlag sind niemandes Fokus. Dazu fehlt das Tempogedächtnis — das neue Tempo wird aus dem alten geschätzt statt als feste Referenz abgerufen, und bei unverwandten Tempi geht die Schätzung daneben.",
+          "korrektur": "Das Üben umdrehen: nicht Durchläufe, sondern Kanten — zwei Takte vor dem Wechsel rein, zwei danach raus, zehnmal. Jedes Teil-Tempo einzeln mit Klick als Gefühl verankern (notfalls mit Referenzsong im Ohr) und nach dem Stopp aus dem Gedächtnis abrufen. Auf der Aufnahme zählt nur eines: Liegt der erste Schlag des neuen Teils exakt — und im richtigen Tempo?"
+        }
+      }
+    },
+    {
+      "id": "fb_pv_karte_fehlt",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_band_abrisskanten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Live und in der Probe dasselbe Bild: Bei jedem dritten Wechsel schaut sich die Band an, einer springt zurück, um einen Patzer zu reparieren — und aus einem Vierzig-Sekunden-Song wird eine Baustelle.",
+          "ursache": "Das Stück existiert nur als Muskelgedächtnis, nicht als geteilte Landkarte: Niemand kann die Zustandsfolge mit Taktzahlen aufsagen, Signale für variable Stellen sind nicht verabredet, und die Regel für den Fehlerfall (weiterspielen, nie zurückspringen) wurde nie explizit gemacht.",
+          "korrektur": "Die Landkarte zur Eintrittskarte machen: Vor dem Proben sagt jede Person die Zustandsfolge auswendig auf — zweimal dieselbe Antwort, sonst wird nicht gespielt. Kanten einzeln proben, Signale für die variablen Stellen festlegen, und den Fehlerfall aktiv üben: absichtlicher Patzer, alle spielen unbeirrt weiter. Der Song ist zu kurz für Reparaturen — das muss als Regel sitzen, nicht als Hoffnung."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_drama_ungeduld",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_dramaturgie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die selbstgeschriebenen langen Songs wirken kurzatmig: Alle dreißig Sekunden passiert etwas Neues, die Trance stellt sich nie ein — oder das Gegenteil: Ein Riff läuft acht Minuten, und irgendwann hört niemand mehr zu.",
+          "ursache": "Das Verhältnis von Wiederholung und Ereignis ist nicht kalibriert: Entweder fehlt das Vertrauen in die Wiederholung (jede Angst vor Langeweile wird sofort mit einem Wechsel beantwortet), oder die Grenze zwischen Trance und Langeweile wurde nie bewusst gesucht — Wiederholung allein ist noch keine Dramaturgie.",
+          "korrektur": "Mit der Stoppuhr hören lassen: bei zwei, drei großen Doom-Songs die Abstände zwischen echten Veränderungen messen und daneben die eigene Skizze legen — der Unterschied ist meist drastisch. Dann die Übung umdrehen: im eigenen Material eine geplante Veränderung ersatzlos streichen und der Wiederholung doppelt so viel Zeit geben; anschließend prüfen, wo die Aufmerksamkeit wirklich kippt, und GENAU dort das kleine Ereignis setzen (ein Becken, eine zweite Stimme — nicht gleich ein neues Riff)."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_gewicht_verwechselt",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_sound_gewicht",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Sound soll schwer werden, aber er wird nur dichter: mehr Verzerrung, tieferes Tuning mit den alten dünnen Saiten — und das Ergebnis schlackert, matscht und wird im Bandkontext eher kleiner als größer.",
+          "ursache": "Die Doom-Schwere wird am falschen Regler gesucht: High-Gain-Kompression statt breiter, offener Zerre; Tiefe ohne die passende Saitenstärke; und die Rolle von Lautstärke und bewegter Luft im Klang wird ignoriert oder ohne Schutz gesucht. Das Rezept des Genres — Fuzz, dicke Saiten, Amp-Arbeit — ist schlicht nicht bekannt.",
+          "korrektur": "Das Hörexperiment an den Anfang stellen: einen klassischen Doom-Fuzz neben eine moderne High-Gain-Produktion legen und den Unterschied benennen lassen (breit-offen gegen komprimiert-dicht). Dann das Setup in dieser Reihenfolge anpassen: Saitenstärke zum Tuning, weniger Gain und dafür mehr Amp und Anschlag, Zerre eher breit als heiß. Und die Grundregel verankern: Wer Lautstärke als Klangfarbe nutzt, trägt Gehörschutz — ohne Ausnahme."
+        }
+      }
+    },
+    {
+      "id": "fb_hc_song_gestreckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_songwriting_direkt",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die eigenen Songs dauern vier Minuten, haben zwei Übergangsteile und ein langes Intro — und der Moment, für den der Song eigentlich existiert, geht in der Strecke unter.",
+          "ursache": "Konventionen aus anderen Genres werden ungeprüft übernommen: noch eine Strophe, ein vermittelnder Übergang, ein Outro — Teile, die nur existieren, weil man glaubt, dass Songs sie brauchen. Die Hardcore-Ökonomie (jeder Teil hat einen Job für die Energie im Raum) wurde nie als Maßstab angelegt.",
+          "korrektur": "Den Streichtest zur Methode machen: Für jeden Teil des Songs die Frage beantworten, was er für die Energie leistet — sammeln, entladen, bündeln. Jeder Teil ohne Antwort fliegt probeweise raus; fast immer wird der Song besser. Referenz-Anker setzen: zwei Klassiker unter zweieinhalb Minuten zerlegen und zählen, wie wenige Teile sie brauchen. Und den stärksten Moment zum Chef machen: Alles vor ihm bereitet ihn vor, nach ihm darf der Song einfach aufhören."
+        }
+      }
+    },
+    {
+      "id": "fb_hc_buehne_show",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardcore_buehne_community",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Auftritt wirkt einstudiert: choreografierte Posen, Ansagen wie vom Zettel, Distanz zum Publikum — und der Raum bleibt kalt, obwohl die Songs sitzen. Oder das Gegenteil: Das Chaos ist echt, aber nach jeder Störung bricht das Set auseinander.",
+          "ursache": "Präsenz wird mit Inszenierung verwechselt (oder Echtheit mit Unvorbereitetheit): Es fehlt die Unterscheidung zwischen dem, was man vorbereiten kann — Songs im Stehen und in Bewegung, Wiedereinstieg nach Unterbrechungen, wer zählt ein — und dem, was echt sein muss: die Energie, die Ansagen, der Umgang mit dem Raum.",
+          "korrektur": "Die Probe realistisch machen: im Stehen, in Bewegung, mit absichtlichen Störungen (Mikroständer fällt, jemand patzt) — und der Wiedereinstieg wird geübt wie ein Songteil. Ansagen nicht skripten, aber die zwei wichtigen Situationen durchsprechen: Was sagen wir, wenn im Pit jemand stürzt? Was, wenn die Technik ausfällt? Dann live die Kontrolle abgeben, wo sie hingehört: Die Setlist ist das Gerüst, die Energie des Raums füllt sie."
+        }
+      }
+    },
+    {
+      "id": "fb_crust_dreck_ausrede",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_sound_dreck",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Unter der Soundwand ist nichts mehr zu erkennen: kein Riff zum Mitsingen, Bass und Gitarre ununterscheidbar, das Schlagzeug zugekleistert — und auf Nachfrage heißt es, das sei eben Crust.",
+          "ursache": "Die Ästhetik wird als Freibrief missverstanden: Der Dreck der Vorbilder ist kuratiert (Attack und Rhythmus kommen durch, die Rollen sind gestaffelt), der eigene ist flächendeckend. Oft steckt darunter ein zweites Problem: Unsauberes Spiel versteckt sich gern in der Wand — der Dreck kaschiert, statt zu färben.",
+          "korrektur": "Den Lesbarkeitstest von den Vorbildern lernen: am Referenz-Song zeigen, dass man trotz Kettensäge das Riff mitsingen und jeden Schlagzeugschlag orten kann — dann die eigene Aufnahme demselben Test unterziehen. Danach gezielt aufräumen: Rollen staffeln (wer hält welchen Frequenzbereich), an ein, zwei Stellen bewusst NICHT in den Dreck gehen, und die Passage einmal clean spielen lassen — was clean nicht steht, rettet auch die Zerre nicht."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_gestreckt",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_kompression",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Grind-Song dauert zwei Minuten: Intro, jedes Riff viermal wiederholt, ein Übergangstakt vor jedem Wechsel — die Verdichtung, die das Genre ausmacht, findet nicht statt.",
+          "ursache": "Song-Gewohnheiten aus dem klassischen Metal überleben im falschen Genre: Wiederholung zur Gewöhnung, Aufbau vor dem Höhepunkt, Vorbereitung vor jedem Wechsel. Die Grind-Logik — der Song beginnt auf dem Höhepunkt und jedes Element trägt mehrere Funktionen gleichzeitig — wurde gehört, aber nie aufs eigene Schreiben angewendet.",
+          "korrektur": "Die Sekunden-Analyse zur Pflicht machen: drei Klassiker unter einer Minute protokollieren (wie viele Ereignisse pro dreißig Sekunden?) und den eigenen Song daneben legen. Dann radikal kürzen als Experiment: den Zwei-Minuten-Song auf dreißig Sekunden eindampfen — was bleibt, ist fast immer die bessere Fassung. Prüffrage je Takt: Was leistet er, das kein anderer schon leistet? Keine Antwort, kein Takt."
+        }
+      }
+    },
+    {
+      "id": "fb_pv_beliebig",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_miniatur_dramaturgie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die selbstgebaute Miniatur springt wild zwischen Zuständen, aber die Wirkung bleibt aus: Nach dem dritten Wechsel stumpft alles ab, der Zeitlupen-Block kommt irgendwo und dauert irgendwie — Chaos ja, Schlag nein.",
+          "ursache": "Die Nichtvorbereitung wird mit Beliebigkeit verwechselt: Powerviolence verzichtet auf Übergänge, aber nicht auf Proportion. Ohne Gespür dafür, WANN der Sludge-Block maximal erdrückt (wenn die Raserei zu kippen droht) und wie lange die Spannung ihn trägt, ist jeder Schnitt nur ein weiterer Zufall — und Zufall nutzt sich ab.",
+          "korrektur": "Von den Klassikern die Proportionen ablesen lassen: Zustandsfolgen mit Stoppuhr protokollieren — wie viel Raserei steht wie viel Zeitlupe gegenüber, und wo genau sitzt der Block? Dann die eigene Miniatur als Zustandsfolge MIT Zeitangaben planen (auf Papier, vor dem Spielen): ein Zeitlupen-Block, bewusst platziert, exakt so lang, wie die Spannung trägt. Regel für die Revision: Wirkt ein Schnitt nicht, wird nicht der Schnitt weicher — es wird die Proportion verschoben."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_breakdown_matsch",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_breakdown_wucht",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Breakdown klingt nach Brei statt nach einzelnen, schweren Schlägen — zwischen den Chugs rauscht die tiefe Saite weiter, die Kante vom schnellen Teil in den Breakdown franst.",
+          "ursache": "Die Dämpfhand arbeitet nicht sauber: Die Saite wird zwischen den Schlägen nicht abgestoppt, und der erste schwere Schlag sitzt nicht exakt auf der Kante. Oft wird das Noise Gate als Ersatz für saubere Technik missverstanden.",
+          "korrektur": "Nur die Kante isolieren: vier Takte schneller Teil, winzige bewusste Pause, dann EIN schwerer Schlag exakt auf der Eins — zehnmal. Danach den Breakdown aus wenigen Tönen mit echter Stille bauen; die Greif-/Dämpfhand muss zwischen den Schlägen greifen. Gate erst zuschalten, wenn es OHNE Gate schon halbwegs sauber ist."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_bass_wummern",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_bass_fundament",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In extremer Tiefe wird der Bass zu undefiniertem Wummern; auf kleinen Lautsprechern ist keine Tonhöhe mehr erkennbar, und die Breakdown-Akzente verschmieren mit der Gitarre.",
+          "ursache": "Zu dünne Saiten für die tiefe Stimmung (die Saite schlackert) und/oder fehlender Attack — der Ton hat keinen Anschlagskern, der durch die Dichte sticht. Die Akzente sitzen nicht exakt auf denselben Schlägen wie die Gitarre.",
+          "korrektur": "Saitenstärke an die Stimmung anpassen, Attack aus hartem Plektrum oder angezerrtem Ton holen und auf kleinen Lautsprechern gegenprüfen: Bleibt jede Tonhöhe erkennbar? Die Breakdown-Akzente langsam mit der Gitarre verzahnen, bis sie als EIN Schlag klingen — nicht Lautstärke, sondern Definition ist das Ziel."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_gravity_holpert",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_gravity_blast",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Gravity Blast klingt ungleichmäßig — die zwei Schläge aus einer Handbewegung sind unterschiedlich laut, das Tempo eiert.",
+          "ursache": "Es wird zu früh beschleunigt, bevor die schaukelnde Stock-Bewegung (Spitze/Kante am Fell) sauber und gleichmäßig sitzt. Kraft ersetzt die Technik, die Bewegung verkrampft.",
+          "korrektur": "Die Schaukelbewegung getrennt und sehr langsam üben: ein Schlag mit der Spitze, einer mit der Kante — erst wenn beide gleich laut und gleichmäßig sind, minimal beschleunigen. Lockerheit vor Tempo; bei Verkrampfung sofort zurück ins langsame Tempo."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_vocals_pressen",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_gutturals_squeals",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Gutturals klingen gepresst und werden schnell heiser; nach kurzer Zeit kratzt die Alltagsstimme. Der Registerwechsel tief-hoch verstärkt das Pressen.",
+          "ursache": "Die Verzerrung kommt aus Kehlkopf-Druck statt aus Weite und Resonanz; die Stütze wird beim schnellen Wechsel aufgegeben. Häufig wird zu laut und in Heiserkeit hineingeübt.",
+          "korrektur": "Alles einzeln und leise aus Resonanz und Luft aufbauen, nie in Heiserkeit üben; nach jeder Einheit den Sprechtest. Registerwechsel mit großem Abstand üben, die Stütze bleibt aktiv. Diese Techniken gehören an die Seite einer erfahrenen Lehrperson — bei Kratzen oder Engegefühl sofort stoppen, anhaltende Heiserkeit in die HNO-Praxis."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_pocket_verrechnet",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_gitarre_pocket",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die verschobenen Chug-Gruppen klingen gezählt und steif — der Groove will sich nicht einstellen, das Ganze wirkt wie Mathematik statt Musik.",
+          "ursache": "Der gerade Grundpuls geht verloren: Er sitzt nur im Kopf (mitzählen) statt im Körper, deshalb kippt das Muster in Verkrampfung. Oft wird der Anschlag mit steigendem Tempo größer und härter.",
+          "korrektur": "Den Viertelpuls mit dem Fuß mittippen, während die Hand die Gruppierung spielt — solange der Fuß gerade bleibt, groovt es. Anschlag klein und locker halten; erst wenn das Nicken von allein kommt, das Tempo erhöhen."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_bass_verschmiert",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_bass_lock",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bass und Gitarre driften in den verschobenen Gruppen auseinander; die Betonungen fransen, der Lock fehlt.",
+          "ursache": "Der Bass spielt blind gleichmäßige Achtel, statt die betonten Chugs mitzudenken — die Verzahnung mit Kick und Gitarre ist nicht exakt.",
+          "korrektur": "Nur die Akzente spielen (nicht jede Achtel), langsam mit Kick und Gitarre, bis Bass und Gitarre auf den Betonungen EIN Schlag sind. Synkopen genau dort setzen, wo die Gitarre sie setzt; Tempo erst steigern, wenn der Lock sitzt."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_drums_fuss_zieht",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_drums_polymetrik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Sobald die Kick in die verschobene Gruppierung geht, wackelt die eigentlich gerade Hi-Hat mit — der gerade Boden ist weg.",
+          "ursache": "Hände und Fuß sind nicht unabhängig: Die Kick-Verschiebung zieht die Hi-Hat vom geraden Puls weg, statt dass der Boden stur weiterläuft.",
+          "korrektur": "Zuerst nur geraden Hi-Hat-Puls plus Backbeat sichern, bis er mühelos liegt. Dann die Kick sehr langsam in die Fünfer-Gruppe setzen, während die Hände bewusst stur bleiben — bei jedem Ausreißer zurück zum geraden Boden ohne Kick."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_vocals_wechsel",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_vocals_dynamik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Sprung zwischen zartem Clean und hartem Harsh verspannt die Stimme; die Clean-Linie klingt nach einem Harsh-Teil unruhig und eng.",
+          "ursache": "Der harte Wechsel wird ohne Abstand und ohne Stütze genommen; die Kehle bleibt vom Harsh-Teil eng, wenn der Clean einsetzt.",
+          "korrektur": "Beide Register einzeln und leise sichern, dann den Wechsel mit großem Abstand üben: Clean — bewusster Atem, Kehle offen — Harsh, jeweils leise. Die Stütze bleibt in beiden aktiv; Tempo erst steigern, wenn beide nach dem Wechsel frei bleiben (Sprechtest)."
+        }
+      }
+    },
+    {
+      "id": "fb_stoner_riff_steif",
+      "typ": "fehlerbild",
+      "basis_baustein": "stoner_riff_fuzz",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der fuzzige Riff klingt korrekt, aber tot — er zwingt nicht zum Mitwippen, die Wiederholung langweilt.",
+          "ursache": "Der Anschlag sitzt zu weit vorn im Puls (gehetzt), die bewusste Lücke im Riff fehlt oder wird zugespielt, und jede Runde klingt exakt gleich.",
+          "korrektur": "Den Riff leicht hinter dem Klick spielen, entspannt statt getrieben, und die Lücke wirklich stehen lassen. Jede Runde minimal variieren (Anschlagshärte, eine Betonung, ein Ghost-Ton); auf der Aufnahme prüfen: Nickt der Kopf?"
+        }
+      }
+    },
+    {
+      "id": "fb_stoner_bass_matsch",
+      "typ": "fehlerbild",
+      "basis_baustein": "stoner_bass_fuzz_groove",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der bewegliche Bass verschwindet im Fuzz — die kleinen Läufe und Bendings sind nicht mehr hörbar, es bleibt ein wolliger Teppich.",
+          "ursache": "Zu viel Fuzz ohne Mitten-Definition; der Anschlag hat keinen Kern, mit dem sich die Bewegung durchsetzt.",
+          "korrektur": "Mitten präsent lassen und Attack aus dem Anschlag holen; im Zweifel etwas weniger Fuzz. Die bewegte Linie einmal cleaner und einmal gefuzzt vergleichen — bleibt die Bewegung im Fuzz hörbar? Fehlt sie, ist es Definition, nicht Lautstärke."
+        }
+      }
+    },
+    {
+      "id": "fb_postmetal_drums_zu_frueh",
+      "typ": "fehlerbild",
+      "basis_baustein": "postmetal_drums_crescendo",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Aufbau kommt oben an, aber es ist keine Luft mehr da — der Crescendo springt in Stufen statt zu wachsen, die Wand wirkt nicht.",
+          "ursache": "Der leise Teil war nicht wirklich leise, deshalb fehlt der Raum nach oben; die Steigerung ist ungleichmäßig, und aus Ungeduld wird zu früh alles gegeben.",
+          "korrektur": "Die Grundebene wirklich leise und trotzdem tight spielen (Sticks nah am Fell) — das ist die schwerste und wichtigste Stufe. Dann über viele Takte gleichmäßig wachsen und den Höhepunkt bewusst hinauszögern; Geduld ist die eigentliche Übung."
+        }
+      }
+    },
+    {
+      "id": "fb_postmetal_vocals_dauer",
+      "typ": "fehlerbild",
+      "basis_baustein": "postmetal_vocals_dynamik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der große Klimax-Schrei trifft nicht — entweder gibt es zu viele davon, oder der eine kostet die Stimme und klingt danach heiser.",
+          "ursache": "Dauerbeschallung statt Maß: Der raue Ton wird zu oft und aus Alles-Geben gesetzt, statt zurückzuhalten; oft kommt er aus Druck statt aus Luft und Resonanz.",
+          "korrektur": "Zurückhalten üben: eine ruhige Clean-Passage, die in EINEN gezielten Ausbruch mündet — das Maß trägt, nicht die Dauerintensität. Den rauen Ton einzeln und leise aus Luft/Resonanz sichern; nach jeder Einheit Sprechtest, bei Kratzen sofort stoppen, im Zweifel Lehrperson/HNO."
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_riff_gleich",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_riff_genrefarbe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Derselbe Riff soll in mehreren Genre-Farben klingen, aber zwei oder mehr Behandlungen klingen praktisch identisch.",
+          "ursache": "Ein klangbestimmender Parameter wurde nicht umgeschaltet — meist Dämpfung, Ausklang oder Feel; die Töne ändern sich, die Behandlung nicht.",
+          "korrektur": "Pro Genre den entscheidenden Parameter benennen (Tempo, Palm-Mute/offen, Ausklang, Feel) und bewusst umstellen. Die Farben nacheinander aufnehmen und blind zuordnen lassen: Erkennt man die Genres an der Behandlung, obwohl die Töne gleich sind?"
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_groove_tempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_groove_genrefarbe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Umfärben eines Grooves durch mehrere Genre-Feels driftet das Grundtempo — beim Blast zieht es an, beim Sludge schleppt es.",
+          "ursache": "Tempo und Feel werden als dasselbe behandelt; die Verteilung von Kick/Snare wird gewechselt, aber der Grundpuls nicht als eigene, konstante Größe gehalten.",
+          "korrektur": "Ein Klick läuft stur durch alle Feels; jeder Groove wird gegen denselben Puls gespielt. Auf der Aufnahme prüfen, ob das Grundtempo über alle Wechsel konstant bleibt — Feel entsteht aus der Verteilung, nicht aus der Geschwindigkeit."
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_bass_rolle",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_bass_rollen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Dieselbe Linie soll verschiedene Genre-Rollen tragen (Gewicht, Skelett, Lock, Stimme, Motor), klingt aber in allen Rollen gleich.",
+          "ursache": "Es werden Töne gespielt statt Haltung: Der Rollenwechsel (was die Musik gerade vom Bass braucht) wird nicht umgesetzt — Anschlag, Ausklang und Dichte bleiben unverändert.",
+          "korrektur": "Jede Rolle einzeln über ihre Haltung definieren: Doom-Gewicht (wenige, sehr schwere, gehaltene Töne), Grind-Skelett (schnell, verzahnt, Attack), Djent-Lock (exakt auf die Akzente), Stoner-Stimme (beweglich, fuzzig), Hardcore-Motor (treibend). Aufnehmen und prüfen, ob man den Haltungswechsel hört, obwohl die Töne gleich bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_transfer_vocals_stapeln",
+      "typ": "fehlerbild",
+      "basis_baustein": "transfer_vocals_genrefarbe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Zuordnen der Register zu Genres werden neue, fordernde Techniken auf einmal gestapelt; die Stimme wird schnell eng und müde.",
+          "ursache": "Die Übung wird als Freibrief missverstanden, unsichere Register gleichzeitig zu üben — statt nur zwischen bereits gesund beherrschten Registern umzuschalten.",
+          "korrektur": "Nur mit Registern arbeiten, die einzeln und mühelos sitzen; die Übung ist Zuordnung, kein Neuland. Neue Register einzeln und angeleitet aufbauen. Nach jeder Einheit Sprechtest; jedes Enger-Werden ist die Warnlampe — leiser, im Zweifel stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gb_flam",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_lock",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Statt eines Anschlags hört man zwei dicht aufeinanderfolgende — einen „Flam“. Besonders bei tiefen, gedämpften Riffs wirkt der Ton verwaschen statt wuchtig, und mit steigendem Tempo wird die Doppelung deutlicher.",
+          "ursache": "Beide richten sich aneinander aus statt an einer gemeinsamen Referenz; einer — oft der Bass wegen der trägeren Ansprache — liegt konstant leicht vor oder hinter dem Klick. Zusätzlich endet das Abdämpfen zu unterschiedlichen Zeitpunkten.",
+          "korrektur": "Lass beide zunächst nur zum Klick spielen, nicht aufeinander hören. Nimm einen Durchgang auf und lass sie gemeinsam bestimmen, wer vorne oder hinten liegt. Reduziere das Tempo, bis ein einziger Attack hörbar ist, und steigere erst dann — mit Aufmerksamkeit auch auf das synchrone Abdämpfen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gb_matsch",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_frequenztrennung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Zusammenklang dröhnt, einzelne Instrumente sind nicht mehr heraushörbar; je tiefer die Stimmung, desto breiiger. Der Bass scheint zu „verschwinden“, obwohl er laut ist.",
+          "ursache": "Beide besetzen denselben Tiefenbereich: Die Gitarre ist zu bassig eingestellt, der Bass hat zu wenig Mitten oder Anzerrung. Niemand hat bewusst Rollen verteilt — Fundament gegen Mitten.",
+          "korrektur": "Lass sie eine tiefe Passage gemeinsam spielen und je einen Parameter isoliert verändern (Anschlagpunkt, Anzerrung, Tiefen- oder Mittenanteil). Vereinbart, wer die Tiefen trägt und wer die Mitten. Kontrolliere über eine Aufnahme, ob beide getrennt hörbar bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gb_pausen_versetzt",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_chug_sync",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In Breakdown-Chugs sind die Pausen nicht schwarz — ein Instrument klingt noch nach, während das andere schon stumm ist. Der perkussive Druck fehlt, der Part „schwimmt“.",
+          "ursache": "Die Anschläge sind grob zusammen, das Abdämpfen ist es nicht; meist dämpft einer der beiden konstant später ab. Bei Synkopen driftet die Länge zusätzlich auseinander.",
+          "korrektur": "Verlagere die Aufmerksamkeit vom Anschlag auf das gemeinsame Abdämpfen. Lass beide die Handballen-Bewegung bewusst synchronisieren und an der Bassdrum ausrichten. Übe langsam, bis die Pausen bei beiden gleich lang sind, und kontrolliere per Aufnahme."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gb_rollen_unklar",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_rollen_riff",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Bass wechselt unmotiviert zwischen Verdopplung und eigener Linie — mal Klotz, mal Gegenstimme, ohne dass es dem Part dient. Der Zusammenklang wirkt unentschlossen, Parts gewinnen keine klare Kontur.",
+          "ursache": "Die Rolle wird nicht pro Part bewusst entschieden, sondern ergibt sich zufällig aus Gewohnheit oder Bequemlichkeit. Niemand fragt, was der jeweilige Part braucht.",
+          "korrektur": "Lass beide denselben Part einmal komplett verdoppelt und einmal mit eigener Basslinie spielen und den Unterschied beschreiben. Vereinbart die Rolle pro Part bewusst und baut Übergänge, an denen der Wechsel an einer festen Stelle passiert, statt zu schwimmen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_kick_desync",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_kick_lock",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Low-End flattert: Statt eines wuchtigen Impulses hört man Basston und Bassdrum als zwei getrennte Ereignisse. Der Groove wirkt weich und ungenau, besonders bei schnelleren Kick-Figuren.",
+          "ursache": "Der Bass legt seine Töne nicht exakt auf die Kick — meist minimal davor oder danach, oft weil er auf die Snare oder das eigene Zählen statt auf den Fuß hört. Bei schnellen Figuren fehlt die Absprache, welche Kicks überhaupt gemeinsam sind.",
+          "korrektur": "Isoliere die Achse — nur Bass und Bassdrum, ohne Rest, zum Klick — und lass den Bass bewusst auf den Fuß hören. Kläre bei schnellen Figuren, welche Schläge gemeinsam sind. Nimm nur diese Achse auf und steigere das Tempo erst, wenn Ton und Kick zu einem Impuls verschmelzen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_driftet",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_pocket_klick",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Tempo ist nicht stabil — die Rhythmusgruppe zieht an oder wird langsamer. Zum Klick gehört fällt auf, dass beide gemeinsam wegdriften; der Rest der Band folgt notgedrungen.",
+          "ursache": "Einer führt, der andere jagt nach: Statt beide an derselben Referenz auszurichten, hört jeder auf den anderen und reagiert verspätet — ein sich aufschaukelndes Nachziehen.",
+          "korrektur": "Lass beide gleichberechtigt auf den Klick spielen, nicht aufeinander. Reduziere das Metronom testweise auf jeden zweiten Schlag, dann auf die Eins, um zu prüfen, ob das gemeinsame Zeitgefühl trägt. Bestimmt über eine Aufnahme gemeinsam, ob sie vor, auf oder hinter dem Klick liegen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_break_stolpert",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_akzente_breaks",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei Stops und Breaks kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Break ist unsauber, einer setzt zu früh oder zu spät wieder ein. Der Part stolpert genau an der auffälligsten Stelle.",
+          "ursache": "Der Puls wird während der Stille nicht gehalten — statt innerlich weiterzuzählen, wird geschätzt. Länge des Stops und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
+          "korrektur": "Übe nur die zwei Takte um den Break in Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins wieder einsteigen. Nimm es auf und prüfe, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_blast_verliert",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_blast_begleitung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In schnellen Blast- oder Double-Bass-Parts löst sich die Verbindung: Der Bass versucht jede Kick zu doppeln, verkrampft und wird ungenau — oder er spielt beliebig und trifft die Akzente nicht mehr. Die gemeinsame Kontur zerfällt.",
+          "ursache": "Es ist nicht geklärt, welche Schläge gemeinsam sind. Der Bass orientiert sich am nicht durchhaltbaren Anspruch, jede Kick mitzuspielen, statt an der rhythmischen Kontur und den Akzenten.",
+          "korrektur": "Nimm das Tempo zurück und lass gemeinsam festlegen, welche Schläge Akzente sind, die beide punktgenau treffen — dazwischen trägt der Bass eine gleichmäßige Linie. Steigere das Tempo über mehrere Einheiten; bei Verkrampfung in Händen oder Füßen wird gestoppt."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_ueberlagert",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_phrasierung_luecken",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Riff und Gesang laufen dauerhaft gleichzeitig; beide Ebenen verlieren an Kontur, der Text ist schwer verständlich, das Riff tritt in den Hintergrund. Der Part klingt voll, aber undeutlich.",
+          "ursache": "Es gibt keine Absprache, wer wann im Vordergrund steht. Gesangsphrasen liegen nicht in den Lücken des Riffs, sondern über dessen dichten Stellen.",
+          "korrektur": "Geht den Part gemeinsam durch und markiert die Lücken im Riff. Lass die Gesangsphrasen bewusst dorthin legen, sodass ein Wechsel aus Riff und Stimme entsteht. Ein bewusst gleichzeitiger Moment darf als Kontrast bleiben — aber als Entscheidung, nicht als Dauerzustand."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_vocals_hinterm_riff",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_vocals_timing_riff",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Geschriene Silben, die auf den Akzenten der Gitarre sitzen sollen, kommen konstant leicht zu spät. Der Breakdown verliert Druck, weil Silbe und Chug nicht als ein Schlag zusammenfallen.",
+          "ursache": "Die Stimme reagiert auf das gehörte Riff, statt den gemeinsamen Anker — oft die Bassdrum — zu antizipieren; bei höherem Tempo summiert sich die Reaktionszeit. Teils sitzt die Betonung auf der falschen Silbe.",
+          "korrektur": "Langsames Tempo, Gitarre spielt akzentuiert. Lass die betonten Silben zuerst gesprochen exakt auf die Akzente legen, dann leise verzerrt; beide richten sich an der Bassdrum aus, nicht aneinander. Per Aufnahme prüfen, ob Silbe und Chug zusammenfallen — der Gesundheitsrahmen bleibt: kein Druck, bei Kratzen stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_melodie_daneben",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_tonart_melodie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die clean gesungene Melodie klingt über dem Riff „schief“ — einzelne Zieltöne liegen hörbar neben der Harmonik. Besonders am Phrasenende wirkt es unsauber, obwohl der Gesang sicher intoniert ist.",
+          "ursache": "Sänger und Gitarre teilen kein gemeinsames Fundament: Der Grundton oder die Tonart des Parts ist nicht benannt, und die Melodie nutzt Töne außerhalb der zugrunde liegenden Skala.",
+          "korrektur": "Lass die Gitarre den Grundton nennen und eine einfache, langsame Powerchord-Folge spielen; die Stimme tastet sich vom Grundton zu sicheren Zieltönen vor. Haltet die stimmige Melodie fest und erweitert Tonart oder Folge erst, wenn sie sicher sitzt. Für das Skalenverständnis hilft ein Blick auf die Grundlagen der Moll-/Phrygisch-Färbung."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_aufbau_einseitig",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_dynamik_aufbau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ein geplanter Spannungsaufbau (leiser Vers, intensiver Refrain) verpufft, weil nur einer ihn trägt: Die Gitarre zündet den Refrain, während der Gesang gleich bleibt — oder umgekehrt. Der Umschlag wirkt halbgar.",
+          "ursache": "Der Umschlagpunkt ist nicht als gemeinsame Entscheidung vereinbart; Dynamik wird als individuelle Angelegenheit behandelt statt als geteilter Verlauf.",
+          "korrektur": "Legt gemeinsam fest, wo die Intensität steigt. Lass den Vers bewusst zurückgenommen und den Refrain am selben Punkt von beiden zünden. Prüft per Aufnahme, ob der Umschlag als eine Bewegung wirkt, und baut den Verlauf bei Bedarf mehrstufig auf."
+        }
+      }
+    }
+  ]
+}

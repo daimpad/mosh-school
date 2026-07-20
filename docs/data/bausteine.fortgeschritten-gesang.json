@@ -1,0 +1,443 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "gesang",
+    "hinweis": "Fortgeschritten-Gesang (Extreme Vocals). Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Gesundheitsrahmen strikt: Prinzip statt riskanter Dosierung, alles leise/kurz aufbauen, bei Schmerz/Kratzen sofort stoppen, Lehrperson und HNO-Arzt empfohlen. Sichtbare Titel werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "fry_verzerrung",
+      "anzeigetitel": {
+        "de": "Fry-Ansatz: Verzerrung aus dem Knarren"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "verzerrung_prinzip",
+        "sanfter_einstieg_verzerrung"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle",
+        "stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Vocal Fry ist das leise, entspannte Knarren, das entsteht, wenn die Stimme ganz locker und tief „blubbert“ — du kennst es vom müden Sprechen am Morgen. Genau dieses Knarren ist einer der sichersten Einstiege in verzerrte Vocals: Es entsteht bei minimaler Spannung und minimalem Luftdruck, also unter Bedingungen, die die Stimme kaum belasten.\n\nAus dem Fry heraus lässt sich die Verzerrung langsam „aufladen“: mehr Stütze, mehr Resonanz, etwas mehr Intensität — und aus dem Knarren wird ein rauer, screamartiger Klang. Der Weg ist immer derselbe: erst der mühelose Fry, dann behutsam Energie dazu. Nie umgekehrt, nie aus Druck.\n\nGesundheit hat Vorrang: Der Fry selbst muss sich anfühlen wie Ausruhen, nicht wie Arbeit. Kratzt oder schmerzt etwas, wird die Stimme danach heiser, stimmt der Ansatz nicht — dann zurück zu leiser, und im Zweifel eine erfahrene Lehrperson dazuholen. Für diese Techniken ist Begleitung dringend empfohlen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Vom Knarren zum rauen Ton",
+          "ziel": "Den mühelosen Fry finden und behutsam mit Stütze aufladen.",
+          "schritte": [
+            "Wärm die Stimme gründlich auf und lass dann am Ende einer entspannten Ausatmung ein leises, tiefes Knarren entstehen.",
+            "Halte das Knarren einige Sekunden völlig mühelos — es darf sich wie Ausruhen anfühlen.",
+            "Gib über die Atemstütze minimal mehr Energie dazu, sodass das Knarren etwas dichter und rauer wird — und geh sofort zurück, wenn es sich nach Druck anfühlt."
+          ],
+          "steigerung": "Das aufgeladene Knarren auf einen offenen Vokal legen — kurz, leise und nur solange es mühelos bleibt.",
+          "selbstkontrolle": "Kein Kratzen, kein Druck, keine Heiserkeit danach; der Fry bleibt jederzeit abrufbar mühelos."
+        }
+      }
+    },
+    {
+      "id": "false_cord_ansatz",
+      "anzeigetitel": {
+        "de": "Taschenfalten-Ansatz (False Cord)"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "hardcore"
+      ],
+      "voraussetzungen": [
+        "verzerrung_prinzip",
+        "atemstuetze"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle",
+        "stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "False-Cord-Vocals sind der Klang des Death Metal und vieler Hardcore-Shouts: Die Taschenfalten — Gewebefalten oberhalb der eigentlichen Stimmlippen — werden vom gestützten Luftstrom in Schwingung versetzt und erzeugen die tiefe, breite Verzerrung. Die Stimmlippen selbst bleiben dabei weitgehend entlastet; genau das macht die Technik nachhaltig, wenn sie richtig sitzt.\n\nDer Zugang führt über ein gehauchtes, warmes Fauchen: viel entspannte Luft, offener Rachen (wie beim Gähnen), und dann ein sanftes „Bellen“ oder Seufzen auf diesem Luftstrom. Wenn es richtig läuft, spürst du eine breite Vibration im Hals — aber keinerlei Enge, Druck oder Kratzen.\n\nGesundheit hat Vorrang: Diese Technik lässt sich schriftlich nur als Prinzip vermitteln. Der Unterschied zwischen gesundem Taschenfalten-Klang und schädlichem Pressen ist von außen schwer zu hören und von innen anfangs schwer zu spüren — eine erfahrene Lehrperson ist hier keine Empfehlung, sondern der eigentliche Weg. Alles Übende bleibt leise, kurz und sofort beendet, wenn etwas kratzt oder die Stimme danach belegt ist."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gehauchtes Fauchen mit offenem Rachen",
+          "ziel": "Den entlasteten, breiten Verzerrungsansatz über dem Luftstrom finden.",
+          "schritte": [
+            "Wärm die Stimme auf, gähne einmal bewusst und behalte die offene Rachenweite bei.",
+            "Atme gestützt und hörbar aus — ein warmes, gehauchtes Fauchen ohne Ton.",
+            "Lass auf diesem Luftstrom ein kurzes, leises Seufz-„Bellen“ entstehen und spür, ob die Vibration breit und frei bleibt — bei jeder Enge sofort stoppen."
+          ],
+          "steigerung": "Die kurzen Impulse minimal verlängern — nur mit Anleitung einer Lehrperson weiter intensivieren.",
+          "selbstkontrolle": "Breite Vibration ohne Enge; kein Kratzen, kein Hustenreiz, keine belegte oder heisere Stimme danach."
+        }
+      }
+    },
+    {
+      "id": "growl_resonanz",
+      "anzeigetitel": {
+        "de": "Growls formen: Resonanz & Vokale"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "false_cord_ansatz",
+        "resonanz_projektion"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle"
+      ],
+      "erklaerteil": {
+        "de": "Ob ein Growl tief und mächtig oder flach und gequetscht klingt, entscheidet nicht die Kraft, sondern der Resonanzraum: Ein tiefer Kehlkopf (wie beim Gähnen), ein weiter Rachen und ein geformter Mundraum machen aus derselben Verzerrung völlig verschiedene Klänge. „Tiefer“ heißt beim Growlen fast nie „mehr drücken“, sondern „mehr Raum“.\n\nDie Vokalform ist dein Klangregler: Ein „O“ oder „U“ macht den Growl dunkler und runder, ein „A“ offener und aggressiver. Probier dieselbe kurze Phrase über verschiedene Vokalformen und hör, wie stark sich der Charakter ändert, ohne dass sich am Ansatz etwas bewegt.\n\nAuch hier wacht die Gesundheit über allem: Der Growl reitet auf der Stütze, der Hals bleibt weit und frei. Wird der Klang enger statt dunkler, bist du beim Drücken gelandet — zurück zum gehauchten Ansatz, und im Zweifel zur Lehrperson."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Raum statt Druck",
+          "ziel": "Growl-Klangfarben über Rachenweite und Vokalform steuern.",
+          "schritte": [
+            "Aufwärmen, dann den gehauchten Taschenfalten-Ansatz kurz und leise abrufen.",
+            "Forme denselben rauen Klang nacheinander über „A“, „O“ und „U“ und hör die Farbwechsel.",
+            "Vertiefe den Klang, indem du die Gähn-Weite vergrößerst — nicht, indem du mehr drückst."
+          ],
+          "steigerung": "Eine kurze Textsilbe (etwa „Ough“) in verschiedenen Farben growlen — leise beginnen, kurz halten.",
+          "selbstkontrolle": "Dunkler heißt weiter, nie enger; nach der Übung fühlt sich die Stimme unverändert frisch an."
+        }
+      }
+    },
+    {
+      "id": "scream_hoehe",
+      "anzeigetitel": {
+        "de": "Höhere Screams: der helle Ansatz"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "fry_verzerrung",
+        "resonanz_projektion"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle"
+      ],
+      "erklaerteil": {
+        "de": "Hohe Screams — das Kreischen des Black Metal, die hellen Screams des Metalcore — sind keine lauter gepressten Growls, sondern ein eigener Ansatz: weniger Masse, mehr Kopfresonanz, oft aus dem aufgeladenen Fry heraus entwickelt. Der Klang sitzt „oben“ im Kopf, nicht „unten“ im Hals.\n\nDer Weg dorthin führt über Helligkeit, nicht über Anstrengung: eine helle Vokalfarbe (Richtung „Ä“ oder „E“), angehobener weicher Gaumen, und die Vorstellung, der Klang ziele nach vorn-oben. Aus einem leisen, hellen Fry-Klang lässt sich so schrittweise ein tragfähiger Scream entwickeln, der schneidet, ohne zu würgen.\n\nGerade in der Höhe ist die Verwechslungsgefahr mit purem Schreien am größten — und pures Schreien ruiniert Stimmen. Deshalb gilt verschärft: leise aufbauen, kurz halten, sofort stoppen bei Kratzen oder Enge, und die Technik von einer erfahrenen Lehrperson prüfen lassen, bevor du Intensität aufbaust."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Hell und oben statt laut und eng",
+          "ziel": "Einen hellen, kopfresonanten Scream-Ansatz leise entwickeln.",
+          "schritte": [
+            "Aufwärmen, dann einen leisen Fry auf heller Vokalfarbe („Ä“) etablieren.",
+            "Gib minimal Stütze dazu und richte die Klangvorstellung nach vorn-oben — der Klang soll heller, nicht lauter werden.",
+            "Halte die Impulse kurz und prüf nach jedem, ob Hals und Stimme frei bleiben."
+          ],
+          "steigerung": "Die hellen Impulse behutsam verlängern; Intensität nur mit Anleitung steigern.",
+          "selbstkontrolle": "Der Klang sitzt hörbar „oben“ und bleibt mühelos; keinerlei Würgen, Kratzen oder Heiserkeit."
+        }
+      }
+    },
+    {
+      "id": "harsh_artikulation",
+      "anzeigetitel": {
+        "de": "Artikulation in harschen Vocals"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "hardcore",
+        "metalcore",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "artikulation_text",
+        "verzerrung_prinzip"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle",
+        "stimmsicherheit"
+      ],
+      "erklaerteil": {
+        "de": "Ob ein Growl nur Lärm ist oder eine Textzeile transportiert, entscheiden Lippen, Zunge und Kiefer — dieselben Werkzeuge wie beim klaren Singen. Die Verzerrung passiert tief im Hals; die Artikulation darüber bleibt davon im Idealfall völlig unabhängig. Genau diese Entkopplung ist die Übung.\n\nHardcore lebt von verständlichen Shouts, und auch im Death Metal trennt saubere Vokal- und Konsonantenarbeit die prägnanten Vocals vom Brei. Der Trick: Text zuerst überdeutlich im Sprechton artikulieren, dann dieselbe Mundbewegung unverändert unter den verzerrten Klang legen.\n\nKonsonanten sind zugleich Rhythmus: Ein hartes „T“ oder „K“ setzt Akzente wie eine Snare. Wer den Text artikuliert, growlt automatisch rhythmischer — und schont nebenbei die Stimme, weil Verständlichkeit aus dem Mund kommt, nicht aus mehr Druck."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Mund arbeitet, Hals bleibt frei",
+          "ziel": "Text unter Verzerrung verständlich halten, ohne den Ansatz zu verändern.",
+          "schritte": [
+            "Sprich eine kurze Zeile überdeutlich und beobachte die Bewegungen von Lippen, Zunge und Kiefer.",
+            "Leg dieselbe Zeile leise über deinen rauen Ansatz und behalte exakt dieselben Mundbewegungen bei.",
+            "Nimm dich auf und prüf: Ist der Text verständlich, ohne dass der Klang enger wird?"
+          ],
+          "steigerung": "Längere Zeilen und schnellere Passagen artikulieren; Konsonanten bewusst als rhythmische Akzente setzen.",
+          "selbstkontrolle": "Der Text bleibt auf der Aufnahme verständlich; Ansatz und Halsgefühl verändern sich dabei nicht."
+        }
+      }
+    },
+    {
+      "id": "harsh_phrasierung_atmung",
+      "anzeigetitel": {
+        "de": "Atemplanung & Phrasierung im Harsh"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "atemstuetze",
+        "rhythmus_phrasierung"
+      ],
+      "spielziele": [
+        "atemstuetze",
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Verzerrte Vocals verbrauchen deutlich mehr Luft als klare — eine Zeile, die clean bequem durchläuft, kann im Growl auf halber Strecke verhungern. Deshalb planst du im Harsh die Atmung wie ein Instrumentalist die Bogenstriche: Vor jeder Phrase steht fest, wo geatmet wird.\n\nAtempausen sind dabei kein Manko, sondern Gestaltung: Eine bewusst gesetzte Lücke vor dem betonten Wort macht es größer. Kurze, tiefe Nachatmer in den natürlichen Pausen des Riffs halten den Tank voll, ohne den Fluss zu brechen — hektisches Schnappen mitten im Wort dagegen zerstört Phrase und Stütze zugleich.\n\nSchreib dir bei dichten Passagen die Atemzeichen in den Text, wie es klassische Sänger tun. Was markiert ist, passiert verlässlich — und eine verlässliche Atmung ist die halbe Ausdauer über einen ganzen Song."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Atemzeichen setzen",
+          "ziel": "Phrasen so planen, dass Luft und Betonung über die ganze Passage reichen.",
+          "schritte": [
+            "Nimm eine Textpassage von vier Zeilen und markiere, wo geatmet werden soll — vorzugsweise in Riff-Pausen.",
+            "Sprich die Passage rhythmisch zum Klick und atme exakt an den Markierungen.",
+            "Trag sie dann in deinem (leisen) harschen Ansatz vor und prüf, ob die Luft bis zu jeder Markierung reicht."
+          ],
+          "steigerung": "Markierungen reduzieren und Phrasen verlängern — nur soweit die Stütze stabil bleibt.",
+          "selbstkontrolle": "Kein hektisches Schnappen; jede Phrase endet mit Restluft, und die Betonungen sitzen wie geplant."
+        }
+      }
+    },
+    {
+      "id": "clean_harsh_wechsel",
+      "anzeigetitel": {
+        "de": "Wechsel zwischen Clean & Harsh"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "doom",
+        "djent"
+      ],
+      "voraussetzungen": [
+        "clean_im_metal",
+        "sanfter_einstieg_verzerrung"
+      ],
+      "spielziele": [
+        "stimmsicherheit",
+        "verzerrungskontrolle",
+        "saubere_uebergaenge"
+      ],
+      "erklaerteil": {
+        "de": "Der Wechsel zwischen harscher Strophe und cleanem Refrain ist das Markenzeichen des modernen Metalcore — und stimmlich anspruchsvoller als beides einzeln. Die Gefahr: Die Härte des Harsh „klebt“ am Ansatz, und der Clean danach klingt gepresst oder brüchig.\n\nDie Lösung ist ein bewusster Reset: In der kurzen Pause vor dem Wechsel löst du aktiv die Spannung — ein entspannter Nachatmer, Kiefer und Rachen weich, und der erste Clean-Ton kommt betont leicht, fast zu weich. Der umgekehrte Weg (Clean zu Harsh) braucht denselben Reset in die andere Richtung: erst die Stütze aufbauen, dann den rauen Ansatz abrufen, statt in ihn „hineinzurutschen“.\n\nÜbe die Wechsel zunächst mit übertrieben großen Pausen und verkürze sie schrittweise. Ein sauberer Wechsel mit kleiner Lücke schlägt einen nahtlosen, der beide Register beschädigt — live entscheidet diese Disziplin, ob die Stimme den Set übersteht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Register-Reset üben",
+          "ziel": "Zwischen harschem und klarem Ansatz wechseln, ohne dass einer den anderen verschleppt.",
+          "schritte": [
+            "Sing zwei Takte einer einfachen Clean-Melodie, dann zwei Takte Pause, dann zwei Takte leisen Harsh — im Loop.",
+            "Nutze die Pause bewusst: Nachatmen, Kiefer lockern, den neuen Ansatz gezielt abrufen.",
+            "Verkürze die Pause schrittweise auf einen Schlag und prüf, ob beide Klänge unverändert frei bleiben."
+          ],
+          "steigerung": "Die Wechsel in eine echte Songpassage übertragen und dynamische Unterschiede gestalten.",
+          "selbstkontrolle": "Der Clean bleibt nach dem Harsh frei und klar; kein Klang wird vom vorherigen enger oder rauer."
+        }
+      }
+    },
+    {
+      "id": "harsh_dynamik_intensitaet",
+      "anzeigetitel": {
+        "de": "Intensität dosieren statt brüllen"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "dynamik_ausdruck"
+      ],
+      "spielziele": [
+        "verzerrungskontrolle",
+        "stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Der größte Irrtum über harte Vocals: dass Härte aus Lautstärke kommt. Tatsächlich entsteht wahrgenommene Intensität aus Klangfarbe, Artikulation und Kontrast — ein mittellauter, dichter Growl mit bissigen Konsonanten wirkt brutaler als ungestütztes Gebrüll, und er kostet einen Bruchteil der Stimme.\n\nDenk in Intensitätsstufen: Dieselbe Zeile lässt sich auf drei, vier Stufen vortragen — vom zurückgenommenen Grollen bis zum vollen Ausbruch. Wer alle Stufen beherrscht, kann einen Song dramaturgisch aufbauen und spart die höchste Stufe für den einen Moment, der sie verdient.\n\nDas ist zugleich die wichtigste Ausdauer-Strategie: Ein Set, das durchgehend auf Maximum läuft, überfordert jede Stimme. Die Dosierung — technisch über die Stütze, musikalisch über die Dramaturgie — ist das, was Profis von Anfängern unterscheidet, die nach drei Songs heiser sind."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei Stufen, eine Zeile",
+          "ziel": "Intensität bewusst abstufen, ohne die Stimme zu belasten.",
+          "schritte": [
+            "Trag eine kurze Zeile in deinem (leisen) harschen Ansatz auf Stufe 1 vor: zurückgenommen, fast grollend.",
+            "Wiederhole sie auf Stufe 2 mit mehr Stütze und schärferen Konsonanten — nicht lauter im Hals.",
+            "Steigere auf Stufe 3 nur, solange sich nichts eng anfühlt, und vergleich die Wirkung der Stufen auf einer Aufnahme."
+          ],
+          "steigerung": "Eine ganze Passage mit geplanter Intensitätskurve gestalten — der Höhepunkt kommt genau einmal.",
+          "selbstkontrolle": "Auch Stufe 3 fühlt sich kontrolliert an; die Wirkung wächst hörbar, ohne dass der Hals arbeitet."
+        }
+      }
+    },
+    {
+      "id": "mikrofon_harsh",
+      "anzeigetitel": {
+        "de": "Mikrofontechnik für harsche Vocals"
+      },
+      "domaene": [
+        "gesang",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "mikrofontechnik"
+      ],
+      "spielziele": [
+        "stimmsicherheit"
+      ],
+      "erklaerteil": {
+        "de": "Harsche Vocals stellen eigene Anforderungen ans Mikrofon: Der Klang ist obertonreich und impulsiv, die Bühnenlautstärke hoch, und der Nahbesprechungseffekt macht tiefe Growls bei kleinem Abstand noch massiver. Wer seinen Abstand kennt, klingt vorn im Mix — wer wild variiert, verschwindet und taucht wieder auf.\n\nDas „Cupping“ — die Hand umschließt Korb und Mikrofonkopf — ist im Extreme Metal verbreitet, weil es den Klang komprimiert und mittiger macht. Es hat aber einen Preis: mehr Rückkopplungsgefahr und ein undefinierterer Klang, wenn es unkontrolliert passiert. Entscheide bewusst, ob der Effekt zu deinem Sound gehört, und übe ihn dann als feste Technik statt als Zufall.\n\nWichtig für die Stimme: Das Mikrofon ersetzt Lautstärke. Wer dem Publikum akustisch „hinterherbrüllt“, statt das Mikro arbeiten zu lassen, verschenkt Technik und riskiert die Stimme — Abstand und Winkel sind Teil deiner Stimmgesundheit."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Abstand & Griff festlegen",
+          "ziel": "Eine feste, reproduzierbare Mikrofontechnik für harsche Parts entwickeln.",
+          "schritte": [
+            "Trag eine harsche Zeile (leise Übungsintensität) in drei Abständen vor — dicht, eine Handbreit, weiter weg — und vergleich die Aufnahmen.",
+            "Leg deinen Standard-Abstand für Growls und einen für hellere Screams fest.",
+            "Teste kontrolliert den Unterschied mit und ohne Cupping und entscheide dich bewusst für einen Standard."
+          ],
+          "steigerung": "Abstandswechsel als Dynamik-Werkzeug in eine Passage einbauen — geplant, nicht zufällig.",
+          "selbstkontrolle": "Deine Aufnahmen klingen über mehrere Durchgänge gleich; du kannst deinen Standard benennen und wiederholen."
+        }
+      }
+    },
+    {
+      "id": "vocal_aufnahme_feedback",
+      "anzeigetitel": {
+        "de": "Aufnahmen als ehrliches Feedback"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "zur_musik_singen"
+      ],
+      "spielziele": [
+        "stimmsicherheit"
+      ],
+      "erklaerteil": {
+        "de": "Die eigene Stimme hört sich von innen anders an als von außen — bei verzerrten Vocals ist diese Lücke besonders groß. Was sich im Kopf brutal anfühlt, kann auf der Aufnahme dünn klingen; was sich mühelos anfühlt, kann gepresst sein. Regelmäßiges Aufnehmen ist deshalb kein Luxus, sondern dein wichtigstes Feedback-Werkzeug.\n\nHör Aufnahmen mit konkreten Fragen ab, nicht mit allgemeinem Unbehagen: Ist der Text verständlich? Sitzt die Phrasierung auf dem Riff? Klingt die Verzerrung voll oder gequetscht? Und — besonders wichtig — klingt die Stimme am Ende der Session noch wie am Anfang? Eine hörbar müder werdende Aufnahmereihe ist ein Warnsignal fürs Pensum.\n\nBewahre alte Aufnahmen auf. Der Vergleich über Monate zeigt Fortschritt, den das Tagesgefühl nie zeigt — und er relativiert schlechte Tage, die zu jedem Stimmtraining gehören."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm deine nächste Übe-Session an drei Stellen auf: Anfang, Mitte, Ende. Hör die Aufnahmen mit drei festen Fragen ab — Verständlichkeit, Phrasierung, Frische der Stimme am Ende. Was änderst du an deinem Übungsaufbau, wenn die letzte Aufnahme hörbar angestrengter klingt als die erste?"
+      }
+    },
+    {
+      "id": "set_pacing",
+      "anzeigetitel": {
+        "de": "Set-Planung & Pacing"
+      },
+      "domaene": [
+        "koerper",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "stimme_schuetzen_alltag"
+      ],
+      "spielziele": [
+        "stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Ein einzelner Song ist ein Sprint — ein Set oder eine Probe ist ein Rennen über Distanz. Ohne Pacing verheizt du die Stimme in den ersten drei Songs und kämpfst den Rest des Abends. Profis planen ein Set stimmlich wie einen Trainingsplan: Wo liegen die fordernden Songs, wo kann die Stimme durchatmen, wo ist der Höhepunkt?\n\nPraktisch heißt das: die anspruchsvollsten Passagen nicht direkt an den Anfang (die Stimme ist noch nicht ganz warm) und nicht alle hintereinander; zwischen intensiven Songs bewusst Stücke mit mehr Pausen, Instrumentalteilen oder tieferer Lage; Wasser griffbereit; und ein kurzes Einsingen vor dem Auftritt so selbstverständlich wie der Soundcheck.\n\nDasselbe gilt für Proben: Zwei Stunden Dauer-Growl sind kein Training, sondern Verschleiß. Markiere Durchläufe, in denen du bewusst leise übst („Marking“), und heb die volle Intensität für gezielte Momente auf — so wächst Ausdauer, statt verbraucht zu werden."
+      },
+      "reflexionsaufgabe": {
+        "de": "Stell dir dein aktuelles Set (oder deine typische Probe) als Belastungskurve vor: Wo häufen sich die stimmlich teuersten Passagen, und wo sind Erholungsfenster? Ordne die Reihenfolge auf dem Papier einmal stimmfreundlich um und leg fest, welche Durchläufe du künftig nur „markierend“ — also leise und technisch — singst."
+      }
+    },
+    {
+      "id": "stimm_regeneration",
+      "anzeigetitel": {
+        "de": "Regeneration & Warnzeichen"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "stimme_schuetzen_alltag"
+      ],
+      "spielziele": [
+        "stimmgesundheit",
+        "schmerzfrei_spielen"
+      ],
+      "erklaerteil": {
+        "de": "Wer regelmäßig verzerrt singt, braucht Regeneration als festen Teil des Trainings — nicht als Notbremse. Nach intensiven Sessions oder Shows helfen Stimmruhe (auch leises Dauerreden zählt als Belastung), viel Flüssigkeit, sanftes Abwärmen mit leisem Summen und Schlaf. Die Stimme regeneriert wie ein Muskel: in der Pause, nicht in der Belastung.\n\nErnst zu nehmende Warnzeichen sind Heiserkeit, die länger als ein, zwei Tage bleibt, ein rauer oder belegter Grundklang, Schmerzen beim Sprechen oder Schlucken, Tonlücken im Umfang oder eine Stimme, die schneller ermüdet als früher. Solche Signale heißen: Belastung sofort herunterfahren und der Stimme echte Ruhe geben.\n\nBleiben Beschwerden bestehen oder kehren sie wieder, gehört die Stimme in fachkundige Hände — eine HNO-ärztliche Untersuchung (idealerweise mit Stimmdiagnostik) ist dann keine Übervorsicht, sondern Berufspraxis. Sänger:innen, die lange dabei sind, kennen ihre Ärztin wie ihren Proberaum."
+      },
+      "reflexionsaufgabe": {
+        "de": "Erstelle deine persönliche Regenerations-Checkliste für die 24 Stunden nach einer intensiven Session oder Show: Was tust du direkt danach, was am nächsten Tag, und worauf verzichtest du? Leg außerdem schriftlich fest, bei welchen Warnzeichen und nach wie vielen Tagen du einen HNO-Termin machst — entschieden wird das jetzt, nicht erst im Ernstfall."
+      }
+    }
+  ]
+}

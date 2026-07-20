@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "band-proberaum",
+    "hinweis": "Band gründen & Proberaum einrichten: Einstieg ins Zusammenspiel abseits des Instruments (Mentales/Ausrüstung/Körper). Fünf Reflexions-Bausteine, intern verkettet. Gesundheitsrahmen zentral bei gehoerschutz_lautstaerke (irreversible Hörschäden, Musiker-Gehörschutz, Lautstärkedisziplin, HNO). Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "band_gruenden",
+      "anzeigetitel": {
+        "de": "Band gründen: Rollen, Ziele, Verbindlichkeit"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Eine Band ist zuerst eine Gruppe von Menschen und erst dann ein Klang. Bevor der erste Ton fällt, entscheidet die Abstimmung über Ziele und Erwartungen darüber, ob das Projekt trägt: Wollt ihr auftreten oder nur jammen, eigene Songs schreiben oder covern, welches Genre, wie oft proben, wie verbindlich?\n\nUnausgesprochene Unterschiede in diesen Punkten sind der häufigste Grund, warum junge Bands zerfallen — nicht mangelndes Können. Genauso wichtig sind Rollen jenseits des Instruments: Wer organisiert Proben, wer kümmert sich um Auftritte, wie werden Entscheidungen getroffen und Konflikte gelöst. Eine Band, die früh offen darüber spricht, erspart sich später viel Frust.\n\nVerbindlichkeit heißt nicht Vertrag, sondern gemeinsame Klarheit: Was erwartet ihr voneinander, und was passiert, wenn jemand das nicht einhält?"
+      },
+      "reflexionsaufgabe": {
+        "de": "Bevor ihr ernsthaft loslegt: Klärt gemeinsam eure Ziele (auftreten oder jammen, eigene Songs oder Covers, welches Genre, welche Probenfrequenz) und benennt, wer welche organisatorische Rolle übernimmt. Wo liegen eure Erwartungen an Verbindlichkeit auseinander — und wie wollt ihr Entscheidungen treffen und Konflikte ansprechen, bevor der erste echte Streit kommt?"
+      }
+    },
+    {
+      "id": "erste_proben_struktur",
+      "anzeigetitel": {
+        "de": "Erste Proben: Struktur & Zusammenspiel"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die erste gemeinsame Probe ist selten ein fertiger Song, sondern der Anfang eines Prozesses. Struktur hilft: eine grobe Reihenfolge — kurz aufwärmen, an ein bis zwei Stücken arbeiten, am Ende einmal ganz durchspielen — verhindert, dass die Zeit im ziellosen Jammen verpufft.\n\nDas Wichtigste ist Zuhören statt Übertönen. Wer ständig spielt, während andere etwas erklären, blockiert den Fortschritt; wer zu laut aufdreht, macht Absprachen unmöglich. Feedback gehört sachlich formuliert — an die Stelle im Song, nicht an die Person. Und weil das Schlagzeug meist die Lautstärke vorgibt, orientieren sich die anderen an ihm, statt es zu übertönen.\n\nGeduld ist Teil des Handwerks: Ein Part langsam und sauber gemeinsam zu erarbeiten bringt mehr als zehn hektische Durchläufe im Fehler."
+      },
+      "reflexionsaufgabe": {
+        "de": "Überlegt euch eine einfache Proben-Struktur (Aufwärmen, gezielte Arbeit an wenigen Stücken, Durchlauf am Ende) und gemeinsame Umgangsregeln: Wann wird gespielt und wann zugehört, wie gebt ihr euch sachliches Feedback? Woran würdet ihr merken, dass eine Probe produktiv war — und was würdet ihr beim nächsten Mal anders machen?"
+      },
+      "voraussetzungen": [
+        "band_gruenden"
+      ]
+    },
+    {
+      "id": "proberaum_einrichten",
+      "anzeigetitel": {
+        "de": "Proberaum einrichten: Raum, Akustik, Aufstellung"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Proberaum muss kein Studio sein, aber ein paar Grundlagen entscheiden über brauchbare Bedingungen. Kleine, kahle Räume mit glatten Wänden klingen hart und hallig; schon einfache Maßnahmen — Teppich, schwere Vorhänge, ein paar absorbierende Flächen — nehmen die schlimmsten Reflexionen und machen das Zusammenspiel überhaupt erst hörbar.\n\nMindestens so wichtig ist die Aufstellung: Alle sollten sich sehen und hören können. Ein Halbkreis, in dem Schlagzeug, Bass, Gitarre und Gesang Sichtkontakt haben, erlaubt Einsätze über Blicke und Nicken — die Grundlage jedes engen Zusammenspiels. Der Gesang braucht eine Position, an der er sich gegen die laute Backline behaupten kann.\n\nPraktische Punkte runden es ab: genügend und sicher verlegte Stromversorgung, feste Plätze für Instrumente und Kabel, und ein Raum, den ihr regelmäßig und verlässlich nutzen könnt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Prüft euren möglichen Proberaum auf drei Dinge: Klingt er so hallig, dass einfache Dämpfung nötig ist? Können sich alle sehen und hören, oder übertönt die Backline den Gesang? Und sind Strom, Platz und Verfügbarkeit verlässlich geregelt? Welche eine Maßnahme würde die Probenbedingungen am spürbarsten verbessern?"
+      }
+    },
+    {
+      "id": "proberaum_ausruestung",
+      "anzeigetitel": {
+        "de": "Proberaum-Ausrüstung: Backline, PA, Monitore"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Anders als bei leiseren Instrumenten braucht eine Metal-Band im Proberaum eine Grundausstattung, damit alle gegen das akustisch laute Schlagzeug ankommen. Dazu gehören Gitarren- und Bassverstärker mit genug Reserve, ein stabil aufgebautes Schlagzeug — und, oft unterschätzt, eine Gesangsanlage: Ohne PA mit Mikrofon und Monitorboxen ist die Stimme gegen die Backline chancenlos.\n\nVieles lässt sich teilen (eine gemeinsame Backline im Raum) oder gebraucht anschaffen; Vollständigkeit ist wichtiger als Hochwertigkeit. Entscheidend ist, dass jede Stimme im Gesamtklang präsent sein kann — sonst singt der Sänger gegen eine Wand, und niemand hört, ob Parts zusammenpassen.\n\nÜberlegt die Anschaffungen als Band gemeinsam: Was ist geteilt, was privat, und in welcher Reihenfolge lohnen sich Investitionen für das, was ihr gerade am dringendsten braucht?"
+      },
+      "reflexionsaufgabe": {
+        "de": "Geht eure Ausstattung durch: Kann jedes Instrument — vor allem der Gesang über eine PA mit Monitor — im Gesamtklang präsent sein? Was fehlt am dringendsten, was lässt sich teilen oder gebraucht beschaffen? Legt eine grobe Reihenfolge fest, in der ihr die Lücken schließt, statt alles auf einmal zu wollen."
+      },
+      "voraussetzungen": [
+        "proberaum_einrichten"
+      ]
+    },
+    {
+      "id": "gehoerschutz_lautstaerke",
+      "anzeigetitel": {
+        "de": "Gehörschutz & Lautstärke im Proberaum"
+      },
+      "domaene": [
+        "koerper",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Metal-Proberaum ist laut genug, um das Gehör dauerhaft zu schädigen — und Hörschäden wie Tinnitus oder Lärmschwerhörigkeit sind nicht heilbar. Das ist keine Randnotiz, sondern die wichtigste Gesundheitsfrage eures Zusammenspiels, gerade weil die Belastung sich unbemerkt aufsummiert.\n\nDer Schutz beginnt mit zwei Dingen: Gehörschutz von Anfang an tragen und die Gesamtlautstärke diszipliniert halten. Spezielle Musiker-Gehörschutzstöpsel dämpfen gleichmäßig über alle Frequenzen, sodass ihr euch weiter gut hört — anders als einfache Schaumstoffstöpsel, die dumpf machen. Sinnvoll ist außerdem, die Lautstärke gemeinsam zu begrenzen: Nicht der Lauteste gewinnt, sondern die Balance, in der jeder jeden hört. Pausen geben dem Gehör Erholung.\n\nBehandelt Gehörschutz wie das Anschnallen — selbstverständlich, jedes Mal. Bei Klingeln, Pfeifen oder dumpfem Hören nach der Probe ist ärztlicher Rat (HNO) angebracht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Macht Gehörschutz zur festen Regel für alle: Wer trägt schon welchen, und wären gleichmäßig dämpfende Musiker-Stöpsel eine sinnvolle Investition? Wie könnt ihr als Band die Gesamtlautstärke begrenzen, sodass jeder jeden hört, ohne dass sich alle gegenseitig hochschrauben — und welche Pausen-Routine nehmt ihr euch vor, um dem Gehör Erholung zu geben?"
+      },
+      "voraussetzungen": [
+        "proberaum_ausruestung"
+      ]
+    }
+  ]
+}

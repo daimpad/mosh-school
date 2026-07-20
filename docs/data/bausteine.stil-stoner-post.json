@@ -1,0 +1,175 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-stoner-post",
+    "hinweis": "Genre-Achse Stoner / Post-Metal: acht Bausteine quer durch die Domänen, alle stil:[stoner_post] — inkl. Sound/Gear (Ausrüstung) und Körper/Ausdauer zur Vertiefung auf Doom-Niveau. Die warme, groovende (Stoner) und die dynamisch-atmosphärische (Post-Metal) Verlängerung der langsamen Linie um Doom/Sludge. Zusammen mit Retags bestehender Bausteine (doom_riffing, doom_sustain_feedback, doom_bass_fuzz, sludge_riffing_dreck, drums_dynamik_architektur, doom_sound_gewicht) trägt sie den Pfad. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "stoner_riff_fuzz",
+      "anzeigetitel": { "de": "Stoner-Gitarre: Fuzz, Groove & der Riff als König" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["doom_riffing", "slides_bends"],
+      "erklaerteil": {
+        "de": "Im Stoner Rock regiert der Riff — nicht als Baustein unter vielen, sondern als das ganze Stück. Ein guter Stoner-Riff ist eingängig, wiederholt sich lustvoll und groovt so, dass man mitwippen muss. Das Vorbild ist der Blues und der frühe Hard Rock, durch einen fetten Fuzz gezogen: warme, sämige Verzerrung statt scharfer High-Gain-Zerre, oft in tieferer Stimmung, aber mit viel Bewegung statt Zeitlupe.\n\nDrei Dinge machen den Stil aus. Erstens der Ton: Fuzz ist runder und wolliger als Metal-Distortion — er lebt von den Mitten und einem gewissen Zusammensacken bei hartem Anschlag. Zweitens der Groove: Stoner-Riffs swingen oft leicht, sitzen bewusst locker im Puls (nicht davor), und lassen Raum — die Lücke im Riff ist so wichtig wie die Note. Drittens die Phrasierung aus dem Blues: Bendings, Slides und kleine Läufe zwischen den Powerchords geben dem Riff Stimme und Schmutz, statt ihn nur zu hämmern.\n\nDie Kunst ist die Wiederholung: Ein Stoner-Riff darf und soll oft wiederkommen — aber jede Runde braucht minimale Variation im Anschlag, im Feel, in der Betonung, damit die Hypnose lebt statt zu langweilen. Weniger Töne, mehr Groove und Ton — das ist die Stoner-Ökonomie."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Riff, das groovt",
+          "ziel": "Einen fuzzigen Stoner-Riff mit Groove, Raum und bluesiger Phrasierung spielen und lustvoll wiederholen.",
+          "schritte": [
+            "Stell einen warmen, fuzzigen Ton ein (Fuzz oder weiche Verzerrung, Mitten drin lassen) und spiel einen einfachen Powerchord-Riff mit einer bewussten Lücke drin — vier Töne, eine Pause, statt durchgehend zu hämmern. Die Lücke ist Teil des Riffs.",
+            "Bring Groove rein: Spiel den Riff leicht hinter dem Klick, entspannt statt gehetzt, und betone die Töne, die zum Mitwippen einladen. Nimm auf und prüf: Wippt dein Kopf, oder klingt es steif?",
+            "Setz bluesige Phrasierung ein: ein Bending oder Slide zwischen zwei Powerchords, ein kleiner Lauf am Riff-Ende. Der Schmutz und die Stimme kommen aus diesen Zwischentönen.",
+            "Wiederhol den Riff acht Runden am Stück und variier jede Runde minimal (Anschlagshärte, eine Betonung, ein zusätzlicher Ghost-Ton) — die Wiederholung soll hypnotisch werden, nicht langweilig."
+          ],
+          "steigerung": "Nimm denselben Riff und spiel ihn einmal streng auf dem Klick und einmal bewusst locker dahinter — hör, wie erst das lockere Feel den Groove bringt. Oder bau eine zweite Riff-Variante als Kontrast und wechsle zwischen beiden.",
+          "selbstkontrolle": "Hör die Aufnahme: Groovt der Riff wirklich (zwingt er zum Mitwippen), oder ist er nur laut? Klingt der Fuzz-Ton warm und voll oder dünn und scharf? Und lebt die Wiederholung durch die kleinen Variationen, oder ermüdet sie? Wenn es steif klingt, sitzt du zu weit vorn im Puls — zurück zu Schritt 2."
+        }
+      }
+    },
+    {
+      "id": "stoner_bass_fuzz_groove",
+      "anzeigetitel": { "de": "Stoner-Bass: Fuzz, Fundament & Bewegung" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["doom_bass", "bass_akkordspiel"],
+      "erklaerteil": {
+        "de": "Im Stoner und Post-Metal ist der Bass selten nur das Fundament — er ist oft die zweite Stimme des Riffs und trägt einen erheblichen Teil des Klangcharakters. Ein fuzziger, mittenreicher Bass verschmilzt mit der Gitarre zu einer breiten, warmen Wand oder übernimmt in den ruhigen Passagen sogar die Führung, wenn die Gitarre nur Flächen legt. Weil das Genre von Groove und Dynamik lebt (nicht von Tempo), hat der Bass hier viel Raum, sich zu bewegen.\n\nZwei Rollen wechseln sich ab. In den groovenden Stoner-Teilen folgt der Bass dem Riff, aber mit eigener Bewegung: kleine Läufe, Bendings, das Ausfüllen der Lücken, die die Gitarre lässt — ein Bass, der mitatmet statt nur Grundtöne zu halten. In den ruhigen Post-Metal-Passagen wird er zum Anker der Atmosphäre: wenige, warme, lang gehaltene Töne, die den Aufbau tragen, bis die Wand kommt.\n\nDer Ton ist Genre-Sache: Ein leicht angezerrter oder gefuzzter Bass mit präsenten Mitten setzt sich durch und verschmilzt zugleich mit der Gitarre. Wichtig ist die Balance — genug Fuzz für den Charakter, genug Definition, dass die Bewegung hörbar bleibt und nicht im Matsch verschwindet."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Fundament, das mitatmet",
+          "ziel": "Zwischen groovender Riff-Begleitung mit eigener Bewegung und tragender Atmosphäre-Rolle wechseln.",
+          "schritte": [
+            "Stell einen warmen, leicht angezerrten Ton mit präsenten Mitten ein. Spiel zu einem Stoner-Riff (Aufnahme oder mitgedacht) zuerst nur die Grundtöne — satt und im Groove, leicht hinter dem Klick.",
+            "Füll die Lücken: Dort, wo die Gitarre Raum lässt, setz einen kleinen Lauf oder ein Bending — der Bass antwortet dem Riff, statt nur mitzulaufen. Spiel es, bis Bass und Gitarre ein Gespräch sind, kein Unisono.",
+            "Wechsel die Rolle: Spiel vier Takte groovende Begleitung, dann eine ruhige Passage, in der nur du wenige lange, warme Töne hältst (die Gitarre denkst du dir als Fläche). Der Übergang ist bewusst, nicht zufällig.",
+            "Prüf die Ton-Balance: Spiel die bewegte Linie einmal mit viel Fuzz und einmal cleaner — bleibt die Bewegung im Fuzz noch hörbar? Genug Charakter, genug Definition."
+          ],
+          "steigerung": "Übe den langen Aufbau: Beginne eine Passage sehr leise und schlicht und steigere über acht Takte Gewicht und Bewegung, bis der Bass die Wand mitträgt — ohne das Tempo zu ändern, nur Intensität.",
+          "selbstkontrolle": "Hör die Aufnahme mit Gitarre: Verschmilzt der Bass zur warmen Wand UND bleibt seine Bewegung hörbar? Trägt er die ruhige Passage wirklich, oder fällt sie in sich zusammen? Wird die bewegte Linie im Fuzz zu Matsch, fehlt Mitten-Definition, nicht Lautstärke."
+        }
+      }
+    },
+    {
+      "id": "postmetal_drums_crescendo",
+      "anzeigetitel": { "de": "Post-Metal-Drums: Groove, Dynamik & Aufbau" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["doom_feel", "drums_ghostnotes"],
+      "erklaerteil": {
+        "de": "Im Stoner und besonders im Post-Metal sind die Drums der Motor der Dynamik. Es geht nicht um Tempo oder Dichte, sondern um Groove und um den großen Bogen: das lange Anwachsen von einer leisen, sparsamen Figur bis zur donnernden Wand — und die Geduld, diesen Aufbau nicht zu früh zu verschießen. Wer das beherrscht, trägt den ganzen Song.\n\nZwei Fähigkeiten stehen im Zentrum. Erstens der Groove: ein lockerer, oft leicht swingender Pocket, der hinter dem Klick atmet, mit Ghost Notes, die den Beat füllen und ihm Fleisch geben. Im Stoner-Teil ist das der Kopf-Wipp-Faktor. Zweitens die Dynamik-Architektur: bewusst leise anfangen (Sticks nah am Fell, vielleicht nur Hi-Hat und sparsame Snare), dann über viele Takte kontrolliert lauter und dichter werden — mehr Becken, offene Hi-Hat, härterer Anschlag, bis der Höhepunkt als echtes Ereignis kommt. Der Schlüssel ist die Kontrolle über die leisen Ebenen: Wer nicht wirklich leise spielen kann, hat keinen Raum nach oben.\n\nDie eigentliche Kunst ist die Geduld. Ein Post-Metal-Aufbau darf sich Zeit lassen; jeder zu frühe Höhepunkt raubt dem eigentlichen Ziel die Wucht. Als Band heißt das: gemeinsam wachsen, gemeinsam die Kante zum Höhepunkt treffen. Wie immer bei Lautstärke und Ausdauer gilt Gehörschutz und Lockerheit vor Kraft."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von leise bis zur Wand",
+          "ziel": "Einen lockeren Groove mit Ghost Notes halten und daraus einen kontrollierten, geduldigen Crescendo-Aufbau formen.",
+          "schritte": [
+            "Spiel einen entspannten, leicht hinter dem Klick liegenden Groove und füll ihn mit leisen Ghost Notes auf der Snare. Nimm auf und prüf: Groovt es, atmet es — oder ist es steif?",
+            "Übe das echte Leise: Spiel denselben Groove so leise wie möglich (Sticks nah am Fell, minimale Bewegung), ohne dass das Timing zerfällt. Das ist deine Grundebene — und die schwerste.",
+            "Bau den Crescendo: Beginne auf der leisen Grundebene und werde über acht bis sechzehn Takte kontrolliert lauter und dichter (mehr Becken, offenere Hi-Hat, härterer Anschlag), bis zur vollen Wand. Steigere gleichmäßig, nicht in Sprüngen.",
+            "Übe die Geduld: Spiel denselben Aufbau doppelt so lang, ohne früher laut zu werden — halte die Spannung tiefer, länger. Der Höhepunkt kommt erst, wenn er wirklich verdient ist."
+          ],
+          "steigerung": "Bau eine ganze Bogen-Dramaturgie: leise Grundebene → Aufbau → Wand → bewusster Abfall zurück in die Stille → zweiter, größerer Aufbau. Jede Stufe im selben Grundtempo, nur Intensität ändert sich.",
+          "selbstkontrolle": "Hör die Aufnahme: Ist der leise Teil wirklich leise UND tight, oder wackelt das Timing, sobald du dich zurücknimmst? Wächst der Crescendo gleichmäßig, oder springt er? Und die Geduldsfrage: Kommt der Höhepunkt zu früh? Wenn oben keine Luft mehr ist, warst du unten nicht leise genug — zurück zu Schritt 2."
+        }
+      }
+    },
+    {
+      "id": "postmetal_vocals_dynamik",
+      "anzeigetitel": { "de": "Post-Metal-Vocals: Atmosphäre, Klimax & Maß" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["clean_im_metal", "scream_hoehe"],
+      "erklaerteil": {
+        "de": "Stoner und Post-Metal behandeln die Stimme oft anders als die schnellen, dichten Genres: Sie ist nicht durchgehend präsent, sondern ein Element unter mehreren, das gezielt eingesetzt wird. Im Stoner sind das häufig melodische, psychedelisch gefärbte Cleans, die über dem Groove schweben. Im Post-Metal ist die Stimme oft sparsam und dient dem großen Bogen: lange Passagen instrumental, dann eine gehaltene Clean-Linie über dem Aufbau — und auf dem Höhepunkt ein rauer, verzweifelter Schrei, der die ganze aufgestaute Spannung entlädt.\n\nHandwerklich sind das zwei Pole mit viel Raum dazwischen. Der Clean-Gesang muss tragen und über weiten, langsamen Harmonien sicher sitzen — oft mehr Stimmung als Virtuosität, aber mit sicherer Tonhöhe und Ruhe. Der Harsh-Teil ist hier kein Dauerzustand, sondern der Klimax: ein einzelner, intensiver Ausbruch wirkt in diesem Kontext stärker als Dauerbeschallung. Genau das ist die Kunst — das Maß, das Zurückhalten, damit der eine Schrei trifft.\n\nDer Gesundheitsrahmen bleibt Pflicht, gerade weil der Klimax-Schrei zum Alles-Geben verführt: gründlich aufwärmen, den rauen Ton aus Luft und Resonanz holen (nie aus Kehlkopf-Druck), einzeln und leise aufbauen. Nie in Heiserkeit hineinüben, nach jeder Einheit den Sprechtest, bei Kratzen oder Engegefühl sofort stoppen. Die Harsh-Technik gehört an die Seite einer erfahrenen Lehrperson, anhaltende Heiserkeit in die HNO-Praxis. Ein Höhepunkt ist keine kaputte Stimme wert."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ruhe tragen, den Klimax setzen",
+          "ziel": "Getragene Cleans über weiten Harmonien sicher halten und einen einzelnen rauen Klimax gesund und gezielt setzen.",
+          "schritte": [
+            "Wärm gründlich auf. Übe zuerst nur die Ruhe: eine lange, getragene Clean-Linie mit sicherer Tonhöhe über einem weiten, langsamen Akkord (Aufnahme oder Drone). Stimmung vor Virtuosität — der Ton soll schweben und ruhig sein.",
+            "Sichere den rauen Ton einzeln und leise: ein intensiver, aber müheloser Schrei aus Luft und Resonanz, nicht aus Druck. Er muss auch leise funktionieren, bevor du ihn laut denkst.",
+            "Bau den Bogen: lange Clean-Passage über einem Aufbau, dann an EINER Stelle — dem Höhepunkt — der raue Ausbruch, danach zurück in die Ruhe. Übe genau diesen einen Übergang, das Maß ist die Lektion.",
+            "Übe das Zurückhalten: Widersteh der Versuchung, mehrere Schreie zu setzen. Ein einziger, richtig platzierter trägt weiter — und schont die Stimme."
+          ],
+          "steigerung": "Erst wenn Clean und Harsh einzeln über Wochen stabil und beschwerdefrei sind, den Bogen im Songkontext üben — immer nur so intensiv, wie beide frei bleiben. Für die Atmosphäre: Leg (falls möglich) eine zweite Clean-Spur darüber und hör, wie Schichten Weite erzeugen.",
+          "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Trägt die Clean-Linie ruhig und sicher, oder wird sie unruhig? Und ehrlich: Klingt der eine Klimax intensiver, weil du davor zurückgehalten hast? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen."
+        }
+      }
+    },
+    {
+      "id": "stoner_riff_harmonik",
+      "anzeigetitel": { "de": "Stoner-Theorie: Riff-Ökonomie & Bluesfarbe" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["riff_baukasten", "akkordfolgen_metal"],
+      "erklaerteil": {
+        "de": "Stoner Rock ist harmonisch näher am Blues und am frühen Hard Rock als am Metal — und genau das gibt ihm seine Farbe. Das Material ist oft einfach: Powerchords, die Moll-Pentatonik und ihre Blue Notes, dazu die charakteristische Reibung der kleinen Terz über einem Dur-gefärbten Grund. Nicht Komplexität macht den Stil, sondern der Groove und die Farbe der wenigen Töne.\n\nDrei Prinzipien tragen das Schreiben. Erstens die Riff-Ökonomie: Ein starker Riff braucht wenige Töne, eine gute Lücke und einen Rhythmus, der groovt — die Kunst ist Reduktion, nicht Anhäufung. Zweitens die Bluesfarbe: Bendings in die Blue Note, das Spiel mit der kleinen Terz und der Quinte, kleine pentatonische Läufe geben dem Riff Stimme. Drittens die Wiederholung als Struktur: Stoner-Songs bauen oft auf der hypnotischen Wiederholung eines Riffs auf, der sich langsam wandelt — Variation statt ständig neuer Teile.\n\nPost-Metal denkt dieselbe Sparsamkeit in Zeit und Dynamik: wenige harmonische Ideen, über lange Bögen entfaltet, wo die Spannung aus Lautstärke und Dichte kommt statt aus Akkordwechseln. In beiden Fällen gilt: Der Raum und die Zeit sind so sehr Material wie die Töne."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei Stoner- oder Post-Metal-Songs vor und zerleg ihre Ökonomie: Wie wenige Töne trägt der zentrale Riff wirklich? Wo sitzen die Lücken, und was macht den Groove aus? Hörst du Blue Notes, Bendings, die pentatonische Farbe — oder (im Post-Metal) wie wenig harmonisch sich ändert, während die Dynamik alles trägt?\n\nBau dann selbst eine Miniatur: einen Stoner-Riff aus maximal fünf Tönen mit einer bewussten Lücke und einem Bending in die Blue Note. Wiederhol ihn viermal und variier jede Runde minimal. Prüf die Kernfrage: Groovt der Riff mit so wenig Material — und trägt die Wiederholung, weil die kleinen Variationen sie lebendig halten? Wenn du das Gefühl hast, mehr Töne zu brauchen, arbeitest du noch gegen die Ökonomie des Genres, nicht mit ihr."
+      }
+    },
+    {
+      "id": "postmetal_langform_geduld",
+      "anzeigetitel": { "de": "Post-Metal-Dramaturgie: Langform & Geduld" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["set_pacing"],
+      "erklaerteil": {
+        "de": "Post-Metal ist Musik der langen Bögen, und ihre eigentliche Herausforderung ist mental: Geduld. Ein Song kann acht, zehn, zwölf Minuten dauern und aus einem einzigen großen Aufbau bestehen — von der leisen, sparsamen Anfangsfigur bis zur überwältigenden Wand am Ende. Das trägt nur, wenn die Band die Spannung diszipliniert aufbaut und dem Höhepunkt Zeit lässt, verdient zu werden.\n\nDrei Dinge sind schwer und wichtig. Erstens das echte Leise: Die ruhigen Teile müssen wirklich ruhig sein und trotzdem präsent — wer nicht zurücktreten kann, hat keinen Raum für den Aufbau. Zweitens die gemeinsame Kurve: Der Crescendo funktioniert nur, wenn alle zugleich wachsen und niemand zu früh ausbricht; das ist Zuhören und Zurückhalten als Kollektiv, nicht individuelle Energie. Drittens die Zeit als Freund: Was in einem schnellen Genre ungeduldig wäre, ist hier die Substanz — die Wiederholung, das langsame Anwachsen, das Aushalten der Ruhe.\n\nMental heißt das, gegen den eigenen Impuls zu arbeiten, sofort Wirkung zu wollen. Der Reiz des Post-Metal ist die aufgeschobene Erlösung: Je länger und disziplinierter der Aufbau, desto größer die Entladung. Das entsteht nur, wenn die Band genau das probt — nicht die Wand, sondern den Weg dahin, und den gemeinsamen Moment, an dem sie kippt. Verwandt mit der Doom-Geduld, nur über noch größere Zeiträume."
+      },
+      "reflexionsaufgabe": {
+        "de": "Analysiere einen Post-Metal-Song, den du stark findest, als Spannungskurve über die volle Länge: Wo beginnt es (wie leise wirklich?), wie lange dauert der Aufbau, wann kommt die Wand — und gibt es danach einen Abfall und einen zweiten Bogen? Zeichne die Kurve über die Minuten auf.\n\nÜberleg für dich oder deine Band: Traut ihr euch, wirklich leise und lange aufzubauen — oder werdet ihr aus Ungeduld zu früh laut? Wo in einem eurer Stücke (oder einem, das ihr covern würdet) fehlt die Geduld? Und ganz praktisch: Probt ihr die leisen Teile und den gemeinsamen Anstieg genauso ernst wie die Wand — oder nur den lauten Höhepunkt? Nimm dir die eine Passage vor, in der der Aufbau am ehesten zusammenfällt, und plan, wie ihr sie als Kollektiv geduldig und gemeinsam wachsen lasst."
+      }
+    },
+    {
+      "id": "stoner_sound_gear",
+      "anzeigetitel": { "de": "Stoner/Post-Sound: Fuzz, Wärme & Flächen" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["verzerrer_typen", "drop_tuning"],
+      "erklaerteil": {
+        "de": "Der Stoner- und Post-Metal-Sound ist das warme Gegenstück zum tighten High-Gain der modernen Metal-Genres: Statt eng kontrollierter, scooped Zerre regieren hier Fuzz und aufgerissene Röhrenamps — ein Ton, der breit, sämig und mittenreich ist. Genau die Mitten, die der brutale Metal wegdreht, sind hier das Herz: Sie geben dem Riff Wärme, Körper und diesen bluesig-räudigen Charakter.\n\nDrei Dinge prägen den Stoner-Ton. Erstens die Verzerrung: Fuzz ist runder und wolliger als Distortion, sackt bei hartem Anschlag charakteristisch zusammen und lebt vom Zusammenspiel mit der Gitarren-Lautstärke — zurückgedreht wird der Ton fast clean, aufgedreht sämig. Zweitens die Stimmung: eher moderat (Standard bis leicht tiefer) statt extrem tief, aber mit Saiten, die dick genug sind, dass die Tiefe steht. Drittens die Dynamik aus der Hand und dem Volume-Poti statt nur aus Pedalen — der Ton atmet mit dem Anschlag.\n\nDie Post-Metal-Seite fügt eine zweite Klangwelt hinzu: die weiten, atmosphärischen Cleans, die den Aufbau tragen. Delay und Reverb schichten hier lange, schwebende Flächen, die langsam anschwellen, bis die verzerrte Wand kommt — dasselbe Rig muss also beides können, den fuzzigen Brocken und die schimmernde Weite. Der Wechsel zwischen beiden (oft über Volume-Pedal oder Fußschalter) ist ein eigenes Handwerk."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör je eine Stoner- und eine Post-Metal-Produktion gezielt auf den Ton: Wie warm und mittig ist der verzerrte Sound (Fuzz statt scooped High-Gain)? Reagiert er hörbar auf die Anschlagsdynamik? Und im Post-Metal: Wie bauen Delay/Reverb die weiten Flächen auf, bevor die Wand kommt?\n\nGeh dann deine eigene Kette durch (oder plane sie): Hast du eine Fuzz- oder aufgerissene Amp-Option mit präsenten Mitten — oder klingt dein Ton nach tightem Metal-Gain? Kannst du über das Volume-Poti von sämig zu fast clean regeln, ohne umzustöpseln? Und für die atmosphärische Seite: Wie kommst du zwischen fuzzigem Riff und schimmernder Clean-Fläche hin und her (Volume-Pedal, Fußschalter, zwei Kanäle)? Notier die eine Anschaffung oder Einstellung, die deinen Stoner/Post-Ton am meisten öffnen würde."
+      }
+    },
+    {
+      "id": "postmetal_koerper_ausdauer",
+      "anzeigetitel": { "de": "Post-Metal-Körper: Ausdauer über die Langform" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["drums_koerper_ausdauer", "aufwaermen_gesundheit"],
+      "erklaerteil": {
+        "de": "Stoner und besonders Post-Metal fordern den Körper anders als die schnellen Genres: nicht durch Spitzentempo, sondern durch Länge und Durchhaltevermögen. Ein Post-Metal-Song kann zehn Minuten dauern, ein Set ist ein einziger langer Bogen — und die Herausforderung ist, über diese Strecke Kontrolle, Fokus und Lockerheit zu halten, ohne früh zu ermüden oder sich zu verkrampfen.\n\nDrei Dinge tragen die Ausdauer. Erstens die Ökonomie: Wer seine Energie ökonomisch einsetzt (kein verkrampftes Draufhalten in den leisen Teilen, keine verschwendete Kraft), hat am Ende noch Reserven für die Wand. Ausdauer ist Effizienz, nicht Kraft. Zweitens das Pacing: Die eigene Energie über den ganzen Bogen einteilen — nicht schon im ersten Aufbau alles geben. Das ist so sehr Kopfsache wie Körpersache. Drittens die Dauerbelastung: Lange, laute Passagen bedeuten anhaltenden Pegel — Gehörschutz ist bei diesen sich aufbauenden Wänden nicht optional, sondern die Bedingung fürs Weiterspielen. Und bei Vocals gilt der Stimmrahmen unverändert: der eine große Klimax-Schrei darf nicht auf Kosten der Stimme gehen.\n\nDer Grundsatz: locker bleiben über die Länge. Aufwärmen vor der Session, bewusste Lockerheit gerade in den ruhigen Teilen (wo man dazu neigt, unbemerkt zu verspannen), und bei Schmerz, Taubheit oder Klingeln im Ohr sofort stoppen. Wer über zehn Minuten verkrampft, spielt die letzten drei nicht mehr sauber — und riskiert auf Dauer Überlastung. Bei anhaltenden Beschwerden ärztlich oder physiotherapeutisch abklären."
+      },
+      "reflexionsaufgabe": {
+        "de": "Spiel (oder stell dir vor) einen langen, sich aufbauenden Post-Metal-Bogen von acht bis zehn Minuten und beobachte dich ehrlich: Wo ermüdest du, wo verkrampfst du — und passiert das schon in den leisen Teilen, wo du eigentlich locker sein solltest? Teilst du deine Energie über den Bogen ein, oder gibst du im ersten Aufbau zu viel?\n\nBenenne deine zwei größten Ausdauer-Lecks (verkrampfte Ruhe-Teile, zu früh zu viel Kraft, fehlendes Aufwärmen) und je eine Gegenmaßnahme. Prüf die Dauerbelastung: Nutzt du bei den langen lauten Passagen Gehörschutz? Und bei Vocals: Schonst du den Klimax so, dass er nicht die Stimme kostet? Zum Schluss die Sicherheitsfrage: Hast du ein klares Stopp-Signal (Schmerz, Taubheit, Klingeln im Ohr, Heiserkeit), an das du dich hältst? Schreib es auf. Bei anhaltenden Beschwerden ärztlich abklären."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1525 @@
+{
+  "_meta": {
+    "hinweis": "Kuratierte Trainingseinheiten (Spez. 6.4): geordnete Referenzen auf Übungsteile bestehender Bausteine, gegliedert in Erwärmung → Hauptteil → Ausklang. Sichtbare Titel stehen in labels/de.json unter trainingseinheiten."
+  },
+  "trainingseinheiten": [
+    {
+      "id": "gitarre_riff_fundament",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Palm Muting, Powerchords und das erste Riff"
+      },
+      "beschreibung": {
+        "de": "Eine kompakte Session für das Riff-Fundament: Du wärmst die Hände auf, arbeitest an Dämpfung und Akkorden und setzt beides zu einem kurzen Riff zusammen."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Langsam und leise — die Chromatik ist dein Aufwärmprogramm, kein Tempotest."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "palm_muting",
+            "hinweis": {
+              "de": "Such den Punkt am Steg jedes Mal neu, statt die gestrige Position blind zu übernehmen."
+            }
+          },
+          {
+            "baustein": "powerchords",
+            "hinweis": {
+              "de": "Prüf jeden Akkord einzeln: Klingen alle gewollten Töne — und nur die?"
+            }
+          },
+          {
+            "baustein": "einfaches_riff",
+            "hinweis": {
+              "de": "Setz Chugs und Akkorde zu zwei Takten zusammen — Tempo bewusst niedrig."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Zum Abschluss bewusst mit Minimaldruck spielen — locker aufhören, nicht ausgepowert."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gitarre_tempo_tightness",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Wechselschlag, Downpicking und Galopp"
+      },
+      "beschreibung": {
+        "de": "Die Tempo-Session: kontrollierter Anschlag, Ausdauer in kleinen Dosen und die Galopp-Figur. Sauberkeit steht über Geschwindigkeit — Schmerz oder Brennen heißt Pause."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "anschlaghand_grundlagen",
+            "hinweis": {
+              "de": "Gleichmäßige Achtel auf der leeren Saite, Bewegung klein — erst warm werden, dann Tempo."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "wechselschlag",
+            "hinweis": {
+              "de": "Metronom an; erhöhe erst, wenn zwei Durchgänge fehlerfrei sind."
+            }
+          },
+          {
+            "baustein": "downpicking",
+            "hinweis": {
+              "de": "Stopp beim ersten Brennen im Unterarm — Ausdauer wächst über Wochen, nicht in einer Session."
+            }
+          },
+          {
+            "baustein": "galopp_rhythmus",
+            "hinweis": {
+              "de": "Zähl die Figur laut mit, bis das Muster automatisch läuft."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "tremolo_picking",
+            "hinweis": {
+              "de": "Nur mäßiges Tempo: Lockerheit spüren und entspannt ausklingen lassen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_fundament_timing",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Fingerstyle, Grundtöne und Timing zur Bassdrum"
+      },
+      "beschreibung": {
+        "de": "Die Kern-Session für Bass: gleichmäßiges Zupfen, Grundtönen folgen und die Töne exakt auf den Puls setzen — die Basis für tightes Low-End."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Ein Finger pro Bund in mittlerer Lage — ruhig, sauber, ohne Überdehnung."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Streng Zeige–Mittel im Wechsel, auch beim Saitenwechsel."
+            }
+          },
+          {
+            "baustein": "grundton_folgen",
+            "hinweis": {
+              "de": "Nimm ein einfaches Riff oder eine Akkordfolge als Vorlage."
+            }
+          },
+          {
+            "baustein": "lock_zur_bassdrum",
+            "hinweis": {
+              "de": "Behandle jeden Klick wie einen Kick: Ton und Klick sollen verschmelzen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "greifhand_daempfen",
+            "hinweis": {
+              "de": "Leise, kurze Figuren — die Pausen wirklich still werden lassen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_attack_tightness",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Plektrum, Palm Muting und die erste Basslinie"
+      },
+      "beschreibung": {
+        "de": "Attack-Session für den durchsetzungsfähigen Metal-Bass: definierter Pick-Anschlag, kontrollierte Dämpfung und eine komplette Linie zum Riff."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Locker einspielen in mäßigem Tempo — beide Finger gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "plektrum_technik",
+            "hinweis": {
+              "de": "Erst nur Abschläge, dann strikter Wechsel — Lautstärke konstant halten."
+            }
+          },
+          {
+            "baustein": "palm_muting_bass",
+            "hinweis": {
+              "de": "Handballen-Position suchen, bis der Ton kurz bleibt, aber noch Tonhöhe hat."
+            }
+          },
+          {
+            "baustein": "einfache_basslinie",
+            "hinweis": {
+              "de": "Langsam und ganz durchspielen, bevor du das Tempo anziehst."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "anschlagpunkt_ton",
+            "hinweis": {
+              "de": "Zum Schluss bewusst Klangfarben vergleichen — Steg gegen Hals."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_groove_fundament",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Puls, Grundbeat und das erste Fill"
+      },
+      "beschreibung": {
+        "de": "Die Groove-Session: sicheres Zählen zum Klick, der Metal-Grundbeat und ein kurzes Fill mit sauberer Landung auf der Eins."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stockhaltung",
+            "hinweis": {
+              "de": "Freie Schläge auf Snare oder Pad — den Rückprall arbeiten lassen."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "puls_zaehlzeiten",
+            "hinweis": {
+              "de": "Laut mitzählen; das Metronom bleibt in ruhigem Tempo."
+            }
+          },
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Stimme für Stimme aufbauen: erst Hi-Hat, dann Snare, dann Bassdrum."
+            }
+          },
+          {
+            "baustein": "fills",
+            "hinweis": {
+              "de": "Kurzes Fill im vierten Takt — bewusst wieder auf der Eins landen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "dynamik_akzente",
+            "hinweis": {
+              "de": "Leise Sechzehntel mit wenigen Akzenten — Kontrolle statt Kraft."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_speed_koordination",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Rudiments, Double Bass und Unabhängigkeit"
+      },
+      "beschreibung": {
+        "de": "Die Speed-Session in gesunden Dosen: gleichmäßige Hände, gleichmäßige Füße und Koordination über dem Beat. Tempo wächst aus Lockerheit — bei Schmerz sofort pausieren."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Singles und Doubles langsam — beide Hände gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "fusstechnik",
+            "hinweis": {
+              "de": "Gleichmäßige Viertel auf der Bassdrum, Fußgelenk locker."
+            }
+          },
+          {
+            "baustein": "double_bass",
+            "hinweis": {
+              "de": "Beide Füße gleich laut — den schwächeren gezielt angleichen."
+            }
+          },
+          {
+            "baustein": "koordination",
+            "hinweis": {
+              "de": "Eine Stimme variieren, während der Rest stabil weiterläuft."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_feel",
+            "hinweis": {
+              "de": "Langsamer, schwerer Beat zum Runterkommen — jeder Schlag sitzt."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_stimme_stuetze",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Atmung, Stütze und Resonanz"
+      },
+      "beschreibung": {
+        "de": "Die Grundlagen-Session für die Stimme: ruhige Atmung, gestützter Luftstrom und tragfähiger Ton ohne Halsdruck. Nichts darf kratzen oder wehtun — Schmerz ist ein Stoppsignal."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "gesang_haltung_atmung",
+            "hinweis": {
+              "de": "Aufrecht und locker; die Atmung geht in Bauch und Flanken, nicht in die Schultern."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "atemstuetze",
+            "hinweis": {
+              "de": "Langes „Ss“ gleichmäßig halten — die Arbeit passiert im Rumpf, nicht im Hals."
+            }
+          },
+          {
+            "baustein": "resonanz_projektion",
+            "hinweis": {
+              "de": "Lauter nur über Stütze und Offenheit — nie über Druck im Hals."
+            }
+          },
+          {
+            "baustein": "tonhoehe_clean",
+            "hinweis": {
+              "de": "Leise Töne sauber treffen; ein Instrument oder eine App liefert die Referenz."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Leise Lip Trills und Sirenen zum Abwärmen — alles bleibt mühelos."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_rhythmus_ausdruck",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Artikulation, Phrasierung und Dynamik"
+      },
+      "beschreibung": {
+        "de": "Die Performance-Session: klarer Text, Silben exakt auf dem Beat und Ausdruck über bewusste Dynamik — mit sanftem Ein- und Ausklang für die Stimmgesundheit."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft aufwärmen — nichts darf kratzen oder anstrengen."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "artikulation_text",
+            "hinweis": {
+              "de": "Die Textzeile erst überdeutlich sprechen, dann in den Gesang überführen."
+            }
+          },
+          {
+            "baustein": "rhythmus_phrasierung",
+            "hinweis": {
+              "de": "Betonte Silben bewusst auf die Zählzeiten setzen — zum Klick."
+            }
+          },
+          {
+            "baustein": "dynamik_ausdruck",
+            "hinweis": {
+              "de": "Eine Zeile in mehreren Intensitäten — der Hals bleibt dabei locker."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "clean_im_metal",
+            "hinweis": {
+              "de": "Eine ruhige, getragene Melodie in bequemer Lage zum Ausklang."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gitarre_tremolo_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Tremolo-Ausbau bis zum Riffing"
+      },
+      "beschreibung": {
+        "de": "Die Tremolo-Session für Fortgeschrittene: vom gleichmäßigen Strom über die schnelle Melodie bis zum Riffing mit Akkordwechseln. Lockerheit ist das Abbruchkriterium — kippt sie, endet der Durchgang."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "wechselschlag",
+            "hinweis": {
+              "de": "Langsam einschwingen: kleine Bewegung, gleich laute Ab- und Aufschläge."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "tremolo_ausbau",
+            "hinweis": {
+              "de": "Bewusst unter dem Grenztempo bleiben — Dichte vor Geschwindigkeit."
+            }
+          },
+          {
+            "baustein": "schnelles_tremolo",
+            "hinweis": {
+              "de": "Erst aufwärmen, dann das Tempo suchen; Abdämpfen arbeitet ständig mit."
+            }
+          },
+          {
+            "baustein": "tremolo_riffing",
+            "hinweis": {
+              "de": "Anschläge pro Akkord mitzählen, damit die Wechsel exakt sitzen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Mit Minimaldruck ausklingen — die Hände locker in den Feierabend."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_speed_praezision",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Drei Finger, synchrone Hände, Tremolo"
+      },
+      "beschreibung": {
+        "de": "Die Tempo-Session am Bass: Drei-Finger-Zyklus egalisieren, Hände synchronisieren und den dichten Tonstrom halten. Tempo wächst aus Gleichmäßigkeit, nicht aus Kraft."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Locker einspielen — beide Finger gleich laut, mäßiges Tempo."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "bass_dreifinger",
+            "hinweis": {
+              "de": "Auf den leisesten Finger hören und gezielt angleichen."
+            }
+          },
+          {
+            "baustein": "bass_hand_sync",
+            "hinweis": {
+              "de": "Staccato als Test: Jeder Ton bleibt voll und definiert."
+            }
+          },
+          {
+            "baustein": "bass_tremolo",
+            "hinweis": {
+              "de": "Kleiner Anschlag, dichter Strom — unter dem Grenztempo bleiben."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "bass_ghostnotes",
+            "hinweis": {
+              "de": "Leise perkussive Figuren zum Runterkommen — Pausen wirklich still."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_blast_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Blast-Varianten, Fuß-Teppich, Ausdauer"
+      },
+      "beschreibung": {
+        "de": "Die Blast-Session: Traditional und Bomb sauber trennen, den Sechzehntel-Teppich der Füße glätten und Ausdauer in Intervallen aufbauen. Verkrampfung beendet den Durchgang — immer."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Singles und Doubles langsam — beide Hände gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "blast_varianten",
+            "hinweis": {
+              "de": "Jeder Takt ist eindeutig Traditional oder Bomb — nichts dazwischen."
+            }
+          },
+          {
+            "baustein": "double_bass_sechzehntel",
+            "hinweis": {
+              "de": "Auf den schwächeren Fuß hören; Gleichheit vor Tempo."
+            }
+          },
+          {
+            "baustein": "blast_ausdauer",
+            "hinweis": {
+              "de": "Intervalle: vier Takte Blast, vier Takte lockerer Groove."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_feel",
+            "hinweis": {
+              "de": "Langsam und schwer ausklingen — jeder Schlag sitzt."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_harsh_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Fry, Taschenfalten und Artikulation — leise und sicher"
+      },
+      "beschreibung": {
+        "de": "Die Harsh-Session mit striktem Sicherheitsrahmen: alles leise und kurz, nichts darf kratzen oder wehtun. Auf- und Abwärmen sind Pflichtteile — und für den Intensitätsaufbau gehört eine Lehrperson an deine Seite."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Gründlich aufwärmen: Lip Trills und Sirenen, alles mühelos."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "fry_verzerrung",
+            "hinweis": {
+              "de": "Der Fry fühlt sich an wie Ausruhen — erst dann behutsam aufladen."
+            }
+          },
+          {
+            "baustein": "false_cord_ansatz",
+            "hinweis": {
+              "de": "Gehauchtes Fauchen, offener Rachen; bei jeder Enge sofort stoppen."
+            }
+          },
+          {
+            "baustein": "harsh_artikulation",
+            "hinweis": {
+              "de": "Der Mund artikuliert, der Hals bleibt frei — leise Übungsintensität."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft abwärmen: leises Summen, bis sich die Stimme neutral anfühlt."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gitarre_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Blast-Tempo, Sweeps und Studio-Präzision"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session: kontrollierte Ausflüge über die Tempogrenze, Sweep-Feinbau und Reproduzierbarkeit auf Studio-Niveau. Lockerheit bleibt das Abbruchkriterium."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "wechselschlag",
+            "hinweis": {
+              "de": "Langsam einschwingen — kleine Bewegung, beide Richtungen gleich laut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "blast_tempo_riffing",
+            "hinweis": {
+              "de": "Kurze Ausflüge über die Grenze, sofort zurück ins Kontrolltempo."
+            }
+          },
+          {
+            "baustein": "sweep_ausbau",
+            "hinweis": {
+              "de": "Zeitlupe: ein Ton zur Zeit, das Rolling entscheidet."
+            }
+          },
+          {
+            "baustein": "recording_tightness",
+            "hinweis": {
+              "de": "Zwei Takes übereinander — Flatterstellen sind deine Übe-Liste."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "lead_phrasierung",
+            "hinweis": {
+              "de": "Singen, dann spielen — ruhig und musikalisch ausklingen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Tapping, Extremtempo und Kontrapunkt"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session am Bass: Zweihand-Technik, Effizienz an der Tempogrenze und kompositorisches Denken. Video- und Audio-Selbstkontrolle gehören dazu."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Locker einspielen — beide Finger gleich laut, mäßiges Tempo."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "bass_tapping",
+            "hinweis": {
+              "de": "Dämpfungsplan zuerst — Stille zwischen den Zyklen."
+            }
+          },
+          {
+            "baustein": "bass_extremtempo",
+            "hinweis": {
+              "de": "Zeitlupen-Video ansehen, dann kurze Grenz-Ausflüge."
+            }
+          },
+          {
+            "baustein": "bass_kontrapunkt",
+            "hinweis": {
+              "de": "Anker treffen, dazwischen bewusst eigene Wege gehen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "bass_mikrotiming",
+            "hinweis": {
+              "de": "Feinhören zum Schluss: vor, auf, hinter dem Schlag — leise und konzentriert."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Extremtempo-Füße, Polymetrik, ungerade Takte"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session am Kit: eine Fußtechnik isoliert anbahnen, wandernde Zellen über stabilem Puls und krumme Takte, die grooven. Federnd statt gestampft — Schmerz beendet den Durchgang."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Singles und Doubles langsam — Hände auf Betriebstemperatur."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "double_bass_extremtempo",
+            "hinweis": {
+              "de": "Eine Technik, kurze Zyklen, großzügige Pausen."
+            }
+          },
+          {
+            "baustein": "drums_polymetrik",
+            "hinweis": {
+              "de": "Die Sieben-Zelle laut zählen, der Vierer wankt nicht."
+            }
+          },
+          {
+            "baustein": "ungerade_takte_drums",
+            "hinweis": {
+              "de": "Kurz-kurz-lang sprechen, bis der 7/8 groovt."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "drums_dynamik_architektur",
+            "hinweis": {
+              "de": "Ruhig ausklingen: Intensitätsebenen bewusst durchfahren."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_experte_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Range, Texturen und rhythmische Präzision — leise und sicher"
+      },
+      "beschreibung": {
+        "de": "Die Experten-Session für Extreme Vocals mit striktem Sicherheitsrahmen: alles leise, kurz und mühelos; Auf- und Abwärmen sind Pflicht, und die Range-Arbeit gehört langfristig in Begleitung einer Lehrperson."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Gründlich aufwärmen — Lip Trills und Sirenen, alles mühelos."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "harsh_range_erweiterung",
+            "hinweis": {
+              "de": "Von den sicheren Zentren in kleinen Stufen zu den Rändern — nie über Druck."
+            }
+          },
+          {
+            "baustein": "harsh_texturen",
+            "hinweis": {
+              "de": "Das innere Mischpult: Übergänge fließend, ohne jeden Ruck."
+            }
+          },
+          {
+            "baustein": "harsh_rhythmische_praezision",
+            "hinweis": {
+              "de": "Erst sprechen, dann verzerren — das Timing zahlt nie die Zeche."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft abwärmen, bis sich die Stimme neutral anfühlt."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "theorie_gehoer_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Gehör & Theorie: Hören, Zählen, Zerlegen"
+      },
+      "beschreibung": {
+        "de": "Die instrumentenfreie Werkstatt: Intervall-Referenzen auffrischen, erweiterte Farben und metrische Kippmomente hören, Stimmführung bauen — und zum Ausklang ein Riff nach Gehör zerlegen. Nur Ohren, Hände und ein Abspielgerät nötig."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "intervalle_grundlagen",
+            "hinweis": {
+              "de": "Einhören: Oktave, Quinte und kleine Sekunde als Referenzen abrufen."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "erweiterte_harmonik",
+            "hinweis": {
+              "de": "Die Farben add9, sus4 und maj7 blind erkennen — Stimmung in einem Wort benennen."
+            }
+          },
+          {
+            "baustein": "metrische_modulation",
+            "hinweis": {
+              "de": "Die Triole zum neuen Puls kippen lassen — und zurück."
+            }
+          },
+          {
+            "baustein": "kontrapunkt_stimmfuehrung",
+            "hinweis": {
+              "de": "Zwei Linien, drei Zustände: gegen, parallel, unisono — hörbar gestalten."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "gehoer_transkription",
+            "hinweis": {
+              "de": "Zum Ausklang ein langsames, klares Riff durch den Trichter ziehen — Doom eignet sich."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "doom_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Doom: Schwere gemeinsam bauen"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für alle Instrumente: Erst wird das gemeinsame Zeitgefühl im Schlepptempo verankert, dann arbeitet jede Person an ihrer Doom-Disziplin — ausklingende Töne, gedehnte Zeit, verzerrtes Fundament — und zum Schluss schärft die Harmonik das Ohr für die Sprache der Schwere."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "doom_band_zeitgefuehl",
+            "hinweis": {
+              "de": "Als Einstieg gemeinsam (oder mit Aufnahme) das 55-BPM-Raster verankern — alles Weitere der Session lebt von diesem geteilten Puls."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "doom_sustain_feedback",
+            "hinweis": {
+              "de": "Gitarre: Jeden langen Ton bewusst gestalten. Feedback nur, wenn Lautstärke und Gehörschutz es hergeben."
+            }
+          },
+          {
+            "baustein": "doom_drums_zeitdehnung",
+            "hinweis": {
+              "de": "Schlagzeug: Klick schrittweise ausdünnen — das stille Netz aus der Erwärmung trägt jetzt allein."
+            }
+          },
+          {
+            "baustein": "doom_bass_fuzz",
+            "hinweis": {
+              "de": "Bass: Die Zerre so weit zurücknehmen, dass Attack und Tonhöhe lesbar bleiben — im Zweifel entscheidet die Aufnahme, nicht das Gefühl."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_harmonik",
+            "hinweis": {
+              "de": "Zum Abschluss die Ohren: das Pendel und der Tritonus in Zeitlupe — wer mag, baut die Miniatur aus drei Tönen direkt mit den Sounds der Session."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "hardcore_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Hardcore: Bounce, Drive und der gemeinsame Ruf"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für den Hardcore-Kern: Der D-Beat bringt den Motor auf Temperatur, dann bauen Gitarre, Bass und Schlagzeug den Stomp mit seinen Kanten — und zum Schluss kommt die Gemeinschaftsdisziplin: Gang-Shouts, präzise und stimmgesund."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "d_beat",
+            "hinweis": {
+              "de": "In bequemem Tempo einlaufen — der Beat soll federn, nicht kämpfen. Wer nicht trommelt, klatscht das Pattern mit."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "hardcore_groove_bounce",
+            "hinweis": {
+              "de": "Gitarre: Die Pausen sind das Riff. Im Stehen spielen — wenn der Körper nicht mitgeht, weiter vereinfachen."
+            }
+          },
+          {
+            "baustein": "hardcore_bass_motor",
+            "hinweis": {
+              "de": "Bass: Zwei Minuten Achtel mit konstantem Attack — die Aufnahme gegen den Klick ist der ehrliche Prüfstein."
+            }
+          },
+          {
+            "baustein": "hardcore_drums_energie",
+            "hinweis": {
+              "de": "Schlagzeug: Die Wechselkanten schnell/Stomp zehnmal am Stück — Energie hoch, Viertel unverrückbar."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "hardcore_gangshouts",
+            "hinweis": {
+              "de": "Zum Abschluss alle zusammen: kurze Parolen, exakt auf den Schlag, aus der Stütze — leise beginnen, bei Kratzen sofort stoppen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "grind_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Grindcore: Dichte, Nähte und der Registerwechsel"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für kontrollierte Raserei: Der Blast wird warm angespielt, dann arbeiten Gitarre, Schlagzeug und Bass an Reduktion, Nähten und Verzahnung — und zum Schluss übt die Stimme den Tief-Hoch-Wechsel. Kurze intensive Blöcke, echte Pausen, Gehörschutz auf."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "blastbeat",
+            "hinweis": {
+              "de": "In entspanntem Tempo einlaufen — Lockerheit vor Geschwindigkeit, die Session wird noch schnell genug."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "grind_riff_reduktion",
+            "hinweis": {
+              "de": "Gitarre: die Dreißig-Sekunden-Miniatur bauen — harte Schnitte, kein Füllmaterial."
+            }
+          },
+          {
+            "baustein": "grind_blast_uebergaenge",
+            "hinweis": {
+              "de": "Schlagzeug: nur die Nähte üben — zehn Wiederholungen pro Kante, der erste Schlag nach dem Wechsel zählt."
+            }
+          },
+          {
+            "baustein": "grind_bass_verzahnung",
+            "hinweis": {
+              "de": "Bass: Skelett-Töne auf die Kick legen — die Wand steht, wenn Bass und Double Bass eine Textur sind."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grind_vocals_wechsel",
+            "hinweis": {
+              "de": "Zum Abschluss die Stimme, bewusst leise: Tief-Hoch-Wechsel mit großem Abstand — Tempo kommt über Wochen, nicht heute."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "crust_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Crust: der unerbittliche Lauf"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für Ausdauer mit Haltung: Der D-Beat läuft sich warm, dann bauen Schlagzeug, Bass und Stimme den räudigen Dauerdruck — und der Ausklang gehört den Händen, die den Lauf bezahlt haben."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "d_beat",
+            "hinweis": {
+              "de": "Locker einlaufen, deutlich unter Zieltempo — der Dauerlauf kommt gleich noch."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "crust_dbeat_ausbau",
+            "hinweis": {
+              "de": "Schlagzeug: Konstanz vor Tempo — zwei Minuten am Stück, Anfang und Ende der Aufnahme müssen gleich klingen."
+            }
+          },
+          {
+            "baustein": "bass_downpicking",
+            "hinweis": {
+              "de": "Bass: der treibende Downpicking-Motor unter dem D-Beat — gleicher Attack auf jeder Note."
+            }
+          },
+          {
+            "baustein": "downpicking",
+            "hinweis": {
+              "de": "Gitarre: Downpicking als Crust-Fundament — Härte aus dem Handgelenk, Lockerheit vor Dauer."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "crust_vocals_rau",
+            "hinweis": {
+              "de": "Zum Abschluss die Stimme, bewusst leise und kurz: dringlich, nicht gepresst — bei Kratzen sofort stoppen, danach Hände und Stimme ausruhen lassen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pv_werkstatt",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Powerviolence: Kanten schleifen"
+      },
+      "beschreibung": {
+        "de": "Die Genre-Werkstatt für Abrisskanten: Erst werden Tempo- und Feel-Wechsel als Grundlage aufgefrischt, dann die Kanten einzeln geschliffen und als Band reproduzierbar gemacht — zum Schluss prüft das Metronom ehrlich, was die Wechsel mit dem Tempogedächtnis gemacht haben."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "tempo_wechsel_drums",
+            "hinweis": {
+              "de": "Die Wechsel-Grundlagen in moderatem Tempo auffrischen — noch mit verwandten Tempi, die harten Sprünge kommen gleich."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "pv_start_stopp",
+            "hinweis": {
+              "de": "Die Kanten einzeln: fester letzter Schlag, definierte Stille, entschlossener erster Schlag — zehnmal dieselbe Stelle."
+            }
+          },
+          {
+            "baustein": "pv_band_abrisskanten",
+            "hinweis": {
+              "de": "Mit der Band (oder zu zweit): Landkarte aufsagen, Kanten verketten, den Fehlerfall proben — nie zurückspringen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_band_zeitgefuehl",
+            "hinweis": {
+              "de": "Zum Abschluss das geteilte Raster in der Zeitlupe prüfen — genau das Tempogedächtnis, von dem die Abrisskanten leben."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "genre_schnupper",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Vier Genres in einer Session: D-Beat, Sludge, Stopps, Doom"
+      },
+      "beschreibung": {
+        "de": "Die Schnupper-Werkstatt für die Genre-Familie: Nach dem Einlaufen probierst du drei sehr unterschiedliche Spielgefühle — den treibenden D-Beat, das schwere Sludge-Riff und das präzise Stopp-Spiel — und lässt die Session im Doom-Tempo ausklingen. Instrumente lassen sich stationsweise tauschen; nimm, was da ist."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Locker einlaufen — der Grundbeat ist die Basis, auf der gleich alles aufbaut."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "d_beat",
+            "hinweis": {
+              "de": "Das Tempo-Gefühl der schnellen Linie: treibend, aber nie hetzend."
+            }
+          },
+          {
+            "baustein": "sludge_erstes_riff",
+            "hinweis": {
+              "de": "Der Gegenpol: zwei Akkorde, volles Gewicht — langsam sauber ist schwerer als schnell schlampig."
+            }
+          },
+          {
+            "baustein": "pv_stopp_spiel",
+            "hinweis": {
+              "de": "Präzision als Spiel: letzter Schlag, gezählte Stille, entschlossener Wiedereinstieg."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_riffing",
+            "hinweis": {
+              "de": "Im Schlepptempo ausklingen — lange Töne, viel Raum, Puls ruhig werden lassen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "deathcore_gitarre",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Breakdown-Gitarre"
+      },
+      "beschreibung": {
+        "de": "Chugs und Powerchord als Waffe: Du wärmst die Greifhand auf, festigst die Dämpfung und baust daraus einen wuchtigen, synkopierten Breakdown mit echter Stille."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Langsam und locker — nur Aufwärmen, kein Tempotest."
+            }
+          },
+          {
+            "baustein": "palm_muting",
+            "hinweis": {
+              "de": "Such den Dämpfpunkt am Steg jedes Mal neu; der Ton knallt und ist sofort tot."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "chugs_breakdown",
+            "hinweis": {
+              "de": "Wenige Töne, viel Stille — spür den Kontrast aus Schlag und Lücke."
+            }
+          },
+          {
+            "baustein": "deathcore_breakdown_wucht",
+            "hinweis": {
+              "de": "Übe zuerst nur die Kante vom schnellen Teil in den ersten schweren Schlag."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Locker ausklingen lassen: minimaler Greifdruck, Hände bewusst entspannen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "djent_gitarre",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Pocket & Polymetrik (Gitarre)"
+      },
+      "beschreibung": {
+        "de": "Perkussive Chugs über geradem Puls: Aufwärmen, tighte Palm-Mute-Systeme, dann verschobene Gruppierungen, die im Körper sitzen statt im Kopf."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker und leise starten."
+            }
+          },
+          {
+            "baustein": "palm_mute_systeme",
+            "hinweis": {
+              "de": "Tight und trocken — der einzelne Chug muss knallen und tot sein."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "djent_gitarre_pocket",
+            "hinweis": {
+              "de": "Den Viertelpuls mit dem Fuß mittippen, während die Hand die Fünfer spielt."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Ausklingen mit minimaler Bewegung — Lockerheit ist der Djent-Kern."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoner_gitarre",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "fuzziger Groove (Gitarre)"
+      },
+      "beschreibung": {
+        "de": "Der Riff regiert: Aufwärmen, Downpicking-Kondition, dann ein fuzziger Groove mit bewusster Lücke, leicht hinter dem Puls und lustvoll wiederholt."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker aufwärmen."
+            }
+          },
+          {
+            "baustein": "downpicking",
+            "hinweis": {
+              "de": "Gleichmäßiger, entschlossener Abschlag — die Basis für den Groove."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "stoner_riff_fuzz",
+            "hinweis": {
+              "de": "Leicht hinter dem Klick spielen und die Lücke wirklich stehen lassen; jede Runde minimal variieren."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Entspannt ausklingen, Hände lockern."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "deathcore_drums",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Blast & Breakdown (Drums)"
+      },
+      "beschreibung": {
+        "de": "Dichte gegen Wucht: Aufwärmen, Blast-Varianten sichern, dann auf den Schlag zwischen Blast-Teppich und schwerem Breakdown umschalten. Gehörschutz, Lockerheit vor Kraft."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Locker und gleichmäßig aufwärmen."
+            }
+          },
+          {
+            "baustein": "double_bass",
+            "hinweis": {
+              "de": "Fuß entspannt, Schläge gleich laut — kein Kraftakt."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "blast_varianten",
+            "hinweis": {
+              "de": "In kurzen Blöcken, Lockerheit vor Tempo."
+            }
+          },
+          {
+            "baustein": "deathcore_gravity_blast",
+            "hinweis": {
+              "de": "Schaltvorgang üben: harter Schnitt vom Blast in den Breakdown, exakt auf dem Schlag."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Ruhig ausklingen, Lockerheit prüfen, Ohren schonen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "djent_drums",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Polymetrik (Drums)"
+      },
+      "beschreibung": {
+        "de": "Gerader Boden, wandernde Betonung: Koordination aufwärmen, Sechzehntel-Fundament festigen, dann die Kick in die Fünfer-Gruppen legen, während die Hände gerade bleiben."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "koordination",
+            "hinweis": {
+              "de": "Locker aufwärmen, Unabhängigkeit wecken."
+            }
+          },
+          {
+            "baustein": "double_bass_sechzehntel",
+            "hinweis": {
+              "de": "Gleichmäßiger, kontrollierter Fuß — die Basis für die verschobene Kick."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "djent_drums_polymetrik",
+            "hinweis": {
+              "de": "Hi-Hat bewusst stur gerade halten, während die Kick wandert; bei jedem Ausreißer zurück zum geraden Boden."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Ruhig und gerade ausklingen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "deathcore_bass",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "tiefes Fundament (Bass)"
+      },
+      "beschreibung": {
+        "de": "Definition in der Tiefe: Greifhand und Dämpfung aufwärmen, dann ein tiefes, definiertes Fundament, das die Breakdown-Akzente exakt mit der Gitarre trifft."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Locker aufwärmen, sauber greifen."
+            }
+          },
+          {
+            "baustein": "palm_muting_bass",
+            "hinweis": {
+              "de": "Dämpfung sichern — Attack und Kontur statt Wummern."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "deathcore_bass_fundament",
+            "hinweis": {
+              "de": "Auf kleinen Lautsprechern prüfen, ob jede Tonhöhe erkennbar bleibt; Akzente exakt mit der Gitarre."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "grundton_folgen",
+            "hinweis": {
+              "de": "Ruhig ausklingen, sauber den Grundtönen folgen."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "experte_gitarre_lead",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Lead-Gitarre (Tapping & Harmonics)"
+      },
+      "beschreibung": {
+        "de": "Ausdruck und Sauberkeit: Aufwärmen und Phrasierung, dann fließendes Legato/Tapping und Pinch-Harmonics als Geste — gleichmäßig vor schnell."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Gründlich und locker aufwärmen — Legato verlangt lockere Finger."
+            }
+          },
+          {
+            "baustein": "lead_phrasierung",
+            "hinweis": {
+              "de": "Phrasierung wecken: Motiv, Betonung, Atempause."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "gitarre_tapping_legato",
+            "hinweis": {
+              "de": "Jeden Ton gleich laut wie angeschlagen; Dämpfung beider Hände, dann erst Tempo."
+            }
+          },
+          {
+            "baustein": "gitarre_kunstharmonics",
+            "hinweis": {
+              "de": "Den Sweet Spot reproduzierbar treffen und mit Bending/Vibrato zur Geste machen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "gitarre_improvisation",
+            "hinweis": {
+              "de": "Kreativer Ausklang: aus wenig Material über ein Riff frei phrasieren."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "deathcore_vocals",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Gutturals & Squeals (Vocals)"
+      },
+      "beschreibung": {
+        "de": "Breite ohne Verschleiß: gründlich aufwärmen, einzeln und leise sichern, die Register behutsam anlegen. Nach jeder Einheit Sprechtest, bei Kratzen sofort stoppen — Squeals nur mit Lehrperson."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft und leise aufwärmen — nie in Heiserkeit hinein."
+            }
+          },
+          {
+            "baustein": "atemstuetze",
+            "hinweis": {
+              "de": "Die Stütze ist die Basis für alle Register; aus Luft und Resonanz, nicht aus Druck."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "deathcore_gutturals_squeals",
+            "hinweis": {
+              "de": "Register einzeln und leise; Pig-Squeals nur mit Lehrperson. Bei Engegefühl sofort stoppen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "tonhoehe_clean",
+            "hinweis": {
+              "de": "Ruhiger Ausklang auf einer sauberen Clean-Linie; danach Sprechtest, bei Heiserkeit HNO."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "erste_gemeinsame_probe",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Als Einheit zusammenfinden — erst koppeln Bass und Bassdrum, dann werden Gitarre und Bass zu einem Ton."
+      },
+      "beschreibung": {
+        "de": "Die erste Probe, in der ihr als Einheit zusammenfindet — nicht über fertige Songs, sondern über das Fundament. Zuerst wärmt jeder für sich auf; dann koppelt ihr Bass und Bassdrum, findet ein gemeinsames Timing zum Klick und bringt schließlich Gitarre und Bass zu einem Ton zusammen. Zum Ausklang spielt ihr locker und leise mit den Rollen im Riff, statt weiter auf Präzision zu drillen. Ziel des Tages ist nicht Repertoire, sondern das Gefühl, als ein Körper zu spielen."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker und ohne Tempo — die Greifhand wach machen, bevor es ums Zusammenspiel geht."
+            }
+          },
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Kurz für sich: saubere Greifhand am Bass, damit der Ton im Duo später trägt."
+            }
+          },
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Ein paar Minuten Einzel- und Doppelschläge, damit die Hände am Set locker sind."
+            }
+          },
+          {
+            "baustein": "atemstuetze",
+            "hinweis": {
+              "de": "Für die Stimme: ruhig auf die Atemstütze einstimmen, bevor es laut wird."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "duo_bd_kick_lock",
+            "hinweis": {
+              "de": "Nur Bass und Bassdrum, ohne Rest — bis Ton und Kick zu einem Impuls verschmelzen."
+            }
+          },
+          {
+            "baustein": "duo_bd_pocket_klick",
+            "hinweis": {
+              "de": "Beide gleichberechtigt auf den Klick, nicht aufeinander — die Pocket entsteht gemeinsam."
+            }
+          },
+          {
+            "baustein": "duo_gb_lock",
+            "hinweis": {
+              "de": "Ein Riff, ein Ton: Gitarre und Bass auf denselben Attack und dieselbe Dämpfung bringen."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "duo_gb_rollen_riff",
+            "hinweis": {
+              "de": "Locker ausklingen: Verdopplung gegen eigene Linie hören, ohne auf Präzision zu drillen."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

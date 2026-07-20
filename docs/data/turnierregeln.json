@@ -1,0 +1,341 @@
+{
+  "_meta": {
+    "titel": "Könnens-Check",
+    "beschreibung": "Selbsteinschätzung je Könnensstufe — Referenzbereich, kein Fortschritt.",
+    "quelle": "instrumentneutrale Leitplanken über Domänen hinweg"
+  },
+  "stufen": [
+    {
+      "id": "einsteiger",
+      "varianten": []
+    },
+    {
+      "id": "fortgeschritten",
+      "varianten": []
+    },
+    {
+      "id": "experte",
+      "varianten": []
+    }
+  ],
+  "kategorien": [
+    {
+      "id": "technik",
+      "titel": {
+        "de": "Technik & Kontrolle"
+      }
+    },
+    {
+      "id": "timing",
+      "titel": {
+        "de": "Timing & Groove"
+      }
+    },
+    {
+      "id": "ton",
+      "titel": {
+        "de": "Ton & Dynamik"
+      }
+    },
+    {
+      "id": "buehne",
+      "titel": {
+        "de": "Zusammenspiel & Bühne"
+      }
+    },
+    {
+      "id": "gesundheit",
+      "titel": {
+        "de": "Gesundheit & Warm-up"
+      }
+    }
+  ],
+  "anforderungen": [
+    {
+      "id": "kc_saubere_toene",
+      "kategorie": "technik",
+      "titel": {
+        "de": "Saubere Töne & Anschläge"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du erzeugst gleichmäßige, klare Töne ohne Nebengeräusche im langsamen Tempo."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Die Sauberkeit bleibt bei mittlerem Tempo und über längere Läufe erhalten."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Auch bei hohem Tempo und unter Ermüdung bleibt jeder Ton definiert."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_wechsel",
+      "kategorie": "technik",
+      "titel": {
+        "de": "Lagen- & Positionswechsel"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "empfehlung",
+          "text": {
+            "de": "Einfache Wechsel gelingen bewusst und ohne Hektik."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Wechsel sitzen im Tempo, ohne den Fluss zu unterbrechen."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Große Sprünge und schnelle Wechsel triffst du sicher."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_klick",
+      "kategorie": "timing",
+      "titel": {
+        "de": "Spiel zum Klick"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du hältst ein einfaches Muster stabil zum Metronom."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du bleibst auch bei Tempowechseln und Pausen im Raster."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du spielst bewusst vor oder hinter dem Beat, ohne das Tempo zu verlieren."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_unterteilung",
+      "kategorie": "timing",
+      "titel": {
+        "de": "Unterteilungen"
+      },
+      "werte": {
+        "fortgeschritten": {
+          "stufe": "empfehlung",
+          "text": {
+            "de": "Achtel, Triolen und Sechzehntel bleiben gleichmäßig."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Wechsel der Unterteilung und Polyrhythmen sitzen sicher."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_dynamik",
+      "kategorie": "ton",
+      "titel": {
+        "de": "Dynamik & Lautstärke"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "empfehlung",
+          "text": {
+            "de": "Du hörst den Unterschied zwischen laut und leise und steuerst ihn grob."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Akzente und Abstufungen setzt du gezielt."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Dynamik ist ein bewusstes Ausdrucksmittel über ganze Passagen."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_ton_form",
+      "kategorie": "ton",
+      "titel": {
+        "de": "Ton & Verzerrung im Griff"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "empfehlung",
+          "text": {
+            "de": "Dein Grundton trägt, ohne zu matschen — Gain und Verzerrung bewusst dosiert."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Palm-Mutes, Attack oder Growls klingen kontrolliert und wiederholbar."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du formst den Ton je nach Passage von tight bis offen — reproduzierbar."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_zusammenspiel",
+      "kategorie": "buehne",
+      "titel": {
+        "de": "Zusammenspiel"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "empfehlung",
+          "text": {
+            "de": "Du hörst auf die anderen und findest den gemeinsamen Puls."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du hältst deine Stimme, während um dich herum viel passiert."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du führst und reagierst — Übergänge und Breaks sitzen als Band."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_auftritt",
+      "kategorie": "buehne",
+      "titel": {
+        "de": "Auftritt & Ablauf"
+      },
+      "werte": {
+        "fortgeschritten": {
+          "stufe": "empfehlung",
+          "text": {
+            "de": "Du kennst deinen Ablauf und dein Setup ohne langes Suchen."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Ein ganzes Set läuft sicher — samt Ansagen, Wechseln und Plan für Pannen."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_warmup",
+      "kategorie": "gesundheit",
+      "titel": {
+        "de": "Aufwärmen als Routine"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du wärmst vor jedem Üben kurz auf und startest leise und langsam."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Aufwärmen und Abwärmen gehören fest zu jeder Session."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du dosierst die Belastung bewusst und planst Pausen ein."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_stoppregel",
+      "kategorie": "gesundheit",
+      "titel": {
+        "de": "Stoppregel & Grenzen"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Bei Schmerz, Kratzen oder Taubheit stoppst du sofort."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du erkennst frühe Warnzeichen und passt an, statt durchzuziehen."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Bei anhaltenden Beschwerden holst du eine Lehrperson, Ärztin oder HNO-Praxis dazu."
+          }
+        }
+      }
+    },
+    {
+      "id": "kc_gehoerschutz",
+      "kategorie": "gesundheit",
+      "titel": {
+        "de": "Gehörschutz"
+      },
+      "werte": {
+        "einsteiger": {
+          "stufe": "empfehlung",
+          "text": {
+            "de": "Beim lauten Üben und im Proberaum trägst du Gehörschutz."
+          }
+        },
+        "fortgeschritten": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Bei Band-Lautstärke ist Gehörschutz selbstverständlich."
+          }
+        },
+        "experte": {
+          "stufe": "pflicht",
+          "text": {
+            "de": "Du schützt dein Gehör konsequent — in Probe, auf Bühne und bei Aufnahme."
+          }
+        }
+      }
+    }
+  ],
+  "varianten": []
+}

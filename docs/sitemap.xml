@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Vorerst nur die Startseite: Bei Hash-Routing (#/...) ist die Wurzel die einzige
+     echte URL. Mit Tier 2 (Pfad-URLs + Deploy-Prerendering, s. docs/seo-tier2-konzept.md)
+     wird diese Sitemap um alle Bausteine, Regeln und Pfade erweitert. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://daimpad.github.io/mosh-school/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
