@@ -4,7 +4,7 @@
 // (Themen-Vorschläge) statt einer leeren Fläche; ohne Treffer ein Ausweg-CTA.
 // Die Suchlogik liegt DOM-frei in js/suche.js (testbar); hier nur Darstellung.
 
-import { domaenenVon, spielformVon } from '../daten.js';
+import { domaenenVon } from '../daten.js';
 import { label, t } from '../i18n.js';
 import { bausteinIcon, esc, heroKlein, leerHtml } from '../oberflaeche.js';
 import { themenDomaenen } from '../pfade.js';
@@ -26,10 +26,9 @@ const DOMAENE_HUE = {
 };
 
 // In-Kontext-Rückweg passend zum Baustein: Outdoor bleibt in der Umgebungs-Achse,
-// Doppel in der Spielform-Achse, sonst der Kompetenzpfad (Deep-Link-tauglich).
+// sonst der Kompetenzpfad (Deep-Link-tauglich).
 function kontextFuer(baustein) {
   if (baustein.typ === 'umgebungs_baustein') return 'umgebung';
-  if (spielformVon(baustein) === 'doppel') return 'spielform:doppel';
   return 'kompetenz';
 }
 
