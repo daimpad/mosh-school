@@ -1,0 +1,48 @@
+name: Sync static root to /docs on main
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-docs:
+    if: "!contains(github.event.head_commit.message, '[skip docs]')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Prepare docs directory
+        run: |
+          # clean target docs folder
+          rm -rf ./docs
+          mkdir -p ./docs
+
+      - name: Copy static files to docs
+        run: |
+          # copy everything from repo root into docs, excluding .git and workflow triggers
+          rsync -av --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'node_modules' \
+            --exclude 'docs' \
+            ./ ./docs/
+
+      - name: Commit and push docs to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          # only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to docs. Nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore: sync /docs [skip docs]"
+          git push origin HEAD:main
