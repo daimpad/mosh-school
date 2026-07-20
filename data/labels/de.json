@@ -556,7 +556,15 @@
     "djent_sound_gear": "Djent-Sound: Attack, Definition & Tightness",
     "djent_koerper_praezision": "Djent-Körper: Präzision aus Lockerheit",
     "stoner_sound_gear": "Stoner/Post-Sound: Fuzz, Wärme & Flächen",
-    "postmetal_koerper_ausdauer": "Post-Metal-Körper: Ausdauer über die Langform"
+    "postmetal_koerper_ausdauer": "Post-Metal-Körper: Ausdauer über die Langform",
+    "gitarre_tapping_legato": "Gitarre: Tapping & Legato-Fluss",
+    "gitarre_kunstharmonics": "Gitarre: Pinch- & Kunstharmonics",
+    "bass_lead_melodisch": "Bass: melodischer Lead-Bass",
+    "drums_lineares_spiel": "Drums: lineares Spiel",
+    "harsh_uebergaenge_nahtlos": "Vocals: nahtlose Register-Übergänge",
+    "harsh_arrangement_schichten": "Vocals: Schichten arrangieren",
+    "komposition_langform": "Theorie: Langform & Arrangement komponieren",
+    "gitarre_improvisation": "Gitarre: Improvisation über Riffs"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
