@@ -518,7 +518,13 @@
     "djent_drums_polymetrik": "",
     "djent_vocals_dynamik": "",
     "djent_theorie_polymetrik": "",
-    "djent_dramaturgie_raum": ""
+    "djent_dramaturgie_raum": "",
+    "stoner_riff_fuzz": "",
+    "stoner_bass_fuzz_groove": "",
+    "postmetal_drums_crescendo": "",
+    "postmetal_vocals_dynamik": "",
+    "stoner_riff_harmonik": "",
+    "postmetal_langform_geduld": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -674,7 +680,8 @@
       "powerviolence": "",
       "sludge": "",
       "deathcore": "",
-      "djent": ""
+      "djent": "",
+      "stoner_post": ""
     },
     "stimmung": {
       "e_standard": "",
