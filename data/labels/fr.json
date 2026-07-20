@@ -274,7 +274,20 @@
     "klang_intervall_aria": "",
     "klang_akkord_aria": "",
     "klang_skalen": "",
-    "klang_skala_aria": ""
+    "klang_skala_aria": "",
+    "nav_patterns": "",
+    "pattern_untertitel": "",
+    "pattern_bpm": "",
+    "pattern_play": "",
+    "pattern_play_aria": "",
+    "pattern_tab_aria": "",
+    "pattern_drum_aria": "",
+    "pattern_spur_crash": "",
+    "pattern_spur_hihat": "",
+    "pattern_spur_snare": "",
+    "pattern_spur_kick": "",
+    "pattern_zum_pfad": "",
+    "pattern_hinweis_pegel": ""
   },
   "bausteine": {
     "grundhaltung": "",
@@ -531,7 +544,9 @@
     "transfer_groove_genrefarbe": "",
     "transfer_bass_rollen": "",
     "transfer_vocals_genrefarbe": "",
-    "set_ueber_genres": ""
+    "set_ueber_genres": "",
+    "deathcore_sound_gear": "",
+    "deathcore_koerper_intensitaet": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
