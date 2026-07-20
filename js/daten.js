@@ -49,17 +49,16 @@ const INHALTSDATEIEN = [
 ];
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, regeln, appInfo, turnierregeln, tunings, patterns, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
-    holeJson('data/regeln.json'),
     holeJson('data/app-info.json'),
     holeJson('data/turnierregeln.json'),
     holeJson('data/tunings.json'),
     holeJson('data/patterns.json'),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
-  const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, regeln, appInfo, turnierregeln);
+  const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, appInfo, turnierregeln);
   // Werkzeug-Daten (Stimmungs-Referenz): eigener Referenzbereich, NICHT im
   // Baustein-Pool — kein Fortschritt, keine Voraussetzungen.
   daten.tunings = {
@@ -99,12 +98,6 @@ export function domaenenVon(baustein) {
   return Array.isArray(baustein.domaene) ? baustein.domaene : [baustein.domaene];
 }
 
-// Spielform (optionale Metadaten-Dimension, orthogonal zur Domäne): fehlendes
-// Feld = 'einzel'. Alle Alt-Bausteine gelten damit ohne Änderung als Einzel.
-export function spielformVon(baustein) {
-  return baustein.spielform || 'einzel';
-}
-
 // Untergrund (Modifikator-Dimension, koordinierte Erweiterung: als LISTE geführt).
 // Fehlendes Feld = Halle (Default); ein Alt-String 'halle' liest sich als ['halle'].
 export function untergrundVon(baustein) {
@@ -113,7 +106,7 @@ export function untergrundVon(baustein) {
   return Array.isArray(u) ? u : [u];
 }
 
-// Witterung (nur outdoor, sonst leere Liste) — Navigationsachse wie Spielform.
+// Witterung (Kontext-Facette, sonst leere Liste) — Navigationsachse.
 export function witterungVon(baustein) {
   return Array.isArray(baustein.witterung) ? baustein.witterung : [];
 }
@@ -153,7 +146,7 @@ export function fehlerbilderFuer(daten, basisId) {
   return daten.fehlerbildVonBasis.get(basisId) || [];
 }
 
-export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, regelnRoh, appInfoRoh, turnierregelnRoh) {
+export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, appInfoRoh, turnierregelnRoh) {
   const warnungen = [];
   // Ein Objekt oder eine Liste von Inhaltsdateien; letztere werden gemischt.
   const dateien = Array.isArray(inhaltRoh) ? inhaltRoh : [inhaltRoh];
@@ -162,9 +155,6 @@ export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, regelnRoh,
   const deltas = dateien.flatMap((d) => d.delta_bausteine || []);
   const einheiten = einheitenRoh?.trainingseinheiten || [];
   const fehlerbilder = fehlerbilderRoh?.fehlerbild_bausteine || [];
-  // Regeln: eigener Referenzbereich, NICHT im Baustein-Pool (kein Fortschritt,
-  // keine Voraussetzungen, keine Deltas). Nur statischer Inhalt + Quellenangabe.
-  const regeln = { meta: regelnRoh?._meta || {}, abschnitte: regelnRoh?.abschnitte || [] };
   // App-Info: statischer Referenzbereich (Reiter „Über"/„Mitmachen" + Sprachanzeige),
   // ebenfalls NICHT im Baustein-Pool — kein Fortschritt, keine Gamification.
   const appInfo = {
@@ -193,7 +183,6 @@ export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, regelnRoh,
     deltas,
     einheiten,
     fehlerbilder,
-    regeln,
     appInfo,
     turnierregeln,
     bausteinVonId: new Map(bausteine.map((b) => [b.id, b])),
@@ -262,7 +251,6 @@ function pruefeDaten(daten) {
       if (!inVokabular(voka.kompetenzstufe, s)) w.push(`${b.id}: unbekannte Stufe "${s}"`);
     }
     if (!inVokabular(voka.baustein_typ, b.typ)) w.push(`${b.id}: unbekannter Typ "${b.typ}"`);
-    if (b.spielform != null && !inVokabular(voka.spielform, b.spielform)) w.push(`${b.id}: unbekannte Spielform "${b.spielform}"`);
     for (const v of b.voraussetzungen || []) {
       if (!daten.bausteinVonId.has(v)) w.push(`${b.id}: Voraussetzung "${v}" existiert nicht`);
     }
@@ -331,18 +319,6 @@ function pruefeDaten(daten) {
     }
     for (const k of fb.transfer_herkunft || []) {
       if (!inVokabular(voka.transfer_herkunft, k)) w.push(`${fb.id}: unbekanntes Transfer-Kürzel "${k}"`);
-    }
-  }
-
-  // Regeln (Referenz-Reiter): eigener statischer Bereich, NICHT im Baustein-Pool.
-  // `querverweis` ist reine Dokumentation (kein Graph, kein Pflicht-Link, analog
-  // zu voraussetzungen_querverweis) — nicht auflösbare Verweise nur melden.
-  for (const abschnitt of daten.regeln.abschnitte) {
-    for (const regel of abschnitt.regeln || []) {
-      if (!regel.inhalt?.de) w.push(`Regel in Abschnitt "${abschnitt.id}": inhalt.de fehlt`);
-      for (const id of regel.querverweis || []) {
-        if (!daten.bausteinVonId.has(id)) w.push(`Regel (${abschnitt.id}): querverweis "${id}" existiert nicht`);
-      }
     }
   }
 
