@@ -3,7 +3,7 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "fortgeschritten",
     "domaene": "stil-stoner-post",
-    "hinweis": "Genre-Achse Stoner / Post-Metal: sechs Bausteine quer durch die Domänen, alle stil:[stoner_post]. Die warme, groovende (Stoner) und die dynamisch-atmosphärische (Post-Metal) Verlängerung der langsamen Linie um Doom/Sludge. Zusammen mit Retags bestehender Bausteine (doom_riffing, doom_sustain_feedback, doom_bass_fuzz, sludge_riffing_dreck, drums_dynamik_architektur, doom_sound_gewicht) trägt sie den Pfad. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+    "hinweis": "Genre-Achse Stoner / Post-Metal: acht Bausteine quer durch die Domänen, alle stil:[stoner_post] — inkl. Sound/Gear (Ausrüstung) und Körper/Ausdauer zur Vertiefung auf Doom-Niveau. Die warme, groovende (Stoner) und die dynamisch-atmosphärische (Post-Metal) Verlängerung der langsamen Linie um Doom/Sludge. Zusammen mit Retags bestehender Bausteine (doom_riffing, doom_sustain_feedback, doom_bass_fuzz, sludge_riffing_dreck, drums_dynamik_architektur, doom_sound_gewicht) trägt sie den Pfad. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
   },
   "delta_bausteine": [],
   "bausteine": [
@@ -139,6 +139,36 @@
       },
       "reflexionsaufgabe": {
         "de": "Analysiere einen Post-Metal-Song, den du stark findest, als Spannungskurve über die volle Länge: Wo beginnt es (wie leise wirklich?), wie lange dauert der Aufbau, wann kommt die Wand — und gibt es danach einen Abfall und einen zweiten Bogen? Zeichne die Kurve über die Minuten auf.\n\nÜberleg für dich oder deine Band: Traut ihr euch, wirklich leise und lange aufzubauen — oder werdet ihr aus Ungeduld zu früh laut? Wo in einem eurer Stücke (oder einem, das ihr covern würdet) fehlt die Geduld? Und ganz praktisch: Probt ihr die leisen Teile und den gemeinsamen Anstieg genauso ernst wie die Wand — oder nur den lauten Höhepunkt? Nimm dir die eine Passage vor, in der der Aufbau am ehesten zusammenfällt, und plan, wie ihr sie als Kollektiv geduldig und gemeinsam wachsen lasst."
+      }
+    },
+    {
+      "id": "stoner_sound_gear",
+      "anzeigetitel": { "de": "Stoner/Post-Sound: Fuzz, Wärme & Flächen" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["verzerrer_typen", "drop_tuning"],
+      "erklaerteil": {
+        "de": "Der Stoner- und Post-Metal-Sound ist das warme Gegenstück zum tighten High-Gain der modernen Metal-Genres: Statt eng kontrollierter, scooped Zerre regieren hier Fuzz und aufgerissene Röhrenamps — ein Ton, der breit, sämig und mittenreich ist. Genau die Mitten, die der brutale Metal wegdreht, sind hier das Herz: Sie geben dem Riff Wärme, Körper und diesen bluesig-räudigen Charakter.\n\nDrei Dinge prägen den Stoner-Ton. Erstens die Verzerrung: Fuzz ist runder und wolliger als Distortion, sackt bei hartem Anschlag charakteristisch zusammen und lebt vom Zusammenspiel mit der Gitarren-Lautstärke — zurückgedreht wird der Ton fast clean, aufgedreht sämig. Zweitens die Stimmung: eher moderat (Standard bis leicht tiefer) statt extrem tief, aber mit Saiten, die dick genug sind, dass die Tiefe steht. Drittens die Dynamik aus der Hand und dem Volume-Poti statt nur aus Pedalen — der Ton atmet mit dem Anschlag.\n\nDie Post-Metal-Seite fügt eine zweite Klangwelt hinzu: die weiten, atmosphärischen Cleans, die den Aufbau tragen. Delay und Reverb schichten hier lange, schwebende Flächen, die langsam anschwellen, bis die verzerrte Wand kommt — dasselbe Rig muss also beides können, den fuzzigen Brocken und die schimmernde Weite. Der Wechsel zwischen beiden (oft über Volume-Pedal oder Fußschalter) ist ein eigenes Handwerk."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör je eine Stoner- und eine Post-Metal-Produktion gezielt auf den Ton: Wie warm und mittig ist der verzerrte Sound (Fuzz statt scooped High-Gain)? Reagiert er hörbar auf die Anschlagsdynamik? Und im Post-Metal: Wie bauen Delay/Reverb die weiten Flächen auf, bevor die Wand kommt?\n\nGeh dann deine eigene Kette durch (oder plane sie): Hast du eine Fuzz- oder aufgerissene Amp-Option mit präsenten Mitten — oder klingt dein Ton nach tightem Metal-Gain? Kannst du über das Volume-Poti von sämig zu fast clean regeln, ohne umzustöpseln? Und für die atmosphärische Seite: Wie kommst du zwischen fuzzigem Riff und schimmernder Clean-Fläche hin und her (Volume-Pedal, Fußschalter, zwei Kanäle)? Notier die eine Anschaffung oder Einstellung, die deinen Stoner/Post-Ton am meisten öffnen würde."
+      }
+    },
+    {
+      "id": "postmetal_koerper_ausdauer",
+      "anzeigetitel": { "de": "Post-Metal-Körper: Ausdauer über die Langform" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["stoner_post"],
+      "voraussetzungen": ["drums_koerper_ausdauer", "aufwaermen_gesundheit"],
+      "erklaerteil": {
+        "de": "Stoner und besonders Post-Metal fordern den Körper anders als die schnellen Genres: nicht durch Spitzentempo, sondern durch Länge und Durchhaltevermögen. Ein Post-Metal-Song kann zehn Minuten dauern, ein Set ist ein einziger langer Bogen — und die Herausforderung ist, über diese Strecke Kontrolle, Fokus und Lockerheit zu halten, ohne früh zu ermüden oder sich zu verkrampfen.\n\nDrei Dinge tragen die Ausdauer. Erstens die Ökonomie: Wer seine Energie ökonomisch einsetzt (kein verkrampftes Draufhalten in den leisen Teilen, keine verschwendete Kraft), hat am Ende noch Reserven für die Wand. Ausdauer ist Effizienz, nicht Kraft. Zweitens das Pacing: Die eigene Energie über den ganzen Bogen einteilen — nicht schon im ersten Aufbau alles geben. Das ist so sehr Kopfsache wie Körpersache. Drittens die Dauerbelastung: Lange, laute Passagen bedeuten anhaltenden Pegel — Gehörschutz ist bei diesen sich aufbauenden Wänden nicht optional, sondern die Bedingung fürs Weiterspielen. Und bei Vocals gilt der Stimmrahmen unverändert: der eine große Klimax-Schrei darf nicht auf Kosten der Stimme gehen.\n\nDer Grundsatz: locker bleiben über die Länge. Aufwärmen vor der Session, bewusste Lockerheit gerade in den ruhigen Teilen (wo man dazu neigt, unbemerkt zu verspannen), und bei Schmerz, Taubheit oder Klingeln im Ohr sofort stoppen. Wer über zehn Minuten verkrampft, spielt die letzten drei nicht mehr sauber — und riskiert auf Dauer Überlastung. Bei anhaltenden Beschwerden ärztlich oder physiotherapeutisch abklären."
+      },
+      "reflexionsaufgabe": {
+        "de": "Spiel (oder stell dir vor) einen langen, sich aufbauenden Post-Metal-Bogen von acht bis zehn Minuten und beobachte dich ehrlich: Wo ermüdest du, wo verkrampfst du — und passiert das schon in den leisen Teilen, wo du eigentlich locker sein solltest? Teilst du deine Energie über den Bogen ein, oder gibst du im ersten Aufbau zu viel?\n\nBenenne deine zwei größten Ausdauer-Lecks (verkrampfte Ruhe-Teile, zu früh zu viel Kraft, fehlendes Aufwärmen) und je eine Gegenmaßnahme. Prüf die Dauerbelastung: Nutzt du bei den langen lauten Passagen Gehörschutz? Und bei Vocals: Schonst du den Klimax so, dass er nicht die Stimme kostet? Zum Schluss die Sicherheitsfrage: Hast du ein klares Stopp-Signal (Schmerz, Taubheit, Klingeln im Ohr, Heiserkeit), an das du dich hältst? Schreib es auf. Bei anhaltenden Beschwerden ärztlich abklären."
       }
     }
   ]

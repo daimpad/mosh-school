@@ -717,6 +717,20 @@ S["postmetal_langform_geduld"] = [
     P(wavepath(14, 100, 62, 30, 3, step=1.6, env=lambda t: 0.1 + 0.9 * t), 2.5),
     RECT(96, 40, 10, 44, filled=True),
 ]
+# Sound: Fuzz, Wärme & Flächen — warmer, rauer Fuzz-Ton über mittigem Fundament,
+# rechts die abklingenden Delay/Reverb-Echos (Flächen).
+S["stoner_sound_gear"] = [
+    P(roughpath(14, 68, 54, 8, step=2.6, seed=521), 2.5),
+    L(14, 90, 68, 90, 5),
+    *[C(78 + i * 9, 58, 5.5 - i, 2) for i in range(4)],
+]
+# Körper: Ausdauer über die Langform — eine lange, langsam anschwellende Linie
+# unter einem schützenden Bogen, ein Stopp-/Ruhepunkt.
+S["postmetal_koerper_ausdauer"] = [
+    P(wavepath(14, 106, 66, 7, 2.5, step=2.0, env=lambda t: 0.45 + 0.55 * t), 2.5),
+    ARC(60, 66, 42, 20, 160, 3),
+    C(60, 92, 4, fill=True),
+]
 
 # ================= GENRE-ÜBERGREIFEND (genreuebergreifend, gemischt) =================
 # Meta-Ebene quer zu den Genres: hören/unterscheiden, verschmelzen, dieselbe Idee
@@ -805,6 +819,7 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "djent_sound_gear", "djent_koerper_praezision",
                 "stoner_riff_fuzz", "stoner_bass_fuzz_groove", "postmetal_drums_crescendo",
                 "postmetal_vocals_dynamik", "stoner_riff_harmonik", "postmetal_langform_geduld",
+                "stoner_sound_gear", "postmetal_koerper_ausdauer",
                 "genre_hoeren_erkennen", "genre_fusion_crossover", "transfer_riff_genrefarbe",
                 "transfer_groove_genrefarbe", "transfer_bass_rollen", "transfer_vocals_genrefarbe",
                 "set_ueber_genres"]
