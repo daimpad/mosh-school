@@ -13,7 +13,6 @@ import { diagnose, einstellungen } from '../zustand.js';
 function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
   if (art === 'themen') return `#/pfad/themen/${parameter}`;
-  if (art === 'spielform') return `#/pfad/spielform/${parameter}`;
   if (art === 'stil') return `#/pfad/stil/${parameter}`;
   if (art === 'umgebung') return '#/pfad/umgebung';
   if (art === 'witterung' || art === 'untergrund') return `#/pfad/${art}/${parameter}`;

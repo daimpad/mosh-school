@@ -7,7 +7,7 @@ import { renderHeim } from './ansichten/heim.js';
 import { renderMitmachen, renderRechtstext, renderUeber } from './ansichten/info.js';
 import { renderOnboarding } from './ansichten/onboarding.js';
 import { renderPlan } from './ansichten/plan.js';
-import { renderIndividual, renderKompetenzpfad, renderSpielform, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
+import { renderIndividual, renderKompetenzpfad, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
 import { renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
@@ -270,8 +270,6 @@ function rendern() {
     renderKompetenzpfad(el, daten, segmente[2] || null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'themen') {
     renderThemen(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
-  } else if (segmente[0] === 'pfad' && segmente[1] === 'spielform') {
-    renderSpielform(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'stil') {
     renderStil(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'umgebung') {

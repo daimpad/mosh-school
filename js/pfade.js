@@ -5,7 +5,7 @@
 // Zwei-Ebenen-Logik (4.4): der Graph sortiert nur. Zugänglichkeit ist überall
 // frei; nicht absolvierte Voraussetzungen werden als Hinweis mitgegeben.
 
-import { deltaFuer, domaenenVon, einheitReferenzen, hatReflexionsaufgabe, hatUebungsteil, niedrigsteStufe, spielformVon, untergrundVon, witterungVon } from './daten.js';
+import { deltaFuer, domaenenVon, einheitReferenzen, hatReflexionsaufgabe, hatUebungsteil, niedrigsteStufe, untergrundVon, witterungVon } from './daten.js';
 import { fehlendeVoraussetzungen, topoSortiere } from './graph.js';
 import { absolviertNachId, bausteinAbsolviert } from './fortschritt.js';
 import { diagnose, kontinuitaet, teilStatus } from './zustand.js';
@@ -21,8 +21,8 @@ function standardVergleicher(daten) {
   return (a, b) => domIdx(a) - domIdx(b) || daten.poolIndex.get(a.id) - daten.poolIndex.get(b.id);
 }
 
-// Reine Pool-Reihenfolge (Datei-/Erzählreihenfolge) — für Querschnittsthemen,
-// die bewusst NICHT nach Domäne blockieren (Spielform-Achse).
+// Reine Pool-Reihenfolge (Datei-/Erzählreihenfolge) — für Querschnittsthemen
+// (Genre/Umgebung), die bewusst NICHT nach Domäne blockieren.
 function poolVergleicher(daten) {
   return (a, b) => daten.poolIndex.get(a.id) - daten.poolIndex.get(b.id);
 }
@@ -151,37 +151,10 @@ export function themenpfad(daten, domaene) {
   };
 }
 
-// Spielform-Achse (Querschnitt, orthogonal zur Domäne): sammelt alle Bausteine
-// einer Spielform (z. B. doppel) domänenübergreifend zu einem zusammenhängenden
-// Thema. 'einzel' ist der Default (praktisch alle Bausteine) und kein Thema —
-// angeboten wird nur, was tatsächlich als eigene Spielform ausgezeichnet ist.
-// Wie der Kompetenzpfad eine Perspektive über den Pool: der Cross-Sport-
-// Modifikator ist hier verdrahtet (Herkunft aus der Diagnose → Delta), denn die
-// Herkunft ist gerade beim Doppel inhaltlich relevant (Badminton-Umstieg).
-export function spielformen(daten) {
-  return (daten.vokabulare.spielform || [])
-    .filter((s) => s !== 'einzel')
-    .map((spielform) => ({
-      spielform,
-      anzahl: daten.bausteine.filter((b) => spielformVon(b) === spielform).length,
-    }));
-}
-
-export function spielformpfad(daten, spielform) {
-  const herkunft = diagnose().herkunft;
-  const menge = daten.bausteine.filter((b) => spielformVon(b) === spielform);
-  return {
-    art: 'spielform',
-    spielform,
-    herkunft,
-    stationen: zuStationen(daten, menge, poolVergleicher(daten), herkunft),
-  };
-}
-
 // Genre-Achse (Stil): Querschnitt über Instrumente UND Stufen — sammelt alle
 // Bausteine eines Genres (death_metal, black_metal, doom …) domänenübergreifend
 // zu einem Thema. Reine Pool-/Erzählreihenfolge, kein Modifikator. Es erscheinen
-// nur tatsächlich belegte Genres (analog zur Spielform-Achse: der Default fehlt).
+// nur tatsächlich belegte Genres (leere Werte fallen weg).
 function stilVon(baustein) {
   return Array.isArray(baustein.stil) ? baustein.stil : [];
 }
@@ -201,11 +174,10 @@ export function stilpfad(daten, stil) {
   };
 }
 
-// Umgebungs-Achse (Outdoor, Querschnitt): witterung und untergrund werden zu
-// Navigationsachsen — analog zur Spielform-Achse, aber ohne Cross-Sport-Modifikator
-// (Outdoor ist crossminton-eigen, kein Herkunftskonflikt → herkunft bleibt außen vor).
-// `witterungen`/`untergruende` bieten nur die tatsächlich belegten Werte an (halle
-// ist der Default/kein Thema, analog 'einzel' bei der Spielform).
+// Umgebungs-/Kontext-Achse (Querschnitt): witterung und untergrund werden zu
+// Navigationsachsen, ohne Cross-Sport-Modifikator (kein Herkunftskonflikt →
+// herkunft bleibt außen vor). `witterungen`/`untergruende` bieten nur die
+// tatsächlich belegten Werte an (der Default/kein Thema fällt weg).
 export function umgebungBausteine(daten) {
   return daten.bausteine.filter((b) => umgebungsBaustein(b));
 }
@@ -296,7 +268,6 @@ export function trainingsuebersicht(daten) {
 export function sequenzFuer(daten, kontext) {
   const [art, parameter] = String(kontext || 'kompetenz').split(':');
   if (art === 'themen') return themenpfad(daten, parameter);
-  if (art === 'spielform') return spielformpfad(daten, parameter);
   if (art === 'stil') return stilpfad(daten, parameter);
   if (art === 'umgebung') return umgebungspfad(daten);
   if (art === 'witterung') return umgebungspfad(daten, 'witterung', parameter);
@@ -322,7 +293,7 @@ export function stationImKontext(daten, bausteinId, kontext) {
   }
   const baustein = daten.bausteinVonId.get(bausteinId);
   if (!baustein) return null;
-  const herkunft = sequenz.art === 'kompetenz' || sequenz.art === 'spielform' ? diagnose().herkunft : null;
+  const herkunft = sequenz.art === 'kompetenz' ? diagnose().herkunft : null;
   return {
     sequenz,
     station: baueStation(daten, baustein, new Set(), herkunft),

@@ -5,7 +5,7 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { label, t } from '../i18n.js';
 import { balkenHtml, bausteinIcon, entdeckenAktion, esc, heroKlein, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
-import { individualpfad, kompetenzpfad, spielformen, spielformpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
+import { individualpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 
@@ -111,21 +111,6 @@ export function renderThemen(el, daten, domaene) {
   el.innerHTML = `
     <h1>${esc(label('domaene', domaene))}</h1>
     <p class="leise">${esc(t('vorgeschlagene_reihenfolge'))}</p>
-    ${inhalt}`;
-}
-
-// Spielform-Achse (Querschnittsthema): rendert alle Bausteine einer Spielform
-// domänenübergreifend als ein Thema. Der Cross-Sport-Modifikator ist verdrahtet
-// (Delta-Chip in der Liste), analog zum Kompetenzpfad.
-export function renderSpielform(el, daten, spielform) {
-  const gewaehlt = spielform || spielformen(daten).find((s) => s.anzahl > 0)?.spielform || null;
-  const pfad = gewaehlt ? spielformpfad(daten, gewaehlt) : { stationen: [] };
-  const inhalt =
-    pfad.stationen.length === 0
-      ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
-      : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, `spielform:${gewaehlt}`)}`;
-  el.innerHTML = `
-    ${heroKlein('fa-users', t('pfad_spielform'), t('pfad_spielform_text'), 'pf-magenta')}
     ${inhalt}`;
 }
 

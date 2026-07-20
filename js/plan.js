@@ -21,14 +21,12 @@ function plusTage(iso, tage) {
   return d.toISOString().slice(0, 10);
 }
 
-// Planbare Einheiten: stufen-kumulativ (aus trainingsuebersicht), optional nach Spielform.
-export function planbareEinheiten(daten, spielform = 'alle') {
-  return trainingsuebersicht(daten)
-    .map((u) => u.einheit)
-    .filter((e) => spielform === 'alle' || (e.spielform || 'einzel') === spielform);
+// Planbare Einheiten: stufen-kumulativ (aus trainingsuebersicht).
+export function planbareEinheiten(daten) {
+  return trainingsuebersicht(daten).map((u) => u.einheit);
 }
 
-const STANDARD = { wochen: 4, einheitenProWoche: 2, spielform: 'alle' };
+const STANDARD = { wochen: 4, einheitenProWoche: 2 };
 
 // Erzeugt einen Plan: rotiert die planbaren Einheiten für Abwechslung und verteilt
 // sie auf Termine ab startISO. Ohne planbare Einheiten bleibt `sessions` leer.
@@ -39,7 +37,7 @@ export function erzeugePlan(daten, konfig = {}) {
   }
   const wochen = Math.max(1, Math.min(12, (k.wochen | 0) || STANDARD.wochen));
   const proWoche = Math.max(1, Math.min(4, (k.einheitenProWoche | 0) || STANDARD.einheitenProWoche));
-  const pool = planbareEinheiten(daten, k.spielform).map((e) => e.id);
+  const pool = planbareEinheiten(daten).map((e) => e.id);
   const tage = verteileTage(proWoche);
   const sessions = [];
   let i = 0;
@@ -49,12 +47,12 @@ export function erzeugePlan(daten, konfig = {}) {
       i += 1;
     }
   }
-  return { startISO: k.startISO, wochen, einheitenProWoche: proWoche, spielform: k.spielform, sessions };
+  return { startISO: k.startISO, wochen, einheitenProWoche: proWoche, sessions };
 }
 
 // Tauscht die Einheit einer Session gegen die nächste planbare (zyklisch) — macht „anpassbar".
 export function tauscheEinheit(daten, plan, index) {
-  const pool = planbareEinheiten(daten, plan.spielform).map((e) => e.id);
+  const pool = planbareEinheiten(daten).map((e) => e.id);
   if (!plan.sessions[index] || pool.length <= 1) return plan;
   const aktuell = pool.indexOf(plan.sessions[index].einheit);
   const naechste = pool[(aktuell + 1 + pool.length) % pool.length];
