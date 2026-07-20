@@ -21,7 +21,8 @@
       "typ": "micro",
       "stil": [
         "doom",
-        "sludge"
+        "sludge",
+        "stoner_post"
       ],
       "voraussetzungen": [
         "doom_riffing",
@@ -59,7 +60,8 @@
       "typ": "micro",
       "stil": [
         "doom",
-        "sludge"
+        "sludge",
+        "stoner_post"
       ],
       "voraussetzungen": [
         "doom_bass",
@@ -233,7 +235,8 @@
       ],
       "typ": "micro",
       "stil": [
-        "doom"
+        "doom",
+        "stoner_post"
       ],
       "voraussetzungen": [
         "drop_tuning",

@@ -37,7 +37,8 @@
       "powerviolence",
       "sludge",
       "deathcore",
-      "djent"
+      "djent",
+      "stoner_post"
     ],
     "spielziele": {
       "tempo": [
@@ -591,7 +592,8 @@
       ],
       "typ": "micro",
       "stil": [
-        "doom"
+        "doom",
+        "stoner_post"
       ],
       "voraussetzungen": [
         "powerchords",

@@ -518,7 +518,13 @@
     "djent_drums_polymetrik": "Djent-Drums: Polymetrik, Pocket & Ghost Notes",
     "djent_vocals_dynamik": "Prog-Metalcore-Vocals: Clean, Harsh & Phrasierung",
     "djent_theorie_polymetrik": "Djent-Theorie: Polymetrik & Gruppierung",
-    "djent_dramaturgie_raum": "Djent-Dramaturgie: Härte & Raum"
+    "djent_dramaturgie_raum": "Djent-Dramaturgie: Härte & Raum",
+    "stoner_riff_fuzz": "Stoner-Gitarre: Fuzz, Groove & der Riff als König",
+    "stoner_bass_fuzz_groove": "Stoner-Bass: Fuzz, Fundament & Bewegung",
+    "postmetal_drums_crescendo": "Post-Metal-Drums: Groove, Dynamik & Aufbau",
+    "postmetal_vocals_dynamik": "Post-Metal-Vocals: Atmosphäre, Klimax & Maß",
+    "stoner_riff_harmonik": "Stoner-Theorie: Riff-Ökonomie & Bluesfarbe",
+    "postmetal_langform_geduld": "Post-Metal-Dramaturgie: Langform & Geduld"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -674,7 +680,8 @@
       "powerviolence": "Powerviolence",
       "sludge": "Sludge",
       "deathcore": "Deathcore",
-      "djent": "Djent / Prog-Metalcore"
+      "djent": "Djent / Prog-Metalcore",
+      "stoner_post": "Stoner / Post-Metal"
     },
     "stimmung": {
       "e_standard": "E-Standard",
