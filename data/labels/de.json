@@ -548,7 +548,9 @@
     "deathcore_sound_gear": "Deathcore-Sound: Tiefe, Gate & Definition",
     "deathcore_koerper_intensitaet": "Deathcore-Körper: Intensität ohne Verschleiß",
     "djent_sound_gear": "Djent-Sound: Attack, Definition & Tightness",
-    "djent_koerper_praezision": "Djent-Körper: Präzision aus Lockerheit"
+    "djent_koerper_praezision": "Djent-Körper: Präzision aus Lockerheit",
+    "stoner_sound_gear": "Stoner/Post-Sound: Fuzz, Wärme & Flächen",
+    "postmetal_koerper_ausdauer": "Post-Metal-Körper: Ausdauer über die Langform"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
