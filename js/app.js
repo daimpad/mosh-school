@@ -10,6 +10,7 @@ import { renderPlan } from './ansichten/plan.js';
 import { renderIndividual, renderKompetenzpfad, renderSpielform, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
 import { renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
+import { renderPatterns } from './ansichten/patterns.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
@@ -46,6 +47,8 @@ function aktualisiereNavigation(segmente) {
                 ? 'suche'
                 : segmente[0] === 'stimmungen'
                   ? 'stimmungen'
+                  : segmente[0] === 'patterns'
+                    ? 'patterns'
                 : 'lernen';
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const istAktiv = verweis.dataset.nav === aktiv;
@@ -61,7 +64,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte).
   const imMehr =
-    ['suche', 'stimmungen', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
+    ['suche', 'stimmungen', 'patterns', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
     (segmente[0] === 'pfad' && segmente[1] === 'stil');
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -89,6 +92,7 @@ function beschrifteRahmen() {
     training: t('nav_training'),
     suche: t('nav_suche'),
     stimmungen: t('nav_stimmungen'),
+    patterns: t('nav_patterns'),
     ueber: t('nav_ueber'),
     mitmachen: t('nav_mitmachen'),
     profil: t('nav_profil'),
@@ -280,6 +284,8 @@ function rendern() {
     renderSuche(el, daten);
   } else if (segmente[0] === 'stimmungen') {
     renderStimmungen(el, daten);
+  } else if (segmente[0] === 'patterns') {
+    renderPatterns(el, daten);
   } else if (segmente[0] === 'ueber') {
     renderUeber(el, daten);
   } else if (segmente[0] === 'mitmachen') {

@@ -46,13 +46,14 @@ const INHALTSDATEIEN = [
 ];
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, regeln, appInfo, turnierregeln, tunings, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, regeln, appInfo, turnierregeln, tunings, patterns, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/regeln.json'),
     holeJson('data/app-info.json'),
     holeJson('data/turnierregeln.json'),
     holeJson('data/tunings.json'),
+    holeJson('data/patterns.json'),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
   const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, regeln, appInfo, turnierregeln);
@@ -64,6 +65,11 @@ export async function ladeDaten() {
     intervalle: tunings?.intervalle || [],
     akkorde: tunings?.akkorde || [],
     skalen: tunings?.skalen || [],
+  };
+  // Pattern-Werkzeug (Riffs & Drumpattern pro Genre): ebenfalls Referenzbereich.
+  daten.patterns = {
+    meta: patterns?._meta || {},
+    patterns: patterns?.patterns || [],
   };
   return daten;
 }
