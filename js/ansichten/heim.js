@@ -4,15 +4,14 @@
 // Themen-Einstieg ist jetzt der Hero-CTA „Kapitel entdecken". Kompetenzpfad
 // ist von der Startseite entfernt; dafür führen Regeln und Profil als Kacheln.
 
-import { label, t } from '../i18n.js';
+import { t } from '../i18n.js';
 import { esc, markeHeroGross } from '../oberflaeche.js';
-import { spielformen, stile, umgebungBausteine } from '../pfade.js';
+import { stile, umgebungBausteine } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
 
 export function renderHeim(el, daten) {
   const d = diagnose();
-  const doppel = spielformen(daten).find((eintrag) => eintrag.spielform === 'doppel');
   const umgebung = umgebungBausteine(daten);
   const zielBeschriftungen = zielLabels(d.ziel);
 
@@ -44,15 +43,6 @@ export function renderHeim(el, daten) {
         titel: esc(t('pfad_umgebung')),
         meta: ` <span class="chip">${esc(t('n_bausteine', { n: umgebung.length }))}</span>`,
         text: esc(t('pfad_umgebung_text')),
-      })
-    : '';
-
-  const doppelKachel = doppel && doppel.anzahl > 0
-    ? kachel({
-        href: '#/pfad/spielform/doppel', hue: 'pf-magenta', icon: 'fa-users',
-        titel: esc(t('pfad_spielform')),
-        meta: ` <span class="chip">${esc(label('spielform', 'doppel'))} · ${doppel.anzahl}</span>`,
-        text: esc(t('pfad_spielform_text')),
       })
     : '';
 
@@ -96,7 +86,6 @@ export function renderHeim(el, daten) {
     <h2 class="abschnitt-titel">${esc(t('pfade'))}</h2>
     <div class="pfad-gitter">
       ${umgebungKachel}
-      ${doppelKachel}
       ${genreKachel}
       ${trainingKachel}
       ${individualKachel}

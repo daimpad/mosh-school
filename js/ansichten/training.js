@@ -39,7 +39,6 @@ function renderListe(el, daten) {
       const stufe = einheit.kompetenzstufe;
       const metaChips = [
         `<a class="chip chip-stufe chip-stufe-${esc(stufe)}" href="#/pfad/kompetenz/${esc(stufe)}">${esc(label('kompetenzstufe', stufe))}</a>`,
-        einheit.spielform === 'doppel' ? `<a class="chip chip-akzent" href="#/pfad/spielform/doppel">${esc(label('spielform', 'doppel'))}</a>` : '',
       ]
         .filter(Boolean)
         .join(' ');
