@@ -1577,6 +1577,186 @@
           "korrektur": "Nur mit Registern arbeiten, die einzeln und mühelos sitzen; die Übung ist Zuordnung, kein Neuland. Neue Register einzeln und angeleitet aufbauen. Nach jeder Einheit Sprechtest; jedes Enger-Werden ist die Warnlampe — leiser, im Zweifel stoppen."
         }
       }
+    },
+    {
+      "id": "fb_duo_gb_flam",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_lock",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Statt eines Anschlags hört man zwei dicht aufeinanderfolgende — einen „Flam“. Besonders bei tiefen, gedämpften Riffs wirkt der Ton verwaschen statt wuchtig, und mit steigendem Tempo wird die Doppelung deutlicher.",
+          "ursache": "Beide richten sich aneinander aus statt an einer gemeinsamen Referenz; einer — oft der Bass wegen der trägeren Ansprache — liegt konstant leicht vor oder hinter dem Klick. Zusätzlich endet das Abdämpfen zu unterschiedlichen Zeitpunkten.",
+          "korrektur": "Lass beide zunächst nur zum Klick spielen, nicht aufeinander hören. Nimm einen Durchgang auf und lass sie gemeinsam bestimmen, wer vorne oder hinten liegt. Reduziere das Tempo, bis ein einziger Attack hörbar ist, und steigere erst dann — mit Aufmerksamkeit auch auf das synchrone Abdämpfen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gb_matsch",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_frequenztrennung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Zusammenklang dröhnt, einzelne Instrumente sind nicht mehr heraushörbar; je tiefer die Stimmung, desto breiiger. Der Bass scheint zu „verschwinden“, obwohl er laut ist.",
+          "ursache": "Beide besetzen denselben Tiefenbereich: Die Gitarre ist zu bassig eingestellt, der Bass hat zu wenig Mitten oder Anzerrung. Niemand hat bewusst Rollen verteilt — Fundament gegen Mitten.",
+          "korrektur": "Lass sie eine tiefe Passage gemeinsam spielen und je einen Parameter isoliert verändern (Anschlagpunkt, Anzerrung, Tiefen- oder Mittenanteil). Vereinbart, wer die Tiefen trägt und wer die Mitten. Kontrolliere über eine Aufnahme, ob beide getrennt hörbar bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gb_pausen_versetzt",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_chug_sync",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In Breakdown-Chugs sind die Pausen nicht schwarz — ein Instrument klingt noch nach, während das andere schon stumm ist. Der perkussive Druck fehlt, der Part „schwimmt“.",
+          "ursache": "Die Anschläge sind grob zusammen, das Abdämpfen ist es nicht; meist dämpft einer der beiden konstant später ab. Bei Synkopen driftet die Länge zusätzlich auseinander.",
+          "korrektur": "Verlagere die Aufmerksamkeit vom Anschlag auf das gemeinsame Abdämpfen. Lass beide die Handballen-Bewegung bewusst synchronisieren und an der Bassdrum ausrichten. Übe langsam, bis die Pausen bei beiden gleich lang sind, und kontrolliere per Aufnahme."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gb_rollen_unklar",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gb_rollen_riff",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Bass wechselt unmotiviert zwischen Verdopplung und eigener Linie — mal Klotz, mal Gegenstimme, ohne dass es dem Part dient. Der Zusammenklang wirkt unentschlossen, Parts gewinnen keine klare Kontur.",
+          "ursache": "Die Rolle wird nicht pro Part bewusst entschieden, sondern ergibt sich zufällig aus Gewohnheit oder Bequemlichkeit. Niemand fragt, was der jeweilige Part braucht.",
+          "korrektur": "Lass beide denselben Part einmal komplett verdoppelt und einmal mit eigener Basslinie spielen und den Unterschied beschreiben. Vereinbart die Rolle pro Part bewusst und baut Übergänge, an denen der Wechsel an einer festen Stelle passiert, statt zu schwimmen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_kick_desync",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_kick_lock",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Low-End flattert: Statt eines wuchtigen Impulses hört man Basston und Bassdrum als zwei getrennte Ereignisse. Der Groove wirkt weich und ungenau, besonders bei schnelleren Kick-Figuren.",
+          "ursache": "Der Bass legt seine Töne nicht exakt auf die Kick — meist minimal davor oder danach, oft weil er auf die Snare oder das eigene Zählen statt auf den Fuß hört. Bei schnellen Figuren fehlt die Absprache, welche Kicks überhaupt gemeinsam sind.",
+          "korrektur": "Isoliere die Achse — nur Bass und Bassdrum, ohne Rest, zum Klick — und lass den Bass bewusst auf den Fuß hören. Kläre bei schnellen Figuren, welche Schläge gemeinsam sind. Nimm nur diese Achse auf und steigere das Tempo erst, wenn Ton und Kick zu einem Impuls verschmelzen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_driftet",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_pocket_klick",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Tempo ist nicht stabil — die Rhythmusgruppe zieht an oder wird langsamer. Zum Klick gehört fällt auf, dass beide gemeinsam wegdriften; der Rest der Band folgt notgedrungen.",
+          "ursache": "Einer führt, der andere jagt nach: Statt beide an derselben Referenz auszurichten, hört jeder auf den anderen und reagiert verspätet — ein sich aufschaukelndes Nachziehen.",
+          "korrektur": "Lass beide gleichberechtigt auf den Klick spielen, nicht aufeinander. Reduziere das Metronom testweise auf jeden zweiten Schlag, dann auf die Eins, um zu prüfen, ob das gemeinsame Zeitgefühl trägt. Bestimmt über eine Aufnahme gemeinsam, ob sie vor, auf oder hinter dem Klick liegen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_break_stolpert",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_akzente_breaks",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei Stops und Breaks kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Break ist unsauber, einer setzt zu früh oder zu spät wieder ein. Der Part stolpert genau an der auffälligsten Stelle.",
+          "ursache": "Der Puls wird während der Stille nicht gehalten — statt innerlich weiterzuzählen, wird geschätzt. Länge des Stops und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
+          "korrektur": "Übe nur die zwei Takte um den Break in Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins wieder einsteigen. Nimm es auf und prüfe, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bd_blast_verliert",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bd_blast_begleitung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In schnellen Blast- oder Double-Bass-Parts löst sich die Verbindung: Der Bass versucht jede Kick zu doppeln, verkrampft und wird ungenau — oder er spielt beliebig und trifft die Akzente nicht mehr. Die gemeinsame Kontur zerfällt.",
+          "ursache": "Es ist nicht geklärt, welche Schläge gemeinsam sind. Der Bass orientiert sich am nicht durchhaltbaren Anspruch, jede Kick mitzuspielen, statt an der rhythmischen Kontur und den Akzenten.",
+          "korrektur": "Nimm das Tempo zurück und lass gemeinsam festlegen, welche Schläge Akzente sind, die beide punktgenau treffen — dazwischen trägt der Bass eine gleichmäßige Linie. Steigere das Tempo über mehrere Einheiten; bei Verkrampfung in Händen oder Füßen wird gestoppt."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_ueberlagert",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_phrasierung_luecken",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Riff und Gesang laufen dauerhaft gleichzeitig; beide Ebenen verlieren an Kontur, der Text ist schwer verständlich, das Riff tritt in den Hintergrund. Der Part klingt voll, aber undeutlich.",
+          "ursache": "Es gibt keine Absprache, wer wann im Vordergrund steht. Gesangsphrasen liegen nicht in den Lücken des Riffs, sondern über dessen dichten Stellen.",
+          "korrektur": "Geht den Part gemeinsam durch und markiert die Lücken im Riff. Lass die Gesangsphrasen bewusst dorthin legen, sodass ein Wechsel aus Riff und Stimme entsteht. Ein bewusst gleichzeitiger Moment darf als Kontrast bleiben — aber als Entscheidung, nicht als Dauerzustand."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_vocals_hinterm_riff",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_vocals_timing_riff",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Geschriene Silben, die auf den Akzenten der Gitarre sitzen sollen, kommen konstant leicht zu spät. Der Breakdown verliert Druck, weil Silbe und Chug nicht als ein Schlag zusammenfallen.",
+          "ursache": "Die Stimme reagiert auf das gehörte Riff, statt den gemeinsamen Anker — oft die Bassdrum — zu antizipieren; bei höherem Tempo summiert sich die Reaktionszeit. Teils sitzt die Betonung auf der falschen Silbe.",
+          "korrektur": "Langsames Tempo, Gitarre spielt akzentuiert. Lass die betonten Silben zuerst gesprochen exakt auf die Akzente legen, dann leise verzerrt; beide richten sich an der Bassdrum aus, nicht aneinander. Per Aufnahme prüfen, ob Silbe und Chug zusammenfallen — der Gesundheitsrahmen bleibt: kein Druck, bei Kratzen stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_melodie_daneben",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_tonart_melodie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die clean gesungene Melodie klingt über dem Riff „schief“ — einzelne Zieltöne liegen hörbar neben der Harmonik. Besonders am Phrasenende wirkt es unsauber, obwohl der Gesang sicher intoniert ist.",
+          "ursache": "Sänger und Gitarre teilen kein gemeinsames Fundament: Der Grundton oder die Tonart des Parts ist nicht benannt, und die Melodie nutzt Töne außerhalb der zugrunde liegenden Skala.",
+          "korrektur": "Lass die Gitarre den Grundton nennen und eine einfache, langsame Powerchord-Folge spielen; die Stimme tastet sich vom Grundton zu sicheren Zieltönen vor. Haltet die stimmige Melodie fest und erweitert Tonart oder Folge erst, wenn sie sicher sitzt. Für das Skalenverständnis hilft ein Blick auf die Grundlagen der Moll-/Phrygisch-Färbung."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gv_aufbau_einseitig",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gv_dynamik_aufbau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ein geplanter Spannungsaufbau (leiser Vers, intensiver Refrain) verpufft, weil nur einer ihn trägt: Die Gitarre zündet den Refrain, während der Gesang gleich bleibt — oder umgekehrt. Der Umschlag wirkt halbgar.",
+          "ursache": "Der Umschlagpunkt ist nicht als gemeinsame Entscheidung vereinbart; Dynamik wird als individuelle Angelegenheit behandelt statt als geteilter Verlauf.",
+          "korrektur": "Legt gemeinsam fest, wo die Intensität steigt. Lass den Vers bewusst zurückgenommen und den Refrain am selben Punkt von beiden zünden. Prüft per Aufnahme, ob der Umschlag als eine Bewegung wirkt, und baut den Verlauf bei Bedarf mehrstufig auf."
+        }
+      }
     }
   ]
 }
