@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "genreuebergreifend",
+    "hinweis": "Genre-übergreifendes Kapitel: sieben Bausteine, die QUER zu den Genre-Achsen arbeiten — Genres hören/erkennen, Crossover/Fusion, und pro Instrument dieselbe Idee (Riff, Groove, Rolle, Register) über mehrere Genres umfärben, dazu Set-Dramaturgie über Genres. Bewusst OHNE stil-Tag (genre-neutral); auffindbar über Kompetenz- und Themen-Pfade. Baut auf dem Einsteiger-Anker genrekunde_extreme_familie auf. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "genre_hoeren_erkennen",
+      "anzeigetitel": { "de": "Genres am Klang erkennen" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["tempo_genres", "genrekunde_extreme_familie"],
+      "erklaerteil": {
+        "de": "Wer Genres sicher hört, spielt sie auch bewusster — denn jedes Genre hat eine Handvoll Merkmale, an denen es sich verrät. Die Genrekunde hat die Landkarte gezeichnet; hier geht es darum, sie mit den Ohren zu lesen. Vier Achsen tragen die meiste Information: Tempo und Feel (rasend, mittig-groovend, zäh-langsam?), der Ton (sauber-tight, warm-fuzzig, räudig-dreckig?), der Gesang (tiefe Growls, hohe Screams, Shouts, cleane Melodie?) und die Rhythmik (D-Beat, Blast, Breakdown, verschobene Gruppierung, schleppender Halftime?).\n\nDas Entscheidende ist, nicht nach dem Bandnamen oder dem Cover zu gehen, sondern nach diesen hörbaren Zutaten. Zwei Genres können dasselbe Tempo teilen und sich trotzdem sofort unterscheiden — Doom und Sludge sind beide langsam, aber der eine klingt erhaben, der andere wütend. Grindcore und Powerviolence rasen beide, aber der eine ist gleichmäßige Verdichtung, der andere ein Springen zwischen Extremen. Die Merkmale in Kombination ergeben den Fingerabdruck.\n\nDiese Hörfähigkeit ist praktisch: Sie hilft dir, Vorbilder gezielt zu analysieren, den eigenen Sound einzuordnen, und in einer Band eine gemeinsame Sprache zu finden („mehr Sludge im Refrain, weniger Thrash im Vers“). Hören ist die Voraussetzung fürs bewusste Gestalten."
+      },
+      "reflexionsaufgabe": {
+        "de": "Bau dir eine Blind-Hörübung: Stell dir eine kleine Playlist aus fünf bis sechs Songs verschiedener extremer Genres zusammen (nutz die Genrekunde-Landkarte als Auswahlhilfe). Hör jeden Song eine Minute und notier — bevor du auf den Titel schaust — deine Einschätzung entlang der vier Achsen: Tempo/Feel, Ton, Gesang, Rhythmik. Rate dann das Genre.\n\nPrüf danach deine Treffer: Wo lagst du richtig, wo nicht? Welche Achse hat dir am meisten verraten, welche hat dich getäuscht? Nimm dir gezielt ein Paar vor, das du verwechselt hast (z. B. Doom vs. Sludge, Grind vs. Powerviolence, Death vs. Deathcore), und benenne in einem Satz das eine hörbare Merkmal, an dem du sie künftig sicher trennst. Wiederhol die Übung über Wochen mit neuen Songs — Genre-Hören wächst wie Vokabellernen."
+      }
+    },
+    {
+      "id": "genre_fusion_crossover",
+      "anzeigetitel": { "de": "Crossover & Fusion: Genres mischen" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["genre_hoeren_erkennen", "akkordfolgen_metal"],
+      "erklaerteil": {
+        "de": "Die spannendste Musik lebt oft auf den Grenzen zwischen Genres — und viele Genres, die wir heute als eigenständig hören, waren ursprünglich genau solche Fusionen. Sludge ist Doom-Tempo plus Hardcore-Wut, Grindcore ist Crust plus Death-Metal-Extremität, Deathcore ist Metalcore-Breakdown plus Death-Metal-Brutalität, Blackened Death mischt die Kälte des Black Metal in die Wucht des Death Metal. Crossover ist kein Trick, sondern der Motor, aus dem neue Stile entstehen.\n\nWas eine Fusion trägt, ist nicht das bloße Aneinanderkleben, sondern das Finden der gemeinsamen Achse. Zwei Genres verschmelzen dort, wo sie sich berühren: ein gemeinsames Tempo, das man von zwei Seiten füllt; ein Riff-Prinzip, das man in einen fremden Ton taucht; eine Rhythmik, die man mit dem Gesang eines anderen Genres kombiniert. Die Kunst ist die Auswahl — welches Element aus Genre A, welches aus Genre B, und was lässt man weg, damit es nicht beliebig wird.\n\nFür das eigene Schreiben heißt das: Fusion beginnt mit klaren Zutaten. Wer beide Ausgangsgenres wirklich versteht (ihre Merkmale, ihre Haltung), kann gezielt kombinieren, statt zufällig zu mischen. Ein bewusster Kontrast — der Doom-Teil, der in einen Blast kippt; der cleane Post-Metal-Bogen, der in einen Deathcore-Breakdown stürzt — wirkt stärker als ein diffuser Einheitsbrei."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei Genres, die du gut hörst, und plane bewusst eine Fusion. Benenne zuerst je drei Kernmerkmale beider (Tempo/Feel, Ton, Gesang, Rhythmik). Such dann die gemeinsame Achse: Wo berühren sie sich, worüber kannst du sie verbinden? Und entscheide, was du weglässt.\n\nSkizzier eine Miniatur (auf Papier oder am Instrument): ein Teil klar aus Genre A, ein Übergang, ein Teil aus Genre B, und mindestens eine Stelle, an der beide zugleich klingen. Prüf die Kernfrage: Trägt die gemeinsame Achse den Übergang, oder klebt es nur zusammen? Und: Erkennt man beide Ausgangsgenres noch — oder ist es zu diffusem Brei verschwommen? Wenn du eine bestehende Band als Vorbild hast, vergleiche deine Lösung mit ihrer: Wo setzt sie den Kontrast, wo den Verschmelzungspunkt?"
+      }
+    },
+    {
+      "id": "transfer_riff_genrefarbe",
+      "anzeigetitel": { "de": "Gitarre: ein Riff, mehrere Genres" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["palm_mute_systeme", "doom_riffing"],
+      "erklaerteil": {
+        "de": "Dasselbe Tonmaterial kann in völlig verschiedenen Genres zu Hause sein — was es einordnet, ist nicht die Notenfolge, sondern die Behandlung: Tempo, Anschlag, Dämpfung, Ton und Feel. Wer einen einzigen Riff durch mehrere Genre-Farben schicken kann, versteht die Genres von innen und wird als Gitarrist enorm flexibel.\n\nNimm einen schlichten Powerchord-Riff aus wenigen Tönen. Als Thrash gespielt: schnell, tight palm-gemutet, harter Wechselschlag, aggressiver Mitten-Ton. Als Doom: auf ein Viertel des Tempos gezogen, jeder Akkord voll ausgehalten, schwer und klingend. Als Sludge: dasselbe langsame Tempo, aber dreckig, mit angerissenen Bendings und Noise zwischen den Tönen. Als Djent: die Töne kurz und perkussiv gemutet, in verschobene Gruppen über einen geraden Puls gelegt. Als Stoner: mittleres Tempo, fuzziger Ton, eine Lücke eingebaut, bluesig phrasiert. Ein Riff — fünf Welten.\n\nDiese Übung schult zweierlei: die Kontrolle über die Parameter, die den Ton eines Genres ausmachen (denn du musst sie bewusst umschalten), und das Verständnis, dass Genre vor allem Haltung und Behandlung ist. Wer das beherrscht, kann in einer Fusion gezielt einfärben, statt nur Töne aneinanderzureihen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Fünf Farben, ein Riff",
+          "ziel": "Einen einfachen Riff bewusst durch mehrere Genre-Behandlungen schicken und die Parameter sauber umschalten.",
+          "schritte": [
+            "Wähl einen schlichten Riff aus drei bis vier Powerchords, den du sicher spielst. Spiel ihn zuerst neutral zum Klick, damit die Töne sitzen.",
+            "Färb ihn thrashig: schnelles Tempo, tight palm-gemutet, harter Wechselschlag. Nimm auf und prüf: Klingt es nach Thrash, oder nur schnell?",
+            "Färb denselben Riff doomig: Tempo geviertelt, jeder Akkord voll ausgehalten, schwerer Anschlag. Dann sludgig: gleiches Tempo, aber Dreck, ein angerissenes Bending, Noise dazwischen.",
+            "Färb ihn zuletzt djentig (kurze, perkussive Chugs in verschobenen Gruppen über geradem Puls) und/oder stonerig (mittleres Tempo, Fuzz, eine Lücke, bluesige Phrasierung). Spiel die Farben direkt hintereinander und hör den Unterschied."
+          ],
+          "steigerung": "Bau die Farbwechsel in EIN Stück: derselbe Riff als Vers thrashig, als Bridge doomig, als Finale djentig — ein Mini-Song aus einem Riff. Der Kontrast der Behandlungen trägt die Dramaturgie.",
+          "selbstkontrolle": "Nimm alle Farben nacheinander auf und lass sie (idealerweise) jemanden blind zuordnen: Erkennt man die Genres an deiner Behandlung, obwohl die Töne gleich sind? Wenn zwei Farben gleich klingen, hast du einen Parameter nicht umgeschaltet — meist Dämpfung, Ausklang oder Feel."
+        }
+      }
+    },
+    {
+      "id": "transfer_groove_genrefarbe",
+      "anzeigetitel": { "de": "Drums: einen Groove umfärben" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["grundbeat", "blast_varianten"],
+      "erklaerteil": {
+        "de": "Am Schlagzeug entscheidet oft der Beat allein, in welchem Genre man sich befindet — dasselbe Grundtempo trägt völlig verschiedene Feels, je nachdem, wie du Kick, Snare und Becken verteilst. Einen Grundpuls durch mehrere Genre-Grooves zu schicken, ist die schnellste Art zu begreifen, was ein Genre rhythmisch ausmacht.\n\nNimm ein festes Grundtempo. Als D-Beat: der treibende Punk-Motor mit der charakteristischen Kick-Snare-Verzahnung. Als Blast: maximale Dichte, Kick und Snare im schnellen Wechsel. Als Halftime-Sludge: derselbe Puls, aber die Snare nur auf jeder zweiten Zählzeit, zäh und schwer hinter dem Beat. Als Metalcore-Groove: synkopierte, bouncende Akzente. Als Djent-Feel: gerade Hi-Hat oben, die Kick in verschobene Gruppen gelegt. Ein Tempo — fünf Genres.\n\nDer Lerneffekt ist doppelt: Du trainierst die konkreten Genre-Grooves, und du verstehst, dass Tempo und Genre zwei verschiedene Dinge sind — das Feel entsteht aus der Verteilung, nicht aus der Geschwindigkeit. Das macht dich flexibel für Fusionen und für das bewusste Umschalten mitten im Song. Wie immer bei Dichte und Tempo gilt: Lockerheit vor Kraft, Gehörschutz, und bei anhaltendem Zwicken ärztlich abklären."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Puls, fünf Feels",
+          "ziel": "Ein festes Grundtempo bewusst durch mehrere Genre-Grooves schicken und die Verteilung sauber umschalten.",
+          "schritte": [
+            "Stell ein bequemes Grundtempo am Klick ein und spiel zuerst einen neutralen Grundbeat, bis er locker sitzt.",
+            "Färb ihn als D-Beat (treibende Kick-Snare-Verzahnung), dann als Halftime-Sludge (Snare nur auf jeder zweiten Zählzeit, bewusst hinter dem Beat, schwer). Derselbe Klick läuft durch.",
+            "Färb denselben Puls als Blast (sichere Form, Dichte) und als Metalcore-Groove (synkopierte, bouncende Akzente). Achte darauf, dass das Grundtempo über alle Feels konstant bleibt.",
+            "Optional als Djent-Feel: gerade Hi-Hat oben, Kick in eine verschobene Fünfer-Gruppe. Spiel die Feels direkt hintereinander und prüf, ob das Tempo stabil bleibt."
+          ],
+          "steigerung": "Wechsle die Feels auf Ansage (oder alle vier Takte) ohne Tempoverlust — der harte Schnitt zwischen zwei Genre-Grooves ist die eigentliche Prüfung. Dann bau sie in einen Mini-Song: D-Beat-Vers, Sludge-Bridge, Blast-Finale.",
+          "selbstkontrolle": "Nimm die Feels nacheinander auf: Erkennt man die Genres an der Verteilung, obwohl das Tempo gleich ist? Bleibt das Grundtempo über alle Wechsel wirklich konstant, oder ziehst du beim Blast an und beim Sludge nach? Ein Klick-Vergleich verrät es sofort."
+        }
+      }
+    },
+    {
+      "id": "transfer_bass_rollen",
+      "anzeigetitel": { "de": "Bass: die Rolle wechseln" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["bass_synkopen", "doom_bass"],
+      "erklaerteil": {
+        "de": "Der Bass hat in jedem Genre eine andere Aufgabe — und wer diese Rollen bewusst wechseln kann, ist in jeder Band und jeder Stilrichtung brauchbar. Es geht weniger um neue Töne als um eine neue Haltung zum selben Fundament.\n\nIm Grindcore ist der Bass oft Textur und Skelett: er verzahnt sich mit der Double Bass zu einem rasenden Teppich, Definition zählt mehr als Melodie. Im Doom wird er zum tragenden Gewicht: wenige, sehr schwere, lang gehaltene Töne, die den Raum füllen. Im Djent ist er der Lock: exakt mit Kick und Gitarre verzahnt, jede verschobene Betonung mitgedacht. Im Stoner wird er zur zweiten Stimme: fuzzig, beweglich, die Lücken der Gitarre füllend. Im Hardcore treibt er als Motor: satt, direkt, den Groove nach vorn schiebend. Dasselbe Instrument, fünf Haltungen.\n\nDie Übung dahinter ist, eine einfache Grundlinie zu nehmen und sie in diesen Rollen zu spielen — mal als Skelett, mal als Gewicht, mal als Lock, mal als bewegliche Stimme. Das schult das Wichtigste am Bassspiel im Metal: zu verstehen, was die Musik gerade vom Bass braucht, und genau das zu liefern, statt überall dasselbe zu spielen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Eine Linie, fünf Rollen",
+          "ziel": "Eine einfache Basslinie bewusst in verschiedenen Genre-Rollen spielen — Skelett, Gewicht, Lock, bewegliche Stimme, Motor.",
+          "schritte": [
+            "Nimm eine schlichte Grundlinie (wenige Töne, sicher gespielt). Spiel sie zuerst neutral zum Klick.",
+            "Als Doom-Gewicht: wenige Töne, sehr schwer, voll ausgehalten. Als Grind-Skelett: dieselbe Linie schnell und gleichmäßig, mit der Kick verzahnt, Attack vor Melodie.",
+            "Als Djent-Lock: die Betonungen exakt auf eine verschobene Gruppierung mit Kick und Gitarre legen. Als Stoner-Stimme: fuzzig, beweglich, kleine Läufe in die Lücken.",
+            "Als Hardcore-Motor: satt und direkt nach vorn schiebend, leicht treibend. Spiel die Rollen direkt hintereinander und spür den Haltungswechsel."
+          ],
+          "steigerung": "Spiel dieselbe Linie zu einem wechselnden Song (Aufnahme, die das Genre wechselt) und passe deine Rolle in Echtzeit an — das ist die Bandrealität. Oder wechsle die Rolle alle vier Takte auf Ansage.",
+          "selbstkontrolle": "Nimm die Rollen auf: Hört man den Haltungswechsel, obwohl die Töne gleich bleiben? Trägt der Doom-Teil wirklich Gewicht, verzahnt sich das Grind-Skelett, sitzt der Djent-Lock exakt? Wenn alle Rollen gleich klingen, spielst du noch Töne statt Haltung."
+        }
+      }
+    },
+    {
+      "id": "transfer_vocals_genrefarbe",
+      "anzeigetitel": { "de": "Vocals: Register nach Genre" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "voraussetzungen": ["growl_resonanz", "clean_im_metal"],
+      "erklaerteil": {
+        "de": "Jedes Genre hat seine typische Stimmfarbe — und wer die Register bewusst wählen kann, gestaltet Gesang, statt nur laut zu sein. Wichtig vorweg: Diese Übung ist eine Zuordnung und ein bewusstes Umschalten zwischen Techniken, die du bereits gesund beherrschst — sie ist kein Freibrief, neue, fordernde Techniken auf einmal zu stapeln.\n\nDie grobe Landkarte: tiefe Growls tragen Death Metal und (noch komprimierter) Deathcore; hohe, schneidende Screams gehören zum Black Metal und zum Metalcore; raue, mittige Shouts prägen Hardcore und Crust; verzweifelt-kehlige Schreie den Sludge; getragene oder psychedelische Cleans den Stoner und den melodischen Post-Metal, oft neben einem einzelnen rauen Klimax. Viele Genres kombinieren mehrere Register bewusst als Kontrast.\n\nDie Kunst ist die Passung: Zum treibenden Hardcore-Groove passt der direkte Shout, zum weiten Doom-Riff der getragene, tiefe Ton, zum Post-Metal-Aufbau die ruhige Clean-Linie mit einem gezielten Ausbruch. Register-Wahl ist Ausdruck, nicht Kraftprotzerei — das richtige Register am richtigen Ort trägt weiter als das extremste.\n\nDer Gesundheitsrahmen bleibt strikt: nur zwischen Techniken wechseln, die einzeln und gesund sitzen; gründlich aufwärmen; jede Verzerrung aus Luft und Resonanz, nie aus Kehlkopf-Druck; nach jeder Einheit der Sprechtest; bei Kratzen oder Engegefühl sofort stoppen. Neue oder unsichere Register gehören an die Seite einer erfahrenen Lehrperson, anhaltende Heiserkeit in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Das passende Register wählen",
+          "ziel": "Zwischen bereits gesund beherrschten Registern bewusst umschalten und sie passend zum Genre-Feel einsetzen.",
+          "schritte": [
+            "Wärm gründlich auf. Arbeite NUR mit Registern, die du bereits einzeln und mühelos beherrschst — diese Übung ist Zuordnung, kein Neuland.",
+            "Ordne zu: Spiel dir kurze Loops in verschiedenen Feels vor (treibend, weit-schwer, ruhig-atmosphärisch) und wähle je das passende Register — direkter Shout, getragener tiefer Ton, ruhige Clean-Linie. Leise, Timing vor Lautstärke.",
+            "Übe das bewusste Umschalten mit Abstand: Register A — bewusster Atem, Kehle offen — Register B, jeweils leise. Der Wechsel darf keines der Register verspannen.",
+            "Setz Register gezielt als Kontrast: eine ruhige Clean-Passage, die in einen einzelnen rauen Ausbruch mündet — das Maß trägt, nicht die Dauerintensität."
+          ],
+          "steigerung": "Erst wenn die Wechsel über Wochen beschwerdefrei sitzen, sie Richtung Songtempo bringen — immer nur so intensiv, wie alle beteiligten Register frei bleiben. Neue Register nimmst du NICHT hier dazu, sondern einzeln und angeleitet.",
+          "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Passt das gewählte Register zum Feel — oder drückst du ein extremes Register in einen Kontext, der ein ruhigeres verlangt? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen."
+        }
+      }
+    },
+    {
+      "id": "set_ueber_genres",
+      "anzeigetitel": { "de": "Ein Set über Genres bauen" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["set_pacing", "genrekunde_extreme_familie"],
+      "erklaerteil": {
+        "de": "Ob ein einzelner Song mehrere Genres berührt oder ein ganzes Live-Set verschiedene Stile aneinanderreiht — die Dramaturgie über Genres hinweg ist eine eigene Kunst. Sie entscheidet, ob Abwechslung als Reichtum wirkt oder als Zusammenhanglosigkeit, und ob das Publikum mitgeht oder ermüdet.\n\nDas Grundprinzip ist der bewusste Kontrast im Bogen. Genres unterscheiden sich in Energie und Dichte: der rasende Grind-Teil, der zähe Doom-Teil, der groovende Stoner-Teil, der explosive Deathcore-Breakdown. Aneinandergereiht ohne Plan heben sie sich gegenseitig auf. Mit Plan aber trägt der eine den anderen: Nach der zähen Schwere trifft das Tempo doppelt, nach dem Chaos wirkt der Groove wie eine Erlösung, und ein ruhiger Post-Metal-Aufbau lädt den nächsten Ausbruch auf. Kontrast ist das Werkzeug, Dosierung die Kunst.\n\nPraktisch heißt das, in Energiekurven zu denken statt in Genre-Schubladen: Wo baue ich Spannung auf, wo entlade ich sie, wo gebe ich dem Ohr eine Pause? Ein Set, das nur aus Höhepunkten besteht, hat keinen Höhepunkt. Und als Band: Die Übergänge zwischen den Genre-Teilen sind die verletzlichsten Momente — sie entscheiden, ob der Wechsel als gewollter Bruch oder als Stolpern wirkt, und gehören darum gezielt geprobt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir ein Live-Set (oder ein langes, genre-wechselndes Stück) einer Band vor, die du stark findest, und zeichne ihre Energiekurve über die Zeit: Wo sitzt der zähe Teil, wo der rasende, wo der groovende, wo die Ruhe? Wie nutzt sie den Kontrast — trägt ein Teil den nächsten?\n\nEntwirf dann selbst eine Set- oder Song-Dramaturgie aus mindestens drei verschiedenen Genre-Feels. Ordne sie nicht nach Vorliebe, sondern nach Wirkung: Welcher Kontrast lädt welchen Teil auf? Wo brauchst du eine Ruhezone, damit der Höhepunkt trifft? Prüf die Kernfrage: Hat dein Bogen einen echten Höhepunkt — oder besteht er aus lauter gleich lauten Teilen, die sich gegenseitig neutralisieren? Und ganz praktisch für deine Band: Welcher Übergang zwischen zwei Genre-Teilen ist am wackligsten, und wie probt ihr ihn, damit er als gewollter Bruch wirkt?"
+      }
+    }
+  ]
+}

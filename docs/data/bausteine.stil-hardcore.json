@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-hardcore",
+    "hinweis": "Genre-Vertiefung Hardcore: sechs Bausteine quer durch die Domänen, alle mit stil:[hardcore]. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel stehen inline in anzeigetitel und werden im Repo nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "hardcore_groove_bounce",
+      "anzeigetitel": { "de": "Hardcore-Riffing: Groove & Bounce" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["hardcore"],
+      "voraussetzungen": ["downpicking", "chugs_breakdown"],
+      "erklaerteil": {
+        "de": "Hardcore-Riffs leben nicht von Geschwindigkeit oder Komplexität, sondern von Bounce: dem federnden Groove, der einen Raum in Bewegung setzt. Technisch ist das meist simpel — Powerchords, Downpicking, viel Palm Muting —, aber die Platzierung macht den Unterschied: Synkopen, die gegen den Beat drücken, Pausen, die das Riff atmen lassen, und Akzente, die mit der Kick des Schlagzeugs verzahnt sind.\n\nDer häufigste Fehler ist, Hardcore-Riffs wie Thrash zu spielen: vorwärtsgepeitscht und durchgehend dicht. Hardcore groovt breiter — das Riff sitzt satt AUF dem Beat oder minimal dahinter, und die Lücken zwischen den Schlägen sind Teil der Aussage. Wer den Stomp-Teil eines Hardcore-Songs spielt, spielt vor allem die Pausen mit.\n\nHör dir als Referenz klassische NYHC-Riffs an: wenige Töne, viel Gewicht, und ein Groove, zu dem sich ein ganzer Raum synchron bewegt. Genau diese Körperlichkeit ist das Ziel."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Stomp bauen",
+          "ziel": "Ein synkopiertes Hardcore-Riff mit hörbarem Bounce spielen — die Pausen gehören zum Riff.",
+          "schritte": [
+            "Nimm eine simple Powerchord-Folge (zwei bis drei Akkorde) und spiel sie zuerst in durchgehenden gedämpften Achteln zum Klick (um 100 BPM) — das ist die Basis ohne Groove.",
+            "Streich gezielt Schläge: Lass die Zählzeiten 2-und und 4 weg und ersetz sie durch bewusste Stille. Die Dämpfung muss sauber greifen — die Pausen sollen knallen, nicht nachklingen.",
+            "Verschieb einen Akzent auf eine Und-Zeit (Synkope) und halte den Klick dabei stabil. Der Groove entsteht genau aus diesem Gegeneinander von Akzent und Beat.",
+            "Steh auf und spiel das Riff im Stehen: Wenn dein eigener Körper nicht mitgeht, hat das Riff noch keinen Bounce — vereinfache, bis es sich körperlich anfühlt."
+          ],
+          "steigerung": "Spiel dasselbe Riff einmal exakt auf dem Klick und einmal minimal dahinter (laid back) und nimm beides auf — der Unterschied ist der halbe Hardcore-Sound.",
+          "selbstkontrolle": "Nimm das Riff auf und hör auf die Pausen: Sind sie wirklich still? Nickt dein Kopf beim Anhören von allein mit? Wenn nicht, sind die Akzente noch nicht klar genug gesetzt."
+        }
+      }
+    },
+    {
+      "id": "hardcore_bass_motor",
+      "anzeigetitel": { "de": "Hardcore-Bass: der Motor" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["hardcore"],
+      "voraussetzungen": ["bass_downpicking", "bass_synkopen"],
+      "erklaerteil": {
+        "de": "Im Hardcore ist der Bass der Motor: treibende Achtel mit hartem Pick-Attack, die den Song nach vorn schieben, ohne schneller zu werden. Das klingt nach einem Widerspruch, ist aber das Kernhandwerk — Drive entsteht aus Konsequenz und Attack, nicht aus Tempo. Ein Bass, der hetzt, macht den Song nervös; ein Bass, der schiebt, macht ihn zwingend.\n\nZwei Werkzeuge dafür: Erstens der Anschlag — jede Note gleich hart, gleich lang, mit hörbarem Attack und präsenten Mitten, damit der Bass im Bandsound als eigene Kante steht. Zweitens die Verzahnung mit der Kick: In den Stomp-Teilen sitzt der Bass exakt auf dem Kick-Pattern, in den schnellen Teilen hält er die Achtel wie ein Uhrwerk, während Gitarre und Schlagzeug darüber arbeiten.\n\nUnd wenn die Gitarre ins Feedback kippt oder ein Break spielt, trägt der Bass allein weiter — diese Momente entscheiden, ob die Band groovt oder auseinanderfällt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Schieben ohne Hetzen",
+          "ziel": "Treibende Achtellinien mit konstantem Attack spielen, die drücken, ohne das Tempo zu ziehen.",
+          "schritte": [
+            "Spiel zwei Minuten durchgehende Achtel auf einem Ton zum Klick (um 100 BPM) und achte nur auf eines: Jede Note klingt gleich — gleicher Attack, gleiche Länge, gleiche Lautstärke.",
+            "Nimm die Übung auf und hör sie gegen den Klick ab: Wanderst du in den zwei Minuten nach vorn? Das Ziel ist Druck bei stabiler Zeit.",
+            "Verzahne dich mit einem Kick-Pattern (Metronom-App mit Beat oder Aufnahme): Spiel die Achtel und akzentuiere genau die Noten, die auf der Kick liegen — der Rest bleibt gleichmäßig.",
+            "Übe den Alleinträger-Moment: vier Takte Linie mit Band-Aufnahme, dann vier Takte, in denen du dir die anderen Instrumente wegdenkst (Aufnahme leiser drehen) — deine Zeit und dein Druck dürfen sich nicht ändern."
+          ],
+          "steigerung": "Wechsle innerhalb der Linie zwischen Stomp-Verzahnung (Akzente auf der Kick) und treibenden durchgehenden Achteln — die Umschaltung muss ohne Tempoveränderung passieren.",
+          "selbstkontrolle": "Leg die Aufnahme über den Klick: Bleiben die Achtel über zwei Minuten stabil? Hörst du jede Note als eigenen Anschlag, auch bei Zerre? Wenn es matscht, ist es der Anschlag, nicht der Amp."
+        }
+      }
+    },
+    {
+      "id": "hardcore_drums_energie",
+      "anzeigetitel": { "de": "Hardcore-Drums: Energie kontrollieren" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["hardcore"],
+      "voraussetzungen": ["d_beat", "skank_beat"],
+      "erklaerteil": {
+        "de": "Hardcore-Drumming ist das Handwerk der kontrollierten Eskalation: Der Beat treibt — Two-Step, D-Beat, schnelle Punk-Beats —, aber er hetzt nicht. Die Energie kommt aus Entschlossenheit und Akzentsetzung, nicht aus Beschleunigung. Genau das ist die Schwierigkeit: Ein Raum voller Energie zieht das Tempo unweigerlich nach vorn, und die Band folgt dem Schlagzeug.\n\nDas zweite Werkzeug sind die Übergänge: Hardcore-Songs leben von den Momenten, in denen der schnelle Teil in den halb so schnellen Stomp kippt — der Raum explodiert genau dann, wenn dieser Wechsel knallt. Der Wechsel ist eine Entscheidung, kein Übergang: letzter Schlag des schnellen Teils, mikroskopische Luft, dann der erste schwere Schlag des Stomps mit voller Autorität.\n\nFills sind im Hardcore Ansagen: kurz, laut, richtungsweisend. Ein Fill kündigt den Wechsel an — wer es verschleppt, nimmt dem Moment die Wucht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Eskalation mit Anker",
+          "ziel": "Schnelle Hardcore-Beats und Halftime-Stomps stabil wechseln — Energie hoch, Tempo fest.",
+          "schritte": [
+            "Spiel vier Takte schnellen Beat (Two-Step oder D-Beat, um 180 BPM) zum Klick und geh dann OHNE Tempoveränderung in vier Takte Halftime-Stomp: Die Viertel bleiben identisch, nur das Feel halbiert sich.",
+            "Übe die Kante: Setz vor den Wechsel ein kurzes Ein-Schlag-Fill (Snare oder Tom) und lande mit maximaler Entschlossenheit auf der Eins des Stomps. Kein Ritardando, kein Hineinrutschen.",
+            "Dreh die Richtung um: aus dem Stomp zurück in den schnellen Beat — der erste schnelle Takt neigt zum Hetzen, kontrollier ihn bewusst.",
+            "Simulier den Live-Moment: Spiel die Wechselfolge mit einer energischen Aufnahme oder bewusst „aufgedreht“ — und prüf mit dem Klick, ob die Energie ins Tempo gesickert ist."
+          ],
+          "steigerung": "Bau eine Drei-Stufen-Dramaturgie: acht Takte schnell, vier Takte Stomp, zwei Takte Breakdown-Feel mit China oder Crash-Ride — jede Stufe schwerer, alle im selben Grundtempo.",
+          "selbstkontrolle": "Nimm die Übung auf und miss die Übergänge: Liegt die erste Eins nach jedem Wechsel exakt auf dem Klick? Wird der schnelle Teil nach dem Stomp schneller als davor? Das ist die häufigste Leckstelle."
+        }
+      }
+    },
+    {
+      "id": "hardcore_gangshouts",
+      "anzeigetitel": { "de": "Gang-Shouts & Mitgröl-Parts" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["hardcore"],
+      "voraussetzungen": ["rhythmus_phrasierung", "harsh_stile_ueberblick"],
+      "erklaerteil": {
+        "de": "Gang-Shouts sind das Gemeinschaftsritual des Hardcore: mehrere Stimmen, die dieselbe Parole gleichzeitig rufen — live oft mit dem halben Publikum am Mikro. Damit das nach Wucht klingt und nicht nach Chaos, braucht es zwei Dinge: rhythmische Präzision (alle Silben exakt zusammen, wie ein perkussiver Schlag) und eine gesunde Ruftechnik.\n\nDenn Shouten ist nicht Schreien: Ein tragfähiger Shout kommt aus der Stütze und aus Resonanz — der Körper arbeitet, der Hals bleibt weit. Wer aus dem Hals ruft, ist nach drei Songs heiser; wer aus dem Körper ruft, trägt einen ganzen Auftritt. Das Prinzip ist dasselbe wie beim Rufen über einen Sportplatz: Zwerchfell-Impuls, offener Rachen, kurze und entschlossene Töne statt gepresster Länge.\n\nGesundheitsrahmen wie immer: leise beginnen, Lautstärke über Wochen aufbauen, bei Kratzen oder Engegefühl sofort stoppen — und wer regelmäßig shoutet, wärmt die Stimme genauso auf wie für jeden anderen Gesang. Bei anhaltender Heiserkeit gehört die Stimme in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der präzise Ruf",
+          "ziel": "Kurze Shout-Phrasen rhythmisch exakt und stimmlich gesund platzieren.",
+          "schritte": [
+            "Wärm die Stimme auf. Sprich eine kurze Parole (zwei bis vier Silben) zuerst rhythmisch im Sprechton zu einem langsamen Klick — jede Silbe exakt auf ihren Schlag.",
+            "Steiger zum halblauten Ruf aus der Stütze: Impuls aus der Körpermitte, Hals bleibt locker, die Silben bleiben kurz. Lautstärke nur so weit, wie es mühelos bleibt.",
+            "Platzier die Shouts in einen musikalischen Kontext: Ruf die Parole an einer festen Stelle über ein geloopte Riff oder eine Aufnahme (etwa als Antwort auf die Hauptstimme). Timing vor Lautstärke.",
+            "Übe den Wechsel: eine Zeile normale Stimme oder Harsh-Ansatz, dann der Gang-Shout, dann zurück — der Shout darf die folgende Phrase nicht beschädigen."
+          ],
+          "steigerung": "Wenn du mit anderen üben kannst: Ruft die Parole zu zweit oder dritt und nehmt euch auf — das Ziel ist EIN gemeinsamer Schlag pro Silbe, nicht drei fast gleichzeitige.",
+          "selbstkontrolle": "Fühlt sich der Hals nach zehn Shouts neutral an? Sitzen alle Silben auf der Aufnahme exakt zusammen bzw. auf dem Klick? Heiserkeit oder Kratzen heißt: zu laut oder zu sehr aus dem Hals — leiser und zurück zu Schritt 2."
+        }
+      }
+    },
+    {
+      "id": "hardcore_songwriting_direkt",
+      "anzeigetitel": { "de": "Hardcore-Songwriting: direkt & dringlich" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["hardcore"],
+      "voraussetzungen": ["songstruktur_breakdown", "riff_baukasten"],
+      "erklaerteil": {
+        "de": "Hardcore-Songs sind kurz, direkt und auf Wirkung gebaut: Zwei Minuten, drei bis vier Teile, keine Umwege. Die Dramaturgie ist körperlich gedacht — jeder Teil hat einen Job im Raum: das Intro sammelt, der schnelle Teil entlädt, der Stomp bündelt die Bewegung, der Breakdown oder Singalong ist der Moment, für den der Song existiert.\n\nDie Kunst liegt in der Ökonomie: Ein Hardcore-Song verträgt keine Teile, die nur Übergang sind. Jedes Riff muss für sich bestehen, und die Reihenfolge folgt der Energie, nicht der Konvention — viele klassische Hardcore-Songs brechen nach dem stärksten Moment einfach ab, statt noch eine Strophe nachzuschieben.\n\nDazu kommt die Dringlichkeit des Textes: Hardcore ist ein Genre der Ansage. Kurze, wiederholbare Zeilen, die ein Raum mitrufen kann, sind Teil der Songarchitektur — die Mitgröl-Zeile ist strukturell so wichtig wie das Hauptriff."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei kurze Hardcore-Songs vor (unter zweieinhalb Minuten) und zerleg sie: Wie viele unterschiedliche Teile gibt es wirklich? Welche Funktion hat jeder Teil für die Energie im Raum — sammeln, entladen, bündeln? Wo sitzt der Moment, für den der Song gebaut ist (Breakdown, Singalong, letzter Stomp), und wie bereiten die Teile davor ihn vor?\n\nAchte auch aufs Ende: Wie hören die Songs auf — mit einem Schlussteil oder einfach am Höhepunkt? Überleg dann für eigenes Material: Welcher Teil in deinem aktuellen Song ist nur Übergang — und was würde passieren, wenn du ihn ersatzlos streichst? Und welche Zeile könnte ein voller Raum nach dem zweiten Hören mitrufen?"
+      }
+    },
+    {
+      "id": "hardcore_buehne_community",
+      "anzeigetitel": { "de": "Bühne & Community: Hardcore live" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["hardcore"],
+      "voraussetzungen": ["set_pacing"],
+      "erklaerteil": {
+        "de": "Ein Hardcore-Konzert ist keine Vorführung, sondern ein gemeinsames Ereignis: Die Grenze zwischen Bühne und Publikum ist absichtlich durchlässig — Mikro ins Publikum, Stagediving, ein Pit, der zum Song gehört. Für die Band heißt das: Präsenz entsteht nicht aus Distanz und Show, sondern aus Ernsthaftigkeit und Energie. Ein Raum spürt sofort, ob eine Band meint, was sie spielt.\n\nMental ist das eine eigene Disziplin: Die Energie des Raums annehmen, ohne sich von ihr das Set zerlegen zu lassen — das Tempo nicht mit der Aufregung davonziehen lassen, die Songs auch im Chaos strukturiert halten, und nach einem umgeworfenen Mikroständer einfach weiterspielen. Routine entsteht durch Proben unter realistischen Bedingungen: im Stehen, in Bewegung, mit Unterbrechungen.\n\nUnd Verantwortung gehört dazu: Ein guter Pit lebt davon, dass aufeinander geachtet wird — wer fällt, wird aufgehoben. Die Band setzt diesen Ton mit, in Ansagen und im Umgang miteinander. Community ist im Hardcore kein Dekor, sondern die Grundlage des Ganzen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Denk an das intensivste Hardcore- oder Punk-Konzert, das du erlebt hast (im Zweifel: such dir ein gut gefilmtes Live-Set an einem kleinen Ort an). Was genau hat die Intensität erzeugt — die Musik selbst, das Verhalten der Band, die Reaktion des Raums, das Zusammenspiel von allem? Woran hast du gemerkt, dass die Grenze zwischen Bühne und Publikum verschwand?\n\nÜberleg dann für dich oder deine Band: Was davon lässt sich vorbereiten, ohne dass es einstudiert wirkt? Prüf konkret: Spielt ihr eure Songs auch im Stehen und in Bewegung sicher? Wisst ihr, wer nach einer Unterbrechung wieder einzählt? Und welche Ansage würdet ihr machen, wenn im Pit jemand stürzt und nicht sofort aufsteht?"
+      }
+    }
+  ]
+}

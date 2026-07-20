@@ -1,0 +1,265 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "theorie",
+    "hinweis": "Fortgeschritten-Theorie: instrumentenunabhängige Vertiefung (Modi, Harmonik, ungerade Takte, Polyrhythmik, Transkription, Arrangement). Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "modi_im_metal",
+      "anzeigetitel": {
+        "de": "Modi: die dunkle Farbpalette"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "moll_phrygisch"
+      ],
+      "erklaerteil": {
+        "de": "Die Modi sind sieben Tonleitern aus demselben Tonmaterial, die sich nur im Startpunkt unterscheiden — und doch völlig verschieden klingen. Für Metal zählt vor allem die dunkle Hälfte der Palette: Äolisch (natürliches Moll) ist die Grundfarbe, Phrygisch kennst du als die bedrohliche Stufe darunter, und Lokrisch — mit verminderter Quinte — ist die instabilste, „kaputteste“ Farbe von allen.\n\nAuch die hellere Seite hat ihren Platz: Dorisch (Moll mit großer Sexte) klingt kämpferisch statt düster und trägt viele klassische Riffs; Mixolydisch taucht im rockigeren Metal auf. Wichtiger als Theorie-Namen ist das Farbhören: Jeder Modus hat einen charakteristischen Ton, der ihn von Äolisch unterscheidet — die b2 im Phrygischen, die b5 im Lokrischen, die große Sexte im Dorischen.\n\nHör Modi als Stimmungen, nicht als Fingersätze: dieselbe Melodie durch verschiedene Modi gedreht verändert ihre Emotion komplett. Wer die Farben kennt, wählt beim Riff-Schreiben gezielt — statt immer wieder zufällig in derselben zu landen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Charaktertöne hören",
+          "ziel": "Äolisch, Phrygisch, Lokrisch und Dorisch am Klang unterscheiden.",
+          "schritte": [
+            "Spiel (oder lass dir vorspielen) eine äolische Tonleiter über einem gehaltenen Grundton — die Referenzfarbe.",
+            "Verändere nur den Charakterton: erst zur b2 (Phrygisch), dann zusätzlich zur b5 (Lokrisch), dann zurück und zur großen Sexte (Dorisch).",
+            "Benenne bei jeder Variante laut, welcher Ton die Farbe kippt, und beschreib die Stimmung in einem Wort."
+          ],
+          "steigerung": "Lass dir die vier Farben in zufälliger Reihenfolge vorspielen und erkenne sie nur nach Gehör.",
+          "selbstkontrolle": "Du erkennst die vier Modi zuverlässig und kannst ihren Charakterton benennen."
+        }
+      }
+    },
+    {
+      "id": "harmonisch_moll_exotik",
+      "anzeigetitel": {
+        "de": "Harmonisch Moll & exotische Skalen"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "black_metal",
+        "death_metal"
+      ],
+      "voraussetzungen": [
+        "moll_phrygisch"
+      ],
+      "erklaerteil": {
+        "de": "Harmonisch Moll entsteht aus natürlichem Moll durch einen einzigen Eingriff: Die siebte Stufe wird zum Leitton erhöht. Das Ergebnis ist der übermäßige Sekundschritt zwischen sechster und siebter Stufe — jenes orientalisch-neoklassische Intervall, das von Yngwie-artigen Läufen bis zu melodischem Black und Death Metal die „böse Eleganz“ liefert.\n\nNoch schärfer wird es mit dem fünften Modus davon, Phrygisch-Dominant: die phrygische b2 kombiniert mit großer Terz. Diese Skala klingt gleichzeitig bedrohlich und majestätisch — der Klang unzähliger epischer Metal-Momente. Auch hier gilt: Ein einziger charakteristischer Schritt (b2 zu großer Terz) trägt die ganze Farbe.\n\nSolche Skalen sind Gewürze, keine Grundnahrung: Ein Riff, das durchgehend exotisch ist, nutzt sich ab. Die Meister setzen den übermäßigen Schritt als Ereignis — ein Lauf, eine Wendung — und kehren dann zur dunklen Grundfarbe zurück."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Den übermäßigen Schritt hören",
+          "ziel": "Harmonisch Moll und Phrygisch-Dominant an ihren Signalintervallen erkennen.",
+          "schritte": [
+            "Spiel natürliches Moll und dann harmonisch Moll über demselben Grundton — hör den neuen Leitton und den übermäßigen Schritt.",
+            "Spiel Phrygisch und dann Phrygisch-Dominant und vergleich: Die große Terz macht die b2 majestätisch statt nur düster.",
+            "Such in einem melodischen Black- oder Death-Metal-Song eine Stelle mit diesem Klang und benenne, welche der beiden Farben du hörst."
+          ],
+          "steigerung": "Sing oder spiel eine kurze Phrase erst in Moll, dann in Phrygisch-Dominant und spür den Dramatik-Sprung.",
+          "selbstkontrolle": "Du erkennst den übermäßigen Sekundschritt sofort und unterscheidest beide Skalen sicher."
+        }
+      }
+    },
+    {
+      "id": "akkordfolgen_metal",
+      "anzeigetitel": {
+        "de": "Akkordfolgen: warum Riffs funktionieren"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "powerchord_theorie"
+      ],
+      "erklaerteil": {
+        "de": "Auch Powerchord-Riffs erzählen harmonische Geschichten. Die Metal-Grammatik ist dabei eigen: Statt der Dur-Pop-Formeln regieren Bewegungen wie i–bVII–bVI (die absteigende Moll-Treppe), die Pendelbewegung zum bII (der phrygische Nachbar) und Quint- oder Tritonus-Sprünge, die Stabilität gegen Kippen tauschen.\n\nDer Schlüssel zum Verstehen ist die Stufen-Denkweise: Nicht „E, D, C“, sondern „i, bVII, bVI“ — dieselbe Bewegung funktioniert in jeder Tonart, und du erkennst sie in hunderten Songs wieder. Ein Riff, das dich packt, tut das selten zufällig: Meist läuft unter den Powerchords eine dieser bewährten Bewegungen.\n\nAnalysiere Riffs deshalb zweistufig: erst den Grundton-Verlauf notieren, dann in Stufen übersetzen. Nach zehn analysierten Riffs besitzt du ein Vokabular an Bewegungen — und beim Schreiben greifst du bewusst hinein, statt zu würfeln."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Riffs in Stufen übersetzen",
+          "ziel": "Harmonische Bewegungen hinter Riffs erkennen und benennen.",
+          "schritte": [
+            "Nimm zwei Riffs, die du kennst (oder Aufnahmen), und notiere jeweils den Verlauf der Grundtöne.",
+            "Übersetze die Verläufe in Stufen relativ zum Grundton (i, bII, bVI, bVII …).",
+            "Vergleich beide: Welche Bewegungen tauchen auf, und wo liegt jeweils der Spannungsmoment?"
+          ],
+          "steigerung": "Spiel dieselbe Stufen-Bewegung in einer anderen Tonart und hör, dass die Wirkung erhalten bleibt.",
+          "selbstkontrolle": "Du kannst zu jedem analysierten Riff die Stufenfolge benennen und die Bewegung wiedererkennen."
+        }
+      }
+    },
+    {
+      "id": "ungerade_takte_theorie",
+      "anzeigetitel": {
+        "de": "Ungerade Takte: Zweier und Dreier"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "djent"
+      ],
+      "voraussetzungen": [
+        "taktarten_unterteilungen"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Jeder ungerade Takt ist in Wahrheit eine Kette aus Zweier- und Dreiergruppen: 5 = 3+2 (oder 2+3), 7 = 2+2+3 in einer seiner Drehungen, 9 = 2+2+2+3. Das ist die ganze Theorie — der Rest ist Fühlen. Wer „kurz-kurz-lang“ sprechen kann, groovt im 7/8, ohne bis sieben zu zählen.\n\nDie Gruppierung ist dabei eine musikalische Entscheidung: 3+2 und 2+3 sind derselbe 5er mit völlig verschiedenem Gesicht, weil die Betonungen anders fallen. Prog- und Extreme-Metal-Bands nutzen genau das — dieselbe Taktart, neu gruppiert, klingt wie ein neues Riff.\n\nAls Hörer erkennst du ungerade Takte am „Stolperstein“: Die Schleife ist einen Schlag zu kurz oder zu lang für dein 4/4-Gefühl. Statt das als Fehler zu empfinden, zähl die Gruppen mit — plötzlich wird aus dem Stolpern ein Muster, und aus dem Muster ein Groove."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gruppen sprechen und klatschen",
+          "ziel": "Ungerade Takte als Zweier-Dreier-Ketten fühlen statt zählen.",
+          "schritte": [
+            "Sprich und klatsch einen 5er in beiden Gruppierungen: „laaang-kurz“ (3+2) und „kurz-laaang“ (2+3), Gruppenanfänge betont.",
+            "Nimm den 7er dazu (2+2+3) und wechsle nach jeweils vier Durchläufen die Drehung (3+2+2).",
+            "Leg ein Metronom auf die Achtel und halte die Gruppierung über mehrere Schleifen, ohne dass die Betonung verrutscht."
+          ],
+          "steigerung": "Hör einen Prog- oder Metal-Song mit ungeradem Takt und bestimme Taktart und Gruppierung nach Gehör.",
+          "selbstkontrolle": "Du sprichst die Gruppen flüssig, die Betonungen sitzen, und du erkennst Gruppierungen beim Hören."
+        }
+      }
+    },
+    {
+      "id": "polyrhythmik_theorie",
+      "anzeigetitel": {
+        "de": "Polyrhythmus vs. Polymetrik"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "djent"
+      ],
+      "voraussetzungen": [
+        "taktarten_unterteilungen"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Zwei Begriffe, die ständig verwechselt werden: Beim Polyrhythmus laufen zwei verschiedene Unterteilungen im selben Zeitraum — drei Schläge gegen vier, beide beginnen und enden gemeinsam. Bei der Polymetrik läuft eine Figur von ungerader Länge über einem geraden Puls und verschiebt sich bei jeder Wiederholung — bis sich beide nach mehreren Takten wieder treffen.\n\nDer Klang ist entsprechend verschieden: Polyrhythmen erzeugen ein flirrendes „Ineinander“ im Moment, Polymetrik erzeugt eine wandernde Reibung über die Zeit mit einem Erlösungsmoment am Treffpunkt. Meshuggah ist der Klassiker der Polymetrik: gerader 4/4 im Schlagzeug-Grundgerüst, darüber Riff-Zellen von krummer Länge.\n\nFürs Hören hilft eine einfache Frage: Verschiebt sich das Muster gegen den Puls (Polymetrik), oder steht es still und reibt nur in sich (Polyrhythmus)? Wer die Unterscheidung sicher hört, kann beim Schreiben gezielt zum passenden Werkzeug greifen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Beides klatschen, beides hören",
+          "ziel": "Polyrhythmus und Polymetrik praktisch unterscheiden.",
+          "schritte": [
+            "Klatsch den 3-gegen-4-Polyrhythmus (zusammengesetztes Muster aus dem Einsteiger-Baustein) und spür, dass er in sich steht.",
+            "Sprich dann eine Fünfergruppe („1-2-3-4-5“) fortlaufend über einem geklatschten Viererpuls und spür, wie sie wandert.",
+            "Zähl mit, nach wie vielen Vierertakten sich die Fünfergruppe wieder mit der Eins trifft."
+          ],
+          "steigerung": "Hör eine Meshuggah-artige Passage und bestimme: Polyrhythmus oder Polymetrik — und wie lang ist die Zelle?",
+          "selbstkontrolle": "Du kannst beide Phänomene erzeugen, benennen und beim Hören sicher auseinanderhalten."
+        }
+      }
+    },
+    {
+      "id": "tonartwechsel_dramaturgie",
+      "anzeigetitel": {
+        "de": "Tonartwechsel als Dramaturgie"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "akkordfolgen_metal"
+      ],
+      "erklaerteil": {
+        "de": "Der Tonartwechsel ist eines der stärksten dramaturgischen Werkzeuge des Metal — und eines der einfachsten: Die Halbton-Rückung nach oben (dasselbe Riff einen Halbton höher) erzeugt sofortige Eskalation; die Verschiebung um eine kleine Terz wechselt die Etage, ohne die Verwandtschaft zu verlieren; der Quintfall wirkt wie ein Kapitelwechsel.\n\nAnders als im Pop, wo Modulationen oft weich vorbereitet werden, liebt Metal den harten Schnitt: Das neue Riff steht einfach in der neuen Tonart, und genau dieser Ruck ist der Effekt. Wichtig ist nur die Landung — der erste Ton nach dem Wechsel muss die neue Heimat unmissverständlich behaupten, sonst klingt der Schnitt wie ein Versehen.\n\nSetz Tonartwechsel wie Kamerafahrten ein: selten, absichtsvoll, an Wendepunkten des Songs. Ein einziger gut platzierter Wechsel vor dem letzten Refrain oder Breakdown hebt einen ganzen Song — drei beliebige Wechsel zerlegen ihn."
+      },
+      "reflexionsaufgabe": {
+        "de": "Such zwei Songs, in denen ein Teil spürbar „höher rückt“ oder die Tonart hart wechselt, und bestimme: Um welches Intervall geht es, an welcher Song-Position passiert es, und was macht es mit der Energie? Überleg dann für einen eigenen (oder gedachten) Song: An welcher einen Stelle würde ein Wechsel die größte Wirkung entfalten — und um welches Intervall?"
+      }
+    },
+    {
+      "id": "gehoer_transkription",
+      "anzeigetitel": {
+        "de": "Riffs heraushören: Transkription"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "intervalle_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Riffs nach Gehör herauszuhören ist die vielleicht wertvollste Theorie-Fähigkeit überhaupt: Jede Transkription trainiert Intervallhören, Rhythmusgefühl und Stilverständnis gleichzeitig — und macht dich unabhängig von Tabs, die oft falsch sind.\n\nDie Methode ist ein Trichter: Erst der Rhythmus (klatschen, bis er sitzt), dann der Grundton (mitsummen und auf dem Instrument suchen), dann die Kontur (wohin bewegt sich die Linie — hoch, runter, Sprung?), zuletzt die exakten Intervalle. Wer sofort Töne sucht, bevor der Rhythmus steht, verirrt sich; wer den Trichter einhält, kommt erstaunlich schnell ans Ziel.\n\nHilfsmittel sind legitim: verlangsamtes Abspielen ohne Tonhöhenänderung, kurze Schleifen, Mitsummen als Brücke zwischen Ohr und Hand. Beginne mit langsamen, klaren Riffs (Doom eignet sich hervorragend) und steigere dich — jedes transkribierte Riff wandert doppelt ins Gedächtnis: als Klang und als Bauplan."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der Transkriptions-Trichter",
+          "ziel": "Ein einfaches Riff systematisch nach Gehör rekonstruieren.",
+          "schritte": [
+            "Wähle ein langsames, klares Riff und klatsch zuerst nur seinen Rhythmus, bis er sicher sitzt.",
+            "Summe den Grundton mit und finde ihn auf deinem Instrument (oder einer App).",
+            "Skizziere die Kontur der Linie (hoch/runter/Sprung) und fülle erst dann die exakten Intervalle — Schleife für Schleife."
+          ],
+          "steigerung": "Ein mittelschnelles Riff transkribieren und die Stufenfolge (aus dem Akkordfolgen-Baustein) gleich mitbestimmen.",
+          "selbstkontrolle": "Dein nachgespieltes Riff deckt sich mit dem Original in Rhythmus und Tönen — geprüft im direkten Vergleich."
+        }
+      }
+    },
+    {
+      "id": "arrangement_dichte",
+      "anzeigetitel": {
+        "de": "Arrangement: Dichte, Register, Raum"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "songstruktur_breakdown",
+        "riff_baukasten"
+      ],
+      "erklaerteil": {
+        "de": "Warum klingt derselbe Song bei der einen Band massiv und bei der anderen dünn? Meist liegt es am Arrangement — der Kunst, wer wann was spielt. Die drei großen Regler: Dichte (wie viele Ereignisse pro Takt), Register (wo im Frequenzspektrum die Instrumente sitzen) und Raum (wie viel bewusste Leere bleibt).\n\nDie Grundregel ist Kontrast durch Verteilung: Wenn alle Instrumente dasselbe tun (Unisono), entsteht Wucht; wenn sie sich Register und Rhythmus teilen, entsteht Breite; wenn eines aussetzt, bekommt der Wiedereinstieg Gewicht. Der klassische Metal-Fehler ist Dauervollgas auf allen Kanälen — das Ohr stumpft ab, und ausgerechnet der Breakdown hat keine Reserve mehr.\n\nDenk in Rollen pro Songteil: Wer trägt gerade das Fundament, wer die Bewegung, wer die Fläche — und wer schweigt? Ein Arrangement, das diese Fragen pro Teil beantwortet, klingt auch mit einfachen Riffs groß. Genau deshalb ist Arrangement Theorie, die jede Band sofort hörbar besser macht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm einen Song deiner Lieblingsband und protokolliere für zwei kontrastierende Teile (z. B. Strophe und Breakdown), was jedes Instrument tut: Fundament, Bewegung, Fläche oder Pause? Übertrage die Erkenntnis auf einen eigenen Song oder Bandprobe-Kontext: Welcher Teil würde von mehr Leere profitieren — und wer müsste dafür aussetzen?"
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-deathcore",
+    "hinweis": "Genre-Achse Deathcore (Death Metal × Metalcore): acht Bausteine quer durch die Domänen, alle stil:[deathcore] — inkl. Sound/Gear (Ausrüstung) und Athletik/Gesundheit (Körper) zur Vertiefung auf Doom-Niveau. Zusammen mit Retags bestehender Bausteine (chugs_breakdown, blastbeat, metalcore_groove, drop_tuning) trägt sie den Pfad. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "deathcore_breakdown_wucht",
+      "anzeigetitel": { "de": "Deathcore-Gitarre: der Breakdown als Waffe" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["chugs_breakdown", "sound_core_tight"],
+      "erklaerteil": {
+        "de": "Der Breakdown ist im Deathcore nicht ein Teil unter vielen — er ist der Zielpunkt, auf den alles zuläuft. Was ihn zur Waffe macht, ist der maximale Kontrast: davor Chaos aus Blast und Tremolo, dann der Absturz in extreme Tiefe und Langsamkeit, jeder Anschlag ein einzelner, gedämpfter Schlag mit absoluter Stille dazwischen. Genau diese Stille ist die halbe Miete — ohne das Noise Gate aus dem Core-Sound-Baustein wird aus dem Breakdown Matsch statt Wucht.\n\nDas Handwerk liegt in drei Dingen. Erstens die Präzision der Chugs: Bei tiefen Tunings und maximaler Zerre verzeiht nichts unsaubere Dämpfung — der Ton muss knallen und sofort tot sein. Zweitens das Timing des Einschlags: Der erste Breakdown-Schlag muss exakt auf der Kante sitzen, oft nach einer winzigen bewussten Pause, die den Absturz ankündigt. Drittens die Rhythmik: Deathcore-Breakdowns spielen mit Synkopen und ungeraden Betonungen (der berühmte „brei-brei-BREI“-Effekt), damit der Groove trotz Zeitlupe unvorhersehbar bleibt.\n\nDie Falle ist die Beliebigkeit: Ein Breakdown wirkt nur, wenn er vorbereitet ist und nicht jeder zweite Takt einer wird. Weniger, aber gezielt platziert, schlägt eine Aneinanderreihung."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der Absturz",
+          "ziel": "Aus einem schnellen Teil sauber und wuchtig in einen synkopierten Breakdown kippen.",
+          "schritte": [
+            "Spiel vier Takte schnelle gedämpfte Achtel (dein Chaos-Teil) zum Klick, dann eine winzige bewusste Pause, dann den ersten schweren Breakdown-Schlag exakt auf der nächsten Eins. Übe nur diese Kante, zehnmal.",
+            "Bau den Breakdown aus wenigen Tönen mit viel Stille: etwa Schlag – Stille – Schlag-Schlag – lange Stille. Die Dämpfung muss zwischen den Schlägen absolut greifen (Gate hilft, ersetzt aber saubere Hand nicht).",
+            "Setz eine Synkope: Verschieb einen der schweren Schläge auf eine Und-Zeit, sodass der Groove gegen den erwarteten Puls drückt. Nimm auf und prüf, ob es trotzdem tight sitzt.",
+            "Steh auf und spiel den Breakdown im Stehen: Wenn dein eigener Körper nicht mitgeht (Nacken, Gewicht), fehlt die Wucht — vereinfache, bis es körperlich zwingt."
+          ],
+          "steigerung": "Verkette Chaos → Breakdown → kurzes Chaos → längerer Breakdown zu einem Mini-Song und achte darauf, dass der zweite Breakdown schwerer wirkt als der erste (weniger Töne, mehr Stille, tiefere Lage).",
+          "selbstkontrolle": "Nimm die Kante auf: Ist zwischen den Breakdown-Schlägen wirklich Stille, oder rauscht es? Sitzt der erste schwere Schlag exakt, oder franst er? Und ehrlich: Nickt dein Kopf beim Anhören — oder ist es nur laut?"
+        }
+      }
+    },
+    {
+      "id": "deathcore_bass_fundament",
+      "anzeigetitel": { "de": "Deathcore-Bass: das tiefe Fundament" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["bass_downpicking", "drop_tuning"],
+      "erklaerteil": {
+        "de": "Im Deathcore lebt der Bass in extremer Tiefe — oft Drop B, Drop A oder auf dem Fünfsaiter noch darunter. Die Rolle ist doppelt: In den Blast- und Tremolo-Teilen verzahnt er sich als Textur mit der Double Bass (das Skelett-Prinzip aus dem Grind-Bass), im Breakdown wird er zum hörbaren Fundament, das jedem Chug sein Gewicht gibt. Ohne einen definierten Bass klingt selbst der brutalste Breakdown dünn.\n\nDie Herausforderung ist die Definition bei dieser Tiefe: Sehr tiefe Töne verlieren schnell Kontur und werden zu Wummern. Die Gegenmittel sind bekannt (dicke Saiten für das Tuning, Attack aus dem Anschlag, ein leicht angezerrter oder mit cleanem Anteil gemischter Ton), aber im Deathcore kommt Präzision dazu: Der Bass muss die synkopierten Breakdown-Akzente exakt mit der Gitarre treffen, sonst verschmiert die Kante, die den Breakdown ausmacht.\n\nEin Genre-Detail ist der Slam-Einfluss: In langsamen, groovenden Teilen sitzt der Bass extrem satt auf der Eins und lässt Raum — hier trägt er weniger Noten, aber jede mit maximalem Gewicht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gewicht mit Kontur",
+          "ziel": "In tiefer Stimmung definiert bleiben und die Breakdown-Akzente exakt mit der Gitarre treffen.",
+          "schritte": [
+            "Stimm tief (Drop C oder tiefer, passende Saiten) und spiel eine langsame Breakdown-Linie: wenige Töne, jeder satt angeschlagen und bewusst abgestoppt. Nimm auf und prüf auf kleinen Lautsprechern, ob jede Tonhöhe erkennbar bleibt.",
+            "Verzahn dich mit einem Chug-Pattern (Aufnahme oder Gitarrist): Deine Bass-Akzente müssen exakt auf denselben Schlägen sitzen wie die Gitarre — spiel es langsam, bis es EIN Schlag ist.",
+            "Übe den Rollenwechsel: vier Takte Blast-Textur (gleichmäßige Achtel, mit der Kick verzahnt), harter Schnitt in vier Takte Breakdown-Fundament (wenige schwere Töne). Der Schnitt sitzt auf dem Schlag.",
+            "Reduzier im Breakdown auf das Minimum: nur die Grundtöne der Gitarre, maximal satt. Weniger Noten, mehr Gewicht — das ist die Slam-Logik."
+          ],
+          "steigerung": "Misch (falls möglich) einen cleanen Tief-Anteil unter die Zerre und vergleich die Definition — oder spiel dieselbe Linie einmal mit hartem Plektrum-Attack und einmal weicher, und hör, was sich besser durchsetzt.",
+          "selbstkontrolle": "Hör die Aufnahme mit Gitarre und Kick: Ist der Bass als eigene Kante hörbar UND liegen die Akzente exakt übereinander? Wird es bei den tiefsten Tönen zu Wummern? Dann fehlt Saitenstärke oder Attack, nicht Lautstärke."
+        }
+      }
+    },
+    {
+      "id": "deathcore_gravity_blast",
+      "anzeigetitel": { "de": "Deathcore-Drums: Blast, Gravity & Breakdown" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["blast_varianten", "double_bass_sechzehntel"],
+      "erklaerteil": {
+        "de": "Deathcore-Drumming ist der Spagat zwischen zwei Extremen: maximale Dichte (Blasts, Double-Bass-Teppiche, der Gravity Blast) und maximale Wucht bei minimaler Dichte (der Breakdown). Beide müssen tight sein, und der Wechsel dazwischen ist die eigentliche Kunst.\n\nDer Gravity Blast ist die genre-typische Spezialität: ein Blast, bei dem ein Stock mit der Kante am Fell abprallt (rim und Fell in einer schaukelnden Bewegung), sodass zwei Schläge aus einer Handbewegung entstehen — das verdoppelt das Tempo bei halber Anstrengung. Er verlangt Geduld: erst die Schaukelbewegung sauber und langsam, dann Tempo.\n\nDazu kommt die Signatur des Breakdown-Drummings: die betonte, oft mit China oder Bell verzierte Akzentuierung jedes Gitarren-Chugs, und die Kunst, im Breakdown NICHT zu füllen, sondern die synkopierten Einschläge mit maximaler Wucht mitzuspielen. Wie bei allem Extremtempo gilt: Lockerheit vor Kraft, kurze intensive Blöcke mit echten Pausen, Gehörschutz — und bei anhaltendem Zwicken in Handgelenken oder Fußgelenken ärztlich abklären lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Dichte und Wucht schalten",
+          "ziel": "Zwischen Blast-Dichte und Breakdown-Wucht auf den Schlag wechseln — beide tight.",
+          "schritte": [
+            "Spiel vier Takte Blast (deine sichere Form) zum Klick, dann harter Schnitt in vier Takte Breakdown: jeden Gitarren-Chug (denk ihn dir in synkopierten schweren Schlägen) mit Kick+Crash/China exakt mittreffen. Der Schnitt sitzt auf dem Schlag.",
+            "Übe den Gravity Blast getrennt und langsam: die schaukelnde Stock-Bewegung an der Snare, ein Schlag mit der Spitze, einer mit der Kante — erst wenn beide gleich laut und gleichmäßig sind, minimal beschleunigen.",
+            "Verzier den Breakdown: Setz auf die schwersten Einschläge einen China- oder Bell-Akzent, ohne die Lücken zu füllen. Die Stille zwischen den Schlägen bleibt.",
+            "Simulier den Song: Chaos (Blast/Double Bass) → Breakdown → Chaos, mit Klick — und prüf, ob das Grundtempo über alle Wechsel konstant bleibt."
+          ],
+          "steigerung": "Bau eine Drei-Stufen-Dramaturgie: Blast → einfacher Breakdown → schnellerer Teil → schwererer, langsamerer Breakdown mit mehr Akzenten. Jede Stufe im selben Grundtempo.",
+          "selbstkontrolle": "Nimm auf: Liegt der erste Schlag nach jedem Schnitt exakt? Ist der Gravity Blast wirklich gleichmäßig (beide Schläge gleich laut) oder holpert er? Und im Breakdown: triffst du die Akzente mit der Gitarre als EINEN Schlag?"
+        }
+      }
+    },
+    {
+      "id": "deathcore_gutturals_squeals",
+      "anzeigetitel": { "de": "Deathcore-Vocals: Gutturals, Highs & Squeals" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["growl_resonanz", "scream_hoehe"],
+      "erklaerteil": {
+        "de": "Deathcore verlangt die vielleicht breiteste Vocal-Palette des Extreme Metal: extrem tiefe Gutturals (der „Brutal“-Growl, oft noch tiefer und komprimierter als im Death Metal), schneidend hohe Screams, und als Signatur der Pig Squeal — ein hoher, quiekender Ton, der bei vielen über einen Inhale (eingeatmet statt ausgeatmet) erzeugt wird. Diese Bandbreite ist der Reiz — und die Gefahr.\n\nDenn genau hier ist der Gesundheitsrahmen nicht optional, sondern überlebenswichtig für die Stimme. Jede dieser Techniken MUSS auf einer gesunden Basis stehen: Gutturals aus Weite und Resonanzraum (nicht aus Kehlkopf-Druck), Highs aus Luftführung und False-Cord-Ansatz, und Inhale-Squeals nur mit sorgfältiger, angeleiteter Technik — falsch ausgeführt sind sie besonders belastend. Der schnelle Wechsel zwischen den Registern (tief-hoch-tief) verführt zusätzlich zum Pressen; die Stütze bleibt das Kontinuum, nur der Resonanzraum schaltet.\n\nStrikt und ohne Kompromiss: alles einzeln und leise aufbauen, nie in Heiserkeit hineinüben, nach jeder Einheit den Sprechtest, bei Kratzen oder Engegefühl sofort stoppen. Diese Stile gehören unbedingt an die Seite einer erfahrenen Lehrperson für Extreme Vocals, und anhaltende Heiserkeit gehört in die HNO-Praxis. Eine kaputte Stimme kennt keinen Breakdown."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Breite ohne Verschleiß",
+          "ziel": "Die Register (tief/hoch) auf gesunder Basis anlegen und behutsam verbinden — Squeals nur mit Anleitung.",
+          "schritte": [
+            "Wärm die Stimme gründlich auf. Sichere zuerst einzeln und leise: ein tiefer Guttural aus Weite und Resonanz, ein hoher Scream aus Luft und Kopfresonanz. Beide müssen mühelos sein, bevor du sie kombinierst.",
+            "Übe den Registerwechsel mit großem Abstand: tiefe Phrase — bewusster Atem — hohe Phrase, jeweils leise. Die Stütze bleibt aktiv, nur der Raum schaltet. Der Abstand schrumpft über Wochen, nicht in einer Session.",
+            "Leg die Register in einen Deathcore-Kontext: tiefe Gutturals über den Breakdown, hohe Screams über die schnellen Teile — an festen Stellen über einen Loop, Timing vor Lautstärke.",
+            "Pig Squeals NUR, wenn du eine Lehrperson für Extreme Vocals hast, die die Inhale-Technik anleitet — nicht nach Videos allein. Bis dahin: weglassen. Keine Technik ist eine kaputte Stimme wert."
+          ],
+          "steigerung": "Erst wenn Tief und Hoch über Wochen stabil und beschwerdefrei sind, den Wechsel behutsam Richtung Songtempo beschleunigen — immer nur so schnell, wie beide Register frei bleiben.",
+          "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Klingen beide Register nach dem Wechsel genauso frei wie einzeln? Jedes Enger-Werden ist die Warnlampe — sofort leiser, Abstand vergrößern, im Zweifel stoppen."
+        }
+      }
+    },
+    {
+      "id": "deathcore_riff_dissonanz",
+      "anzeigetitel": { "de": "Deathcore-Riffing: Dissonanz & Slam" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["tritonus_dissonanz", "chromatik_atonalitaet"],
+      "erklaerteil": {
+        "de": "Deathcore borgt sein harmonisches Vokabular vom Death Metal und schärft es fürs Ungemütliche: dissonante Intervalle als Dauerzustand, nicht als Durchgang. Kleine Sekunden, Tritonus und enge Cluster sind das Material — nicht um schön zu klingen, sondern um Unbehagen zu erzeugen, das der Breakdown dann entlädt. Chromatik (Halbtonrutscher, atonale Läufe) ersetzt oft die Tonleiter ganz.\n\nZwei Bauprinzipien tragen das Genre. Erstens der Slam: extrem langsame, groovende Riffs aus wenigen, schweren, oft synkopierten Powerchords oder Einzeltönen — die Verlangsamung des Death-Metal-Riffs zu maximaler Wucht (verwandt mit Slam Death). Zweitens die Breakdown-Dramaturgie: Ein Riff baut Spannung durch dichte Dissonanz auf, bricht ab, und der Breakdown ist die Auflösung dieser Spannung ins pure Gewicht.\n\nWer Deathcore schreiben will, denkt weniger in Melodie als in Spannung und Entladung: Wo baue ich Reibung auf, wo lasse ich sie abstürzen? Der Kontrast ist der Song."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei Deathcore-Songs vor und zerleg ihre Spannungs-Dramaturgie: Wo sitzt die dichte, dissonante Aufbau-Passage, wo der Abriss, wo der Breakdown als Entladung? Welche Intervalle hörst du in den Aufbau-Riffs (kleine Sekunde? Tritonus? chromatische Läufe)?\n\nBau dann selbst eine Miniatur auf Papier oder am Instrument: ein dissonantes Aufbau-Riff (mindestens eine echte Reibung), ein Abriss, ein Slam-Breakdown aus maximal drei schweren Tönen. Prüf die Kernfrage: Erzeugt der Aufbau genug Unbehagen, dass der Breakdown sich wie eine Erlösung anfühlt? Wenn der Breakdown einfach nur da ist, fehlt die Spannung davor — genau daran arbeitet das Genre."
+      }
+    },
+    {
+      "id": "deathcore_dynamik_dramaturgie",
+      "anzeigetitel": { "de": "Deathcore-Dramaturgie: Chaos & Entladung" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["set_pacing"],
+      "erklaerteil": {
+        "de": "Deathcore ist Musik der Kontraste, und als Band muss man diese Kontraste bewusst inszenieren — sonst nutzt sich das Extreme ab. Das Grundprinzip ist Spannung und Entladung: Chaos (Blast, Tremolo, dissonante Riffs, Screams) baut Druck auf, der Breakdown entlädt ihn. Wenn alles gleich brutal ist, wird nichts als brutal empfunden — das Ohr stumpft ab.\n\nDramaturgisch heißt das drei Dinge. Erstens Dosierung: Nicht jeder Song braucht fünf Breakdowns; der eine, richtig platzierte wirkt stärker als eine Aneinanderreihung. Zweitens Vorbereitung: Der Breakdown wirkt nur, wenn davor genug Spannung stand — die Band baut ihn gemeinsam auf, mit einem klaren Bruch als Ankündigung. Drittens die Live-Dimension: Deathcore-Breakdowns sind der Moment, für den das Publikum kommt (der Pit explodiert) — die Band muss diesen Moment als Kollektiv treffen, auf den Schlag genau, mit voller körperlicher Präsenz.\n\nMental ist die Kunst, die Energie zu halten, ohne das Tempo zu verlieren: Die Aufregung des brutalen Teils darf den Breakdown nicht überhetzen, und der gemeinsame Einschlag muss auch im Live-Chaos sitzen. Das entsteht nur durch Proben genau dieser Übergänge — wie die Abrisskanten im Powerviolence, nur mit mehr Gewicht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Analysiere einen Deathcore-Song, den du stark findest, als Spannungskurve: Zeichne über die Zeit auf, wann Druck aufgebaut wird (Chaos) und wann er sich entlädt (Breakdown). Wie viele Breakdowns gibt es wirklich, und ist der stärkste am besten vorbereitet?\n\nÜberleg für dich oder deine Band: Habt ihr Songs, in denen zu viele Breakdowns die Wirkung abstumpfen? Welchen könntet ihr streichen, damit der wichtigste mehr trifft? Und ganz praktisch: Probt ihr die Übergänge in den Breakdown gezielt (gemeinsamer Bruch, exakter Einschlag) — oder hofft ihr, dass es live schon passt? Nimm dir den einen Übergang vor, der am wackligsten sitzt, und plan, wie ihr ihn als Kollektiv auf den Schlag genau trefft."
+      }
+    },
+    {
+      "id": "deathcore_sound_gear",
+      "anzeigetitel": { "de": "Deathcore-Sound: Tiefe, Gate & Definition" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["sound_core_tight", "drop_tuning"],
+      "erklaerteil": {
+        "de": "Der Deathcore-Sound ist ein Präzisionsinstrument: extreme Tiefe, die trotzdem definiert bleibt, und eine Stille im Breakdown, die so hart ist wie die Schläge. Beides kommt nicht aus dem Verstärker allein, sondern aus einer durchdachten Kette. Der Ausgangspunkt ist die tiefe Stimmung (oft Drop A, Drop G oder Sieben-/Achtsaiter) — und die verlangt zwingend dicke Saiten, sonst schlackert die Tiefe zu Matsch, egal wie gut der Amp ist.\n\nDrei Werkzeuge formen den Ton. Erstens die Zerre: hoch, aber tight — nicht die wollige Fuzz-Wand des Doom, sondern ein kontrolliertes, dichtes Gain, das jeden Chug knallen lässt. Zu viel Gain frisst die Definition, die den Breakdown ausmacht. Zweitens das Noise Gate: der wichtigste Baustein für den Breakdown. Es schneidet die tiefe Saite zwischen den Schlägen tot, sodass die berüchtigte Stille entsteht — sauber eingestellt (Schwelle nicht zu hoch, sonst fehlen leise Anschläge) ist es der Unterschied zwischen Wucht und Brei. Drittens die Definition in der Tiefe: ein präziser, oft angeklickter Kick-Sound am Schlagzeug, der durch die Dichte sticht, und ein Bass mit Attack, damit das Fundament hörbar bleibt und nicht nur wummert.\n\nWichtig bleibt: Das Gate ersetzt keine saubere Hand. Wer die Saiten nicht sauber dämpft, klingt auch mit Gate nur maschinell-tot statt tight. Der Sound verstärkt gutes Spiel, er ersetzt es nicht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör drei Deathcore-Produktionen, die du stark findest, gezielt auf den Sound: Wie definiert bleibt die tiefe Saite trotz der Tiefe? Wie hart ist die Stille im Breakdown — hörst du das Noise Gate arbeiten? Wie sticht der Kick durch die Dichte?\n\nGeh dann deine eigene Kette durch (oder plane sie): Passt die Saitenstärke zur Stimmung, oder schlackert die Tiefe? Ist dein Gain wirklich tight, oder wollig? Wenn du ein Noise Gate nutzt — ist die Schwelle so gesetzt, dass die Breakdown-Stille sauber kommt, ohne leise Anschläge zu schlucken? Und der ehrliche Test: Klingt ein Breakdown auch OHNE Gate schon halbwegs sauber — oder verdeckt das Gate nur unsaubere Dämpfung? Notier die eine Stellschraube (Saiten, Gain, Gate-Schwelle, Kick-Attack), die deinen Ton am meisten verbessern würde."
+      }
+    },
+    {
+      "id": "deathcore_koerper_intensitaet",
+      "anzeigetitel": { "de": "Deathcore-Körper: Intensität ohne Verschleiß" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["deathcore"],
+      "voraussetzungen": ["handgesundheit_tempo", "aufwaermen_gesundheit"],
+      "erklaerteil": {
+        "de": "Deathcore ist körperlich eine der fordernsten Spielarten: Gravity Blasts und Double-Bass-Teppiche am Schlagzeug, schnelles Downpicking und dichte Chugs an der Gitarre, extreme Vocals über die ganze Bandbreite — und live das Headbangen im Breakdown. Diese Intensität ist der Reiz, aber sie hat ein Verschleißrisiko, das man ernst nehmen muss, wenn man lange spielen will.\n\nVier Baustellen. Erstens die Hände und Unterarme: Die Dichte und das Tempo belasten Sehnen und Handgelenke stark — Aufwärmen vor jeder Session, Lockerheit vor Kraft, und bei ziehendem Schmerz oder Taubheit sofort stoppen (das ist keine Schwäche, das ist Vorsorge gegen chronische Überlastung). Zweitens der Nacken: Headbangen im Breakdown geht auf die Halswirbelsäule — kontrolliert aus dem ganzen Oberkörper statt ruckartig aus dem Nacken, und nicht in Erschöpfung hinein, wo die Bewegung unkontrolliert wird. Drittens das Gehör: Bei diesen Lautstärken ist Gehörschutz nicht optional, sondern die Bedingung dafür, überhaupt weiterspielen zu können. Viertens die Stimme (bei Vocals): der Gesundheitsrahmen aus dem Vocal-Baustein gilt unverändert.\n\nDer Grundsatz ist einfach: Intensität kommt aus Technik und Lockerheit, nicht aus Verkrampfung und Kraft. Kurze, intensive Blöcke mit echten Pausen bringen mehr als stundenlanges Draufhalten — und bei anhaltenden Beschwerden in Handgelenken, Nacken oder Ohren gehört das ärztlich oder physiotherapeutisch abgeklärt. Eine kaputte Sehne kennt keinen Breakdown."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geh deine eigene Praxis ehrlich durch: Wärmst du vor den fordernden Deathcore-Techniken wirklich auf (Hände, Unterarme, bei Vocals die Stimme), oder springst du kalt rein? Spielst du in Erschöpfung weiter, wo Technik zu Verkrampfung wird?\n\nNimm dir die vier Baustellen einzeln vor — Hände/Unterarme, Nacken (Headbangen), Gehör, Stimme — und benenne für jede eine konkrete Gewohnheit, die du verbessern kannst (ein Aufwärmritual, kontrolliertes statt ruckartiges Headbangen, Gehörschutz griffbereit, Pausen statt Draufhalten). Und die wichtigste Frage: Hast du ein klares Stopp-Signal für dich — bei welchem Zeichen (Ziehen, Taubheit, Nackenschmerz, Klingeln im Ohr, Heiserkeit) hörst du sofort auf, statt es wegzuspielen? Schreib dir dieses Signal auf. Bei anhaltenden Beschwerden: ärztlich abklären, nicht ignorieren."
+      }
+    }
+  ]
+}

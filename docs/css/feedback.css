@@ -1,0 +1,66 @@
+/* Kommentator-CI an das App-CI angleichen. Wird NUR im Feedback-Modus geladen
+   (js/feedback.js), nach vendor/kommentator/kommentare.css — die vendored Datei
+   bleibt unangetastet. Der Kommentator färbt sich über --k-*-Variablen auf
+   .kommentare-scope; wir mappen sie auf die App-Tokens (--primaer, --tinte …),
+   die ohnehin mit dem App-Thema (data-theme) kippen. Wir überschreiben mit
+   gleicher Spezifität wie die Theme-Klassen des Kommentators und später in der
+   Quellreihenfolge, damit unsere Werte gewinnen — inkl. eigener @media-dark-
+   Regel für den „auto"-Fall (kein Klassen-Marker, nur prefers-color-scheme). */
+
+.kommentare-scope,
+.kommentare-scope.kommentare-dark,
+.kommentare-scope.kommentare-light {
+  --k-paper: var(--hintergrund);
+  --k-surface: var(--flaeche);
+  --k-ink: var(--tinte);
+  --k-soft: var(--tinte-2);
+  --k-line: var(--linie);
+  --k-line-strong: var(--linie-stark);
+  --k-accent: var(--primaer);
+  --k-accent-soft: var(--primaer-weich);
+  --k-el: var(--primaer);
+  --k-focus: var(--primaer);
+  /* Text-Markierung: an die Ampel-Gelbtöne der App gekoppelt (Textmarker-Konvention). */
+  --k-mark: var(--signal-gelb-weich);
+  --k-mark-active: var(--signal-gelb);
+  --k-mark-edge: var(--signal-gelb-text);
+  --k-mark-ink: var(--tinte);
+  --k-radius: var(--radius);
+  --k-radius-sm: var(--radius-klein);
+  --k-shadow: var(--schatten-karte);
+  --k-shadow-lg: var(--schatten-hover);
+  --k-ui: 'Rubik', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --k-serif: 'Rubik', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* „auto"-Dunkel (kein .kommentare-dark, nur OS-Präferenz): muss die gleich-
+   spezifische Dunkel-Regel des Kommentators schlagen. Werte identisch — die
+   App-Tokens kippen selbst über data-theme. */
+@media (prefers-color-scheme: dark) {
+  .kommentare-scope:not(.kommentare-light) {
+    --k-paper: var(--hintergrund);
+    --k-surface: var(--flaeche);
+    --k-ink: var(--tinte);
+    --k-soft: var(--tinte-2);
+    --k-line: var(--linie);
+    --k-line-strong: var(--linie-stark);
+    --k-accent: var(--primaer);
+    --k-accent-soft: var(--primaer-weich);
+    --k-el: var(--primaer);
+    --k-focus: var(--primaer);
+    --k-mark: var(--signal-gelb-weich);
+    --k-mark-active: var(--signal-gelb);
+    --k-mark-edge: var(--signal-gelb-text);
+    --k-mark-ink: var(--tinte);
+    --k-shadow: var(--schatten-karte);
+    --k-shadow-lg: var(--schatten-hover);
+  }
+}
+
+/* Text auf der Akzentfarbe: hell weiß, dunkel tinten-dunkel — wie die App-Buttons. */
+.kommentare-scope,
+.kommentare-scope.kommentare-light { --k-accent-ink: #ffffff; }
+.kommentare-scope.kommentare-dark { --k-accent-ink: #08151f; }
+@media (prefers-color-scheme: dark) {
+  .kommentare-scope:not(.kommentare-light) { --k-accent-ink: #08151f; }
+}

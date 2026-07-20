@@ -1,0 +1,291 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "experte",
+    "domaene": "bass",
+    "hinweis": "Experte-Bass. Kein Vokabular-Block — der liegt allein in bausteine.einsteiger-gitarre.json. Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "bass_tapping",
+      "anzeigetitel": {
+        "de": "Tapping am Bass"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_slides_legato"
+      ],
+      "spielziele": [
+        "gliedmassen_unabhaengigkeit",
+        "saubere_uebergaenge"
+      ],
+      "erklaerteil": {
+        "de": "Beim Tapping schlägt die Anschlaghand Töne direkt aufs Griffbrett — beide Hände greifen, keine zupft. Am Bass eröffnet das Läufe und Intervallsprünge, die mit konventioneller Technik unmöglich sind, und progressive Metal-Bassisten bauen daraus ganze Passagen.\n\nDie dicken Saiten verlangen einen entschlossenen, präzisen Tap dicht am Bunddraht — Kraft allein hilft nicht, der Treffpunkt entscheidet. Genauso wichtig ist das Gegenteil: das saubere Beenden jedes Tons und die Dämpfung aller Saiten, die gerade nicht dran sind. Ohne Dämpfungsplan wird jede Tapping-Passage zum Dröhnen.\n\nBaue Tapping als Farbe ein, nicht als Dauerzustand: ein getappter Lauf als Übergang, ein zweistimmiges Muster als Intro-Motiv. Sparsam eingesetzt wirkt die Technik doppelt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zweihand-Muster aufbauen",
+          "ziel": "Ein einfaches Tapping-Muster sauber und gedämpft spielen.",
+          "schritte": [
+            "Tapp mit dem Zeige- oder Mittelfinger der Anschlaghand einen Ton dicht am Bund und zieh ihn mit einem leichten Pull-off ab.",
+            "Verbinde ihn mit zwei gegriffenen Tönen der Greifhand zu einem Drei-Ton-Zyklus.",
+            "Leg die freien Finger beider Hände als Dämpfer auf die übrigen Saiten und loope den Zyklus langsam."
+          ],
+          "steigerung": "Den Zyklus über zwei Saiten erweitern und rhythmisch ans Metronom binden.",
+          "selbstkontrolle": "Alle Töne sind gleich laut und klar; zwischen den Zyklen herrscht Stille statt Dröhnen."
+        }
+      }
+    },
+    {
+      "id": "bass_kontrapunkt",
+      "anzeigetitel": {
+        "de": "Eigenständige Linien & Kontrapunkt"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "bass_fills_uebergaenge"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Die höchste Stufe des Metal-Bass ist nicht das Mitspielen, sondern das Mitkomponieren: eine Linie, die dem Riff harmonisch dient, aber eigene Wege geht — Gegenbewegung, wenn die Gitarre steigt, ein Halteton unter hektischem Riffing, eine rhythmische Verschiebung, die den Groove aufreißt. Bands von Death bis Opeth leben von solchen Bass-Stimmen.\n\nKontrapunkt im Metal folgt einer einfachen Ökonomie: An den Ankerpunkten (Downbeats, Riff-Akzente) triffst du das Fundament, dazwischen darfst du dich entfernen. Je stabiler die Anker, desto weiter darf der Ausflug — das Ohr verzeiht jede Reise, solange die Landung sitzt.\n\nEntwickle solche Linien schreibend, nicht nur jammend: Nimm das Riff auf, hör es als Komponist und frag, was fehlt — Tiefe, Gegenbewegung, Ruhe? Die beste Basslinie ist oft die, die das Riff besser klingen lässt, nicht die, die selbst glänzt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gegenstimme schreiben",
+          "ziel": "Zu einem Riff eine eigenständige, dienende Basslinie komponieren.",
+          "schritte": [
+            "Nimm ein Gitarrenriff (eigene Aufnahme oder Loop) auf und bestimme seine Ankerpunkte.",
+            "Schreibe eine Linie, die die Anker trifft, sich dazwischen aber bewusst vom Grundton entfernt — etwa in Gegenbewegung.",
+            "Spiel beide zusammen und prüf: Trägt die Linie das Riff, oder konkurriert sie damit?"
+          ],
+          "steigerung": "Zwei Varianten schreiben (eine ruhige, eine bewegte) und im Songkontext entscheiden, welche dient.",
+          "selbstkontrolle": "Die Anker sitzen hörbar; das Riff klingt mit deiner Linie größer als ohne."
+        }
+      }
+    },
+    {
+      "id": "bass_extremtempo",
+      "anzeigetitel": {
+        "de": "Extremtempi: Effizienz an der Grenze"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "bass_dreifinger",
+        "bass_blast_begleitung"
+      ],
+      "spielziele": [
+        "schnellerer_wechselschlag",
+        "praezises_tremolo"
+      ],
+      "erklaerteil": {
+        "de": "Bei 220+ BPM entscheidet am Bass die Bewegungsökonomie über alles: Die dicken Saiten verzeihen keine großen Wege. Ob Drei-Finger-Zyklus oder Pick — an der Grenze steuerst du keine Einzelanschläge mehr, sondern startest und führst einen Bewegungszyklus, den du in kurzen, geplanten Dosen trainierst.\n\nAnalysiere deine Technik wie ein Sportler: Wo entsteht die Bewegung (Finger, Handgelenk, Unterarm)? Wo geht Weg verloren? Videoaufnahmen in Zeitlupe zeigen Verschwendung, die du nicht spürst — ein Finger, der weit abhebt, ein Handgelenk, das mitwippt. Jeder eingesparte Millimeter ist Tempo.\n\nGesundheit hat Vorrang: Extremtempi am Bass belasten Sehnen massiv. Kurze Ausflüge über die Kontrollgrenze, eingebettet in lockeres Spiel, bauen auf — langes Verharren über der Grenze schleift Verkrampfung ein und riskiert Überlastung. Brennen, Kribbeln oder Taubheit beenden die Session sofort."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zyklus-Analyse & Kurzausflüge",
+          "ziel": "Die eigene Bewegung an der Tempogrenze analysieren und effizienter machen.",
+          "schritte": [
+            "Film deine Anschlaghand in Zeitlupe beim schnellsten sauberen Tempo und markiere überflüssige Bewegung.",
+            "Übe den Zyklus betont klein im Kontrolltempo, bis die Einsparung selbstverständlich ist.",
+            "Mache kurze Ausflüge (zwei Takte) knapp über die Grenze und kehr sofort ins Kontrolltempo zurück."
+          ],
+          "steigerung": "Die Ausflüge behutsam verlängern; wöchentlich das saubere Maximaltempo dokumentieren.",
+          "selbstkontrolle": "Das Video zeigt eine kleinere Bewegung als vorher; die Grenz-Takte klingen wie die Kontroll-Takte."
+        }
+      }
+    },
+    {
+      "id": "bass_fuenfsaiter",
+      "anzeigetitel": {
+        "de": "5-Saiter & sehr tiefe Tunings"
+      },
+      "domaene": [
+        "bass",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "metalcore"
+      ],
+      "voraussetzungen": [
+        "greifhand_daempfen"
+      ],
+      "spielziele": [
+        "schwererer_ton"
+      ],
+      "erklaerteil": {
+        "de": "Die tiefe H-Saite (oder noch tiefere Tunings) verändert das Instrument grundlegend: mehr Griffbrett, neue Lagenlogik — und eine Saite, die bei jeder Unachtsamkeit mitdröhnt. Der 5-Saiter verlangt deshalb vor allem eines: einen erweiterten Dämpfungsplan. Viele legen den Daumen als beweglichen Anker auf die tiefste Saite und wandern mit ihm mit.\n\nKlanglich ist die Tiefe eine Verantwortung: Unter dem Bass ist nichts mehr, das Fehler kaschiert. Sehr tiefe Töne brauchen präzisen, definierten Anschlag und oft mehr Höhen- und Mittenanteil im Sound, damit sie als Ton statt als Grummeln ankommen. Intonation wird kritisch — dicke, schlaffe Saiten reagieren stark auf zu festen Druck.\n\nAuch das Setup gehört dazu: passende Saitenstärken für das Ziel-Tuning, saubere Oktavreinheit und eine Halskrümmung, die das Schlackern bändigt. Tiefe ist ein System aus Hand, Instrument und Einstellung — nicht nur eine zusätzliche Saite."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die tiefe Saite zähmen",
+          "ziel": "Auf der tiefsten Saite definiert spielen und alles andere stumm halten.",
+          "schritte": [
+            "Etabliere den beweglichen Daumen-Anker: Beim Spiel auf höheren Saiten liegt er dämpfend auf der tiefsten.",
+            "Spiel eine langsame Linie auf der tiefen Saite und prüf jeden Ton auf Definition und saubere Intonation (Stimmgerät).",
+            "Wechsle zwischen tiefster und mittlerer Saite, ohne dass die jeweils andere mitklingt."
+          ],
+          "steigerung": "Ein bestehendes Riff auf die tiefe Lage übertragen und mit leichtem Palm Muting Kontur geben.",
+          "selbstkontrolle": "Kein Dröhnen der ungespielten Saiten; die tiefen Töne kommen als definierte Töne an, nicht als Rumpeln."
+        }
+      }
+    },
+    {
+      "id": "bass_mikrotiming",
+      "anzeigetitel": {
+        "de": "Mikrotiming & Pocket im Metal"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_synkopen"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Jenseits von „richtig oder falsch“ liegt das Mikrotiming: die bewusste Platzierung weniger Millisekunden vor, auf oder hinter dem Schlag. Exakt auf dem Punkt klingt maschinell-tight — der Standard für schnelle Passagen. Minimal hinter dem Schlag wird ein Breakdown schwerer und fetter; minimal davor drängt ein Thrash-Riff nach vorn.\n\nDas ist keine Esoterik, sondern hörbar: Programmier oder spiel denselben Groove einmal exakt, einmal mit späten Bassnoten — der späte „lehnt sich zurück“. Entscheidend ist, dass die Abweichung konstant und gewollt ist. Zufälliges Streuen um den Schlag klingt schlampig; konsistentes Platzieren klingt nach Absicht.\n\nTrainiere das Gefühl mit Extremen: bewusst deutlich zu spät spielen, dann exakt, dann die Mitte suchen. Wer die Ränder kennt, kann die feinen Zwischenstufen kontrollieren — und im Bandkontext entscheiden, wo der gemeinsame Punkt liegen soll."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Vor, auf, hinter dem Schlag",
+          "ziel": "Die Platzierung relativ zum Puls bewusst steuern.",
+          "schritte": [
+            "Spiel einen einfachen Groove zum Klick dreimal: bewusst exakt, bewusst spürbar zu spät, bewusst leicht zu früh.",
+            "Nimm alle drei auf und hör den Charakterunterschied — schwer, treibend, maschinell.",
+            "Such dann die feine Stufe: nur einen Hauch hinter dem Klick, konstant über acht Takte."
+          ],
+          "steigerung": "Dasselbe mit einem Breakdown-Riff zu programmierten Drums; die späte Variante mit der exakten vergleichen.",
+          "selbstkontrolle": "Die Abweichung ist konstant statt zufällig; du kannst auf Ansage zwischen den drei Platzierungen wechseln."
+        }
+      }
+    },
+    {
+      "id": "bass_linien_schreiben",
+      "anzeigetitel": {
+        "de": "Eigene Linien schreiben"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "einfache_basslinie",
+        "riff_baukasten"
+      ],
+      "spielziele": [
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Vom Nachspielen zum Schreiben: Eine eigene Basslinie entsteht aus denselben Bauprinzipien wie ein Riff — Kern, Wiederholung, Variation — plus den bass-eigenen Werkzeugen: chromatische Annäherungen an Zieltöne, Orgelpunkte (ein Ton hält, während oben alles wechselt), Oktavsprünge für Energie und rhythmische Lücken für Groove.\n\nDer Arbeitsweg ist entscheidend: Erst der Rhythmus (was macht die Bassdrum, was verlangt das Riff?), dann die Tonauswahl. Eine rhythmisch zwingende Linie mit zwei Tönen schlägt eine harmonisch raffinierte, die eiert. Schreib in Varianten — drei Versionen derselben Linie, dann die beste im Songkontext wählen.\n\nUnd: Weglassen ist ein Werkzeug. Die Stelle, an der der Bass aussetzt und mit einem Sprung zurückkommt, kann der größte Moment des Songs sein. Schreiben heißt entscheiden — auch gegen Töne."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei Varianten, eine Entscheidung",
+          "ziel": "Zu einem Riff systematisch eine eigene Linie entwickeln.",
+          "schritte": [
+            "Leg zu einem Riff zuerst nur den Rhythmus deiner Linie fest — geklopft oder auf einem Ton gespielt.",
+            "Schreibe drei Ton-Varianten: eine minimale (Grundtöne + eine Annäherung), eine mit Orgelpunkt, eine bewegte.",
+            "Nimm alle drei im Kontext auf und entscheide nach Wirkung, nicht nach Schwierigkeit."
+          ],
+          "steigerung": "In die Gewinner-Variante eine bewusste Lücke einbauen und den Wiedereinstieg als Ereignis gestalten.",
+          "selbstkontrolle": "Jede Variante ist sauber spielbar; deine Wahl kannst du musikalisch begründen."
+        }
+      }
+    },
+    {
+      "id": "bass_signalkette",
+      "anzeigetitel": {
+        "de": "Signalkette: Kompression, Zerr-Split, DI"
+      },
+      "domaene": [
+        "bass",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_ton_gear"
+      ],
+      "spielziele": [
+        "schwererer_ton"
+      ],
+      "erklaerteil": {
+        "de": "Der professionelle Metal-Bass-Sound ist fast immer ein Mehrwege-System: Ein cleaner, tiefer Signalweg liefert das Fundament, ein verzerrter, in den Tiefen beschnittener Weg liefert Biss und Präsenz — erst die Summe klingt gleichzeitig fett und definiert. Wer die Zerre aufs Gesamtsignal legt, verliert das Low-End; wer nur clean bleibt, verschwindet zwischen den Gitarren.\n\nKompression ist das zweite Fundament: Sie fängt die Pegelsprünge zwischen Anschlagsarten ab und hält den Bass als stabilen Boden im Mix. Die Kunst ist die Dosierung — hörbar pumpen soll sie im Metal selten, arbeiten fast immer.\n\nDazu kommt die DI-Disziplin: Ein sauberes Direktsignal vor aller Bearbeitung ist im Studio Gold wert (Re-Amping) und live die Versicherung. Verstehe deine Kette als Architektur mit Entscheidungen — nicht als Ansammlung von Pedalen, die sich angesammelt haben."
+      },
+      "reflexionsaufgabe": {
+        "de": "Zeichne deine aktuelle Signalkette auf — vom Instrument bis zum Ausgang — und beschrifte jede Stufe mit ihrer Aufgabe. Welche Stufe kannst du nicht begründen? Skizziere dann eine Zwei-Wege-Architektur (clean tief / verzerrt mittig) mit den Mitteln, die du hast oder brauchst, und leg fest, wie du sie im Bandkontext testest."
+      }
+    },
+    {
+      "id": "bass_buehnenpraesenz",
+      "anzeigetitel": {
+        "de": "Bühne: Präsenz ohne Timing-Verlust"
+      },
+      "domaene": [
+        "bass",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "bass_timing_klick"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ],
+      "erklaerteil": {
+        "de": "Live ist der Bass das Bindeglied zwischen Schlagzeug und Wand aus Gitarren — und gleichzeitig willst du dich bewegen, headbangen, präsent sein. Der Konflikt ist real: Große Bewegung kostet Präzision, wenn sie unkontrolliert passiert. Profis choreografieren deshalb grob — Bewegung in den stabilen Passagen, Fokus in den heiklen.\n\nDie zweite Säule ist das Hören: Wer sich selbst und die Bassdrum nicht hört, spielt blind. Kümmere dich aktiv um dein Monitoring (Position zum Amp, Monitormix, In-Ears) — es ist Teil deines Instruments. Ein Set, in dem du dich durchgehend hörst, ist automatisch tighter.\n\nUnd schließlich die Vorbereitung: Übe die schweren Passagen im Stehen, mit Gurt in Bühnenhöhe, in Bewegung. Was nur im Sitzen funktioniert, existiert auf der Bühne nicht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geh dein Live-Set (oder deine Probe) durch und teile es in Bewegungs-Passagen und Fokus-Passagen ein: Wo darfst du ausbrechen, wo gehört die volle Aufmerksamkeit den Händen? Prüf außerdem ehrlich dein Monitoring — hörst du dich und die Bassdrum jederzeit? Leg zwei konkrete Änderungen fest (Position, Mix, In-Ears, Gurthöhe), die du beim nächsten Mal testest."
+      }
+    }
+  ]
+}

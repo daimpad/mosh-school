@@ -1,0 +1,2138 @@
+/* Crossminton-Handbuch — Hauptfarbe #38a4f1 (Akzent), Rubik (lokal).
+   Hell & Dunkel über umgeschaltete Tokens (System oder Profil-Umschalter);
+   Container-Radius 14px, weiche mehrlagige Elevation, moderne Übergänge.
+   Untere Leiste nur mobil; ab 768px Hamburger-Menü oben rechts. */
+
+/* CI-Farbwelt (siehe docs/ci.md): Hauptfarbe + drei Signalfarben.
+   Ampellogik: Rot = offen, Gelb = teilweise/Hinweis, Grün = erledigt. */
+:root {
+  color-scheme: light;
+  /* Marke (CI): Hauptfarbe #38a4f1 + Ampel-Signalfarben (unverändert verbindlich). */
+  --primaer: #38a4f1;
+  --primaer-dunkel: #1e8bd6;
+  --primaer-tief: #1568ad;
+  --primaer-weich: #e8f3fe;
+  /* Kompetenzstufen-Rampe (Blau-Intensität, Einsteiger→Experte). KEINE Ampelfarben —
+     Rot/Gelb/Grün bleiben dem Status vorbehalten; die Stufe kodiert nur Intensität. */
+  --stufe-1-flaeche: #e8f3fe; --stufe-1-text: #1568ad;
+  --stufe-2-flaeche: #bfe1fb; --stufe-2-text: #0f4f86;
+  --stufe-3-flaeche: #1568ad; --stufe-3-text: #ffffff;
+  /* Pfad-Kachel-Hues (kühle, markennahe Palette; bewusst KEINE Ampelfarben). */
+  --pf-blau: #1568ad; --pf-blau-weich: #e8f3fe;
+  --pf-teal: #0e8a86; --pf-teal-weich: #d7f1ef;
+  --pf-violett: #6b46c9; --pf-violett-weich: #ece7fb;
+  --pf-indigo: #3b4bc0; --pf-indigo-weich: #e5e8fd;
+  --pf-magenta: #b83c8f; --pf-magenta-weich: #f7e3f0;
+  --pf-sky: #0f83c4; --pf-sky-weich: #dceffb;
+  --pf-schiefer: #586577; --pf-schiefer-weich: #eaeef4;
+  --signal-rot: #f4402a;
+  --signal-rot-text: #c4180a;
+  --signal-rot-weich: #fdece9;
+  --signal-gruen: #24bd47;
+  --signal-gruen-text: #14802f;
+  --signal-gruen-weich: #e6f7ea;
+  --signal-gelb: #f2d93b;
+  --signal-gelb-text: #6f6104;
+  --signal-gelb-weich: #fbf5d3;
+  /* Flächen & Tinte — ruhige, leicht kühle Neutrale. */
+  --hintergrund: #f2f6fc;
+  --hintergrund-2: #eaf1fa;
+  --flaeche: #ffffff;
+  --flaeche-2: #f1f5fb;
+  --tinte: #16202b;
+  --tinte-2: #5a6675;
+  /* #6b7686 statt #8a94a3: ~4,6:1 auf Weiß (AA für die kleinen Sekundär-Labels,
+     die diesen Token tragen). Nur Hellmodus; der Dunkelwert bleibt. */
+  --tinte-3: #6b7686;
+  --linie: #e9eef6;
+  --linie-stark: #dae3ee;
+  /* Überschriften ruhen in Tinte; Blau wird Akzent (Links, Aktion, Aktiv-Zustand). */
+  --ueberschrift: var(--tinte);
+  /* Radien (CI weiterentwickelt: weicher, gestuft). */
+  --radius: 14px;
+  --radius-gross: 20px;
+  --radius-klein: 9px;
+  /* Kopf/Overlay. */
+  --kopf-bg: rgba(242, 246, 252, 0.82);
+  --overlay: rgba(18, 32, 46, 0.42);
+  /* Elevation — weiche, mehrlagige Tiefe statt harter Rahmen. */
+  --schatten-weich: 0 1px 2px rgba(20, 30, 45, 0.05);
+  --schatten-karte: 0 1px 2px rgba(20, 30, 45, 0.04), 0 10px 26px -14px rgba(20, 30, 45, 0.12);
+  --schatten-hover: 0 2px 6px rgba(20, 30, 45, 0.06), 0 20px 42px -18px rgba(56, 164, 241, 0.30);
+  --uebergang: 200ms cubic-bezier(0.33, 1, 0.5, 1);
+}
+
+/* Dunkles Farbschema: folgt dem System; per Profil-Umschalter überschreibbar
+   (data-theme="hell" erzwingt hell, "dunkel" erzwingt dunkel). Hauptfarbe & Ampel bleiben. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) {
+    color-scheme: dark;
+    --primaer: #4fb0f4;
+    --primaer-dunkel: #6bbdf6;
+    --primaer-tief: #9acdf8;
+    --primaer-weich: #143247;
+    --stufe-1-flaeche: #143247; --stufe-1-text: #9acdf8;
+    --stufe-2-flaeche: #1d4a6b; --stufe-2-text: #cbe6fb;
+    --stufe-3-flaeche: #4fb0f4; --stufe-3-text: #08243b;
+    --pf-blau: #6fb8f0; --pf-blau-weich: #152c40;
+    --pf-teal: #48c2ba; --pf-teal-weich: #0f2b2a;
+    --pf-violett: #a98cf0; --pf-violett-weich: #221b3a;
+    --pf-indigo: #8894f0; --pf-indigo-weich: #1a2044;
+    --pf-magenta: #e58cc6; --pf-magenta-weich: #311a29;
+    --pf-sky: #55b4e8; --pf-sky-weich: #0e2a3d;
+    --pf-schiefer: #9fb0c4; --pf-schiefer-weich: #202a35;
+    --signal-rot: #ff5a44; --signal-rot-text: #ff9a8c; --signal-rot-weich: #3a1a15;
+    --signal-gruen: #33cf5a; --signal-gruen-text: #7fe39a; --signal-gruen-weich: #12301f;
+    --signal-gelb: #f2d93b; --signal-gelb-text: #e2ce74; --signal-gelb-weich: #322f10;
+    --hintergrund: #0f151c;
+    --hintergrund-2: #131c26;
+    --flaeche: #18232f;
+    --flaeche-2: #1f2c3a;
+    --tinte: #e8eef5;
+    --tinte-2: #a2b2c4;
+    --tinte-3: #7f8ea0;
+    --linie: #273543;
+    --linie-stark: #3a4b5e;
+    --kopf-bg: rgba(15, 21, 28, 0.82);
+    --overlay: rgba(6, 12, 18, 0.62);
+    --schatten-weich: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --schatten-karte: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 28px -14px rgba(0, 0, 0, 0.55);
+    --schatten-hover: 0 2px 6px rgba(0, 0, 0, 0.4), 0 20px 44px -18px rgba(56, 164, 241, 0.28);
+  }
+}
+:root[data-theme='dunkel'] {
+  color-scheme: dark;
+  --primaer: #4fb0f4;
+  --primaer-dunkel: #6bbdf6;
+  --primaer-tief: #9acdf8;
+  --primaer-weich: #143247;
+  --stufe-1-flaeche: #143247; --stufe-1-text: #9acdf8;
+  --stufe-2-flaeche: #1d4a6b; --stufe-2-text: #cbe6fb;
+  --stufe-3-flaeche: #4fb0f4; --stufe-3-text: #08243b;
+  --pf-blau: #6fb8f0; --pf-blau-weich: #152c40;
+  --pf-teal: #48c2ba; --pf-teal-weich: #0f2b2a;
+  --pf-violett: #a98cf0; --pf-violett-weich: #221b3a;
+  --pf-indigo: #8894f0; --pf-indigo-weich: #1a2044;
+  --pf-magenta: #e58cc6; --pf-magenta-weich: #311a29;
+  --pf-sky: #55b4e8; --pf-sky-weich: #0e2a3d;
+  --pf-schiefer: #9fb0c4; --pf-schiefer-weich: #202a35;
+  --signal-rot: #ff5a44; --signal-rot-text: #ff9a8c; --signal-rot-weich: #3a1a15;
+  --signal-gruen: #33cf5a; --signal-gruen-text: #7fe39a; --signal-gruen-weich: #12301f;
+  --signal-gelb: #f2d93b; --signal-gelb-text: #e2ce74; --signal-gelb-weich: #322f10;
+  --hintergrund: #0f151c;
+  --hintergrund-2: #131c26;
+  --flaeche: #18232f;
+  --flaeche-2: #1f2c3a;
+  --tinte: #e8eef5;
+  --tinte-2: #a2b2c4;
+  --tinte-3: #7f8ea0;
+  --linie: #273543;
+  --linie-stark: #3a4b5e;
+  --kopf-bg: rgba(15, 21, 28, 0.82);
+  --overlay: rgba(6, 12, 18, 0.62);
+  --schatten-weich: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --schatten-karte: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 28px -14px rgba(0, 0, 0, 0.55);
+  --schatten-hover: 0 2px 6px rgba(0, 0, 0, 0.4), 0 20px 44px -18px rgba(56, 164, 241, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--tinte);
+  background: var(--hintergrund);
+  background-image: linear-gradient(180deg, var(--hintergrund) 0%, var(--hintergrund-2) 55%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, p, ul, ol, dl, figure {
+  margin: 0 0 0.6rem;
+}
+
+h1 { font-size: 1.9rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; color: var(--ueberschrift); }
+h2 { font-size: 1.3rem; line-height: 1.3; font-weight: 600; letter-spacing: -0.01em; color: var(--ueberschrift); }
+h3 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.005em; color: var(--ueberschrift); }
+h4 { font-size: 0.78rem; font-weight: 600; color: var(--tinte-2); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Icons sind immer farbig, nie schwarz — Default Hauptfarbe, Status in Signalfarben. */
+.fa-solid { color: var(--primaer); }
+.knopf .fa-solid, .hero .fa-solid, .menue-schliessen .fa-solid, .hamburger .fa-solid { color: inherit; }
+
+a { color: var(--primaer-tief); }
+
+code { font-size: 0.85em; word-break: break-all; }
+
+/* ---------- Rahmen ---------- */
+
+.kopf {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  background: var(--kopf-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--linie);
+  padding: env(safe-area-inset-top) 1rem 0;
+}
+
+.kopf-innen {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0.65rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.marke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primaer);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.marke-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: block;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  /* Unten Platz für die fixierte Bottom-Bar (nur mobil sichtbar) lassen, damit der
+     letzte Container nicht dahinter verschwindet; ab Tablet ohne Bar überschrieben. */
+  padding: 1.1rem 1rem calc(5rem + env(safe-area-inset-bottom));
+}
+
+/* Einstiegs-Übergang: die Blöcke der Ansicht gleiten gestaffelt herein — nur
+   bei Routenwechsel (app.js setzt .einstieg dann neu), nicht bei jeder Zustands-
+   Neuzeichnung. prefers-reduced-motion schaltet es unten global ab. */
+@keyframes ansicht-einstieg {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#ansicht.einstieg > * {
+  animation: ansicht-einstieg 400ms cubic-bezier(0.22, 0.9, 0.35, 1) both;
+}
+#ansicht.einstieg > :nth-child(2) { animation-delay: 45ms; }
+#ansicht.einstieg > :nth-child(3) { animation-delay: 90ms; }
+#ansicht.einstieg > :nth-child(4) { animation-delay: 135ms; }
+#ansicht.einstieg > :nth-child(5) { animation-delay: 180ms; }
+#ansicht.einstieg > :nth-child(n+6) { animation-delay: 220ms; }
+
+/* ---------- Untere Leiste (nur mobil) ---------- */
+
+.fussnav {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 15;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--flaeche);
+  border-top: 1px solid var(--linie);
+  box-shadow: 0 -4px 16px rgba(31, 41, 51, 0.06);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.fussnav a,
+.fussnav-mehr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.55rem 0 0.5rem;
+  min-height: 44px;
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--tinte-2);
+  text-decoration: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transition: color var(--uebergang), transform var(--uebergang);
+}
+
+.fussnav a .fa-solid,
+.fussnav-mehr .fa-solid { font-size: 1.15rem; }
+
+.fussnav a.aktiv,
+.fussnav-mehr.aktiv {
+  color: var(--primaer-tief);
+  font-weight: 600;
+}
+
+.fussnav a.aktiv .fa-solid,
+.fussnav-mehr.aktiv .fa-solid { transform: translateY(-1px); color: var(--primaer-tief); }
+
+body.im-onboarding .fussnav { display: none; }
+body.im-onboarding main { padding-bottom: 2rem; }
+
+/* ---------- Hamburger + Menü (Desktop) ---------- */
+
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primaer);
+  color: #fff;
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: background var(--uebergang), box-shadow var(--uebergang), transform var(--uebergang);
+}
+
+.kopf-rechts {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Kopf-Suchknopf: immer sichtbar — auch mobil, wo der Hamburger verborgen ist
+   (die Suche ist von jeder Seite erreichbar). */
+.kopf-suche {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius);
+  color: var(--primaer);
+  text-decoration: none;
+  transition: background var(--uebergang), box-shadow var(--uebergang), transform var(--uebergang);
+}
+@media (hover: hover) {
+  .kopf-suche:hover { background: var(--primaer-weich); box-shadow: var(--schatten-hover); transform: translateY(-1px); }
+}
+
+/* Sprachanzeige — rein darstellend (app-info funktion_aktiv:false): Flagge +
+   Kürzel neben dem Hamburger; die Liste klappt auf, schaltet aber nichts um. */
+.sprach-anzeige { position: relative; }
+
+.sprach-knopf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 40px;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  background: var(--flaeche);
+  color: var(--tinte);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background var(--uebergang), box-shadow var(--uebergang);
+}
+
+.sprach-globus { font-size: 1.2rem; line-height: 1; }
+
+.sprach-liste {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 40;
+  min-width: 12.5rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  box-shadow: var(--schatten-hover);
+}
+
+.sprach-eintrag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.sprach-flagge { flex: none; font-size: 1.2rem; line-height: 1; }
+.sprach-eintrag .sprach-name { flex: 1; }
+.sprach-eintrag.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); font-weight: 600; }
+.sprach-haken { flex: none; width: 1rem; text-align: center; color: var(--primaer-tief); font-weight: 700; }
+
+.menue {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+}
+
+.menue-schleier {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.menue-lade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(21rem, 88vw);
+  background: var(--flaeche);
+  border-radius: var(--radius) 0 0 var(--radius);
+  box-shadow: -12px 0 40px rgba(31, 41, 51, 0.18);
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transform: translateX(105%);
+  transition: transform 380ms cubic-bezier(0.22, 0.9, 0.3, 1);
+}
+
+.menue.offen .menue-schleier { opacity: 1; }
+.menue.offen .menue-lade { transform: translateX(0); }
+
+.menue-kopf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.menue-titel {
+  font-weight: 700;
+  color: var(--tinte-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.menue-schliessen {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--flaeche-2);
+  color: var(--primaer-tief);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background var(--uebergang), box-shadow var(--uebergang);
+}
+
+.menue-punkt {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem 0.9rem;
+  border-radius: var(--radius);
+  color: var(--tinte);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateX(18px);
+  transition: opacity 320ms ease, transform 320ms cubic-bezier(0.22, 0.9, 0.3, 1), background var(--uebergang), color var(--uebergang);
+}
+
+.menue-punkt .fa-solid {
+  width: 1.5rem;
+  text-align: center;
+  color: var(--primaer);
+}
+
+/* Gestaffeltes Hereingleiten der Menüpunkte. */
+.menue.offen .menue-punkt { opacity: 1; transform: translateX(0); }
+.menue.offen .menue-punkt:nth-of-type(1) { transition-delay: 60ms; }
+.menue.offen .menue-punkt:nth-of-type(2) { transition-delay: 120ms; }
+.menue.offen .menue-punkt:nth-of-type(3) { transition-delay: 180ms; }
+.menue.offen .menue-punkt:nth-of-type(4) { transition-delay: 240ms; }
+.menue.offen .menue-punkt:nth-of-type(5) { transition-delay: 300ms; }
+.menue.offen .menue-punkt:nth-of-type(6) { transition-delay: 360ms; }
+.menue.offen .menue-punkt:nth-of-type(7) { transition-delay: 420ms; }
+.menue.offen .menue-punkt:nth-of-type(8) { transition-delay: 480ms; }
+
+/* Trenner vor den Rechtstexten (Impressum/Datenschutz) im Menü. */
+.menue-trenner {
+  display: block;
+  height: 1px;
+  margin: 0.5rem 0.9rem;
+  background: var(--linie);
+}
+
+.menue-punkt.aktiv {
+  background: var(--primaer-weich);
+  color: var(--primaer-tief);
+}
+
+/* Themen-Steuerung (Darstellung) im Menü — segmentierter Umschalter. */
+.menue-thema { padding: 0.4rem 0.9rem 0.7rem; }
+.menue-thema-titel {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinte-3);
+}
+.menue-thema-optionen {
+  display: flex;
+  gap: 0.3rem;
+  padding: 0.25rem;
+  background: var(--flaeche-2);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+}
+.menue-thema-knopf {
+  flex: 1;
+  padding: 0.45rem 0.3rem;
+  border: 0;
+  border-radius: var(--radius-klein);
+  background: transparent;
+  color: var(--tinte-2);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--uebergang), color var(--uebergang);
+}
+.menue-thema-knopf.aktiv {
+  background: var(--flaeche);
+  color: var(--primaer-tief);
+  box-shadow: var(--schatten-weich);
+}
+
+/* Kleine Rechtstext-Links am Menüfuß (Impressum · Datenschutz). */
+.menue-rechtliches {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+  padding: 0.7rem 0.9rem 0.2rem;
+  border-top: 1px solid var(--linie);
+  color: var(--tinte-3);
+  font-size: 0.82rem;
+}
+.menue-mini { color: var(--tinte-2); text-decoration: none; }
+.menue-mini.aktiv { color: var(--primaer-tief); font-weight: 600; }
+
+@media (hover: hover) {
+  .menue-thema-knopf:not(.aktiv):hover { color: var(--primaer-tief); }
+  .menue-mini:hover { color: var(--primaer-tief); text-decoration: underline; }
+}
+
+/* ---------- Grundbausteine ---------- */
+
+.karte {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  box-shadow: var(--schatten-karte);
+  padding: 1.25rem;
+  margin-bottom: 1.05rem;
+  transition: box-shadow var(--uebergang), transform var(--uebergang), border-color var(--uebergang);
+}
+
+.karte > :last-child { margin-bottom: 0; }
+
+a.karte-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.karte-akzent { border-left: 3px solid var(--primaer); }
+
+.karte-inaktiv { opacity: 0.55; }
+
+/* Pfade als konsistentes Kachel-Raster (2-spaltig ab Tablet) statt schnöder Liste.
+   Jede Kachel trägt eine farbige Icon-Medaille in ihrer Hue + dezenten Hue-Schimmer;
+   die Fläche bleibt neutral (CI: Blau = Akzent, keine Flächenfarbe). Hue-Zuordnung
+   über --pf/--pf-weich, die in beiden Themes automatisch kippen. */
+.pfad-gitter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.05rem;
+}
+@media (min-width: 34rem) {
+  .pfad-gitter { grid-template-columns: 1fr 1fr; }
+}
+.pfad-kachel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+.pfad-kachel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8.5rem;
+  height: 8.5rem;
+  background: radial-gradient(circle at top left, var(--pf-weich), transparent 72%);
+  opacity: 0.75;
+  pointer-events: none;
+}
+.pfad-medaille {
+  position: relative;
+  flex: none;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: var(--radius-klein);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pf-weich);
+  color: var(--pf);
+  font-size: 1.2rem;
+}
+/* Medaillen-Icon trägt die Pfad-Hue, nicht das globale Akzentblau (.fa-solid). */
+.pfad-medaille .fa-solid { color: inherit; }
+.pfad-kachel-text {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.pfad-kachel-text > :last-child { margin-bottom: 0; }
+.pfad-kachel-text h3 {
+  margin: 0 0 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.pfad-kachel-chips { margin-top: 0.5rem; }
+.pfad-kachel-ziel { margin-top: 0.35rem; }
+/* CTA je Kachel: dezenter Button-Look in der Pfad-Hue, unten linksbündig. */
+.pfad-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  margin-top: 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--pf);
+}
+.pfad-cta .fa-solid { color: inherit; transition: transform var(--uebergang); }
+@media (hover: hover) {
+  a.pfad-kachel:hover .pfad-cta .fa-solid { transform: translateX(3px); }
+}
+
+/* Kompetenzpfad-Block im Profil ist ein Wiedereinstieg-Link (nicht nur Anzeige). */
+.profil-kompetenz-link { margin: 0.2rem 0 0.4rem; }
+.profil-kompetenz-link h3 { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.profil-kompetenz-link h3 .fa-arrow-right { font-size: 0.8em; margin-left: auto; transition: transform var(--uebergang); }
+@media (hover: hover) {
+  .profil-kompetenz-link:hover .fa-arrow-right { transform: translateX(3px); }
+}
+.pfad-kachel-ring {
+  position: relative;
+  flex: none;
+  align-self: center;
+}
+.pfad-kachel--lead {
+  grid-column: 1 / -1;
+  align-items: center;
+}
+@media (hover: hover) {
+  a.pfad-kachel:hover { border-color: var(--pf); }
+}
+
+.pf-blau { --pf: var(--pf-blau); --pf-weich: var(--pf-blau-weich); }
+.pf-teal { --pf: var(--pf-teal); --pf-weich: var(--pf-teal-weich); }
+.pf-violett { --pf: var(--pf-violett); --pf-weich: var(--pf-violett-weich); }
+.pf-indigo { --pf: var(--pf-indigo); --pf-weich: var(--pf-indigo-weich); }
+.pf-magenta { --pf: var(--pf-magenta); --pf-weich: var(--pf-magenta-weich); }
+.pf-sky { --pf: var(--pf-sky); --pf-weich: var(--pf-sky-weich); }
+.pf-schiefer { --pf: var(--pf-schiefer); --pf-weich: var(--pf-schiefer-weich); }
+
+.leise { color: var(--tinte-2); font-size: 0.9rem; }
+
+/* Nur für Screenreader (visuell versteckt) — Struktur-H1 der Startseite, aria-live-Ansagen. */
+.nur-sr {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+/* Programmatisch fokussierter Inhaltsanker bei Routenwechsel — kein sichtbarer Ring. */
+#ansicht:focus { outline: none; }
+
+/* Skip-Link: springt für Tastatur-Nutzer über Kopf + Navigation direkt zum
+   Inhalt. Außerhalb des Viewports geparkt, gleitet bei Fokus herein. */
+.zum-inhalt {
+  position: absolute;
+  left: 0.5rem;
+  top: -3.5rem;
+  z-index: 200;
+  padding: 0.55rem 0.9rem;
+  background: var(--flaeche);
+  color: var(--primaer-tief);
+  border: 1px solid var(--primaer);
+  border-radius: var(--radius);
+  box-shadow: var(--schatten-karte);
+  text-decoration: none;
+  font-weight: 600;
+  transition: top var(--uebergang);
+}
+.zum-inhalt:focus { top: 0.5rem; }
+
+.bestaetigung { color: var(--signal-gruen-text); font-weight: 600; }
+
+.abschnitt-titel { margin: 1.3rem 0 0.6rem; }
+
+.chip {
+  display: inline-block;
+  padding: 0.13rem 0.66rem;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--linie-stark);
+  color: var(--tinte-2);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* display: inline-block würde sonst das [hidden]-Attribut aushebeln (z. B. der
+   Stopp-Knopf im Pattern-Werkzeug, der nur während der Wiedergabe erscheint). */
+.chip[hidden] { display: none; }
+
+.chip-akzent { background: var(--primaer-weich); color: var(--primaer-tief); }
+
+/* Signal-Badges (Ampellogik) — weiche Fläche, kräftige Schrift, farbige Kante. */
+.chip-rot { background: var(--signal-rot-weich); color: var(--signal-rot-text); border: 1px solid var(--signal-rot); }
+.chip-gruen { background: var(--signal-gruen-weich); color: var(--signal-gruen-text); border: 1px solid var(--signal-gruen); }
+
+/* Baustein-Chips als Buttons: leicht blau hervorgehoben, Sprung direkt in den Baustein. */
+.chip-baustein { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; }
+
+/* Kompetenzstufen-Chips: Blau-Intensitätsrampe (Einsteiger hell → Experte tief).
+   Bewusst KEINE Ampel-Signalfarben — Rot/Gelb/Grün bleiben dem Status vorbehalten. */
+.chip-stufe { border-color: transparent; font-weight: 600; }
+.chip-stufe-einsteiger { background: var(--stufe-1-flaeche); color: var(--stufe-1-text); }
+.chip-stufe-fortgeschritten { background: var(--stufe-2-flaeche); color: var(--stufe-2-text); }
+.chip-stufe-experte { background: var(--stufe-3-flaeche); color: var(--stufe-3-text); }
+.chip-stufe-trainer { background: var(--flaeche-2); color: var(--tinte-2); border-color: var(--linie-stark); }
+
+/* Chip-Links klickbar: kleiner Hover (nur Zeigergeräte; Lift nur ohne reduce-motion). */
+a.chip { text-decoration: none; cursor: pointer; transition: transform var(--uebergang), box-shadow var(--uebergang), border-color var(--uebergang); }
+a.chip:focus-visible { outline: 2px solid var(--primaer); outline-offset: 2px; }
+@media (hover: hover) {
+  a.chip:hover { box-shadow: var(--schatten-weich); }
+  a.chip-baustein:hover { border-color: var(--primaer); }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  a.chip:hover { transform: translateY(-1px); }
+}
+
+.chip-zeile { display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center; }
+.chip-trenner { color: var(--tinte-2); }
+
+.banner-hinweis {
+  background: var(--signal-gelb-weich);
+  border-left: 3px solid var(--signal-gelb);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.banner-hinweis a { color: inherit; font-weight: 600; }
+
+/* ---------- Knöpfe & Formulare ---------- */
+
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  color: var(--tinte);
+  transition: background var(--uebergang), box-shadow var(--uebergang), transform var(--uebergang), color var(--uebergang);
+}
+
+/* Füllung im Hellmodus auf --primaer-tief (#1568ad, ~5,8:1 mit Weiß) statt --primaer
+   (#38a4f1, nur 2,7:1) — WCAG-AA-Kontrast für den meistgenutzten Button. Akzent-Blau
+   bleibt für Links/Rahmen/Icons; der Dunkelmodus kippt unten zurück auf --primaer
+   (dort trägt der Button ohnehin dunkle Schrift). */
+.knopf-primaer { background: var(--primaer-tief); color: #fff; box-shadow: 0 6px 16px -6px rgba(56, 164, 241, 0.55); }
+.knopf-primaer:active { background: var(--primaer-dunkel); }
+.knopf-sekundaer { border-color: var(--linie); background: var(--flaeche); }
+.knopf-leise { color: var(--tinte-2); font-weight: 500; }
+.knopf-gefahr { color: var(--signal-rot-text); border-color: var(--signal-rot); }
+.knopf-erledigt { color: var(--signal-gruen-text); border-color: var(--signal-gruen); }
+.knopf[disabled] { opacity: 0.45; cursor: default; box-shadow: none; }
+/* Nicht verlinkter CTA (noch nicht gefüllter Platzhalter-Absprung). */
+.knopf-inaktiv { opacity: 0.6; cursor: default; border-color: var(--linie); background: var(--flaeche-2); color: var(--tinte-2); }
+
+.knopf-zeile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.8rem;
+}
+
+select {
+  font: inherit;
+  color: inherit;
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.55rem;
+}
+
+input[type='radio'], input[type='checkbox'] {
+  accent-color: var(--primaer);
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+  margin: 0.15rem 0 0;
+}
+
+/* ---------- Optionen (Onboarding, Profil, Zielwahl) ---------- */
+
+.option-karte {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  padding: 0.85rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  transition: border-color var(--uebergang), background var(--uebergang), box-shadow var(--uebergang), transform var(--uebergang);
+}
+
+.option-karte:has(input:checked) {
+  border-color: var(--primaer);
+  background: var(--primaer-weich);
+}
+
+.option-inhalt { display: flex; flex-direction: column; gap: 0.2rem; }
+
+.option-zeile {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 0.45rem 0.2rem;
+  cursor: pointer;
+}
+
+.ziel-bereich {
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+  margin: 0 0 0.7rem;
+  background: var(--flaeche);
+}
+
+.ziel-bereich legend {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tinte-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 0.3rem;
+}
+
+.ziel-dimension { margin-top: 1rem; }
+
+/* Große Schirme: die Ziel-Checkboxen zweispaltig, damit die Liste nicht so lang wird.
+   Die Legende (Bereichstitel) spannt beide Spalten. */
+@media (min-width: 768px) {
+  .ziel-bereich {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.2rem;
+    align-items: start;
+  }
+  .ziel-bereich legend { grid-column: 1 / -1; }
+}
+
+.onboarding-schritt { margin-top: 0.4rem; }
+/* Die Frage ist die H1 jedes Schritts (genau eine H1 je Ansicht) — modest gehalten,
+   damit sie nicht zu groß wirkt; der Willkommens-Vorspann (Schritt 1) steht als
+   ruhiger Lead darüber. */
+.onboarding h1 { font-size: 1.35rem; margin: 0.1rem 0 0.6rem; }
+.onboarding-willkommen { font-weight: 600; color: var(--tinte); margin-bottom: 0.25rem; }
+
+/* ---------- Stationslisten ---------- */
+
+.stationsliste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.station {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  box-shadow: var(--schatten-karte);
+  margin-bottom: 0.55rem;
+  padding: 0.25rem 0.4rem;
+  transition: box-shadow var(--uebergang), transform var(--uebergang), border-color var(--uebergang);
+}
+
+.station-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.4rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.station-nummer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--primaer-weich);
+  color: var(--primaer-tief);
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.station-absolviert .station-nummer { background: var(--signal-gruen-weich); color: var(--signal-gruen-text); }
+
+.station-mitte { flex: 1; display: flex; flex-direction: column; gap: 0.15rem; }
+
+.station-titel { font-weight: 600; }
+
+.station-icon { font-size: 0.9em; margin-right: 0.15rem; }
+.baustein-icon { font-size: 0.85em; margin-right: 0.2rem; }
+
+.station-hinweis { font-size: 0.8rem; color: var(--signal-gelb-text); }
+
+.station-skip { margin: 0 0 0.3rem 2.85rem; min-height: 36px; padding: 0.2rem 0.5rem; font-size: 0.85rem; }
+
+.status-punkt {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--linie);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--uebergang), border-color var(--uebergang);
+}
+/* Form/Icon je Zustand zusätzlich zur Ampelfarbe — nicht allein farbabhängig (Farbfehlsicht). */
+.status-punkt i { font-size: 8px; line-height: 1; }
+
+.status-offen { border-color: var(--signal-rot); background: var(--signal-rot-weich); }
+.status-teil { border-color: var(--signal-gelb); background: var(--signal-gelb); }
+.status-teil i { color: #4d4300; }
+.status-voll { border-color: var(--signal-gruen); background: var(--signal-gruen); }
+.status-voll i { color: #0f3d1e; }
+
+/* ---------- Fortschritt ---------- */
+
+.fortschritt-zeile { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.7rem; }
+
+.balken {
+  height: 7px;
+  border-radius: 999px;
+  background: var(--flaeche-2);
+  overflow: hidden;
+}
+
+.balken-fuellung {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primaer), #7cc6f7);
+  transition: width 500ms cubic-bezier(0.22, 0.9, 0.35, 1);
+}
+
+/* ---------- Baustein-Ansicht ---------- */
+
+.baustein .chip-zeile { margin-bottom: 1rem; }
+
+.abschnitt {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  box-shadow: var(--schatten-karte);
+  padding: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.abschnitt-kopf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.abschnitt-kopf h2 { margin: 0; }
+
+.delta-hinweis {
+  background: var(--primaer-weich);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.grafik-platzhalter { margin: 0.9rem 0; }
+
+.grafik-bild {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1.5px solid var(--linie);
+  border-radius: var(--radius);
+  background: var(--flaeche-2);
+}
+
+.grafik-platzhalter figcaption { margin-top: 0.3rem; }
+
+.ue-block { margin-bottom: 0.9rem; }
+.ue-block h4 { margin-bottom: 0.25rem; }
+.ue-titel { margin-top: 0.2rem; }
+
+.schrittliste { padding-left: 1.3rem; }
+.schrittliste li { margin-bottom: 0.35rem; }
+
+.einordnung dl { margin: 0.6rem 0 0; }
+.einordnung dt { font-size: 0.78rem; color: var(--tinte-2); text-transform: uppercase; letter-spacing: 0.04em; }
+.einordnung dd { margin: 0.1rem 0 0.6rem; }
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 32px;
+}
+
+details[open] summary { margin-bottom: 0.5rem; }
+
+.baustein-fussnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+/* ---------- Trainer-Layer / Fehlerbilder ---------- */
+
+.trainer-layer {
+  border-left: 4px solid var(--primaer);
+  background: linear-gradient(180deg, var(--primaer-weich) 0%, var(--flaeche) 60%);
+}
+
+.trainer-layer .abschnitt-kopf h2 { display: inline-flex; align-items: center; gap: 0.45rem; }
+
+.fb-karte {
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  background: var(--flaeche);
+  padding: 0.9rem 1rem;
+  margin-top: 0.8rem;
+}
+
+.fb-karte > h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.6rem;
+  color: var(--signal-rot-text);
+}
+
+.fb-karte > h3 .fa-solid { color: var(--signal-rot); }
+
+.fb-feld { margin-bottom: 0.7rem; }
+.fb-feld h4 { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem; }
+.fb-feld p { margin: 0; }
+.fb-karte .chip-zeile { margin-top: 0.6rem; }
+
+/* ---------- Training ---------- */
+
+.einheit-abschluss { text-align: center; padding: 2rem 1rem; }
+.einheiten-zaehler { padding-left: 1.2rem; }
+
+/* Kuratorischer Hinweis je Übung im Sitzungsdurchlauf — dezenter Akzent-Callout. */
+.einheit-hinweis {
+  background: var(--primaer-weich);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.7rem;
+  margin: 0.6rem 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Regeln (Referenz-Reiter) ---------- */
+
+/* Quellenangabe: sichtbar, aber zurückhaltend — Herausgeber und Stand. */
+.regeln-quelle {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+/* Abschnitt = aufklappbares <details> mit H2-Titel und eigener Chevron-Marke
+   (die FA-Chevrons liegen nicht im Subset — daher CSS-gezeichnet). */
+.regel-abschnitt { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.regel-abschnitt > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0.3rem 0;
+}
+.regel-abschnitt > summary::-webkit-details-marker { display: none; }
+.regel-abschnitt > summary::before {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--primaer);
+  border-bottom: 2px solid var(--primaer);
+  transform: rotate(-45deg);
+  transition: transform var(--uebergang);
+}
+.regel-abschnitt[open] > summary::before { transform: rotate(45deg); }
+.regel-abschnitt > summary h2 { margin: 0; }
+.regel-einleitung { margin-top: 0; }
+
+.regel-karte {
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  background: var(--flaeche);
+  padding: 0.9rem 1rem;
+  margin-top: 0.8rem;
+}
+
+.regel-titel { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+.regel-nummer {
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primaer-tief);
+  background: var(--primaer-weich);
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+}
+
+.regel-feld { margin-bottom: 0.6rem; }
+.regel-feld:last-child { margin-bottom: 0; }
+.regel-feld h4 { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem; }
+.regel-feld p { margin: 0; }
+
+/* Erklärteil ("Was das bedeutet"): dezent abgesetzt, Glühbirne im Hinweis-Gelb. */
+.regel-erklaerung {
+  background: var(--flaeche-2);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.75rem;
+}
+.regel-erklaerung h4 .fa-lightbulb { color: var(--signal-gelb-text); }
+
+.regel-verweise { margin: 0.7rem 0 0; font-size: 0.9rem; }
+.regel-verweise-titel { color: var(--tinte-2); }
+.regel-verweis { display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 0.6rem; white-space: nowrap; }
+.regel-verweis .fa-arrow-right { font-size: 0.75em; }
+
+/* ---------- Turnier-Regularium (Filter unter „Regeln") ---------- */
+
+.turnier-titel-icon { color: var(--primaer); margin-right: 0.4rem; }
+.turnier-feld-titel {
+  display: block;
+  margin: 0 0 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinte-3);
+}
+
+/* Kategorie-Auswahl (Kacheln) */
+.turnier-stufen { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.turnier-stufe {
+  flex: 1 1 auto;
+  min-width: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  align-items: flex-start;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--linie-stark);
+  border-radius: var(--radius-klein);
+  background: var(--flaeche);
+  color: var(--tinte);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--uebergang), background var(--uebergang), box-shadow var(--uebergang);
+}
+.turnier-stufe-name { font-weight: 600; font-size: 0.95rem; }
+.turnier-stufe-serie { font-size: 0.72rem; color: var(--tinte-3); }
+.turnier-stufe[aria-pressed='true'] {
+  border-color: var(--primaer);
+  background: var(--primaer-weich);
+  color: var(--primaer-tief);
+  box-shadow: 0 0 0 1px var(--primaer) inset;
+}
+.turnier-stufe[aria-pressed='true'] .turnier-stufe-serie { color: var(--primaer-tief); }
+@media (hover: hover) {
+  .turnier-stufe:not([aria-pressed='true']):hover { border-color: var(--primaer); }
+}
+
+/* Varianten-Umschalter (Einzel / Doppel / Junior) */
+.turnier-varianten { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.9rem; flex-wrap: wrap; }
+.turnier-varianten .turnier-feld-titel { margin: 0; }
+.turnier-segment {
+  display: inline-flex;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  background: var(--flaeche-2);
+  border: 1px solid var(--linie);
+  border-radius: 999px;
+}
+.turnier-variante-knopf {
+  border: 0;
+  background: transparent;
+  color: var(--tinte-2);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.32rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color var(--uebergang), background var(--uebergang), box-shadow var(--uebergang);
+}
+.turnier-variante-knopf[aria-pressed='true'] {
+  background: var(--flaeche);
+  color: var(--primaer-tief);
+  box-shadow: var(--schatten-weich);
+}
+
+/* Zusammenfassung + Leiter */
+.turnier-summe-kopf { display: flex; gap: 1rem; align-items: center; }
+.turnier-summe-zahl {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--primaer-tief);
+  font-variant-numeric: tabular-nums;
+}
+.turnier-summe-text { display: flex; flex-direction: column; gap: 0.1rem; }
+.turnier-summe-text strong { color: var(--tinte); font-weight: 600; }
+.turnier-kurz { margin: 0.7rem 0 0; }
+.turnier-leiter { display: flex; gap: 0.3rem; align-items: center; margin-top: 0.9rem; flex-wrap: wrap; }
+.turnier-leiter-schritt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  background: var(--flaeche-2);
+  color: var(--tinte-3);
+  border: 1px solid var(--linie);
+}
+.turnier-leiter-schritt.an {
+  background: var(--primaer-weich);
+  color: var(--primaer-tief);
+  border-color: var(--primaer);
+}
+.turnier-leiter-pfeil { color: var(--tinte-3); font-size: 0.8rem; }
+
+/* Varianten-Abweichungen (Hinweis-Karte) */
+.turnier-variante-info { border-left: 3px solid var(--primaer); }
+.turnier-variante-info h2 { display: flex; align-items: center; gap: 0.5rem; font-size: 1.02rem; margin-bottom: 0.5rem; }
+.turnier-variante-info h2 .fa-solid { color: var(--primaer); }
+.turnier-abweichungen { margin: 0; padding-left: 1.1rem; }
+.turnier-abweichungen li { margin-bottom: 0.35rem; }
+.turnier-abweichungen li:last-child { margin-bottom: 0; }
+
+/* Bereichs-Abschnitte + Anforderungs-Zeilen */
+.turnier-kat h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.02rem;
+  margin-bottom: 0.4rem;
+}
+.turnier-kat h2 .fa-solid { color: var(--primaer); font-size: 0.9em; }
+.turnier-kat-zahl {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--tinte-3);
+  background: var(--flaeche-2);
+  border: 1px solid var(--linie);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+.turnier-anf { display: flex; gap: 0.7rem; padding: 0.7rem 0; border-top: 1px solid var(--linie); }
+.turnier-anf:first-of-type { border-top: 0; padding-top: 0.2rem; }
+.turnier-anf-punkt {
+  flex: none;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.28rem;
+  border-radius: 50%;
+  border: 2px solid var(--linie-stark);
+  background: transparent;
+}
+.turnier-anf.hervor .turnier-anf-punkt { border-color: var(--primaer); background: var(--primaer); }
+.turnier-anf-koerper { flex: 1; min-width: 0; }
+.turnier-anf-kopf { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.turnier-anf-titel { font-weight: 600; font-size: 0.95rem; }
+.turnier-anf-text { margin: 0.15rem 0 0; color: var(--tinte-2); font-size: 0.9rem; }
+.turnier-marken { display: inline-flex; gap: 0.3rem; flex-wrap: wrap; }
+.turnier-marke {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--linie-stark);
+  color: var(--tinte-2);
+  white-space: nowrap;
+}
+.marke-pflicht { background: var(--signal-gruen-weich); color: var(--signal-gruen-text); border-color: var(--signal-gruen); }
+.marke-empfehlung { background: var(--signal-gelb-weich); color: var(--signal-gelb-text); border-color: var(--signal-gelb); }
+.marke-neu { background: var(--primaer-weich); color: var(--primaer-tief); border-color: var(--primaer); }
+.marke-verschaerft { background: transparent; color: var(--primaer-tief); border-color: var(--primaer); }
+
+/* Dokumente / Quelle / Hinweis */
+.turnier-dokumente h2 { display: flex; align-items: center; gap: 0.5rem; font-size: 1.02rem; margin-bottom: 0.5rem; }
+.turnier-dokumente h2 .fa-solid { color: var(--primaer); }
+.turnier-dok-liste { list-style: none; margin: 0 0 0.6rem; padding: 0; }
+.turnier-dok-liste li { padding: 0.3rem 0; border-top: 1px solid var(--linie); }
+.turnier-dok-liste li:first-child { border-top: 0; }
+.turnier-dok-link { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 500; }
+.turnier-dok-link .fa-book-open { font-size: 0.85em; color: var(--primaer); }
+.turnier-quelle, .turnier-hinweis { display: flex; gap: 0.45rem; align-items: baseline; margin: 0.5rem 0 0; }
+.turnier-quelle .fa-solid, .turnier-hinweis .fa-solid { color: var(--primaer); flex: none; }
+
+/* ---------- Profil ---------- */
+
+.profil-zeile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--linie);
+}
+
+.profil-zeile p { margin: 0; }
+
+.profil-editor {
+  border-top: 1px solid var(--linie);
+  padding-top: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Überlagerung / Meilenstein ---------- */
+
+.ueberlagerung {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: var(--overlay);
+  backdrop-filter: blur(5px);
+  animation: schleier-einstieg 260ms ease both;
+}
+
+@keyframes schleier-einstieg {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes karte-pop {
+  from { opacity: 0; transform: translateY(16px) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.meilenstein-karte {
+  background: var(--flaeche);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(22, 51, 74, 0.25);
+  padding: 1.7rem 1.5rem;
+  max-width: 22rem;
+  text-align: center;
+  animation: karte-pop 420ms cubic-bezier(0.22, 0.9, 0.3, 1.2) both;
+}
+
+.meilenstein-zeichen {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.meilenstein-zeichen .fa-solid {
+  color: var(--signal-gelb);
+  filter: drop-shadow(0 2px 3px rgba(31, 41, 51, 0.25));
+}
+
+/* ---------- Hover (nur Geräte mit Zeiger) ---------- */
+
+@media (hover: hover) {
+  .karte:hover, .station:hover, .option-karte:hover {
+    box-shadow: var(--schatten-hover);
+    transform: translateY(-2px);
+    border-color: var(--linie-stark);
+  }
+  .knopf:hover:not([disabled]) { box-shadow: var(--schatten-hover); }
+  .knopf-primaer:hover:not([disabled]) { background: var(--primaer-dunkel); }
+  .knopf-leise:hover { color: var(--primaer-tief); box-shadow: none; }
+  .hamburger:hover { background: var(--primaer-dunkel); box-shadow: var(--schatten-hover); transform: translateY(-1px); }
+  .menue-schliessen:hover { background: var(--primaer-weich); box-shadow: var(--schatten-hover); }
+  .menue-punkt:hover { background: var(--primaer-weich); color: var(--primaer-tief); }
+  .fussnav a:hover, .fussnav-mehr:hover { color: var(--primaer-tief); }
+}
+
+/* ---------- Desktop ---------- */
+
+@media (min-width: 768px) {
+  .fussnav { display: none; }
+  .hamburger { display: inline-flex; }
+  main { padding: 1.6rem 1.5rem 1rem; }
+  h1 { font-size: 1.7rem; }
+}
+
+/* ---------- Info-Reiter (Über / Mitmachen) ---------- */
+
+.info-cta { margin: 0.9rem 0 0; flex-wrap: wrap; }
+
+/* Noch nicht gefüllter Platzhalter — sichtbar gelassen, monospace als Signal. */
+.info-platzhalter {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  font-size: 0.8rem;
+  color: var(--tinte-2);
+  word-break: break-word;
+}
+
+/* GitHub-Logo (Inline-SVG) im „Über"-Reiter unter Lizenz/Credits. */
+.github-logo { fill: currentColor; flex: none; vertical-align: -0.2em; margin-right: 0.15rem; }
+
+/* ---------- Willkommen: Hero + Einstiegs-CTAs ---------- */
+
+.hero {
+  background: linear-gradient(135deg, var(--primaer) 0%, var(--primaer-tief) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.8rem 1.4rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--schatten-hover);
+}
+
+.hero h1 { color: #fff; font-size: 1.65rem; margin-bottom: 0.5rem; }
+.hero p { color: rgba(255, 255, 255, 0.92); margin: 0; }
+
+.hero-icons { display: flex; gap: 0.8rem; margin-bottom: 0.9rem; }
+
+.hero-icons .fa-solid {
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Marken-Hero (Layout des OG-Bilds): Speeder/Icon links, Text rechts. Ruhiger
+   Panel-Look — dieselbe neutrale Karten-Elevation wie .karte (weiche Schatten,
+   kein blauer Akzentbalken/Rahmen), eine durchgehende Tinte-Hierarchie im Text
+   (kein zweiter Blauton neben der Überschrift). Nur Tokens → hell/dunkel
+   automatisch. Groß auf Start/Willkommen, .klein auf den obersten Landingpages. */
+.marke-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 1.35rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  box-shadow: var(--schatten-karte);
+  background: linear-gradient(160deg, var(--hintergrund-2) 0%, var(--flaeche) 100%);
+}
+.marke-hero-bild {
+  flex: none;
+  width: 96px;
+  height: 96px;
+}
+.marke-hero-icon {
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-klein);
+  background: var(--primaer-weich);
+  color: var(--primaer-tief);
+  font-size: 1.35rem;
+}
+.marke-hero-text { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.marke-hero-text h1 { margin: 0; font-size: 1.5rem; line-height: 1.1; color: var(--tinte); letter-spacing: -0.015em; }
+.marke-hero-untertitel { margin: 0; font-weight: 600; color: var(--tinte-2); font-size: 1rem; }
+.marke-hero-themen { margin: 0.1rem 0 0; color: var(--tinte-3); font-size: 0.86rem; }
+/* Einstiegs-CTAs direkt unter dem Hero-Text (nur Startseite). */
+.marke-hero-cta { margin-top: 0.95rem; }
+
+.marke-hero.klein { gap: 0.9rem; padding: 0.95rem 1.1rem; }
+.marke-hero.klein .marke-hero-text h1 { font-size: 1.25rem; display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; }
+.marke-hero.klein .marke-hero-untertitel { font-weight: 500; font-size: 0.9rem; color: var(--tinte-2); }
+
+/* Farbige Variante (Pfad-Landingpages): leichte Hue-Tönung + Icon in der Pfad-Hue,
+   passend zur jeweiligen Startseiten-Kachel. Ohne .hue bleibt der Hero neutral. */
+.marke-hero.klein.hue { background: linear-gradient(160deg, var(--pf-weich) 0%, var(--flaeche) 78%); }
+.marke-hero.klein.hue .marke-hero-icon { background: var(--pf-weich); color: var(--pf); }
+.marke-hero.klein.hue .marke-hero-icon .fa-solid { color: inherit; }
+/* Baustein-Hero: der Titel ist die Hauptüberschrift der Seite, etwas größer. */
+.baustein-hero .marke-hero-text h1 { font-size: 1.4rem; }
+.willkommen-lead { margin: -0.5rem 0 1.1rem; }
+
+@media (min-width: 40rem) {
+  .marke-hero { gap: 1.6rem; padding: 1.6rem 1.7rem; }
+  .marke-hero-bild { width: 120px; height: 120px; }
+  .marke-hero-text h1 { font-size: 1.85rem; }
+}
+
+.cta-karte {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta-symbol {
+  display: grid;
+  place-items: center;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: var(--radius);
+  background: var(--primaer-weich);
+  font-size: 1.45rem;
+  flex-shrink: 0;
+}
+
+.cta-text { flex: 1; display: flex; flex-direction: column; gap: 0.15rem; }
+.cta-text strong { font-size: 1.05rem; color: var(--ueberschrift); }
+
+.cta-pfeil { font-size: 1.1rem; transition: transform var(--uebergang); }
+
+@media (hover: hover) {
+  .cta-karte:hover .cta-pfeil { transform: translateX(5px); }
+  .cta-karte:hover { border-color: var(--primaer); }
+}
+
+/* ---------- Feinheiten ---------- */
+
+:focus-visible {
+  outline: 2px solid var(--primaer);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ---------- Feinschliff: Ziffern, Lesemaß, Ikon-Kachel, Ring, Leerzustand ---------- */
+
+/* Tabellenziffern überall, wo Zahlen zählen (Fortschritt, Stationen, Plan) —
+   gleiche Ziffernbreite, damit nichts springt. */
+.fortschritt-zeile .leise,
+.ring-text,
+.station-nummer,
+.stationszahl,
+.plan-feld input,
+.einheiten-zaehler {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ruhiges Lesemaß für Fließtext in den Abschnitten (Erklär-/Übungs-/Reflexion).
+   Auf schmalen Schirmen greift 100% ohnehin zuerst. */
+.abschnitt > p,
+.ue-block > p,
+.delta-hinweis {
+  max-width: 64ch;
+}
+
+/* Stationszahl in der Baustein-Ansicht als dezentes Kapitälchen-Label. */
+.stationszahl {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tinte-3);
+}
+
+/* Baustein-Titel: das Icon wird eine ruhige, getönte Kachel statt nacktem Glyph. */
+.baustein > h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.baustein-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  border-radius: var(--radius-klein);
+  background: var(--primaer-weich);
+  color: var(--primaer);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+/* Fortschritts-Ring (SVG-Donut). */
+.ring {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.ring svg {
+  transform: rotate(-90deg); /* 0 % beginnt oben statt rechts */
+}
+.ring-spur { stroke: var(--flaeche-2); }
+.ring-wert {
+  stroke: var(--primaer);
+  transition: stroke-dasharray 600ms cubic-bezier(0.22, 0.9, 0.35, 1);
+}
+.ring-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ueberschrift);
+}
+.ring-prozent { font-size: 0.62em; color: var(--tinte-2); margin-left: 0.06em; }
+
+/* Profil-Gesamt: Ring neben der Kennzahl. */
+.ring-zeile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+.ring-zeile .leise { margin: 0; }
+
+/* Kompetenz-Karte auf der Startseite: Text links, Ring rechts. */
+.karte-ring {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.karte-ring > div { min-width: 0; }
+.karte-ring > div > :last-child { margin-bottom: 0; }
+
+/* Leerer Zustand: zentriertes ruhiges Icon über dem Hinweis. */
+.leer-zustand {
+  text-align: center;
+  padding: 1.8rem 1.25rem;
+}
+.leer-zustand > i {
+  font-size: 1.6rem;
+  color: var(--primaer);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.leer-zustand > p { margin: 0; }
+/* Aktiver Leer-Zustand: Ausweg-Knöpfe unter der Nachricht, zentriert. */
+.leer-aktion { justify-content: center; margin-top: 1rem; }
+
+/* ---------- Suche ---------- */
+.such-form { margin: 0 0 1rem; }
+.such-feld-zeile { position: relative; display: flex; align-items: center; }
+.such-feld-icon { position: absolute; left: 0.85rem; color: var(--primaer); opacity: 0.75; pointer-events: none; }
+.such-feld {
+  width: 100%;
+  padding: 0.72rem 0.9rem 0.72rem 2.5rem;
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  background: var(--flaeche);
+  color: var(--tinte);
+  font: inherit;
+  box-shadow: var(--schatten-karte);
+}
+.such-feld::placeholder { color: var(--tinte-2); }
+.such-feld:focus-visible { outline: 2px solid var(--primaer); outline-offset: 1px; border-color: var(--primaer); }
+
+.such-start { text-align: center; }
+.such-vorschlaege { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 0.8rem 0 0; }
+.such-vorschlag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--primaer-weich);
+  color: var(--primaer-tief);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--uebergang), color var(--uebergang);
+}
+@media (hover: hover) { .such-vorschlag:hover { background: var(--primaer); color: #fff; } }
+
+.such-anzahl { margin: 0 0 0.75rem; }
+.such-liste { display: flex; flex-direction: column; gap: 0.6rem; }
+.such-treffer { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 0; }
+.such-medaille {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-klein);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pf-weich);
+  color: var(--pf);
+}
+.such-medaille .fa-solid { color: inherit; }
+.such-treffer-text { flex: 1; min-width: 0; }
+.such-treffer-text h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+.such-meta { margin: 0 0 0.3rem; font-size: 0.8rem; }
+.such-ausschnitt { margin: 0; font-size: 0.9rem; color: var(--tinte); }
+.such-ausschnitt mark { background: var(--primaer-weich); color: var(--primaer-tief); padding: 0 0.12em; border-radius: 3px; }
+
+/* Dunkelmodus-Tiefe: höher liegende Flächen tragen einen zarten oberen
+   Lichtsaum (Elevation-Overlay) — sonst liest sich Tiefe im Dunkeln flach. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) .karte,
+  :root:not([data-theme='hell']) .abschnitt,
+  :root:not([data-theme='hell']) .station {
+    box-shadow: var(--schatten-karte), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  }
+}
+:root[data-theme='dunkel'] .karte,
+:root[data-theme='dunkel'] .abschnitt,
+:root[data-theme='dunkel'] .station {
+  box-shadow: var(--schatten-karte), inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+/* ---------- Trainingsplan ---------- */
+
+.plan-felder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.7rem;
+  margin: 0.8rem 0;
+}
+.plan-feld { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.82rem; color: var(--tinte-2); font-weight: 600; }
+.plan-feld input, .plan-feld select {
+  font: inherit; font-weight: 400; color: var(--tinte);
+  padding: 0.5rem 0.6rem; border: 1px solid var(--linie); border-radius: var(--radius); background: var(--flaeche);
+}
+.plan-uebersicht { margin-top: 1rem; }
+.plan-kopf { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem; margin-bottom: 0.4rem; }
+.plan-aktionen { margin: 0; }
+.plan-woche { margin-top: 1.1rem; }
+.plan-woche > h3 { color: var(--ueberschrift); border-bottom: 1px solid var(--linie); padding-bottom: 0.3rem; margin-bottom: 0.3rem; }
+.plan-session {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.4rem 0.9rem;
+  align-items: start;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--linie);
+}
+.plan-session:last-child { border-bottom: 0; }
+.plan-session-datum { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--primaer-tief); white-space: nowrap; font-size: 0.88rem; padding-top: 0.15rem; }
+.plan-session-inhalt h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.plan-session-link { display: inline-block; margin-top: 0.15rem; }
+.plan-session-knoepfe { display: flex; gap: 0.3rem; }
+.plan-session-knoepfe .knopf { padding: 0.4rem 0.55rem; }
+
+/* ---------- Dunkelmodus-Feinschliff (was Tokens allein nicht abdecken) ---------- */
+/* Der Primär-Button trägt im Dunkeln dunklen Text auf dem hellen Marken-Blau;
+   der Willkommens-Hero behält einen tiefen Blauverlauf (weißer Text bleibt lesbar). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) .knopf-primaer { color: #08151f; background: var(--primaer); }
+  :root:not([data-theme='hell']) .hero { background: linear-gradient(135deg, #1c6fae 0%, #0e4a79 100%); }
+}
+:root[data-theme='dunkel'] .knopf-primaer { color: #08151f; background: var(--primaer); }
+:root[data-theme='dunkel'] .hero { background: linear-gradient(135deg, #1c6fae 0%, #0e4a79 100%); }
+
+/* Druckansicht = „Als PDF": nur der Plan, ohne Navigation, Formular und Knöpfe. */
+@media print {
+  .kopf, .fussnav, .menue, .sprach-anzeige,
+  .plan-konfig, .plan-aktionen, .plan-session-knoepfe, .plan-session-link { display: none !important; }
+  body { background: #fff; }
+  main { padding: 0; max-width: none; }
+  .karte { box-shadow: none; border: 1px solid #ccc; margin: 0 0 0.6rem; }
+  .plan-session { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+}
+
+/* ============================================================================
+   mosh school — GRUNGY HARDCORE SKIN
+   Überschreibt die Basistokens (Kaskade: später gewinnt). Düster, hart,
+   zerkratzt: Concrete-Schwarz, Knochen-Weiss, Blutrot als Spot; harte Kanten,
+   harte Versatz-Schatten (Siebdruck), Filmkorn-Overlay, fette Versalien.
+   ============================================================================ */
+
+/* Hell = distressed Xerox-Flyer (Knochenpapier + Tinte + Rot) */
+:root {
+  --primaer: #cc2418;
+  --primaer-dunkel: #a81a10;
+  --primaer-tief: #a81a10;
+  --primaer-weich: #f3ded9;
+  --hintergrund: #dcd8cd;
+  --hintergrund-2: #d0ccbf;
+  --flaeche: #ebe8df;
+  --flaeche-2: #dedacd;
+  --tinte: #17140f;
+  --tinte-2: #4a453d;
+  --tinte-3: #6b655b;
+  --linie: #17140f;
+  --linie-stark: #17140f;
+  --ueberschrift: #17140f;
+  --kopf-bg: rgba(220,216,205,0.94);
+  --overlay: rgba(23,20,15,0.55);
+  --signal-rot: #b23a26; --signal-rot-text: #9a2c19; --signal-rot-weich: #f0ddd7;
+  --signal-gelb: #c79a12; --signal-gelb-text: #7d5f04; --signal-gelb-weich: #f3e8cb;
+  --signal-gruen: #4f7a1f; --signal-gruen-text: #3c5f15; --signal-gruen-weich: #e2ecd4;
+}
+
+/* Dunkel = die Haupt-Identität: Concrete-Schwarz */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) {
+    --primaer: #ff3b2e;
+    --primaer-dunkel: #ff5b50;
+    --primaer-tief: #ff3b2e;
+    --primaer-weich: #2c1310;
+    --hintergrund: #0b0b0c;
+    --hintergrund-2: #111112;
+    --flaeche: #161617;
+    --flaeche-2: #1e1e20;
+    --tinte: #ece9e1;
+    --tinte-2: #a4a099;
+    --tinte-3: #77736b;
+    --linie: #34343a;
+    --linie-stark: #55555d;
+    --ueberschrift: #ece9e1;
+    --kopf-bg: rgba(11,11,12,0.9);
+    --overlay: rgba(0,0,0,0.7);
+    --signal-rot: #c2472f; --signal-rot-text: #e8836c; --signal-rot-weich: #2a1410;
+    --signal-gelb: #d9ab24; --signal-gelb-text: #e6c568; --signal-gelb-weich: #2f2810;
+    --signal-gruen: #7bbb2c; --signal-gruen-text: #a7dd6a; --signal-gruen-weich: #16260f;
+  }
+}
+:root[data-theme='dunkel'] {
+  --primaer: #ff3b2e;
+  --primaer-dunkel: #ff5b50;
+  --primaer-tief: #ff3b2e;
+  --primaer-weich: #2c1310;
+  --hintergrund: #0b0b0c;
+  --hintergrund-2: #111112;
+  --flaeche: #161617;
+  --flaeche-2: #1e1e20;
+  --tinte: #ece9e1;
+  --tinte-2: #a4a099;
+  --tinte-3: #77736b;
+  --linie: #34343a;
+  --linie-stark: #55555d;
+  --ueberschrift: #ece9e1;
+  --kopf-bg: rgba(11,11,12,0.9);
+  --overlay: rgba(0,0,0,0.7);
+  --signal-rot: #c2472f; --signal-rot-text: #e8836c; --signal-rot-weich: #2a1410;
+  --signal-gelb: #d9ab24; --signal-gelb-text: #e6c568; --signal-gelb-weich: #2f2810;
+  --signal-gruen: #7bbb2c; --signal-gruen-text: #a7dd6a; --signal-gruen-weich: #16260f;
+}
+
+/* Harte Kanten überall (Siebdruck statt weiche App) */
+:root, :root[data-theme='dunkel'] {
+  --radius: 2px; --radius-gross: 2px; --radius-klein: 1px;
+  --schatten-weich: 3px 3px 0 rgba(0,0,0,0.55);
+  --schatten-karte: 4px 4px 0 rgba(0,0,0,0.6);
+  --schatten-hover: 6px 6px 0 var(--primaer);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) {
+    --radius: 2px; --radius-gross: 2px; --radius-klein: 1px;
+    --schatten-weich: 3px 3px 0 rgba(0,0,0,0.85);
+    --schatten-karte: 4px 4px 0 rgba(0,0,0,0.8);
+    --schatten-hover: 6px 6px 0 var(--primaer);
+  }
+}
+
+/* Filmkorn über allem — dezent, damit es "ordentlich"/lesbar bleibt (zerkratzt, nicht chaotisch) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
+/* Überschriften: fette Versalien, eng — hardcore-Poster (kondensierte Woff2 folgt) */
+h1, h2, h3, .marke-text, .marke-hero-text h1, .abschnitt-titel {
+  font-family: 'Oswald', 'Archivo Narrow', 'Arial Narrow', var(--schrift, 'Rubik'), system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  font-weight: 700;
+}
+h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
+.marke-text { letter-spacing: 0.04em; }
+
+/* Karten: harte sichtbare Kante + harter Versatz-Schatten statt weicher Elevation */
+.karte, .marke-hero, .pfad-kachel, .station, .baustein-hero, .abschnitt {
+  border: 1.5px solid var(--linie-stark);
+  box-shadow: var(--schatten-karte);
+}
+.karte-akzent { border-left: 4px solid var(--primaer); }
+
+/* Knöpfe: hart, blockig, Versalien; Primär = Blutrot mit Tinten-Schrift (bold, AA) */
+.knopf { border-radius: 2px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 700; border-width: 1.5px; }
+.knopf-primaer { background: var(--primaer); color: #0b0b0c; border: 1.5px solid var(--primaer); box-shadow: var(--schatten-weich); }
+:root[data-theme='dunkel'] .knopf-primaer, 
+.knopf-primaer { color: #0b0b0c; }
+.knopf-sekundaer { border: 1.5px solid var(--linie-stark); background: transparent; }
+
+/* Kopfzeile mit harter Unterkante */
+.kopf { border-bottom: 2px solid var(--linie-stark); }
+
+/* Willkommens-Hero im Dunkel: Concrete statt geerbtem Crossminton-Blau (Fork-Rest),
+   Blutrot nur als harte Kante — nicht als Fläche. Der weiße Hero-Text bleibt lesbar. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) .hero {
+    background: linear-gradient(135deg, #1e1e20 0%, #0b0b0c 100%);
+    border: 2px solid var(--primaer);
+    box-shadow: var(--schatten-karte);
+  }
+}
+:root[data-theme='dunkel'] .hero {
+  background: linear-gradient(135deg, #1e1e20 0%, #0b0b0c 100%);
+  border: 2px solid var(--primaer);
+  box-shadow: var(--schatten-karte);
+}
+
+/* Aktive Navigation: roter Marker */
+.fussnav a.aktiv, .fussnav-mehr.aktiv, .menue-punkt.aktiv { color: var(--primaer); }
+.fussnav a.aktiv { box-shadow: inset 0 3px 0 var(--primaer); }
+
+/* Chips/Stufen: eckig + Kante */
+.chip { border-radius: 2px; border: 1px solid var(--linie-stark); text-transform: uppercase; letter-spacing: 0.02em; font-size: 0.72rem; }
+
+/* Medaillen/Icons hart einrahmen (Stempel-Look) */
+.pfad-medaille, .marke-hero-icon, .such-medaille { border-radius: 2px; border: 1.5px solid currentColor; }
+
+/* mosh school — Medaillen-Hues (hardcore statt Crossminton-Kühl) */
+:root {
+  --pf-blau: #a81a10; --pf-blau-weich: #f0dcd7;
+  --pf-teal: #5f6a72; --pf-teal-weich: #e2e0d8;
+  --pf-violett: #9a3a22; --pf-violett-weich: #f0ddd5;
+  --pf-indigo: #a67c10; --pf-indigo-weich: #efe6cd;
+  --pf-magenta: #cc2418; --pf-magenta-weich: #f3ded9;
+  --pf-sky: #5a7a1f; --pf-sky-weich: #e4ecd6;
+  --pf-schiefer: #55525a; --pf-schiefer-weich: #e3e0d8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) {
+    --pf-blau: #cbc6ba; --pf-blau-weich: #201f1f;
+    --pf-teal: #9aa0a8; --pf-teal-weich: #1b1e22;
+    --pf-violett: #e8836c; --pf-violett-weich: #251310;
+    --pf-indigo: #e6c568; --pf-indigo-weich: #241f0c;
+    --pf-magenta: #ff3b2e; --pf-magenta-weich: #261110;
+    --pf-sky: #a7dd6a; --pf-sky-weich: #17240f;
+    --pf-schiefer: #b3afa5; --pf-schiefer-weich: #201f22;
+  }
+}
+:root[data-theme='dunkel'] {
+  --pf-blau: #cbc6ba; --pf-blau-weich: #201f1f;
+  --pf-teal: #9aa0a8; --pf-teal-weich: #1b1e22;
+  --pf-violett: #e8836c; --pf-violett-weich: #251310;
+  --pf-indigo: #e6c568; --pf-indigo-weich: #241f0c;
+  --pf-magenta: #ff3b2e; --pf-magenta-weich: #261110;
+  --pf-sky: #a7dd6a; --pf-sky-weich: #17240f;
+  --pf-schiefer: #b3afa5; --pf-schiefer-weich: #201f22;
+}
+
+/* mosh school — Display-Schrift Anton (kondensiert) für die großen Überschriften;
+   h3 (Karten-/Unterteil-Titel) bleiben in Rubik 700, damit längere Titel lesbar sind. */
+h1, h2, .marke-text, .marke-hero-text h1, .abschnitt-titel {
+  font-family: 'Anton', 'Oswald', 'Arial Narrow', 'Rubik', system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+h3 { font-family: 'Rubik', system-ui, sans-serif; font-weight: 700; }
+
+/* Instrument-SVGs in den Icon-Medaillen skalieren + einfärben (currentColor). */
+.dom-svg { width: 1.5rem; height: 1.5rem; display: block; }
+.marke-hero-icon .dom-svg { width: 1.7rem; height: 1.7rem; }
+
+/* Abstrakte Baustein-Grafiken (data/grafiken.json, inline via bausteinIcon):
+   currentColor erbt die Kontextfarbe; Größen je Einsatzort. Die Grafiken sind
+   quadratisch (viewBox 120) und ersetzen die FA-Baustein-Icons. */
+svg.grafik-icon { width: 1.25em; height: 1.25em; vertical-align: -0.25em; }
+svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -0.5rem; }
+.marke-hero-icon svg.grafik-icon { width: 2.1rem; height: 2.1rem; vertical-align: 0; }
+.such-medaille svg.grafik-icon { width: 1.35rem; height: 1.35rem; vertical-align: 0; }
+.fb-karte h3 svg.grafik-icon { width: 1.6em; height: 1.6em; vertical-align: -0.4em; }
+
+/* Lehrgrafiken: breite Erklär-Schemata im Erklärteil (Tranche 4). */
+.lehrgrafik { margin: 1.1rem 0 1.4rem; }
+.lehrgrafik .lehrgrafik-svg { display: block; width: 100%; max-width: 460px; height: auto; color: var(--tinte); }
+.lehrgrafik figcaption { font-size: 0.85rem; color: var(--tinte-2); margin-top: 0.4rem; max-width: 460px; }
+
+/* Stimmungs-Werkzeug */
+.chip-waehlbar { cursor: pointer; background: var(--flaeche); font: inherit; font-size: 0.72rem; }
+/* Aktiver Auswahl-Chip: die Akzentfläche muss die neutrale .chip-waehlbar-Fläche
+   schlagen (gleiche Spezifität, aber diese Regel kommt später) — sonst bliebe der
+   Aktiv-Zustand nur an der Textfarbe erkennbar. */
+.chip-waehlbar.chip-akzent { background: var(--primaer-weich); color: var(--primaer-tief); }
+.chip-waehlbar svg { width: 1em; height: 1em; vertical-align: -0.15em; }
+.stimm-detail { margin-top: 1.2rem; }
+.stimm-saiten { display: flex; flex-direction: column; gap: 0.35rem; margin: 1rem 0; max-width: 460px; }
+.saite { display: flex; align-items: center; gap: 0.7rem; background: var(--flaeche); border: 1px solid var(--linie-stark); border-radius: 2px; padding: 0.45rem 0.7rem; cursor: pointer; color: var(--tinte); font: inherit; }
+.saite:hover { border-color: var(--primaer, var(--tinte)); }
+.saite-note { font-weight: 700; min-width: 2.6rem; text-align: left; }
+.saite svg { flex: 1; height: 12px; }
+.stimm-fakten { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; margin: 0.8rem 0; }
+.stimm-fakten dt { font-weight: 700; }
+.stimm-fakten dd { margin: 0; }
+
+/* Klang-Werkzeug (Intervalle & Akkorde zum Anhören) */
+.klang-werkzeug { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--linie-stark); }
+.klang-werkzeug h3 { margin: 1rem 0 0.4rem; font-size: 0.95rem; }
+.klang-knopf { gap: 0.35rem; }
+.klang-knopf i { font-size: 0.72em; }
+.klang-hinweis { margin-top: 0.9rem; min-height: 1.4em; }
+
+/* Pattern-Werkzeug (Riffs als TAB & Drumpattern pro Genre) */
+.pattern-liste { display: grid; gap: 1rem; margin: 1.2rem 0; }
+.pattern-karte { background: var(--flaeche); border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); box-shadow: var(--schatten-karte); padding: 0.9rem 1rem 1.1rem; }
+.pattern-kopf { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; }
+.pattern-kopf h3 { margin: 0; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.pattern-kopf h3 svg { width: 1.1em; height: 1.1em; vertical-align: -0.15em; }
+.pattern-play { gap: 0.35rem; }
+.pattern-play i { font-size: 0.72em; }
+.pattern-meta { margin: 0.3rem 0 0.7rem; }
+.pattern-raster { overflow-x: auto; padding-bottom: 0.2rem; }
+.pattern-hinweis { margin: 0.8rem 0 0; }
+
+.tab-raster, .drum-raster { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.tab-raster th, .drum-raster th { text-align: right; padding: 0 0.6rem 0 0; font-weight: 700; font-size: 0.78rem; color: var(--tinte-2); white-space: nowrap; }
+/* Zeilenkopf (Saite/Spur) bleibt beim horizontalen Scrollen des Rasters stehen. */
+.tab-saite, .drum-spur { position: sticky; left: 0; z-index: 1; background: var(--flaeche); }
+.tab-zelle { width: 1.55rem; height: 1.5rem; text-align: center; font-weight: 700; font-size: 0.82rem; border-bottom: 2px solid var(--linie-stark); color: var(--tinte); }
+.tab-zelle.tab-treffer { color: var(--primaer-tief); }
+.drum-spur { font-size: 0.72rem !important; }
+.drum-zelle { width: 1.4rem; height: 1.4rem; text-align: center; border: 1px solid var(--linie); }
+/* Symbol je Spur — Beat-Raster-Konvention: Hi-Hat ×, Snare ○ (hohl), Kick ●,
+   China/Crash ◆. Klar unterscheidbare Glyphen statt formähnlicher Flächen. */
+.drum-mark { display: inline-block; font-size: 0.95rem; line-height: 1; color: var(--primaer); }
+.drum-an.drum-hihat .drum-mark { color: var(--tinte-2); }
+.drum-an.drum-hihat .drum-mark::before { content: "\2715"; }
+.drum-an.drum-snare .drum-mark::before { content: "\25CB"; }
+.drum-an.drum-kick .drum-mark::before { content: "\25CF"; }
+.drum-an.drum-crash .drum-mark::before { content: "\25C6"; }
+/* Laufende Spalte: neutrale Fläche + Akzentrahmen statt Rot-auf-Rot (Kontrast). */
+.tab-zelle.schritt-aktiv, .drum-zelle.schritt-aktiv { background: var(--flaeche-2); box-shadow: inset 0 0 0 2px var(--primaer); }
+
+/* Pattern-Werkzeug: Steuerzeile (Tempo-Regler + Loop) */
+.pattern-steuerung { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1.2rem; margin: 0.6rem 0 0.2rem; }
+.pattern-tempo-feld { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; font-weight: 700; color: var(--tinte-2); }
+.pattern-tempo { accent-color: var(--primaer); max-width: 9rem; }
+.pattern-tempo-wert { min-width: 3.2rem; font-variant-numeric: tabular-nums; }
+.pattern-loop { gap: 0.35rem; }
+.pattern-loop i { font-size: 0.8em; }
+
+/* Könnens-Check (Referenzbereich, kein Fortschritt): Stufen-Selbsteinschätzung.
+   Kategorien als Fieldsets, Posten als echte Checkboxen mit Pflicht/Empfehlung-Marke. */
+.kc-zaehler { font-weight: 700; font-variant-numeric: tabular-nums; margin: 0.25rem 0 0.75rem; }
+.kc-gruppen { display: grid; gap: 1rem; }
+.kc-gruppe {
+  border: 1px solid var(--linie-stark); border-radius: var(--radius);
+  background: var(--flaeche); padding: 0.85rem 1rem 1rem; margin: 0;
+}
+.kc-gruppe > legend {
+  font-family: 'Rubik', system-ui, sans-serif; font-weight: 700;
+  letter-spacing: 0.01em; font-size: 0.95rem; padding: 0 0.4rem; color: var(--ueberschrift);
+}
+.kc-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.kc-posten {
+  display: grid; grid-template-columns: auto 1fr; gap: 0.65rem; align-items: start;
+  padding: 0.55rem 0.6rem; border: 1px solid var(--linie); border-radius: var(--radius-klein);
+  background: var(--flaeche-2); transition: border-color var(--uebergang), background var(--uebergang);
+}
+.kc-posten input[type='checkbox'] {
+  width: 1.15rem; height: 1.15rem; margin-top: 0.15rem; accent-color: var(--signal-gruen); cursor: pointer;
+}
+.kc-posten label { display: grid; gap: 0.2rem; cursor: pointer; }
+.kc-posten-kopf { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.kc-posten-titel { font-weight: 700; color: var(--tinte); }
+.kc-posten-text { font-size: 0.86rem; }
+.kc-posten.erledigt { border-color: var(--signal-gruen); background: var(--signal-gruen-weich); }
+.kc-posten.erledigt .kc-posten-titel { color: var(--signal-gruen-text); }
+.kc-marke {
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  padding: 0.1rem 0.45rem; border-radius: 999px; white-space: nowrap;
+}
+.kc-marke.kc-pflicht { background: var(--primaer-weich); color: var(--primaer); }
+.kc-marke.kc-empfehlung { background: var(--flaeche); color: var(--tinte-3); border: 1px solid var(--linie-stark); }
+.kc-fuss { margin-top: 1rem; }

@@ -1,0 +1,268 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "theorie",
+    "hinweis": "Einsteiger-Theorie: instrumentenunabhängiges Grundwissen für Metal (Intervalle, Skalen-Farben, Rhythmus, Tempo, Songbau). Sichtbare Titel stehen inline in anzeigetitel und werden nach labels/de.json geliftet."
+  },
+  "delta_bausteine": [
+    {
+      "id": "delta_klv_intervalle",
+      "basis_baustein": "intervalle_grundlagen",
+      "ersetzt_bei_herkunft": "KLV",
+      "erklaerteil": {
+        "de": "Vom Klavier kennst du Intervalle als sichtbare Abstände: eine Quinte sind sieben Halbtöne, auf der Tastatur direkt ablesbar. Dieses Wissen trägt komplett — was Metal dazulegt, ist eine andere Gewichtung: Hier zählen vor allem drei Klangcharaktere. Die Oktave („derselbe Ton, nur höher“), die Quinte als stabiles Kraftintervall (der Powerchord besteht nur aus ihr) und die kleine Sekunde als maximale Reibung — das Gründungsintervall von Black Metal und Doom.\n\nDie Umstellung für dich ist der Weg vom Auge zum Ohr: Auf der Tastatur SIEHST du Intervalle, im Bandkontext musst du sie HÖREN — im verzerrten Riff, ohne Tasten vor dir. Nutze dein Klavier als Brücke: Spiel die drei Kernintervalle bewusst an, sing sie nach, und such sie dann in Riffs wieder. Dein Vorsprung: Du musst nichts Neues verstehen, nur Vertrautes in eine neue Klangwelt übersetzen.\n\nAls Anker helfen Referenzriffs — die Quinte ist jeder Powerchord, die kleine Sekunde jede böse Halbton-Reibung über dem Grundton."
+      }
+    },
+    {
+      "id": "delta_klv_taktarten",
+      "basis_baustein": "taktarten_unterteilungen",
+      "ersetzt_bei_herkunft": "KLV",
+      "erklaerteil": {
+        "de": "Notenwerte und Taktarten kennst du aus dem Klavierunterricht — Viertel, Achtel, Sechzehntel, Triolen sind für dich Lesestoff, kein Neuland. Was Metal verlangt, ist eine andere Ebene: Die Unterteilungen müssen bei hohem Tempo KÖRPERLICH abrufbar sein, nicht nur lesbar. Ein Blastbeat bei 220 BPM fragt nicht, ob du Sechzehntel notieren kannst — er fragt, ob dein Puls stabil bleibt, während sich die Dichte verdoppelt.\n\nDie typische Klavier-Falle ist dabei dieselbe wie überall: Beim Wechsel von Achteln zu Triolen zieht das Grundtempo mit, weil das Zählen an den Tönen hängt statt am Puls. Metal trainiert das mit Silbensprache und Körper-Puls (Fuß hält die Viertel, Stimme spricht die Unterteilung) — Werkzeuge, die dir mit deiner Lese-Grundlage schnell zufliegen.\n\nDein Vorsprung: Du weißt schon, WAS passiert. Der Baustein übt, es bei Metal-Tempi zu FÜHLEN — vom Blatt in den Körper."
+      }
+    },
+    {
+      "id": "delta_drm_taktarten",
+      "basis_baustein": "taktarten_unterteilungen",
+      "ersetzt_bei_herkunft": "DRM",
+      "erklaerteil": {
+        "de": "Als Schlagzeuger bist du hier im Heimspiel: Unterteilungen sind dein Handwerk, und den Unterschied zwischen Achteln, Sechzehnteln und Triolen hast du in den Händen, nicht nur im Kopf. Dieser Baustein ist für dich weniger Lernstoff als Übersetzungsarbeit — die Frage ist nicht, ob du Unterteilungen fühlst, sondern ob du sie auch OHNE dein Instrument abrufen und benennen kannst: beim Riff-Schreiben, im Gespräch mit der Band, beim Hören.\n\nZwei Dinge lohnen sich trotzdem: Erstens die Vokabeln — wer einem Gitarristen erklären kann, dass sein Galopp ein Achtel-plus-zwei-Sechzehntel-Muster ist, spart Proben-Zeit. Zweitens die Gegenprobe: Sing oder klopf die Unterteilungswechsel auf dem Tisch, während der Fuß die Viertel hält — ganz ohne Set. Wenn das so stabil ist wie hinter den Drums, gehört dir der Baustein.\n\nNutz deinen Vorsprung als Anker für die Band: Du bist die Referenz, an der sich alle Unterteilungen ausrichten."
+      }
+    }
+  ],
+  "bausteine": [
+    {
+      "id": "intervalle_grundlagen",
+      "anzeigetitel": {
+        "de": "Intervalle: das Rohmaterial"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Intervall ist der Abstand zwischen zwei Tönen — das Rohmaterial, aus dem Riffs und Akkorde gebaut sind. Für Metal sind vor allem drei Klangcharaktere wichtig: Die Oktave klingt wie „derselbe Ton, nur höher“, die Quinte klingt stabil und kraftvoll, und die kleine Sekunde — zwei direkt benachbarte Töne — klingt eng und spannungsgeladen.\n\nGenau diese Charaktere hörst du in der Musik wieder: Die Quinte trägt den Powerchord, die kleine Sekunde sorgt für das Bedrohliche in vielen Death- und Black-Metal-Riffs. Wer Intervalle am Klang erkennt, versteht Riffs schneller und kann sie leichter nachspielen oder selbst bauen.\n\nDu brauchst dafür kein Notenlesen: Es reicht, die Abstände bewusst zu hören und zu benennen. Jedes Instrument (oder eine Piano-App) taugt als Tonquelle."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei Intervalle am Klang erkennen",
+          "ziel": "Oktave, Quinte und kleine Sekunde sicher unterscheiden.",
+          "schritte": [
+            "Spiel auf einem Instrument oder einer App einen Grundton und dazu die Oktave — hör auf das „gleich, nur höher“.",
+            "Spiel denselben Grundton mit der Quinte darüber und merk dir den stabilen, offenen Klang.",
+            "Spiel den Grundton mit dem direkt benachbarten Ton (kleine Sekunde) und vergleich die Reibung mit den beiden anderen Klängen."
+          ],
+          "steigerung": "Lass dir die drei Intervalle in zufälliger Reihenfolge vorspielen (App oder eine zweite Person) und benenne sie nur nach Gehör.",
+          "selbstkontrolle": "Du erkennst die drei Intervalle zuverlässig, ohne hinzusehen."
+        }
+      },
+      "transfer_herkunft": [
+        "KLV"
+      ]
+    },
+    {
+      "id": "powerchord_theorie",
+      "anzeigetitel": {
+        "de": "Warum Powerchords funktionieren"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "intervalle_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Der Powerchord besteht nur aus Grundton und Quinte — die Terz, die einen Akkord nach Dur oder Moll klingen lässt, fehlt bewusst. Das ist kein Zufall, sondern Physik: Starke Verzerrung erzeugt zu jedem gespielten Ton zusätzliche Obertöne und Kombinationstöne. Je mehr unterschiedliche Intervalle im Akkord stecken, desto mehr dieser Zusatztöne reiben sich — der Klang wird matschig.\n\nGrundton und Quinte vertragen sich dabei besonders gut, weil ihre Obertonreihen stark überlappen. Deshalb bleibt der Powerchord auch unter extremer Verzerrung klar und wuchtig, während ein voller Dur-Akkord zerfällt.\n\nDiese eine Idee erklärt viel Metal-Harmonik: Das Genre baut auf Powerchords und Einzeltonlinien, und Farben wie Dur oder Moll entstehen eher durch die Melodie- und Riff-Töne drumherum als durch volle Akkorde."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör dir ein verzerrtes Riff deiner Wahl an und achte darauf, ob volle Akkorde oder Powerchords gespielt werden. Woran hörst du den Unterschied? Und wenn du ein Instrument zur Hand hast: Vergleich einen vollen Akkord und einen Powerchord unter Verzerrung — was passiert mit der Klarheit?"
+      }
+    },
+    {
+      "id": "moll_phrygisch",
+      "anzeigetitel": {
+        "de": "Moll & Phrygisch: dunkle Farben"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "death_metal",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "intervalle_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Die meisten Metal-Riffs schöpfen aus Moll — der Tonleiter, die dunkler und schwerer klingt als Dur. Noch eine Stufe düsterer wird es mit Phrygisch: Diese Tonleiter unterscheidet sich vom natürlichen Moll durch einen einzigen Ton, die tiefergelegte zweite Stufe. Genau dieser Halbton direkt über dem Grundton (die kleine Sekunde) erzeugt das Bedrohliche, „Böse“, das du aus unzähligen Death- und Black-Metal-Riffs kennst.\n\nDu musst dafür keine Tonleitern auswendig lernen. Wichtiger ist, die Farbe zu hören: Dur klingt offen, Moll dunkel, Phrygisch bedrohlich eng. Riffs pendeln oft zwischen dem Grundton und dieser kleinen Sekunde, um Spannung aufzubauen.\n\nWenn du diese Farbe erkennst, verstehst du, warum ein Riff so klingt, wie es klingt — und kannst beim eigenen Schreiben gezielt danach greifen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die phrygische Farbe hören",
+          "ziel": "Den Unterschied zwischen Moll und Phrygisch am Klang erkennen.",
+          "schritte": [
+            "Spiel (oder lass dir vorspielen) einen Grundton und dann den Ton eine kleine Sekunde darüber — das ist die phrygische Reibung.",
+            "Vergleich das mit dem Ton eine große Sekunde über dem Grundton, wie er im natürlichen Moll vorkommt.",
+            "Pendle zwischen Grundton und kleiner Sekunde hin und her und hör, wie ein bedrohlicher Riff-Kern entsteht."
+          ],
+          "steigerung": "Such in einem Death- oder Black-Metal-Song eine Stelle, an der genau diese Halbton-Reibung das Riff prägt.",
+          "selbstkontrolle": "Du hörst den Unterschied zwischen der Moll- und der phrygischen Farbe sicher heraus."
+        }
+      }
+    },
+    {
+      "id": "tritonus_dissonanz",
+      "anzeigetitel": {
+        "de": "Tritonus & Dissonanz"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "doom",
+        "black_metal"
+      ],
+      "voraussetzungen": [
+        "intervalle_grundlagen"
+      ],
+      "erklaerteil": {
+        "de": "Der Tritonus liegt genau zwischen Quarte und Quinte — drei Ganztöne über dem Grundton. Er klingt instabil und unheilvoll; im Mittelalter bekam er den Beinamen „Diabolus in musica“, der Teufel in der Musik. Als Black Sabbath ihren ersten Song auf genau diesem Intervall aufbauten, wurde er zum Gründungsklang des Doom und Heavy Metal.\n\nDissonanz — die bewusste Reibung zwischen Tönen — ist im Extreme Metal kein Fehler, sondern ein Werkzeug. Tritonus, kleine Sekunde und chromatische Rutscher erzeugen die Unruhe und Härte, die das Genre will. Konsonante, „schöne“ Intervalle wie die Quinte liefern dagegen Stabilität und Wucht.\n\nGute Riffs spielen mit diesem Kontrast: Spannung aus Dissonanz, Auflösung in den stabilen Powerchord. Wer beides gezielt einsetzt, schreibt Riffs mit Dramaturgie statt Zufall."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör dir den Anfang von Black Sabbaths „Black Sabbath“ oder einen ähnlich unheilvollen Doom-Song an. Wo hörst du die Reibung, wo die Auflösung in Stabilität? Überleg dir, wie ein Riff wirken würde, das NUR aus stabilen Quinten bestünde — und was ihm fehlen würde."
+      }
+    },
+    {
+      "id": "taktarten_unterteilungen",
+      "anzeigetitel": {
+        "de": "Takt, Puls & Unterteilungen"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Fast aller Metal steht im 4/4-Takt: vier gleichmäßige Zählzeiten, die den Puls bilden. Interessant wird es durch die Unterteilungen — Achtel (zwei Töne pro Schlag), Sechzehntel (vier pro Schlag) und Triolen (drei pro Schlag). Aus diesen wenigen Werten bestehen praktisch alle Riffs und Beats des Genres.\n\nDer Galopp ist zum Beispiel nichts anderes als „Achtel plus zwei Sechzehntel“, und ein Blastbeat ist eine durchlaufende Sechzehntel-Kette. Wer Unterteilungen zählen und fühlen kann, kann jedes Riff in seine rhythmischen Bausteine zerlegen — und lernt es dadurch schneller.\n\nDieses Zählen ist instrumentenunabhängig: Du kannst es mit Klatschen oder Sprechen üben, ganz ohne Instrument. Genau darum ist es Theorie, die sich sofort praktisch auszahlt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Unterteilungen klatschen",
+          "ziel": "Viertel, Achtel, Sechzehntel und Triolen sicher fühlen und wechseln.",
+          "schritte": [
+            "Stell ein Metronom auf ein ruhiges Tempo und klatsch die Viertel mit (zähl laut 1-2-3-4).",
+            "Wechsle zu Achteln (1-und-2-und …) und dann zu Sechzehnteln, ohne den Puls zu verlieren.",
+            "Sprich Triolen dazu (z. B. „1-o-le, 2-o-le“) und wechsle frei zwischen den Unterteilungen."
+          ],
+          "steigerung": "Klatsch das Galopp-Muster (Achtel + zwei Sechzehntel) über mehrere Takte gleichmäßig.",
+          "selbstkontrolle": "Du wechselst zwischen den Unterteilungen, ohne aus dem Puls zu fallen."
+        }
+      },
+      "transfer_herkunft": [
+        "KLV",
+        "DRM"
+      ]
+    },
+    {
+      "id": "tempo_genres",
+      "anzeigetitel": {
+        "de": "Tempo & BPM im Metal"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "taktarten_unterteilungen"
+      ],
+      "spielziele": [
+        "timing_zum_klick"
+      ],
+      "erklaerteil": {
+        "de": "Tempo wird in BPM gemessen — Schlägen pro Minute. Die Extreme-Metal-Genres besetzen dabei sehr unterschiedliche Bereiche: Doom kriecht oft unter 70 BPM, klassischer Hardcore und Metalcore grooven im mittleren Bereich, Thrash drückt jenseits der 180, und Blastbeat-Passagen im Death und Black Metal erreichen 200 BPM und mehr. Das sind Orientierungswerte, keine Gesetze — aber sie erklären, warum sich die Genres so verschieden anfühlen.\n\nEin Gefühl für BPM hilft dir doppelt: Beim Üben wählst du realistische Metronom-Tempi und steigerst in sinnvollen Schritten. Und beim Hören ordnest du sofort ein, wie schnell ein Song wirklich ist — Geschwindigkeit wirkt nämlich oft schneller oder langsamer, als sie gemessen ist, je nachdem, welche Unterteilung das Riff trägt.\n\nGenau dieser Effekt — halbes Tempo fühlen bei gleichem Klick (Half-Time) oder doppeltes (Double-Time) — ist ein zentrales Stilmittel im Metalcore und Hardcore."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "BPM schätzen und prüfen",
+          "ziel": "Ein verlässliches Gefühl für Tempobereiche entwickeln.",
+          "schritte": [
+            "Spiel einen Metal-Song deiner Wahl ab und tippe den Puls mit dem Fuß oder der Hand mit.",
+            "Schätze das Tempo in BPM und prüf die Schätzung mit einem Metronom oder einer Tap-Tempo-App.",
+            "Wiederhole das mit Songs aus verschiedenen Genres (z. B. Doom, Metalcore, Thrash) und vergleich die Bereiche."
+          ],
+          "steigerung": "Achte bei einem Song darauf, ob sich das Riff in Half-Time oder Double-Time zum Puls anfühlt, und prüf, was das Schlagzeug tatsächlich spielt.",
+          "selbstkontrolle": "Deine Schätzungen liegen meist im richtigen Bereich, und du erkennst Half-Time-Passagen."
+        }
+      }
+    },
+    {
+      "id": "songstruktur_breakdown",
+      "anzeigetitel": {
+        "de": "Songstruktur & Breakdown"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "stil": [
+        "metalcore",
+        "hardcore"
+      ],
+      "erklaerteil": {
+        "de": "Auch der härteste Song ist gebaut: Intro, Strophe, Refrain oder Hook, Bridge, Outro — und im Metalcore und Hardcore als dramaturgischer Höhepunkt der Breakdown. Die Teile unterscheiden sich durch Energie, Dichte und Tonlage; ihre Reihenfolge erzeugt den Spannungsbogen.\n\nDer Breakdown funktioniert über Kontrast: Nach schnellen, dichten Passagen wird das Tempo-Gefühl halbiert, das Riff reduziert sich auf wenige, schwere Schläge, und alle Instrumente treffen dieselben Akzente. Die Wirkung entsteht nicht durch Komplexität, sondern durch das gemeinsame, exakte Zuschlagen — und durch den Aufbau davor.\n\nWer Songstrukturen erkennt, übt gezielter (Teile statt ganzer Songs), kommuniziert klarer mit der Band („ab der zweiten Strophe“) und versteht, warum ein Part wirkt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Zerleg einen Lieblingssong in seine Teile: Wo sind Strophe, Refrain, Bridge, Breakdown? Notier dir, wie die Energie von Teil zu Teil steigt oder fällt — und was genau vor dem härtesten Moment des Songs passiert, damit er so hart wirkt."
+      }
+    },
+    {
+      "id": "riff_baukasten",
+      "anzeigetitel": {
+        "de": "Wie Riffs gebaut sind"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "taktarten_unterteilungen"
+      ],
+      "erklaerteil": {
+        "de": "Ein Riff ist eine kurze, wiedererkennbare musikalische Zelle — meist ein bis zwei Takte —, die durch Wiederholung ihre Kraft entfaltet. Fast alle großen Riffs folgen demselben Bauprinzip: ein Kern, der sich wiederholt, plus eine kleine Variation, die Langeweile verhindert. Oft ist das ein Frage-Antwort-Spiel: zweimal die gleiche Phrase, beim dritten oder vierten Mal eine veränderte Endung.\n\nDer Rhythmus ist dabei wichtiger als die Tonauswahl. Viele legendäre Riffs benutzen nur zwei, drei Töne — ihre Energie kommt aus dem rhythmischen Muster, den Pausen und den Akzenten. Deshalb lohnt es sich, ein Riff zuerst rhythmisch zu verstehen (klatschen, zählen) und erst dann tonal.\n\nMit dieser Brille wird jedes Riff zum Lehrstück: Was ist der Kern? Wo sitzt die Variation? Was machen Pausen und Akzente? Dieselben Fragen führen dich später zu eigenen Riffs."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm zwei Riffs, die du stark findest, und analysier sie: Wie lang ist die Kern-Zelle, wie oft wiederholt sie sich, und wo sitzt die Variation? Klatsch beide Riffs nur rhythmisch — was fällt dir über die Rolle von Pausen und Akzenten auf?"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "version": "0.1"
+  },
+  "ueber": {
+    "titel": {
+      "de": "Über mosh school"
+    },
+    "absaetze": [
+      {
+        "de": "mosh school bringt dir extreme Metal-Instrumente Riff für Riff bei — vom ersten Powerchord bis zum Blastbeat. Kostenlos, werbefrei, direkt im Browser."
+      },
+      {
+        "de": "Die App läuft komplett auf deinem Gerät und speichert deinen Fortschritt lokal. Kein Login, kein Tracking."
+      }
+    ]
+  },
+  "mitmachen": {
+    "titel": {
+      "de": "Mitmachen"
+    },
+    "einleitung": [
+      {
+        "de": "mosh school ist offen und wächst mit der Szene."
+      }
+    ],
+    "moeglichkeiten": [
+      {
+        "titel": {
+          "de": "Feedback geben"
+        },
+        "text": {
+          "de": "Sag uns, was fehlt oder unklar ist."
+        },
+        "cta_label": {
+          "de": "Kontakt"
+        },
+        "cta_ziel": "[deine-mail@example.com]"
+      }
+    ]
+  },
+  "rechtliches": {
+    "impressum": {
+      "titel": {
+        "de": "Impressum"
+      },
+      "absaetze": [
+        {
+          "de": "[Name]"
+        },
+        {
+          "de": "[Anschrift]"
+        },
+        {
+          "de": "[E-Mail]"
+        }
+      ]
+    },
+    "datenschutz": {
+      "titel": {
+        "de": "Datenschutz"
+      },
+      "absaetze": [
+        {
+          "de": "mosh school speichert deinen Fortschritt ausschließlich lokal (localStorage). Es werden keine personenbezogenen Daten an einen Server übertragen."
+        }
+      ]
+    }
+  },
+  "sprachen": {
+    "funktion_aktiv": false,
+    "aktuell": "de",
+    "liste": [
+      {
+        "code": "de",
+        "eigenname": "Deutsch",
+        "flagge": "🇩🇪",
+        "label": {
+          "de": "Deutsch"
+        }
+      }
+    ]
+  }
+}
