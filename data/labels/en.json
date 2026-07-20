@@ -266,7 +266,15 @@
     "stimm_genres": "",
     "stimm_saite_aria": "",
     "stimm_hinweis_pegel": "",
-    "lehrgrafik_titel": ""
+    "lehrgrafik_titel": "",
+    "klang_titel": "",
+    "klang_intervalle": "",
+    "klang_akkorde": "",
+    "klang_untertitel": "",
+    "klang_intervall_aria": "",
+    "klang_akkord_aria": "",
+    "klang_skalen": "",
+    "klang_skala_aria": ""
   },
   "bausteine": {
     "grundhaltung": "",
@@ -498,7 +506,13 @@
     "fussmaschinen": "",
     "hardware_stabilitaet": "",
     "trigger_edrums": "",
-    "drums_wartung_backup": ""
+    "drums_wartung_backup": "",
+    "deathcore_breakdown_wucht": "",
+    "deathcore_bass_fundament": "",
+    "deathcore_gravity_blast": "",
+    "deathcore_gutturals_squeals": "",
+    "deathcore_riff_dissonanz": "",
+    "deathcore_dynamik_dramaturgie": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -652,7 +666,8 @@
       "crust": "",
       "grindcore": "",
       "powerviolence": "",
-      "sludge": ""
+      "sludge": "",
+      "deathcore": ""
     },
     "stimmung": {
       "e_standard": "",
@@ -669,6 +684,30 @@
       "bass_d_standard": "",
       "bass_drop_c": "",
       "bass_b_5": ""
+    },
+    "intervall": {
+      "kleine_sekunde": "",
+      "kleine_terz": "",
+      "grosse_terz": "",
+      "quarte": "",
+      "tritonus": "",
+      "quinte": "",
+      "oktave": ""
+    },
+    "akkord": {
+      "powerchord": "",
+      "dur": "",
+      "moll": "",
+      "vermindert": ""
+    },
+    "skala": {
+      "moll_natuerlich": "",
+      "dorisch": "",
+      "phrygisch": "",
+      "phrygisch_dominant": "",
+      "harmonisch_moll": "",
+      "lokrisch": "",
+      "moll_pentatonik": ""
     }
   },
   "spielziele": {
