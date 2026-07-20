@@ -720,6 +720,9 @@ a.karte-link {
   vertical-align: middle;
   white-space: nowrap;
 }
+/* display: inline-block würde sonst das [hidden]-Attribut aushebeln (z. B. der
+   Stopp-Knopf im Pattern-Werkzeug, der nur während der Wiedergabe erscheint). */
+.chip[hidden] { display: none; }
 
 .chip-akzent { background: var(--primaer-weich); color: var(--primaer-tief); }
 
@@ -1953,6 +1956,21 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 /* Kopfzeile mit harter Unterkante */
 .kopf { border-bottom: 2px solid var(--linie-stark); }
 
+/* Willkommens-Hero im Dunkel: Concrete statt geerbtem Crossminton-Blau (Fork-Rest),
+   Blutrot nur als harte Kante — nicht als Fläche. Der weiße Hero-Text bleibt lesbar. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) .hero {
+    background: linear-gradient(135deg, #1e1e20 0%, #0b0b0c 100%);
+    border: 2px solid var(--primaer);
+    box-shadow: var(--schatten-karte);
+  }
+}
+:root[data-theme='dunkel'] .hero {
+  background: linear-gradient(135deg, #1e1e20 0%, #0b0b0c 100%);
+  border: 2px solid var(--primaer);
+  box-shadow: var(--schatten-karte);
+}
+
 /* Aktive Navigation: roter Marker */
 .fussnav a.aktiv, .fussnav-mehr.aktiv, .menue-punkt.aktiv { color: var(--primaer); }
 .fussnav a.aktiv { box-shadow: inset 0 3px 0 var(--primaer); }
@@ -2023,6 +2041,10 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 
 /* Stimmungs-Werkzeug */
 .chip-waehlbar { cursor: pointer; background: var(--flaeche); font: inherit; font-size: 0.72rem; }
+/* Aktiver Auswahl-Chip: die Akzentfläche muss die neutrale .chip-waehlbar-Fläche
+   schlagen (gleiche Spezifität, aber diese Regel kommt später) — sonst bliebe der
+   Aktiv-Zustand nur an der Textfarbe erkennbar. */
+.chip-waehlbar.chip-akzent { background: var(--primaer-weich); color: var(--primaer-tief); }
 .chip-waehlbar svg { width: 1em; height: 1em; vertical-align: -0.15em; }
 .stimm-detail { margin-top: 1.2rem; }
 .stimm-saiten { display: flex; flex-direction: column; gap: 0.35rem; margin: 1rem 0; max-width: 460px; }
