@@ -548,7 +548,9 @@
     "deathcore_sound_gear": "",
     "deathcore_koerper_intensitaet": "",
     "djent_sound_gear": "",
-    "djent_koerper_praezision": ""
+    "djent_koerper_praezision": "",
+    "stoner_sound_gear": "",
+    "postmetal_koerper_ausdauer": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
