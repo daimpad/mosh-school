@@ -2101,3 +2101,38 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .pattern-tempo-wert { min-width: 3.2rem; font-variant-numeric: tabular-nums; }
 .pattern-loop { gap: 0.35rem; }
 .pattern-loop i { font-size: 0.8em; }
+
+/* Könnens-Check (Referenzbereich, kein Fortschritt): Stufen-Selbsteinschätzung.
+   Kategorien als Fieldsets, Posten als echte Checkboxen mit Pflicht/Empfehlung-Marke. */
+.kc-zaehler { font-weight: 700; font-variant-numeric: tabular-nums; margin: 0.25rem 0 0.75rem; }
+.kc-gruppen { display: grid; gap: 1rem; }
+.kc-gruppe {
+  border: 1px solid var(--linie-stark); border-radius: var(--radius);
+  background: var(--flaeche); padding: 0.85rem 1rem 1rem; margin: 0;
+}
+.kc-gruppe > legend {
+  font-family: 'Rubik', system-ui, sans-serif; font-weight: 700;
+  letter-spacing: 0.01em; font-size: 0.95rem; padding: 0 0.4rem; color: var(--ueberschrift);
+}
+.kc-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.kc-posten {
+  display: grid; grid-template-columns: auto 1fr; gap: 0.65rem; align-items: start;
+  padding: 0.55rem 0.6rem; border: 1px solid var(--linie); border-radius: var(--radius-klein);
+  background: var(--flaeche-2); transition: border-color var(--uebergang), background var(--uebergang);
+}
+.kc-posten input[type='checkbox'] {
+  width: 1.15rem; height: 1.15rem; margin-top: 0.15rem; accent-color: var(--signal-gruen); cursor: pointer;
+}
+.kc-posten label { display: grid; gap: 0.2rem; cursor: pointer; }
+.kc-posten-kopf { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.kc-posten-titel { font-weight: 700; color: var(--tinte); }
+.kc-posten-text { font-size: 0.86rem; }
+.kc-posten.erledigt { border-color: var(--signal-gruen); background: var(--signal-gruen-weich); }
+.kc-posten.erledigt .kc-posten-titel { color: var(--signal-gruen-text); }
+.kc-marke {
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  padding: 0.1rem 0.45rem; border-radius: 999px; white-space: nowrap;
+}
+.kc-marke.kc-pflicht { background: var(--primaer-weich); color: var(--primaer); }
+.kc-marke.kc-empfehlung { background: var(--flaeche); color: var(--tinte-3); border: 1px solid var(--linie-stark); }
+.kc-fuss { margin-top: 1rem; }

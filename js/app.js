@@ -11,6 +11,7 @@ import { renderIndividual, renderKompetenzpfad, renderSpielform, renderStil, ren
 import { renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
+import { renderKoennenscheck } from './ansichten/koennenscheck.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
@@ -49,6 +50,8 @@ function aktualisiereNavigation(segmente) {
                   ? 'stimmungen'
                   : segmente[0] === 'patterns'
                     ? 'patterns'
+                    : segmente[0] === 'koennenscheck'
+                      ? 'koennenscheck'
                 : 'lernen';
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const istAktiv = verweis.dataset.nav === aktiv;
@@ -64,7 +67,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte).
   const imMehr =
-    ['suche', 'stimmungen', 'patterns', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
+    ['suche', 'stimmungen', 'patterns', 'koennenscheck', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
     (segmente[0] === 'pfad' && segmente[1] === 'stil');
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -93,6 +96,7 @@ function beschrifteRahmen() {
     suche: t('nav_suche'),
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
+    koennenscheck: t('nav_koennenscheck'),
     ueber: t('nav_ueber'),
     mitmachen: t('nav_mitmachen'),
     profil: t('nav_profil'),
@@ -286,6 +290,8 @@ function rendern() {
     renderStimmungen(el, daten);
   } else if (segmente[0] === 'patterns') {
     renderPatterns(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
+  } else if (segmente[0] === 'koennenscheck') {
+    renderKoennenscheck(el, daten);
   } else if (segmente[0] === 'ueber') {
     renderUeber(el, daten);
   } else if (segmente[0] === 'mitmachen') {
