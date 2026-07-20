@@ -881,7 +881,15 @@
     "grind_werkstatt": "Grind-Werkstatt",
     "crust_werkstatt": "Crust-Werkstatt",
     "pv_werkstatt": "Powerviolence-Werkstatt",
-    "genre_schnupper": "Genres: Schnupper-Werkstatt"
+    "genre_schnupper": "Genres: Schnupper-Werkstatt",
+    "deathcore_gitarre": "Deathcore: Breakdown-Gitarre",
+    "djent_gitarre": "Djent: Pocket & Polymetrik (Gitarre)",
+    "stoner_gitarre": "Stoner: fuzziger Groove (Gitarre)",
+    "deathcore_drums": "Deathcore: Blast & Breakdown (Drums)",
+    "djent_drums": "Djent: Polymetrik (Drums)",
+    "deathcore_bass": "Deathcore: tiefes Fundament (Bass)",
+    "experte_gitarre_lead": "Experte: Lead-Gitarre (Tapping & Harmonics)",
+    "deathcore_vocals": "Deathcore: Gutturals & Squeals (Vocals)"
   },
   "lehrgrafiken": {
     "grundbeat": "Grundbeat im Achtel-Raster: oben Hi-Hat (x), Mitte Snare (Ring), unten Kick (Punkt) — Snare auf 2 und 4, Kick auf 1 und 3.",
