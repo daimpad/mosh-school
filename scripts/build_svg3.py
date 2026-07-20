@@ -652,6 +652,23 @@ S["djent_dramaturgie_raum"] = [
     L(64, 32, 64, 92, 2.5),
     P(wavepath(72, 106, 62, 12, 1.0, step=2.0), 3),
 ]
+# Sound: Attack, Definition & Tightness — definierter Boden, scharfe Transienten
+# (Attack-Spikes), Gate-Kante, dahinter tighte trockene Chug-Blöcke.
+S["djent_sound_gear"] = [
+    L(14, 92, 106, 92, 5),
+    L(24, 92, 24, 48, 3.5), C(24, 44, 2.5, fill=True),
+    L(42, 92, 42, 60, 3), C(42, 56, 2, fill=True),
+    L(58, 38, 58, 92, 3),
+    *[RECT(68 + i * 11, 62, 6, 24, filled=True) for i in range(3)],
+]
+# Körper: Präzision aus Lockerheit — ein präzises, tightes Raster unter einem
+# schützenden Bogen (Lockerheit/Schonung), ein Ruhe-/Stopp-Punkt.
+S["djent_koerper_praezision"] = [
+    L(14, 88, 106, 88, 2),
+    *[L(20 + i * 11, 88, 20 + i * 11, 74, 2.5) for i in range(8)],
+    ARC(60, 74, 40, 20, 160, 3),
+    C(60, 96, 4, fill=True),
+]
 
 # ================= STONER / POST-METAL-ACHSE (stil-stoner_post, fortgeschritten) =====
 # Stoner: fuzziger Groove, Riff-Ökonomie, Bluesfarbe (Rauigkeit + Punkte + Bögen).
@@ -785,6 +802,7 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "deathcore_sound_gear", "deathcore_koerper_intensitaet",
                 "djent_gitarre_pocket", "djent_bass_lock", "djent_drums_polymetrik",
                 "djent_vocals_dynamik", "djent_theorie_polymetrik", "djent_dramaturgie_raum",
+                "djent_sound_gear", "djent_koerper_praezision",
                 "stoner_riff_fuzz", "stoner_bass_fuzz_groove", "postmetal_drums_crescendo",
                 "postmetal_vocals_dynamik", "stoner_riff_harmonik", "postmetal_langform_geduld",
                 "genre_hoeren_erkennen", "genre_fusion_crossover", "transfer_riff_genrefarbe",
