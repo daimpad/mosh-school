@@ -512,7 +512,13 @@
     "deathcore_gravity_blast": "Deathcore-Drums: Blast, Gravity & Breakdown",
     "deathcore_gutturals_squeals": "Deathcore-Vocals: Gutturals, Highs & Squeals",
     "deathcore_riff_dissonanz": "Deathcore-Riffing: Dissonanz & Slam",
-    "deathcore_dynamik_dramaturgie": "Deathcore-Dramaturgie: Chaos & Entladung"
+    "deathcore_dynamik_dramaturgie": "Deathcore-Dramaturgie: Chaos & Entladung",
+    "djent_gitarre_pocket": "Djent-Gitarre: Pocket, Chug & Polymetrik",
+    "djent_bass_lock": "Djent-Bass: Lock, Tiefe & Groove",
+    "djent_drums_polymetrik": "Djent-Drums: Polymetrik, Pocket & Ghost Notes",
+    "djent_vocals_dynamik": "Prog-Metalcore-Vocals: Clean, Harsh & Phrasierung",
+    "djent_theorie_polymetrik": "Djent-Theorie: Polymetrik & Gruppierung",
+    "djent_dramaturgie_raum": "Djent-Dramaturgie: Härte & Raum"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -667,7 +673,8 @@
       "grindcore": "Grindcore",
       "powerviolence": "Powerviolence",
       "sludge": "Sludge",
-      "deathcore": "Deathcore"
+      "deathcore": "Deathcore",
+      "djent": "Djent / Prog-Metalcore"
     },
     "stimmung": {
       "e_standard": "E-Standard",

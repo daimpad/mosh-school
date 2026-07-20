@@ -36,7 +36,8 @@
       "grindcore",
       "powerviolence",
       "sludge",
-      "deathcore"
+      "deathcore",
+      "djent"
     ],
     "spielziele": {
       "tempo": [
@@ -549,7 +550,8 @@
       "stil": [
         "metalcore",
         "hardcore",
-        "deathcore"
+        "deathcore",
+        "djent"
       ],
       "voraussetzungen": [
         "palm_muting"

@@ -512,7 +512,13 @@
     "deathcore_gravity_blast": "",
     "deathcore_gutturals_squeals": "",
     "deathcore_riff_dissonanz": "",
-    "deathcore_dynamik_dramaturgie": ""
+    "deathcore_dynamik_dramaturgie": "",
+    "djent_gitarre_pocket": "",
+    "djent_bass_lock": "",
+    "djent_drums_polymetrik": "",
+    "djent_vocals_dynamik": "",
+    "djent_theorie_polymetrik": "",
+    "djent_dramaturgie_raum": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -667,7 +673,8 @@
       "grindcore": "",
       "powerviolence": "",
       "sludge": "",
-      "deathcore": ""
+      "deathcore": "",
+      "djent": ""
     },
     "stimmung": {
       "e_standard": "",

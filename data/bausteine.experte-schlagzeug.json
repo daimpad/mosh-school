@@ -139,6 +139,9 @@
         "experte"
       ],
       "typ": "micro",
+      "stil": [
+        "djent"
+      ],
       "voraussetzungen": [
         "tempo_wechsel_drums",
         "taktarten_unterteilungen"
