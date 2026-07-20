@@ -1,0 +1,189 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "experte",
+    "domaene": "experte-vertiefung",
+    "hinweis": "Experte-Vertiefung: acht Bausteine, die die dünnere Experten-Ebene über die Instrumente und Theorie stärken (Gitarre-Lead/Technik, Lead-Bass, lineares Drumming, nahtlose Vocals + Arrangement, Langform-Komposition). Kein Vokabular-Block, keine neuen Vokabelwerte. Gesundheitsrahmen bei den stimmbezogenen Bausteinen."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "gitarre_tapping_legato",
+      "anzeigetitel": { "de": "Gitarre: Tapping & Legato-Fluss" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["sweep_ausbau", "lead_phrasierung"],
+      "erklaerteil": {
+        "de": "Tapping und Legato sind die Werkzeuge für Läufe, die mit reinem Anschlag kaum sauber und flüssig zu spielen wären: weite Sprünge, schnelle Tonfolgen, ein singendes, ununterbrochenes Legato. Im Metal sind sie kein Selbstzweck, sondern Mittel für Ausdruck und Tempo — und der Unterschied zwischen beeindruckend und beliebig liegt in der Sauberkeit.\n\nDrei Dinge tragen die Technik. Erstens die Gleichmäßigkeit: Getappte, gehämmerte und gezogene Töne müssen gleich laut sein wie angeschlagene — sonst hört man die Naht. Das verlangt Kraft aus den Fingern der Greifhand (Hammer-ons/Pull-offs) und eine kontrollierte Tapping-Hand. Zweitens die Sauberkeit: Bei hohem Gain schwingen ungenutzte Saiten mit — die Dämpfung (beide Hände) entscheidet, ob der Lauf klar oder verwaschen klingt. Drittens die Phrasierung: Auch der schnellste Legato-Lauf braucht Betonungen, Atempausen und ein Ziel, sonst ist er nur Notenbrei.\n\nDer Weg dahin ist langsam und ehrlich: erst jeden Ton gleich laut und sauber, dann Tempo. Wer Legato mit Kraft und Tempo erzwingt, verkrampft und verliert genau die Gleichmäßigkeit, die es ausmacht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gleichmäßig vor schnell",
+          "ziel": "Getappte und Legato-Töne so sauber und gleich laut spielen wie angeschlagene, mit Phrasierung.",
+          "schritte": [
+            "Spiel einen einfachen Legato-Lauf (Hammer-on/Pull-off über drei bis vier Töne pro Saite) sehr langsam und hör auf die Lautstärke: Ist jeder Ton gleich laut? Nimm auf und prüf, welcher Ton abfällt — meist der Pull-off.",
+            "Sichere die Dämpfung: Leg die Anschlagshand locker auf die tieferen Saiten, die Greifhand dämpft die höheren. Spiel den Lauf und prüf, ob ungenutzte Saiten still bleiben (bei Gain besonders wichtig).",
+            "Nimm die Tapping-Hand dazu: ein getappter Ton als Erweiterung des Laufs, gleich laut wie der Rest. Erst wenn er sich nicht abhebt, weiterbauen.",
+            "Gib dem Lauf Phrasierung: Betone Anfang und Zielton, lass am Ende eine winzige Atempause. Ein Lauf mit Richtung schlägt einen doppelt so schnellen ohne."
+          ],
+          "steigerung": "Steigere das Tempo nur so weit, wie alle Töne gleich laut und sauber bleiben — bei der ersten Unsauberkeit zurück. Dann denselben Lauf über einen Lagenwechsel oder mit einem Tapping-Sprung erweitern.",
+          "selbstkontrolle": "Auf der Aufnahme: Hört man, welche Töne getappt/gezogen sind (Naht) oder klingt alles wie eine Linie? Bleiben die ungenutzten Saiten still? Und hat der Lauf ein Ziel — oder ist er nur schnell? Wenn es verwaschen klingt, fehlt Dämpfung; wenn es holpert, fehlt Gleichmäßigkeit — beides vor dem Tempo lösen."
+        }
+      }
+    },
+    {
+      "id": "gitarre_kunstharmonics",
+      "anzeigetitel": { "de": "Gitarre: Pinch- & Kunstharmonics" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["lead_phrasierung", "slides_bends"],
+      "erklaerteil": {
+        "de": "Pinch-Harmonics (das kreischende „Squeal“, wenn der Daumen der Anschlagshand die Saite direkt nach dem Plektrum berührt) sind eine der ausdrucksstärksten Gitarren-Gesten des Metal — richtig gesetzt geben sie einem einzelnen Ton Schärfe und Stimme. Falsch gesetzt kommen sie gar nicht oder als Zufall. Der Unterschied ist Kontrolle über den Berührungspunkt.\n\nZwei Dinge machen sie zuverlässig. Erstens der Punkt: Über welchem Bereich zwischen Steg und Hals der Daumen die Saite streift, bestimmt, welcher Oberton anspricht — und der wandert mit dem gegriffenen Ton. Man lernt die „Sweet Spots“ für die häufigsten Töne, statt zu hoffen. Zweitens die Kombination mit Ausdruck: Ein Pinch-Harmonic lebt vom Bending und Vibrato danach — erst die Kombination macht aus dem Quietschen eine Geste. Viel Gain und ein betonter Mittenbereich helfen, aber ersetzen die Technik nicht.\n\nKünstliche Harmonics (getappt oder mit dem Anschlag erzwungen) erweitern das auf ganze melodische Linien. Für den Anfang reicht ein zuverlässiger Pinch-Harmonic auf ein, zwei Lieblingstönen — reproduzierbar, mit Bending und Vibrato veredelt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der Squeal auf Kommando",
+          "ziel": "Einen Pinch-Harmonic zuverlässig ansprechen lassen und mit Bending/Vibrato zur Geste machen.",
+          "schritte": [
+            "Greif einen Ton in mittlerer Lage (viel Gain). Schlag ihn an und lass unmittelbar den Daumen der Anschlagshand die Saite streifen — variier den Punkt zwischen Steg und Halsende in kleinen Schritten, bis ein klarer Oberton kreischt.",
+            "Merk dir den Sweet Spot für diesen Ton und triff ihn zehnmal hintereinander bewusst — Reproduzierbarkeit ist das Ziel, nicht Zufall.",
+            "Veredel den Harmonic: Nach dem Ansprechen ein Bending nach oben plus Vibrato. Jetzt wird aus dem Quietschen eine Geste.",
+            "Wechsel den gegriffenen Ton: Der Sweet Spot wandert. Such ihn für einen zweiten Ton und übe den Wechsel zwischen beiden."
+          ],
+          "steigerung": "Setz den Pinch-Harmonic gezielt ans Ende einer Riff-Phrase (Akzent) statt beliebig. Oder taste dich an einen getappten künstlichen Harmonic auf einer gegriffenen Melodie heran.",
+          "selbstkontrolle": "Spricht der Harmonic auf Kommando an (acht von zehn) oder ist er Glückssache? Klingt er als Geste (mit Bending/Vibrato) oder als isoliertes Quietschen? Wenn er unzuverlässig ist, sitzt der Berührungspunkt noch nicht — langsamer, bewusster, Punkt für Punkt."
+        }
+      }
+    },
+    {
+      "id": "bass_lead_melodisch",
+      "anzeigetitel": { "de": "Bass: melodischer Lead-Bass" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["bass_linien_schreiben", "bass_tapping"],
+      "erklaerteil": {
+        "de": "Meistens trägt der Bass das Fundament — aber es gibt Momente, in denen er aus der Deckung tritt und die Melodie führt: ein Bass-Break, ein Interludium, eine Passage, in der die Gitarren schweigen oder nur Flächen legen. Diese Fähigkeit, vom Fundament zur Führungsstimme zu wechseln und wieder zurück, macht einen kompletten Metal-Bassisten aus.\n\nDrei Dinge sind dafür nötig. Erstens der Ton für vorne: In der Führungsrolle braucht der Bass mehr Definition und oft eine hellere Klangfarbe (Lagen weiter oben, mehr Attack), damit die Melodie trägt und nicht im Tief verschwimmt. Zweitens die Technik: melodisches Spiel in höheren Lagen, saubere Lagenwechsel, evtl. Tapping oder Akkordtöne — Werkzeuge, die im reinen Grundton-Fundament ungenutzt bleiben. Drittens die Dramaturgie: Der Lead-Moment wirkt nur, wenn der Bass davor und danach seine tragende Rolle sauber ausfüllt — der Kontrast macht den Ausbruch.\n\nDie Kunst ist der Rollenwechsel in Echtzeit: erkennen, wann die Musik den Bass vorn braucht, dort mit Definition und Melodie führen, und rechtzeitig wieder ins Fundament zurückfinden, ohne die Band hängen zu lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Aus dem Fundament nach vorn",
+          "ziel": "In höheren Lagen eine tragende Melodie führen und sauber ins Fundament zurückwechseln.",
+          "schritte": [
+            "Stell einen definierteren, etwas helleren Ton ein und spiel eine einfache Melodie in höherer Lage (ab dem siebten Bund aufwärts) — sauber intoniert, jeder Ton trägt.",
+            "Übe die Lagenwechsel: von der Führungslage zurück in die tiefe Fundament-Lage und wieder hoch, ohne Kratzen und ohne Timing-Loch.",
+            "Bau eine kleine Dramaturgie: vier Takte tragendes Fundament, dann ein Bass-Break, in dem du die Melodie führst (Gitarre denkst du dir als Fläche oder Stille), dann zurück ins Fundament.",
+            "Nimm ein Werkzeug dazu, wenn es die Linie braucht: ein getappter Ton, ein Akkordton, ein Slide — als Ausdruck, nicht als Angeberei."
+          ],
+          "steigerung": "Spiel den Lead-Moment zu einer Aufnahme, die tatsächlich Raum lässt, und triff den Wiedereinstieg ins Fundament exakt auf den Punkt, an dem die Band zurückkommt. Oder erweitere die Melodie um einen Lagenwechsel über zwei Oktaven.",
+          "selbstkontrolle": "Trägt die Melodie in der höheren Lage wirklich (Definition, Intonation), oder verschwimmt sie? Sind die Lagenwechsel sauber und im Timing? Und der Bandtest: Findest du rechtzeitig und exakt ins Fundament zurück — oder bleibt eine Lücke? Der Lead wirkt nur mit sauberem Fundament davor und danach."
+        }
+      }
+    },
+    {
+      "id": "drums_lineares_spiel",
+      "anzeigetitel": { "de": "Drums: lineares Spiel" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["drums_fill_sprache", "drums_ghostnotes"],
+      "erklaerteil": {
+        "de": "Lineares Spiel heißt: keine zwei Gliedmaßen schlagen gleichzeitig — jeder Ton ist ein eigener, und Hände und Füße bilden zusammen eine durchgehende, verzahnte Linie. Das erzeugt Grooves und Fills mit einer Dichte und einem fließenden Charakter, die mit gleichzeitigen Schlägen nicht möglich sind, und ist ein Kernwerkzeug für moderne, technische Metal-Drummer.\n\nZwei Dinge sind der Schlüssel. Erstens die Verzahnung: Kick, Snare, Hi-Hat/Toms wechseln sich lückenlos ab, sodass eine einzige Sechzehntel- oder Zweiunddreißigstel-Linie entsteht, die zwischen Händen und Füßen hin- und herspringt. Das verlangt Unabhängigkeit UND präzises Timing, damit die Linie gleichmäßig klingt und nicht stolpert. Zweitens die Dynamik: Ghost Notes auf der Snare zwischen den Hauptschlägen geben der linearen Linie ihren typischen fließenden Pocket — ohne sie klingt es mechanisch.\n\nDer Weg ist wie immer langsam: kurze lineare Muster (etwa Kick–Snare–Hi-Hat im Wechsel) sehr langsam absolut gleichmäßig, dann als Groove oder Fill einbauen. Bei allem Tempo gilt Lockerheit vor Kraft, Gehörschutz, und bei Zwicken in Hand- oder Fußgelenken abklären."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Eine Linie aus vier Gliedmaßen",
+          "ziel": "Ein lineares Muster (nie zwei Schläge gleichzeitig) gleichmäßig und mit Ghost-Note-Pocket spielen.",
+          "schritte": [
+            "Nimm ein einfaches lineares Sechzehntel-Muster (z. B. Hand–Hand–Fuß, wiederholt) und spiel es sehr langsam zum Klick: Klingt die Linie absolut gleichmäßig, egal ob Hand oder Fuß dran ist?",
+            "Prüf die Lücken: Es dürfen nie zwei Gliedmaßen zugleich klingen — nimm auf und hör, ob sich irgendwo Töne überlappen (dann ist es nicht mehr linear).",
+            "Streu Ghost Notes ein: leise Snare-Schläge in der Linie, die den Pocket erzeugen, ohne die Hauptschläge zu überdecken.",
+            "Bau das Muster als kurzen Groove oder Fill in einen einfachen Beat ein und wieder heraus — der Wechsel muss nahtlos sein."
+          ],
+          "steigerung": "Verteil die Linie über die Toms (fließendes lineares Fill) oder erhöh das Tempo nur so weit, wie die Gleichmäßigkeit hält. Wechsel die Gliedmaßen-Reihenfolge für neue Muster.",
+          "selbstkontrolle": "Auf der Aufnahme: Ist die Linie wirklich gleichmäßig, oder hört man, wo der Fuß gegenüber den Händen abfällt? Überlappt nirgends etwas (echt linear)? Und groovt es durch die Ghost Notes, oder klingt es mechanisch? Ungleichmäßigkeit vor dem Tempo lösen."
+        }
+      }
+    },
+    {
+      "id": "harsh_uebergaenge_nahtlos",
+      "anzeigetitel": { "de": "Vocals: nahtlose Register-Übergänge" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["harsh_range_erweiterung", "clean_harsh_wechsel"],
+      "erklaerteil": {
+        "de": "Auf Experten-Niveau geht es nicht mehr nur darum, tiefe Growls, hohe Screams und Cleans einzeln zu beherrschen, sondern sie nahtlos und mitten in der Phrase zu verbinden — ein Wort clean beginnen und verzerrt enden, von einem tiefen Guttural in einen hohen Scream gleiten, ohne hörbaren Bruch und ohne die Stimme zu belasten. Das ist die hohe Schule der Extreme Vocals.\n\nDie Voraussetzung ist paradox: Nahtlosigkeit entsteht aus Kontinuität der Stütze, nicht aus mehr Kraft. Über alle Register bleibt die Atemstütze die konstante Basis; was sich ändert, ist nur der Resonanzraum und der Grad der Verzerrung. Wer den Übergang mit Druck erzwingt, bekommt genau den Bruch, den er vermeiden will — und riskiert die Stimme. Der Schlüssel ist, die Register über eine gemeinsame, gesunde Basis zu verbinden und die Verzerrung graduell auf- und abzublenden.\n\nGenau deshalb ist der Gesundheitsrahmen hier nicht optional, sondern die Bedingung: Solche Übergänge nur auf gesunder Basis und behutsam aufbauen, nie in Heiserkeit üben, nach jeder Einheit den Sprechtest. Diese fortgeschrittenen Techniken gehören an die Seite einer erfahrenen Lehrperson für Extreme Vocals; bei Kratzen oder Engegefühl sofort stoppen, anhaltende Heiserkeit in die HNO-Praxis. Nahtlosigkeit, die die Stimme kostet, ist keine."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ohne Bruch, ohne Druck",
+          "ziel": "Zwischen Registern mitten in der Phrase gleiten — nahtlos, aus Kontinuität der Stütze, gesund.",
+          "schritte": [
+            "Wärm gründlich auf. Arbeite nur mit Registern, die einzeln und mühelos sitzen. Sichere zuerst einen sauberen Clean und einen leisen, mühelosen Harsh-Ton auf demselben Ton.",
+            "Übe das Auf- und Abblenden der Verzerrung auf EINEM gehaltenen Ton: clean beginnen, die Verzerrung ganz allmählich dazunehmen, wieder zurück — die Stütze bleibt konstant, nur der Anteil ändert sich. Leise.",
+            "Verbinde zwei Register mit gemeinsamer Basis: tiefer Guttural, dann ohne abzusetzen in einen höheren Ton gleiten — der Übergang läuft über die Stütze, nicht über einen Neuansatz. Erst sehr langsam.",
+            "Bau einen nahtlosen Übergang in eine kurze Phrase, an einer festen Stelle, leise. Timing und Gesundheit vor Lautstärke."
+          ],
+          "steigerung": "Erst wenn die Übergänge über Wochen beschwerdefrei sitzen, sie Richtung Songintensität bringen — immer nur so laut, wie der Übergang bruchlos UND frei bleibt. Neue Register nimmst du NICHT hier dazu.",
+          "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt die Alltagsstimme frei? Ist der Übergang wirklich nahtlos, oder hörst du einen Bruch/Neuansatz? Und das Wichtigste: Bleibt die Stütze konstant, oder drückst du im Übergang? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen und mit der Lehrperson arbeiten."
+        }
+      }
+    },
+    {
+      "id": "harsh_arrangement_schichten",
+      "anzeigetitel": { "de": "Vocals: Schichten arrangieren" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["harsh_projektion_band", "vocal_identitaet"],
+      "erklaerteil": {
+        "de": "Auf Aufnahmen und in großen Live-Produktionen ist die Extreme-Vocal-Spur selten eine einzelne Stimme — sie ist arrangiert: eine tragende Hauptstimme, darunter oder darüber Schichten, die sie verbreitern (eine Oktave tiefer für Brutalität, ein höherer Scream für Schärfe), dazu Gang-Vocals an den Hooks und gezielte Effekte. Dieses Arrangieren zu verstehen, macht aus einem guten Sänger einen, der ganze Vocal-Produktionen gestalten kann.\n\nDrei Prinzipien tragen es. Erstens die Hierarchie: Eine Schicht führt, die anderen dienen — zu viele gleichberechtigte Spuren werden zu Matsch. Zweitens der Zweck jeder Schicht: Verbreiterung (Doppelung), Tiefe (Oktave drunter), Schärfe (Scream drüber), Gemeinschaft (Gang-Shouts) — jede Schicht hat einen Grund, sonst gehört sie weg. Drittens die Dramaturgie: Schichten sparsam und gezielt einsetzen (der volle Stapel am Höhepunkt wirkt nur, wenn davor Raum war), statt alles durchgehend zu stapeln.\n\nLive ist das ein Verteilungs- und Effektthema (Bandmitglieder für Gang-Vocals, evtl. ein Harmonizer), im Studio ein Arrangement- und Mixthema. In beiden Fällen gilt: Klarheit vor Masse — die Hauptaussage muss verständlich bleiben."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei Produktionen vor, deren Vocal-Sound du stark findest, und zerleg die Schichten: Welche Stimme führt? Welche Schichten liegen darunter/darüber (Oktave, höherer Scream, Doppelung), und wo genau setzen sie ein — durchgehend oder nur an Hooks/Höhepunkten? Wo kommen Gang-Vocals?\n\nEntwirf dann für einen eigenen (oder gedachten) Song ein Vocal-Arrangement: Lege die Hauptstimme fest und plane bewusst, wo welche Schicht dazukommt und warum (Verbreiterung, Tiefe, Schärfe, Gemeinschaft) — und wo du bewusst nur die nackte Hauptstimme lässt, damit der Stapel später trifft. Prüf die Kernfrage: Bleibt die Hauptaussage über alle Schichten verständlich, oder wird es Matsch? Und dient jede Schicht einem klaren Zweck, oder ist sie nur da? Für die Live-Umsetzung: Wer singt die Gang-Vocals, und an welcher einen Stelle lohnt sich der Aufwand am meisten?"
+      }
+    },
+    {
+      "id": "komposition_langform",
+      "anzeigetitel": { "de": "Theorie: Langform & Arrangement komponieren" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["klangregie_arrangement", "werkanalyse_repertoire"],
+      "erklaerteil": {
+        "de": "Ein starkes Riff ist ein Baustein — ein starker Song ist eine Architektur. Auf Experten-Niveau geht es darum, über die einzelne Idee hinaus zu denken: wie Teile zueinander stehen, wie Spannung über Minuten geführt wird, und wie aus Motiven ein zusammenhängendes Ganzes wird statt einer Aneinanderreihung guter Einfälle. Gerade im progressiven, Doom- und Post-Metal ist die Langform selbst das Instrument.\n\nDrei Werkzeuge tragen das. Erstens die motivische Arbeit: Ein wiederkehrendes Motiv (ein Intervall, eine Rhythmusfigur, eine Melodie), das variiert wiederkehrt, gibt einem langen Stück Zusammenhalt — der Hörer erkennt es, ohne es zu benennen. Zweitens die Spannungskurve über die Form: bewusst gesetzte Ruhezonen, Aufbauten, Höhepunkte und Abfälle, sodass der eine große Moment vorbereitet ist. Drittens die Kontrast-Dramaturgie: Dichte gegen Raum, hart gegen offen, schnell gegen langsam — nicht zufällig, sondern als Erzählung.\n\nDie Kunst ist das Weglassen und Verbinden: nicht jeder gute Einfall gehört in denselben Song, und die Übergänge zwischen den Teilen entscheiden, ob die Form trägt oder zerfällt. Wer in Bögen statt in Riffs denkt, schreibt Stücke, die auch beim zehnten Hören noch wachsen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Analysiere ein langes, mehrteiliges Stück, das du stark findest (Prog/Doom/Post-Metal), als Architektur: Skizziere die Form über die Zeit (Teile, Längen), markiere die Spannungskurve (Ruhe, Aufbau, Höhepunkt, Abfall) und such nach einem wiederkehrenden Motiv — kommt eine Idee variiert zurück und hält das Ganze zusammen?\n\nEntwirf dann selbst die Architektur eines langen Stücks (auf Papier, ohne alles auszukomponieren): ein zentrales Motiv, das mindestens zweimal variiert wiederkehrt; eine Spannungskurve mit einem klar vorbereiteten Höhepunkt; und für jeden Übergang eine Idee, wie ein Teil in den nächsten führt. Prüf die Kernfragen: Trägt das Motiv den Zusammenhalt, oder ist es eine bloße Aneinanderreihung? Ist der Höhepunkt vorbereitet? Und welchen guten Einfall musst du weglassen, damit die Form trägt? Zum Schluss: Welcher Übergang ist der schwierigste, und wie löst du ihn?"
+      }
+    },
+    {
+      "id": "gitarre_improvisation",
+      "anzeigetitel": { "de": "Gitarre: Improvisation über Riffs" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "voraussetzungen": ["lead_phrasierung", "erweiterte_harmonik"],
+      "erklaerteil": {
+        "de": "Improvisation ist im Metal seltener das freie Jazz-Solo und öfter das spontane Gestalten über bekanntem Material: über ein Riff, eine Akkordfolge oder einen Bordunton frei phrasieren, Ideen entwickeln und variieren, statt einen auswendig gelernten Lauf abzuspulen. Diese Fähigkeit macht das Spiel lebendig — live, beim Jammen und beim Schreiben, wo die besten Ideen oft aus dem Ausprobieren kommen.\n\nDrei Dinge tragen sie. Erstens das Material im Ohr und in den Fingern: Wer die passende Tonleiter/Modus (aus der erweiterten Harmonik) über dem Grundton kennt und die Lagen beherrscht, muss nicht suchen, sondern kann gestalten. Zweitens die Phrasierung: Improvisation ist nicht möglichst viele Töne, sondern Motive bilden, sie wiederholen und variieren, Pausen setzen — eine musikalische Aussage in Echtzeit. Drittens das Zuhören: Über ein Riff zu improvisieren heißt, auf dessen Rhythmik und Betonung zu reagieren, nicht darüber hinwegzuspielen.\n\nDer Weg ist, die Angst vor dem falschen Ton zu verlieren: Mit wenig Material (drei, vier Tönen) anfangen, daraus Motive bauen, und die Freiheit langsam erweitern. Ein falscher Ton, bewusst aufgelöst, wird zur Absicht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Aus wenig Material gestalten",
+          "ziel": "Über ein Riff frei phrasieren: Motive bilden, variieren, auf die Rhythmik reagieren.",
+          "schritte": [
+            "Nimm ein einfaches Riff oder einen Bordunton auf (Loop) und wähl die passende Tonleiter/Modus darüber. Beschränk dich zuerst auf drei, vier Töne und bilde daraus ein kurzes Motiv.",
+            "Wiederhol das Motiv und variier es minimal (ein Ton anders, ein Rhythmus verschoben, eine Betonung) — so entsteht eine Aussage statt zufälliger Läufe.",
+            "Setz bewusst Pausen: Lass das Riff zwischen deinen Phrasen sprechen. Reagier auf seine Betonungen, statt darüber hinwegzuspielen.",
+            "Erweitere das Material langsam (mehr Töne, Lagenwechsel, ein Bending als Höhepunkt) — aber halte die Phrasierung: Motiv, Variation, Pause."
+          ],
+          "steigerung": "Improvisier über eine Passage, die die Harmonik wechselt, und folge dem Wechsel bewusst mit passenden Tönen. Oder nimm zwei Durchläufe auf und bau aus den besten Momenten ein festes Solo.",
+          "selbstkontrolle": "Hör die Aufnahme: Erkennst du Motive und Variationen, oder ist es eine Aneinanderreihung von Tönen? Atmet die Phrasierung (Pausen), oder ist alles vollgespielt? Und reagierst du auf das Riff, oder spielst du daneben? Wenn es beliebig klingt, nimm Material weg und arbeite mit weniger — Gestaltung vor Menge."
+        }
+      }
+    }
+  ]
+}

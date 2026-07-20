@@ -791,6 +791,64 @@ S["set_ueber_genres"] = [
     *[C(80 + i * 6, 96, 2, fill=True) for i in range(4)],
 ]
 
+# ================= EXPERTE-VERTIEFUNG (experte, mehrere Domänen) =================
+# Fortgeschrittene Technik & Komposition: fließende Linien, Schichten, Bögen.
+
+# Tapping & Legato: eine durchgehende, fließende Linie mit getappten Punkten darauf.
+S["gitarre_tapping_legato"] = [
+    P(wavepath(14, 106, 60, 16, 2.5, step=2.0), 2.5),
+    C(30, 52, 3, fill=True), C(60, 68, 3, fill=True), C(90, 52, 3, fill=True),
+]
+# Pinch-/Kunstharmonics: ein Ton spitzt in einen hohen Oberton — Stiel, Kringel,
+# ausstrahlende Schärfe.
+S["gitarre_kunstharmonics"] = [
+    L(40, 94, 40, 50, 4),
+    C(40, 42, 6, 2.5), C(40, 42, 2.5, fill=True),
+    L(52, 34, 62, 28, 2), L(54, 46, 66, 44, 2), L(50, 24, 56, 16, 2),
+    P(roughpath(70, 106, 60, 4, step=2.4, seed=601), 1.8),
+]
+# Lead-Bass: schweres tiefes Fundament tritt nach oben in eine melodische Welle.
+S["bass_lead_melodisch"] = [
+    L(14, 92, 54, 92, 6),
+    P("M54,92 L64,64", 3),
+    P(wavepath(64, 106, 52, 12, 1.5, step=2.0), 2.5),
+]
+# Lineares Spiel: eine einzige Linie zickzackt zwischen zwei Ebenen (Hand/Fuß),
+# nie gleichzeitig — dazu Ghost Notes (Hohlkreise).
+S["drums_lineares_spiel"] = [
+    P("M14,48 L26,84 L38,48 L50,84 L62,48 L74,84 L86,48 L98,84 L108,48", 2.5),
+    C(32, 66, 3, 1.8), C(68, 66, 3, 1.8),
+]
+# Nahtlose Register-Übergänge: eine glatte Welle geht bruchlos in eine raue über.
+S["harsh_uebergaenge_nahtlos"] = [
+    P(wavepath(14, 60, 60, 12, 2.0, step=2.0), 2.8),
+    P(roughpath(60, 106, 60, 12, step=2.2, seed=607), 2.8),
+    C(60, 60, 3, fill=True),
+]
+# Schichten arrangieren: eine tragende Hauptlinie (dick) plus dünnere Schichten
+# darüber und darunter.
+S["harsh_arrangement_schichten"] = [
+    L(14, 60, 106, 60, 6),
+    L(14, 44, 106, 44, 2),
+    L(14, 76, 106, 76, 2.5),
+    L(14, 32, 106, 32, 1.5),
+]
+# Langform & Arrangement: ein großer Bogen über die ganze Form, darunter die
+# Teile als Blöcke unterschiedlicher Länge, ein wiederkehrendes Motiv (Punkt).
+S["komposition_langform"] = [
+    ARC(60, 84, 46, 20, 160, 2.5),
+    RECT(14, 88, 20, 10, filled=True), RECT(40, 88, 30, 10, filled=True),
+    RECT(76, 88, 14, 10, filled=True), RECT(96, 88, 10, 10, filled=True),
+    C(24, 70, 3, fill=True), C(90, 70, 3, fill=True),
+]
+# Improvisation: ein kleines Motiv, variiert wiederholt, mit einer Pause (Lücke).
+S["gitarre_improvisation"] = [
+    P("M14,70 L20,54 L26,62", 2.5),
+    P("M40,70 L46,50 L52,60", 2.5),
+    P("M88,70 L94,58 L100,64", 2.5),
+    L(66, 66, 78, 66, 2),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -822,7 +880,10 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "stoner_sound_gear", "postmetal_koerper_ausdauer",
                 "genre_hoeren_erkennen", "genre_fusion_crossover", "transfer_riff_genrefarbe",
                 "transfer_groove_genrefarbe", "transfer_bass_rollen", "transfer_vocals_genrefarbe",
-                "set_ueber_genres"]
+                "set_ueber_genres",
+                "gitarre_tapping_legato", "gitarre_kunstharmonics", "bass_lead_melodisch",
+                "drums_lineares_spiel", "harsh_uebergaenge_nahtlos", "harsh_arrangement_schichten",
+                "komposition_langform", "gitarre_improvisation"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:

@@ -287,6 +287,12 @@
     "pattern_spur_snare": "",
     "pattern_spur_kick": "",
     "pattern_zum_pfad": "",
+    "pattern_pause": "",
+    "pattern_stopp": "",
+    "pattern_spielt": "",
+    "pattern_tempo": "",
+    "pattern_tempo_aria": "",
+    "pattern_loop": "",
     "pattern_hinweis_pegel": ""
   },
   "bausteine": {
@@ -550,7 +556,15 @@
     "djent_sound_gear": "",
     "djent_koerper_praezision": "",
     "stoner_sound_gear": "",
-    "postmetal_koerper_ausdauer": ""
+    "postmetal_koerper_ausdauer": "",
+    "gitarre_tapping_legato": "",
+    "gitarre_kunstharmonics": "",
+    "bass_lead_melodisch": "",
+    "drums_lineares_spiel": "",
+    "harsh_uebergaenge_nahtlos": "",
+    "harsh_arrangement_schichten": "",
+    "komposition_langform": "",
+    "gitarre_improvisation": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -641,7 +655,23 @@
     "fb_hc_buehne_show": "",
     "fb_crust_dreck_ausrede": "",
     "fb_grind_gestreckt": "",
-    "fb_pv_beliebig": ""
+    "fb_pv_beliebig": "",
+    "fb_deathcore_breakdown_matsch": "",
+    "fb_deathcore_bass_wummern": "",
+    "fb_deathcore_gravity_holpert": "",
+    "fb_deathcore_vocals_pressen": "",
+    "fb_djent_pocket_verrechnet": "",
+    "fb_djent_bass_verschmiert": "",
+    "fb_djent_drums_fuss_zieht": "",
+    "fb_djent_vocals_wechsel": "",
+    "fb_stoner_riff_steif": "",
+    "fb_stoner_bass_matsch": "",
+    "fb_postmetal_drums_zu_frueh": "",
+    "fb_postmetal_vocals_dauer": "",
+    "fb_transfer_riff_gleich": "",
+    "fb_transfer_groove_tempo": "",
+    "fb_transfer_bass_rolle": "",
+    "fb_transfer_vocals_stapeln": ""
   },
   "grafiken": {},
   "vokabeln": {
@@ -727,27 +757,42 @@
     },
     "intervall": {
       "kleine_sekunde": "",
+      "grosse_sekunde": "",
       "kleine_terz": "",
       "grosse_terz": "",
       "quarte": "",
       "tritonus": "",
       "quinte": "",
+      "kleine_sexte": "",
+      "grosse_sexte": "",
+      "kleine_septime": "",
+      "grosse_septime": "",
       "oktave": ""
     },
     "akkord": {
       "powerchord": "",
+      "sus2": "",
+      "sus4": "",
       "dur": "",
       "moll": "",
-      "vermindert": ""
+      "vermindert": "",
+      "dur7": "",
+      "moll7": "",
+      "vermindert7": ""
     },
     "skala": {
+      "dur": "",
       "moll_natuerlich": "",
       "dorisch": "",
       "phrygisch": "",
       "phrygisch_dominant": "",
-      "harmonisch_moll": "",
+      "mixolydisch": "",
       "lokrisch": "",
-      "moll_pentatonik": ""
+      "harmonisch_moll": "",
+      "moll_pentatonik": "",
+      "moll_blues": "",
+      "ganzton": "",
+      "chromatisch": ""
     }
   },
   "spielziele": {
