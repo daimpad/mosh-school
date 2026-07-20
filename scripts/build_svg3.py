@@ -583,6 +583,22 @@ S["deathcore_dynamik_dramaturgie"] = [
     L(74, 30, 74, 90, 3),
     RECT(80, 66, 26, 24, filled=True),
 ]
+# Sound: Tiefe, Gate & Definition — schweres Fundament, ein schwerer Ton, harte
+# Gate-Kante in die Stille, dahinter der clicky, definierte Impuls.
+S["deathcore_sound_gear"] = [
+    L(14, 92, 106, 92, 6),
+    RECT(20, 54, 16, 30, filled=True),
+    L(44, 38, 44, 92, 3.5),
+    L(70, 66, 70, 48, 3.5), C(70, 44, 3, fill=True),
+    P(roughpath(80, 104, 60, 3, step=2.4, seed=501), 1.6),
+]
+# Körper: Intensität ohne Verschleiß — dichte, intensive Belastung unter einem
+# schützenden Bogen (Aufwärmen/Schonung), ein Ruhe-/Stopp-Punkt.
+S["deathcore_koerper_intensitaet"] = [
+    P(roughpath(16, 104, 68, 10, step=2.0, seed=507), 2.2),
+    ARC(60, 68, 42, 20, 160, 3),
+    C(60, 92, 4, fill=True),
+]
 
 # ================= DJENT-ACHSE (stil-djent, fortgeschritten) =================
 # Djent / Prog-Metalcore: gerader Puls unten, verschobene Gruppierung oben —
@@ -766,6 +782,7 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "trigger_edrums", "drums_wartung_backup",
                 "deathcore_breakdown_wucht", "deathcore_bass_fundament", "deathcore_gravity_blast",
                 "deathcore_gutturals_squeals", "deathcore_riff_dissonanz", "deathcore_dynamik_dramaturgie",
+                "deathcore_sound_gear", "deathcore_koerper_intensitaet",
                 "djent_gitarre_pocket", "djent_bass_lock", "djent_drums_polymetrik",
                 "djent_vocals_dynamik", "djent_theorie_polymetrik", "djent_dramaturgie_raum",
                 "stoner_riff_fuzz", "stoner_bass_fuzz_groove", "postmetal_drums_crescendo",
