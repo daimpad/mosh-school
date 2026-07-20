@@ -298,6 +298,16 @@
       }
     },
     {
+      "id": "grosse_sekunde",
+      "halbtoene": [
+        0,
+        2
+      ],
+      "hinweis": {
+        "de": "Der Ganzton — der übliche Schritt in Riffs und Tonleitern. Neutral, treibt vorwärts."
+      }
+    },
+    {
       "id": "kleine_terz",
       "halbtoene": [
         0,
@@ -348,6 +358,46 @@
       }
     },
     {
+      "id": "kleine_sexte",
+      "halbtoene": [
+        0,
+        8
+      ],
+      "hinweis": {
+        "de": "Dunkel und sehnsuchtsvoll — die kleine Sexte gibt Doom- und Death-Melodien ihre Schwermut."
+      }
+    },
+    {
+      "id": "grosse_sexte",
+      "halbtoene": [
+        0,
+        9
+      ],
+      "hinweis": {
+        "de": "Offen und weit — seltener im harten Metal, aber wirkungsvoll in melodischen und Post-Metal-Momenten."
+      }
+    },
+    {
+      "id": "kleine_septime",
+      "halbtoene": [
+        0,
+        10
+      ],
+      "hinweis": {
+        "de": "Die Spannungsnote schlechthin — Grundlage von Moll-Riffs und dem Dominant-Sound."
+      }
+    },
+    {
+      "id": "grosse_septime",
+      "halbtoene": [
+        0,
+        11
+      ],
+      "hinweis": {
+        "de": "Extreme Reibung knapp unter der Oktave — scharf und dissonant, gern im dissonanten Death/Black."
+      }
+    },
+    {
       "id": "oktave",
       "halbtoene": [
         0,
@@ -368,6 +418,28 @@
       ],
       "hinweis": {
         "de": "Grundton, Quinte, Oktave — keine Terz. Genau darum bleibt er unter Verzerrung klar statt matschig."
+      }
+    },
+    {
+      "id": "sus2",
+      "halbtoene": [
+        0,
+        2,
+        7
+      ],
+      "hinweis": {
+        "de": "Grundton, große Sekunde, Quinte — offen und schwebend statt Dur/Moll. Beliebt in Post-Metal-Flächen."
+      }
+    },
+    {
+      "id": "sus4",
+      "halbtoene": [
+        0,
+        5,
+        7
+      ],
+      "hinweis": {
+        "de": "Grundton, Quarte, Quinte — gespannt, will sich auflösen. Treibt Aufbauten und Übergänge."
       }
     },
     {
@@ -402,9 +474,61 @@
       "hinweis": {
         "de": "Kleine Terz plus Tritonus — maximal instabil und spannungsgeladen. Das Schock-Werkzeug für dissonante Passagen."
       }
+    },
+    {
+      "id": "dur7",
+      "halbtoene": [
+        0,
+        4,
+        7,
+        10
+      ],
+      "hinweis": {
+        "de": "Dominantseptakkord — Dur mit kleiner Septime, bluesig und gespannt. Wurzel des Stoner/Hard-Rock-Sounds."
+      }
+    },
+    {
+      "id": "moll7",
+      "halbtoene": [
+        0,
+        3,
+        7,
+        10
+      ],
+      "hinweis": {
+        "de": "Moll mit kleiner Septime — dunkel, aber weicher als der reine Moll-Akkord; trägt melodische und atmosphärische Teile."
+      }
+    },
+    {
+      "id": "vermindert7",
+      "halbtoene": [
+        0,
+        3,
+        6,
+        9
+      ],
+      "hinweis": {
+        "de": "Vier gestapelte kleine Terzen — maximal instabil und unheimlich. Das neoklassische/Death-Metal-Spannungswerkzeug."
+      }
     }
   ],
   "skalen": [
+    {
+      "id": "dur",
+      "halbtoene": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        9,
+        11,
+        12
+      ],
+      "hinweis": {
+        "de": "Dur (Ionisch) — die helle Grundtonleiter. Im Metal seltener, aber Bezugspunkt für alle Modi."
+      }
+    },
     {
       "id": "moll_natuerlich",
       "halbtoene": [
@@ -470,19 +594,19 @@
       }
     },
     {
-      "id": "harmonisch_moll",
+      "id": "mixolydisch",
       "halbtoene": [
         0,
         2,
-        3,
+        4,
         5,
         7,
-        8,
-        11,
+        9,
+        10,
         12
       ],
       "hinweis": {
-        "de": "Harmonisch Moll — Moll mit erhöhter siebter Stufe; der große Sprung zur Leitton-Septime klingt dramatisch und neoklassisch."
+        "de": "Dur mit kleiner Septime — bluesig und rockig; der Modus des Stoner und klassischen Hard Rock."
       }
     },
     {
@@ -502,6 +626,22 @@
       }
     },
     {
+      "id": "harmonisch_moll",
+      "halbtoene": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        12
+      ],
+      "hinweis": {
+        "de": "Harmonisch Moll — Moll mit erhöhter siebter Stufe; der große Sprung zur Leitton-Septime klingt dramatisch und neoklassisch."
+      }
+    },
+    {
       "id": "moll_pentatonik",
       "halbtoene": [
         0,
@@ -513,6 +653,57 @@
       ],
       "hinweis": {
         "de": "Moll-Pentatonik — fünf Töne ohne Halbtöne, die Basis von Groove-Metal-Riffs und blues-getränkten Leads."
+      }
+    },
+    {
+      "id": "moll_blues",
+      "halbtoene": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Moll-Pentatonik plus Blue Note (b5) — der räudige, bluesige Kern von Stoner und Sludge."
+      }
+    },
+    {
+      "id": "ganzton",
+      "halbtoene": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "hinweis": {
+        "de": "Nur Ganztöne — schwebend und tonal haltlos. Erzeugt Desorientierung, gern in dissonantem/technischem Metal."
+      }
+    },
+    {
+      "id": "chromatisch",
+      "halbtoene": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "hinweis": {
+        "de": "Alle zwölf Halbtöne — Basis für chromatische Läufe und atonale Riffs im Death und technischen Metal."
       }
     }
   ]
