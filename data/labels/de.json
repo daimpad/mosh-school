@@ -746,27 +746,42 @@
     },
     "intervall": {
       "kleine_sekunde": "Kleine Sekunde",
+      "grosse_sekunde": "Große Sekunde",
       "kleine_terz": "Kleine Terz",
       "grosse_terz": "Große Terz",
       "quarte": "Quarte",
       "tritonus": "Tritonus",
       "quinte": "Quinte",
+      "kleine_sexte": "Kleine Sexte",
+      "grosse_sexte": "Große Sexte",
+      "kleine_septime": "Kleine Septime",
+      "grosse_septime": "Große Septime",
       "oktave": "Oktave"
     },
     "akkord": {
       "powerchord": "Powerchord",
+      "sus2": "Sus2",
+      "sus4": "Sus4",
       "dur": "Dur-Akkord",
       "moll": "Moll-Akkord",
-      "vermindert": "Verminderter Akkord"
+      "vermindert": "Verminderter Akkord",
+      "dur7": "Dominantseptakkord (7)",
+      "moll7": "Moll-Septakkord (m7)",
+      "vermindert7": "Verminderter Septakkord (dim7)"
     },
     "skala": {
+      "dur": "Dur (Ionisch)",
       "moll_natuerlich": "Natürliches Moll (Äolisch)",
       "dorisch": "Dorisch",
       "phrygisch": "Phrygisch",
       "phrygisch_dominant": "Phrygisch-Dominant",
-      "harmonisch_moll": "Harmonisch Moll",
+      "mixolydisch": "Mixolydisch",
       "lokrisch": "Lokrisch",
-      "moll_pentatonik": "Moll-Pentatonik"
+      "harmonisch_moll": "Harmonisch Moll",
+      "moll_pentatonik": "Moll-Pentatonik",
+      "moll_blues": "Moll-Blues",
+      "ganzton": "Ganztonleiter",
+      "chromatisch": "Chromatisch"
     }
   },
   "spielziele": {
