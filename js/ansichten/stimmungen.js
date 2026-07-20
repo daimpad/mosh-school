@@ -225,7 +225,9 @@ export function renderStimmungen(el, daten) {
   const hinweisFeld = el.querySelector('.klang-hinweis');
   for (const knopf of el.querySelectorAll('.klang-knopf')) {
     knopf.addEventListener('click', () => {
-      const halbtoene = knopf.dataset.halbtoene.split(',').map(Number);
+      // Leeres/fehlerhaftes halbtoene ergäbe [NaN] → NaN-Frequenz; leer überspringen.
+      const halbtoene = knopf.dataset.halbtoene.split(',').map(Number).filter((n) => !Number.isNaN(n));
+      if (!halbtoene.length) return;
       if (knopf.dataset.spielart === 'sequenz') spieleSequenz(halbtoene);
       else spieleAkkord(halbtoene);
       if (hinweisFeld) hinweisFeld.textContent = knopf.dataset.hinweis;

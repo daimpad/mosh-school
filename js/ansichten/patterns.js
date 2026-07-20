@@ -230,7 +230,7 @@ function drumRasterHtml(pattern) {
         // sonst „Pause" — sonst wäre das Drum-Raster eine Tabelle aus leeren Zellen.
         const srText = an ? spurName : pause;
         zellen.push(
-          `<td class="drum-zelle${an ? ` drum-an drum-${spur}` : ''}" data-schritt="${i}"><span aria-hidden="true"></span><span class="nur-sr">${esc(srText)}</span></td>`
+          `<td class="drum-zelle${an ? ` drum-an drum-${spur}` : ''}" data-schritt="${i}"><span class="drum-mark" aria-hidden="true"></span><span class="nur-sr">${esc(srText)}</span></td>`
         );
       }
       return `<tr><th scope="row" class="drum-spur">${esc(spurName)}</th>${zellen.join('')}</tr>`;
@@ -256,12 +256,14 @@ function patternKarteHtml(pattern) {
     </article>`;
 }
 
-export function renderPatterns(el, daten) {
+export function renderPatterns(el, daten, genreParam) {
   stoppeLauf();
   const alle = (daten.patterns && daten.patterns.patterns) || [];
   // Genres in Erscheinungsreihenfolge, jedes nur einmal.
   const genres = [];
   for (const p of alle) if (!genres.includes(p.genre)) genres.push(p.genre);
+  // Genre aus dem Deep-Link (#/patterns/<genre>) hat Vorrang, sonst Modul-State.
+  if (genreParam && genres.includes(genreParam)) aktivesGenre = genreParam;
   if (!genres.includes(aktivesGenre)) aktivesGenre = genres[0] || null;
   const sichtbar = alle.filter((p) => p.genre === aktivesGenre);
 
@@ -314,6 +316,10 @@ export function renderPatterns(el, daten) {
   for (const knopf of el.querySelectorAll('[data-genre]')) {
     knopf.addEventListener('click', () => {
       aktivesGenre = knopf.dataset.genre;
+      // URL mitführen (Deep-Link/Reload), ohne einen zweiten Render auszulösen.
+      if (window.history?.replaceState) {
+        window.history.replaceState(null, '', `#/patterns/${encodeURIComponent(aktivesGenre)}`);
+      }
       renderPatterns(el, daten);
       // Fokus nach dem Neu-Rendern auf den nun aktiven Chip zurückholen.
       el.querySelector(`[data-genre="${CSS.escape(aktivesGenre)}"]`)?.focus();
