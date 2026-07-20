@@ -2040,3 +2040,28 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .klang-knopf { gap: 0.35rem; }
 .klang-knopf i { font-size: 0.72em; }
 .klang-hinweis { margin-top: 0.9rem; min-height: 1.4em; }
+
+/* Pattern-Werkzeug (Riffs als TAB & Drumpattern pro Genre) */
+.pattern-liste { display: grid; gap: 1rem; margin: 1.2rem 0; }
+.pattern-karte { background: var(--flaeche); border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); box-shadow: var(--schatten-karte); padding: 0.9rem 1rem 1.1rem; }
+.pattern-kopf { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; }
+.pattern-kopf h3 { margin: 0; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.pattern-kopf h3 svg { width: 1.1em; height: 1.1em; vertical-align: -0.15em; }
+.pattern-play { gap: 0.35rem; }
+.pattern-play i { font-size: 0.72em; }
+.pattern-meta { margin: 0.3rem 0 0.7rem; }
+.pattern-raster { overflow-x: auto; padding-bottom: 0.2rem; }
+.pattern-hinweis { margin: 0.8rem 0 0; }
+
+.tab-raster, .drum-raster { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.tab-raster th, .drum-raster th { text-align: right; padding: 0 0.6rem 0 0; font-weight: 700; font-size: 0.78rem; color: var(--tinte-2); white-space: nowrap; }
+.tab-zelle { width: 1.55rem; height: 1.5rem; text-align: center; font-weight: 700; font-size: 0.82rem; border-bottom: 2px solid var(--linie-stark); color: var(--tinte); }
+.tab-zelle.tab-treffer { color: var(--primaer-tief); }
+.drum-spur { font-size: 0.72rem !important; }
+.drum-zelle { width: 1.4rem; height: 1.4rem; text-align: center; border: 1px solid var(--linie); }
+.drum-zelle span { display: inline-block; width: 0.7rem; height: 0.7rem; vertical-align: middle; }
+.drum-an.drum-kick span, .drum-an.drum-crash span { background: var(--primaer); border-radius: 50%; }
+.drum-an.drum-crash span { border-radius: 2px; transform: rotate(45deg); }
+.drum-an.drum-snare span { border: 2px solid var(--primaer); border-radius: 50%; }
+.drum-an.drum-hihat span { background: var(--tinte-2); width: 0.55rem; height: 0.55rem; border-radius: 1px; }
+.tab-zelle.schritt-aktiv, .drum-zelle.schritt-aktiv { background: var(--primaer-weich); }
