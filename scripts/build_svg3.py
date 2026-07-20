@@ -532,6 +532,58 @@ S["drums_wartung_backup"] = [
     L(94, 40, 106, 92, 4),
 ]
 
+# ================= DEATHCORE-ACHSE (stil-deathcore, fortgeschritten) =================
+# Deathcore: maximaler Kontrast — Chaos (dicht) stürzt in den Breakdown (schwer, leer).
+
+# Breakdown als Waffe: dichtes Chaos links, harte Abrisskante, dann synkopierte
+# schwere Einschläge mit viel Stille.
+S["deathcore_breakdown_wucht"] = [
+    P(wavepath(14, 48, 60, 9, 5, step=1.4), 2),
+    L(52, 34, 52, 86, 4),
+    RECT(60, 46, 10, 28, filled=True),
+    RECT(82, 54, 10, 28, filled=True),
+    RECT(98, 46, 8, 28, filled=True),
+]
+# Tiefes Fundament: eine sehr schwere Grundlinie, darüber synkopierte
+# Akzent-Blöcke, die exakt darauf sitzen.
+S["deathcore_bass_fundament"] = [
+    L(14, 88, 106, 88, 7),
+    RECT(22, 52, 12, 24, filled=True),
+    RECT(52, 52, 12, 24, filled=True),
+    RECT(84, 52, 12, 24, filled=True),
+    L(28, 88, 28, 76, 2), L(58, 88, 58, 76, 2), L(90, 88, 90, 76, 2),
+]
+# Gravity-Blast & Breakdown: extrem dichtes Blast-Raster kippt in wenige
+# schwere Einschläge.
+S["deathcore_gravity_blast"] = [
+    L(12, 60, 54, 60, 2),
+    *[L(14 + i * 5, 60, 14 + i * 5, 44, 2) for i in range(8)],
+    *[L(14 + i * 5, 60, 14 + i * 5, 76, 2) for i in range(8)],
+    L(58, 36, 58, 84, 3.5),
+    L(74, 44, 74, 76, 6), L(92, 44, 92, 76, 6),
+]
+# Gutturals, Highs & Squeals: extreme Bandbreite — tiefe schwere Welle, hohe
+# raue Spitze, dazwischen der quiekende Squeal (kleiner Kringel).
+S["deathcore_gutturals_squeals"] = [
+    P(wavepath(14, 106, 90, 8, 1.5, step=2.0), 5),
+    P(roughpath(16, 70, 34, 6, step=2.4, seed=131), 2.2),
+    C(90, 30, 5, 2), ARC(90, 30, 9, 20, 200, 1.5),
+]
+# Riff-Dissonanz & Slam: enge Cluster-Reibung (raue Doppellinie) über einem
+# schweren Slam-Block.
+S["deathcore_riff_dissonanz"] = [
+    P(roughpath(16, 104, 42, 5, step=2.6, seed=137), 2.5),
+    P(roughpath(16, 104, 52, 5, step=2.6, seed=138), 2.5),
+    RECT(30, 66, 60, 24, filled=True),
+]
+# Chaos & Entladung: eine Spannungskurve steigt dicht an und entlädt sich in
+# einen schweren Abfall-Block.
+S["deathcore_dynamik_dramaturgie"] = [
+    P(roughpath(14, 74, 60, 9, step=2.4, seed=143, env=lambda t: 0.4 + 0.6 * t), 2.2),
+    L(74, 30, 74, 90, 3),
+    RECT(80, 66, 26, 24, filled=True),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -551,7 +603,9 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "modeler_reamping", "noise_management", "backline_ausfallsicherheit", "tuning_landkarte",
                 "kit_ergonomie", "felle_grundlagen", "drum_stimmen_basis", "becken_typen",
                 "felle_sound_genre", "daempfung_definition", "fussmaschinen", "hardware_stabilitaet",
-                "trigger_edrums", "drums_wartung_backup"]
+                "trigger_edrums", "drums_wartung_backup",
+                "deathcore_breakdown_wucht", "deathcore_bass_fundament", "deathcore_gravity_blast",
+                "deathcore_gutturals_squeals", "deathcore_riff_dissonanz", "deathcore_dynamik_dramaturgie"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:

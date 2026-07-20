@@ -9,14 +9,30 @@
   "bausteine": [
     {
       "id": "genrekunde_extreme_familie",
-      "anzeigetitel": { "de": "Genrekunde: die extreme Familie" },
-      "domaene": ["theorie"],
-      "kompetenzstufe": ["einsteiger"],
+      "anzeigetitel": {
+        "de": "Genrekunde: die extreme Familie"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
       "typ": "micro",
-      "stil": ["hardcore", "crust", "grindcore", "powerviolence", "sludge", "doom"],
-      "voraussetzungen": ["tempo_genres"],
+      "stil": [
+        "hardcore",
+        "crust",
+        "grindcore",
+        "powerviolence",
+        "sludge",
+        "doom",
+        "deathcore"
+      ],
+      "voraussetzungen": [
+        "tempo_genres"
+      ],
       "erklaerteil": {
-        "de": "Zwischen Hardcore-Punk und Metal liegt eine ganze Familie von Genres, die sich gegenseitig hervorgebracht haben — und wer die Verwandtschaften kennt, hört jedes einzelne Genre klarer. Die Kurzfassung: Aus dem Hardcore-Punk der frühen Achtziger wachsen zwei Linien. Die eine wird schneller und dreckiger — der D-Beat führt zum Crust, und wo Crust-Tempo auf Metal-Extremität trifft, entsteht Grindcore: Blastbeats, Sekunden-Songs, totale Verdichtung. Powerviolence ist der eigenwillige Cousin: Hardcore, der zwischen absurdem Tempo und Zeitlupe hin- und herspringt, mit Schnitten statt Übergängen.\n\nDie andere Linie wird langsamer und schwerer: Doom pflegt das erhabene, majestätische Schleppen aus der Sabbath-Tradition — und Sludge kreuzt genau dieses Tempo mit der Wut und dem Dreck des Hardcore. Gleiches Tempo, völlig andere Haltung: Doom klingt wie ein Ritual, Sludge wie ein Kampf.\n\nDie Grenzen sind fließend, und viele Bands leben genau auf den Übergängen. Aber als Landkarte funktioniert das Bild: eine schnelle Linie (Hardcore → Crust → Grind, daneben Powerviolence) und eine langsame (Doom, daneben Sludge) — und alle teilen dieselbe Wurzel aus Direktheit und Dringlichkeit."
+        "de": "Zwischen Hardcore-Punk und Metal liegt eine ganze Familie von Genres, die sich gegenseitig hervorgebracht haben — und wer die Verwandtschaften kennt, hört jedes einzelne Genre klarer. Die Kurzfassung: Aus dem Hardcore-Punk der frühen Achtziger wachsen zwei Linien. Die eine wird schneller und dreckiger — der D-Beat führt zum Crust, und wo Crust-Tempo auf Metal-Extremität trifft, entsteht Grindcore: Blastbeats, Sekunden-Songs, totale Verdichtung. Powerviolence ist der eigenwillige Cousin: Hardcore, der zwischen absurdem Tempo und Zeitlupe hin- und herspringt, mit Schnitten statt Übergängen.\n\nDie andere Linie wird langsamer und schwerer: Doom pflegt das erhabene, majestätische Schleppen aus der Sabbath-Tradition — und Sludge kreuzt genau dieses Tempo mit der Wut und dem Dreck des Hardcore. Gleiches Tempo, völlig andere Haltung: Doom klingt wie ein Ritual, Sludge wie ein Kampf.\n\nDie Grenzen sind fließend, und viele Bands leben genau auf den Übergängen. Aber als Landkarte funktioniert das Bild: eine schnelle Linie (Hardcore → Crust → Grind, daneben Powerviolence) und eine langsame (Doom, daneben Sludge) — und alle teilen dieselbe Wurzel aus Direktheit und Dringlichkeit.\n\nQuer zu beiden Linien liegen die Core-Fusionen: Metalcore und Deathcore verbinden die Härte und die Breakdowns des Hardcore mit Riffing und Extremtechnik des Metal — Deathcore zieht dabei die tiefe Brutalität und die Growls des Death Metal in den Breakdown-Fokus."
       },
       "reflexionsaufgabe": {
         "de": "Bau dir eine kleine Hör-Landkarte: Such dir je einen typischen Song aus Hardcore, Crust, Grindcore, Powerviolence, Doom und Sludge (Genre-Klassiker findest du mit einer kurzen Suche) und hör jeweils eine Minute konzentriert hinein. Notier zu jedem drei Stichworte: Tempo, Klang (sauber/räudig, dünn/massiv), Gesang.\n\nPrüf dann die Landkarte aus dem Erklärteil an deinen Notizen: Hörst du die schnelle Linie und die langsame Linie? Woran erkennst du den Unterschied zwischen Doom und Sludge, obwohl beide langsam sind — und zwischen Grindcore und Powerviolence, obwohl beide rasen? Zum Schluss: Welches der sechs Genres zieht dich am stärksten — und was genau daran (das Tempo, der Klang, die Haltung)?"
@@ -24,12 +40,23 @@
     },
     {
       "id": "sludge_erstes_riff",
-      "anzeigetitel": { "de": "Das erste Sludge-Riff" },
-      "domaene": ["gitarre"],
-      "kompetenzstufe": ["einsteiger"],
+      "anzeigetitel": {
+        "de": "Das erste Sludge-Riff"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
       "typ": "micro",
-      "stil": ["sludge"],
-      "voraussetzungen": ["powerchords", "palm_muting"],
+      "stil": [
+        "sludge"
+      ],
+      "voraussetzungen": [
+        "powerchords",
+        "palm_muting"
+      ],
       "erklaerteil": {
         "de": "Sludge ist einer der dankbarsten Einstiege ins langsame Spiel: Die Riffs sind technisch einfach — Powerchords, wenige Töne —, aber sie verlangen genau das, was Einsteiger am meisten weiterbringt: Gewicht, Geduld und Kontrolle über den Ausklang. Ein Sludge-Riff bei 60 BPM verzeiht nichts: Jeder Anschlag ist ein Ereignis, jede Lücke ist hörbar, und genau daran wächst dein Timing.\n\nDas Rezept für den Anfang: ein Powerchord, satt angeschlagen und voll ausgehalten, dann ein zweiter einen Ganzton oder Halbton tiefer — mehr braucht ein erstes Sludge-Riff nicht. Die Kunst liegt im Wie: Der Anschlag kommt entschlossen (zaghaft klingt bei diesem Tempo doppelt zaghaft), der Akkord klingt bis kurz vor dem nächsten Schlag, und dann stoppst du ihn bewusst ab, damit der neue Anschlag knallt.\n\nLass dich vom langsamen Tempo nicht täuschen: Langsam sauber ist schwerer als schnell schlampig. Wenn dein erstes Sludge-Riff nach etwas klingt, hast du mehr gelernt als mit zehn hektischen Riffs."
       },
@@ -50,12 +77,22 @@
     },
     {
       "id": "pv_stopp_spiel",
-      "anzeigetitel": { "de": "Das Stopp-Spiel" },
-      "domaene": ["schlagzeug"],
-      "kompetenzstufe": ["einsteiger"],
+      "anzeigetitel": {
+        "de": "Das Stopp-Spiel"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
       "typ": "micro",
-      "stil": ["powerviolence"],
-      "voraussetzungen": ["grundbeat"],
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "grundbeat"
+      ],
       "erklaerteil": {
         "de": "Stopps sind eines der stärksten Mittel harter Musik — und eine perfekte Einsteiger-Übung, lange bevor es um Powerviolence-Tempo geht. Ein Stopp ist mehr als Aufhören: Er hat einen exakten letzten Schlag, eine definierte Stille und einen entschlossenen Wiedereinstieg. Alle drei Teile kann man üben wie Vokabeln.\n\nDas Schwierigste ist die Stille: Während nichts klingt, muss die Zeit in dir weiterlaufen, sonst kommt der Wiedereinstieg zu früh oder zu spät. Der Trick ist, die Stille aktiv zu zählen — laut, dann leise, dann nur im Kopf — statt sie als Loch zu erleben. Genau diese Fähigkeit trägt später alles: Breakdowns, Abrisskanten, ganze Powerviolence-Songs.\n\nUnd nebenbei trainiert das Stopp-Spiel Entschlossenheit: Ein zaghafter Wiedereinstieg klingt nach Fehler, ein entschlossener nach Absicht — bei jedem Tempo, auf jedem Level."
       },
