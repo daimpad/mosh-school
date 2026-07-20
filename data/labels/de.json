@@ -274,7 +274,20 @@
     "klang_intervall_aria": "Intervall {name} anspielen",
     "klang_akkord_aria": "Akkord {name} anspielen",
     "klang_skalen": "Skalen & Modi",
-    "klang_skala_aria": "Skala {name} aufwärts anspielen"
+    "klang_skala_aria": "Skala {name} aufwärts anspielen",
+    "nav_patterns": "Patterns",
+    "pattern_untertitel": "Typische Riffs (TAB) und Drumpattern pro Genre — tipp auf „Abspielen“, um sie zu hören. Referenz zum Nachbauen, kein Fortschritt.",
+    "pattern_bpm": "{n} BPM",
+    "pattern_play": "Abspielen",
+    "pattern_play_aria": "{name} abspielen",
+    "pattern_tab_aria": "TAB-Raster: Saiten (Zeilen) und Achtel-Schritte (Spalten) mit Bundzahlen",
+    "pattern_drum_aria": "Drum-Raster: Spuren (Zeilen) und Achtel-Schritte (Spalten)",
+    "pattern_spur_crash": "China / Crash",
+    "pattern_spur_hihat": "Hi-Hat",
+    "pattern_spur_snare": "Snare",
+    "pattern_spur_kick": "Kick",
+    "pattern_zum_pfad": "Zum {name}-Pfad",
+    "pattern_hinweis_pegel": "Die synthetischen Klänge sind bewusst schlicht — sie zeigen Rhythmus und Tonfolge, nicht den echten Sound. Bewusst leise abspielen; am Instrument gilt wie immer Gehörschutz, sobald der Amp läuft."
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
