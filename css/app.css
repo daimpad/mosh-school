@@ -2292,3 +2292,38 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .wz-ab-fakten dt { font-weight: 700; margin-top: 0.55rem; }
 .wz-ab-fakten dd { margin: 0.1rem 0 0; }
 .wz-ab-amp-watt, .wz-ab-box-watt { width: 6rem; padding: 0.4rem 0.5rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+
+/* === Song-Struktur-Baukasten =============================================== */
+.wz-st-timeline { display: flex; gap: 2px; height: 2.2rem; margin: 0.5rem 0; border-radius: var(--radius-klein); overflow: hidden; }
+.wz-st-seg { display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 0.72rem; font-weight: 700; color: var(--flaeche); padding: 0 0.25rem; }
+.wz-st-kurve { height: 42px; margin: 0.2rem 0 0.8rem; color: var(--primaer); }
+.wz-st-kurve-svg { width: 100%; height: 100%; }
+/* Intensitätsfarbe: 1 (ruhig) → 5 (brutal); nutzt Ampel-Token, gilt für Segment + Blockrand. */
+.intens-1 { background: var(--pf-teal); }
+.intens-2 { background: var(--pf-sky); }
+.intens-3 { background: var(--primaer); }
+.intens-4 { background: var(--signal-gelb-text); }
+.intens-5 { background: var(--signal-rot); }
+.wz-st-liste { list-style: none; margin: 0.5rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.wz-st-block { border: 1px solid var(--linie-stark); border-left-width: 5px; border-radius: var(--radius-klein); padding: 0.6rem 0.75rem; background: var(--flaeche); }
+.wz-st-block.intens-1 { border-left-color: var(--pf-teal); background: var(--flaeche); }
+.wz-st-block.intens-2 { border-left-color: var(--pf-sky); }
+.wz-st-block.intens-3 { border-left-color: var(--primaer); }
+.wz-st-block.intens-4 { border-left-color: var(--signal-gelb-text); }
+.wz-st-block.intens-5 { border-left-color: var(--signal-rot); }
+.wz-st-block-kopf { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.45rem; }
+.wz-st-block-typ { font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; }
+.wz-st-block-knoepfe { display: inline-flex; gap: 0.1rem; }
+.wz-st-felder { display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; align-items: flex-end; }
+.wz-st-felder label { display: inline-flex; flex-direction: column; gap: 0.2rem; font-size: 0.82rem; font-weight: 600; }
+.wz-st-felder input[type="number"] { width: 4.2rem; padding: 0.3rem 0.4rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+.wz-st-felder select { padding: 0.3rem 0.4rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+.wz-st-notiz-feld { flex: 1 1 12rem; }
+.wz-st-notiz-feld input { width: 100%; padding: 0.3rem 0.4rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+.wz-st-intens-gruppe { display: inline-flex; gap: 0.15rem; }
+.wz-st-intens-knopf { width: 1.7rem; height: 1.7rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche-2); color: var(--tinte-2); cursor: pointer; font-weight: 700; }
+.wz-st-intens-knopf.aktiv { background: var(--primaer); color: var(--flaeche); border-color: var(--primaer); }
+.wz-st-bpm { width: 6rem; padding: 0.4rem 0.5rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+.wz-st-text { font-family: monospace; font-size: 0.82rem; overflow-wrap: anywhere; }
+.wz-metro-map { padding: 0.5rem 0.75rem; border-left: 3px solid var(--primaer); background: var(--primaer-weich); border-radius: var(--radius-klein); font-weight: 600; }
+:root[data-theme="dark"] .wz-metro-map { background: color-mix(in srgb, var(--primaer) 14%, transparent); }
