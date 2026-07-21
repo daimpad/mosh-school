@@ -54,6 +54,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.songwriting.json',
   'data/bausteine.uebe-methodik.json',
   'data/bausteine.unterricht.json',
+  'data/bausteine.gesang-clean.json',
 ];
 
 export async function ladeDaten() {
