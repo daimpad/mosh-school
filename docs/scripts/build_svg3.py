@@ -1026,6 +1026,90 @@ S["sludge_langform"] = [
     L(14, 92, 106, 92, 2),
 ]
 
+# ============ GENRE-VERTIEFUNG RUNDE 2 (grind/deathcore/djent/stoner-post) ============
+# Grind-Sound „Kreissäge": zwei sehr dichte, raue Linien — maximale Verzerrung/Harsh.
+S["grind_sound_buzzsaw"] = [
+    P(roughpath(14, 106, 60, 20, step=2.0, seed=113), 3),
+    P(roughpath(14, 106, 60, 10, step=2.0, seed=57), 2),
+]
+# Grind-Haltung: scharfer Schrägschlag (Ansage), kleines X (Anti-Konvention),
+# Hohlkreis (die absurde/groteske Seite).
+S["grind_ethos_humor"] = [
+    L(24, 86, 96, 34, 7),
+    L(30, 30, 44, 44, 3), L(44, 30, 30, 44, 3),
+    C(90, 82, 7, 2.5),
+]
+# Grind-Extrem-Vocals: tiefer, schwerer rauer Guttural unten gegen dünnen,
+# schnellen Pig-Squeal-Zickzack oben.
+S["grind_vocals_extrem"] = [
+    P(roughpath(14, 60, 88, 8, step=2.5, seed=41), 6),
+    P(wavepath(64, 106, 40, 6, 6, step=1.5), 2),
+]
+# Deathcore-Downtempo: ein einzelner, riesig schwerer Amboss-Chug, viel schwarzer
+# Raum, dann ein zweiter — Wucht aus Leere.
+S["deathcore_downtempo"] = [
+    L(12, 84, 108, 84, 2.5),
+    L(34, 84, 34, 34, 11),
+    L(92, 84, 92, 52, 9),
+]
+# Deathcore-Intro: ruhige, weite Atmosphäre-Welle links, Trennlinie, dann rauhes
+# Chaos rechts — Kontrast als Dramaturgie.
+S["deathcore_intro_atmosphaere"] = [
+    P(wavepath(14, 58, 60, 10, 1.0, step=2.0), 2),
+    L(60, 30, 60, 90, 2),
+    P(roughpath(64, 106, 60, 18, step=2.0, seed=88), 4),
+]
+# Deathcore-Ausdauer: gleichmäßige Stimm-Welle über eine Zeitlinie mit Ticks —
+# Ökonomie/Durchhalten statt Maximaldruck.
+S["deathcore_gesang_ausdauer"] = [
+    L(12, 92, 108, 92, 2),
+    P(wavepath(14, 106, 58, 12, 5, step=2.0), 3.5),
+]
+for x in (20, 42, 64, 86, 108):
+    S["deathcore_gesang_ausdauer"].append(L(x, 92, x, 88, 2))
+# Djent-Ambient: ein angeschlagener Ton (Punkt) mit abklingenden Resonanz-/Delay-
+# Bögen nach außen — weite cleane Fläche.
+S["djent_gitarre_ambient"] = [C(24, 60, 4, fill=True)]
+for i, r in enumerate((14, 22, 30, 38)):
+    S["djent_gitarre_ambient"].append(ARC(24, 60, r, 300, 60, 3 - i * 0.6))
+# Djent-Lead: singende, melodische Lead-Welle über einer tighten, dichten Chug-
+# Pocket unten.
+S["djent_solo_lead"] = [
+    P(wavepath(16, 104, 42, 15, 1.5, step=2.5), 3),
+    L(12, 86, 108, 86, 2),
+]
+for x in range(18, 107, 11):
+    S["djent_solo_lead"].append(L(x, 86, x, 74, 5))
+# Djent-Produktion: Doubletracking — zwei identische, gespiegelte Tick-Reihen um
+# eine Mittellinie (präzises Editing/Layering).
+S["djent_studio_produktion"] = [L(12, 60, 108, 60, 1.5)]
+for x in range(20, 105, 12):
+    S["djent_studio_produktion"].append(L(x, 40, x, 57, 4))
+    S["djent_studio_produktion"].append(L(x, 63, x, 80, 4))
+# Stoner-Swing: geschwungene (long-short) Hi-Hat-Ticks über der Zeitlinie, dazu
+# Ghost-Notes als Hohlkreise — rollendes, wippendes Feel.
+S["stoner_groove_swing"] = [L(12, 74, 108, 74, 2)]
+for x in (20, 38, 48, 66, 76, 94):
+    S["stoner_groove_swing"].append(L(x, 74, x, 52, 4))
+for x in (30, 58, 86):
+    S["stoner_groove_swing"].append(C(x, 88, 5, 2))
+# Stoner-Jam: ein Seed-Riff (Punkt), aus dem mehrere überlagerte, wandernde Wellen
+# hervorgehen — gemeinsames Improvisieren.
+S["stoner_jam"] = [
+    C(22, 60, 4, fill=True),
+    P(wavepath(26, 106, 60, 8, 2.0, step=2.5, phase=0.0), 2.5),
+    P(wavepath(26, 106, 60, 14, 1.5, step=2.5, phase=1.6), 2),
+    P(wavepath(26, 106, 60, 20, 1.0, step=2.5, phase=3.1), 1.5),
+]
+# Post-Metal-Texturen: schweres Fundament, darüber anwachsende Klangschichten
+# (Hüllkurve steigt), gekrönt von einem Resonanz-/Feedback-Bogen — Aufbau zur Klimax.
+S["postmetal_textur_schichten"] = [
+    L(14, 98, 106, 98, 6),
+    P(wavepath(14, 106, 76, 8, 1.5, step=2.0, env=lambda t: 0.3 + 0.7 * t), 3),
+    P(wavepath(14, 106, 54, 10, 2.0, step=2.0, env=lambda t: 0.2 + 0.8 * t), 2.5),
+    ARC(60, 42, 30, 20, 160, 2),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -1072,7 +1156,11 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "clean_refrain_hook", "clean_belting", "clean_harmonien",
                 "pv_bass_chaos", "pv_koerper_explosivitaet", "pv_sound_roh",
                 "crust_ethos_haltung", "crust_songwriting_struktur", "crust_koerper_ausdauer",
-                "sludge_bass_wand", "sludge_sound_gear", "sludge_langform"]
+                "sludge_bass_wand", "sludge_sound_gear", "sludge_langform",
+                "grind_sound_buzzsaw", "grind_ethos_humor", "grind_vocals_extrem",
+                "deathcore_downtempo", "deathcore_intro_atmosphaere", "deathcore_gesang_ausdauer",
+                "djent_gitarre_ambient", "djent_solo_lead", "djent_studio_produktion",
+                "stoner_groove_swing", "stoner_jam", "postmetal_textur_schichten"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
