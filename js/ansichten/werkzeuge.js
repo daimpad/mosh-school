@@ -11,7 +11,7 @@ import { esc } from '../oberflaeche.js';
 // Reihenfolge = Erzählreihenfolge. `bereit` schaltet den Link frei.
 const WERKZEUGE = [
   { id: 'metronom', route: '#/werkzeug/metronom', icon: 'fa-stopwatch', bereit: true },
-  { id: 'loops', route: '#/werkzeug/loops', icon: 'fa-drum', bereit: false },
+  { id: 'loops', route: '#/werkzeug/loops', icon: 'fa-drum', bereit: true },
   { id: 'stimmgeraet', route: '#/werkzeug/stimmgeraet', icon: 'fa-wave-square', bereit: false },
   { id: 'struktur', route: '#/werkzeug/struktur', icon: 'fa-layer-group', bereit: false },
   { id: 'recorder', route: '#/werkzeug/recorder', icon: 'fa-microphone', bereit: false },

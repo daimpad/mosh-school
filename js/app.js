@@ -13,6 +13,7 @@ import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
 import { renderWerkzeuge } from './ansichten/werkzeuge.js';
 import { renderWerkzeugMetronom } from './ansichten/werkzeug-metronom.js';
+import { renderWerkzeugLoops } from './ansichten/werkzeug-loops.js';
 import { renderKoennenscheck } from './ansichten/koennenscheck.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
@@ -297,6 +298,8 @@ function rendern() {
     renderWerkzeuge(el, daten);
   } else if (segmente[0] === 'werkzeug' && segmente[1] === 'metronom') {
     renderWerkzeugMetronom(el, daten, query);
+  } else if (segmente[0] === 'werkzeug' && segmente[1] === 'loops') {
+    renderWerkzeugLoops(el, daten, query);
   } else if (segmente[0] === 'werkzeug') {
     // Noch nicht gebautes Werkzeug → zurück zum Hub (kein Bruch bei Deep-Links).
     renderWerkzeuge(el, daten);
