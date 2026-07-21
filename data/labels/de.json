@@ -635,7 +635,13 @@
     "feedback_geben": "Feedback geben, das weiterbringt",
     "motivation_schueler": "Schüler motivieren & Dranbleiben fördern",
     "gesundheit_vermitteln": "Gesundheit vermitteln: sichere Technik von Anfang an",
-    "gehoer_stimme_langfristig": "Gehör & Stimme langfristig schützen"
+    "gehoer_stimme_langfristig": "Gehör & Stimme langfristig schützen",
+    "clean_kopfstimme": "Kopfstimme & sichere Höhe",
+    "clean_intonation_druck": "Sauber intonieren unter Druck",
+    "clean_vibrato": "Vibrato & gehaltene Töne gestalten",
+    "clean_refrain_hook": "Einen tragenden Klargesang-Refrain singen",
+    "clean_belting": "Belting: kraftvolle Höhe ohne Schaden",
+    "clean_harmonien": "Harmonien & zweite Stimme"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
