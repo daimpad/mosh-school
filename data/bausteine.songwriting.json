@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "songwriting",
+    "hinweis": "Songwriting & Arrangement: von der rohen Songidee über das Entwickeln eines Riffs zum Part, das Arrangieren von Übergängen und ganzen Songs, die Verteilung der Parts, Text/Thema für den Gesang bis zur aufnahmereifen Pre-Production. Sieben Bausteine (mentales/theorie/gitarre/gesang/ausruestung), zwei mit Übungsteil (Riff-zu-Part, Übergänge), Rest Reflexion. Gesundheitsrahmen bei Text/Gesang. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "songidee_teilen",
+      "anzeigetitel": {
+        "de": "Songidee einbringen & teilen"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "band_gruenden"
+      ],
+      "erklaerteil": {
+        "de": "Eine Songidee kommt selten fertig auf die Welt — sie ist ein Riff auf dem Handy, ein Beat, eine gesummte Hook. Der entscheidende Schritt in einer Band ist, so eine rohe Idee überhaupt einzubringen, damit die anderen darauf aufbauen können. Die Hürde ist meist nicht die Idee selbst, sondern der Mut, etwas Unfertiges zu zeigen.\n\nEine gute Bandkultur behandelt Ideen als Rohmaterial, nicht als fertiges Urteil: Jeder darf etwas mitbringen, nichts wird sofort zerredet, es wird erst einmal ausprobiert. Wie ihr Rückmeldung gebt, entscheidet darüber, ob weiter Ideen kommen — sachlich an der Stelle im Song, nicht an der Person.\n\nSammelt Ideen niedrigschwellig, etwa als kurze Sprachnotizen, und nehmt euch in der Probe bewusst Zeit, eine davon gemeinsam anzuspielen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie bringt ihr rohe Ideen ein, ohne dass sie fertig sein müssen — und wie sammelt ihr sie, damit keine verloren geht? Wie stellt ihr sicher, dass jeder etwas beitragen kann und Ideen ausprobiert statt zerredet werden? Woran merkt ihr, dass eure Bandkultur Ideen wirklich fördert?"
+      }
+    },
+    {
+      "id": "riff_zu_part_entwickeln",
+      "anzeigetitel": {
+        "de": "Vom Riff zum Songpart"
+      },
+      "domaene": [
+        "gitarre",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "einfaches_riff",
+        "powerchords"
+      ],
+      "erklaerteil": {
+        "de": "Ein einzelnes Riff ist noch kein Part. Damit daraus ein Songabschnitt wird — Vers, Refrain, Breakdown — braucht das Riff Wiederholung, Variation und eine klare Länge. Genau das ist Handwerk: ein Riff so oft wiederholen, dass es sich setzt, und es dann variieren (ein rhythmischer Akzent, ein anderer Abschluss, eine Antwortphrase), damit es nicht langweilig wird.\n\nEin Part umfasst meist eine feste Anzahl Takte (4 oder 8), damit die Band sich orientieren kann. Die Frage bei der Entwicklung lautet: Was will dieses Riff werden — ein treibender Vers oder ein schwerer Refrain? Dieselbe Grundidee kann beides tragen, je nach Tempo, Dichte und Wiederholung.\n\nEntwickeln heißt auch weglassen: Nicht jede Variante muss in den Part. Ein klarer, geschlossener Abschnitt wirkt stärker als ein überladener."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Vom Riff zum Part",
+          "ziel": "Ein Riff zu einem klaren, wiederholbaren Songpart formen.",
+          "schritte": [
+            "Wähle ein kurzes Riff und lege eine feste Länge fest (z. B. 8 Takte).",
+            "Wiederhole es, bis es sich setzt, und baue eine kleine Variation ein — Akzent, Abschluss oder Antwortphrase.",
+            "Spiele den Part mehrmals am Stück und prüfe, ob er als geschlossener Abschnitt wirkt."
+          ],
+          "steigerung": "Entwickle aus demselben Riff zwei Fassungen — eine treibende und eine schwere — und höre den Unterschied.",
+          "selbstkontrolle": "Der Part hat eine klare Länge, wiederholt sich sauber und wirkt als geschlossener Abschnitt."
+        }
+      },
+      "spielziele": [
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "uebergaenge_arrangieren",
+      "anzeigetitel": {
+        "de": "Übergänge zwischen Parts arrangieren"
+      },
+      "domaene": [
+        "theorie",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "riff_zu_part_entwickeln"
+      ],
+      "erklaerteil": {
+        "de": "Songs leben in den Übergängen zwischen den Parts. Ein harter Schnitt, ein Drum-Fill, ein Break, ein Aufbau — wie ihr von Part A nach Part B kommt, entscheidet, ob der Song fließt oder stolpert. Im Metal tragen Übergänge Gewicht: Ein gut gesetzter Fill oder ein gemeinsamer Stop lässt den nächsten Part härter einschlagen.\n\nEntscheidend ist, dass die ganze Band den Übergang gemeinsam trifft, nicht jeder für sich. Der kritische Punkt ist die Eins des neuen Parts — dort zeigt sich, ob der Wechsel sitzt. Deshalb wird ein Übergang isoliert geübt: die zwei Takte um die Nahtstelle, nicht der ganze Song.\n\nDer Typ des Übergangs ist ein Ausdrucksmittel: Ein harter Schnitt wirkt brutal, ein Aufbau schafft Spannung, ein Break gibt Raum. Wählt bewusst, was der Song an dieser Stelle braucht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von Part zu Part",
+          "ziel": "Zwei Parts mit einem bewussten Übergang verbinden.",
+          "schritte": [
+            "Nimm zwei fertige Parts und lege fest, wie ihr von A nach B kommt — harter Schnitt, Fill, Break oder Aufbau.",
+            "Übt nur die zwei Takte um den Übergang in der Schleife.",
+            "Spielt A – Übergang – B am Stück und prüft, ob der Wechsel gemeinsam sitzt und trägt."
+          ],
+          "steigerung": "Baut denselben Übergang einmal als harten Schnitt und einmal als Aufbau und vergleicht die Wirkung.",
+          "selbstkontrolle": "Der Übergang sitzt bei allen gemeinsam; der Wechsel wirkt gewollt, nicht zufällig."
+        }
+      },
+      "spielziele": [
+        "saubere_uebergaenge"
+      ]
+    },
+    {
+      "id": "song_arrangieren_ganz",
+      "anzeigetitel": {
+        "de": "Einen ganzen Song arrangieren"
+      },
+      "domaene": [
+        "theorie",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "uebergaenge_arrangieren"
+      ],
+      "erklaerteil": {
+        "de": "Ein ganzer Song ist mehr als eine Kette guter Parts — er ist eine Dramaturgie. Arrangieren heißt, die Parts in eine Reihenfolge zu bringen, die Spannung aufbaut und hält: Intro, Vers, Refrain, Breakdown, und wo der Höhepunkt sitzt. Nicht jedes gute Riff gehört in jeden Song; manchmal ist Streichen das eigentliche Handwerk.\n\nEin häufiger Anfängerfehler ist, Riffs ohne roten Faden aneinanderzureihen. Ein Song braucht eine tragende Idee und einen Verlauf: Wo ist er am leersten, wo am dichtesten, und kommt der Höhepunkt an der richtigen Stelle? Wiederholung schafft Wiedererkennung — ein Refrain, der zweimal kommt, bleibt hängen.\n\nArrangement ist auch Ökonomie: Ein straffer Song mit klarem Bogen wirkt stärker als ein langer, der alles zeigen will. Fragt euch bei jedem Part, ob er dem Ganzen dient."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie ordnet ihr eure Parts zu einem Bogen mit Aufbau und Höhepunkt? Welche Idee trägt den Song — und welchen guten Part streicht ihr, weil er hier nicht hingehört? Wo ist der Song am leersten, wo am dichtesten, und wie endet er, damit er in Erinnerung bleibt?"
+      }
+    },
+    {
+      "id": "parts_verteilen",
+      "anzeigetitel": {
+        "de": "Parts unter den Instrumenten verteilen"
+      },
+      "domaene": [
+        "theorie",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "song_arrangieren_ganz",
+        "duo_gb_rollen_riff"
+      ],
+      "erklaerteil": {
+        "de": "Derselbe Songpart kann sehr unterschiedlich klingen, je nachdem, wer was spielt. Parts zu verteilen ist Arrangement-Arbeit: Verdoppelt der Bass die Gitarre oder hält er eine eigene Linie? Harmonisiert eine zweite Gitarre, oder trägt die Stimme einen Abschnitt allein? Setzt das Schlagzeug hier zurück oder treibt es?\n\nDie Entscheidung fällt gemeinsam und pro Part — nicht danach, wer am lautesten spielt. Gute Arrangements geben jedem Instrument seine Momente und lassen bewusst Platz, wo ein Part atmen soll. Ein voller Klang entsteht nicht dadurch, dass alle ständig alles spielen, sondern durch sinnvolle Verteilung.\n\nWeniger ist oft mehr: Wenn eine Stimme in den Vordergrund tritt, treten die anderen zurück. Diese Absprache verhindert das Gedränge, in dem alles gleich laut und dadurch undeutlich wird."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie entscheidet ihr pro Part, wer führt und wer Raum lässt (Bass verdoppelt oder eigene Linie, zweite Gitarre, Gesang allein)? Bekommt jedes Instrument seine Momente über den Song verteilt? Und wo lasst ihr bewusst Platz, damit ein Part atmet, statt dass alle gleichzeitig alles spielen?"
+      }
+    },
+    {
+      "id": "text_thema_gesang",
+      "anzeigetitel": {
+        "de": "Text & Thema für den Gesang"
+      },
+      "domaene": [
+        "gesang",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "zur_musik_singen",
+        "rhythmus_phrasierung"
+      ],
+      "erklaerteil": {
+        "de": "Text und Thema geben einem Song eine Identität jenseits der Riffs. Auch wenn die Vocals harsch sind und die Worte kaum zu verstehen, prägen Text und Thema Phrasierung, Rhythmus und Haltung. Im Metal reichen die Themen von persönlich über politisch bis abstrakt; was zählt, ist Echtheit — schreib über das, was dich wirklich bewegt, nicht über Klischees.\n\nDer Rhythmus der Silben ist Teil der Musik: Ein Text wird auf die Phrasierung geschrieben, nicht nachträglich darübergelegt. Betonte Silben fallen auf die Akzente des Riffs; so wird der Text zum rhythmischen Instrument, das den Part verstärkt.\n\nDer Gesundheitsrahmen bleibt: Auch das stärkste Thema und die härteste Zeile werden aus Luft und Stütze getragen, nie aus Pressen. Ein Text ist erst dann gut gesungen, wenn er mühelos sitzt — bei Kratzen oder Schmerz wird pausiert."
+      },
+      "reflexionsaufgabe": {
+        "de": "Worüber wollt ihr wirklich schreiben — was bewegt euch, jenseits von Klischees? Wie passt ihr den Text an die Phrasierung an, sodass betonte Silben auf die Akzente fallen, statt ihn nachträglich drüberzulegen? Und wie tragt ihr auch harte Themen aus der Stütze, ohne zu pressen?"
+      }
+    },
+    {
+      "id": "pre_production_plan",
+      "anzeigetitel": {
+        "de": "Pre-Production: den Song aufnahmereif machen"
+      },
+      "domaene": [
+        "ausruestung",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "song_arrangieren_ganz",
+        "metronom_prinzip"
+      ],
+      "erklaerteil": {
+        "de": "Bevor der erste Ton aufgenommen wird, entscheidet die Pre-Production, wie reibungslos und gut eine Aufnahme wird. Pre-Production heißt: Die Songs sind fertig arrangiert, die Tempos stehen fest (zum Klick), die Parts sind so verinnerlicht, dass sie unter Aufnahmebedingungen sitzen, und jeder kennt den Ablauf.\n\nDie Tempos vorher festzulegen ist fast Pflicht, weil zum Klick aufgenommen wird und sich die Spuren sonst nicht sauber übereinanderlegen lassen. Schwächen, die hier auffallen — ein wackliger Übergang, ein unklarer Part — sind jetzt billig zu beheben und später teuer. Deshalb ist Pre-Production Hausaufgabe, nicht Glamour, und sie entscheidet über die Demo mehr als teures Equipment.\n\nGeht die Songs bewusst durch: Steht jeder Part, ist jedes Tempo gesetzt, und weiß jeder, was in welcher Reihenfolge passiert? Was hier sitzt, spart im Studio Zeit, Geld und Nerven."
+      },
+      "reflexionsaufgabe": {
+        "de": "Stehen eure Songs, Tempos (zum Klick) und Parts so fest, dass sie unter Aufnahmebedingungen sitzen? Welche Schwächen — wackliger Übergang, unklarer Part — räumt ihr jetzt aus, statt sie in die Aufnahme zu tragen? Und kennt jeder den Ablauf, bevor die Aufnahme beginnt?"
+      }
+    }
+  ]
+}

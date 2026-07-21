@@ -51,6 +51,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.ensemble-gross.json',
   'data/bausteine.demo-recording.json',
   'data/bausteine.auftritt-live.json',
+  'data/bausteine.songwriting.json',
 ];
 
 export async function ladeDaten() {
