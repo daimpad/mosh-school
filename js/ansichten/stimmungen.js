@@ -163,12 +163,22 @@ export function renderStimmungen(el, daten) {
   // art bestimmt Label-Gruppe + aria-Text; spielart entscheidet die Wiedergabe
   // (akkord = gleichzeitig, sequenz = aufwärts).
   const ARIA = { intervall: 'klang_intervall_aria', akkord: 'klang_akkord_aria', skala: 'klang_skala_aria' };
-  const klangKnopf = (art, spielart, eintrag) => `
-    <button type="button" class="chip chip-waehlbar klang-knopf" data-spielart="${spielart}" data-halbtoene="${eintrag.halbtoene.join(',')}"
-      data-hinweis="${esc(text(eintrag.hinweis) || '')}"
-      aria-label="${esc(t(ARIA[art], { name: label(art, eintrag.id) }))}">
-      <i class="fa-solid fa-play" aria-hidden="true"></i> ${esc(label(art, eintrag.id))}
-    </button>`;
+  // Chip mit Play-Knopf; getaggte Einträge zeigen darunter die typischen Genres
+  // (verlinkt in die Genre-Achse, wie die Genre-Chips der Stimmung).
+  const klangKnopf = (art, spielart, eintrag) => {
+    const genres = (eintrag.genres || [])
+      .map((g) => `<a class="klang-genre" href="#/pfad/stil/${esc(g)}">${esc(label('stil', g))}</a>`)
+      .join('');
+    return `
+    <span class="klang-eintrag">
+      <button type="button" class="chip chip-waehlbar klang-knopf" data-spielart="${spielart}" data-halbtoene="${eintrag.halbtoene.join(',')}"
+        data-hinweis="${esc(text(eintrag.hinweis) || '')}"
+        aria-label="${esc(t(ARIA[art], { name: label(art, eintrag.id) }))}">
+        <i class="fa-solid fa-play" aria-hidden="true"></i> ${esc(label(art, eintrag.id))}
+      </button>
+      ${genres ? `<span class="klang-genres">${genres}</span>` : ''}
+    </span>`;
+  };
   const intervalle = werkzeug.intervalle || [];
   const akkorde = werkzeug.akkorde || [];
   const skalen = werkzeug.skalen || [];

@@ -18,7 +18,9 @@
         "thrash",
         "hardcore",
         "black_metal",
-        "crust"
+        "crust",
+        "grindcore",
+        "powerviolence"
       ],
       "staerke": "09–46 bis 10–46",
       "hinweis": {
@@ -39,7 +41,10 @@
       "genres": [
         "hardcore",
         "metalcore",
-        "sludge"
+        "sludge",
+        "grindcore",
+        "powerviolence",
+        "stoner_post"
       ],
       "staerke": "10–46 bis 10–52",
       "hinweis": {
@@ -80,7 +85,8 @@
       "genres": [
         "death_metal",
         "doom",
-        "sludge"
+        "sludge",
+        "stoner_post"
       ],
       "staerke": "11–50 bis 12–54",
       "hinweis": {
@@ -101,7 +107,9 @@
       "genres": [
         "metalcore",
         "death_metal",
-        "hardcore"
+        "hardcore",
+        "deathcore",
+        "stoner_post"
       ],
       "staerke": "11–54 bis 12–56",
       "hinweis": {
@@ -122,7 +130,8 @@
       "genres": [
         "doom",
         "sludge",
-        "death_metal"
+        "death_metal",
+        "stoner_post"
       ],
       "staerke": "12–56 bis 13–60",
       "hinweis": {
@@ -142,7 +151,8 @@
       ],
       "genres": [
         "metalcore",
-        "death_metal"
+        "death_metal",
+        "deathcore"
       ],
       "staerke": "12–60 bis 13–62",
       "hinweis": {
@@ -163,7 +173,9 @@
       ],
       "genres": [
         "death_metal",
-        "metalcore"
+        "metalcore",
+        "deathcore",
+        "djent"
       ],
       "staerke": "10–59 bis 10–62 (7-Saiter)",
       "hinweis": {
@@ -183,11 +195,57 @@
         "E4"
       ],
       "genres": [
-        "metalcore"
+        "metalcore",
+        "deathcore",
+        "djent"
       ],
       "staerke": "10–64 (7-Saiter)",
       "hinweis": {
         "de": "Drop-Logik auf sieben Saiten: die tiefste nochmal einen Ganzton runter — modernes Deathcore-/Metalcore-Terrain, Baritone-Mensur hilft."
+      }
+    },
+    {
+      "id": "f_sharp_standard_8",
+      "instrument": "gitarre",
+      "saiten": [
+        "F#1",
+        "B1",
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "genres": [
+        "djent",
+        "deathcore"
+      ],
+      "staerke": "09–74 bis 10–80 (8-Saiter)",
+      "hinweis": {
+        "de": "Achtsaiter-Standard mit tiefem F♯ — die Prog-/Djent-Basis (Meshuggah-Terrain): erweiterte Range für tiefe Grooves, ohne die hohen Lagen aufzugeben."
+      }
+    },
+    {
+      "id": "drop_e_8",
+      "instrument": "gitarre",
+      "saiten": [
+        "E1",
+        "B1",
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "genres": [
+        "djent",
+        "deathcore"
+      ],
+      "staerke": "09–80 (8-Saiter)",
+      "hinweis": {
+        "de": "Achtsaiter mit auf E heruntergezogener tiefster Saite — maximale Wucht für Djent- und Deathcore-Breakdowns über den Powerchord auf der tiefsten Saite."
       }
     },
     {
@@ -203,7 +261,9 @@
         "thrash",
         "hardcore",
         "black_metal",
-        "crust"
+        "crust",
+        "grindcore",
+        "powerviolence"
       ],
       "staerke": "45–105",
       "hinweis": {
@@ -222,7 +282,10 @@
       "genres": [
         "hardcore",
         "metalcore",
-        "sludge"
+        "sludge",
+        "grindcore",
+        "powerviolence",
+        "stoner_post"
       ],
       "staerke": "50–110",
       "hinweis": {
@@ -241,7 +304,8 @@
       "genres": [
         "death_metal",
         "doom",
-        "sludge"
+        "sludge",
+        "stoner_post"
       ],
       "staerke": "50–110 bis 55–110",
       "hinweis": {
@@ -259,7 +323,9 @@
       ],
       "genres": [
         "metalcore",
-        "death_metal"
+        "death_metal",
+        "deathcore",
+        "stoner_post"
       ],
       "staerke": "55–115",
       "hinweis": {
@@ -278,7 +344,9 @@
       ],
       "genres": [
         "death_metal",
-        "metalcore"
+        "metalcore",
+        "deathcore",
+        "djent"
       ],
       "staerke": "45–130 (5-Saiter)",
       "hinweis": {
@@ -429,7 +497,11 @@
       ],
       "hinweis": {
         "de": "Grundton, große Sekunde, Quinte — offen und schwebend statt Dur/Moll. Beliebt in Post-Metal-Flächen."
-      }
+      },
+      "genres": [
+        "djent",
+        "stoner_post"
+      ]
     },
     {
       "id": "sus4",
@@ -440,7 +512,11 @@
       ],
       "hinweis": {
         "de": "Grundton, Quarte, Quinte — gespannt, will sich auflösen. Treibt Aufbauten und Übergänge."
-      }
+      },
+      "genres": [
+        "djent",
+        "stoner_post"
+      ]
     },
     {
       "id": "dur",
@@ -462,7 +538,12 @@
       ],
       "hinweis": {
         "de": "Grundton, kleine Terz, Quinte — dunkel. Der Grundklang der Metal-Harmonik, clean oder leicht angezerrt."
-      }
+      },
+      "genres": [
+        "doom",
+        "black_metal",
+        "sludge"
+      ]
     },
     {
       "id": "vermindert",
@@ -473,7 +554,12 @@
       ],
       "hinweis": {
         "de": "Kleine Terz plus Tritonus — maximal instabil und spannungsgeladen. Das Schock-Werkzeug für dissonante Passagen."
-      }
+      },
+      "genres": [
+        "death_metal",
+        "deathcore",
+        "black_metal"
+      ]
     },
     {
       "id": "dur7",
@@ -509,7 +595,11 @@
       ],
       "hinweis": {
         "de": "Vier gestapelte kleine Terzen — maximal instabil und unheimlich. Das neoklassische/Death-Metal-Spannungswerkzeug."
-      }
+      },
+      "genres": [
+        "death_metal",
+        "deathcore"
+      ]
     }
   ],
   "skalen": [
@@ -543,7 +633,13 @@
       ],
       "hinweis": {
         "de": "Natürliches Moll (Äolisch) — die dunkle Grundtonleiter fast aller Metal-Riffs und -Melodien."
-      }
+      },
+      "genres": [
+        "doom",
+        "black_metal",
+        "sludge",
+        "stoner_post"
+      ]
     },
     {
       "id": "dorisch",
@@ -559,7 +655,11 @@
       ],
       "hinweis": {
         "de": "Dorisch — Moll mit heller großer Sexte, etwas offener und rockiger; im Groove- und Death-Metal beliebt."
-      }
+      },
+      "genres": [
+        "djent",
+        "metalcore"
+      ]
     },
     {
       "id": "phrygisch",
@@ -575,7 +675,13 @@
       ],
       "hinweis": {
         "de": "Phrygisch — natürliches Moll mit tiefer zweiter Stufe; der Halbton über dem Grundton macht es finster. Kernfarbe von Thrash und Death."
-      }
+      },
+      "genres": [
+        "thrash",
+        "death_metal",
+        "black_metal",
+        "deathcore"
+      ]
     },
     {
       "id": "phrygisch_dominant",
@@ -591,7 +697,12 @@
       ],
       "hinweis": {
         "de": "Phrygisch-Dominant — die exotische, „spanische“ Färbung aus dem Harmonisch Moll: große Terz über dunklem Fundament, viel in orientalisch angehauchtem Death und Black."
-      }
+      },
+      "genres": [
+        "thrash",
+        "death_metal",
+        "black_metal"
+      ]
     },
     {
       "id": "mixolydisch",
@@ -607,7 +718,10 @@
       ],
       "hinweis": {
         "de": "Dur mit kleiner Septime — bluesig und rockig; der Modus des Stoner und klassischen Hard Rock."
-      }
+      },
+      "genres": [
+        "stoner_post"
+      ]
     },
     {
       "id": "lokrisch",
@@ -623,7 +737,11 @@
       ],
       "hinweis": {
         "de": "Lokrisch — die instabilste Kirchentonart mit verminderter Quinte (Tritonus über dem Grundton). Maximale Spannung für dissonante Passagen."
-      }
+      },
+      "genres": [
+        "deathcore",
+        "djent"
+      ]
     },
     {
       "id": "harmonisch_moll",
@@ -639,7 +757,11 @@
       ],
       "hinweis": {
         "de": "Harmonisch Moll — Moll mit erhöhter siebter Stufe; der große Sprung zur Leitton-Septime klingt dramatisch und neoklassisch."
-      }
+      },
+      "genres": [
+        "black_metal",
+        "death_metal"
+      ]
     },
     {
       "id": "moll_pentatonik",
@@ -653,7 +775,14 @@
       ],
       "hinweis": {
         "de": "Moll-Pentatonik — fünf Töne ohne Halbtöne, die Basis von Groove-Metal-Riffs und blues-getränkten Leads."
-      }
+      },
+      "genres": [
+        "hardcore",
+        "crust",
+        "sludge",
+        "doom",
+        "stoner_post"
+      ]
     },
     {
       "id": "moll_blues",
@@ -668,7 +797,12 @@
       ],
       "hinweis": {
         "de": "Moll-Pentatonik plus Blue Note (b5) — der räudige, bluesige Kern von Stoner und Sludge."
-      }
+      },
+      "genres": [
+        "stoner_post",
+        "sludge",
+        "doom"
+      ]
     },
     {
       "id": "ganzton",
@@ -683,7 +817,11 @@
       ],
       "hinweis": {
         "de": "Nur Ganztöne — schwebend und tonal haltlos. Erzeugt Desorientierung, gern in dissonantem/technischem Metal."
-      }
+      },
+      "genres": [
+        "djent",
+        "deathcore"
+      ]
     },
     {
       "id": "chromatisch",
@@ -704,7 +842,12 @@
       ],
       "hinweis": {
         "de": "Alle zwölf Halbtöne — Basis für chromatische Läufe und atonale Riffs im Death und technischen Metal."
-      }
+      },
+      "genres": [
+        "grindcore",
+        "powerviolence",
+        "death_metal"
+      ]
     }
   ]
 }
