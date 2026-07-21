@@ -1,0 +1,532 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "ensemble",
+    "hinweis": "Größere Ensemble-Verbünde (Zusammenspiel): restliche Instrumentenpaare (duo_gd_* Gitarre+Drums, duo_bv_* Bass+Gesang, duo_dv_* Drums+Gesang) plus Trio (trio_engine_lock) und ganze Band (band_gemeinsamer_breakdown/band_dynamik_aufbau/band_stops_einsaetze). Mehrwertige domaene (2–4 Instrumente). Alle mit Übungsteil, fortgeschritten. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "duo_gd_riff_kick",
+      "anzeigetitel": {
+        "de": "Gitarre & Drums: Riff-Akzente auf die Bassdrum"
+      },
+      "domaene": [
+        "gitarre",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "chugs_breakdown",
+        "grundbeat",
+        "double_bass"
+      ],
+      "erklaerteil": {
+        "de": "Auch ohne Bass koppeln sich Gitarre und Schlagzeug über die Bassdrum: Die Akzente des Riffs — betonte Chugs, Wechsel, Stops — fallen mit bestimmten Kicks zusammen. Diese Kopplung gibt tempoorientierten Parts ihre Wucht und hält Gitarre und Drums als rhythmische Einheit zusammen.\n\nEntscheidend ist Klarheit, welche Riff-Akzente auf welche Kicks fallen. Der Drummer gibt mit dem Fuß die Referenz, die Gitarre legt ihre betonten Anschläge genau darauf. Bei schnellen Double-Bass-Parts trifft nicht jeder Anschlag eine Kick — aber die Akzente müssen sitzen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Akzent auf die Kick",
+          "ziel": "Betonte Riff-Anschläge mit der Bassdrum koppeln.",
+          "schritte": [
+            "Der Drummer spielt eine einfache Figur mit klaren Bassdrum-Schlägen zum Klick.",
+            "Die Gitarre legt die betonten Anschläge des Riffs exakt auf die Kicks, die dazwischenliegenden lockerer.",
+            "Nehmt es auf und prüft, ob Akzent und Kick als ein Impuls zusammenfallen."
+          ],
+          "steigerung": "Wechselt zu einer schnelleren Kick-Figur und haltet die Akzent-Kopplung, auch wenn nicht jeder Anschlag eine Kick trifft.",
+          "selbstkontrolle": "Die betonten Anschläge sitzen exakt auf den Kicks; der Part wirkt als eine rhythmische Einheit."
+        }
+      },
+      "stil": [
+        "death_metal",
+        "thrash"
+      ],
+      "spielziele": [
+        "riff_praezision",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "duo_gd_breaks",
+      "anzeigetitel": {
+        "de": "Gitarre & Drums: gemeinsame Stops & Akzente"
+      },
+      "domaene": [
+        "gitarre",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "chugs_breakdown",
+        "dynamik_akzente",
+        "fills"
+      ],
+      "erklaerteil": {
+        "de": "Stops und gesetzte Akzente wirken nur, wenn Gitarre und Schlagzeug sie als eine Bewegung treffen: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg. Gerade an diesen exponierten Stellen fällt jede Ungenauigkeit auf.\n\nDer kritische Punkt ist wie immer die Eins nach dem Stop. Wer den Puls während der Stille innerlich hält, steigt gemeinsam wieder ein; wer schätzt, stolpert. Übt die zwei Takte um den Break isoliert, nicht ganze Parts."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zusammen stoppen",
+          "ziel": "Stops und Akzente von Gitarre und Drums deckungsgleich setzen.",
+          "schritte": [
+            "Spielt einen einfachen Part und baut an fester Stelle einen gemeinsamen Stop von einer Zählzeit ein.",
+            "Zählt beide innerlich weiter und steigt exakt gemeinsam auf der Eins wieder ein.",
+            "Prüft per Aufnahme, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+          ],
+          "steigerung": "Setzt einen gemeinsamen Akzent mitten in die Pause, den beide exakt gleich platzieren.",
+          "selbstkontrolle": "Stop und Wiedereinstieg fallen zusammen; die Eins danach sitzt bei beiden."
+        }
+      },
+      "spielziele": [
+        "saubere_uebergaenge",
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_gd_tempo_fuehrung",
+      "anzeigetitel": {
+        "de": "Gitarre & Drums: Tempo-Führung"
+      },
+      "domaene": [
+        "gitarre",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "metronom_prinzip",
+        "timing_klick",
+        "grundbeat"
+      ],
+      "erklaerteil": {
+        "de": "In riffgetriebenen Parts stellt sich die Frage, wer das Tempo führt. Grundsätzlich gibt das Schlagzeug die Band-Zeit vor — die Gitarre ordnet sich ein, statt zu drängen. Ein häufiger Fehler ist, dass die Gitarre bei aufregenden Riffs beschleunigt und die Drums mitzieht.\n\nDie saubere Lösung ist nicht, dass einer dem anderen folgt, sondern dass beide auf derselben Referenz liegen — dem Klick. So bleibt das Tempo auch dann stabil, wenn ein Part zum Eilen einlädt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Wer führt das Tempo",
+          "ziel": "Gitarre ordnet sich der Drum-Zeit unter; beide liegen auf dem Klick.",
+          "schritte": [
+            "Spielt einen treibenden Part gemeinsam zum Klick; die Gitarre achtet bewusst darauf, nicht zu drängen.",
+            "Reduziert das Metronom auf jeden zweiten Schlag und prüft, ob das Tempo hält.",
+            "Nehmt es auf und hört, ob ihr über den Part konstant bleibt oder anzieht."
+          ],
+          "steigerung": "Nehmt einen besonders treibenden Part und haltet das Tempo über mehrere Durchläufe stabil.",
+          "selbstkontrolle": "Das Tempo bleibt konstant; die Gitarre drängt nicht, beide liegen auf dem Klick."
+        }
+      },
+      "spielziele": [
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "duo_bv_groove_phrasierung",
+      "anzeigetitel": {
+        "de": "Bass & Gesang: Phrasierung über dem Groove"
+      },
+      "domaene": [
+        "bass",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "grundton_folgen",
+        "rhythmus_phrasierung"
+      ],
+      "erklaerteil": {
+        "de": "Wenn die Gitarre zurücktritt — in Intros, ruhigen Parts oder bestimmten Breakdowns — tragen Bass und Gesang gemeinsam. Der Bass liefert Groove und Fundament, die Stimme phrasiert darüber. Weil beide unterschiedliche Register besetzen, konkurrieren sie kaum, aber ihr Timing muss zusammenpassen.\n\nDie Stimme orientiert sich am Groove des Basses statt an einem Metronom im Kopf; der Bass hält die Linie so stabil, dass die Stimme sich darauf verlassen kann. So entsteht ein tragfähiges Gerüst auch ohne Gitarre."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Stimme über dem Bass-Groove",
+          "ziel": "Gesang und Bass ohne Gitarre zu einem tragfähigen Gerüst verbinden.",
+          "schritte": [
+            "Der Bass spielt eine einfache, stabile Linie zum Klick.",
+            "Die Stimme phrasiert darüber und richtet ihr Timing am Groove des Basses aus.",
+            "Nehmt es auf und prüft, ob Bass und Stimme zusammen ein tragfähiges Gerüst ergeben."
+          ],
+          "steigerung": "Nehmt einen Part, in dem die Gitarre bewusst pausiert, und tragt ihn nur zu zweit.",
+          "selbstkontrolle": "Bass und Stimme wirken zusammen stabil und vollständig, auch ohne Gitarre."
+        }
+      },
+      "spielziele": [
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_bv_tonzentrum",
+      "anzeigetitel": {
+        "de": "Bass & Gesang: Tonzentrum für die Melodie"
+      },
+      "domaene": [
+        "bass",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "grundton_folgen",
+        "tonhoehe_clean"
+      ],
+      "erklaerteil": {
+        "de": "Für clean gesungene Passagen gibt der Bass ein hörbares Tonzentrum: Sein Grundton ist ein sicherer Bezugspunkt, an dem die Stimme ihre Zieltöne findet. Gerade wenn die Gitarre schweigt oder nur Fläche liefert, ist der Bass die harmonische Orientierung.\n\nDer Sänger hört bewusst auf den Grundton des Basses und singt Töne, die dazu stimmen — oft den Grundton selbst oder Töne der zugrunde liegenden Skala. So bleibt die Melodie auch ohne Akkordinstrument sicher verankert."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Grundton als Anker",
+          "ziel": "Clean-Melodie am Grundton des Basses verankern.",
+          "schritte": [
+            "Der Bass hält oder wiederholt langsam einen Grundton und nennt ihn.",
+            "Die Stimme sucht dazu sichere Zieltöne, beginnend beim Grundton.",
+            "Erweitert zu einer kurzen Melodie und singt sie sicher über die Bass-Töne."
+          ],
+          "steigerung": "Der Bass wechselt den Grundton; die Stimme überträgt das Vorgehen auf das neue Zentrum.",
+          "selbstkontrolle": "Die Melodie klingt stimmig zum Bass; keine Töne liegen hörbar daneben."
+        }
+      },
+      "stil": [
+        "doom"
+      ],
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "duo_bv_raum_lassen",
+      "anzeigetitel": {
+        "de": "Bass & Gesang: Register trennen"
+      },
+      "domaene": [
+        "bass",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "anschlagpunkt_ton",
+        "resonanz_projektion"
+      ],
+      "erklaerteil": {
+        "de": "Tiefe, raue Vocals und ein tiefer Bass können sich im unteren Mittenbereich in die Quere kommen — dann wird der Zusammenklang undeutlich. Auch ohne Gitarre lohnt es, bewusst Register zu trennen.\n\nDer Bass gewinnt Definition durch Anschlag und Mitten, die Stimme durch Resonanz und Projektion statt durch reine Tiefe. Wer wo Platz besetzt, ist eine Frage der Klanggestaltung, nicht der Lautstärke — und entscheidet, ob beide klar bleiben."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Beide klar halten",
+          "ziel": "Bass und tiefe Vocals im Zusammenklang trennbar halten.",
+          "schritte": [
+            "Bass und Stimme tragen gemeinsam einen Part ohne Gitarre.",
+            "Hört, ob beide getrennt wahrnehmbar sind oder sich im unteren Mittenbereich mischen.",
+            "Verändert Anschlag und Mitten des Basses sowie Resonanz und Projektion der Stimme, bis beide klar bleiben."
+          ],
+          "steigerung": "Übertragt die Trennung auf einen dichteren, tieferen Part.",
+          "selbstkontrolle": "Bass und Stimme bleiben im Zusammenklang getrennt hörbar."
+        }
+      },
+      "spielziele": [
+        "definierter_anschlag"
+      ]
+    },
+    {
+      "id": "duo_dv_akzent_silbe",
+      "anzeigetitel": {
+        "de": "Drums & Gesang: Silbe auf den Schlag"
+      },
+      "domaene": [
+        "schlagzeug",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "rhythmus_phrasierung",
+        "grundbeat",
+        "dynamik_akzente"
+      ],
+      "erklaerteil": {
+        "de": "Harsche Vocals sind oft ein rhythmisches Instrument, das sich direkt am Schlagzeug ausrichtet: Betonte Silben fallen auf Kick oder Snare und verstärken den Groove. Diese Kopplung ist der Kern vieler Breakdown- und Hardcore-Parts.\n\nDie Stimme zielt auf denselben Anker wie der Rest der Band — meist die Bassdrum — und platziert betonte Silben punktgenau darauf. Weil das Schlagzeug die Zeit vorgibt, richtet sich die Stimme daran aus, nicht umgekehrt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Silbe auf Kick oder Snare",
+          "ziel": "Betonte Silben punktgenau auf Drum-Schläge legen.",
+          "schritte": [
+            "Der Drummer spielt eine klare Figur mit betonten Kick- und Snare-Schlägen.",
+            "Die Stimme legt betonte Silben (zunächst gesprochen, dann leise verzerrt) exakt auf diese Schläge.",
+            "Nehmt es auf und prüft, ob Silbe und Schlag zusammenfallen."
+          ],
+          "steigerung": "Verschiebt die Akzente auf Synkopen und haltet die gemeinsame Platzierung.",
+          "selbstkontrolle": "Betonte Silben und Drum-Schläge fallen zusammen; die Stimme bleibt mühelos, ohne Druck."
+        }
+      },
+      "stil": [
+        "metalcore",
+        "hardcore"
+      ],
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "duo_dv_tempo_anker",
+      "anzeigetitel": {
+        "de": "Drums & Gesang: das Schlagzeug als Anker"
+      },
+      "domaene": [
+        "schlagzeug",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "timing_klick",
+        "zur_musik_singen"
+      ],
+      "erklaerteil": {
+        "de": "Ohne harmonisches Instrument braucht die Stimme einen klaren zeitlichen Anker — das Schlagzeug. Gerade rhythmisch gesprochene oder geschriene Passagen müssen sich am Puls der Drums festhalten, sonst verlieren sie die Form.\n\nDie Stimme hört bewusst auf Kick und Snare als Raster und platziert ihre Phrasen darin. Der Drummer hält den Puls so stabil, dass die Stimme sich verlassen kann — ein Zusammenspiel wie zwischen Bass und Bassdrum, nur mit der Stimme."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Am Puls festhalten",
+          "ziel": "Vocal-Phrasen ohne Harmonieinstrument am Drum-Puls verankern.",
+          "schritte": [
+            "Der Drummer spielt eine einfache, stabile Figur zum Klick.",
+            "Die Stimme platziert rhythmische Phrasen bewusst auf Kick und Snare.",
+            "Reduziert den Klick und prüft, ob die Stimme am Drum-Puls stabil bleibt."
+          ],
+          "steigerung": "Nehmt eine komplexere Drum-Figur und haltet die Phrasen sauber im Raster.",
+          "selbstkontrolle": "Die Vocal-Phrasen sitzen stabil im Puls; ohne Klick bleibt die Form erhalten."
+        }
+      },
+      "spielziele": [
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "duo_dv_breakdown_druck",
+      "anzeigetitel": {
+        "de": "Drums & Gesang: Breakdown-Druck"
+      },
+      "domaene": [
+        "schlagzeug",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "metalcore_groove",
+        "dynamik_akzente",
+        "zur_musik_singen"
+      ],
+      "erklaerteil": {
+        "de": "Im Breakdown treiben Schlagzeug und Vocals den Part gemeinsam — die Drums setzen die schweren Akzente, die Stimme legt ihre stärksten Silben genau darauf. Fallen beide zusammen, entsteht der Druck, der einen Breakdown ausmacht.\n\nEntscheidend ist die gemeinsame Platzierung der Härte: nicht Dauerbeschuss, sondern gezielte gemeinsame Schläge mit Raum dazwischen. Der Gesundheitsrahmen bleibt — Härte aus Stütze, nicht Druck; bei Kratzen stoppen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gemeinsam treiben",
+          "ziel": "Drum-Akzente und stärkste Silben im Breakdown zusammen setzen.",
+          "schritte": [
+            "Der Drummer spielt ein langsames Breakdown-Muster mit klaren schweren Akzenten.",
+            "Die Stimme legt ihre stärksten Silben genau auf diese Akzente, mit Raum dazwischen.",
+            "Nehmt es auf und prüft, ob die gemeinsamen Schläge Druck erzeugen."
+          ],
+          "steigerung": "Verschiebt einzelne Akzente auf unerwartete Zählzeiten und haltet die Kopplung.",
+          "selbstkontrolle": "Die gemeinsamen Schläge sitzen und erzeugen Druck; die Stimme bleibt mühelos."
+        }
+      },
+      "stil": [
+        "metalcore",
+        "hardcore"
+      ],
+      "spielziele": [
+        "riff_praezision",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "trio_engine_lock",
+      "anzeigetitel": {
+        "de": "Rhythmusgruppe + Gitarre: als Trio locken"
+      },
+      "domaene": [
+        "gitarre",
+        "bass",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "duo_bd_kick_lock",
+        "duo_gb_lock"
+      ],
+      "erklaerteil": {
+        "de": "Bass, Schlagzeug und Rhythmusgitarre bilden zusammen die Riff-Maschine. Nachdem Bass und Bassdrum gekoppelt sind (Rhythmusgruppe) und Gitarre und Bass gelockt (Riff), fügt dieses Trio beide Achsen zu einem Motor: Alle drei Anschläge fallen auf denselben Impuls.\n\nÜbt schichtweise: erst Bass und Bassdrum, dann die Gitarre dazu, ohne dass sich der gemeinsame Attack verwischt. Der Klick bleibt die neutrale Referenz für alle drei."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei auf einen Impuls",
+          "ziel": "Gitarre, Bass und Bassdrum zu einem gemeinsamen Attack verbinden.",
+          "schritte": [
+            "Bass und Bassdrum locken zunächst allein zum Klick.",
+            "Die Gitarre kommt dazu und legt ihre Anschläge auf denselben Impuls.",
+            "Nehmt es auf und prüft, ob alle drei als ein Schlag klingen."
+          ],
+          "steigerung": "Erhöht das Tempo in kleinen Schritten und haltet den gemeinsamen Attack.",
+          "selbstkontrolle": "Gitarre, Bass und Kick fallen zu einem Impuls zusammen; kein Flattern."
+        }
+      },
+      "spielziele": [
+        "riff_praezision",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "band_gemeinsamer_breakdown",
+      "anzeigetitel": {
+        "de": "Ganze Band: gemeinsamer Breakdown"
+      },
+      "domaene": [
+        "gitarre",
+        "bass",
+        "schlagzeug",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "trio_engine_lock",
+        "duo_dv_akzent_silbe",
+        "chugs_breakdown"
+      ],
+      "erklaerteil": {
+        "de": "Der Breakdown ist die Nagelprobe des Zusammenspiels: Alle vier müssen ihre schweren Akzente exakt gemeinsam setzen, mit absolut schwarzen Pausen dazwischen. Ein einziges Instrument, das nachklingt oder zu spät kommt, nimmt dem Part den Druck.\n\nGebaut wird er von der Rhythmus-Maschine aus: Der Trio-Lock steht, dann legen die Vocals ihre stärksten Silben auf dieselben Akzente. Alle zielen auf denselben Anker, die Bassdrum. Weniger, aber gemeinsame Schläge wirken stärker als viel Ungefähres."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Alle auf einen Schlag",
+          "ziel": "Vier Stimmen zu gemeinsamen Breakdown-Akzenten mit schwarzen Pausen verbinden.",
+          "schritte": [
+            "Das Trio aus Gitarre, Bass und Drums setzt ein einfaches Breakdown-Muster mit klaren Akzenten.",
+            "Die Vocals legen ihre stärksten Silben genau auf diese Akzente.",
+            "Nehmt es auf und prüft, ob alle vier zusammen treffen und die Pausen schwarz sind."
+          ],
+          "steigerung": "Verschiebt Akzente auf Synkopen und haltet die gemeinsame Platzierung über alle vier.",
+          "selbstkontrolle": "Alle vier fallen als ein Schlag zusammen; die Pausen sind still; der Part drückt."
+        }
+      },
+      "stil": [
+        "metalcore",
+        "hardcore",
+        "death_metal"
+      ],
+      "spielziele": [
+        "riff_praezision",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "band_dynamik_aufbau",
+      "anzeigetitel": {
+        "de": "Ganze Band: Dynamik & Aufbau"
+      },
+      "domaene": [
+        "gitarre",
+        "bass",
+        "schlagzeug",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "duo_gv_dynamik_aufbau",
+        "dynamik_akzente"
+      ],
+      "erklaerteil": {
+        "de": "Ein Spannungsbogen wirkt nur, wenn ihn die ganze Band gemeinsam trägt: von einem zurückgenommenen Part in einen intensiven, alle zünden im selben Moment. Zieht einer, während andere halten, verpufft der Aufbau.\n\nDynamik ist mehr als Lautstärke — Dichte, Härte und Register verändern sich gemeinsam. Der Umschlagpunkt ist eine Bandentscheidung, kein Zufall. Plant die leersten und dichtesten Stellen bewusst und kommt dort zusammen an."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gemeinsam zünden",
+          "ziel": "Einen Intensitätsaufbau von der ganzen Band zusammen tragen.",
+          "schritte": [
+            "Legt einen Übergang von einem ruhigen in einen intensiven Part fest und den Punkt, an dem es kippt.",
+            "Spielt den ruhigen Part bewusst zurückgenommen und zündet gemeinsam am festgelegten Punkt.",
+            "Prüft per Aufnahme, ob der Umschlag als eine Bewegung wirkt."
+          ],
+          "steigerung": "Baut einen mehrstufigen Aufbau über mehrere Parts, den die ganze Band gemeinsam steigert.",
+          "selbstkontrolle": "Der Umschlag wirkt wie aus einem Guss; alle erreichen den Höhepunkt gemeinsam."
+        }
+      },
+      "spielziele": [
+        "saubere_uebergaenge"
+      ]
+    },
+    {
+      "id": "band_stops_einsaetze",
+      "anzeigetitel": {
+        "de": "Ganze Band: Stops & Einsätze"
+      },
+      "domaene": [
+        "gitarre",
+        "bass",
+        "schlagzeug",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "duo_bd_akzente_breaks",
+        "band_gemeinsamer_breakdown"
+      ],
+      "erklaerteil": {
+        "de": "Der gemeinsame Stop und der gemeinsame Einsatz sind die sichtbarste Ensemble-Leistung — und die schwerste. Wenn die ganze Band abrupt stoppt und exakt zusammen wieder einsteigt, wirkt sie wie ein Körper; verpasst einer die Eins, fällt es sofort auf.\n\nWährend der Stille hält jeder den Puls innerlich; der Wiedereinstieg ist als gemeinsame Bewegung vereinbart, nicht geschätzt. Blickkontakt und ein klarer Anker — oft ein Nicken des Drummers oder ein Zählen — helfen. Übt die Stelle isoliert, nicht ganze Songs."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Alle stoppen, alle ein",
+          "ziel": "Gemeinsamen Stop und Wiedereinsatz der ganzen Band deckungsgleich setzen.",
+          "schritte": [
+            "Spielt einen einfachen Part und baut einen gemeinsamen Stop von ein bis zwei Zählzeiten ein.",
+            "Alle zählen innerlich weiter; ein klares Signal (Nicken oder Zählen) markiert den Wiedereinstieg.",
+            "Steigt exakt gemeinsam auf der Eins wieder ein und prüft es per Aufnahme."
+          ],
+          "steigerung": "Verlängert die Pause oder setzt mehrere Stops hintereinander, die alle gemeinsam sitzen.",
+          "selbstkontrolle": "Stop und Wiedereinstieg fallen bei allen vier zusammen; die Eins danach sitzt."
+        }
+      },
+      "spielziele": [
+        "saubere_uebergaenge",
+        "timing_zum_klick"
+      ]
+    }
+  ]
+}

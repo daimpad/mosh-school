@@ -1514,6 +1514,72 @@
           }
         ]
       }
+    },
+    {
+      "id": "band_zusammen_session",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Als ganze Band zusammenfinden — Trio-Lock, gemeinsamer Breakdown, Stops und ein gemeinsamer Dynamik-Aufbau."
+      },
+      "beschreibung": {
+        "de": "Eine Session für die ganze Band, aufgebaut von der Rhythmus-Maschine nach außen. Jeder wärmt sich für sich auf; dann fügt ihr Gitarre, Bass und Drums zum Trio-Lock, setzt gemeinsam einen Breakdown mit den Vocals und übt zuletzt Stops und Einsätze, an denen alle vier zusammen treffen. Zum Ausklang tragt ihr gemeinsam einen Dynamik-Aufbau. Ziel ist nicht Repertoire, sondern das Gefühl, als ein Körper zu spielen."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Ein paar Minuten Einzel- und Doppelschläge, damit die Hände am Set locker sind."
+            }
+          },
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Kurz für sich: saubere Greifhand am Bass, bevor es ums Zusammenspiel geht."
+            }
+          },
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker die Greifhand wach machen, ohne Tempo."
+            }
+          },
+          {
+            "baustein": "atemstuetze",
+            "hinweis": {
+              "de": "Für die Stimme: ruhig auf die Atemstütze einstimmen, bevor es laut wird."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "trio_engine_lock",
+            "hinweis": {
+              "de": "Erst Bass und Bassdrum, dann die Gitarre dazu — alle drei auf einen Impuls."
+            }
+          },
+          {
+            "baustein": "band_gemeinsamer_breakdown",
+            "hinweis": {
+              "de": "Die Vocals legen ihre stärksten Silben auf die gemeinsamen Akzente; Pausen schwarz halten."
+            }
+          },
+          {
+            "baustein": "band_stops_einsaetze",
+            "hinweis": {
+              "de": "Gemeinsam stoppen, gemeinsam auf der Eins wieder rein — den Puls in der Stille halten."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "band_dynamik_aufbau",
+            "hinweis": {
+              "de": "Locker ausklingen: einen Spannungsbogen gemeinsam tragen, alle zünden am selben Punkt."
+            }
+          }
+        ]
+      }
     }
   ]
 }
