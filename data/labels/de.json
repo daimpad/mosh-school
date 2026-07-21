@@ -616,7 +616,14 @@
     "buehne_aufstellung_show": "Bühne: Aufstellung & Präsenz",
     "lampenfieber_umgang": "Lampenfieber: Umgang & Fokus",
     "show_lautstaerke_gehoer": "Live-Lautstärke & Gehörschutz auf der Bühne",
-    "nach_der_show": "Nach der Show: Abbau, Reflexion, Kontakte"
+    "nach_der_show": "Nach der Show: Abbau, Reflexion, Kontakte",
+    "songidee_teilen": "Songidee einbringen & teilen",
+    "riff_zu_part_entwickeln": "Vom Riff zum Songpart",
+    "uebergaenge_arrangieren": "Übergänge zwischen Parts arrangieren",
+    "song_arrangieren_ganz": "Einen ganzen Song arrangieren",
+    "parts_verteilen": "Parts unter den Instrumenten verteilen",
+    "text_thema_gesang": "Text & Thema für den Gesang",
+    "pre_production_plan": "Pre-Production: den Song aufnahmereif machen"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
