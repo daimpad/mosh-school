@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "auftritt-live",
+    "hinweis": "Erster Auftritt live: Vorbereitung/Setlist, Soundcheck, Bühne/Aufstellung, Lampenfieber, Live-Lautstärke & Gehörschutz, nach der Show. Reflexions-Bausteine (Mentales/Ausrüstung/Körper). Gesundheitsrahmen zentral in show_lautstaerke_gehoer (In-Ear, Tinnitus, HNO). Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "erster_auftritt_vorbereitung",
+      "anzeigetitel": {
+        "de": "Erster Auftritt: Vorbereitung & Setlist"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein erster Auftritt steht und fällt mit der Vorbereitung, nicht mit dem Talent am Abend. Wählt für den Anfang lieber wenige Songs, die ihr wirklich sicher beherrscht, als ein langes Set am Rand eures Könnens — eine kurze, souveräne Show wirkt stärker als eine lange, wacklige.\n\nDie Reihenfolge ist ein eigenes Werkzeug: ein energischer Opener, der sitzt, kein Experiment am Anfang; Wechsel aus Härte und Ruhe, damit das Set atmet; ein Abschluss, der in Erinnerung bleibt. Plant die Länge realistisch — für Newcomer oft 20 bis 30 Minuten — und klärt sie vorab mit dem Veranstalter.\n\nSicher heißt: so verinnerlicht, dass ihr die Songs auch mit Lampenfieber und schlechtem Monitoring durchspielt. Was ihr nur im Proberaum bei idealen Bedingungen könnt, ist für die Bühne noch nicht sicher genug."
+      },
+      "reflexionsaufgabe": {
+        "de": "Stellt eine erste Setlist zusammen: Welche Songs beherrscht ihr so sicher, dass sie auch unter Druck sitzen? Wie ordnet ihr sie zu einem Bogen (Opener, Wechsel aus Härte und Ruhe, Schluss), und passt die Gesamtlänge zu dem, was der Veranstalter vorgibt? Was müsstet ihr bis zum Auftritt noch von „geht im Proberaum“ auf „sitzt sicher“ bringen?"
+      }
+    },
+    {
+      "id": "soundcheck_ablauf",
+      "anzeigetitel": {
+        "de": "Soundcheck: Ablauf & Verhalten"
+      },
+      "domaene": [
+        "ausruestung",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Soundcheck bringt euren Klang in den konkreten Raum und über die PA — er ist kein Proben, sondern ein zügiges Einpegeln. Meist läuft er in fester Reihenfolge (oft Schlagzeug, dann Bass, Gitarren, Gesang), damit der Tontechniker jede Quelle einzeln einstellen kann. Wer währenddessen ungefragt spielt, verlängert alles und erschwert die Arbeit.\n\nZwei Klangebenen sind zu trennen: der Saal (macht der Techniker) und euer Monitor auf der Bühne (was ihr selbst hört). Sagt klar und knapp, was ihr mehr braucht — meist die eigene Stimme oder die Bassdrum als Orientierung. „Mehr von mir“ ist eine legitime, gängige Bitte.\n\nEffizienz und ein guter Ton zum Techniker zahlen sich aus: Bei Festivals oder Newcomer-Slots ist die Zeit knapp, oft gibt es nur einen kurzen Linecheck statt vollem Soundcheck. Wer vorbereitet und freundlich ist, bekommt erfahrungsgemäß den besseren Sound."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geht den Ablauf durch: In welcher Reihenfolge werden eure Quellen eingepegelt, und wann spielt ihr — und wann nicht? Was braucht jeder von euch im Monitor, um sich sicher zu hören (eigene Stimme, Bassdrum, Gitarre)? Und wie tretet ihr dem Tontechniker gegenüber auf, damit die knappe Zeit für euch arbeitet?"
+      },
+      "voraussetzungen": [
+        "erster_auftritt_vorbereitung"
+      ]
+    },
+    {
+      "id": "buehne_aufstellung_show",
+      "anzeigetitel": {
+        "de": "Bühne: Aufstellung & Präsenz"
+      },
+      "domaene": [
+        "ausruestung",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Bühne ist nicht euer Proberaum: andere Maße, Monitore am Boden, Kabelwege, und ein Publikum vor euch verändern die Aufstellung. Trotzdem gilt dasselbe Prinzip — ihr müsst euch sehen und hören können, um Einsätze über Blicke und Nicken zu geben, gerade wenn das Monitoring schlecht ist.\n\nStellt euch so auf, dass Sichtkontakt zur Rhythmusgruppe besteht; das Schlagzeug bleibt der visuelle und zeitliche Anker. Achtet auf sichere Kabelwege und darauf, den Monitor vor euch zu haben. Präsenz heißt nicht Show um jeden Preis, sondern dem Publikum zugewandt zu bleiben, statt sich wegzudrehen oder im Boden zu versinken.\n\nEin praktischer Punkt: Klärt vorab, was an Backline geteilt wird — oft die Schlagzeug-Kessel, manchmal Amps — und plant einen schnellen Auf- und Abbau, denn bei kurzen Slots ist die Umbauzeit knapp."
+      },
+      "reflexionsaufgabe": {
+        "de": "Überlegt eure Bühnen-Aufstellung: Wer steht wo, damit alle Sichtkontakt zur Rhythmusgruppe haben und die Monitore nutzen können? Wie haltet ihr Kabelwege sicher und den Auf- und Abbau schnell? Und was heißt „präsent, dem Publikum zugewandt“ konkret für euch, ohne dass es aufgesetzt wirkt?"
+      },
+      "voraussetzungen": [
+        "soundcheck_ablauf"
+      ]
+    },
+    {
+      "id": "lampenfieber_umgang",
+      "anzeigetitel": {
+        "de": "Lampenfieber: Umgang & Fokus"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Lampenfieber ist normal und betrifft auch erfahrene Musiker — der Körper schüttet Adrenalin aus, weil ihm der Moment wichtig ist. Ziel ist nicht, es wegzumachen, sondern die Energie zu nutzen: Sie schärft Wachheit und Präsenz, wenn ihr sie nicht als Bedrohung deutet.\n\nWas hilft, ist Vorbereitung und Routine: sicher beherrschte Songs, ein fester Ablauf vor dem Auftritt, ruhiges Ausatmen gegen die körperliche Anspannung, der Fokus auf das erste Riff statt auf das ganze Set oder das Publikum. Wenn im Song etwas schiefgeht, spielt einfach weiter — das Publikum bemerkt Einzelfehler selten, und Weiterspielen ist fast immer die richtige Reaktion.\n\nRichtet die Aufmerksamkeit nach außen auf die Musik und aufeinander, nicht nach innen auf die eigene Nervosität. Wenn Auftrittsangst allerdings dauerhaft lähmt oder euch das Spielen verleidet, ist es sinnvoll, mit jemandem darüber zu sprechen, der sich damit auskennt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Was hilft dir persönlich, mit Lampenfieber umzugehen — eine feste Routine vor dem Auftritt, bewusstes Ausatmen, ein klarer Fokus auf den Einstieg? Worauf richtest du deine Aufmerksamkeit, wenn die Nervosität kommt: nach innen oder nach außen auf Musik und Band? Und was ist euer gemeinsamer Plan, wenn mitten im Song etwas schiefgeht?"
+      },
+      "voraussetzungen": [
+        "erster_auftritt_vorbereitung"
+      ]
+    },
+    {
+      "id": "show_lautstaerke_gehoer",
+      "anzeigetitel": {
+        "de": "Live-Lautstärke & Gehörschutz auf der Bühne"
+      },
+      "domaene": [
+        "koerper",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Auf der Bühne ist es meist lauter und länger laut als im Proberaum — mehr Verstärker, eine PA, Monitore, und das Adrenalin überdeckt die Belastung, sodass ihr sie unterschätzt. Der Schutz des Gehörs ist deshalb live noch wichtiger, nicht weniger.\n\nTragt Gehörschutz auch auf der Bühne; gleichmäßig dämpfende Musiker-Stöpsel lassen euch weiter präzise hören. Wer regelmäßig spielt, für den lohnen sich In-Ear-Monitore: Sie liefern einen sauberen eigenen Mix und schirmen zugleich vom Bühnenlärm ab — ein deutlicher Schritt gegenüber lauten Wedge-Monitoren. Vermeidet die Lautstärke-Schlacht, bei der jeder lauter dreht, um sich zu hören; das ist über den Monitor lösbar, nicht über mehr Pegel.\n\nHörschäden sind nicht heilbar, und schon ein einzelner sehr lauter Abend kann Tinnitus auslösen. Bei Klingeln oder dumpfem Hören nach dem Auftritt gilt dasselbe wie sonst: ärztlicher Rat (HNO)."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie schützt ihr euer Gehör im Live-Kontext, wo es lauter und länger laut ist als im Proberaum — tragen alle Gehörschutz, und wären In-Ear-Monitore für euch der nächste Schritt? Wie vermeidet ihr die Lautstärke-Schlacht auf der Bühne, sodass sich jeder über den Monitor hört statt über mehr Pegel?"
+      },
+      "voraussetzungen": [
+        "soundcheck_ablauf"
+      ]
+    },
+    {
+      "id": "nach_der_show",
+      "anzeigetitel": {
+        "de": "Nach der Show: Abbau, Reflexion, Kontakte"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Mit dem letzten Ton ist der Abend nicht vorbei. Ein zügiger, rücksichtsvoller Abbau gehört zum guten Ton — macht die Bühne für die nächste Band frei, statt liegen zu bleiben, und behandelt geteilte Backline pfleglich. Das prägt euren Ruf in einer kleinen Szene mehr als das Set selbst.\n\nDer Moment nach der Show ist gut für Kontakte: andere Bands, der Veranstalter, Leute im Publikum. In der DIY-Szene entstehen die nächsten Auftritte fast immer über solche Verbindungen, nicht über Bewerbungen. Klärt Praktisches — Gage, nächste Termine — freundlich und verlässlich.\n\nUnd nehmt euch später eine ehrliche, ruhige Manöverkritik vor, ohne Selbstzerfleischung: Was hat funktioniert, was nehmt ihr euch fürs nächste Mal vor? Eine Aufnahme des Auftritts hilft, das nüchtern statt aus dem Bauch zu beurteilen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie organisiert ihr einen schnellen, fairen Abbau und den Umgang mit geteilter Backline? Welche Kontakte wollt ihr nach der Show knüpfen oder pflegen (andere Bands, Veranstalter, Publikum)? Und wie zieht ihr gemeinsam eine ehrliche, faire Manöverkritik — was lief gut, was nehmt ihr euch fürs nächste Mal vor?"
+      },
+      "voraussetzungen": [
+        "buehne_aufstellung_show"
+      ]
+    }
+  ]
+}
