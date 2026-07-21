@@ -2264,3 +2264,31 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .wz-pb-check-ok { margin: 0.6rem 0; color: var(--signal-gruen-text); }
 .wz-pb-erklaerung { margin: 1rem 0; }
 .wz-pb-teilen-feld { flex: 1 1 12rem; padding: 0.4rem 0.5rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); font-family: monospace; }
+
+/* === Amp-/Box-Baukasten ===================================================== */
+.wz-ab-block { margin: 1.25rem 0; padding-top: 0.5rem; border-top: 1px solid var(--linie); }
+.wz-ab-block h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+.wz-ab-erkl { margin: 0.3rem 0 0.7rem; }
+.wz-ab-imp-feld { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+.wz-ab-gesamt { font-weight: 700; margin: 0.6rem 0 0.2rem; }
+.wz-ab-pruef { border-top-width: 2px; }
+.wz-ab-hinweis {
+  display: flex; flex-direction: column; gap: 0.2rem; margin: 0.55rem 0;
+  padding: 0.65rem 0.85rem; border-radius: var(--radius-klein); border-left: 4px solid var(--linie-stark);
+  background: var(--flaeche-2);
+}
+.wz-ab-hinweis-marke { font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.78rem; }
+.wz-ab-hinweis.stufe-ok { border-left-color: var(--signal-gruen); }
+.wz-ab-hinweis.stufe-ok .wz-ab-hinweis-marke { color: var(--signal-gruen-text); }
+.wz-ab-hinweis.stufe-info { border-left-color: var(--primaer); }
+.wz-ab-hinweis.stufe-info .wz-ab-hinweis-marke { color: var(--primaer); }
+.wz-ab-hinweis.stufe-warn { border-left-color: var(--signal-gelb); background: var(--signal-gelb-weich); }
+.wz-ab-hinweis.stufe-warn .wz-ab-hinweis-marke { color: var(--signal-gelb-text); }
+.wz-ab-hinweis.stufe-ernst { border-left-color: var(--signal-rot); background: var(--signal-rot-weich); border-left-width: 6px; }
+.wz-ab-hinweis.stufe-ernst .wz-ab-hinweis-marke { color: var(--signal-rot-text); font-size: 0.9rem; }
+:root[data-theme="dark"] .wz-ab-hinweis.stufe-warn { background: color-mix(in srgb, var(--signal-gelb) 12%, transparent); }
+:root[data-theme="dark"] .wz-ab-hinweis.stufe-ernst { background: color-mix(in srgb, var(--signal-rot) 16%, transparent); }
+.wz-ab-signalfluss { font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; }
+.wz-ab-fakten dt { font-weight: 700; margin-top: 0.55rem; }
+.wz-ab-fakten dd { margin: 0.1rem 0 0; }
+.wz-ab-amp-watt, .wz-ab-box-watt { width: 6rem; padding: 0.4rem 0.5rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
