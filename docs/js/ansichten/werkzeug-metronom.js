@@ -14,6 +14,7 @@ import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import { klick } from '../audio/stimmen.js';
 import { rendereWav } from '../audio/wav.js';
+import { holeWerkzeugDaten } from '../werkzeug-speicher.js';
 
 // Unterteilungen: Pulse pro Viertel. 1=Viertel, 2=Achtel, 3=Triole, 4=Sechzehntel.
 const UNTERTEILUNGEN = [1, 2, 3, 4];
@@ -40,7 +41,31 @@ function reduziert() {
 
 // --- Reine Timing-Logik (auch vom WAV-Export genutzt) ---
 // BPM für einen gegebenen Takt (0-basiert), Tempo-Ramp berücksichtigt.
+// Tempo-Map aus dem Song-Struktur-Baukasten (Abschnitt → Takte/Tempo). Wenn
+// aktiv, überschreibt sie Ramp/Konstant-Tempo und beendet nach dem letzten Takt.
+let tempoMap = null; // { segmente:[{takte,bpm}], total }
+function ladeTempoMap() {
+  const g = holeWerkzeugDaten('klick_tempomap', null);
+  if (g && Array.isArray(g.segmente) && g.segmente.length) {
+    let total = 0;
+    for (const s of g.segmente) total += s.takte;
+    tempoMap = { segmente: g.segmente, total };
+    if (g.bpm) zustand.bpm = g.bpm;
+  } else {
+    tempoMap = null;
+  }
+}
+function bpmAusMap(takt) {
+  let acc = 0;
+  for (const s of tempoMap.segmente) {
+    if (takt < acc + s.takte) return s.bpm;
+    acc += s.takte;
+  }
+  return tempoMap.segmente[tempoMap.segmente.length - 1].bpm;
+}
+
 function bpmBeiTakt(takt) {
+  if (tempoMap) return bpmAusMap(takt);
   if (!zustand.rampeAn) return zustand.bpm;
   const stufen = Math.floor(takt / Math.max(1, zustand.rampeAlle));
   const ziel = zustand.rampeZiel;
@@ -126,7 +151,10 @@ function starte(el) {
     schrittDauer: (i) => {
       const proTakt = zustand.takt * zustand.unterteilung;
       const taktNr = Math.floor(i / proTakt);
-      letztesBpm = taktNr < countinTakte ? zustand.bpm : bpmBeiTakt(taktNr - countinTakte);
+      const songTakt = taktNr - countinTakte;
+      // Mit Tempo-Map endet der Klick nach dem letzten Song-Takt.
+      if (tempoMap && songTakt >= tempoMap.total) return null;
+      letztesBpm = taktNr < countinTakte ? zustand.bpm : bpmBeiTakt(songTakt);
       return schrittDauer(i, countinTakte);
     },
     beiSchritt: (zeit, i) => {
@@ -211,6 +239,9 @@ function wendePresetAn(query) {
   const takt = zahl('takt', 1, 12);
   if (takt) zustand.takt = Math.round(takt);
   if (query.get('rampe') === '1' || query.get('rampe') === 'true') zustand.rampeAn = true;
+  // Tempo-Map aus dem Song-Struktur-Baukasten laden (oder abschalten).
+  if (query.get('tempomap') === '1') ladeTempoMap();
+  else tempoMap = null;
 }
 
 // --- Rendern ---
@@ -244,6 +275,7 @@ export function renderWerkzeugMetronom(el, daten, query) {
       </div>
 
       <div class="wz-metro-koerper" ${audioBereit ? '' : 'hidden'}>
+        ${tempoMap ? `<p class="wz-metro-map"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('wz_metro_map', { takte: tempoMap.total }))}</p>` : ''}
         <div class="wz-beat-anzeige" role="img" aria-label="${esc(t('wz_beat_aria'))}">
           <span class="wz-beat-punkt" aria-hidden="true"></span>
           <span class="wz-beat-zahl" aria-hidden="true">${zustand.takt}</span>
