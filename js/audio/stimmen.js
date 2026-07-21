@@ -75,3 +75,33 @@ export function hihat(ctx, ziel, zeit) {
 export function crash(ctx, ziel, zeit) {
   rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 5200, dauer: 0.45, pegel: 0.3 });
 }
+
+// Gehaltener Referenzton (Drone): weicher Sägezahn mit sanfter Ein-/Ausblende.
+// Zum Stimmen nach Gehör und als Grundton-Drone für Gesangsübungen. Gibt ein
+// Handle mit stop() zurück (rampt aus, statt hart abzuschneiden).
+export function referenzDrone(ctx, ziel, frequenz) {
+  const osc = ctx.createOscillator();
+  const huelle = ctx.createGain();
+  osc.type = 'sawtooth';
+  osc.frequency.value = frequenz;
+  const jetzt = ctx.currentTime;
+  huelle.gain.setValueAtTime(0.0001, jetzt);
+  huelle.gain.exponentialRampToValueAtTime(0.12, jetzt + 0.05);
+  osc.connect(huelle).connect(ziel);
+  osc.start(jetzt);
+  let gestoppt = false;
+  return {
+    setzeFrequenz(f) {
+      osc.frequency.setTargetAtTime(f, ctx.currentTime, 0.02);
+    },
+    stop() {
+      if (gestoppt) return;
+      gestoppt = true;
+      const t = ctx.currentTime;
+      huelle.gain.cancelScheduledValues(t);
+      huelle.gain.setValueAtTime(huelle.gain.value, t);
+      huelle.gain.exponentialRampToValueAtTime(0.0001, t + 0.08);
+      osc.stop(t + 0.1);
+    },
+  };
+}
