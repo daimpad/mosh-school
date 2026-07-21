@@ -3197,6 +3197,426 @@
           "korrektur": "Die Wechsel langsam üben und die Anschlagbewegung durchlaufen lassen, während die Greifhand den nächsten Akkord vorbereitet."
         }
       }
+    },
+    {
+      "id": "fb_pv_bass_chaos",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_bass_chaos",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "An den Abrisskanten stoppt der Bass nicht gemeinsam mit der Band — die Stille franst aus.",
+          "ursache": "Der Bass reagiert auf die Stops, statt sie mitzuzählen; die Greif-/Anschlaghand dämpft zu spät ab.",
+          "korrektur": "Die Stopp-Stellen isoliert und langsam mit der Band zählen, das Abdämpfen als eigenen aktiven Impuls üben, dann das Tempo steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_sludge_bass_wand",
+      "typ": "fehlerbild",
+      "basis_baustein": "sludge_bass_wand",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bass und Gitarre verschmelzen zu undefiniertem Matsch statt zu einer schweren Wand.",
+          "ursache": "Zu viel überlappendes Fuzz ohne Frequenzstaffelung; beide Instrumente belegen denselben Bereich.",
+          "korrektur": "Dem Bass eine eigene hörbare Schicht geben (etwas weniger Fuzz oder eigene Mitten), langsam zusammen spielen und prüfen, ob beide einzeln durchkommen."
+        }
+      }
+    },
+    {
+      "id": "fb_stimmuebungen_sanft",
+      "typ": "fehlerbild",
+      "basis_baustein": "stimmuebungen_sanft",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Stimmübungen fühlen sich anstrengend an, es kratzt oder drückt im Hals.",
+          "ursache": "Zu viel Druck und Lautstärke von Beginn an, ohne sanftes Anwärmen.",
+          "korrektur": "Ganz leise und locker beginnen, nur so viel wie mühelos geht; bei Kratzen sofort Pause. Aufwärmen ist Prinzip, nicht Kraftakt — bei anhaltenden Beschwerden zur HNO oder Gesangslehrkraft."
+        }
+      }
+    },
+    {
+      "id": "fb_resonanz_projektion",
+      "typ": "fehlerbild",
+      "basis_baustein": "resonanz_projektion",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Um lauter zu werden, spannt sich der Hals an und der Ton wird gepresst statt tragfähiger.",
+          "ursache": "Die Lautstärke kommt aus Halsdruck statt aus Stütze und Resonanz.",
+          "korrektur": "Die Lautstärke bewusst aus der Atemstütze und offenem Resonanzraum aufbauen, nicht aus dem Hals; leiser üben, bis der Ton frei trägt, dann behutsam steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_rhythmus_phrasierung",
+      "typ": "fehlerbild",
+      "basis_baustein": "rhythmus_phrasierung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Silben liegen neben dem Beat, betonte Silben fallen nicht mit den Akzenten zusammen.",
+          "ursache": "Der Text wird gesungen ohne festen Bezug zum Grundpuls.",
+          "korrektur": "Zuerst nur den Rhythmus der Silben klopfen und sprechen, dann langsam auf Beat und Riff legen; Zielakzente markieren und das Tempo erst steigern, wenn sie sitzen."
+        }
+      }
+    },
+    {
+      "id": "fb_clean_im_metal",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_im_metal",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In höheren Tönen der Melodie wird gedrückt, der Klang wird eng.",
+          "ursache": "Die Höhe wird mit Kraft erzwungen statt aus Stütze getragen.",
+          "korrektur": "Die Melodie in bequemer Lage sicher machen, hohe Töne leise aus Stütze antönen und erst dann Lautstärke geben; bei Druck zurücknehmen."
+        }
+      }
+    },
+    {
+      "id": "fb_dynamik_ausdruck",
+      "typ": "fehlerbild",
+      "basis_baustein": "dynamik_ausdruck",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei lauteren Stellen verspannt der Hals; die Dynamik entsteht durch Pressen statt durch Gestaltung.",
+          "ursache": "Intensität wird über Halsdruck geregelt statt über Atem und Resonanz.",
+          "korrektur": "Laut und leise beide aus der Stütze denken; die Steigerung über mehr Luftfluss und Resonanz gestalten und den Hals dabei locker halten."
+        }
+      }
+    },
+    {
+      "id": "fb_mikrofontechnik",
+      "typ": "fehlerbild",
+      "basis_baustein": "mikrofontechnik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Laute Stellen übersteuern, leise gehen unter — der Pegel schwankt unkontrolliert.",
+          "ursache": "Der Abstand zum Mikrofon bleibt konstant, statt mit der Lautstärke zu variieren.",
+          "korrektur": "Bei lauten Passagen bewusst zurückgehen, bei leisen näher; den Abstand als aktives Werkzeug üben und an Pegelmeter oder Aufnahme kontrollieren."
+        }
+      }
+    },
+    {
+      "id": "fb_clean_kopfstimme",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_kopfstimme",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Hohe Töne werden gepresst statt aus der Kopfstimme getragen; es kratzt.",
+          "ursache": "Der Registerwechsel wird vermieden, die Bruststimme mit Druck nach oben gezwungen.",
+          "korrektur": "Den Übergang in die Kopfstimme leise über Gleittöne üben, die Höhe aus Stütze und Resonanz tragen; bei Druck oder Kratzen stoppen, im Zweifel zur Gesangslehrkraft."
+        }
+      }
+    },
+    {
+      "id": "fb_clean_intonation_druck",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_intonation_druck",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei schlechtem Monitoring wird die Intonation unsicher, die Töne werden gegen die Lautstärke angepresst.",
+          "ursache": "Fehlende Rückmeldung verleitet dazu, über Kraft statt über inneres Tonvorstellen zu treffen.",
+          "korrektur": "Den Zielton innerlich vorhören und aus Stütze setzen statt gegen die Lautstärke zu drücken; mit reduziertem Monitor üben und die Treffsicherheit per Aufnahme prüfen."
+        }
+      }
+    },
+    {
+      "id": "fb_clean_vibrato",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_vibrato",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der gehaltene Ton zittert nervös oder das Vibrato ist unregelmäßig und unkontrolliert.",
+          "ursache": "Das Vibrato entsteht aus Anspannung statt aus gestützter, entspannter Tongebung.",
+          "korrektur": "Erst den geraden, stabilen Ton aus Stütze sichern, dann das Vibrato bewusst und langsam als gleichmäßige Schwingung hinzufügen und die Geschwindigkeit kontrolliert steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_clean_refrain_hook",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_refrain_hook",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Refrain trägt nicht — die Intonation wackelt oder die Höhe klingt gedrückt.",
+          "ursache": "Melodie und Höhe sind nicht sicher verankert, es wird gegen die Lautstärke gearbeitet.",
+          "korrektur": "Die Melodie erst ohne Band sicher und intonationsrein machen, die Höhe aus Stütze tragen; dann mit Playback und Ausdruck, ohne zu pressen."
+        }
+      }
+    },
+    {
+      "id": "fb_clean_belting",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_belting",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der kraftvolle hohe Ton kippt in Pressen, der Hals wird eng, es kratzt.",
+          "ursache": "Die Kraft kommt aus Halsdruck statt aus Stütze und Resonanz.",
+          "korrektur": "Belting nur kurz und aufgewärmt, den Ton offen aus Stütze und Resonanz aufbauen; bei Enge oder Kratzen sofort stoppen. Diese Technik am besten mit Gesangslehrkraft, bei Beschwerden zur HNO."
+        }
+      }
+    },
+    {
+      "id": "fb_clean_harmonien",
+      "typ": "fehlerbild",
+      "basis_baustein": "clean_harmonien",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die zweite Stimme rutscht zur Hauptmelodie ab oder der Zusammenklang klingt unrein.",
+          "ursache": "Die eigene Linie ist ohne die Melodie im Ohr nicht gefestigt.",
+          "korrektur": "Die zweite Stimme allein sicher machen, dann gegen eine Aufnahme der Melodie üben; auf ein reines Intervall hören und die eigene Linie halten, statt zur Melodie zu ziehen."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_vocals_extrem",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_vocals_extrem",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Gutturals und Pig Squeals werden über Halsdruck erzwungen, es kratzt schnell.",
+          "ursache": "Die Extreme werden aus Pressen statt aus kontrollierter Verzerrung und Luftführung erzeugt.",
+          "korrektur": "Leise aus Luftfluss und Resonanz ansetzen, nur in sehr kurzen Versuchen mit Pausen; bei Kratzen, Schmerz oder Blut im Speichel sofort stoppen. Extreme am besten mit erfahrener Anleitung, bei Beschwerden zur HNO."
+        }
+      }
+    },
+    {
+      "id": "fb_deathcore_downtempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "deathcore_downtempo",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Downtempo-Schläge fallen nicht gemeinsam mit der Kick oder klingen zu leicht.",
+          "ursache": "Zu viele Noten und ungenaues Timing nehmen dem einzelnen Schlag die Wucht.",
+          "korrektur": "Auf ganz wenige Schläge reduzieren, jeden exakt mit der Bassdrum setzen und die Pausen still aushalten; Länge und Dreck des Tons maximieren, gemeinsam mit Klick oder Drummer üben."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_gitarre_ambient",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_gitarre_ambient",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die cleane Ambient-Fläche klingt matschig oder überladen statt weit.",
+          "ursache": "Zu viele Töne und zu viel Delay/Reverb ohne Bezug zur Harmonik füllen den Raum zu.",
+          "korrektur": "Auf wenige klare Töne reduzieren, stimmig zur Harmonik, und den Effekten Raum lassen; die Fläche bewusst gegen den tighten Part setzen, statt durchgehend zu spielen."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_solo_lead",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_solo_lead",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Lead-Linie verliert den Bezug zur oft ungeraden Metrik oder klingt wie Dauerbeschuss.",
+          "ursache": "Es fehlen Zielnoten und Pausen; die Phrase ist nicht am Grundpuls verankert.",
+          "korrektur": "Kurze, singbare Phrasen mit klaren Zielnoten und Pausen bauen, an den Grundpuls binden und langsam gegen den Groove prüfen; Technik wie Legato und Tapping erst hinzufügen, wenn die Phrasierung sitzt."
+        }
+      }
+    },
+    {
+      "id": "fb_postmetal_textur_schichten",
+      "typ": "fehlerbild",
+      "basis_baustein": "postmetal_textur_schichten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Schichten addieren sich zu Matsch statt zu einer klaren, wachsenden Textur.",
+          "ursache": "Zu viele Ebenen im selben Frequenzbereich, ohne Raum und ohne Auf- und Abbau über die Zeit.",
+          "korrektur": "Schichten gestaffelt einsetzen (Fundament, Fläche, Obertöne), jeder Ebene Raum geben und den Bogen bewusst über Hinzufügen und Wegnehmen gestalten; per Aufnahme prüfen, ob jede Schicht hörbar bleibt."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_band_zeitgefuehl",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_band_zeitgefuehl",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die gemeinsamen Schläge im Schlepptempo liegen nicht übereinander, jede Eins franst aus, das Tempo zieht an.",
+          "ursache": "Das langsame Raster wird nicht geteilt — ohne Puls-Anker driftet jede Person eigenständig.",
+          "korrektur": "Einen gemeinsamen Unterteilungs-Anker vereinbaren, sehr langsam zu zweit oder mit Aufnahme spielen und über vier Takte prüfen, ob es zusammenbleibt; erst dann ohne Klick."
+        }
+      }
+    },
+    {
+      "id": "fb_stoner_groove_swing",
+      "typ": "fehlerbild",
+      "basis_baustein": "stoner_groove_swing",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Groove schleppt oder wird starr, statt entspannt zu rollen.",
+          "ursache": "Das Liegen hinter dem Beat wird zu instabil (schleppt) oder gar nicht umgesetzt (marschiert).",
+          "korrektur": "Bewusst minimal hinter den Klick legen, ohne langsamer zu werden; Swing im Hi-Hat und Ghost Notes hinzufügen und am Klick prüfen, dass es treibt und wippt, ohne wegzudriften."
+        }
+      }
+    },
+    {
+      "id": "fb_erweiterte_harmonik",
+      "typ": "fehlerbild",
+      "basis_baustein": "erweiterte_harmonik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "add9, sus4 und maj7 werden nicht sicher unterschieden oder klingen unter Zerre matschig.",
+          "ursache": "Die Farben werden nur theoretisch gewusst, nicht am Klang erkannt; die Lagerung passt nicht zur Verzerrung.",
+          "korrektur": "Die drei Farben einzeln und im Vergleich hören und blind erkennen üben; unter Zerre schlanke Lagerungen wählen und prüfen, was durchkommt."
+        }
+      }
+    },
+    {
+      "id": "fb_modulation_vertieft",
+      "typ": "fehlerbild",
+      "basis_baustein": "modulation_vertieft",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Schnitt, Pivot und chromatische Vorbereitung klingen gleich oder die neue Tonart wirkt nicht überzeugend.",
+          "ursache": "Die drei Wege werden nicht klanglich unterschieden, die Vorbereitung fehlt.",
+          "korrektur": "Jede Variante isoliert bauen und hören, ihre Wirkung benennen (hart, weich, gleitend); den Pivot-Akkord bewusst als Brücke setzen und die chromatische Führung Ton für Ton legen."
+        }
+      }
+    },
+    {
+      "id": "fb_kontrapunkt_stimmfuehrung",
+      "typ": "fehlerbild",
+      "basis_baustein": "kontrapunkt_stimmfuehrung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die zweite Stimme ist einzeln nicht singbar oder die Zustände (gegen, parallel, unisono) sind nicht hörbar.",
+          "ursache": "Die Stimmen werden vertikal Akkord für Akkord gedacht statt als eigenständige Linien.",
+          "korrektur": "Beide Stimmen einzeln als singbare Linien bauen, dann bewusst Gegenbewegung, Parallelen und Unisono als gestaltete Zustände einsetzen und den Wechsel hörbar machen."
+        }
+      }
+    },
+    {
+      "id": "fb_modi_im_metal",
+      "typ": "fehlerbild",
+      "basis_baustein": "modi_im_metal",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Äolisch, Phrygisch, Lokrisch und Dorisch werden verwechselt.",
+          "ursache": "Die Modi werden über Griffbilder statt über ihren Charakterton erkannt.",
+          "korrektur": "Jeden Modus über sein Signalintervall und den Charakterton hören (etwa die kleine Sekunde bei Phrygisch), im direkten Vergleich üben und blind zuordnen."
+        }
+      }
+    },
+    {
+      "id": "fb_harmonisch_moll_exotik",
+      "typ": "fehlerbild",
+      "basis_baustein": "harmonisch_moll_exotik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Harmonisch Moll und Phrygisch-Dominant werden nicht sicher unterschieden.",
+          "ursache": "Der übermäßige Sekundschritt als Signal wird nicht gehört.",
+          "korrektur": "Gezielt auf den übermäßigen Sekundschritt hören, beide Skalen direkt vergleichen und den Unterschied am Grundton-Bezug festmachen."
+        }
+      }
+    },
+    {
+      "id": "fb_akkordfolgen_metal",
+      "typ": "fehlerbild",
+      "basis_baustein": "akkordfolgen_metal",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Zu einem Riff kann die Stufenfolge nicht benannt werden, die harmonische Bewegung wird nicht erkannt.",
+          "ursache": "Riffs werden nur als Griffe gelernt, nicht als harmonische Bewegung gehört.",
+          "korrektur": "Riffs in Stufen zerlegen (Grundton, Ziel), die Bewegung benennen und in mehreren Beispielen wiedererkennen; langsam mitspielen und die Funktion mitsprechen."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_harmonik",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_harmonik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei fremden Doom-Riffs kann nur „klingt dunkel“ gesagt werden, das tragende Intervall wird nicht benannt.",
+          "ursache": "Die typischen Doom-Intervalle wurden zu schnell und nicht in Zeitlupe gehört.",
+          "korrektur": "Die Schlüssel-Intervalle einzeln und sehr langsam anhören, ihre Wirkung erleben, dann an drei fremden Riffs das tragende Intervall bestimmen; bei Unsicherheit langsamer wiederholen."
+        }
+      }
     }
   ]
 }
