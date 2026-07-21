@@ -754,7 +754,22 @@
     "fb_duo_gv_ueberlagert": "Gitarre & Gesang: alles gleichzeitig",
     "fb_duo_gv_vocals_hinterm_riff": "Gitarre & Gesang: Vocals hängen hinterm Riff",
     "fb_duo_gv_melodie_daneben": "Gitarre & Gesang: Clean-Melodie liegt daneben",
-    "fb_duo_gv_aufbau_einseitig": "Gitarre & Gesang: Aufbau nur von einem"
+    "fb_duo_gv_aufbau_einseitig": "Gitarre & Gesang: Aufbau nur von einem",
+    "fb_duo_gd_riff_kick": "Gitarre & Drums: Akzente neben der Kick",
+    "fb_duo_gd_breaks": "Gitarre & Drums: Stop stolpert",
+    "fb_duo_gd_tempo": "Gitarre & Drums: Gitarre drängt das Tempo",
+    "fb_duo_bv_groove": "Bass & Gesang: Stimme hängt nicht am Groove",
+    "fb_duo_bv_tonzentrum": "Bass & Gesang: Melodie ohne Anker",
+    "fb_duo_bv_register": "Bass & Gesang: Register matschen",
+    "fb_duo_dv_silbe": "Drums & Gesang: Silbe neben dem Schlag",
+    "fb_duo_dv_puls": "Drums & Gesang: Phrasen verlieren den Puls",
+    "fb_duo_dv_druck": "Drums & Gesang: Breakdown ohne Druck",
+    "fb_trio_engine": "Trio: der Attack verwischt",
+    "fb_band_breakdown": "Ganze Band: Pausen nicht schwarz",
+    "fb_band_dynamik": "Ganze Band: Aufbau verpufft",
+    "fb_band_stops": "Ganze Band: die Eins verpasst",
+    "fb_riff_zu_part": "Songpart ohne klare Form",
+    "fb_uebergang": "Übergang wirkt zufällig"
   },
   "grafiken": {},
   "vokabeln": {
