@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v57';
+const CACHE = 'mosh-v58';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -44,6 +44,7 @@ const SHELL = [
   'js/suche.js',
   'js/zustand.js',
   'js/werkzeug-links.js',
+  'js/werkzeug-speicher.js',
   'js/audio/kontext.js',
   'js/audio/scheduler.js',
   'js/audio/stimmen.js',
@@ -63,6 +64,7 @@ const SHELL = [
   'js/ansichten/werkzeug-metronom.js',
   'js/ansichten/werkzeug-loops.js',
   'js/ansichten/werkzeug-stimmgeraet.js',
+  'js/ansichten/werkzeug-pedalboard.js',
   'js/ansichten/koennenscheck.js',
   'js/ansichten/suche.js',
   'js/ansichten/training.js',
@@ -110,10 +112,12 @@ const SHELL = [
   'data/bausteine.stil-vertiefung-1.json',
   'data/bausteine.stil-vertiefung-2.json',
   'data/bausteine.koerper-athletik.json',
+  'data/bausteine.pedalboard-gear.json',
   'data/fehlerbilder.json',
   'data/grafiken.json',
   'data/lehrgrafiken.json',
   'data/tunings.json',
+  'data/pedale.json',
   'data/trainingseinheiten.json',
   'data/turnierregeln.json',
   'data/labels/de.json',

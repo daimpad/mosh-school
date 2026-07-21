@@ -98,10 +98,12 @@ eine eigene View + Route `#/werkzeug/<name>`.
   Regeln über `spielziele`/`stil`); die Baustein-Ansicht rendert daraus die
   „Passendes Werkzeug"-Chips. **Neue Anbindungen NUR hier** — die Werkzeuge kennen
   die Bausteine nicht.
-- **Persistenz:** Werkzeug-Einstellungen sind vorerst **flüchtiger Modul-State**
-  (wie patterns.js) — das versionierte `zustand.js`-Schema bleibt unangetastet.
-  Echte Persistenz (localStorage für Strukturen, **IndexedDB** für Audio-Blobs)
-  kommt mit dem Song-Struktur-Baukasten und den Rekordern.
+- **Persistenz:** Audio-Werkzeug-Einstellungen sind **flüchtiger Modul-State**
+  (wie patterns.js). Für gespeicherte Strukturen (Pedalketten, später Song-
+  Strukturen) gibt es `js/werkzeug-speicher.js` — ein **eigener localStorage-
+  Namespace** (`moshschool.werkzeuge.v1`), bewusst getrennt vom versionierten
+  `zustand.js`-Fortschritts-Schema. Audio-Blobs (Rekorder) gehören später in
+  **IndexedDB**, nicht hierher.
 - **SW-Pflege:** neue `js/audio/*`- und `js/ansichten/werkzeug*`-Module gehören in
   `SHELL` + `CACHE`-Bump (wie jedes Kern-Modul). Zugänglichkeit: tastaturbedienbar,
   ARIA; Tuner/Klick brauchen **nicht-farbliche** Signale (Zahl/Form, nicht nur Farbe).
