@@ -45,6 +45,10 @@ const ID_REGELN = {
   // Amp-/Box-Bausteine öffnen den Physik-Baukasten vorbelegt.
   amp_grundlagen: [{ werkzeug: 'ampbox' }],
   box_grundlagen: [{ werkzeug: 'ampbox' }],
+  // Songwriting-/Arrangement-Bausteine öffnen den Song-Struktur-Baukasten.
+  song_arrangieren_ganz: [{ werkzeug: 'struktur' }],
+  parts_verteilen: [{ werkzeug: 'struktur' }],
+  uebergaenge_arrangieren: [{ werkzeug: 'struktur' }],
 };
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
@@ -74,6 +78,7 @@ const WERKZEUG_META = {
   stimmgeraet: { route: '#/werkzeug/stimmgeraet', labelKey: 'wz_stimmgeraet_titel' },
   pedalboard: { route: '#/werkzeug/pedalboard', labelKey: 'wz_pedalboard_titel' },
   ampbox: { route: '#/werkzeug/ampbox', labelKey: 'wz_ampbox_titel' },
+  struktur: { route: '#/werkzeug/struktur', labelKey: 'wz_struktur_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
