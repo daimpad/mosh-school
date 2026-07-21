@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v48';
+const CACHE = 'mosh-v49';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -93,6 +93,7 @@ const SHELL = [
   'data/bausteine.demo-recording.json',
   'data/bausteine.auftritt-live.json',
   'data/bausteine.songwriting.json',
+  'data/bausteine.uebe-methodik.json',
   'data/fehlerbilder.json',
   'data/grafiken.json',
   'data/lehrgrafiken.json',
