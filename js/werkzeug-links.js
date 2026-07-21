@@ -33,10 +33,14 @@ const ID_REGELN = {
   // Tuning-/Ton-Bausteine öffnen das Stimmgerät; Tonzentrum-/Gesangs-Bausteine
   // die Referenzton-Drone vorbelegt.
   drop_tuning: [{ werkzeug: 'stimmgeraet', params: { tuning: 'drop_d' } }],
-  bass_ton_gear: [{ werkzeug: 'stimmgeraet', params: { tuning: 'bass_standard' } }],
   duo_bv_tonzentrum: [{ werkzeug: 'stimmgeraet', params: { note: 'E2' } }],
   duo_gv_tonart_melodie: [{ werkzeug: 'stimmgeraet', params: { note: 'E2' } }],
   tonhoehe_clean: [{ werkzeug: 'stimmgeraet', params: { note: 'A2' } }],
+  // Signalketten-/Sound-Bausteine öffnen den Pedalboard-Baukasten vorbelegt.
+  pedalboard_grundlagen: [{ werkzeug: 'pedalboard' }],
+  gitarren_sound_architektur: [{ werkzeug: 'pedalboard', params: { instrument: 'gitarre' } }],
+  bass_signalkette: [{ werkzeug: 'pedalboard', params: { instrument: 'bass' } }],
+  bass_ton_gear: [{ werkzeug: 'stimmgeraet', params: { tuning: 'bass_standard' } }, { werkzeug: 'pedalboard', params: { instrument: 'bass' } }],
 };
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
@@ -64,6 +68,7 @@ const WERKZEUG_META = {
   metronom: { route: '#/werkzeug/metronom', labelKey: 'wz_metronom_titel' },
   loops: { route: '#/werkzeug/loops', labelKey: 'wz_loops_titel' },
   stimmgeraet: { route: '#/werkzeug/stimmgeraet', labelKey: 'wz_stimmgeraet_titel' },
+  pedalboard: { route: '#/werkzeug/pedalboard', labelKey: 'wz_pedalboard_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
