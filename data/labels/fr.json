@@ -1201,5 +1201,18 @@
   "wz_wav_fehler": "",
   "wz_metronom_fuss": "",
   "wz_baustein_titel": "",
-  "wz_baustein_hinweis": ""
+  "wz_baustein_hinweis": "",
+  "wz_loops_untertitel": "",
+  "wz_loop_genre": "",
+  "wz_loop_laeuft": "",
+  "wz_loop_genre_wahl": "",
+  "wz_klick_mit": "",
+  "wz_klick_solo": "",
+  "wz_beat_d_beat": "",
+  "wz_beat_blastbeat": "",
+  "wz_beat_double_bass": "",
+  "wz_beat_metalcore_groove": "",
+  "wz_beat_metalcore_breakdown": "",
+  "wz_beat_thrash_galopp": "",
+  "wz_beat_doom_feel": ""
 }
