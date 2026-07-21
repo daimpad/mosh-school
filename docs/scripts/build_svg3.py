@@ -988,6 +988,44 @@ S["clean_harmonien"] = [
     P(wavepath(16, 104, 74, 10, 2.0, step=2.0), 3.5),
 ]
 
+# ================= GENRE-VERTIEFUNG 1 (PV / Crust / Sludge) =================
+# PV = Chaos/Bursts (raue Ticks, harte Stops), Crust = D-Beat/Dreck/Haltung
+# (Blöcke, Säge), Sludge = zäh/schwer/Fuzz (dicke raue Wellen, Langform).
+S["pv_bass_chaos"] = [L(12, 92, 108, 92, 2)]
+for x in (18, 27, 36, 45, 54):
+    S["pv_bass_chaos"].append(P(roughline(x, 44, x, 88, 3.0, step=6.0, seed=x), 3))
+S["pv_bass_chaos"] += [L(92, 40, 92, 92, 7), C(92, 92, 5, fill=True)]
+S["pv_koerper_explosivitaet"] = [C(38, 62, 4, fill=True)]
+for a in range(0, 360, 45):
+    dx = 26 * math.cos(math.radians(a)); dy = 26 * math.sin(math.radians(a))
+    S["pv_koerper_explosivitaet"].append(L(38, 62, 38 + dx, 62 - dy, 3))
+S["pv_koerper_explosivitaet"].append(L(74, 62, 108, 62, 3))
+S["pv_sound_roh"] = [P(roughpath(14, 106, 60, 17, step=3.0, seed=7), 3)]
+S["crust_ethos_haltung"] = [
+    RECT(42, 58, 36, 34, filled=True),
+    L(60, 58, 60, 26, 6), TRI([(52, 30), (68, 30), (60, 18)]),
+]
+S["crust_songwriting_struktur"] = [L(12, 84, 108, 84, 2)]
+for x in (18, 30, 42, 54):
+    S["crust_songwriting_struktur"].append(RECT(x, 66, 8, 18, filled=True))
+S["crust_songwriting_struktur"].append(RECT(72, 50, 26, 34, filled=True))
+S["crust_koerper_ausdauer"] = [L(12, 40, 108, 40, 2)]
+S["crust_koerper_ausdauer"].append(P(wavepath(16, 104, 68, 16, 7, step=2.0), 3))
+for x in (16, 44, 72, 100):
+    S["crust_koerper_ausdauer"].append(L(x, 38, x, 44, 2))
+S["sludge_bass_wand"] = [
+    P(roughpath(14, 106, 62, 7, step=4.0, seed=3), 8),
+    L(14, 88, 106, 88, 4),
+]
+S["sludge_sound_gear"] = [
+    P(roughpath(16, 104, 46, 12, step=3.0, seed=19), 3),
+    P(wavepath(16, 104, 84, 12, 1.5, step=2.0), 5),
+]
+S["sludge_langform"] = [
+    P(wavepath(14, 106, 62, 20, 1.0, step=2.0, env=lambda t: 0.4 + 0.6 * t), 5),
+    L(14, 92, 106, 92, 2),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -1031,7 +1069,10 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "kontext_aufnahme_tightness", "kontext_aufnahme_vorbereitung",
                 "kontext_solo_struktur", "kontext_solo_ohne_band",
                 "clean_kopfstimme", "clean_intonation_druck", "clean_vibrato",
-                "clean_refrain_hook", "clean_belting", "clean_harmonien"]
+                "clean_refrain_hook", "clean_belting", "clean_harmonien",
+                "pv_bass_chaos", "pv_koerper_explosivitaet", "pv_sound_roh",
+                "crust_ethos_haltung", "crust_songwriting_struktur", "crust_koerper_ausdauer",
+                "sludge_bass_wand", "sludge_sound_gear", "sludge_langform"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
