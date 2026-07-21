@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "uebe-methodik",
+    "hinweis": "Übe-Methodik (Wie übe ich?): bewusstes/effektives Üben, eine Übe-Einheit strukturieren, Übe-Tagebuch, Fehler früh an der Ursache beheben, den Lernweg planen, eine Übung ans eigene Level anpassen. Sechs Reflexions-Bausteine (Domäne mentales). Bewusst OHNE Dubletten zu bestehenden Themen (Plateaus, Motivation, Ergonomie, Überlastung sind schon abgedeckt). Gesundheitsrahmen (Aufwärmen, Pausen, Stopp bei Schmerz). Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "effektiv_ueben",
+      "anzeigetitel": {
+        "de": "Effektiv üben: Qualität vor Quantität"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Wie du übst, entscheidet mehr über deinen Fortschritt als wie lange. Der Kern ist bewusstes Üben: langsam, konzentriert und in kleinen Häppchen, mit voller Aufmerksamkeit auf einer Sache. Zwanzig fokussierte Minuten bringen mehr als zwei Stunden gedankenloses Durchspielen.\n\nEntscheidend ist, die richtige Bewegung zu wiederholen, nicht den Fehler. Wer eine Stelle zehnmal falsch spielt, übt das Falsche ein. Deshalb: Tempo so weit heruntersetzen, dass es sauber gelingt, und erst dann steigern. Ziel einer Übe-Einheit ist, in einer bestimmten Sache besser zu werden — nicht, alles einmal zu spielen.\n\nPausen gehören dazu: Das Gehirn festigt Gelerntes in den Pausen und über Nacht. Kurze, regelmäßige Einheiten schlagen seltene Marathons. Und der Gesundheitsrahmen gilt auch hier — kurz aufwärmen, bei Schmerz oder Kratzen stoppen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Übst du mit voller Aufmerksamkeit auf einer Sache, oder spielst du eher alles durch? Setzt du das Tempo so weit herunter, dass die Stelle sauber gelingt, bevor du steigerst — statt den Fehler einzuüben? Und wie verteilst du deine Zeit auf kurze, regelmäßige Einheiten statt seltener Marathons?"
+      }
+    },
+    {
+      "id": "ueben_strukturieren",
+      "anzeigetitel": {
+        "de": "Eine Übe-Einheit strukturieren"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "effektiv_ueben"
+      ],
+      "erklaerteil": {
+        "de": "Eine gute Übe-Einheit hat einen Aufbau, statt einfach loszuspielen. Ein bewährtes Muster: kurz aufwärmen, dann konzentriert an einer schwierigen Sache arbeiten, das Geübte in einen größeren Zusammenhang einbauen und locker ausklingen. So verpufft die Zeit nicht im ziellosen Jammen.\n\nDer Kern ist der fokussierte Block: eine konkrete Stelle oder Technik, langsam und gezielt, mit klarem Ziel für heute. Danach das Geübte in einen Part oder Song einbauen, damit es nicht isoliert bleibt. Zum Schluss etwas spielen, das Spaß macht — das hält die Motivation.\n\nZeitkästen helfen: Wer sich pro Block ein paar Minuten setzt, bleibt fokussiert und übt nicht eine Sache tot. Plane die Einheit vorher grob, statt im Spielen zu entscheiden — und baue Pausen ein, gerade bei körperlicher Belastung."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hat deine Übe-Zeit einen Aufbau (Aufwärmen, fokussierter Block, Einbauen, Ausklang), oder spielst du einfach los? Was ist dein konkretes Ziel für den heutigen fokussierten Block? Und wie stellst du sicher, dass du das Geübte in einen Song einbaust und Pausen einhältst, statt eine Sache totzuüben?"
+      }
+    },
+    {
+      "id": "uebe_tagebuch",
+      "anzeigetitel": {
+        "de": "Übe-Tagebuch: Fortschritt sichtbar machen"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "effektiv_ueben"
+      ],
+      "erklaerteil": {
+        "de": "Fortschritt am Instrument ist oft so langsam, dass man ihn im Alltag nicht spürt — und genau das frustriert. Ein einfaches Übe-Tagebuch macht ihn sichtbar: notiere kurz, was du geübt hast, bei welchem Tempo, was schon sitzt und wo es hakt.\n\nDas hat zwei Wirkungen. Erstens siehst du beim Zurückblättern schwarz auf weiß, dass du in Wochen tatsächlich schneller oder sauberer geworden bist — das trägt über Durststrecken. Zweitens wird ein Plateau diagnostizierbar: Wenn dasselbe Tempo seit Wochen steht, weißt du, wo du ansetzen musst.\n\nEs muss nichts Aufwendiges sein — ein paar Zeilen pro Einheit oder eine Tempo-Zahl reichen. Wichtiger als die Form ist die Regelmäßigkeit: Das Tagebuch wirkt nur, wenn es mitläuft."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie hältst du fest, was du übst — Tempo, was sitzt, wo es hakt? Woran würdest du beim Zurückblättern erkennen, dass du in den letzten Wochen wirklich vorangekommen bist? Und wie einfach muss dein Tagebuch sein, damit du es tatsächlich regelmäßig führst?"
+      }
+    },
+    {
+      "id": "fehler_frueh_erkennen",
+      "anzeigetitel": {
+        "de": "Fehler früh erkennen und an der Ursache beheben"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "effektiv_ueben"
+      ],
+      "erklaerteil": {
+        "de": "Ein Fehler, den du nicht bemerkst, übst du ein. Deshalb ist das frühe Erkennen die halbe Miete: langsam genug spielen, um zu hören, was passiert, und dir selbst ehrlich zuhören, statt über die Stelle hinwegzuspielen.\n\nDas wirksamste Werkzeug ist die Aufnahme. Beim Spielen ist die Aufmerksamkeit auf die Ausführung gerichtet; erst beim Anhören hörst du nüchtern, wo es flattert, matscht oder nicht im Timing sitzt. Was du hörst, kannst du gezielt angehen.\n\nEntscheidend ist, die Ursache zu beheben, nicht das Symptom. Ein unsauberer Ton kann von der Greif- oder der Anschlaghand kommen, von zu viel Tempo oder von Verspannung. Wer nur schneller wiederholt, zementiert das Problem; wer die Ursache sucht und langsam korrigiert, löst es."
+      },
+      "reflexionsaufgabe": {
+        "de": "Spielst du langsam genug, um deine eigenen Fehler überhaupt zu hören — und nutzt du dafür Aufnahmen? Gehst du der Ursache nach (welche Hand, welches Tempo, welche Verspannung) statt nur das Symptom zu wiederholen? Und was tust du, wenn du merkst, dass du eine Stelle bereits falsch eingeübt hast?"
+      }
+    },
+    {
+      "id": "lernweg_planen",
+      "anzeigetitel": {
+        "de": "Den eigenen Lernweg planen"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "ueben_strukturieren"
+      ],
+      "erklaerteil": {
+        "de": "Ohne Ziel übt man, was gerade Spaß macht — und tritt oft auf der Stelle. Einen Lernweg zu planen heißt, sich realistische Ziele über Wochen und Monate zu setzen und sie in erreichbare Schritte zu zerlegen. Ein großes Ziel wie einen Song sicher spielen zerfällt in Technik, Tempo, Ausdauer und Zusammenspiel.\n\nGute Ziele sind konkret und überprüfbar: nicht schneller werden, sondern dieses Riff bei diesem Tempo sauber. So weißt du, woran du bist, und kannst deine begrenzte Übe-Zeit auf das Wichtigste lenken, statt dich zu verzetteln.\n\nEin Plan ist kein Korsett: Er darf sich ändern, wenn du merkst, dass etwas fehlt oder eine Baustelle drängt. Aber ohne Richtung verpufft Fleiß. Frag dich regelmäßig, wo du in ein paar Monaten stehen willst und welcher nächste Schritt dich dorthin bringt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wo willst du in ein paar Monaten stehen — und in welche konkreten, überprüfbaren Schritte zerlegst du dieses Ziel? Worauf lenkst du deine begrenzte Übe-Zeit, statt dich zu verzetteln? Und wie oft prüfst du deinen Plan und passt ihn an, ohne die Richtung zu verlieren?"
+      }
+    },
+    {
+      "id": "uebung_anpassen",
+      "anzeigetitel": {
+        "de": "Eine Übung ans eigene Level anpassen"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "effektiv_ueben"
+      ],
+      "erklaerteil": {
+        "de": "Eine Übung wirkt am besten, wenn sie genau an deiner Grenze liegt — nicht so leicht, dass sie langweilt, nicht so schwer, dass nichts gelingt. Diesen Punkt triffst du selten von allein; du musst die Übung anpassen.\n\nDie wichtigsten Stellschrauben sind Tempo, Umfang und Isolation. Zu schwer? Tempo herunter, die Stelle auf den schwierigen Takt verkürzen oder ein Element weglassen (nur die Greifhand, nur der Rhythmus). Zu leicht? Tempo hoch, verlängern, eine Variation oder Erschwernis einbauen. So bleibt jede Übung im Bereich, in dem echtes Lernen passiert.\n\nDieses Anpassen ist eine eigene Fähigkeit: Wer sie beherrscht, macht aus jeder Vorlage eine Übung, die zu ihm passt, statt an einer Vorgabe zu scheitern oder sich zu langweilen. Beobachte, wo du stehst, und drehe bewusst an einer Schraube."
+      },
+      "reflexionsaufgabe": {
+        "de": "Liegt deine aktuelle Übung an deiner Grenze — oder ist sie zu leicht (langweilig) bzw. zu schwer (nichts gelingt)? An welcher Stellschraube drehst du dann bewusst: Tempo, Umfang oder Isolation? Und wie machst du aus einer festen Vorlage eine Übung, die zu deinem Level passt?"
+      }
+    }
+  ]
+}
