@@ -650,7 +650,19 @@
     "crust_koerper_ausdauer": "",
     "sludge_bass_wand": "",
     "sludge_sound_gear": "",
-    "sludge_langform": ""
+    "sludge_langform": "",
+    "grind_sound_buzzsaw": "",
+    "grind_ethos_humor": "",
+    "grind_vocals_extrem": "",
+    "deathcore_downtempo": "",
+    "deathcore_intro_atmosphaere": "",
+    "deathcore_gesang_ausdauer": "",
+    "djent_gitarre_ambient": "",
+    "djent_solo_lead": "",
+    "djent_studio_produktion": "",
+    "stoner_groove_swing": "",
+    "stoner_jam": "",
+    "postmetal_textur_schichten": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",

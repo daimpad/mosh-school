@@ -650,7 +650,19 @@
     "crust_koerper_ausdauer": "Crust: Downpicking-Ausdauer ökonomisch",
     "sludge_bass_wand": "Sludge-Bass: die zähe Fuzz-Wand",
     "sludge_sound_gear": "Sludge-Sound: Fuzz, Tiefe & Feedback",
-    "sludge_langform": "Sludge-Arrangement: die Zähigkeit der Wiederholung"
+    "sludge_langform": "Sludge-Arrangement: die Zähigkeit der Wiederholung",
+    "grind_sound_buzzsaw": "Grind-Sound: die Kreissäge",
+    "grind_ethos_humor": "Grindcore: Haltung, Politik & Absurdität",
+    "grind_vocals_extrem": "Grind-Vocals: tiefste Gutturals & Pig Squeals",
+    "deathcore_downtempo": "Deathcore: Downtempo & Beatdown-Crush",
+    "deathcore_intro_atmosphaere": "Deathcore: atmosphärische Intros & Kontrast",
+    "deathcore_gesang_ausdauer": "Deathcore-Vocals: über ein Set durchhalten",
+    "djent_gitarre_ambient": "Djent: Clean- & Ambient-Schichten",
+    "djent_solo_lead": "Djent: melodisches Lead über dem Fundament",
+    "djent_studio_produktion": "Djent: Produktion als Instrument",
+    "stoner_groove_swing": "Stoner-Drums: der rollende Groove",
+    "stoner_jam": "Stoner: die Jam-Kultur",
+    "postmetal_textur_schichten": "Post-Metal: Klangschichten & Texturen"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",

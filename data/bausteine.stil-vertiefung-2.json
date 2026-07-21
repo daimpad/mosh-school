@@ -1,0 +1,401 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-vertiefung-2",
+    "hinweis": "Genre-Vertiefung Runde 2: Grindcore, Deathcore, Djent, Stoner/Post um je drei genuin neue Facetten ergänzt (Grind: Sound/Haltung/Extrem-Vocals; Deathcore: Downtempo/Atmosphäre-Intros/Vocal-Ausdauer; Djent: Ambient-Schichten/Lead/Produktion; Stoner-Post: Groove-Swing/Jam-Kultur/Post-Metal-Texturen). stil-getaggt, fortgeschritten. Gesundheitsrahmen bei Vocal-/Körper-Bausteinen. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "grind_sound_buzzsaw",
+      "anzeigetitel": {
+        "de": "Grind-Sound: die Kreissäge"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "grind_riff_reduktion",
+        "verzerrer_typen"
+      ],
+      "erklaerteil": {
+        "de": "Der klassische Grind-Gitarrensound ist eine Kreissäge: extrem verzerrt, mittig-schneidend, oft bewusst blown-out und roh. Er soll nicht schön klingen, sondern wehtun und im Blast-Chaos noch als aggressive Kante durchkommen.\n\nDas Rezept ist viel Verzerrung mit aggressiven oberen Mitten und Höhen, wenig Wärme, und die Bereitschaft, auf Sauberkeit zu verzichten. In der dichten Grind-Produktion muss die Gitarre eine kreischende Präsenz haben, sonst verschwindet sie unter Blasts und Bass.\n\nRoh heißt nicht beliebig: Der Sound ist gewollt schneidend, aber die Riffs müssen trotz der Härte noch als Struktur erkennbar bleiben, damit die kurzen Songs Wirkung haben."
+      },
+      "reflexionsaufgabe": {
+        "de": "Baust du bewusst einen schneidenden, kreissägenden Sound mit aggressiven Mitten/Höhen auf, statt Wärme oder Sauberkeit anzustreben? Wie stellst du sicher, dass die Gitarre im Blast-Chaos als Kante durchkommt? Und bleibt die Riff-Struktur trotz der Rohheit erkennbar?"
+      }
+    },
+    {
+      "id": "grind_ethos_humor",
+      "anzeigetitel": {
+        "de": "Grindcore: Haltung, Politik & Absurdität"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "genrekunde_extreme_familie"
+      ],
+      "erklaerteil": {
+        "de": "Grindcore ist von Anfang an mehr als Lärm — es trägt eine Haltung. Zwei Stränge prägen das Genre: scharfe politische und gesellschaftskritische Ansage (aus dem Anarcho-Punk-Erbe) und eine bewusst absurde, überzeichnete oder groteske Seite (bis hin zum Goregrind). Beide eint die Ablehnung von Konvention und Hochglanz.\n\nDas prägt Songtitel, Texte, Artwork und Auftreten: extrem kurze Statements, oft provokant, manchmal satirisch. Die Kürze der Songs ist selbst Teil der Aussage — ein Schlag ins Gesicht statt einer ausformulierten Ballade.\n\nWer Grind spielt, sollte wissen, wofür die eigenen Songs stehen — ernste Kritik, schwarzer Humor oder beides — statt Provokation ohne Inhalt zu reproduzieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kennt ihr die beiden Stränge des Grind — scharfe politische Ansage und bewusste Absurdität — und wofür stehen eure Songs? Nutzt ihr die extreme Kürze als Teil der Aussage? Und ist eure Provokation inhaltlich gefüllt (Kritik oder schwarzer Humor) statt bloße Pose?"
+      }
+    },
+    {
+      "id": "grind_vocals_extrem",
+      "anzeigetitel": {
+        "de": "Grind-Vocals: tiefste Gutturals & Pig Squeals"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "grindcore"
+      ],
+      "voraussetzungen": [
+        "grind_vocals_wechsel",
+        "false_cord_ansatz"
+      ],
+      "erklaerteil": {
+        "de": "Neben dem Tief-Hoch-Wechsel kennt Grind (und besonders Goregrind) extreme Spezial-Vocals: sehr tiefe, gepresst wirkende Gutturals und die hohen, quiekenden Pig Squeals. Sie sind Effekt und Textur, kein Melodie-Ersatz — bewusst überzeichnet und unmenschlich.\n\nTechnisch entstehen auch diese Extreme aus kontrollierter Verzerrung und Luftführung, nicht aus reinem Halsdruck. Gerade weil sie so extrem klingen, ist die Versuchung groß, sie über Pressen zu erzwingen — genau das schädigt die Stimme am schnellsten.\n\nGesundheitsrahmen ist hier zentral: nur kurz und aufgewärmt, aus Stütze und Resonanz, bei Kratzen, Schmerz oder Blut im Speichel sofort stoppen. Diese Extreme lernt man am besten mit erfahrener Anleitung; bei Beschwerden zur HNO."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Extreme kontrolliert ansetzen",
+          "ziel": "Tiefe Gutturals und Pig Squeals aus Kontrolle statt Druck erzeugen.",
+          "schritte": [
+            "Wärm gründlich auf und finde den Ansatz leise, aus Luftfluss und Resonanz, nicht aus Halsdruck.",
+            "Taste dich in sehr kurzen Versuchen an die tiefe bzw. hohe Extrem-Textur heran, mit Pausen dazwischen.",
+            "Nimm es auf und prüfe, ob der Effekt kontrolliert klingt — bei Kratzen oder Schmerz sofort stoppen."
+          ],
+          "steigerung": "Setze die Extreme gezielt als Akzent in eine Phrase, ohne die ganze Zeit im Extrem zu bleiben.",
+          "selbstkontrolle": "Die Extrem-Vocals kommen kontrolliert aus Stütze und Luft; kein Halsdruck, kein Kratzen — im Zweifel Pause."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "deathcore_downtempo",
+      "anzeigetitel": {
+        "de": "Deathcore: Downtempo & Beatdown-Crush"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "deathcore"
+      ],
+      "voraussetzungen": [
+        "chugs_breakdown",
+        "deathcore_breakdown_wucht"
+      ],
+      "erklaerteil": {
+        "de": "Ein eigener Zweig des Deathcore ist das Downtempo (Beatdown): extrem langsame, zermalmende Breakdowns, die nicht auf Tempo, sondern auf schiere Wucht und Zeitlupe setzen. Der Effekt entsteht durch Kontrast — nach Chaos und Blast kommt der Boden weg, und ein einzelner, unfassbar schwerer Chug fällt wie ein Amboss.\n\nDie Kunst ist die Platzierung und der Ton: wenige, extrem betonte Anschläge mit maximaler Länge und Dreck, absolut gemeinsam mit der Bassdrum gesetzt, mit schwarzen Pausen dazwischen. Je leerer der Raum um den Schlag, desto schwerer wirkt er.\n\nZu viele Noten töten den Effekt. Downtempo ist Reduktion auf das Wuchtigste — Geduld und gemeinsames Timing entscheiden mehr als Technik."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der Amboss-Chug",
+          "ziel": "Extrem langsame, zermalmende Breakdown-Schläge gemeinsam und schwer setzen.",
+          "schritte": [
+            "Spiele nach einem schnellen Part einen einzelnen, sehr schweren Chug mit maximaler Länge, exakt auf die Bassdrum.",
+            "Lass viel schwarzen Raum um den Schlag und halte die Pause bewusst aus.",
+            "Nimm es auf und prüfe, ob der Schlag durch den Kontrast wuchtig wirkt."
+          ],
+          "steigerung": "Baue eine kurze Downtempo-Passage aus wenigen, unterschiedlich platzierten schweren Schlägen.",
+          "selbstkontrolle": "Die Schläge fallen gemeinsam mit der Kick, sind maximal schwer, und die Pausen dazwischen sind still."
+        }
+      },
+      "spielziele": [
+        "schwererer_ton",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "deathcore_intro_atmosphaere",
+      "anzeigetitel": {
+        "de": "Deathcore: atmosphärische Intros & Kontrast"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "deathcore"
+      ],
+      "voraussetzungen": [
+        "deathcore_dynamik_dramaturgie"
+      ],
+      "erklaerteil": {
+        "de": "Viele Deathcore-Songs beginnen nicht mit dem Chaos, sondern mit Atmosphäre: ein cleaner Gitarrenklang, ein Sample, ein Ambient-Flächenklang, der Spannung aufbaut, bevor der erste Blast einschlägt. Dieser Kontrast macht die folgende Härte erst wuchtig.\n\nDas Prinzip ist Dramaturgie über Gegensatz: Ruhe und Weite als Kontrastfolie zur Entladung. Ein gut gesetztes Intro oder ein atmosphärischer Zwischenteil gibt dem Hörer Luft und dem folgenden Breakdown Fallhöhe. Zu viel davon verwässert, ein gezielter Einsatz verstärkt.\n\nSamples und Flächen sind Werkzeuge, keine Deko: Sie sollten zur Stimmung des Songs passen und den Übergang in die Härte bewusst gestalten, nicht bloß Zeit füllen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nutzt ihr atmosphärische Intros oder Zwischenteile (clean, Samples, Flächen) bewusst als Kontrastfolie, die der folgenden Härte Fallhöhe gibt? Passt die Atmosphäre zur Stimmung des Songs, statt bloß Zeit zu füllen? Und gestaltet ihr den Übergang von Ruhe in die Entladung gezielt?"
+      }
+    },
+    {
+      "id": "deathcore_gesang_ausdauer",
+      "anzeigetitel": {
+        "de": "Deathcore-Vocals: über ein Set durchhalten"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "deathcore"
+      ],
+      "voraussetzungen": [
+        "deathcore_gutturals_squeals",
+        "resonanz_projektion"
+      ],
+      "erklaerteil": {
+        "de": "Ein einzelnes Growl zu können ist eine Sache — eine ganze Show voller Gutturals, Screams und Squeals gesund durchzuhalten eine andere. Deathcore-Vocals sind eine Ausdauerleistung, und der häufigste Grund für Stimmprobleme ist nicht die Technik einzelner Töne, sondern die Überlastung über die Zeit.\n\nDurchhalten kommt aus Ökonomie: aus Stütze und Resonanz statt Halsdruck, aus bewusstem Dosieren der Intensität über das Set und aus Erholung, wo der Song sie zulässt. Wer jeden Ton mit Maximaldruck gibt, ist nach drei Songs heiser.\n\nGesundheitsrahmen: gründlich ein- und aussingen, ausreichend trinken, die Belastung über Wochen aufbauen und Warnzeichen ernst nehmen. Bei anhaltender Heiserkeit oder Schmerz pausieren und zur HNO oder Gesangslehrkraft."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kommen deine Deathcore-Vocals aus Stütze und Resonanz statt Halsdruck, sodass sie über ein ganzes Set tragen? Dosierst du die Intensität bewusst und nutzt Erholungsmomente im Song, statt jeden Ton mit Maximaldruck zu geben? Und wie ernst nimmst du Warnzeichen wie anhaltende Heiserkeit (Ein-/Aussingen, HNO)?"
+      }
+    },
+    {
+      "id": "djent_gitarre_ambient",
+      "anzeigetitel": {
+        "de": "Djent: Clean- & Ambient-Schichten"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "djent"
+      ],
+      "voraussetzungen": [
+        "djent_gitarre_pocket",
+        "doom_sustain_feedback"
+      ],
+      "erklaerteil": {
+        "de": "Djent und Prog-Metalcore leben nicht nur von tighten tiefen Chugs, sondern vom Kontrast dazu: cleane, hallige Ambient-Schichten mit Delay und Reverb, die Weite und Atmosphäre schaffen. Erst dieser Raum macht die harten Parts wuchtig und gibt dem oft komplexen Rhythmus etwas zum Atmen.\n\nDie Technik ist zurückgenommen und klanglich: offene Akkorde oder einzelne Töne in den hohen Lagen, mit Delay zu Flächen verwoben, sauber gespielt und stimmig zur Harmonik. Weniger ist mehr — ein paar klare Töne im Raum wirken stärker als viele.\n\nDer Reiz liegt im Wechsel: die tighte, tiefe Pocket gegen die weite, cleane Fläche. Beides gehört zusammen und macht den prog-typischen Sog aus."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Weite gegen Pocket",
+          "ziel": "Cleane Ambient-Schichten mit Delay als Kontrast zum tighten Chug-Part spielen.",
+          "schritte": [
+            "Spiele in den hohen Lagen offene Akkorde oder einzelne Töne, sauber und stimmig zur Harmonik.",
+            "Verwebe sie mit Delay/Reverb zu einer Fläche und lass Raum, statt viele Töne zu spielen.",
+            "Setze den cleanen Ambient-Part bewusst gegen einen tighten, tiefen Chug-Part und höre den Kontrast."
+          ],
+          "steigerung": "Baue einen Übergang, in dem die Ambient-Fläche in den harten Part kippt, ohne den Fluss zu brechen.",
+          "selbstkontrolle": "Die cleane Fläche klingt weit und stimmig; der Kontrast zum tighten Part gibt dem Song Raum und Wucht."
+        }
+      },
+      "spielziele": [
+        "saubere_uebergaenge"
+      ]
+    },
+    {
+      "id": "djent_solo_lead",
+      "anzeigetitel": {
+        "de": "Djent: melodisches Lead über dem Fundament"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "djent"
+      ],
+      "voraussetzungen": [
+        "gitarre_tapping_legato",
+        "lead_phrasierung"
+      ],
+      "erklaerteil": {
+        "de": "Über dem rhythmisch-komplexen Djent-Fundament tragen viele Prog-Metalcore-Songs ein melodisches Lead: ein Solo oder eine Lead-Linie, die über den Grooves singt und einen Kontrast zur perkussiven Härte bildet. Anders als reine Shred-Soli zählt hier Gesanglichkeit und das Passen zur oft ungeraden Metrik.\n\nDie Herausforderung ist doppelt: die Lead-Linie muss melodisch tragen und sich zugleich in die polymetrische Umgebung einfügen, ohne die Orientierung zu verlieren. Legato, Tapping und weite Bendings sind typische Mittel; entscheidend ist aber die Phrasierung — Pausen und Zielnoten statt Dauerbeschuss.\n\nGut gesetzt gibt das Lead dem komplexen Song einen melodischen Anker, an dem sich das Ohr festhält."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Singen über dem Groove",
+          "ziel": "Eine melodische Lead-Linie über dem djent-typischen Fundament phrasieren.",
+          "schritte": [
+            "Lege über einen einfachen djent-Groove eine kurze, singbare Lead-Phrase mit klaren Zielnoten und Pausen.",
+            "Halte den Bezug zur (oft ungeraden) Metrik, indem du die Phrase an den Grundpuls bindest.",
+            "Nimm es auf und prüfe, ob das Lead melodisch trägt und trotzdem im Groove sitzt."
+          ],
+          "steigerung": "Erweitere die Phrase mit Legato/Tapping und einem weiten Bending zum Höhepunkt.",
+          "selbstkontrolle": "Das Lead singt über dem Groove, bleibt in der Metrik verankert und wirkt als melodischer Anker."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit",
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "djent_studio_produktion",
+      "anzeigetitel": {
+        "de": "Djent: Produktion als Instrument"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "djent"
+      ],
+      "voraussetzungen": [
+        "djent_sound_gear",
+        "recording_tightness"
+      ],
+      "erklaerteil": {
+        "de": "Kaum ein Genre ist so eng mit seiner Produktion verwoben wie Djent. Der typische Sound entsteht nicht nur an Amp und Gitarre, sondern im Rechner: extrem tighte, oft doppelt oder vierfach eingespielte Rhythmusgitarren, präzises Editing, ein kontrolliertes Low-End und ein perkussiver, definierter Attack.\n\nDas verlangt, die Produktion als Teil des Songs zu denken: Doubletracking für Breite, sauberes Gate und EQ für Definition, und eine Tightness, die live vom Spiel und im Studio zusätzlich von der Bearbeitung kommt. Über den Grad an Editing (Quantisierung) gibt es Debatten — wichtig ist, dass das Fundament aus tightem Spiel kommt und die Produktion es schärft, nicht ersetzt.\n\nWer Djent aufnimmt, sollte diese Werkzeuge kennen und bewusst einsetzen, statt sich zu wundern, warum der Rohmix nicht nach dem Vorbild klingt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Denkst du die Produktion (Doubletracking, Editing, Gate, Low-End-Kontrolle, Attack) als Teil des Djent-Songs, nicht als Nachgedanken? Kommt die Tightness zuerst aus dem Spiel und wird von der Bearbeitung geschärft statt ersetzt? Und kennst du die Werkzeuge, die den definierten, perkussiven Djent-Sound ausmachen?"
+      }
+    },
+    {
+      "id": "stoner_groove_swing",
+      "anzeigetitel": {
+        "de": "Stoner-Drums: der rollende Groove"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "stoner_post"
+      ],
+      "voraussetzungen": [
+        "grundbeat",
+        "drums_dynamik_architektur"
+      ],
+      "erklaerteil": {
+        "de": "Anders als die schwere Starre mancher Doom-Beats lebt Stoner Rock von einem rollenden, groovenden Feel — oft mit einem leichten Swing oder Shuffle, der die Musik trotz Tiefe und Fuzz nach vorne wippen lässt. Der Groove ist entspannt, aber treibend, eher wippend als marschierend.\n\nDer Schlüssel ist ein lockeres, leicht hinter dem Beat liegendes Zeitgefühl, das dem Riff Raum zum Atmen gibt, ohne zu schleppen. Ghost Notes und ein swingender Hi-Hat- oder Ride-Puls geben dem Ganzen den rollenden Charakter; die Bassdrum sitzt satt mit dem Fuzz-Bass.\n\nDieser Groove ist das Gegenstück zur Tempo-Härte anderer Genres: die Wirkung kommt aus dem Feel, nicht aus Geschwindigkeit."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Rollen statt marschieren",
+          "ziel": "Einen entspannten, leicht swingenden Stoner-Groove treiben lassen.",
+          "schritte": [
+            "Spiele einen einfachen Beat bewusst leicht hinter dem Klick, locker und wippend statt starr.",
+            "Füge einen leichten Swing im Hi-Hat/Ride und ein paar Ghost Notes hinzu, damit es rollt.",
+            "Nimm es auf und prüfe, ob es treibt und wippt, ohne zu schleppen."
+          ],
+          "steigerung": "Koppele den Groove satt an einen Fuzz-Bass und halte das rollende Feel über einen ganzen Part.",
+          "selbstkontrolle": "Der Groove rollt entspannt und treibt zugleich; er liegt bewusst hinten, ohne instabil zu werden."
+        }
+      },
+      "spielziele": [
+        "timing_zum_klick"
+      ]
+    },
+    {
+      "id": "stoner_jam",
+      "anzeigetitel": {
+        "de": "Stoner: die Jam-Kultur"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "stoner_post"
+      ],
+      "voraussetzungen": [
+        "stoner_riff_fuzz",
+        "gitarre_improvisation"
+      ],
+      "erklaerteil": {
+        "de": "Stoner Rock ist tief in der Jam-Kultur verwurzelt: Viele Songs und Ideen entstehen nicht am Reißbrett, sondern aus dem gemeinsamen Improvisieren über einen Groove. Ein fetter Fuzz-Riff wird zur Ausgangsbasis, über der die Band sich einspielt, Variationen findet und einen Aufbau entstehen lässt.\n\nDas verlangt eine andere Haltung als das präzise Durcharrangieren: zuhören, aufeinander reagieren, einen Groove tragen und ihn gemeinsam atmen lassen, statt sofort zum nächsten Part zu hetzen. Aus solchen Jams kristallisieren sich die besten Parts oft von allein heraus.\n\nDie Kunst ist, die Balance zu halten: genug Struktur, dass es nicht zerfasert, genug Freiheit, dass Neues entsteht. Ein Jam ist Werkzeug zum Schreiben und ein Wert an sich."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nutzt ihr das gemeinsame Jammen über einen Fuzz-Groove als Weg, Ideen und Aufbauten entstehen zu lassen — statt alles vorab durchzuarrangieren? Hört ihr aufeinander und tragt einen Groove gemeinsam, statt zu hetzen? Und haltet ihr die Balance aus genug Struktur und genug Freiheit, damit Neues entsteht?"
+      }
+    },
+    {
+      "id": "postmetal_textur_schichten",
+      "anzeigetitel": {
+        "de": "Post-Metal: Klangschichten & Texturen"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "stoner_post"
+      ],
+      "voraussetzungen": [
+        "doom_sustain_feedback",
+        "sludge_riffing_dreck"
+      ],
+      "erklaerteil": {
+        "de": "Post-Metal baut seine Größe aus Schichten. Statt eines einzelnen Riffs stapeln sich Klangebenen: ein tiefes, schweres Fundament, darüber cleane oder angezerrte Flächen mit Delay und Reverb, dazu Feedback und Obertöne — eine Textur, die sich langsam auftürmt und wieder abbaut.\n\nDas Denken ist eher das eines Klangmalers als eines Riff-Schreibers: Welche Schicht trägt, welche schwebt darüber, wann kommt eine dazu, wann fällt eine weg? Der oft zitierte Aufbau von Ruhe zu einer überwältigenden Klimax entsteht genau durch dieses Hinzufügen und Wegnehmen von Schichten über die Zeit.\n\nGerade live und in der Aufnahme sind Effekte (Delay, Reverb, Volume-Swells) Teil des Instruments. Entscheidend bleibt, dass die Schichten sich ergänzen und Raum lassen, statt sich zu Matsch zu addieren."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Schichten auftürmen",
+          "ziel": "Eine Post-Metal-Textur aus mehreren Klangebenen aufbauen und wieder abbauen.",
+          "schritte": [
+            "Lege über ein schweres Fundament eine cleane oder angezerrte Fläche mit Delay/Reverb.",
+            "Baue über die Zeit eine weitere Schicht (Feedback, Obertöne, ein hoher Ton) hinzu, hin zu einer Klimax.",
+            "Nimm es auf und prüfe, ob sich die Schichten ergänzen und Raum bleibt, statt zu matschen."
+          ],
+          "steigerung": "Gestalte einen ganzen Bogen von Ruhe zu Klimax und zurück, nur über Hinzufügen und Wegnehmen von Schichten.",
+          "selbstkontrolle": "Die Schichten ergänzen sich zu einer wachsenden Textur mit klarer Klimax; nichts addiert sich zu Matsch."
+        }
+      },
+      "spielziele": [
+        "schwererer_ton"
+      ]
+    }
+  ]
+}
