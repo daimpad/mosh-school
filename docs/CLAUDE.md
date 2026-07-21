@@ -102,8 +102,9 @@ eine eigene View + Route `#/werkzeug/<name>`.
   (wie patterns.js). Für gespeicherte Strukturen (Pedalketten, später Song-
   Strukturen) gibt es `js/werkzeug-speicher.js` — ein **eigener localStorage-
   Namespace** (`moshschool.werkzeuge.v1`), bewusst getrennt vom versionierten
-  `zustand.js`-Fortschritts-Schema. Audio-Blobs (Rekorder) gehören später in
-  **IndexedDB**, nicht hierher.
+  `zustand.js`-Fortschritts-Schema. Audio-Blobs (Riff-Recorder) liegen in
+  **IndexedDB** (`js/audio/riff-db.js`, DB `moshschool-aufnahmen`) — nicht in
+  localStorage (Größe) und nicht im Zustand-Schema.
 - **SW-Pflege:** neue `js/audio/*`- und `js/ansichten/werkzeug*`-Module gehören in
   `SHELL` + `CACHE`-Bump (wie jedes Kern-Modul). Zugänglichkeit: tastaturbedienbar,
   ARIA; Tuner/Klick brauchen **nicht-farbliche** Signale (Zahl/Form, nicht nur Farbe).

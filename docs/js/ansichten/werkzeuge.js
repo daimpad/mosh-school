@@ -16,7 +16,7 @@ const WERKZEUGE = [
   { id: 'pedalboard', route: '#/werkzeug/pedalboard', icon: 'fa-layer-group', bereit: true },
   { id: 'ampbox', route: '#/werkzeug/ampbox', icon: 'fa-volume-high', bereit: true },
   { id: 'struktur', route: '#/werkzeug/struktur', icon: 'fa-list-check', bereit: true },
-  { id: 'recorder', route: '#/werkzeug/recorder', icon: 'fa-microphone', bereit: false },
+  { id: 'recorder', route: '#/werkzeug/recorder', icon: 'fa-microphone', bereit: true },
   { id: 'mehrspur', route: '#/werkzeug/mehrspur', icon: 'fa-sliders', bereit: false },
 ];
 

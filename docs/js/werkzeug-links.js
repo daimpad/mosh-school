@@ -49,6 +49,9 @@ const ID_REGELN = {
   song_arrangieren_ganz: [{ werkzeug: 'struktur' }],
   parts_verteilen: [{ werkzeug: 'struktur' }],
   uebergaenge_arrangieren: [{ werkzeug: 'struktur' }],
+  // Ideen-Bausteine öffnen den Riff-Recorder.
+  songidee_teilen: [{ werkzeug: 'recorder' }],
+  riff_zu_part_entwickeln: [{ werkzeug: 'recorder' }],
 };
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
@@ -79,6 +82,7 @@ const WERKZEUG_META = {
   pedalboard: { route: '#/werkzeug/pedalboard', labelKey: 'wz_pedalboard_titel' },
   ampbox: { route: '#/werkzeug/ampbox', labelKey: 'wz_ampbox_titel' },
   struktur: { route: '#/werkzeug/struktur', labelKey: 'wz_struktur_titel' },
+  recorder: { route: '#/werkzeug/recorder', labelKey: 'wz_recorder_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
