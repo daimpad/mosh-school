@@ -59,10 +59,11 @@ const INHALTSDATEIEN = [
   'data/bausteine.stil-vertiefung-2.json',
   'data/bausteine.koerper-athletik.json',
   'data/bausteine.pedalboard-gear.json',
+  'data/bausteine.amp-box-gear.json',
 ];
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, pedale, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, pedale, ampbox, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -70,6 +71,7 @@ export async function ladeDaten() {
     holeJson('data/tunings.json'),
     holeJson('data/patterns.json'),
     holeJson('data/pedale.json'),
+    holeJson('data/ampbox.json'),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
   const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, appInfo, turnierregeln);
@@ -92,6 +94,8 @@ export async function ladeDaten() {
     meta: pedale?._meta || {},
     pedale: pedale?.pedale || [],
   };
+  // Amp-/Box-Baukasten (Fakten-Daten): ebenfalls Referenzbereich.
+  daten.ampbox = ampbox || {};
   return daten;
 }
 
