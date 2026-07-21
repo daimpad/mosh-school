@@ -1174,6 +1174,14 @@ for x in (26, 60, 94):
         C(x - 5, 50, 2.5, fill=True), C(x + 5, 50, 2.5, fill=True),
         C(x, 70, 5, 2.5),
     ]
+# Amp-Topteil: Gehäuse mit Reglerreihe und Frontpanel-Linie.
+S["amp_grundlagen"] = [RECT(14, 46, 92, 32, filled=False), L(18, 68, 102, 68, 2)]
+for x in (28, 44, 60, 76, 92):
+    S["amp_grundlagen"].append(C(x, 56, 3, 2.5))
+# Box: Gehäuse mit vier Lautsprecher-Membranen (2x2), je Kegel als Innenkreis.
+S["box_grundlagen"] = [RECT(30, 22, 60, 76, filled=False)]
+for cx, cy in ((48, 44), (72, 44), (48, 76), (72, 76)):
+    S["box_grundlagen"] += [C(cx, cy, 11, 2.5), C(cx, cy, 3.5, 2.5)]
 
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
@@ -1229,7 +1237,7 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "schlaf_regeneration", "ernaehrung_hydration", "rumpf_kraft_stabilitaet",
                 "mobilitaet_routine", "headbangen_nacken", "verletzung_reha_rueckkehr",
                 "deload_periodisierung", "abwaermen_koerper",
-                "pedalboard_grundlagen"]
+                "pedalboard_grundlagen", "amp_grundlagen", "box_grundlagen"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:

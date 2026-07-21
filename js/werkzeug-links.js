@@ -36,11 +36,15 @@ const ID_REGELN = {
   duo_bv_tonzentrum: [{ werkzeug: 'stimmgeraet', params: { note: 'E2' } }],
   duo_gv_tonart_melodie: [{ werkzeug: 'stimmgeraet', params: { note: 'E2' } }],
   tonhoehe_clean: [{ werkzeug: 'stimmgeraet', params: { note: 'A2' } }],
-  // Signalketten-/Sound-Bausteine öffnen den Pedalboard-Baukasten vorbelegt.
-  pedalboard_grundlagen: [{ werkzeug: 'pedalboard' }],
-  gitarren_sound_architektur: [{ werkzeug: 'pedalboard', params: { instrument: 'gitarre' } }],
-  bass_signalkette: [{ werkzeug: 'pedalboard', params: { instrument: 'bass' } }],
-  bass_ton_gear: [{ werkzeug: 'stimmgeraet', params: { tuning: 'bass_standard' } }, { werkzeug: 'pedalboard', params: { instrument: 'bass' } }],
+  // Signalketten-/Sound-Bausteine öffnen den Pedalboard-Baukasten (und den
+  // Amp-/Box-Baukasten als Fortsetzung der Signalkette Pedalboard → Amp → Box).
+  pedalboard_grundlagen: [{ werkzeug: 'pedalboard' }, { werkzeug: 'ampbox' }],
+  gitarren_sound_architektur: [{ werkzeug: 'pedalboard', params: { instrument: 'gitarre' } }, { werkzeug: 'ampbox', params: { instrument: 'gitarre' } }],
+  bass_signalkette: [{ werkzeug: 'pedalboard', params: { instrument: 'bass' } }, { werkzeug: 'ampbox', params: { instrument: 'bass' } }],
+  bass_ton_gear: [{ werkzeug: 'stimmgeraet', params: { tuning: 'bass_standard' } }, { werkzeug: 'pedalboard', params: { instrument: 'bass' } }, { werkzeug: 'ampbox', params: { instrument: 'bass' } }],
+  // Amp-/Box-Bausteine öffnen den Physik-Baukasten vorbelegt.
+  amp_grundlagen: [{ werkzeug: 'ampbox' }],
+  box_grundlagen: [{ werkzeug: 'ampbox' }],
 };
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
@@ -69,6 +73,7 @@ const WERKZEUG_META = {
   loops: { route: '#/werkzeug/loops', labelKey: 'wz_loops_titel' },
   stimmgeraet: { route: '#/werkzeug/stimmgeraet', labelKey: 'wz_stimmgeraet_titel' },
   pedalboard: { route: '#/werkzeug/pedalboard', labelKey: 'wz_pedalboard_titel' },
+  ampbox: { route: '#/werkzeug/ampbox', labelKey: 'wz_ampbox_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
