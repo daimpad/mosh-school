@@ -2447,6 +2447,756 @@
           "korrektur": "Den Ausdruck über Luft, Stütze und Resonanz erzeugen, nicht über Halsdruck — leise entwickeln und die Intensität aus der Führung holen. Bei Kratzen oder Schmerz stoppen, im Zweifel HNO oder Coach."
         }
       }
+    },
+    {
+      "id": "fb_blast_ausdauer",
+      "typ": "fehlerbild",
+      "basis_baustein": "blast_ausdauer",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Blast bricht nach kurzer Zeit ein — Tempo und Gleichmaß fallen ab, die Hände werden schwer.",
+          "ursache": "Verkrampfung und zu viel Kraft statt ökonomischer, lockerer Bewegung; kein Atmen, keine Erholung.",
+          "korrektur": "Locker und klein knapp unter der Grenze arbeiten, in kurzen Intervallen mit Pausen. Ausdauer über Wochen aufbauen; bei Brennen oder Schmerz stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_blast_spezialformen",
+      "typ": "fehlerbild",
+      "basis_baustein": "blast_spezialformen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bomb-Blast, Gravity oder andere Spezialform verwaschen — Hände und Füße sind nicht klar zugeordnet.",
+          "ursache": "Die Grundform ist noch nicht sicher, und die Zuordnung der Schläge zu Händen und Füßen ist unklar.",
+          "korrektur": "Erst den Grundblast stabilisieren, dann eine Spezialform langsam isolieren und die Zuordnung laut ansagen, bevor das Tempo steigt."
+        }
+      }
+    },
+    {
+      "id": "fb_blast_varianten",
+      "typ": "fehlerbild",
+      "basis_baustein": "blast_varianten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die verschiedenen Blast-Varianten klingen gleich oder verwaschen; der Wechsel zwischen ihnen ist nicht hörbar.",
+          "ursache": "Die Hand-Fuß-Zuordnung der einzelnen Varianten ist nicht sauber getrennt, und das Tempo ist zu hoch zum Unterscheiden.",
+          "korrektur": "Jede Variante langsam und isoliert üben, die Zuordnung bewusst machen und erst dann zwischen zweien wechseln."
+        }
+      }
+    },
+    {
+      "id": "fb_double_bass_extremtempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "double_bass_extremtempo",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "An der Tempogrenze wird die Double Bass ungleichmäßig, die Füße verkrampfen und ein Fuß ist deutlich schwächer.",
+          "ursache": "Unökonomische Technik und Dauerspannung statt kleiner, entspannter Impulse; die Füße sind nicht gleich trainiert.",
+          "korrektur": "Eine saubere Technik (Heel-up oder Slide) sauber halten, beide Füße gleich stark, knapp unter der Grenze. Kurze Intervalle mit Pausen; bei Verkrampfung stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_double_bass_patterns",
+      "typ": "fehlerbild",
+      "basis_baustein": "double_bass_patterns",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Akzente innerhalb der Double-Bass-Figur gehen unter — die Figur klingt als gleichförmiger Teppich statt strukturiert.",
+          "ursache": "Betonung und Zählung der Figur sind nicht verinnerlicht; alle Schläge kommen gleich laut.",
+          "korrektur": "Langsam üben, die Akzente laut mitzählen und deutlich abheben. Erst wenn die Struktur hörbar ist, das Tempo anheben."
+        }
+      }
+    },
+    {
+      "id": "fb_double_bass_sechzehntel",
+      "typ": "fehlerbild",
+      "basis_baustein": "double_bass_sechzehntel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Durchgehende Sechzehntel sind ungleich — ein Fuß dominiert, das Muster eiert und driftet vom Klick weg.",
+          "ursache": "Fuß-Balance und Timing sind nicht stabil; die schwächere Seite kommt zu spät oder zu leise.",
+          "korrektur": "Langsam zum Klick, auf gleiche Lautstärke und Länge beider Füße achten. Metronom als Kontrolle, Tempo nur bei gleichmäßigem Muster steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_drums_dynamik_architektur",
+      "typ": "fehlerbild",
+      "basis_baustein": "drums_dynamik_architektur",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Song bleibt über alle Parts gleich laut und dicht — es gibt keinen dynamischen Verlauf, der Höhepunkt fehlt.",
+          "ursache": "Dynamik wird nicht als Architektur geplant; jeder Part wird gleich intensiv gespielt.",
+          "korrektur": "Die leerste und die dichteste Stelle des Songs bewusst festlegen und die Dynamik dorthin aufbauen. Akzente und Zurücknahme gezielt setzen."
+        }
+      }
+    },
+    {
+      "id": "fb_drums_fill_sprache",
+      "typ": "fehlerbild",
+      "basis_baustein": "drums_fill_sprache",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Fills wirken austauschbar und stören eher den Fluss, als ihn zu tragen; sie finden nicht sauber zurück in den Beat.",
+          "ursache": "Es fehlt eine eigene Fill-Idee, und der Fill ist nicht ins Timing eingebettet — der Puls reißt.",
+          "korrektur": "Wenige eigene Fill-Motive entwickeln und variieren; jeden Fill innerlich zählen und bewusst auf die Eins zurückführen."
+        }
+      }
+    },
+    {
+      "id": "fb_drums_lineares_spiel",
+      "typ": "fehlerbild",
+      "basis_baustein": "drums_lineares_spiel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Statt einer sauberen Abfolge, bei der keine zwei Schläge zusammenfallen, überlappen Hände und Füße — der lineare Charakter geht verloren.",
+          "ursache": "Hand und Fuß sind zeitlich nicht klar getrennt; im Tempo verschmelzen die Schläge.",
+          "korrektur": "Sehr langsam üben, jede Note einzeln setzen und auf Nicht-Gleichzeitigkeit achten. Erst bei sauberer Trennung das Tempo steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_drums_polymetrik",
+      "typ": "fehlerbild",
+      "basis_baustein": "drums_polymetrik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim verschobenen Riff geht die gemeinsame Eins verloren — die Band driftet auseinander.",
+          "ursache": "Der gemeinsame Grundpuls wird nicht gehalten; nur die verschobene Ebene wird gefühlt.",
+          "korrektur": "Den Grundpuls laut mitzählen und die Länge des Zyklus klarmachen. Beide Ebenen einzeln fühlen, dann an der gemeinsamen Eins zusammenführen."
+        }
+      }
+    },
+    {
+      "id": "fb_dynamik_akzente",
+      "typ": "fehlerbild",
+      "basis_baustein": "dynamik_akzente",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Betonte Schläge und Ghost Notes klingen gleich laut — der Groove wirkt flach, Akzente sind nicht hörbar.",
+          "ursache": "Es fehlt der bewusste Kontrast zwischen laut und leise; alle Schläge kommen mit gleicher Kraft.",
+          "korrektur": "Den Kontrast zwischen Akzent und Ghost Note zunächst übertreiben, dann zurücknehmen. Per Aufnahme prüfen, ob die Akzente tragen."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_blast_uebergaenge",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_blast_uebergaenge",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Wechsel zwischen Blast und Beat stolpert — der Puls wackelt genau an der Nahtstelle.",
+          "ursache": "Der Übergang wird nicht isoliert geübt, und der Puls wird im Wechselmoment nicht gehalten.",
+          "korrektur": "Nur die zwei Takte um den Wechsel in der Schleife üben, innerlich durchzählen und exakt auf der Eins wechseln."
+        }
+      }
+    },
+    {
+      "id": "fb_halftime_china",
+      "typ": "fehlerbild",
+      "basis_baustein": "halftime_china",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Half-Time-Part schleppt, oder die China-Akzente liegen neben dem Beat — das Zeitgefühl verrutscht.",
+          "ursache": "Im gedehnten Half-Time-Feel wird der Puls langsamer gefühlt und driftet; die Akzente sind nicht bewusst platziert.",
+          "korrektur": "Den Klick auf den Backbeat legen und das Tempo bewusst halten. China-Akzente gezielt setzen und per Aufnahme prüfen, ob es stabil bleibt."
+        }
+      }
+    },
+    {
+      "id": "fb_herta_verzierungen",
+      "typ": "fehlerbild",
+      "basis_baustein": "herta_verzierungen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Hertas und Rudiment-Verzierungen verwaschen und ziehen den Grundschlag mit — der Puls verrutscht.",
+          "ursache": "Die Verzierung wird zu früh ins Tempo genommen und ist nicht sauber an den Grundschlag angebunden.",
+          "korrektur": "Die Verzierung langsam an den Grundschlag anhängen, ohne dass der Grundpuls wackelt. Erst bei sauberem Sitz beschleunigen."
+        }
+      }
+    },
+    {
+      "id": "fb_kit_sitzhaltung",
+      "typ": "fehlerbild",
+      "basis_baustein": "kit_sitzhaltung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Rücken, Schultern oder Handgelenke verspannen, die Ausdauer bricht schnell ein.",
+          "ursache": "Hockerhöhe und Kit-Einstellung sind ungünstig; die Haltung erzwingt Fehlbelastung.",
+          "korrektur": "Hockerhöhe und Trommel-/Beckenwinkel so einstellen, dass Arme und Beine entspannt arbeiten und die Handgelenke gerade bleiben. Pausen einlegen; bei Schmerz die Position korrigieren."
+        }
+      }
+    },
+    {
+      "id": "fb_metalcore_groove",
+      "typ": "fehlerbild",
+      "basis_baustein": "metalcore_groove",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Groove hat kein Breakdown-Gefühl — er sitzt nicht in der Pocket und treibt nicht.",
+          "ursache": "Betonungen von Kick und Snare treffen die Pocket nicht, und die Kopplung ans Riff fehlt.",
+          "korrektur": "Langsam üben, Kick- und Snare-Akzente bewusst platzieren und den Groove mit dem Riff koppeln, bis er drückt."
+        }
+      }
+    },
+    {
+      "id": "fb_polyrhythmik_einstieg",
+      "typ": "fehlerbild",
+      "basis_baustein": "polyrhythmik_einstieg",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Einstieg in Polyrhythmik (3 über 4) verrutschen die beiden Ebenen und die gemeinsame Eins geht verloren.",
+          "ursache": "Nur eine der beiden Ebenen wird gefühlt; die gemeinsame Bezugs-Eins wird nicht gehalten.",
+          "korrektur": "Beide Ebenen einzeln sicher fühlen, dann sehr langsam zusammenführen und die gemeinsame Eins laut mitzählen."
+        }
+      }
+    },
+    {
+      "id": "fb_puls_zaehlzeiten",
+      "typ": "fehlerbild",
+      "basis_baustein": "puls_zaehlzeiten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Puls geht verloren — mitten in der Figur kommt der Schüler aus dem Takt.",
+          "ursache": "Der innere Puls ist nicht stabil, und es wird nicht mitgezählt.",
+          "korrektur": "Laut mitzählen, mit Klick und einer sehr einfachen Figur beginnen und den Puls über den ganzen Takt halten, bevor es komplexer wird."
+        }
+      }
+    },
+    {
+      "id": "fb_pv_stopp_spiel",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_stopp_spiel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die abrupten Stops sind nicht gemeinsam/schlagartig, und der Wiedereinstieg wackelt.",
+          "ursache": "Der Puls wird während der Stille nicht innerlich gehalten; der Wiedereinstieg ist nicht als gemeinsame Bewegung vereinbart.",
+          "korrektur": "Die Stelle isoliert üben, innerlich weiterzählen und mit einem klaren Signal exakt gemeinsam wieder einsteigen."
+        }
+      }
+    },
+    {
+      "id": "fb_skank_beat",
+      "typ": "fehlerbild",
+      "basis_baustein": "skank_beat",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Skank-Beat schleppt oder verkrampft, sobald das Tempo steigt.",
+          "ursache": "Unökonomische Bewegung und mangelnde Hand-Fuß-Koordination; zu viel Kraft.",
+          "korrektur": "Locker und mit kleiner Bewegung spielen, langsam beginnen und das Tempo erst bei stabiler Koordination steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_sludge_drums_hinterm_beat",
+      "typ": "fehlerbild",
+      "basis_baustein": "sludge_drums_hinterm_beat",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das bewusst laid-back gespielte Feel kippt in unkontrolliertes Schleppen und wird instabil.",
+          "ursache": "Bewusst hinter dem Beat liegen wird mit langsamer werden verwechselt; der Klick wird nicht als Anker genutzt.",
+          "korrektur": "Den Klick als festen Anker halten und bewusst leicht hinter ihm bleiben, ohne das Tempo zu verlieren. Per Aufnahme prüfen, ob es stabil bleibt."
+        }
+      }
+    },
+    {
+      "id": "fb_ungerade_takte_drums",
+      "typ": "fehlerbild",
+      "basis_baustein": "ungerade_takte_drums",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In 5er-, 7er- oder 9er-Takten geht die Eins verloren und das Muster verrutscht.",
+          "ursache": "Die Gruppierung des Taktes ist nicht verinnerlicht; er wird gezählt, aber nicht gefühlt.",
+          "korrektur": "Den Takt in Gruppen zählen (etwa 3+2) und langsam üben, bis die Gruppierung sitzt und die Eins sicher ist."
+        }
+      }
+    },
+    {
+      "id": "fb_anschlaghand_grundlagen",
+      "typ": "fehlerbild",
+      "basis_baustein": "anschlaghand_grundlagen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Anschlag ist ungleichmäßig, der Wechselschlag unsauber, die Hand verkrampft.",
+          "ursache": "Die Bewegung kommt aus dem Arm statt aus dem Handgelenk, und der Wechselschlag ist nicht sauber alternierend.",
+          "korrektur": "Aus dem Handgelenk und streng alternierend spielen, langsam und locker. Auf gleiche Stärke von Ab- und Aufschlag achten; bei Verkrampfung pausieren."
+        }
+      }
+    },
+    {
+      "id": "fb_blast_tempo_riffing",
+      "typ": "fehlerbild",
+      "basis_baustein": "blast_tempo_riffing",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Auf Blast-Tempo verwaschen die Anschläge und die Hand verkrampft; das Riff verliert Definition.",
+          "ursache": "Das Riff wird nicht in kleine Einheiten zerlegt, und die Anschlagbewegung ist unökonomisch.",
+          "korrektur": "Das Riff in kleine Häppchen zerlegen, langsam und ökonomisch sauber üben, dann in kleinen Schritten steigern. Bei Verkrampfung stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_crust_gitarre_saege",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_gitarre_saege",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die charakteristische Säge-Kante fehlt — der Ton klingt zu sauber oder zu dünn.",
+          "ursache": "Zu wenig Biss und Anzerrung, und der Anschlag ist zu weich; die Kante wird nicht bewusst geformt.",
+          "korrektur": "Anschlag und Ton auf die Kante bringen — dreckig, aber kontrolliert. Im Zusammenklang prüfen, ob die Gitarre sägt statt zu verschwinden."
+        }
+      }
+    },
+    {
+      "id": "fb_dissonante_intervalle",
+      "typ": "fehlerbild",
+      "basis_baustein": "dissonante_intervalle",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Dissonante Intervalle und der Tritonus klingen versehentlich falsch statt bewusst finster.",
+          "ursache": "Griff und Intonation sind unsicher, und die Dissonanz wird nicht als gewollte Farbe eingesetzt.",
+          "korrektur": "Die Intervalle bewusst und sauber greifen und die Dissonanz als Ausdrucksmittel hören. Erst sicher greifen, dann gezielt einsetzen."
+        }
+      }
+    },
+    {
+      "id": "fb_dissonanz_voicings",
+      "typ": "fehlerbild",
+      "basis_baustein": "dissonanz_voicings",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Dissonante Voicings und Cluster matschen — statt gezielter Reibung entsteht Brei.",
+          "ursache": "Die Saiten kommen nicht sauber, und das Voicing hat zu viele Töne.",
+          "korrektur": "Das Voicing reduzieren, jede Note sauber zum Klingen bringen und die Reibung dann dosiert aufbauen."
+        }
+      }
+    },
+    {
+      "id": "fb_djent_technik",
+      "typ": "fehlerbild",
+      "basis_baustein": "djent_technik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Synkopen sitzen nicht im Raster, und die tiefe Saite matscht statt tight zu treffen.",
+          "ursache": "Das Timing der Synkopen ist unklar, und das Palm-Muting auf der tiefen Saite ist inkonsistent.",
+          "korrektur": "Langsam zum Klick, die Synkopen laut zählen und mit tighter, konstanter Dämpfung spielen. Erst bei sauberem Sitz beschleunigen."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_riffing",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_riffing",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Doom-Riff wird zu hastig und leicht gespielt — das Gewicht und die Wucht fehlen.",
+          "ursache": "Zu schnell und ohne Sustain; die Akkorde werden nicht stehen gelassen.",
+          "korrektur": "Langsam und schwer spielen, jeden Akkord voll ausklingen lassen und das Tempo bewusst niedrig halten."
+        }
+      }
+    },
+    {
+      "id": "fb_doppel_galopp",
+      "typ": "fehlerbild",
+      "basis_baustein": "doppel_galopp",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Doppel-Galopp ist ungleichmäßig, der Anschlag verwaschen.",
+          "ursache": "Unterteilung und Anschlag sind nicht sauber; die kurzen Noten schwanken in Länge und Stärke.",
+          "korrektur": "Langsam mit Klick, die Unterteilung mitzählen und auf gleichen Anschlag der schnellen Noten achten."
+        }
+      }
+    },
+    {
+      "id": "fb_drop_tuning",
+      "typ": "fehlerbild",
+      "basis_baustein": "drop_tuning",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach dem Umstimmen matschen die Powerchords oder die Intonation liegt daneben.",
+          "ursache": "Ungenau gestimmt oder der Powerchord-Griff nicht an das Drop-Tuning angepasst; die tiefe Saite braucht mehr Dämpfung.",
+          "korrektur": "Sauber mit Referenz stimmen, den Ein-Finger-Powerchord-Griff nutzen und die tiefe Saite konsequent dämpfen."
+        }
+      }
+    },
+    {
+      "id": "fb_fingerdruck_oekonomie",
+      "typ": "fehlerbild",
+      "basis_baustein": "fingerdruck_oekonomie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Greifhand ermüdet schnell und verkrampft, weil zu fest gedrückt wird.",
+          "ursache": "Deutlich mehr Greifdruck als nötig; die minimale Kraft für einen klaren Ton wird nicht gesucht.",
+          "korrektur": "Den Druck so weit reduzieren, dass der Ton gerade eben sauber klingt, und die Lockerheit halten. Regelmäßig entspannen."
+        }
+      }
+    },
+    {
+      "id": "fb_gitarre_improvisation",
+      "typ": "fehlerbild",
+      "basis_baustein": "gitarre_improvisation",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Improvisation über Riffs wirkt planlos oder repetitiv und verliert den Bezug zum Riff.",
+          "ursache": "Es fehlt ein Tonmaterial und ein Rahmen; es werden nur Muster abgespult, ohne auf das Riff zu hören.",
+          "korrektur": "Eine Skala und sichere Zieltöne festlegen, in Phrasen mit Pausen denken und bewusst auf das Riff reagieren."
+        }
+      }
+    },
+    {
+      "id": "fb_gitarre_kunstharmonics",
+      "typ": "fehlerbild",
+      "basis_baustein": "gitarre_kunstharmonics",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Pinch- und Kunstharmonics kommen unzuverlässig — mal quietschen sie, mal nicht.",
+          "ursache": "Der Anschlagpunkt und der Daumenkontakt werden nicht sicher getroffen.",
+          "korrektur": "Den passenden Anschlagpunkt über der Saite suchen und den Daumen gezielt streifen lassen. An wenigen sicheren Punkten üben, dann übertragen."
+        }
+      }
+    },
+    {
+      "id": "fb_gitarre_tapping_legato",
+      "typ": "fehlerbild",
+      "basis_baustein": "gitarre_tapping_legato",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Getappte und gebundene Töne sind ungleich laut, einzelne werden verschluckt.",
+          "ursache": "Hammer-ons und Pull-offs sind ungleichmäßig, und die Nebensaiten werden nicht gedämpft.",
+          "korrektur": "Gleichmäßiger, kräftiger Fingeraufsatz und konsequentes Abdämpfen der Nebensaiten; langsam, bis alle Töne gleich klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_greifhand_grundlagen",
+      "typ": "fehlerbild",
+      "basis_baustein": "greifhand_grundlagen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Töne schnarren oder klingen nicht sauber, und die Lagenwechsel sind langsam und mühsam.",
+          "ursache": "Die Finger stehen nicht nah genug am Bund oder drücken zu wenig; die Handhaltung ist ungünstig.",
+          "korrektur": "Die Fingerkuppen nah am Bund aufsetzen, mit minimalem, aber ausreichendem Druck, und langsam saubere Wechsel üben."
+        }
+      }
+    },
+    {
+      "id": "fb_grundhaltung",
+      "typ": "fehlerbild",
+      "basis_baustein": "grundhaltung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Schulter und Handgelenk verspannen, die Hand ermüdet schnell.",
+          "ursache": "Ungünstige Instrumentenhöhe und ein abgeknicktes Handgelenk erzwingen Dauerspannung.",
+          "korrektur": "Gurt- oder Sitzhöhe so einstellen, dass das Handgelenk gerade bleibt und die Schultern locker sind. Bewusst entspannen und Pausen machen; bei Schmerz stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_lead_phrasierung",
+      "typ": "fehlerbild",
+      "basis_baustein": "lead_phrasierung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Lead klingt wie eine abgespielte Tonleiter statt gesanglich — es fehlt der Ausdruck.",
+          "ursache": "Es werden nur Noten aneinandergereiht, ohne Phrasen, Pausen und Bendings.",
+          "korrektur": "In singbaren Phrasen mit Pausen denken und Bendings sowie Vibrato bewusst einsetzen. Eine Phrase laut vorsingen und dann spielen."
+        }
+      }
+    },
+    {
+      "id": "fb_palm_mute_systeme",
+      "typ": "fehlerbild",
+      "basis_baustein": "palm_mute_systeme",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Palm-Mutes sind inkonsistent — mal offen, mal ganz tot — und nicht tight zum Beat.",
+          "ursache": "Die Handballen-Position wandert, und der Anschlag ist ungleich stark.",
+          "korrektur": "Die Handballen-Position konstant halten und tight zum Klick spielen. Per Aufnahme prüfen, ob alle gedämpften Anschläge gleich klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_pentatonik_leads",
+      "typ": "fehlerbild",
+      "basis_baustein": "pentatonik_leads",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die ersten Leads sind holprig, einzelne Töne liegen daneben oder es fehlt der Fluss.",
+          "ursache": "Skalenlage und Fingersatz der Pentatonik sind noch unsicher.",
+          "korrektur": "Die Pentatonik-Box sicher greifen, langsam üben und mit wenigen Tönen und Ausdruck beginnen, statt viele Noten zu spielen."
+        }
+      }
+    },
+    {
+      "id": "fb_pv_gitarre_zustaende",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_gitarre_zustaende",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Wechsel zwischen den Zuständen (schnell, langsam, Chaos) ist unkontrolliert und bricht.",
+          "ursache": "Die einzelnen Zustände sind nicht isoliert beherrscht, und das Umschalten wird nicht geübt.",
+          "korrektur": "Jeden Zustand einzeln sicher machen, dann den Umschaltpunkt hart und bewusst üben, bis der Wechsel gewollt wirkt."
+        }
+      }
+    },
+    {
+      "id": "fb_recording_tightness",
+      "typ": "fehlerbild",
+      "basis_baustein": "recording_tightness",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Doubletracking liegen die Spuren nicht übereinander — der Rhythmus verwaschen im Mix.",
+          "ursache": "Das Spiel ist nicht tight genug zum Klick; das Timing schwankt zwischen den Takes.",
+          "korrektur": "Tight zum Klick und langsam sauber spielen, bis das Timing konstant sitzt, dann doppeln. Per Aufnahme prüfen, ob die Spuren decken."
+        }
+      }
+    },
+    {
+      "id": "fb_rhythmus_lead_wechsel",
+      "typ": "fehlerbild",
+      "basis_baustein": "rhythmus_lead_wechsel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Wechsel zwischen Rhythmus und Lead ist holprig — Timing oder Ton brechen an der Naht.",
+          "ursache": "Der Umschaltpunkt und die Hand-/Sound-Umstellung werden nicht bewusst geübt.",
+          "korrektur": "Die Nahtstelle isoliert üben und den Übergang bewusst gestalten, bis er ohne Bruch sitzt."
+        }
+      }
+    },
+    {
+      "id": "fb_schnelles_tremolo",
+      "typ": "fehlerbild",
+      "basis_baustein": "schnelles_tremolo",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das schnelle Tremolo ist ungleichmäßig, verkrampft und das Tempo bricht ein.",
+          "ursache": "Die Bewegung kommt aus dem Arm mit Dauerspannung statt aus einem kleinen, lockeren Handgelenk.",
+          "korrektur": "Klein aus dem Handgelenk und locker spielen, in kurzen Intervallen mit Pausen. Bei Verkrampfung stoppen und das Tempo über Wochen aufbauen."
+        }
+      }
+    },
+    {
+      "id": "fb_slides_bends",
+      "typ": "fehlerbild",
+      "basis_baustein": "slides_bends",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bends erreichen die Zielhöhe nicht sauber, und Slides landen ungenau.",
+          "ursache": "Intonation und Kraft werden nicht kontrolliert; der Zielton wird nicht vorher im Ohr gehabt.",
+          "korrektur": "Den Zielton vorher hören und den Bend langsam bis genau dorthin ziehen, mit Referenz kontrollieren. Slides mit klarem Zielpunkt üben."
+        }
+      }
+    },
+    {
+      "id": "fb_sludge_erstes_riff",
+      "typ": "fehlerbild",
+      "basis_baustein": "sludge_erstes_riff",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das erste Sludge-Riff wird zu hastig und leicht gespielt — Dreck und Gewicht fehlen.",
+          "ursache": "Zu schnell und mit zu sauberem, leichtem Ton.",
+          "korrektur": "Langsam und schwer spielen und dem Ton bewusst Dreck geben, ohne die Kontrolle zu verlieren."
+        }
+      }
+    },
+    {
+      "id": "fb_sludge_riffing_dreck",
+      "typ": "fehlerbild",
+      "basis_baustein": "sludge_riffing_dreck",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das langsam-giftige Riffing kippt in leblos und schleppend statt drückend.",
+          "ursache": "Langsam wird ohne Intensität und Ton gespielt; das Gewicht wird nicht gehalten.",
+          "korrektur": "Gewicht und Ton über die langsamen Noten halten und bewusst leicht hinter dem Beat, aber stabil bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_sweep_ausbau",
+      "typ": "fehlerbild",
+      "basis_baustein": "sweep_ausbau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Sweep-Picking klingen die Töne zusammen statt einzeln — der Lauf matscht.",
+          "ursache": "Es fehlt die Dämpfung, die jede Note einzeln stoppt, und Greif- und Anschlaghand sind nicht synchron.",
+          "korrektur": "Sehr langsam üben, jede Note nach dem Anschlag gezielt abdämpfen und beide Hände synchronisieren, bevor das Tempo steigt."
+        }
+      }
+    },
+    {
+      "id": "fb_tremolo_ausbau",
+      "typ": "fehlerbild",
+      "basis_baustein": "tremolo_ausbau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Tremolo-Picking ist ungleichmäßig und verkrampft, sobald das Tempo steigt.",
+          "ursache": "Die Bewegung kommt aus dem Arm mit Dauerspannung statt aus einem kleinen, lockeren Handgelenk.",
+          "korrektur": "Klein aus dem Handgelenk und locker spielen, langsam steigern und Pausen machen. Bei Verkrampfung stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_tremolo_riffing",
+      "typ": "fehlerbild",
+      "basis_baustein": "tremolo_riffing",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei Akkordwechseln im Tremolo-Riffing bricht das Tremolo oder das Timing.",
+          "ursache": "Der Greifhand-Wechsel stört die Kontinuität der Anschlagbewegung.",
+          "korrektur": "Die Wechsel langsam üben und die Anschlagbewegung durchlaufen lassen, während die Greifhand den nächsten Akkord vorbereitet."
+        }
+      }
     }
   ]
 }
