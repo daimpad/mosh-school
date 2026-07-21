@@ -1164,6 +1164,17 @@ S["abwaermen_koerper"] = [
     ARC(60, 82, 30, 200, 340, 2),
 ]
 
+# ==================== WERKZEUGE (Ausrüstung, self-contained) ====================
+# Pedalboard: eine Signallinie, darauf drei Pedale (Gehäuse-Rechtecke) mit je zwei
+# Reglerpunkten und einem Fußschalter-Kreis — die Kette ist der Sound.
+S["pedalboard_grundlagen"] = [L(10, 86, 110, 86, 2)]
+for x in (26, 60, 94):
+    S["pedalboard_grundlagen"] += [
+        RECT(x - 11, 40, 22, 44, filled=False),
+        C(x - 5, 50, 2.5, fill=True), C(x + 5, 50, 2.5, fill=True),
+        C(x, 70, 5, 2.5),
+    ]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -1217,7 +1228,8 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "stoner_groove_swing", "stoner_jam", "postmetal_textur_schichten",
                 "schlaf_regeneration", "ernaehrung_hydration", "rumpf_kraft_stabilitaet",
                 "mobilitaet_routine", "headbangen_nacken", "verletzung_reha_rueckkehr",
-                "deload_periodisierung", "abwaermen_koerper"]
+                "deload_periodisierung", "abwaermen_koerper",
+                "pedalboard_grundlagen"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
