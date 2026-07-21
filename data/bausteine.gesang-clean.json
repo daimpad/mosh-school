@@ -1,0 +1,228 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "gesang-clean",
+    "hinweis": "Clean-Gesang-Vertiefung: echtes Klarsingen jenseits der Harsh-Techniken — Kopfstimme/Höhe, Intonation unter Druck, Vibrato, tragender Klargesang-Refrain, Belting (Experte), Harmonien/zweite Stimme (Experte). Alle mit Übungsteil, Gesundheitsrahmen (Stütze statt Pressen, aufwärmen, bei Kratzen stoppen, HNO/Gesangslehrkraft). Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "clean_kopfstimme",
+      "anzeigetitel": {
+        "de": "Kopfstimme & sichere Höhe"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "tonhoehe_clean",
+        "atemstuetze"
+      ],
+      "erklaerteil": {
+        "de": "In cleanen Metal-Passagen — Refrains im Metalcore, tragende Melodien im Post-Metal — braucht es Höhe, ohne zu pressen. Der Schlüssel ist die Kopfstimme: eine leichtere Registerfunktion, die hohe Töne aus Resonanz und Luftfluss trägt statt aus Halskraft.\n\nDer häufigste Fehler ist, die Bruststimme mit Druck nach oben zu ziehen — das klingt gequetscht und schädigt die Stimme. Stattdessen bleibt der Ansatz leicht, die Stütze trägt, und der Ton darf zunächst dünner sein. Mit der Zeit lässt sich Kopf- und Bruststimme verbinden (Mix), aber der Weg dorthin führt über Leichtigkeit, nicht über Kraft.\n\nGesundheitsrahmen: leise und kurz aufbauen, immer aufwärmen, bei Kratzen oder Druck im Hals sofort stoppen. Anhaltende Heiserkeit gehört zur HNO oder Gesangslehrkraft."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Leicht in die Höhe",
+          "ziel": "Hohe Töne aus Kopfstimme und Stütze tragen statt zu pressen.",
+          "schritte": [
+            "Wärm dich ein und gleite auf einem leichten Vokal (z. B. u) von der Mittellage sanft nach oben.",
+            "Halte den Ansatz bewusst leicht und die Stütze aktiv; lass den Ton oben dünner werden, statt zu drücken.",
+            "Nimm es auf und prüfe, ob die Höhe mühelos klingt oder gequetscht."
+          ],
+          "steigerung": "Verbinde Brust- und Kopfstimme über einen sanften Übergang (Mix), ohne dass ein Bruch hörbar wird.",
+          "selbstkontrolle": "Die Höhe kommt mühelos aus Stütze und Resonanz; kein Druck im Hals, kein Kratzen."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "clean_intonation_druck",
+      "anzeigetitel": {
+        "de": "Sauber intonieren unter Druck"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "tonhoehe_clean",
+        "resonanz_projektion"
+      ],
+      "erklaerteil": {
+        "de": "Im Proberaum oder auf der Bühne ist es laut, das Monitoring schlecht und die Aufregung hoch — genau dort rutscht die Intonation weg. Sauber zu treffen, wenn man sich kaum hört, ist eine eigene Fähigkeit über das reine Tonhöhentreffen hinaus.\n\nZwei Dinge helfen: ein sicherer innerer Bezug (den Zielton innerlich hören, bevor er kommt) und ein tragfähiger, resonanter Ton, der sich selbst rückmeldet, statt lauter gepresst zu werden. Wer die Höhe über Druck sucht, verliert die Kontrolle; wer über Resonanz und Stütze arbeitet, bleibt treffsicher.\n\nDer Monitor ist Werkzeug, nicht Lautstärke-Wettlauf: gezielt die eigene Stimme oder einen harmonischen Anker anfordern. Gesundheitsrahmen: nicht gegen die Lautstärke anpressen, bei Beschwerden stoppen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Treffen ohne sich zu hören",
+          "ziel": "Zieltöne auch bei schlechtem Monitoring sicher treffen.",
+          "schritte": [
+            "Höre den Zielton innerlich, bevor du ihn singst, und setze ihn aus der Stütze an.",
+            "Lass eine laute Störquelle (Band-Aufnahme leise) mitlaufen und halte die Intonation über Resonanz statt über mehr Druck.",
+            "Nimm es auf und prüfe, ob du den Ton auch unter Störung sicher triffst."
+          ],
+          "steigerung": "Übe denselben Zielton bei wechselnder Störlautstärke und mit reduziertem eigenem Monitor.",
+          "selbstkontrolle": "Die Intonation bleibt sicher, ohne dass du gegen die Lautstärke anpresst."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "clean_vibrato",
+      "anzeigetitel": {
+        "de": "Vibrato & gehaltene Töne gestalten"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "tonhoehe_clean"
+      ],
+      "erklaerteil": {
+        "de": "Ein gehaltener Ton lebt von seiner Gestaltung. Vibrato — eine gleichmäßige, leichte Schwankung der Tonhöhe — gibt cleanen Tönen Wärme und Leben, wenn es kontrolliert und aus Entspannung kommt.\n\nZwei Fehler sind häufig: ein starres, totes Halten ohne jede Bewegung und ein nervöses, unkontrolliertes Zittern aus Anspannung. Gutes Vibrato entsteht aus einer stabilen Stütze und einem entspannten Ansatz; es ist ein Werkzeug, das man ein- und ausschalten können sollte, nicht ein Dauerzustand.\n\nÜbe erst den geraden, stabilen Ton, dann eine bewusste, langsame Schwankung, die du allmählich gleichmäßiger machst. Gesundheitsrahmen: aus der Stütze, ohne Druck; bei Verspannung lösen und pausieren."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Vom geraden Ton zum Vibrato",
+          "ziel": "Gehaltene Töne bewusst mit kontrolliertem Vibrato gestalten.",
+          "schritte": [
+            "Halte einen Ton gerade und stabil aus der Stütze, ohne Zittern.",
+            "Füge eine langsame, bewusste Tonhöhen-Schwankung hinzu und mache sie allmählich gleichmäßiger.",
+            "Schalte das Vibrato bewusst ein und aus und prüfe per Aufnahme, ob es kontrolliert klingt."
+          ],
+          "steigerung": "Setze Vibrato gezielt am Phrasenende ein, während der Rest der Phrase gerade bleibt.",
+          "selbstkontrolle": "Der gerade Ton ist stabil, das Vibrato gleichmäßig und bewusst steuerbar — kein nervöses Zittern."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "clean_refrain_hook",
+      "anzeigetitel": {
+        "de": "Einen tragenden Klargesang-Refrain singen"
+      },
+      "domaene": [
+        "gesang",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "clean_im_metal",
+        "dynamik_ausdruck"
+      ],
+      "erklaerteil": {
+        "de": "Der Klargesang-Refrain ist im modernen Metal (Metalcore, Post-Hardcore) oft der emotionale Höhepunkt — die Melodie, die hängen bleibt. Damit sie trägt, braucht sie mehr als richtige Töne: eine klare, singbare Melodie, überzeugende Intonation und Ausdruck, der die Zeile ernst meint.\n\nEin tragender Refrain lebt von Wiederholung und einem Melodiebogen mit einem klaren Höhepunkt. Wichtiger als Akrobatik ist, dass die Hook sitzt und die Emotion echt ist — eine schlichte, sicher gesungene Melodie schlägt eine überladene, wacklige. Der Kontrast zu harschen Strophen macht den Refrain zusätzlich stark.\n\nGesundheitsrahmen: die Höhe aus Stütze und Kopfstimme tragen, nicht pressen; bei Kratzen stoppen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die Hook zum Sitzen bringen",
+          "ziel": "Einen einfachen Klargesang-Refrain sicher und ausdrucksvoll singen.",
+          "schritte": [
+            "Wähle eine kurze, singbare Refrain-Melodie mit einem klaren Höhepunkt.",
+            "Singe sie sicher und intonationsrein, die Höhe aus Kopfstimme und Stütze, und arbeite den Melodiebogen heraus.",
+            "Nimm sie auf und prüfe, ob die Hook trägt und der Ausdruck echt wirkt."
+          ],
+          "steigerung": "Stelle den cleanen Refrain bewusst gegen eine harsche Strophe und übe den Wechsel.",
+          "selbstkontrolle": "Die Melodie sitzt intonationsrein, trägt und bleibt hängen; die Höhe kommt mühelos."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "clean_belting",
+      "anzeigetitel": {
+        "de": "Belting: kraftvolle Höhe ohne Schaden"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "clean_kopfstimme",
+        "resonanz_projektion"
+      ],
+      "erklaerteil": {
+        "de": "Belting ist der kraftvolle, brustdominierte Klang in der Höhe, der cleanen Metal-Refrains ihre Wucht gibt — die durchsetzungsstarke, offene Stimme, die über der Wand aus Gitarren trägt. Er ist ein Fortgeschrittenen-Werkzeug, weil er leicht falsch, nämlich über Druck, gemacht wird und dann die Stimme gefährdet.\n\nSicheres Belting kommt aus starker Stütze, einem offenen Ansatz und gezielter Resonanz, nicht aus Halskraft. Die Kunst ist, die Kraft aus dem Atemfluss und der Resonanz zu holen, während der Hals frei bleibt. Ohne solide Kopfstimme und Stütze als Basis ist Belting riskant.\n\nGesundheitsrahmen ist hier zentral: nur kurz und aufgewärmt, nie gegen Widerstand pressen, bei Kratzen, Schmerz oder Heiserkeit sofort stoppen. Belting lernt man am besten mit einer Gesangslehrkraft; bei anhaltenden Beschwerden zur HNO."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Kraft aus Stütze, nicht aus dem Hals",
+          "ziel": "Kraftvolle hohe Clean-Töne aus Stütze und Resonanz statt Druck erzeugen.",
+          "schritte": [
+            "Wärm gründlich auf und finde einen offenen, gestützten Ton in der oberen Mittellage.",
+            "Steigere die Kraft ausschließlich über mehr Atemstütze und Resonanz, während der Hals bewusst frei bleibt.",
+            "Nimm kurze Versuche auf und prüfe, ob der Ton kraftvoll und zugleich mühelos klingt — bei Kratzen sofort stoppen."
+          ],
+          "steigerung": "Übertrage das Belting auf eine kurze Refrain-Zeile, immer noch aus Stütze und mit Pausen zwischen den Versuchen.",
+          "selbstkontrolle": "Der Ton ist kraftvoll und offen, kommt aus Stütze und Resonanz, und der Hals bleibt frei — kein Druck, kein Kratzen."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    },
+    {
+      "id": "clean_harmonien",
+      "anzeigetitel": {
+        "de": "Harmonien & zweite Stimme"
+      },
+      "domaene": [
+        "gesang",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "tonhoehe_clean",
+        "clean_refrain_hook"
+      ],
+      "erklaerteil": {
+        "de": "Mehrstimmiger Gesang gibt cleanen Refrains Tiefe und Größe — eine zweite Stimme über oder unter der Melodie, oft in Terzen, lässt eine Hook deutlich mächtiger klingen. Live von einer zweiten Person, in der Aufnahme oft als Overdub gesungen.\n\nDie Herausforderung ist, die eigene Stimme sicher zu halten, während eine andere Melodie danebenläuft — der Reflex, zur Hauptmelodie zu rutschen, ist stark. Es hilft, das eigene Intervall (etwa die Terz) als eigene Melodie zu lernen und den Zusammenklang bewusst zu hören, statt sich an der Hauptstimme festzuhalten.\n\nEin einfacher Einstieg sind Terzen und die Verdopplung in der Oktave. Gesundheitsrahmen wie immer: aus der Stütze, bei Beschwerden stoppen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die zweite Stimme halten",
+          "ziel": "Eine harmonische zweite Stimme sicher neben der Melodie singen.",
+          "schritte": [
+            "Lerne die zweite Stimme (z. B. die Terz über der Melodie) als eigene Melodie sicher.",
+            "Singe sie gegen eine Aufnahme der Hauptstimme und halte dein Intervall, ohne zur Melodie zu rutschen.",
+            "Nimm den Zusammenklang auf und prüfe, ob beide Stimmen klar und stimmig sind."
+          ],
+          "steigerung": "Baue einen kurzen dreistimmigen Satz oder wechselnde Intervalle (Terz, Sexte) über eine Refrain-Zeile.",
+          "selbstkontrolle": "Die zweite Stimme bleibt stabil neben der Melodie; der Zusammenklang ist rein und trägt."
+        }
+      },
+      "spielziele": [
+        "stimmsicherheit"
+      ]
+    }
+  ]
+}
