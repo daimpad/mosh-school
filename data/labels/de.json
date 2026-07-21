@@ -641,7 +641,16 @@
     "clean_vibrato": "Vibrato & gehaltene Töne gestalten",
     "clean_refrain_hook": "Einen tragenden Klargesang-Refrain singen",
     "clean_belting": "Belting: kraftvolle Höhe ohne Schaden",
-    "clean_harmonien": "Harmonien & zweite Stimme"
+    "clean_harmonien": "Harmonien & zweite Stimme",
+    "pv_bass_chaos": "Powerviolence-Bass: im Chaos verzahnt",
+    "pv_koerper_explosivitaet": "Powerviolence: Explosivität & Erholung",
+    "pv_sound_roh": "Powerviolence-Sound: roh & schneidend",
+    "crust_ethos_haltung": "Crust: Haltung, DIY & Text",
+    "crust_songwriting_struktur": "Crust-Songwriting: aus D-Beat-Parts Songs bauen",
+    "crust_koerper_ausdauer": "Crust: Downpicking-Ausdauer ökonomisch",
+    "sludge_bass_wand": "Sludge-Bass: die zähe Fuzz-Wand",
+    "sludge_sound_gear": "Sludge-Sound: Fuzz, Tiefe & Feedback",
+    "sludge_langform": "Sludge-Arrangement: die Zähigkeit der Wiederholung"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
