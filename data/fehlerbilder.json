@@ -1982,6 +1982,471 @@
           "korrektur": "Legt den Übergang bewusst fest und übt nur die zwei Takte um die Nahtstelle in der Schleife. Spielt A – Übergang – B am Stück, bis der Wechsel gemeinsam sitzt und gewollt wirkt. Vergleicht verschiedene Übergangstypen, um den passenden zu finden."
         }
       }
+    },
+    {
+      "id": "fb_anschlagpunkt_ton",
+      "typ": "fehlerbild",
+      "basis_baustein": "anschlagpunkt_ton",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Bass klingt mal dünn und klackig, mal dumpf; der Grundton trägt nicht und der Klang wechselt von Note zu Note.",
+          "ursache": "Der Anschlagpunkt wandert unbemerkt zwischen Steg und Hals, und die Anschlagstärke ist ungleichmäßig. Es fehlt eine bewusste, wiederholbare Position.",
+          "korrektur": "Lass den Schüler den Anschlagpunkt bewusst wählen und über eine Reihe gleich lauter Töne konstant halten. Per Aufnahme hören, ob der Ton gleichmäßig trägt; erst dann Dynamik und Tempo dazunehmen."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_akkordspiel",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_akkordspiel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Powerchords oder Doppelgriffe am Bass klingen matschig; eine der beiden Saiten kommt nicht sauber oder schnarrt.",
+          "ursache": "Ungleicher Fingerdruck und ein zu grober Anschlag lassen die Saiten nicht gleichzeitig und gleich stark klingen; oft dämpft eine Nachbarsaite mit.",
+          "korrektur": "Beide Töne einzeln prüfen, dann langsam zusammen — auf gleichzeitigen Anschlag und gleichmäßigen Druck achten. Nebensaiten bewusst abdämpfen und das Tempo erst steigern, wenn beide Töne klar zusammen ansprechen."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_blast",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_blast_begleitung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In schnellen Blast-Parts verkrampft der Bass und wird ungenau, oder er spielt beliebig und trifft die Akzente nicht mehr.",
+          "ursache": "Der Anspruch, jede Kick zu doppeln, ist bei hohem Tempo nicht durchhaltbar; es ist nicht geklärt, welche Schläge gemeinsam sind und welche der Bass als Linie trägt.",
+          "korrektur": "Tempo zurücknehmen und festlegen, welche Schläge Akzente sind, die Bass und Drums punktgenau treffen; dazwischen trägt der Bass eine gleichmäßige Linie. Über Wochen steigern; bei Verkrampfung stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_extremtempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_extremtempo",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "An der oberen Tempo-Grenze verkrampfen Hand und Unterarm, der Ton wird ungleichmäßig und die Ausdauer bricht nach kurzer Zeit ein.",
+          "ursache": "Zu große, kraftbetonte Bewegungen und Dauerspannung statt minimaler, entspannter Impulse; es wird über die Grenze geprügelt statt Effizienz aufzubauen.",
+          "korrektur": "Bewegungen verkleinern, Lockerheit zwischen den Anschlägen suchen und knapp unter der Grenze sauber arbeiten. Kurze Intervalle mit Pausen; bei Brennen oder Schmerz sofort stoppen — Tempo wächst über Wochen."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_fills",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_fills_uebergaenge",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ein Fill oder Übergang in der Basslinie reißt den Groove auf und findet nicht sauber auf die Eins zurück; der Part stolpert danach.",
+          "ursache": "Der Fill ist nicht ins Timing eingebettet — er wird gespielt, ohne den Puls durchzuhalten, und der Wiedereinstieg ist nicht als Ziel gedacht.",
+          "korrektur": "Den Fill isoliert üben, innerlich weiterzählen und den Zielpunkt (die Eins) bewusst ansteuern. Erst wenn der Fill den Groove trägt statt ihn zu unterbrechen, ins volle Tempo."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_galopp",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_galopp_varianten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Galopp-Rhythmus verwaschen — die kurzen Noten sind nicht gleichmäßig, das charakteristische Muster verliert seinen Antrieb.",
+          "ursache": "Die Unterteilung ist nicht sauber verinnerlicht; die Anschlagstärke der schnellen Noten schwankt, und die Hand eilt oder schleppt in den Zwischenschlägen.",
+          "korrektur": "Langsam mit Klick, die Unterteilung laut mitzählen und auf gleichmäßige Länge und Stärke der kurzen Noten achten. Erst bei stabilem Muster das Tempo anheben."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_ghostnotes",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_ghostnotes",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ghost Notes klingen wie normale Töne statt als perkussives Rauschen; der Groove verliert Definition, weil betonte und tote Noten gleich laut sind.",
+          "ursache": "Die Dämpfung der Greifhand ist unvollständig und der Anschlag zu kräftig; der Kontrast zwischen betonten und Ghost Notes wird nicht bewusst gestaltet.",
+          "korrektur": "Ghost Notes klar abgedämpft und leise anlegen, betonte Noten deutlich abheben — den Lautstärke-Kontrast übertreiben und dann zurücknehmen. Per Aufnahme prüfen, ob der perkussive Effekt trägt."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_grundhaltung",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_grundhaltung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Schulter und Nacken sind verspannt, das Handgelenk abgeknickt; nach kurzer Zeit ermüdet oder schmerzt die Hand.",
+          "ursache": "Ungünstige Instrumentenhöhe und Haltung erzwingen ein abgeknicktes Handgelenk und Dauerspannung; die Bewegung kommt aus Kraft statt aus Lockerheit.",
+          "korrektur": "Gurt-/Sitzhöhe so einstellen, dass das Handgelenk gerade bleibt, Schultern locker. Zwischen den Tönen bewusst entspannen und regelmäßig Pausen einlegen; bei Schmerz stoppen und die Haltung korrigieren."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_kontrapunkt",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_kontrapunkt",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die eigenständige Basslinie kollidiert mit dem Riff oder verliert das Fundament — der Zusammenklang wirkt unruhig statt bereichernd.",
+          "ursache": "Die Gegenlinie nimmt zu wenig Rücksicht auf Harmonik und Grundton; sie bewegt sich gegen das Riff, ohne an den wichtigen Stellen zusammenzutreffen.",
+          "korrektur": "Zuerst nur Grundton halten, dann schrittweise Gegenbewegung einbauen und an den harmonischen Ankerpunkten mit dem Riff zusammenkommen. Über eine Aufnahme prüfen, ob Riff und Basslinie beide klar bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_lead",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_lead_melodisch",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der melodische Lead-Bass liegt intonatorisch daneben oder verschwindet im Mix, sodass die Melodie nicht trägt.",
+          "ursache": "In der hohen Lage stimmt die Intonation nicht sicher, und der Ton hat zu wenig Definition/Mitten, um sich durchzusetzen.",
+          "korrektur": "Ziele auf die sichere Intonation in der hohen Lage (langsam, mit Referenzton) und formt den Ton mit Anschlag und Mitten. Im Bandkontext prüfen, ob die Lead-Linie hörbar bleibt."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_linien",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_linien_schreiben",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die selbstgeschriebene Basslinie folgt entweder stur nur dem Grundton oder ist überladen — in beiden Fällen dient sie dem Song nicht.",
+          "ursache": "Es fehlt die Entscheidung, was der Part braucht: Fundament oder Bewegung. Die Linie wird nach Gewohnheit gebaut, nicht nach der Funktion im Song.",
+          "korrektur": "Pro Part klären, ob der Bass tragen oder bewegen soll, und die Linie darauf ausrichten. Eine schlichte, tragfähige Version gegen eine bewegtere stellen und hören, welche dem Part dient."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_mikrotiming",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_mikrotiming",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Bass liegt konstant leicht vor oder hinter der Bassdrum; der Groove wirkt weich oder gehetzt, die Pocket fehlt.",
+          "ursache": "Der Bass richtet sich nicht bewusst an der Kick aus, sondern an der Snare oder am eigenen Zählen; das gemeinsame Zeitgefühl ist nicht geklärt.",
+          "korrektur": "Nur Bass und Bassdrum zum Klick, der Bass legt seine Töne bewusst auf den Fuß. Per Aufnahme bestimmen, ob er vor, auf oder hinter der Kick liegt, und gezielt nachjustieren."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_slides",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_slides_legato",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Slides landen nicht sicher auf dem Zielton, Hammer-ons und Pull-offs werden verschluckt oder klingen ungleich laut.",
+          "ursache": "Das Ziel des Slides wird nicht klar angesteuert, und der Greifdruck bei Legato-Tönen ist zu schwach oder ungleichmäßig.",
+          "korrektur": "Slides mit festem Zielton langsam üben (Blick/Gehör aufs Ziel), Legato-Töne mit klarem, gleichmäßigem Fingeraufsatz. Erst bei sauberem Ergebnis das Tempo steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_tremolo",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_tremolo",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Tremolo am Bass ist ungleichmäßig, verkrampft schnell und das Tempo bricht ein.",
+          "ursache": "Zu große Bewegung aus dem Arm und Dauerspannung statt kleiner, entspannter Wechselbewegung; der Anschlag ist ungleich stark.",
+          "korrektur": "Bewegung verkleinern und aus dem Handgelenk/den Fingern arbeiten, Lockerheit halten. Kurz und mit Pausen üben, gleichmäßige Stärke anstreben; bei Verkrampfung stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_crust_bass_wand",
+      "typ": "fehlerbild",
+      "basis_baustein": "crust_bass_wand",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Bass verschwindet neben der verzerrten Gitarre, statt als zweite Säge eine eigene Wand zu bilden.",
+          "ursache": "Zu wenig Anzerrung und Mitten, und der Ton ist zu rund; Bass und Gitarre besetzen denselben Bereich, ohne dass der Bass Kante zeigt.",
+          "korrektur": "Dem Bass über Anzerrung und Mitten eine eigene Sägekante geben und Anschlag/Ton so formen, dass er neben der Gitarre steht. Im Zusammenklang prüfen, ob beide als Wand tragen."
+        }
+      }
+    },
+    {
+      "id": "fb_doom_bass",
+      "typ": "fehlerbild",
+      "basis_baustein": "doom_bass",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Doom-Bass spielt zu viel und zu kurz — das Schwere und Getragene fehlt, der Part wirkt unruhig statt monumental.",
+          "ursache": "Es werden Lücken mit Noten gefüllt, statt wenige Töne stehen und klingen zu lassen; Sustain und Gewicht werden nicht als Mittel genutzt.",
+          "korrektur": "Radikal reduzieren: wenige, schwere Töne mit vollem Sustain, den Raum dazwischen aushalten. Auf gleichmäßigen, tragenden Ton achten statt auf Betriebsamkeit."
+        }
+      }
+    },
+    {
+      "id": "fb_einfache_basslinie",
+      "typ": "fehlerbild",
+      "basis_baustein": "einfache_basslinie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die einfache Basslinie läuft ungefähr neben Riff und Kick her, statt mit ihnen gekoppelt zu sein — das Fundament wirkt weich.",
+          "ursache": "Die Linie folgt dem Grundton, ohne sich rhythmisch an Riff und Bassdrum auszurichten; die gemeinsamen Anschläge fallen nicht zusammen.",
+          "korrektur": "Erst den Grundtönen des Riffs sicher folgen, dann die Anschläge bewusst mit der Kick koppeln. Langsam zum Klick, bis Bass, Riff und Kick als ein Fundament wirken."
+        }
+      }
+    },
+    {
+      "id": "fb_grind_bass",
+      "typ": "fehlerbild",
+      "basis_baustein": "grind_bass_verzahnung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im Extremtempo löst sich die Verzahnung zwischen Bass und Schlagzeug — das Low-End wird zum undefinierten Brei.",
+          "ursache": "Bei sehr hohem Tempo ist nicht geklärt, welche Schläge gemeinsam sind; der Bass versucht alles mitzuspielen und verliert die Kontur.",
+          "korrektur": "Tempo zurück, die gemeinsamen Akzente mit den Drums festlegen, dazwischen eine tragfähige Linie. Nur die Achse Bass–Drums isoliert aufnehmen und schrittweise steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_grundton_folgen",
+      "typ": "fehlerbild",
+      "basis_baustein": "grundton_folgen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Bass trifft die Grundton-Wechsel des Riffs zu spät oder greift den falschen Ton — das Fundament wackelt an den Wechseln.",
+          "ursache": "Die Akkord-/Grundtonwechsel des Riffs sind nicht antizipiert; der Bass reagiert, statt den Wechsel vorzubereiten.",
+          "korrektur": "Die Wechsel langsam ansagen und den nächsten Grundton vorbereiten (Griff schon bereitlegen). Erst die Wechselstellen isoliert, dann im Tempo, bis sie sicher und pünktlich sitzen."
+        }
+      }
+    },
+    {
+      "id": "fb_palm_muting_bass",
+      "typ": "fehlerbild",
+      "basis_baustein": "palm_muting_bass",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die gedämpften Töne am Bass klingen mal offen, mal ganz tot; der perkussive, kontrollierte Charakter geht verloren.",
+          "ursache": "Der Handballen liegt nicht konstant an derselben Stelle und mit gleichem Druck; die Position wandert während des Spielens.",
+          "korrektur": "Die Handballen-Position bewusst suchen und über eine Reihe von Tönen konstant halten. Langsam, gleichmäßig, per Aufnahme prüfen, ob alle gedämpften Töne gleich klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_schnelles_fingerspiel",
+      "typ": "fehlerbild",
+      "basis_baustein": "schnelles_fingerspiel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim schnellen Fingerspiel ist der Wechselschlag ungleichmäßig — ein Finger ist deutlich stärker, die Hand verkrampft und eiert.",
+          "ursache": "Die beiden Anschlagfinger sind nicht gleich trainiert, und der Wechsel ist nicht sauber alternierend; oft dominiert der Zeigefinger.",
+          "korrektur": "Bewusst streng alternierend und langsam üben, auf gleiche Stärke beider Finger achten. Kurze Intervalle mit Pausen, Lockerheit halten; Tempo erst bei gleichmäßigem Wechsel steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_artikulation",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_artikulation",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Text geht in der Verzerrung völlig unter — Konsonanten werden verschluckt, alles klingt wie ein gleichförmiges Brüllen.",
+          "ursache": "Die Verzerrung überlagert die Artikulation; Zunge, Lippen und Kiefer formen die Worte nicht klar, während der Fokus nur auf dem Sound liegt.",
+          "korrektur": "Den Text zuerst deutlich sprechen, dann leise verzerrt mit derselben klaren Artikulation. Konsonanten bewusst formen; die Verzerrung bleibt Träger, nicht Ersatz für die Aussprache. Aus der Stütze, bei Kratzen stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_dynamik",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_dynamik_intensitaet",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Vocals sind durchgehend maximal intensiv — es gibt keine Abstufung, die Stimme ermüdet schnell und der Ausdruck wird eintönig.",
+          "ursache": "Intensität wird mit Dauer-Vollgas verwechselt; leise, kontrollierte Verzerrung und bewusste Steigerungen werden nicht als Mittel genutzt.",
+          "korrektur": "Bewusst mit leiser, kontrollierter Verzerrung arbeiten und Höhepunkte gezielt setzen, statt durchgehend zu pressen. Dynamik als Ausdruck üben — das schont die Stimme und wirkt stärker. Bei Ermüdung pausieren."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_projektion",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_projektion_band",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Stimme setzt sich gegen die laute Band nicht durch; der Reflex ist, lauter zu pressen — was schnell ermüdet und trotzdem untergeht.",
+          "ursache": "Durchsetzung wird über rohe Lautstärke und Pressen gesucht statt über Resonanz, Frequenzlage und Mikrofontechnik.",
+          "korrektur": "Durchsetzung über Resonanz und die richtige Frequenzlage aufbauen, nicht über Druck; Mikrofon und Monitor nutzen. Über eine Bandaufnahme prüfen, ob die Stimme trägt. Härte aus der Stütze, nie aus dem Hals."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_range",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_range_erweiterung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Erweitern der Verzerrungs-Range klingen die neuen (sehr hohen oder tiefen) Lagen gequetscht, und die Stimme wird danach heiser.",
+          "ursache": "Die neuen Lagen werden aus Hals und Druck erzeugt statt aus Luft, Stütze und Resonanz — ein direktes Gesundheitsrisiko.",
+          "korrektur": "Neue Lagen leise und kurz aus der Stütze entwickeln, nie über Pressen; zwischen den Versuchen Pausen. Bei Kratzen, Schmerz oder anhaltender Heiserkeit sofort stoppen und im Zweifel HNO oder Gesangscoach hinzuziehen."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_rhythmik",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_rhythmische_praezision",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die geschrienen Silben liegen nicht sauber im Raster — die Vocals treiben den Part nicht, sondern hängen ungefähr über der Musik.",
+          "ursache": "Die Stimme wird nicht als Perkussionsinstrument gedacht; betonte Silben zielen nicht punktgenau auf den gemeinsamen Anker (meist die Bassdrum).",
+          "korrektur": "Betonte Silben bewusst auf die Akzente legen, zunächst gesprochen, dann verzerrt, an der Bassdrum ausgerichtet. Langsam mit Klick, per Aufnahme prüfen, ob Silbe und Schlag zusammenfallen."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_texturen",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_texturen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Wechsel zwischen verschiedenen Harsh-Texturen (etwa tiefes Growl und hoher Scream) ist unkontrolliert und bricht hörbar.",
+          "ursache": "Die einzelnen Texturen sind nicht sicher isoliert beherrscht, und die Übergänge werden nicht bewusst geübt, sondern dem Zufall überlassen.",
+          "korrektur": "Jede Textur einzeln stabilisieren, dann gezielt Übergänge zwischen zweien langsam üben. Kontrolliert und aus der Stütze; bei Kratzen stoppen. Erst wenn der Wechsel sauber sitzt, in den Song einbauen."
+        }
+      }
+    },
+    {
+      "id": "fb_harsh_uebergaenge",
+      "typ": "fehlerbild",
+      "basis_baustein": "harsh_uebergaenge_nahtlos",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Übergang zwischen clean und harsch oder zwischen Registern bricht hörbar — es gibt einen Knick statt eines nahtlosen Wechsels.",
+          "ursache": "Die Register werden getrennt gedacht und der Umschaltpunkt nicht geübt; Stütze und Luftfluss brechen im Moment des Wechsels ein.",
+          "korrektur": "Den Wechsel langsam und leise üben, Stütze und Luftfluss über den Umschaltpunkt hinweg halten. Schrittweise annähern, bis der Übergang nahtlos wird; aus der Stütze, bei Beschwerden stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_mikrofon_harsh",
+      "typ": "fehlerbild",
+      "basis_baustein": "mikrofon_harsh",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Aufnahme oder der Live-Sound schwankt stark — mal übersteuert, mal zu leise; Popp- und Zischgeräusche stören.",
+          "ursache": "Der Mikrofonabstand variiert unkontrolliert, und die Ausrichtung ignoriert Popp-Laute; die dynamische Verzerrung wird nicht über die Technik ausgeglichen.",
+          "korrektur": "Konstanten Abstand und Winkel zum Mikro üben, bei lauten Passagen leicht abrücken, Popp-Laute seitlich abfangen. Über eine Aufnahme den Pegel prüfen und die Technik anpassen."
+        }
+      }
+    },
+    {
+      "id": "fb_pv_vocals",
+      "typ": "fehlerbild",
+      "basis_baustein": "pv_vocals_ausbruch",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In der Serie kurzer, heftiger Powerviolence-Ausbrüche kippt die Stimme oder versagt; die Kontrolle geht mit jedem Ausbruch mehr verloren.",
+          "ursache": "Die Ausbrüche kommen aus reinem Druck ohne Stütze und ohne Erholung dazwischen; die kurze, extreme Belastung summiert sich.",
+          "korrektur": "Ausbrüche einzeln aus der Stütze anlegen, kurze Erholung zwischen den Stößen bewusst nutzen. Erst wenige, kontrollierte Ausbrüche, dann die Serie. Bei Kratzen, Kippen oder Schmerz sofort stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_sludge_vocals",
+      "typ": "fehlerbild",
+      "basis_baustein": "sludge_vocals_verzweiflung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der raue, verzweifelte Sludge-Schrei entsteht aus Halsdruck statt aus Stütze — er klingt gequält und hält keine ganze Probe durch.",
+          "ursache": "Der emotionale Ausdruck wird körperlich über Pressen erzeugt; Luftfluss und Stütze tragen den Schrei nicht.",
+          "korrektur": "Den Ausdruck über Luft, Stütze und Resonanz erzeugen, nicht über Halsdruck — leise entwickeln und die Intensität aus der Führung holen. Bei Kratzen oder Schmerz stoppen, im Zweifel HNO oder Coach."
+        }
+      }
     }
   ]
 }
