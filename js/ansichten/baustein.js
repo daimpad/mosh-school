@@ -8,6 +8,7 @@ import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, un
 import { label, t, text } from '../i18n.js';
 import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
 import { stationImKontext } from '../pfade.js';
+import { werkzeugeFuer } from '../werkzeug-links.js';
 import { diagnose, einstellungen } from '../zustand.js';
 
 function kontextZuListe(kontext) {
@@ -114,6 +115,23 @@ function trainerLayerHtml(daten, baustein) {
       </div>
       <p class="leise">${esc(t('trainer_layer_hinweis'))}</p>
       ${karten}
+    </section>`;
+}
+
+// Verlinkungs-Konvention (Werkzeuge): passt ein Audio-Werkzeug zum Baustein,
+// wird es hier vorbelegt verlinkt (z. B. Timing-Übung → Metronom mit Tempo).
+// Die Zuordnung lebt in werkzeug-links.js; die Ansicht kennt die Regeln nicht.
+function werkzeugSektionHtml(baustein) {
+  const links = werkzeugeFuer(baustein);
+  if (links.length === 0) return '';
+  const chips = links
+    .map((w) => `<a class="chip chip-waehlbar" href="${esc(w.route)}"><i class="fa-solid fa-toolbox" aria-hidden="true"></i> ${esc(t(w.labelKey))}</a>`)
+    .join(' ');
+  return `
+    <section class="abschnitt werkzeug-anbindung">
+      <div class="abschnitt-kopf"><h2><i class="fa-solid fa-toolbox" aria-hidden="true"></i> ${esc(t('wz_baustein_titel'))}</h2></div>
+      <p class="leise">${esc(t('wz_baustein_hinweis'))}</p>
+      <p class="chip-zeile">${chips}</p>
     </section>`;
 }
 
@@ -300,6 +318,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${schemaSektion}
       ${uebungsSektion}
       ${reflexionsSektion}
+      ${werkzeugSektionHtml(b)}
       ${trainerLayerHtml(daten, b)}
       ${abschlussZeile}
       ${einordnungHtml(b, kuerzelSichtbar)}
