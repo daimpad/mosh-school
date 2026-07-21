@@ -53,6 +53,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.auftritt-live.json',
   'data/bausteine.songwriting.json',
   'data/bausteine.uebe-methodik.json',
+  'data/bausteine.unterricht.json',
 ];
 
 export async function ladeDaten() {
