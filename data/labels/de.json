@@ -623,7 +623,13 @@
     "song_arrangieren_ganz": "Einen ganzen Song arrangieren",
     "parts_verteilen": "Parts unter den Instrumenten verteilen",
     "text_thema_gesang": "Text & Thema für den Gesang",
-    "pre_production_plan": "Pre-Production: den Song aufnahmereif machen"
+    "pre_production_plan": "Pre-Production: den Song aufnahmereif machen",
+    "effektiv_ueben": "Effektiv üben: Qualität vor Quantität",
+    "ueben_strukturieren": "Eine Übe-Einheit strukturieren",
+    "uebe_tagebuch": "Übe-Tagebuch: Fortschritt sichtbar machen",
+    "fehler_frueh_erkennen": "Fehler früh erkennen und an der Ursache beheben",
+    "lernweg_planen": "Den eigenen Lernweg planen",
+    "uebung_anpassen": "Eine Übung ans eigene Level anpassen"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
