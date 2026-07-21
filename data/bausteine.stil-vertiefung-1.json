@@ -1,0 +1,273 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-vertiefung-1",
+    "hinweis": "Genre-Vertiefung Runde 1 (dünnste Genres): Powerviolence, Crust, Sludge um je drei Bausteine in bisher nicht abgedeckten Domänen ergänzt (PV: Bass/Körper/Sound; Crust: Haltung/Songwriting/Körper; Sludge: Bass/Sound/Langform). stil-getaggt, fortgeschritten. Gesundheitsrahmen bei Körper-Bausteinen. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "pv_bass_chaos",
+      "anzeigetitel": {
+        "de": "Powerviolence-Bass: im Chaos verzahnt"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "einfache_basslinie",
+        "pv_band_abrisskanten"
+      ],
+      "erklaerteil": {
+        "de": "In Powerviolence bricht die Musik ständig ab, kippt vom Blast in den langsamen Part und zurück. Der Bass darf dabei nicht untergehen — er muss an den Abrisskanten mit der Band gemeinsam stoppen und exakt gemeinsam wieder losbrechen, sonst franst das Chaos aus und wirkt nur schlampig statt brutal.\n\nDas Kunststück ist, im scheinbaren Chaos verzahnt zu bleiben: Der Bass koppelt sich in den schnellen Teilen an Kick und Riff, und an den Stops hält jeder den Puls, damit die Eins nach dem Bruch gemeinsam sitzt. Kontrolle ist hier das eigentliche Extreme, nicht das Tempo allein."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Stop und Losbrechen",
+          "ziel": "Bass an den Abrisskanten exakt mit der Band stoppen und starten.",
+          "schritte": [
+            "Spielt einen kurzen schnellen Part und baut einen abrupten gemeinsamen Stop ein.",
+            "Halte den Puls innerlich und brich exakt gemeinsam auf der Eins wieder los.",
+            "Nimm es auf und prüfe, ob Stop und Wiedereinstieg wie ein Schlag sitzen."
+          ],
+          "steigerung": "Setzt mehrere Brüche mit wechselndem Tempo hintereinander und haltet die Verzahnung.",
+          "selbstkontrolle": "Die Stops sitzen gemeinsam, der Bass verzahnt sich im schnellen Teil — das Chaos wirkt kontrolliert."
+        }
+      },
+      "spielziele": [
+        "timing_zum_klick",
+        "riff_praezision"
+      ]
+    },
+    {
+      "id": "pv_koerper_explosivitaet",
+      "anzeigetitel": {
+        "de": "Powerviolence: Explosivität & Erholung"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "athletik_grundlage",
+        "pv_start_stopp"
+      ],
+      "erklaerteil": {
+        "de": "Powerviolence lebt von kurzen, maximal explosiven Ausbrüchen mit abrupten Stopps. Das ist eher Sprint als Dauerlauf: volle Intensität für wenige Sekunden, dann Bruch. Diese Belastung ist körperlich extrem und verlangt Explosivität und schnelle Erholung statt reiner Ausdauer.\n\nDer Schlüssel ist, die Kraft in den Bursts aus Lockerheit zu holen und in den Pausen bewusst zu entspannen, statt durchgehend verspannt zu sein. Wer zwischen den Ausbrüchen nicht lockerlässt, verkrampft und verletzt sich.\n\nGesundheitsrahmen: gründlich aufwärmen, die Explosivität über Wochen aufbauen, in kurzen Einheiten mit echten Pausen üben. Bei Schmerz in Gelenken, Sehnen oder Rücken sofort stoppen — solche extremen Bursts fordern Handgelenke und Nacken besonders."
+      },
+      "reflexionsaufgabe": {
+        "de": "Holst du die Kraft in den kurzen Ausbrüchen aus Lockerheit und entspannst in den Pausen bewusst, statt durchgehend verspannt zu spielen? Wie wärmst du dich für diese explosive Belastung auf und baust sie über Wochen auf? Und bei welchen Warnzeichen (Gelenke, Sehnen, Nacken) stoppst du sofort?"
+      }
+    },
+    {
+      "id": "pv_sound_roh",
+      "anzeigetitel": {
+        "de": "Powerviolence-Sound: roh & schneidend"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "powerviolence"
+      ],
+      "voraussetzungen": [
+        "crust_sound_dreck",
+        "verzerrer_typen"
+      ],
+      "erklaerteil": {
+        "de": "Der Powerviolence-Sound ist bewusst roh, schneidend und unpoliert — er soll wehtun, nicht schmeicheln. Anders als bei glatt produziertem Metal ist hier die harsche, fast schmerzhafte Kante Programm: viel Höhen und Biss, wenig Wärme, ein Sound, der die Aggression und Kürze der Songs unterstreicht.\n\nDas heißt nicht schlechter Sound, sondern eine bewusste Ästhetik: dreckige Verzerrung, aggressive Mitten und Höhen, und die Bereitschaft, auf Hochglanz zu verzichten. Die Rohheit ist Teil der Aussage; eine sterile Produktion würde der Musik ihre Dringlichkeit nehmen.\n\nWichtig bleibt trotzdem Kontrolle: roh ja, aber so, dass die Instrumente im Chaos noch trennbar sind und die Brüche wirken."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wählst du bewusst einen rohen, schneidenden Sound als Ästhetik — dreckige Verzerrung, Biss statt Wärme — statt Hochglanz anzustreben? Wie stellst du sicher, dass die Rohheit gewollt wirkt und die Instrumente im Chaos trotzdem trennbar bleiben? Und wo hilft die Unpoliertheit der Dringlichkeit der Musik?"
+      }
+    },
+    {
+      "id": "crust_ethos_haltung",
+      "anzeigetitel": {
+        "de": "Crust: Haltung, DIY & Text"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "genrekunde_extreme_familie"
+      ],
+      "erklaerteil": {
+        "de": "Crust ist mehr als ein Sound — es ist eine Haltung. Das Genre ist tief in der DIY- und Anarcho-Punk-Kultur verwurzelt: Selbermachen statt Marktlogik, gesellschaftskritische und politische Texte, Kollektiv statt Rockstar. Wer Crust spielt, ohne diesen Hintergrund zu kennen, spielt nur die Oberfläche.\n\nDas prägt konkrete Entscheidungen: Texte, die etwas zu sagen haben, ein rauer, ehrlicher Sound statt Hochglanz, Konzerte in selbstverwalteten Räumen, faire Preise. Die Wut in der Musik hat einen Inhalt — sie richtet sich gegen etwas.\n\nDas heißt nicht, dass jede Band dieselben Überzeugungen teilen muss. Aber die Auseinandersetzung mit dem Ethos gehört zum Genre. Fragt euch, wofür eure Musik steht und wie ihr das in Text, Sound und Auftreten lebt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kennt ihr die DIY- und Anarcho-Punk-Wurzeln des Crust und setzt ihr euch mit dem Ethos auseinander? Wofür steht eure Musik inhaltlich — und wie zeigt sich das in Texten, Sound und Auftreten (selbstverwaltete Räume, faire Preise)? Wo ist eure Wut konkret, statt nur Pose zu sein?"
+      }
+    },
+    {
+      "id": "crust_songwriting_struktur",
+      "anzeigetitel": {
+        "de": "Crust-Songwriting: aus D-Beat-Parts Songs bauen"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "crust_dbeat_ausbau",
+        "song_arrangieren_ganz"
+      ],
+      "erklaerteil": {
+        "de": "Crust-Songs sind meist kurz, direkt und ungeschliffen — aber gute Crust-Songs sind trotzdem gebaut, nicht zusammengewürfelt. Das Fundament ist der D-Beat als treibender Motor; darüber reihen sich wenige, prägnante Riffs zu einem Song mit klarer Dringlichkeit.\n\nDie Kunst ist Ökonomie: ein einprägsames Hauptriff, ein Kontrast-Part (oft langsamer, schwerer — die Doom-/Sludge-Verwandtschaft), ein paar gemeinsame Stops, und ein Ende, das sitzt. Zu viele Ideen verwässern die Wucht; Crust wirkt durch Direktheit, nicht durch Komplexität.\n\nDer Wechsel zwischen der D-Beat-Raserei und einem schweren, langsamen Teil ist ein Kernmittel — er gibt dem Song Dynamik, ohne die Rohheit zu verlieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Baut ihr eure Crust-Songs bewusst um den D-Beat als Motor mit wenigen prägnanten Riffs, statt Ideen zusammenzuwürfeln? Nutzt ihr den Kontrast zwischen D-Beat-Raserei und einem schweren, langsamen Teil für Dynamik? Und haltet ihr die Songs ökonomisch und direkt, statt sie mit zu vielen Parts zu verwässern?"
+      }
+    },
+    {
+      "id": "crust_koerper_ausdauer",
+      "anzeigetitel": {
+        "de": "Crust: Downpicking-Ausdauer ökonomisch"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "crust"
+      ],
+      "voraussetzungen": [
+        "downpicking",
+        "koerperhaltung_ergonomie"
+      ],
+      "erklaerteil": {
+        "de": "Crust und D-Beat leben oft von durchgehendem Downpicking über ganze Songs — eine echte Ausdauerleistung für den Anschlagarm. Ohne Ökonomie brennt der Unterarm nach kurzer Zeit aus, der Ton wird ungleich und die Ausdauer bricht mitten im Set ein.\n\nDer Schlüssel ist eine kleine, entspannte Bewegung aus dem Handgelenk statt großer Schläge aus dem Arm, und Lockerheit zwischen den Anschlägen. Gleichmäßigkeit vor Härte: Ein konstanter, tragfähiger Downpicking-Puls wirkt stärker als ein paar harte Schläge, die dann einbrechen.\n\nGesundheitsrahmen: aufwärmen, die Ausdauer über Wochen aufbauen und in Intervallen mit Pausen üben. Bei Brennen oder Schmerz im Unterarm oder Handgelenk sofort stoppen — Sehnenüberlastung ist hier ein reales Risiko."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kommt dein durchgehendes Downpicking aus einer kleinen, entspannten Handgelenksbewegung statt aus dem Arm — und lässt du zwischen den Anschlägen locker? Baust du die Ausdauer über Wochen in Intervallen mit Pausen auf, statt sie zu erzwingen? Und stoppst du bei Brennen oder Schmerz im Unterarm sofort?"
+      }
+    },
+    {
+      "id": "sludge_bass_wand",
+      "anzeigetitel": {
+        "de": "Sludge-Bass: die zähe Fuzz-Wand"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "sludge"
+      ],
+      "voraussetzungen": [
+        "doom_bass_fuzz",
+        "palm_muting_bass"
+      ],
+      "erklaerteil": {
+        "de": "Im Sludge ist der Bass keine Begleitung, sondern die halbe Wand. Zusammen mit der tief gestimmten, verzerrten Gitarre bildet er eine zähe, drückende Masse, die sich langsam vorwärtswälzt. Der Ton ist fuzzig, dick und schwer, das Spiel bewusst zäh und hinter dem Beat.\n\nDie Kunst ist, mit der Gitarre zu verschmelzen, ohne im Matsch zu verschwinden: gemeinsamer Anschlag, gemeinsame Länge, aber genug Anzerrung und Mitten, dass der Bass als eigene Schicht spürbar bleibt. Weniger Noten, mehr Gewicht — jeder Ton darf stehen und dröhnen.\n\nDas Tempo ist niedrig, aber das verlangt eher mehr Kontrolle als weniger: Zähigkeit ist gewollt, Schleppen nicht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zäh und schwer verschmelzen",
+          "ziel": "Mit der Gitarre eine zähe, drückende Fuzz-Wand bilden, ohne zu matschen.",
+          "schritte": [
+            "Spiele eine langsame, tief gestimmte Passage mit fuzzigem, dickem Ton gemeinsam mit der Gitarre.",
+            "Achte auf gemeinsamen Anschlag und gemeinsame Länge, aber behalte über Anzerrung und Mitten eine eigene Schicht.",
+            "Nimm es auf und prüfe, ob die Wand drückt und Bass und Gitarre trotzdem trennbar bleiben."
+          ],
+          "steigerung": "Spiele bewusst leicht hinter dem Beat und halte die Zähigkeit stabil, ohne zu schleppen.",
+          "selbstkontrolle": "Die Fuzz-Wand ist schwer und zäh, der Bass bleibt als eigene Schicht hörbar, nichts schleppt."
+        }
+      },
+      "spielziele": [
+        "schwererer_ton",
+        "definierter_anschlag"
+      ]
+    },
+    {
+      "id": "sludge_sound_gear",
+      "anzeigetitel": {
+        "de": "Sludge-Sound: Fuzz, Tiefe & Feedback"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "sludge"
+      ],
+      "voraussetzungen": [
+        "drop_tuning",
+        "verzerrer_typen"
+      ],
+      "erklaerteil": {
+        "de": "Der Sludge-Sound ist eine eigene Ästhetik: extrem tief gestimmt, dick verzerrt, oft mit Fuzz statt reinem High-Gain, und bewusst dreckig. Er soll erdrückend und organisch klingen, nicht steril — die Wärme und das Brummen gehören dazu.\n\nZentrale Mittel sind eine tiefe Stimmung mit dicken Saiten, ein fuzziger, mittiger Verzerrer und aufgerissene, atmende Amps. Feedback wird nicht bekämpft, sondern als Ausdrucksmittel genutzt — kontrolliertes Rückkopplungs-Dröhnen zwischen den Riffs verstärkt die drückende, zähe Stimmung.\n\nWie im Doom entsteht das Gewicht mehr aus Ton und Raum als aus Tempo: wenige, fette Klänge, die stehen und dröhnen dürfen. Der Sound ist die halbe Miete des Genres."
+      },
+      "reflexionsaufgabe": {
+        "de": "Baust du deinen Sludge-Sound bewusst aus tiefer Stimmung, dickem Fuzz und aufgerissenen Amps auf, statt sterilem High-Gain? Nutzt du Feedback als kontrolliertes Ausdrucksmittel statt es zu bekämpfen? Und holst du das Gewicht aus Ton und Raum (wenige, fette Klänge) statt aus Tempo?"
+      }
+    },
+    {
+      "id": "sludge_langform",
+      "anzeigetitel": {
+        "de": "Sludge-Arrangement: die Zähigkeit der Wiederholung"
+      },
+      "domaene": [
+        "theorie",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "sludge"
+      ],
+      "voraussetzungen": [
+        "sludge_riffing_dreck",
+        "song_arrangieren_ganz"
+      ],
+      "erklaerteil": {
+        "de": "Sludge-Songs nehmen sich Zeit. Wo andere Genres Riffs schnell wechseln, lässt Sludge ein schweres Riff lange stehen und wiederholt es, bis es sich ins Mark bohrt. Diese Zähigkeit ist kein Mangel an Ideen, sondern das zentrale Ausdrucksmittel: Die Wiederholung erzeugt einen hypnotischen, erdrückenden Sog.\n\nDamit das trägt und nicht langweilt, braucht es kleine Veränderungen über die Zeit — eine wachsende Intensität, eine hinzukommende Schicht, ein Feedback-Schwall, ein langsamer Aufbau zu einem Ausbruch. Der Spannungsbogen entsteht langsam und über die Länge, nicht durch schnelle Parts.\n\nDas verlangt auch mentale Disziplin von der Band: ein Riff bewusst auszuhalten und gemeinsam zu tragen, statt aus Nervosität weiterzuhetzen, ist eine eigene Kunst."
+      },
+      "reflexionsaufgabe": {
+        "de": "Traut ihr euch, ein schweres Riff lange stehen zu lassen und zu wiederholen, bis es einen Sog erzeugt — statt aus Nervosität weiterzuhetzen? Wie haltet ihr die Wiederholung interessant (wachsende Intensität, neue Schicht, langsamer Aufbau zum Ausbruch)? Und wie tragt ihr diesen langsamen Spannungsbogen als Band gemeinsam?"
+      }
+    }
+  ]
+}
