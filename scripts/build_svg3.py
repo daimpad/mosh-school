@@ -959,6 +959,35 @@ S["kontext_solo_ohne_band"] = [
     C(78, 44, 4, fill=True),
 ]
 
+# ================= CLEAN-GESANG-VERTIEFUNG =================
+# Vokabular: Wellen = klingender Ton, Bögen = Atem/Resonanz/Stütze, Rauigkeit =
+# Störung/Druck, Punkte = Zielton, parallele Wellen = Mehrstimmigkeit.
+S["clean_kopfstimme"] = [
+    P(wavepath(16, 104, 44, 9, 2.5, step=2.0), 3),
+    ARC(60, 86, 34, 30, 150, 2.5),
+]
+S["clean_intonation_druck"] = [
+    L(16, 50, 104, 50, 4), C(96, 50, 5, fill=True),
+    P(wavepath(16, 92, 50, 10, 2.5, step=2.0), 3),
+    P(roughpath(16, 104, 88, 6, step=3.0, seed=41), 2),
+]
+S["clean_vibrato"] = [
+    P(wavepath(14, 106, 58, 10, 6, step=2.0), 3.5),
+    L(14, 86, 106, 86, 2),
+]
+S["clean_refrain_hook"] = [
+    P(wavepath(16, 104, 66, 20, 1.5, step=2.0, env=lambda t: math.sin(math.pi * t)), 4.5),
+    C(60, 44, 4, fill=True),
+]
+S["clean_belting"] = [
+    P(wavepath(20, 100, 46, 15, 2.0, step=2.0), 5),
+    ARC(60, 98, 44, 25, 155, 4), ARC(60, 98, 30, 30, 150, 2),
+]
+S["clean_harmonien"] = [
+    P(wavepath(16, 104, 44, 10, 2.0, step=2.0), 3.5),
+    P(wavepath(16, 104, 74, 10, 2.0, step=2.0), 3.5),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -1000,7 +1029,9 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "kontext_proberaum_effizienz", "kontext_proberaum_zusammenspiel",
                 "kontext_buehne_praesenz", "kontext_buehne_ablauf",
                 "kontext_aufnahme_tightness", "kontext_aufnahme_vorbereitung",
-                "kontext_solo_struktur", "kontext_solo_ohne_band"]
+                "kontext_solo_struktur", "kontext_solo_ohne_band",
+                "clean_kopfstimme", "clean_intonation_druck", "clean_vibrato",
+                "clean_refrain_hook", "clean_belting", "clean_harmonien"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
