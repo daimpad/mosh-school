@@ -641,7 +641,16 @@
     "clean_vibrato": "",
     "clean_refrain_hook": "",
     "clean_belting": "",
-    "clean_harmonien": ""
+    "clean_harmonien": "",
+    "pv_bass_chaos": "",
+    "pv_koerper_explosivitaet": "",
+    "pv_sound_roh": "",
+    "crust_ethos_haltung": "",
+    "crust_songwriting_struktur": "",
+    "crust_koerper_ausdauer": "",
+    "sludge_bass_wand": "",
+    "sludge_sound_gear": "",
+    "sludge_langform": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
