@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "pedalboard-gear",
+    "hinweis": "Rahmen-Baustein zum Pedalboard-Baukasten (Werkzeug #/werkzeug/pedalboard). Reflexion, keine markenbezogenen Inhalte — nur generische Typen. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "pedalboard_grundlagen",
+      "anzeigetitel": {
+        "de": "Pedalboard-Grundlagen für Anfänger"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Pedalboard formt den Klang zwischen Instrument und Verstärker — eine Reihe von Effektgeräten, die das Signal nacheinander durchläuft. Für den Metal-Sound sind meist nur wenige Klassiker nötig; man braucht nicht viele Pedale, sondern die richtigen an der richtigen Stelle.\n\nEntscheidend ist die Reihenfolge, denn jedes Pedal bearbeitet, was vor ihm ankommt. Eine bewährte Grundordnung: zuerst Stimmgerät und dynamische Effekte (Kompressor, Wah), dann die Verzerrung (Overdrive, Distortion, Boost), dann ein Noise Gate gegen das Rauschen der hohen Gain-Stufen, und am Ende die zeitbasierten Effekte (Delay, Reverb) — oft im Effektweg des Amps. Wer die Verzerrung hinter ein Delay legt statt davor, bekommt einen anderen, meist matschigen Klang.\n\nFang klein an: Für den Anfang genügen oft ein Stimmgerät, ein Verzerrer (oder ein Boost vor den bereits zerrenden Amp) und ein Noise Gate. Bass unterscheidet sich etwas — hier zählen Kompressor und ein DI/Preamp mehr, und bass-taugliche Verzerrer erhalten den Tiefbass, statt ihn wegzuschneiden."
+      },
+      "reflexionsaufgabe": {
+        "de": "Überlege dir eine minimale Signalkette für deinen Sound: Welche drei, vier Pedale brauchst du wirklich, und in welcher Reihenfolge stehen sie (dynamische Effekte → Verzerrung → Noise Gate → zeitbasierte Effekte am Ende)? Wo liegt bei dir der Unterschied zwischen Gitarre und Bass — braucht der Bass eher Kompressor und Preamp als viel Verzerrung? Und welches eine Pedal würde deinen Klang am spürbarsten verbessern?"
+      }
+    }
+  ]
+}

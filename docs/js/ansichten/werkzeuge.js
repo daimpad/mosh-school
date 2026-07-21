@@ -13,7 +13,9 @@ const WERKZEUGE = [
   { id: 'metronom', route: '#/werkzeug/metronom', icon: 'fa-stopwatch', bereit: true },
   { id: 'loops', route: '#/werkzeug/loops', icon: 'fa-drum', bereit: true },
   { id: 'stimmgeraet', route: '#/werkzeug/stimmgeraet', icon: 'fa-wave-square', bereit: true },
-  { id: 'struktur', route: '#/werkzeug/struktur', icon: 'fa-layer-group', bereit: false },
+  { id: 'pedalboard', route: '#/werkzeug/pedalboard', icon: 'fa-layer-group', bereit: true },
+  { id: 'ampbox', route: '#/werkzeug/ampbox', icon: 'fa-volume-high', bereit: false },
+  { id: 'struktur', route: '#/werkzeug/struktur', icon: 'fa-list-check', bereit: false },
   { id: 'recorder', route: '#/werkzeug/recorder', icon: 'fa-microphone', bereit: false },
   { id: 'mehrspur', route: '#/werkzeug/mehrspur', icon: 'fa-sliders', bereit: false },
 ];
