@@ -12,12 +12,13 @@ laufen.
 
 Ausnahme: scripts/svg_static/ hält vorgefertigte, eingecheckte SVGs
 (z. B. eigens gezeichnete Motive im selben Format: viewBox 0 0 120 120,
-currentColor, aria-hidden, textfrei). Diese werden NACH den Generatoren in
-den Bundle-Ordner kopiert (überschreiben bei Namensgleichheit ein Motiv)
-und ebenso deterministisch gebündelt — die Quelle bleibt die eingecheckte
-Datei, das Bundle wird nie von Hand editiert. Für Bausteine MIT Fehlerbildern
-gehört das Motiv in build_svg3.py (die Fehlerbild-Komposition dort braucht es
-zur Laufzeit); die statischen Motive tragen hier keine Fehlerbilder.
+currentColor, aria-hidden, textfrei). Diese werden VOR den Generatoren in den
+Bundle-Ordner gelegt und ebenso deterministisch gebündelt — die Quelle bleibt
+die eingecheckte Datei, das Bundle wird nie von Hand editiert. „Vor den
+Generatoren", damit die Fehlerbild-Komposition in build_svg3 auch statische
+Basis-Motive nutzen kann (Fehlerbild = statisches Motiv + Riss). Statische IDs
+müssen daher disjunkt zu den generierten sein; ein Motiv gehört entweder in
+einen Generator ODER nach svg_static, nicht in beide.
 
     python3 scripts/build_grafiken.py
 
@@ -53,15 +54,13 @@ def pool_ids():
 def main():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
+    os.makedirs(OUT, exist_ok=True)
     lehr_out = os.path.join(HERE, '_svg_lehre')
     if os.path.isdir(lehr_out):
         shutil.rmtree(lehr_out)
-    runpy.run_path(os.path.join(HERE, 'build_svg.py'))
-    runpy.run_path(os.path.join(HERE, 'build_svg2.py'))
-    runpy.run_path(os.path.join(HERE, 'build_svg3.py'))
-    runpy.run_path(os.path.join(HERE, 'build_svg4.py'))
 
-    # Eingecheckte statische Motive nach den Generatoren einspielen (siehe Docstring).
+    # Eingecheckte statische Motive VOR den Generatoren einspielen (siehe Docstring):
+    # so kann die Fehlerbild-Komposition in build_svg3 auch statische Basis-Motive nutzen.
     static_dir = os.path.join(HERE, 'svg_static')
     static_n = 0
     if os.path.isdir(static_dir):
@@ -73,6 +72,18 @@ def main():
             with open(os.path.join(OUT, name), 'w', encoding='utf-8') as f:
                 f.write(svg)
             static_n += 1
+
+    runpy.run_path(os.path.join(HERE, 'build_svg.py'))
+    runpy.run_path(os.path.join(HERE, 'build_svg2.py'))
+    runpy.run_path(os.path.join(HERE, 'build_svg3.py'))
+    runpy.run_path(os.path.join(HERE, 'build_svg4.py'))
+
+    # Sicherstellen, dass kein Generator ein statisches Motiv überschrieben hat.
+    for name in sorted(os.listdir(static_dir)) if os.path.isdir(static_dir) else []:
+        if name.endswith('.svg'):
+            gen = open(os.path.join(static_dir, name), encoding='utf-8').read()
+            cur = open(os.path.join(OUT, name), encoding='utf-8').read()
+            assert cur == gen, f'statisches Motiv {name} von einem Generator überschrieben'
 
     grafiken = {}
     for name in sorted(os.listdir(OUT)):
