@@ -662,7 +662,15 @@
     "djent_studio_produktion": "Djent: Produktion als Instrument",
     "stoner_groove_swing": "Stoner-Drums: der rollende Groove",
     "stoner_jam": "Stoner: die Jam-Kultur",
-    "postmetal_textur_schichten": "Post-Metal: Klangschichten & Texturen"
+    "postmetal_textur_schichten": "Post-Metal: Klangschichten & Texturen",
+    "schlaf_regeneration": "Schlaf: die unsichtbare Übungseinheit",
+    "ernaehrung_hydration": "Ernährung & Hydration fürs Spielen",
+    "rumpf_kraft_stabilitaet": "Rumpfkraft: stabil über das ganze Set",
+    "mobilitaet_routine": "Mobilität: Handgelenk, Schulter, Nacken",
+    "headbangen_nacken": "Headbangen ohne Nackenschaden",
+    "verletzung_reha_rueckkehr": "Verletzung: pausieren & dosiert zurück",
+    "deload_periodisierung": "Belastung steuern: Deload & Periodisierung",
+    "abwaermen_koerper": "Abwärmen: Hände & Körper runterfahren"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
