@@ -635,7 +635,13 @@
     "feedback_geben": "",
     "motivation_schueler": "",
     "gesundheit_vermitteln": "",
-    "gehoer_stimme_langfristig": ""
+    "gehoer_stimme_langfristig": "",
+    "clean_kopfstimme": "",
+    "clean_intonation_druck": "",
+    "clean_vibrato": "",
+    "clean_refrain_hook": "",
+    "clean_belting": "",
+    "clean_harmonien": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
