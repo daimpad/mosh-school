@@ -48,6 +48,9 @@ const INHALTSDATEIEN = [
   'data/bausteine.kontext.json',
   'data/bausteine.ensemble-paare.json',
   'data/bausteine.band-proberaum.json',
+  'data/bausteine.ensemble-gross.json',
+  'data/bausteine.demo-recording.json',
+  'data/bausteine.auftritt-live.json',
 ];
 
 export async function ladeDaten() {

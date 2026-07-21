@@ -10,6 +10,15 @@ Korrekturen dort vornehmen und neu generieren, nie SVGs oder das Bundle
 von Hand editieren. Tranche 3 liest die Ausgaben von 1/2 und muss zuletzt
 laufen.
 
+Ausnahme: scripts/svg_static/ hält vorgefertigte, eingecheckte SVGs
+(z. B. eigens gezeichnete Motive im selben Format: viewBox 0 0 120 120,
+currentColor, aria-hidden, textfrei). Diese werden NACH den Generatoren in
+den Bundle-Ordner kopiert (überschreiben bei Namensgleichheit ein Motiv)
+und ebenso deterministisch gebündelt — die Quelle bleibt die eingecheckte
+Datei, das Bundle wird nie von Hand editiert. Für Bausteine MIT Fehlerbildern
+gehört das Motiv in build_svg3.py (die Fehlerbild-Komposition dort braucht es
+zur Laufzeit); die statischen Motive tragen hier keine Fehlerbilder.
+
     python3 scripts/build_grafiken.py
 
 Ergebnis: data/grafiken.json als {baustein_id: "<svg …>"} (sortierte Keys).
@@ -23,6 +32,7 @@ import os
 import re
 import runpy
 import shutil
+import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -50,6 +60,19 @@ def main():
     runpy.run_path(os.path.join(HERE, 'build_svg2.py'))
     runpy.run_path(os.path.join(HERE, 'build_svg3.py'))
     runpy.run_path(os.path.join(HERE, 'build_svg4.py'))
+
+    # Eingecheckte statische Motive nach den Generatoren einspielen (siehe Docstring).
+    static_dir = os.path.join(HERE, 'svg_static')
+    static_n = 0
+    if os.path.isdir(static_dir):
+        for name in sorted(os.listdir(static_dir)):
+            if not name.endswith('.svg'):
+                continue
+            svg = open(os.path.join(static_dir, name), encoding='utf-8').read()
+            ET.fromstring(svg)  # muss XML-wohlgeformt sein
+            with open(os.path.join(OUT, name), 'w', encoding='utf-8') as f:
+                f.write(svg)
+            static_n += 1
 
     grafiken = {}
     for name in sorted(os.listdir(OUT)):
@@ -83,7 +106,7 @@ def main():
     fb_ohne_grafik = sorted(fb_ids - set(grafiken))
     vorproduziert = sorted(set(grafiken) - pool - fb_ids)
     kb = os.path.getsize(ziel) / 1024
-    print(f'data/grafiken.json: {len(grafiken)} Grafiken ({kb:.0f} KB)')
+    print(f'data/grafiken.json: {len(grafiken)} Grafiken ({kb:.0f} KB), davon {static_n} statisch (svg_static)')
     print(f'  Pool: {len(pool)} Bausteine, davon ohne Grafik: {ohne_grafik or "keine"}')
     print(f'  Fehlerbilder: {len(fb_ids)}, davon ohne Grafik: {fb_ohne_grafik or "keine"}')
     lehr_waisen = sorted(set(lehrgrafiken) - pool)
