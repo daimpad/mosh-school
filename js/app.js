@@ -16,6 +16,7 @@ import { renderWerkzeugMetronom } from './ansichten/werkzeug-metronom.js';
 import { renderWerkzeugLoops } from './ansichten/werkzeug-loops.js';
 import { renderWerkzeugStimmgeraet } from './ansichten/werkzeug-stimmgeraet.js';
 import { renderWerkzeugPedalboard } from './ansichten/werkzeug-pedalboard.js';
+import { renderWerkzeugAmpbox } from './ansichten/werkzeug-ampbox.js';
 import { renderKoennenscheck } from './ansichten/koennenscheck.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
@@ -306,6 +307,8 @@ function rendern() {
     renderWerkzeugStimmgeraet(el, daten, query);
   } else if (segmente[0] === 'werkzeug' && segmente[1] === 'pedalboard') {
     renderWerkzeugPedalboard(el, daten, query);
+  } else if (segmente[0] === 'werkzeug' && segmente[1] === 'ampbox') {
+    renderWerkzeugAmpbox(el, daten, query);
   } else if (segmente[0] === 'werkzeug') {
     // Noch nicht gebautes Werkzeug → zurück zum Hub (kein Bruch bei Deep-Links).
     renderWerkzeuge(el, daten);

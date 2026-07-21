@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "amp-box-gear",
+    "hinweis": "Rahmen-Bausteine zum Amp-/Box-Physik-Baukasten (Werkzeug #/werkzeug/ampbox). Reflexion, physik-/faktenbasiert, keine Marken — nur Typen und Zahlen. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "amp_grundlagen",
+      "anzeigetitel": {
+        "de": "Verstärker-Grundlagen: Physik & Fakten"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Verstärker macht zwei Dinge, die man auseinanderhalten sollte: Die Vorstufe formt den Klang und erzeugt über den Gain-Regler die Verzerrung; die Endstufe liefert die Lautstärke. Deshalb sind Gain (Zerre) und Volume beziehungsweise Master (Lautstärke) getrennte Regler — viel Gain bei wenig Master ergibt leise Zerre, wenig Gain bei viel Master laute Sauberkeit.\n\nNach der Bauart unterscheidet sich das Verhalten physikalisch: Röhren zerren weich und dynamisch und reagieren auf den Anschlag, sind aber schwer und brauchen Wartung (Röhrenwechsel). Transistoren (Solid State) zerren härter und abrupter, sind robust und leicht. Modeling-Amps bilden solche Schaltungen digital nach. Ob Topteil mit separater Box oder Combo (Amp und Lautsprecher in einem Gehäuse) ist vor allem eine Frage von Flexibilität und Gewicht.\n\nEin verbreiteter Irrtum betrifft die Watt: Mehr Watt heißt nicht proportional lauter. Eine Verdopplung der Leistung bringt nur etwa 3 dB — kaum hörbar mehr; als doppelt so laut empfindet man erst rund 10 dB, was etwa der zehnfachen Leistung entspricht. Ein 100-Watt-Amp ist also nicht doppelt so laut wie ein 50-Watt-Amp. Bass braucht dennoch mehr Leistung und sauberen Headroom, weil tiefe Frequenzen mehr Energie zum Bewegen der Luft verlangen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist dir der Unterschied zwischen Gain (Zerre, Vorstufe) und Master/Volume (Lautstärke, Endstufe) an deinem Amp klar? Welche Bauart passt zu dir — Röhre (weiche, dynamische Zerre, aber schwer und wartungsintensiv), Transistor (robust, leicht) oder Modeling (flexibel, digital)? Und rechnest du realistisch mit der Lautstärke: dass mehr Watt nur wenig lauter bedeutet und Bass mehr Headroom braucht als Gitarre?"
+      }
+    },
+    {
+      "id": "box_grundlagen",
+      "anzeigetitel": {
+        "de": "Boxen-Grundlagen: Physik & Fakten"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Eine Box ist ein oder mehrere Lautsprecher in einem Gehäuse — und das Gehäuse formt den Klang mit. Größe und Anzahl der Lautsprecher folgen der Physik: Größere Membranen und mehr davon bewegen mehr Luft, das bringt mehr Tiefbass und Lautstärke. Darum stehen im Gitarrenbereich 4x12- neben 1x12-Boxen, im Bassbereich 8x10- oder 1x15-Konstruktionen für unterschiedlich viel Fundament.\n\nDie Bauform entscheidet über den Charakter: Eine geschlossene Box klingt tighter und richtet den Tiefbass gerichtet nach vorn; eine offene Rückwand klingt luftiger und diffuser, mit weniger Bass. Bassboxen sind oft ventiliert (Bassreflex-Port), was den Tiefton gezielt abstimmt und erweitert. All das ist Luftbewegung — kein Klanggeschmack, sondern Akustik.\n\nZwei technische Fakten sind beim Anschließen entscheidend. Erstens die Impedanz (Ohm): Amp und Box müssen zusammenpassen. Röhrenamps müssen mit passender Impedanz und niemals ohne Last betrieben werden, sonst droht ein Schaden am Ausgangstransformator; Transistoramps dürfen die angegebene Mindest-Impedanz nicht unterschreiten. Zwei gleiche Boxen parallel halbieren die Impedanz, in Reihe verdoppeln sie sie. Zweitens die Belastbarkeit: Die Watt-Angabe der Box sollte die des Amps erreichen oder übertreffen, sonst können Lautsprecher durchbrennen. Die Empfindlichkeit (dB pro Watt) sagt, wie laut eine Box je Watt spielt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Welche Lautsprecher-Bestückung passt zu deinem Fundament — brauchst du für viel Tiefbass mehr oder größere Membranen? Willst du den tighten, gerichteten Klang einer geschlossenen Box oder die luftigere offene Bauform? Und prüfst du vor dem Anschließen die zwei Fakten, die Geräte schützen: passende Impedanz (Ohm) zwischen Amp und Box und ausreichende Belastbarkeit (Watt) der Box?"
+      },
+      "voraussetzungen": [
+        "amp_grundlagen"
+      ]
+    }
+  ]
+}
