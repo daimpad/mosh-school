@@ -58,10 +58,53 @@ Crossminton-Lern-Engine geforkt — die Engine ist themenneutral, der Inhalt ist
 | Zustand | `js/zustand.js` | einziger `localStorage`-Zugriff, versioniertes Schema |
 | i18n | `js/i18n.js` | alle sichtbaren Texte laufen hier durch |
 | Ansichten | `js/ansichten/*.js` | rendern HTML-Strings + binden Events; lesen die Engine, mutieren nie direkt |
+| Audio-Kern | `js/audio/*.js` | **themenneutral, DOM-frei**: ein `AudioContext`, ein Scheduler, Stimmen, WAV — trägt alle Werkzeuge |
 | Shell | `js/app.js` | Boot, Hash-Router, Navigation |
 | Oberfläche | `js/oberflaeche.js` | Icons (`BAUSTEIN_ICONS`, Instrument-SVGs, `domaeneIcon`), Theme, Hero |
 
 **Faustregel:** Logik gehört in die Engine (testbar, DOM-frei), nicht in die Ansichten.
+
+## Werkzeuge (Audio) — `#/werkzeuge`
+
+Der Bereich **Werkzeuge** bündelt interaktive Audio-Werkzeuge, die die Lern-Bausteine
+praktisch stützen (Klick/Metronom, Play-along-Loops, Stimmgerät, Song-Struktur,
+Riff-/Mehrspur-Rekorder). Referenzbereich wie Stimmungen/Patterns — **NICHT im
+Baustein-Pool, kein Fortschritt**. Hub-View `js/ansichten/werkzeuge.js`, je Werkzeug
+eine eigene View + Route `#/werkzeug/<name>`.
+
+- **Ein gemeinsamer Audio-Kern** (`js/audio/`, themenneutral, DOM-frei) trägt ALLE
+  Werkzeuge — nie sechs getrennte Audio-Implementierungen:
+  - `kontext.js` — **ein** `AudioContext` (Singleton) + Master-Gain + geteilter
+    Rausch-Puffer. `aktiviere()` startet/`resume()`t den Kontext **nur aus einer
+    User-Geste** (Autoplay-Policy); jede Werkzeug-View zeigt bis dahin „Audio
+    aktivieren". `istBereit()` steuert diesen Schritt.
+  - `scheduler.js` — **ein** Lookahead-Scheduler (Muster „A Tale of Two Clocks":
+    25 ms-Tick, 100 ms-Planung gegen `currentTime`). Schritt-basiert und
+    tempo-agnostisch: `schrittDauer(i)→s|null` (konstant = Metronom, steigend =
+    Ramp, aus Tabelle = Tempo-Map; `null` beendet). **Naives `setInterval`/
+    `setTimeout`-Timing für Klang ist unzulässig** (hörbare Drift) — die Audio-Uhr
+    trägt das Timing, der Timer weckt nur zum Nachplanen.
+  - `stimmen.js` — **synthetisierte** Stimmen (`klick`, `kick`, `snare`, …); jede
+    nimmt `ctx`+`ziel` entgegen, damit sie live **und** im `OfflineAudioContext`
+    (WAV-Export) identisch klingt. **Synthese statt Samples** (offline, leicht) —
+    Samples nur, wenn nötig, dann vendored + im SW gecacht.
+  - `wav.js` — rendert eine geplante Klangfolge über `OfflineAudioContext` in einen
+    WAV-Blob (DAW-tauglicher als `MediaRecorder`-WebM/Opus).
+- **Verlinkungs-Konvention Baustein → Werkzeug** (`js/werkzeug-links.js`):
+  Route-Form `#/werkzeug/<name>?<preset>`; Presets sind einfache Query-Parameter,
+  die die View beim Laden liest (`bpm`, `rampe`, später `stil`/`note`). Unbekannte
+  Parameter ignoriert die View — Vorbelegung ist immer optional. `werkzeugeFuer(b)`
+  liefert die Links über zwei Ebenen (explizite ID-Regeln schlagen generische
+  Regeln über `spielziele`/`stil`); die Baustein-Ansicht rendert daraus die
+  „Passendes Werkzeug"-Chips. **Neue Anbindungen NUR hier** — die Werkzeuge kennen
+  die Bausteine nicht.
+- **Persistenz:** Werkzeug-Einstellungen sind vorerst **flüchtiger Modul-State**
+  (wie patterns.js) — das versionierte `zustand.js`-Schema bleibt unangetastet.
+  Echte Persistenz (localStorage für Strukturen, **IndexedDB** für Audio-Blobs)
+  kommt mit dem Song-Struktur-Baukasten und den Rekordern.
+- **SW-Pflege:** neue `js/audio/*`- und `js/ansichten/werkzeug*`-Module gehören in
+  `SHELL` + `CACHE`-Bump (wie jedes Kern-Modul). Zugänglichkeit: tastaturbedienbar,
+  ARIA; Tuner/Klick brauchen **nicht-farbliche** Signale (Zahl/Form, nicht nur Farbe).
 
 ## Neuen Inhalt einbinden (Content-Pipeline)
 
