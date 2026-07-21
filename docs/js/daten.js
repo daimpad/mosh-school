@@ -56,6 +56,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.unterricht.json',
   'data/bausteine.gesang-clean.json',
   'data/bausteine.stil-vertiefung-1.json',
+  'data/bausteine.stil-vertiefung-2.json',
 ];
 
 export async function ladeDaten() {
