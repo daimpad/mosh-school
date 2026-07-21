@@ -24,19 +24,38 @@ const ID_REGELN = {
   mentale_temposteigerung: [{ werkzeug: 'metronom', params: { rampe: '1' } }],
   pre_production_plan: [{ werkzeug: 'metronom' }],
   tracking_reihenfolge: [{ werkzeug: 'metronom' }],
+  // Genre-Groove-Bausteine öffnen den passenden Play-along-Beat vorbelegt.
+  d_beat: [{ werkzeug: 'loops', params: { beat: 'd_beat' } }],
+  blastbeat: [{ werkzeug: 'loops', params: { beat: 'blastbeat' } }],
+  galopp_rhythmus: [{ werkzeug: 'loops', params: { beat: 'thrash_galopp' } }],
+  metalcore_groove: [{ werkzeug: 'loops', params: { beat: 'metalcore_groove' } }],
+  doom_feel: [{ werkzeug: 'loops', params: { beat: 'doom_feel' } }],
 };
+
+// Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
+// in werkzeug-loops.js). Nur diese lösen die generische Loop-Regel aus.
+const LOOP_STILE = new Set([
+  'hardcore', 'crust', 'powerviolence', 'grindcore', 'black_metal', 'death_metal',
+  'thrash', 'metalcore', 'djent', 'deathcore', 'doom', 'sludge', 'stoner_post',
+]);
 
 // Generische Regeln: liefern für einen Baustein passende Werkzeug-Links.
 // Jede Regel bekommt den Baustein und gibt ein Link-Objekt oder null zurück.
 const GENERISCHE_REGELN = [
   // Jede Übung mit dem Spielziel „timing_zum_klick" kann das Metronom öffnen.
   (b) => ((b.spielziele || []).includes('timing_zum_klick') ? { werkzeug: 'metronom', params: { bpm: '160' } } : null),
+  // Bausteine mit einem Genre, für das es einen Loop gibt, öffnen ihn vorbelegt.
+  (b) => {
+    const stil = (b.stil || []).find((s) => LOOP_STILE.has(s));
+    return stil ? { werkzeug: 'loops', params: { stil } } : null;
+  },
 ];
 
 // Verfügbare Werkzeuge (Route + i18n-Schlüssel für Beschriftung). Wächst mit den
 // weiteren PRs (loops, stimmgeraet, struktur, riff-recorder, mehrspur).
 const WERKZEUG_META = {
   metronom: { route: '#/werkzeug/metronom', labelKey: 'wz_metronom_titel' },
+  loops: { route: '#/werkzeug/loops', labelKey: 'wz_loops_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1

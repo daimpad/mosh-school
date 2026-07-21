@@ -1201,5 +1201,18 @@
   "wz_wav_fehler": "Export fehlgeschlagen.",
   "wz_metronom_fuss": "Halte den Pegel angenehm — bei lauten Kopfhörern schützt das dein Gehör.",
   "wz_baustein_titel": "Passendes Werkzeug",
-  "wz_baustein_hinweis": "Übe diesen Baustein mit dem passenden Audio-Werkzeug — schon vorbelegt."
+  "wz_baustein_hinweis": "Übe diesen Baustein mit dem passenden Audio-Werkzeug — schon vorbelegt.",
+  "wz_loops_untertitel": "Synthetische Genre-Beats zum Mitspielen — wähle einen Groove, stell das Tempo ein und leg los. Läuft offline, kein Sample-Download.",
+  "wz_loop_genre": "Genre: {name}",
+  "wz_loop_laeuft": "Läuft: {name}",
+  "wz_loop_genre_wahl": "Beat",
+  "wz_klick_mit": "Klick mit",
+  "wz_klick_solo": "Nur Klick",
+  "wz_beat_d_beat": "D-Beat",
+  "wz_beat_blastbeat": "Blastbeat",
+  "wz_beat_double_bass": "Double-Bass",
+  "wz_beat_metalcore_groove": "Metalcore-Groove",
+  "wz_beat_metalcore_breakdown": "Breakdown",
+  "wz_beat_thrash_galopp": "Thrash-Galopp",
+  "wz_beat_doom_feel": "Doom-Feel"
 }
