@@ -205,6 +205,10 @@ Tokens**, nie harte Farben.
 
 - **`file://` funktioniert nicht** — `fetch()` der JSON braucht HTTP. Immer über einen
   lokalen Server testen.
+- **UI-Texte gehören unter `ui`** in `labels/de.json`: `t('schluessel')` schlägt unter
+  `['ui', schluessel]` nach (nicht am Root). Ein am Root eingefügter Schlüssel wird nie
+  gefunden und rendert als roher Key. Beim Verifizieren auch auf **sichtbaren** Text prüfen
+  (nicht nur „keine Konsolenfehler") — ein fehlgeleitetes Label wirft keinen Fehler.
 - **SW-Wartung:** wird eine Kern-Datei neu hinzugefügt/umbenannt (neues `js/`-Modul, neue
   `data/…json` in `INHALTSDATEIEN`, CSS, Schrift), muss sie in `SHELL` **und** der `CACHE`-Name
   erhöht werden. Baustein-Grafiken (`images/*.png`, falls später ergänzt) werden bewusst NICHT
