@@ -30,6 +30,13 @@ const ID_REGELN = {
   galopp_rhythmus: [{ werkzeug: 'loops', params: { beat: 'thrash_galopp' } }],
   metalcore_groove: [{ werkzeug: 'loops', params: { beat: 'metalcore_groove' } }],
   doom_feel: [{ werkzeug: 'loops', params: { beat: 'doom_feel' } }],
+  // Tuning-/Ton-Bausteine öffnen das Stimmgerät; Tonzentrum-/Gesangs-Bausteine
+  // die Referenzton-Drone vorbelegt.
+  drop_tuning: [{ werkzeug: 'stimmgeraet', params: { tuning: 'drop_d' } }],
+  bass_ton_gear: [{ werkzeug: 'stimmgeraet', params: { tuning: 'bass_standard' } }],
+  duo_bv_tonzentrum: [{ werkzeug: 'stimmgeraet', params: { note: 'E2' } }],
+  duo_gv_tonart_melodie: [{ werkzeug: 'stimmgeraet', params: { note: 'E2' } }],
+  tonhoehe_clean: [{ werkzeug: 'stimmgeraet', params: { note: 'A2' } }],
 };
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
@@ -56,6 +63,7 @@ const GENERISCHE_REGELN = [
 const WERKZEUG_META = {
   metronom: { route: '#/werkzeug/metronom', labelKey: 'wz_metronom_titel' },
   loops: { route: '#/werkzeug/loops', labelKey: 'wz_loops_titel' },
+  stimmgeraet: { route: '#/werkzeug/stimmgeraet', labelKey: 'wz_stimmgeraet_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
