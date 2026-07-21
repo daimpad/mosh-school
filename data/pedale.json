@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "hinweis": "Seed-Katalog für den Pedalboard-Baukasten (#/werkzeug/pedalboard). Referenzbereich wie tunings/patterns — NICHT im Baustein-Pool, kein Fortschritt. Generische Typen, keine Marken/Modelle. position = Rang in der üblichen Signalkette (klein = früh); der sanfte Reihenfolge-Check vergleicht die gebaute Kette damit. instrument: gitarre | bass | beide."
+  },
+  "pedale": [
+    {
+      "id": "tuner", "instrument": "beide", "position": 1,
+      "name": { "de": "Stimmgerät" },
+      "erklaerung": { "de": "Stimmt das Signal und schaltet oft stumm. Gehört ganz an den Anfang der Kette." },
+      "tipp": { "de": "Das erste, was man braucht — auch ohne alles andere." }
+    },
+    {
+      "id": "kompressor", "instrument": "beide", "position": 2,
+      "name": { "de": "Kompressor" },
+      "erklaerung": { "de": "Gleicht Lautstärkeunterschiede aus, gibt Punch und Sustain. Steht früh, vor der Verzerrung." },
+      "tipp": { "de": "Beim Bass oft wichtiger als jede Zerre." }
+    },
+    {
+      "id": "wah", "instrument": "gitarre", "position": 3,
+      "name": { "de": "Wah" },
+      "erklaerung": { "de": "Bewegliches Frequenzfilter per Fußwippe; für Leads und Ausdruck. Meist vor der Verzerrung." },
+      "tipp": { "de": "Sparsam einsetzen, sonst nutzt es sich ab." }
+    },
+    {
+      "id": "boost", "instrument": "beide", "position": 4,
+      "name": { "de": "Boost" },
+      "erklaerung": { "de": "Hebt den Pegel und treibt den Amp oder Verzerrer härter an; strafft den Ton. Vor die Zerre." },
+      "tipp": { "de": "Vor einem schon zerrenden Amp der einfachste Weg zu mehr Biss." }
+    },
+    {
+      "id": "overdrive", "instrument": "beide", "position": 5,
+      "name": { "de": "Overdrive" },
+      "erklaerung": { "de": "Weiche, dynamische Zerre; vor High-Gain beliebt als „Tightener“, der die Bässe strafft." },
+      "tipp": { "de": "Für tighte Rhythmus-Sounds oft der Schlüssel." }
+    },
+    {
+      "id": "distortion", "instrument": "gitarre", "position": 6,
+      "name": { "de": "Distortion" },
+      "erklaerung": { "de": "Kräftige, konstante Verzerrung — der klassische Metal-Zerrer. Kern der Kette." },
+      "tipp": { "de": "Ein guter Distortion kann einen cleanen Amp in Metal-Terrain bringen." }
+    },
+    {
+      "id": "fuzz", "instrument": "beide", "position": 6,
+      "name": { "de": "Fuzz" },
+      "erklaerung": { "de": "Extreme, raue, wollige Zerre mit eigenem Charakter. Oft weit vorne in der Kette." },
+      "tipp": { "de": "Herz vieler Doom- und Sludge-Sounds." }
+    },
+    {
+      "id": "noise_gate", "instrument": "beide", "position": 7,
+      "name": { "de": "Noise Gate" },
+      "erklaerung": { "de": "Schneidet Rauschen und Nebengeräusche in den Pausen ab. Nach der Verzerrung." },
+      "tipp": { "de": "Für tighte Chugs bei High-Gain fast Pflicht." }
+    },
+    {
+      "id": "eq", "instrument": "beide", "position": 8,
+      "name": { "de": "EQ (Equalizer)" },
+      "erklaerung": { "de": "Hebt und senkt Frequenzbänder, formt den Ton gezielt — etwa Mitten für Durchsetzung. Flexibel platzierbar." },
+      "tipp": { "de": "Mitten rein hilft, sich im Bandmix durchzusetzen." }
+    },
+    {
+      "id": "chorus", "instrument": "beide", "position": 9,
+      "name": { "de": "Chorus" },
+      "erklaerung": { "de": "Verbreitert und verdickt den Klang. Hinter der Zerre." },
+      "tipp": { "de": "Im Metal sparsam — für cleane Parts und Doom." }
+    },
+    {
+      "id": "delay", "instrument": "gitarre", "position": 10,
+      "name": { "de": "Delay" },
+      "erklaerung": { "de": "Echo und Wiederholungen; für Leads und Atmosphäre. Ans Ende oder in den Effektweg." },
+      "tipp": { "de": "Hinter, nicht vor die Zerre — sonst matscht es." }
+    },
+    {
+      "id": "reverb", "instrument": "beide", "position": 11,
+      "name": { "de": "Reverb" },
+      "erklaerung": { "de": "Raum und Hall; gibt Tiefe, besonders in Doom und atmosphärischen Parts. Ganz ans Ende." },
+      "tipp": { "de": "Wenig reicht meist — zu viel verwäscht die Tightness." }
+    },
+    {
+      "id": "bass_preamp_di", "instrument": "bass", "position": 8,
+      "name": { "de": "Bass-Preamp / DI" },
+      "erklaerung": { "de": "Formt den Grundton und liefert ein sauberes DI-Signal für PA und Aufnahme. Oft das Herz eines Bass-Boards." },
+      "tipp": { "de": "Für Auftritt und Recording extrem nützlich." }
+    },
+    {
+      "id": "bass_overdrive", "instrument": "bass", "position": 5,
+      "name": { "de": "Bass-Overdrive" },
+      "erklaerung": { "de": "Fügt Zerre hinzu, ohne den Tiefbass zu verlieren; oft mit Clean-Blend." },
+      "tipp": { "de": "Der Blend-Regler hält den Bass fett und fügt trotzdem Biss hinzu." }
+    }
+  ]
+}
