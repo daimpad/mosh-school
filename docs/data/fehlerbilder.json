@@ -1757,6 +1757,231 @@
           "korrektur": "Legt gemeinsam fest, wo die Intensität steigt. Lass den Vers bewusst zurückgenommen und den Refrain am selben Punkt von beiden zünden. Prüft per Aufnahme, ob der Umschlag als eine Bewegung wirkt, und baut den Verlauf bei Bedarf mehrstufig auf."
         }
       }
+    },
+    {
+      "id": "fb_duo_gd_riff_kick",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gd_riff_kick",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die betonten Riff-Anschläge fallen nicht mit den Bassdrum-Schlägen zusammen — statt eines wuchtigen Impulses hört man zwei dicht aufeinanderfolgende Ereignisse. Bei schnelleren Kick-Figuren zerfasert die Kopplung sichtbar.",
+          "ursache": "Es ist nicht geklärt, welche Riff-Akzente auf welche Kicks fallen; die Gitarre hört auf die Snare oder das eigene Zählen statt auf den Fuß. Bei Double-Bass versucht sie oft, jeden Anschlag zu treffen, statt die Akzente zu setzen.",
+          "korrektur": "Lass Drummer und Gitarrist die gemeinsamen Akzente ausdrücklich benennen. Isoliere die Achse — nur Kick und betonte Anschläge, langsam zum Klick — bis Akzent und Kick als ein Impuls verschmelzen. Steigere das Tempo erst, wenn die Kopplung an den Akzenten sicher sitzt."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gd_breaks",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gd_breaks",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei gemeinsamen Stops und Akzenten kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Stop ist unsauber, einer setzt zu früh oder zu spät wieder ein. Genau an der exponierten Stelle stolpert der Part.",
+          "ursache": "Der Puls wird während der Stille nicht gehalten, sondern geschätzt. Länge des Stops und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
+          "korrektur": "Übt nur die zwei Takte um den Break in der Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins einsteigen. Per Aufnahme prüfen, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_gd_tempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_gd_tempo_fuehrung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Tempo ist nicht stabil — bei treibenden Riffs zieht es an. Meist drängt die Gitarre und das Schlagzeug wird mitgezogen; über den Part hinweg wird alles schneller.",
+          "ursache": "Statt beide an derselben Referenz auszurichten, führt die Gitarre aus Aufregung und die Drums folgen. Der Klick wird nicht als neutrale Instanz genutzt.",
+          "korrektur": "Lass beide gleichberechtigt auf den Klick spielen; die Gitarre achtet bewusst darauf, nicht zu drängen. Reduziere das Metronom auf jeden zweiten Schlag und prüfe, ob das Tempo hält. Über eine Aufnahme hören, ob ihr über den Part konstant bleibt."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bv_groove",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bv_groove_phrasierung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Wenn die Gitarre zurücktritt und Bass und Gesang allein tragen, wirkt das Gerüst wacklig — die Stimme sitzt nicht im Groove des Basses, das Timing driftet auseinander.",
+          "ursache": "Die Stimme orientiert sich an einem inneren Metronom statt am hörbaren Groove des Basses; der Bass hält seine Linie nicht stabil genug, als dass die Stimme sich darauf verlassen könnte.",
+          "korrektur": "Lass den Bass eine einfache, sehr stabile Linie zum Klick spielen und die Stimme ihr Timing bewusst am Bass ausrichten, nicht an eigenen Zählzeiten. Nehmt einen Part ohne Gitarre auf und prüft, ob Bass und Stimme zusammen tragfähig klingen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bv_tonzentrum",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bv_tonzentrum",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In clean gesungenen Passagen ohne Gitarre klingt die Melodie schief — einzelne Zieltöne liegen neben der Harmonik, besonders am Phrasenende, obwohl der Gesang sicher intoniert.",
+          "ursache": "Der Bass-Grundton wird nicht als Anker genutzt; Sänger und Bass teilen kein benanntes Tonzentrum, und die Melodie greift Töne außerhalb der zugrunde liegenden Skala.",
+          "korrektur": "Lass den Bass einen Grundton halten und ihn benennen. Die Stimme sucht sichere Zieltöne, beginnend beim Grundton, und tastet sich vor. Erst wenn die Melodie sicher zum Bass sitzt, den Grundton wechseln und das Vorgehen übertragen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_bv_register",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_bv_raum_lassen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Tiefer Bass und tiefe, raue Vocals mischen sich im unteren Mittenbereich zu Brei; beide sind im Zusammenklang nicht mehr getrennt herauszuhören, obwohl beide laut sind.",
+          "ursache": "Beide besetzen denselben Frequenzbereich, ohne die Register bewusst zu trennen — der Bass ohne Anschlag/Mitten, die Stimme über reine Tiefe statt Resonanz und Projektion.",
+          "korrektur": "Lass beide einen Part ohne Gitarre tragen und je einen Parameter verändern: Anschlag und Mitten des Basses, Resonanz und Projektion der Stimme. Vereinbart, wer wo Platz besetzt, und kontrolliert über eine Aufnahme, ob beide klar bleiben."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_dv_silbe",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_dv_akzent_silbe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Betonte Silben, die auf Kick oder Snare sitzen sollen, fallen nicht mit den Schlägen zusammen — der Groove verliert an Druck, weil Stimme und Schlagzeug nebeneinander laufen.",
+          "ursache": "Die Stimme zielt nicht auf denselben Anker wie das Schlagzeug; betonte Silben liegen ungefähr, nicht punktgenau auf Kick oder Snare. Teils sitzt die Betonung auf der falschen Silbe.",
+          "korrektur": "Langsames Tempo, klare Kick- und Snare-Schläge. Lass die betonten Silben zuerst gesprochen exakt auf die Schläge legen, dann leise verzerrt. Per Aufnahme prüfen, ob Silbe und Schlag zusammenfallen — Gesundheitsrahmen: ohne Druck, bei Kratzen stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_dv_puls",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_dv_tempo_anker",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ohne Harmonieinstrument verlieren rhythmisch gesprochene oder geschriene Phrasen die Form — die Stimme hält sich nicht am Puls des Schlagzeugs fest und eiert.",
+          "ursache": "Die Stimme hört nicht bewusst auf Kick und Snare als Raster; der Drummer hält den Puls nicht stabil genug, als dass die Stimme sich verlassen könnte.",
+          "korrektur": "Der Drummer spielt eine einfache, stabile Figur zum Klick; die Stimme platziert ihre Phrasen bewusst auf Kick und Snare. Reduziert den Klick schrittweise und prüft, ob die Form am Drum-Puls stabil bleibt."
+        }
+      }
+    },
+    {
+      "id": "fb_duo_dv_druck",
+      "typ": "fehlerbild",
+      "basis_baustein": "duo_dv_breakdown_druck",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im Breakdown fehlt der Druck: Schlagzeug und Vocals setzen die schweren Akzente nicht gemeinsam, die stärksten Silben liegen neben den Drum-Akzenten, oder es wird durchgängig draufgehalten statt gezielt.",
+          "ursache": "Die gemeinsame Platzierung der Härte ist nicht vereinbart — statt weniger, gemeinsamer Schläge mit Raum dazwischen kommt Dauerbeschuss oder Ungefähres.",
+          "korrektur": "Langsames Breakdown-Muster mit klaren schweren Akzenten. Die Stimme legt ihre stärksten Silben genau darauf, mit Raum dazwischen. Per Aufnahme prüfen, ob die gemeinsamen Schläge Druck erzeugen. Härte aus der Stütze, bei Kratzen stoppen."
+        }
+      }
+    },
+    {
+      "id": "fb_trio_engine",
+      "typ": "fehlerbild",
+      "basis_baustein": "trio_engine_lock",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Zusammenfügen von Bass, Bassdrum und Gitarre verwischt der gemeinsame Attack — statt eines Impulses hört man ein Flattern aus drei dicht beieinanderliegenden Anschlägen, besonders bei höherem Tempo.",
+          "ursache": "Die Gitarre kommt hinzu, ohne sich exakt auf die schon gekoppelte Achse aus Bass und Bassdrum zu legen; nicht alle drei zielen auf denselben Klick-Impuls.",
+          "korrektur": "Schichtweise aufbauen: erst Bass und Bassdrum allein locken, dann die Gitarre auf denselben Impuls legen, ohne den Attack zu verwischen. Langsam zum Klick, per Aufnahme prüfen, ob alle drei als ein Schlag klingen, dann erst steigern."
+        }
+      }
+    },
+    {
+      "id": "fb_band_breakdown",
+      "typ": "fehlerbild",
+      "basis_baustein": "band_gemeinsamer_breakdown",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im gemeinsamen Breakdown sind die Pausen nicht schwarz — ein Instrument klingt nach oder kommt zu spät. Der Part verliert den Druck, den vier gemeinsam gesetzte Akzente erzeugen würden.",
+          "ursache": "Der Breakdown wird nicht von der Rhythmus-Maschine aus gebaut; die Vocals oder ein Instrument zielen nicht auf denselben Anker (Bassdrum). Einer dämpft später ab als die anderen.",
+          "korrektur": "Baut von innen: erst der Trio-Lock, dann legen die Vocals ihre stärksten Silben auf dieselben Akzente. Alle zielen auf die Bassdrum. Langsam üben, bis alle vier zusammen treffen und die Pausen wirklich still sind."
+        }
+      }
+    },
+    {
+      "id": "fb_band_dynamik",
+      "typ": "fehlerbild",
+      "basis_baustein": "band_dynamik_aufbau",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ein geplanter Spannungsaufbau verpufft, weil ihn nicht die ganze Band gemeinsam trägt: Einer zündet den intensiven Part, während andere noch halten — oder umgekehrt. Der Umschlag wirkt halbgar.",
+          "ursache": "Der Umschlagpunkt ist nicht als Bandentscheidung vereinbart; Dynamik wird als individuelle Sache behandelt statt als geteilter Verlauf über Dichte, Härte und Register.",
+          "korrektur": "Legt gemeinsam fest, wo die Intensität steigt. Spielt den ruhigen Part bewusst zurückgenommen und zündet den intensiven am selben Punkt von allen. Per Aufnahme prüfen, ob der Umschlag als eine Bewegung wirkt; bei Bedarf mehrstufig aufbauen."
+        }
+      }
+    },
+    {
+      "id": "fb_band_stops",
+      "typ": "fehlerbild",
+      "basis_baustein": "band_stops_einsaetze",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim gemeinsamen Stop und Wiedereinsatz verpasst einer die Eins — die ganze Band wirkt an der sichtbarsten Stelle unpräzise, obwohl jeder für sich den Part beherrscht.",
+          "ursache": "Während der Stille hält nicht jeder den Puls innerlich; der Wiedereinstieg ist nicht als gemeinsame Bewegung mit klarem Signal vereinbart, sondern wird geschätzt.",
+          "korrektur": "Übt die Stelle isoliert. Alle zählen innerlich weiter; ein klares Signal (Nicken des Drummers oder hörbares Zählen) markiert den Wiedereinstieg. Exakt gemeinsam auf der Eins einsteigen und per Aufnahme prüfen, ob es bei allen vier zusammenfällt."
+        }
+      }
+    },
+    {
+      "id": "fb_riff_zu_part",
+      "typ": "fehlerbild",
+      "basis_baustein": "riff_zu_part_entwickeln",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Part wirkt beliebig — das Riff wird ohne klare Länge aneinandergereiht, wiederholt sich nicht sauber und wirkt eher wie eine Sammlung von Ideen als ein geschlossener Abschnitt.",
+          "ursache": "Es fehlt eine feste Länge (etwa 4 oder 8 Takte) und eine bewusste Variation; das Riff wird gespielt, aber nicht zu einem Part geformt. Manchmal ist der Part auch überladen mit zu vielen Varianten.",
+          "korrektur": "Lege eine feste Länge fest und wiederhole das Riff, bis es sich setzt. Baue genau eine Variation ein (Akzent, Abschluss, Antwortphrase) und lass den Rest weg. Spiele den Part mehrmals am Stück, bis er als geschlossener Abschnitt wirkt."
+        }
+      }
+    },
+    {
+      "id": "fb_uebergang",
+      "typ": "fehlerbild",
+      "basis_baustein": "uebergaenge_arrangieren",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Wechsel von Part A nach B wirkt zufällig oder holprig — die Band trifft den Übergang nicht gemeinsam, und die Eins des neuen Parts wackelt.",
+          "ursache": "Der Typ des Übergangs (Schnitt, Fill, Break, Aufbau) ist nicht bewusst gewählt und nicht gemeinsam vereinbart; jeder trifft die Nahtstelle für sich.",
+          "korrektur": "Legt den Übergang bewusst fest und übt nur die zwei Takte um die Nahtstelle in der Schleife. Spielt A – Übergang – B am Stück, bis der Wechsel gemeinsam sitzt und gewollt wirkt. Vergleicht verschiedene Übergangstypen, um den passenden zu finden."
+        }
+      }
     }
   ]
 }
