@@ -2327,3 +2327,25 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .wz-st-text { font-family: monospace; font-size: 0.82rem; overflow-wrap: anywhere; }
 .wz-metro-map { padding: 0.5rem 0.75rem; border-left: 3px solid var(--primaer); background: var(--primaer-weich); border-radius: var(--radius-klein); font-weight: 600; }
 :root[data-theme="dark"] .wz-metro-map { background: color-mix(in srgb, var(--primaer) 14%, transparent); }
+
+/* === Riff-Recorder ========================================================= */
+.wz-rec-panel { margin: 1rem 0; padding: 1rem; border: 1px solid var(--linie-stark); border-radius: var(--radius); background: var(--flaeche-2); }
+.wz-rec-knopf-zeile { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin: 0.6rem 0 0.2rem; }
+.wz-rec-knopf.aufnahme { background: var(--signal-rot); border-color: var(--signal-rot); }
+.wz-rec-anzeige { display: inline-flex; align-items: center; gap: 0.45rem; font-weight: 700; }
+.wz-rec-punkt { width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--signal-rot); animation: wz-rec-blink 1s steps(2, start) infinite; }
+@keyframes wz-rec-blink { 50% { opacity: 0.2; } }
+@media (prefers-reduced-motion: reduce) { .wz-rec-punkt { animation: none; } }
+.wz-rec-dauer { font-variant-numeric: tabular-nums; }
+.wz-rec-fehler { color: var(--signal-rot-text); min-height: 1.2em; }
+.wz-rec-tempo-neu, .wz-rec-tempo { width: 6rem; padding: 0.4rem 0.5rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+.wz-rec-liste { list-style: none; margin: 0.5rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.wz-rec-clip { border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); padding: 0.7rem 0.85rem; background: var(--flaeche); }
+.wz-rec-clip-kopf { display: flex; align-items: center; gap: 0.6rem; justify-content: space-between; margin-bottom: 0.45rem; }
+.wz-rec-name { flex: 1 1 auto; font-weight: 700; padding: 0.3rem 0.45rem; border: 1px solid transparent; border-radius: var(--radius-klein); background: transparent; color: var(--tinte); }
+.wz-rec-name:hover, .wz-rec-name:focus { border-color: var(--linie-stark); background: var(--flaeche-2); }
+.wz-rec-audio { width: 100%; margin: 0.35rem 0; }
+.wz-rec-meta { margin: 0.4rem 0; }
+.wz-rec-meta label { display: inline-flex; flex-direction: column; gap: 0.2rem; font-size: 0.82rem; font-weight: 600; }
+.wz-rec-notiz-feld { flex: 1 1 12rem; }
+.wz-rec-notiz-feld input { width: 100%; padding: 0.35rem 0.45rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
