@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "hinweis": "Fakten-Daten für den Amp-/Box-Physik-Baukasten (#/werkzeug/ampbox). Referenzbereich wie tunings/patterns — kein Fortschritt. Nur Typen und Zahlen, keine Marken. impedanz_regel: match (Röhre — exakt passend, sonst Schadensgefahr) | min (Transistor — Box-Ohm >= Amp-Mindest) | frei (Modeling — oft direkt ohne Box)."
+  },
+  "bauarten": [
+    { "id": "roehre", "name": { "de": "Röhre" }, "impedanz_regel": "match",
+      "erklaerung": { "de": "Zerrt weich und dynamisch, reagiert auf den Anschlag; schwer, wird warm, braucht Wartung (Röhrenwechsel). Muss immer mit passender Impedanz und niemals ohne Box (Last) betrieben werden." } },
+    { "id": "transistor", "name": { "de": "Transistor (Solid State)" }, "impedanz_regel": "min",
+      "erklaerung": { "de": "Zerrt härter und abrupter, robust, leicht, wartungsarm. Die Box-Impedanz darf die Mindestangabe des Amps nicht unterschreiten." } },
+    { "id": "modeling", "name": { "de": "Modeling (digital)" }, "impedanz_regel": "frei",
+      "erklaerung": { "de": "Bildet Schaltungen digital nach; flexibel, leicht; kann oft direkt (ohne Box) ins Pult oder Interface." } }
+  ],
+  "formate": [
+    { "id": "topteil", "name": { "de": "Topteil + Box" }, "erklaerung": { "de": "Amp und Box getrennt — flexibler und kombinierbar." } },
+    { "id": "combo", "name": { "de": "Combo" }, "erklaerung": { "de": "Amp und Lautsprecher in einem Gehäuse — kompakter." } }
+  ],
+  "signalstufen": [
+    { "id": "vorstufe", "name": { "de": "Vorstufe" }, "erklaerung": { "de": "Formt den Ton und erzeugt über den Gain-Regler die Verzerrung." } },
+    { "id": "endstufe", "name": { "de": "Endstufe" }, "erklaerung": { "de": "Liefert die Lautstärke; Master/Volume regelt hier. Gain (Zerre) und Master (Lautstärke) sind getrennt." } }
+  ],
+  "bauformen": [
+    { "id": "geschlossen", "name": { "de": "geschlossen" }, "erklaerung": { "de": "Tighter, gerichteter Tiefbass, mehr Punch." } },
+    { "id": "offen", "name": { "de": "offen" }, "erklaerung": { "de": "Luftiger und diffuser, weniger Tiefbass — strahlt auch nach hinten ab." } },
+    { "id": "ventiliert", "name": { "de": "ventiliert (Bassreflex)" }, "erklaerung": { "de": "Ein Port stimmt den Tiefton ab und erweitert ihn — vor allem bei Bassboxen." } }
+  ],
+  "bestueckung": {
+    "gitarre": [
+      { "id": "1x12", "name": { "de": "1x12" }, "erklaerung": { "de": "Ein 12-Zoll-Lautsprecher — kompakt, wenig bewegte Luft, weniger Tiefbass und Lautstärke." } },
+      { "id": "2x12", "name": { "de": "2x12" }, "erklaerung": { "de": "Zwei 12er — mehr Membranfläche, mehr Fundament und Lautstärke." } },
+      { "id": "4x12", "name": { "de": "4x12" }, "erklaerung": { "de": "Vier 12er — die klassische Gitarrenwand: viel bewegte Luft, viel Druck." } }
+    ],
+    "bass": [
+      { "id": "4x10", "name": { "de": "4x10" }, "erklaerung": { "de": "Vier 10er — schnell und definiert, viel Membranfläche fürs Bass-Fundament." } },
+      { "id": "8x10", "name": { "de": "8x10" }, "erklaerung": { "de": "Acht 10er — die große Basswand: maximaler Schub und Headroom." } },
+      { "id": "1x15", "name": { "de": "1x15" }, "erklaerung": { "de": "Ein 15er — großes, tiefes Fundament, weniger Höhenbiss." } },
+      { "id": "4x12", "name": { "de": "4x12" }, "erklaerung": { "de": "Vier 12er — Kompromiss aus Tiefe und Definition, auch für Bass genutzt." } }
+    ]
+  },
+  "fakten": {
+    "watt_lautstaerke": { "de": "+3 dB entspricht etwa der doppelten Leistung — kaum hörbar lauter. Als „doppelt so laut“ empfindet man erst rund +10 dB, also etwa die zehnfache Leistung. Ein 100-Watt-Amp ist damit nicht doppelt so laut wie ein 50-Watt-Amp." },
+    "bass_headroom": { "de": "Bass braucht mehr Leistung und sauberen Headroom als Gitarre, weil tiefe Frequenzen mehr Energie verlangen, um dieselbe Lautstärke zu erzeugen — deshalb die größeren Bass-Boxen." },
+    "empfindlichkeit": { "de": "Die Empfindlichkeit (dB SPL bei 1 W / 1 m) sagt, wie laut eine Box je Watt spielt: Eine empfindlichere Box klingt bei gleicher Leistung lauter." }
+  }
+}
