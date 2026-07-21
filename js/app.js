@@ -18,6 +18,7 @@ import { renderWerkzeugStimmgeraet } from './ansichten/werkzeug-stimmgeraet.js';
 import { renderWerkzeugPedalboard } from './ansichten/werkzeug-pedalboard.js';
 import { renderWerkzeugAmpbox } from './ansichten/werkzeug-ampbox.js';
 import { renderWerkzeugStruktur } from './ansichten/werkzeug-struktur.js';
+import { renderWerkzeugRecorder } from './ansichten/werkzeug-recorder.js';
 import { renderKoennenscheck } from './ansichten/koennenscheck.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
@@ -312,6 +313,8 @@ function rendern() {
     renderWerkzeugAmpbox(el, daten, query);
   } else if (segmente[0] === 'werkzeug' && segmente[1] === 'struktur') {
     renderWerkzeugStruktur(el, daten, query);
+  } else if (segmente[0] === 'werkzeug' && segmente[1] === 'recorder') {
+    renderWerkzeugRecorder(el, daten, query);
   } else if (segmente[0] === 'werkzeug') {
     // Noch nicht gebautes Werkzeug → zurück zum Hub (kein Bruch bei Deep-Links).
     renderWerkzeuge(el, daten);
