@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "trainer",
+    "domaene": "unterricht",
+    "hinweis": "Trainer/Unterricht (Lehr-Perspektive): Grundhaltung, Stunde strukturieren, Feedback geben, Schüler motivieren, Gesundheit vermitteln, Gehör & Stimme langfristig schützen. Sechs Reflexions-Bausteine mit kompetenzstufe trainer — orthogonal zur Könnensstufe: sie erscheinen in der Themen-Ansicht und im Individualpfad NUR bei aktivem Trainer-Modus, immer per Deep-Link. Domänen mentales/koerper. Gesundheitsrahmen zentral in gesundheit_vermitteln und gehoer_stimme_langfristig. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "unterrichten_grundhaltung",
+      "anzeigetitel": {
+        "de": "Unterrichten: die Grundhaltung"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Du unterrichtest einen Menschen, nicht nur ein Instrument. Die Grundhaltung entscheidet über den Erfolg mehr als jede Methode: Hol den Schüler dort ab, wo er steht, mit Geduld und ohne Bloßstellen. Was für dich selbstverständlich ist, kann für ihn eine echte Hürde sein.\n\nDas Kostbarste, das ein Schüler mitbringt, ist seine Motivation — schütze sie. Orientiere dich an seinen Zielen, nicht an deinen: Wer ein bestimmtes Riff spielen will, lernt an diesem Riff schneller als an einer abstrakten Übung. Zeige vor, lass ausprobieren, gib Raum zum eigenen Entdecken, statt jeden Schritt vorzugeben.\n\nMetal-Unterricht heißt auch: Technik und Sicherheit von Anfang an mit der Begeisterung verbinden, die dich selbst zum Instrument gebracht hat. Ein Schüler, der sich ernst genommen fühlt und Fortschritt erlebt, bleibt dabei."
+      },
+      "reflexionsaufgabe": {
+        "de": "Holst du den Schüler dort ab, wo er steht — und orientierst du dich an seinen Zielen statt an deinen? Wie schützt du seine Motivation, statt sie mit Kritik oder Überforderung zu untergraben? Und wie viel Raum lässt du ihm zum eigenen Ausprobieren, statt jeden Schritt vorzugeben?"
+      }
+    },
+    {
+      "id": "stunde_strukturieren",
+      "anzeigetitel": {
+        "de": "Eine Unterrichtsstunde strukturieren"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "unterrichten_grundhaltung"
+      ],
+      "erklaerteil": {
+        "de": "Eine gute Unterrichtsstunde hat einen roten Faden. Ein bewährter Aufbau: kurz aufwärmen, das Wichtigste der letzten Stunde auffrischen, einen neuen Fokus einführen, ihn gemeinsam anwenden und mit einer klaren, machbaren Hausaufgabe schließen.\n\nDer häufigste Fehler ist, zu viel auf einmal zu wollen. Ein Schüler behält pro Stunde nur wenig — lieber eine Sache wirklich verstanden als fünf angerissen. Baue die Stunde so, dass der Schüler mit einem kleinen Erfolgserlebnis und einer konkreten Aufgabe geht, nicht mit einem Berg Überforderung.\n\nStruktur heißt nicht Starrheit: Wenn ein Schüler an einer Stelle brennt oder hängt, darfst du umplanen. Aber ein grober Plan vor der Stunde verhindert, dass die Zeit im Ungefähren verpufft."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hat deine Stunde einen Aufbau (Aufwärmen, Auffrischen, ein neuer Fokus, Anwenden, Hausaufgabe)? Willst du eher zu viel auf einmal — und was ist die EINE Sache, die der Schüler heute wirklich mitnehmen soll? Und wie sorgst du dafür, dass er mit einem Erfolgserlebnis und einer klaren Aufgabe geht?"
+      }
+    },
+    {
+      "id": "feedback_geben",
+      "anzeigetitel": {
+        "de": "Feedback geben, das weiterbringt"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "unterrichten_grundhaltung"
+      ],
+      "erklaerteil": {
+        "de": "Feedback ist das wichtigste Werkzeug im Unterricht — und leicht falsch dosiert. Gutes Feedback ist konkret und richtet sich an die Stelle im Spiel, nicht an die Person: nicht das war schlecht, sondern hier kommt der Anschlag zu spät. So weiß der Schüler, was er ändern kann, ohne sich entmutigt zu fühlen.\n\nBalance ist entscheidend: Ehrliche Korrektur braucht es, aber sie wirkt nur, wenn der Schüler auch hört, was schon funktioniert. Beides gehört zusammen, ohne dass daraus ein starres Schema wird. Beziehe den Schüler ein — lass ihn sich selbst einschätzen, etwa über eine Aufnahme; wer den eigenen Fehler selbst hört, korrigiert ihn nachhaltiger.\n\nUnd wie beim eigenen Üben gilt: Korrigiere die Ursache, nicht das Symptom. Ein ermutigender Ton, der trotzdem klar benennt, hält die Motivation hoch und den Fortschritt in Gang."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist dein Feedback konkret und an der Stelle im Spiel statt an der Person? Balancierst du ehrliche Korrektur mit dem, was schon funktioniert — und beziehst du den Schüler ein, sodass er sich selbst einschätzt (z. B. per Aufnahme)? Und gehst du der Ursache nach statt nur dem Symptom?"
+      }
+    },
+    {
+      "id": "motivation_schueler",
+      "anzeigetitel": {
+        "de": "Schüler motivieren & Dranbleiben fördern"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "unterrichten_grundhaltung"
+      ],
+      "erklaerteil": {
+        "de": "Motivation ist der Treibstoff des Lernens — und sie lässt sich fördern. Am stärksten wirkt, was von innen kommt: Ein Schüler, der an einem Song arbeitet, den er liebt, übt von allein mehr als für jede Pflichtübung. Knüpfe den Stoff an das, was ihn begeistert.\n\nErreichbare Ziele und sichtbarer Fortschritt halten dabei: Zerlege Großes in kleine Schritte, feiere kleine Erfolge und mach Fortschritt greifbar, etwa über Aufnahmen von früher und heute. Gib dem Schüler Autonomie — Mitbestimmung, woran gearbeitet wird — statt alles vorzuschreiben.\n\nFrustration und Plateaus gehören dazu; benenne sie offen, damit der Schüler sie nicht für persönliches Versagen hält. Der größte Fehler ist, einem Schüler die Freude am Instrument durch Druck oder Dauerkritik auszutreiben. Wer gern spielt, bleibt dabei — und wird dadurch gut."
+      },
+      "reflexionsaufgabe": {
+        "de": "Knüpfst du den Stoff an das, was den Schüler wirklich begeistert (seine Songs, sein Genre)? Wie machst du Fortschritt sichtbar und feierst kleine Erfolge, und wie viel Mitbestimmung gibst du ihm? Und wie gehst du mit Frustration und Plateaus um, ohne ihm die Freude am Spielen zu nehmen?"
+      }
+    },
+    {
+      "id": "gesundheit_vermitteln",
+      "anzeigetitel": {
+        "de": "Gesundheit vermitteln: sichere Technik von Anfang an"
+      },
+      "domaene": [
+        "koerper",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "unterrichten_grundhaltung"
+      ],
+      "erklaerteil": {
+        "de": "Als Lehrperson trägst du Verantwortung für die Gesundheit deiner Schüler — und die entscheidet sich in den ersten Stunden. Was sich früh einschleift, bleibt: Deshalb gehören Aufwärmen, entspannte Haltung, Gehörschutz und die Stoppregel bei Schmerz von Anfang an dazu, nicht als Nachtrag für Fortgeschrittene.\n\nDu wirkst vor allem als Vorbild: Wenn du selbst Gehörschutz trägst, aufwärmst und bei Verspannung pausierst, übernimmt der Schüler das. Bremse den verständlichen Ehrgeiz, das Tempo zu früh hochzuschrauben — sauberes, lockeres Spiel schützt vor Überlastung und klingt am Ende besser.\n\nBesonders im Gesang: Vermittle, dass Verzerrung aus Luft und Resonanz entsteht, nie aus Pressen, und dass Kratzen oder Schmerz ein sofortiges Stoppsignal ist. Wo Beschwerden auftreten oder deine Kompetenz endet, verweise ohne Zögern an Fachleute — Ärztin, HNO-Praxis oder eine Gesangslehrkraft."
+      },
+      "reflexionsaufgabe": {
+        "de": "Vermittelst du Aufwärmen, Haltung, Gehörschutz und die Stoppregel von der ersten Stunde an — und lebst du sie selbst vor? Wie bremst du den Ehrgeiz, das Tempo zu früh hochzuschrauben? Und ab wann verweist du bei Beschwerden (gerade beim Gesang) an Ärztin, HNO oder eine spezialisierte Lehrkraft?"
+      }
+    },
+    {
+      "id": "gehoer_stimme_langfristig",
+      "anzeigetitel": {
+        "de": "Gehör & Stimme langfristig schützen"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "gesundheit_vermitteln"
+      ],
+      "erklaerteil": {
+        "de": "Ein Instrument, das ein Leben lang halten soll, braucht Pflege in Jahrzehnten gedacht — das gilt fürs Gehör wie für die Stimme. Beide Schäden summieren sich unbemerkt und sind oft nicht heilbar: Lärmschwerhörigkeit und Tinnitus ebenso wie chronische Stimmprobleme.\n\nAls Lehrperson pflanzt du lebenslange Gewohnheiten: Gehörschutz selbstverständlich bei jeder lauten Situation, disziplinierte Lautstärke im Proberaum und auf der Bühne, für Sängerinnen und Sänger konsequentes Ein- und Aussingen und echte Erholung zwischen Belastungen. Ein einzelner sehr lauter Abend oder eine durchgeschriene Probe kann bereits Schaden anrichten.\n\nSchule das Hinhören auf Warnzeichen — Klingeln, dumpfes Hören, Heiserkeit, die nicht weggeht — und die Haltung, früh zur HNO-Praxis oder Gesangslehrkraft zu gehen, statt es auszusitzen. Wer sein Gehör und seine Stimme über Jahrzehnte schützt, kann sein Leben lang spielen und singen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Denkst du Gehör- und Stimmschutz in Jahrzehnten und pflanzt lebenslange Gewohnheiten (Gehörschutz, Lautstärkedisziplin, Ein- und Aussingen, Erholung)? Wie schulst du das Hinhören auf Warnzeichen wie Tinnitus oder anhaltende Heiserkeit? Und vermittelst du die Haltung, früh zur HNO oder Gesangslehrkraft zu gehen, statt Beschwerden auszusitzen?"
+      }
+    }
+  ]
+}
