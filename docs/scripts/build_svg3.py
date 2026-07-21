@@ -1110,6 +1110,60 @@ S["postmetal_textur_schichten"] = [
     ARC(60, 42, 30, 20, 160, 2),
 ]
 
+# ==================== KÖRPER / ATHLETIK-VERTIEFUNG ====================
+# Schlaf: aktive Welle klingt aus (Hüllkurve fällt) und geht in eine ruhige
+# flache Linie über — Herunterfahren zur Erholung.
+S["schlaf_regeneration"] = [
+    P(wavepath(14, 70, 60, 16, 2.0, step=2.0, env=lambda t: 1.0 - 0.8 * t), 3),
+    L(72, 60, 106, 60, 3),
+]
+# Ernährung/Hydration: ein Tropfen mit innerer Wasserlinie — Flüssigkeit/Brennstoff.
+S["ernaehrung_hydration"] = [
+    P("M60,30 C78,54 75,72 60,80 C45,72 42,54 60,30 Z", 3),
+    P(wavepath(48, 72, 62, 3, 1.5, step=2.0), 2),
+]
+# Rumpfkraft: eine tragende, gefüllte Säule (Rumpf) mit Kopfmarker auf breiter,
+# stabiler Basis.
+S["rumpf_kraft_stabilitaet"] = [
+    RECT(52, 32, 16, 54, filled=True),
+    L(60, 32, 60, 22, 3), C(60, 17, 5, 2.5),
+    L(28, 92, 92, 92, 5),
+]
+# Mobilität: ein Gelenk (Kreis) mit umlaufenden Rotationsbögen und Pfeilspitze —
+# kontrollierte Beweglichkeit.
+S["mobilitaet_routine"] = [
+    C(60, 60, 8, 3),
+    ARC(60, 60, 22, 20, 160, 2.5),
+    ARC(60, 60, 22, 200, 340, 2.5),
+    TRI([(82, 57), (82, 69), (91, 63)]),
+]
+# Headbangen: Pendel aus einem Nacken-Drehpunkt, zwei Kopf-Positionen und ein
+# Schwungbogen unten — Bewegung aus dem Schwung, nicht aus dem Ruck.
+S["headbangen_nacken"] = [
+    C(60, 28, 4, fill=True),
+    L(60, 28, 40, 72, 3), L(60, 28, 80, 72, 3),
+    C(40, 78, 6, 3), C(80, 78, 6, 3),
+    ARC(60, 28, 50, 233, 307, 2),
+]
+# Verletzungs-Reha: Kurve fällt in eine Ruhe-Plateau-Senke (Verletzung/Pause)
+# und steigt dann dosiert wieder an — Rückkehr in Schritten.
+S["verletzung_reha_rueckkehr"] = [
+    P("M14,46 L40,46 L52,86 L72,86 L92,58 L106,52", 3),
+    C(62, 86, 3, fill=True),
+]
+# Deload/Periodisierung: gefüllte Last-Balken steigen an, brechen zum Deload ein
+# und bauen wieder auf — gesteuerte Belastung über Wochen.
+S["deload_periodisierung"] = [L(12, 92, 108, 92, 2)]
+for x, h in zip((20, 32, 44, 56, 68, 80, 92), (22, 32, 44, 54, 18, 32, 44)):
+    S["deload_periodisierung"].append(RECT(x - 4, 92 - h, 8, h, filled=True))
+# Abwärmen: aktive Welle klingt in eine flache Ruhelinie aus, darunter ein
+# ruhiger Atembogen — bewusstes Herunterfahren.
+S["abwaermen_koerper"] = [
+    P(wavepath(14, 76, 54, 15, 3.0, step=2.0, env=lambda t: 1.0 - 0.7 * t), 3),
+    L(78, 54, 106, 54, 3),
+    ARC(60, 82, 30, 200, 340, 2),
+]
+
 TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnung",
                 "doom_vocals_getragen", "doom_harmonik", "doom_dramaturgie",
                 "doom_sound_gewicht", "doom_band_zeitgefuehl",
@@ -1160,7 +1214,10 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
                 "grind_sound_buzzsaw", "grind_ethos_humor", "grind_vocals_extrem",
                 "deathcore_downtempo", "deathcore_intro_atmosphaere", "deathcore_gesang_ausdauer",
                 "djent_gitarre_ambient", "djent_solo_lead", "djent_studio_produktion",
-                "stoner_groove_swing", "stoner_jam", "postmetal_textur_schichten"]
+                "stoner_groove_swing", "stoner_jam", "postmetal_textur_schichten",
+                "schlaf_regeneration", "ernaehrung_hydration", "rumpf_kraft_stabilitaet",
+                "mobilitaet_routine", "headbangen_nacken", "verletzung_reha_rueckkehr",
+                "deload_periodisierung", "abwaermen_koerper"]
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
