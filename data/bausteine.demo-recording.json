@@ -1,0 +1,171 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "demo-recording",
+    "hinweis": "DIY-Demo & Heim-Recording: von „Warum eine Demo?“ über Grundausstattung, Tracking-Reihenfolge, sauberes Signal, DIY-Drums und Mischen bis Veröffentlichen. Einsteiger-Reflexionen plus zwei fortgeschrittene (Drums aufnehmen, Mischen). Domänen Ausrüstung/Mentales/Theorie/Schlagzeug. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "demo_warum_wozu",
+      "anzeigetitel": {
+        "de": "Warum eine Demo?"
+      },
+      "domaene": [
+        "mentales",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Eine Demo ist die erste Aufnahme, mit der eine Band nach außen tritt — sie muss kein Studioalbum sein. In der DIY-Szene erfüllt sie handfeste Zwecke: Sie bringt Auftritte, weil Veranstalter hören wollen, was ihr macht; sie teilt eure Musik; und sie lässt euch selbst zum ersten Mal nüchtern hören, wie ihr klingt.\n\nDer wichtigste Grundsatz: Eine raue Demo, die existiert, ist mehr wert als eine perfekte, die nie fertig wird. Die Szene lebt vom Selbermachen; ein ehrlicher, energischer Rohmix mit Charakter schlägt sterile Perfektion. Setzt euch ein erreichbares Ziel, statt auf Studiobedingungen zu warten, die ihr nicht habt.\n\nRealistische Erwartungen gehören dazu: Eure erste Aufnahme wird Schwächen haben, und das ist normal. Sie zu machen ist der Lernschritt, nicht das Endprodukt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wozu wollt ihr eure Demo — Auftritte, Teilen, euch selbst hören? Welches erreichbare Ziel setzt ihr euch, statt auf Studiobedingungen zu warten, die ihr nicht habt? Und woran erinnert ihr euch, wenn der Perfektionismus zuschlägt: dass eine fertige raue Demo mehr wert ist als eine perfekte, die nie erscheint?"
+      }
+    },
+    {
+      "id": "recording_grundausstattung",
+      "anzeigetitel": {
+        "de": "Grundausstattung fürs Heim-Recording"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Heim-Recording braucht heute erstaunlich wenig: einen Rechner mit einer Aufnahme-Software (DAW), von denen es kostenlose und günstige gibt; ein Audio-Interface, das Mikrofon und Instrument in den Rechner bringt; ein Mikrofon; einen Kopfhörer zum Abhören; und Kabel. Damit ist eine Demo machbar.\n\nEin robustes dynamisches Mikrofon ist der vielseitigste Einstieg — der Klassiker für Gitarrenboxen und Gesang ist seit Jahrzehnten das SM57 und seine Verwandten, günstig und praktisch unkaputtbar. Vollständigkeit schlägt Hochwertigkeit: lieber mit einfachem Gerät aufnehmen als auf teures warten.\n\nVieles lässt sich teilen oder gebraucht beschaffen. Überlegt als Band, was ihr gemeinsam anschafft und in welcher Reihenfolge — Interface und ein Mikrofon zuerst, der Rest nach Bedarf."
+      },
+      "reflexionsaufgabe": {
+        "de": "Was habt ihr schon, was fehlt für eine erste Aufnahme (Rechner mit DAW, Interface, Mikrofon, Kopfhörer, Kabel)? Was schafft ihr gemeinsam an, was lässt sich teilen oder gebraucht beschaffen? Und in welcher Reihenfolge investiert ihr, statt alles auf einmal zu wollen?"
+      },
+      "voraussetzungen": [
+        "demo_warum_wozu"
+      ]
+    },
+    {
+      "id": "tracking_reihenfolge",
+      "anzeigetitel": {
+        "de": "Was zuerst tracken"
+      },
+      "domaene": [
+        "ausruestung",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Beim mehrspurigen Aufnehmen hat sich eine Reihenfolge bewährt: zuerst ein Klick und ein Scratch-Track als Orientierung, dann das Schlagzeug, dann der Bass, dann die Gitarren, zuletzt die Vocals. So baut jede Spur auf einem stabilen Fundament auf.\n\nDas Schlagzeug kommt früh, weil es das rhythmische Fundament ist — alles andere richtet sich danach. Ein Scratch-Track (eine grobe Gitarren- oder Gesangsaufnahme als Leitfaden) gibt dem Drummer die Struktur des Songs, während er zum Klick spielt. Diese Scratch-Spuren werden später ersetzt.\n\nZum Klick zu spielen ist beim Aufnehmen fast Pflicht, weil sich die Spuren sonst nicht sauber übereinanderlegen lassen. Hier zahlt sich die Pre-Production aus: ein festes Tempo, das ihr vorher bestimmt habt."
+      },
+      "reflexionsaufgabe": {
+        "de": "In welcher Reihenfolge nehmt ihr auf, und warum kommt das Schlagzeug zuerst? Habt ihr einen Scratch-Track als Leitfaden für den Drummer vorbereitet? Und steht euer Tempo zum Klick fest, damit sich die Spuren sauber übereinanderlegen lassen?"
+      },
+      "voraussetzungen": [
+        "recording_grundausstattung",
+        "metronom_prinzip"
+      ]
+    },
+    {
+      "id": "signal_aufnehmen",
+      "anzeigetitel": {
+        "de": "Ein sauberes Signal aufnehmen"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Wie der Klang in den Rechner kommt, entscheidet über die halbe Aufnahme. Für verzerrte Gitarren und Bässe gibt es zwei Wege: ein Mikrofon vor der Box — der Klassiker ist ein dynamisches Mikro nah am Rand der Lautsprecher-Kalotte — oder ein DI-Signal direkt aus dem Instrument, das später mit einer Amp-Simulation bearbeitet wird. Für Vocals genügt dasselbe dynamische Mikrofon, dicht besungen.\n\nEntscheidend ist die Aussteuerung: Das Signal soll kräftig, aber nie übersteuert sein. Digitales Clipping — wenn der Pegel die Obergrenze reißt — klingt hart und ist nicht reparierbar. Lieber etwas leiser aufnehmen und später anheben.\n\nKleine Änderungen der Mikrofonposition verändern den Klang stark. Ein paar Minuten Probieren vor der Aufnahme sparen später viel Mühe im Mix."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie holt ihr euren Klang in den Rechner — Mikrofon vor der Box oder DI mit Amp-Simulation? Achtet ihr auf einen kräftigen, aber nie übersteuerten Pegel, damit nichts clippt? Und nehmt ihr euch die paar Minuten, die Mikrofonposition vor der Aufnahme zu probieren?"
+      },
+      "voraussetzungen": [
+        "recording_grundausstattung"
+      ]
+    },
+    {
+      "id": "drums_aufnehmen_diy",
+      "anzeigetitel": {
+        "de": "Schlagzeug aufnehmen im DIY-Rahmen"
+      },
+      "domaene": [
+        "ausruestung",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Das Schlagzeug ist der schwierigste Teil einer Heimaufnahme, weil es viele laute Schallquellen auf engem Raum vereint. Mit begrenzten Mitteln gibt es pragmatische Wege: Eine minimale Mikrofonierung aus einem Bassdrum-Mikro und ein bis zwei Overheads liefert oft schon ein brauchbares, ehrliches Bild des ganzen Kits.\n\nWo kein gutes Raum- oder Equipment-Setup möglich ist, sind Alternativen legitim: Programmierte Drums oder das Ersetzen einzelner Spuren durch Samples sind in vielen Metal-Produktionen üblich und kein Makel. Wichtiger als die Methode ist ein sauberes, tightes Spiel zum Klick — das entscheidet über die Aufnahme mehr als die Mikrofonzahl.\n\nWählt den Weg, der zu euren Mitteln passt, statt an einem Ideal zu scheitern, das ihr nicht umsetzen könnt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Welcher Weg passt zu euren Mitteln — eine minimale Mikrofonierung (Bassdrum plus Overheads), programmierte Drums oder eine Mischung? Ist euer Raum und Equipment für echte Drum-Aufnahmen geeignet, oder ist eine Alternative ehrlicher? Und ist das Drum-Spiel tight genug zum Klick, damit die Aufnahme trägt?"
+      },
+      "voraussetzungen": [
+        "tracking_reihenfolge",
+        "drums_recording"
+      ]
+    },
+    {
+      "id": "mischen_grundlagen",
+      "anzeigetitel": {
+        "de": "Mischen: die Grundlagen"
+      },
+      "domaene": [
+        "ausruestung",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Im Mix werden die Spuren zu einem Ganzen: Lautstärken, Verteilung im Stereobild und das Freiräumen von Frequenzen, damit sich Instrumente nicht maskieren. Für eine Demo braucht es keine Perfektion, aber ein paar Prinzipien tragen weit.\n\nBeginnt mit den Lautstärken — die wichtigste Entscheidung —, verteilt Instrumente im Panorama (etwa zwei Gitarren nach links und rechts) und nehmt tiefe Frequenzen aus Spuren heraus, die sie nicht brauchen, damit der Bassbereich frei bleibt. Der häufigste Anfängerfehler ist Überbearbeitung: zu viele Effekte, zu viel Kompression. Weniger, aber gezielt, klingt besser.\n\nEin Referenz-Song eurer Lieblingsbands im selben Genre hilft, den eigenen Mix einzuordnen: Vergleicht Balance und Klang, statt im luftleeren Raum zu regeln."
+      },
+      "reflexionsaufgabe": {
+        "de": "Habt ihr zuerst die Lautstärken im Griff, bevor ihr an Effekte geht? Verteilt ihr die Instrumente sinnvoll im Stereobild und haltet den tiefen Bereich frei? Und nutzt ihr einen Referenz-Song, um euren Mix einzuordnen — und widersteht der Versuchung, alles zu überbearbeiten?"
+      },
+      "voraussetzungen": [
+        "signal_aufnehmen",
+        "produktionswissen_frequenz",
+        "klangregie_arrangement"
+      ]
+    },
+    {
+      "id": "demo_veroeffentlichen",
+      "anzeigetitel": {
+        "de": "Demo teilen & veröffentlichen"
+      },
+      "domaene": [
+        "mentales",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ist die Demo fertig, geht es ums Teilen — und auch das ist in der DIY-Szene selbst gemacht. Plattformen wie Bandcamp oder die üblichen Streaming-Dienste (über einfache Digital-Vertriebe) bringen eure Musik online; ein Titelbild und ein paar Zeilen zur Band gehören dazu.\n\nDer wirksamste Weg zu Auftritten führt über direkte Kontakte: Schickt die Demo an Veranstalter, andere Bands und lokale Kollektive, freundlich und konkret. In einer kleinen Szene zählen Verlässlichkeit und echtes Interesse mehr als Hochglanz. Eine Demo, die bei den richtigen Leuten landet, öffnet mehr Türen als eine, die nur online steht.\n\nTeilt sie auch dort, wo eure Szene ohnehin ist — nicht als Werbung, sondern als das, was sie ist: eure erste Aufnahme, mit der ihr Teil des Ganzen werdet."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wo veröffentlicht ihr eure Demo (Bandcamp, Streaming über einen Digital-Vertrieb), und habt ihr ein Titelbild und ein paar Zeilen zur Band? An welche Veranstalter, Bands und Kollektive schickt ihr sie direkt und persönlich? Und wie werdet ihr damit Teil eurer Szene, statt nur online zu stehen?"
+      },
+      "voraussetzungen": [
+        "demo_warum_wozu"
+      ]
+    }
+  ]
+}
