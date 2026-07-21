@@ -1,0 +1,183 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "koerper-athletik",
+    "hinweis": "Körper/Athletik-Vertiefung: acht Gesundheits-/Athletik-Bausteine, die reale Lücken der Körper-Domäne schließen (Schlaf, Ernährung/Hydration, Rumpfkraft, Mobilität, Headbangen/Nacken, Verletzungs-Reha, Deload/Periodisierung, Abwärmen). Reine Reflexions-Bausteine wie die gesamte Körper-Domäne. Durchgehend Gesundheitsrahmen (Prinzip statt Dosierung, kein Training in den Schmerz, bei Warnzeichen ärztliche/physiotherapeutische Abklärung). Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "schlaf_regeneration",
+      "anzeigetitel": {
+        "de": "Schlaf: die unsichtbare Übungseinheit"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Fortschritt entsteht nicht beim Spielen selbst, sondern in der Erholung danach — und der wichtigste Erholungsmotor ist Schlaf. Muskeln, Sehnen und Nervensystem verarbeiten das Geübte im Schlaf; wer chronisch zu wenig schläft, lernt langsamer, spielt ungenauer und verletzt sich leichter.\n\nFür Spielende heißt das konkret: regelmäßige Zeiten, genug Stunden, und nach intensiven Sessions oder Shows dem Körper bewusst Erholung gönnen. Gerade auf Tour oder nach späten Gigs ist Schlaf das Erste, was leidet — und das Erste, was die Leistung senkt.\n\nGesundheitsrahmen: Schlaf ist kein Luxus, sondern Teil des Trainings. Anhaltende Erschöpfung, Schmerzen, die nicht abklingen, oder ständige Heiserkeit sind Warnzeichen — dann mehr Erholung einplanen und bei Bedarf ärztlichen Rat suchen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Behandelst du Schlaf als Teil deines Übens — mit regelmäßigen Zeiten und genug Stunden, besonders nach intensiven Sessions oder Shows? Merkst du, wie sich Präzision und Ausdauer bei zu wenig Schlaf verschlechtern? Und nimmst du anhaltende Erschöpfung als Warnzeichen ernst, statt sie zu überspielen?"
+      }
+    },
+    {
+      "id": "ernaehrung_hydration",
+      "anzeigetitel": {
+        "de": "Ernährung & Hydration fürs Spielen"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Energie und eine belastbare Stimme kommen auch aus dem, was du isst und trinkst. Für lange Proben, Shows und intensives Üben braucht der Körper stabile Energie statt kurzer Zucker-Spitzen, und Muskeln wie Stimme brauchen ausreichend Flüssigkeit.\n\nPraktisch heißt das: nicht mit leerem Tank in die Belastung starten, über den Tag verteilt genug trinken (Wasser, nicht erst bei Durst), und wissen, dass Alkohol, viel Koffein und sehr späte, schwere Mahlzeiten Schlaf, Stimme und Konzentration belasten. Für Sängerinnen und Sänger ist Hydration besonders wichtig — trockene Schleimhäute machen die Stimme verletzlich.\n\nGesundheitsrahmen: Das sind Prinzipien, keine strenge Diät. Bei besonderen Bedürfnissen, Beschwerden oder gesundheitlichen Fragen sind eine Ärztin oder eine Ernährungsfachkraft die richtige Adresse."
+      },
+      "reflexionsaufgabe": {
+        "de": "Startest du Proben und Shows mit stabiler Energie und ausreichend Flüssigkeit, statt mit leerem Tank oder auf Zucker-Spitzen? Trinkst du über den Tag verteilt genug — gerade wenn du singst? Und kennst du, was deinen Schlaf und deine Stimme belastet (Alkohol, viel Koffein, späte schwere Mahlzeiten)?"
+      }
+    },
+    {
+      "id": "rumpf_kraft_stabilitaet",
+      "anzeigetitel": {
+        "de": "Rumpfkraft: stabil über das ganze Set"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "athletik_grundlage"
+      ],
+      "erklaerteil": {
+        "de": "Ein stabiler Rumpf (Bauch, Rücken, Beckenboden) ist die Basis für alles, was Arme, Hände und Stimme tun. Beim langen Stehen mit der Gitarre, beim kraftvollen Drumming oder beim Singen aus der Stütze arbeitet der Rumpf ständig mit — ist er schwach, kompensieren Schultern, Nacken und Hals, und genau dort entstehen Verspannungen und Überlastung.\n\nRumpfkraft heißt nicht Sixpack, sondern belastbare Tiefenmuskulatur und eine aufrechte, tragfähige Haltung über ein ganzes Set. Ein paar gezielte, regelmäßige Übungen (Planks, Rückenketten, Atem- und Beckenboden-Arbeit) zahlen sich direkt am Instrument aus: stabiler Stand, freiere Atmung, weniger Nackenlast.\n\nGesundheitsrahmen: langsam und mit sauberer Technik aufbauen, nicht in den Schmerz trainieren. Bei Rückenproblemen oder Unsicherheit über die Ausführung eine Physiotherapie oder qualifizierte Anleitung hinzuziehen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist dir bewusst, dass ein stabiler Rumpf die Basis für freie Arme, Hände und Stütze ist — und dass ein schwacher Rumpf Nacken und Schultern überlastet? Baust du ein paar gezielte Rumpfübungen regelmäßig ein? Und gehst du dabei sauber und schmerzfrei vor (bei Rückenproblemen: fachliche Anleitung)?"
+      }
+    },
+    {
+      "id": "mobilitaet_routine",
+      "anzeigetitel": {
+        "de": "Mobilität: Handgelenk, Schulter, Nacken"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "koerperhaltung_ergonomie",
+        "athletik_grundlage"
+      ],
+      "erklaerteil": {
+        "de": "Aufwärmen bereitet auf eine Session vor — Mobilitätsarbeit hält die Gelenke langfristig beweglich und beschwerdefrei. Für Spielende sind drei Zonen besonders belastet: Handgelenke und Unterarme, Schultern und der Nacken. Regelmäßige, sanfte Mobilität dort beugt genau den Beschwerden vor, die vom vielen Spielen kommen.\n\nEine kurze tägliche Routine reicht: kontrollierte Kreise und Dehnungen für Handgelenke und Unterarme, Schulterkreisen und Brustöffnung gegen die nach vorn gezogene Spielhaltung, sanfte Nackenmobilität. Wichtig ist Regelmäßigkeit und Sanftheit, nicht Intensität — Mobilität ist Pflege, kein Kraftakt.\n\nGesundheitsrahmen: nie in den Schmerz dehnen, langsam und kontrolliert bewegen. Bei Kribbeln, Taubheit oder anhaltenden Gelenkbeschwerden nicht durcharbeiten, sondern ärztlich oder physiotherapeutisch abklären."
+      },
+      "reflexionsaufgabe": {
+        "de": "Pflegst du die besonders belasteten Zonen (Handgelenk/Unterarm, Schulter, Nacken) mit einer kurzen, regelmäßigen Mobilitätsroutine — über das reine Aufwärmen hinaus? Bewegst du dabei sanft und kontrolliert, statt in den Schmerz zu dehnen? Und nimmst du Kribbeln oder Taubheit als Signal zum Abklären, nicht zum Durcharbeiten?"
+      }
+    },
+    {
+      "id": "headbangen_nacken",
+      "anzeigetitel": {
+        "de": "Headbangen ohne Nackenschaden"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "koerperhaltung_ergonomie"
+      ],
+      "erklaerteil": {
+        "de": "Headbangen gehört zur Bühne — aber der Nacken ist dabei stark belastet, und ruckartiges, extremes Bangen über Jahre kann zu ernsten Beschwerden führen. Das heißt nicht Verzicht, sondern einen klugen Umgang mit der Belastung.\n\nNackenschonender wird es, wenn die Bewegung mehr aus einem lockeren Ganzkörper-Schwung als aus einem harten Nackenruck kommt, wenn du den Nacken vorher aufwärmst und Nacken- wie Rumpfmuskulatur generell kräftigst, und wenn du bei langen Sets die Intensität dosierst statt jede Sekunde voll zu bangen. Ein starker, gut aufgewärmter Nacken steckt Belastung besser weg.\n\nGesundheitsrahmen: bei Schwindel, Kopfschmerz, Taubheit, Kribbeln in den Armen oder anhaltenden Nackenschmerzen sofort stoppen und ärztlich abklären — das sind keine Kleinigkeiten. Aufwärmen und Kräftigung sind hier echte Prävention."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kommt dein Headbangen eher aus einem lockeren Ganzkörper-Schwung als aus einem harten Nackenruck — und wärmst du den Nacken vorher auf? Kräftigst du Nacken und Rumpf als Prävention und dosierst die Intensität über lange Sets? Und nimmst du Warnzeichen wie Schwindel, Taubheit oder Kribbeln in den Armen ernst (sofort stoppen, abklären)?"
+      }
+    },
+    {
+      "id": "verletzung_reha_rueckkehr",
+      "anzeigetitel": {
+        "de": "Verletzung: pausieren & dosiert zurück"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "ueberlastung_praevention"
+      ],
+      "erklaerteil": {
+        "de": "Trotz aller Prävention kann es zu Überlastung oder Verletzung kommen — eine gereizte Sehne, ein Handgelenksproblem, eine überstrapazierte Stimme. Entscheidend ist dann, wie du reagierst: Wer eine echte Verletzung wegspielt, macht sie meist chronisch.\n\nDer Weg zurück ist Dosierung. Erst die akute Reizung abklingen lassen (Pause, ärztliche oder physiotherapeutische Abklärung), dann in kleinen, kontrollierten Schritten zurück — reduziertes Pensum, saubere Technik, bewusstes Beobachten, ob die Belastung vertragen wird. Ein zu schneller Wiedereinstieg wirft dich zurück; Geduld ist hier die schnellere Route.\n\nGesundheitsrahmen: Schmerz, der bleibt oder wiederkehrt, gehört fachlich abgeklärt — nicht selbst diagnostiziert. Dieser Baustein ersetzt keine medizinische Beratung; er soll die Haltung stärken, eine Verletzung ernst zu nehmen und den Wiedereinstieg zu dosieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hast du eine klare Haltung, eine echte Verletzung zu pausieren und abklären zu lassen, statt sie wegzuspielen? Kennst du das Prinzip der dosierten Rückkehr (klein anfangen, Belastung beobachten, Technik sauber halten)? Und weißt du, dass anhaltender oder wiederkehrender Schmerz fachlich — nicht selbst — abgeklärt gehört?"
+      }
+    },
+    {
+      "id": "deload_periodisierung",
+      "anzeigetitel": {
+        "de": "Belastung steuern: Deload & Periodisierung"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "athletik_grundlage",
+        "ueberlastung_praevention"
+      ],
+      "erklaerteil": {
+        "de": "Wer viel spielt, übt und tourt, kann nicht dauerhaft auf Anschlag fahren. Aus dem Sport kommt ein einfaches Prinzip: Belastung und Erholung bewusst über Wochen steuern, statt jede Woche gleich hart. Phasen höherer Intensität wechseln mit leichteren Phasen (Deload), in denen der Körper das Geübte festigt und sich erholt.\n\nFür Spielende heißt das: intensive Übe- oder Tourblöcke bewusst mit leichteren Wochen abfedern, nicht erst pausieren, wenn nichts mehr geht. Ein geplanter Deload ist kein Rückschritt, sondern das, was die harten Phasen überhaupt tragbar macht — und beugt Übertraining, Verletzung und Motivationseinbruch vor.\n\nGesundheitsrahmen: Diese Steuerung ist ein Prinzip, keine starre Formel — höre auf Erschöpfungssignale und passe an. Bei anhaltender Erschöpfung, Schmerzen oder Leistungsabfall trotz Erholung ärztlichen Rat suchen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Steuerst du deine Belastung bewusst über Wochen — mit leichteren Phasen (Deload) nach intensiven Blöcken — statt dauerhaft auf Anschlag zu fahren? Verstehst du einen geplanten Deload als Teil des Fortschritts, nicht als Rückschritt? Und passt du die Steuerung an deine Erschöpfungssignale an?"
+      }
+    },
+    {
+      "id": "abwaermen_koerper",
+      "anzeigetitel": {
+        "de": "Abwärmen: Hände & Körper runterfahren"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "aufwaermen_handgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Aufwärmen vor dem Spielen ist etabliert — das Abwärmen danach wird oft vergessen, hilft aber, Verspannungen und Steifheit nach intensiven Sessions zu reduzieren. Nach dem Spielen sind Unterarme, Hände, Schultern und (beim Schlagzeug) die Beine stark beansprucht.\n\nEin kurzes Cool-down fährt den Körper bewusst herunter: sanftes Ausschütteln und lockere Dehnung von Unterarmen und Händen, Schultern kreisen, tief durchatmen, die Anspannung bewusst loslassen. Das dauert wenige Minuten und macht einen Unterschied, wie sich die Hände am nächsten Tag anfühlen.\n\nGesundheitsrahmen: sanft und ohne Ziehen dehnen, nie in den Schmerz. Wenn nach dem Spielen regelmäßig Schmerzen oder Taubheit bleiben, ist das ein Warnzeichen zum Abklären, kein normaler Trainingsschmerz."
+      },
+      "reflexionsaufgabe": {
+        "de": "Fährst du nach intensiven Sessions bewusst herunter — mit sanftem Ausschütteln, lockerer Dehnung und ein paar tiefen Atemzügen — statt einfach abrupt aufzuhören? Merkst du einen Unterschied, wie sich Hände und Schultern am nächsten Tag anfühlen? Und nimmst du bleibende Schmerzen oder Taubheit als Warnzeichen ernst?"
+      }
+    }
+  ]
+}
