@@ -6,13 +6,12 @@
 
 import { label, t } from '../i18n.js';
 import { esc, markeHeroGross } from '../oberflaeche.js';
-import { stile, umgebungBausteine } from '../pfade.js';
+import { stile } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar, zuletzt } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
 
 export function renderHeim(el, daten) {
   const d = diagnose();
-  const umgebung = umgebungBausteine(daten);
   const zielBeschriftungen = zielLabels(d.ziel);
 
   // Einstiegs-CTAs im Hero: „Kapitel entdecken" öffnet den Themen-Einstieg,
@@ -36,15 +35,6 @@ export function renderHeim(el, daten) {
         ${cta}
       </div>
     </a>`;
-
-  const umgebungKachel = umgebung.length > 0
-    ? kachel({
-        href: '#/pfad/umgebung', hue: 'pf-sky', icon: 'fa-users',
-        titel: esc(t('pfad_umgebung')),
-        meta: ` <span class="chip">${esc(t('n_bausteine', { n: umgebung.length }))}</span>`,
-        text: esc(t('pfad_umgebung_text')),
-      })
-    : '';
 
   const trainingKachel = kachel({
     href: '#/training', hue: 'pf-indigo', icon: 'fa-list-check',
@@ -74,16 +64,18 @@ export function renderHeim(el, daten) {
       })
     : '';
 
-  // „Fortsetzen wo du warst" (§3b): nur wenn ein zuletzt geöffneter Baustein
-  // existiert und noch im Pool ist. Steht als erste Kachel oben.
+  // „Fortsetzen wo du warst" (§3b): ein schmaler Streifen über die ganze Breite
+  // (keine Kachel), nur wenn ein zuletzt geöffneter Baustein noch im Pool ist.
   const letzter = zuletzt();
-  const fortsetzenKachel = letzter?.baustein && daten.bausteinVonId.has(letzter.baustein)
-    ? kachel({
-        href: `#/baustein/${encodeURIComponent(letzter.baustein)}?kontext=kompetenz`,
-        hue: 'pf-magenta', icon: 'fa-play',
-        titel: esc(t('heim_fortsetzen')),
-        text: esc(label('baustein', letzter.baustein)),
-      })
+  const fortsetzenStreifen = letzter?.baustein && daten.bausteinVonId.has(letzter.baustein)
+    ? `<a class="heim-fortsetzen" href="#/baustein/${encodeURIComponent(letzter.baustein)}?kontext=kompetenz">
+        <span class="heim-fortsetzen-icon"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
+        <span class="heim-fortsetzen-text">
+          <span class="heim-fortsetzen-label">${esc(t('heim_fortsetzen'))}</span>
+          <span class="heim-fortsetzen-titel">${esc(label('baustein', letzter.baustein))}</span>
+        </span>
+        <span class="heim-fortsetzen-pfeil" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>`
     : '';
 
   const werkzeugeKachel = kachel({
@@ -107,15 +99,14 @@ export function renderHeim(el, daten) {
   el.innerHTML = `
     ${markeHeroGross(heroCta)}
     ${speicherIstVerfuegbar() ? '' : `<div class="banner-hinweis">${esc(t('speicher_warnung'))}</div>`}
+    ${fortsetzenStreifen}
     <h2 class="abschnitt-titel">${esc(t('pfade'))}</h2>
     <div class="pfad-gitter">
-      ${fortsetzenKachel}
-      ${umgebungKachel}
       ${genreKachel}
+      ${songsKachel}
       ${trainingKachel}
       ${individualKachel}
       ${werkzeugeKachel}
-      ${songsKachel}
       ${profilKachel}
     </div>`;
 }

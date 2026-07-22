@@ -2430,3 +2430,18 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .ob-genre-chip:hover { border-color: var(--primaer); color: var(--tinte); }
 .ob-genre-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; font-weight: 600; }
 .ob-ziel-hinweis { margin-top: 0.4rem; }
+
+/* „Fortsetzen wo du warst": schmaler Streifen über die ganze Breite (keine
+   Kachel). Akzent-Kante links, Titel des zuletzt geöffneten Bausteins. */
+.heim-fortsetzen {
+  display: flex; align-items: center; gap: 0.75rem; width: 100%; box-sizing: border-box;
+  padding: 0.55rem 0.9rem; margin: 0 0 1.2rem; text-decoration: none; color: inherit;
+  background: var(--flaeche); border: 1px solid var(--linie-stark);
+  border-left: 3px solid var(--primaer); border-radius: var(--radius-klein);
+}
+.heim-fortsetzen:hover { border-color: var(--primaer); }
+.heim-fortsetzen-icon { color: var(--primaer); flex: 0 0 auto; }
+.heim-fortsetzen-text { display: flex; flex-direction: column; line-height: 1.2; flex: 1; min-width: 0; }
+.heim-fortsetzen-label { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tinte-2); }
+.heim-fortsetzen-titel { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.heim-fortsetzen-pfeil { color: var(--primaer); flex: 0 0 auto; }
