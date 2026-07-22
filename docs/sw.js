@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v82';
+const CACHE = 'mosh-v83';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -27,6 +27,7 @@ const SHELL = [
   'index.html',
   'manifest.json',
   'assets/images/speeder.svg',
+  'assets/images/hintergrund-collage.jpg',
   'images/logo-speeder.svg',
   'css/app.css',
   'css/feedback.css',
