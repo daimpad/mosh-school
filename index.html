@@ -118,12 +118,6 @@
         <button class="hamburger" id="hamburger" aria-haspopup="true" aria-expanded="false" aria-controls="hauptmenue" aria-label="Menü">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
-        <div class="sprach-anzeige" id="sprach-anzeige">
-          <button class="sprach-knopf" id="sprach-knopf" aria-expanded="false" aria-controls="sprach-liste" aria-label="Sprache">
-            <i class="fa-solid fa-world sprach-globus" aria-hidden="true"></i>
-          </button>
-          <ul class="sprach-liste" id="sprach-liste" hidden></ul>
-        </div>
       </div>
     </div>
   </header>
@@ -136,11 +130,11 @@
   <nav class="fussnav" aria-label="Hauptnavigation">
     <a href="#/instrument" data-nav="lernen">
       <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-      <span class="nav-text">Lernen</span>
+      <span class="nav-text">Theorie</span>
     </a>
     <a href="#/training" data-nav="training">
       <i class="fa-solid fa-list-check" aria-hidden="true"></i>
-      <span class="nav-text">Training</span>
+      <span class="nav-text">Praxis</span>
     </a>
     <a href="#/profil" data-nav="profil">
       <i class="fa-solid fa-user" aria-hidden="true"></i>
@@ -179,13 +173,20 @@
       </a>
       <a href="#/werkzeuge" data-nav="werkzeuge" class="menue-punkt">
         <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
-        <span class="nav-text">Werkzeuge</span>
+        <span class="nav-text">Tools</span>
       </a>
       <a href="#/koennenscheck" data-nav="koennenscheck" class="menue-punkt">
         <i class="fa-solid fa-flag-checkered" aria-hidden="true"></i>
-        <span class="nav-text">Könnens-Check</span>
+        <span class="nav-text">Prüfung</span>
       </a>
       <span class="menue-trenner" role="separator"></span>
+      <div class="sprach-anzeige menue-sprache" id="sprach-anzeige">
+        <button class="sprach-knopf menue-punkt" id="sprach-knopf" aria-expanded="false" aria-controls="sprach-liste" aria-label="Sprache">
+          <i class="fa-solid fa-world" aria-hidden="true"></i>
+          <span class="nav-text" data-sprach-titel>Sprache</span>
+        </button>
+        <ul class="sprach-liste" id="sprach-liste" hidden></ul>
+      </div>
       <a href="#/ueber" data-nav="ueber" class="menue-punkt">
         <i class="fa-solid fa-compass" aria-hidden="true"></i>
         <span class="nav-text">Über</span>
