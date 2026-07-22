@@ -658,7 +658,9 @@
     "wz_rec_kreativ_hinweis": "Kreativ-Modus: Dein nächstes Riff gilt als erster eigener Genre-Mix.",
     "wz_rec_kreativ_hinweis_mix": "Kreativ-Modus für {mix}: Nimm die Fusion auf — der erste Take zählt als Meilenstein.",
     "meilenstein_kreativ_fusion": "Erstes eigenes Fusions-Riff aufgenommen",
-    "wz_lk_legende_aria": "Genre-Auswahl — Chip antippen hebt den Punkt hervor"
+    "wz_lk_legende_aria": "Genre-Auswahl — Chip antippen hebt den Punkt hervor",
+    "wz_baustein_kreativ_titel": "Kreativ-Werkzeuge",
+    "wz_baustein_kreativ_hinweis": "Genau hier setzt du an — öffne das Werkzeug und probier es direkt aus:"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
