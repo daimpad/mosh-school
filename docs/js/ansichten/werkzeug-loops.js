@@ -8,7 +8,7 @@
 // ?stil=<genre> (oder ?beat=<id>) belegt den passenden Beat vor.
 
 import { label, t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import { klick, kick, snare, hihat, crash } from '../audio/stimmen.js';
@@ -233,6 +233,11 @@ export function renderWerkzeugLoops(el, daten, query) {
     </article>`;
 
   verdrahte(el);
+  // Beim Verlassen der Route den Loop stoppen (läuft sonst über andere Views weiter).
+  registriereAufraeumen(() => {
+    if (scheduler) scheduler.stoppe();
+    stoppeMarker();
+  });
 }
 
 function verdrahte(el) {
