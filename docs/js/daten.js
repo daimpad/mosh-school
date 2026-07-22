@@ -62,6 +62,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.amp-box-gear.json',
   'data/bausteine.instrument-technik.json',
   'data/bausteine.gear-schlagzeug-gesang.json',
+  'data/bausteine.grenzgaenger.json',
 ];
 
 // Beispielsongs-Referenz (Genre → 30 kuratierte Songs als externe Links). Eigener
@@ -82,6 +83,7 @@ const SONGDATEIEN = [
   'data/songs.post-metal.json',
   'data/songs.deathcore.json',
   'data/songs.sludge.json',
+  'data/songs.grenzgaenger.json',
 ];
 
 // Aus dem Dateipfad (data/songs.<slug>.json) den Genre-Slug für Deep-Links ziehen.
