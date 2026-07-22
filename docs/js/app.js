@@ -37,6 +37,47 @@ import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboar
 let daten = null;
 let letzteRoute = null;
 
+// Scroll-Einblendungen (.reveal): ein einzelner IntersectionObserver, der nach
+// jedem Rendern die aktuellen .reveal-Blöcke beobachtet und beim Hereinscrollen
+// .sichtbar setzt, beim Verlassen (nach erstem Sichtbarwerden) .raus. Nur aktiv,
+// wenn Bewegung erlaubt ist — die html-Klasse .anim-reveal schaltet den Effekt
+// CSS-seitig frei; ohne sie bleibt aller Inhalt sofort sichtbar (auch ohne JS).
+const bewegungErlaubt =
+  typeof window.matchMedia !== 'function' ||
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let revealBeobachter = null;
+
+function richteRevealEin(el) {
+  if (revealBeobachter) {
+    revealBeobachter.disconnect();
+    revealBeobachter = null;
+  }
+  if (!bewegungErlaubt || typeof IntersectionObserver !== 'function') return;
+  const ziele = el.querySelectorAll('.reveal');
+  if (!ziele.length) return;
+  revealBeobachter = new IntersectionObserver(
+    (eintraege) => {
+      for (const e of eintraege) {
+        if (e.isIntersecting) {
+          e.target.classList.add('sichtbar');
+          e.target.classList.remove('raus');
+        } else if (e.target.classList.contains('sichtbar')) {
+          // Erst nach dem ersten Sichtbarwerden abblenden (nicht im Ausgangs-
+          // zustand) — so „boxt" der Block einmal sauber herein, bevor er
+          // beim Weiterscrollen wieder abdunkelt.
+          e.target.classList.add('raus');
+          e.target.classList.remove('sichtbar');
+        }
+      }
+    },
+    // threshold 0 (nicht > 0): ein hoher Block (lange Baustein-Liste) erreicht in
+    // einem kleinen Viewport nie einen Sichtbarkeits-Anteil > 0 und würde sonst nie
+    // ausgelöst. rootMargin zieht den Auslösepunkt etwas ins Bild hinein.
+    { threshold: 0, rootMargin: '0px 0px -12% 0px' },
+  );
+  ziele.forEach((z) => revealBeobachter.observe(z));
+}
+
 function parseHash() {
   const roh = window.location.hash.replace(/^#\/?/, '');
   const [pfadTeil, queryTeil] = roh.split('?');
@@ -438,10 +479,17 @@ function rendern() {
     const ziel = el.querySelector(fokusVorher);
     if (ziel) ziel.focus({ preventScroll: true });
   }
+
+  // Scroll-Einblendungen der aktuellen Ansicht neu verdrahten (Beobachter wird
+  // intern zuerst getrennt — auch bei In-Place-Neuzeichnung kein Leck).
+  richteRevealEin(el);
 }
 
 async function boot() {
   ladeZustand();
+  // Bewegungseffekte (Reinboxen/Einblendungen) nur freischalten, wenn das System
+  // keine reduzierte Bewegung verlangt — die CSS-Regeln hängen an .anim-reveal.
+  if (bewegungErlaubt) document.documentElement.classList.add('anim-reveal');
   const el = document.getElementById('ansicht');
   // Baustein-Grafiken laufen beiläufig mit: Fehlt die Datei, bleibt die Registry
   // leer und bausteinIcon fällt auf die FA-/Domänen-Icons zurück (kein Bruch).
