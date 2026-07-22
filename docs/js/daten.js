@@ -92,7 +92,7 @@ function songSlug(pfad) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, pedale, ampbox, genres, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -102,6 +102,7 @@ export async function ladeDaten() {
     holeJson('data/pedale.json'),
     holeJson('data/ampbox.json'),
     holeJson('data/genres.json').catch(() => null),
+    holeJson('data/gefuehlslandkarte.json').catch(() => null),
     holeJson('data/index.json').catch(() => null),
     Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
@@ -131,6 +132,11 @@ export async function ladeDaten() {
   // Genre-Inszenierung (Kurzbeschreibung, musikwissenschaftliche Einordnung,
   // Verwandtschaft) für die Genre-Achse. Referenzbereich, kein Fortschritt.
   daten.genres = genres?.genres || {};
+  // Gefühlslandkarte (Grenzgänger-Zweig): kuratierte Genre-Koordinaten
+  // (x=Energie/Tempo, y=Grundton) + Gefühls-Tags. Datenbasis für die zwei
+  // Kreativ-Werkzeuge (Landkarte + Genre-Mix-Generator). Referenzbereich, kein
+  // Fortschritt — „Tendenzen, keine Gesetze" (Feld `hinweis`).
+  daten.gefuehlslandkarte = gefuehlslandkarte || { genres: [], achsen: {}, hinweis: '' };
   // Such-/Metadaten-Index (generiert via scripts/build_index.py): kompakte
   // Einträge für die clientseitige Volltextsuche + Facetten (Trainings-Loop §0a/§3c).
   daten.suchindex = suchindex?.eintraege || [];
