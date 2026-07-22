@@ -50,12 +50,13 @@
         var thema = z && z.einstellungen && z.einstellungen.thema;
         var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
         var dunkel;
-        // mosh school ist düster per Default: ohne gespeicherte Wahl -> dunkel.
-        if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; dunkel = false; }
+        // mosh school = schmutzig-weißer Zine-Look per Default: ohne gespeicherte
+        // Wahl -> hell (creme). 'dunkel' bleibt als Option, 'auto' folgt dem OS.
+        if (thema === 'dunkel') { document.documentElement.dataset.theme = 'dunkel'; dunkel = true; }
         else if (thema === 'auto') { dunkel = osDunkel; }
-        else { document.documentElement.dataset.theme = 'dunkel'; dunkel = true; }
+        else { document.documentElement.dataset.theme = 'hell'; dunkel = false; }
         var meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute('content', dunkel ? '#0f151c' : '#f2f6fc');
+        if (meta) meta.setAttribute('content', dunkel ? '#0b0b0c' : '#dcd8cd');
       } catch (e) {}
     })();
   </script>
