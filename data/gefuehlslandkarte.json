@@ -2,8 +2,16 @@
   "titel": "Gefühlslandkarte",
   "hinweis": "Tendenzen, keine Gesetze — eine Startheuristik, um Spannung (Kartendistanz) und Brücken (verwandte Gefühls-Tags) sichtbar zu machen.",
   "achsen": {
-    "x": "Energie/Tempo: 0 träge/spärlich … 10 rasend/dicht",
-    "y": "Grundton: 0 finster/schwer/verzweifelt … 10 erhebend/kathartisch/trotzig"
+    "x": {
+      "titel": "Energie & Tempo",
+      "von": "träge · spärlich",
+      "bis": "rasend · dicht"
+    },
+    "y": {
+      "titel": "Grundton",
+      "von": "finster · schwer",
+      "bis": "licht · kathartisch"
+    }
   },
   "genres": [
     {
