@@ -2349,3 +2349,19 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .wz-rec-meta label { display: inline-flex; flex-direction: column; gap: 0.2rem; font-size: 0.82rem; font-weight: 600; }
 .wz-rec-notiz-feld { flex: 1 1 12rem; }
 .wz-rec-notiz-feld input { width: 100%; padding: 0.35rem 0.45rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+
+/* === Skizzen-Mehrspur-Rekorder ============================================= */
+.wz-ms-liste { list-style: none; margin: 0.5rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.7rem; }
+.wz-ms-spur { border: 1px solid var(--linie-stark); border-left-width: 4px; border-left-color: var(--primaer); border-radius: var(--radius-klein); padding: 0.65rem 0.85rem; background: var(--flaeche); }
+.wz-ms-spur-kopf { display: flex; align-items: center; gap: 0.6rem; justify-content: space-between; margin-bottom: 0.4rem; }
+.wz-ms-name { flex: 1 1 auto; font-weight: 700; padding: 0.3rem 0.45rem; border: 1px solid transparent; border-radius: var(--radius-klein); background: transparent; color: var(--tinte); }
+.wz-ms-name:hover, .wz-ms-name:focus { border-color: var(--linie-stark); background: var(--flaeche-2); }
+.wz-ms-schalter { display: inline-flex; gap: 0.25rem; }
+.wz-ms-mini { width: 1.9rem; height: 1.9rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche-2); color: var(--tinte-2); cursor: pointer; font-weight: 800; }
+.wz-ms-mute.aktiv { background: var(--signal-gelb-text); color: var(--flaeche); border-color: var(--signal-gelb-text); }
+.wz-ms-solo.aktiv { background: var(--primaer); color: var(--flaeche); border-color: var(--primaer); }
+.wz-ms-audio { width: 100%; margin: 0.3rem 0; }
+.wz-ms-pegel-zeile { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; }
+.wz-ms-pegel-zeile label { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; }
+.wz-ms-knopf.aufnahme { background: var(--signal-rot); border-color: var(--signal-rot); }
+.wz-ms-latenz, .wz-ms-bpm { width: 6rem; padding: 0.4rem 0.5rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
