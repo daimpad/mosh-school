@@ -13,7 +13,20 @@
       {
         "de": "Die App läuft komplett auf deinem Gerät und speichert deinen Fortschritt lokal. Kein Login, kein Tracking."
       }
-    ]
+    ],
+    "danksagungen": {
+      "titel": {
+        "de": "Wer & Danke"
+      },
+      "eintraege": [
+        {
+          "de": "Gebaut von Damian Paderta."
+        },
+        {
+          "de": "Danke an [Platzhalter] für Feedback, Testen und Support aus der Szene."
+        }
+      ]
+    }
   },
   "mitmachen": {
     "titel": {
@@ -21,23 +34,37 @@
     },
     "einleitung": [
       {
-        "de": "mosh school ist offen und wächst mit der Szene."
+        "de": "mosh school ist offen und wächst mit der Szene — mit dir."
       }
     ],
     "moeglichkeiten": [
       {
         "titel": {
-          "de": "Feedback geben"
+          "de": "Fehler & Ideen auf GitHub"
         },
         "text": {
-          "de": "Sag uns, was fehlt oder unklar ist."
+          "de": "Melde Fehler, schlag neue Bausteine vor oder diskutiere mit — alles offen als GitHub-Issue."
         },
         "cta_label": {
-          "de": "Kontakt"
+          "de": "GitHub-Issues öffnen"
         },
-        "cta_ziel": "[deine-mail@example.com]"
+        "cta_ziel": "https://github.com/daimpad/mosh-school/issues"
       }
-    ]
+    ],
+    "feedback": {
+      "titel": {
+        "de": "Direkt hier kommentieren"
+      },
+      "text": {
+        "de": "Schalte den Kommentator ein und markier direkt auf der Seite, was fehlt oder unklar ist — ohne Umweg über GitHub."
+      },
+      "knopf": {
+        "de": "Kommentator starten"
+      },
+      "aktiv": {
+        "de": "Kommentator läuft — tippe auf einen Bereich, um ihn zu kommentieren."
+      }
+    }
   },
   "rechtliches": {
     "impressum": {
