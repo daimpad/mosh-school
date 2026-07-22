@@ -1,0 +1,217 @@
+{
+  "genre": "Deathcore",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Suicide Silence",
+      "titel": "No Time to Bleed",
+      "substil_vermerk": "früher Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Suicide+Silence+No+Time+to+Bleed",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Whitechapel",
+      "titel": "This Is Exile",
+      "substil_vermerk": "früher Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Whitechapel+This+Is+Exile&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Job for a Cowboy",
+      "titel": "Entombment of a Machine",
+      "substil_vermerk": "früher Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Job+for+a+Cowboy+Entombment+of+a+Machine",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Despised Icon",
+      "titel": "MVP",
+      "substil_vermerk": "Pionier-Deathcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=Despised+Icon+MVP&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "All Shall Perish",
+      "titel": "Wretched",
+      "substil_vermerk": "melodischer Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=All+Shall+Perish+Wretched",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Carnifex",
+      "titel": "Hell Chose Me",
+      "substil_vermerk": "blackened/melodischer Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Carnifex+Hell+Chose+Me&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Thy Art Is Murder",
+      "titel": "Reign of Darkness",
+      "substil_vermerk": "moderner Deathcore (Australien)",
+      "url": "https://bandcamp.com/search?q=Thy+Art+Is+Murder+Reign+of+Darkness&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Chelsea Grin",
+      "titel": "Recreant",
+      "substil_vermerk": "Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Chelsea+Grin+Recreant",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Oceano",
+      "titel": "District of Misery",
+      "substil_vermerk": "downtempo/heavy Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Oceano+District+of+Misery",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Born of Osiris",
+      "titel": "Bow Down",
+      "substil_vermerk": "progressiver/technischer Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Born+of+Osiris+Bow+Down",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Rings of Saturn",
+      "titel": "Lugal Ki En",
+      "substil_vermerk": "Aliencore/technischer Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Rings+of+Saturn+Lugal+Ki+En&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Fit for an Autopsy",
+      "titel": "Hells Kitchen",
+      "substil_vermerk": "modern-melodischer Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Fit+for+an+Autopsy+Hells+Kitchen&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Lorna Shore",
+      "titel": "To the Hellfire",
+      "substil_vermerk": "symphonischer Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Lorna+Shore+To+the+Hellfire&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Shadow of Intent",
+      "titel": "Intensified Genocide",
+      "substil_vermerk": "symphonisch/technischer Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Shadow+of+Intent+Intensified+Genocide&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Signs of the Swarm",
+      "titel": "Vital Rot",
+      "substil_vermerk": "downtempo Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Signs+of+the+Swarm+Vital+Rot&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ingested",
+      "titel": "Where No Life Lingers",
+      "substil_vermerk": "slam/Deathcore (UK)",
+      "url": "https://bandcamp.com/search?q=Ingested+Where+No+Life+Lingers&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Aversions Crown",
+      "titel": "Erebus",
+      "substil_vermerk": "Aliencore/atmosphärischer Deathcore (Australien)",
+      "url": "https://bandcamp.com/search?q=Aversions+Crown+Erebus&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Spite",
+      "titel": "Made to Consume",
+      "substil_vermerk": "moderner Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Spite+Made+to+Consume",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Bodysnatcher",
+      "titel": "Death of Me",
+      "substil_vermerk": "downtempo/beatdown Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Bodysnatcher+Death+of+Me&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Distant",
+      "titel": "Dusk",
+      "substil_vermerk": "slam/downtempo Deathcore (NL)",
+      "url": "https://bandcamp.com/search?q=Distant+Dusk&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Brand of Sacrifice",
+      "titel": "Demon King",
+      "substil_vermerk": "symphonischer Animecore-Deathcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=Brand+of+Sacrifice+Demon+King&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Humanity's Last Breath",
+      "titel": "Bâsk",
+      "substil_vermerk": "Thall/downtempo Deathcore (Schweden)",
+      "url": "https://bandcamp.com/search?q=Humanity%27s+Last+Breath+B%C3%A2sk&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Slaughter to Prevail",
+      "titel": "Baptism of Fire",
+      "substil_vermerk": "downtempo/heavy Deathcore (Russland)",
+      "url": "https://www.youtube.com/results?search_query=Slaughter+to+Prevail+Baptism+of+Fire",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Infant Annihilator",
+      "titel": "Decapitation Fornication",
+      "substil_vermerk": "technisch/brutaler Deathcore (UK/US)",
+      "url": "https://bandcamp.com/search?q=Infant+Annihilator+Decapitation+Fornication&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Acrania",
+      "titel": "The Beginning of the End of Humanity",
+      "substil_vermerk": "brutaler/slam Deathcore (UK)",
+      "url": "https://bandcamp.com/search?q=Acrania+The+Beginning+of+the+End+of+Humanity&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Molotov Solution",
+      "titel": "The Harbinger",
+      "substil_vermerk": "Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Molotov+Solution+The+Harbinger",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Emmure",
+      "titel": "Nemesis",
+      "substil_vermerk": "nu-/beatdown-Deathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Emmure+Nemesis",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "AngelMaker",
+      "titel": "Salt in the Wound",
+      "substil_vermerk": "symphonisch/melodischer Deathcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=AngelMaker+Salt+in+the+Wound&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "I Declare War",
+      "titel": "Malevolence",
+      "substil_vermerk": "Deathcore/beatdown (US)",
+      "url": "https://www.youtube.com/results?search_query=I+Declare+War+Malevolence",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Enterprise Earth",
+      "titel": "Reanimate Regenerate",
+      "substil_vermerk": "modern-melodischer Deathcore (US)",
+      "url": "https://bandcamp.com/search?q=Enterprise+Earth+Reanimate+Regenerate&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
