@@ -2564,3 +2564,58 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .demo-presets-titel { font-size: 0.78rem; }
 .demo-toggle { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer; }
 .demo-hoerbeispiel h2 { margin-top: 0; }
+
+/* --- Grenzgänger-Werkzeuge: Gefühlslandkarte + Genre-Mix-Generator --- */
+/* Beide monochrom über die Tinten-/Akzent-Tokens; die SVGs tragen keine harten
+   Farben, sondern erben currentColor bzw. lesen die Tokens per Klasse. */
+
+/* Gefühlslandkarte */
+.lk-karte { position: relative; margin: 1rem 0 0.4rem; }
+.lk-svg { display: block; width: 100%; height: auto; color: var(--tinte); }
+.lk-achse { stroke: var(--linie-stark); stroke-width: 1.5; }
+.lk-kreis { fill: var(--tinte-2); transition: fill 0.15s ease, r 0.15s ease; }
+.lk-name { fill: var(--tinte-2); font-size: 9px; font-weight: 500; }
+.lk-punkt { cursor: pointer; outline: none; }
+.lk-punkt:hover .lk-kreis,
+.lk-punkt:focus-visible .lk-kreis,
+.lk-punkt.aktiv .lk-kreis { fill: var(--primaer); }
+.lk-punkt:focus-visible .lk-kreis { stroke: var(--primaer); stroke-width: 2; }
+.lk-punkt.aktiv .lk-name,
+.lk-punkt:hover .lk-name { fill: var(--primaer); font-weight: 700; }
+.lk-achse-x { display: block; text-align: center; font-size: 0.8rem; margin-top: 0.2rem; }
+.lk-achse-y { display: block; font-size: 0.8rem; margin-bottom: 0.2rem; }
+.lk-tags { min-height: 3.2rem; padding: 0.7rem 0.85rem; border: 1px solid var(--linie); border-radius: 8px; background: var(--flaeche-2); }
+.lk-tags-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; margin-bottom: 0.5rem; }
+.lk-tag-zeile { margin: 0; }
+.lk-tags-leer { margin: 0; }
+.lk-fuss { margin-top: 0.9rem; }
+.lk-hinweis { margin: 0.6rem 0 0.4rem; }
+
+/* Genre-Mix-Generator */
+.gm-steuerung { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.7rem 1rem; margin: 0.9rem 0; }
+.gm-modus { display: inline-flex; gap: 0.4rem; }
+.gm-ziel-feld { display: flex; flex-direction: column; }
+.gm-ziel-feld.gm-verborgen { display: none; }
+.gm-ziel-select { padding: 0.4rem 0.55rem; border: 1px solid var(--linie-stark); border-radius: 7px; background: var(--flaeche); color: var(--tinte); font: inherit; }
+.gm-trio-feld { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; cursor: pointer; }
+.gm-ausgabe { margin: 0.6rem 0; }
+.gm-leer { padding: 1.2rem 0; text-align: center; }
+.gm-ergebnis { border: 1px solid var(--linie-stark); border-radius: 10px; padding: 1rem 1.1rem; background: var(--flaeche-2); box-shadow: var(--schatten-karte); }
+.gm-paar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.gm-genre { font-family: 'Anton', 'Oswald', 'Arial Narrow', 'Rubik', system-ui, sans-serif; font-size: 1.5rem; letter-spacing: 0.01em; text-transform: uppercase; line-height: 1.05; }
+.gm-mal { color: var(--primaer); font-size: 1.3rem; font-weight: 700; }
+.gm-trio { margin: 0.4rem 0 0; font-weight: 600; }
+.gm-spannung-zeile { margin: 0.35rem 0 0.8rem; }
+.gm-merkmale { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.7rem; margin-bottom: 0.8rem; }
+.gm-merkmal-titel { display: block; margin-bottom: 0.3rem; font-weight: 600; }
+.gm-linie { margin: 0.5rem 0; }
+.gm-prompt { margin: 0.7rem 0; padding: 0.7rem 0.9rem; border-left: 3px solid var(--primaer); background: var(--flaeche); border-radius: 0 8px 8px 0; font-size: 1.02rem; }
+.gm-bogen { margin: 0.3rem 0 0.7rem; }
+.gm-svg { display: block; width: 100%; max-width: 380px; height: auto; margin: 0.4rem 0; color: var(--tinte); }
+.gm-punkt.blass circle { fill: var(--tinte-3); opacity: 0.4; }
+.gm-punkt.aktiv circle { fill: var(--primaer); }
+.gm-name { fill: var(--primaer); font-size: 10px; font-weight: 700; }
+.gm-spannung { stroke: var(--primaer); stroke-width: 2; stroke-dasharray: 4 3; }
+.gm-anbindung { margin-top: 0.6rem; }
+.gm-ziel-block { margin: 0.8rem 0; }
+.gm-kreativ-ziel[aria-pressed="true"] { background: var(--primaer-weich); color: var(--primaer-tief); }
