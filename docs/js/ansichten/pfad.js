@@ -4,11 +4,12 @@
 import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { label, t } from '../i18n.js';
-import { balkenHtml, bausteinIcon, entdeckenAktion, esc, heroKlein, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
-import { individualpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
+import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, heroKlein, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
+import { INSTRUMENTE, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 import { genreInszenierungHtml, genreKurz, genreMotivSvg, genrePlatzhalterSvg } from '../genre-inszenierung.js';
+import { zeichneKoennenscheck } from './koennenscheck.js';
 
 // In der Liste ordnet bereits die Reihenfolge; der „Empfohlen vorher"-Hinweis
 // gehört zum Zugriffsmoment und lebt in der Baustein-Ansicht (Spez. 4.4).
@@ -174,6 +175,107 @@ export function renderStil(el, daten, stil) {
       <h2 class="abschnitt-titel genre-bausteine-titel reveal">${esc(t('genre_bausteine_titel'))}</h2>
       <div class="reveal">${liste}</div>
     </div>`;
+}
+
+// Instrument-Landing: ein Zuhause je Instrument. Ohne Instrument der Picker (vier
+// Kacheln), mit Instrument die gebündelte Seite: Technik nach Stufe, Ausrüstung,
+// eingebetteter Könnens-Check und passende Werkzeuge. Ziel des mobilen „Lernen".
+const INSTR_WERKZEUGE = {
+  gitarre: ['stimmgeraet', 'metronom', 'pedalboard', 'ampbox', 'loops', 'recorder'],
+  bass: ['stimmgeraet', 'metronom', 'pedalboard', 'ampbox', 'loops', 'recorder'],
+  schlagzeug: ['metronom', 'loops', 'struktur', 'recorder', 'mehrspur'],
+  gesang: ['stimmgeraet', 'recorder', 'metronom', 'loops', 'struktur'],
+};
+const WZ_ICON = {
+  explorer: 'fa-magnifying-glass', metronom: 'fa-stopwatch', loops: 'fa-drum',
+  stimmgeraet: 'fa-wave-square', pedalboard: 'fa-layer-group', ampbox: 'fa-volume-high',
+  struktur: 'fa-list-check', recorder: 'fa-microphone', mehrspur: 'fa-sliders',
+};
+const INSTR_STUFEN = ['einsteiger', 'fortgeschritten', 'experte'];
+function instrumentStufe(baustein) {
+  return INSTR_STUFEN.find((s) => (baustein.kompetenzstufe || []).includes(s)) || 'einsteiger';
+}
+
+export function renderInstrument(el, daten, domaene) {
+  if (!domaene || !INSTRUMENTE.includes(domaene)) {
+    const karten = instrumentUebersicht(daten)
+      .map(
+        ({ domaene: d, anzahl }) => `
+        <a class="karte karte-link pfad-kachel instr-kachel pf-blau" href="#/instrument/${esc(d)}">
+          <div class="pfad-kachel-kopf">
+            <span class="pfad-medaille">${domaeneIcon(d)}</span>
+            <h3>${esc(label('domaene', d))}</h3>
+          </div>
+          <div class="pfad-kachel-text">
+            <p class="leise">${esc(t('n_bausteine', { n: anzahl }))}</p>
+            <span class="pfad-cta">${esc(t('instrument_oeffnen'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>`
+      )
+      .join('');
+    el.innerHTML = `
+      ${heroKlein('fa-guitar', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
+      <div class="pfad-gitter instr-picker">${karten}</div>`;
+    return;
+  }
+
+  const pfad = instrumentpfad(daten, domaene);
+  const kontext = `instrument:${domaene}`;
+  const nachStufe = INSTR_STUFEN.map((stufe) => ({
+    stufe,
+    stationen: pfad.technik.filter((s) => instrumentStufe(s.baustein) === stufe),
+  })).filter((g) => g.stationen.length);
+  const technikBlock = nachStufe.length
+    ? nachStufe
+        .map(
+          ({ stufe, stationen }) => `
+        <h3 class="instr-stufe-titel"><span class="chip chip-stufe chip-stufe-${esc(stufe)}">${esc(label('kompetenzstufe', stufe))}</span></h3>
+        ${stationslisteHtml(stationen, kontext)}`
+        )
+        .join('')
+    : `<p class="leise">${esc(t('leer_domaene'))}</p>`;
+  const gearBlock = pfad.ausruestung.length
+    ? stationslisteHtml(pfad.ausruestung, kontext)
+    : `<p class="leise">${esc(t('instrument_keine_ausruestung'))}</p>`;
+  const wzChips = (INSTR_WERKZEUGE[domaene] || [])
+    .map(
+      (id) => `<a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/${esc(id)}"><i class="fa-solid ${WZ_ICON[id] || 'fa-toolbox'}" aria-hidden="true"></i> ${esc(t('wz_' + id + '_titel'))}</a>`
+    )
+    .join(' ');
+
+  el.innerHTML = `
+    <section class="marke-hero klein hue pf-blau baustein-hero instr-hero">
+      <span class="marke-hero-icon">${domaeneIcon(domaene)}</span>
+      <div class="marke-hero-text">
+        <h1>${esc(label('domaene', domaene))}</h1>
+        <p class="marke-hero-untertitel">${esc(t('instrument_untertitel'))}</p>
+      </div>
+    </section>
+    <section class="abschnitt instr-abschnitt">
+      <div class="abschnitt-kopf"><h2>${esc(t('instrument_technik'))}</h2></div>
+      ${balkenHtml(projektion(pfad.technik.map((s) => s.baustein)))}
+      ${technikBlock}
+    </section>
+    <section class="abschnitt instr-abschnitt">
+      <div class="abschnitt-kopf"><h2>${esc(t('instrument_ausruestung'))}</h2></div>
+      ${gearBlock}
+    </section>
+    <section class="abschnitt instr-abschnitt">
+      <div class="abschnitt-kopf"><h2>${esc(t('nav_koennenscheck'))}</h2></div>
+      <p class="leise">${esc(t('instrument_kc_intro', { instrument: label('domaene', domaene) }))}</p>
+      <div class="instr-kc"></div>
+    </section>
+    <section class="abschnitt instr-abschnitt">
+      <div class="abschnitt-kopf"><h2>${esc(t('instrument_werkzeuge'))}</h2></div>
+      <p class="chip-zeile">${wzChips}</p>
+    </section>
+    <p class="knopf-zeile instr-fuss">
+      <a class="knopf knopf-sekundaer" href="#/instrument"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('instrument_alle'))}</a>
+      <a class="knopf knopf-sekundaer" href="#/training"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('nav_training'))}</a>
+    </p>`;
+
+  const kc = el.querySelector('.instr-kc');
+  if (kc) zeichneKoennenscheck(kc, daten, { mitHero: false });
 }
 
 // Umgebungs-Achse (Outdoor, Querschnitt): Hub über die Wetter- und Boden-Themen
