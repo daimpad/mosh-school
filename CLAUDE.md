@@ -150,9 +150,9 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
   `status` (baustein-gebundener Mastery-Zustand `neu`/`in_arbeit`/`sitzt`, getrennt
   vom teil-genauen `fortschritt`), `log` (Übe-Tagebuch), `ziele`, `bestwerte`,
   `meilensteine`, `onboarding`. Alt-Stände (Schema 1) heben sich per `tiefMerge`
-  verlustfrei. Neu: `abonniere()` (Reaktivität) und `exportiereZustand()`/
-  `importiereZustand()` (portables JSON-Backup, kein Konto). Jeder Mutator
-  persistiert **und** benachrichtigt (`schreibe()`).
+  verlustfrei. Neu: `exportiereZustand()`/`importiereZustand()` (portables
+  JSON-Backup, kein Konto). Jeder Mutator persistiert über `schreibe()`; Sichten
+  rendern nach einer Änderung über das `app:rendern`-Ereignis (`neuRendern`) neu.
 - **Optionales Baustein-Feld `demonstration`** (rückwärtskompatibel): `pattern`
   (Rhythmus-Raster, `spuren[].instrument/schritte`), `tab` (Saite × Zeit,
   `events[].saite/bund/technik`) oder `hoerbeispiel` (`verweis_genre`). Abgespielt

@@ -1015,18 +1015,6 @@ input[type='radio'], input[type='checkbox'] {
   font-size: 0.9rem;
 }
 
-.grafik-platzhalter { margin: 0.9rem 0; }
-
-.grafik-bild {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1.5px solid var(--linie);
-  border-radius: var(--radius);
-  background: var(--flaeche-2);
-}
-
-.grafik-platzhalter figcaption { margin-top: 0.3rem; }
 
 .ue-block { margin-bottom: 0.9rem; }
 .ue-block h4 { margin-bottom: 0.25rem; }
@@ -1929,9 +1917,10 @@ body::before {
   background-size: 140px 140px;
 }
 
-/* Überschriften: fette Versalien, eng — hardcore-Poster (kondensierte Woff2 folgt) */
+/* Überschriften: fette Versalien, eng — hardcore-Poster. Die konkrete Schrift
+   (Anton für die großen Titel, Rubik für h3) setzt der Display-Block weiter unten;
+   hier bleibt nur, was für ALLE Überschriften gilt (Versalien, Laufweite). */
 h1, h2, h3, .marke-text, .marke-hero-text h1, .abschnitt-titel {
-  font-family: 'Oswald', 'Archivo Narrow', 'Arial Narrow', var(--schrift, 'Rubik'), system-ui, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.005em;
   font-weight: 700;
