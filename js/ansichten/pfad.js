@@ -217,6 +217,66 @@ const INSTR_STUFEN = ['einsteiger', 'fortgeschritten', 'experte'];
 function instrumentStufe(baustein) {
   return INSTR_STUFEN.find((s) => (baustein.kompetenzstufe || []).includes(s)) || 'einsteiger';
 }
+// Instrumente mit gestimmten Saiten bekommen zusätzlich den Reiter „Stimmung".
+const INSTR_STIMMUNG = ['gitarre', 'bass'];
+// Aktiver In-Page-Reiter (überlebt ein Neu-Rendern; wird zurückgesetzt, wenn er
+// im aktuellen Instrument nicht existiert).
+let instrAktiverReiter = 'praxis';
+
+// Reiter-Definition je Instrument (Reihenfolge = Anzeige).
+function instrumentReiter(domaene) {
+  const reiter = [
+    { id: 'theorie', titel: t('instrument_theorie'), icon: 'fa-book-open' },
+    { id: 'praxis', titel: t('instrument_praxis'), icon: 'fa-list-check' },
+    { id: 'tools', titel: t('nav_werkzeuge'), icon: 'fa-toolbox' },
+    { id: 'pruefung', titel: t('nav_koennenscheck'), icon: 'fa-flag-checkered' },
+    { id: 'geraete', titel: t('wz_explorer_titel'), icon: 'fa-volume-high' },
+  ];
+  if (INSTR_STIMMUNG.includes(domaene)) reiter.push({ id: 'stimmung', titel: t('instrument_stimmung'), icon: 'fa-wave-square' });
+  if (domaene === 'schlagzeug') reiter.push({ id: 'patterns', titel: t('nav_patterns'), icon: 'fa-repeat' });
+  return reiter;
+}
+
+// Inhalt eines Reiters (reines HTML; der Könnens-Check wird nach dem Einsetzen
+// separat verdrahtet).
+function instrumentReiterInhalt(daten, domaene, pfad, id) {
+  const kontext = `instrument:${domaene}`;
+  const stufenListe = (stationen) => {
+    const gruppen = INSTR_STUFEN.map((stufe) => ({ stufe, st: stationen.filter((s) => instrumentStufe(s.baustein) === stufe) })).filter((g) => g.st.length);
+    return gruppen.length
+      ? gruppen.map(({ stufe, st }) => `<h3 class="instr-stufe-titel"><span class="chip chip-stufe chip-stufe-${esc(stufe)}">${esc(label('kompetenzstufe', stufe))}</span></h3>${stationslisteHtml(st, kontext)}`).join('')
+      : `<p class="leise">${esc(t('instrument_leer_abschnitt'))}</p>`;
+  };
+  if (id === 'theorie') return `${balkenHtml(projektion(pfad.theorie.map((s) => s.baustein)))}${stufenListe(pfad.theorie)}`;
+  if (id === 'praxis') return `${balkenHtml(projektion(pfad.praxis.map((s) => s.baustein)))}${stufenListe(pfad.praxis)}`;
+  if (id === 'tools') {
+    const chips = (INSTR_WERKZEUGE[domaene] || [])
+      .map((wid) => `<a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/${esc(wid)}"><i class="fa-solid ${WZ_ICON[wid] || 'fa-toolbox'}" aria-hidden="true"></i> ${esc(t('wz_' + wid + '_titel'))}</a>`)
+      .join(' ');
+    return `<p class="leise">${esc(t('instrument_tools_text'))}</p><p class="chip-zeile">${chips}</p>`;
+  }
+  if (id === 'pruefung') return `<p class="leise">${esc(t('instrument_kc_intro', { instrument: label('domaene', domaene) }))}</p><div class="instr-kc"></div>`;
+  if (id === 'geraete') {
+    const explorer = `<a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/explorer?ansicht=gitarre_bass"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> ${esc(t('wz_explorer_titel'))}</a>`;
+    const gear = pfad.ausruestung.length ? stationslisteHtml(pfad.ausruestung, kontext) : `<p class="leise">${esc(t('instrument_keine_ausruestung'))}</p>`;
+    return `<p class="chip-zeile">${explorer}</p>${gear}`;
+  }
+  if (id === 'stimmung') {
+    return `<p class="leise">${esc(t('instrument_stimmung_text'))}</p>
+      <p class="chip-zeile">
+        <a class="chip chip-akzent instr-wz-chip" href="#/stimmungen"><i class="fa-solid fa-wave-square" aria-hidden="true"></i> ${esc(t('nav_stimmungen'))}</a>
+        <a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/stimmgeraet"><i class="fa-solid fa-wave-square" aria-hidden="true"></i> ${esc(t('wz_stimmgeraet_titel'))}</a>
+      </p>`;
+  }
+  if (id === 'patterns') {
+    return `<p class="leise">${esc(t('instrument_patterns_text'))}</p>
+      <p class="chip-zeile">
+        <a class="chip chip-akzent instr-wz-chip" href="#/patterns"><i class="fa-solid fa-repeat" aria-hidden="true"></i> ${esc(t('nav_patterns'))}</a>
+        <a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/metronom"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> ${esc(t('wz_metronom_titel'))}</a>
+      </p>`;
+  }
+  return '';
+}
 
 export function renderInstrument(el, daten, domaene) {
   if (!domaene || !INSTRUMENTE.includes(domaene)) {
@@ -242,28 +302,12 @@ export function renderInstrument(el, daten, domaene) {
   }
 
   const pfad = instrumentpfad(daten, domaene);
-  const kontext = `instrument:${domaene}`;
-  const nachStufe = INSTR_STUFEN.map((stufe) => ({
-    stufe,
-    stationen: pfad.technik.filter((s) => instrumentStufe(s.baustein) === stufe),
-  })).filter((g) => g.stationen.length);
-  const technikBlock = nachStufe.length
-    ? nachStufe
-        .map(
-          ({ stufe, stationen }) => `
-        <h3 class="instr-stufe-titel"><span class="chip chip-stufe chip-stufe-${esc(stufe)}">${esc(label('kompetenzstufe', stufe))}</span></h3>
-        ${stationslisteHtml(stationen, kontext)}`
-        )
-        .join('')
-    : `<p class="leise">${esc(t('leer_domaene'))}</p>`;
-  const gearBlock = pfad.ausruestung.length
-    ? stationslisteHtml(pfad.ausruestung, kontext)
-    : `<p class="leise">${esc(t('instrument_keine_ausruestung'))}</p>`;
-  const wzChips = (INSTR_WERKZEUGE[domaene] || [])
-    .map(
-      (id) => `<a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/${esc(id)}"><i class="fa-solid ${WZ_ICON[id] || 'fa-toolbox'}" aria-hidden="true"></i> ${esc(t('wz_' + id + '_titel'))}</a>`
-    )
-    .join(' ');
+  const reiter = instrumentReiter(domaene);
+  if (!reiter.some((r) => r.id === instrAktiverReiter)) instrAktiverReiter = reiter[0].id;
+
+  const reiterBar = `<div class="instr-reiter" role="tablist" aria-label="${esc(t('instrument_untertitel'))}">${reiter
+    .map((r) => `<button type="button" class="chip chip-waehlbar instr-reiter-knopf ${r.id === instrAktiverReiter ? 'chip-akzent' : ''}" role="tab" aria-selected="${r.id === instrAktiverReiter}" data-reiter="${esc(r.id)}"><i class="fa-solid ${r.icon}" aria-hidden="true"></i> ${esc(r.titel)}</button>`)
+    .join('')}</div>`;
 
   el.innerHTML = `
     <section class="marke-hero klein hue pf-blau baustein-hero instr-hero">
@@ -273,31 +317,32 @@ export function renderInstrument(el, daten, domaene) {
         <p class="marke-hero-untertitel">${esc(t('instrument_untertitel'))}</p>
       </div>
     </section>
-    <section class="abschnitt instr-abschnitt">
-      <div class="abschnitt-kopf"><h2>${esc(t('instrument_technik'))}</h2></div>
-      ${balkenHtml(projektion(pfad.technik.map((s) => s.baustein)))}
-      ${technikBlock}
-    </section>
-    <section class="abschnitt instr-abschnitt">
-      <div class="abschnitt-kopf"><h2>${esc(t('instrument_ausruestung'))}</h2></div>
-      ${gearBlock}
-    </section>
-    <section class="abschnitt instr-abschnitt">
-      <div class="abschnitt-kopf"><h2>${esc(t('nav_koennenscheck'))}</h2></div>
-      <p class="leise">${esc(t('instrument_kc_intro', { instrument: label('domaene', domaene) }))}</p>
-      <div class="instr-kc"></div>
-    </section>
-    <section class="abschnitt instr-abschnitt">
-      <div class="abschnitt-kopf"><h2>${esc(t('instrument_werkzeuge'))}</h2></div>
-      <p class="chip-zeile">${wzChips}</p>
-    </section>
+    ${reiterBar}
+    <div class="instr-tab-inhalt" role="tabpanel">${instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter)}</div>
     <p class="knopf-zeile instr-fuss">
       <a class="knopf knopf-sekundaer" href="#/instrument"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('instrument_alle'))}</a>
       <a class="knopf knopf-sekundaer" href="#/training"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('nav_training'))}</a>
     </p>`;
 
-  const kc = el.querySelector('.instr-kc');
-  if (kc) zeichneKoennenscheck(kc, daten, { mitHero: false });
+  const inhalt = el.querySelector('.instr-tab-inhalt');
+  const kcVerdrahten = () => {
+    const kc = inhalt.querySelector('.instr-kc');
+    if (kc) zeichneKoennenscheck(kc, daten, { mitHero: false });
+  };
+  kcVerdrahten();
+
+  for (const knopf of el.querySelectorAll('[data-reiter]')) {
+    knopf.addEventListener('click', () => {
+      instrAktiverReiter = knopf.dataset.reiter;
+      for (const k of el.querySelectorAll('[data-reiter]')) {
+        const an = k.dataset.reiter === instrAktiverReiter;
+        k.classList.toggle('chip-akzent', an);
+        k.setAttribute('aria-selected', String(an));
+      }
+      inhalt.innerHTML = instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter);
+      kcVerdrahten();
+    });
+  }
 }
 
 // Band-Landing: Querschnittsthemen, die mehrere Instrumente zugleich betreffen
