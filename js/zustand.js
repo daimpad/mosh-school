@@ -12,29 +12,12 @@ const SCHEMA_VERSION = 2;
 
 let z = null;
 let speicherVerfuegbar = true;
-const abonnenten = new Set();
 
-// Reaktivität: Sichten abonnieren Änderungen und rendern neu. Fehler in einem
-// Abonnenten dürfen andere nicht abreißen lassen.
-export function abonniere(rueckruf) {
-  abonnenten.add(rueckruf);
-  return () => abonnenten.delete(rueckruf);
-}
-
-function benachrichtige() {
-  for (const fn of abonnenten) {
-    try {
-      fn();
-    } catch {
-      /* ein defekter Abonnent darf die übrigen nicht blockieren */
-    }
-  }
-}
-
-// Persistiert und benachrichtigt in einem Schritt — jeder Mutator ruft das.
+// Persistiert nach jeder Mutation. Sichten rendern nach einer Änderung über das
+// 'app:rendern'-Ereignis neu (neuRendern in js/oberflaeche.js) — ein separater
+// Abonnenten-Mechanismus ist dafür nicht nötig.
 function schreibe() {
   speichereZustand();
-  benachrichtige();
 }
 
 function vorgabe() {
