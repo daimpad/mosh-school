@@ -1,0 +1,217 @@
+{
+  "genre": "Grenzgänger",
+  "anzahl": 30,
+  "hinweis": "Grenzüberschreitende Bands als praktische Beispiele zum Baustein 'von_referenz_zum_eigenen'. Jede Zeile nennt die verschmolzenen Welten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar), optional durch verifizierte Deep-Links ersetzbar. Hass-/extremismusfrei kuratiert.",
+  "songs": [
+    {
+      "kuenstler": "Zeal & Ardor",
+      "titel": "Devil Is Fine",
+      "substil_vermerk": "Black Metal × Gospel/Spirituals",
+      "url": "https://bandcamp.com/search?q=Zeal+%26+Ardor+Devil+Is+Fine&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Kvelertak",
+      "titel": "Mjød",
+      "substil_vermerk": "Black Metal × Hardcore × Rock'n'Roll",
+      "url": "https://www.youtube.com/results?search_query=Kvelertak+Mj%C3%B8d",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Deafheaven",
+      "titel": "Dream House",
+      "substil_vermerk": "Black Metal × Shoegaze (Blackgaze)",
+      "url": "https://bandcamp.com/search?q=Deafheaven+Dream+House&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Oranssi Pazuzu",
+      "titel": "Vasemman käden hierarkia",
+      "substil_vermerk": "Black Metal × Psychedelic/Kraut",
+      "url": "https://bandcamp.com/search?q=Oranssi+Pazuzu+Vasemman+k%C3%A4den+hierarkia&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Imperial Triumphant",
+      "titel": "Swarming Opulence",
+      "substil_vermerk": "Black/Death × Jazz/Avantgarde",
+      "url": "https://bandcamp.com/search?q=Imperial+Triumphant+Swarming+Opulence&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "White Ward",
+      "titel": "Love Exchange Failure",
+      "substil_vermerk": "Black Metal × Noir-Jazz/Saxophon",
+      "url": "https://bandcamp.com/search?q=White+Ward+Love+Exchange+Failure&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Panopticon",
+      "titel": "Where Mountains Pierce the Sky",
+      "substil_vermerk": "Black Metal × Bluegrass/Folk",
+      "url": "https://bandcamp.com/search?q=Panopticon+Where+Mountains+Pierce+the+Sky&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Igorrr",
+      "titel": "Cheval",
+      "substil_vermerk": "Breakcore/Electronic × Metal × Barock",
+      "url": "https://bandcamp.com/search?q=Igorrr+Cheval&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Body",
+      "titel": "An Urn",
+      "substil_vermerk": "Sludge × Noise/Electronic",
+      "url": "https://bandcamp.com/search?q=The+Body+An+Urn&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Author & Punisher",
+      "titel": "Pharmacide",
+      "substil_vermerk": "Doom/Industrial × Maschinen",
+      "url": "https://bandcamp.com/search?q=Author+%26+Punisher+Pharmacide&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Boris",
+      "titel": "Farewell",
+      "substil_vermerk": "Drone/Doom × Shoegaze × Pop",
+      "url": "https://bandcamp.com/search?q=Boris+Farewell&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sunn O)))",
+      "titel": "Aghartha",
+      "substil_vermerk": "Drone × Ambient",
+      "url": "https://bandcamp.com/search?q=Sunn+O%29%29%29+Aghartha&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mr. Bungle",
+      "titel": "Quote Unquote",
+      "substil_vermerk": "Metal × Funk × Avantgarde",
+      "url": "https://www.youtube.com/results?search_query=Mr.+Bungle+Quote+Unquote",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Devin Townsend",
+      "titel": "Kingdom",
+      "substil_vermerk": "Extreme Metal × Prog × Ambient × Pop",
+      "url": "https://bandcamp.com/search?q=Devin+Townsend+Kingdom&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Gojira",
+      "titel": "Flying Whales",
+      "substil_vermerk": "Death/Groove × Progressive × atmosphärisch",
+      "url": "https://www.youtube.com/results?search_query=Gojira+Flying+Whales",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Ulver",
+      "titel": "Nowhere/Catastrophe",
+      "substil_vermerk": "Black Metal → Electronic (Genre-Verlassen)",
+      "url": "https://bandcamp.com/search?q=Ulver+Nowhere%2FCatastrophe&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Chat Pile",
+      "titel": "Slaughterhouse",
+      "substil_vermerk": "Noise Rock × Sludge × Post-Hardcore",
+      "url": "https://bandcamp.com/search?q=Chat+Pile+Slaughterhouse&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wilderun",
+      "titel": "Woolgatherer",
+      "substil_vermerk": "Folk × Orchestral × Prog/Death",
+      "url": "https://bandcamp.com/search?q=Wilderun+Woolgatherer&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Alcest",
+      "titel": "Autre Temps",
+      "substil_vermerk": "Blackgaze × Dream Pop",
+      "url": "https://bandcamp.com/search?q=Alcest+Autre+Temps&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Swans",
+      "titel": "The Seer",
+      "substil_vermerk": "No Wave/Post-Punk × experimentelle Schwere",
+      "url": "https://bandcamp.com/search?q=Swans+The+Seer&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Neurosis",
+      "titel": "Locust Star",
+      "substil_vermerk": "Sludge × Post-Rock × Tribal",
+      "url": "https://bandcamp.com/search?q=Neurosis+Locust+Star&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Godflesh",
+      "titel": "Like Rats",
+      "substil_vermerk": "Industrial × Metal × HipHop-Rhythmik",
+      "url": "https://bandcamp.com/search?q=Godflesh+Like+Rats&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Jesu",
+      "titel": "Conqueror",
+      "substil_vermerk": "Metal × Shoegaze/Ambient",
+      "url": "https://bandcamp.com/search?q=Jesu+Conqueror&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Liturgy",
+      "titel": "Returner",
+      "substil_vermerk": "Black Metal × Minimalismus/Glitch",
+      "url": "https://bandcamp.com/search?q=Liturgy+Returner&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ne Obliviscaris",
+      "titel": "And Plague Flowers the Kaleidoscope",
+      "substil_vermerk": "Black/Death × Violine/Prog",
+      "url": "https://bandcamp.com/search?q=Ne+Obliviscaris+And+Plague+Flowers+the+Kaleidoscope&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bathory",
+      "titel": "A Fine Day to Die",
+      "substil_vermerk": "Thrash/Black × Viking/Folk (Genre-Erfindung)",
+      "url": "https://www.youtube.com/results?search_query=Bathory+A+Fine+Day+to+Die",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Sepultura",
+      "titel": "Roots Bloody Roots",
+      "substil_vermerk": "Groove Metal × brasilianisch/tribal",
+      "url": "https://www.youtube.com/results?search_query=Sepultura+Roots+Bloody+Roots",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Ghost",
+      "titel": "Square Hammer",
+      "substil_vermerk": "Heavy Metal × Pop-Hooks × Theatralik",
+      "url": "https://www.youtube.com/results?search_query=Ghost+Square+Hammer",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Leprous",
+      "titel": "The Price",
+      "substil_vermerk": "Prog Metal × Pop/Art-Rock",
+      "url": "https://bandcamp.com/search?q=Leprous+The+Price&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cave In",
+      "titel": "Juggernaut",
+      "substil_vermerk": "Hardcore/Metalcore × Space-Rock/Prog",
+      "url": "https://bandcamp.com/search?q=Cave+In+Juggernaut&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
