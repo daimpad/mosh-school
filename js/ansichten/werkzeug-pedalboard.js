@@ -11,13 +11,7 @@
 import { t, text } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
-
-// Abstraktes Pedal-Glyph (Formsprache: Gehäuse-Rechteck, zwei Reglerpunkte,
-// Fußschalter-Kreis) — monochrom, currentColor, nur inline.
-const PEDAL_SVG =
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">' +
-  '<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="9" cy="7.5" r="1.3"/>' +
-  '<circle cx="15" cy="7.5" r="1.3"/><circle cx="12" cy="16.5" r="2.4"/></svg>';
+import { pedalGrafik } from '../geraete-grafik.js';
 
 const MINIMAL = { gitarre: ['tuner', 'distortion', 'noise_gate'], bass: ['tuner', 'kompressor', 'bass_overdrive'] };
 
@@ -115,7 +109,7 @@ export function renderWerkzeugPedalboard(el, daten, query) {
   const katalogHtml = katalog
     .map(
       (p) => `<button type="button" class="chip chip-waehlbar wz-pb-katalog" data-pedal="${esc(p.id)}">
-        <span class="wz-pb-glyph">${PEDAL_SVG}</span> ${esc(text(p.name))}
+        <span class="wz-pb-glyph">${pedalGrafik(p)}</span> ${esc(text(p.name))}
       </button>`
     )
     .join(' ');
@@ -128,11 +122,11 @@ export function renderWerkzeugPedalboard(el, daten, query) {
           const gewaehlt = id === zustand.ausgewaehlt;
           return `<li class="wz-pb-glied${gewaehlt ? ' gewaehlt' : ''}" draggable="true" data-index="${i}" data-pedal="${esc(id)}">
             <button type="button" class="wz-pb-glied-name" data-waehle="${i}" aria-pressed="${gewaehlt}">
-              <span class="wz-pb-glyph">${PEDAL_SVG}</span> <span>${esc(name)}</span>
+              <span class="wz-pb-glyph">${pedalGrafik(p)}</span> <span>${esc(name)}</span>
             </button>
             <span class="wz-pb-glied-knoepfe">
-              <button type="button" class="wz-pb-mini" data-hoch="${i}" aria-label="${esc(t('wz_pb_hoch', { name }))}" ${i === 0 ? 'disabled' : ''}><span aria-hidden="true">↑</span></button>
-              <button type="button" class="wz-pb-mini" data-runter="${i}" aria-label="${esc(t('wz_pb_runter', { name }))}" ${i === kette.length - 1 ? 'disabled' : ''}><span aria-hidden="true">↓</span></button>
+              <button type="button" class="wz-pb-mini" data-hoch="${i}" aria-label="${esc(t('wz_pb_hoch', { name }))}" ${i === 0 ? 'disabled' : ''}><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+              <button type="button" class="wz-pb-mini" data-runter="${i}" aria-label="${esc(t('wz_pb_runter', { name }))}" ${i === kette.length - 1 ? 'disabled' : ''}><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></button>
               <button type="button" class="wz-pb-mini" data-entferne="${i}" aria-label="${esc(t('wz_pb_entferne', { name }))}"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
             </span>
           </li>`;
@@ -143,7 +137,7 @@ export function renderWerkzeugPedalboard(el, daten, query) {
   const gewaehltesPedal = zustand.ausgewaehlt ? pedal(daten, zustand.ausgewaehlt) : null;
   const erklaerHtml = gewaehltesPedal
     ? `<div class="wz-pb-erklaerung karte">
-         <h3>${PEDAL_SVG} ${esc(text(gewaehltesPedal.name))}</h3>
+         <h3><span class="wz-pb-glyph-gross">${pedalGrafik(gewaehltesPedal)}</span> ${esc(text(gewaehltesPedal.name))}</h3>
          <p>${esc(text(gewaehltesPedal.erklaerung))}</p>
          <p class="leise"><strong>${esc(t('wz_pb_tipp'))}:</strong> ${esc(text(gewaehltesPedal.tipp))}</p>
        </div>`
