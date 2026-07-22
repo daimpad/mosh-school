@@ -657,7 +657,8 @@
     "wz_rec_fusion_name": "Fusions-Riff {n}",
     "wz_rec_kreativ_hinweis": "Kreativ-Modus: Dein nächstes Riff gilt als erster eigener Genre-Mix.",
     "wz_rec_kreativ_hinweis_mix": "Kreativ-Modus für {mix}: Nimm die Fusion auf — der erste Take zählt als Meilenstein.",
-    "meilenstein_kreativ_fusion": "Erstes eigenes Fusions-Riff aufgenommen"
+    "meilenstein_kreativ_fusion": "Erstes eigenes Fusions-Riff aufgenommen",
+    "wz_lk_legende_aria": "Genre-Auswahl — Chip antippen hebt den Punkt hervor"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
