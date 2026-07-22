@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "zweck": "Inszenierung der Genre-Achse (#/pfad/stil): coole Kurzbeschreibung, musikwissenschaftliche Einordnung und Verwandtschaft. Referenz, kein Fortschritt. Kein Vokabular-Block; die Genre-Namen leben in labels vokabeln.stil."
+  },
+  "genres": {
+    "hardcore": {
+      "kurz": "Kurz, laut, direkt — Hardcore ist Punk mit zusammengebissenen Zähnen. Keine Soli, kein Firlefanz: ein Riff, ein Break, eine Botschaft, dann ist der Song vorbei. Es geht um Energie im Raum, um Circle Pits und das Gefühl, dass die Bühne dir genauso gehört wie der Band.",
+      "einordnung": {
+        "tempo": "Mittel bis schnell, treibender Achtel-Puls; das Herzstück ist der Breakdown — ein halbtempo-schwerer Part zum Mitstampfen.",
+        "sound": "Anzerrte, mittige Gitarren ohne Hochglanz-Produktion; Standard- oder leicht tiefere Stimmung. Ton vor Perfektion.",
+        "vocals": "Geschrien, aber verständlich — Parolen zum Mitbrüllen (Gang Shouts), oft im Kollektiv.",
+        "struktur": "Sehr kompakt (oft unter zwei Minuten): Intro-Riff, Strophe, Break, Schluss. Wiederholung schlägt Komplexität.",
+        "herkunft": "Anfang der 1980er aus dem US-Punk (Black Flag, Minor Threat, Bad Brains); die NYHC-Szene brachte den metallischen Härtegrad."
+      },
+      "verwandt": [
+        "metalcore",
+        "crust",
+        "powerviolence"
+      ]
+    },
+    "metalcore": {
+      "kurz": "Metalcore ist der Ort, wo Hardcore-Wucht auf Metal-Melodie trifft: brutale Breakdowns neben eingängigen Leads, geschriene Strophen neben gesungenen Refrains. Die Formel, die eine ganze Generation in die Hallen gezogen hat.",
+      "einordnung": {
+        "tempo": "Wechselhaft — schnelle melodische Parts kippen in halbtempo-Breakdowns; dynamische Kontraste sind das Prinzip.",
+        "sound": "Tief gestimmte, tighte High-Gain-Gitarren, oft in Drop-Tunings; klar produziert für Wucht und Definition.",
+        "vocals": "Zweistimmig im Prinzip: harsches Screaming/Growling in den harten Parts, cleaner Gesang im Refrain.",
+        "struktur": "Strophe-Refrain-Logik mit eingebautem Breakdown als Höhepunkt; Melodie und Härte im Wechsel.",
+        "herkunft": "Ende der 1990er/2000er aus der Verschmelzung von Hardcore und Melodic Death (Göteborg); prägend u. a. Killswitch Engage, As I Lay Dying."
+      },
+      "verwandt": [
+        "hardcore",
+        "deathcore",
+        "djent"
+      ]
+    },
+    "thrash": {
+      "kurz": "Thrash ist Geschwindigkeit mit Präzision — die scharfe Kante des Metal. Rasende Downpicking-Riffs, Galopp-Rhythmen und eine Rhythmusgitarre, die tighter sein muss als das Metronom. Bier, Denim, Nackenschmerzen.",
+      "einordnung": {
+        "tempo": "Schnell bis sehr schnell; Galopp-Figuren und stramme Downpicking-Läufe an der Ausdauergrenze der Anschlaghand.",
+        "sound": "Bissige, mittenreiche Gitarren mit straffem Palm Muting; meist Standard-Tuning, Präzision vor Tiefe.",
+        "vocals": "Aggressiv-rhythmisches Shouting, halb gesungen, halb gebellt — meist verständlich.",
+        "struktur": "Riff-getrieben mit ausgedehnten Instrumentalteilen und schnellen Soli; mehr Parts als im Hardcore.",
+        "herkunft": "Frühe 1980er aus der Verbindung von NWOBHM und Hardcore-Punk; die Bay Area und die deutsche Teutonic-Schule (Kreator, Sodom) trugen es weiter."
+      },
+      "verwandt": [
+        "death_metal",
+        "crust",
+        "grindcore"
+      ]
+    },
+    "death_metal": {
+      "kurz": "Death Metal ist Extremität als Handwerk: tiefer, dunkler, brutaler — und oft erstaunlich technisch. Growls aus dem Bauch, Blastbeats wie ein Presslufthammer, Riffs, die sich winden statt zu rocken. Die Schwerkraft des Genres zieht nach unten.",
+      "einordnung": {
+        "tempo": "Von schleppend bis Blastbeat-schnell; abrupte Tempowechsel und Double-Bass-Gewitter sind Standard.",
+        "sound": "Sehr tief gestimmt, dicht und sattelt viel Gain; Palm Muting und Tremolo-Picking formen die wummernde Wand.",
+        "vocals": "Tiefe, kehlige Growls (Death Growls) — Klangfarbe aus Verzerrung, nicht aus Pressen; Text tritt hinter den Klang zurück.",
+        "struktur": "Riff-Collagen ohne klassisches Strophe-Refrain; viele Parts, oft technisch verschachtelt.",
+        "herkunft": "Mitte der 1980er aus dem Thrash heraus (Death, Possessed); Florida und die schwedische Szene (Entombed) prägten zwei Schulen."
+      },
+      "verwandt": [
+        "thrash",
+        "grindcore",
+        "deathcore"
+      ]
+    },
+    "black_metal": {
+      "kurz": "Black Metal ist Atmosphäre vor allem anderen — kalt, weit, entrückt. Hohe Tremolo-Riffs wie ein Schneesturm, keifende Vocals aus der Ferne, eine Produktion, die Rohheit zur Ästhetik erklärt. Weniger Groove, mehr Sog.",
+      "einordnung": {
+        "tempo": "Oft sehr schnell mit durchlaufenden Blastbeats, dann wieder hypnotisch langsam; das Tremolo trägt die Melodie.",
+        "sound": "Hohe, dünne, verhallte Gitarren mit viel Tremolo-Picking; bewusst rohe (lo-fi) Produktion für Kälte und Distanz.",
+        "vocals": "Hohes, keifendes Kreischen (Shrieks) — schneidend und entmenschlicht statt tief.",
+        "struktur": "Lange, repetitive Passagen, die einen Sog aufbauen; Atmosphäre schlägt Hook.",
+        "herkunft": "Erste Welle Mitte 1980er (Bathory, Venom, Celtic Frost), zweite Welle Anfang 1990er in Norwegen (Mayhem, Darkthrone, Emperor)."
+      },
+      "verwandt": [
+        "death_metal",
+        "crust",
+        "doom"
+      ]
+    },
+    "doom": {
+      "kurz": "Doom ist Schwere in Zeitlupe — der Riff bekommt Raum zum Atmen, jede Note wiegt eine Tonne. Wo andere Genres rasen, lässt Doom die Spannung tragen. Melancholie, Verstärker-Feedback und die Kunst, langsam zu spielen, ohne zu langweilen.",
+      "einordnung": {
+        "tempo": "Langsam bis sehr langsam; der Groove zerdehnt sich, einzelne Schläge werden zum Ereignis.",
+        "sound": "Tief, warm, sehr viel Sustain und Fuzz; die Gitarre klingt wie ein einstürzendes Gebäude in Superzeitlupe.",
+        "vocals": "Breit gefächert — klarer, klagender Gesang (Epic/Traditional) bis zu tiefen Growls (Death-/Funeral-Doom).",
+        "struktur": "Wenige, ausgedehnte Riffs mit viel Dynamik-Aufbau; Wiederholung als Trance, nicht als Faulheit.",
+        "herkunft": "Wurzel im Ur-Metal von Black Sabbath (1970); als eigenes Genre in den 1980ern (Candlemass, Saint Vitus) ausformuliert."
+      },
+      "verwandt": [
+        "sludge",
+        "stoner_post",
+        "black_metal"
+      ]
+    },
+    "crust": {
+      "kurz": "Crust ist der dreckige Schnittpunkt von Punk und Metal — d-beat-Getrommel, Verzerrung bis zur Schmerzgrenze und eine politische Wut, die man hört. Roh, komprimiert, kompromisslos. Kein Studio-Glanz, nur Substanz.",
+      "einordnung": {
+        "tempo": "Schnell und treibend über dem d-beat (Discharge-Rhythmus); dazwischen schwere, kriechende Parts.",
+        "sound": "Extrem verzerrte, bassige Gitarren; absichtlich rau und übersteuert für maximalen Dreck.",
+        "vocals": "Bellend-geschrien, oft im Wechsel hoch/tief, mit Parolen zu Krieg, System und Widerstand.",
+        "struktur": "Kurz und wuchtig wie Hardcore, aber mit Metal-Riffs unterfüttert; d-beat als roter Faden.",
+        "herkunft": "Mitte der 1980er aus dem UK-Anarcho-Punk (Discharge, Amebix); Stenchcore und schwedischer Käng führten es weiter."
+      },
+      "verwandt": [
+        "hardcore",
+        "grindcore",
+        "black_metal"
+      ]
+    },
+    "grindcore": {
+      "kurz": "Grindcore ist Extremität in Reinform — Songs, die vorbei sind, bevor du blinzelst. Blastbeats am Anschlag, Riffs als Splitter, ein Sänger, der zwischen Growl und Kreischen zerreißt. Alles auf null Komma nichts komprimiert.",
+      "einordnung": {
+        "tempo": "Extrem schnell; der Blastbeat ist das Fundament, Songlängen von wenigen Sekunden sind Programm.",
+        "sound": "Verzerrt und chaotisch, oft bewusst schmutzig; Präzision weicht purer Wucht.",
+        "vocals": "Zweistimmig extrem — tiefe Growls und hohe Shrieks im schnellen Wechsel (Pig Squeals inklusive).",
+        "struktur": "Ultrakurze Ausbrüche ohne Refrain; ein Riff, ein Blast, Schluss.",
+        "herkunft": "Mitte/Ende der 1980er aus Hardcore, Crust und Thrash (Napalm Death, Repulsion, Terrorizer)."
+      },
+      "verwandt": [
+        "powerviolence",
+        "death_metal",
+        "crust"
+      ]
+    },
+    "powerviolence": {
+      "kurz": "Powerviolence ist Hardcore, das aus der Haut fährt — brutale Tempowechsel zwischen Höchstgeschwindigkeit und schleppendem Stillstand. Kurz, unberechenbar, ohne einen Funken Kommerz. Dynamik als Waffe.",
+      "einordnung": {
+        "tempo": "Extreme Kontraste: rasende Fastcore-Blasts kippen unvermittelt in zähe, langsame Parts und zurück.",
+        "sound": "Roh und trocken, bass-lastig; bewusst unpoliert, näher am Punk als am Metal.",
+        "vocals": "Geschrien und angepisst, oft mehrstimmig; Wut ohne Umweg.",
+        "struktur": "Winzige Songs mit abrupten Stopps und Starts; die Unberechenbarkeit ist das Stilmittel.",
+        "herkunft": "Frühe 1990er an der US-Westküste (Infest, Man Is the Bastard, No Comment) aus dem Hardcore heraus."
+      },
+      "verwandt": [
+        "grindcore",
+        "hardcore",
+        "crust"
+      ]
+    },
+    "sludge": {
+      "kurz": "Sludge ist Doom durch den Fleischwolf von Hardcore gedreht — zäh, giftig, verzerrt bis zum Anschlag. Langsame Schwere trifft auf angepisste Aggression. Der Sumpf, aus dem der schwerste Sound kriecht.",
+      "einordnung": {
+        "tempo": "Überwiegend langsam und schleppend, mit gelegentlichen Hardcore-Ausbrüchen zum Kontrast.",
+        "sound": "Extrem verzerrt, dreckig und bass-schwer; Feedback und Rückkopplung gehören dazu.",
+        "vocals": "Geschrien, gequält, oft rau und hasserfüllt — mehr Verzweiflung als Melodie.",
+        "struktur": "Riff-lastig und zäh, mit dynamischen Brüchen zwischen Kriechen und Explosion.",
+        "herkunft": "Frühe 1990er, v. a. aus New Orleans (NOLA-Sludge: Eyehategod, Crowbar) — Doom-Schwere plus Hardcore-Dreck."
+      },
+      "verwandt": [
+        "doom",
+        "stoner_post",
+        "hardcore"
+      ]
+    },
+    "deathcore": {
+      "kurz": "Deathcore fusioniert die Brutalität des Death Metal mit der Wucht des Metalcore-Breakdowns — tief, technisch, auf maximale Härte getrimmt. Blastbeats treffen auf halbtempo-Vernichtung. Die junge, brutale Speerspitze.",
+      "einordnung": {
+        "tempo": "Voller Kontrast: Death-Metal-Blasts und rasende Parts neben ultra-langsamen, vernichtenden Breakdowns (Downtempo).",
+        "sound": "Sehr tief gestimmt (7-/8-Saiter verbreitet), extrem tight produziert für chirurgische Härte.",
+        "vocals": "Ganze Palette — tiefe Gutturals, hohe Screams, oft mit extrem tiefen Downs im Breakdown.",
+        "struktur": "Death-Metal-Riffing als Rahmen, der Breakdown als dramaturgischer Höhepunkt; teils symphonisch überhöht.",
+        "herkunft": "Mitte der 2000er aus Metalcore und Death Metal (Suicide Silence, Whitechapel, Job for a Cowboy)."
+      },
+      "verwandt": [
+        "metalcore",
+        "death_metal",
+        "djent"
+      ]
+    },
+    "djent": {
+      "kurz": "Djent dreht sich um einen Sound: den hoch gegainten, palm-gemuteten Chug auf einer sehr tiefen Saite, dessen Klang dem Genre den Namen gab. Polyrhythmen, verschobene Betonungen und mathematische Präzision treffen auf luftige, atmosphärische Weiten. Kopf und Nacken zugleich.",
+      "einordnung": {
+        "tempo": "Moderat, aber rhythmisch komplex; ungerade Taktarten und Polyrhythmen verschieben das Metrum bewusst.",
+        "sound": "Sehr tief (7-/8-Saiter, erweiterte Mensur), extrem tight und mittenbetont — der namensgebende Chug.",
+        "vocals": "Wechsel aus Screaming und cleanem, oft atmosphärischem Gesang; die Stimme trägt die Melodie über dem Rhythmus.",
+        "struktur": "Groove- und rhythmusgetrieben mit Ambient-Flächen; Spannung aus Metrik statt aus Tempo.",
+        "herkunft": "2000er, ausgehend von Meshuggah und popularisiert durch Periphery, Animals as Leaders — ein moderner Ableger des Prog-Metalcore."
+      },
+      "verwandt": [
+        "metalcore",
+        "deathcore",
+        "thrash"
+      ]
+    },
+    "stoner_post": {
+      "kurz": "Stoner und Post-Metal teilen sich eine Vorliebe für Raum und Textur: fuzz-getränkte, hypnotische Grooves auf der einen, weite, dynamische Klanglandschaften auf der anderen Seite. Weniger Aggression, mehr Reise — vom Wüsten-Riff bis zur kathartischen Welle.",
+      "einordnung": {
+        "tempo": "Mittel bis langsam, groovend und wiegend; Post-Metal baut über lange Strecken Spannung auf und entlädt sie.",
+        "sound": "Warm, fuzz- und effektreich; Stoner rockt erdig, Post-Metal schichtet Hall und Delay zu Weite.",
+        "vocals": "Sparsam eingesetzt — klarer, oft entrückter Gesang; Post-Metal nutzt auch Screams als Klangfarbe, viele Passagen bleiben instrumental.",
+        "struktur": "Riff-Trance (Stoner) bzw. lange Crescendo-Bögen mit leise-laut-Dynamik (Post-Metal); Geduld als Prinzip.",
+        "herkunft": "Stoner aus dem Desert Rock der 1990er (Kyuss); Post-Metal aus der Neurosis/Isis-Linie derselben Ära."
+      },
+      "verwandt": [
+        "doom",
+        "sludge"
+      ]
+    }
+  }
+}

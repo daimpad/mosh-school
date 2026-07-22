@@ -8,6 +8,7 @@ import { balkenHtml, bausteinIcon, entdeckenAktion, esc, heroKlein, leerHtml, ne
 import { individualpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
+import { genreInszenierungHtml, genreKurz, genrePlatzhalterSvg } from '../genre-inszenierung.js';
 
 // In der Liste ordnet bereits die Reihenfolge; der „Empfohlen vorher"-Hinweis
 // gehört zum Zugriffsmoment und lebt in der Baustein-Ansicht (Spez. 4.4).
@@ -113,27 +114,50 @@ export function renderThemen(el, daten, domaene) {
     ${inhalt}`;
 }
 
-// Genre-Achse (Stil): Hub über alle belegten Genres, dann je Genre alle Bausteine
-// quer über Instrumente und Stufen. Reine Perspektive über den Pool.
+// Genre-Achse (Stil): Hub über alle belegten Genres, dann je Genre eine
+// inszenierte Seite — cooler Einstieg, musikwissenschaftliche Einordnung,
+// Verwandtschaft (aus data/genres.json) plus alle Bausteine quer über
+// Instrumente und Stufen. Reine Perspektive über den Pool.
+
+// Erster Satz der Kurzbeschreibung — kompakter Anreißer für die Hub-Karten.
+function ersterSatz(text) {
+  const m = /^(.*?[.!?])(\s|$)/.exec(text || '');
+  return m ? m[1] : (text || '');
+}
+
 export function renderStil(el, daten, stil) {
   if (!stil) {
     const zeilen = stile(daten)
-      .map(
-        (e) =>
-          `<a class="karte karte-link" href="#/pfad/stil/${esc(e.stil)}"><h3>${esc(label('stil', e.stil))}</h3><p class="leise">${esc(t('n_bausteine', { n: e.anzahl }))}</p></a>`,
-      )
+      .map((e) => {
+        const anreiss = ersterSatz(genreKurz(daten, e.stil));
+        return `<a class="karte karte-link genre-karte" href="#/pfad/stil/${esc(e.stil)}">
+            <h3>${esc(label('stil', e.stil))} <span class="chip">${esc(t('n_bausteine', { n: e.anzahl }))}</span></h3>
+            ${anreiss ? `<p class="leise genre-karte-kurz">${esc(anreiss)}</p>` : ''}
+          </a>`;
+      })
       .join('');
-    el.innerHTML = `${heroKlein('fa-fire', t('pfad_stil'), t('pfad_stil_text'), 'pf-magenta')}${zeilen || leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}`;
+    const hero = `
+      <section class="marke-hero klein hue pf-magenta genre-hub-hero">
+        <div class="marke-hero-text">
+          <h1>${esc(t('pfad_stil'))}</h1>
+          <p class="marke-hero-untertitel">${esc(t('pfad_stil_text'))}</p>
+        </div>
+        ${genrePlatzhalterSvg()}
+      </section>`;
+    el.innerHTML = `${hero}${zeilen || leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}`;
     return;
   }
   const pfad = stilpfad(daten, stil);
-  const inhalt =
+  const liste =
     pfad.stationen.length === 0
       ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
       : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, `stil:${stil}`)}`;
+  const inszenierung = genreInszenierungHtml(daten, stil);
   el.innerHTML = `
-    ${heroKlein('fa-fire', label('stil', stil), t('pfad_stil_text'), 'pf-magenta')}
-    ${inhalt}`;
+    ${heroKlein('fa-fire', label('stil', stil), '', 'pf-magenta')}
+    ${inszenierung}
+    <h2 class="abschnitt-titel genre-bausteine-titel">${esc(t('genre_bausteine_titel'))}</h2>
+    ${liste}`;
 }
 
 // Umgebungs-Achse (Outdoor, Querschnitt): Hub über die Wetter- und Boden-Themen
