@@ -1,0 +1,217 @@
+{
+  "genre": "Thrash",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Metallica",
+      "titel": "Master of Puppets",
+      "substil_vermerk": "Bay-Area/Big Four (US)",
+      "url": "https://www.youtube.com/results?search_query=Metallica+Master+of+Puppets",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Slayer",
+      "titel": "Angel of Death",
+      "substil_vermerk": "Big Four (US)",
+      "url": "https://www.youtube.com/results?search_query=Slayer+Angel+of+Death",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Megadeth",
+      "titel": "Holy Wars... The Punishment Due",
+      "substil_vermerk": "Big Four (US)",
+      "url": "https://www.youtube.com/results?search_query=Megadeth+Holy+Wars...+The+Punishment+Due",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Anthrax",
+      "titel": "Among the Living",
+      "substil_vermerk": "Big Four (US)",
+      "url": "https://www.youtube.com/results?search_query=Anthrax+Among+the+Living",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Exodus",
+      "titel": "Bonded by Blood",
+      "substil_vermerk": "Bay-Area-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Exodus+Bonded+by+Blood",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Testament",
+      "titel": "Into the Pit",
+      "substil_vermerk": "Bay-Area-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Testament+Into+the+Pit",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Overkill",
+      "titel": "Elimination",
+      "substil_vermerk": "East-Coast-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Overkill+Elimination",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Death Angel",
+      "titel": "The Ultra-Violence",
+      "substil_vermerk": "Bay-Area-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Death+Angel+The+Ultra-Violence",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Kreator",
+      "titel": "Pleasure to Kill",
+      "substil_vermerk": "Teutonic Thrash (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Kreator+Pleasure+to+Kill",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Sodom",
+      "titel": "Agent Orange",
+      "substil_vermerk": "Teutonic Thrash (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Sodom+Agent+Orange",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Destruction",
+      "titel": "Mad Butcher",
+      "substil_vermerk": "Teutonic Thrash (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Destruction+Mad+Butcher",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Sepultura",
+      "titel": "Arise",
+      "substil_vermerk": "Thrash/Death (Brasilien)",
+      "url": "https://www.youtube.com/results?search_query=Sepultura+Arise",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dark Angel",
+      "titel": "Merciless Death",
+      "substil_vermerk": "US-Thrash (Los Angeles)",
+      "url": "https://www.youtube.com/results?search_query=Dark+Angel+Merciless+Death",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Nuclear Assault",
+      "titel": "Brain Death",
+      "substil_vermerk": "East-Coast-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Nuclear+Assault+Brain+Death",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Forbidden",
+      "titel": "Chalice of Blood",
+      "substil_vermerk": "Bay-Area-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Forbidden+Chalice+of+Blood",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Vio-lence",
+      "titel": "Eternal Nightmare",
+      "substil_vermerk": "Bay-Area-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Vio-lence+Eternal+Nightmare",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Sacred Reich",
+      "titel": "Independent",
+      "substil_vermerk": "US-Thrash (Arizona)",
+      "url": "https://www.youtube.com/results?search_query=Sacred+Reich+Independent",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Coroner",
+      "titel": "Masked Jackal",
+      "substil_vermerk": "technischer Thrash (Schweiz)",
+      "url": "https://www.youtube.com/results?search_query=Coroner+Masked+Jackal",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Voivod",
+      "titel": "Voivod",
+      "substil_vermerk": "progressiver Thrash (Kanada)",
+      "url": "https://www.youtube.com/results?search_query=Voivod+Voivod",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Annihilator",
+      "titel": "Alison Hell",
+      "substil_vermerk": "technischer Thrash (Kanada)",
+      "url": "https://www.youtube.com/results?search_query=Annihilator+Alison+Hell",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Artillery",
+      "titel": "Khomaniac",
+      "substil_vermerk": "dänischer Thrash",
+      "url": "https://www.youtube.com/results?search_query=Artillery+Khomaniac",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Onslaught",
+      "titel": "Power from Hell",
+      "substil_vermerk": "UK-Thrash",
+      "url": "https://www.youtube.com/results?search_query=Onslaught+Power+from+Hell",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Suicidal Tendencies",
+      "titel": "You Can't Bring Me Down",
+      "substil_vermerk": "Crossover-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Suicidal+Tendencies+You+Can%27t+Bring+Me+Down",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "D.R.I.",
+      "titel": "I Don't Need Society",
+      "substil_vermerk": "Crossover-Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=D.R.I.+I+Don%27t+Need+Society",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Municipal Waste",
+      "titel": "The Art of Partying",
+      "substil_vermerk": "moderner Crossover (US)",
+      "url": "https://bandcamp.com/search?q=Municipal+Waste+The+Art+of+Partying&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Toxic Holocaust",
+      "titel": "Nuke 'Em All",
+      "substil_vermerk": "moderner Thrash (US)",
+      "url": "https://bandcamp.com/search?q=Toxic+Holocaust+Nuke+%27Em+All&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Warbringer",
+      "titel": "Living in a Whirlwind",
+      "substil_vermerk": "moderner Thrash (US)",
+      "url": "https://bandcamp.com/search?q=Warbringer+Living+in+a+Whirlwind&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Havok",
+      "titel": "D.O.A.",
+      "substil_vermerk": "moderner Thrash (US)",
+      "url": "https://bandcamp.com/search?q=Havok+D.O.A.&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Vektor",
+      "titel": "Black Future",
+      "substil_vermerk": "progressiver/technischer Thrash (US)",
+      "url": "https://bandcamp.com/search?q=Vektor+Black+Future&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Power Trip",
+      "titel": "Executioner's Tax (Swing of the Axe)",
+      "substil_vermerk": "moderner Crossover/Thrash (US)",
+      "url": "https://bandcamp.com/search?q=Power+Trip+Executioner%27s+Tax+%28Swing+of+the+Axe%29&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
