@@ -238,7 +238,10 @@ main {
   to { opacity: 1; transform: translateY(0); }
 }
 
-#ansicht.einstieg > * {
+/* Der Genre-Landing-Block trägt einen eigenen Reinbox-/Scroll-Effekt und ist
+   deshalb vom globalen Einstiegs-Stagger ausgenommen (sonst überschriebe der
+   Stagger den Box-in-Zustand des Heros). */
+#ansicht.einstieg > *:not(.genre-landing) {
   animation: ansicht-einstieg 400ms cubic-bezier(0.22, 0.9, 0.35, 1) both;
 }
 #ansicht.einstieg > :nth-child(2) { animation-delay: 45ms; }
@@ -2478,7 +2481,6 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 
 /* Detailseite: Einstieg, Einordnung, Verwandtschaft. */
 .genre-inszenierung { margin: 0.2rem 0 0.6rem; }
-.genre-kurz { font-size: 1.05rem; line-height: 1.5; margin: 0 0 1.3rem; }
 .genre-abschnitt-titel { font-family: var(--schrift-display, inherit); font-size: 1.1rem; margin: 0 0 0.6rem; }
 .genre-einordnung { margin-bottom: 1.4rem; }
 .genre-ein-liste { margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -2688,4 +2690,126 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
     --backdrop-attachment: fixed;
     --backdrop-blend: normal;
   }
+}
+
+/* ============================================================================
+   Genre-Landing-Hero + Reinbox-Effekt + Scroll-Einblendungen
+   Großer Hero je Genre mit genre-eigenem Motiv-Backdrop (js/genre-inszenierung.js
+   genreMotivSvg). Der Hero „boxt sich rein" (Skalierung + clip-path-Blende +
+   kurzer Rahmen-Blitz), die Abschnitte darunter blenden beim Hereinscrollen ein
+   und wieder aus (.reveal ↔ .sichtbar/.raus, Beobachter in js/app.js). Alle
+   Bewegung ist an .anim-reveal (html-Klasse, nur wenn Bewegung erlaubt) gebunden
+   und wird zusätzlich von der globalen prefers-reduced-motion-Regel abgeschaltet.
+   ============================================================================ */
+
+.genre-landing-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  min-height: 210px;
+  padding: 1.6rem 1.5rem;
+  margin-bottom: 1.3rem;
+  color: var(--pf, var(--primaer));
+  background: linear-gradient(160deg, var(--pf-weich) 0%, var(--flaeche) 82%);
+}
+/* Motiv-Backdrop: genre-eigenes SVG, gedämpft hinter Scrim + Text. */
+.genre-landing-bild {
+  position: absolute;
+  inset: -8% -3%;
+  width: 106%;
+  height: 116%;
+  color: var(--pf, var(--primaer));
+  opacity: 0.22;
+  pointer-events: none;
+}
+/* Scrim: unten in die Fläche auslaufen lassen, damit der Titel satt sitzt. */
+.genre-landing-scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, var(--flaeche) 2%, rgba(0, 0, 0, 0) 62%),
+    radial-gradient(130% 90% at 18% 118%, var(--flaeche) 0%, rgba(0, 0, 0, 0) 58%);
+  opacity: 0.92;
+}
+.genre-landing-inhalt {
+  position: relative;
+  z-index: 1;
+  border-left: 5px solid var(--pf, var(--primaer));
+  padding-left: 0.95rem;
+}
+.genre-landing-augenbraue {
+  margin: 0 0 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--pf, var(--primaer));
+}
+.genre-landing-hero h1 {
+  margin: 0;
+  line-height: 1.02;
+  color: var(--tinte);
+  font-size: clamp(1.9rem, 7vw, 3rem);
+}
+.genre-landing-kurz {
+  margin: 0.55rem 0 0;
+  max-width: 44ch;
+  color: var(--tinte-2);
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+@media (min-width: 40rem) {
+  .genre-landing-hero { min-height: 250px; padding: 2rem 2.1rem; }
+}
+
+/* „Reinboxen" (etwas kräftig): der Hero fährt leicht überskaliert über eine
+   clip-path-Blende herein, setzt sich mit kurzem Rücksprung und rotem
+   Rahmen-Blitz. Inhalt zieht mit leichter Verzögerung nach. */
+@keyframes genre-boxin {
+  0%   { opacity: 0; transform: scale(1.09); clip-path: inset(15% 17% 15% 17%); }
+  55%  { opacity: 1; transform: scale(0.984); clip-path: inset(0); }
+  78%  { transform: scale(1.007); }
+  100% { transform: scale(1); clip-path: inset(0); }
+}
+@keyframes genre-boxin-inhalt {
+  0%   { opacity: 0; transform: translateY(16px); }
+  45%  { opacity: 0; }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes genre-rahmenblitz {
+  0%, 40% { box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 0 var(--pf, var(--primaer)); }
+  56%     { box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 3.5px var(--pf, var(--primaer)); }
+  100%    { box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 0 var(--pf, var(--primaer)); }
+}
+.anim-reveal .genre-landing-hero {
+  animation: genre-boxin 660ms cubic-bezier(0.2, 0.8, 0.2, 1) both,
+             genre-rahmenblitz 660ms ease-out both;
+}
+.anim-reveal .genre-landing-inhalt {
+  animation: genre-boxin-inhalt 740ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Scroll-Einblendungen: Abschnitte kommen gedämpft/versetzt herein und blenden
+   beim Verlassen wieder ab (düster). Nur aktiv, wenn Bewegung erlaubt ist
+   (.anim-reveal) — ohne die Klasse bleibt alles sofort sichtbar. */
+.anim-reveal .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  filter: brightness(0.45) saturate(0.8);
+  transition: opacity 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 520ms ease;
+  will-change: opacity, transform, filter;
+}
+.anim-reveal .reveal.sichtbar {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+.anim-reveal .reveal.raus {
+  opacity: 0.18;
+  transform: translateY(-10px);
+  filter: brightness(0.4) saturate(0.75);
 }
