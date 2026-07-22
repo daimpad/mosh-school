@@ -1,0 +1,217 @@
+{
+  "genre": "Sludge",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Acid Bath",
+      "titel": "The Blue",
+      "substil_vermerk": "NOLA-Sludge/experimentell (US)",
+      "url": "https://www.youtube.com/results?search_query=Acid+Bath+The+Blue",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Down",
+      "titel": "Stone the Crow",
+      "substil_vermerk": "NOLA-Sludge/Doom (US)",
+      "url": "https://www.youtube.com/results?search_query=Down+Stone+the+Crow",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Soilent Green",
+      "titel": "Sewn Mouth Secrets",
+      "substil_vermerk": "NOLA-Sludge/Grind (US)",
+      "url": "https://www.youtube.com/results?search_query=Soilent+Green+Sewn+Mouth+Secrets",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Buzzov·en",
+      "titel": "Sore",
+      "substil_vermerk": "dreckiger Sludge (US)",
+      "url": "https://www.youtube.com/results?search_query=Buzzov%C2%B7en+Sore",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Grief",
+      "titel": "I Hate You",
+      "substil_vermerk": "depressiver Heavy-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Grief+I+Hate+You&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "-(16)-",
+      "titel": "Shine",
+      "substil_vermerk": "LA-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=-%2816%29-+Shine&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Iron Monkey",
+      "titel": "Boss Keloid",
+      "substil_vermerk": "UK-Sludge",
+      "url": "https://bandcamp.com/search?q=Iron+Monkey+Boss+Keloid&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Noothgrush",
+      "titel": "Jundland Wastes",
+      "substil_vermerk": "depressiver Sludge/Doom (US)",
+      "url": "https://bandcamp.com/search?q=Noothgrush+Jundland+Wastes&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cavity",
+      "titel": "Damage Control",
+      "substil_vermerk": "Florida-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Cavity+Damage+Control&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Corrupted",
+      "titel": "Rato",
+      "substil_vermerk": "Sludge/Doom (Japan)",
+      "url": "https://bandcamp.com/search?q=Corrupted+Rato&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Kylesa",
+      "titel": "Unknown Awareness",
+      "substil_vermerk": "psychedelischer Dual-Drummer-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Kylesa+Unknown+Awareness&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Baroness",
+      "titel": "Isak",
+      "substil_vermerk": "progressiver/melodischer Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Baroness+Isak&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mastodon",
+      "titel": "March of the Fire Ants",
+      "substil_vermerk": "früher progressiver Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Mastodon+March+of+the+Fire+Ants&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Torche",
+      "titel": "Kicking",
+      "substil_vermerk": "Pop-/Stoner-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Torche+Kicking&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "High on Fire",
+      "titel": "Devilution",
+      "substil_vermerk": "Riff-Sludge/Metal (US)",
+      "url": "https://bandcamp.com/search?q=High+on+Fire+Devilution&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bongripper",
+      "titel": "Hail",
+      "substil_vermerk": "instrumentaler Sludge/Doom (US)",
+      "url": "https://bandcamp.com/search?q=Bongripper+Hail&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Primitive Man",
+      "titel": "Scum",
+      "substil_vermerk": "blackened/nihilistischer Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Primitive+Man+Scum&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Body Void",
+      "titel": "Given to the Grave",
+      "substil_vermerk": "blackened/atmosphärischer Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Body+Void+Given+to+the+Grave&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cough",
+      "titel": "Crooked Spine",
+      "substil_vermerk": "psychedelischer Sludge/Doom (US)",
+      "url": "https://bandcamp.com/search?q=Cough+Crooked+Spine&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Fister",
+      "titel": "Instinctual",
+      "substil_vermerk": "Midwest-Sludge/Doom (US)",
+      "url": "https://bandcamp.com/search?q=Fister+Instinctual&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ilsa",
+      "titel": "Cries the Fallen",
+      "substil_vermerk": "crust/Sludge/Death-Doom (US)",
+      "url": "https://bandcamp.com/search?q=Ilsa+Cries+the+Fallen&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Coffinworm",
+      "titel": "Sympathetic Extinction",
+      "substil_vermerk": "blackened Sludge/Death (US)",
+      "url": "https://bandcamp.com/search?q=Coffinworm+Sympathetic+Extinction&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Lord Mantis",
+      "titel": "Body Choke",
+      "substil_vermerk": "blackened Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Lord+Mantis+Body+Choke&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Indian",
+      "titel": "The Only Cure",
+      "substil_vermerk": "harscher Noise-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Indian+The+Only+Cure&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Fórn",
+      "titel": "Saliva as Solvent",
+      "substil_vermerk": "atmosphärischer Death-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=F%C3%B3rn+Saliva+as+Solvent&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Dopethrone",
+      "titel": "Scum Fuck Blues",
+      "substil_vermerk": "Weedian-Stoner-Sludge (Kanada)",
+      "url": "https://bandcamp.com/search?q=Dopethrone+Scum+Fuck+Blues&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Whitehorse",
+      "titel": "Progression",
+      "substil_vermerk": "australischer Drone-Sludge",
+      "url": "https://bandcamp.com/search?q=Whitehorse+Progression&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Fange",
+      "titel": "Poison Sludge",
+      "substil_vermerk": "industrieller/blackened Sludge (Frankreich)",
+      "url": "https://bandcamp.com/search?q=Fange+Poison+Sludge&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Moloch",
+      "titel": "Illusions of the Living",
+      "substil_vermerk": "dreckiger Sludge (UK)",
+      "url": "https://bandcamp.com/search?q=Moloch+Illusions+of+the+Living&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Kal-El",
+      "titel": "Witch",
+      "substil_vermerk": "moderner Riff-/Stoner-Sludge (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Kal-El+Witch&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
