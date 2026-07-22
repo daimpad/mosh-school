@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "instrument-technik",
+    "hinweis": "Gear-Bausteine zur Instrument-Technik (Gitarre/Bass): Anatomie und Bauteile für den Gear-Explorer (#/werkzeug/explorer). Reflexion, physik-/faktenbasiert, keine Marken. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "tonabnehmer_typen",
+      "anzeigetitel": { "de": "Tonabnehmer: Humbucker, Single Coil, aktiv/passiv" },
+      "domaene": ["ausruestung", "gitarre", "bass"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Tonabnehmer (Pickups) wandeln die Saitenschwingung in ein Signal um und prägen den Grundklang stärker als fast jedes andere Bauteil. Ein Single Coil hat eine Spule: heller, glasiger, dynamischer — fängt sich aber ein Netzbrummen ein. Ein Humbucker hat zwei gegeneinander geschaltete Spulen, die dieses Brummen auslöschen („humbucking“); er klingt fetter, mittiger, hat mehr Ausgangsleistung und verträgt hohe Verzerrung besser. Darum ist er der Metal-Standard, vor allem am Steg.\n\nZweite Unterscheidung: passiv oder aktiv. Passive Pickups klingen dynamisch und organisch, ohne Batterie. Aktive haben einen eingebauten Vorverstärker (Batterie): höhere, gleichmäßigere Leistung, tighter und komprimierter, sehr rauscharm — beliebt für modernen, tighten High-Gain-Sound. Ein Coil-Split kann einen Humbucker auf Single-Coil-Klang umschalten.\n\nAuch die Position zählt: Der Steg-Pickup ist am hellsten, aggressivsten und tightesten — die erste Wahl für Metal-Rhythmus und Leads; der Hals-Pickup klingt wärmer und runder für Cleans und singende Leads. Beim Bass gilt dasselbe Prinzip; humbuckende Bauformen unterdrücken das Brummen, eine stegnahe Position klingt aggressiver. Empfehlung: für Metal Humbucker (besonders am Steg), aktiv für tighten High-Gain, passiv für mehr Dynamik."
+      },
+      "reflexionsaufgabe": {
+        "de": "Welcher Tonabnehmer passt zu deinem Sound — Humbucker für fetten, brummfreien High-Gain oder Single Coil für hellere Dynamik? Brauchst du aktiv (tight, komprimiert, modern) oder passiv (dynamisch, organisch)? Und nutzt du bewusst den Unterschied zwischen Steg (hell, aggressiv) und Hals (warm, rund)?"
+      }
+    },
+    {
+      "id": "steg_typen",
+      "anzeigetitel": { "de": "Steg: feste und bewegliche Brücken" },
+      "domaene": ["ausruestung", "gitarre", "bass"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Steg verankert die Saiten am Korpus und überträgt ihre Schwingung; seine Bauart entscheidet über Stimmstabilität, Sustain und die Möglichkeit zum Whammy. Ein fester Steg (Hardtail) hält die Saiten starr: beste Stimmstabilität, gutes Sustain, einfacher Saitenwechsel und Tuning-Wechsel — bevorzugt für tighten Metal und Drop-Tunings.\n\nTremolo-Systeme erlauben das Verstimmen per Hebel (Whammy). Einfache Vintage-Tremolos verstimmen sich dabei leicht; ein doppelt verriegelndes System der Floyd-Rose-Bauart klemmt die Saiten an Sattel und Steg und bleibt selbst nach Dive Bombs in Stimmung — ist aber aufwändiger einzustellen und beim Saiten- oder Tuning-Wechsel umständlich. Ein durch den Korpus geführter Saitenverlauf („string-through“) erhöht Spannung und Sustain etwas.\n\nBeim Bass sind Stege fast immer fest; mehr Masse kann das Sustain erhöhen. Empfehlung: Für Drop-Tunings und tighten Rhythmus zählt Stabilität am meisten — ein fester Steg (oder ein verriegelndes System samt Klemmsattel) ist die sichere Wahl; ein Tremolo lohnt nur, wenn du den Hebel wirklich nutzt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Brauchst du die Stabilität eines festen Stegs (ideal für Drop-Tunings und tighten Rhythmus) oder willst du das Whammy eines Tremolos? Falls Tremolo: Reicht dir ein einfaches System, oder brauchst du ein verriegelndes der Floyd-Rose-Bauart für Stimmstabilität? Und nutzt du den Hebel überhaupt genug, um den höheren Aufwand zu rechtfertigen?"
+      }
+    },
+    {
+      "id": "sattel_typen",
+      "anzeigetitel": { "de": "Sattel: Material und Funktion" },
+      "domaene": ["ausruestung", "gitarre", "bass"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Sattel hält die Saiten am Kopfende, legt ihren Abstand fest und bestimmt die Höhe der leeren Saiten. Material und Kerbung beeinflussen den Klang der Leersaiten und — entscheidend — die Stimmstabilität: Reibung in den Kerben lässt Saiten klemmen und aus der Stimmung springen, besonders bei Tremolo oder beim Umstimmen.\n\nMaterialien: Knochen (klassisch, guter Klang), synthetische Materialien (gleichmäßig, teils selbstschmierend), Graphit (geringe Reibung, hilft der Stimmstabilität), Messing. Ein Klemmsattel (Teil verriegelnder Tremolos) fixiert die Saiten für maximale Stabilität. Für dickere Saiten und tiefe Tunings müssen die Kerben breiter und tiefer gefeilt sein — eine zu enge Kerbe klemmt und schnarrt.\n\nEmpfehlung für Metal: Wer Tremolo oder Drop-Tunings nutzt, fährt mit einem reibungsarmen (Graphit/geschmierten) oder einem Klemmsattel deutlich stabiler; die Kerben müssen zur Saitenstärke passen. Ein schlecht gefeilter Sattel verursacht Schnarren, schlechte Intonation in den tiefen Lagen und Stimmprobleme — oft ein Fall für die Fachwerkstatt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Macht dir der Sattel Stimmprobleme — klemmen Saiten beim Umstimmen oder nach dem Tremolo-Einsatz? Wäre ein reibungsarmes Material (Graphit) oder ein Klemmsattel für deine Spielweise sinnvoll? Und passen die Kerben zu deiner Saitenstärke, gerade wenn du dick besaitet und tief gestimmt spielst?"
+      }
+    },
+    {
+      "id": "saiten_mensur",
+      "anzeigetitel": { "de": "Saiten & Mensur: Stärke, Länge, tiefe Tunings" },
+      "domaene": ["ausruestung", "gitarre", "bass"],
+      "kompetenzstufe": ["einsteiger"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Saitenstärke (Gauge) und Mensur (die schwingende Saitenlänge) bestimmen zusammen die Saitenspannung — wie straff sich die Saiten anfühlen. Dickere Saiten haben mehr Spannung: strafferes Gefühl, stabilere Stimmung und weniger „Floppiness“ in tiefen Tunings, dafür mehr Kraftaufwand. Dünne Saiten lassen sich leichter ziehen, werden aber schlabberig, wenn man tief stimmt.\n\nDie Mensur ist die Länge zwischen Sattel und Steg; eine längere Mensur erzeugt bei gleicher Tonhöhe mehr Spannung. Deshalb nutzen Bariton- und erweiterte Instrumente (7- und 8-Saiter) längere Mensuren für sehr tiefe Tunings, und Multiscale-Bauweisen (Fanned Frets) geben den tiefen Saiten mehr Länge und den hohen weniger. Für tiefe Drop-Tunings gilt: mehr Spannung heißt tighteres Fundament.\n\nEmpfehlung: Stimme Saitenstärke und Mensur auf dein Tuning ab — je tiefer, desto dicker die Saiten (und/oder länger die Mensur) für Tightness. Dickere Saiten in tiefen Tunings verlangen zudem angepasste Sattelkerben und ein neues Setup. Beim Bass gilt dieselbe Logik: dickere Saiten und längere Mensur halten tiefe Töne definiert."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passen deine Saitenstärke und Mensur zu deinem Tuning — fühlt sich die tiefe Saite straff oder schlabberig an? Bräuchtest du für sehr tiefe Tunings dickere Saiten oder eine längere Mensur (Bariton, erweiterte Instrumente)? Und ist dir klar, dass ein Wechsel der Saitenstärke Sattel und Setup mit betrifft?"
+      },
+      "voraussetzungen": ["drop_tuning"]
+    },
+    {
+      "id": "saitenlage_setup",
+      "anzeigetitel": { "de": "Saitenlage & Setup: Action, Halskrümmung, Intonation" },
+      "domaene": ["ausruestung", "gitarre", "bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Saitenlage (Action) ist die Höhe der Saiten über den Bünden. Eine niedrige Action macht schnelles Spiel und tighte Chugs leichter und kraftsparender, schnarrt aber, wenn sie zu niedrig ist; eine hohe Action klingt sauberer und lauter, kostet aber Kraft. Das Optimum ist so niedrig wie möglich, ohne dass es schnarrt.\n\nDrei Dinge greifen im Setup ineinander: die Halskrümmung (eine leichte Vorwärtsbiegung, über den Halsstab/Trussrod eingestellt), die Action (an den Steg-Reitern eingestellt) und die Intonation (die Saitenlänge je Reiter, damit das Instrument über den ganzen Hals sauber stimmt). Saitenstärke und Tuning verändern alle drei — ein neuer Gauge oder ein neues Tuning verlangt darum meist ein frisches Setup.\n\nVorsicht: Der Halsstab steuert den Hals und kann ihn bei Gewalt beschädigen — nur in kleinen Schritten drehen, Zeit lassen, und im Zweifel eine Fachwerkstatt das Setup machen lassen. Empfehlung für Metal: eine niedrige, schnarrfreie Action mit korrekter Halskrümmung passt zu schnellem, tightem Spiel; stelle das Setup gezielt auf deine Saitenstärke und dein Tuning ein, statt gegen das Instrument zu kämpfen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist deine Action so niedrig wie möglich, ohne zu schnarren — passt sie zu schnellem, tightem Spiel? Weißt du, dass Halskrümmung, Action und Intonation zusammenhängen und ein neues Tuning oder eine neue Saitenstärke ein frisches Setup verlangen? Und traust du dir den Halsstab in kleinen Schritten zu — oder ist es ein Fall für die Fachwerkstatt?"
+      },
+      "voraussetzungen": ["sattel_typen", "saiten_mensur"]
+    }
+  ]
+}

@@ -20,6 +20,7 @@ import { renderWerkzeugAmpbox } from './ansichten/werkzeug-ampbox.js';
 import { renderWerkzeugStruktur } from './ansichten/werkzeug-struktur.js';
 import { renderWerkzeugRecorder } from './ansichten/werkzeug-recorder.js';
 import { renderWerkzeugMehrspur } from './ansichten/werkzeug-mehrspur.js';
+import { renderWerkzeugExplorer } from './ansichten/werkzeug-explorer.js';
 import { renderKoennenscheck } from './ansichten/koennenscheck.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
@@ -318,6 +319,8 @@ function rendern() {
     renderWerkzeugRecorder(el, daten, query);
   } else if (segmente[0] === 'werkzeug' && segmente[1] === 'mehrspur') {
     renderWerkzeugMehrspur(el, daten, query);
+  } else if (segmente[0] === 'werkzeug' && segmente[1] === 'explorer') {
+    renderWerkzeugExplorer(el, daten, query);
   } else if (segmente[0] === 'werkzeug') {
     // Noch nicht gebautes Werkzeug → zurück zum Hub (kein Bruch bei Deep-Links).
     renderWerkzeuge(el, daten);
