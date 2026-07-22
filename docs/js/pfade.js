@@ -167,13 +167,21 @@ export function instrumentUebersicht(daten) {
 }
 
 export function instrumentpfad(daten, domaene) {
-  const alle = daten.bausteine.filter((b) => domaenenVon(b).includes(domaene) && trainerSichtbar(daten, b) && !umgebungsBaustein(b));
+  const sichtbar = (b) => trainerSichtbar(daten, b) && !umgebungsBaustein(b);
   const istGear = (b) => domaenenVon(b).includes('ausruestung');
+  const amInstrument = daten.bausteine.filter((b) => domaenenVon(b).includes(domaene) && sichtbar(b));
+  // Praxis = die Übungs-Bausteine des Instruments (die instrument-eigenen Inhalte
+  // sind durchweg praktisch). Theorie = das Wissens-Fundament (Musiktheorie-
+  // Domäne) — instrumentübergreifend, aber auf jeder Instrument-Seite als „Warum"
+  // greifbar. Reflexions-Bausteine des Instruments zählen zur Theorie hinzu.
+  const theorie = daten.bausteine.filter((b) => sichtbar(b) && (domaenenVon(b).includes('theorie') || (domaenenVon(b).includes(domaene) && !!b.reflexionsaufgabe)));
+  const praxis = amInstrument.filter((b) => !istGear(b) && !b.reflexionsaufgabe);
   return {
     art: 'instrument',
     domaene,
-    technik: zuStationen(daten, alle.filter((b) => !istGear(b)), kompetenzVergleicher(daten), diagnose().herkunft),
-    ausruestung: zuStationen(daten, alle.filter(istGear), standardVergleicher(daten), null),
+    theorie: zuStationen(daten, theorie, kompetenzVergleicher(daten), diagnose().herkunft),
+    praxis: zuStationen(daten, praxis, kompetenzVergleicher(daten), diagnose().herkunft),
+    ausruestung: zuStationen(daten, amInstrument.filter(istGear), standardVergleicher(daten), null),
   };
 }
 
