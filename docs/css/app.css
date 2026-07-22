@@ -2445,3 +2445,39 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .heim-fortsetzen-label { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tinte-2); }
 .heim-fortsetzen-titel { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .heim-fortsetzen-pfeil { color: var(--primaer); flex: 0 0 auto; }
+
+/* --- Genre-Inszenierung (#/pfad/stil) --- */
+/* Hub-Hero mit abstraktem Platzhalter-„Bild" (Klang-Spektrum, currentColor). */
+.genre-hub-hero { display: flex; align-items: center; gap: 1rem; overflow: hidden; }
+.genre-hub-hero .marke-hero-text { flex: 1 1 auto; min-width: 0; }
+.genre-hero-bild { flex: 0 0 auto; width: min(44%, 210px); height: auto; color: var(--primaer); opacity: 0.85; }
+@media (max-width: 520px) { .genre-hero-bild { display: none; } }
+
+/* Hub-Karten mit Anreißer. */
+.genre-karte h3 { margin: 0 0 0.3rem; }
+.genre-karte-kurz { margin: 0; font-size: 0.9rem; line-height: 1.45; }
+
+/* Detailseite: Einstieg, Einordnung, Verwandtschaft. */
+.genre-inszenierung { margin: 0.2rem 0 0.6rem; }
+.genre-kurz { font-size: 1.05rem; line-height: 1.5; margin: 0 0 1.3rem; }
+.genre-abschnitt-titel { font-family: var(--schrift-display, inherit); font-size: 1.1rem; margin: 0 0 0.6rem; }
+.genre-einordnung { margin-bottom: 1.4rem; }
+.genre-ein-liste { margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.genre-ein-zeile {
+  display: grid; grid-template-columns: minmax(9rem, 28%) 1fr; gap: 0.5rem 0.9rem;
+  padding: 0.5rem 0.7rem; background: var(--flaeche);
+  border: 1px solid var(--linie-stark); border-left: 3px solid var(--primaer);
+  border-radius: var(--radius-klein);
+}
+.genre-ein-titel { margin: 0; font-weight: 600; color: var(--primaer-tief); font-size: 0.86rem; }
+.genre-ein-text { margin: 0; font-size: 0.92rem; line-height: 1.45; }
+@media (max-width: 480px) { .genre-ein-zeile { grid-template-columns: 1fr; gap: 0.2rem; } }
+
+.genre-verwandt-inhalt { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.genre-verwandt-svg { flex: 0 0 auto; width: 150px; height: auto; color: var(--primaer); }
+.genre-verwandt-text { flex: 1 1 12rem; min-width: 0; }
+.genre-verwandt-text .leise { margin: 0 0 0.5rem; }
+.genre-verwandt-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.genre-verwandt-chip { text-decoration: none; }
+.genre-verwandt-chip:hover { border-color: var(--primaer); color: var(--primaer-tief); }
+.genre-bausteine-titel { margin-top: 1.5rem; }
