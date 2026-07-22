@@ -8,7 +8,7 @@
 // gerade offenen Baustein-Seite); ein erneutes Binden stoppt die vorherige.
 
 import { t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeAusgang, holeKontext, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import { china, crash, hihat, hihatOffen, kick, klick, ride, saite, snare, tomHoch, tomTief } from '../audio/stimmen.js';
@@ -197,6 +197,9 @@ export function bindeDemonstration(el, demo) {
   if (!demo || (demo.typ !== 'pattern' && demo.typ !== 'tab')) return;
   const sektion = el.querySelector('.demo');
   if (!sektion) return;
+  // Beim Verlassen der Baustein-Seite eine laufende Demo stoppen (nicht nur beim
+  // Öffnen des nächsten Bausteins mit Demo).
+  registriereAufraeumen(stoppeDemo);
 
   const cfg = { bpm: demo.bpm, loop: sektion.querySelector('.demo-loop')?.checked ?? demo.loop, countin: false };
   const tempoInput = sektion.querySelector('.demo-tempo');

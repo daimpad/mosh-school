@@ -144,6 +144,14 @@ function ergebnisseHtml(daten) {
   const roh = letzteAnfrage.trim();
   const treffer = sucheIndex(daten.suchindex, roh, filter);
   const zaehlung = facettenZaehlung(treffer.map((tr) => tr.eintrag));
+  // Gewählte Facettenwerte immer sichtbar halten (auch bei 0 Treffern) — sonst
+  // verschwinden bei einer Filterkombination ohne Ergebnis alle Chips und die
+  // Auswahl lässt sich nur noch global zurücksetzen, nicht einzeln abwählen.
+  for (const facette of FACETTEN) {
+    for (const wert of filter[facette]) {
+      if (!zaehlung[facette].has(wert)) zaehlung[facette].set(wert, 0);
+    }
+  }
   const filterUi = facettenHtml(zaehlung);
 
   if (roh.length < 2 && anzahlAktiveFilter() === 0) {

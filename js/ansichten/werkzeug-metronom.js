@@ -9,7 +9,7 @@
 // Song-Struktur-Baukasten (späterer PR).
 
 import { t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import { klick } from '../audio/stimmen.js';
@@ -388,6 +388,12 @@ export function renderWerkzeugMetronom(el, daten, query) {
     </article>`;
 
   verdrahte(el, daten);
+  // Beim Verlassen der Route Ton + Timer stoppen (läuft sonst über andere Views weiter).
+  registriereAufraeumen(() => {
+    if (scheduler) scheduler.stoppe();
+    stoppeMarker();
+    clearTimeout(pausenTimer);
+  });
 }
 
 function verdrahte(el, daten) {

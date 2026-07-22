@@ -6,7 +6,7 @@
 import { schalteTeil } from '../aktionen.js';
 import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, untergrundVon, witterungVon } from '../daten.js';
 import { label, t, text } from '../i18n.js';
-import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
+import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein, zeigeMeilensteine } from '../oberflaeche.js';
 import { pruefeMeilensteine } from '../mastery.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
 import { stationImKontext } from '../pfade.js';
@@ -396,7 +396,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   // Nach einer Änderung: neu erreichte Meilensteine feiern, sonst neu rendern.
   const nachAenderung = () => {
     const neue = pruefeMeilensteine(daten);
-    if (neue.length > 0) zeigeMeilenstein({ text: meilensteinLabel(neue[0]) });
+    if (neue.length > 0) zeigeMeilensteine(neue.map((id) => ({ text: meilensteinLabel(id) })));
     else neuRendern();
   };
 
@@ -423,7 +423,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       if (bestaetigung) bestaetigung.textContent = neuerBest ? t('ube_log_bestwert', { n: tempo }) : t('ube_log_ok');
       if (tempoEl) tempoEl.value = '';
       const neue = pruefeMeilensteine(daten);
-      if (neue.length > 0) zeigeMeilenstein({ text: meilensteinLabel(neue[0]) });
+      if (neue.length > 0) zeigeMeilensteine(neue.map((id) => ({ text: meilensteinLabel(id) })));
     });
   }
 }

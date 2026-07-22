@@ -31,7 +31,7 @@ import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, sprache, t, text } from './i18n.js';
-import { esc, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
+import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung } from './zustand.js';
 
 let daten = null;
@@ -100,6 +100,22 @@ function sicherDecode(wert) {
   } catch {
     return wert;
   }
+}
+
+// Fokus-Signatur eines Bedienelements aus seinen data-*-Attributen (oder id) —
+// stabil über eine In-Place-Neuzeichnung derselben Route hinweg. So landet der
+// Tastatur-/Screenreader-Fokus nach einer Aktion (Quittieren, Mastery, „weiter")
+// wieder auf demselben Steuerelement statt auf <body>. Gibt null, wenn sich das
+// Element nicht wiederfinden lässt.
+function fokusSchluessel(elem) {
+  if (!elem || elem === document.body || !elem.attributes) return null;
+  const daten = [...elem.attributes]
+    .filter((a) => a.name.startsWith('data-'))
+    .map((a) => `[${a.name}="${CSS.escape(a.value)}"]`)
+    .join('');
+  if (daten) return elem.tagName.toLowerCase() + daten;
+  if (elem.id) return '#' + CSS.escape(elem.id);
+  return null;
 }
 
 function beschrifteRahmen() {
@@ -229,10 +245,48 @@ function setzeMenueTrigger(offen) {
   }
 }
 
+// Fokus-Falle für den Menü-Drawer (Tastatur/Screenreader): Tab zirkuliert
+// innerhalb der Lade, statt hinter den überdeckenden Schleier zu wandern.
+let menueFokusVorher = null;
+function menueFokussierbare() {
+  const lade = document.querySelector('#hauptmenue .menue-lade');
+  if (!lade) return [];
+  return [...lade.querySelectorAll('a[href], button:not([disabled]), input, select, [tabindex]:not([tabindex="-1"])')].filter(
+    (e) => e.offsetParent !== null || e === document.activeElement,
+  );
+}
+function menueTasten(ereignis) {
+  if (ereignis.key !== 'Tab') return;
+  const ziele = menueFokussierbare();
+  if (ziele.length === 0) return;
+  const erst = ziele[0];
+  const letzt = ziele[ziele.length - 1];
+  if (ereignis.shiftKey && document.activeElement === erst) {
+    letzt.focus();
+    ereignis.preventDefault();
+  } else if (!ereignis.shiftKey && document.activeElement === letzt) {
+    erst.focus();
+    ereignis.preventDefault();
+  }
+}
+
 function oeffneMenue() {
   const menue = document.getElementById('hauptmenue');
+  menueFokusVorher = document.activeElement;
   menue.hidden = false;
-  requestAnimationFrame(() => requestAnimationFrame(() => menue.classList.add('offen')));
+  // Die Lade ist ein modaler Dialog: Fokus hinein, außen ignorieren (aria-modal).
+  const lade = menue.querySelector('.menue-lade');
+  if (lade) {
+    lade.setAttribute('role', 'dialog');
+    lade.setAttribute('aria-modal', 'true');
+  }
+  requestAnimationFrame(() =>
+    requestAnimationFrame(() => {
+      menue.classList.add('offen');
+      menue.querySelector('.menue-schliessen')?.focus();
+    }),
+  );
+  document.addEventListener('keydown', menueTasten, true);
   setzeMenueTrigger(true);
 }
 
@@ -241,6 +295,10 @@ function schliesseMenue() {
   if (menue.hidden) return;
   menue.classList.remove('offen');
   setzeMenueTrigger(false);
+  document.removeEventListener('keydown', menueTasten, true);
+  // Fokus zurück auf den auslösenden Knopf (Hamburger/„Mehr"), sofern noch da.
+  if (menueFokusVorher && typeof menueFokusVorher.focus === 'function') menueFokusVorher.focus();
+  menueFokusVorher = null;
   window.setTimeout(() => {
     menue.hidden = true;
   }, 400);
@@ -260,6 +318,16 @@ function renderFehler(el, fehler) {
 function rendern() {
   const { segmente, query, roh } = parseHash();
   const el = document.getElementById('ansicht');
+
+  // Ressourcen der verlassenen Ansicht stoppen (Audio, Mikrofon, Timer, URLs) —
+  // nur bei echtem Routenwechsel, nicht bei einer In-Place-Neuzeichnung derselben
+  // Route (app:rendern), damit z. B. ein laufender Demo-Loop beim Quittieren nicht
+  // abbricht. letzteRoute trägt hier noch die vorige Route.
+  if (roh !== letzteRoute) fuehreAufraeumenAus();
+
+  // Bei einer In-Place-Neuzeichnung (gleiche Route) den Fokus des gerade bedienten
+  // Steuerelements merken, um ihn nach dem Neu-Rendern zurückzusetzen.
+  const fokusVorher = letzteRoute !== null && roh === letzteRoute ? fokusSchluessel(document.activeElement) : null;
 
   // Erstlauf: Willkommensseite mit den zwei Einstiegen; der Wizard ist einer
   // davon. Nur die leere Route zeigt die Willkommensseite — aktive Navigation
@@ -365,6 +433,10 @@ function rendern() {
     el.classList.add('einstieg');
     // Tastatur-/Screenreader-Fokus auf den neuen Inhalt lenken (nicht beim Erstaufbau).
     if (!ersterLauf) el.focus({ preventScroll: true });
+  } else if (fokusVorher) {
+    // Gleiche Route neu gezeichnet: Fokus auf dasselbe Steuerelement zurücksetzen.
+    const ziel = el.querySelector(fokusVorher);
+    if (ziel) ziel.focus({ preventScroll: true });
   }
 }
 
