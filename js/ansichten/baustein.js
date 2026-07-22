@@ -123,8 +123,39 @@ function trainerLayerHtml(daten, baustein) {
 // Verlinkungs-Konvention (Werkzeuge): passt ein Audio-Werkzeug zum Baustein,
 // wird es hier vorbelegt verlinkt (z. B. Timing-Übung → Metronom mit Tempo).
 // Die Zuordnung lebt in werkzeug-links.js; die Ansicht kennt die Regeln nicht.
+// Symbol je Werkzeug für die prominente Aktionskarte (nur gemappte FA-Icons).
+const WERKZEUG_ICON = { landkarte: 'fa-compass', genremix: 'fa-right-left' };
+
+// Prominente Werkzeug-Anbindung: für Bausteine, deren Kern ein Werkzeug IST
+// (Grenzgänger-Zweig → Kreativ-Werkzeuge), als Aktionskarte weit oben statt als
+// kleiner Chip am Ende. Leere Ausgabe, wenn kein prominentes Werkzeug passt.
+function werkzeugProminentHtml(baustein) {
+  const links = werkzeugeFuer(baustein).filter((w) => w.prominent);
+  if (links.length === 0) return '';
+  const karten = links
+    .map(
+      (w) => `
+      <a class="wz-prominent-karte" href="${esc(w.route)}">
+        <span class="wz-prominent-icon" aria-hidden="true"><i class="fa-solid ${WERKZEUG_ICON[w.werkzeug] || 'fa-right-left'}"></i></span>
+        <span class="wz-prominent-text">
+          <span class="wz-prominent-titel">${esc(t(w.labelKey))}</span>
+          ${w.kurzKey ? `<span class="wz-prominent-kurz leise">${esc(t(w.kurzKey))}</span>` : ''}
+        </span>
+        <span class="wz-prominent-pfeil" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>`
+    )
+    .join('');
+  return `
+    <section class="abschnitt werkzeug-prominent">
+      <div class="abschnitt-kopf"><h2><i class="fa-solid fa-right-left" aria-hidden="true"></i> ${esc(t('wz_baustein_kreativ_titel'))}</h2></div>
+      <p class="leise">${esc(t('wz_baustein_kreativ_hinweis'))}</p>
+      <div class="wz-prominent-karten">${karten}</div>
+    </section>`;
+}
+
 function werkzeugSektionHtml(baustein) {
-  const links = werkzeugeFuer(baustein);
+  // Prominente Werkzeuge erscheinen bereits als Aktionskarte oben — hier nur der Rest.
+  const links = werkzeugeFuer(baustein).filter((w) => !w.prominent);
   if (links.length === 0) return '';
   const chips = links
     .map((w) => `<a class="chip chip-waehlbar" href="${esc(w.route)}"><i class="fa-solid fa-toolbox" aria-hidden="true"></i> ${esc(t(w.labelKey))}</a>`)
@@ -342,6 +373,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${erklaerSektion}
       ${schemaSektion}
       ${demonstrationHtml(b.demonstration)}
+      ${werkzeugProminentHtml(b)}
       ${uebungsSektion}
       ${reflexionsSektion}
       ${werkzeugSektionHtml(b)}

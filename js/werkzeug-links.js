@@ -114,6 +114,15 @@ const WERKZEUG_META = {
   genremix: { route: '#/werkzeug/genremix', labelKey: 'wz_genremix_titel' },
 };
 
+// Werkzeuge, die für ihren Baustein zentral sind (nicht bloß nützliches Beiwerk):
+// Im Grenzgänger-Zweig SIND die Kreativ-Werkzeuge der Kern der Übung. Solche Links
+// hebt die Baustein-Ansicht prominent hervor (Aktionskarte statt kleiner Chip),
+// statt sie ans Ende zu stellen. `kurzKey` liefert die Werkzeug-Kurzbeschreibung.
+const PROMINENTE_WERKZEUGE = {
+  landkarte: 'wz_landkarte_kurz',
+  genremix: 'wz_genremix_kurz',
+};
+
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
 export function werkzeugRoute(werkzeug, params) {
   const basis = WERKZEUG_META[werkzeug]?.route || `#/werkzeug/${werkzeug}`;
@@ -122,7 +131,9 @@ export function werkzeugRoute(werkzeug, params) {
 }
 
 // Liefert die Werkzeug-Links für einen Baustein, dedupliziert (ID-Regel schlägt
-// generische Regel für dasselbe Werkzeug). Form: [{ werkzeug, route, labelKey }].
+// generische Regel für dasselbe Werkzeug). Form:
+// [{ werkzeug, route, labelKey, prominent, kurzKey }]. `prominent` markiert
+// Kern-Werkzeuge (s. PROMINENTE_WERKZEUGE) für die hervorgehobene Darstellung.
 export function werkzeugeFuer(baustein) {
   if (!baustein) return [];
   const roh = [];
@@ -138,7 +149,16 @@ export function werkzeugeFuer(baustein) {
     gesehen.add(werkzeug);
     const meta = WERKZEUG_META[werkzeug];
     if (!meta) continue;
-    links.push({ werkzeug, route: werkzeugRoute(werkzeug, params), labelKey: meta.labelKey });
+    const kurzKey = PROMINENTE_WERKZEUGE[werkzeug] || null;
+    links.push({
+      werkzeug,
+      route: werkzeugRoute(werkzeug, params),
+      labelKey: meta.labelKey,
+      prominent: !!kurzKey,
+      kurzKey,
+    });
   }
+  // Prominente Werkzeuge zuerst — die Ansicht rendert sie als Aktionskarte oben.
+  links.sort((a, b) => Number(b.prominent) - Number(a.prominent));
   return links;
 }

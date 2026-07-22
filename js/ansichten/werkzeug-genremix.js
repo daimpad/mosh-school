@@ -210,7 +210,7 @@ export function renderWerkzeugGenremix(el, daten, query) {
         </button>
       </div>
 
-      <div class="gm-ausgabe">${zustand.ergebnis ? ergebnisHtml(zustand.ergebnis) : `<p class="leise gm-leer">${esc(t('wz_gm_leer'))}</p>`}</div>
+      <div class="gm-ausgabe" role="status" aria-live="polite">${zustand.ergebnis ? ergebnisHtml(zustand.ergebnis) : `<p class="leise gm-leer">${esc(t('wz_gm_leer'))}</p>`}</div>
 
       <div class="gm-ziel-block">
         <button type="button" class="chip chip-waehlbar gm-kreativ-ziel" ${zielGesetzt ? 'aria-pressed="true"' : ''}>
