@@ -6,10 +6,11 @@
 import { schalteTeil } from '../aktionen.js';
 import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, untergrundVon, witterungVon } from '../daten.js';
 import { label, t, text } from '../i18n.js';
-import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
+import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
+import { pruefeMeilensteine } from '../mastery.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
-import { bausteinStatus, diagnose, einstellungen, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
+import { bausteinStatus, diagnose, einstellungen, ergaenzeLog, meldeBestwert, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
 
 function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
@@ -314,6 +315,12 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
           .map(([wert, zeichen]) => `<button type="button" class="mastery-knopf status-${wert}${masteryAktuell === wert ? ' aktiv' : ''}" data-mastery="${wert}" aria-pressed="${masteryAktuell === wert}"><span aria-hidden="true">${zeichen}</span> ${esc(t('such_status_' + wert))}</button>`)
           .join('')}
       </div>
+      <div class="ube-log">
+        <input type="number" class="ube-log-tempo" min="20" max="400" step="1" inputmode="numeric"
+          placeholder="${esc(t('ube_log_tempo_platzhalter'))}" aria-label="${esc(t('ube_log_tempo_label'))}">
+        <button type="button" class="knopf knopf-leise ube-log-knopf" data-log>${esc(t('ube_log_knopf'))}</button>
+        <span class="ube-log-bestaetigung leise" aria-live="polite"></span>
+      </div>
     </div>`;
 
   const listeHref = kontextZuListe(kontext);
@@ -350,12 +357,37 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     });
   }
 
+  // Nach einer Änderung: neu erreichte Meilensteine feiern, sonst neu rendern.
+  const nachAenderung = () => {
+    const neue = pruefeMeilensteine(daten);
+    if (neue.length > 0) zeigeMeilenstein({ text: meilensteinLabel(neue[0]) });
+    else neuRendern();
+  };
+
   for (const knopf of el.querySelectorAll('[data-mastery]')) {
     knopf.addEventListener('click', () => {
       // Erneuter Klick auf den aktiven Zustand setzt zurück auf „neu" (Toggle).
       const neu = knopf.classList.contains('aktiv') ? 'neu' : knopf.dataset.mastery;
       setzeBausteinStatus(b.id, neu);
-      neuRendern();
+      nachAenderung();
+    });
+  }
+
+  // Übe-Log (§2e): „Heute geübt" mit optionalem Tempo. Bestätigung erscheint in
+  // place (kein Neu-Rendern, damit der Fokus bleibt); nur ein neuer Meilenstein
+  // löst die Feier aus. Persönlicher Bestwert wird nur bei Verbesserung gemeldet.
+  const logKnopf = el.querySelector('[data-log]');
+  if (logKnopf) {
+    logKnopf.addEventListener('click', () => {
+      const tempoEl = el.querySelector('.ube-log-tempo');
+      const tempo = Number(tempoEl?.value) || null;
+      ergaenzeLog({ baustein: b.id, ...(tempo ? { tempo_bpm: tempo } : {}) });
+      const neuerBest = tempo ? meldeBestwert(b.id, 'tempo_bpm', tempo) : false;
+      const bestaetigung = el.querySelector('.ube-log-bestaetigung');
+      if (bestaetigung) bestaetigung.textContent = neuerBest ? t('ube_log_bestwert', { n: tempo }) : t('ube_log_ok');
+      if (tempoEl) tempoEl.value = '';
+      const neue = pruefeMeilensteine(daten);
+      if (neue.length > 0) zeigeMeilenstein({ text: meilensteinLabel(neue[0]) });
     });
   }
 }
