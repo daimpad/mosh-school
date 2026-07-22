@@ -2507,3 +2507,30 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .koennen-naechst-icon { flex: 0 0 auto; width: 1.4em; height: 1.4em; display: inline-flex; align-items: center; justify-content: center; color: var(--primaer); }
 .koennen-naechst > span:not(.koennen-naechst-icon) { flex: 1 1 auto; min-width: 0; }
 .koennen-naechst .fa-arrow-right { color: var(--primaer); flex: 0 0 auto; }
+
+/* --- Übe-Log (§2e) auf der Baustein-Seite --- */
+.ube-log { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.2rem; }
+.ube-log-tempo { width: 6.5rem; padding: 0.3rem 0.5rem; border-radius: var(--radius-klein); border: 1px solid var(--linie-stark); background: var(--flaeche); color: var(--tinte); font-size: 0.9rem; }
+.ube-log-bestaetigung { font-size: 0.85rem; }
+
+/* --- Meilensteine (§5) --- */
+.meilenstein-liste { list-style: none; padding: 0; margin: 0.4rem 0 0.6rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.meilenstein-eintrag { display: flex; align-items: center; gap: 0.6rem; }
+.meilenstein-eintrag .fa-medal { color: var(--primaer); flex: 0 0 auto; }
+
+/* --- Persönliche Bestwerte (§5) --- */
+.bestwert-liste { list-style: none; padding: 0; margin: 0.4rem 0 0.6rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.bestwert-eintrag { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; border-bottom: 1px solid var(--linie-schwach, var(--linie-stark)); padding-bottom: 0.25rem; }
+.bestwert-tempo { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--primaer-tief); white-space: nowrap; }
+
+/* --- Übe-Kalender (§5): Heatmap, 10 Wochen × 7 Tage. Kein Streak. --- */
+.ube-kalender { display: grid; grid-template-rows: repeat(7, 12px); grid-auto-flow: column; grid-auto-columns: 12px; gap: 3px; margin: 0.5rem 0; width: max-content; max-width: 100%; }
+.kal-tag { width: 12px; height: 12px; border-radius: 2px; background: var(--flaeche-2); border: 1px solid var(--linie-stark); }
+.kal-stufe-1 { background: color-mix(in srgb, var(--primaer) 30%, var(--flaeche-2)); border-color: transparent; }
+.kal-stufe-2 { background: color-mix(in srgb, var(--primaer) 60%, var(--flaeche-2)); border-color: transparent; }
+.kal-stufe-3 { background: var(--primaer); border-color: transparent; }
+.kalender-legende { margin-top: 0.3rem; }
+
+/* --- Gesundheits-Pausenhinweis im Metronom (§5) --- */
+.wz-pausen-hinweis { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+.wz-pausen-hinweis .fa-heart-pulse { color: var(--primaer); margin-right: 0.4rem; }
