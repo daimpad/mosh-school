@@ -12,6 +12,7 @@
 
 import { t, text } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
+import { ampGrafik, boxGrafik } from '../geraete-grafik.js';
 
 const IMPEDANZEN = [4, 8, 16];
 
@@ -135,6 +136,12 @@ export function renderWerkzeugAmpbox(el, daten, query) {
       </section>
 
       <p class="chip-zeile">${instrumentKnoepfe}</p>
+
+      <div class="wz-ab-rig" aria-hidden="true">
+        <span class="wz-ab-rig-amp">${ampGrafik(zustand.bauart, zustand.format)}</span>
+        <span class="wz-ab-rig-pfeil"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="wz-ab-rig-box">${boxGrafik(zustand.bestueckung)}${zustand.zweiBoxen ? boxGrafik(zustand.bestueckung) : ''}</span>
+      </div>
 
       <section class="wz-ab-block">
         <h2>${esc(t('wz_ab_amp'))}</h2>
