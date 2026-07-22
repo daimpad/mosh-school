@@ -8,7 +8,8 @@
 // Mikro-Ablehnung wird sauber abgefangen.
 
 import { t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, meilensteinLabel, zeigeMeilenstein } from '../oberflaeche.js';
+import { feiereMeilenstein } from '../zustand.js';
 import { speichereClip, alleClips, aktualisiereMeta, loescheClip } from '../audio/riff-db.js';
 
 let aufnahmeLaeuft = false;
@@ -78,12 +79,19 @@ async function starteAufnahme(el) {
       blob,
       mime: blob.type,
     };
+    let gespeichert = false;
     try {
       await speichereClip(clip);
+      gespeichert = true;
     } catch {
       letzterFehler = t('wz_rec_speicher_fehler');
     }
     await ladeUndRendere(el);
+    // Meilenstein „erstes eigenes Riff" (§5) — nach dem Rendern feiern, damit die
+    // Überlagerung nicht gleich wieder übermalt wird.
+    if (gespeichert && feiereMeilenstein('erstes_riff')) {
+      zeigeMeilenstein({ text: meilensteinLabel('erstes_riff') });
+    }
   };
   mediaRecorder.start();
   aufnahmeLaeuft = true;

@@ -282,6 +282,14 @@ export function hatMeilenstein(id) {
   return stelleSicher().meilensteine.includes(id);
 }
 
+export function meilensteine() {
+  return stelleSicher().meilensteine;
+}
+
+export function alleBestwerte() {
+  return stelleSicher().bestwerte;
+}
+
 export function feiereMeilenstein(id) {
   const m = stelleSicher().meilensteine;
   if (m.includes(id)) return false;
