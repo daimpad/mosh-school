@@ -9,7 +9,7 @@
 // Sample-Alignment. Das ist ein Skizzen-Werkzeug für Ideen und Pre-Production.
 
 import { t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeKontext, holeAusgang } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import { klick } from '../audio/stimmen.js';
@@ -302,6 +302,29 @@ export function renderWerkzeugMehrspur(el) {
     e.target.value = String(zustand.latenz);
   });
   ladeUndRendere(el);
+
+  // Beim Verlassen der Route Mikrofon, Klick-Scheduler, Wiedergabe und Timer
+  // stoppen (Mikro bliebe sonst offen, der Klick liefe weiter).
+  registriereAufraeumen(() => {
+    if (mediaRecorder && aufnahmeLaeuft) {
+      try {
+        mediaRecorder.stop();
+      } catch {
+        // Stream wird ohnehin gleich freigegeben
+      }
+    }
+    aufnahmeLaeuft = false;
+    if (strom) {
+      strom.getTracks().forEach((s) => s.stop());
+      strom = null;
+    }
+    if (tickTimer) {
+      clearInterval(tickTimer);
+      tickTimer = null;
+    }
+    stoppeKlick();
+    stoppeMix();
+  });
 }
 
 function verdrahteSpuren(el) {

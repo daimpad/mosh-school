@@ -13,7 +13,7 @@
 // Ablehnung wird sauber abgefangen.
 
 import { label, t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { frequenzVon } from './stimmungen.js';
 import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext.js';
 import { referenzDrone } from '../audio/stimmen.js';
@@ -266,6 +266,11 @@ export function renderWerkzeugStimmgeraet(el, daten, query) {
     </article>`;
 
   verdrahte(el, daten);
+  // Beim Verlassen der Route Mikrofon + Referenzton stoppen (Mikro bliebe sonst offen).
+  registriereAufraeumen(() => {
+    stoppeTuner();
+    stoppeDrone(null);
+  });
 }
 
 function verdrahte(el, daten) {
