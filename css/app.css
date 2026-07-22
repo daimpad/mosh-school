@@ -2534,3 +2534,33 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 /* --- Gesundheits-Pausenhinweis im Metronom (§5) --- */
 .wz-pausen-hinweis { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
 .wz-pausen-hinweis .fa-heart-pulse { color: var(--primaer); margin-right: 0.4rem; }
+
+/* --- Demonstrations-Ebene (§1): Raster/Tab + Playhead + Steuerung --- */
+.demo { margin: 1.2rem 0; padding: 1rem; border: 1px solid var(--linie-stark); border-radius: var(--radius); background: var(--flaeche); }
+.demo > h2 { margin: 0 0 0.8rem; font-size: 1.05rem; }
+.demo > h2 .fa-play { color: var(--primaer); margin-right: 0.3rem; }
+.demo-raster { overflow-x: auto; padding-bottom: 0.3rem; margin-bottom: 0.9rem; }
+.demo-zeile { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.28rem; }
+.demo-zeilen-label { flex: 0 0 auto; width: 5.2rem; text-align: right; font-size: 0.72rem; color: var(--tinte-2); white-space: nowrap; }
+.demo-saite-label { font-weight: 600; font-variant-numeric: tabular-nums; }
+.demo-zellen { display: grid; gap: 2px; flex: 1 1 auto; min-width: 22rem; }
+.demo-zelle {
+  height: 20px; border: 1px solid var(--linie-stark); border-radius: 2px; background: var(--flaeche-2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-variant-numeric: tabular-nums; color: var(--tinte-2);
+}
+.demo-zelle.takt { border-left-width: 2px; border-left-color: var(--tinte-2); }
+.demo-raster-pattern .demo-zelle.an { background: var(--primaer); border-color: transparent; }
+.demo-tab-zelle.an { background: var(--primaer-weich); border-color: var(--primaer); color: var(--primaer-tief); font-weight: 600; }
+.demo-tab-zelle.an.technik-palm_mute, .demo-tab-zelle.an.technik-chug, .demo-tab-zelle.an.technik-dead_note { border-style: dashed; }
+.demo-zelle.playhead { outline: 2px solid var(--primaer); outline-offset: -1px; }
+
+.demo-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; }
+.demo-play.laeuft { background: var(--signal-rot, var(--primaer)); }
+.demo-tempo-label { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; }
+.demo-tempo { width: 8rem; accent-color: var(--primaer); }
+.demo-tempo-wert { font-weight: 600; font-variant-numeric: tabular-nums; }
+.demo-presets { display: inline-flex; align-items: center; gap: 0.3rem; }
+.demo-presets-titel { font-size: 0.78rem; }
+.demo-toggle { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer; }
+.demo-hoerbeispiel h2 { margin-top: 0; }
