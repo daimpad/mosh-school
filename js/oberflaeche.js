@@ -192,15 +192,16 @@ export function meilensteinLabel(id) {
   return t('meilenstein_' + id);
 }
 
-export function zeigeMeilenstein(meilenstein) {
-  // Neue Trainings-Loop-Meilensteine reichen einen fertigen Text herein; die
-  // alten Pfad-Meilensteine tragen art/stufe.
-  const istKompetenz = meilenstein.art === 'kompetenz';
-  const textZeile = meilenstein.text
-    ? meilenstein.text
-    : istKompetenz
+// Text einer Meilenstein-Feier: neue Trainings-Loop-Meilensteine reichen einen
+// fertigen Text herein; die alten Pfad-Meilensteine tragen art/stufe.
+function meilensteinTextZeile(meilenstein) {
+  if (meilenstein.text) return meilenstein.text;
+  return meilenstein.art === 'kompetenz'
     ? t('meilenstein_kompetenz', { pfad: `${t('pfad_kompetenz')} (${label('kompetenzstufe', meilenstein.stufe)})` })
     : t('meilenstein_individual');
+}
+
+function zeigeMeilensteinKarte(textZeile, aufSchliessen) {
   zeigeUeberlagerung(`
     <div class="meilenstein-karte">
       <p class="meilenstein-zeichen" aria-hidden="true"><i class="fa-solid fa-medal"></i></p>
@@ -211,13 +212,54 @@ export function zeigeMeilenstein(meilenstein) {
     </div>`);
   document.querySelector('#dialog-wurzel [data-schliessen]').addEventListener('click', () => {
     schliesseUeberlagerung();
-    neuRendern();
+    aufSchliessen();
   });
+}
+
+export function zeigeMeilenstein(meilenstein) {
+  zeigeMeilensteinKarte(meilensteinTextZeile(meilenstein), neuRendern);
+}
+
+// Mehrere gleichzeitig erreichte Meilensteine nacheinander feiern (statt nur den
+// ersten zu zeigen und die übrigen still zu verbuchen). Schließt eine Feier, folgt
+// die nächste; nach der letzten wird neu gerendert.
+export function zeigeMeilensteine(meilensteine) {
+  const rest = Array.isArray(meilensteine) ? meilensteine.slice() : [meilensteine];
+  const weiter = () => {
+    if (!rest.length) {
+      neuRendern();
+      return;
+    }
+    zeigeMeilensteinKarte(meilensteinTextZeile(rest.shift()), weiter);
+  };
+  weiter();
 }
 
 // Ansichten stoßen ein Neu-Rendern an, ohne app.js zu importieren (kein Zyklus).
 export function neuRendern() {
   window.dispatchEvent(new CustomEvent('app:rendern'));
+}
+
+// Ansichts-Aufräumen (Ressourcen-Teardown beim Ansichtswechsel). Views mit
+// laufenden Ressourcen (Audio-Scheduler, Mikrofon-Streams, Timer, Objekt-URLs)
+// registrieren hier eine Stop-Funktion; der Router führt sie beim Verlassen der
+// Route aus, BEVOR die nächste Ansicht rendert. So läuft nichts weiter, nachdem
+// man weggeklickt hat (u. a. bleibt kein Mikrofon offen). Die Haken werden nach
+// dem Ausführen geleert — jede Ansicht registriert bei ihrem Rendern neu.
+let aufraeumHaken = [];
+export function registriereAufraeumen(fn) {
+  if (typeof fn === 'function') aufraeumHaken.push(fn);
+}
+export function fuehreAufraeumenAus() {
+  const haken = aufraeumHaken;
+  aufraeumHaken = [];
+  for (const fn of haken) {
+    try {
+      fn();
+    } catch {
+      // Ein fehlschlagendes Aufräumen darf den Ansichtswechsel nicht blockieren.
+    }
+  }
 }
 
 // Thema (hell/dunkel/auto) auf das Wurzelelement anwenden. 'auto' entfernt die
