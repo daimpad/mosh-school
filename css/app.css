@@ -2894,3 +2894,14 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 .genre-featured-text { display: flex; flex-direction: column; gap: 0.1rem; flex: 1; min-width: 0; }
 .genre-featured-pfeil { color: var(--primaer); flex: none; }
+
+/* Instrument-Seite: In-Page-Reiter (Theorie · Praxis · Tools · Prüfung · Geräte
+   · [Stimmung/Patterns]). Waagerecht scrollbar auf schmalen Screens. */
+.instr-reiter {
+  display: flex; gap: 0.4rem; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  margin: 0.2rem 0 1rem; padding-bottom: 0.35rem; scrollbar-width: thin;
+}
+.instr-reiter-knopf { flex: none; white-space: nowrap; }
+.instr-reiter-knopf .fa-solid { font-size: 0.85em; margin-right: 0.1rem; }
+.instr-tab-inhalt { margin-top: 0.2rem; }
+.instr-tab-inhalt > .instr-stufe-titel:first-child { margin-top: 0.2rem; }
