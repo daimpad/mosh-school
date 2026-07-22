@@ -7,7 +7,7 @@ import { renderHeim } from './ansichten/heim.js';
 import { renderMitmachen, renderRechtstext, renderUeber } from './ansichten/info.js';
 import { renderOnboarding } from './ansichten/onboarding.js';
 import { renderPlan } from './ansichten/plan.js';
-import { renderIndividual, renderKompetenzpfad, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
+import { renderIndividual, renderInstrument, renderKompetenzpfad, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
 import { renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
@@ -407,6 +407,8 @@ function rendern() {
     renderUmgebung(el, daten, segmente[1], segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'individual') {
     renderIndividual(el, daten);
+  } else if (segmente[0] === 'instrument') {
+    renderInstrument(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'plan') {
     renderPlan(el, daten);
   } else if (segmente[0] === 'training') {

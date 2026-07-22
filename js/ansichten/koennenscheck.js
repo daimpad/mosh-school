@@ -37,7 +37,16 @@ function zaehleGesamt(werkzeug, stufe) {
   return (werkzeug.anforderungen || []).filter((a) => a.werte?.[stufe]).length;
 }
 
+// Route-Einstieg: Vollseite mit eigenem Hero.
 export function renderKoennenscheck(el, daten) {
+  zeichneKoennenscheck(el, daten, { mitHero: true });
+}
+
+// Wiederverwendbarer Renderer: zeichnet den Check in `container` und bindet die
+// Interaktion. `mitHero` steuert den eigenen Hero-Kopf (Vollseite) vs. eingebettet
+// (nur der Check-Körper, z. B. als Abschnitt der Instrument-Seite). Der Zustand
+// (gewählte Stufe, abgehakte Posten) lebt modulweit — egal, wo eingebettet.
+export function zeichneKoennenscheck(container, daten, { mitHero = false } = {}) {
   const werkzeug = daten.turnierregeln || { stufen: [], kategorien: [], anforderungen: [] };
   const stufen = stufenListe(werkzeug);
   if (!stufen.includes(aktiveStufe)) aktiveStufe = stufen[0] || 'einsteiger';
@@ -85,34 +94,35 @@ export function renderKoennenscheck(el, daten) {
       </ul>
     </fieldset>`;
 
-  el.innerHTML = `
-    <article>
-      <section class="marke-hero klein hue pf-teal">
+  const hero = mitHero
+    ? `<section class="marke-hero klein hue pf-teal">
         <span class="marke-hero-icon"><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i></span>
         <div class="marke-hero-text">
           <h1>${esc(t('nav_koennenscheck'))}</h1>
           <p class="marke-hero-untertitel">${esc(t('koennenscheck_untertitel'))}</p>
         </div>
-      </section>
-      <p class="leise">${esc(t('koennenscheck_intro'))}</p>
-      <p class="chip-zeile" role="group" aria-label="${esc(t('koennenscheck_stufenwahl'))}">${stufenKnoepfe}</p>
-      <p class="kc-zaehler leise" aria-live="polite">${esc(t('koennenscheck_erfuellt', { n: gehakt.size, gesamt }))}</p>
-      <div class="kc-gruppen">
-        ${gruppen.map(kategorieHtml).join('')}
-      </div>
-      <p class="leise kc-fuss">${esc(t('koennenscheck_hinweis'))}</p>
-    </article>`;
+      </section>`
+    : '';
+  container.innerHTML = `
+    ${hero}
+    <p class="leise">${esc(t('koennenscheck_intro'))}</p>
+    <p class="chip-zeile" role="group" aria-label="${esc(t('koennenscheck_stufenwahl'))}">${stufenKnoepfe}</p>
+    <p class="kc-zaehler leise" aria-live="polite">${esc(t('koennenscheck_erfuellt', { n: gehakt.size, gesamt }))}</p>
+    <div class="kc-gruppen">
+      ${gruppen.map(kategorieHtml).join('')}
+    </div>
+    <p class="leise kc-fuss">${esc(t('koennenscheck_hinweis'))}</p>`;
 
-  for (const knopf of el.querySelectorAll('[data-stufe]')) {
+  for (const knopf of container.querySelectorAll('[data-stufe]')) {
     knopf.addEventListener('click', () => {
       aktiveStufe = knopf.dataset.stufe;
-      renderKoennenscheck(el, daten);
-      el.querySelector(`[data-stufe="${CSS.escape(aktiveStufe)}"]`)?.focus();
+      zeichneKoennenscheck(container, daten, { mitHero });
+      container.querySelector(`[data-stufe="${CSS.escape(aktiveStufe)}"]`)?.focus();
     });
   }
 
-  const zaehler = el.querySelector('.kc-zaehler');
-  for (const box of el.querySelectorAll('[data-posten]')) {
+  const zaehler = container.querySelector('.kc-zaehler');
+  for (const box of container.querySelectorAll('[data-posten]')) {
     box.addEventListener('change', () => {
       const id = box.dataset.posten;
       if (box.checked) gehakt.add(id);
