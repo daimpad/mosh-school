@@ -151,6 +151,32 @@ export function themenpfad(daten, domaene) {
   };
 }
 
+// Instrument-Landing (die vier Instrumente als eigenes Zuhause). Bündelt ALLE
+// Bausteine eines Instruments (Technik + Ausrüstung, da Gear-Bausteine die
+// Instrument-Domäne mittragen) und trennt sie in Technik (ohne `ausruestung`)
+// und Ausrüstung (mit). Technik nach dem Kompetenz-Ladder geordnet, Ausrüstung
+// pool-/erzählnah. Querschnitts-Domänen (theorie/koerper/mentales) bleiben außen
+// vor — sie haben eigene Themen-Facetten.
+export const INSTRUMENTE = ['gitarre', 'bass', 'schlagzeug', 'gesang'];
+
+export function instrumentUebersicht(daten) {
+  return INSTRUMENTE.map((domaene) => ({
+    domaene,
+    anzahl: daten.bausteine.filter((b) => domaenenVon(b).includes(domaene) && trainerSichtbar(daten, b) && !umgebungsBaustein(b)).length,
+  }));
+}
+
+export function instrumentpfad(daten, domaene) {
+  const alle = daten.bausteine.filter((b) => domaenenVon(b).includes(domaene) && trainerSichtbar(daten, b) && !umgebungsBaustein(b));
+  const istGear = (b) => domaenenVon(b).includes('ausruestung');
+  return {
+    art: 'instrument',
+    domaene,
+    technik: zuStationen(daten, alle.filter((b) => !istGear(b)), kompetenzVergleicher(daten), diagnose().herkunft),
+    ausruestung: zuStationen(daten, alle.filter(istGear), standardVergleicher(daten), null),
+  };
+}
+
 // Genre-Achse (Stil): Querschnitt über Instrumente UND Stufen — sammelt alle
 // Bausteine eines Genres (death_metal, black_metal, doom …) domänenübergreifend
 // zu einem Thema. Reine Pool-/Erzählreihenfolge, kein Modifikator. Es erscheinen
