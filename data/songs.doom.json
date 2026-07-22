@@ -1,0 +1,217 @@
+{
+  "genre": "Doom",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Black Sabbath",
+      "titel": "Black Sabbath",
+      "substil_vermerk": "Ur-Doom (UK)",
+      "url": "https://www.youtube.com/results?search_query=Black+Sabbath+Black+Sabbath",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Candlemass",
+      "titel": "Solitude",
+      "substil_vermerk": "Epic Doom (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Candlemass+Solitude",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Saint Vitus",
+      "titel": "Born Too Late",
+      "substil_vermerk": "traditioneller Doom (US)",
+      "url": "https://www.youtube.com/results?search_query=Saint+Vitus+Born+Too+Late",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Pentagram",
+      "titel": "All Your Sins",
+      "substil_vermerk": "traditioneller Doom (US)",
+      "url": "https://www.youtube.com/results?search_query=Pentagram+All+Your+Sins",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Trouble",
+      "titel": "The Tempter",
+      "substil_vermerk": "traditioneller Doom (US)",
+      "url": "https://www.youtube.com/results?search_query=Trouble+The+Tempter",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cathedral",
+      "titel": "Ride",
+      "substil_vermerk": "traditioneller/Stoner-Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Cathedral+Ride&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Electric Wizard",
+      "titel": "Funeralopolis",
+      "substil_vermerk": "Stoner-/Heavy-Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Electric+Wizard+Funeralopolis&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sleep",
+      "titel": "Dragonaut",
+      "substil_vermerk": "Stoner-Doom (US)",
+      "url": "https://bandcamp.com/search?q=Sleep+Dragonaut&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Reverend Bizarre",
+      "titel": "The Hour of Death",
+      "substil_vermerk": "Epic Doom (Finnland)",
+      "url": "https://bandcamp.com/search?q=Reverend+Bizarre+The+Hour+of+Death&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Solitude Aeturnus",
+      "titel": "Plague of Procreation",
+      "substil_vermerk": "Epic Doom (US)",
+      "url": "https://www.youtube.com/results?search_query=Solitude+Aeturnus+Plague+of+Procreation",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Solstice",
+      "titel": "Death's Crown Is Victory",
+      "substil_vermerk": "Epic Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Solstice+Death%27s+Crown+Is+Victory&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "My Dying Bride",
+      "titel": "The Cry of Mankind",
+      "substil_vermerk": "Death-Doom (UK)",
+      "url": "https://bandcamp.com/search?q=My+Dying+Bride+The+Cry+of+Mankind&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Paradise Lost",
+      "titel": "Gothic",
+      "substil_vermerk": "Death-Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Paradise+Lost+Gothic&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Anathema",
+      "titel": "Sleepless",
+      "substil_vermerk": "früher Death-Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Anathema+Sleepless&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Katatonia",
+      "titel": "Murder",
+      "substil_vermerk": "früher Death-Doom (Schweden)",
+      "url": "https://bandcamp.com/search?q=Katatonia+Murder&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Novembers Doom",
+      "titel": "The Novella Reservoir",
+      "substil_vermerk": "Death-Doom (US)",
+      "url": "https://bandcamp.com/search?q=Novembers+Doom+The+Novella+Reservoir&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Swallow the Sun",
+      "titel": "Swallow",
+      "substil_vermerk": "Death-Doom (Finnland)",
+      "url": "https://bandcamp.com/search?q=Swallow+the+Sun+Swallow&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Draconian",
+      "titel": "The Solitude",
+      "substil_vermerk": "gothic Death-Doom (Schweden)",
+      "url": "https://bandcamp.com/search?q=Draconian+The+Solitude&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Shape of Despair",
+      "titel": "Shades of Dying",
+      "substil_vermerk": "Funeral Doom (Finnland)",
+      "url": "https://bandcamp.com/search?q=Shape+of+Despair+Shades+of+Dying&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Skepticism",
+      "titel": "Pouring",
+      "substil_vermerk": "Funeral Doom (Finnland)",
+      "url": "https://bandcamp.com/search?q=Skepticism+Pouring&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mournful Congregation",
+      "titel": "The Watchers Serene",
+      "substil_vermerk": "Funeral Doom (Australien)",
+      "url": "https://bandcamp.com/search?q=Mournful+Congregation+The+Watchers+Serene&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Evoken",
+      "titel": "A Caress of the Void",
+      "substil_vermerk": "Funeral Death-Doom (US)",
+      "url": "https://bandcamp.com/search?q=Evoken+A+Caress+of+the+Void&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ahab",
+      "titel": "The Pacific",
+      "substil_vermerk": "nautischer Funeral Doom (Deutschland)",
+      "url": "https://bandcamp.com/search?q=Ahab+The+Pacific&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bell Witch",
+      "titel": "Mirror Reaper",
+      "substil_vermerk": "Funeral Doom (US)",
+      "url": "https://bandcamp.com/search?q=Bell+Witch+Mirror+Reaper&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Pallbearer",
+      "titel": "Foreigner",
+      "substil_vermerk": "moderner Doom (US)",
+      "url": "https://bandcamp.com/search?q=Pallbearer+Foreigner&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Yob",
+      "titel": "Marrow",
+      "substil_vermerk": "psychedelischer Stoner-Doom (US)",
+      "url": "https://bandcamp.com/search?q=Yob+Marrow&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Warning",
+      "titel": "Watching from a Distance",
+      "substil_vermerk": "emotionaler traditioneller Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Warning+Watching+from+a+Distance&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "40 Watt Sun",
+      "titel": "Restless",
+      "substil_vermerk": "moderner Doom (UK)",
+      "url": "https://bandcamp.com/search?q=40+Watt+Sun+Restless&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Count Raven",
+      "titel": "Traveller in Time",
+      "substil_vermerk": "Epic Doom (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Count+Raven+Traveller+in+Time",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Witchfinder General",
+      "titel": "Witchfinder General",
+      "substil_vermerk": "NWOBHM/Doom (UK)",
+      "url": "https://www.youtube.com/results?search_query=Witchfinder+General+Witchfinder+General",
+      "quelle": "youtube"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "genre": "Death Metal",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Death",
+      "titel": "Pull the Plug",
+      "substil_vermerk": "Florida-OSDM, Genre-Pionier (US)",
+      "url": "https://www.youtube.com/results?search_query=Death+Pull+the+Plug",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Morbid Angel",
+      "titel": "Immortal Rites",
+      "substil_vermerk": "Florida-OSDM (US)",
+      "url": "https://www.youtube.com/results?search_query=Morbid+Angel+Immortal+Rites",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cannibal Corpse",
+      "titel": "Hammer Smashed Face",
+      "substil_vermerk": "Brutal Death (US)",
+      "url": "https://www.youtube.com/results?search_query=Cannibal+Corpse+Hammer+Smashed+Face",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Deicide",
+      "titel": "Dead by Dawn",
+      "substil_vermerk": "Florida-OSDM (US)",
+      "url": "https://www.youtube.com/results?search_query=Deicide+Dead+by+Dawn",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Obituary",
+      "titel": "Slowly We Rot",
+      "substil_vermerk": "Florida-OSDM (US)",
+      "url": "https://www.youtube.com/results?search_query=Obituary+Slowly+We+Rot",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Autopsy",
+      "titel": "Charred Remains",
+      "substil_vermerk": "Death-Doom/OSDM (US)",
+      "url": "https://www.youtube.com/results?search_query=Autopsy+Charred+Remains",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Entombed",
+      "titel": "Left Hand Path",
+      "substil_vermerk": "schwedisches OSDM",
+      "url": "https://www.youtube.com/results?search_query=Entombed+Left+Hand+Path",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dismember",
+      "titel": "Override of the Overture",
+      "substil_vermerk": "schwedisches OSDM",
+      "url": "https://www.youtube.com/results?search_query=Dismember+Override+of+the+Overture",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Grave",
+      "titel": "Into the Grave",
+      "substil_vermerk": "schwedisches OSDM",
+      "url": "https://www.youtube.com/results?search_query=Grave+Into+the+Grave",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Bloodbath",
+      "titel": "Eaten",
+      "substil_vermerk": "schwedisches OSDM-Revival",
+      "url": "https://bandcamp.com/search?q=Bloodbath+Eaten&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bolt Thrower",
+      "titel": "World Eater",
+      "substil_vermerk": "Death/War (UK)",
+      "url": "https://bandcamp.com/search?q=Bolt+Thrower+World+Eater&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Carcass",
+      "titel": "Heartwork",
+      "substil_vermerk": "melodischer Death (UK)",
+      "url": "https://bandcamp.com/search?q=Carcass+Heartwork&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "At the Gates",
+      "titel": "Blinded by Fear",
+      "substil_vermerk": "Göteborg-Melodic-Death (Schweden)",
+      "url": "https://bandcamp.com/search?q=At+the+Gates+Blinded+by+Fear&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Dark Tranquillity",
+      "titel": "The Wonders at Your Feet",
+      "substil_vermerk": "Melodic Death (Schweden)",
+      "url": "https://bandcamp.com/search?q=Dark+Tranquillity+The+Wonders+at+Your+Feet&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "In Flames",
+      "titel": "Only for the Weak",
+      "substil_vermerk": "Melodic Death (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=In+Flames+Only+for+the+Weak",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Amon Amarth",
+      "titel": "Twilight of the Thunder God",
+      "substil_vermerk": "Melodic/Viking-Death (Schweden)",
+      "url": "https://bandcamp.com/search?q=Amon+Amarth+Twilight+of+the+Thunder+God&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Suffocation",
+      "titel": "Liege of Inveracity",
+      "substil_vermerk": "Brutal/Technical Death (US)",
+      "url": "https://bandcamp.com/search?q=Suffocation+Liege+of+Inveracity&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cryptopsy",
+      "titel": "Slit Your Guts",
+      "substil_vermerk": "technischer Brutal Death (Kanada)",
+      "url": "https://bandcamp.com/search?q=Cryptopsy+Slit+Your+Guts&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Nile",
+      "titel": "Sacrifice unto Sebek",
+      "substil_vermerk": "technischer Death (US)",
+      "url": "https://bandcamp.com/search?q=Nile+Sacrifice+unto+Sebek&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Origin",
+      "titel": "Antithesis",
+      "substil_vermerk": "technischer/brutaler Death (US)",
+      "url": "https://bandcamp.com/search?q=Origin+Antithesis&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Necrophagist",
+      "titel": "Fermented Offal Discharge",
+      "substil_vermerk": "technischer Death (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Necrophagist+Fermented+Offal+Discharge",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Gorguts",
+      "titel": "Obscura",
+      "substil_vermerk": "avantgardistischer/technischer Death (Kanada)",
+      "url": "https://bandcamp.com/search?q=Gorguts+Obscura&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Immolation",
+      "titel": "Father, You're Not a Father",
+      "substil_vermerk": "NY-Death (US)",
+      "url": "https://bandcamp.com/search?q=Immolation+Father%2C+You%27re+Not+a+Father&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Incantation",
+      "titel": "Deliverance of Horrific Prophecies",
+      "substil_vermerk": "US-Death-Doom",
+      "url": "https://bandcamp.com/search?q=Incantation+Deliverance+of+Horrific+Prophecies&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Vader",
+      "titel": "Silent Empire",
+      "substil_vermerk": "Death/Thrash (Polen)",
+      "url": "https://bandcamp.com/search?q=Vader+Silent+Empire&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Behemoth",
+      "titel": "Demigod",
+      "substil_vermerk": "Blackened Death (Polen)",
+      "url": "https://bandcamp.com/search?q=Behemoth+Demigod&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Decapitated",
+      "titel": "Spheres of Madness",
+      "substil_vermerk": "technischer Death (Polen)",
+      "url": "https://bandcamp.com/search?q=Decapitated+Spheres+of+Madness&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cattle Decapitation",
+      "titel": "Kingdom of Tyrants",
+      "substil_vermerk": "moderner Death/Grind (US)",
+      "url": "https://bandcamp.com/search?q=Cattle+Decapitation+Kingdom+of+Tyrants&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Revocation",
+      "titel": "Dario",
+      "substil_vermerk": "moderner technischer Death (US)",
+      "url": "https://bandcamp.com/search?q=Revocation+Dario&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Blood Incantation",
+      "titel": "Inner Paths (to Outer Space)",
+      "substil_vermerk": "moderner Death (US)",
+      "url": "https://bandcamp.com/search?q=Blood+Incantation+Inner+Paths+%28to+Outer+Space%29&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

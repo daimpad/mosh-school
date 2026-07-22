@@ -69,6 +69,12 @@ const INHALTSDATEIEN = [
 // Fortschritt. Getrennte Datei je Genre hält Updates lokal und risikoarm;
 // Reihenfolge = Anzeigereihenfolge der Genre-Auswahl.
 const SONGDATEIEN = [
+  'data/songs.hardcore.json',
+  'data/songs.metalcore.json',
+  'data/songs.thrash.json',
+  'data/songs.death-metal.json',
+  'data/songs.black-metal.json',
+  'data/songs.doom.json',
   'data/songs.crust.json',
   'data/songs.grindcore.json',
   'data/songs.powerviolence.json',
