@@ -1,0 +1,217 @@
+{
+  "genre": "Grindcore",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Napalm Death",
+      "titel": "You Suffer",
+      "substil_vermerk": "Ur-grind, kürzester Song (UK)",
+      "url": "https://www.youtube.com/results?search_query=Napalm+Death+You+Suffer",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Repulsion",
+      "titel": "Radiation Sickness",
+      "substil_vermerk": "proto-grind/gore (US)",
+      "url": "https://www.youtube.com/results?search_query=Repulsion+Radiation+Sickness",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Terrorizer",
+      "titel": "Fear of Napalm",
+      "substil_vermerk": "death-grind (US)",
+      "url": "https://www.youtube.com/results?search_query=Terrorizer+Fear+of+Napalm",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Carcass",
+      "titel": "Exhume to Consume",
+      "substil_vermerk": "goregrind (UK)",
+      "url": "https://www.youtube.com/results?search_query=Carcass+Exhume+to+Consume",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "General Surgery",
+      "titel": "Ominous Lament",
+      "substil_vermerk": "goregrind (Schweden)",
+      "url": "https://bandcamp.com/search?q=General+Surgery+Ominous+Lament&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Last Days of Humanity",
+      "titel": "In Advanced Haemorrhaging Condition",
+      "substil_vermerk": "goregrind/noisegrind (NL)",
+      "url": "https://www.youtube.com/results?search_query=Last+Days+of+Humanity+In+Advanced+Haemorrhaging+Condition",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Regurgitate",
+      "titel": "Sightless",
+      "substil_vermerk": "goregrind (Schweden)",
+      "url": "https://bandcamp.com/search?q=Regurgitate+Sightless&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Brutal Truth",
+      "titel": "Godplayer",
+      "substil_vermerk": "deathgrind (US)",
+      "url": "https://www.youtube.com/results?search_query=Brutal+Truth+Godplayer",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Nasum",
+      "titel": "Scoundrels",
+      "substil_vermerk": "schwedischer Grind",
+      "url": "https://bandcamp.com/search?q=Nasum+Scoundrels&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Rotten Sound",
+      "titel": "Cursed",
+      "substil_vermerk": "finnischer Grind",
+      "url": "https://bandcamp.com/search?q=Rotten+Sound+Cursed&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Pig Destroyer",
+      "titel": "Trojan Whore",
+      "substil_vermerk": "deathgrind (US)",
+      "url": "https://www.youtube.com/results?search_query=Pig+Destroyer+Trojan+Whore",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Discordance Axis",
+      "titel": "Castration Rite",
+      "substil_vermerk": "technischer Grind (US)",
+      "url": "https://www.youtube.com/results?search_query=Discordance+Axis+Castration+Rite",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Assück",
+      "titel": "Page",
+      "substil_vermerk": "grind/death (US)",
+      "url": "https://www.youtube.com/results?search_query=Ass%C3%BCck+Page",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Insect Warfare",
+      "titel": "Street Sweeper",
+      "substil_vermerk": "moderner Ur-grind (US)",
+      "url": "https://www.youtube.com/results?search_query=Insect+Warfare+Street+Sweeper",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cephalic Carnage",
+      "titel": "Molest the Dead",
+      "substil_vermerk": "experimenteller Hydrogrind (US)",
+      "url": "https://www.youtube.com/results?search_query=Cephalic+Carnage+Molest+the+Dead",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Gridlink",
+      "titel": "Constellatory",
+      "substil_vermerk": "technischer Grind (US)",
+      "url": "https://bandcamp.com/search?q=Gridlink+Constellatory&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Agoraphobic Nosebleed",
+      "titel": "Bacon Cheese Xtreme",
+      "substil_vermerk": "Drum-Machine-/Cybergrind (US)",
+      "url": "https://bandcamp.com/search?q=Agoraphobic+Nosebleed+Bacon+Cheese+Xtreme&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Genghis Tron",
+      "titel": "Board Up the House",
+      "substil_vermerk": "Cybergrind/elektronisch (US)",
+      "url": "https://bandcamp.com/search?q=Genghis+Tron+Board+Up+the+House&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Locust",
+      "titel": "Wet Dream War Machine",
+      "substil_vermerk": "grind/noise (US)",
+      "url": "https://www.youtube.com/results?search_query=The+Locust+Wet+Dream+War+Machine",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Fuck the Facts",
+      "titel": "Census Blank",
+      "substil_vermerk": "moderner Grind (Kanada)",
+      "url": "https://bandcamp.com/search?q=Fuck+the+Facts+Census+Blank&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wormrot",
+      "titel": "Voices",
+      "substil_vermerk": "moderner Grind (Singapur)",
+      "url": "https://bandcamp.com/search?q=Wormrot+Voices&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cloud Rat",
+      "titel": "Aria",
+      "substil_vermerk": "emotiver moderner Grind (US)",
+      "url": "https://bandcamp.com/search?q=Cloud+Rat+Aria&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Full of Hell",
+      "titel": "Deluminate",
+      "substil_vermerk": "noise/grind (US)",
+      "url": "https://bandcamp.com/search?q=Full+of+Hell+Deluminate&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Antigama",
+      "titel": "The Law",
+      "substil_vermerk": "moderner/technischer Grind (Polen)",
+      "url": "https://bandcamp.com/search?q=Antigama+The+Law&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Phobia",
+      "titel": "Serenity Through Extermination",
+      "substil_vermerk": "crust-grind (US)",
+      "url": "https://www.youtube.com/results?search_query=Phobia+Serenity+Through+Extermination",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dropdead",
+      "titel": "Bitch",
+      "substil_vermerk": "grind/powerviolence (US)",
+      "url": "https://bandcamp.com/search?q=Dropdead+Bitch&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Total Fucking Destruction",
+      "titel": "Hair",
+      "substil_vermerk": "experimenteller Grind (US)",
+      "url": "https://bandcamp.com/search?q=Total+Fucking+Destruction+Hair&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Kill the Client",
+      "titel": "Broken Bones",
+      "substil_vermerk": "deathgrind (US)",
+      "url": "https://bandcamp.com/search?q=Kill+the+Client+Broken+Bones&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Benighted",
+      "titel": "Let the Blood Spill Between My Broken Teeth",
+      "substil_vermerk": "brutaler Deathgrind (Frankreich)",
+      "url": "https://bandcamp.com/search?q=Benighted+Let+the+Blood+Spill+Between+My+Broken+Teeth&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Magrudergrind",
+      "titel": "Bridge Burner",
+      "substil_vermerk": "grind/powerviolence (US)",
+      "url": "https://bandcamp.com/search?q=Magrudergrind+Bridge+Burner&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

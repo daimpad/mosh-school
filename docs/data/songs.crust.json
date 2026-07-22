@@ -1,0 +1,217 @@
+{
+  "genre": "Crust",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Discharge",
+      "titel": "Hear Nothing See Nothing Say Nothing",
+      "substil_vermerk": "d-beat-Ur-crust (UK)",
+      "url": "https://www.youtube.com/results?search_query=Discharge+Hear+Nothing+See+Nothing+Say+Nothing",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Amebix",
+      "titel": "Arise!",
+      "substil_vermerk": "stenchcore/proto-crust (UK)",
+      "url": "https://www.youtube.com/results?search_query=Amebix+Arise%21",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Antisect",
+      "titel": "Channel Zero",
+      "substil_vermerk": "anarcho-crust (UK)",
+      "url": "https://www.youtube.com/results?search_query=Antisect+Channel+Zero",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Doom",
+      "titel": "Police Bastard",
+      "substil_vermerk": "UK-crust (Birmingham)",
+      "url": "https://www.youtube.com/results?search_query=Doom+Police+Bastard",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Extreme Noise Terror",
+      "titel": "Deceived",
+      "substil_vermerk": "crustgrind (UK)",
+      "url": "https://www.youtube.com/results?search_query=Extreme+Noise+Terror+Deceived",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Deviated Instinct",
+      "titel": "Welcome to the Orgy",
+      "substil_vermerk": "stenchcore (UK)",
+      "url": "https://www.youtube.com/results?search_query=Deviated+Instinct+Welcome+to+the+Orgy",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Hellbastard",
+      "titel": "Heading for Internal Darkness",
+      "substil_vermerk": "proto-crust/thrashcore (UK)",
+      "url": "https://www.youtube.com/results?search_query=Hellbastard+Heading+for+Internal+Darkness",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Sacrilege",
+      "titel": "Out of Sight Out of Mind",
+      "substil_vermerk": "crust/thrash, weiblich gefronted (UK)",
+      "url": "https://www.youtube.com/results?search_query=Sacrilege+Out+of+Sight+Out+of+Mind",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Nausea",
+      "titel": "Blackreign",
+      "substil_vermerk": "NYC-crust (US)",
+      "url": "https://www.youtube.com/results?search_query=Nausea+Blackreign",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Aus-Rotten",
+      "titel": "The System Works for Them",
+      "substil_vermerk": "anarcho-crust (US)",
+      "url": "https://www.youtube.com/results?search_query=Aus-Rotten+The+System+Works+for+Them",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Anti Cimex",
+      "titel": "Victims of a Bomb Raid",
+      "substil_vermerk": "schwedischer Käng/d-beat",
+      "url": "https://www.youtube.com/results?search_query=Anti+Cimex+Victims+of+a+Bomb+Raid",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Skitsystem",
+      "titel": "Enslaved",
+      "substil_vermerk": "schwedischer crust",
+      "url": "https://www.youtube.com/results?search_query=Skitsystem+Enslaved",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Disfear",
+      "titel": "The Cage",
+      "substil_vermerk": "schwedischer d-beat-crust",
+      "url": "https://bandcamp.com/search?q=Disfear+The+Cage&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wolfbrigade",
+      "titel": "Wolfpack",
+      "substil_vermerk": "schwedischer d-beat/crust",
+      "url": "https://bandcamp.com/search?q=Wolfbrigade+Wolfpack&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Martyrdöd",
+      "titel": "Nekromantiker",
+      "substil_vermerk": "blackened crust (Schweden)",
+      "url": "https://bandcamp.com/search?q=Martyrd%C3%B6d+Nekromantiker&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "His Hero Is Gone",
+      "titel": "Like Weeds",
+      "substil_vermerk": "dunkler Neocrust (US)",
+      "url": "https://www.youtube.com/results?search_query=His+Hero+Is+Gone+Like+Weeds",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "From Ashes Rise",
+      "titel": "Reaction",
+      "substil_vermerk": "Neocrust (US)",
+      "url": "https://www.youtube.com/results?search_query=From+Ashes+Rise+Reaction",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Tragedy",
+      "titel": "Conflicting Emotions",
+      "substil_vermerk": "Neocrust (US)",
+      "url": "https://www.youtube.com/results?search_query=Tragedy+Conflicting+Emotions",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Masakari",
+      "titel": "The Prophet",
+      "substil_vermerk": "blackened Neocrust (US)",
+      "url": "https://bandcamp.com/search?q=Masakari+The+Prophet&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Iskra",
+      "titel": "The Terror State",
+      "substil_vermerk": "anarchistischer blackened crust (Kanada)",
+      "url": "https://bandcamp.com/search?q=Iskra+The+Terror+State&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Fall of Efrafa",
+      "titel": "Simulacrum",
+      "substil_vermerk": "epischer/atmosphärischer crust (UK)",
+      "url": "https://bandcamp.com/search?q=Fall+of+Efrafa+Simulacrum&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Framtid",
+      "titel": "Under the Ashes",
+      "substil_vermerk": "japanischer crust/noise",
+      "url": "https://www.youtube.com/results?search_query=Framtid+Under+the+Ashes",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Warcollapse",
+      "titel": "Defy",
+      "substil_vermerk": "schwedischer crust",
+      "url": "https://www.youtube.com/results?search_query=Warcollapse+Defy",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dystopia",
+      "titel": "Sanctity",
+      "substil_vermerk": "crust/sludge (US)",
+      "url": "https://www.youtube.com/results?search_query=Dystopia+Sanctity",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Behind Enemy Lines",
+      "titel": "The Global Cannibal",
+      "substil_vermerk": "anarcho-crust (US)",
+      "url": "https://www.youtube.com/results?search_query=Behind+Enemy+Lines+The+Global+Cannibal",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Misery",
+      "titel": "Who's the Fool",
+      "substil_vermerk": "US-crust (Minneapolis)",
+      "url": "https://www.youtube.com/results?search_query=Misery+Who%27s+the+Fool",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cursed",
+      "titel": "Fed Through the Teeth Machine",
+      "substil_vermerk": "blackened crust/hardcore (Kanada)",
+      "url": "https://www.youtube.com/results?search_query=Cursed+Fed+Through+the+Teeth+Machine",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Downfall of Gaia",
+      "titel": "Suffocating in the Swarm of Cranes",
+      "substil_vermerk": "blackened crust/post (Deutschland)",
+      "url": "https://bandcamp.com/search?q=Downfall+of+Gaia+Suffocating+in+the+Swarm+of+Cranes&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Young and in the Way",
+      "titel": "Be My Blood",
+      "substil_vermerk": "blackened crust/hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Young+and+in+the+Way+Be+My+Blood&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Nux Vomica",
+      "titel": "Choir of the Clouds",
+      "substil_vermerk": "atmosphärischer blackened crust (US)",
+      "url": "https://bandcamp.com/search?q=Nux+Vomica+Choir+of+the+Clouds&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
