@@ -2481,3 +2481,29 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .genre-verwandt-chip { text-decoration: none; }
 .genre-verwandt-chip:hover { border-color: var(--primaer); color: var(--primaer-tief); }
 .genre-bausteine-titel { margin-top: 1.5rem; }
+
+/* --- Mastery-Umschalter (§2a) auf der Baustein-Seite --- */
+.mastery-toggle { display: flex; flex-direction: column; gap: 0.4rem; margin: 0.2rem 0 1rem; }
+.mastery-frage { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tinte-2); }
+.mastery-knoepfe { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.mastery-knopf {
+  display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer;
+  padding: 0.35rem 0.8rem; border-radius: 999px; font-size: 0.85rem; font-weight: 500;
+  background: transparent; border: 1px solid var(--linie-stark); color: var(--tinte-2);
+}
+.mastery-knopf:hover { border-color: var(--primaer); color: var(--tinte); }
+.mastery-knopf.aktiv { font-weight: 600; }
+.mastery-knopf.status-neu.aktiv { background: var(--flaeche-2); color: var(--tinte); border-color: var(--linie-stark); }
+.mastery-knopf.status-in_arbeit.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; }
+.mastery-knopf.status-sitzt.aktiv { background: var(--signal-gruen-weich, var(--primaer-weich)); color: var(--signal-gruen-text, var(--primaer-tief)); border-color: var(--signal-gruen, transparent); }
+
+/* --- „Dein Können" (§5): Ringe je Instrument + Was als Nächstes --- */
+.koennen-ringe { display: flex; flex-wrap: wrap; gap: 1.1rem; margin: 0.6rem 0 1.2rem; }
+.koennen-ring { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+.koennen-ring-label { font-weight: 600; font-size: 0.85rem; }
+.koennen-ring-zahl { font-size: 0.72rem; font-variant-numeric: tabular-nums; }
+.koennen-naechste { display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.4rem; }
+.koennen-naechst { display: flex; align-items: center; gap: 0.7rem; padding: 0.55rem 0.75rem; margin: 0; }
+.koennen-naechst-icon { flex: 0 0 auto; width: 1.4em; height: 1.4em; display: inline-flex; align-items: center; justify-content: center; color: var(--primaer); }
+.koennen-naechst > span:not(.koennen-naechst-icon) { flex: 1 1 auto; min-width: 0; }
+.koennen-naechst .fa-arrow-right { color: var(--primaer); flex: 0 0 auto; }
