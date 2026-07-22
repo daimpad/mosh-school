@@ -60,6 +60,8 @@ const INHALTSDATEIEN = [
   'data/bausteine.koerper-athletik.json',
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
+  'data/bausteine.instrument-technik.json',
+  'data/bausteine.gear-schlagzeug-gesang.json',
 ];
 
 export async function ladeDaten() {

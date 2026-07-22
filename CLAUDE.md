@@ -67,7 +67,7 @@ Crossminton-Lern-Engine geforkt — die Engine ist themenneutral, der Inhalt ist
 ## Werkzeuge (Audio) — `#/werkzeuge`
 
 Der Bereich **Werkzeuge** bündelt interaktive Audio-Werkzeuge, die die Lern-Bausteine
-praktisch stützen (Klick/Metronom, Play-along-Loops, Stimmgerät, Song-Struktur,
+praktisch stützen (Gear-Explorer als Karte, Klick/Metronom, Play-along-Loops, Stimmgerät, Song-Struktur,
 Riff-/Mehrspur-Rekorder). Referenzbereich wie Stimmungen/Patterns — **NICHT im
 Baustein-Pool, kein Fortschritt**. Hub-View `js/ansichten/werkzeuge.js`, je Werkzeug
 eine eigene View + Route `#/werkzeug/<name>`.

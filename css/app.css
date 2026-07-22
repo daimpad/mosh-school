@@ -2365,3 +2365,16 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .wz-ms-pegel-zeile label { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; }
 .wz-ms-knopf.aufnahme { background: var(--signal-rot); border-color: var(--signal-rot); }
 .wz-ms-latenz, .wz-ms-bpm { width: 6rem; padding: 0.4rem 0.5rem; border: 1px solid var(--linie-stark); border-radius: var(--radius-klein); background: var(--flaeche); color: var(--tinte); }
+
+/* === Gear-Explorer ========================================================= */
+.wz-exp-buehne { margin: 0.75rem 0; padding: 1rem; border: 1px solid var(--linie-stark); border-radius: var(--radius); background: var(--flaeche-2); overflow-x: auto; }
+.wz-exp-buehne svg { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; color: var(--tinte); }
+.wz-exp-buehne .hotspot { cursor: pointer; }
+.wz-exp-buehne .hotspot rect { fill: transparent; stroke: transparent; stroke-width: 1.5; stroke-dasharray: 4 3; transition: stroke 90ms, fill 90ms; }
+.wz-exp-buehne .hotspot:hover rect, .wz-exp-buehne .hotspot:focus-visible rect { stroke: var(--primaer); fill: color-mix(in srgb, var(--primaer) 10%, transparent); }
+.wz-exp-buehne .hotspot:focus { outline: none; }
+.wz-exp-buehne .hotspot.aktiv rect { stroke: var(--primaer); stroke-dasharray: none; stroke-width: 2; fill: color-mix(in srgb, var(--primaer) 14%, transparent); }
+.wz-exp-panel-halter { margin: 0.5rem 0; }
+.wz-exp-panel h3 { display: flex; align-items: center; gap: 0.5rem; }
+.wz-exp-panel h3 svg { width: 1.4em; height: 1.4em; }
+.wz-exp-panel-leer { padding: 0.75rem; }
