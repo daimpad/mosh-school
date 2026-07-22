@@ -109,8 +109,7 @@ export function renderThemen(el, daten, domaene) {
       ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
       : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, `themen:${domaene}`)}`;
   el.innerHTML = `
-    <h1>${esc(label('domaene', domaene))}</h1>
-    <p class="leise">${esc(t('vorgeschlagene_reihenfolge'))}</p>
+    ${heroKlein('fa-layer-group', label('domaene', domaene), t('vorgeschlagene_reihenfolge'), 'pf-teal')}
     ${inhalt}`;
 }
 
