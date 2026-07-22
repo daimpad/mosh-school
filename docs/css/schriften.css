@@ -153,6 +153,18 @@
 .fa-calendar-days::before { content: '\f073'; }
 .fa-calendar-plus::before { content: '\f271'; }
 .fa-print::before { content: '\f02f'; }
+/* Nachgezogene Glyphen: im woff2-Subset vorhanden, aber die Klassen-Zuordnung
+   fehlte — ohne sie rendern diese (in Werkzeugen breit genutzten) Icons als Tofu. */
+.fa-arrow-left::before { content: '\f060'; }
+.fa-stop::before { content: '\f04d'; }
+.fa-microphone::before { content: '\f130'; }
+.fa-download::before { content: '\f019'; }
+.fa-volume-high::before { content: '\f028'; }
+.fa-sliders::before { content: '\f1de'; }
+.fa-wave-square::before { content: '\f83e'; }
+.fa-drum::before { content: '\f569'; }
+.fa-hourglass-start::before { content: '\f251'; }
+.fa-angles-up::before { content: '\f102'; }
 
 /* mosh school — Anton (OFL): kondensierte Poster-Schrift für Display-Headings. */
 @font-face {
