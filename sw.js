@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v64';
+const CACHE = 'mosh-v65';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -130,6 +130,12 @@ const SHELL = [
   'data/tunings.json',
   'data/pedale.json',
   'data/ampbox.json',
+  'data/songs.hardcore.json',
+  'data/songs.metalcore.json',
+  'data/songs.thrash.json',
+  'data/songs.death-metal.json',
+  'data/songs.black-metal.json',
+  'data/songs.doom.json',
   'data/songs.crust.json',
   'data/songs.grindcore.json',
   'data/songs.powerviolence.json',

@@ -1,0 +1,217 @@
+{
+  "genre": "Black Metal",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Bathory",
+      "titel": "A Fine Day to Die",
+      "substil_vermerk": "proto-/Viking-Black (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Bathory+A+Fine+Day+to+Die",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Celtic Frost",
+      "titel": "Circle of the Tyrants",
+      "substil_vermerk": "proto-Black/Extreme (Schweiz)",
+      "url": "https://www.youtube.com/results?search_query=Celtic+Frost+Circle+of+the+Tyrants",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Venom",
+      "titel": "Black Metal",
+      "substil_vermerk": "proto-Black, Namensgeber (UK)",
+      "url": "https://www.youtube.com/results?search_query=Venom+Black+Metal",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Mayhem",
+      "titel": "Freezing Moon",
+      "substil_vermerk": "norwegische zweite Welle",
+      "url": "https://www.youtube.com/results?search_query=Mayhem+Freezing+Moon",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Darkthrone",
+      "titel": "Transilvanian Hunger",
+      "substil_vermerk": "norwegischer Roh-Black",
+      "url": "https://www.youtube.com/results?search_query=Darkthrone+Transilvanian+Hunger",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Emperor",
+      "titel": "I Am the Black Wizards",
+      "substil_vermerk": "symphonischer Black (Norwegen)",
+      "url": "https://www.youtube.com/results?search_query=Emperor+I+Am+the+Black+Wizards",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Immortal",
+      "titel": "At the Heart of Winter",
+      "substil_vermerk": "Blizzard-Black (Norwegen)",
+      "url": "https://www.youtube.com/results?search_query=Immortal+At+the+Heart+of+Winter",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Enslaved",
+      "titel": "Isa",
+      "substil_vermerk": "Viking-/Progressive-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Enslaved+Isa&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Satyricon",
+      "titel": "Mother North",
+      "substil_vermerk": "norwegischer Black",
+      "url": "https://www.youtube.com/results?search_query=Satyricon+Mother+North",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Gorgoroth",
+      "titel": "Incipit Satan",
+      "substil_vermerk": "norwegischer Black",
+      "url": "https://www.youtube.com/results?search_query=Gorgoroth+Incipit+Satan",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dark Funeral",
+      "titel": "The Secrets of the Black Arts",
+      "substil_vermerk": "schwedischer Fast-Black",
+      "url": "https://www.youtube.com/results?search_query=Dark+Funeral+The+Secrets+of+the+Black+Arts",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dissection",
+      "titel": "Where Dead Angels Lie",
+      "substil_vermerk": "melodischer Black/Death (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Dissection+Where+Dead+Angels+Lie",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Watain",
+      "titel": "Malfeitor",
+      "substil_vermerk": "schwedischer Black",
+      "url": "https://bandcamp.com/search?q=Watain+Malfeitor&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Rotting Christ",
+      "titel": "King of a Stellar War",
+      "substil_vermerk": "griechischer Black",
+      "url": "https://bandcamp.com/search?q=Rotting+Christ+King+of+a+Stellar+War&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Naglfar",
+      "titel": "Sunless",
+      "substil_vermerk": "schwedischer melodischer Black",
+      "url": "https://bandcamp.com/search?q=Naglfar+Sunless&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Windir",
+      "titel": "Journey to the End",
+      "substil_vermerk": "Folk-/Viking-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Windir+Journey+to+the+End&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Kampfar",
+      "titel": "Ravens",
+      "substil_vermerk": "pagan-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Kampfar+Ravens&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mgla",
+      "titel": "Exercises in Futility I",
+      "substil_vermerk": "moderner Black (Polen)",
+      "url": "https://bandcamp.com/search?q=Mgla+Exercises+in+Futility+I&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Batushka",
+      "titel": "Yekteniya I",
+      "substil_vermerk": "orthodox-thematischer Black (Polen)",
+      "url": "https://bandcamp.com/search?q=Batushka+Yekteniya+I&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Tribulation",
+      "titel": "The Motherhood of God",
+      "substil_vermerk": "moderner Black/Death (Schweden)",
+      "url": "https://bandcamp.com/search?q=Tribulation+The+Motherhood+of+God&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Deafheaven",
+      "titel": "Dream House",
+      "substil_vermerk": "Blackgaze (US)",
+      "url": "https://bandcamp.com/search?q=Deafheaven+Dream+House&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wolves in the Throne Room",
+      "titel": "Prayer of Transformation",
+      "substil_vermerk": "Cascadian/atmosphärischer Black (US)",
+      "url": "https://bandcamp.com/search?q=Wolves+in+the+Throne+Room+Prayer+of+Transformation&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Panopticon",
+      "titel": "A Ridge Where the Tall Pines Once Stood",
+      "substil_vermerk": "atmosphärischer Folk-Black (US)",
+      "url": "https://bandcamp.com/search?q=Panopticon+A+Ridge+Where+the+Tall+Pines+Once+Stood&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Agalloch",
+      "titel": "Falling Snow",
+      "substil_vermerk": "atmosphärischer Black/Metal (US)",
+      "url": "https://bandcamp.com/search?q=Agalloch+Falling+Snow&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ulver",
+      "titel": "Wolf and Passion",
+      "substil_vermerk": "früher Folk-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Ulver+Wolf+and+Passion&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wiegedood",
+      "titel": "Doodskaravaan",
+      "substil_vermerk": "moderner atmosphärischer Black (Belgien)",
+      "url": "https://bandcamp.com/search?q=Wiegedood+Doodskaravaan&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Der Weg einer Freiheit",
+      "titel": "Requiem",
+      "substil_vermerk": "atmosphärischer Black (Deutschland)",
+      "url": "https://bandcamp.com/search?q=Der+Weg+einer+Freiheit+Requiem&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "1349",
+      "titel": "Sculptor of Flesh",
+      "substil_vermerk": "norwegischer Fast-Black",
+      "url": "https://bandcamp.com/search?q=1349+Sculptor+of+Flesh&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Carpathian Forest",
+      "titel": "The Cold Earth Slept Below",
+      "substil_vermerk": "norwegischer Black",
+      "url": "https://bandcamp.com/search?q=Carpathian+Forest+The+Cold+Earth+Slept+Below&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mork",
+      "titel": "Det Siste Lyset",
+      "substil_vermerk": "moderner Roh-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Mork+Det+Siste+Lyset&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
