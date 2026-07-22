@@ -4,10 +4,38 @@
 // „beherrscht" ist später nur ein weiterer Wert, keine Migration.
 
 const SPEICHER_KEY = 'moshschool.zustand.v1';
-const SCHEMA_VERSION = 1;
+// Schema 2 fügt den Trainings-Loop-Unterbau hinzu (baustein-gebundener Mastery-
+// Zustand, Übe-Log, selbstgesetzte Ziele, persönliche Bestwerte, Meilensteine,
+// Onboarding-Profil). Alle neuen Felder sind additiv — Alt-Stände (Schema 1)
+// heben sich per tiefMerge verlustfrei; der localStorage-Schlüssel bleibt gleich.
+const SCHEMA_VERSION = 2;
 
 let z = null;
 let speicherVerfuegbar = true;
+const abonnenten = new Set();
+
+// Reaktivität: Sichten abonnieren Änderungen und rendern neu. Fehler in einem
+// Abonnenten dürfen andere nicht abreißen lassen.
+export function abonniere(rueckruf) {
+  abonnenten.add(rueckruf);
+  return () => abonnenten.delete(rueckruf);
+}
+
+function benachrichtige() {
+  for (const fn of abonnenten) {
+    try {
+      fn();
+    } catch {
+      /* ein defekter Abonnent darf die übrigen nicht blockieren */
+    }
+  }
+}
+
+// Persistiert und benachrichtigt in einem Schritt — jeder Mutator ruft das.
+function schreibe() {
+  speichereZustand();
+  benachrichtige();
+}
 
 function vorgabe() {
   return {
@@ -19,6 +47,20 @@ function vorgabe() {
     einstellungen: { sprache: 'de', transferKuerzelSichtbar: true, thema: 'dunkel' },
     // Persönlicher Trainingsplan (generiert, anpassbar): null = noch keiner erstellt.
     plan: null,
+    // --- Trainings-Loop-Unterbau (Schema 2) ---
+    // Selbst markierter Mastery-Zustand je Baustein: 'neu' | 'in_arbeit' | 'sitzt'.
+    // Getrennt vom teil-genauen `fortschritt` (offen/erledigt je Übungs-/Erklärteil).
+    status: {},
+    // Übe-Tagebuch: schlanke, chronologische Einträge (kein Druck, keine Streaks).
+    log: [],
+    // Selbstgesetzte Ziele ({ art:'spielziel'|'stil', wert, gesetzt }).
+    ziele: [],
+    // Persönliche Bestwerte (nicht-vergleichend), z. B. Tempo je Spielziel/Übung.
+    bestwerte: {},
+    // Gefeierte Meilensteine (IDs) — einmalig, wegklickbar.
+    meilensteine: [],
+    // Onboarding-Profil (speist Pfad & „Was als Nächstes"). Ergänzt `diagnose`.
+    onboarding: { instrumente: [], level: null, zielsound: [], erledigt: false },
   };
 }
 
@@ -89,7 +131,7 @@ export function diagnose() {
 
 export function setzeDiagnose(patch) {
   Object.assign(stelleSicher().diagnose, patch);
-  speichereZustand();
+  schreibe();
 }
 
 export function istOnboardingAbgeschlossen() {
@@ -98,7 +140,7 @@ export function istOnboardingAbgeschlossen() {
 
 export function schliesseOnboardingAb() {
   stelleSicher().onboardingAbgeschlossen = true;
-  speichereZustand();
+  schreibe();
 }
 
 // Abschluss-Status je Teil: 'offen' | 'erledigt' (getrennt für Erklär- und Übungsteil).
@@ -111,7 +153,7 @@ export function setzeTeilStatus(bausteinId, teil, status) {
   const fortschritt = stelleSicher().fortschritt;
   if (!fortschritt[bausteinId]) fortschritt[bausteinId] = {};
   fortschritt[bausteinId][teil] = status;
-  speichereZustand();
+  schreibe();
 }
 
 export function einstellungen() {
@@ -120,7 +162,7 @@ export function einstellungen() {
 
 export function setzeEinstellung(schluessel, wert) {
   stelleSicher().einstellungen[schluessel] = wert;
-  speichereZustand();
+  schreibe();
 }
 
 export function kontinuitaet() {
@@ -132,7 +174,7 @@ export function registriereEinheitAbschluss(einheitId) {
   const k = stelleSicher().kontinuitaet;
   k.gesamt += 1;
   k.jeEinheit[einheitId] = (k.jeEinheit[einheitId] || 0) + 1;
-  speichereZustand();
+  schreibe();
   return k.gesamt;
 }
 
@@ -144,13 +186,131 @@ export function plan() {
 
 export function setzePlan(neu) {
   stelleSicher().plan = neu;
-  speichereZustand();
+  schreibe();
   return neu;
 }
 
 export function loeschePlan() {
   stelleSicher().plan = null;
-  speichereZustand();
+  schreibe();
+}
+
+// --- Trainings-Loop-Unterbau (Schema 2) ---
+
+const STATUS_WERTE = new Set(['neu', 'in_arbeit', 'sitzt']);
+
+// Mastery-Zustand je Baustein (selbst markiert). Ohne Eintrag: 'neu'.
+export function bausteinStatus(bausteinId) {
+  return stelleSicher().status[bausteinId]?.zustand || 'neu';
+}
+
+export function setzeBausteinStatus(bausteinId, zustand, ts = null) {
+  if (!STATUS_WERTE.has(zustand)) return;
+  const s = stelleSicher().status;
+  if (zustand === 'neu') delete s[bausteinId];
+  else s[bausteinId] = { zustand, ts: ts || new Date().toISOString() };
+  schreibe();
+}
+
+// Alle Status als flaches { id: 'zustand' } (für Pfad-/Fortschrittssichten).
+export function alleStatus() {
+  const s = stelleSicher().status;
+  const out = {};
+  for (const [id, e] of Object.entries(s)) out[id] = e.zustand;
+  return out;
+}
+
+// Übe-Tagebuch (§2e): schlanke, chronologische Einträge. `ts` einspeisbar (Tests).
+export function holeLog() {
+  return stelleSicher().log;
+}
+
+export function ergaenzeLog(eintrag, ts = null) {
+  stelleSicher().log.push({ ts: ts || new Date().toISOString(), ...eintrag });
+  schreibe();
+}
+
+export function loescheLogEintrag(index) {
+  const l = stelleSicher().log;
+  if (index >= 0 && index < l.length) {
+    l.splice(index, 1);
+    schreibe();
+  }
+}
+
+// Selbstgesetzte Ziele ({ art, wert, gesetzt }). Doppelte (art+wert) werden
+// zusammengeführt, nicht dupliziert.
+export function holeZiele() {
+  return stelleSicher().ziele;
+}
+
+export function setzeZiel(art, wert) {
+  const ziele = stelleSicher().ziele;
+  if (!ziele.some((z2) => z2.art === art && z2.wert === wert)) {
+    ziele.push({ art, wert, gesetzt: new Date().toISOString() });
+    schreibe();
+  }
+}
+
+export function entferneZiel(art, wert) {
+  const zst = stelleSicher();
+  const vorher = zst.ziele.length;
+  zst.ziele = zst.ziele.filter((z2) => !(z2.art === art && z2.wert === wert));
+  if (zst.ziele.length !== vorher) schreibe();
+}
+
+// Persönliche Bestwerte (nicht-vergleichend). Nur nach oben — ein neuer Wert
+// zählt nur, wenn er den bisherigen übertrifft. Rückgabe: true, wenn neuer Best.
+export function holeBestwert(schluessel, feld = 'tempo_bpm') {
+  return stelleSicher().bestwerte[schluessel]?.[feld] ?? null;
+}
+
+export function meldeBestwert(schluessel, feld, wert) {
+  const bw = stelleSicher().bestwerte;
+  const bisher = bw[schluessel]?.[feld];
+  if (typeof wert !== 'number' || (typeof bisher === 'number' && wert <= bisher)) return false;
+  bw[schluessel] = { ...(bw[schluessel] || {}), [feld]: wert, ts: new Date().toISOString() };
+  schreibe();
+  return true;
+}
+
+// Meilensteine (§5): einmalig gefeiert, wegklickbar. `feiere` gibt true zurück,
+// wenn der Meilenstein neu ist (Aufrufer zeigt dann die Feier).
+export function hatMeilenstein(id) {
+  return stelleSicher().meilensteine.includes(id);
+}
+
+export function feiereMeilenstein(id) {
+  const m = stelleSicher().meilensteine;
+  if (m.includes(id)) return false;
+  m.push(id);
+  schreibe();
+  return true;
+}
+
+// Onboarding-Profil (§3a). Speist Pfad & Vorschläge; spiegelt Level/Ziel zusätzlich
+// in `diagnose`, damit die bestehenden Pfad-Sichten unverändert weiterlaufen.
+export function onboarding() {
+  return stelleSicher().onboarding;
+}
+
+export function setzeOnboarding(patch) {
+  Object.assign(stelleSicher().onboarding, patch);
+  schreibe();
+}
+
+// Export/Import als ein portables JSON-Envelope (Backup, kein Konto). Import
+// verschmilzt defensiv über die Vorgabe, sodass fehlende/fremde Felder nicht
+// crashen und das Schema aktuell bleibt.
+export function exportiereZustand() {
+  return JSON.parse(JSON.stringify(stelleSicher()));
+}
+
+export function importiereZustand(objekt) {
+  if (!objekt || typeof objekt !== 'object') return false;
+  z = verschmelze(vorgabe(), objekt);
+  schreibe();
+  return true;
 }
 
 export function setzeZurueck() {
@@ -160,6 +320,6 @@ export function setzeZurueck() {
     /* egal — Neuaufbau folgt ohnehin */
   }
   z = vorgabe();
-  speichereZustand();
+  schreibe();
   return z;
 }

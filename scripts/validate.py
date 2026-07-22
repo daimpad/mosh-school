@@ -49,6 +49,59 @@ UMLAUT_VERDACHT = re.compile(
 )
 
 
+# Demonstrations-Schema (§0c/§1 Trainings-Loop): optionales Feld am Baustein.
+DEMO_INSTRUMENTE = {
+    'kick', 'snare', 'hihat_closed', 'hihat_open',
+    'tom_hi', 'tom_lo', 'crash', 'ride', 'china',
+}
+DEMO_TECHNIKEN = {'normal', 'palm_mute', 'chug', 'slide', 'bend', 'dead_note'}
+
+
+def pruefe_demonstration(bid, demo, fehler):
+    """Validiert eine vorhandene `demonstration`. Abwesenheit ist zulässig."""
+    if not isinstance(demo, dict):
+        fehler.append(f'{bid}: demonstration ist kein Objekt')
+        return
+    typ = demo.get('typ')
+    if typ not in ('pattern', 'tab', 'hoerbeispiel'):
+        fehler.append(f'{bid}: demonstration.typ "{typ}" ungültig (pattern|tab|hoerbeispiel)')
+        return
+    if typ == 'pattern':
+        spuren = demo.get('spuren')
+        if not isinstance(spuren, list) or not spuren:
+            fehler.append(f'{bid}: demonstration(pattern) ohne spuren')
+            return
+        aufl = demo.get('aufloesung')
+        for sp in spuren:
+            if sp.get('instrument') not in DEMO_INSTRUMENTE:
+                fehler.append(f'{bid}: demonstration-Instrument "{sp.get("instrument")}" ungültig')
+            schritte = sp.get('schritte')
+            if not isinstance(schritte, list) or any(x not in (0, 1) for x in schritte):
+                fehler.append(f'{bid}: demonstration-schritte müssen eine 0/1-Liste sein')
+            elif isinstance(aufl, int) and len(schritte) != aufl * (demo.get('takte') or 1):
+                fehler.append(f'{bid}: demonstration-schritte-Länge passt nicht zu aufloesung*takte')
+    elif typ == 'tab':
+        events = demo.get('events')
+        if not isinstance(events, list) or not events:
+            fehler.append(f'{bid}: demonstration(tab) ohne events')
+            return
+        if not isinstance(demo.get('tuning'), list) or not demo['tuning']:
+            fehler.append(f'{bid}: demonstration(tab) ohne tuning')
+        for ev in events:
+            if not isinstance(ev.get('schritt'), int):
+                fehler.append(f'{bid}: demonstration-event ohne schritt')
+            saite = ev.get('saite')
+            if not isinstance(saite, int) or not 1 <= saite <= 6:
+                fehler.append(f'{bid}: demonstration-event saite "{saite}" außerhalb 1..6')
+            if not isinstance(ev.get('bund'), int) or ev['bund'] < 0:
+                fehler.append(f'{bid}: demonstration-event bund ungültig')
+            if ev.get('technik', 'normal') not in DEMO_TECHNIKEN:
+                fehler.append(f'{bid}: demonstration-Technik "{ev.get("technik")}" ungültig')
+    elif typ == 'hoerbeispiel':
+        if not demo.get('verweis_genre'):
+            fehler.append(f'{bid}: demonstration(hoerbeispiel) ohne verweis_genre')
+
+
 def sichtbare_texte(obj):
     out = []
     if isinstance(obj, dict):
@@ -132,6 +185,8 @@ def main():
             fehler.append(f'{bid}: anzeigetitel.de fehlt')
         if not (b.get('erklaerteil') or {}).get('de'):
             fehler.append(f'{bid}: erklaerteil.de fehlt')
+        if b.get('demonstration') is not None:
+            pruefe_demonstration(bid, b['demonstration'], fehler)
         if bid not in titel:
             warnung.append(f'{bid}: Titel nicht nach labels/de.json geliftet (scripts/lift.py laufen lassen)')
         for txt in sichtbare_texte(b):
