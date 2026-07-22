@@ -2813,3 +2813,13 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   transform: translateY(-10px);
   filter: brightness(0.4) saturate(0.75);
 }
+
+/* ---- Instrument-Landing (#/instrument, #/instrument/<domaene>) ---- */
+.instr-hero .marke-hero-icon .dom-svg { width: 2rem; height: 2rem; }
+.instr-abschnitt { margin-bottom: 1.1rem; }
+.instr-stufe-titel { margin: 1rem 0 0.5rem; }
+.instr-stufe-titel:first-child { margin-top: 0.2rem; }
+.instr-wz-chip { text-decoration: none; }
+.instr-wz-chip .fa-solid { font-size: 0.85em; margin-right: 0.15rem; }
+.instr-fuss { margin-top: 1.2rem; }
+.instr-kachel .pfad-medaille .dom-svg { width: 1.6rem; height: 1.6rem; }
