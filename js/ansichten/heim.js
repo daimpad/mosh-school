@@ -4,10 +4,10 @@
 // Themen-Einstieg ist jetzt der Hero-CTA „Kapitel entdecken". Kompetenzpfad
 // ist von der Startseite entfernt; dafür führen Regeln und Profil als Kacheln.
 
-import { t } from '../i18n.js';
+import { label, t } from '../i18n.js';
 import { esc, markeHeroGross } from '../oberflaeche.js';
 import { stile, umgebungBausteine } from '../pfade.js';
-import { diagnose, speicherIstVerfuegbar } from '../zustand.js';
+import { diagnose, speicherIstVerfuegbar, zuletzt } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
 
 export function renderHeim(el, daten) {
@@ -74,6 +74,30 @@ export function renderHeim(el, daten) {
       })
     : '';
 
+  // „Fortsetzen wo du warst" (§3b): nur wenn ein zuletzt geöffneter Baustein
+  // existiert und noch im Pool ist. Steht als erste Kachel oben.
+  const letzter = zuletzt();
+  const fortsetzenKachel = letzter?.baustein && daten.bausteinVonId.has(letzter.baustein)
+    ? kachel({
+        href: `#/baustein/${encodeURIComponent(letzter.baustein)}?kontext=kompetenz`,
+        hue: 'pf-magenta', icon: 'fa-play',
+        titel: esc(t('heim_fortsetzen')),
+        text: esc(label('baustein', letzter.baustein)),
+      })
+    : '';
+
+  const werkzeugeKachel = kachel({
+    href: '#/werkzeuge', hue: 'pf-teal', icon: 'fa-toolbox',
+    titel: esc(t('nav_werkzeuge')),
+    text: esc(t('wz_hub_untertitel')),
+  });
+
+  const songsKachel = kachel({
+    href: '#/songs', hue: 'pf-schiefer', icon: 'fa-play',
+    titel: esc(t('nav_songs')),
+    text: esc(t('songs_untertitel')),
+  });
+
   const profilKachel = kachel({
     href: '#/profil', hue: 'pf-blau', icon: 'fa-user',
     titel: esc(t('nav_profil')),
@@ -85,10 +109,13 @@ export function renderHeim(el, daten) {
     ${speicherIstVerfuegbar() ? '' : `<div class="banner-hinweis">${esc(t('speicher_warnung'))}</div>`}
     <h2 class="abschnitt-titel">${esc(t('pfade'))}</h2>
     <div class="pfad-gitter">
+      ${fortsetzenKachel}
       ${umgebungKachel}
       ${genreKachel}
       ${trainingKachel}
       ${individualKachel}
+      ${werkzeugeKachel}
+      ${songsKachel}
       ${profilKachel}
     </div>`;
 }

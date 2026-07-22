@@ -61,6 +61,8 @@ function vorgabe() {
     meilensteine: [],
     // Onboarding-Profil (speist Pfad & „Was als Nächstes"). Ergänzt `diagnose`.
     onboarding: { instrumente: [], level: null, zielsound: [], erledigt: false },
+    // Zuletzt geöffneter Baustein (für die „Fortsetzen"-Kachel auf der Startseite).
+    zuletzt: null,
   };
 }
 
@@ -296,6 +298,19 @@ export function onboarding() {
 
 export function setzeOnboarding(patch) {
   Object.assign(stelleSicher().onboarding, patch);
+  schreibe();
+}
+
+// Zuletzt geöffneter Baustein — leichtgewichtig (nur die ID + Zeitstempel), damit
+// die Startseite „Fortsetzen wo du warst" anbieten kann. Kein Fortschritt.
+export function zuletzt() {
+  return stelleSicher().zuletzt;
+}
+
+export function merkeZuletzt(bausteinId) {
+  const zst = stelleSicher();
+  if (zst.zuletzt?.baustein === bausteinId) return; // kein unnötiges Schreiben/Benachrichtigen
+  zst.zuletzt = { baustein: bausteinId, ts: new Date().toISOString() };
   schreibe();
 }
 
