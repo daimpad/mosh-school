@@ -154,7 +154,6 @@ export function renderWerkzeugPedalboard(el, daten, query) {
       : `<p class="wz-pb-check-ok leise"><i class="fa-solid fa-check" aria-hidden="true"></i> ${esc(t('wz_pb_check_ok'))}</p>`
     : '';
 
-  const teilen = kette.join('-');
 
   el.innerHTML = `
     <article class="wz-werkzeug">
@@ -185,15 +184,6 @@ export function renderWerkzeugPedalboard(el, daten, query) {
       ${hinweisHtml}
 
       ${erklaerHtml}
-
-      <details class="wz-export">
-        <summary>${esc(t('wz_pb_teilen'))}</summary>
-        <p class="leise">${esc(t('wz_pb_teilen_hinweis'))}</p>
-        <p class="wz-feld-reihe">
-          <input type="text" class="wz-pb-teilen-feld" readonly value="${esc(teilen)}" aria-label="${esc(t('wz_pb_teilen'))}">
-          <button type="button" class="chip chip-waehlbar wz-pb-kopieren">${esc(t('wz_pb_kopieren'))}</button>
-        </p>
-      </details>
 
       <p class="leise wz-metro-fuss">${esc(t('wz_pb_fuss'))}</p>
     </article>`;
@@ -279,16 +269,4 @@ function verdrahte(el, daten) {
       neu();
     });
   }
-
-  const kopieren = el.querySelector('.wz-pb-kopieren');
-  kopieren?.addEventListener('click', async () => {
-    const feld = el.querySelector('.wz-pb-teilen-feld');
-    if (!feld) return;
-    try {
-      await navigator.clipboard.writeText(feld.value);
-      kopieren.classList.add('chip-akzent');
-    } catch {
-      feld.select(); // Fallback: markieren, damit manuell kopiert werden kann
-    }
-  });
 }
