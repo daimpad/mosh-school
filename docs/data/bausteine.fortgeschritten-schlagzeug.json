@@ -207,6 +207,79 @@
           "steigerung": "Tempo in 5-BPM-Schritten Richtung Thrash anheben; am Phrasenende ein kurzes Fill einbauen und sauber zurückkommen.",
           "selbstkontrolle": "Der Beat treibt gleichmäßig ohne Tempodrift; Hände und Schultern bleiben locker."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 210,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
       }
     },
     {

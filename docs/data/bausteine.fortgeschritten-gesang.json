@@ -46,6 +46,11 @@
           "steigerung": "Das aufgeladene Knarren auf einen offenen Vokal legen — kurz, leise und nur solange es mühelos bleibt.",
           "selbstkontrolle": "Kein Kratzen, kein Druck, keine Heiserkeit danach; der Fry bleibt jederzeit abrufbar mühelos."
         }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "deathcore",
+        "hinweis": "Der Fry-Ansatz als Basis vieler Screams — Beispiele in den Deathcore-Songs."
       }
     },
     {
@@ -126,6 +131,11 @@
           "steigerung": "Eine kurze Textsilbe (etwa „Ough“) in verschiedenen Farben growlen — leise beginnen, kurz halten.",
           "selbstkontrolle": "Dunkler heißt weiter, nie enger; nach der Übung fühlt sich die Stimme unverändert frisch an."
         }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "death_metal",
+        "hinweis": "So klingen tiefe, resonante Growls in echt — Beispiele in den Death-Metal-Songs."
       }
     },
     {
@@ -166,6 +176,11 @@
           "steigerung": "Die hellen Impulse behutsam verlängern; Intensität nur mit Anleitung steigern.",
           "selbstkontrolle": "Der Klang sitzt hörbar „oben“ und bleibt mühelos; keinerlei Würgen, Kratzen oder Heiserkeit."
         }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "black_metal",
+        "hinweis": "Hohe, schneidende Screams hörst du in echt am besten im Black Metal."
       }
     },
     {
