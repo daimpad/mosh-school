@@ -2423,3 +2423,10 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .such-status.status-neu { color: var(--tinte-2); }
 .such-status.status-in_arbeit { color: var(--primaer); }
 .such-status.status-sitzt { color: var(--signal-gruen, var(--primaer)); }
+
+/* Onboarding: Zielsound-Genre-Chips (Mehrfachauswahl, Toggle). */
+.ob-genres { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.4rem 0 1rem; }
+.ob-genre-chip { cursor: pointer; }
+.ob-genre-chip:hover { border-color: var(--primaer); color: var(--tinte); }
+.ob-genre-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; font-weight: 600; }
+.ob-ziel-hinweis { margin-top: 0.4rem; }

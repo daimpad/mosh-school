@@ -1,23 +1,30 @@
-// Onboarding-Diagnostik (Spez. 7): Stufe obligatorisch, Herkunft und Ziel
-// überspringbar. Verhaltensnahe Anker statt abstrakter Etiketten (Anhang A).
-// Alles hier Erhobene ist revidierbar — dieselben Angaben stehen im Profil.
+// Onboarding (Spez. 7 + Trainings-Loop §3a): Instrument(e) → Stufe (Level) →
+// [Trainer] → [Herkunft] → Zielsound (Genre + Spielziel). Alles Erhobene ist
+// revidierbar (dieselben Angaben stehen im Profil) und überspringbar; der freie
+// Zugang ohne Wizard bleibt erhalten (Zwei-Ebenen-Logik: nichts wird gesperrt).
+//
+// Ergebnis: schreibt sowohl `diagnose` (Stufe/Trainer/Herkunft/Spielziel — speist
+// die bestehenden Pfad-Sichten) als auch das Store-`onboarding`-Profil
+// ({ instrumente, level, zielsound, erledigt }), das Pfad & „Was als Nächstes"
+// (§2) hebt.
 
 import { markiereAbsolviert } from '../aktionen.js';
 import { deltaFuer, niedrigsteStufe } from '../daten.js';
 import { bausteinAbsolviert } from '../fortschritt.js';
 import { label, t } from '../i18n.js';
 import { esc, zeigeMeilenstein } from '../oberflaeche.js';
-import { schliesseOnboardingAb, setzeDiagnose } from '../zustand.js';
+import { stile } from '../pfade.js';
+import { schliesseOnboardingAb, setzeDiagnose, setzeOnboarding } from '../zustand.js';
 import { gewaehlteZiele, zielwahlHtml } from './zielwahl.js';
+
+const INSTRUMENTE = ['gitarre', 'bass', 'schlagzeug', 'gesang'];
 
 let assistent = null;
 
 function frisch() {
-  return { schritt: 0, stufe: null, trainer: false, herkunft: null, ziel: null };
+  return { schritt: 0, instrumente: [], stufe: null, trainer: false, herkunft: null, ziel: null, zielsound: [] };
 }
 
-// Kandidaten fürs optionale Überspringen (6.5): kein Delta für die Herkunft
-// nötig und noch nicht absolviert — die Person bestätigt selbst.
 function skipKandidaten(daten, stufe, herkunft) {
   if (!herkunft) return [];
   return daten.bausteine.filter(
@@ -26,13 +33,23 @@ function skipKandidaten(daten, stufe, herkunft) {
 }
 
 function schrittfolge(daten) {
-  // Herkunft nur anbieten, wenn es überhaupt Delta-Inhalte gibt — sonst wäre
-  // der Schritt eine Einzeloption „Keine Vorerfahrung" für alle.
-  const schritte = daten.herkuenfte.length > 0 ? ['stufe', 'trainer', 'herkunft', 'ziel'] : ['stufe', 'trainer', 'ziel'];
+  const schritte = ['instrument', 'stufe', 'trainer'];
+  if (daten.herkuenfte.length > 0) schritte.push('herkunft');
+  schritte.push('zielsound');
   if (assistent.herkunft && skipKandidaten(daten, assistent.stufe, assistent.herkunft).length > 0) {
     schritte.push('vormarkieren');
   }
   return schritte;
+}
+
+function instrumentOptionenHtml() {
+  return INSTRUMENTE.map(
+    (dom) => `
+      <label class="option-karte">
+        <input type="checkbox" name="ob-instrument" value="${dom}" ${assistent.instrumente.includes(dom) ? 'checked' : ''}>
+        <span class="option-inhalt"><strong>${esc(label('domaene', dom))}</strong></span>
+      </label>`
+  ).join('');
 }
 
 function stufenOptionenHtml(aktiv) {
@@ -50,7 +67,19 @@ function stufenOptionenHtml(aktiv) {
     .join('');
 }
 
+function genreChipsHtml(daten) {
+  return stile(daten)
+    .map(
+      ({ stil }) => `<button type="button" class="chip ob-genre-chip${assistent.zielsound.includes(stil) ? ' aktiv' : ''}"
+        data-stil="${esc(stil)}" aria-pressed="${assistent.zielsound.includes(stil)}">${esc(label('stil', stil))}</button>`
+    )
+    .join('');
+}
+
 function schrittInhalt(daten, name) {
+  if (name === 'instrument') {
+    return { frage: t('frage_instrument'), html: `<p class="leise">${esc(t('instrument_hinweis'))}</p>${instrumentOptionenHtml()}`, weiterAktiv: true, ueberspringbar: false };
+  }
   if (name === 'stufe') {
     return { frage: t('frage_stufe'), html: stufenOptionenHtml(assistent.stufe), weiterAktiv: assistent.stufe !== null, ueberspringbar: false };
   }
@@ -88,10 +117,15 @@ function schrittInhalt(daten, name) {
       ueberspringbar: true,
     };
   }
-  if (name === 'ziel') {
+  if (name === 'zielsound') {
+    // Zielsound = Genre(s) + Spielziel(e). Beides optional; beides speist den Pfad.
     return {
-      frage: t('frage_ziel'),
-      html: `<p class="leise">${esc(t('ziel_hinweis'))}</p>${zielwahlHtml(daten, assistent.ziel, { mitVermittlungszielen: assistent.trainer })}`,
+      frage: t('frage_zielsound'),
+      html: `
+        <p class="leise">${esc(t('zielsound_genre_hinweis'))}</p>
+        <div class="ob-genres">${genreChipsHtml(daten)}</div>
+        <p class="leise ob-ziel-hinweis">${esc(t('ziel_hinweis'))}</p>
+        ${zielwahlHtml(daten, assistent.ziel, { mitVermittlungszielen: assistent.trainer })}`,
       weiterAktiv: true,
       ueberspringbar: true,
     };
@@ -116,25 +150,29 @@ function schrittInhalt(daten, name) {
 }
 
 function liesSchrittWerte(el, name) {
-  if (name === 'stufe') {
+  if (name === 'instrument') {
+    assistent.instrumente = [...el.querySelectorAll('input[name="ob-instrument"]:checked')].map((e) => e.value);
+  } else if (name === 'stufe') {
     assistent.stufe = el.querySelector('input[name="ob-stufe"]:checked')?.value ?? assistent.stufe;
   } else if (name === 'trainer') {
     assistent.trainer = el.querySelector('input[name="ob-trainer"]:checked')?.value === 'ja';
   } else if (name === 'herkunft') {
     const wert = el.querySelector('input[name="ob-herkunft"]:checked')?.value;
     assistent.herkunft = wert ? wert : null;
-  } else if (name === 'ziel') {
+  } else if (name === 'zielsound') {
     assistent.ziel = gewaehlteZiele(el);
+    assistent.zielsound = [...el.querySelectorAll('.ob-genre-chip.aktiv')].map((c) => c.dataset.stil);
   }
 }
 
+function schreibeProfil(erledigt = true) {
+  setzeDiagnose({ stufe: assistent.stufe, trainer: assistent.trainer, herkunft: assistent.herkunft, ziel: assistent.ziel });
+  setzeOnboarding({ instrumente: assistent.instrumente, level: assistent.stufe, zielsound: assistent.zielsound, erledigt });
+  schliesseOnboardingAb();
+}
+
 function schliesseAb(el, daten, mitVormarkierung) {
-  setzeDiagnose({
-    stufe: assistent.stufe,
-    trainer: assistent.trainer,
-    herkunft: assistent.herkunft,
-    ziel: assistent.ziel,
-  });
+  schreibeProfil();
   let meilenstein = null;
   if (mitVormarkierung) {
     for (const eingabe of el.querySelectorAll('input[name="ob-vormarkieren"]:checked')) {
@@ -144,7 +182,6 @@ function schliesseAb(el, daten, mitVormarkierung) {
       meilenstein = ergebnis.meilenstein ?? meilenstein;
     }
   }
-  schliesseOnboardingAb();
   assistent = null;
   location.hash = '#/';
   if (meilenstein) zeigeMeilenstein(meilenstein);
@@ -178,6 +215,14 @@ export function renderOnboarding(el, daten) {
     liesSchrittWerte(el, name);
     if (name === 'stufe') weiter.disabled = assistent.stufe === null;
   });
+  // Genre-Chips (Zielsound) sind Buttons — Toggle per Klick/Enter.
+  for (const chip of el.querySelectorAll('.ob-genre-chip')) {
+    chip.addEventListener('click', () => {
+      const an = !chip.classList.contains('aktiv');
+      chip.classList.toggle('aktiv', an);
+      chip.setAttribute('aria-pressed', String(an));
+    });
+  }
 
   weiter.addEventListener('click', () => {
     liesSchrittWerte(el, name);
@@ -191,24 +236,24 @@ export function renderOnboarding(el, daten) {
   });
 
   el.querySelector('#ob-zurueck')?.addEventListener('click', () => {
+    liesSchrittWerte(el, name);
     assistent.schritt -= 1;
     renderOnboarding(el, daten);
   });
 
-  // Freier Zugang ohne Wizard: alle Kapitel bleiben zugänglich (Zwei-Ebenen-
-  // Logik 4.4) — die Stufe ist nur für den geführten Pfad konstitutiv und
-  // lässt sich jederzeit im Profil oder über die Einladung im Heim nachholen.
+  // Freier Zugang ohne Wizard: alle Kapitel bleiben zugänglich. Onboarding gilt als
+  // erledigt (kein wiederholtes Nachfragen), aber ohne gesetzte Diagnose.
   el.querySelector('#ob-direkt')?.addEventListener('click', () => {
     setzeDiagnose({ stufe: null, trainer: false, herkunft: null, ziel: null });
+    setzeOnboarding({ erledigt: true });
     schliesseOnboardingAb();
     assistent = null;
     location.hash = '#/pfad/themen';
   });
 
-  // Überspringen setzt den Default: keine Herkunft (kein Modifikator), kein Ziel.
   el.querySelector('#ob-ueberspringen')?.addEventListener('click', () => {
     if (name === 'herkunft') assistent.herkunft = null;
-    if (name === 'ziel') assistent.ziel = null;
+    if (name === 'zielsound') { assistent.ziel = null; assistent.zielsound = []; }
     if (istLetzter) {
       schliesseAb(el, daten, false);
       return;

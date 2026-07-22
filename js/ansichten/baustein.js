@@ -9,7 +9,7 @@ import { label, t, text } from '../i18n.js';
 import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
-import { diagnose, einstellungen } from '../zustand.js';
+import { diagnose, einstellungen, merkeZuletzt } from '../zustand.js';
 
 function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
@@ -190,6 +190,9 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   }
   const { station, sequenz, index, vorherige, naechste } = info;
   const b = station.baustein;
+  merkeZuletzt(b.id); // „Fortsetzen wo du warst" auf der Startseite
+
+
   const delta = station.delta;
   const kuerzelSichtbar = einstellungen().transferKuerzelSichtbar;
 
