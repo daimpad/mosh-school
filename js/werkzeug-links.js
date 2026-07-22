@@ -22,8 +22,6 @@
 const ID_REGELN = {
   metronom_prinzip: [{ werkzeug: 'metronom' }],
   mentale_temposteigerung: [{ werkzeug: 'metronom', params: { rampe: '1' } }],
-  pre_production_plan: [{ werkzeug: 'metronom' }],
-  tracking_reihenfolge: [{ werkzeug: 'metronom' }],
   // Genre-Groove-Bausteine öffnen den passenden Play-along-Beat vorbelegt.
   d_beat: [{ werkzeug: 'loops', params: { beat: 'd_beat' } }],
   blastbeat: [{ werkzeug: 'loops', params: { beat: 'blastbeat' } }],
@@ -52,6 +50,10 @@ const ID_REGELN = {
   // Ideen-Bausteine öffnen den Riff-Recorder.
   songidee_teilen: [{ werkzeug: 'recorder' }],
   riff_zu_part_entwickeln: [{ werkzeug: 'recorder' }],
+  // Aufnahme-/Pre-Production-Bausteine öffnen den Skizzen-Mehrspur-Rekorder.
+  tracking_reihenfolge: [{ werkzeug: 'mehrspur' }, { werkzeug: 'metronom' }],
+  pre_production_plan: [{ werkzeug: 'mehrspur' }, { werkzeug: 'metronom' }],
+  signal_aufnehmen: [{ werkzeug: 'mehrspur' }, { werkzeug: 'recorder' }],
 };
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
@@ -83,6 +85,7 @@ const WERKZEUG_META = {
   ampbox: { route: '#/werkzeug/ampbox', labelKey: 'wz_ampbox_titel' },
   struktur: { route: '#/werkzeug/struktur', labelKey: 'wz_struktur_titel' },
   recorder: { route: '#/werkzeug/recorder', labelKey: 'wz_recorder_titel' },
+  mehrspur: { route: '#/werkzeug/mehrspur', labelKey: 'wz_mehrspur_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
