@@ -504,7 +504,12 @@
       },
       "spielziele": [
         "verzerrungskontrolle"
-      ]
+      ],
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "death_metal",
+        "hinweis": "Synthese kann Klangfarben wie Growl oder Scream nicht nachbilden — hör die Bandbreite harscher Stile in echten Death-Metal-Songs."
+      }
     },
     {
       "id": "sanfter_einstieg_verzerrung",
