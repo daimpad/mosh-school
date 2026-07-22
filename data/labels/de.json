@@ -1007,7 +1007,15 @@
     "felle_stimmung": "Felle & Schlagzeug-Stimmung",
     "fussmaschine_double": "Fußmaschine & Double-Pedal",
     "mikrofon_typen": "Mikrofontypen für Gesang",
-    "plektren_saitenpflege": "Plektren & Saitenpflege"
+    "plektren_saitenpflege": "Plektren & Saitenpflege",
+    "genres_als_werkzeug": "Genres als Werkzeug, nicht als Käfig",
+    "eigenen_sound_finden": "Den eigenen Sound finden",
+    "spannung_zwischen_genres": "Spannung zwischen Genres als Motor",
+    "gefuehl_vor_genre": "Gefühl vor Genre: die Gefühlslandkarte",
+    "serendipitaet_methode": "Serendipität: Zufall als Methode",
+    "anschlussfaehigkeit": "Anschlussfähigkeit: im Bekannten verankern",
+    "zwei_genres_ein_riff": "Aufgabe: Zwei Genres, ein Riff",
+    "von_referenz_zum_eigenen": "Aufgabe: Von der Referenz zum Eigenen"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
