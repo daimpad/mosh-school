@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "gear-schlagzeug-gesang",
+    "hinweis": "Gear-Bausteine für Schlagzeug und Gesang: Komponenten und Technik für den Gear-Explorer (#/werkzeug/explorer). Reflexion, physik-/faktenbasiert, keine Marken. Kein Vokabular-Block. becken_typen und trigger_edrums existieren bereits (drums-gear) und werden nur verlinkt."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "schlagzeug_komponenten",
+      "anzeigetitel": {
+        "de": "Schlagzeug: Aufbau & Komponenten"
+      },
+      "domaene": [
+        "ausruestung",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Schlagzeug ist ein System aus Trommeln, Becken und Hardware. Die Trommeln — Bassdrum, Snare, Toms — sind Kessel mit Fellen; Kesselmaterial und -größe formen den Klang: Größere Kessel klingen tiefer, härtere Hölzer verschieben den Charakter (Birke heller und punchiger, Ahorn wärmer und ausgewogener).\n\nBecken (Hi-Hat, Ride, Crashes, im Metal oft eine China) und die Hardware (Ständer, Hi-Hat- und Bassdrum-Fußmaschine, Hocker) vervollständigen das Kit. Ein typisches Metal-Setup ergänzt zusätzliche Toms, eine China und entweder eine Doppel-Bassdrum oder ein Double-Pedal.\n\nFür den Anfang braucht es kein großes Kit — ein Standard-Fünfteiler mit Hi-Hat, Ride und einem Crash deckt das meiste ab; die metal-spezifischen Teile (China, Double-Pedal) kommen dazu, wenn die Musik sie verlangt. Wichtiger als die Größe ist, dass alles stabil steht, gestimmt und gut erreichbar ist."
+      },
+      "reflexionsaufgabe": {
+        "de": "Welche Komponenten hast du, und was fehlt für deinen Stil — reicht das Standard-Kit, oder brauchst du China und Double-Pedal? Steht alles stabil und erreichbar? Und ist dir klar, dass Kesselgröße (Tonhöhe) und Holz (Charakter) den Grundklang mitbestimmen, bevor du überhaupt stimmst?"
+      }
+    },
+    {
+      "id": "felle_stimmung",
+      "anzeigetitel": {
+        "de": "Felle & Schlagzeug-Stimmung"
+      },
+      "domaene": [
+        "ausruestung",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Jede Trommel hat ein Schlagfell (oben) und ein Resonanzfell (unten); die Fellwahl prägt Attack, Sustain und Haltbarkeit stärker als fast alles andere. Aufgeraute („coated“) Felle klingen wärmer und kontrollierter, klare Felle heller mit mehr Attack. Einlagige Felle sind offen und resonant, doppellagige (2-ply) haltbarer und punchiger mit weniger Obertönen und Sustain — bevorzugt für hartes Spiel und Metal.\n\nStimmen heißt, das Fell an jeder Schraube gleichmäßig zu spannen; das Verhältnis von Schlag- zu Resonanzfell legt Tonhöhe und Sustain fest. Dämpfung (Gel-Pads, Ringe, ein Kissen in der Bassdrum) zähmt die Obertöne für den tighten, kontrollierten modernen Metal-Sound.\n\nEmpfehlung für Metal: oft tiefer gestimmte, gedämpfte Toms mit punchigen (doppellagigen) Fellen und eine Bassdrum mit Beater-Attack und Innendämpfung für einen definierten, klickenden Schlag, der sich durch schnelle Double-Bass-Läufe durchsetzt. Stimme nach, wenn Felle altern oder du den Klang änderst; stumpfe, verbeulte Felle verlieren Attack."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passen deine Felle zum Sound — punchige doppellagige für hartes Metal-Spiel, dazu gezielte Dämpfung für Tightness? Ist das Verhältnis von Schlag- zu Resonanzfell bewusst gestimmt, nicht nur „irgendwie“? Und tauschst du stumpfe, verbeulte Felle, statt gegen ihren verlorenen Attack zu kämpfen?"
+      },
+      "voraussetzungen": [
+        "schlagzeug_komponenten"
+      ]
+    },
+    {
+      "id": "fussmaschine_double",
+      "anzeigetitel": {
+        "de": "Fußmaschine & Double-Pedal"
+      },
+      "domaene": [
+        "ausruestung",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Bassdrum-Fußmaschine ist die wichtigste Hardware des Metal-Drummers. Eine Einzelmaschine spielt einen Beater; ein Double-Pedal ergänzt einen zweiten Beater an derselben Bassdrum, sodass sich Double-Bass-Muster ohne zwei Bassdrums spielen lassen.\n\nDie Physik des Spielgefühls: Der Antrieb (Kette = haltbar, Direktantrieb = unmittelbare, schnelle Ansprache, Riemen = leicht) und die Federspannung verändern den Rückschlag — lockerer fühlt sich schneller und leichter an, straffer gibt mehr Kontrolle und Kraft. Das Beater-Material verschiebt den Klang: Filz ist weicher, ein Plastik- oder Hartbeater bringt Attack und Klick, der schnelle Kicks durchsetzen lässt.\n\nEmpfehlung für Metal: ein solides Double-Pedal, Antrieb und Federspannung auf die eigene Fußtechnik abgestimmt, und ein härterer Beater für Definition bei Double Bass und Blasts. Wie bei allem Tempotraining gilt: Fuß-Ausdauer über Wochen aufbauen — Verkrampfung ist ein Signal zum Pausieren, nicht zum Weitermachen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passt deine Fußmaschine zu deiner Technik — Antrieb und Federspannung so eingestellt, dass Rückschlag und Kontrolle stimmen? Hilft dir ein härterer Beater, schnelle Kicks definierter zu machen? Und baust du Fuß-Ausdauer schrittweise auf, statt bei Verkrampfung weiterzudrücken?"
+      },
+      "voraussetzungen": [
+        "double_bass"
+      ]
+    },
+    {
+      "id": "mikrofon_typen",
+      "anzeigetitel": {
+        "de": "Mikrofontypen für Gesang"
+      },
+      "domaene": [
+        "ausruestung",
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Für Gesang zählen zwei Bauarten. Dynamische Mikrofone sind robust, vertragen sehr hohe Lautstärke (laute Screams) ohne zu verzerren und blenden Umgebung und Feedback gut aus — der Standard für Live-Metal-Vocals. Kondensatormikrofone sind empfindlicher und detaillierter und brauchen Phantomspeisung, was ins Studio passt, aber von sehr lauten Quellen überfordert werden kann und mehr Raum aufnimmt.\n\nDie Richtcharakteristik bestimmt, was das Mikro hört: Eine Niere (cardioid) konzentriert sich nach vorn und blendet hinten aus — live wichtig gegen Feedback und Übersprechen. Der Nahbesprechungseffekt bedeutet, dass näheres Singen mehr Tiefe hinzufügt; Harsh-Sänger nutzen das bewusst.\n\nEmpfehlung: für Live und Probe ein robustes dynamisches Nierenmikro, das hohe Pegel wegsteckt und Screams verträgt; fürs Studio ein Dynamiker oder ein für laute Quellen ausgelegter Kondensator. Die Technik entscheidet mehr als das Mikro — aber der richtige Typ lässt Harsh-Vocals besser sitzen und weniger koppeln."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passt dein Mikrofontyp zum Einsatz — ein robustes dynamisches Nierenmikro für laute Live-Screams, ein Kondensator eher fürs Studio? Nutzt du die Niere gegen Feedback und den Nahbesprechungseffekt bewusst? Und ist dir klar, dass die Technik mehr entscheidet als das Mikro, der Typ aber Harsh-Vocals hörbar besser sitzen lässt?"
+      },
+      "voraussetzungen": [
+        "mikrofontechnik"
+      ]
+    },
+    {
+      "id": "plektren_saitenpflege",
+      "anzeigetitel": {
+        "de": "Plektren & Saitenpflege"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Das Plektrum prägt Attack und Kontrolle. Dünne Plektren biegen sich und eignen sich zum Anschlagen, bleiben aber ungenau; dicke, steife Plektren (oft um einen Millimeter oder mehr) geben präzisen Attack und sind für schnelles Einzelsaitenspiel und tightes Metal-Picking bevorzugt. Eine spitze Form erhöht die Präzision; Material und Grip beeinflussen Gefühl und den hörbaren Klick.\n\nSaiten werden mit der Zeit stumpf: Schweiß, Hautfett und Korrosion beladen die Saite mit Masse und töten Brillanz und Stimmgenauigkeit. Die Saiten nach dem Spielen abzuwischen verlängert ihr Leben; beschichtete Saiten halten länger. Wechsle die Saiten, wenn sie tot klingen oder vor einer Aufnahme — frische Saiten sind brillanter und intonieren besser.\n\nEmpfehlung für Metal: ein dickeres Plektrum für Kontrolle und Attack in schnellen, tighten Passagen, und regelmäßige Saitenpflege, damit Chugs definiert bleiben und das Instrument in Stimmung bleibt. Beim Bass gilt dasselbe; dicke Basssaiten halten ihren Ton länger, profitieren aber ebenso vom Abwischen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passt deine Plektrumstärke zu deinem Spiel — ein dickeres für präzisen Attack in schnellen, tighten Passagen? Wischst du die Saiten nach dem Spielen ab und wechselst sie, wenn sie tot klingen oder vor Aufnahmen? Und merkst du, wie frische Saiten Brillanz und Intonation zurückbringen?"
+      }
+    }
+  ]
+}
