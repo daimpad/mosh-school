@@ -74,7 +74,7 @@
       {
         "code": "de",
         "eigenname": "Deutsch",
-        "flagge": "🇩🇪",
+        "kuerzel": "de",
         "label": {
           "de": "Deutsch"
         }
