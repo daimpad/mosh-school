@@ -237,6 +237,9 @@ function setzeSprachanzeige() {
   if (!knopf || !s) return;
   const eintrag = spracheEintrag();
   if (eintrag) knopf.setAttribute('aria-label', `${t('sprache')}: ${eintrag.eigenname ?? text(eintrag.label) ?? eintrag.kuerzel}`);
+  // Menü-Zeile zeigt die aktuelle Sprache (Weltkugel-Icon + Name).
+  const titel = knopf.querySelector('[data-sprach-titel]');
+  if (titel && eintrag) titel.textContent = eintrag.eigenname ?? text(eintrag.label) ?? eintrag.kuerzel;
   if (!liste) return;
   const aktivCode = eintrag?.code;
   // Flagge + Sprachname in der jeweiligen Heimatsprache (Eigenname), aktive markiert.

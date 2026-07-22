@@ -49,6 +49,5 @@ export function renderWerkzeuge(el) {
         </div>
       </section>
       <div class="wz-karten">${WERKZEUGE.map(karte).join('')}</div>
-      <p class="leise">${esc(t('wz_hub_hinweis'))}</p>
     </article>`;
 }
