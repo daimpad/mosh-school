@@ -17,7 +17,7 @@ const WERKZEUGE = [
   { id: 'ampbox', route: '#/werkzeug/ampbox', icon: 'fa-volume-high', bereit: true },
   { id: 'struktur', route: '#/werkzeug/struktur', icon: 'fa-list-check', bereit: true },
   { id: 'recorder', route: '#/werkzeug/recorder', icon: 'fa-microphone', bereit: true },
-  { id: 'mehrspur', route: '#/werkzeug/mehrspur', icon: 'fa-sliders', bereit: false },
+  { id: 'mehrspur', route: '#/werkzeug/mehrspur', icon: 'fa-sliders', bereit: true },
 ];
 
 function karte(wz) {
