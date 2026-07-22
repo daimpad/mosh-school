@@ -2404,3 +2404,22 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   border-radius: 999px; color: var(--tinte-2); white-space: nowrap;
 }
 .song-fuss { margin-top: 1rem; }
+
+/* Facetten-Filter der Suche (Trainings-Loop §3c). Chips über Tokens; aktiv =
+   Akzent-Fläche. Zahl = Trefferzahl je Wert. */
+.such-filter { display: flex; flex-direction: column; gap: 0.7rem; margin: 0.4rem 0 1.1rem; }
+.such-facette-gruppe { display: flex; flex-direction: column; gap: 0.35rem; }
+.such-facette-titel { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tinte-2); }
+.such-facette-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.such-facette-chip { cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; }
+.such-facette-chip:hover { border-color: var(--primaer); color: var(--tinte); }
+.such-facette-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; font-weight: 600; }
+.such-facette-zahl { font-size: 0.66rem; opacity: 0.7; font-variant-numeric: tabular-nums; }
+.such-filter-reset { align-self: flex-start; }
+
+/* Mastery-Status-Pill in der Trefferkarte. Signal doppelt kodiert: Form/Zeichen
+   (○/◐/●) UND Farbe — nie nur Farbe (Zugänglichkeit). */
+.such-status { font-size: 0.72rem; font-weight: 600; vertical-align: middle; white-space: nowrap; }
+.such-status.status-neu { color: var(--tinte-2); }
+.such-status.status-in_arbeit { color: var(--primaer); }
+.such-status.status-sitzt { color: var(--signal-gruen, var(--primaer)); }
