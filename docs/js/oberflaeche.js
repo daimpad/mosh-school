@@ -179,9 +179,26 @@ export function melde(mitteilung) {
 }
 
 // Sequenzabschluss-Gratifikation (Spez. 8.3): würdigend, aber zurückhaltend.
+// Beschriftung eines Trainings-Loop-Meilensteins (§5) aus seiner ID. Dynamische
+// IDs (grundlagen_<instrument>, spielziel_<wert>) lösen ihr Label über die
+// Vokabeln auf; statische über direkte UI-Schlüssel.
+export function meilensteinLabel(id) {
+  if (id.startsWith('grundlagen_')) {
+    return t('meilenstein_grundlagen', { instrument: label('domaene', id.slice('grundlagen_'.length)) });
+  }
+  if (id.startsWith('spielziel_')) {
+    return t('meilenstein_spielziel', { ziel: label('spielziel_faktor', id.slice('spielziel_'.length)) });
+  }
+  return t('meilenstein_' + id);
+}
+
 export function zeigeMeilenstein(meilenstein) {
+  // Neue Trainings-Loop-Meilensteine reichen einen fertigen Text herein; die
+  // alten Pfad-Meilensteine tragen art/stufe.
   const istKompetenz = meilenstein.art === 'kompetenz';
-  const textZeile = istKompetenz
+  const textZeile = meilenstein.text
+    ? meilenstein.text
+    : istKompetenz
     ? t('meilenstein_kompetenz', { pfad: `${t('pfad_kompetenz')} (${label('kompetenzstufe', meilenstein.stufe)})` })
     : t('meilenstein_individual');
   zeigeUeberlagerung(`
