@@ -1,0 +1,217 @@
+{
+  "genre": "Hardcore",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Black Flag",
+      "titel": "Rise Above",
+      "substil_vermerk": "US-Hardcore-Punk (Kalifornien)",
+      "url": "https://www.youtube.com/results?search_query=Black+Flag+Rise+Above",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Minor Threat",
+      "titel": "Straight Edge",
+      "substil_vermerk": "DC-Hardcore, Straight-Edge-Ursprung (US)",
+      "url": "https://www.youtube.com/results?search_query=Minor+Threat+Straight+Edge",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Bad Brains",
+      "titel": "Banned in D.C.",
+      "substil_vermerk": "DC-Hardcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Bad+Brains+Banned+in+D.C.",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Agnostic Front",
+      "titel": "Victim in Pain",
+      "substil_vermerk": "NYHC-Grundstein (US)",
+      "url": "https://www.youtube.com/results?search_query=Agnostic+Front+Victim+in+Pain",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cro-Mags",
+      "titel": "We Gotta Know",
+      "substil_vermerk": "NYHC/Crossover (US)",
+      "url": "https://www.youtube.com/results?search_query=Cro-Mags+We+Gotta+Know",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Gorilla Biscuits",
+      "titel": "Start Today",
+      "substil_vermerk": "NY Youth Crew (US)",
+      "url": "https://www.youtube.com/results?search_query=Gorilla+Biscuits+Start+Today",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Youth of Today",
+      "titel": "Break Down the Walls",
+      "substil_vermerk": "Youth Crew (US)",
+      "url": "https://www.youtube.com/results?search_query=Youth+of+Today+Break+Down+the+Walls",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Sick of It All",
+      "titel": "Scratch the Surface",
+      "substil_vermerk": "NYHC (US)",
+      "url": "https://www.youtube.com/results?search_query=Sick+of+It+All+Scratch+the+Surface",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Madball",
+      "titel": "Set It Off",
+      "substil_vermerk": "NYHC (US)",
+      "url": "https://www.youtube.com/results?search_query=Madball+Set+It+Off",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "H2O",
+      "titel": "Nothing to Prove",
+      "substil_vermerk": "melodischer NYHC (US)",
+      "url": "https://www.youtube.com/results?search_query=H2O+Nothing+to+Prove",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Judge",
+      "titel": "New York Crew",
+      "substil_vermerk": "Youth Crew/NYHC (US)",
+      "url": "https://www.youtube.com/results?search_query=Judge+New+York+Crew",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Warzone",
+      "titel": "As One",
+      "substil_vermerk": "NYHC (US)",
+      "url": "https://www.youtube.com/results?search_query=Warzone+As+One",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Terror",
+      "titel": "Keepers of the Faith",
+      "substil_vermerk": "moderner Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Terror+Keepers+of+the+Faith&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Hatebreed",
+      "titel": "Perseverance",
+      "substil_vermerk": "metallischer Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Hatebreed+Perseverance&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Comeback Kid",
+      "titel": "Wake the Dead",
+      "substil_vermerk": "melodischer Hardcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=Comeback+Kid+Wake+the+Dead&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Have Heart",
+      "titel": "Watch Me Rise",
+      "substil_vermerk": "Youth-Crew-Revival (US)",
+      "url": "https://bandcamp.com/search?q=Have+Heart+Watch+Me+Rise&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bane",
+      "titel": "Can We Start Again",
+      "substil_vermerk": "melodischer Hardcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Bane+Can+We+Start+Again",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "American Nightmare",
+      "titel": "Hearts",
+      "substil_vermerk": "Boston-Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=American+Nightmare+Hearts&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Modern Life Is War",
+      "titel": "First & Ellen",
+      "substil_vermerk": "melodischer Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Modern+Life+Is+War+First+%26+Ellen&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Defeater",
+      "titel": "Empty Days & Sleepless Nights",
+      "substil_vermerk": "emotionaler Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Defeater+Empty+Days+%26+Sleepless+Nights&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Verse",
+      "titel": "Bitter Clarity",
+      "substil_vermerk": "melodischer Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Verse+Bitter+Clarity&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Champion",
+      "titel": "Time Slips Away",
+      "substil_vermerk": "Youth Crew (US)",
+      "url": "https://bandcamp.com/search?q=Champion+Time+Slips+Away&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Trapped Under Ice",
+      "titel": "Stay Cold",
+      "substil_vermerk": "moderner Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Trapped+Under+Ice+Stay+Cold&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Backtrack",
+      "titel": "Deal With It",
+      "substil_vermerk": "moderner Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Backtrack+Deal+With+It&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Expire",
+      "titel": "Pretty Low",
+      "substil_vermerk": "moderner Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Expire+Pretty+Low&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Turnstile",
+      "titel": "Real Thing",
+      "substil_vermerk": "moderner Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Turnstile+Real+Thing&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Knocked Loose",
+      "titel": "Counting Worms",
+      "substil_vermerk": "moderner Metal-Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Knocked+Loose+Counting+Worms&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Code Orange",
+      "titel": "Forever",
+      "substil_vermerk": "moderner Hardcore/Metal (US)",
+      "url": "https://bandcamp.com/search?q=Code+Orange+Forever&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Stick to Your Guns",
+      "titel": "Nothing You Can Do to Me",
+      "substil_vermerk": "melodischer Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Stick+to+Your+Guns+Nothing+You+Can+Do+to+Me&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ceremony",
+      "titel": "Kersed",
+      "substil_vermerk": "kalifornischer Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Ceremony+Kersed&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
