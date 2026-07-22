@@ -123,6 +123,8 @@ Für jede neue `data/bausteine.<stufe>-<instrument>.json`:
 2. **Pfad in `INHALTSDATEIEN`** (`js/daten.js`) ergänzen. Reihenfolge = Erzählreihenfolge.
 3. **Titel liften + Skelette regenerieren:** `python3 scripts/lift.py`
    (hebt alle `anzeigetitel.de` nach `labels/de.json`, erzeugt `en/fr/pl` neu).
+3b. **Such-Index neu bauen:** `python3 scripts/build_index.py` (regeneriert
+   `data/index.json` aus dem Pool + gelifteten Titeln — generiertes Artefakt, eingecheckt).
 4. **Service Worker:** die neue Datei in `SHELL` (`sw.js`) aufnehmen **und** `CACHE` erhöhen
    (`mosh-vN` → `mosh-vN+1`). Sonst bekommen Offline-Nutzer die Datei nie.
 5. **Validieren:** `python3 scripts/validate.py` (muss „OK — strukturell sauber" zeigen).
@@ -131,6 +133,32 @@ Für jede neue `data/bausteine.<stufe>-<instrument>.json`:
 **Neuer Vokabelwert** (neuer `stil`, neue `domaene`, neuer `spielziele`-Faktor) ist eine
 *koordinierte* Erweiterung: Wert in `vokabulare` der **kanonischen Gitarren-Datei** ergänzen
 **und** Label unter `vokabeln.*` bzw. `spielziele` in `labels/de.json`. Erst dann nutzbar.
+
+## Trainings-Loop (Unterbau)
+
+Der Trainings-Loop (zeigen → üben → markieren → Fortschritt sehen) hebt vorhandene
+Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
+
+- **Such-/Metadaten-Index** `data/index.json` (generiert via `scripts/build_index.py`,
+  eingecheckt wie `grafiken.json`). Ein Eintrag je Baustein/Fehlerbild: Facetten
+  (`domaene/kompetenzstufe/stil/spielziele/typ`), `voraussetzungen`, `hat_demo` und
+  ein gedeckeltes, kleingeschriebenes `text`-Token-Feld für die reine In-Memory-Suche
+  (kein externer Index, keine Lib). `typ` ist abgeleitet (`uebung`/`reflexion`/
+  `fehlerbild`). Geladen in `js/daten.js` als `daten.suchindex`.
+- **Fortschritts-Store = `js/zustand.js`** (kein zweiter Store — das versionierte
+  Ein-Schlüssel-Schema bleibt kanonisch). **Schema 2** ergänzt additiv:
+  `status` (baustein-gebundener Mastery-Zustand `neu`/`in_arbeit`/`sitzt`, getrennt
+  vom teil-genauen `fortschritt`), `log` (Übe-Tagebuch), `ziele`, `bestwerte`,
+  `meilensteine`, `onboarding`. Alt-Stände (Schema 1) heben sich per `tiefMerge`
+  verlustfrei. Neu: `abonniere()` (Reaktivität) und `exportiereZustand()`/
+  `importiereZustand()` (portables JSON-Backup, kein Konto). Jeder Mutator
+  persistiert **und** benachrichtigt (`schreibe()`).
+- **Optionales Baustein-Feld `demonstration`** (rückwärtskompatibel): `pattern`
+  (Rhythmus-Raster, `spuren[].instrument/schritte`), `tab` (Saite × Zeit,
+  `events[].saite/bund/technik`) oder `hoerbeispiel` (`verweis_genre`). Abgespielt
+  über den **Audio-Kern der Werkzeuge** (Synthese, kein Asset). `validate.py`
+  akzeptiert Abwesenheit und prüft bei Anwesenheit die Struktur (erlaubte
+  Instrumente/Techniken, Rasterlänge = `aufloesung*takte`, `saite` 1..6).
 
 ## Verifikation (Pflicht vor jedem Commit)
 
