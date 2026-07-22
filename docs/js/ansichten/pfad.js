@@ -8,7 +8,7 @@ import { balkenHtml, bausteinIcon, entdeckenAktion, esc, heroKlein, leerHtml, ne
 import { individualpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
-import { genreInszenierungHtml, genreKurz, genrePlatzhalterSvg } from '../genre-inszenierung.js';
+import { genreInszenierungHtml, genreKurz, genreMotivSvg, genrePlatzhalterSvg } from '../genre-inszenierung.js';
 
 // In der Liste ordnet bereits die Reihenfolge; der „Empfohlen vorher"-Hinweis
 // gehört zum Zugriffsmoment und lebt in der Baustein-Ansicht (Spez. 4.4).
@@ -153,11 +153,27 @@ export function renderStil(el, daten, stil) {
       ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
       : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, `stil:${stil}`)}`;
   const inszenierung = genreInszenierungHtml(daten, stil);
+  const kurz = genreKurz(daten, stil);
+  // Großer Landing-Hero mit genre-eigenem Motiv-Backdrop (+ „Reinbox"-Effekt via
+  // CSS). Der Inhalt darunter wird in Abschnitten gerendert, die beim Hereinscrollen
+  // ein-/ausblenden (.reveal — der Beobachter in app.js schaltet .sichtbar/.raus).
+  // Alles in einer .genre-landing-Hülle: so bekommt nur die Hülle den globalen
+  // Einstiegs-Stagger, die inneren .reveal-Blöcke bleiben dem Scroll-Effekt überlassen.
   el.innerHTML = `
-    ${heroKlein('fa-fire', label('stil', stil), '', 'pf-magenta')}
-    ${inszenierung}
-    <h2 class="abschnitt-titel genre-bausteine-titel">${esc(t('genre_bausteine_titel'))}</h2>
-    ${liste}`;
+    <div class="genre-landing">
+      <section class="marke-hero genre-landing-hero pf-magenta">
+        ${genreMotivSvg(stil)}
+        <div class="genre-landing-scrim" aria-hidden="true"></div>
+        <div class="genre-landing-inhalt">
+          <p class="genre-landing-augenbraue">${esc(t('genre_augenbraue'))} · ${esc(t('n_bausteine', { n: pfad.stationen.length }))}</p>
+          <h1>${esc(label('stil', stil))}</h1>
+          ${kurz ? `<p class="genre-landing-kurz">${esc(kurz)}</p>` : ''}
+        </div>
+      </section>
+      ${inszenierung ? `<div class="reveal">${inszenierung}</div>` : ''}
+      <h2 class="abschnitt-titel genre-bausteine-titel reveal">${esc(t('genre_bausteine_titel'))}</h2>
+      <div class="reveal">${liste}</div>
+    </div>`;
 }
 
 // Umgebungs-Achse (Outdoor, Querschnitt): Hub über die Wetter- und Boden-Themen
