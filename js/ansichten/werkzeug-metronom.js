@@ -140,12 +140,43 @@ function markiere(el, ctx, zeit, i, countinTakte) {
 // Aktuelles Live-BPM (für die Statuszeile bei Ramp) — vom Scheduler je Takt gesetzt.
 let letztesBpm = zustand.bpm;
 
+// Gesundheitsrahmen (§5): nach längerer ununterbrochener Tempo-Session ein
+// sanfter Pausen-/Aufwärm-Hinweis — nie ein Drängen zu MEHR Spielen. Kumuliert
+// die Laufzeit über Starts hinweg; feuert einmal je Ansichts-Sitzung.
+const PAUSE_MS = 20 * 60 * 1000;
+let laufSeit = 0;
+let laufKumuliert = 0;
+let pausenTimer = null;
+let pausenHinweisGezeigt = false;
+
+function planePausenHinweis(el) {
+  if (pausenHinweisGezeigt) return;
+  clearTimeout(pausenTimer);
+  pausenTimer = setTimeout(() => zeigePausenHinweis(el), Math.max(0, PAUSE_MS - laufKumuliert));
+}
+
+function zeigePausenHinweis(el) {
+  if (pausenHinweisGezeigt) return;
+  pausenHinweisGezeigt = true;
+  const halter = el.querySelector('.wz-metro-koerper') || el.querySelector('.wz-werkzeug');
+  if (!halter || halter.querySelector('.wz-pausen-hinweis')) return;
+  const hinweis = document.createElement('div');
+  hinweis.className = 'wz-pausen-hinweis banner-hinweis';
+  hinweis.setAttribute('role', 'status');
+  hinweis.innerHTML = `<span><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> ${esc(t('wz_pausen_hinweis'))}</span>
+    <button type="button" class="knopf knopf-leise" data-pause-schliessen>${esc(t('wz_pausen_ok'))}</button>`;
+  halter.prepend(hinweis);
+  hinweis.querySelector('[data-pause-schliessen]').addEventListener('click', () => hinweis.remove());
+}
+
 // --- Start/Stop ---
 function starte(el) {
   const ctx = holeKontext();
   const ziel = holeAusgang();
   scheduler = scheduler || erzeugeScheduler(ctx);
   stoppeMarker();
+  laufSeit = performance.now();
+  planePausenHinweis(el);
   const countinTakte = zustand.countin ? 1 : 0;
   scheduler.starte({
     schrittDauer: (i) => {
@@ -168,6 +199,9 @@ function starte(el) {
 function stoppe(el) {
   if (scheduler) scheduler.stoppe();
   stoppeMarker();
+  if (laufSeit) laufKumuliert += performance.now() - laufSeit;
+  laufSeit = 0;
+  clearTimeout(pausenTimer);
   setzeLaufZustand(el, false);
   const punkt = el.querySelector('.wz-beat-punkt');
   if (punkt) punkt.classList.remove('an', 'eins');
