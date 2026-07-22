@@ -385,7 +385,7 @@ body.im-onboarding main { padding-bottom: 2rem; }
   font-size: 0.9rem;
 }
 
-.sprach-flagge { flex: none; font-size: 1.2rem; line-height: 1; }
+.sprach-kuerzel { flex: none; min-width: 1.9rem; text-align: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; padding: 0.1rem 0.3rem; border: 1.5px solid var(--linie-stark); border-radius: 2px; color: var(--tinte-2); }
 .sprach-eintrag .sprach-name { flex: 1; }
 .sprach-eintrag.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); font-weight: 600; }
 .sprach-haken { flex: none; width: 1rem; text-align: center; color: var(--primaer-tief); font-weight: 700; }
