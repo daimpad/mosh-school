@@ -1,0 +1,217 @@
+{
+  "genre": "Powerviolence",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Infest",
+      "titel": "Break",
+      "substil_vermerk": "Grundstein-PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Infest+Break",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Man Is the Bastard",
+      "titel": "Hispanic Small Man Power",
+      "substil_vermerk": "bass-lastiger PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Man+Is+the+Bastard+Hispanic+Small+Man+Power",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Crossed Out",
+      "titel": "Stomp",
+      "substil_vermerk": "brutaler Proto-PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Crossed+Out+Stomp",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "No Comment",
+      "titel": "Downsided",
+      "substil_vermerk": "Grundstein-PV (US)",
+      "url": "https://www.youtube.com/results?search_query=No+Comment+Downsided",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Neanderthal",
+      "titel": "The Lowest Form of Music",
+      "substil_vermerk": "schwerer PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Neanderthal+The+Lowest+Form+of+Music",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Spazz",
+      "titel": "Rev. Fuzz",
+      "substil_vermerk": "Skate-/PV (US)",
+      "url": "https://bandcamp.com/search?q=Spazz+Rev.+Fuzz&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Charles Bronson",
+      "titel": "I Am Charles Bronson",
+      "substil_vermerk": "Fastcore/PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Charles+Bronson+I+Am+Charles+Bronson",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Despise You",
+      "titel": "West Side Horizons",
+      "substil_vermerk": "LA-PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Despise+You+West+Side+Horizons",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Lack of Interest",
+      "titel": "Compilation Discography",
+      "substil_vermerk": "West-Coast-PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Lack+of+Interest+Compilation+Discography",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Capitalist Casualties",
+      "titel": "Subdivisions of Life",
+      "substil_vermerk": "fast PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Capitalist+Casualties+Subdivisions+of+Life",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Siege",
+      "titel": "Grim Reaper",
+      "substil_vermerk": "Proto-PV/Hardcore (US, Boston)",
+      "url": "https://www.youtube.com/results?search_query=Siege+Grim+Reaper",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Hellnation",
+      "titel": "Colonized",
+      "substil_vermerk": "Fastcore/PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Hellnation+Colonized",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "What Happens Next?",
+      "titel": "Konfrontation",
+      "substil_vermerk": "Fastcore/PV (US)",
+      "url": "https://www.youtube.com/results?search_query=What+Happens+Next%3F+Konfrontation",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Benümb",
+      "titel": "Wesley Willis Is Alive and Well",
+      "substil_vermerk": "PV/grind (US)",
+      "url": "https://bandcamp.com/search?q=Ben%C3%BCmb+Wesley+Willis+Is+Alive+and+Well&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Iron Lung",
+      "titel": "Cerebral Cavity Search",
+      "substil_vermerk": "sicko-PV (US)",
+      "url": "https://bandcamp.com/search?q=Iron+Lung+Cerebral+Cavity+Search&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Weekend Nachos",
+      "titel": "Hometown Hero",
+      "substil_vermerk": "moderner schwerer PV (US)",
+      "url": "https://bandcamp.com/search?q=Weekend+Nachos+Hometown+Hero&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sex Prisoner",
+      "titel": "Ruin",
+      "substil_vermerk": "moderner sludgy PV (US)",
+      "url": "https://bandcamp.com/search?q=Sex+Prisoner+Ruin&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "ACxDC",
+      "titel": "The Second Coming",
+      "substil_vermerk": "moderner PV/grind (US)",
+      "url": "https://bandcamp.com/search?q=ACxDC+The+Second+Coming&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Dropdead",
+      "titel": "Poverty",
+      "substil_vermerk": "PV/grind (US)",
+      "url": "https://bandcamp.com/search?q=Dropdead+Poverty&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Left for Dead",
+      "titel": "Devoid of Everything",
+      "substil_vermerk": "PV/grind (Kanada)",
+      "url": "https://bandcamp.com/search?q=Left+for+Dead+Devoid+of+Everything&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Hatred Surge",
+      "titel": "Deconstruct",
+      "substil_vermerk": "moderner PV (US)",
+      "url": "https://bandcamp.com/search?q=Hatred+Surge+Deconstruct&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Backslider",
+      "titel": "Motherfucker",
+      "substil_vermerk": "moderner PV (US)",
+      "url": "https://bandcamp.com/search?q=Backslider+Motherfucker&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "P.L.F.",
+      "titel": "Extermination Process",
+      "substil_vermerk": "grind/PV (US)",
+      "url": "https://bandcamp.com/search?q=P.L.F.+Extermination+Process&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sidetracked",
+      "titel": "Insite",
+      "substil_vermerk": "moderner PV (US)",
+      "url": "https://bandcamp.com/search?q=Sidetracked+Insite&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Endless Blockade",
+      "titel": "Primitive",
+      "substil_vermerk": "PV/noise (Kanada)",
+      "url": "https://bandcamp.com/search?q=The+Endless+Blockade+Primitive&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mind Eraser",
+      "titel": "Cave",
+      "substil_vermerk": "PV/Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Mind+Eraser+Cave&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Vaccine",
+      "titel": "Human Hatred",
+      "substil_vermerk": "moderner PV (US)",
+      "url": "https://bandcamp.com/search?q=Vaccine+Human+Hatred&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Godstomper",
+      "titel": "Assault with Battery",
+      "substil_vermerk": "Cyber-/PV (US)",
+      "url": "https://bandcamp.com/search?q=Godstomper+Assault+with+Battery&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Gride",
+      "titel": "Poselství",
+      "substil_vermerk": "tschechischer PV/grind",
+      "url": "https://bandcamp.com/search?q=Gride+Poselstv%C3%AD&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sordo",
+      "titel": "Bestias del Sur Salvaje",
+      "substil_vermerk": "moderner PV (US)",
+      "url": "https://bandcamp.com/search?q=Sordo+Bestias+del+Sur+Salvaje&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

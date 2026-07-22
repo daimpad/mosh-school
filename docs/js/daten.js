@@ -64,8 +64,27 @@ const INHALTSDATEIEN = [
   'data/bausteine.gear-schlagzeug-gesang.json',
 ];
 
+// Beispielsongs-Referenz (Genre → 30 kuratierte Songs als externe Links). Eigener
+// Referenzbereich wie Stimmungen/Patterns — NICHT im Baustein-Pool, kein
+// Fortschritt. Getrennte Datei je Genre hält Updates lokal und risikoarm;
+// Reihenfolge = Anzeigereihenfolge der Genre-Auswahl.
+const SONGDATEIEN = [
+  'data/songs.crust.json',
+  'data/songs.grindcore.json',
+  'data/songs.powerviolence.json',
+  'data/songs.stoner.json',
+  'data/songs.post-metal.json',
+  'data/songs.deathcore.json',
+  'data/songs.sludge.json',
+];
+
+// Aus dem Dateipfad (data/songs.<slug>.json) den Genre-Slug für Deep-Links ziehen.
+function songSlug(pfad) {
+  return pfad.replace(/^data\/songs\./, '').replace(/\.json$/, '');
+}
+
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, pedale, ampbox, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, pedale, ampbox, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -74,6 +93,7 @@ export async function ladeDaten() {
     holeJson('data/patterns.json'),
     holeJson('data/pedale.json'),
     holeJson('data/ampbox.json'),
+    Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
   const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, appInfo, turnierregeln);
@@ -98,6 +118,13 @@ export async function ladeDaten() {
   };
   // Amp-/Box-Baukasten (Fakten-Daten): ebenfalls Referenzbereich.
   daten.ampbox = ampbox || {};
+  // Beispielsongs (Genre → Songliste): Referenzbereich, kein Fortschritt. Jeder
+  // Eintrag trägt seinen Slug für Deep-Links (#/songs/<slug>).
+  daten.songs = SONGDATEIEN.map((pfad, i) => ({
+    slug: songSlug(pfad),
+    genre: songDateien[i]?.genre || songSlug(pfad),
+    songs: songDateien[i]?.songs || [],
+  }));
   return daten;
 }
 
