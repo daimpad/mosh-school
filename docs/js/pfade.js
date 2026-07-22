@@ -177,6 +177,20 @@ export function instrumentpfad(daten, domaene) {
   };
 }
 
+// Band-Querschnitt: Bausteine, die MEHRERE Instrumente zugleich betreffen
+// (Domäne enthält ≥2 der vier Instrumente) — Ensemble, Proberaum, Songwriting,
+// Auftritt, „ganze Band". Das eigene Zuhause für Band-Themen.
+function instrumentDomaenen(baustein) {
+  return domaenenVon(baustein).filter((d) => INSTRUMENTE.includes(d));
+}
+export function bandAnzahl(daten) {
+  return daten.bausteine.filter((b) => instrumentDomaenen(b).length >= 2 && trainerSichtbar(daten, b) && !umgebungsBaustein(b)).length;
+}
+export function bandpfad(daten) {
+  const menge = daten.bausteine.filter((b) => instrumentDomaenen(b).length >= 2 && trainerSichtbar(daten, b) && !umgebungsBaustein(b));
+  return { art: 'band', stationen: zuStationen(daten, menge, standardVergleicher(daten), null) };
+}
+
 // Genre-Achse (Stil): Querschnitt über Instrumente UND Stufen — sammelt alle
 // Bausteine eines Genres (death_metal, black_metal, doom …) domänenübergreifend
 // zu einem Thema. Reine Pool-/Erzählreihenfolge, kein Modifikator. Es erscheinen
