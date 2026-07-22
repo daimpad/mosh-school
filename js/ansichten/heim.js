@@ -5,8 +5,8 @@
 // ist von der Startseite entfernt; dafür führen Regeln und Profil als Kacheln.
 
 import { label, t } from '../i18n.js';
-import { esc, markeHeroGross } from '../oberflaeche.js';
-import { stile } from '../pfade.js';
+import { domaeneIcon, esc, markeHeroGross } from '../oberflaeche.js';
+import { INSTRUMENTE, bandAnzahl, instrumentUebersicht, stile } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar, zuletzt } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
 
@@ -98,10 +98,35 @@ export function renderHeim(el, daten) {
     text: esc(t('profil_intro')),
   });
 
+  // Instrument-Kacheln (Gitarre/Bass/Drums/Vocals) + Band-Querschnitt.
+  const instrumentKacheln = instrumentUebersicht(daten)
+    .map(({ domaene, anzahl }) => `
+      <a class="karte karte-link pfad-kachel instr-kachel pf-blau" href="#/instrument/${esc(domaene)}">
+        <div class="pfad-kachel-kopf">
+          <span class="pfad-medaille">${domaeneIcon(domaene)}</span>
+          <h3>${esc(label('domaene', domaene))}</h3>
+        </div>
+        <div class="pfad-kachel-text"><p class="leise">${esc(t('n_bausteine', { n: anzahl }))}</p>${cta}</div>
+      </a>`)
+    .join('');
+  const bandKachel = `
+    <a class="karte karte-link pfad-kachel band-kachel pf-schiefer" href="#/band">
+      <div class="pfad-kachel-kopf">
+        <span class="pfad-medaille"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
+        <h3>${esc(t('band_titel'))}</h3>
+      </div>
+      <div class="pfad-kachel-text"><p class="leise">${esc(t('band_kachel_text'))}</p>${cta}</div>
+    </a>`;
+
   el.innerHTML = `
     ${markeHeroGross(heroCta)}
     ${speicherIstVerfuegbar() ? '' : `<div class="banner-hinweis">${esc(t('speicher_warnung'))}</div>`}
     ${fortsetzenStreifen}
+    <h2 class="abschnitt-titel">${esc(t('instrumente'))}</h2>
+    <div class="pfad-gitter">
+      ${instrumentKacheln}
+      ${bandKachel}
+    </div>
     <h2 class="abschnitt-titel">${esc(t('pfade'))}</h2>
     <div class="pfad-gitter">
       ${genreKachel}

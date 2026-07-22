@@ -5,7 +5,7 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { label, t } from '../i18n.js';
 import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, heroKlein, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
-import { INSTRUMENTE, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
+import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 import { genreInszenierungHtml, genreKurz, genreMotivSvg, genrePlatzhalterSvg } from '../genre-inszenierung.js';
@@ -145,7 +145,29 @@ export function renderStil(el, daten, stil) {
         </div>
         ${genrePlatzhalterSvg()}
       </section>`;
-    el.innerHTML = `${hero}${zeilen || leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}`;
+    // Unten featured: Beispielsongs + Gefühlslandkarte — bewusst in einem anderen
+    // Stil als die Genre-Karten (breite Feature-Kacheln mit Icon).
+    const featured = `
+      <h2 class="abschnitt-titel genre-featured-titel">${esc(t('genre_featured_titel'))}</h2>
+      <div class="genre-featured">
+        <a class="genre-featured-karte" href="#/songs">
+          <span class="genre-featured-icon"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
+          <span class="genre-featured-text">
+            <strong>${esc(t('nav_songs'))}</strong>
+            <span class="leise">${esc(t('genre_featured_songs'))}</span>
+          </span>
+          <i class="fa-solid fa-arrow-right genre-featured-pfeil" aria-hidden="true"></i>
+        </a>
+        <a class="genre-featured-karte" href="#/werkzeug/landkarte">
+          <span class="genre-featured-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
+          <span class="genre-featured-text">
+            <strong>${esc(t('wz_landkarte_titel'))}</strong>
+            <span class="leise">${esc(t('genre_featured_landkarte'))}</span>
+          </span>
+          <i class="fa-solid fa-arrow-right genre-featured-pfeil" aria-hidden="true"></i>
+        </a>
+      </div>`;
+    el.innerHTML = `${hero}${zeilen || leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}${zeilen ? featured : ''}`;
     return;
   }
   const pfad = stilpfad(daten, stil);
@@ -276,6 +298,19 @@ export function renderInstrument(el, daten, domaene) {
 
   const kc = el.querySelector('.instr-kc');
   if (kc) zeichneKoennenscheck(kc, daten, { mitHero: false });
+}
+
+// Band-Landing: Querschnittsthemen, die mehrere Instrumente zugleich betreffen
+// (Ensemble, Proberaum, Songwriting, Auftritt). Ziel der Band-Kachel der Startseite.
+export function renderBand(el, daten) {
+  const pfad = bandpfad(daten);
+  const liste = pfad.stationen.length
+    ? `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, 'band')}`
+    : leerHtml(t('leer_domaene'), 'fa-users', entdeckenAktion());
+  el.innerHTML = `
+    ${heroKlein('fa-users', t('band_titel'), t('band_untertitel'), 'pf-schiefer')}
+    <p class="leise">${esc(t('band_intro'))}</p>
+    ${liste}`;
 }
 
 // Umgebungs-Achse (Outdoor, Querschnitt): Hub über die Wetter- und Boden-Themen
