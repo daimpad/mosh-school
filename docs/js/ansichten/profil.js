@@ -6,7 +6,8 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { deltaFuer, niedrigsteStufe } from '../daten.js';
 import { bausteinAbsolviert, globaleProjektion, projektion } from '../fortschritt.js';
 import { label, setzeSprache, sprache, t } from '../i18n.js';
-import { balkenHtml, esc, heroKlein, neuRendern, ringHtml, wendeThemaAn, zeigeMeilenstein } from '../oberflaeche.js';
+import { balkenHtml, bausteinIcon, esc, heroKlein, neuRendern, ringHtml, wendeThemaAn, zeigeMeilenstein } from '../oberflaeche.js';
+import { instrumentRinge, wasAlsNaechstes } from '../mastery.js';
 import { kompetenzpfad } from '../pfade.js';
 import { diagnose, einstellungen, kontinuitaet, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
@@ -133,6 +134,36 @@ export function renderProfil(el, daten) {
     .map((w) => `<option value="${w}" ${(e.thema || 'auto') === w ? 'selected' : ''}>${esc(t(`thema_${w}`))}</option>`)
     .join('');
 
+  // „Dein Können" (§5): fähigkeitsbasierte Ringe je Instrument (Anteil „sitzt")
+  // plus „Was als Nächstes" — getrennt vom durchgearbeiteten „Fortschritt".
+  const ringe = instrumentRinge(daten);
+  const koennenRinge = ringe
+    .map(
+      (r) => `<div class="koennen-ring">
+        ${ringHtml({ quote: r.quote, absolviert: r.sitzt, gesamt: r.gesamt }, { groesse: 72, staerke: 7, beschriftung: t('koennen_ring_aria', { instrument: label('domaene', r.domaene), a: r.sitzt, b: r.gesamt }) })}
+        <span class="koennen-ring-label">${esc(label('domaene', r.domaene))}</span>
+        <span class="leise koennen-ring-zahl">${r.sitzt}/${r.gesamt}</span>
+      </div>`,
+    )
+    .join('');
+  const naechste = wasAlsNaechstes(daten, 5);
+  const naechsteListe = naechste
+    .map(
+      (b) => `<a class="karte karte-link koennen-naechst" href="#/baustein/${esc(b.id)}?kontext=kompetenz">
+        <span class="koennen-naechst-icon">${bausteinIcon(b.id) || '<i class="fa-solid fa-feather" aria-hidden="true"></i>'}</span>
+        <span>${esc(label('baustein', b.id))}</span>
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>`,
+    )
+    .join('');
+  const koennenSektion = `
+    <section class="karte profil-koennen">
+      <h2>${esc(t('koennen_titel'))}</h2>
+      <p class="leise">${esc(t('koennen_intro'))}</p>
+      ${koennenRinge ? `<div class="koennen-ringe">${koennenRinge}</div>` : ''}
+      ${naechste.length ? `<h3>${esc(t('was_als_naechstes'))}</h3><div class="koennen-naechste">${naechsteListe}</div>` : ''}
+    </section>`;
+
   el.innerHTML = `
     ${heroKlein('fa-user', t('nav_profil'), t('profil_intro'), 'pf-blau')}
 
@@ -150,6 +181,8 @@ export function renderProfil(el, daten) {
     </section>
 
     ${vormarkierenHtml(daten, d)}
+
+    ${koennenSektion}
 
     <section class="karte">
       <h2>${esc(t('fortschritt'))}</h2>
