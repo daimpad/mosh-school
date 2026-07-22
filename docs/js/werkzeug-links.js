@@ -54,6 +54,15 @@ const ID_REGELN = {
   tracking_reihenfolge: [{ werkzeug: 'mehrspur' }, { werkzeug: 'metronom' }],
   pre_production_plan: [{ werkzeug: 'mehrspur' }, { werkzeug: 'metronom' }],
   signal_aufnehmen: [{ werkzeug: 'mehrspur' }, { werkzeug: 'recorder' }],
+  // Grenzgänger-Zweig: die Kreativ-Werkzeuge (Gefühlslandkarte + Genre-Mix).
+  genres_als_werkzeug: [{ werkzeug: 'landkarte' }],
+  spannung_zwischen_genres: [{ werkzeug: 'landkarte' }, { werkzeug: 'genremix' }],
+  gefuehl_vor_genre: [{ werkzeug: 'genremix' }, { werkzeug: 'landkarte' }],
+  serendipitaet_methode: [{ werkzeug: 'genremix' }],
+  eigenen_sound_finden: [{ werkzeug: 'genremix' }, { werkzeug: 'landkarte' }],
+  // Die Fusions-Übung öffnet den Generator; „vom Referenz zum eigenen" den Recorder.
+  zwei_genres_ein_riff: [{ werkzeug: 'genremix' }, { werkzeug: 'recorder', params: { kreativ: '1' } }],
+  von_referenz_zum_eigenen: [{ werkzeug: 'recorder', params: { kreativ: '1' } }, { werkzeug: 'genremix' }],
 };
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
@@ -101,6 +110,8 @@ const WERKZEUG_META = {
   recorder: { route: '#/werkzeug/recorder', labelKey: 'wz_recorder_titel' },
   mehrspur: { route: '#/werkzeug/mehrspur', labelKey: 'wz_mehrspur_titel' },
   explorer: { route: '#/werkzeug/explorer', labelKey: 'wz_explorer_titel' },
+  landkarte: { route: '#/werkzeug/landkarte', labelKey: 'wz_landkarte_titel' },
+  genremix: { route: '#/werkzeug/genremix', labelKey: 'wz_genremix_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
