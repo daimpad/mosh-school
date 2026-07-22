@@ -341,6 +341,15 @@ body.im-onboarding main { padding-bottom: 2rem; }
 /* Sprachanzeige — rein darstellend (app-info funktion_aktiv:false): Flagge +
    Kürzel neben dem Hamburger; die Liste klappt auf, schaltet aber nichts um. */
 .sprach-anzeige { position: relative; }
+/* Sprach-Umschalter lebt jetzt im Hamburger-Menü (als Menü-Zeile). */
+.menue-sprache .sprach-knopf {
+  width: 100%; border: none; background: transparent; border-radius: 0;
+  justify-content: flex-start; font-weight: 500; min-height: 0;
+}
+.menue-sprache .sprach-liste {
+  position: static; min-width: 0; margin: 0.15rem 0 0; padding: 0.2rem 0 0;
+  border: none; background: transparent; box-shadow: none;
+}
 
 .sprach-knopf {
   display: inline-flex;
@@ -2723,23 +2732,15 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   --backdrop-blend: multiply, multiply, multiply, normal;
 }
 :root[data-theme='dunkel'] {
-  --sheet-bg: rgba(12, 12, 14, 0.7);
+  --sheet-bg: var(--flaeche);
   --kante-oben: #6a6a72;
-  --backdrop-image: url("../assets/images/hintergrund-collage.jpg");
-  --backdrop-size: cover;
-  --backdrop-repeat: no-repeat;
-  --backdrop-attachment: fixed;
-  --backdrop-blend: normal;
+  --backdrop-image: none;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) {
-    --sheet-bg: rgba(12, 12, 14, 0.7);
+    --sheet-bg: var(--flaeche);
     --kante-oben: #6a6a72;
-    --backdrop-image: url("../assets/images/hintergrund-collage.jpg");
-    --backdrop-size: cover;
-    --backdrop-repeat: no-repeat;
-    --backdrop-attachment: fixed;
-    --backdrop-blend: normal;
+    --backdrop-image: none;
   }
 }
 

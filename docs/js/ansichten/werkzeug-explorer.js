@@ -84,7 +84,6 @@ export function renderWerkzeugExplorer(el, daten, query) {
       <div class="wz-exp-buehne">${SCHEMATA[aktiveAnsicht]}</div>
       <div class="wz-exp-panel-halter">${panelHtml(daten, aktiveRegion)}</div>
 
-      <p class="leise wz-metro-fuss">${esc(t('wz_exp_fuss'))}</p>
     </article>`;
 
   verdrahte(el, daten);
