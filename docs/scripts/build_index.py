@@ -22,10 +22,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Kurze/strukturarme Tokens tragen für die Suche wenig und blähen den Index.
 MIN_TOKEN = 3
-# Text-Feld je Eintrag deckeln (Größenbudget, §8): Titel + frühe Erklär-Tokens
-# tragen die meiste Trefferqualität; das Ranking gewichtet Titel/Metadaten ohnehin
-# über den Volltext. 48 eindeutige Tokens halten den Index klein und relevant.
-MAX_TOKENS = 48
+# Kein Kürzen des Text-Felds aus Größengründen: der Index trägt den VOLLEN Inhalt
+# (deduplizierte Tokens des ganzen Erklär-/Übungs-/Reflexionstexts), damit die
+# Volltextsuche jeden Begriff findet. Qualität vor Dateigröße — wird der Index zu
+# groß, folgt eine bessere Ladestruktur (Lazy-Load/Split), nie eine Inhaltskürzung.
 # Häufige Füllwörter raus — hält den Text-Index klein, ohne Trefferqualität zu kosten.
 STOPWORTE = {
     'und', 'oder', 'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine',
@@ -80,8 +80,6 @@ def text_tokens(*quellen):
                 continue
             gesehen.add(tok)
             tokens.append(tok)
-            if len(tokens) >= MAX_TOKENS:
-                return ' '.join(tokens)
     return ' '.join(tokens)
 
 

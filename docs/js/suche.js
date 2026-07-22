@@ -82,3 +82,96 @@ export function sucheBausteine(daten, anfrage, titelVon) {
   );
   return treffer;
 }
+
+// --- Facetten-Suche über den vorgebauten Index (Trainings-Loop §3c) ---
+// Arbeitet über daten.suchindex (Bausteine + Fehlerbilder): Volltext (voller,
+// ungekürzter Inhalt aus scripts/build_index.py) plus UND-verknüpfte Facetten-
+// Filter. Titeltreffer wiegen schwerer als Volltext; die ganze Anfrage im Titel
+// rankt zusätzlich oben. Rein clientseitig, in-memory, keine Lib.
+
+// Facetten-Dimensionen (Reihenfolge = Anzeige) und ihr Index-Feld. `typ` ist ein
+// Skalar, die übrigen Listen — `facetWerte` vereinheitlicht das.
+export const FACETTEN = ['domaene', 'kompetenzstufe', 'stil', 'spielziel', 'typ'];
+const FACET_FELD = {
+  domaene: 'domaene',
+  kompetenzstufe: 'kompetenzstufe',
+  stil: 'stil',
+  spielziel: 'spielziele',
+  typ: 'typ',
+};
+
+function facetWerte(eintrag, facette) {
+  const feld = eintrag[FACET_FELD[facette]];
+  if (Array.isArray(feld)) return feld;
+  return feld != null ? [feld] : [];
+}
+
+// Ein Eintrag passt, wenn er in JEDER belegten Facette mindestens einen gewählten
+// Wert trägt (UND über Dimensionen, ODER innerhalb einer Dimension).
+export function passtFacetten(eintrag, filter) {
+  for (const facette of FACETTEN) {
+    const gewaehlt = filter?.[facette];
+    if (!gewaehlt || gewaehlt.size === 0) continue;
+    if (!facetWerte(eintrag, facette).some((w) => gewaehlt.has(w))) return false;
+  }
+  return true;
+}
+
+// Faltet Titel/Text jedes Index-Eintrags EINMAL in `_titelN`/`_textN` (idempotent).
+// Ohne diesen Cache würde jede Tastatureingabe den ganzen Index neu normalisieren.
+export function normalisiereIndex(index) {
+  for (const eintrag of index) {
+    if (eintrag._titelN === undefined) {
+      eintrag._titelN = normalisiere(eintrag.titel);
+      eintrag._textN = normalisiere(eintrag.text);
+    }
+  }
+  return index;
+}
+
+export function sucheIndex(index, anfrage, filter) {
+  const roh = normalisiere(anfrage);
+  const terme = roh.split(/\s+/).filter(Boolean);
+  const treffer = [];
+  index.forEach((eintrag, pos) => {
+    if (!passtFacetten(eintrag, filter)) return;
+    let score = 0;
+    if (terme.length > 0) {
+      // Normalisierte Felder werden einmalig gecacht (siehe `normalisiereIndex`),
+      // damit die Suche je Tastendruck nicht den ganzen Index neu faltet.
+      const titelN = eintrag._titelN ?? normalisiere(eintrag.titel);
+      const textN = eintrag._textN ?? normalisiere(eintrag.text);
+      let alle = true;
+      for (const term of terme) {
+        const imTitel = titelN.includes(term);
+        const imText = textN.includes(term);
+        if (!imTitel && !imText) {
+          alle = false;
+          break;
+        }
+        score += (imTitel ? 5 : 0) + (imText ? 1 : 0);
+      }
+      if (!alle) return;
+      if (titelN.includes(roh)) score += 10;
+    }
+    treffer.push({ eintrag, score, pos });
+  });
+  // Ohne Anfrage (nur Facetten) bleibt die Index-Reihenfolge; sonst Score zuerst.
+  treffer.sort((a, b) => b.score - a.score || a.pos - b.pos);
+  return treffer;
+}
+
+// Häufigkeit je Facettenwert über eine Treffermenge — für die Filter-Chips mit
+// Zähler. Liefert { facette: Map(wert -> anzahl) }.
+export function facettenZaehlung(eintraege) {
+  const zaehlung = {};
+  for (const facette of FACETTEN) zaehlung[facette] = new Map();
+  for (const eintrag of eintraege) {
+    for (const facette of FACETTEN) {
+      for (const wert of facetWerte(eintrag, facette)) {
+        zaehlung[facette].set(wert, (zaehlung[facette].get(wert) || 0) + 1);
+      }
+    }
+  }
+  return zaehlung;
+}
