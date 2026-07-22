@@ -2378,3 +2378,29 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .wz-exp-panel h3 { display: flex; align-items: center; gap: 0.5rem; }
 .wz-exp-panel h3 svg { width: 1.4em; height: 1.4em; }
 .wz-exp-panel-leer { padding: 0.75rem; }
+
+/* Beispielsongs-Referenz (#/songs): Genre-Auswahl + gewürfelte Songliste.
+   Monochrom über Tokens; Akzent nur als Kante/Aktiv-Zustand, keine Flächenfarbe. */
+.song-genres { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0 1.1rem; }
+.song-chip { text-decoration: none; cursor: pointer; }
+.song-chip:hover { border-color: var(--primaer); color: var(--tinte); }
+.song-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; font-weight: 600; }
+.song-kopf { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.song-kopf .abschnitt-titel { margin: 0; }
+.song-liste { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.song-zeile {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem;
+  padding: 0.6rem 0.8rem; background: var(--flaeche);
+  border: 1px solid var(--linie-stark); border-left: 3px solid var(--primaer);
+  border-radius: var(--radius-klein);
+}
+.song-link { display: flex; flex-direction: column; gap: 0.15rem; text-decoration: none; color: inherit; flex: 1 1 auto; min-width: 0; }
+.song-link:hover .song-haupt { text-decoration: underline; }
+.song-haupt { font-weight: 600; }
+.song-substil { font-size: 0.78rem; }
+.song-quelle {
+  flex: 0 0 auto; align-self: center; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.02em; padding: 0.08rem 0.42rem; border: 1px solid var(--linie-stark);
+  border-radius: 999px; color: var(--tinte-2); white-space: nowrap;
+}
+.song-fuss { margin-top: 1rem; }

@@ -1,0 +1,217 @@
+{
+  "genre": "Stoner",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Kyuss",
+      "titel": "Green Machine",
+      "substil_vermerk": "Desert/Stoner-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Kyuss+Green+Machine",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Fu Manchu",
+      "titel": "Evil Eye",
+      "substil_vermerk": "Fuzz-Stoner-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Fu+Manchu+Evil+Eye",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Monster Magnet",
+      "titel": "Space Lord",
+      "substil_vermerk": "Space-/Stoner-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Monster+Magnet+Space+Lord",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Queens of the Stone Age",
+      "titel": "Regular John",
+      "substil_vermerk": "Desert/Stoner-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Queens+of+the+Stone+Age+Regular+John",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Clutch",
+      "titel": "Electric Worry",
+      "substil_vermerk": "bluesiger Stoner-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Clutch+Electric+Worry",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Nebula",
+      "titel": "So It Goes",
+      "substil_vermerk": "Fuzz-Stoner (US)",
+      "url": "https://bandcamp.com/search?q=Nebula+So+It+Goes&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Dozer",
+      "titel": "Drawing Dead",
+      "substil_vermerk": "schwedischer Desert/Stoner",
+      "url": "https://bandcamp.com/search?q=Dozer+Drawing+Dead&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Truckfighters",
+      "titel": "Desert Cruiser",
+      "substil_vermerk": "schwedischer Fuzz-Stoner",
+      "url": "https://bandcamp.com/search?q=Truckfighters+Desert+Cruiser&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Orange Goblin",
+      "titel": "Scorpionica",
+      "substil_vermerk": "UK-Stoner-Metal",
+      "url": "https://bandcamp.com/search?q=Orange+Goblin+Scorpionica&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Sword",
+      "titel": "Freya",
+      "substil_vermerk": "Retro-Stoner-Metal (US)",
+      "url": "https://www.youtube.com/results?search_query=The+Sword+Freya",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Red Fang",
+      "titel": "Prehistoric Dog",
+      "substil_vermerk": "Stoner/Noise-Rock (US)",
+      "url": "https://bandcamp.com/search?q=Red+Fang+Prehistoric+Dog&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Uncle Acid & the Deadbeats",
+      "titel": "I'll Cut You Down",
+      "substil_vermerk": "okkulter Psych-Stoner (UK)",
+      "url": "https://bandcamp.com/search?q=Uncle+Acid+%26+the+Deadbeats+I%27ll+Cut+You+Down&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "All Them Witches",
+      "titel": "When God Comes Back",
+      "substil_vermerk": "Psych/Blues-Stoner (US)",
+      "url": "https://bandcamp.com/search?q=All+Them+Witches+When+God+Comes+Back&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Elephant Tree",
+      "titel": "Sails",
+      "substil_vermerk": "Heavy-Psych/Stoner-Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Elephant+Tree+Sails&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Kadavar",
+      "titel": "Come Back Life",
+      "substil_vermerk": "Retro/Psych-Stoner (Deutschland)",
+      "url": "https://bandcamp.com/search?q=Kadavar+Come+Back+Life&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Colour Haze",
+      "titel": "Mind",
+      "substil_vermerk": "psychedelischer Desert-Stoner (Deutschland)",
+      "url": "https://bandcamp.com/search?q=Colour+Haze+Mind&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Church of Misery",
+      "titel": "Beltway Sniper",
+      "substil_vermerk": "Doom/Stoner (Japan)",
+      "url": "https://bandcamp.com/search?q=Church+of+Misery+Beltway+Sniper&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ufomammut",
+      "titel": "Smoke",
+      "substil_vermerk": "psychedelischer Heavy-Stoner (Italien)",
+      "url": "https://bandcamp.com/search?q=Ufomammut+Smoke&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "King Buffalo",
+      "titel": "Eye of the Storm",
+      "substil_vermerk": "moderner Psych/Stoner (US)",
+      "url": "https://bandcamp.com/search?q=King+Buffalo+Eye+of+the+Storm&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Slift",
+      "titel": "Ilion",
+      "substil_vermerk": "moderner Space/Psych-Stoner (Frankreich)",
+      "url": "https://bandcamp.com/search?q=Slift+Ilion&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Om",
+      "titel": "State of Non-Return",
+      "substil_vermerk": "meditativer Stoner/Drone (US)",
+      "url": "https://bandcamp.com/search?q=Om+State+of+Non-Return&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Brant Bjork",
+      "titel": "Low Desert Punk",
+      "substil_vermerk": "Desert-Rock (US)",
+      "url": "https://bandcamp.com/search?q=Brant+Bjork+Low+Desert+Punk&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mondo Generator",
+      "titel": "Dead Silence",
+      "substil_vermerk": "roher Desert/Stoner (US)",
+      "url": "https://bandcamp.com/search?q=Mondo+Generator+Dead+Silence&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sasquatch",
+      "titel": "More Than You'll Ever Be",
+      "substil_vermerk": "Riff-Stoner-Rock (US)",
+      "url": "https://bandcamp.com/search?q=Sasquatch+More+Than+You%27ll+Ever+Be&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wo Fat",
+      "titel": "Enter the Riffian",
+      "substil_vermerk": "texanischer Psych-Stoner (US)",
+      "url": "https://bandcamp.com/search?q=Wo+Fat+Enter+the+Riffian&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Belzebong",
+      "titel": "Greenmachine",
+      "substil_vermerk": "instrumentaler Stoner-Doom (Polen)",
+      "url": "https://bandcamp.com/search?q=Belzebong+Greenmachine&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Weedeater",
+      "titel": "$20 Bill",
+      "substil_vermerk": "Stoner/Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Weedeater+%2420+Bill&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bongzilla",
+      "titel": "Free the Weed",
+      "substil_vermerk": "Stoner/Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Bongzilla+Free+the+Weed&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Lowrider",
+      "titel": "Ol' Mule Pepe",
+      "substil_vermerk": "schwedischer Desert-Stoner",
+      "url": "https://bandcamp.com/search?q=Lowrider+Ol%27+Mule+Pepe&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mars Red Sky",
+      "titel": "Strong Reflection",
+      "substil_vermerk": "französischer Heavy-Psych/Stoner",
+      "url": "https://bandcamp.com/search?q=Mars+Red+Sky+Strong+Reflection&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

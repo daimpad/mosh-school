@@ -1,0 +1,217 @@
+{
+  "genre": "Post-Metal",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Neurosis",
+      "titel": "Through Silver in Blood",
+      "substil_vermerk": "prägender Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Neurosis+Through+Silver+in+Blood&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Isis",
+      "titel": "In Fiction",
+      "substil_vermerk": "atmosphärischer Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Isis+In+Fiction&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cult of Luna",
+      "titel": "Finland",
+      "substil_vermerk": "schwedischer Post-Metal",
+      "url": "https://bandcamp.com/search?q=Cult+of+Luna+Finland&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Pelican",
+      "titel": "Last Day of Winter",
+      "substil_vermerk": "instrumentaler Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Pelican+Last+Day+of+Winter&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Russian Circles",
+      "titel": "Harper Lewis",
+      "substil_vermerk": "instrumentaler Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Russian+Circles+Harper+Lewis&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Rosetta",
+      "titel": "Au Pays Natal",
+      "substil_vermerk": "kosmischer Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Rosetta+Au+Pays+Natal&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Amenra",
+      "titel": "A Solitary Reign",
+      "substil_vermerk": "kathartischer Post-Metal/Sludge (Belgien)",
+      "url": "https://bandcamp.com/search?q=Amenra+A+Solitary+Reign&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Ocean",
+      "titel": "Bathyalpelagic II",
+      "substil_vermerk": "progressiver Post-Metal (Deutschland)",
+      "url": "https://bandcamp.com/search?q=The+Ocean+Bathyalpelagic+II&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mono",
+      "titel": "Ashes in the Snow",
+      "substil_vermerk": "orchestraler Post-Rock (Japan)",
+      "url": "https://bandcamp.com/search?q=Mono+Ashes+in+the+Snow&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Year of No Light",
+      "titel": "Persephone I",
+      "substil_vermerk": "instrumentaler Post-Metal (Frankreich)",
+      "url": "https://bandcamp.com/search?q=Year+of+No+Light+Persephone+I&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mouth of the Architect",
+      "titel": "Baobab",
+      "substil_vermerk": "atmosphärischer Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Mouth+of+the+Architect+Baobab&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Old Man Gloom",
+      "titel": "Common Species",
+      "substil_vermerk": "experimenteller Sludge/Post (US)",
+      "url": "https://bandcamp.com/search?q=Old+Man+Gloom+Common+Species&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Intronaut",
+      "titel": "Sunderance",
+      "substil_vermerk": "progressiver Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Intronaut+Sunderance&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Junius",
+      "titel": "A Universe Without Stars",
+      "substil_vermerk": "Post-Metal/-Rock (US)",
+      "url": "https://bandcamp.com/search?q=Junius+A+Universe+Without+Stars&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bossk",
+      "titel": "Kobe",
+      "substil_vermerk": "atmosphärischer Post-Metal (UK)",
+      "url": "https://bandcamp.com/search?q=Bossk+Kobe&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Jesu",
+      "titel": "Conqueror",
+      "substil_vermerk": "ambient-Post-Metal (UK)",
+      "url": "https://bandcamp.com/search?q=Jesu+Conqueror&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Godflesh",
+      "titel": "Like Rats",
+      "substil_vermerk": "industrieller Vorläufer (UK)",
+      "url": "https://bandcamp.com/search?q=Godflesh+Like+Rats&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cave In",
+      "titel": "Big Riff",
+      "substil_vermerk": "Post-Metal/Prog (US)",
+      "url": "https://bandcamp.com/search?q=Cave+In+Big+Riff&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Minsk",
+      "titel": "Crescents of Mars",
+      "substil_vermerk": "psychedelischer Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=Minsk+Crescents+of+Mars&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Palms",
+      "titel": "Future Warrior",
+      "substil_vermerk": "Post-Metal (US, ex-Isis)",
+      "url": "https://www.youtube.com/results?search_query=Palms+Future+Warrior",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "A Storm of Light",
+      "titel": "Missing",
+      "substil_vermerk": "Post-Metal (US)",
+      "url": "https://bandcamp.com/search?q=A+Storm+of+Light+Missing&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Conjurer",
+      "titel": "Hollow",
+      "substil_vermerk": "moderner Post-Metal/Sludge (UK)",
+      "url": "https://bandcamp.com/search?q=Conjurer+Hollow&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wren",
+      "titel": "Chromed",
+      "substil_vermerk": "UK-Post-Metal/Sludge",
+      "url": "https://bandcamp.com/search?q=Wren+Chromed&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Oathbreaker",
+      "titel": "Second Son of R.",
+      "substil_vermerk": "Blackgaze/Post (Belgien)",
+      "url": "https://bandcamp.com/search?q=Oathbreaker+Second+Son+of+R.&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Long Distance Calling",
+      "titel": "The Nearing Grave",
+      "substil_vermerk": "instrumentaler Post-Metal (Deutschland)",
+      "url": "https://bandcamp.com/search?q=Long+Distance+Calling+The+Nearing+Grave&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Callisto",
+      "titel": "Sanctuary",
+      "substil_vermerk": "finnischer Post-Metal",
+      "url": "https://bandcamp.com/search?q=Callisto+Sanctuary&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Latitudes",
+      "titel": "Ordinary People",
+      "substil_vermerk": "UK-Post-Metal",
+      "url": "https://bandcamp.com/search?q=Latitudes+Ordinary+People&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Pijn",
+      "titel": "Squander",
+      "substil_vermerk": "UK-Post-Metal",
+      "url": "https://bandcamp.com/search?q=Pijn+Squander&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Hundred Year Old Man",
+      "titel": "Breaching",
+      "substil_vermerk": "atmosphärischer Post-Metal (UK)",
+      "url": "https://bandcamp.com/search?q=Hundred+Year+Old+Man+Breaching&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sâver",
+      "titel": "I Vanish",
+      "substil_vermerk": "norwegischer Post-Metal/Sludge",
+      "url": "https://bandcamp.com/search?q=S%C3%A2ver+I+Vanish&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}
