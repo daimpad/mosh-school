@@ -1,0 +1,217 @@
+{
+  "genre": "Metalcore",
+  "anzahl": 30,
+  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "songs": [
+    {
+      "kuenstler": "Killswitch Engage",
+      "titel": "My Curse",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Killswitch+Engage+My+Curse",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "As I Lay Dying",
+      "titel": "Nothing Left",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=As+I+Lay+Dying+Nothing+Left",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Unearth",
+      "titel": "The Great Dividing",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Unearth+The+Great+Dividing",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "All That Remains",
+      "titel": "This Calling",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=All+That+Remains+This+Calling",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Shadows Fall",
+      "titel": "The Power of I and I",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Shadows+Fall+The+Power+of+I+and+I",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Darkest Hour",
+      "titel": "With a Thousand Words to Say But One",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Darkest+Hour+With+a+Thousand+Words+to+Say+But+One",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "God Forbid",
+      "titel": "The End of the World",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=God+Forbid+The+End+of+the+World",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Bleeding Through",
+      "titel": "Love Lost in a Hail of Gunfire",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Bleeding+Through+Love+Lost+in+a+Hail+of+Gunfire",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Poison the Well",
+      "titel": "Nerdy",
+      "substil_vermerk": "früher Metalcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Poison+the+Well+Nerdy",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Converge",
+      "titel": "Jane Doe",
+      "substil_vermerk": "metallischer/chaotischer Hardcore (US)",
+      "url": "https://bandcamp.com/search?q=Converge+Jane+Doe&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Dillinger Escape Plan",
+      "titel": "43% Burnt",
+      "substil_vermerk": "Mathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=The+Dillinger+Escape+Plan+43%25+Burnt",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Botch",
+      "titel": "Transitions from Persona to Object",
+      "substil_vermerk": "Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Botch+Transitions+from+Persona+to+Object&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Every Time I Die",
+      "titel": "The New Black",
+      "substil_vermerk": "Southern-Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Every+Time+I+Die+The+New+Black&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Norma Jean",
+      "titel": "Memphis Will Be Laid to Waste",
+      "substil_vermerk": "chaotischer Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=Norma+Jean+Memphis+Will+Be+Laid+to+Waste&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Underoath",
+      "titel": "Writing on the Walls",
+      "substil_vermerk": "Post-Hardcore/Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=Underoath+Writing+on+the+Walls&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Devil Wears Prada",
+      "titel": "Hey John, What's Your Name Again?",
+      "substil_vermerk": "Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=The+Devil+Wears+Prada+Hey+John%2C+What%27s+Your+Name+Again%3F&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "August Burns Red",
+      "titel": "Composure",
+      "substil_vermerk": "technischer Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=August+Burns+Red+Composure&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Parkway Drive",
+      "titel": "Carrion",
+      "substil_vermerk": "melodischer Metalcore (Australien)",
+      "url": "https://bandcamp.com/search?q=Parkway+Drive+Carrion&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Architects",
+      "titel": "These Colours Don't Run",
+      "substil_vermerk": "moderner Metalcore (UK)",
+      "url": "https://bandcamp.com/search?q=Architects+These+Colours+Don%27t+Run&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "While She Sleeps",
+      "titel": "Bleeds Me",
+      "substil_vermerk": "moderner Metalcore (UK)",
+      "url": "https://bandcamp.com/search?q=While+She+Sleeps+Bleeds+Me&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bring Me the Horizon",
+      "titel": "Chelsea Smile",
+      "substil_vermerk": "Deathcore/Metalcore (UK)",
+      "url": "https://bandcamp.com/search?q=Bring+Me+the+Horizon+Chelsea+Smile&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Misery Signals",
+      "titel": "Reset",
+      "substil_vermerk": "progressiver Metalcore (US/Kanada)",
+      "url": "https://bandcamp.com/search?q=Misery+Signals+Reset&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Ghost Inside",
+      "titel": "Engine 45",
+      "substil_vermerk": "melodischer Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=The+Ghost+Inside+Engine+45&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Miss May I",
+      "titel": "Relentless Chaos",
+      "substil_vermerk": "moderner Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=Miss+May+I+Relentless+Chaos&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Erra",
+      "titel": "Snowblood",
+      "substil_vermerk": "progressiver Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=Erra+Snowblood&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Currents",
+      "titel": "Monsters",
+      "substil_vermerk": "moderner Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=Currents+Monsters&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Wage War",
+      "titel": "Stitch",
+      "substil_vermerk": "moderner Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=Wage+War+Stitch&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Counterparts",
+      "titel": "Bouquet",
+      "substil_vermerk": "melodischer Metalcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=Counterparts+Bouquet&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Zao",
+      "titel": "Lies of Serpents, a River of Tears",
+      "substil_vermerk": "früher Metalcore (US)",
+      "url": "https://bandcamp.com/search?q=Zao+Lies+of+Serpents%2C+a+River+of+Tears&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Trivium",
+      "titel": "Pull Harder on the Strings of Your Martyr",
+      "substil_vermerk": "Metalcore/Thrash (US)",
+      "url": "https://www.youtube.com/results?search_query=Trivium+Pull+Harder+on+the+Strings+of+Your+Martyr",
+      "quelle": "youtube"
+    }
+  ]
+}
