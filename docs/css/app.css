@@ -2875,3 +2875,22 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .instr-wz-chip .fa-solid { font-size: 0.85em; margin-right: 0.15rem; }
 .instr-fuss { margin-top: 1.2rem; }
 .instr-kachel .pfad-medaille .dom-svg { width: 1.6rem; height: 1.6rem; }
+
+/* Genres-Hub: unten „featured" (Songs + Gefühlslandkarte) — bewusst anderer
+   Stil als die Genre-Karten: breite Zeilen-Kacheln mit Icon + Akzentkante. */
+.genre-featured-titel { margin-top: 1.6rem; }
+.genre-featured { display: grid; gap: 0.7rem; grid-template-columns: 1fr; margin: 0.2rem 0 1rem; }
+@media (min-width: 34rem) { .genre-featured { grid-template-columns: 1fr 1fr; } }
+.genre-featured-karte {
+  display: flex; align-items: center; gap: 0.9rem; padding: 0.9rem 1rem;
+  border: 1.5px solid var(--linie-stark); border-left: 4px solid var(--primaer);
+  border-radius: 2px; background: var(--flaeche-2); color: var(--tinte);
+  text-decoration: none; box-shadow: var(--schatten-karte);
+}
+@media (hover: hover) { .genre-featured-karte:hover { border-color: var(--primaer); } }
+.genre-featured-icon {
+  flex: none; width: 2.4rem; height: 2.4rem; display: inline-flex; align-items: center;
+  justify-content: center; border-radius: 2px; background: var(--primaer-weich); color: var(--primaer); font-size: 1.15rem;
+}
+.genre-featured-text { display: flex; flex-direction: column; gap: 0.1rem; flex: 1; min-width: 0; }
+.genre-featured-pfeil { color: var(--primaer); flex: none; }
