@@ -8,6 +8,7 @@ import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, un
 import { label, t, text } from '../i18n.js';
 import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
 import { pruefeMeilensteine } from '../mastery.js';
+import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
 import { bausteinStatus, diagnose, einstellungen, ergaenzeLog, meldeBestwert, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
@@ -340,6 +341,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${voraussetzungsBanner(station, kontext)}
       ${erklaerSektion}
       ${schemaSektion}
+      ${demonstrationHtml(b.demonstration)}
       ${uebungsSektion}
       ${reflexionsSektion}
       ${werkzeugSektionHtml(b)}
@@ -356,6 +358,8 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       else neuRendern();
     });
   }
+
+  bindeDemonstration(el, b.demonstration);
 
   // Nach einer Änderung: neu erreichte Meilensteine feiern, sonst neu rendern.
   const nachAenderung = () => {

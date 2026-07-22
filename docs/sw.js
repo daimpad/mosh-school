@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v72';
+const CACHE = 'mosh-v73';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -56,6 +56,7 @@ const SHELL = [
   'js/audio/riff-db.js',
   'js/audio/spuren-db.js',
   'js/ansichten/baustein.js',
+  'js/ansichten/demonstration.js',
   'js/ansichten/heim.js',
   'js/ansichten/info.js',
   'js/ansichten/onboarding.js',
