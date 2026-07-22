@@ -21,6 +21,11 @@ let startZeit = 0;
 let clipURLs = [];
 let letzterFehler = '';
 const zustand = { tempo: 0 };
+// Kreativ-Modus (Grenzgänger): aus dem Genre-Mix-Generator geöffnet
+// (#/werkzeug/recorder?kreativ=1&mix=death_metal-doom). Der nächste gespeicherte
+// Clip gilt als das erste eigene Fusions-Riff → Kreativ-Meilenstein.
+let kreativModus = false;
+let kreativMix = '';
 
 function mimeEndung(mime) {
   if (/webm/.test(mime)) return 'webm';
@@ -72,9 +77,9 @@ async function starteAufnahme(el) {
     const anzahl = (await alleClips().catch(() => [])).length;
     const clip = {
       id: 'r' + Date.now(),
-      name: t('wz_rec_default', { n: anzahl + 1 }),
+      name: kreativModus ? t('wz_rec_fusion_name', { n: anzahl + 1 }) : t('wz_rec_default', { n: anzahl + 1 }),
       tempo: zustand.tempo || 0,
-      notiz: '',
+      notiz: kreativModus && kreativMix ? kreativMix.replace(/-/g, ' × ') : '',
       datum: Date.now(),
       blob,
       mime: blob.type,
@@ -87,10 +92,15 @@ async function starteAufnahme(el) {
       letzterFehler = t('wz_rec_speicher_fehler');
     }
     await ladeUndRendere(el);
-    // Meilenstein „erstes eigenes Riff" (§5) — nach dem Rendern feiern, damit die
-    // Überlagerung nicht gleich wieder übermalt wird.
-    if (gespeichert && feiereMeilenstein('erstes_riff')) {
-      zeigeMeilenstein({ text: meilensteinLabel('erstes_riff') });
+    // Meilensteine (§5) — nach dem Rendern feiern, damit die Überlagerung nicht
+    // gleich wieder übermalt wird. Im Kreativ-Modus (aus dem Genre-Mix-Generator)
+    // zählt der Clip als erstes eigenes Fusions-Riff; sonst als erstes Riff.
+    if (gespeichert) {
+      if (kreativModus && feiereMeilenstein('kreativ_fusion')) {
+        zeigeMeilenstein({ text: meilensteinLabel('kreativ_fusion') });
+      } else if (feiereMeilenstein('erstes_riff')) {
+        zeigeMeilenstein({ text: meilensteinLabel('erstes_riff') });
+      }
     }
   };
   mediaRecorder.start();
@@ -178,12 +188,15 @@ async function ladeUndRendere(el) {
   verdrahteClips(el);
 }
 
-export function renderWerkzeugRecorder(el) {
+export function renderWerkzeugRecorder(el, daten, query) {
   aufnahmeLaeuft = false;
   if (tickTimer) {
     clearInterval(tickTimer);
     tickTimer = null;
   }
+  // Kreativ-Preset aus dem Genre-Mix-Generator übernehmen (optional).
+  kreativModus = !!query && (query.get('kreativ') === '1' || query.get('kreativ') === 'true');
+  kreativMix = (query && query.get('mix')) || '';
   el.innerHTML = `
     <article class="wz-werkzeug">
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
@@ -194,6 +207,8 @@ export function renderWerkzeugRecorder(el) {
           <p class="marke-hero-untertitel">${esc(t('wz_recorder_untertitel'))}</p>
         </div>
       </section>
+
+      ${kreativModus ? `<p class="lk-hinweis banner-hinweis" role="note"><span><i class="fa-solid fa-star" aria-hidden="true"></i> ${esc(kreativMix ? t('wz_rec_kreativ_hinweis_mix', { mix: kreativMix.replace(/-/g, ' × ') }) : t('wz_rec_kreativ_hinweis'))}</span></p>` : ''}
 
       <div class="wz-rec-panel">
         <div class="wz-feld-reihe">
