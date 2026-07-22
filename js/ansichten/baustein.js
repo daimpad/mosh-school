@@ -9,7 +9,7 @@ import { label, t, text } from '../i18n.js';
 import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, neuRendern, zeigeMeilenstein } from '../oberflaeche.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
-import { diagnose, einstellungen, merkeZuletzt } from '../zustand.js';
+import { bausteinStatus, diagnose, einstellungen, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
 
 function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
@@ -303,6 +303,19 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     ? `<p class="bestaetigung">${esc(t('baustein_abgeschlossen'))}</p>`
     : '';
 
+  // Mastery-Umschalter (§2a): selbst markieren, wie der Baustein sitzt. Reaktiv
+  // (schreibt in den Store, neu rendern). Signal doppelt kodiert (Zeichen + Text).
+  const masteryAktuell = bausteinStatus(b.id);
+  const masteryToggle = `
+    <div class="mastery-toggle">
+      <span class="mastery-frage">${esc(t('mastery_frage'))}</span>
+      <div class="mastery-knoepfe" role="group" aria-label="${esc(t('mastery_frage'))}">
+        ${[['neu', '○'], ['in_arbeit', '◐'], ['sitzt', '●']]
+          .map(([wert, zeichen]) => `<button type="button" class="mastery-knopf status-${wert}${masteryAktuell === wert ? ' aktiv' : ''}" data-mastery="${wert}" aria-pressed="${masteryAktuell === wert}"><span aria-hidden="true">${zeichen}</span> ${esc(t('such_status_' + wert))}</button>`)
+          .join('')}
+      </div>
+    </div>`;
+
   const listeHref = kontextZuListe(kontext);
   const fussNavigation = `
     <nav class="baustein-fussnav" aria-label="${esc(t('baustein_navigation'))}">
@@ -316,6 +329,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${positionsZeile}
       ${heroSektion}
       ${chipZeile}
+      ${masteryToggle}
       ${voraussetzungsBanner(station, kontext)}
       ${erklaerSektion}
       ${schemaSektion}
@@ -333,6 +347,15 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       const { meilenstein } = schalteTeil(daten, kontext, knopf.dataset.baustein, knopf.dataset.quittiere);
       if (meilenstein) zeigeMeilenstein(meilenstein);
       else neuRendern();
+    });
+  }
+
+  for (const knopf of el.querySelectorAll('[data-mastery]')) {
+    knopf.addEventListener('click', () => {
+      // Erneuter Klick auf den aktiven Zustand setzt zurück auf „neu" (Toggle).
+      const neu = knopf.classList.contains('aktiv') ? 'neu' : knopf.dataset.mastery;
+      setzeBausteinStatus(b.id, neu);
+      neuRendern();
     });
   }
 }
