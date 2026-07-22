@@ -1,0 +1,152 @@
+{
+  "titel": "Gefühlslandkarte",
+  "hinweis": "Tendenzen, keine Gesetze — eine Startheuristik, um Spannung (Kartendistanz) und Brücken (verwandte Gefühls-Tags) sichtbar zu machen.",
+  "achsen": {
+    "x": "Energie/Tempo: 0 träge/spärlich … 10 rasend/dicht",
+    "y": "Grundton: 0 finster/schwer/verzweifelt … 10 erhebend/kathartisch/trotzig"
+  },
+  "genres": [
+    {
+      "genre": "doom",
+      "x": 2,
+      "y": 2,
+      "tags": [
+        "Schwere",
+        "Trauer",
+        "Erhabenheit",
+        "Trance"
+      ]
+    },
+    {
+      "genre": "sludge",
+      "x": 3,
+      "y": 2,
+      "tags": [
+        "Wut",
+        "Erschöpfung",
+        "Dreck",
+        "Bitterkeit"
+      ]
+    },
+    {
+      "genre": "post_metal",
+      "x": 4,
+      "y": 6,
+      "tags": [
+        "Weite",
+        "Katharsis",
+        "Kontemplation",
+        "Erlösung"
+      ]
+    },
+    {
+      "genre": "stoner",
+      "x": 5,
+      "y": 6,
+      "tags": [
+        "Groove",
+        "Wärme",
+        "Trance",
+        "Lässigkeit"
+      ]
+    },
+    {
+      "genre": "deathcore",
+      "x": 7,
+      "y": 2,
+      "tags": [
+        "Wucht",
+        "Bedrohung",
+        "Aggression",
+        "Entladung"
+      ]
+    },
+    {
+      "genre": "metalcore",
+      "x": 7,
+      "y": 6,
+      "tags": [
+        "Katharsis",
+        "Trotz",
+        "Sehnsucht",
+        "Aufbäumen"
+      ]
+    },
+    {
+      "genre": "black_metal",
+      "x": 8,
+      "y": 3,
+      "tags": [
+        "Kälte",
+        "Entrückung",
+        "Isolation",
+        "Transzendenz"
+      ]
+    },
+    {
+      "genre": "death_metal",
+      "x": 8,
+      "y": 2,
+      "tags": [
+        "Wucht",
+        "Bedrohung",
+        "Morbidität",
+        "Kraft"
+      ]
+    },
+    {
+      "genre": "thrash",
+      "x": 8,
+      "y": 5,
+      "tags": [
+        "Aggression",
+        "Adrenalin",
+        "Trotz"
+      ]
+    },
+    {
+      "genre": "hardcore",
+      "x": 8,
+      "y": 6,
+      "tags": [
+        "Wut",
+        "Gemeinschaft",
+        "Empowerment",
+        "Unmittelbarkeit"
+      ]
+    },
+    {
+      "genre": "crust",
+      "x": 8,
+      "y": 3,
+      "tags": [
+        "Zorn",
+        "Weltschmerz",
+        "Aufbegehren",
+        "Düsternis"
+      ]
+    },
+    {
+      "genre": "powerviolence",
+      "x": 9,
+      "y": 3,
+      "tags": [
+        "Ausbruch",
+        "Frust",
+        "Schock",
+        "Dynamikwechsel"
+      ]
+    },
+    {
+      "genre": "grindcore",
+      "x": 10,
+      "y": 3,
+      "tags": [
+        "Chaos",
+        "Überwältigung",
+        "Absurdität",
+        "Entladung"
+      ]
+    }
+  ]
+}
