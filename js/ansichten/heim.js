@@ -27,9 +27,11 @@ export function renderHeim(el, daten) {
   const cta = `<span class="pfad-cta">${esc(t('ansehen'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>`;
   const kachel = ({ href, hue, icon, titel, meta = '', text = '', extra = '' }) => `
     <a class="karte karte-link pfad-kachel ${hue}" href="${esc(href)}">
-      <span class="pfad-medaille"><i class="fa-solid ${icon}" aria-hidden="true"></i></span>
-      <div class="pfad-kachel-text">
+      <div class="pfad-kachel-kopf">
+        <span class="pfad-medaille"><i class="fa-solid ${icon}" aria-hidden="true"></i></span>
         <h3>${titel}${meta}</h3>
+      </div>
+      <div class="pfad-kachel-text">
         ${text ? `<p class="leise">${text}</p>` : ''}
         ${extra}
         ${cta}
