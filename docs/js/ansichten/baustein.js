@@ -40,18 +40,6 @@ function quittierKnopf(id, teil, status, beschriftungOffen, beschriftungErledigt
     </button>`;
 }
 
-function grafikenHtml(baustein) {
-  return (baustein.grafik || [])
-    .map(
-      (id) => `
-      <figure class="grafik-platzhalter">
-        <img class="grafik-bild" src="images/${esc(id)}.png" alt="${esc(label('grafik', id))}" loading="lazy" />
-        <figcaption class="leise">${esc(label('grafik', id))}</figcaption>
-      </figure>`
-    )
-    .join('');
-}
-
 // Übungsteile sind heterogen (schritte vs. schritte_teil1/2, optionale Felder).
 // Der Renderer folgt der Feldreihenfolge der Daten, kennt die bekannten Felder
 // und bleibt für künftige tolerant. Auch vom Trainingspfad genutzt.
@@ -303,7 +291,6 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${deltaHinweis}
       ${buendelung}
       ${absaetze(erklaertext)}
-      ${grafikenHtml(b)}
       <div class="knopf-zeile">${quittierKnopf(b.id, 'erklaerteil', station.status.erklaerteil, t('als_gelesen'), t('gelesen'))}</div>
     </section>`;
 
