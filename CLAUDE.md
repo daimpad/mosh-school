@@ -192,9 +192,15 @@ Tokens**, nie harte Farben.
   Ampellogik für Status (offen/teilweise/erledigt). Hell & Dunkel über denselben Token-Satz.
 - **Kondensierte Display-Schrift** (Anton, lokal als `assets/fonts/anton-regular.ttf`) für
   H1/H2/Marke; Fließtext Rubik. Hart-kantige Container, versetzte Schatten, Grain-Overlay.
-- **Icons:** Font Awesome Solid ist ein **lokales Subset** — neue Codepoints rendern als Tofu
-  und lassen sich hier nicht nachziehen. Instrument-Symbole liegen daher als **Inline-SVG**
-  (`INSTRUMENT_SVG` + `domaeneIcon()` in `js/oberflaeche.js`); Baustein-Icons in `BAUSTEIN_ICONS`.
+- **Icons:** **Tabler Icons** (MIT), lokal eingebettet als **Inline-SVG-Masken** in
+  `css/schriften.css` — keine Icon-Schrift, kein CDN. Jede `.fa-*`-Klasse trägt ein Tabler-
+  Outline-SVG als CSS-`mask` (`--ti`), die Fläche kommt aus `background-color: currentColor`
+  (erbt also die Textfarbe). Die alte `<i class="fa-solid fa-xxx">`-Markup bleibt bewusst
+  erhalten (Klassennamen = FA-Konvention), nur die Darstellung ist Tabler-Outline statt
+  gefüllt. **Neues Icon einbinden:** in `css/schriften.css` eine `.fa-<name> { --ti: url("data:…") }`-
+  Zeile mit dem Tabler-SVG als Data-URI ergänzen (Quelle: `@tabler/icons` via npm, `icons/outline/`).
+  Instrument-Symbole bleiben eigenständige **Inline-SVG** (`INSTRUMENT_SVG` + `domaeneIcon()` in
+  `js/oberflaeche.js`); Baustein-Icons in `BAUSTEIN_ICONS`.
 - **Baustein-Grafiken:** Jeder Baustein hat eine abstrakte, monochrome SVG-Grafik
   (`data/grafiken.json`, `{id: "<svg…>"}`). Quelle der Wahrheit sind die deterministischen
   Generatoren `scripts/build_svg.py`/`build_svg2.py`/`build_svg3.py`;
