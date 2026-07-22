@@ -44,6 +44,19 @@ function punkteSvg(genres) {
     ${rahmen}${punkte}</svg>`;
 }
 
+// Legende: klickbare Chips für alle 13 Genres. Nötig, weil sich Punkte im
+// Karten-Raum überlagern können (z. B. Crust und Black Metal auf derselben
+// Koordinate) — die Chips halten jeden Namen lesbar und per Tastatur erreichbar.
+function legende(genres) {
+  const chips = genres
+    .map(
+      (g, i) =>
+        `<button type="button" class="chip chip-waehlbar lk-legende-chip" data-i="${i}" aria-pressed="false">${esc(landkarteName(g.genre))}</button>`
+    )
+    .join(' ');
+  return `<div class="chip-zeile lk-legende" role="group" aria-label="${esc(t('wz_lk_legende_aria'))}">${chips}</div>`;
+}
+
 function tagsPanel(g) {
   if (!g) {
     return `<p class="leise lk-tags-leer">${esc(t('wz_lk_tipp'))}</p>`;
@@ -80,6 +93,8 @@ export function renderWerkzeugLandkarte(el, daten) {
         <span class="lk-achse-x leise" aria-hidden="true">${esc(achsen.x || '')}</span>
       </div>
 
+      ${legende(genres)}
+
       <div class="lk-tags" role="status" aria-live="polite">${tagsPanel(null)}</div>
 
       <p class="chip-zeile lk-fuss">
@@ -94,6 +109,7 @@ export function renderWerkzeugLandkarte(el, daten) {
 function verdrahte(el, genres) {
   const panel = el.querySelector('.lk-tags');
   const punkte = [...el.querySelectorAll('.lk-punkt')];
+  const chips = [...el.querySelectorAll('.lk-legende-chip')];
   const waehle = (i) => {
     const g = genres[i];
     if (panel) panel.innerHTML = tagsPanel(g);
@@ -101,6 +117,11 @@ function verdrahte(el, genres) {
       const an = Number(p.dataset.i) === i;
       p.classList.toggle('aktiv', an);
       p.setAttribute('aria-pressed', String(an));
+    }
+    for (const c of chips) {
+      const an = Number(c.dataset.i) === i;
+      c.classList.toggle('chip-akzent', an);
+      c.setAttribute('aria-pressed', String(an));
     }
   };
   for (const p of punkte) {
@@ -113,5 +134,8 @@ function verdrahte(el, genres) {
         waehle(i);
       }
     });
+  }
+  for (const c of chips) {
+    c.addEventListener('click', () => waehle(Number(c.dataset.i)));
   }
 }
