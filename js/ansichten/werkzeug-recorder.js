@@ -8,7 +8,7 @@
 // Mikro-Ablehnung wird sauber abgefangen.
 
 import { t } from '../i18n.js';
-import { esc, meilensteinLabel, zeigeMeilenstein } from '../oberflaeche.js';
+import { esc, meilensteinLabel, registriereAufraeumen, zeigeMeilenstein } from '../oberflaeche.js';
 import { feiereMeilenstein } from '../zustand.js';
 import { speichereClip, alleClips, aktualisiereMeta, loescheClip } from '../audio/riff-db.js';
 
@@ -238,6 +238,29 @@ export function renderWerkzeugRecorder(el, daten, query) {
     e.target.value = String(zustand.tempo);
   });
   ladeUndRendere(el);
+
+  // Beim Verlassen der Route das Mikrofon freigeben (Aufnahme-Indikator bliebe
+  // sonst an) und Objekt-URLs aufräumen.
+  registriereAufraeumen(() => {
+    if (mediaRecorder && aufnahmeLaeuft) {
+      try {
+        mediaRecorder.stop();
+      } catch {
+        // egal — der Stream wird ohnehin gleich freigegeben
+      }
+    }
+    aufnahmeLaeuft = false;
+    if (strom) {
+      strom.getTracks().forEach((s) => s.stop());
+      strom = null;
+    }
+    if (tickTimer) {
+      clearInterval(tickTimer);
+      tickTimer = null;
+    }
+    for (const u of clipURLs) URL.revokeObjectURL(u);
+    clipURLs = [];
+  });
 }
 
 function verdrahteClips(el) {
