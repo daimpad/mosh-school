@@ -243,10 +243,11 @@ function setzeSprachanzeige() {
   liste.innerHTML = (s.liste || [])
     .map((e) => {
       const istAktiv = e.code === aktivCode;
+      const kuerzel = (e.kuerzel ?? e.code ?? '').toUpperCase();
       return `<li class="sprach-eintrag${istAktiv ? ' aktiv' : ''}"${istAktiv ? ' aria-current="true"' : ''}>
-        <span class="sprach-flagge" aria-hidden="true">${esc(e.flagge || '')}</span>
+        <span class="sprach-kuerzel" aria-hidden="true">${esc(kuerzel)}</span>
         <span class="sprach-name">${esc(e.eigenname ?? text(e.label) ?? e.kuerzel)}</span>
-        <span class="sprach-haken" aria-hidden="true">${istAktiv ? '✓' : ''}</span>
+        <span class="sprach-haken" aria-hidden="true">${istAktiv ? '<i class="fa-solid fa-check"></i>' : ''}</span>
       </li>`;
     })
     .join('');

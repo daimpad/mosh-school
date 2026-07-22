@@ -345,7 +345,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const listeHref = kontextZuListe(kontext);
   const fussNavigation = `
     <nav class="baustein-fussnav" aria-label="${esc(t('baustein_navigation'))}">
-      ${vorherige ? `<a class="knopf knopf-sekundaer" href="#/baustein/${esc(vorherige.baustein.id)}?kontext=${encodeURIComponent(kontext)}"><span aria-hidden="true">←</span> ${esc(label('baustein', vorherige.baustein.id))}</a>` : ''}
+      ${vorherige ? `<a class="knopf knopf-sekundaer" href="#/baustein/${esc(vorherige.baustein.id)}?kontext=${encodeURIComponent(kontext)}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(label('baustein', vorherige.baustein.id))}</a>` : ''}
       <a class="knopf knopf-leise" href="${listeHref}">${esc(t('zur_liste'))}</a>
       ${naechste ? `<a class="knopf ${station.status.absolviert ? 'knopf-primaer' : 'knopf-sekundaer'}" href="#/baustein/${esc(naechste.baustein.id)}?kontext=${encodeURIComponent(kontext)}">${esc(label('baustein', naechste.baustein.id))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>` : ''}
     </nav>`;
