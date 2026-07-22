@@ -63,6 +63,18 @@ const LOOP_STILE = new Set([
   'thrash', 'metalcore', 'djent', 'deathcore', 'doom', 'sludge', 'stoner_post',
 ]);
 
+
+// Gear-Baustein -> Explorer-Ansicht (Region = Baustein-ID). Jeder Gear-Baustein
+// bekommt einen „Im Explorer ansehen"-Link auf die passende Ansicht.
+const GEAR_REGION = {
+  sattel_typen: 'gitarre_bass', saitenlage_setup: 'gitarre_bass', saiten_mensur: 'gitarre_bass',
+  tonabnehmer_typen: 'gitarre_bass', steg_typen: 'gitarre_bass', plektren_saitenpflege: 'gitarre_bass',
+  pedalboard_grundlagen: 'signalweg', amp_grundlagen: 'signalweg', box_grundlagen: 'signalweg',
+  schlagzeug_komponenten: 'schlagzeug', felle_stimmung: 'schlagzeug', becken_typen: 'schlagzeug',
+  fussmaschine_double: 'schlagzeug', trigger_edrums: 'schlagzeug',
+  mikrofon_typen: 'gesang', proberaum_ausruestung: 'gesang',
+};
+
 // Generische Regeln: liefern für einen Baustein passende Werkzeug-Links.
 // Jede Regel bekommt den Baustein und gibt ein Link-Objekt oder null zurück.
 const GENERISCHE_REGELN = [
@@ -73,6 +85,8 @@ const GENERISCHE_REGELN = [
     const stil = (b.stil || []).find((s) => LOOP_STILE.has(s));
     return stil ? { werkzeug: 'loops', params: { stil } } : null;
   },
+  // Gear-Bausteine öffnen den Gear-Explorer auf ihrer Region.
+  (b) => (GEAR_REGION[b.id] ? { werkzeug: 'explorer', params: { ansicht: GEAR_REGION[b.id], region: b.id } } : null),
 ];
 
 // Verfügbare Werkzeuge (Route + i18n-Schlüssel für Beschriftung). Wächst mit den
@@ -86,6 +100,7 @@ const WERKZEUG_META = {
   struktur: { route: '#/werkzeug/struktur', labelKey: 'wz_struktur_titel' },
   recorder: { route: '#/werkzeug/recorder', labelKey: 'wz_recorder_titel' },
   mehrspur: { route: '#/werkzeug/mehrspur', labelKey: 'wz_mehrspur_titel' },
+  explorer: { route: '#/werkzeug/explorer', labelKey: 'wz_explorer_titel' },
 };
 
 // Baut eine Route mit Query-Preset: #/werkzeug/metronom?bpm=160&rampe=1
