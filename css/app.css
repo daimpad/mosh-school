@@ -2592,6 +2592,39 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   .genre-landing-hero { min-height: 250px; padding: 2rem 2.1rem; }
 }
 
+/* Startseiten-Hero: inszeniert wie die Landingpages (Motiv + Reinbox), aber mit
+   Marken-Logo, Themenzeile und den Einstiegs-CTAs. Inhalt stapelt sauber — auch
+   auf schmalen Mobil-Breiten, wo der alte Logo-links/Text-rechts-Hero drängte. */
+.startseite-hero { align-items: flex-start; min-height: 300px; }
+.startseite-hero .genre-landing-inhalt { align-self: flex-end; }
+.startseite-hero-mark {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.55rem;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+}
+.startseite-hero-themen {
+  margin: 0.5rem 0 0;
+  color: var(--tinte-2);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.startseite-hero .marke-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+.startseite-hero .marke-hero-cta .knopf { flex: 0 0 auto; }
+@media (min-width: 40rem) {
+  .startseite-hero { min-height: 340px; }
+  .startseite-hero-mark { width: 60px; height: 60px; }
+  .startseite-hero-themen { font-size: 1rem; }
+}
+
 /* „Reinboxen" (etwas kräftig): der Hero fährt leicht überskaliert über eine
    clip-path-Blende herein, setzt sich mit kurzem Rücksprung und rotem
    Rahmen-Blitz. Inhalt zieht mit leichter Verzögerung nach. */
