@@ -11,6 +11,7 @@
 
 import { label, t, text } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const STUFEN_REIHENFOLGE = ['einsteiger', 'fortgeschritten', 'experte'];
 let aktiveStufe = 'einsteiger';
@@ -95,13 +96,7 @@ export function zeichneKoennenscheck(container, daten, { mitHero = false } = {})
     </fieldset>`;
 
   const hero = mitHero
-    ? `<section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('nav_koennenscheck'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('koennenscheck_untertitel'))}</p>
-        </div>
-      </section>`
+    ? landingHeroHtml('fa-flag-checkered', t('nav_koennenscheck'), t('koennenscheck_untertitel'), 'pf-teal', 'pruefung')
     : '';
   container.innerHTML = `
     ${hero}

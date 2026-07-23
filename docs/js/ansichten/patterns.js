@@ -10,6 +10,7 @@
 import { label, t, text } from '../i18n.js';
 import { domaeneIcon, esc } from '../oberflaeche.js';
 import { frequenzVon } from './stimmungen.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aktivesGenre = null;
 let audioKontext = null;
@@ -308,13 +309,7 @@ export function renderPatterns(el, daten, genreParam) {
 
   el.innerHTML = `
     <article>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-repeat" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('nav_patterns'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('pattern_untertitel'))}</p>
-        </div>
-      </section>
+      ${landingHeroHtml('fa-repeat', t('nav_patterns'), t('pattern_untertitel'), 'pf-teal', 'patterns')}
       <p class="chip-zeile">${genreKnoepfe}</p>
       <div class="pattern-steuerung">
         <label class="pattern-tempo-feld">${esc(t('pattern_tempo'))}
