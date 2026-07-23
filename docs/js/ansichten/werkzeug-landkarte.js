@@ -200,23 +200,38 @@ function starteFelder(canvas, genres, onGenre) {
       ctx.arc(cx, cy, rad, 0, Math.PI * 2);
       ctx.fill();
     });
-    // Beschriftung der hervorgehobenen Felder (über dem Blending).
+    // Beschriftung (über dem Blending). Damit sich die Namen nicht überlagern
+    // (bei eng beieinander liegenden Genres), werden nahe Etiketten senkrecht
+    // auseinandergeschoben: nach cy sortieren, bei zu geringem Abstand UND
+    // horizontaler Nähe das untere nach unten nudgen, dann in den Canvas clampen.
     ctx.globalCompositeOperation = 'source-over';
     ctx.font = '600 12px Rubik, system-ui, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
+    const etiketten = [];
     genres.forEach((g, i) => {
       if (aktiv && !aktiv.has(i)) return;
       const { fx, fy } = feldPos(g);
-      const cx = fx * w;
-      const cy = fy * h;
-      const name = landkarteName(g.genre);
-      ctx.lineWidth = 3;
-      ctx.strokeStyle = 'rgba(0,0,0,0.55)';
-      ctx.strokeText(name, cx, cy);
-      ctx.fillStyle = '#fff';
-      ctx.fillText(name, cx, cy);
+      etiketten.push({ name: landkarteName(g.genre), cx: fx * w, cy: fy * h });
     });
+    etiketten.sort((a, b) => a.cy - b.cy || a.cx - b.cx);
+    const minAbstand = 15;
+    for (let k = 1; k < etiketten.length; k++) {
+      const vor = etiketten[k - 1];
+      const cur = etiketten[k];
+      const naheX = (vor.name.length + cur.name.length) * 3.1;
+      if (cur.cy - vor.cy < minAbstand && Math.abs(cur.cx - vor.cx) < naheX) {
+        cur.cy = vor.cy + minAbstand;
+      }
+    }
+    for (const e of etiketten) {
+      const cy = Math.max(9, Math.min(h - 7, e.cy));
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = 'rgba(0,0,0,0.6)';
+      ctx.strokeText(e.name, e.cx, cy);
+      ctx.fillStyle = '#fff';
+      ctx.fillText(e.name, e.cx, cy);
+    }
   }
 
   function schleife(zeit) {
@@ -264,10 +279,23 @@ function starteFelder(canvas, genres, onGenre) {
 function ergebnisPanel(kind) {
   if (!kind) return `<p class="leise gf-ergebnis-leer">${esc(t('wz_lk_gefuehl_tipp'))}</p>`;
   if (kind.typ === 'gefuehl') {
-    const chips = kind.genres
-      .map((g) => `<a class="chip chip-akzent gf-genre-link" href="#/pfad/stil/${esc(g.genre)}">${esc(landkarteName(g.genre))}</a>`)
+    // Ein oder mehrere Gefühle: Genres nach Trefferzahl (wie viele der gewählten
+    // Gefühle sie tragen) absteigend; bei Mehrfachwahl trägt jedes Genre eine
+    // kleine Trefferzahl. `kind.treffer` ist eine Map genreIndex→Anzahl.
+    const tags = kind.tags || [];
+    const mehr = tags.length > 1;
+    const eintraege = [...(kind.treffer || new Map()).entries()].sort(
+      (a, b) => b[1] - a[1] || landkarteName(kind.genres[a[0]].genre).localeCompare(landkarteName(kind.genres[b[0]].genre))
+    );
+    const chips = eintraege
+      .map(([i, n]) => {
+        const g = kind.genres[i];
+        const marke = mehr && n > 1 ? ` <span class="gf-zahl" aria-hidden="true">${n}</span>` : '';
+        return `<a class="chip chip-akzent gf-genre-link" href="#/pfad/stil/${esc(g.genre)}">${esc(landkarteName(g.genre))}${marke}</a>`;
+      })
       .join(' ');
-    return `<div class="lk-tags-kopf"><strong>${esc(kind.tag)}</strong> <span class="leise">${esc(t('wz_lk_gefuehl_n_genres', { n: kind.genres.length }))}</span></div>
+    const titel = mehr ? t('wz_lk_gefuehl_mehr', { n: tags.length }) : tags[0];
+    return `<div class="lk-tags-kopf"><strong>${esc(titel)}</strong> <span class="leise">${esc(t('wz_lk_gefuehl_n_genres', { n: eintraege.length }))}</span></div>
       <p class="chip-zeile lk-tag-zeile">${chips}</p>`;
   }
   // typ === 'genre'
@@ -279,57 +307,86 @@ function ergebnisPanel(kind) {
 function verdrahteFelder(el, genres, index) {
   const canvas = el.querySelector('.gf-canvas');
   const panel = el.querySelector('.gf-ergebnis');
+  const leerenKnopf = el.querySelector('.gf-leeren');
   const gefuehlChips = () => [...el.querySelectorAll('[data-gefuehl]')];
   const genreChips = [...el.querySelectorAll('.gf-genre-chip')];
   if (!canvas) return;
 
-  const felder = starteFelder(canvas, genres, (i) => waehleGenre(i));
+  const felder = starteFelder(canvas, genres, (i) => zeigeGenre(i));
   laufendeFelder = felder;
   registriereAufraeumen(() => {
     felder.stop();
     if (laufendeFelder === felder) laufendeFelder = null;
   });
 
-  function markiereChips(aktivTag, aktivGenreI) {
+  // Mehrfachauswahl: Menge gewählter Gefühls-Tags. Die hervorgehobenen Genres
+  // sind die Vereinigung (jedes Genre, das mindestens eins der Gefühle trägt),
+  // sortiert nach Trefferzahl.
+  const gewaehlt = new Set();
+
+  function markiereChips() {
     for (const c of gefuehlChips()) {
-      const an = c.dataset.gefuehl === aktivTag;
+      const an = gewaehlt.has(c.dataset.gefuehl);
       c.classList.toggle('chip-akzent', an && c.classList.contains('gf-chip'));
       c.setAttribute('aria-pressed', String(an));
     }
-    for (const c of genreChips) {
-      const an = Number(c.dataset.i) === aktivGenreI;
-      c.classList.toggle('chip-akzent', an);
-      c.setAttribute('aria-pressed', String(an));
-    }
+    for (const c of genreChips) c.setAttribute('aria-pressed', 'false');
   }
 
-  function waehleGefuehl(tag) {
-    const eintrag = index.find(([tg]) => tg === tag);
-    if (!eintrag) return;
-    const gs = eintrag[1];
-    felder.setzeAktiv(new Set(gs));
-    panel.innerHTML = ergebnisPanel({ typ: 'gefuehl', tag, genres: gs.map((i) => genres[i]) });
-    markiereChips(tag, -1);
+  function aktualisiere() {
+    if (leerenKnopf) leerenKnopf.hidden = gewaehlt.size === 0;
+    if (gewaehlt.size === 0) {
+      felder.setzeAktiv(null);
+      panel.innerHTML = ergebnisPanel(null);
+      markiereChips();
+      return;
+    }
+    // Trefferzahl je Genre über alle gewählten Gefühle.
+    const treffer = new Map();
+    for (const tag of gewaehlt) {
+      const eintrag = index.find(([tg]) => tg === tag);
+      if (!eintrag) continue;
+      for (const i of eintrag[1]) treffer.set(i, (treffer.get(i) || 0) + 1);
+    }
+    felder.setzeAktiv(new Set(treffer.keys()));
+    panel.innerHTML = ergebnisPanel({ typ: 'gefuehl', tags: [...gewaehlt], treffer, genres });
+    markiereChips();
     verdrahteInline();
   }
-  function waehleGenre(i) {
+
+  function toggleGefuehl(tag) {
+    if (!index.some(([tg]) => tg === tag)) return;
+    if (gewaehlt.has(tag)) gewaehlt.delete(tag);
+    else gewaehlt.add(tag);
+    aktualisiere();
+  }
+  // Ein Genre antippen: seine Gefühle zeigen (als anklickbare Chips, die in die
+  // Mehrfachauswahl übernommen werden) und das eine Feld hervorheben.
+  function zeigeGenre(i) {
     felder.setzeAktiv(new Set([i]));
     panel.innerHTML = ergebnisPanel({ typ: 'genre', genre: genres[i] });
-    markiereChips(null, i);
+    markiereChips();
     verdrahteInline();
   }
-  // Inline-Gefühl-Chips im Ergebnis (Genre → seine Gefühle) wieder anklickbar machen.
+  // Inline-Gefühl-Chips im Ergebnis (Genre → seine Gefühle) übernehmen ins Set.
   function verdrahteInline() {
     for (const c of panel.querySelectorAll('.gf-chip-inline')) {
-      c.addEventListener('click', () => waehleGefuehl(c.dataset.gefuehl));
+      c.classList.toggle('chip-akzent', gewaehlt.has(c.dataset.gefuehl));
+      c.addEventListener('click', () => toggleGefuehl(c.dataset.gefuehl));
     }
   }
 
   for (const c of el.querySelectorAll('.gf-chip')) {
-    c.addEventListener('click', () => waehleGefuehl(c.dataset.gefuehl));
+    c.addEventListener('click', () => toggleGefuehl(c.dataset.gefuehl));
   }
   for (const c of genreChips) {
-    c.addEventListener('click', () => waehleGenre(Number(c.dataset.i)));
+    c.addEventListener('click', () => zeigeGenre(Number(c.dataset.i)));
+  }
+  if (leerenKnopf) {
+    leerenKnopf.addEventListener('click', () => {
+      gewaehlt.clear();
+      aktualisiere();
+    });
   }
 }
 
@@ -368,6 +425,7 @@ export function renderWerkzeugLandkarte(el, daten) {
       <p class="leise gf-canvas-hinweis">${esc(t('wz_lk_gefuehl_canvas_hinweis'))}</p>
       <h2 class="abschnitt-titel">${esc(t('wz_lk_gefuehl_waehlen'))}</h2>
       ${gefuehlWolke(index)}
+      <p class="chip-zeile gf-werkzeugleiste"><button type="button" class="chip chip-waehlbar gf-leeren" hidden><i class="fa-solid fa-xmark" aria-hidden="true"></i> ${esc(t('wz_lk_gefuehl_leeren'))}</button></p>
       <div class="gf-ergebnis" role="status" aria-live="polite">${ergebnisPanel(null)}</div>
       <details class="gf-genre-liste"><summary class="leise">${esc(t('wz_lk_gefuehl_genre_liste'))}</summary>
         <div class="chip-zeile">${genreLegendeChips}</div></details>`;
