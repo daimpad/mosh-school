@@ -7,6 +7,7 @@
 
 import { t } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 // Reihenfolge = Erzählreihenfolge. `bereit` schaltet den Link frei.
 const WERKZEUGE = [
@@ -41,13 +42,7 @@ function karte(wz) {
 export function renderWerkzeuge(el) {
   el.innerHTML = `
     <article>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-toolbox" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('nav_werkzeuge'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_hub_untertitel'))}</p>
-        </div>
-      </section>
+      ${landingHeroHtml('fa-toolbox', t('nav_werkzeuge'), t('wz_hub_untertitel'), 'pf-teal', 'tools-hub')}
       <div class="wz-karten">${WERKZEUGE.map(karte).join('')}</div>
     </article>`;
 }
