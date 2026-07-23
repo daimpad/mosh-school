@@ -12,12 +12,12 @@
 //     im Cache und sind danach offline verfügbar.
 //
 // Alle Pfade sind RELATIV zum SW-Standort (Wurzel des Deployments), damit das
-// Skript sowohl unter „/" (lokaler Server) als auch unter „/crossminton-handbook/"
+// Skript sowohl unter „/" (lokaler Server) als auch unter „/mosh-school/"
 // (GitHub Pages) ohne <base>-Tag funktioniert. Bei inhaltlicher Änderung an
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v96';
+const CACHE = 'mosh-v97';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -26,8 +26,7 @@ const SHELL = [
   './',
   'index.html',
   'manifest.json',
-  'assets/images/speeder.svg',
-  'images/logo-speeder.svg',
+  'assets/images/logo.svg',
   'css/app.css',
   'css/feedback.css',
   'css/schriften.css',

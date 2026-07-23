@@ -79,36 +79,20 @@ export function entdeckenAktion() {
     <a class="knopf knopf-leise" href="#/suche">${esc(t('nav_suche'))}</a>`;
 }
 
-// Marken-Hero im Layout des OG-Bilds (Speeder links, Text rechts, Akzentleiste
-// unten). Groß auf Startseite + Willkommen; die obersten Landingpages nutzen die
-// kleine Variante heroKlein(icon, titel, untertitel). Alle Farben aus Tokens —
-// hell/dunkel kippen automatisch mit.
+// Marken-Hero (Logo links, Text rechts, Akzentleiste unten). Groß auf Startseite
+// + Willkommen; die Landingpages nutzen landingHeroHtml (js/genre-inszenierung.js).
+// Alle Farben aus Tokens — hell/dunkel kippen automatisch mit.
 // extra ist optionales Inline-HTML unter dem Hero-Text (Startseite: die Einstiegs-CTAs).
 // Ohne extra bleibt der Hero rein darstellend (Willkommensseite).
 export function markeHeroGross(extra = '') {
   return `
     <section class="marke-hero">
-      <img class="marke-hero-bild" src="assets/images/speeder.svg" alt="" width="96" height="96">
+      <img class="marke-hero-bild" src="assets/images/logo.svg" alt="" width="96" height="96">
       <div class="marke-hero-text">
         <h1>${esc(t('app_titel'))}</h1>
         <p class="marke-hero-untertitel">${esc(t('hero_untertitel'))}</p>
         <p class="marke-hero-themen">${esc(t('hero_themen'))}</p>
         ${extra}
-      </div>
-    </section>`;
-}
-
-// hue (z. B. 'pf-teal') färbt Icon-Medaille + eine leichte Tönung des Hero passend
-// zur Startseiten-Kachel des Pfades; meta ist optionales Inline-HTML (z. B. ein
-// Stufen-Chip) neben dem Titel. Ohne hue bleibt der Hero neutral-blau wie bisher.
-export function heroKlein(icon, titel, untertitel = '', hue = '', meta = '') {
-  const klassen = `marke-hero klein${hue ? ` hue ${hue}` : ''}`;
-  return `
-    <section class="${klassen}">
-      <span class="marke-hero-icon"><i class="fa-solid ${icon}" aria-hidden="true"></i></span>
-      <div class="marke-hero-text">
-        <h1>${esc(titel)}${meta}</h1>
-        ${untertitel ? `<p class="marke-hero-untertitel">${esc(untertitel)}</p>` : ''}
       </div>
     </section>`;
 }
