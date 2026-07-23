@@ -5,7 +5,8 @@
 // ist von der Startseite entfernt; dafür führen Regeln und Profil als Kacheln.
 
 import { label, t } from '../i18n.js';
-import { domaeneIcon, esc, markeHeroGross } from '../oberflaeche.js';
+import { domaeneIcon, esc } from '../oberflaeche.js';
+import { markeHeroInszeniert } from '../genre-inszenierung.js';
 import { INSTRUMENTE, bandAnzahl, instrumentUebersicht, stile } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar, zuletzt } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
@@ -119,7 +120,7 @@ export function renderHeim(el, daten) {
     </a>`;
 
   el.innerHTML = `
-    ${markeHeroGross(heroCta)}
+    ${markeHeroInszeniert(heroCta)}
     ${speicherIstVerfuegbar() ? '' : `<div class="banner-hinweis">${esc(t('speicher_warnung'))}</div>`}
     ${fortsetzenStreifen}
     <h2 class="abschnitt-titel">${esc(t('instrumente'))}</h2>
