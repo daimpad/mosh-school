@@ -79,7 +79,6 @@
     "pfad_umgebung": "",
     "pfad_umgebung_text": "",
     "umgebung_wetter": "",
-    "umgebung_boden": "",
     "umgebung_alle": "",
     "pfad_individual": "",
     "pfad_individual_text": "",
@@ -148,7 +147,6 @@
     "einordnung": "",
     "meta_spielziele": "",
     "meta_vermittlungsziele": "",
-    "meta_untergrund": "",
     "meta_witterung": "",
     "meta_transfer": "",
     "meta_voraussetzungen": "",
@@ -1357,13 +1355,6 @@
       "VOC": "",
       "KLV": "",
       "KLA": ""
-    },
-    "untergrund": {
-      "halle": "",
-      "sand": "",
-      "rasen": "",
-      "asche": "",
-      "kunstrasen": ""
     },
     "witterung": {
       "proberaum": "",

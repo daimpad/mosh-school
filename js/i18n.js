@@ -81,7 +81,7 @@ const LABEL_PFADE = {
 
 // Sichtbares Label zu einer sprachneutralen ID.
 // Gruppen: baustein, grafik, einheit, spielziel_*, vermittlungsziel_* oder ein Vokabularname
-// (domaene, kompetenzstufe, baustein_typ, transfer_herkunft, untergrund, witterung, abschluss_status).
+// (domaene, kompetenzstufe, baustein_typ, transfer_herkunft, witterung, abschluss_status).
 export function label(gruppe, id) {
   const bau = LABEL_PFADE[gruppe];
   return schlageNach(bau ? bau(id) : ['vokabeln', gruppe, id]);

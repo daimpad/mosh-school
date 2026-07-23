@@ -762,7 +762,7 @@ a.chip:focus-visible { outline: 2px solid var(--primaer); outline-offset: 2px; }
 }
 
 /* Füllung im Hellmodus auf --primaer-tief (#1568ad, ~5,8:1 mit Weiß) statt --primaer
-   (#38a4f1, nur 2,7:1) — WCAG-AA-Kontrast für den meistgenutzten Button. Akzent-Blau
+   WCAG-AA-Kontrast für den meistgenutzten Button. Der Akzent
    bleibt für Links/Rahmen/Icons; der Dunkelmodus kippt unten zurück auf --primaer
    (dort trägt der Button ohnehin dunkle Schrift). */
 .knopf-primaer { background: var(--primaer-tief); color: #fff; box-shadow: 0 6px 16px -6px rgba(56, 164, 241, 0.55); }
@@ -1749,7 +1749,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 /* Kopfzeile mit harter Unterkante */
 .kopf { border-bottom: 2px solid var(--linie-stark); }
 
-/* Willkommens-Hero im Dunkel: Concrete statt geerbtem Crossminton-Blau (Fork-Rest),
+/* Willkommens-Hero im Dunkel: Concrete-Schwarz,
    Blutrot nur als harte Kante — nicht als Fläche. Der weiße Hero-Text bleibt lesbar. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) .hero {
@@ -1774,7 +1774,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 /* Medaillen/Icons hart einrahmen (Stempel-Look) */
 .pfad-medaille, .marke-hero-icon, .such-medaille { border-radius: 2px; border: 1.5px solid currentColor; }
 
-/* mosh school — Medaillen-Hues (hardcore statt Crossminton-Kühl) */
+/* mosh school — Medaillen-Hues (hardcore, warm) */
 :root {
   --pf-blau: #a81a10; --pf-blau-weich: #f0dcd7;
   --pf-teal: #5f6a72; --pf-teal-weich: #e2e0d8;

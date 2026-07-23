@@ -1,10 +1,10 @@
 // Baustein-Ansicht: Erklär- und Übungsteil mit getrennter Quittierung.
-// Im Kompetenz-Kontext greift der Cross-Sport-Modifikator: bei passender
+// Im Kompetenz-Kontext greift der Instrument-Transfer-Modifikator: bei passender
 // Herkunft tritt der Delta-Erklärteil an die Stelle des Basis-Erklärteils —
 // der Übungsteil des Basisbausteins bleibt stets erhalten (Spez. 4.2, 5).
 
 import { schalteTeil } from '../aktionen.js';
-import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, untergrundVon, witterungVon } from '../daten.js';
+import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, witterungVon } from '../daten.js';
 import { label, t, text } from '../i18n.js';
 import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein, zeigeMeilensteine } from '../oberflaeche.js';
 import { pruefeMeilensteine } from '../mastery.js';
@@ -18,7 +18,7 @@ function kontextZuListe(kontext) {
   if (art === 'themen') return `#/pfad/themen/${parameter}`;
   if (art === 'stil') return `#/pfad/stil/${parameter}`;
   if (art === 'umgebung') return '#/pfad/umgebung';
-  if (art === 'witterung' || art === 'untergrund') return `#/pfad/${art}/${parameter}`;
+  if (art === 'witterung') return `#/pfad/${art}/${parameter}`;
   if (art === 'individual') return '#/pfad/individual';
   return parameter ? `#/pfad/kompetenz/${parameter}` : '#/pfad/kompetenz';
 }
@@ -169,7 +169,6 @@ function einordnungHtml(baustein, kuerzelSichtbar) {
   const spielziele = (baustein.spielziele || []).map((f) => esc(label('spielziel_faktor', f))).join(', ');
   const vermittlungsziele = (baustein.vermittlungsziele || []).map((f) => esc(label('vermittlungsziel_faktor', f))).join(', ');
   const witterung = witterungVon(baustein).map((w) => esc(label('witterung', w))).join(', ');
-  const untergrund = untergrundVon(baustein).filter((u) => u !== 'halle').map((u) => esc(label('untergrund', u))).join(', ');
   const transfer = kuerzelSichtbar
     ? (baustein.transfer_herkunft || []).map((k) => esc(label('transfer_herkunft', k))).join(', ')
     : '';
@@ -182,7 +181,6 @@ function einordnungHtml(baustein, kuerzelSichtbar) {
       <dl>
         ${zeile(t('meta_spielziele'), spielziele)}
         ${zeile(t('meta_vermittlungsziele'), vermittlungsziele)}
-        ${zeile(t('meta_untergrund'), untergrund)}
         ${zeile(t('meta_witterung'), witterung)}
         ${zeile(t('meta_transfer'), transfer)}
         ${zeile(t('meta_voraussetzungen'), voraussetzungen)}
@@ -219,10 +217,9 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
 
   // Domäne + Könnensstufe wandern in den Hero-Untertitel (s. u.); der interne
   // Typ ('micro' auf 96/102 – kein Unterscheidungsmerkmal) wird nicht mehr als
-  // Chip gezeigt. Hier bleiben nur die spezifischen Outdoor-Chips.
+  // Chip gezeigt. Hier bleiben nur die spezifischen Kontext-Chips.
   const metaChips = [
     ...witterungVon(b).map((w) => `<span class="chip">${esc(label('witterung', w))}</span>`),
-    ...untergrundVon(b).filter((u) => u !== 'halle').map((u) => `<span class="chip">${esc(label('untergrund', u))}</span>`),
   ].join(' ');
 
   // Dezente Transfer-Kennzeichnung, per Schalter ausblendbar (Spez. 3.2/6).

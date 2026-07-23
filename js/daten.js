@@ -172,14 +172,6 @@ export function domaenenVon(baustein) {
   return Array.isArray(baustein.domaene) ? baustein.domaene : [baustein.domaene];
 }
 
-// Untergrund (Modifikator-Dimension, koordinierte Erweiterung: als LISTE geführt).
-// Fehlendes Feld = Halle (Default); ein Alt-String 'halle' liest sich als ['halle'].
-export function untergrundVon(baustein) {
-  const u = baustein.untergrund;
-  if (u == null) return ['halle'];
-  return Array.isArray(u) ? u : [u];
-}
-
 // Witterung (Kontext-Facette, sonst leere Liste) — Navigationsachse.
 export function witterungVon(baustein) {
   return Array.isArray(baustein.witterung) ? baustein.witterung : [];
@@ -337,9 +329,6 @@ function pruefeDaten(daten) {
     if (new Set(kuerzel).size !== kuerzel.length) w.push(`${b.id}: Transfer-Kürzel doppelt`);
     for (const k of kuerzel) {
       if (!inVokabular(voka.transfer_herkunft, k)) w.push(`${b.id}: unbekanntes Transfer-Kürzel "${k}"`);
-    }
-    for (const grund of untergrundVon(b)) {
-      if (!inVokabular(voka.untergrund, grund)) w.push(`${b.id}: unbekannter Untergrund "${grund}"`);
     }
     for (const wetter of b.witterung || []) {
       if (!inVokabular(voka.witterung, wetter)) w.push(`${b.id}: unbekannte Witterung "${wetter}"`);

@@ -172,6 +172,7 @@ function beschrifteRahmen() {
     patterns: t('nav_patterns'),
     songs: t('nav_songs'),
     genres: t('pfad_stil'),
+    kontext: t('pfad_umgebung'),
     werkzeuge: t('nav_werkzeuge'),
     koennenscheck: t('nav_koennenscheck'),
     ueber: t('nav_ueber'),
@@ -341,7 +342,7 @@ function rendern() {
     renderStil(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'umgebung') {
     renderUmgebung(el, daten, null, null);
-  } else if (segmente[0] === 'pfad' && (segmente[1] === 'witterung' || segmente[1] === 'untergrund')) {
+  } else if (segmente[0] === 'pfad' && segmente[1] === 'witterung') {
     renderUmgebung(el, daten, segmente[1], segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'individual') {
     renderIndividual(el, daten);

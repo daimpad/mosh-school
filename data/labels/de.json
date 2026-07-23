@@ -79,7 +79,6 @@
     "pfad_umgebung": "Kontext",
     "pfad_umgebung_text": "Wo und wie du spielst: Proberaum, Bühne, Aufnahme, Solo — die Bausteine, die quer zu Stufe und Instrument in jeder Spielsituation zählen.",
     "umgebung_wetter": "Nach Situation",
-    "umgebung_boden": "Nach Boden",
     "umgebung_alle": "Alle Kontext-Bausteine",
     "pfad_individual": "Individualpfad",
     "pfad_individual_text": "Nur die Bausteine, die auf dein gewähltes Ziel einzahlen.",
@@ -148,7 +147,6 @@
     "einordnung": "Einordnung",
     "meta_spielziele": "Spielziele",
     "meta_vermittlungsziele": "Vermittlungsziele",
-    "meta_untergrund": "Untergrund",
     "meta_witterung": "Witterung",
     "meta_transfer": "Transfer-Herkunft",
     "meta_voraussetzungen": "Voraussetzungen",
@@ -1357,13 +1355,6 @@
       "VOC": "Gesang",
       "KLV": "Klavier & Keys",
       "KLA": "Klassische Ausbildung"
-    },
-    "untergrund": {
-      "halle": "Halle",
-      "sand": "Sand",
-      "rasen": "Rasen",
-      "asche": "Asche",
-      "kunstrasen": "Kunstrasen"
     },
     "witterung": {
       "proberaum": "Proberaum",
