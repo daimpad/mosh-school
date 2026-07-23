@@ -8,7 +8,7 @@
   <meta name="author" content="Damian Paderta">
   <meta name="theme-color" content="#0f151c">
   <link rel="canonical" href="https://daimpad.github.io/mosh-school/">
-  <link rel="icon" href="assets/images/speeder.svg">
+  <link rel="icon" href="assets/images/logo.svg">
   <link rel="apple-touch-icon" href="images/icon-180.png">
   <link rel="manifest" href="manifest.json">
 
@@ -108,7 +108,7 @@
   <header class="kopf">
     <div class="kopf-innen">
       <a class="marke" href="#/">
-        <img class="marke-logo" src="assets/images/speeder.svg" alt="" width="32" height="32">
+        <img class="marke-logo" src="assets/images/logo.svg" alt="" width="32" height="32">
         <span class="marke-text">mosh school</span>
       </a>
       <div class="kopf-rechts">
@@ -171,6 +171,10 @@
         <i class="fa-solid fa-fire" aria-hidden="true"></i>
         <span class="nav-text">Genres</span>
       </a>
+      <a href="#/pfad/umgebung" data-nav="kontext" class="menue-punkt">
+        <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+        <span class="nav-text">Kontext</span>
+      </a>
       <a href="#/werkzeuge" data-nav="werkzeuge" class="menue-punkt">
         <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
         <span class="nav-text">Tools</span>
@@ -180,13 +184,15 @@
         <span class="nav-text">Prüfung</span>
       </a>
       <span class="menue-trenner" role="separator"></span>
-      <div class="sprach-anzeige menue-sprache" id="sprach-anzeige">
-        <button class="sprach-knopf menue-punkt" id="sprach-knopf" aria-expanded="false" aria-controls="sprach-liste" aria-label="Sprache">
-          <i class="fa-solid fa-world" aria-hidden="true"></i>
-          <span class="nav-text" data-sprach-titel>Sprache</span>
-        </button>
-        <ul class="sprach-liste" id="sprach-liste" hidden></ul>
+      <div class="menue-thema">
+        <span class="menue-thema-titel" data-thema-titel>Darstellung</span>
+        <div class="menue-thema-optionen" role="group" aria-label="Darstellung">
+          <button type="button" class="menue-thema-knopf" data-thema="auto" aria-pressed="false">Auto</button>
+          <button type="button" class="menue-thema-knopf" data-thema="hell" aria-pressed="false">Hell</button>
+          <button type="button" class="menue-thema-knopf" data-thema="dunkel" aria-pressed="false">Dunkel</button>
+        </div>
       </div>
+      <span class="menue-trenner" role="separator"></span>
       <a href="#/ueber" data-nav="ueber" class="menue-punkt">
         <i class="fa-solid fa-compass" aria-hidden="true"></i>
         <span class="nav-text">Über</span>

@@ -8,7 +8,7 @@
 // Genre überlebt ein Neu-Rendern, aber keinen Reload.
 
 import { label, t, text } from '../i18n.js';
-import { domaeneIcon, esc } from '../oberflaeche.js';
+import { domaeneIcon, esc, registriereAufraeumen } from '../oberflaeche.js';
 import { frequenzVon } from './stimmungen.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
@@ -383,4 +383,8 @@ export function renderPatterns(el, daten, genreParam) {
       // Loop ausschalten stoppt nicht sofort — die laufende Runde spielt aus.
     });
   }
+
+  // Beim Verlassen der Seite (Router-Wechsel) Klang + Lauf stoppen — sonst
+  // spielt das Pattern im Hintergrund weiter (wie die übrigen Audio-Werkzeuge).
+  registriereAufraeumen(beende);
 }

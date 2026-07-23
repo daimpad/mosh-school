@@ -7,7 +7,7 @@
 // Stimmung und Instrument-Filter überleben ein Neu-Rendern, aber keinen Reload.
 
 import { label, t, text } from '../i18n.js';
-import { domaeneIcon, esc } from '../oberflaeche.js';
+import { domaeneIcon, esc, registriereAufraeumen } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aktivesInstrument = 'gitarre';
@@ -238,4 +238,10 @@ export function renderStimmungen(el, daten) {
       if (hinweisFeld) hinweisFeld.textContent = knopf.dataset.hinweis;
     });
   }
+
+  // Beim Verlassen den Audio-Kontext ruhen legen (Töne sind zwar einmalig, aber
+  // der Kontext soll nicht offen weiterlaufen) — wie die übrigen Audio-Ansichten.
+  registriereAufraeumen(() => {
+    if (audioKontext && audioKontext.state !== 'closed') audioKontext.suspend();
+  });
 }

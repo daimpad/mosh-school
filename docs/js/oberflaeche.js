@@ -79,36 +79,20 @@ export function entdeckenAktion() {
     <a class="knopf knopf-leise" href="#/suche">${esc(t('nav_suche'))}</a>`;
 }
 
-// Marken-Hero im Layout des OG-Bilds (Speeder links, Text rechts, Akzentleiste
-// unten). Groß auf Startseite + Willkommen; die obersten Landingpages nutzen die
-// kleine Variante heroKlein(icon, titel, untertitel). Alle Farben aus Tokens —
-// hell/dunkel kippen automatisch mit.
+// Marken-Hero (Logo links, Text rechts, Akzentleiste unten). Groß auf Startseite
+// + Willkommen; die Landingpages nutzen landingHeroHtml (js/genre-inszenierung.js).
+// Alle Farben aus Tokens — hell/dunkel kippen automatisch mit.
 // extra ist optionales Inline-HTML unter dem Hero-Text (Startseite: die Einstiegs-CTAs).
 // Ohne extra bleibt der Hero rein darstellend (Willkommensseite).
 export function markeHeroGross(extra = '') {
   return `
     <section class="marke-hero">
-      <img class="marke-hero-bild" src="assets/images/speeder.svg" alt="" width="96" height="96">
+      <img class="marke-hero-bild" src="assets/images/logo.svg" alt="" width="96" height="96">
       <div class="marke-hero-text">
         <h1>${esc(t('app_titel'))}</h1>
         <p class="marke-hero-untertitel">${esc(t('hero_untertitel'))}</p>
         <p class="marke-hero-themen">${esc(t('hero_themen'))}</p>
         ${extra}
-      </div>
-    </section>`;
-}
-
-// hue (z. B. 'pf-teal') färbt Icon-Medaille + eine leichte Tönung des Hero passend
-// zur Startseiten-Kachel des Pfades; meta ist optionales Inline-HTML (z. B. ein
-// Stufen-Chip) neben dem Titel. Ohne hue bleibt der Hero neutral-blau wie bisher.
-export function heroKlein(icon, titel, untertitel = '', hue = '', meta = '') {
-  const klassen = `marke-hero klein${hue ? ` hue ${hue}` : ''}`;
-  return `
-    <section class="${klassen}">
-      <span class="marke-hero-icon"><i class="fa-solid ${icon}" aria-hidden="true"></i></span>
-      <div class="marke-hero-text">
-        <h1>${esc(titel)}${meta}</h1>
-        ${untertitel ? `<p class="marke-hero-untertitel">${esc(untertitel)}</p>` : ''}
       </div>
     </section>`;
 }
@@ -280,130 +264,6 @@ export function wendeThemaAn(thema) {
   window.dispatchEvent(new CustomEvent('app:thema', { detail: thema }));
 }
 
-// Sichtbare Baustein-Icons (Font Awesome, immer farbig): Körper, Hand, Schläger,
-// Wege. Neue Bausteine ohne Eintrag bekommen schlicht kein Icon — kein Fehlerfall.
-const BAUSTEIN_ICONS = {
-  grundposition: 'fa-person',
-  griff: 'fa-hand',
-  aufschlag: 'fa-baseball',
-  vorhand_drive: 'fa-table-tennis-paddle-ball',
-  rueckhand: 'fa-hand-back-fist',
-  beinarbeit: 'fa-shoe-prints',
-  // Taktik
-  spielziel_verstehen: 'fa-bullseye',
-  zentrale_position: 'fa-crosshairs',
-  laenge_tiefe: 'fa-ruler-horizontal',
-  rueckhand_des_gegners: 'fa-user-slash',
-  aufschlag_taktisch: 'fa-chess',
-  fehler_vermeiden: 'fa-shield-halved',
-  // Mentales
-  warum_der_kopf_mitspielt: 'fa-brain',
-  routine_vor_dem_aufschlag: 'fa-list-check',
-  ruhig_bleiben_wenn_es_eng_wird: 'fa-wind',
-  den_fehler_abhaken: 'fa-arrow-rotate-left',
-  bei_der_sache_bleiben: 'fa-eye',
-  // Athletik / Kondition
-  warum_athletik_dein_spiel_traegt: 'fa-heart-pulse',
-  richtig_aufwaermen: 'fa-fire',
-  beweglichkeit_und_schulter: 'fa-child-reaching',
-  schnelle_fuesse: 'fa-shoe-prints',
-  durchhalten: 'fa-gauge-high',
-  erholen: 'fa-bed',
-  // Fortgeschritten-Technik
-  handgelenk_peitsche: 'fa-bolt',
-  ueberkopf_clear: 'fa-arrow-up-long',
-  smash: 'fa-hammer',
-  kurzes_spiel_stopp: 'fa-feather',
-  schnitt_spin: 'fa-arrows-spin',
-  beinarbeit_system: 'fa-shoe-prints',
-  // Fortgeschritten-Taktik
-  umschalten: 'fa-right-left',
-  punkt_aufbauen: 'fa-layer-group',
-  smash_vorbereiten: 'fa-bomb',
-  gegner_lesen_muster: 'fa-magnifying-glass',
-  doppel_grundlagen: 'fa-users',
-  engen_satz_fuehren: 'fa-flag-checkered',
-  // Fortgeschritten-Mentales
-  vom_werkzeug_zum_system: 'fa-toolbox',
-  selbstgespraech_steuern: 'fa-comment-dots',
-  sich_das_spiel_vorstellen: 'fa-film',
-  momentum_lesen_und_drehen: 'fa-water',
-  ueber_das_match_stabil_bleiben: 'fa-anchor',
-  // Fortgeschritten-Athletik / Kondition
-  gezielt_trainieren: 'fa-chart-line',
-  explosivitaet: 'fa-rocket',
-  rumpfstabilitaet: 'fa-tree',
-  intervallausdauer: 'fa-stopwatch',
-  belastung_steuern_regenerieren: 'fa-scale-balanced',
-  // Doppel-Thema (Querschnitt über Domänen, spielform:doppel)
-  doppel_als_eigenes_spiel: 'fa-people-group',
-  angriff_im_paar: 'fa-hand-fist',
-  verteidigung_im_paar: 'fa-shield',
-  bewegung_als_einheit: 'fa-people-arrows',
-  verstaendigung_im_paar: 'fa-comments',
-  aufschlag_rueckschlag_doppel: 'fa-repeat',
-  das_umschalten_im_doppel: 'fa-rotate',
-  // Experte-Technik (Feinschliff, Täuschung) — herkunftsneutral
-  taeuschung: 'fa-chess',
-  frueh_nehmen: 'fa-bolt',
-  tempo_rhythmus_wechsel: 'fa-gauge-high',
-  sprung_smash: 'fa-hammer',
-  praezision_an_die_linien: 'fa-crosshairs',
-  konstanz_unter_hoechstdruck: 'fa-anchor',
-  // Experte-Taktik (Matchstrategie, Scouting) — herkunftsneutral
-  der_matchplan: 'fa-list-check',
-  gegner_typen_gegenrezepte: 'fa-magnifying-glass',
-  dem_gegner_aufzwingen: 'fa-hand-fist',
-  schwaeche_systematisch_angreifen: 'fa-bullseye',
-  matchverlauf_steuern: 'fa-water',
-  entscheidender_punkt: 'fa-flag-checkered',
-  // Trainer-Trainingsgestaltung (Vermittlung, Trainer-Ebene)
-  was_gutes_vermitteln_ausmacht: 'fa-lightbulb',
-  inhalt_zugaenglich_machen: 'fa-feather',
-  fehler_erkennen_korrigieren: 'fa-stethoscope',
-  uebungen_aufbauen: 'fa-layer-group',
-  gruppe_fuehren: 'fa-users',
-  // Doppel-Beginner (spielform:doppel, erstes Zusammenspiel)
-  erste_schritte_doppel: 'fa-handshake',
-  wer_nimmt_den_ball: 'fa-hand',
-  aufschlag_im_doppel_einfach: 'fa-baseball',
-  sich_absprechen: 'fa-comments',
-  einander_platz_lassen: 'fa-people-arrows',
-  // Doppel-Experte (Paar als System)
-  paar_als_system: 'fa-people-group',
-  gegnerisches_paar_lesen: 'fa-magnifying-glass',
-  partner_in_position_bringen: 'fa-compass',
-  nahtlos_umschalten: 'fa-right-left',
-  blindes_verstaendnis: 'fa-link',
-  // Experte-Mentales (Wettkampfzustand, Flow, Druck) — herkunftsneutral
-  optimaler_wettkampfzustand: 'fa-star',
-  in_den_flow_finden: 'fa-infinity',
-  druck_als_herausforderung: 'fa-mountain',
-  gelassen_bei_unfairness: 'fa-scale-balanced',
-  mentale_staerke_entwickeln: 'fa-seedling',
-  // Experte-Athletik / Kondition (Formaufbau, Reaktivkraft) — herkunftsneutral
-  form_ueber_die_saison: 'fa-chart-line',
-  reaktivkraft_bodenkontakt: 'fa-bolt',
-  bewegungsoekonomie: 'fa-feather',
-  antizipative_schnelligkeit: 'fa-forward',
-  langfristig_belastbar: 'fa-heart-pulse',
-  // Outdoor / Umgebung (umgebungs_baustein)
-  draussen_spielen: 'fa-tree',
-  wind_lesen_nutzen: 'fa-wind',
-  sonne_blendung: 'fa-sun',
-  naesse_sicherer_stand: 'fa-water',
-  hitze: 'fa-fire',
-  verschiedene_boeden: 'fa-layer-group',
-  // Ausrüstung (eigene Domäne) — bestehende Glyphen (FA-Subset), keine neuen Codepoints
-  deine_ausruestung: 'fa-toolbox',
-  der_speeder: 'fa-baseball',
-  der_schlaeger: 'fa-table-tennis-paddle-ball',
-  schuhe_finden: 'fa-shoe-prints',
-  funktionskleidung: 'fa-layer-group',
-  die_bespannung: 'fa-gauge-high',
-  griff_und_griffband: 'fa-hand',
-};
-
 // Abstrakte Baustein-Grafiken (data/grafiken.json, generiert via
 // scripts/build_grafiken.py): Registry wird beim Boot gesetzt. Die SVGs nutzen
 // currentColor und wirken deshalb NUR inline — nie als <img src> einbinden.
@@ -428,8 +288,9 @@ export function lehrgrafik(bausteinId) {
 export function bausteinIcon(bausteinId, klasse = '') {
   const grafik = GRAFIKEN[bausteinId];
   if (grafik) return grafik.replace('<svg ', `<svg class="grafik-icon ${klasse}" `);
-  const icon = BAUSTEIN_ICONS[bausteinId];
-  return icon ? `<i class="fa-solid ${icon} ${klasse}" aria-hidden="true"></i>` : '';
+  // Kein generiertes Motiv (z. B. noch unbebilderter Baustein): schlicht kein
+  // Icon — kein Fehlerfall.
+  return '';
 }
 
 // Instrument-Icons als Inline-SVG (die FA-Subset-Schrift kennt kein Gitarre/Drum/
