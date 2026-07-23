@@ -192,6 +192,26 @@ export function landingHeroHtml(icon, titel, untertitel = '', hue = 'pf-blau', m
     </section>`;
 }
 
+// Inszenierter Startseiten-Hero: gleiche Motiv-Backdrop- + Reinbox-Inszenierung
+// wie die Landingpages, aber mit Marken-Logo, Titel, Untertitel, Themenzeile und
+// den Einstiegs-CTAs (extra). Blutrote Marken-Hue. Ersetzt den flachen
+// markeHeroGross auf der Startseite; auf Mobil stapelt der Inhalt sauber über dem
+// Motiv statt Logo+Text gedrängt nebeneinander.
+export function markeHeroInszeniert(extra = '') {
+  return `
+    <section class="marke-hero genre-landing-hero landing-hero startseite-hero pf-magenta">
+      ${motivSvg('mosh-startseite')}
+      <div class="genre-landing-scrim" aria-hidden="true"></div>
+      <div class="genre-landing-inhalt">
+        <img class="startseite-hero-mark" src="assets/images/logo.svg" alt="" width="52" height="52">
+        <h1>${esc(t('app_titel'))}</h1>
+        <p class="genre-landing-kurz">${esc(t('hero_untertitel'))}</p>
+        <p class="startseite-hero-themen">${esc(t('hero_themen'))}</p>
+        ${extra}
+      </div>
+    </section>`;
+}
+
 // Abstraktes Platzhalter-„Bild" für den Genre-Hub-Hero: ein monochromes
 // Klang-Spektrum (Balken unterschiedlicher Höhe) mit Wellenlinie darüber.
 // Deterministisch, currentColor, wirkt nur inline.
