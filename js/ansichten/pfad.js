@@ -296,7 +296,7 @@ export function renderInstrument(el, daten, domaene) {
       )
       .join('');
     el.innerHTML = `
-      ${landingHeroHtml('fa-guitar', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
+      ${landingHeroHtml('fa-bolt', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
       <div class="pfad-gitter instr-picker">${karten}</div>`;
     return;
   }

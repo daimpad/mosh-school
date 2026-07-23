@@ -171,6 +171,7 @@ function beschrifteRahmen() {
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
     songs: t('nav_songs'),
+    genres: t('pfad_stil'),
     werkzeuge: t('nav_werkzeuge'),
     koennenscheck: t('nav_koennenscheck'),
     ueber: t('nav_ueber'),
