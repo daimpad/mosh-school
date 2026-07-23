@@ -5,7 +5,8 @@
 
 import { aktiviereFeedback, feedbackAktiv } from '../feedback.js';
 import { t, text } from '../i18n.js';
-import { esc, externesZiel, heroKlein } from '../oberflaeche.js';
+import { esc, externesZiel } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 function istPlatzhalter(wert) {
   return typeof wert === 'string' && wert.trim().startsWith('[');
@@ -44,7 +45,7 @@ export function renderUeber(el, daten) {
   const absaetze = (u.absaetze || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
   const links = (u.links || []).map((l) => `<p class="info-cta">${externerLink(l.ziel, text(l.label) ?? '', 'knopf knopf-sekundaer')}</p>`).join('');
   el.innerHTML = `
-    ${heroKlein('fa-compass', text(u.titel) ?? t('nav_ueber'), '', 'pf-blau')}
+    ${landingHeroHtml('fa-compass', text(u.titel) ?? t('nav_ueber'), '', 'pf-blau')}
     ${absaetze ? `<section class="karte">${absaetze}</section>` : ''}
     ${abschnittHtml(u.danksagungen)}
     ${abschnittHtml(u.credits_lizenz)}
@@ -102,7 +103,7 @@ export function renderMitmachen(el, daten) {
     : '';
 
   el.innerHTML = `
-    ${heroKlein('fa-comments', text(m.titel) ?? t('nav_mitmachen'), '', 'pf-blau')}
+    ${landingHeroHtml('fa-comments', text(m.titel) ?? t('nav_mitmachen'), '', 'pf-blau')}
     ${einleitung}
     ${karten}
     ${feedbackKarte}`;

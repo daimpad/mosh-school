@@ -7,7 +7,8 @@
 import { einheitReferenzen } from '../daten.js';
 import { projektion } from '../fortschritt.js';
 import { label, t, text } from '../i18n.js';
-import { bausteinIcon, entdeckenAktion, esc, heroKlein, leerHtml, neuRendern } from '../oberflaeche.js';
+import { bausteinIcon, entdeckenAktion, esc, leerHtml, neuRendern } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 import { kompetenzpfad, trainingsuebersicht } from '../pfade.js';
 import { kontinuitaet, registriereEinheitAbschluss, setzeTeilStatus, teilStatus } from '../zustand.js';
 import { uebungsteilHtml } from './baustein.js';
@@ -59,7 +60,7 @@ function renderListe(el, daten) {
     })
     .join('');
   el.innerHTML = `
-    ${heroKlein('fa-list-check', t('pfad_training'), t('pfad_training_text'), 'pf-indigo')}
+    ${landingHeroHtml('fa-list-check', t('pfad_training'), t('pfad_training_text'), 'pf-indigo')}
     <a class="karte karte-link karte-akzent" href="#/plan">
       <h3><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> ${esc(t('plan_titel'))}</h3>
       <p class="leise">${esc(t('plan_kachel_text'))}</p>
