@@ -1,0 +1,217 @@
+{
+  "genre": "Dark Post-Punk / Deathrock",
+  "anzahl": 30,
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks. Reiner Song-Pool ohne stil-Wert — dient der Inspiration, nicht als Lernzweig. Hass-/extremismusfrei kuratiert.",
+  "songs": [
+    {
+      "kuenstler": "Joy Division",
+      "titel": "Isolation",
+      "substil_vermerk": "kalter Grundstein (UK)",
+      "url": "https://www.youtube.com/results?search_query=Joy+Division+Isolation",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Bauhaus",
+      "titel": "Bela Lugosi's Dead",
+      "substil_vermerk": "Goth-Ursprung (UK)",
+      "url": "https://www.youtube.com/results?search_query=Bauhaus+Bela+Lugosi%27s+Dead",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Killing Joke",
+      "titel": "Requiem",
+      "substil_vermerk": "treibend, martialisch (UK)",
+      "url": "https://bandcamp.com/search?q=Killing+Joke+Requiem&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Cure",
+      "titel": "One Hundred Years",
+      "substil_vermerk": "duesterste Phase (UK)",
+      "url": "https://www.youtube.com/results?search_query=The+Cure+One+Hundred+Years",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Siouxsie and the Banshees",
+      "titel": "Spellbound",
+      "substil_vermerk": "kantig, tomlastig (UK)",
+      "url": "https://www.youtube.com/results?search_query=Siouxsie+and+the+Banshees+Spellbound",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "The Sisters of Mercy",
+      "titel": "Marian",
+      "substil_vermerk": "Goth-Rock mit Drum-Machine (UK)",
+      "url": "https://www.youtube.com/results?search_query=The+Sisters+of+Mercy+Marian",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Fields of the Nephilim",
+      "titel": "Moonchild",
+      "substil_vermerk": "episch-staubig (UK)",
+      "url": "https://www.youtube.com/results?search_query=Fields+of+the+Nephilim+Moonchild",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Christian Death",
+      "titel": "Romeo's Distress",
+      "substil_vermerk": "US-Deathrock-Grundstein",
+      "url": "https://bandcamp.com/search?q=Christian+Death+Romeo%27s+Distress&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "45 Grave",
+      "titel": "Party Time",
+      "substil_vermerk": "Deathrock/Horrorpunk (US)",
+      "url": "https://bandcamp.com/search?q=45+Grave+Party+Time&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Rudimentary Peni",
+      "titel": "Blissful Myth",
+      "substil_vermerk": "anarcho-punk trifft Deathrock (UK)",
+      "url": "https://bandcamp.com/search?q=Rudimentary+Peni+Blissful+Myth&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Virgin Prunes",
+      "titel": "Baby Turns Blue",
+      "substil_vermerk": "theatralisch-verstoerend (Irland)",
+      "url": "https://www.youtube.com/results?search_query=Virgin+Prunes+Baby+Turns+Blue",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Red Lorry Yellow Lorry",
+      "titel": "Hollow Eyes",
+      "substil_vermerk": "monoton-treibend (UK)",
+      "url": "https://www.youtube.com/results?search_query=Red+Lorry+Yellow+Lorry+Hollow+Eyes",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Southern Death Cult",
+      "titel": "Fatman",
+      "substil_vermerk": "tribal-lastig (UK)",
+      "url": "https://www.youtube.com/results?search_query=Southern+Death+Cult+Fatman",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Crisis",
+      "titel": "Holocaust",
+      "substil_vermerk": "politischer Post-Punk (UK)",
+      "url": "https://www.youtube.com/results?search_query=Crisis+Holocaust",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "The Chameleons",
+      "titel": "Second Skin",
+      "substil_vermerk": "weit, hallgetraenkt (UK)",
+      "url": "https://www.youtube.com/results?search_query=The+Chameleons+Second+Skin",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Clan of Xymox",
+      "titel": "A Day",
+      "substil_vermerk": "Coldwave/Darkwave (NL)",
+      "url": "https://bandcamp.com/search?q=Clan+of+Xymox+A+Day&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Xmal Deutschland",
+      "titel": "Incubus Succubus",
+      "substil_vermerk": "deutscher Dark Wave",
+      "url": "https://www.youtube.com/results?search_query=Xmal+Deutschland+Incubus+Succubus",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Asylum Party",
+      "titel": "Julia",
+      "substil_vermerk": "franzoesischer Coldwave",
+      "url": "https://bandcamp.com/search?q=Asylum+Party+Julia&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Lebanon Hanover",
+      "titel": "Gallowdance",
+      "substil_vermerk": "moderner Minimal-Darkwave (UK/DE)",
+      "url": "https://bandcamp.com/search?q=Lebanon+Hanover+Gallowdance&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Drab Majesty",
+      "titel": "The Demon",
+      "substil_vermerk": "moderner Darkwave (US)",
+      "url": "https://bandcamp.com/search?q=Drab+Majesty+The+Demon&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "She Past Away",
+      "titel": "Rituel",
+      "substil_vermerk": "tuerkischer Darkwave",
+      "url": "https://bandcamp.com/search?q=She+Past+Away+Rituel&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Molchat Doma",
+      "titel": "Sudno",
+      "substil_vermerk": "belarussischer Post-Punk",
+      "url": "https://bandcamp.com/search?q=Molchat+Doma+Sudno&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Twin Tribes",
+      "titel": "Fantasmas",
+      "substil_vermerk": "moderner Deathrock (US)",
+      "url": "https://bandcamp.com/search?q=Twin+Tribes+Fantasmas&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ritual Howls",
+      "titel": "Nervous Hands",
+      "substil_vermerk": "Industrial-Post-Punk (US)",
+      "url": "https://bandcamp.com/search?q=Ritual+Howls+Nervous+Hands&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cold Cave",
+      "titel": "Confetti",
+      "substil_vermerk": "Synth-Darkwave (US)",
+      "url": "https://bandcamp.com/search?q=Cold+Cave+Confetti&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Boy Harsher",
+      "titel": "Pain",
+      "substil_vermerk": "Electronic-Darkwave (US)",
+      "url": "https://bandcamp.com/search?q=Boy+Harsher+Pain&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "A Place to Bury Strangers",
+      "titel": "Deadbeat",
+      "substil_vermerk": "Noise-Post-Punk (US)",
+      "url": "https://bandcamp.com/search?q=A+Place+to+Bury+Strangers+Deadbeat&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Preoccupations",
+      "titel": "Anxiety",
+      "substil_vermerk": "kantiger moderner Post-Punk (Kanada)",
+      "url": "https://bandcamp.com/search?q=Preoccupations+Anxiety&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Rendez-Vous",
+      "titel": "Distance",
+      "substil_vermerk": "franzoesischer Post-Punk",
+      "url": "https://bandcamp.com/search?q=Rendez-Vous+Distance&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Grave Pleasures",
+      "titel": "Infatuation Overkill",
+      "substil_vermerk": "Deathrock mit Punk-Drive (Finnland)",
+      "url": "https://bandcamp.com/search?q=Grave+Pleasures+Infatuation+Overkill&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

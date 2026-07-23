@@ -1,0 +1,379 @@
+{
+  "titel": "Experimente",
+  "hinweis": "Kurze Impulse zum Ausprobieren. Kein Ergebnisdruck: die meisten Versuche fuehren zu nichts Brauchbarem, und genau das ist eingeplant. Bei allem, was laut wird, gilt der Gehoerschutz; bei Stimm-Experimenten die ueblichen Grenzen (leise, kurz, muehelos).",
+  "kategorien": [
+    "Aufnahme",
+    "Beschränkung",
+    "Klang & Ton",
+    "Struktur & Form",
+    "Technik verfremden",
+    "Wahrnehmung",
+    "Zufall & Serendipität",
+    "Zusammenspiel"
+  ],
+  "anzahl": 48,
+  "experimente": [
+    {
+      "id": "exp_001",
+      "kategorie": "Klang & Ton",
+      "titel": "Zerre aus der Hand",
+      "impuls": "Stell den Amp clean und hol die Verzerrung nur aus dem Anschlag. Wie viel Dynamik hattest du vorher verschenkt?",
+      "aufwand": "kurz",
+      "bezug": "amp_grundlagen"
+    },
+    {
+      "id": "exp_002",
+      "kategorie": "Klang & Ton",
+      "titel": "Eine Oktave höher",
+      "impuls": "Spiel dein tiefstes Riff eine Oktave höher statt tiefer. Oft wird es dadurch bedrohlicher, nicht harmloser.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_003",
+      "kategorie": "Klang & Ton",
+      "titel": "Kette umdrehen",
+      "impuls": "Setz ein zeitbasiertes Pedal vor die Verzerrung statt dahinter. Der Matsch, der entsteht, ist manchmal genau der Klang.",
+      "aufwand": "kurz",
+      "werkzeug": "pedalboard",
+      "bezug": "pedalboard_grundlagen"
+    },
+    {
+      "id": "exp_004",
+      "kategorie": "Klang & Ton",
+      "titel": "Nur das Volume-Poti",
+      "impuls": "Regel eine ganze Session ausschließlich am Instrument, nie am Amp.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_005",
+      "kategorie": "Klang & Ton",
+      "titel": "Halstonabnehmer für Rhythmus",
+      "impuls": "Spiel ein Rhythmus-Riff nur auf dem Hals-Tonabnehmer.",
+      "aufwand": "kurz",
+      "bezug": "tonabnehmer_typen"
+    },
+    {
+      "id": "exp_006",
+      "kategorie": "Klang & Ton",
+      "titel": "Anschlag wechseln",
+      "impuls": "Bass: eine Session lang mit Plektrum statt Fingern — oder umgekehrt.",
+      "aufwand": "kurz",
+      "bezug": "anschlagpunkt_ton"
+    },
+    {
+      "id": "exp_007",
+      "kategorie": "Technik verfremden",
+      "titel": "Palm Mute ohne Zerre",
+      "impuls": "Spiel dein Chug-Riff komplett clean, palm-muted. Was bleibt vom Groove übrig?",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_008",
+      "kategorie": "Technik verfremden",
+      "titel": "Tremolo im Doom",
+      "impuls": "Leg Tremolo-Picking über ein sehr langsames, schweres Riff.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_009",
+      "kategorie": "Technik verfremden",
+      "titel": "Blast unter Langsamkeit",
+      "impuls": "Drums: Blast-Beat unter einem schleppenden Riff.",
+      "aufwand": "mittel",
+      "werkzeug": "play_along"
+    },
+    {
+      "id": "exp_010",
+      "kategorie": "Technik verfremden",
+      "titel": "Mitten im Takt wechseln",
+      "impuls": "Beginn ein Riff im Downpicking und kipp mitten im Takt in Wechselschlag.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_011",
+      "kategorie": "Technik verfremden",
+      "titel": "Nur leere Saiten",
+      "impuls": "Bau ein Riff ausschließlich aus leeren Saiten und Dynamik.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_012",
+      "kategorie": "Technik verfremden",
+      "titel": "Ghost Notes einschmuggeln",
+      "impuls": "Bau tote Zwischenanschläge in ein Metal-Riff ein, wie im Funk.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_013",
+      "kategorie": "Struktur & Form",
+      "titel": "Song ohne Refrain",
+      "impuls": "Schreib ein Stück, das nie zu einer Stelle zurückkehrt.",
+      "aufwand": "lang",
+      "werkzeug": "song_struktur",
+      "bezug": "song_arrangieren_ganz"
+    },
+    {
+      "id": "exp_014",
+      "kategorie": "Struktur & Form",
+      "titel": "Breakdown zuerst",
+      "impuls": "Setz den schwersten Teil an den Anfang statt ans Ende.",
+      "aufwand": "mittel",
+      "werkzeug": "song_struktur"
+    },
+    {
+      "id": "exp_015",
+      "kategorie": "Struktur & Form",
+      "titel": "Ein Riff, ganzes Stück",
+      "impuls": "Bau ein Stück aus einem einzigen Riff — nur Dynamik und Instrumentierung ändern sich.",
+      "aufwand": "lang"
+    },
+    {
+      "id": "exp_016",
+      "kategorie": "Struktur & Form",
+      "titel": "Takt klauen",
+      "impuls": "Lass in einem Riff eine Zählzeit weg, sodass 4/4 zu 7/8 wird.",
+      "aufwand": "mittel",
+      "bezug": "mathcore_taktwechsel"
+    },
+    {
+      "id": "exp_017",
+      "kategorie": "Struktur & Form",
+      "titel": "Intro als Outro",
+      "impuls": "Nimm dein Intro und spiel es am Schluss halb so schnell.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_018",
+      "kategorie": "Struktur & Form",
+      "titel": "Zwei Parts übereinander",
+      "impuls": "Leg zwei Parts, die du nacheinander gespielt hast, gleichzeitig übereinander.",
+      "aufwand": "mittel",
+      "werkzeug": "skizzen_recorder"
+    },
+    {
+      "id": "exp_019",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Genres würfeln",
+      "impuls": "Zieh zwei Genres im Generator und schreib acht Takte daraus.",
+      "aufwand": "mittel",
+      "werkzeug": "genre_mix",
+      "bezug": "zwei_genres_ein_riff"
+    },
+    {
+      "id": "exp_020",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Rückwärts",
+      "impuls": "Spiel ein eigenes Riff Ton für Ton rückwärts.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_021",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Fremdes Tempo",
+      "impuls": "Stell das Metronom auf eine willkürliche Zahl und schreib dazu, statt das Tempo zu wählen.",
+      "aufwand": "kurz",
+      "werkzeug": "klick"
+    },
+    {
+      "id": "exp_022",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Aus dem Archiv",
+      "impuls": "Nimm eine Idee, die du verworfen hast, und bau heute weiter daran.",
+      "aufwand": "mittel",
+      "werkzeug": "riff_recorder"
+    },
+    {
+      "id": "exp_023",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Erste Idee behalten",
+      "impuls": "Was du als Erstes spielst, bleibt — bau zwanzig Minuten darauf auf, egal wie es klingt.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_024",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Bild oder Wort",
+      "impuls": "Wähl ein Wort oder Bild und übersetz es in ein Riff, ohne zu erklären wie.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_025",
+      "kategorie": "Beschränkung",
+      "titel": "Zwei Saiten",
+      "impuls": "Eine ganze Session nur auf zwei Saiten.",
+      "aufwand": "kurz",
+      "bezug": "beschraenkung_als_werkzeug"
+    },
+    {
+      "id": "exp_026",
+      "kategorie": "Beschränkung",
+      "titel": "Drei Töne",
+      "impuls": "Bau ein vollständiges Riff aus genau drei verschiedenen Tönen.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_027",
+      "kategorie": "Beschränkung",
+      "titel": "Eine Hand",
+      "impuls": "Nur Legato oder Tapping — die Anschlaghand bleibt weg.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_028",
+      "kategorie": "Beschränkung",
+      "titel": "Kein Verzerrer",
+      "impuls": "Schreib einen schweren Part vollständig clean.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_029",
+      "kategorie": "Beschränkung",
+      "titel": "Zehn Minuten",
+      "impuls": "Timer stellen: In zehn Minuten steht ein Riff, fertig oder nicht.",
+      "aufwand": "kurz",
+      "werkzeug": "klick"
+    },
+    {
+      "id": "exp_030",
+      "kategorie": "Beschränkung",
+      "titel": "Ein Becken",
+      "impuls": "Drums: eine Session mit nur einem Becken am Kit.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_031",
+      "kategorie": "Aufnahme",
+      "titel": "Halbe Geschwindigkeit",
+      "impuls": "Nimm ein Riff auf und hör es halb so schnell. Details treten hervor, die du nicht gespielt zu haben glaubtest.",
+      "aufwand": "kurz",
+      "werkzeug": "riff_recorder"
+    },
+    {
+      "id": "exp_032",
+      "kategorie": "Aufnahme",
+      "titel": "Doppeln und verstimmen",
+      "impuls": "Nimm dieselbe Spur zweimal auf und verstimm eine minimal.",
+      "aufwand": "mittel",
+      "werkzeug": "skizzen_recorder"
+    },
+    {
+      "id": "exp_033",
+      "kategorie": "Aufnahme",
+      "titel": "Ein Take, kein Schnitt",
+      "impuls": "Eine Spur, ein Durchgang, keine Korrektur — auch wenn es patzt.",
+      "aufwand": "kurz",
+      "werkzeug": "riff_recorder"
+    },
+    {
+      "id": "exp_034",
+      "kategorie": "Aufnahme",
+      "titel": "Raum statt DI",
+      "impuls": "Nimm mit einem Mikrofon im Raum auf statt direkt. Der Raum ist ein Instrument.",
+      "aufwand": "mittel",
+      "bezug": "signal_aufnehmen"
+    },
+    {
+      "id": "exp_035",
+      "kategorie": "Aufnahme",
+      "titel": "Drums programmieren",
+      "impuls": "Programmier den Schlagzeugpart, statt ihn zu spielen — du schreibst anders.",
+      "aufwand": "mittel",
+      "bezug": "drums_aufnehmen_diy"
+    },
+    {
+      "id": "exp_036",
+      "kategorie": "Aufnahme",
+      "titel": "Rückwärts hören",
+      "impuls": "Spiel eine Aufnahme rückwärts ab und leite daraus ein neues Riff ab.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_037",
+      "kategorie": "Zusammenspiel",
+      "titel": "Instrumente tauschen",
+      "impuls": "Eine Probe lang spielt jeder das Instrument eines anderen.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_038",
+      "kategorie": "Zusammenspiel",
+      "titel": "Fremdes Riff",
+      "impuls": "Der Bass schreibt das Gitarrenriff, die Gitarre die Basslinie.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_039",
+      "kategorie": "Zusammenspiel",
+      "titel": "Blind jammen",
+      "impuls": "Fünf Minuten ohne jede Absprache spielen, mitschneiden, danach gemeinsam anhören.",
+      "aufwand": "mittel",
+      "werkzeug": "skizzen_recorder"
+    },
+    {
+      "id": "exp_040",
+      "kategorie": "Zusammenspiel",
+      "titel": "Einer führt",
+      "impuls": "Eine Person spielt, alle anderen dürfen nur reagieren.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_041",
+      "kategorie": "Zusammenspiel",
+      "titel": "Getrennt proben",
+      "impuls": "Ein Durchgang ohne Gesang, danach der Gesang ohne Instrumente.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_042",
+      "kategorie": "Zusammenspiel",
+      "titel": "Drums geben vor",
+      "impuls": "Der Drummer bestimmt Taktart und Feel, der Rest muss folgen.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_043",
+      "kategorie": "Wahrnehmung",
+      "titel": "Nur den Bass hören",
+      "impuls": "Hör einen Lieblingssong und achte ausschließlich auf den Bass.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_044",
+      "kategorie": "Wahrnehmung",
+      "titel": "Ohne Tabs",
+      "impuls": "Transkribier ein kurzes Riff allein nach Gehör.",
+      "aufwand": "mittel",
+      "bezug": "gehoer_transkription"
+    },
+    {
+      "id": "exp_045",
+      "kategorie": "Wahrnehmung",
+      "titel": "Aus dem ungeliebten Genre",
+      "impuls": "Hör ein Genre, das du nicht magst, und klau genau ein Element.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_046",
+      "kategorie": "Wahrnehmung",
+      "titel": "Ohne Gitarre",
+      "impuls": "Hör Musik ganz ohne Gitarren und übernimm einen Rhythmus daraus.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_047",
+      "kategorie": "Wahrnehmung",
+      "titel": "Gefühlsverlauf notieren",
+      "impuls": "Hör ein Stück mit geschlossenen Augen und notier, wo die Stimmung kippt.",
+      "aufwand": "kurz",
+      "werkzeug": "gefuehlslandkarte",
+      "bezug": "gefuehl_vor_genre"
+    },
+    {
+      "id": "exp_048",
+      "kategorie": "Wahrnehmung",
+      "titel": "Halbtempo hören",
+      "impuls": "Hör deinen Lieblingssong auf halber Geschwindigkeit. Was hörst du zum ersten Mal?",
+      "aufwand": "kurz"
+    }
+  ]
+}
