@@ -1,4 +1,4 @@
-/* Crossminton-Handbuch — Hauptfarbe #38a4f1 (Akzent), Rubik (lokal).
+/* mosh school — Blutrot als Akzent, Rubik (lokal).
    Hell & Dunkel über umgeschaltete Tokens (System oder Profil-Umschalter);
    Container-Radius 14px, weiche mehrlagige Elevation, moderne Übergänge.
    Untere Leiste nur mobil; ab 768px Hamburger-Menü oben rechts. */
@@ -7,16 +7,18 @@
    Ampellogik: Rot = offen, Gelb = teilweise/Hinweis, Grün = erledigt. */
 :root {
   color-scheme: light;
-  /* Marke (CI): Hauptfarbe #38a4f1 + Ampel-Signalfarben (unverändert verbindlich). */
-  --primaer: #38a4f1;
-  --primaer-dunkel: #1e8bd6;
-  --primaer-tief: #1568ad;
-  --primaer-weich: #e8f3fe;
+  /* Marke (CI): Blutrot als Akzent + Ampel-Signalfarben. Die „grungy hardcore
+     skin" weiter unten überschreibt diese Basistokens pro Theme; sie sind hier
+     nur der rote Fallback. */
+  --primaer: #cc2418;
+  --primaer-dunkel: #a81a10;
+  --primaer-tief: #a81a10;
+  --primaer-weich: #f3ded9;
   /* Kompetenzstufen-Rampe (Blau-Intensität, Einsteiger→Experte). KEINE Ampelfarben —
      Rot/Gelb/Grün bleiben dem Status vorbehalten; die Stufe kodiert nur Intensität. */
-  --stufe-1-flaeche: #e8f3fe; --stufe-1-text: #1568ad;
-  --stufe-2-flaeche: #bfe1fb; --stufe-2-text: #0f4f86;
-  --stufe-3-flaeche: #1568ad; --stufe-3-text: #ffffff;
+  --stufe-1-flaeche: #e4e0d6; --stufe-1-text: #6b655b;
+  --stufe-2-flaeche: #c9c4b8; --stufe-2-text: #3d3931;
+  --stufe-3-flaeche: #4a453d; --stufe-3-text: #ece8df;
   /* Pfad-Kachel-Hues (kühle, markennahe Palette; bewusst KEINE Ampelfarben). */
   --pf-blau: #1568ad; --pf-blau-weich: #e8f3fe;
   --pf-teal: #0e8a86; --pf-teal-weich: #d7f1ef;
@@ -67,13 +69,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) {
     color-scheme: dark;
-    --primaer: #4fb0f4;
-    --primaer-dunkel: #6bbdf6;
-    --primaer-tief: #9acdf8;
-    --primaer-weich: #143247;
-    --stufe-1-flaeche: #143247; --stufe-1-text: #9acdf8;
-    --stufe-2-flaeche: #1d4a6b; --stufe-2-text: #cbe6fb;
-    --stufe-3-flaeche: #4fb0f4; --stufe-3-text: #08243b;
+    --primaer: #ff3b2e;
+    --primaer-dunkel: #ff5b50;
+    --primaer-tief: #ff3b2e;
+    --primaer-weich: #2c1310;
+    --stufe-1-flaeche: #23231f; --stufe-1-text: #a4a099;
+    --stufe-2-flaeche: #3a3a34; --stufe-2-text: #cbc7bd;
+    --stufe-3-flaeche: #86827a; --stufe-3-text: #0b0b0c;
     --pf-blau: #6fb8f0; --pf-blau-weich: #152c40;
     --pf-teal: #48c2ba; --pf-teal-weich: #0f2b2a;
     --pf-violett: #a98cf0; --pf-violett-weich: #221b3a;
@@ -102,13 +104,13 @@
 }
 :root[data-theme='dunkel'] {
   color-scheme: dark;
-  --primaer: #4fb0f4;
-  --primaer-dunkel: #6bbdf6;
-  --primaer-tief: #9acdf8;
-  --primaer-weich: #143247;
-  --stufe-1-flaeche: #143247; --stufe-1-text: #9acdf8;
-  --stufe-2-flaeche: #1d4a6b; --stufe-2-text: #cbe6fb;
-  --stufe-3-flaeche: #4fb0f4; --stufe-3-text: #08243b;
+  --primaer: #ff3b2e;
+  --primaer-dunkel: #ff5b50;
+  --primaer-tief: #ff3b2e;
+  --primaer-weich: #2c1310;
+  --stufe-1-flaeche: #23231f; --stufe-1-text: #a4a099;
+  --stufe-2-flaeche: #3a3a34; --stufe-2-text: #cbc7bd;
+  --stufe-3-flaeche: #86827a; --stufe-3-text: #0b0b0c;
   --pf-blau: #6fb8f0; --pf-blau-weich: #152c40;
   --pf-teal: #48c2ba; --pf-teal-weich: #0f2b2a;
   --pf-violett: #a98cf0; --pf-violett-weich: #221b3a;
@@ -337,67 +339,6 @@ body.im-onboarding main { padding-bottom: 2rem; }
 @media (hover: hover) {
   .kopf-suche:hover { background: var(--primaer-weich); box-shadow: var(--schatten-hover); transform: translateY(-1px); }
 }
-
-/* Sprachanzeige — rein darstellend (app-info funktion_aktiv:false): Flagge +
-   Kürzel neben dem Hamburger; die Liste klappt auf, schaltet aber nichts um. */
-.sprach-anzeige { position: relative; }
-/* Sprach-Umschalter lebt jetzt im Hamburger-Menü (als Menü-Zeile). */
-.menue-sprache .sprach-knopf {
-  width: 100%; border: none; background: transparent; border-radius: 0;
-  justify-content: flex-start; font-weight: 500; min-height: 0;
-}
-.menue-sprache .sprach-liste {
-  position: static; min-width: 0; margin: 0.15rem 0 0; padding: 0.2rem 0 0;
-  border: none; background: transparent; box-shadow: none;
-}
-
-.sprach-knopf {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  min-height: 40px;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid var(--linie);
-  border-radius: var(--radius);
-  background: var(--flaeche);
-  color: var(--tinte);
-  font: inherit;
-  font-weight: 600;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background var(--uebergang), box-shadow var(--uebergang);
-}
-
-.sprach-globus { font-size: 1.2rem; line-height: 1; }
-
-.sprach-liste {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  right: 0;
-  z-index: 40;
-  min-width: 12.5rem;
-  margin: 0;
-  padding: 0.35rem;
-  list-style: none;
-  background: var(--flaeche);
-  border: 1px solid var(--linie);
-  border-radius: var(--radius);
-  box-shadow: var(--schatten-hover);
-}
-
-.sprach-eintrag {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.55rem;
-  border-radius: var(--radius);
-  font-size: 0.9rem;
-}
-
-.sprach-kuerzel { flex: none; min-width: 1.9rem; text-align: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; padding: 0.1rem 0.3rem; border: 1.5px solid var(--linie-stark); border-radius: 2px; color: var(--tinte-2); }
-.sprach-eintrag .sprach-name { flex: 1; }
-.sprach-eintrag.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); font-weight: 600; }
-.sprach-haken { flex: none; width: 1rem; text-align: center; color: var(--primaer-tief); font-weight: 700; }
 
 .menue {
   position: fixed;
@@ -821,7 +762,7 @@ a.chip:focus-visible { outline: 2px solid var(--primaer); outline-offset: 2px; }
 }
 
 /* Füllung im Hellmodus auf --primaer-tief (#1568ad, ~5,8:1 mit Weiß) statt --primaer
-   (#38a4f1, nur 2,7:1) — WCAG-AA-Kontrast für den meistgenutzten Button. Akzent-Blau
+   WCAG-AA-Kontrast für den meistgenutzten Button. Der Akzent
    bleibt für Links/Rahmen/Icons; der Dunkelmodus kippt unten zurück auf --primaer
    (dort trägt der Button ohnehin dunkle Schrift). */
 .knopf-primaer { background: var(--primaer-tief); color: #fff; box-shadow: 0 6px 16px -6px rgba(56, 164, 241, 0.55); }
@@ -1196,179 +1137,6 @@ details[open] summary { margin-bottom: 0.5rem; }
 .regel-verweise-titel { color: var(--tinte-2); }
 .regel-verweis { display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 0.6rem; white-space: nowrap; }
 .regel-verweis .fa-arrow-right { font-size: 0.75em; }
-
-/* ---------- Turnier-Regularium (Filter unter „Regeln") ---------- */
-
-.turnier-titel-icon { color: var(--primaer); margin-right: 0.4rem; }
-.turnier-feld-titel {
-  display: block;
-  margin: 0 0 0.55rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--tinte-3);
-}
-
-/* Kategorie-Auswahl (Kacheln) */
-.turnier-stufen { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.turnier-stufe {
-  flex: 1 1 auto;
-  min-width: 6.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  align-items: flex-start;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid var(--linie-stark);
-  border-radius: var(--radius-klein);
-  background: var(--flaeche);
-  color: var(--tinte);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: border-color var(--uebergang), background var(--uebergang), box-shadow var(--uebergang);
-}
-.turnier-stufe-name { font-weight: 600; font-size: 0.95rem; }
-.turnier-stufe-serie { font-size: 0.72rem; color: var(--tinte-3); }
-.turnier-stufe[aria-pressed='true'] {
-  border-color: var(--primaer);
-  background: var(--primaer-weich);
-  color: var(--primaer-tief);
-  box-shadow: 0 0 0 1px var(--primaer) inset;
-}
-.turnier-stufe[aria-pressed='true'] .turnier-stufe-serie { color: var(--primaer-tief); }
-@media (hover: hover) {
-  .turnier-stufe:not([aria-pressed='true']):hover { border-color: var(--primaer); }
-}
-
-/* Varianten-Umschalter (Einzel / Doppel / Junior) */
-.turnier-varianten { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.9rem; flex-wrap: wrap; }
-.turnier-varianten .turnier-feld-titel { margin: 0; }
-.turnier-segment {
-  display: inline-flex;
-  gap: 0.2rem;
-  padding: 0.2rem;
-  background: var(--flaeche-2);
-  border: 1px solid var(--linie);
-  border-radius: 999px;
-}
-.turnier-variante-knopf {
-  border: 0;
-  background: transparent;
-  color: var(--tinte-2);
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.32rem 0.85rem;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: color var(--uebergang), background var(--uebergang), box-shadow var(--uebergang);
-}
-.turnier-variante-knopf[aria-pressed='true'] {
-  background: var(--flaeche);
-  color: var(--primaer-tief);
-  box-shadow: var(--schatten-weich);
-}
-
-/* Zusammenfassung + Leiter */
-.turnier-summe-kopf { display: flex; gap: 1rem; align-items: center; }
-.turnier-summe-zahl {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--primaer-tief);
-  font-variant-numeric: tabular-nums;
-}
-.turnier-summe-text { display: flex; flex-direction: column; gap: 0.1rem; }
-.turnier-summe-text strong { color: var(--tinte); font-weight: 600; }
-.turnier-kurz { margin: 0.7rem 0 0; }
-.turnier-leiter { display: flex; gap: 0.3rem; align-items: center; margin-top: 0.9rem; flex-wrap: wrap; }
-.turnier-leiter-schritt {
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.22rem 0.55rem;
-  border-radius: 999px;
-  background: var(--flaeche-2);
-  color: var(--tinte-3);
-  border: 1px solid var(--linie);
-}
-.turnier-leiter-schritt.an {
-  background: var(--primaer-weich);
-  color: var(--primaer-tief);
-  border-color: var(--primaer);
-}
-.turnier-leiter-pfeil { color: var(--tinte-3); font-size: 0.8rem; }
-
-/* Varianten-Abweichungen (Hinweis-Karte) */
-.turnier-variante-info { border-left: 3px solid var(--primaer); }
-.turnier-variante-info h2 { display: flex; align-items: center; gap: 0.5rem; font-size: 1.02rem; margin-bottom: 0.5rem; }
-.turnier-variante-info h2 .fa-solid { color: var(--primaer); }
-.turnier-abweichungen { margin: 0; padding-left: 1.1rem; }
-.turnier-abweichungen li { margin-bottom: 0.35rem; }
-.turnier-abweichungen li:last-child { margin-bottom: 0; }
-
-/* Bereichs-Abschnitte + Anforderungs-Zeilen */
-.turnier-kat h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.02rem;
-  margin-bottom: 0.4rem;
-}
-.turnier-kat h2 .fa-solid { color: var(--primaer); font-size: 0.9em; }
-.turnier-kat-zahl {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--tinte-3);
-  background: var(--flaeche-2);
-  border: 1px solid var(--linie);
-  border-radius: 999px;
-  padding: 0.05rem 0.5rem;
-  font-variant-numeric: tabular-nums;
-}
-.turnier-anf { display: flex; gap: 0.7rem; padding: 0.7rem 0; border-top: 1px solid var(--linie); }
-.turnier-anf:first-of-type { border-top: 0; padding-top: 0.2rem; }
-.turnier-anf-punkt {
-  flex: none;
-  width: 0.85rem;
-  height: 0.85rem;
-  margin-top: 0.28rem;
-  border-radius: 50%;
-  border: 2px solid var(--linie-stark);
-  background: transparent;
-}
-.turnier-anf.hervor .turnier-anf-punkt { border-color: var(--primaer); background: var(--primaer); }
-.turnier-anf-koerper { flex: 1; min-width: 0; }
-.turnier-anf-kopf { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
-.turnier-anf-titel { font-weight: 600; font-size: 0.95rem; }
-.turnier-anf-text { margin: 0.15rem 0 0; color: var(--tinte-2); font-size: 0.9rem; }
-.turnier-marken { display: inline-flex; gap: 0.3rem; flex-wrap: wrap; }
-.turnier-marke {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 0.1rem 0.5rem;
-  border-radius: 999px;
-  border: 1px solid var(--linie-stark);
-  color: var(--tinte-2);
-  white-space: nowrap;
-}
-.marke-pflicht { background: var(--signal-gruen-weich); color: var(--signal-gruen-text); border-color: var(--signal-gruen); }
-.marke-empfehlung { background: var(--signal-gelb-weich); color: var(--signal-gelb-text); border-color: var(--signal-gelb); }
-.marke-neu { background: var(--primaer-weich); color: var(--primaer-tief); border-color: var(--primaer); }
-.marke-verschaerft { background: transparent; color: var(--primaer-tief); border-color: var(--primaer); }
-
-/* Dokumente / Quelle / Hinweis */
-.turnier-dokumente h2 { display: flex; align-items: center; gap: 0.5rem; font-size: 1.02rem; margin-bottom: 0.5rem; }
-.turnier-dokumente h2 .fa-solid { color: var(--primaer); }
-.turnier-dok-liste { list-style: none; margin: 0 0 0.6rem; padding: 0; }
-.turnier-dok-liste li { padding: 0.3rem 0; border-top: 1px solid var(--linie); }
-.turnier-dok-liste li:first-child { border-top: 0; }
-.turnier-dok-link { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 500; }
-.turnier-dok-link .fa-book-open { font-size: 0.85em; color: var(--primaer); }
-.turnier-quelle, .turnier-hinweis { display: flex; gap: 0.45rem; align-items: baseline; margin: 0.5rem 0 0; }
-.turnier-quelle .fa-solid, .turnier-hinweis .fa-solid { color: var(--primaer); flex: none; }
 
 /* ---------- Profil ---------- */
 
@@ -1837,7 +1605,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 /* Druckansicht = „Als PDF": nur der Plan, ohne Navigation, Formular und Knöpfe. */
 @media print {
-  .kopf, .fussnav, .menue, .sprach-anzeige,
+  .kopf, .fussnav, .menue,
   .plan-konfig, .plan-aktionen, .plan-session-knoepfe, .plan-session-link { display: none !important; }
   body { background: #fff; }
   main { padding: 0; max-width: none; }
@@ -1981,7 +1749,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 /* Kopfzeile mit harter Unterkante */
 .kopf { border-bottom: 2px solid var(--linie-stark); }
 
-/* Willkommens-Hero im Dunkel: Concrete statt geerbtem Crossminton-Blau (Fork-Rest),
+/* Willkommens-Hero im Dunkel: Concrete-Schwarz,
    Blutrot nur als harte Kante — nicht als Fläche. Der weiße Hero-Text bleibt lesbar. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) .hero {
@@ -2006,7 +1774,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 /* Medaillen/Icons hart einrahmen (Stempel-Look) */
 .pfad-medaille, .marke-hero-icon, .such-medaille { border-radius: 2px; border: 1.5px solid currentColor; }
 
-/* mosh school — Medaillen-Hues (hardcore statt Crossminton-Kühl) */
+/* mosh school — Medaillen-Hues (hardcore, warm) */
 :root {
   --pf-blau: #a81a10; --pf-blau-weich: #f0dcd7;
   --pf-teal: #5f6a72; --pf-teal-weich: #e2e0d8;
