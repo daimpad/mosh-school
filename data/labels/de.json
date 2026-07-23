@@ -700,7 +700,11 @@
     "wz_beat_mathcore_jagged": "Mathcore (Stop-Start)",
     "wz_beat_screamo_switch": "Screamo (treibend)",
     "wz_beat_noise_drive": "Noise Rock (stampfend)",
-    "wz_nurgruppe": "Nur Gruppenanfang"
+    "wz_nurgruppe": "Nur Gruppenanfang",
+    "heim_gruppe_lernwege": "Lernwege",
+    "heim_gruppe_werkzeuge": "Werkzeuge",
+    "heim_gruppe_entdecken": "Entdecken & mehr",
+    "heim_ueber_text": "Wer dahintersteckt, wie du mitmachst und die rechtlichen Infos."
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
