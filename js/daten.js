@@ -49,6 +49,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.kontext.json',
   'data/bausteine.ensemble-paare.json',
   'data/bausteine.band-proberaum.json',
+  'data/bausteine.band-intro.json',
   'data/bausteine.ensemble-gross.json',
   'data/bausteine.demo-recording.json',
   'data/bausteine.auftritt-live.json',
@@ -62,8 +63,10 @@ const INHALTSDATEIEN = [
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
   'data/bausteine.instrument-technik.json',
+  'data/bausteine.gitarre-detail.json',
   'data/bausteine.gear-schlagzeug-gesang.json',
   'data/bausteine.grenzgaenger.json',
+  'data/bausteine.experimentieren.json',
 ];
 
 // Beispielsongs-Referenz (Genre → 30 kuratierte Songs als externe Links). Eigener

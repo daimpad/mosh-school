@@ -1,0 +1,233 @@
+{
+  "_meta": {
+    "titel": "Gitarre — Vertiefung",
+    "beschreibung": "Bau, Holz, Elektronik und Setup der E-Gitarre."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "korpus_bauformen",
+      "anzeigetitel": {
+        "de": "Korpus-Bauformen und Halsverbindung"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Drei Bauformen bestimmen den Grundcharakter. Die Solidbody besteht aus massivem Holz ohne Resonanzraum: unempfindlich gegen Rückkopplung, deshalb die einzige zuverlässige Wahl für hohe Verzerrung. Die Hollowbody hat einen echten Klangkörper — akustisch reicher, aber bei hoher Verstärkung koppelt sie unkontrolliert zurück. Die Semi-Hollow liegt dazwischen: Ein massiver Mittelblock trägt Steg und Tonabnehmer, die seitlichen Hohlräume geben etwas Resonanz, ohne die Rückkopplungsneigung der Vollhohlbauweise.\n\nDie Halsverbindung hat zwei belegbare Auswirkungen, und beide betreffen nicht primär den Klang: Ein geschraubter Hals (Bolt-on) ist reparierbar und austauschbar; ein eingeleimter oder durchgehender Hals erlaubt meist besseren Zugang zu den hohen Bünden, weil die klobige Halsplatte entfällt. Unterschiede im Sustain zwischen den Bauweisen sind messbar klein und im verzerrten Bandkontext praktisch nicht hörbar — was oft anders behauptet wird.\n\nGewicht und Balance sind dagegen sehr real und werden unterschätzt: Eine schwere Gitarre über zwei Stunden Auftritt belastet Schulter und Rücken, eine kopflastige zieht ständig nach unten. Für Metal ist die Solidbody der Standard; Semi-Hollow ist bei moderater Verzerrung und in Noise-Rock-Kontexten interessant, wo kontrollierte Rückkopplung erwünscht ist."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passt deine Bauform zu deinem Zerrgrad — oder kämpfst du mit Rückkopplung, die die Bauweise verursacht? Welche Halsverbindung brauchst du wirklich: Reparierbarkeit oder Zugang zu den hohen Lagen? Und hast du Gewicht und Balance geprüft, statt nur auf den Klang zu achten?"
+      }
+    },
+    {
+      "id": "holz_und_resonanz",
+      "anzeigetitel": {
+        "de": "Holz und Klang: was belegt ist und was nicht"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Über Tonhölzer wird viel behauptet und wenig belegt. Die nüchterne Einordnung für eine Solidbody: Der Einfluss der Holzart auf den verstärkten Klang ist vorhanden, aber klein — und er verschwindet weitgehend hinter Faktoren, die um Größenordnungen stärker wirken: Tonabnehmer, Saiten, Mensur, Verstärker und Lautsprecher. Wer den Klang ändern will, holt aus einem Pickup-Tausch oder einer anderen Box ein Vielfaches dessen heraus, was ein Holzwechsel bringt.\n\nWas Holz tatsächlich zuverlässig bestimmt: Gewicht, Steifigkeit und damit die Stabilität des Halses. Ein dichteres, steiferes Holz verhält sich bei Zug und Klimaschwankungen anders — das ist ein handfester, praktischer Unterschied. Auch die Resonanzeigenschaften des Instruments sind messbar, sie äußern sich aber vor allem darin, wie sich das Instrument unter den Händen anfühlt und wo einzelne Töne etwas länger oder kürzer stehen.\n\nBesonders zurückhaltend sollte man bei Aussagen über das Griffbrettmaterial sein: Der hörbare Einfluss im verzerrten Kontext ist sehr gering, der fühlbare durch Oberfläche und Versiegelung dagegen deutlich. Kurz: Holz ist keine Klangzauberei, aber auch nicht bedeutungslos — es entscheidet vor allem über Gewicht, Stabilität und Haptik."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wo würdest du zuerst ansetzen, wenn dir dein Klang nicht gefällt — beim Holz oder bei Tonabnehmern, Saiten und Verstärker? Ist dir Gewicht und Halsstabilität wichtiger als eine bestimmte Holzart? Und welche Behauptungen über Tonhölzer hast du bisher ungeprüft übernommen?"
+      },
+      "voraussetzungen": [
+        "korpus_bauformen"
+      ]
+    },
+    {
+      "id": "halsprofil_griffbrett",
+      "anzeigetitel": {
+        "de": "Halsprofil, Radius und Bünde"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Das Halsprofil ist die Form des Halsrückens im Querschnitt — von flach und dünn bis rund und füllig. Es beeinflusst nichts am Klang, aber alles an der Ermüdung: Ein Profil, das nicht zur Hand passt, führt bei langen, schnellen Passagen zu Verspannung. Flache Profile werden für schnelles Spiel bevorzugt, füllige geben der Hand mehr Auflage und entlasten den Daumen.\n\nDer Griffbrettradius beschreibt die Wölbung quer zur Saitenrichtung. Stark gewölbte Griffbretter passen sich der Hand beim Akkordgreifen an, erschweren aber sehr niedrige Saitenlage: Beim Ziehen einer Saite in hoher Lage schnürt der Ton ab, weil die Saite auf einen höheren Bund trifft. Flachere Radien erlauben niedrigere Lage und weite Bendings — deshalb sind sie bei technischem Spiel verbreitet. Compound-Radien werden zur Halsmitte hin flacher und verbinden beides.\n\nBunddraht wirkt direkter, als man denkt: Hohe, breite Bünde erlauben leichteres Greifen mit weniger Kraft und leichtere Bendings, weil der Finger die Saite eher gegen den Bund drückt als aufs Holz. Sehr flache Bünde verlangen mehr Fingerdruck. Wer über Handermüdung klagt, findet hier oft mehr Abhilfe als in jedem Tonabnehmer."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passt das Halsprofil zu deiner Hand — oder ermüdest du bei langen schnellen Passagen unnötig? Brauchst du einen flacheren Radius, weil dir Bendings in hoher Lage abschnüren? Und könnten höhere Bünde deinen Kraftaufwand beim Greifen senken?"
+      },
+      "voraussetzungen": [
+        "korpus_bauformen"
+      ]
+    },
+    {
+      "id": "mensur_wahl_tuning",
+      "anzeigetitel": {
+        "de": "Mensur richtig zum Tuning wählen"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Mensur bestimmt zusammen mit Saitenstärke und Tonhöhe die Saitenspannung — und Spannung ist das, was sich als straff oder schlabberig anfühlt. Physikalisch steigt die Spannung mit dem Quadrat aus Mensurlänge und Frequenz: Eine längere Mensur erzeugt bei gleicher Tonhöhe und gleicher Saite spürbar mehr Zug. Die zwei verbreiteten Gitarrenmensuren liegen bei etwa 628 mm und 648 mm; Bariton-Instrumente beginnen bei rund 686 mm.\n\nDaraus folgt eine klare Entscheidungsregel für tiefe Tunings: Je tiefer gestimmt wird, desto länger sollte die Mensur oder desto dicker die Saite sein, damit die tiefe Saite definiert bleibt statt zu flattern. Wer in Drop C oder tiefer spielt und beim Palm Muting ein unpräzises Wabern hört, hat meist zu wenig Spannung — nicht zu wenig Gain. Umgekehrt fühlt sich eine kurze Mensur weicher an und erleichtert Bendings, was in Standardstimmung ein Vorteil ist.\n\nMultiscale-Bauweisen (schräg stehende Bünde) geben den tiefen Saiten mehr Länge und den hohen weniger und lösen den Zielkonflikt konstruktiv. Wichtig bei jeder Änderung: Andere Saitenstärke oder Mensur heißt neue Sattelkerben und neues Setup — sonst klemmt oder schnarrt es."
+      },
+      "reflexionsaufgabe": {
+        "de": "Passt deine Mensur zu deinem tiefsten Tuning, oder kompensierst du fehlende Spannung mit dickeren Saiten? Klingt dein Palm Muting in tiefen Lagen definiert oder wabernd? Und wäre für dich ein Bariton- oder Multiscale-Instrument die sinnvollere Lösung als immer dickere Saiten?"
+      },
+      "voraussetzungen": [
+        "saiten_mensur",
+        "drop_tuning"
+      ]
+    },
+    {
+      "id": "stege_detail_ton",
+      "anzeigetitel": {
+        "de": "Stege im Detail: Stabilität, Sustain, Einsatzzweck"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Stege unterscheiden sich vor allem in zwei praktischen Größen: Stimmstabilität und Aufwand. Feste Stege gibt es als durchgeführte Variante (Saiten laufen durch den Korpus) und als aufliegende; der Unterschied im Knickwinkel über dem Reiter ist real, klanglich aber gering — spürbarer ist er beim Saitenwechsel. Zweiteilige Konstruktionen aus Steg und separatem Saitenhalter erlauben bequeme Höhen- und Intonationseinstellung.\n\nBei Vibratosystemen gilt eine oft missverstandene Regel: Stimmstabilität entsteht nicht durch Masse oder Material, sondern durch Reibungsfreiheit an den Klemmpunkten. Ein einfaches Vibrato mit sechs Schrauben verstimmt, weil die Saite an Sattel und Reiter hängen bleibt; ein Zweipunkt-Vibrato reduziert die Reibung an der Auflage; ein doppelt verriegelndes System (Floyd-Rose-Bauart) klemmt Saite an beiden Enden fest und ist deshalb selbst bei extremem Hebeleinsatz stabil — um den Preis, dass Saitenwechsel und Stimmungswechsel deutlich aufwendiger sind. Systeme mit sehr geringem Hebelweg eignen sich nur für dezentes Vibrato und brauchen reibungsarme Auflagen.\n\nZum Sustain: Mehr Masse und feste Kopplung an den Korpus helfen etwas, aber der Effekt ist klein gegenüber Bundzustand, Sattel, Saitenlage und Tonabnehmerhöhe. Wer Sustain sucht, prüft zuerst diese vier. Praktisch heißt das: für tiefe Tunings und häufige Stimmungswechsel ein fester Steg; für dauerhaften Hebeleinsatz ein verriegelndes System; alles dazwischen ist ein Kompromiss aus Komfort und Stabilität."
+      },
+      "reflexionsaufgabe": {
+        "de": "Brauchst du wirklich ein Vibrato — oder wäre ein fester Steg für deine Stimmungswechsel praktischer? Falls Vibrato: Rechtfertigt dein Hebeleinsatz den Mehraufwand eines verriegelnden Systems? Und suchst du Sustain am Steg, obwohl Bünde, Sattel und Tonabnehmerhöhe mehr ausmachen?"
+      },
+      "voraussetzungen": [
+        "steg_typen"
+      ]
+    },
+    {
+      "id": "tonabnehmer_detail",
+      "anzeigetitel": {
+        "de": "Tonabnehmer im Detail: was den Klang wirklich bestimmt"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Tonabnehmer ist eine Spule um einen Magneten: Die schwingende Saite verändert das Magnetfeld und erzeugt eine Spannung. Was den Klang bestimmt, sind vor allem drei Größen — die Zahl der Windungen, die Magnetart und die Geometrie der Spule. Zusammen mit der Kapazität von Kabel und Schaltung bilden sie einen Resonanzpeak: die Frequenz, bei der der Tonabnehmer am lautesten überträgt. Dieser Peak ist der eigentliche Grund, warum Pickups hell oder dunkel klingen.\n\nEin verbreiteter Irrtum betrifft den Gleichstromwiderstand, der oft als Maß für die Leistung angegeben wird. Er ist nur ein grober Anhaltspunkt: Mehr Windungen erhöhen zwar Widerstand und Ausgangsleistung, senken aber zugleich den Resonanzpeak — deshalb klingen sehr leistungsstarke Pickups meist dunkler und komprimierter, nicht einfach nur lauter. Zwei Pickups mit gleichem Widerstand können völlig unterschiedlich klingen. Bei den Magneten sind die Unterschiede real und messbar: Alnico-Magnete ziehen schwächer und klingen weicher und dynamischer, Keramikmagnete liefern mehr Ausgangsleistung und mehr Höhen bei geringerer Dynamik.\n\nFür hohe Verzerrung ist ein Punkt entscheidend, der selten genannt wird: die Vergussmasse. Ungetränkte Spulen werden bei hoher Lautstärke mikrofonisch und pfeifen unkontrolliert — getränkte („potted“) Pickups sind für High-Gain praktisch Pflicht. Ebenfalls zu unterscheiden: Ein Coil-Split legt eine Spule still, ein Coil-Tap greift eine Windungszahl mitten in der Spule ab. Beides klingt anders als ein echter Single Coil, weil Geometrie und Windungszahl nicht identisch sind."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beurteilst du Tonabnehmer nach dem Widerstandswert — obwohl er über den Klang wenig aussagt? Passt die Magnetart zu deinem Ziel: Alnico für Dynamik, Keramik für Leistung und Höhen? Und sind deine Pickups für deinen Zerrgrad ausreichend vergossen, oder pfeift es bei hoher Lautstärke?"
+      },
+      "voraussetzungen": [
+        "tonabnehmer_typen"
+      ]
+    },
+    {
+      "id": "pickup_hoehe_einstellen",
+      "anzeigetitel": {
+        "de": "Tonabnehmerhöhe einstellen"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Tonabnehmerhöhe ist die wirksamste kostenlose Klangänderung an einer Gitarre — und die am seltensten genutzte. Näher an den Saiten bedeutet mehr Ausgangsleistung, mehr Bass und mehr Kompression; weiter weg bedeutet weniger Pegel, mehr Dynamik und klarere Trennung der Töne.\n\nEs gibt jedoch eine physikalische Obergrenze: Der Magnet zieht an der schwingenden Saite. Steht der Tonabnehmer zu nah, bremst und verzieht diese Anziehung die Schwingung — hörbar als schlechtes Sustain, seltsame Schwebungen und unsaubere Intonation, besonders auf den tiefen Saiten und in den hohen Lagen. Der Effekt ist bei starken Keramikmagneten deutlicher als bei schwächeren Alnico-Typen.\n\nDeshalb lautet die Regel: so nah wie nötig für den gewünschten Pegel, so weit wie möglich, um die Saite frei schwingen zu lassen. Steg- und Halstonabnehmer werden dabei getrennt eingestellt, meist der Hals etwas tiefer, damit beide gleich laut sind."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Höhe einstellen ohne Magnetbremse",
+          "ziel": "Pegel und Klarheit ausbalancieren, ohne die Saitenschwingung magnetisch zu stören.",
+          "schritte": [
+            "Greife die höchste Lage auf der tiefsten Saite und miss den Abstand zwischen Saite und Polstück.",
+            "Erhöhe den Tonabnehmer schrittweise und höre auf Pegel und Bassanteil.",
+            "Prüfe bei jedem Schritt Sustain und Sauberkeit der tiefen Saite in hoher Lage.",
+            "Gehe zurück, sobald Schwebungen, kürzeres Sustain oder unsaubere Intonation auftreten.",
+            "Gleiche danach die Lautstärke von Hals- und Stegtonabnehmer aneinander an."
+          ],
+          "steigerung": "Stelle die Polstücke einzelner Saiten nach, wenn eine Saite deutlich lauter oder leiser ist.",
+          "selbstkontrolle": "Klingt die tiefe Saite in hoher Lage sauber und lange? Sind beide Tonabnehmer im Umschalten gleich laut?"
+        }
+      },
+      "voraussetzungen": [
+        "tonabnehmer_detail"
+      ]
+    },
+    {
+      "id": "gitarren_elektronik",
+      "anzeigetitel": {
+        "de": "Potis, Kondensator und Kabel"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Elektronik hinter dem Tonabnehmer verändert den Klang messbar, weil sie den Resonanzpeak belastet. Der Wert des Lautstärkepotis ist dabei der größte Hebel: Ein niedrigerer Widerstandswert dämpft die Höhen stärker, ein höherer lässt sie durch. Deshalb klingen sonst identische Schaltungen mit unterschiedlichen Potiwerten hörbar heller oder dunkler.\n\nDer Tonkondensator bildet zusammen mit dem Tonpoti einen Tiefpass; sein Kapazitätswert bestimmt, ab welcher Frequenz abgesenkt wird — ein größerer Wert schneidet früher und dumpfer. Hier liegt einer der hartnäckigsten Irrtümer: Der Bauart des Kondensators wird oft ein eigener Klang zugeschrieben. Für diese Anwendung ist das nicht belegbar; entscheidend ist der Kapazitätswert, nicht das Dielektrikum. Wer Höhen beim Zurückdrehen der Lautstärke verliert, hilft sich dagegen wirksam mit einer Treble-Bleed-Schaltung.\n\nUnterschätzt wird das Kabel: Bei passiven Tonabnehmern wirkt seine Kapazität wie ein zusätzlicher Höhendämpfer. Lange oder minderwertige Kabel machen den Klang hörbar dumpfer — bei aktiven Systemen mit niedriger Ausgangsimpedanz fällt das weitgehend weg. Das ist einer der wenigen Fälle, in denen Kabellänge tatsächlich klanglich relevant ist."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kennst du die Potiwerte deiner Gitarre — und passen sie zu dem Klang, den du willst? Verlierst du Höhen beim Zurückdrehen der Lautstärke, was eine Treble-Bleed-Schaltung lösen würde? Und wie lang ist dein Kabel, wenn du passive Tonabnehmer spielst?"
+      },
+      "voraussetzungen": [
+        "tonabnehmer_detail"
+      ]
+    },
+    {
+      "id": "gitarre_entscheiden",
+      "anzeigetitel": {
+        "de": "Entscheidungen priorisieren: was zuerst zählt"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Wer den eigenen Klang verbessern will, kann viel Geld an der falschen Stelle ausgeben. Eine nach Wirkung sortierte Reihenfolge hilft: Ganz oben stehen Verstärker und Lautsprecher — sie prägen den verstärkten Klang stärker als jedes Bauteil der Gitarre. Danach folgen Saiten und ein sauberes Setup, weil sie Spielbarkeit und Intonation bestimmen und beide vergleichsweise wenig kosten.\n\nAn dritter Stelle steht die Tonabnehmerhöhe — kostenlos und wirksam —, danach die Tonabnehmer selbst und die Elektronik. Erst dann kommen Hardware-Fragen wie Steg und Mechaniken, und die betreffen ohnehin eher Stimmstabilität als Klang. Ganz am Ende dieser Kette steht die Holzfrage, deren hörbarer Anteil klein ist.\n\nFür ein Metal-Instrument lässt sich daraus eine nüchterne Empfehlung ableiten: eine Solidbody mit stabilem Steg, eine zur Stimmung passende Mensur, vergossene Humbucker am Steg und ein Setup, das zu Saitenstärke und Tuning passt. Alles Weitere ist Feinabstimmung — und sollte man erst angehen, wenn diese Grundlagen sitzen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Setzt du dein Geld dort ein, wo die Wirkung am größten ist — oder tauschst du Bauteile, bevor Setup und Verstärker stimmen? Wann hast du zuletzt Tonabnehmerhöhe und Setup geprüft, statt neue Hardware zu kaufen? Und welche eine Änderung an deinem Instrument würde deinen Klang am spürbarsten verbessern?"
+      },
+      "voraussetzungen": [
+        "saitenlage_setup",
+        "tonabnehmer_detail",
+        "gitarren_elektronik"
+      ]
+    }
+  ]
+}
