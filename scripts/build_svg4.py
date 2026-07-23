@@ -101,11 +101,14 @@ def saiten(y0=24, y1=104, x0=56, x1=228, n=6, staerken=None):
 
 # Powerchord-Griffbild: sechs Saiten (dünn oben, dick unten), drei Bünde,
 # Punkte auf Grundton + Quinte + Oktave, x-Kreuze an den stummen Saiten.
+# Der Grundton sitzt am 1. Bund der tiefen E-Saite (x=84); Quinte (A-Saite) und
+# Oktave (D-Saite) liegen ZWEI Bünde höher, also am 3. Bund (x=198) — die Quinte
+# ist immer +2 Bünde, nie +1. Bundmitten: 1. Bund≈84, 2.≈141, 3.≈198.
 S["powerchords"] = (
     saiten()
     + [L(56, 20, 56, 108, 5)]  # Sattel
     + [L(56 + i * 57, 22, 56 + i * 57, 106, 1.5) for i in (1, 2, 3)]
-    + [C(84, 104, 7, fill=True), C(141, 88, 7, fill=True), C(141, 72, 7, fill=True)]
+    + [C(84, 104, 7, fill=True), C(198, 88, 7, fill=True), C(198, 72, 7, fill=True)]
     + [X(40, 24, 4), X(40, 40, 4), X(40, 56, 4)]
 )
 # Palm Muting: Saiten laufen auf den Steg (Block rechts) zu; der Handballen

@@ -1,7 +1,7 @@
 // Könnens-Check: eine Selbsteinschätzung je Könnensstufe. Referenzbereich wie das
 // Stimmungs-Werkzeug — NICHT im Baustein-Pool, kein gespeicherter Fortschritt.
 // Die Daten (instrumentneutrale Leitplanken über Domänen hinweg) liegen in
-// data/turnierregeln.json: Kategorien bündeln Anforderungen; jede Anforderung
+// data/koennenscheck.json: Kategorien bündeln Anforderungen; jede Anforderung
 // trägt je Stufe entweder Pflicht („solltest du können") oder Empfehlung
 // („übe darauf hin") plus einen stufengerechten Beschreibungstext.
 //
@@ -48,7 +48,7 @@ export function renderKoennenscheck(el, daten) {
 // (nur der Check-Körper, z. B. als Abschnitt der Instrument-Seite). Der Zustand
 // (gewählte Stufe, abgehakte Posten) lebt modulweit — egal, wo eingebettet.
 export function zeichneKoennenscheck(container, daten, { mitHero = false } = {}) {
-  const werkzeug = daten.turnierregeln || { stufen: [], kategorien: [], anforderungen: [] };
+  const werkzeug = daten.koennenscheck || { stufen: [], kategorien: [], anforderungen: [] };
   const stufen = stufenListe(werkzeug);
   if (!stufen.includes(aktiveStufe)) aktiveStufe = stufen[0] || 'einsteiger';
   if (!abgehakt[aktiveStufe]) abgehakt[aktiveStufe] = new Set();
