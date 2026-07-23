@@ -696,7 +696,11 @@
     "exp_grenzgaenger_titel": "Grenzgänger — Zufall & Verwandtschaft",
     "exp_stoebern": "Alle Karten durchstöbern",
     "exp_karten_leer": "Für diese Filter gibt es keine Karte — Filter lockern.",
-    "exp_leer": "Noch keine Experimente hinterlegt."
+    "exp_leer": "Noch keine Experimente hinterlegt.",
+    "wz_beat_mathcore_jagged": "Mathcore (Stop-Start)",
+    "wz_beat_screamo_switch": "Screamo (treibend)",
+    "wz_beat_noise_drive": "Noise Rock (stampfend)",
+    "wz_nurgruppe": "Nur Gruppenanfang"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
