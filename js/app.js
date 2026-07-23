@@ -30,7 +30,7 @@ import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
-import { initI18n, sprache, t, text } from './i18n.js';
+import { initI18n, t } from './i18n.js';
 import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung } from './zustand.js';
 
@@ -171,6 +171,8 @@ function beschrifteRahmen() {
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
     songs: t('nav_songs'),
+    genres: t('pfad_stil'),
+    kontext: t('pfad_umgebung'),
     werkzeuge: t('nav_werkzeuge'),
     koennenscheck: t('nav_koennenscheck'),
     ueber: t('nav_ueber'),
@@ -195,7 +197,6 @@ function beschrifteRahmen() {
     if (ziel) ziel.textContent = beschriftung;
     else verweis.textContent = beschriftung;
   }
-  setzeSprachanzeige();
   aktualisiereThemaMenue();
 }
 
@@ -214,71 +215,6 @@ function aktualisiereThemaMenue() {
     knopf.classList.toggle('aktiv', istAktiv);
     knopf.setAttribute('aria-pressed', String(istAktiv));
   }
-}
-
-// Sprachanzeige (rein darstellend, app-info funktion_aktiv:false): zeigt die aktuell
-// dargestellte Sprache als Flagge + Kürzel neben dem Hamburger. Die Liste lässt sich
-// aufklappen, schaltet aber nichts um — das funktionale Umschalten bleibt im Profil.
-function spracheEintrag() {
-  const s = daten?.appInfo?.sprachen;
-  if (!s) return null;
-  const liste = s.liste || [];
-  const aktiv = sprache();
-  return liste.find((e) => e.code === aktiv) || liste.find((e) => e.code === s.aktuell) || liste[0] || null;
-}
-
-// Der Kopf zeigt konstant eine Weltkugel; das Untermenü listet die Sprachen und
-// markiert die aktive mit Häkchen + Hervorhebung. Wird bei jedem Rendern frisch
-// aufgebaut, damit die Markierung der aktiven Sprache aktuell bleibt.
-function setzeSprachanzeige() {
-  const knopf = document.getElementById('sprach-knopf');
-  const liste = document.getElementById('sprach-liste');
-  const s = daten?.appInfo?.sprachen;
-  if (!knopf || !s) return;
-  const eintrag = spracheEintrag();
-  if (eintrag) knopf.setAttribute('aria-label', `${t('sprache')}: ${eintrag.eigenname ?? text(eintrag.label) ?? eintrag.kuerzel}`);
-  // Menü-Zeile zeigt die aktuelle Sprache (Weltkugel-Icon + Name).
-  const titel = knopf.querySelector('[data-sprach-titel]');
-  if (titel && eintrag) titel.textContent = eintrag.eigenname ?? text(eintrag.label) ?? eintrag.kuerzel;
-  if (!liste) return;
-  const aktivCode = eintrag?.code;
-  // Flagge + Sprachname in der jeweiligen Heimatsprache (Eigenname), aktive markiert.
-  liste.innerHTML = (s.liste || [])
-    .map((e) => {
-      const istAktiv = e.code === aktivCode;
-      const kuerzel = (e.kuerzel ?? e.code ?? '').toUpperCase();
-      return `<li class="sprach-eintrag${istAktiv ? ' aktiv' : ''}"${istAktiv ? ' aria-current="true"' : ''}>
-        <span class="sprach-kuerzel" aria-hidden="true">${esc(kuerzel)}</span>
-        <span class="sprach-name">${esc(e.eigenname ?? text(e.label) ?? e.kuerzel)}</span>
-        <span class="sprach-haken" aria-hidden="true">${istAktiv ? '<i class="fa-solid fa-check"></i>' : ''}</span>
-      </li>`;
-    })
-    .join('');
-}
-
-function initSprachanzeige() {
-  const wurzel = document.getElementById('sprach-anzeige');
-  const knopf = document.getElementById('sprach-knopf');
-  const liste = document.getElementById('sprach-liste');
-  if (!wurzel || !knopf || !liste || !daten?.appInfo?.sprachen) return;
-  const schliesse = () => {
-    liste.hidden = true;
-    knopf.setAttribute('aria-expanded', 'false');
-  };
-  knopf.addEventListener('click', (ereignis) => {
-    ereignis.stopPropagation();
-    const offen = knopf.getAttribute('aria-expanded') === 'true';
-    liste.hidden = offen;
-    knopf.setAttribute('aria-expanded', String(!offen));
-  });
-  document.addEventListener('click', (ereignis) => {
-    if (!wurzel.contains(ereignis.target)) schliesse();
-  });
-  window.addEventListener('keydown', (ereignis) => {
-    if (ereignis.key === 'Escape') schliesse();
-  });
-  window.addEventListener('hashchange', schliesse); // bei Navigation zuklappen
-  setzeSprachanzeige();
 }
 
 // Menü öffnen zwei Auslöser: der Hamburger (Kopf, ab Tablet) und „Mehr"
@@ -406,7 +342,7 @@ function rendern() {
     renderStil(el, daten, segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'umgebung') {
     renderUmgebung(el, daten, null, null);
-  } else if (segmente[0] === 'pfad' && (segmente[1] === 'witterung' || segmente[1] === 'untergrund')) {
+  } else if (segmente[0] === 'pfad' && segmente[1] === 'witterung') {
     renderUmgebung(el, daten, segmente[1], segmente[2] ? sicherDecode(segmente[2]) : null);
   } else if (segmente[0] === 'pfad' && segmente[1] === 'individual') {
     renderIndividual(el, daten);
@@ -533,7 +469,6 @@ async function boot() {
     el.focus();
     el.scrollIntoView();
   });
-  initSprachanzeige();
   for (const element of document.querySelectorAll('[data-menue-zu], .menue-punkt, .menue-mini')) {
     element.addEventListener('click', schliesseMenue);
   }

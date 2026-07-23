@@ -93,19 +93,5 @@
         }
       ]
     }
-  },
-  "sprachen": {
-    "funktion_aktiv": false,
-    "aktuell": "de",
-    "liste": [
-      {
-        "code": "de",
-        "eigenname": "Deutsch",
-        "kuerzel": "de",
-        "label": {
-          "de": "Deutsch"
-        }
-      }
-    ]
   }
 }
