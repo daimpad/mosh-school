@@ -8,7 +8,7 @@ import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, heroKlein,
 import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
-import { genreInszenierungHtml, genreKurz, genreMotivSvg, genrePlatzhalterSvg } from '../genre-inszenierung.js';
+import { genreInszenierungHtml, genreKurz, genreMotivSvg, genrePlatzhalterSvg, landingHeroHtml } from '../genre-inszenierung.js';
 import { zeichneKoennenscheck } from './koennenscheck.js';
 
 // In der Liste ordnet bereits die Reihenfolge; der „Empfohlen vorher"-Hinweis
@@ -70,7 +70,7 @@ export function renderKompetenzpfad(el, daten, stufe) {
     // Ohne Stufe keine Sequenz (Spez. 7.1) — der Zugriff auf die Inhalte
     // bleibt über Themen-/Individualpfad trotzdem frei.
     el.innerHTML = `
-      ${heroKlein('fa-chart-line', t('pfad_kompetenz'), '', 'pf-blau')}
+      ${landingHeroHtml('fa-chart-line', t('pfad_kompetenz'), '', 'pf-blau')}
       <div class="karte">
         <p class="leise">${esc(t('stufe_fehlt'))}</p>
         <div class="knopf-zeile" style="justify-content:flex-start">
@@ -85,7 +85,7 @@ export function renderKompetenzpfad(el, daten, stufe) {
       ? leerHtml(t('leer_stufe'), 'fa-compass', entdeckenAktion())
       : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, kontext, { mitSkip: Boolean(pfad.herkunft) })}`;
   el.innerHTML = `
-    ${heroKlein('fa-chart-line', t('pfad_kompetenz'), t('pfad_kompetenz_text'), 'pf-blau', ` <span class="chip chip-stufe chip-stufe-${esc(pfad.stufe)}">${esc(label('kompetenzstufe', pfad.stufe))}</span>`)}
+    ${landingHeroHtml('fa-chart-line', t('pfad_kompetenz'), t('pfad_kompetenz_text'), 'pf-blau', `kompetenz-${pfad.stufe}`, label('kompetenzstufe', pfad.stufe))}
     ${inhalt}`;
   bindeSkip(el, daten, kontext, pfad.stationen);
 }
@@ -102,7 +102,7 @@ export function renderThemen(el, daten, domaene) {
         return `<a class="karte karte-link" href="#/pfad/themen/${esc(eintrag.domaene)}">${beschriftung}</a>`;
       })
       .join('');
-    el.innerHTML = `${heroKlein('fa-layer-group', t('pfad_themen'), t('pfad_themen_text'), 'pf-teal')}${zeilen}`;
+    el.innerHTML = `${landingHeroHtml('fa-layer-group', t('pfad_themen'), t('pfad_themen_text'), 'pf-teal')}${zeilen}`;
     return;
   }
   const pfad = themenpfad(daten, domaene);
@@ -111,7 +111,7 @@ export function renderThemen(el, daten, domaene) {
       ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
       : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, `themen:${domaene}`)}`;
   el.innerHTML = `
-    ${heroKlein('fa-layer-group', label('domaene', domaene), t('vorgeschlagene_reihenfolge'), 'pf-teal')}
+    ${landingHeroHtml('fa-layer-group', label('domaene', domaene), t('vorgeschlagene_reihenfolge'), 'pf-teal', `themen-${domaene}`)}
     ${inhalt}`;
 }
 
@@ -296,7 +296,7 @@ export function renderInstrument(el, daten, domaene) {
       )
       .join('');
     el.innerHTML = `
-      ${heroKlein('fa-guitar', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
+      ${landingHeroHtml('fa-guitar', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
       <div class="pfad-gitter instr-picker">${karten}</div>`;
     return;
   }
@@ -310,13 +310,7 @@ export function renderInstrument(el, daten, domaene) {
     .join('')}</div>`;
 
   el.innerHTML = `
-    <section class="marke-hero klein hue pf-blau baustein-hero instr-hero">
-      <span class="marke-hero-icon">${domaeneIcon(domaene)}</span>
-      <div class="marke-hero-text">
-        <h1>${esc(label('domaene', domaene))}</h1>
-        <p class="marke-hero-untertitel">${esc(t('instrument_untertitel'))}</p>
-      </div>
-    </section>
+    ${landingHeroHtml(null, label('domaene', domaene), t('instrument_untertitel'), 'pf-blau', `instrument-${domaene}`, '', domaeneIcon(domaene))}
     ${reiterBar}
     <div class="instr-tab-inhalt" role="tabpanel">${instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter)}</div>
     <p class="knopf-zeile instr-fuss">
@@ -353,7 +347,7 @@ export function renderBand(el, daten) {
     ? `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, 'band')}`
     : leerHtml(t('leer_domaene'), 'fa-users', entdeckenAktion());
   el.innerHTML = `
-    ${heroKlein('fa-users', t('band_titel'), t('band_untertitel'), 'pf-schiefer')}
+    ${landingHeroHtml('fa-users', t('band_titel'), t('band_untertitel'), 'pf-schiefer')}
     <p class="leise">${esc(t('band_intro'))}</p>
     ${liste}`;
 }
@@ -404,7 +398,7 @@ export function renderIndividual(el, daten) {
   const pfad = individualpfad(daten);
   if (!pfad.ziel) {
     el.innerHTML = `
-      ${heroKlein('fa-bullseye', t('pfad_individual'), t('ziel_hinweis'), 'pf-violett')}
+      ${landingHeroHtml('fa-bullseye', t('pfad_individual'), t('ziel_hinweis'), 'pf-violett')}
       <form id="zielform">${zielwahlHtml(daten, null, { mitVermittlungszielen: diagnose().trainer })}</form>
       <div class="knopf-zeile"><button class="knopf knopf-primaer" id="ziel-uebernehmen">${esc(t('uebernehmen'))}</button></div>`;
     el.querySelector('#zielform').addEventListener('submit', (ereignis) => ereignis.preventDefault());
@@ -425,7 +419,7 @@ export function renderIndividual(el, daten) {
       ? leerHtml(t('leer_ziel'), 'fa-bullseye', entdeckenAktion())
       : `${balkenHtml(projektion(pfad.stationen.map((s) => s.baustein)))}${stationslisteHtml(pfad.stationen, 'individual')}`;
   el.innerHTML = `
-    ${heroKlein('fa-bullseye', t('pfad_individual'), '', 'pf-violett')}
+    ${landingHeroHtml('fa-bullseye', t('pfad_individual'), '', 'pf-violett')}
     <p class="chip-zeile">${esc(t('ziel_aktuell'))}: ${zielChips}</p>
     ${inhalt}
     <details class="karte">

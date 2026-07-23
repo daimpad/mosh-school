@@ -6,7 +6,8 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { deltaFuer, niedrigsteStufe } from '../daten.js';
 import { bausteinAbsolviert, globaleProjektion, projektion } from '../fortschritt.js';
 import { label, setzeSprache, sprache, t } from '../i18n.js';
-import { balkenHtml, bausteinIcon, esc, heroKlein, meilensteinLabel, neuRendern, ringHtml, wendeThemaAn, zeigeMeilenstein } from '../oberflaeche.js';
+import { balkenHtml, bausteinIcon, esc, meilensteinLabel, neuRendern, ringHtml, wendeThemaAn, zeigeMeilenstein } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 import { geuebteTage, instrumentRinge, uebeKalender, wasAlsNaechstes } from '../mastery.js';
 import { kompetenzpfad } from '../pfade.js';
 import { alleBestwerte, diagnose, einstellungen, kontinuitaet, meilensteine, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
@@ -202,7 +203,7 @@ export function renderProfil(el, daten) {
     </section>`;
 
   el.innerHTML = `
-    ${heroKlein('fa-user', t('nav_profil'), t('profil_intro'), 'pf-blau')}
+    ${landingHeroHtml('fa-user', t('nav_profil'), t('profil_intro'), 'pf-blau')}
 
     <section class="karte">
       <h2>${esc(t('profil_diagnose'))}</h2>

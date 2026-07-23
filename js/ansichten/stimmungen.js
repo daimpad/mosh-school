@@ -8,6 +8,7 @@
 
 import { label, t, text } from '../i18n.js';
 import { domaeneIcon, esc } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aktivesInstrument = 'gitarre';
 let aktiveStimmung = null;
@@ -199,13 +200,7 @@ export function renderStimmungen(el, daten) {
 
   el.innerHTML = `
     <article>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('nav_stimmungen'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('stimm_untertitel'))}</p>
-        </div>
-      </section>
+      ${landingHeroHtml('fa-sliders', t('nav_stimmungen'), t('stimm_untertitel'), 'pf-teal', 'stimmungen')}
       <p class="chip-zeile">${instrumentKnoepfe}</p>
       <p class="chip-zeile">${stimmungsKnoepfe}</p>
       ${detail}
