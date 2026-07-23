@@ -10,6 +10,7 @@
 
 import { t } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const SPEICHER = 'moshschool.songs.v1';
 const TRENNER = '␟'; // Symbol for Unit Separator — trennt Künstler|Titel im Schlüssel.
@@ -100,13 +101,7 @@ export function renderSongs(el, daten, slug) {
 
   el.innerHTML = `
     <article>
-      <section class="marke-hero klein hue pf-magenta">
-        <span class="marke-hero-icon"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('songs_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('songs_untertitel'))}</p>
-        </div>
-      </section>
+      ${landingHeroHtml('fa-play', t('songs_titel'), t('songs_untertitel'), 'pf-magenta', 'songs')}
 
       <nav class="song-genres" aria-label="${esc(t('songs_genre_waehlen'))}">${genreChips(genres, aktiv)}</nav>
 

@@ -241,7 +241,7 @@ main {
 /* Der Genre-Landing-Block trägt einen eigenen Reinbox-/Scroll-Effekt und ist
    deshalb vom globalen Einstiegs-Stagger ausgenommen (sonst überschriebe der
    Stagger den Box-in-Zustand des Heros). */
-#ansicht.einstieg > *:not(.genre-landing) {
+#ansicht.einstieg > *:not(.genre-landing):not(.genre-landing-hero) {
   animation: ansicht-einstieg 400ms cubic-bezier(0.22, 0.9, 0.35, 1) both;
 }
 #ansicht.einstieg > :nth-child(2) { animation-delay: 45ms; }
@@ -2798,6 +2798,14 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--pf, var(--primaer));
+}
+.genre-landing-symbol {
+  display: inline-flex;
+  vertical-align: -0.18em;
+}
+.genre-landing-symbol svg {
+  width: 1.15em;
+  height: 1.15em;
 }
 .genre-landing-hero h1 {
   margin: 0;
