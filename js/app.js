@@ -25,6 +25,7 @@ import { renderWerkzeugExplorer } from './ansichten/werkzeug-explorer.js';
 import { renderWerkzeugLandkarte } from './ansichten/werkzeug-landkarte.js';
 import { renderWerkzeugGenremix } from './ansichten/werkzeug-genremix.js';
 import { renderKoennenscheck } from './ansichten/koennenscheck.js';
+import { renderExperimentieren } from './ansichten/experimentieren.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
@@ -110,6 +111,8 @@ function aktualisiereNavigation(segmente) {
                       ? 'werkzeuge'
                       : segmente[0] === 'koennenscheck'
                         ? 'koennenscheck'
+                        : segmente[0] === 'experimentieren'
+                          ? 'experimentieren'
                 : 'lernen';
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const istAktiv = verweis.dataset.nav === aktiv;
@@ -125,7 +128,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte).
   const imMehr =
-    ['suche', 'stimmungen', 'patterns', 'songs', 'werkzeuge', 'werkzeug', 'koennenscheck', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
+    ['suche', 'stimmungen', 'patterns', 'songs', 'werkzeuge', 'werkzeug', 'koennenscheck', 'experimentieren', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
     (segmente[0] === 'pfad' && segmente[1] === 'stil');
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -173,6 +176,7 @@ function beschrifteRahmen() {
     songs: t('nav_songs'),
     genres: t('pfad_stil'),
     kontext: t('pfad_umgebung'),
+    experimentieren: t('nav_experimentieren'),
     werkzeuge: t('nav_werkzeuge'),
     koennenscheck: t('nav_koennenscheck'),
     ueber: t('nav_ueber'),
@@ -391,6 +395,8 @@ function rendern() {
     renderWerkzeuge(el, daten);
   } else if (segmente[0] === 'koennenscheck') {
     renderKoennenscheck(el, daten);
+  } else if (segmente[0] === 'experimentieren') {
+    renderExperimentieren(el, daten);
   } else if (segmente[0] === 'ueber') {
     renderUeber(el, daten);
   } else if (segmente[0] === 'mitmachen') {
