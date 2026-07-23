@@ -5,7 +5,7 @@
 import { markiereAbsolviert } from '../aktionen.js';
 import { deltaFuer, niedrigsteStufe } from '../daten.js';
 import { bausteinAbsolviert, globaleProjektion, projektion } from '../fortschritt.js';
-import { label, setzeSprache, sprache, t } from '../i18n.js';
+import { label, t } from '../i18n.js';
 import { balkenHtml, bausteinIcon, esc, meilensteinLabel, neuRendern, ringHtml, wendeThemaAn, zeigeMeilenstein } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { geuebteTage, instrumentRinge, uebeKalender, wasAlsNaechstes } from '../mastery.js';
@@ -13,7 +13,6 @@ import { kompetenzpfad } from '../pfade.js';
 import { alleBestwerte, diagnose, einstellungen, kontinuitaet, meilensteine, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 
-const SPRACHNAMEN = { de: 'Deutsch', en: 'English', fr: 'Français', pl: 'Polski' };
 
 let offen = null; // gerade geöffneter Inline-Editor: 'stufe' | 'trainer' | 'herkunft' | 'ziel'
 
@@ -125,10 +124,6 @@ export function renderProfil(el, daten) {
 
   const jeEinheit = Object.entries(k.jeEinheit)
     .map(([id, anzahl]) => `<li>${esc(label('einheit', id))}: ${esc(t('mal_absolviert', { n: anzahl }))}</li>`)
-    .join('');
-
-  const sprachOptionen = Object.entries(SPRACHNAMEN)
-    .map(([kuerzel, name]) => `<option value="${kuerzel}" ${sprache() === kuerzel ? 'selected' : ''}>${esc(name)}</option>`)
     .join('');
 
   const themaOptionen = ['auto', 'hell', 'dunkel']
@@ -248,11 +243,6 @@ export function renderProfil(el, daten) {
     <section class="karte">
       <h2>${esc(t('einstellungen'))}</h2>
       <div class="profil-zeile">
-        <label for="pf-sprache">${esc(t('sprache'))}</label>
-        <select id="pf-sprache">${sprachOptionen}</select>
-      </div>
-      ${sprache() !== 'de' ? `<p class="leise">${esc(t('uebersetzung_fehlt'))}</p>` : ''}
-      <div class="profil-zeile">
         <label for="pf-thema">${esc(t('thema'))}</label>
         <select id="pf-thema">${themaOptionen}</select>
       </div>
@@ -314,18 +304,6 @@ export function renderProfil(el, daten) {
     else renderProfil(el, daten);
   });
 
-  el.querySelector('#pf-sprache').addEventListener('change', async (ereignis) => {
-    const neu = ereignis.target.value;
-    try {
-      await setzeSprache(neu);
-      setzeEinstellung('sprache', neu);
-    } catch {
-      ereignis.target.value = sprache();
-    }
-    // Sprachwechsel muss auch Navigation/Menü/Kopf neu beschriften → globales Re-Render.
-    neuRendern();
-  });
-
   el.querySelector('#pf-thema').addEventListener('change', (ereignis) => {
     const neu = ereignis.target.value;
     setzeEinstellung('thema', neu);
@@ -339,7 +317,6 @@ export function renderProfil(el, daten) {
   el.querySelector('#pf-reset').addEventListener('click', async () => {
     if (!window.confirm(t('reset_bestaetigen'))) return;
     setzeZurueck();
-    await setzeSprache('de');
     offen = null;
     location.hash = '#/onboarding';
     neuRendern();

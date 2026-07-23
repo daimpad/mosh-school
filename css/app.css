@@ -338,67 +338,6 @@ body.im-onboarding main { padding-bottom: 2rem; }
   .kopf-suche:hover { background: var(--primaer-weich); box-shadow: var(--schatten-hover); transform: translateY(-1px); }
 }
 
-/* Sprachanzeige — rein darstellend (app-info funktion_aktiv:false): Flagge +
-   Kürzel neben dem Hamburger; die Liste klappt auf, schaltet aber nichts um. */
-.sprach-anzeige { position: relative; }
-/* Sprach-Umschalter lebt jetzt im Hamburger-Menü (als Menü-Zeile). */
-.menue-sprache .sprach-knopf {
-  width: 100%; border: none; background: transparent; border-radius: 0;
-  justify-content: flex-start; font-weight: 500; min-height: 0;
-}
-.menue-sprache .sprach-liste {
-  position: static; min-width: 0; margin: 0.15rem 0 0; padding: 0.2rem 0 0;
-  border: none; background: transparent; box-shadow: none;
-}
-
-.sprach-knopf {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  min-height: 40px;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid var(--linie);
-  border-radius: var(--radius);
-  background: var(--flaeche);
-  color: var(--tinte);
-  font: inherit;
-  font-weight: 600;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background var(--uebergang), box-shadow var(--uebergang);
-}
-
-.sprach-globus { font-size: 1.2rem; line-height: 1; }
-
-.sprach-liste {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  right: 0;
-  z-index: 40;
-  min-width: 12.5rem;
-  margin: 0;
-  padding: 0.35rem;
-  list-style: none;
-  background: var(--flaeche);
-  border: 1px solid var(--linie);
-  border-radius: var(--radius);
-  box-shadow: var(--schatten-hover);
-}
-
-.sprach-eintrag {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.55rem;
-  border-radius: var(--radius);
-  font-size: 0.9rem;
-}
-
-.sprach-kuerzel { flex: none; min-width: 1.9rem; text-align: center; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; padding: 0.1rem 0.3rem; border: 1.5px solid var(--linie-stark); border-radius: 2px; color: var(--tinte-2); }
-.sprach-eintrag .sprach-name { flex: 1; }
-.sprach-eintrag.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); font-weight: 600; }
-.sprach-haken { flex: none; width: 1rem; text-align: center; color: var(--primaer-tief); font-weight: 700; }
-
 .menue {
   position: fixed;
   inset: 0;
@@ -1837,7 +1776,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 /* Druckansicht = „Als PDF": nur der Plan, ohne Navigation, Formular und Knöpfe. */
 @media print {
-  .kopf, .fussnav, .menue, .sprach-anzeige,
+  .kopf, .fussnav, .menue,
   .plan-konfig, .plan-aktionen, .plan-session-knoepfe, .plan-session-link { display: none !important; }
   body { background: #fff; }
   main { padding: 0; max-width: none; }

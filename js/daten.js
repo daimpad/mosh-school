@@ -229,14 +229,13 @@ export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, appInfoRoh
   const deltas = dateien.flatMap((d) => d.delta_bausteine || []);
   const einheiten = einheitenRoh?.trainingseinheiten || [];
   const fehlerbilder = fehlerbilderRoh?.fehlerbild_bausteine || [];
-  // App-Info: statischer Referenzbereich (Reiter „Über"/„Mitmachen" + Sprachanzeige),
+  // App-Info: statischer Referenzbereich (Reiter „Über"/„Mitmachen"),
   // ebenfalls NICHT im Baustein-Pool — kein Fortschritt, keine Gamification.
   const appInfo = {
     meta: appInfoRoh?._meta || {},
     ueber: appInfoRoh?.ueber || null,
     mitmachen: appInfoRoh?.mitmachen || null,
     rechtliches: appInfoRoh?.rechtliches || null,
-    sprachen: appInfoRoh?.sprachen || { funktion_aktiv: false, aktuell: 'de', liste: [] },
   };
   // Turnier-Regularium: eigener Referenzbereich (wie Regeln), NICHT im Baustein-Pool.
   // Je Turnierstufe explizite Werte (nicht rein kumulativ); Varianten (Doppel/Junior)
@@ -438,7 +437,6 @@ function pruefeDaten(daten) {
   else if (!(ai.mitmachen.moeglichkeiten || []).every((m) => m.cta_label && m.cta_ziel)) {
     w.push('app-info: eine Mitmach-Möglichkeit ohne cta_label/cta_ziel');
   }
-  if (!(ai.sprachen?.liste || []).length) w.push('app-info: Sprachliste leer');
 
   const { zyklisch } = topoSortiere(daten.bausteine, (a, b) => daten.poolIndex.get(a.id) - daten.poolIndex.get(b.id));
   if (zyklisch.length > 0) w.push(`Voraussetzungszyklus: ${zyklisch.join(', ')}`);
