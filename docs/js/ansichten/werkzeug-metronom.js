@@ -24,6 +24,7 @@ const zustand = {
   takt: 4, // Schläge pro Takt
   unterteilung: 1,
   akzent: true,
+  nurGruppe: false, // Klick nur auf den Gruppenanfang (die „1") — für ungerade/wechselnde Metren
   countin: false,
   rampeAn: false,
   rampeZiel: 200,
@@ -93,6 +94,9 @@ function planeKlick(ctx, ziel, zeit, i, countinTakte) {
     if (istSchlag) klick(ctx, ziel, zeit, { akzent: true });
     return;
   }
+  // „Nur Gruppenanfang": alles außer der Eins unterdrücken — man hört nur die
+  // Taktlänge, ideal für wechselnde/ungerade Metren (z. B. mathcore_taktwechsel).
+  if (zustand.nurGruppe && !istEins) return;
   const akzent = istEins && zustand.akzent;
   klick(ctx, ziel, zeit, { akzent, leise: !istSchlag });
 }
@@ -339,6 +343,9 @@ export function renderWerkzeugMetronom(el, daten, query) {
           <button type="button" class="chip chip-waehlbar wz-akzent ${zustand.akzent ? 'chip-akzent' : ''}" aria-pressed="${zustand.akzent}">
             <i class="fa-solid fa-angles-up" aria-hidden="true"></i> ${esc(t('wz_akzent'))}
           </button>
+          <button type="button" class="chip chip-waehlbar wz-nurgruppe ${zustand.nurGruppe ? 'chip-akzent' : ''}" aria-pressed="${zustand.nurGruppe}">
+            <i class="fa-solid fa-forward" aria-hidden="true"></i> ${esc(t('wz_nurgruppe'))}
+          </button>
           <button type="button" class="chip chip-waehlbar wz-countin ${zustand.countin ? 'chip-akzent' : ''}" aria-pressed="${zustand.countin}">
             <i class="fa-solid fa-hourglass-start" aria-hidden="true"></i> ${esc(t('wz_countin'))}
           </button>
@@ -445,6 +452,7 @@ function verdrahte(el, daten) {
     });
   };
   umschalter('.wz-akzent', 'akzent');
+  umschalter('.wz-nurgruppe', 'nurGruppe');
   umschalter('.wz-countin', 'countin');
   umschalter('.wz-rampe-an', 'rampeAn');
 
