@@ -144,6 +144,54 @@ export function genreMotivSvg(stil) {
     </svg>`;
 }
 
+// Generisches Motiv aus einem beliebigen Schlüssel (Seite/Bereich) — deterministisch
+// wie das Genre-Motiv, nur ohne Genre-Tabelle: Grundform + Parameter aus dem Hash.
+// Für die großen Landing-Heros aller Bereiche (Startseite/Menü), gleiches Vokabular.
+const MOTIV_FORMEN = ['balken', 'wellen', 'raster', 'chaos'];
+export function motivSvg(schluessel) {
+  const r = prng(hashSlug('mosh-landing:' + schluessel));
+  const form = MOTIV_FORMEN[Math.floor(r() * MOTIV_FORMEN.length)];
+  const p = {
+    n: form === 'wellen' ? 4 + Math.floor(r() * 3) : form === 'raster' ? 8 + Math.floor(r() * 4) : 20 + Math.floor(r() * 30),
+    h: 0.55 + r() * 0.4,
+    w: form === 'balken' ? 3 + r() * 4 : form === 'wellen' ? 3 + r() * 3 : 2 + r() * 2,
+    j: r() * 0.2,
+    wellen: 2 + Math.floor(r() * 3),
+    punkte: Math.floor(r() * 16),
+  };
+  const gen = { balken: formBalken, wellen: formWellen, raster: formRaster, chaos: formChaos }[form];
+  const koerper = gen(r, p);
+  const wellenLage = form !== 'wellen' && p.wellen ? formWellen(r, p, 1.4) : '';
+  const punkte = p.punkte ? formPunkte(r, p.punkte) : '';
+  const grund = form === 'wellen' ? '' : '<line x1="0" y1="210" x2="480" y2="210" stroke-width="1.5" opacity="0.4" />';
+  return `<svg class="genre-landing-bild" viewBox="0 0 480 270" fill="none" stroke="currentColor"
+      stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      ${grund}${wellenLage}${koerper}${punkte}
+    </svg>`;
+}
+
+// Wiederverwendbarer großer Landing-Hero (Motiv-Backdrop + Reinbox-Effekt), im
+// selben Stil wie der Genre-Hero — für alle Bereiche aus Startseite/Menü. Nutzt
+// die bestehenden .genre-landing-*-Klassen (Box-in-Animation greift automatisch).
+export function landingHeroHtml(icon, titel, untertitel = '', hue = 'pf-blau', motivKey = null, augenbraue = '', iconHtml = '') {
+  const key = motivKey || titel || 'mosh';
+  const iconTeil = iconHtml
+    ? `<span class="genre-landing-symbol" aria-hidden="true">${iconHtml}</span>`
+    : icon
+      ? `<i class="fa-solid ${esc(icon)}" aria-hidden="true"></i>`
+      : '';
+  return `
+    <section class="marke-hero genre-landing-hero landing-hero ${esc(hue)}">
+      ${motivSvg(key)}
+      <div class="genre-landing-scrim" aria-hidden="true"></div>
+      <div class="genre-landing-inhalt">
+        ${iconTeil || augenbraue ? `<p class="genre-landing-augenbraue">${iconTeil}${augenbraue ? ` ${esc(augenbraue)}` : ''}</p>` : ''}
+        <h1>${esc(titel)}</h1>
+        ${untertitel ? `<p class="genre-landing-kurz">${esc(untertitel)}</p>` : ''}
+      </div>
+    </section>`;
+}
+
 // Abstraktes Platzhalter-„Bild" für den Genre-Hub-Hero: ein monochromes
 // Klang-Spektrum (Balken unterschiedlicher Höhe) mit Wellenlinie darüber.
 // Deterministisch, currentColor, wirkt nur inline.

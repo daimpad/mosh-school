@@ -10,7 +10,8 @@
 
 import { domaenenVon } from '../daten.js';
 import { label, t } from '../i18n.js';
-import { bausteinIcon, esc, heroKlein, leerHtml } from '../oberflaeche.js';
+import { bausteinIcon, esc, leerHtml } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 import {
   FACETTEN,
   ausschnitt,
@@ -187,7 +188,7 @@ export function renderSuche(el, daten) {
   };
 
   el.innerHTML = `
-    ${heroKlein('fa-magnifying-glass', t('suche_titel'), t('suche_intro'), 'pf-blau')}
+    ${landingHeroHtml('fa-magnifying-glass', t('suche_titel'), t('suche_intro'), 'pf-blau')}
     <form class="such-form" id="such-form" role="search">
       <label class="nur-sr" for="such-feld">${esc(t('suche_feld_label'))}</label>
       <div class="such-feld-zeile">

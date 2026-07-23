@@ -4,7 +4,8 @@
 // Der Plan lebt im Zustand (persistent); Fortschritt bleibt baustein-gebunden.
 
 import { label, sprache, t, text } from '../i18n.js';
-import { bausteinIcon, esc, heroKlein, neuRendern } from '../oberflaeche.js';
+import { bausteinIcon, esc, neuRendern } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 import { erzeugePlan, tauscheEinheit, entferneSession, planNachWochen, planbareEinheiten, planAlsIcal } from '../plan.js';
 import { plan as gespeicherterPlan, setzePlan, loeschePlan } from '../zustand.js';
 
@@ -105,7 +106,7 @@ export function renderPlan(el, daten) {
   const wenige = planbareEinheiten(daten).length === 0;
 
   el.innerHTML = `
-    ${heroKlein('fa-calendar-days', t('plan_titel'), t('plan_kachel_text'), 'pf-indigo')}
+    ${landingHeroHtml('fa-calendar-days', t('plan_titel'), t('plan_kachel_text'), 'pf-indigo')}
     ${wenige ? `<div class="karte"><p class="leise">${esc(t('plan_keine_einheiten'))}</p></div>` : ''}
     ${konfigHtml(vorgabe)}
     ${p ? planHtml(daten, p) : ''}`;
