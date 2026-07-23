@@ -4,8 +4,8 @@
 import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { label, t } from '../i18n.js';
-import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, heroKlein, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
-import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, untergruende, witterungen } from '../pfade.js';
+import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
+import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 import { genreInszenierungHtml, genreKurz, genreMotivSvg, genrePlatzhalterSvg, landingHeroHtml } from '../genre-inszenierung.js';
@@ -296,7 +296,7 @@ export function renderInstrument(el, daten, domaene) {
       )
       .join('');
     el.innerHTML = `
-      ${landingHeroHtml('fa-guitar', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
+      ${landingHeroHtml('fa-bolt', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
       <div class="pfad-gitter instr-picker">${karten}</div>`;
     return;
   }
@@ -352,9 +352,9 @@ export function renderBand(el, daten) {
     ${liste}`;
 }
 
-// Umgebungs-Achse (Outdoor, Querschnitt): Hub über die Wetter- und Boden-Themen
-// plus die vollständige Outdoor-Reihe. Einzelne Achsen-Werte (Wind, Sand …) sind
-// eigene Ansichten. Kein Cross-Sport-Modifikator — Outdoor ist crossminton-eigen.
+// Kontext-Achse (Querschnitt): Hub über die Spielsituationen (Proberaum, Bühne,
+// Aufnahme, Solo) plus die vollständige Reihe. Einzelne Situationswerte sind
+// eigene Ansichten. Quer zu Stufe und Instrument.
 export function renderUmgebung(el, daten, achse, wert) {
   if (achse && wert) {
     const pfad = umgebungspfad(daten, achse, wert);
@@ -380,16 +380,13 @@ export function renderUmgebung(el, daten, achse, wert) {
     alle.stationen.length === 0
       ? leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())
       : `${balkenHtml(projektion(alle.stationen.map((s) => s.baustein)))}${stationslisteHtml(alle.stationen, 'umgebung')}`;
-  // Facetten-Sektionen nur zeigen, wenn tatsächlich Werte belegt sind — so bleibt
-  // eine unbelegte Facette (z. B. Untergrund) ohne leere Überschrift.
+  // Facetten-Sektion nur zeigen, wenn tatsächlich Situationswerte belegt sind.
   const witt = witterungen(daten);
-  const unter = untergruende(daten);
   const facettenSektion = (titel, eintraege, achsenName) =>
     eintraege.length ? `<h2>${esc(t(titel))}</h2>${achsenKarten(eintraege, achsenName)}` : '';
   el.innerHTML = `
-    ${heroKlein('fa-users', t('pfad_umgebung'), t('pfad_umgebung_text'), 'pf-sky')}
+    ${landingHeroHtml('fa-people-group', t('pfad_umgebung'), t('pfad_umgebung_text'), 'pf-sky', 'kontext')}
     ${facettenSektion('umgebung_wetter', witt, 'witterung')}
-    ${facettenSektion('umgebung_boden', unter, 'untergrund')}
     <h2>${esc(t('umgebung_alle'))}</h2>
     ${liste}`;
 }
