@@ -542,6 +542,9 @@ a.karte-link {
 @media (min-width: 34rem) {
   .pfad-gitter { grid-template-columns: 1fr 1fr; }
 }
+/* Instrumente: schon auf Mobil zweispaltig; die Band-Kachel nimmt die ganze Reihe. */
+.instr-gitter { grid-template-columns: 1fr 1fr; }
+.instr-gitter .band-kachel { grid-column: 1 / -1; }
 .pfad-kachel {
   margin-bottom: 0;
   position: relative;
