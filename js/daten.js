@@ -42,6 +42,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.stil-deathcore.json',
   'data/bausteine.stil-djent.json',
   'data/bausteine.stil-stoner-post.json',
+  'data/bausteine.core-noise.json',
   'data/bausteine.genreuebergreifend.json',
   'data/bausteine.experte-vertiefung.json',
   'data/bausteine.koerper-mentales.json',
