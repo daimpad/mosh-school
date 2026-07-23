@@ -87,6 +87,12 @@ const SONGDATEIEN = [
   'data/songs.post-metal.json',
   'data/songs.deathcore.json',
   'data/songs.sludge.json',
+  'data/songs.screamo.json',
+  'data/songs.mathcore.json',
+  'data/songs.noise-rock.json',
+  'data/songs.post-hardcore.json',
+  'data/songs.dark-post-punk.json',
+  'data/songs.industrial.json',
   'data/songs.grenzgaenger.json',
 ];
 
