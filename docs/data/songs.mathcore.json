@@ -1,0 +1,217 @@
+{
+  "genre": "Mathcore",
+  "anzahl": 30,
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Kuenstler). Bei tiefen Underground-Eintraegen den genauen Tracktitel vor Release kurz gegenpruefen. Hass-/extremismusfrei kuratiert.",
+  "songs": [
+    {
+      "kuenstler": "The Dillinger Escape Plan",
+      "titel": "Sunshine the Werewolf",
+      "substil_vermerk": "praegender Mathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=The+Dillinger+Escape+Plan+Sunshine+the+Werewolf",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Botch",
+      "titel": "Transitions from Persona to Object",
+      "substil_vermerk": "Mathcore-Grundstein (US)",
+      "url": "https://bandcamp.com/search?q=Botch+Transitions+from+Persona+to+Object&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Converge",
+      "titel": "Dark Horse",
+      "substil_vermerk": "metallischer Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Converge+Dark+Horse&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Coalesce",
+      "titel": "Have Patience",
+      "substil_vermerk": "Riff-lastiger Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Coalesce+Have+Patience&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cave In",
+      "titel": "Terminal Fixation",
+      "substil_vermerk": "frueher Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Cave+In+Terminal+Fixation&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Deadguy",
+      "titel": "Baby Arm",
+      "substil_vermerk": "Proto-Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Deadguy+Baby+Arm&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Blood Brothers",
+      "titel": "Ambulance vs. Ambulance",
+      "substil_vermerk": "schriller Chaos-Mathcore (US)",
+      "url": "https://www.youtube.com/results?search_query=The+Blood+Brothers+Ambulance+vs.+Ambulance",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Psyopus",
+      "titel": "Imogen's Puzzle Pt. 2",
+      "substil_vermerk": "extrem technischer Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Psyopus+Imogen%27s+Puzzle+Pt.+2&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ion Dissonance",
+      "titel": "Solipsist",
+      "substil_vermerk": "dissonanter Mathcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=Ion+Dissonance+Solipsist&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Number Twelve Looks Like You",
+      "titel": "Grandfather",
+      "substil_vermerk": "verspielter Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=The+Number+Twelve+Looks+Like+You+Grandfather&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Car Bomb",
+      "titel": "Black Blood",
+      "substil_vermerk": "polyrhythmischer Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Car+Bomb+Black+Blood&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Meshuggah",
+      "titel": "Bleed",
+      "substil_vermerk": "polymetrischer Grenzfall (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Meshuggah+Bleed",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Candiria",
+      "titel": "Without Water",
+      "substil_vermerk": "Mathcore mit Jazz/HipHop (US)",
+      "url": "https://bandcamp.com/search?q=Candiria+Without+Water&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "SikTh",
+      "titel": "Pussyfoot",
+      "substil_vermerk": "technischer britischer Mathcore",
+      "url": "https://www.youtube.com/results?search_query=SikTh+Pussyfoot",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Rolo Tomassi",
+      "titel": "Cloaked",
+      "substil_vermerk": "Mathcore mit Ambient-Kontrast (UK)",
+      "url": "https://bandcamp.com/search?q=Rolo+Tomassi+Cloaked&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Daughters",
+      "titel": "The Hit",
+      "substil_vermerk": "Noise-Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Daughters+The+Hit&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Locust",
+      "titel": "Skin Graft at 75 MPH",
+      "substil_vermerk": "Grind/Math-Hybrid (US)",
+      "url": "https://www.youtube.com/results?search_query=The+Locust+Skin+Graft+at+75+MPH",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Fantomas",
+      "titel": "Rosemary's Baby",
+      "substil_vermerk": "avantgardistischer Grenzfall (US)",
+      "url": "https://www.youtube.com/results?search_query=Fantomas+Rosemary%27s+Baby",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Burnt by the Sun",
+      "titel": "Soundtrack to the Worst Movie Ever",
+      "substil_vermerk": "Groove-Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Burnt+by+the+Sun+Soundtrack+to+the+Worst+Movie+Ever&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Protest the Hero",
+      "titel": "Bloodmeat",
+      "substil_vermerk": "progressiver Mathcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=Protest+the+Hero+Bloodmeat&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sleepytime Gorilla Museum",
+      "titel": "Sleep Is Wrong",
+      "substil_vermerk": "avantgardistisch/theatral (US)",
+      "url": "https://bandcamp.com/search?q=Sleepytime+Gorilla+Museum+Sleep+Is+Wrong&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Frontierer",
+      "titel": "Tumoric",
+      "substil_vermerk": "moderner Noise-Mathcore (UK)",
+      "url": "https://bandcamp.com/search?q=Frontierer+Tumoric&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "KEN mode",
+      "titel": "Blessed",
+      "substil_vermerk": "Noise-Rock-naher Mathcore (Kanada)",
+      "url": "https://bandcamp.com/search?q=KEN+mode+Blessed&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Yautja",
+      "titel": "The Spectacle",
+      "substil_vermerk": "Sludge-naher Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Yautja+The+Spectacle&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Employed to Serve",
+      "titel": "Harsh Truth",
+      "substil_vermerk": "moderner UK-Mathcore",
+      "url": "https://bandcamp.com/search?q=Employed+to+Serve+Harsh+Truth&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Vein.fm",
+      "titel": "Virus://Vibrance",
+      "substil_vermerk": "moderner Nu-Mathcore (US)",
+      "url": "https://bandcamp.com/search?q=Vein.fm+Virus%3A%2F%2FVibrance&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Pupil Slicer",
+      "titel": "Wounds Upon My Skin",
+      "substil_vermerk": "moderner UK-Mathcore",
+      "url": "https://bandcamp.com/search?q=Pupil+Slicer+Wounds+Upon+My+Skin&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Heriot",
+      "titel": "Cleansed Existence",
+      "substil_vermerk": "moderner Industrial-Mathcore (UK)",
+      "url": "https://bandcamp.com/search?q=Heriot+Cleansed+Existence&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Callous Daoboys",
+      "titel": "A Brief Article Regarding Time Travel",
+      "substil_vermerk": "chaotisch-eklektisch (US)",
+      "url": "https://bandcamp.com/search?q=The+Callous+Daoboys+A+Brief+Article+Regarding+Time+Travel&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Dysrhythmia",
+      "titel": "Dead Tree Scrolls",
+      "substil_vermerk": "instrumental-technisch (US)",
+      "url": "https://bandcamp.com/search?q=Dysrhythmia+Dead+Tree+Scrolls&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

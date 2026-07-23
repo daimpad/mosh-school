@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v98';
+const CACHE = 'mosh-v102';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -81,6 +81,7 @@ const SHELL = [
   'js/ansichten/werkzeug-landkarte.js',
   'js/ansichten/werkzeug-genremix.js',
   'js/ansichten/koennenscheck.js',
+  'js/ansichten/experimentieren.js',
   'js/ansichten/suche.js',
   'js/ansichten/training.js',
   'js/ansichten/willkommen.js',
@@ -111,12 +112,14 @@ const SHELL = [
   'data/bausteine.stil-deathcore.json',
   'data/bausteine.stil-djent.json',
   'data/bausteine.stil-stoner-post.json',
+  'data/bausteine.core-noise.json',
   'data/bausteine.genreuebergreifend.json',
   'data/bausteine.experte-vertiefung.json',
   'data/bausteine.koerper-mentales.json',
   'data/bausteine.kontext.json',
   'data/bausteine.ensemble-paare.json',
   'data/bausteine.band-proberaum.json',
+  'data/bausteine.band-intro.json',
   'data/bausteine.ensemble-gross.json',
   'data/bausteine.demo-recording.json',
   'data/bausteine.auftritt-live.json',
@@ -130,14 +133,17 @@ const SHELL = [
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
   'data/bausteine.instrument-technik.json',
+  'data/bausteine.gitarre-detail.json',
   'data/bausteine.gear-schlagzeug-gesang.json',
   'data/bausteine.grenzgaenger.json',
+  'data/bausteine.experimentieren.json',
   'data/fehlerbilder.json',
   'data/grafiken.json',
   'data/lehrgrafiken.json',
   'data/index.json',
   'data/genres.json',
   'data/gefuehlslandkarte.json',
+  'data/experimente.json',
   'data/patterns.json',
   'data/tunings.json',
   'data/pedale.json',
@@ -155,6 +161,12 @@ const SHELL = [
   'data/songs.post-metal.json',
   'data/songs.deathcore.json',
   'data/songs.sludge.json',
+  'data/songs.screamo.json',
+  'data/songs.mathcore.json',
+  'data/songs.noise-rock.json',
+  'data/songs.post-hardcore.json',
+  'data/songs.dark-post-punk.json',
+  'data/songs.industrial.json',
   'data/songs.grenzgaenger.json',
   'data/trainingseinheiten.json',
   'data/koennenscheck.json',

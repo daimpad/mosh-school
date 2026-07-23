@@ -8,6 +8,27 @@
   "delta_bausteine": [],
   "bausteine": [
     {
+      "id": "pedalboard_einsteiger",
+      "anzeigetitel": {
+        "de": "Pedalboard für Anfänger: die Klassiker"
+      },
+      "domaene": [
+        "gitarre",
+        "bass",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Pedalboard bündelt Effektgeräte, die zwischen Instrument und Verstärker geschaltet werden — jeder „Tritt“ (Pedal) verändert oder ergänzt den Klang. Für den Metal ist der wichtigste Gedanke: Du brauchst weniger, als es aussieht. Ein tighter, zerrender Amp und ein Noise Gate bringen dich erstaunlich weit; das ganze Board kommt nach und nach, nicht auf einmal.\n\nEinige Klassiker tauchen immer wieder auf. An der Gitarre: das Stimmgerät (ganz vorne), ein Overdrive/Booster, der vor den Amp gestellt den Ton strafft (der klassische Metal-Kniff), ein Distortion-Pedal als Alternative zur Amp-Zerre, und vor allem das Noise Gate, das die Pausen bei High-Gain sauber hält. Am Bass: ein Compressor für gleichmäßigen Ton, ein Bass-Overdrive mit Blend-Regler (damit das cleane Fundament erhalten bleibt), und ein Preamp/DI, der den Grundton formt und ein sauberes Signal für Bühne und Aufnahme liefert.\n\nEbenso wichtig wie die Auswahl ist die Reihenfolge: Stimmgerät zuerst, dann Dynamik- und Gain-Effekte, das Noise Gate nach der Zerre, dann EQ, und Zeiteffekte wie Delay und Reverb zuletzt (oft im Effektweg des Amps). Die Signalkette ist kein Zufall — sie entscheidet mit über den Ton."
+      },
+      "reflexionsaufgabe": {
+        "de": "Welche wenigen Pedale braucht dein Sound wirklich — reicht vielleicht ein tighter Amp plus Noise Gate für den Anfang? Verstehst du die Reihenfolge der Kette (Stimmgerät, Gain, Gate, EQ, Zeiteffekte zuletzt)? Und wo unterscheiden sich Gitarre und Bass — etwa der Blend-Regler beim Bass-Overdrive und die Rolle des Preamp/DI?"
+      }
+    },
+    {
       "id": "pedalboard_grundlagen",
       "anzeigetitel": {
         "de": "Pedalboard-Grundlagen für Anfänger"

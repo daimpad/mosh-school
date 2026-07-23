@@ -197,6 +197,51 @@
         "doom",
         "sludge"
       ]
+    },
+    "screamo": {
+      "kurz": "Screamo dreht Emo-Intensität ins Extrem: zerbrechliche, verwobene Gitarrenlinien, die unvermittelt in kollektives Geschrei und Chaos kippen. Emotionale Entladung über technische Perfektion — roh, dringlich und bei aller Härte melodisch.",
+      "einordnung": {
+        "herkunft": "Mitte der 1990er aus dem US-Hardcore (San Diego, D.C.); prägend u. a. Heroin und Antioch Arrow, später Orchid und City of Caterpillar.",
+        "sound": "Klirrende, oft unverzerrt-arpeggierte Gitarren neben plötzlichen Verzerrungswänden; wenig Tieftuning, dafür extreme Dynamik statt reiner Wucht.",
+        "struktur": "Ruhe gegen Ausbruch als Grundprinzip: leise, verwobene Parts schlagen unvermittelt in dichte Entladungen um; oft kurze, intensive Stücke.",
+        "tempo": "Sehr wechselhaft — schleppende, zerbrechliche Passagen kippen in hektische, treibende Ausbrüche.",
+        "vocals": "Verzweifelt-hoher, am Rand des Brechens klingender Schrei, oft überlappend/mehrstimmig — roh statt kontrolliert-tief."
+      },
+      "verwandt": [
+        "hardcore",
+        "mathcore",
+        "powerviolence"
+      ]
+    },
+    "mathcore": {
+      "kurz": "Mathcore nimmt Metalcore-Härte und zerlegt sie in ungerade Taktarten, abrupte Stopps und dissonante Reibung. Präzision als Gewalt: das Riff, das man erst nach dem dritten Hören zählen kann.",
+      "einordnung": {
+        "herkunft": "Ende der 1990er aus Hardcore/Metalcore mit Jazz- und Noise-Einschlag; prägend u. a. Converge, Botch und The Dillinger Escape Plan.",
+        "sound": "Scharfe, dissonante High-Gain-Gitarren mit sperrigen Voicings; trocken und definiert produziert, damit die Brüche sitzen.",
+        "struktur": "Kollagenhaft: abrupte Wechsel, Stopps und Neustarts statt Strophe/Refrain; wechselnde Taktarten als tragendes Element.",
+        "tempo": "Extrem wechselhaft — Blast-nahe Raserei neben zähen Halbtempo-Brocken, häufig im selben Stück.",
+        "vocals": "Meist harsches, aggressives Screaming, rhythmisch eng an die Brüche gekoppelt."
+      },
+      "verwandt": [
+        "metalcore",
+        "grindcore",
+        "screamo"
+      ]
+    },
+    "noise_rock": {
+      "kurz": "Noise Rock stellt Klang über Sauberkeit: schräge Stimmungen, Rückkopplung als Melodie, ein Bass, der die Hauptstimme führt. Dreck, Reibung und Wiederholung als Ausdruck — nicht als Fehler.",
+      "einordnung": {
+        "herkunft": "1980er aus Post-Punk und No Wave (US-Underground); prägend u. a. Big Black und The Jesus Lizard.",
+        "sound": "Verzerrte, oft alternativ gestimmte Gitarren, Feedback und Dissonanz als Gestaltungsmittel; roh, direkt, absichtlich unpoliert.",
+        "struktur": "Repetitiv und hypnotisch: Riffs und Grooves, die sich festbeißen, statt sich aufzulösen; Spannung durch Wiederholung.",
+        "tempo": "Meist mittleres, stampfendes Tempo; treibend statt rasend, mit Nachdruck auf dem Groove.",
+        "vocals": "Von tonlos-gesprochen bis geschrien, oft beiläufig-kaputt statt technisch — dem Lärm gleichgestellt."
+      },
+      "verwandt": [
+        "sludge",
+        "mathcore",
+        "powerviolence"
+      ]
     }
   }
 }

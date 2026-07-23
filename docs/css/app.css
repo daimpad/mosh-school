@@ -2714,3 +2714,29 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .instr-reiter-knopf .fa-solid { font-size: 0.85em; margin-right: 0.1rem; }
 .instr-tab-inhalt { margin-top: 0.2rem; }
 .instr-tab-inhalt > .instr-stufe-titel:first-child { margin-top: 0.2rem; }
+
+/* ============================================================================
+   Experimentieren-Bereich (Impuls-Karten-Deck)
+   Referenzbereich; „ausprobiert" ist rein informativ (kein Zähler, §5).
+   ============================================================================ */
+.exp-ziehbereich { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.4rem; }
+.exp-gezogen { margin-top: 0.3rem; }
+.exp-karte { display: flex; flex-direction: column; gap: 0.7rem; border-left: 5px solid var(--primaer); }
+.exp-karte-kopf { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; }
+.exp-karte-titel { margin: 0; font-size: 1.35rem; line-height: 1.1; color: var(--tinte); }
+.exp-karte-impuls { margin: 0; color: var(--tinte-2); font-size: 1.02rem; line-height: 1.5; max-width: 54ch; }
+.exp-karte-aktionen { margin: 0.2rem 0 0; flex-wrap: wrap; }
+.exp-karte-merker { margin: 0; }
+.exp-aufwand { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.exp-aufwand-kurz { color: var(--signal-gruen-text); }
+.exp-aufwand-mittel { color: var(--signal-gelb-text); }
+.exp-aufwand-lang { color: var(--signal-rot-text); }
+.exp-stoebern { margin: 0 0 1.4rem; }
+.exp-stoeber-gruppen { display: flex; flex-direction: column; gap: 0.3rem; padding-top: 0.4rem; }
+.exp-stoeber-liste { list-style: none; margin: 0.3rem 0 0.6rem; padding: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+.exp-stoeber-titel { display: inline-flex; align-items: center; gap: 0.4rem; width: 100%; text-align: left; background: none; border: 0; padding: 0.35rem 0.2rem; color: var(--primaer-tief); font: inherit; cursor: pointer; border-radius: var(--radius-klein); }
+.exp-stoeber-titel:hover { background: var(--primaer-weich); }
+.exp-haltung { display: grid; grid-template-columns: 1fr; gap: 0.6rem; margin-bottom: 1.4rem; }
+.exp-haltung-karte { display: flex; align-items: center; gap: 0.7rem; }
+.exp-haltung-karte .grafik-icon, .exp-haltung-karte .fa-solid { width: 1.7rem; height: 1.7rem; flex: none; color: var(--primaer); }
+@media (min-width: 40rem) { .exp-haltung { grid-template-columns: repeat(3, 1fr); } }

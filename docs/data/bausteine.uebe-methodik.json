@@ -135,6 +135,91 @@
       "reflexionsaufgabe": {
         "de": "Liegt deine aktuelle Übung an deiner Grenze — oder ist sie zu leicht (langweilig) bzw. zu schwer (nichts gelingt)? An welcher Stellschraube drehst du dann bewusst: Tempo, Umfang oder Isolation? Und wie machst du aus einer festen Vorlage eine Übung, die zu deinem Level passt?"
       }
+    },
+    {
+      "id": "plateaus_ueberwinden",
+      "anzeigetitel": {
+        "de": "Plateaus überwinden"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Fortschritt verläuft nicht gleichmäßig. Nach schnellen Anfangserfolgen kommt fast immer ein Plateau — eine Phase, in der es sich anfühlt, als ginge nichts voran. Das ist normal und kein Zeichen mangelnden Talents.\n\nPlateaus überwindet man selten mit mehr vom Gleichen, sondern mit einem veränderten Zugang: die Übung anders angehen, sich selbst aufnehmen und nüchtern anhören, eine Schwäche isolieren, die man umgangen hat — oder bewusst pausieren, denn Können festigt sich auch in der Ruhe. Oft zeigt eine Aufnahme, dass der Fortschritt größer ist als das Gefühl.\n\nGeduld gehört zum Handwerk. Wer über das Plateau hinweg dranbleibt, macht danach oft einen spürbaren Sprung."
+      },
+      "reflexionsaufgabe": {
+        "de": "Steckst du gerade auf einem Plateau — und erkennst du es als normale Phase statt als Scheitern? Was könntest du ändern, statt mehr vom Gleichen zu tun: den Zugang wechseln, dich aufnehmen, eine umgangene Schwäche isolieren, bewusst pausieren? Und zeigt eine Aufnahme vielleicht mehr Fortschritt, als sich anfühlt?"
+      },
+      "voraussetzungen": [
+        "effektiv_ueben"
+      ]
+    },
+    {
+      "id": "motivation_dranbleiben",
+      "anzeigetitel": {
+        "de": "Dranbleiben: Gewohnheit statt Willenskraft"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Langfristig gewinnt nicht, wer die härteste Willenskraft hat, sondern wer eine tragfähige Gewohnheit aufbaut. Motivation schwankt; eine feste Routine — ein gleicher Zeitpunkt, ein niedrigschwelliger Einstieg — trägt auch durch die Tage, an denen die Lust fehlt.\n\nHilfreich ist, die Hürde klein zu halten: Sich vorzunehmen, nur kurz anzufangen, führt oft in eine längere Session. Frustration gehört dazu, wenn etwas nicht klappt — sie ist ein Zeichen, dass du an deiner Grenze arbeitest, nicht ein Grund aufzuhören. Und Fortschritt braucht Zeit; der Vergleich mit anderen schadet meist mehr, als er nützt.\n\nMusik machen soll tragen, nicht zermürben. Wer die Freude am Spielen nicht aus dem Blick verliert, bleibt am längsten dabei."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hast du eine feste Routine, die dich auch durch lustlose Tage trägt — oder verlässt du dich auf schwankende Motivation? Hältst du die Einstiegshürde klein, sodass Anfangen leichtfällt? Und behältst du die Freude am Spielen im Blick, statt dich in Vergleichen und Frust zu verlieren?"
+      },
+      "voraussetzungen": [
+        "ueben_strukturieren"
+      ]
+    },
+    {
+      "id": "ergonomie_haltung",
+      "anzeigetitel": {
+        "de": "Ergonomie & Haltung"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Wie du dein Instrument hältst, entscheidet über Jahre des Spielens ohne Beschwerden. Eine entspannte Haltung, ein sinnvoll eingestellter Gurt (Instrument nicht zu tief), lockere Handgelenke ohne starke Abknickung und regelmäßiges Lockerlassen beugen Überlastung vor — quer über alle Instrumente, von der Greifhand bis zur Fußtechnik.\n\nDas wichtigste Signal ist Schmerz: Er ist kein Zeichen von Fleiß, sondern eine Warnung. Verspannung, Ziehen oder Taubheit heißt innehalten, lockern, die Haltung prüfen — nicht durchhalten. Aufwärmen vor dem Spielen und kurze Pausen bei langen Sessions halten die Muskulatur geschmeidig.\n\nGute Haltung fühlt sich meist auch gut an: mühelos, ohne unnötige Anspannung. Wo Spielen dauerhaft anstrengt oder schmerzt, stimmt etwas an der Ergonomie."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist deine Haltung entspannt — Gurt sinnvoll eingestellt, Handgelenke locker, keine unnötige Anspannung? Behandelst du Schmerz als Warnsignal zum Innehalten, nicht als Zeichen von Fleiß? Und wärmst du dich auf und machst Pausen, statt lange am Stück durchzuspielen?"
+      }
+    },
+    {
+      "id": "ueberlastung_vermeiden",
+      "anzeigetitel": {
+        "de": "Überlastung vermeiden"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Überlastungsbeschwerden wie Sehnenreizungen entstehen schleichend, wenn zu viel zu schnell oder mit schlechter Technik gespielt wird — besonders beim Tempo- und Ausdauertraining, das der Metal verlangt. Sie sind ernst zu nehmen, weil sie hartnäckig werden können.\n\nVorbeugung heißt: das Pensum schrittweise steigern (nicht von null auf lange, schnelle Sessions), aufwärmen, Pausen machen und Ruhetage einplanen — Erholung ist Teil des Trainings, nicht dessen Gegenteil. Warnzeichen sind anhaltendes Ziehen, Schmerz, Taubheit oder Kraftverlust in Händen oder Armen. Dann gilt: pausieren, nicht durchspielen.\n\nWenn Beschwerden trotz Pause anhalten oder wiederkehren, ist ärztlicher Rat angebracht — etwa bei einer Ärztin oder in der Physiotherapie. Früh gehandelt, ist das meiste gut in den Griff zu bekommen; ignoriert, wird es zäh."
+      },
+      "reflexionsaufgabe": {
+        "de": "Steigerst du dein Pensum schrittweise, statt von null auf lange, schnelle Sessions zu springen? Planst du Pausen und Ruhetage als Teil des Trainings ein? Und nimmst du Warnzeichen — anhaltendes Ziehen, Schmerz, Taubheit — ernst genug, um zu pausieren und bei Bedarf ärztlichen Rat zu suchen?"
+      },
+      "voraussetzungen": [
+        "ergonomie_haltung"
+      ]
     }
   ]
 }

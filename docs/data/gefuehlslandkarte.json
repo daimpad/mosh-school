@@ -155,6 +155,39 @@
         "Absurdität",
         "Entladung"
       ]
+    },
+    {
+      "genre": "screamo",
+      "x": 8,
+      "y": 4,
+      "tags": [
+        "Verzweiflung",
+        "Katharsis",
+        "Zerbrechlichkeit",
+        "Entladung"
+      ]
+    },
+    {
+      "genre": "mathcore",
+      "x": 9,
+      "y": 3,
+      "tags": [
+        "Anspannung",
+        "Chaos",
+        "Kontrolle",
+        "Desorientierung"
+      ]
+    },
+    {
+      "genre": "noise_rock",
+      "x": 5,
+      "y": 2,
+      "tags": [
+        "Unbehagen",
+        "Bedrohung",
+        "Dreck",
+        "Hypnose"
+      ]
     }
   ]
 }
