@@ -1,0 +1,217 @@
+{
+  "genre": "Post-Hardcore",
+  "anzahl": 30,
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks. Reiner Song-Pool ohne stil-Wert — dient der Inspiration, nicht als Lernzweig. Hass-/extremismusfrei kuratiert.",
+  "songs": [
+    {
+      "kuenstler": "Fugazi",
+      "titel": "Waiting Room",
+      "substil_vermerk": "DC-Post-Hardcore, Grundstein",
+      "url": "https://bandcamp.com/search?q=Fugazi+Waiting+Room&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Rites of Spring",
+      "titel": "For Want Of",
+      "substil_vermerk": "erste Welle, emotional (US)",
+      "url": "https://www.youtube.com/results?search_query=Rites+of+Spring+For+Want+Of",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Embrace",
+      "titel": "Give Me Back",
+      "substil_vermerk": "DC-Fruehphase (US)",
+      "url": "https://www.youtube.com/results?search_query=Embrace+Give+Me+Back",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Jawbox",
+      "titel": "Savory",
+      "substil_vermerk": "kantig-melodisch (US)",
+      "url": "https://bandcamp.com/search?q=Jawbox+Savory&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Shudder to Think",
+      "titel": "X-French Tee Shirt",
+      "substil_vermerk": "eigenwillig-verquer (US)",
+      "url": "https://www.youtube.com/results?search_query=Shudder+to+Think+X-French+Tee+Shirt",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Quicksand",
+      "titel": "Fazer",
+      "substil_vermerk": "groove-lastig (US)",
+      "url": "https://www.youtube.com/results?search_query=Quicksand+Fazer",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Hot Water Music",
+      "titel": "Trusty Chords",
+      "substil_vermerk": "raue Melodik (US)",
+      "url": "https://bandcamp.com/search?q=Hot+Water+Music+Trusty+Chords&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "At the Drive-In",
+      "titel": "Arcarsenal",
+      "substil_vermerk": "hektisch-explosiv (US)",
+      "url": "https://www.youtube.com/results?search_query=At+the+Drive-In+Arcarsenal",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Refused",
+      "titel": "New Noise",
+      "substil_vermerk": "politisch, genre-sprengend (Schweden)",
+      "url": "https://bandcamp.com/search?q=Refused+New+Noise&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Glassjaw",
+      "titel": "Tip Your Bartender",
+      "substil_vermerk": "aggressiv-melodisch (US)",
+      "url": "https://www.youtube.com/results?search_query=Glassjaw+Tip+Your+Bartender",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Thrice",
+      "titel": "Deadbolt",
+      "substil_vermerk": "technisch-melodisch (US)",
+      "url": "https://bandcamp.com/search?q=Thrice+Deadbolt&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Thursday",
+      "titel": "War All the Time",
+      "substil_vermerk": "dramatisch, doppelte Gitarren (US)",
+      "url": "https://www.youtube.com/results?search_query=Thursday+War+All+the+Time",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Underoath",
+      "titel": "A Boy Brushed Red Living in Black and White",
+      "substil_vermerk": "screamo/metal-nah (US)",
+      "url": "https://www.youtube.com/results?search_query=Underoath+A+Boy+Brushed+Red+Living+in+Black+and+White",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Alexisonfire",
+      "titel": "This Could Be Anywhere in the World",
+      "substil_vermerk": "Clean/Harsh-Wechsel (Kanada)",
+      "url": "https://bandcamp.com/search?q=Alexisonfire+This+Could+Be+Anywhere+in+the+World&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Circa Survive",
+      "titel": "In Fear and Faith",
+      "substil_vermerk": "psychedelisch-melodisch (US)",
+      "url": "https://bandcamp.com/search?q=Circa+Survive+In+Fear+and+Faith&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Saosin",
+      "titel": "Seven Years",
+      "substil_vermerk": "hoher Klargesang (US)",
+      "url": "https://www.youtube.com/results?search_query=Saosin+Seven+Years",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cursive",
+      "titel": "The Martyr",
+      "substil_vermerk": "literarisch, Cello (US)",
+      "url": "https://bandcamp.com/search?q=Cursive+The+Martyr&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Small Brown Bike",
+      "titel": "Sleepless",
+      "substil_vermerk": "Midwest-Rauheit (US)",
+      "url": "https://bandcamp.com/search?q=Small+Brown+Bike+Sleepless&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Boysetsfire",
+      "titel": "Rookie",
+      "substil_vermerk": "politisch, melodisch (US)",
+      "url": "https://bandcamp.com/search?q=Boysetsfire+Rookie&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Snapcase",
+      "titel": "Caboose",
+      "substil_vermerk": "kantig, Hardcore-nah (US)",
+      "url": "https://www.youtube.com/results?search_query=Snapcase+Caboose",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Far",
+      "titel": "Mother Mary",
+      "substil_vermerk": "frueher melodischer Post-Hardcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Far+Mother+Mary",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Poison the Well",
+      "titel": "Ghostchant",
+      "substil_vermerk": "metallischer Post-Hardcore (US)",
+      "url": "https://www.youtube.com/results?search_query=Poison+the+Well+Ghostchant",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Blacklisted",
+      "titel": "I Am Extension",
+      "substil_vermerk": "dunkel, Hardcore-Wurzeln (US)",
+      "url": "https://bandcamp.com/search?q=Blacklisted+I+Am+Extension&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Touche Amore",
+      "titel": "Palm Dreams",
+      "substil_vermerk": "modern, kurz und dicht (US)",
+      "url": "https://bandcamp.com/search?q=Touche+Amore+Palm+Dreams&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Single Mothers",
+      "titel": "Overdose",
+      "substil_vermerk": "sardonisch, roh (Kanada)",
+      "url": "https://bandcamp.com/search?q=Single+Mothers+Overdose&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Departures",
+      "titel": "Be Better",
+      "substil_vermerk": "melodisch-emotional (UK)",
+      "url": "https://bandcamp.com/search?q=Departures+Be+Better&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Svalbard",
+      "titel": "Unpaid Intern",
+      "substil_vermerk": "post-hardcore mit Blackgaze (UK)",
+      "url": "https://bandcamp.com/search?q=Svalbard+Unpaid+Intern&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Cloakroom",
+      "titel": "Concrete Gallery",
+      "substil_vermerk": "langsam, shoegaze-nah (US)",
+      "url": "https://bandcamp.com/search?q=Cloakroom+Concrete+Gallery&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Gouge Away",
+      "titel": "Consider",
+      "substil_vermerk": "modern, kantig (US)",
+      "url": "https://bandcamp.com/search?q=Gouge+Away+Consider&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Militarie Gun",
+      "titel": "Do It Faster",
+      "substil_vermerk": "modern, poppig-kantig (US)",
+      "url": "https://bandcamp.com/search?q=Militarie+Gun+Do+It+Faster&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

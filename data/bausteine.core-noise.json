@@ -1,0 +1,344 @@
+{
+  "_meta": {
+    "titel": "Core / Noise — Screamo, Mathcore, Noise Rock",
+    "beschreibung": "Neun Technik-Bausteine fuer drei Stile am Rand des Genre-Spektrums."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "screamo_dynamik",
+      "anzeigetitel": {
+        "de": "Dynamik-Extreme: leise und Ausbruch"
+      },
+      "domaene": [
+        "gitarre",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "screamo"
+      ],
+      "erklaerteil": {
+        "de": "Screamo und Emoviolence leben vom Bruch. Sehr leise, oft arpeggierte Passagen stehen unmittelbar neben chaotischen Ausbrüchen — der Reiz entsteht nicht aus Lautstärke allein, sondern aus dem Abstand zwischen beiden Zuständen. Je leiser der leise Teil, desto gewaltiger wirkt der laute, ohne dass er lauter gespielt werden müsste.\n\nDer häufigste Fehler ist, die leisen Passagen zu laut und zu sicher zu spielen. Damit schrumpft die Spannweite, und der Ausbruch verpufft. Echte Dynamik verlangt, im leisen Teil wirklich zurückzugehen: weniger Anschlagskraft, klarer Ton, keine Verzerrung — und dann im Umschlag alles zu geben.\n\nEntscheidend ist der Übergang selbst. Er kann hart auf einen Schlag kippen oder über wenige Takte anwachsen; beides muss bewusst entschieden und geprobt sein, sonst franst er aus."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Vom Flüstern in den Ausbruch",
+          "ziel": "Die dynamische Spannweite vergrößern und den Umschlag präzise setzen.",
+          "schritte": [
+            "Spiele eine einfache, arpeggierte Figur so leise wie möglich, ohne dass Töne verschwinden.",
+            "Spiele dieselbe Figur als verzerrten Akkord-Ausbruch mit voller Kraft.",
+            "Verbinde beides: vier Takte leise, dann auf Schlag eins des fünften Takts der Umschlag.",
+            "Nimm beides auf und prüfe, ob der leise Teil wirklich leise war — oder nur gedacht leise.",
+            "Probiere die zweite Variante: den Ausbruch über zwei Takte anwachsen lassen."
+          ],
+          "steigerung": "Verlängere den leisen Teil auf acht Takte, ohne dass er langweilig wird — Variation statt Wiederholung.",
+          "selbstkontrolle": "Wie groß ist der Abstand zwischen leise und laut in deiner Aufnahme? Kippt der Umschlag exakt auf den Schlag?"
+        }
+      },
+      "voraussetzungen": [
+        "dynamik_akzente"
+      ]
+    },
+    {
+      "id": "twinkly_arpeggien",
+      "anzeigetitel": {
+        "de": "Klare Arpeggien mit offenen Saiten"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "screamo"
+      ],
+      "erklaerteil": {
+        "de": "Der klare, glockige Gitarrenklang dieser Szene entsteht durch eine einfache Idee: Töne überlappen lassen, statt sie sauber zu trennen. Gegriffene Töne in höheren Lagen werden mit leeren Saiten kombiniert, sodass beide zusammen klingen — das erzeugt Reibung und Weite zugleich.\n\nTechnisch heißt das: Finger stehen lassen, statt abzudämpfen, und die leeren Saiten bewusst mitklingen lassen. Oft entstehen dabei Sekundreibungen zwischen gegriffener und leerer Saite, die im Metal-Kontext ungewohnt sind — hier sind sie erwünscht, weil sie die schwebende, unaufgelöste Stimmung tragen.\n\nGespielt wird das meist ohne Verzerrung oder mit sehr wenig, damit die einzelnen Töne unterscheidbar bleiben. Ein zu hoher Zerrgrad matscht die überlappenden Töne zu einem Klangbrei."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Überlappende Arpeggien",
+          "ziel": "Gegriffene Töne und leere Saiten zusammenklingen lassen.",
+          "schritte": [
+            "Greife eine Figur in der siebten bis zwölften Lage auf den beiden hohen Saiten.",
+            "Spiele sie arpeggiert und lass jeden Finger stehen, statt abzudämpfen.",
+            "Nimm eine leere Saite dazu, die mitklingt — achte auf die entstehende Reibung.",
+            "Spiele clean oder mit minimaler Verzerrung und prüfe, ob alle Töne unterscheidbar bleiben.",
+            "Variiere die Figur, ohne das Klangbett zu verlassen."
+          ],
+          "steigerung": "Wechsle die Lage, ohne dass die leere Saite ihre Funktion verliert — sie wird zum Bezugston.",
+          "selbstkontrolle": "Klingen die Töne wirklich zusammen, oder trennst du sie unbewusst? Bleibt bei deinem Zerrgrad alles hörbar?"
+        }
+      },
+      "voraussetzungen": [
+        "greifhand_grundlagen",
+        "dissonante_intervalle"
+      ]
+    },
+    {
+      "id": "screamo_vocals_sicher",
+      "anzeigetitel": {
+        "de": "Screamo-Vocals: Intensität ohne Selbstschaden"
+      },
+      "domaene": [
+        "gesang",
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "screamo"
+      ],
+      "erklaerteil": {
+        "de": "Die Stimme dieser Szene klingt anders als der tiefe Growl: hoch, rau, oft am Rand des Brechens, emotional entblößt. Genau darin liegt das Risiko — von allen harschen Techniken ist der hohe, verzweifelt klingende Schrei die belastendste, weil er zum Pressen verleitet.\n\nDer entscheidende Grundsatz lautet: Der Klang entsteht aus Technik und Stütze, niemals aus Druck. Emotionale Intensität ist nicht dasselbe wie stimmliche Kraft — ein gut gestützter, technisch geführter Schrei kann verzweifelt klingen, während die Kehle entspannt bleibt. Wer die Emotion über rohe Anstrengung erzeugt, klingt nicht intensiver, sondern nur kürzer: Die Stimme hält das keine halbe Show durch.\n\nDeshalb gehört diese Technik ans Ende eines Weges, nicht an den Anfang. Sie setzt eine tragfähige Atemstütze und einen sicheren Umgang mit harscher Verzerrung voraus. Kratzen, Brennen oder Heiserkeit sind Stopp-Signale, keine Zwischenstufen. Für ernsthafte Arbeit an dieser Stimmfarbe ist eine erfahrene Gesangslehrkraft die richtige Adresse; bei länger anhaltender Heiserkeit gehört die Stimme HNO-ärztlich abgeklärt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Baut dein Schrei auf Stütze und Technik auf — oder erzeugst du die Intensität über Druck und Anstrengung? Kannst du dieselbe Verzweiflung ausdrücken, während deine Kehle entspannt bleibt? Und behandelst du Kratzen oder Heiserkeit als Stopp-Signal, statt als Preis, den man zahlt?"
+      },
+      "voraussetzungen": [
+        "scream_hoehe",
+        "harsh_dynamik_intensitaet",
+        "stimm_regeneration"
+      ]
+    },
+    {
+      "id": "mathcore_stopps",
+      "anzeigetitel": {
+        "de": "Stopps und Einsätze auf den Punkt"
+      },
+      "domaene": [
+        "gitarre",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "mathcore"
+      ],
+      "erklaerteil": {
+        "de": "Mathcore lebt von abrupten Brüchen: Ein dichtes Riff bricht mitten in der Bewegung ab, Stille steht für einen Bruchteil, dann setzt alles gleichzeitig wieder ein. Diese Stopps wirken nur, wenn sie exakt sind — eine Sechzehntel Ungenauigkeit macht aus einem Schlag ins Gesicht ein Stolpern.\n\nDie Präzision entsteht nicht im Einsatz, sondern im Abbruch. Der Ton muss aktiv beendet werden: Greifhand entspannt, Anschlaghand dämpft, beides gleichzeitig. Wer nur aufhört zu spielen, lässt das Instrument nachklingen — die Stille bleibt aus, und der Effekt verschwindet.\n\nGenauso wichtig ist, die Stille zu zählen. Eine Pause ist kein Aussetzer, sondern eine Zeitdauer mit exakter Länge. Wer innerlich weiterzählt, trifft den Wiedereinsatz; wer wartet, kommt zu spät."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Abbruch und Wiedereinsatz",
+          "ziel": "Töne aktiv beenden und nach gezählter Stille exakt wieder einsetzen.",
+          "schritte": [
+            "Spiele zwei Takte eines dichten Riffs zum Klick.",
+            "Beende den letzten Ton aktiv: Greifhand entspannen und Anschlaghand dämpfen gleichzeitig.",
+            "Zähle die Stille innerlich weiter — zunächst zwei Zählzeiten.",
+            "Setze exakt auf der gezählten Zählzeit wieder ein.",
+            "Verkürze die Pause auf eine Achtel und dann auf eine Sechzehntel."
+          ],
+          "steigerung": "Setze die Stille an ungerade Stellen — mitten in die Zählzeit statt auf sie.",
+          "selbstkontrolle": "Ist die Stille wirklich still, oder klingt etwas nach? Sitzt der Wiedereinsatz exakt auf dem Klick?"
+        }
+      },
+      "voraussetzungen": [
+        "metronom_prinzip",
+        "taktarten_unterteilungen"
+      ]
+    },
+    {
+      "id": "mathcore_taktwechsel",
+      "anzeigetitel": {
+        "de": "Riffs über wechselnde Taktarten"
+      },
+      "domaene": [
+        "gitarre",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "mathcore"
+      ],
+      "erklaerteil": {
+        "de": "In dieser Musik wechselt die Taktart oft von Takt zu Takt: fünf, dann sieben, dann wieder vier. Wer versucht, jeden Takt einzeln mitzuzählen, verliert schnell den Faden. Der praktikable Weg ist ein anderer: Man zählt nicht Takte, sondern gruppiert die Grundschläge in Päckchen.\n\nEine Folge aus 5/8 und 7/8 lässt sich als Kette von Zweier- und Dreier-Gruppen denken — etwa zwei-drei, dann zwei-two-drei. Diese Gruppen fühlt man als Rhythmusfiguren, nicht als Zahlen; ab einem gewissen Punkt zählt man nicht mehr, sondern erkennt die Figur wieder. Genau dorthin führt das Üben.\n\nHilfreich ist, den Klick nur auf den Gruppenanfang zu legen statt auf jede Zählzeit: Das zwingt dazu, die Gruppe innerlich zu tragen, statt sich an jeden Schlag zu hängen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gruppen statt Zahlen",
+          "ziel": "Wechselnde Taktarten als Kette gefühlter Gruppen spielen.",
+          "schritte": [
+            "Wähle eine Folge aus zwei Taktarten, etwa 5/8 und 7/8.",
+            "Zerlege beide in Zweier- und Dreier-Gruppen und sprich die Kette laut mit.",
+            "Spiele einen einzelnen Ton pro Gruppenanfang, bis die Kette sicher sitzt.",
+            "Lege ein Riff darüber, das den Gruppen folgt.",
+            "Stelle den Klick so ein, dass er nur den Gruppenanfang markiert."
+          ],
+          "steigerung": "Hänge eine dritte Taktart an oder verschiebe die Gruppierung innerhalb derselben Taktart.",
+          "selbstkontrolle": "Trägst du die Gruppen innerlich, oder zählst du noch mit? Bleibt die Kette auch ohne Klick stabil?"
+        }
+      },
+      "voraussetzungen": [
+        "ungerade_takte_theorie",
+        "taktarten_unterteilungen"
+      ]
+    },
+    {
+      "id": "mathcore_dissonanz",
+      "anzeigetitel": {
+        "de": "Dissonante Voicings und kantige Riffs"
+      },
+      "domaene": [
+        "gitarre",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "mathcore"
+      ],
+      "erklaerteil": {
+        "de": "Der harmonische Kern dieser Musik ist die bewusste Unauflösbarkeit. Statt Powerchords stehen enge, reibende Zusammenklänge — kleine Sekunden, Tritoni, Quartenschichtungen —, die keine Ruhe zulassen. Sie sollen nicht angenehm klingen, sondern Spannung halten.\n\nKantig wird das Riffing durch die Melodieführung: große Sprünge statt schrittweiser Bewegung, Saitensprünge statt benachbarter Saiten, unregelmäßige Betonungen. Was in anderen Genres als ungeschickt gälte, ist hier Gestaltungsmittel — die Bewegung soll unbequem sein.\n\nDamit das nicht in Beliebigkeit kippt, braucht es einen Anker: ein wiederkehrendes Intervall, einen festen Bezugston oder eine leere Saite, die durchläuft. Der Anker macht die Dissonanz nachvollziehbar, statt sie zufällig wirken zu lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Reibung mit Anker",
+          "ziel": "Dissonante Zusammenklänge und Sprünge zu einem nachvollziehbaren Riff formen.",
+          "schritte": [
+            "Wähle ein reibendes Intervall — kleine Sekunde oder Tritonus — als Kernklang.",
+            "Bestimme einen Anker: eine leere Saite oder einen Bezugston, der wiederkehrt.",
+            "Baue eine kurze Figur, die den Kernklang gegen den Anker setzt.",
+            "Führe die Melodie in Sprüngen statt in Schritten, mit Saitensprüngen.",
+            "Verschiebe die Figur, ohne den Anker aufzugeben."
+          ],
+          "steigerung": "Setze die Betonungen gegen die Zählzeit, sodass die Figur zusätzlich rhythmisch kippt.",
+          "selbstkontrolle": "Ist die Dissonanz hörbar gewollt oder klingt sie nach Fehlgriff? Trägt der Anker die Figur?"
+        }
+      },
+      "voraussetzungen": [
+        "dissonante_intervalle",
+        "string_skipping"
+      ]
+    },
+    {
+      "id": "noise_tunings",
+      "anzeigetitel": {
+        "de": "Alternative Stimmungen jenseits von Drop"
+      },
+      "domaene": [
+        "gitarre",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "noise_rock"
+      ],
+      "erklaerteil": {
+        "de": "Im Noise Rock ist die Stimmung selbst ein Gestaltungsmittel. Statt der üblichen Drop-Tunings, die tiefe Powerchords erleichtern, werden Saiten gezielt so verstimmt, dass ungewohnte Zusammenklänge entstehen — auch mikrotonal, also zwischen den üblichen Halbtönen.\n\nDer Effekt ist grundlegend: Vertraute Griffe klingen plötzlich fremd, und Figuren, die in Standardstimmung unspielbar wären, liegen bequem unter der Hand. Weil die gewohnten Muster nicht mehr greifen, spielt man automatisch anders — die Stimmung erzwingt neue Ideen, statt sie nur zu erlauben.\n\nZwei praktische Punkte: Stark veränderte Stimmungen ändern den Saitenzug und damit die Halseinstellung, weshalb sich ein eigenes Instrument dafür lohnt; und eine Stimmung ist nur nützlich, wenn sie reproduzierbar ist — notiere sie, sonst ist der Klang beim nächsten Mal verloren."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die Stimmung als Ausgangspunkt",
+          "ziel": "Aus einer veränderten Stimmung neue Klänge und Figuren entwickeln.",
+          "schritte": [
+            "Verstimme eine einzelne Saite bewusst — etwa einen Ganzton nach unten oder gezielt daneben.",
+            "Notiere die Stimmung, bevor du weiterspielst.",
+            "Spiele vertraute Griffe und höre, wie sie sich verändern.",
+            "Suche zwei bis drei Zusammenklänge, die es in Standardstimmung nicht gäbe.",
+            "Baue eine kurze Figur, die genau von dieser Stimmung lebt."
+          ],
+          "steigerung": "Verstimme eine zweite Saite und finde Figuren, die sich über beide veränderten Saiten legen.",
+          "selbstkontrolle": "Klingt die Figur in Standardstimmung schlechter oder unmöglich? Dann nutzt sie die Stimmung wirklich."
+        }
+      },
+      "voraussetzungen": [
+        "drop_tuning"
+      ]
+    },
+    {
+      "id": "feedback_als_instrument",
+      "anzeigetitel": {
+        "de": "Feedback kontrolliert einsetzen"
+      },
+      "domaene": [
+        "gitarre",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "noise_rock"
+      ],
+      "erklaerteil": {
+        "de": "Rückkopplung entsteht, wenn der Lautsprecher die Saiten in Schwingung versetzt und dieses Signal erneut verstärkt wird — ein sich selbst tragender Kreis. Im Noise Rock ist das kein Störgeräusch, sondern ein Klang, den man ansteuert und formt.\n\nSteuerbar ist er über wenige physikalische Größen: Abstand und Winkel zum Lautsprecher (näher und frontaler koppelt schneller), die gegriffene Tonhöhe (bestimmt, welcher Oberton anspringt), die Lautstärke am Instrument (dosiert den Kreis) und das Dämpfen der übrigen Saiten (entscheidet, ob ein Ton kommt oder ein Chaos). Kontrolliertes Feedback ist Handwerk, kein Zufall.\n\nWichtig, weil dieser Klang laute Verstärkung braucht: Übe ihn mit Gehörschutz und begrenze die Dauer. Rückkopplungsarbeit findet dauerhaft in einem Lautstärkebereich statt, der das Gehör schädigt — und Hörschäden bilden sich nicht zurück. Kurze Sessions mit Schutz statt langer Sitzungen ohne."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Einen Feedback-Ton ansteuern",
+          "ziel": "Rückkopplung gezielt auf einer bestimmten Tonhöhe erzeugen und halten.",
+          "schritte": [
+            "Setze Gehörschutz auf und begrenze die Session bewusst auf wenige Minuten.",
+            "Stelle eine Lautstärke ein, bei der Rückkopplung gerade eben entsteht — nicht mehr.",
+            "Greife einen Ton und dämpfe alle übrigen Saiten sorgfältig ab.",
+            "Verändere Abstand und Winkel zum Lautsprecher, bis genau dieser Ton anspringt.",
+            "Halte ihn stabil und beende ihn kontrolliert über die Lautstärke am Instrument."
+          ],
+          "steigerung": "Wechsle zwischen zwei Feedback-Tönen, ohne dass der Kreis abreißt.",
+          "selbstkontrolle": "Kommt der Ton, den du gegriffen hast — oder ein unkontrolliertes Pfeifen? Hast du die Dauer wirklich begrenzt?"
+        }
+      },
+      "voraussetzungen": [
+        "gehoerschutz_lautstaerke"
+      ]
+    },
+    {
+      "id": "noise_bass_treibend",
+      "anzeigetitel": {
+        "de": "Der Bass als treibende Hauptstimme"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "noise_rock"
+      ],
+      "erklaerteil": {
+        "de": "In vielen Noise-Rock-Stücken trägt nicht die Gitarre das Riff, sondern der Bass. Er übernimmt die Hauptstimme, während die Gitarre Fläche, Reibung und Geräusch beisteuert. Das kehrt die übliche Rollenverteilung um und verlangt vom Bass einen anderen Ton: verzerrt, präsent, mit deutlichen Mitten, damit die Linie als Melodie erkennbar bleibt.\n\nMusikalisch heißt das, in Figuren zu denken statt in Grundtönen. Die Linie hat einen eigenen Verlauf, eigene Betonungen, oft einen stur wiederholten, hypnotischen Charakter — sie muss ein ganzes Stück allein tragen können.\n\nWer nur Verzerrung hinzufügt, verliert meist den Tiefbass. Sinnvoller ist ein Ton, der unten fundiert bleibt und in den Mitten Biss bekommt; ein leicht härterer Anschlagpunkt nahe am Steg hilft zusätzlich, die Linie durchzusetzen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die Linie trägt das Stück",
+          "ziel": "Eine Bassfigur schreiben, die als Hauptstimme allein trägt.",
+          "schritte": [
+            "Schreibe eine kurze Figur, die eine eigene melodische Kontur hat — keine reine Grundtonfolge.",
+            "Spiele sie allein und prüfe, ob sie über acht Takte trägt, ohne langweilig zu werden.",
+            "Suche einen Ton mit Biss in den Mitten, ohne den Tiefbass zu verlieren.",
+            "Verschiebe den Anschlagpunkt Richtung Steg und höre, wie sich die Durchsetzung ändert.",
+            "Lege eine Fläche oder ein Geräusch darüber und prüfe, ob die Linie führend bleibt."
+          ],
+          "steigerung": "Halte die Figur über ein ganzes Stück stur durch und variiere nur Dynamik und Anschlag.",
+          "selbstkontrolle": "Trägt die Linie ohne Begleitung? Bleibt sie hörbar führend, wenn Gitarrenfläche dazukommt?"
+        }
+      },
+      "voraussetzungen": [
+        "einfache_basslinie",
+        "anschlagpunkt_ton"
+      ]
+    }
+  ]
+}

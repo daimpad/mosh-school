@@ -42,12 +42,14 @@ const INHALTSDATEIEN = [
   'data/bausteine.stil-deathcore.json',
   'data/bausteine.stil-djent.json',
   'data/bausteine.stil-stoner-post.json',
+  'data/bausteine.core-noise.json',
   'data/bausteine.genreuebergreifend.json',
   'data/bausteine.experte-vertiefung.json',
   'data/bausteine.koerper-mentales.json',
   'data/bausteine.kontext.json',
   'data/bausteine.ensemble-paare.json',
   'data/bausteine.band-proberaum.json',
+  'data/bausteine.band-intro.json',
   'data/bausteine.ensemble-gross.json',
   'data/bausteine.demo-recording.json',
   'data/bausteine.auftritt-live.json',
@@ -61,8 +63,10 @@ const INHALTSDATEIEN = [
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
   'data/bausteine.instrument-technik.json',
+  'data/bausteine.gitarre-detail.json',
   'data/bausteine.gear-schlagzeug-gesang.json',
   'data/bausteine.grenzgaenger.json',
+  'data/bausteine.experimentieren.json',
 ];
 
 // Beispielsongs-Referenz (Genre → 30 kuratierte Songs als externe Links). Eigener
@@ -83,6 +87,12 @@ const SONGDATEIEN = [
   'data/songs.post-metal.json',
   'data/songs.deathcore.json',
   'data/songs.sludge.json',
+  'data/songs.screamo.json',
+  'data/songs.mathcore.json',
+  'data/songs.noise-rock.json',
+  'data/songs.post-hardcore.json',
+  'data/songs.dark-post-punk.json',
+  'data/songs.industrial.json',
   'data/songs.grenzgaenger.json',
 ];
 
@@ -92,7 +102,7 @@ function songSlug(pfad) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, experimente, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -103,6 +113,7 @@ export async function ladeDaten() {
     holeJson('data/ampbox.json'),
     holeJson('data/genres.json').catch(() => null),
     holeJson('data/gefuehlslandkarte.json').catch(() => null),
+    holeJson('data/experimente.json').catch(() => null),
     holeJson('data/index.json').catch(() => null),
     Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
@@ -137,6 +148,9 @@ export async function ladeDaten() {
   // Kreativ-Werkzeuge (Landkarte + Genre-Mix-Generator). Referenzbereich, kein
   // Fortschritt — „Tendenzen, keine Gesetze" (Feld `hinweis`).
   daten.gefuehlslandkarte = gefuehlslandkarte || { genres: [], achsen: {}, hinweis: '' };
+  // Experimentieren-Deck (Impuls-Karten): Referenzbereich, kein Fortschritt.
+  // „ausprobiert" ist rein informativ (kein Zähler) im Werkzeug-Speicher.
+  daten.experimente = experimente || { titel: '', hinweis: '', kategorien: [], experimente: [] };
   // Such-/Metadaten-Index (generiert via scripts/build_index.py): kompakte
   // Einträge für die clientseitige Volltextsuche + Facetten (Trainings-Loop §0a/§3c).
   daten.suchindex = suchindex?.eintraege || [];
