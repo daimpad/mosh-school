@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "titel": "Band — Gruendung & Proberaum",
+    "beschreibung": "Von der Bandgruendung bis zur ersten Probe."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "band_gruendung_ziele",
+      "anzeigetitel": {
+        "de": "Band gründen: Ziele, Rollen, Verbindlichkeit"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Eine Band ist eine kleine Organisation, und die meisten scheitern nicht am Können, sondern an unausgesprochenen Erwartungen. Bevor der erste Ton fällt, lohnt sich Klarheit über das Wesentliche: Welche Richtung, welches Genre? Wie ambitioniert — Hobby, Auftritte, Veröffentlichungen? Wie oft wird geprobt? Und wer übernimmt neben dem Spielen die Aufgaben drumherum (Organisation, Booking, Öffentlichkeit, Songwriting)?\n\nFür den Fortbestand einer Band zählen Verbindlichkeit und Verlässlichkeit mehr als reines Talent. Ein unzuverlässiges, aber begabtes Mitglied kostet eine Band mehr Kraft, als es einbringt.\n\nEhrliche Gespräche früh ersparen später Frust — Erwartungen, die nie ausgesprochen wurden, werden zu Konflikten, die niemand kommen sah."
+      },
+      "reflexionsaufgabe": {
+        "de": "Bevor du eine Band gründest oder ihr beitrittst: Was willst du daraus ziehen (Hobby, Live-Auftritte, Aufnahmen), wie viel Zeit kannst du verlässlich investieren, und welche Aufgaben abseits des Spielens würdest du übernehmen? Gleich das mit deinen Mitspieler:innen ab — wo unterscheiden sich die Erwartungen, und wie würdet ihr damit umgehen?"
+      }
+    },
+    {
+      "id": "band_proberaum_finden",
+      "anzeigetitel": {
+        "de": "Proberaum finden und teilen"
+      },
+      "domaene": [
+        "ausruestung",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Proberaum ist das Zuhause der Band; die Wahl beeinflusst Budget, Klang und vor allem, wie oft ihr tatsächlich spielt. Grob gibt es drei Wege: ein Proberaumkomplex (schallisoliert, oft monatliche Miete, teils mit vorhandener Backline, häufig geteilt), ein mit anderen Bands geteilter Raum (günstiger, aber Terminkonflikte) oder ein privater Raum wie Keller oder Garage (frei, aber Nachbarn, Lärm, Genehmigungen).\n\nWichtige Kriterien: erlaubte Lautstärke und Zeiten, Zugang (jederzeit?), Kostenteilung, Sicherheit für das Equipment und Erreichbarkeit für alle. Lauter Metal braucht echte Schallisolierung — ein Wohnzimmer funktioniert ohne Konflikt nicht.\n\nDie nüchterne Wahrheit: Der beste Raum ist der, in den ihr wegen Lage, Kosten und Zugang wirklich regelmäßig geht — nicht der theoretisch schönste."
+      },
+      "voraussetzungen": [
+        "band_gruendung_ziele"
+      ],
+      "reflexionsaufgabe": {
+        "de": "Listet, was eure Band vom Raum braucht (Budget pro Person, Zugangszeiten, Entfernung, ob ihr Equipment lagern könnt). Welche Option — eigener Komplex, geteilter Raum, privater Raum — passt, und welchen Haupt-Kompromiss würdet ihr dafür in Kauf nehmen?"
+      }
+    },
+    {
+      "id": "band_backline_pa",
+      "anzeigetitel": {
+        "de": "Proberaum ausstatten: Backline und PA"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Einen Raum auszustatten heißt: Backline (Verstärker und Boxen für Gitarre und Bass, ein Schlagzeug) und eine PA für den Gesang. Vocals müssen verstärkt werden — gegen ein Schlagzeug und zwei Verstärker kommt keine Stimme unverstärkt an, und das ist zugleich eine Frage der Stimmgesundheit: Wer sich gegen die Band anschreien muss, überlastet die Stimme.\n\nAls Minimum: Gitarrenverstärker, Bassverstärker, Schlagzeug (oft im Raum belassen und geteilt) und eine kleine PA mit mindestens zwei Gesangsmikrofonen und Monitoren, damit die singende Person sich selbst hört. Klärt, was im Raum bleibt und was jede:r mitbringt.\n\nEine günstige, aber ausreichende PA schlägt keine PA — dass die Stimme sich selbst hört, verhindert Drücken und Überlastung von Anfang an."
+      },
+      "voraussetzungen": [
+        "band_proberaum_finden"
+      ],
+      "reflexionsaufgabe": {
+        "de": "Skizziert das Minimum-Setup eures Raums: Welche Backline ist nötig, und welche PA (Mikrofone, Monitore), damit der Gesang hörbar ist, ohne dass die singende Person forcieren muss? Was bleibt im Raum, was bringt jede:r selbst mit?"
+      }
+    },
+    {
+      "id": "band_raum_akustik",
+      "anzeigetitel": {
+        "de": "Proberaum: Akustik und Lautstärke zähmen"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Kleine Räume mit harten Wänden machen aus lautem Metal ein undefiniertes Dröhnen; ihr hört einander nicht mehr, alle drehen auf, und es wird schlimmer — die typische Lautstärke-Spirale.\n\nZwei Hebel helfen: Reflexionen dämpfen (etwas Absorption — schwere Vorhänge, ein Teppich, ein paar Absorberplatten — nimmt die Härte) und Lautstärke bewusst steuern. Verstärker müssen im kleinen Raum nicht auf Bühnenlautstärke stehen; leisere Amps plus PA für den Gesang halten die Balance. Wer sich so aufstellt, dass er die anderen hört, Amps leicht anwinkelt und sich auf eine vernünftige Grundlautstärke einigt, gewinnt an Klarheit.\n\nDas Ziel ist schlicht: einander sauber hören. Alles, was diesem Ziel dient, ist richtig — lauter zu werden dient ihm fast nie."
+      },
+      "voraussetzungen": [
+        "band_backline_pa"
+      ],
+      "reflexionsaufgabe": {
+        "de": "Wo klingt euer Raum matschig, wo hört ihr einander nicht? Welche günstige Absorption (Vorhänge, Teppich, Platten) und welche Lautstärke-Absprache (Amp-Pegel, wer ist zu laut) würden dafür sorgen, dass alle den Gesamtklang hören?"
+      }
+    },
+    {
+      "id": "band_gehoerschutz",
+      "anzeigetitel": {
+        "de": "Gehörschutz: das Wichtigste im lauten Raum"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Proberaum mit einer kompletten Metal-Band erreicht mühelos Lautstärken, die das Gehör dauerhaft schädigen — und Gehörschäden, Tinnitus eingeschlossen, heilen nicht wieder. Das ist der wichtigste Gesundheitspunkt des Bandspielens überhaupt, und er wird routinemäßig ignoriert, bis es zu spät ist.\n\nMusiker-Ohrstöpsel mit einem linearen Filter senken die Lautstärke gleichmäßig, ohne den Klang dumpf zu machen — du hörst weiter Tonhöhe und Details, anders als bei Schaumstoffstöpseln, die alles ersticken. Trag sie bei jeder Probe, von der ersten Minute an, nicht erst, „wenn es laut wird“.\n\nEin Pfeifen oder Klingeln in den Ohren nach dem Spielen ist bereits ein Warnsignal, kein Nebeneffekt, an den man sich gewöhnt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wie laut wird euer Raum wirklich, und trägt jede:r von der ersten Minute an Gehörschutz? Wenn du nach der Probe ein Klingeln oder ein dumpfes Gefühl bemerkst, ist das ein Warnzeichen — was würdest du ändern (Ohrstöpsel für alle, weniger Lautstärke, Pausen), um dein Gehör zu schützen, das sich nach einer Schädigung nicht mehr erholt?"
+      }
+    },
+    {
+      "id": "band_erste_proben",
+      "anzeigetitel": {
+        "de": "Die ersten Proben strukturieren"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die ersten Proben prägen die Kultur der Band. Eine Struktur hilft: gemeinsam stimmen und aufwärmen, sich auf ein bis zwei Stücke einigen (ein Cover ist ein guter gemeinsamer Startpunkt), in fokussierten Blöcken arbeiten, die Probe aufnehmen (das Gedächtnis an eine Probe trügt) und am Ende festlegen, was jede:r bis zum nächsten Mal vorbereitet.\n\nEin ganzes Set schlecht durchzuspielen bringt weniger, als einen Part gemeinsam sauber hinzubekommen. Die Aufnahme ist der ehrliche Spiegel — sie zeigt, wo die Band tight ist und wo sie driftet.\n\nSo wird aus losem Zusammenspielen echtes gemeinsames Arbeiten: mit einem Fokus, einem Spiegel und einer Verabredung für das nächste Mal."
+      },
+      "voraussetzungen": [
+        "band_gruendung_ziele"
+      ],
+      "reflexionsaufgabe": {
+        "de": "Plant eure erste Probe: mit welchem einen oder zwei Stücken ihr beginnt, wie ihr die Zeit aufteilt (Aufwärmen, fokussierte Arbeit, Durchlauf) und wie ihr festhaltet, was passiert ist (eine Handy-Aufnahme genügt). Was wäre für euch eine gute erste Probe — und wie entscheidet ihr, was ihr fürs nächste Mal vorbereitet?"
+      }
+    }
+  ]
+}

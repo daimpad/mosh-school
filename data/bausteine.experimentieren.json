@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "titel": "Experimentieren — Haltung",
+    "beschreibung": "Bausteine zur experimentellen Grundhaltung."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "experiment_haltung",
+      "anzeigetitel": {
+        "de": "Haltung zum Experimentieren"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Experimentieren ist kein Zustand der Inspiration, sondern eine Arbeitsweise. Sie unterscheidet sich vom Üben in einem Punkt: Beim Üben gibt es ein richtiges Ergebnis, beim Experimentieren nicht. Wer das vermischt, bewertet Versuche wie Fehler und hört auf, bevor etwas entsteht.\n\nDie meisten Versuche führen zu nichts Brauchbarem — das ist kein Scheitern, sondern die Rechnung, die aufgeht: Man braucht viele Versuche, damit einige wenige tragen. Deshalb lohnt es, Experimentierzeit bewusst von Übezeit zu trennen und in ihr keinen Ertrag zu verlangen. Zwanzig Minuten ohne Ziel sind produktiver als zwanzig Minuten mit Erfolgsdruck.\n\nDas gilt auch für den Umgang mit dem Ergebnis: Ein Einfall, der im Moment merkwürdig klingt, ist Material, kein Urteil. Bewerten kannst du später — im Moment des Experimentierens ist Bewerten der größte Bremsklotz."
+      },
+      "reflexionsaufgabe": {
+        "de": "Trennst du Experimentierzeit von Übezeit, oder erwartest du in beiden ein richtiges Ergebnis? Wie gehst du mit Versuchen um, die nach nichts klingen — als Fehler oder als Material? Und was hindert dich am meisten daran, einfach etwas auszuprobieren?"
+      }
+    },
+    {
+      "id": "beschraenkung_als_werkzeug",
+      "anzeigetitel": {
+        "de": "Beschränkung als Werkzeug"
+      },
+      "domaene": [
+        "mentales",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Grenzenlose Freiheit lähmt. Wer alles spielen darf, greift zuverlässig zu dem, was er ohnehin immer spielt — die Gewohnheit füllt den leeren Raum. Eine enge Vorgabe wirkt paradoxerweise befreiend, weil sie die gewohnten Wege versperrt.\n\nDie Beschränkung muss dabei nicht sinnvoll sein, sondern nur eng: nur zwei Saiten, nur drei Töne, kein Verzerrer, ein einziges Becken, zehn Minuten Zeit. Entscheidend ist, sie wirklich einzuhalten. Sobald man sie aufweicht, kehrt die Gewohnheit zurück.\n\nInteressant wird es meist erst nach dem ersten Frust: Die ersten Minuten fühlen sich arm an, danach beginnt man, in der Beschränkung zu suchen statt gegen sie zu arbeiten. Genau dort entstehen die Ideen, die man sonst nicht gehabt hätte."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Arbeiten unter einer engen Vorgabe",
+          "ziel": "Aus einer strikten Beschränkung eine Idee entwickeln, die ohne sie nicht entstanden wäre.",
+          "schritte": [
+            "Wähle eine enge Beschränkung — etwa nur zwei Saiten, nur drei Töne oder kein Verzerrer.",
+            "Setze dir eine feste Zeit, zum Beispiel fünfzehn Minuten.",
+            "Halte die Vorgabe strikt ein, auch wenn die ersten Minuten arm klingen.",
+            "Arbeite in der Beschränkung weiter, statt sie zu lockern.",
+            "Nimm auf, was entstanden ist, bevor du es bewertest."
+          ],
+          "steigerung": "Kombiniere zwei Beschränkungen gleichzeitig — etwa drei Töne und kein Verzerrer.",
+          "selbstkontrolle": "Hast du die Vorgabe wirklich eingehalten? Wäre die Idee in völliger Freiheit entstanden?"
+        }
+      },
+      "voraussetzungen": [
+        "experiment_haltung"
+      ]
+    },
+    {
+      "id": "experiment_dokumentieren",
+      "anzeigetitel": {
+        "de": "Experimente festhalten und auswerten"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der häufigste Verlust beim Experimentieren ist nicht die schlechte Idee, sondern die gute, die niemand aufgenommen hat. Einfälle verschwinden innerhalb von Minuten; was nicht festgehalten wird, ist weg — und lässt sich fast nie rekonstruieren.\n\nDeshalb gehört zum Experimentieren ein zweiter Handgriff: aufnehmen, und zwar roh und sofort, ohne Anspruch an Klang oder Sauberkeit. Eine kurze, schlechte Aufnahme schlägt jede perfekte Erinnerung. Ein Stichwort dazu — Stimmung, Tempo, Vorgabe — genügt, damit du später weißt, worum es ging.\n\nDer zweite Teil ist die Auswertung, aber zeitversetzt: Hör die Versuche an einem anderen Tag durch. Was gestern merkwürdig klang, wirkt mit Abstand oft brauchbar — und umgekehrt. Diese Trennung von Machen und Bewerten ist der eigentliche Nutzen des Archivs."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hältst du deine Einfälle sofort fest, oder verlässt du dich auf dein Gedächtnis? Notierst du genug Kontext, um später zu wissen, worum es ging? Und hörst du deine Versuche mit zeitlichem Abstand durch, statt sie im Moment zu bewerten?"
+      },
+      "voraussetzungen": [
+        "experiment_haltung"
+      ]
+    }
+  ]
+}
