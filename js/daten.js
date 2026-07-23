@@ -92,11 +92,11 @@ function songSlug(pfad) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, turnierregeln, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
-    holeJson('data/turnierregeln.json'),
+    holeJson('data/koennenscheck.json'),
     holeJson('data/tunings.json'),
     holeJson('data/patterns.json'),
     holeJson('data/pedale.json'),
@@ -107,7 +107,7 @@ export async function ladeDaten() {
     Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
-  const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, appInfo, turnierregeln);
+  const daten = baueIndizes(inhaltDateien, einheiten, fehlerbilder, appInfo, koennenscheck);
   // Werkzeug-Daten (Stimmungs-Referenz): eigener Referenzbereich, NICHT im
   // Baustein-Pool — kein Fortschritt, keine Voraussetzungen.
   daten.tunings = {
@@ -212,7 +212,7 @@ export function fehlerbilderFuer(daten, basisId) {
   return daten.fehlerbildVonBasis.get(basisId) || [];
 }
 
-export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, appInfoRoh, turnierregelnRoh) {
+export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, appInfoRoh, koennenscheckRoh) {
   const warnungen = [];
   // Ein Objekt oder eine Liste von Inhaltsdateien; letztere werden gemischt.
   const dateien = Array.isArray(inhaltRoh) ? inhaltRoh : [inhaltRoh];
@@ -232,12 +232,12 @@ export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, appInfoRoh
   // Turnier-Regularium: eigener Referenzbereich (wie Regeln), NICHT im Baustein-Pool.
   // Je Turnierstufe explizite Werte (nicht rein kumulativ); Varianten (Doppel/Junior)
   // hängen als Modifikator an bestimmten Stufen. Kein Fortschritt, keine Gamification.
-  const turnierregeln = {
-    meta: turnierregelnRoh?._meta || {},
-    stufen: turnierregelnRoh?.stufen || [],
-    kategorien: turnierregelnRoh?.kategorien || [],
-    anforderungen: turnierregelnRoh?.anforderungen || [],
-    varianten: turnierregelnRoh?.varianten || [],
+  const koennenscheck = {
+    meta: koennenscheckRoh?._meta || {},
+    stufen: koennenscheckRoh?.stufen || [],
+    kategorien: koennenscheckRoh?.kategorien || [],
+    anforderungen: koennenscheckRoh?.anforderungen || [],
+    varianten: koennenscheckRoh?.varianten || [],
   };
 
   const daten = {
@@ -249,7 +249,7 @@ export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, appInfoRoh
     einheiten,
     fehlerbilder,
     appInfo,
-    turnierregeln,
+    koennenscheck,
     bausteinVonId: new Map(bausteine.map((b) => [b.id, b])),
     einheitVonId: new Map(einheiten.map((e) => [e.id, e])),
     deltaVonSchluessel: new Map(),
@@ -387,7 +387,7 @@ function pruefeDaten(daten) {
   // Turnier-Regularium (Referenz-Reiter): eigener statischer Bereich, NICHT im
   // Baustein-Pool. Werte sind je Turnierstufe explizit; Varianten hängen als
   // Modifikator an Stufen. Nur leichte Struktur-/Konsistenz-Warnungen.
-  const tr = daten.turnierregeln;
+  const tr = daten.koennenscheck;
   const stufenIds = new Set(tr.stufen.map((s) => s.id));
   const katIds = new Set(tr.kategorien.map((k) => k.id));
   for (const a of tr.anforderungen) {
