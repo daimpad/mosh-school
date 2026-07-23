@@ -1487,7 +1487,10 @@
       "hardcore": "Hardcore",
       "crust": "Crust",
       "powerviolence": "Powerviolence",
-      "grindcore": "Grindcore"
+      "grindcore": "Grindcore",
+      "screamo": "Screamo",
+      "mathcore": "Mathcore",
+      "noise_rock": "Noise Rock"
     }
   },
   "spielziele": {

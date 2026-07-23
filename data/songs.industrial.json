@@ -1,0 +1,217 @@
+{
+  "genre": "Industrial",
+  "anzahl": 30,
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Kuenstler). Hass-/extremismusfrei kuratiert.",
+  "songs": [
+    {
+      "kuenstler": "Throbbing Gristle",
+      "titel": "Hamburger Lady",
+      "substil_vermerk": "Ur-Industrial (UK)",
+      "url": "https://www.youtube.com/results?search_query=Throbbing+Gristle+Hamburger+Lady",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cabaret Voltaire",
+      "titel": "Nag Nag Nag",
+      "substil_vermerk": "fruehes elektronisches Industrial (UK)",
+      "url": "https://www.youtube.com/results?search_query=Cabaret+Voltaire+Nag+Nag+Nag",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "SPK",
+      "titel": "Metal Dance",
+      "substil_vermerk": "Industrial/EBM-Uebergang (Australien)",
+      "url": "https://www.youtube.com/results?search_query=SPK+Metal+Dance",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Einstuerzende Neubauten",
+      "titel": "Halber Mensch",
+      "substil_vermerk": "Metallperkussion (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Einstuerzende+Neubauten+Halber+Mensch",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Test Dept",
+      "titel": "Compulsion",
+      "substil_vermerk": "politische Metallperkussion (UK)",
+      "url": "https://www.youtube.com/results?search_query=Test+Dept+Compulsion",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Chrome",
+      "titel": "Firebomb",
+      "substil_vermerk": "Proto-Industrial-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Chrome+Firebomb",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Foetus",
+      "titel": "Verklemmt",
+      "substil_vermerk": "orchestral-verstoerend (US/AU)",
+      "url": "https://bandcamp.com/search?q=Foetus+Verklemmt&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "The Young Gods",
+      "titel": "Skinflowers",
+      "substil_vermerk": "Sampler-Industrial-Rock (Schweiz)",
+      "url": "https://www.youtube.com/results?search_query=The+Young+Gods+Skinflowers",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Front 242",
+      "titel": "Headhunter",
+      "substil_vermerk": "EBM-Grundstein (Belgien)",
+      "url": "https://www.youtube.com/results?search_query=Front+242+Headhunter",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Nitzer Ebb",
+      "titel": "Join in the Chant",
+      "substil_vermerk": "harter EBM (UK)",
+      "url": "https://www.youtube.com/results?search_query=Nitzer+Ebb+Join+in+the+Chant",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Die Krupps",
+      "titel": "To the Hilt",
+      "substil_vermerk": "EBM/Industrial-Metal (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Die+Krupps+To+the+Hilt",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Skinny Puppy",
+      "titel": "Worlock",
+      "substil_vermerk": "electro-industrial (Kanada)",
+      "url": "https://www.youtube.com/results?search_query=Skinny+Puppy+Worlock",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Front Line Assembly",
+      "titel": "Mindphaser",
+      "substil_vermerk": "cyber-industrial (Kanada)",
+      "url": "https://bandcamp.com/search?q=Front+Line+Assembly+Mindphaser&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ministry",
+      "titel": "Thieves",
+      "substil_vermerk": "Industrial-Metal-Durchbruch (US)",
+      "url": "https://www.youtube.com/results?search_query=Ministry+Thieves",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Godflesh",
+      "titel": "Christbait Rising",
+      "substil_vermerk": "Industrial-Metal-Grundstein (UK)",
+      "url": "https://bandcamp.com/search?q=Godflesh+Christbait+Rising&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "KMFDM",
+      "titel": "A Drug Against War",
+      "substil_vermerk": "Industrial-Rock (Deutschland/US)",
+      "url": "https://www.youtube.com/results?search_query=KMFDM+A+Drug+Against+War",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Nine Inch Nails",
+      "titel": "Wish",
+      "substil_vermerk": "Industrial-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Nine+Inch+Nails+Wish",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Fear Factory",
+      "titel": "Demanufacture",
+      "substil_vermerk": "cyber/industrial death (US)",
+      "url": "https://www.youtube.com/results?search_query=Fear+Factory+Demanufacture",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Pitchshifter",
+      "titel": "Genius",
+      "substil_vermerk": "Industrial-Metal (UK)",
+      "url": "https://www.youtube.com/results?search_query=Pitchshifter+Genius",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Rammstein",
+      "titel": "Du Hast",
+      "substil_vermerk": "Neue Deutsche Haerte (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Rammstein+Du+Hast",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Scorn",
+      "titel": "Silver Rain Fell",
+      "substil_vermerk": "dub-lastiges Industrial (UK)",
+      "url": "https://bandcamp.com/search?q=Scorn+Silver+Rain+Fell&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Pigface",
+      "titel": "Ten Ground and Down",
+      "substil_vermerk": "Industrial-Kollektiv (US)",
+      "url": "https://bandcamp.com/search?q=Pigface+Ten+Ground+and+Down&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Author & Punisher",
+      "titel": "Ode to Bedlam",
+      "substil_vermerk": "Maschinen-Doom/Industrial (US)",
+      "url": "https://bandcamp.com/search?q=Author+%26+Punisher+Ode+to+Bedlam&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Uniform",
+      "titel": "Delco",
+      "substil_vermerk": "Industrial-Noise-Punk (US)",
+      "url": "https://bandcamp.com/search?q=Uniform+Delco&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "HEALTH",
+      "titel": "Slaves of Fear",
+      "substil_vermerk": "Noise/Industrial-Pop (US)",
+      "url": "https://bandcamp.com/search?q=HEALTH+Slaves+of+Fear&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "3TEETH",
+      "titel": "Master of Decay",
+      "substil_vermerk": "moderner Industrial-Metal (US)",
+      "url": "https://bandcamp.com/search?q=3TEETH+Master+of+Decay&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Youth Code",
+      "titel": "Commitment to Complications",
+      "substil_vermerk": "moderner EBM/Industrial (US)",
+      "url": "https://bandcamp.com/search?q=Youth+Code+Commitment+to+Complications&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Street Sects",
+      "titel": "Featured Animal",
+      "substil_vermerk": "Noise-Industrial (US)",
+      "url": "https://bandcamp.com/search?q=Street+Sects+Featured+Animal&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ho99o9",
+      "titel": "Street Power",
+      "substil_vermerk": "Industrial/HipHop-Punk (US)",
+      "url": "https://bandcamp.com/search?q=Ho99o9+Street+Power&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Puce Mary",
+      "titel": "The Size of Our Desires",
+      "substil_vermerk": "experimentelles Industrial (Daenemark)",
+      "url": "https://bandcamp.com/search?q=Puce+Mary+The+Size+of+Our+Desires&item_type=t",
+      "quelle": "bandcamp"
+    }
+  ]
+}

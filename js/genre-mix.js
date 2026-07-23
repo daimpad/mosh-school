@@ -26,6 +26,11 @@ export const HAEUFIGE_FUSIONEN = [
   ['hardcore', 'metalcore'],
   ['sludge', 'post_metal'],
   ['black_metal', 'post_metal'],
+  ['mathcore', 'metalcore'],
+  ['mathcore', 'grindcore'],
+  ['screamo', 'hardcore'],
+  ['screamo', 'post_metal'],
+  ['noise_rock', 'sludge'],
 ];
 
 // Score-Gewicht für ein häufiges Paar (senkt seine Ziehwahrscheinlichkeit).
@@ -38,9 +43,9 @@ const GEFUEHL_CLUSTER = {
   aggression: ['Wut', 'Zorn', 'Aggression', 'Frust', 'Bitterkeit', 'Aufbegehren', 'Aufbäumen', 'Trotz'],
   wucht: ['Wucht', 'Kraft', 'Bedrohung', 'Schwere', 'Überwältigung', 'Entladung', 'Ausbruch'],
   katharsis: ['Katharsis', 'Erlösung', 'Erhabenheit', 'Transzendenz', 'Entrückung', 'Empowerment', 'Sehnsucht'],
-  finsternis: ['Kälte', 'Isolation', 'Düsternis', 'Morbidität', 'Weltschmerz', 'Trauer'],
-  trance: ['Trance', 'Groove', 'Wärme', 'Lässigkeit', 'Kontemplation', 'Weite'],
-  chaos: ['Chaos', 'Absurdität', 'Schock', 'Dynamikwechsel', 'Adrenalin', 'Unmittelbarkeit'],
+  finsternis: ['Kälte', 'Isolation', 'Düsternis', 'Morbidität', 'Weltschmerz', 'Trauer', 'Unbehagen', 'Verzweiflung', 'Zerbrechlichkeit'],
+  trance: ['Trance', 'Groove', 'Wärme', 'Lässigkeit', 'Kontemplation', 'Weite', 'Hypnose'],
+  chaos: ['Chaos', 'Absurdität', 'Schock', 'Dynamikwechsel', 'Adrenalin', 'Unmittelbarkeit', 'Anspannung', 'Kontrolle', 'Desorientierung'],
   gemeinschaft: ['Gemeinschaft', 'Empowerment', 'Erschöpfung', 'Dreck'],
 };
 
