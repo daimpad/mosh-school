@@ -38,6 +38,15 @@ const BEATS = [
     hihat: setze([0, 2, 4, 6, 8, 10, 12, 14]), kick: setze([0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15]), snare: setze([4, 12]) } },
   { id: 'doom_feel', stil: 'doom', bpm: 70, spuren: {
     crash: setze([0]), hihat: setze([0, 4, 8, 12]), kick: setze([0, 10]), snare: setze([8]) } },
+  // Mathcore: kantig, mit Stop-Start-Lücken (Grid bleibt 16stel, aber gebrochen).
+  { id: 'mathcore_jagged', stil: 'mathcore', bpm: 150, spuren: {
+    crash: setze([0]), hihat: setze([0, 3, 6, 10, 13]), kick: setze([0, 3, 6, 7, 11]), snare: setze([4, 9, 14]) } },
+  // Screamo: treibend mit hartem Umschlag (Crash-Akzent auf 1 und Mitte).
+  { id: 'screamo_switch', stil: 'screamo', bpm: 165, spuren: {
+    crash: setze([0, 8]), hihat: setze([0, 2, 4, 6, 8, 10, 12, 14]), kick: setze([0, 3, 8, 11]), snare: setze([4, 12]) } },
+  // Noise Rock: mittleres Tempo, stampfend, bass-/kick-betont.
+  { id: 'noise_drive', stil: 'noise_rock', bpm: 120, spuren: {
+    hihat: setze([0, 2, 4, 6, 8, 10, 12, 14]), kick: setze([0, 3, 4, 8, 11, 12]), snare: setze([4, 12]) } },
 ];
 
 // Genre → passender Beat (für das ?stil-Preset der Verlinkungs-Konvention).
@@ -46,6 +55,7 @@ const STIL_ZU_BEAT = {
   black_metal: 'blastbeat', death_metal: 'double_bass', thrash: 'thrash_galopp',
   metalcore: 'metalcore_groove', djent: 'metalcore_groove', deathcore: 'metalcore_breakdown',
   doom: 'doom_feel', sludge: 'doom_feel', stoner_post: 'doom_feel',
+  mathcore: 'mathcore_jagged', screamo: 'screamo_switch', noise_rock: 'noise_drive',
 };
 
 const zustand = {
