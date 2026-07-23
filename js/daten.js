@@ -102,7 +102,7 @@ function songSlug(pfad) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, experimente, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -113,6 +113,7 @@ export async function ladeDaten() {
     holeJson('data/ampbox.json'),
     holeJson('data/genres.json').catch(() => null),
     holeJson('data/gefuehlslandkarte.json').catch(() => null),
+    holeJson('data/experimente.json').catch(() => null),
     holeJson('data/index.json').catch(() => null),
     Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
@@ -147,6 +148,9 @@ export async function ladeDaten() {
   // Kreativ-Werkzeuge (Landkarte + Genre-Mix-Generator). Referenzbereich, kein
   // Fortschritt — „Tendenzen, keine Gesetze" (Feld `hinweis`).
   daten.gefuehlslandkarte = gefuehlslandkarte || { genres: [], achsen: {}, hinweis: '' };
+  // Experimentieren-Deck (Impuls-Karten): Referenzbereich, kein Fortschritt.
+  // „ausprobiert" ist rein informativ (kein Zähler) im Werkzeug-Speicher.
+  daten.experimente = experimente || { titel: '', hinweis: '', kategorien: [], experimente: [] };
   // Such-/Metadaten-Index (generiert via scripts/build_index.py): kompakte
   // Einträge für die clientseitige Volltextsuche + Facetten (Trainings-Loop §0a/§3c).
   daten.suchindex = suchindex?.eintraege || [];
