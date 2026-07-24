@@ -1236,7 +1236,19 @@
     "tuergeld_und_abrechnung": "",
     "labels_distros_zines": "",
     "band_absprachen": "",
-    "band_konflikt_ausstieg": ""
+    "band_konflikt_ausstieg": "",
+    "bass_bauform_mensur": "",
+    "bass_tonabnehmer_detail": "",
+    "bass_aktiv_passiv": "",
+    "bass_saiten_detail": "",
+    "bass_signalkette_detail": "",
+    "bass_setup_intonation": "",
+    "kessel_material_groesse": "",
+    "felle_detail": "",
+    "stimmen_systematik": "",
+    "becken_detail": "",
+    "hardware_ergonomie": "",
+    "drum_mikrofonierung": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
