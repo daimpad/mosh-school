@@ -1,6 +1,6 @@
 {
   "titel": "Experimente",
-  "hinweis": "Kurze Impulse zum Ausprobieren. Kein Ergebnisdruck: die meisten Versuche fuehren zu nichts Brauchbarem, und genau das ist eingeplant. Bei allem, was laut wird, gilt der Gehoerschutz; bei Stimm-Experimenten die ueblichen Grenzen (leise, kurz, muehelos).",
+  "hinweis": "Kurze Impulse zum Ausprobieren. Kein Ergebnisdruck: die meisten Versuche führen zu nichts Brauchbarem, und genau das ist eingeplant. Bei allem, was laut wird, gilt der Gehörschutz; bei Stimm-Experimenten die üblichen Grenzen (leise, kurz, mühelos).",
   "kategorien": [
     "Aufnahme",
     "Beschränkung",
@@ -11,7 +11,7 @@
     "Zufall & Serendipität",
     "Zusammenspiel"
   ],
-  "anzahl": 48,
+  "anzahl": 72,
   "experimente": [
     {
       "id": "exp_001",
@@ -374,6 +374,183 @@
       "titel": "Halbtempo hören",
       "impuls": "Hör deinen Lieblingssong auf halber Geschwindigkeit. Was hörst du zum ersten Mal?",
       "aufwand": "kurz"
+    },
+    {
+      "id": "exp_049",
+      "kategorie": "Klang & Ton",
+      "titel": "Nur eine Saite",
+      "impuls": "Spiel ein ganzes Riff auf einer einzigen Saite. Was zwingt dich, das Griffbrett rauf und runter zu denken statt in Akkordformen?",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_050",
+      "kategorie": "Klang & Ton",
+      "titel": "Feedback zähmen",
+      "impuls": "Dreh laut auf und finde die Stelle im Raum, an der die Rückkopplung singt statt kreischt. Kontrolliertes Feedback ist ein Instrument — mit Gehörschutz.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_051",
+      "kategorie": "Klang & Ton",
+      "titel": "Bass als Lead",
+      "impuls": "Lass den Bass die Melodie führen und die Gitarre nur Fläche halten. Wer sagt, dass tief immer hinten stehen muss?",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_052",
+      "kategorie": "Technik verfremden",
+      "titel": "Falsch herum picken",
+      "impuls": "Spiel eine schnelle Passage nur mit Aufschlägen statt Wechselschlag. Der ungewohnte Widerstand formt einen anderen Groove.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_053",
+      "kategorie": "Technik verfremden",
+      "titel": "Slide statt Griff",
+      "impuls": "Nimm einen Slide (oder ein Feuerzeug) und rutsche über die Saiten, statt zu greifen. Welche Zwischentöne findest du zwischen den Bünden?",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_054",
+      "kategorie": "Technik verfremden",
+      "titel": "Dämpfung verkehrt",
+      "impuls": "Dämpfe genau die Töne ab, die sonst klingeln, und lass die klingen, die du sonst abstoppst. Der vertauschte Akzent macht ein neues Riff.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_055",
+      "kategorie": "Struktur & Form",
+      "titel": "Song rückwärts",
+      "impuls": "Beginne mit deinem Outro und arbeite dich zum Intro zurück. Oft ist das Ende die stärkere Eröffnung.",
+      "aufwand": "mittel",
+      "werkzeug": "song_struktur"
+    },
+    {
+      "id": "exp_056",
+      "kategorie": "Struktur & Form",
+      "titel": "Ein Takt zu viel",
+      "impuls": "Häng an ein gerades Riff einen einzelnen ungeraden Takt. Das Stolpern wird zum Wiedererkennungszeichen.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_057",
+      "kategorie": "Struktur & Form",
+      "titel": "Nur zwei Parts",
+      "impuls": "Baue einen ganzen Song aus nur zwei Riffs. Wie hältst du Spannung ohne ständigen Nachschub?",
+      "aufwand": "mittel",
+      "werkzeug": "song_struktur"
+    },
+    {
+      "id": "exp_058",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Blindes Verstimmen",
+      "impuls": "Verstimme drei Saiten blind um ein paar Cent und spiel los. Manche Zufallsstimmung will behalten werden.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_059",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Fremder Griff",
+      "impuls": "Greif eine Akkordform, die du nicht kennst, und benenne den Klang erst hinterher. Erst hören, dann verstehen.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_060",
+      "kategorie": "Zufall & Serendipität",
+      "titel": "Genres zwingen",
+      "impuls": "Nimm die ersten Töne, die dir zufällig im Kopf sind, und zwing sie in ein fremdes Genre. Was passiert an der Naht?",
+      "aufwand": "kurz",
+      "werkzeug": "genre_mix"
+    },
+    {
+      "id": "exp_061",
+      "kategorie": "Beschränkung",
+      "titel": "Drei Bünde",
+      "impuls": "Erlaube dir nur drei Bünde für ein ganzes Riff. Enge zwingt zu Rhythmus statt zu immer neuen Noten.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_062",
+      "kategorie": "Beschränkung",
+      "titel": "Kein Verzerrer",
+      "impuls": "Schreib ein brutales Riff komplett clean. Was davon clean trägt, trägt auch verzerrt.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_063",
+      "kategorie": "Beschränkung",
+      "titel": "Eine Minute",
+      "impuls": "Gib dir sechzig Sekunden für eine fertige Idee, dann leg das Instrument weg. Der Druck killt das Zögern.",
+      "aufwand": "kurz",
+      "werkzeug": "klick"
+    },
+    {
+      "id": "exp_064",
+      "kategorie": "Aufnahme",
+      "titel": "Handy im Raum",
+      "impuls": "Nimm eine Probe mit einem einzigen Handymikro mitten im Raum auf. Was der Matsch verrät, verrät kein sauberer Mix.",
+      "aufwand": "kurz",
+      "werkzeug": "riff_recorder"
+    },
+    {
+      "id": "exp_065",
+      "kategorie": "Aufnahme",
+      "titel": "Erst schlafen",
+      "impuls": "Nimm einen Take auf und hör ihn erst am nächsten Tag. Der Abstand hört anders als der Moment.",
+      "aufwand": "mittel",
+      "werkzeug": "riff_recorder"
+    },
+    {
+      "id": "exp_066",
+      "kategorie": "Aufnahme",
+      "titel": "Doppelt mit Fehler",
+      "impuls": "Nimm dasselbe Riff zweimal ein und lass die kleinen Ungenauigkeiten stehen. Die Breite kommt oft genau aus dem Fehler.",
+      "aufwand": "mittel",
+      "werkzeug": "skizzen_recorder"
+    },
+    {
+      "id": "exp_067",
+      "kategorie": "Wahrnehmung",
+      "titel": "Augen zu",
+      "impuls": "Spiel dein sicherstes Riff mit geschlossenen Augen. Wo verlässt du dich auf das Sehen statt auf das Hören?",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_068",
+      "kategorie": "Wahrnehmung",
+      "titel": "Laut mitzählen",
+      "impuls": "Sprich den Takt laut, während du spielst. Wo die Stimme stolpert, stolpert auch die Hand.",
+      "aufwand": "kurz",
+      "werkzeug": "klick"
+    },
+    {
+      "id": "exp_069",
+      "kategorie": "Wahrnehmung",
+      "titel": "Nur die Stille",
+      "impuls": "Achte eine Runde lang nicht auf die Töne, sondern auf die Pausen dazwischen. Die Lücke formt den Groove mit.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_070",
+      "kategorie": "Zusammenspiel",
+      "titel": "Rollen tauschen",
+      "impuls": "Lass Gitarre und Schlagzeug für ein Riff die Rollen tauschen: die Drums geben die Melodieakzente, die Gitarre den Puls.",
+      "aufwand": "mittel"
+    },
+    {
+      "id": "exp_071",
+      "kategorie": "Zusammenspiel",
+      "titel": "Bewusst leise",
+      "impuls": "Spiel eine Runde absichtlich zu leise, damit du die anderen tragen musst statt sie zu übertönen.",
+      "aufwand": "kurz"
+    },
+    {
+      "id": "exp_072",
+      "kategorie": "Zusammenspiel",
+      "titel": "Frage und Antwort",
+      "impuls": "Wirf einem Mitspieler eine Zwei-Takt-Phrase zu und lass sie ohne Worte beantworten. Zuhören ist die halbe Phrase.",
+      "aufwand": "mittel",
+      "werkzeug": "play_along"
     }
   ]
 }
