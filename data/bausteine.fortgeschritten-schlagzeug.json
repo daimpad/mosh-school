@@ -46,6 +46,78 @@
           "steigerung": "Das Tempo in kleinen Schritten anheben und die Ride-Hand versetzt statt unisono führen.",
           "selbstkontrolle": "Jeder Takt ist eindeutig als Traditional oder Bomb erkennbar; gleichzeitige Schläge klingen als einer."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 200,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          }
+        ]
       }
     },
     {
@@ -260,6 +332,78 @@
           "steigerung": "Figuren an ein echtes Riff anlehnen (Aufnahme oder programmiert) und Startpunkte variieren.",
           "selbstkontrolle": "Jede Gruppe beginnt und endet exakt auf ihrer Unterteilung; der Hand-Beat bleibt stabil."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 170,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "ride",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          }
+        ]
       }
     },
     {
