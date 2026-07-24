@@ -8,9 +8,37 @@
 // hub-übergreifend (ein Zustand), die Hubs sind nur der Ort der Ausführung.
 
 import { label, t } from '../i18n.js';
-import { domaeneIcon, esc } from '../oberflaeche.js';
+import { bausteinIcon, domaeneIcon, esc } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { instrumentUebersicht } from '../pfade.js';
+
+// Die Songwriting-Lernbausteine (data/bausteine.songwriting.json). Bewusst als ID-
+// Liste hier gepflegt (wie die Region-Regeln im Gear-Explorer) — sie tragen keine
+// eigene Domäne, über die man sie sonst als Gruppe fassen könnte. Nicht mehr
+// vorhandene IDs werden beim Rendern still übersprungen.
+const SONGWRITING_BAUSTEINE = [
+  'songidee_teilen',
+  'riff_zu_part_entwickeln',
+  'uebergaenge_arrangieren',
+  'song_arrangieren_ganz',
+  'parts_verteilen',
+  'text_thema_gesang',
+  'pre_production_plan',
+];
+
+// Kompakte Baustein-Links (wie die Equipment-Landing): Icon + Titel + Pfeil.
+function bausteinLinks(daten, ids) {
+  return ids
+    .filter((id) => daten.bausteinVonId?.has(id))
+    .map(
+      (id) => `<a class="karte karte-link geraete-eintrag" href="#/baustein/${esc(id)}?kontext=kompetenz">
+        <span class="geraete-eintrag-icon">${bausteinIcon(id) || '<i class="fa-solid fa-pen-nib" aria-hidden="true"></i>'}</span>
+        <span class="geraete-eintrag-text">${esc(label('baustein', id))}</span>
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>`,
+    )
+    .join('');
+}
 
 const cta = `<span class="pfad-cta">${esc(t('ansehen'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>`;
 
@@ -48,7 +76,7 @@ function renderHub(el, { icon, titel, untertitel, hue }, abschnitte) {
     .map(
       (a) => `
       <h2 class="abschnitt-titel">${esc(a.titel)}</h2>
-      <div class="pfad-gitter${a.klasse ? ` ${a.klasse}` : ''}">${a.kacheln}</div>`,
+      <div class="${a.container || 'pfad-gitter'}${a.klasse ? ` ${a.klasse}` : ''}">${a.kacheln}</div>`,
     )
     .join('');
   el.innerHTML = `
@@ -112,6 +140,11 @@ export function renderSongwriting(el, daten) {
     el,
     { icon: 'fa-pen-nib', titel: t('nav_songwriting'), untertitel: t('hub_songwriting_intro'), hue: 'pf-violett' },
     [
+      {
+        titel: t('hub_songwriting_lernen'),
+        container: 'geraete-liste',
+        kacheln: bausteinLinks(daten, SONGWRITING_BAUSTEINE),
+      },
       {
         titel: t('hub_songwriting_werkzeuge'),
         kacheln: [
