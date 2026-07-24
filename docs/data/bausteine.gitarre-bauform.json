@@ -26,7 +26,8 @@
         "de": "Kippt deine Gitarre am Gurt nach vorn — und hast du schon versucht, den Gurtpin zu versetzen, statt mit dem Halten zu kämpfen? Hast du deine Form im Sitzen und im Stehen geprüft, bevor du sie gewählt hast? Und kommst du in den hohen Lagen bequem an die Saiten, oder blockiert der Halsübergang?"
       },
       "voraussetzungen": [
-        "korpus_bauformen"
+        "korpus_bauformen",
+        "ergonomie_haltung"
       ]
     },
     {
