@@ -15,6 +15,24 @@ import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const INTRO_BAUSTEIN = 'brand_alert';
 
+// Querverweis je Kategorie auf den erklärenden Baustein (die Physik dahinter) —
+// statt sie in der Liste zu wiederholen. Fehlt der Baustein im Pool, entfällt der
+// Link stillschweigend.
+const KATEGORIE_BAUSTEIN = {
+  'Verstärker': 'amp_grundlagen',
+  'Boxen & Lautsprecher': 'box_grundlagen',
+  'Pedale & Effekte': 'pedalboard_grundlagen',
+  'Gitarren': 'bauform_und_bauteilpaket',
+  'Bässe': 'bass_ton_gear',
+  'Drums': 'schlagzeug_komponenten',
+  'Mikrofone': 'mikrofon_typen',
+  'Software (Open Source)': 'recording_grundausstattung',
+};
+
+function bausteinDa(daten, id) {
+  return !!id && (daten.bausteinVonId?.has?.(id) ?? daten.bausteine?.some((b) => b.id === id));
+}
+
 // Ein Eintrag: Bezeichnung + „warum" + „einordnung", darunter die gleichrangig
 // gesetzte bezahlbare Alternative (eigener Block, nicht kleingedruckt).
 function eintragKarte(e) {
@@ -32,11 +50,18 @@ function eintragKarte(e) {
 }
 
 // Nach Kategorie gruppiert (Reihenfolge aus dem Datenfeld `kategorien`, damit die
-// deklarierte Ordnung führt; unbekannte Kategorien hängen hinten an).
-function kategorieAbschnitt(kategorie, eintraege) {
+// deklarierte Ordnung führt; unbekannte Kategorien hängen hinten an). Ist ein
+// erklärender Baustein hinterlegt, steht er als Querverweis unter dem Titel.
+function kategorieAbschnitt(daten, kategorie, eintraege) {
+  const physik = KATEGORIE_BAUSTEIN[kategorie];
+  const physikHtml = bausteinDa(daten, physik)
+    ? `<p class="ba-physik leise">${esc(t('ba_physik_label'))}
+        <a href="#/baustein/${esc(physik)}?kontext=kompetenz">${esc(label('baustein', physik))}</a></p>`
+    : '';
   return `
     <section class="ba-kategorie" aria-label="${esc(kategorie)}">
       <h2 class="ba-kategorie-titel">${esc(kategorie)}</h2>
+      ${physikHtml}
       <ul class="ba-liste">${eintraege.map(eintragKarte).join('')}</ul>
     </section>`;
 }
@@ -74,6 +99,6 @@ export function renderBrandAlert(el, daten) {
       ${ba.hinweis ? `<p class="ba-hinweis">${esc(ba.hinweis)}</p>` : ''}
       ${introHtml}
 
-      <div class="ba-gruppen">${gruppen.map(([k, es]) => kategorieAbschnitt(k, es)).join('')}</div>
+      <div class="ba-gruppen">${gruppen.map(([k, es]) => kategorieAbschnitt(daten, k, es)).join('')}</div>
     </article>`;
 }

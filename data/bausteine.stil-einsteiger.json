@@ -111,6 +111,78 @@
           "steigerung": "Schalte den Klick während der Stille stumm (oder nutz eine Metronom-App mit Aussetzer-Funktion): Jetzt trägt nur noch dein inneres Zählen — die Königsdisziplin des Stopp-Spiels.",
           "selbstkontrolle": "Nimm zehn Stopps auf: Wie viele Wiedereinstiege liegen exakt auf dem Klick? Acht von zehn ist gut, zehn von zehn ist das Ziel. Kommst du systematisch zu früh, erlebst du die Stille noch als Loch — zurück zum lauten Zählen."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 240,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
       }
     }
   ]
