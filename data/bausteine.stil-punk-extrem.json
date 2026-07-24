@@ -42,6 +42,54 @@
           "steigerung": "Spiel einen kompletten Crust-Song (oder fünf Minuten Loop) mit und markier die Stellen, an denen du unbewusst Kraft aufbaust — genau dort bewusst lockern, ohne leiser zu werden.",
           "selbstkontrolle": "Nach der Übung: Fühlen sich Unterarme und Handgelenke belastet, aber neutral an — oder verkrampft? Auf der Aufnahme: Bleibt der Backbeat über die volle Dauer auf dem Klick, oder schleicht sich Eile ein?"
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 180,
+        "taktart": "4/4",
+        "aufloesung": 8,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              1
+            ]
+          }
+        ]
       }
     },
     {

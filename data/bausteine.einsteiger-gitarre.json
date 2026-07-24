@@ -291,6 +291,119 @@
           "steigerung": "Erhöhe das Tempo in 5-BPM-Schritten und wechsle später zu Sechzehnteln.",
           "selbstkontrolle": "Ab- und Aufschlag sind nicht zu unterscheiden; kein Stolpern beim Wechsel."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "bpm": 110,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "tuning": [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4"
+        ],
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ]
       }
     },
     {

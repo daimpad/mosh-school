@@ -127,6 +127,99 @@
           "steigerung": "Tempo in kleinen Schritten anheben; Passagen bewusst mit dem schwachen Fuß beginnen.",
           "selbstkontrolle": "Der Teppich klingt maschinengleich; der Hand-Beat bleibt davon unbeeindruckt im Timing."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 200,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ]
       }
     },
     {
@@ -506,6 +599,66 @@
           "steigerung": "Die Dreier-Stimme in den Fuß legen oder die Figur über zwei Takte zum Klick strecken.",
           "selbstkontrolle": "Das Muster läuft stabil, und du kannst benennen, welche Stimme gerade auf welcher Zählzeit liegt."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 120,
+        "taktart": "4/4",
+        "aufloesung": 12,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "instrument": "crash",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        ]
       }
     },
     {
