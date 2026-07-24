@@ -205,8 +205,6 @@ export function renderWerkzeugAmpbox(el, daten, query) {
           ${zustand.instrument === 'bass' ? `<dt>${esc(t('wz_ab_fakt_bass'))}</dt><dd>${esc(text(fakten.bass_headroom))}</dd>` : ''}
         </dl>
       </section>
-
-      <p class="leise wz-metro-fuss">${esc(t('wz_ab_fuss'))}</p>
     </article>`;
 
   verdrahte(el, daten);

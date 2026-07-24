@@ -9,7 +9,7 @@
 // tabindex="0">); die View verdrahtet Fokus, Klick und Enter/Space auf ein Panel.
 
 import { label, t, text } from '../i18n.js';
-import { bausteinIcon, esc } from '../oberflaeche.js';
+import { bausteinIcon, domaeneIcon, esc } from '../oberflaeche.js';
 
 // Vier Ansichten mit ihren Schema-SVGs (eingebettet, monochrom, Hotspots).
 const SCHEMATA = {
@@ -84,6 +84,21 @@ export function renderWerkzeugExplorer(el, daten, query) {
       <div class="wz-exp-buehne">${SCHEMATA[aktiveAnsicht]}</div>
       <div class="wz-exp-panel-halter">${panelHtml(daten, aktiveRegion)}</div>
 
+      <h2 class="abschnitt-titel">${esc(t('wz_exp_wissen_titel'))}</h2>
+      <p class="leise">${esc(t('wz_exp_wissen_intro'))}</p>
+      <div class="pfad-gitter instr-gitter">
+        ${['gitarre', 'bass', 'schlagzeug', 'gesang']
+          .map(
+            (dom) => `<a class="karte karte-link pfad-kachel instr-kachel pf-teal" href="#/geraete/${dom}">
+              <div class="pfad-kachel-kopf">
+                <span class="pfad-medaille">${domaeneIcon(dom)}</span>
+                <h3>${esc(label('domaene', dom))}</h3>
+              </div>
+              <div class="pfad-kachel-text"><p class="leise">${esc(t('wz_exp_wissen_kachel', { instrument: label('domaene', dom) }))}</p><span class="pfad-cta">${esc(t('ansehen'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div>
+            </a>`,
+          )
+          .join('')}
+      </div>
     </article>`;
 
   verdrahte(el, daten);

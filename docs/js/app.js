@@ -26,14 +26,16 @@ import { renderWerkzeugLandkarte } from './ansichten/werkzeug-landkarte.js';
 import { renderWerkzeugGenremix } from './ansichten/werkzeug-genremix.js';
 import { renderKoennenscheck } from './ansichten/koennenscheck.js';
 import { renderExperimentieren } from './ansichten/experimentieren.js';
+import { renderLernen, renderSongwriting, renderUeben } from './ansichten/hub.js';
+import { renderGeraete } from './ansichten/geraete.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
-import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
-import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung } from './zustand.js';
+import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
+import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb } from './zustand.js';
 
 let daten = null;
 let letzteRoute = null;
@@ -90,30 +92,37 @@ function parseHash() {
 }
 
 function aktualisiereNavigation(segmente) {
-  const aktiv =
-    segmente[0] === 'training' || segmente[0] === 'plan'
-      ? 'training'
-      : segmente[0] === 'ueber'
-          ? 'ueber'
-          : segmente[0] === 'mitmachen'
-            ? 'mitmachen'
-            : segmente[0] === 'profil'
-              ? 'profil'
-              : segmente[0] === 'suche'
-                ? 'suche'
-                : segmente[0] === 'stimmungen'
-                  ? 'stimmungen'
-                  : segmente[0] === 'patterns'
-                    ? 'patterns'
-                    : segmente[0] === 'songs'
-                    ? 'songs'
-                    : segmente[0] === 'werkzeuge' || segmente[0] === 'werkzeug'
-                      ? 'werkzeuge'
-                      : segmente[0] === 'koennenscheck'
-                        ? 'koennenscheck'
-                        : segmente[0] === 'experimentieren'
-                          ? 'experimentieren'
-                : 'lernen';
+  const s0 = segmente[0];
+  // Geräte-Explorer (#/werkzeug/explorer) und die Instrument-Geräte-Landings
+  // (#/geraete/*) gehören zum Menü-Punkt „Geräte", nicht zur Tools-Leiste.
+  const geraeteRoute = s0 === 'geraete' || (s0 === 'werkzeug' && segmente[1] === 'explorer');
+  const aktiv = !s0
+    ? 'home'
+    : s0 === 'profil'
+      ? 'profil'
+      : geraeteRoute
+        ? 'geraete'
+        : s0 === 'werkzeuge' || s0 === 'werkzeug'
+          ? 'werkzeuge'
+          : s0 === 'lernen'
+            ? 'lernen'
+            : s0 === 'ueben'
+              ? 'ueben'
+              : s0 === 'songwriting'
+                ? 'songwriting'
+                : s0 === 'experimentieren'
+                  ? 'experimentieren'
+                  : s0 === 'stimmungen'
+                    ? 'stimmungen'
+                    : s0 === 'patterns'
+                      ? 'patterns'
+                      : s0 === 'ueber'
+                        ? 'ueber'
+                        : s0 === 'pfad' && segmente[1] === 'stil'
+                          ? 'genres'
+                          : s0 === 'pfad' && segmente[1] === 'umgebung'
+                            ? 'kontext'
+                            : null;
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const istAktiv = verweis.dataset.nav === aktiv;
     verweis.classList.toggle('aktiv', istAktiv);
@@ -121,15 +130,15 @@ function aktualisiereNavigation(segmente) {
     else verweis.removeAttribute('aria-current');
   }
   for (const verweis of document.querySelectorAll('[data-footer]')) {
-    const istAktiv = verweis.dataset.footer === segmente[0];
+    const istAktiv = verweis.dataset.footer === s0;
     verweis.classList.toggle('aktiv', istAktiv);
     if (istAktiv) verweis.setAttribute('aria-current', 'page');
     else verweis.removeAttribute('aria-current');
   }
-  // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte).
-  const imMehr =
-    ['suche', 'stimmungen', 'patterns', 'songs', 'werkzeuge', 'werkzeug', 'koennenscheck', 'experimentieren', 'ueber', 'mitmachen', 'impressum', 'datenschutz'].includes(segmente[0]) ||
-    (segmente[0] === 'pfad' && segmente[1] === 'stil');
+  // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
+  // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'ueber'];
+  const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
     mehr.classList.toggle('aktiv', imMehr);
@@ -168,21 +177,23 @@ function beschrifteRahmen() {
   if (zumInhalt) zumInhalt.textContent = t('skip_link');
   document.querySelector('.marke-text').textContent = t('app_titel');
   const beschriftungen = {
-    lernen: t('nav_lernen'),
-    training: t('nav_training'),
-    suche: t('nav_suche'),
-    stimmungen: t('nav_stimmungen'),
-    patterns: t('nav_patterns'),
-    songs: t('nav_songs'),
-    genres: t('pfad_stil'),
-    kontext: t('pfad_umgebung'),
-    experimentieren: t('nav_experimentieren'),
+    // Untere Leiste
+    home: t('nav_home'),
     werkzeuge: t('nav_werkzeuge'),
-    koennenscheck: t('nav_koennenscheck'),
-    ueber: t('nav_ueber'),
-    mitmachen: t('nav_mitmachen'),
     profil: t('nav_profil'),
     mehr: t('nav_mehr'),
+    // Menü: Aktivitäts-Hauptpunkte
+    lernen: t('nav_lernen'),
+    ueben: t('nav_ueben'),
+    experimentieren: t('nav_experimentieren'),
+    songwriting: t('nav_songwriting'),
+    // Menü: Referenzbereiche
+    genres: t('pfad_stil'),
+    kontext: t('pfad_umgebung'),
+    geraete: t('wz_explorer_titel'),
+    stimmungen: t('nav_stimmungen'),
+    patterns: t('nav_patterns'),
+    ueber: t('nav_ueber'),
   };
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const ziel = verweis.querySelector('.nav-text');
@@ -200,24 +211,6 @@ function beschrifteRahmen() {
     const ziel = verweis.querySelector('.nav-text');
     if (ziel) ziel.textContent = beschriftung;
     else verweis.textContent = beschriftung;
-  }
-  aktualisiereThemaMenue();
-}
-
-// Themen-Steuerung im Menü (Darstellung): aktuelle Wahl beschriften + markieren.
-// Das Umschalten selbst wird einmalig in boot() verdrahtet. Läuft bei jedem
-// Rendern mit, damit Sprachwechsel und Auswahl aktuell bleiben.
-function aktualisiereThemaMenue() {
-  const aktiv = einstellungen().thema || 'auto';
-  const titel = document.querySelector('[data-thema-titel]');
-  if (titel) titel.textContent = t('thema');
-  const beschriftung = { auto: t('thema_auto_kurz'), hell: t('thema_hell'), dunkel: t('thema_dunkel') };
-  for (const knopf of document.querySelectorAll('.menue-thema-knopf')) {
-    const wert = knopf.dataset.thema;
-    if (beschriftung[wert]) knopf.textContent = beschriftung[wert];
-    const istAktiv = wert === aktiv;
-    knopf.classList.toggle('aktiv', istAktiv);
-    knopf.setAttribute('aria-pressed', String(istAktiv));
   }
 }
 
@@ -395,6 +388,14 @@ function rendern() {
     renderWerkzeuge(el, daten);
   } else if (segmente[0] === 'koennenscheck') {
     renderKoennenscheck(el, daten);
+  } else if (segmente[0] === 'lernen') {
+    renderLernen(el, daten);
+  } else if (segmente[0] === 'ueben') {
+    renderUeben(el, daten);
+  } else if (segmente[0] === 'songwriting') {
+    renderSongwriting(el, daten);
+  } else if (segmente[0] === 'geraete') {
+    renderGeraete(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'experimentieren') {
     renderExperimentieren(el, daten);
   } else if (segmente[0] === 'ueber') {
@@ -478,16 +479,7 @@ async function boot() {
   for (const element of document.querySelectorAll('[data-menue-zu], .menue-punkt, .menue-mini')) {
     element.addEventListener('click', schliesseMenue);
   }
-  // Themen-Umschalter im Menü: setzt die Einstellung + wendet sie sofort an.
-  // Schließt das Menü bewusst nicht (Auswahl bleibt sichtbar vergleichbar).
-  for (const knopf of document.querySelectorAll('.menue-thema-knopf')) {
-    knopf.addEventListener('click', () => {
-      const wert = knopf.dataset.thema;
-      setzeEinstellung('thema', wert);
-      wendeThemaAn(wert);
-      aktualisiereThemaMenue();
-    });
-  }
+  // Der Themen-Umschalter lebt nur noch im Profil (nicht mehr im Menü).
   window.addEventListener('keydown', (ereignis) => {
     if (ereignis.key === 'Escape') schliesseMenue();
   });
