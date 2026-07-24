@@ -3617,6 +3617,261 @@
           "korrektur": "Die Schlüssel-Intervalle einzeln und sehr langsam anhören, ihre Wirkung erleben, dann an drei fremden Riffs das tragende Intervall bestimmen; bei Unsicherheit langsamer wiederholen."
         }
       }
+    },
+    {
+      "id": "fb_screamo_leise_nicht_leise",
+      "typ": "fehlerbild",
+      "basis_baustein": "screamo_dynamik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Ausbruch wirkt kraftlos, obwohl die laute Stelle mit voller Kraft gespielt wird. Auf der Aufnahme ist der Unterschied zwischen beiden Teilen kleiner, als er sich beim Spielen angefühlt hat.",
+          "ursache": "Ist fast immer die leise Passage, nicht die laute: Sie wird aus Unsicherheit zu fest angeschlagen, oft mit stehender Verzerrung. Damit schrumpft die Spannweite, und der Umschlag hat nichts mehr, wovon er sich abheben könnte.",
+          "korrektur": "Zerrgrad im leisen Teil deutlich zurücknehmen, den Anschlag bewusst schwächer setzen und beides getrennt aufnehmen — der Vergleich in der Aufnahme überzeugt schneller als jede Ansage."
+        }
+      }
+    },
+    {
+      "id": "fb_twinkly_matsch",
+      "typ": "fehlerbild",
+      "basis_baustein": "twinkly_arpeggien",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die überlappenden Töne verschmelzen zu einem undeutlichen Klangbrei; einzelne Töne sind nicht mehr unterscheidbar.",
+          "ursache": "Zwei Ursachen treten meist gemeinsam auf. Erstens ein zu hoher Zerrgrad, der die gleichzeitig klingenden Töne komprimiert und ihre Trennung aufhebt. Zweitens ein zu voller Bassbereich, der die Reibung zwischen gegriffener und leerer Saite zudeckt.",
+          "korrektur": "Zerre deutlich zurücknehmen oder ganz weglassen und die Tiefen absenken. Wenn die Figur clean klar klingt, aber verzerrt nicht, liegt es nie an der Greifhand."
+        }
+      }
+    },
+    {
+      "id": "fb_mathcore_stopp_klingt_nach",
+      "typ": "fehlerbild",
+      "basis_baustein": "mathcore_stopps",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Pause wirkt weich und unentschlossen; der Bruch trifft nicht. Auf der Aufnahme hört man in der vermeintlichen Stille noch Nachklang und Saitengeräusch.",
+          "ursache": "Der Ton wird nicht aktiv beendet, sondern es wird nur aufgehört zu spielen. Greifhand und Anschlaghand müssen gleichzeitig dämpfen — bei hoher Verzerrung reicht ein Bruchteil an offener Saite, um die Stille zu zerstören.",
+          "korrektur": "Das Beenden als eigene Bewegung üben, ohne den nachfolgenden Einsatz, und dabei aufnehmen. Ein Noise Gate kaschiert das Problem, löst es aber nicht."
+        }
+      }
+    },
+    {
+      "id": "fb_mathcore_zaehlt_statt_fuehlt",
+      "typ": "fehlerbild",
+      "basis_baustein": "mathcore_taktwechsel",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Folge bricht regelmäßig an derselben Stelle zusammen, meist beim Übergang zwischen zwei Taktarten. Bei langsamem Tempo funktioniert es, bei Tempo nicht mehr.",
+          "ursache": "Es wird in Zahlen gezählt statt in Gruppen gefühlt. Zählen ist eine bewusste Tätigkeit und bricht unter Tempo zusammen; Gruppen werden als Rhythmusfiguren wiedererkannt und tragen auch schnell.",
+          "korrektur": "Die Kette laut mitsprechen, zunächst nur einen Ton pro Gruppenanfang spielen, und den Klick auf die Gruppenanfänge statt auf jede Zählzeit legen. Erst wenn die Kette ohne Zählen sitzt, kommt das Riff darüber."
+        }
+      }
+    },
+    {
+      "id": "fb_feedback_unkontrolliert",
+      "typ": "fehlerbild",
+      "basis_baustein": "feedback_als_instrument",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Statt eines gehaltenen Tons entsteht ein schrilles, unkontrolliertes Pfeifen, das sich nicht steuern lässt und beim Stoppen unangenehm abreißt.",
+          "ursache": "Meist sind die übrigen Saiten nicht abgedämpft, sodass mehrere Frequenzen gleichzeitig anspringen; oder die Lautstärke ist deutlich höher als nötig, wodurch der Kreis nicht mehr dosierbar ist.",
+          "korrektur": "Zurück auf die Lautstärke, bei der Rückkopplung gerade eben entsteht, alle nicht gegriffenen Saiten sauber abdämpfen und über Abstand und Winkel arbeiten statt über Pegel. Wichtig für die Aufsicht: Diese Übung findet immer mit Gehörschutz und in kurzen Abschnitten statt — bei Ermüdung oder Ohrgeräuschen wird abgebrochen, nicht weitergemacht."
+        }
+      }
+    },
+    {
+      "id": "fb_noise_bass_verliert_fuehrung",
+      "typ": "fehlerbild",
+      "basis_baustein": "noise_bass_treibend",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Bassfigur soll das Stück tragen, verschwindet aber, sobald die Gitarrenfläche einsetzt. Der Bass ist spürbar, aber nicht mehr als Melodie erkennbar.",
+          "ursache": "Ist meist der Ton, nicht die Linie: Volle Verzerrung ohne Clean-Anteil nimmt den Grundton, und ein Klangbild ohne obere Mitten setzt sich gegen Gitarren nicht durch.",
+          "korrektur": "Clean-Blend oder Frequenzweiche einsetzen, damit unten Fundament bleibt, und in den oberen Mitten anheben statt im Bass. Ein Anschlagpunkt näher am Steg hilft zusätzlich. Wenn die Linie allein gut trägt und nur im Bandkontext verschwindet, ist es kein musikalisches, sondern ein klangliches Problem."
+        }
+      }
+    },
+    {
+      "id": "fb_pickup_zu_nah",
+      "typ": "fehlerbild",
+      "basis_baustein": "pickup_hoehe_einstellen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Auf den tiefen Saiten und in hohen Lagen entstehen seltsame Schwebungen, das Sustain bricht früh ab, und einzelne Töne intonieren unsauber, obwohl der Steg richtig eingestellt ist.",
+          "ursache": "Der Magnet zieht so stark an der Saite, dass er ihre Schwingung bremst und verzieht. Der Effekt tritt bei kräftigen Keramikmagneten früher auf als bei schwächeren Typen.",
+          "korrektur": "Den Tonabnehmer schrittweise absenken und dabei die tiefe Saite in hoher Lage prüfen, bis Schwebungen und vorzeitiges Absterben verschwinden; danach die Lautstärke zwischen Hals und Steg neu angleichen. Mehr Pegel holt man am Verstärker, nicht durch Nähe."
+        }
+      }
+    },
+    {
+      "id": "fb_tiefe_saite_wabert",
+      "typ": "fehlerbild",
+      "basis_baustein": "mensur_wahl_tuning",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Palm Mutes in tiefer Stimmung klingen unpräzise und schwammig; der Ton flattert und der Anschlag ist nicht sauber definiert. Die übliche Reaktion ist, mehr Verzerrung einzustellen — wodurch es schlechter wird.",
+          "ursache": "Ist fehlende Saitenspannung: Mensur, Saitenstärke und Zielstimmung passen nicht zusammen.",
+          "korrektur": "dickere Saiten wählen, die Stimmung höher legen oder auf eine längere Mensur wechseln; anschließend Sattelkerben und Setup anpassen. Vor dem Griff zum Gain-Regler prüfen, ob überhaupt genug Spannung vorhanden ist — Verzerrung verstärkt das Flattern, statt es zu beheben."
+        }
+      }
+    },
+    {
+      "id": "fb_bauteile_vor_setup",
+      "typ": "fehlerbild",
+      "basis_baustein": "gitarre_entscheiden",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Es werden Tonabnehmer, Mechaniken oder Stege getauscht, ohne dass sich das Grundproblem ändert — die Unzufriedenheit bleibt und wandert zum nächsten Bauteil.",
+          "ursache": "Die Wirkungskette wird von hinten aufgerollt. Verstärker und Lautsprecher prägen den verstärkten Klang stärker als jedes Instrumentenbauteil; danach kommen Saiten und Setup, dann die kostenlose Tonabnehmerhöhe.",
+          "korrektur": "Vor jedem Kauf diese Reihenfolge durchgehen und ausdrücklich benennen, welches Problem gelöst werden soll. Sehr oft löst ein Setup plus neue Saiten das, wofür ein Pickup-Tausch geplant war."
+        }
+      }
+    },
+    {
+      "id": "fb_bass_zerre_ohne_fundament",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_signalkette_detail",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Bass klingt allein aggressiv und gut, hinterlässt im Bandkontext aber ein Loch: Der Mix wirkt dünn, obwohl der Bass hörbar ist.",
+          "ursache": "Die Verzerrung wirkt auf das gesamte Frequenzband. Sie erzeugt Obertöne und komprimiert, wodurch der Grundton relativ leiser wird — genau das Fundament fehlt dann.",
+          "korrektur": "Clean-Blend beimischen oder eine Frequenzweiche einsetzen, sodass nur der obere Bereich verzerrt wird. Prüfen lässt sich das im Zusammenspiel, nicht allein: Ein Bass, der solo perfekt klingt, ist im Bandkontext oft falsch eingestellt."
+        }
+      }
+    },
+    {
+      "id": "fb_setup_falsche_reihenfolge",
+      "typ": "fehlerbild",
+      "basis_baustein": "bass_setup_intonation",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Nach dem Einstellen stimmt nichts mehr zusammen — die Intonation wandert, es schnarrt an neuen Stellen, und die Arbeit beginnt von vorn.",
+          "ursache": "Die drei Größen hängen voneinander ab. Wer die Intonation einstellt, bevor Halskrümmung und Saitenlage stehen, arbeitet auf einer Grundlage, die sich anschließend verändert.",
+          "korrektur": "feste Reihenfolge einhalten — erst Saiten aufziehen und einspielen, dann Halskrümmung, dann Saitenlage, dann Intonation, zuletzt Tonabnehmerhöhe. Am Halsstab nur in kleinen Schritten und mit Wartezeit arbeiten; bei Widerstand in die Fachwerkstatt."
+        }
+      }
+    },
+    {
+      "id": "fb_fell_ungleich_gespannt",
+      "typ": "fehlerbild",
+      "basis_baustein": "stimmen_systematik",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Der Ton der Trommel schwebt und wabert; auch nach dem Aufbringen von Dämpfungsmaterial klingt sie unruhig, nur eben leiser und dumpfer.",
+          "ursache": "Das Fell ist an den Spannschrauben ungleich straff. Die Schwebung entsteht aus zwei leicht verschiedenen Tonhöhen im selben Fell und lässt sich weder wegdämpfen noch weglauter spielen.",
+          "korrektur": "Dämpfung entfernen, an jeder Schraube etwa zwei Zentimeter neben dem Rand antippen und die Tonhöhen angleichen; über Kreuz arbeiten. Erst danach entscheiden, ob überhaupt gedämpft werden muss — meist nicht."
+        }
+      }
+    },
+    {
+      "id": "fb_becken_gehen_unter",
+      "typ": "fehlerbild",
+      "basis_baustein": "becken_detail",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Becken sind im Bandkontext kaum hörbar. Als Reaktion wird immer härter geschlagen — mit der Zeit entstehen Risse an den Becken und Beschwerden in Handgelenk und Schulter.",
+          "ursache": "Zu leichte oder zu kleine Becken für die Lautstärke der Band. Gewicht bestimmt Durchsetzung; ein dünnes Crash ist im dichten Mix schnell verschwunden, egal wie hart man zuschlägt.",
+          "korrektur": "schwerere oder größere Becken einsetzen und den Anschlag wieder auf ein normales Maß zurückführen. Wichtig für die Aufsicht: Härter schlagen ist keine Lösung, sondern der Weg zu Materialschäden und Überlastung. Wenn jemand anfängt, gegen sein Material anzuspielen, ist das Material das Problem."
+        }
+      }
+    },
+    {
+      "id": "fb_hocker_zu_tief",
+      "typ": "fehlerbild",
+      "basis_baustein": "hardware_ergonomie",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Bei schnellen Fußpassagen ermüden die Beine früh, das Tempo bricht ein, und nach dem Spielen schmerzen Knie oder unterer Rücken.",
+          "ursache": "Ein zu tief eingestellter Hocker schließt den Kniewinkel zu stark. Der Oberschenkel muss dann Arbeit übernehmen, die eigentlich aus dem Fußgelenk kommt, und die Hüfte kippt ungünstig.",
+          "korrektur": "Den Hocker so einstellen, dass der Kniewinkel etwas offener als ein rechter Winkel ist, und die Fußmaschine neu ausrichten. Danach Schlegelabstand und Federspannung prüfen — beides beeinflusst den Kraftaufwand deutlich. Schmerz nach dem Spielen ist ein Einstellungssignal, kein Trainingszustand."
+        }
+      }
+    },
+    {
+      "id": "fb_drums_duenn_phase",
+      "typ": "fehlerbild",
+      "basis_baustein": "drum_mikrofonierung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Aufnahme klingt dünn und kraftlos, obwohl das Kit im Raum gut klingt. Beim Anheben der Tiefen wird es matschig, ohne an Substanz zu gewinnen.",
+          "ursache": "Phasenprobleme zwischen den Mikrofonen. Jedes Mikrofon nimmt jede Trommel zeitversetzt auf; treffen zwei Signale versetzt aufeinander, löschen sich Frequenzen aus.",
+          "korrektur": "Overheads so ausmessen, dass beide gleich weit von der Snare entfernt sind, den Mindestabstand zwischen Mikrofonen einhalten und die Polarität des Snare-Untermikrofons drehen. Erst danach an die Klangregelung gehen — ein Phasenproblem lässt sich nicht wegregeln."
+        }
+      }
+    },
+    {
+      "id": "fb_gehoerschutz_wird_ausgelassen",
+      "typ": "fehlerbild",
+      "basis_baustein": "erstes_konzert_besuchen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Schülerinnen und Schüler gehen ohne Gehörschutz auf Konzerte und in laute Proben, oft mit dem Argument, es klinge damit dumpf oder man wirke übervorsichtig.",
+          "ursache": "Ist meist Fehlinformation, nicht Leichtsinn: Bekannt sind einfache Schaumstoffstöpsel, die vor allem Höhen wegnehmen und den Klang tatsächlich verschlechtern. Gefilterte Ohrstöpsel dämpfen dagegen gleichmäßig und erhalten das Klangbild.",
+          "korrektur": "gefilterten Gehörschutz zeigen und ausprobieren lassen, die Größenordnung benennen und deutlich machen, dass Hörschäden dauerhaft sind. Vorbildwirkung zählt hier mehr als jede Ansage — wer selbst konsequent Schutz trägt, überzeugt am zuverlässigsten."
+        }
+      }
+    },
+    {
+      "id": "fb_band_ohne_absprachen",
+      "typ": "fehlerbild",
+      "basis_baustein": "band_absprachen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "In einer jungen Band entsteht Unzufriedenheit, ohne dass sie ausgesprochen wird — eine Person macht alle Organisation, bei den ersten Einnahmen oder einer Veröffentlichung kommt es zu Streit über Anteile und Rechte.",
+          "ursache": "Es wurde nie geklärt, wem die Songs gehören, wie geteilt wird und wer welche Aufgaben übernimmt. Solange es um nichts geht, fällt das nicht auf.",
+          "korrektur": "Diese Fragen früh und ausdrücklich stellen, solange sie unbelastet sind, und die Antworten aufschreiben. Als Anleitung genügt eine gemeinsame Notiz. Sobald echtes Geld, Verträge oder eingetragene Namen im Spiel sind, gehört rechtliche Beratung dazu — das ist nicht Aufgabe der Lehrkraft."
+        }
+      }
     }
   ]
 }
