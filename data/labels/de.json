@@ -1236,7 +1236,19 @@
     "tuergeld_und_abrechnung": "Türgeld, Gagen und faire Abrechnung",
     "labels_distros_zines": "Labels, Distros und Zines",
     "band_absprachen": "Absprachen in der Band: Rechte, Geld, Aufgaben",
-    "band_konflikt_ausstieg": "Konflikte und Ausstieg"
+    "band_konflikt_ausstieg": "Konflikte und Ausstieg",
+    "bass_bauform_mensur": "Bass: Bauform und Mensur",
+    "bass_tonabnehmer_detail": "Bass-Tonabnehmer im Detail",
+    "bass_aktiv_passiv": "Aktiv oder passiv: Elektronik am Bass",
+    "bass_saiten_detail": "Basssaiten: Wicklung, Material, Stärke",
+    "bass_signalkette_detail": "Bass-Signalkette: Zerre ohne Tiefenverlust",
+    "bass_setup_intonation": "Bass-Setup und Intonation",
+    "kessel_material_groesse": "Kessel: Material, Größe, Gratung",
+    "felle_detail": "Felle im Detail: Aufbau und Wirkung",
+    "stimmen_systematik": "Systematisch stimmen",
+    "becken_detail": "Becken im Detail: Legierung und Fertigung",
+    "hardware_ergonomie": "Hardware, Aufbau und Belastung",
+    "drum_mikrofonierung": "Schlagzeug mikrofonieren"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
