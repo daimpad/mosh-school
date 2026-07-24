@@ -7,7 +7,7 @@
 // „sitzt" ist selbst eingeschätzte Beherrschung, getrennt vom teil-genauen
 // „erledigt" (durchgearbeitet) der bestehenden Fortschritts-Projektion.
 
-import { alleStatus, feiereMeilenstein, holeLog, holeZiele, kontinuitaet, onboarding } from './zustand.js';
+import { alleStatus, feiereMeilenstein, holeZiele, kontinuitaet, onboarding } from './zustand.js';
 
 export const INSTRUMENTE = ['gitarre', 'bass', 'schlagzeug', 'gesang'];
 
@@ -22,11 +22,6 @@ export function masteryZustand(baustein, status = alleStatus()) {
   if (status[baustein.id] === 'sitzt') return 'gemeistert';
   const voraus = baustein.voraussetzungen || [];
   return voraus.every((v) => status[v] === 'sitzt') ? 'verfuegbar' : 'baut_auf';
-}
-
-// Offene Voraussetzungen (noch nicht „sitzt") — für den weichen Hinweis.
-export function offeneVoraussetzungen(baustein, status = alleStatus()) {
-  return (baustein.voraussetzungen || []).filter((v) => status[v] !== 'sitzt');
 }
 
 // Fortschritts-Ringe je Instrument: Anteil der Bausteine einer Instrument-Domäne,
@@ -99,27 +94,4 @@ export function pruefeMeilensteine(daten) {
   }
 
   return neue;
-}
-
-// Übe-Kalender (§5): geloggte Tage der letzten `tage` Tage als { iso, anzahl }.
-// Pausen werden NICHT bestraft — es gibt bewusst keinen Streak-Zähler.
-export function uebeKalender(tage = 70, heuteIso = null) {
-  const zaehlung = new Map();
-  for (const e of holeLog()) {
-    const iso = (e.ts || '').slice(0, 10);
-    if (iso) zaehlung.set(iso, (zaehlung.get(iso) || 0) + 1);
-  }
-  const heute = heuteIso ? new Date(heuteIso + 'T00:00:00Z') : new Date();
-  const raster = [];
-  for (let i = tage - 1; i >= 0; i--) {
-    const d = new Date(heute);
-    d.setUTCDate(heute.getUTCDate() - i);
-    const iso = d.toISOString().slice(0, 10);
-    raster.push({ iso, anzahl: zaehlung.get(iso) || 0 });
-  }
-  return raster;
-}
-
-export function geuebteTage() {
-  return new Set(holeLog().map((e) => (e.ts || '').slice(0, 10)).filter(Boolean)).size;
 }

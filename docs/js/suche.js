@@ -49,40 +49,6 @@ export function ausschnitt(inhalt, term, laenge = 140) {
   return (start > 0 ? '… ' : '') + roh.slice(start, ende).trim() + (ende < roh.length ? ' …' : '');
 }
 
-// Suche: jeder Term muss vorkommen (UND-Verknüpfung). Titeltreffer wiegen
-// schwerer als Inhaltstreffer; steht die ganze Anfrage im Titel, rankt der
-// Baustein zusätzlich oben. Gleichstand → Pool-Reihenfolge (deterministisch).
-export function sucheBausteine(daten, anfrage, titelVon) {
-  const roh = normalisiere(anfrage);
-  const terme = roh.split(/\s+/).filter(Boolean);
-  if (terme.length === 0) return [];
-  const treffer = [];
-  for (const baustein of daten.bausteine) {
-    const titel = titelVon ? titelVon(baustein.id) || '' : '';
-    const inhalt = bausteinText(baustein);
-    const titelN = normalisiere(titel);
-    const inhaltN = normalisiere(inhalt);
-    let score = 0;
-    let alle = true;
-    for (const term of terme) {
-      const imTitel = titelN.includes(term);
-      const imInhalt = inhaltN.includes(term);
-      if (!imTitel && !imInhalt) {
-        alle = false;
-        break;
-      }
-      score += (imTitel ? 5 : 0) + (imInhalt ? 1 : 0);
-    }
-    if (!alle) continue;
-    if (titelN.includes(roh)) score += 10; // ganze Anfrage im Titel
-    treffer.push({ baustein, score, ausschnitt: ausschnitt(inhalt, terme[0]) });
-  }
-  treffer.sort(
-    (a, b) => b.score - a.score || daten.poolIndex.get(a.baustein.id) - daten.poolIndex.get(b.baustein.id),
-  );
-  return treffer;
-}
-
 // --- Facetten-Suche über den vorgebauten Index (Trainings-Loop §3c) ---
 // Arbeitet über daten.suchindex (Bausteine + Fehlerbilder): Volltext (voller,
 // ungekürzter Inhalt aus scripts/build_index.py) plus UND-verknüpfte Facetten-
