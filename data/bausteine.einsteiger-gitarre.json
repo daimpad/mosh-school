@@ -488,7 +488,72 @@
       },
       "transfer_herkunft": [
         "BAS"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "bpm": 120,
+        "taktart": "4/4",
+        "aufloesung": 8,
+        "takte": 1,
+        "tuning": [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4"
+        ],
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 2,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 2,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 2,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 2,
+            "bund": 2,
+            "technik": "normal"
+          }
+        ]
+      }
     },
     {
       "id": "downpicking",
@@ -1081,6 +1146,71 @@
           "steigerung": "Verlängere die Phrasen und arbeite bewusster mit Dynamik und Ausklang.",
           "selbstkontrolle": "Trotz langsamem Tempo sitzt das Timing; die Akkorde klingen voll und platziert."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "bpm": 70,
+        "taktart": "4/4",
+        "aufloesung": 8,
+        "takte": 2,
+        "tuning": [
+          "D2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4"
+        ],
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 1,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 2,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 1,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ]
       }
     },
     {
@@ -1122,6 +1252,71 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und variiere Reihenfolge oder Töne.",
           "selbstkontrolle": "Das Riff läuft flüssig; die Wechsel zwischen gedämpft und offen sind sauber und im Takt."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "bpm": 110,
+        "taktart": "4/4",
+        "aufloesung": 8,
+        "takte": 1,
+        "tuning": [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4"
+        ],
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 1,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 1,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ]
       }
     },
     {

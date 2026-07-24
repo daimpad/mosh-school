@@ -164,6 +164,60 @@
           "steigerung": "Die Gruppierung umstellen (3+2+2) und hören, wie derselbe Takt ein anderes Gesicht bekommt.",
           "selbstkontrolle": "Der 7/8 groovt, statt gezählt zu klingen; beim Wechsel aus dem 4/4 wankt die Achtel nicht."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 120,
+        "taktart": "5/4",
+        "aufloesung": 10,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        ]
       }
     },
     {
