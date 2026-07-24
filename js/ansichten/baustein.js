@@ -11,7 +11,7 @@ import { pruefeMeilensteine } from '../mastery.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
-import { bausteinStatus, diagnose, einstellungen, ergaenzeLog, meldeBestwert, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
+import { bausteinStatus, diagnose, einstellungen, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
 
 function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
@@ -166,6 +166,10 @@ function voraussetzungsBanner(station, kontext) {
 
 function einordnungHtml(baustein, kuerzelSichtbar) {
   const zeile = (begriff, wert) => (wert ? `<dt>${esc(begriff)}</dt><dd>${wert}</dd>` : '');
+  // Domäne + Könnensstufe stehen bei JEDEM Baustein (die Einordnung ist damit nie
+  // leer). Die übrigen Zeilen erscheinen nur, wenn das Feld gesetzt ist.
+  const domaenen = domaenenVon(baustein).map((d) => esc(label('domaene', d))).join(', ');
+  const stufen = (baustein.kompetenzstufe || []).map((s) => esc(label('kompetenzstufe', s))).join(', ');
   const spielziele = (baustein.spielziele || []).map((f) => esc(label('spielziel_faktor', f))).join(', ');
   const vermittlungsziele = (baustein.vermittlungsziele || []).map((f) => esc(label('vermittlungsziel_faktor', f))).join(', ');
   const witterung = witterungVon(baustein).map((w) => esc(label('witterung', w))).join(', ');
@@ -179,6 +183,8 @@ function einordnungHtml(baustein, kuerzelSichtbar) {
     <details class="einordnung karte">
       <summary>${esc(t('einordnung'))}</summary>
       <dl>
+        ${zeile(t('meta_domaene'), domaenen)}
+        ${zeile(t('meta_kompetenzstufe'), stufen)}
         ${zeile(t('meta_spielziele'), spielziele)}
         ${zeile(t('meta_vermittlungsziele'), vermittlungsziele)}
         ${zeile(t('meta_witterung'), witterung)}
@@ -291,6 +297,20 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       <div class="knopf-zeile">${quittierKnopf(b.id, 'erklaerteil', station.status.erklaerteil, t('als_gelesen'), t('gelesen'))}</div>
     </section>`;
 
+  // Mastery-Umschalter (§2a): „Wie sitzt das bei dir?" — NUR bei Übungs-Bausteinen
+  // und am ENDE der Übungsinhalte. Reaktiv (schreibt in den Store, neu rendern);
+  // Signal doppelt kodiert (Zeichen + Text).
+  const masteryAktuell = bausteinStatus(b.id);
+  const masteryToggle = `
+    <div class="mastery-toggle">
+      <span class="mastery-frage">${esc(t('mastery_frage'))}</span>
+      <div class="mastery-knoepfe" role="group" aria-label="${esc(t('mastery_frage'))}">
+        ${[['neu', '○'], ['in_arbeit', '◐'], ['sitzt', '●']]
+          .map(([wert, zeichen]) => `<button type="button" class="mastery-knopf status-${wert}${masteryAktuell === wert ? ' aktiv' : ''}" data-mastery="${wert}" aria-pressed="${masteryAktuell === wert}"><span aria-hidden="true">${zeichen}</span> ${esc(t('such_status_' + wert))}</button>`)
+          .join('')}
+      </div>
+    </div>`;
+
   let uebungsSektion = '';
   if (hatUebungsteil(b)) {
     uebungsSektion = `
@@ -299,6 +319,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
         ${delta ? `<p class="leise">${esc(t('delta_uebungsteil_gilt'))}</p>` : ''}
         ${uebungsteilHtml(text(b.uebungsteil))}
         <div class="knopf-zeile">${quittierKnopf(b.id, 'uebungsteil', station.status.uebungsteil, t('als_erledigt'), t('erledigt'))}</div>
+        ${masteryToggle}
       </section>`;
   }
 
@@ -320,25 +341,6 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     ? `<p class="bestaetigung">${esc(t('baustein_abgeschlossen'))}</p>`
     : '';
 
-  // Mastery-Umschalter (§2a): selbst markieren, wie der Baustein sitzt. Reaktiv
-  // (schreibt in den Store, neu rendern). Signal doppelt kodiert (Zeichen + Text).
-  const masteryAktuell = bausteinStatus(b.id);
-  const masteryToggle = `
-    <div class="mastery-toggle">
-      <span class="mastery-frage">${esc(t('mastery_frage'))}</span>
-      <div class="mastery-knoepfe" role="group" aria-label="${esc(t('mastery_frage'))}">
-        ${[['neu', '○'], ['in_arbeit', '◐'], ['sitzt', '●']]
-          .map(([wert, zeichen]) => `<button type="button" class="mastery-knopf status-${wert}${masteryAktuell === wert ? ' aktiv' : ''}" data-mastery="${wert}" aria-pressed="${masteryAktuell === wert}"><span aria-hidden="true">${zeichen}</span> ${esc(t('such_status_' + wert))}</button>`)
-          .join('')}
-      </div>
-      <div class="ube-log">
-        <input type="number" class="ube-log-tempo" min="20" max="400" step="1" inputmode="numeric"
-          placeholder="${esc(t('ube_log_tempo_platzhalter'))}" aria-label="${esc(t('ube_log_tempo_label'))}">
-        <button type="button" class="knopf knopf-leise ube-log-knopf" data-log>${esc(t('ube_log_knopf'))}</button>
-        <span class="ube-log-bestaetigung leise" aria-live="polite"></span>
-      </div>
-    </div>`;
-
   const listeHref = kontextZuListe(kontext);
   const fussNavigation = `
     <nav class="baustein-fussnav" aria-label="${esc(t('baustein_navigation'))}">
@@ -352,7 +354,6 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${positionsZeile}
       ${heroSektion}
       ${chipZeile}
-      ${masteryToggle}
       ${voraussetzungsBanner(station, kontext)}
       ${erklaerSektion}
       ${schemaSektion}
@@ -393,21 +394,4 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     });
   }
 
-  // Übe-Log (§2e): „Heute geübt" mit optionalem Tempo. Bestätigung erscheint in
-  // place (kein Neu-Rendern, damit der Fokus bleibt); nur ein neuer Meilenstein
-  // löst die Feier aus. Persönlicher Bestwert wird nur bei Verbesserung gemeldet.
-  const logKnopf = el.querySelector('[data-log]');
-  if (logKnopf) {
-    logKnopf.addEventListener('click', () => {
-      const tempoEl = el.querySelector('.ube-log-tempo');
-      const tempo = Number(tempoEl?.value) || null;
-      ergaenzeLog({ baustein: b.id, ...(tempo ? { tempo_bpm: tempo } : {}) });
-      const neuerBest = tempo ? meldeBestwert(b.id, 'tempo_bpm', tempo) : false;
-      const bestaetigung = el.querySelector('.ube-log-bestaetigung');
-      if (bestaetigung) bestaetigung.textContent = neuerBest ? t('ube_log_bestwert', { n: tempo }) : t('ube_log_ok');
-      if (tempoEl) tempoEl.value = '';
-      const neue = pruefeMeilensteine(daten);
-      if (neue.length > 0) zeigeMeilensteine(neue.map((id) => ({ text: meilensteinLabel(id) })));
-    });
-  }
 }

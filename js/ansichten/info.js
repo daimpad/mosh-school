@@ -36,6 +36,36 @@ function abschnittHtml(block) {
   return `<section class="karte"><h2>${esc(text(block.titel) ?? '')}</h2>${eintraege}${github}</section>`;
 }
 
+// Regenbogenflagge (Pride) als Inline-SVG — bewusst FARBIG (Ausnahme vom
+// currentColor-Prinzip; eine Flagge ist ohne ihre Farben keine Flagge).
+const PRIDE_SVG =
+  '<svg class="pride-svg" viewBox="0 0 18 12" width="26" height="17" aria-hidden="true" focusable="false">' +
+  '<rect width="18" height="2" y="0" fill="#e40303"/><rect width="18" height="2" y="2" fill="#ff8c00"/>' +
+  '<rect width="18" height="2" y="4" fill="#ffed00"/><rect width="18" height="2" y="6" fill="#008026"/>' +
+  '<rect width="18" height="2" y="8" fill="#004dff"/><rect width="18" height="2" y="10" fill="#750787"/></svg>';
+
+// Haltungs-Statements mit Icon (monochrom, currentColor) — die Flagge kommt extra.
+const HALTUNG = [
+  { icon: 'fa-ban', key: 'haltung_no_ads' },
+  { icon: 'fa-eye-slash', key: 'haltung_no_tracking' },
+  { icon: 'fa-thumbs-down', key: 'haltung_no_influencer' },
+  { icon: 'fa-shield', key: 'haltung_no_nsbm' },
+];
+
+function haltungHtml() {
+  const zeilen = HALTUNG.map(
+    (s) => `<li><i class="fa-solid ${s.icon}" aria-hidden="true"></i> <span>${esc(t(s.key))}</span></li>`,
+  ).join('');
+  return `
+    <section class="karte ueber-haltung">
+      <h2>${esc(t('haltung_titel'))}</h2>
+      <ul class="haltung-liste">
+        ${zeilen}
+        <li class="haltung-pride"><span class="pride-flag" role="img" aria-label="${esc(t('haltung_lgbtq_aria'))}">${PRIDE_SVG}</span> <span>${esc(t('haltung_lgbtq'))}</span></li>
+      </ul>
+    </section>`;
+}
+
 export function renderUeber(el, daten) {
   const u = daten.appInfo?.ueber;
   if (!u) {
@@ -47,6 +77,7 @@ export function renderUeber(el, daten) {
   el.innerHTML = `
     ${landingHeroHtml('fa-compass', text(u.titel) ?? t('nav_ueber'), '', 'pf-blau')}
     ${absaetze ? `<section class="karte">${absaetze}</section>` : ''}
+    ${haltungHtml()}
     ${abschnittHtml(u.danksagungen)}
     ${abschnittHtml(u.credits_lizenz)}
     ${links ? `<section class="karte">${links}</section>` : ''}
