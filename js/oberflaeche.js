@@ -154,15 +154,6 @@ export function schliesseUeberlagerung() {
   vorherigerFokus = null;
 }
 
-// In eine aria-live-Region ansagen (Screenreader-Rückmeldung, visuell versteckt).
-export function melde(mitteilung) {
-  const region = document.getElementById('ansage');
-  if (!region) return;
-  region.textContent = '';
-  requestAnimationFrame(() => { region.textContent = String(mitteilung ?? ''); });
-}
-
-// Sequenzabschluss-Gratifikation (Spez. 8.3): würdigend, aber zurückhaltend.
 // Beschriftung eines Trainings-Loop-Meilensteins (§5) aus seiner ID. Dynamische
 // IDs (grundlagen_<instrument>, spielziel_<wert>) lösen ihr Label über die
 // Vokabeln auf; statische über direkte UI-Schlüssel.

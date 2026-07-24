@@ -106,10 +106,6 @@ export function speicherIstVerfuegbar() {
   return speicherVerfuegbar;
 }
 
-export function aktuellerZustand() {
-  return stelleSicher();
-}
-
 export function diagnose() {
   return stelleSicher().diagnose;
 }
@@ -210,19 +206,6 @@ export function holeLog() {
   return stelleSicher().log;
 }
 
-export function ergaenzeLog(eintrag, ts = null) {
-  stelleSicher().log.push({ ts: ts || new Date().toISOString(), ...eintrag });
-  schreibe();
-}
-
-export function loescheLogEintrag(index) {
-  const l = stelleSicher().log;
-  if (index >= 0 && index < l.length) {
-    l.splice(index, 1);
-    schreibe();
-  }
-}
-
 // Selbstgesetzte Ziele ({ art, wert, gesetzt }). Doppelte (art+wert) werden
 // zusammengeführt, nicht dupliziert.
 export function holeZiele() {
@@ -237,40 +220,10 @@ export function setzeZiel(art, wert) {
   }
 }
 
-export function entferneZiel(art, wert) {
-  const zst = stelleSicher();
-  const vorher = zst.ziele.length;
-  zst.ziele = zst.ziele.filter((z2) => !(z2.art === art && z2.wert === wert));
-  if (zst.ziele.length !== vorher) schreibe();
-}
-
-// Persönliche Bestwerte (nicht-vergleichend). Nur nach oben — ein neuer Wert
-// zählt nur, wenn er den bisherigen übertrifft. Rückgabe: true, wenn neuer Best.
-export function holeBestwert(schluessel, feld = 'tempo_bpm') {
-  return stelleSicher().bestwerte[schluessel]?.[feld] ?? null;
-}
-
-export function meldeBestwert(schluessel, feld, wert) {
-  const bw = stelleSicher().bestwerte;
-  const bisher = bw[schluessel]?.[feld];
-  if (typeof wert !== 'number' || (typeof bisher === 'number' && wert <= bisher)) return false;
-  bw[schluessel] = { ...(bw[schluessel] || {}), [feld]: wert, ts: new Date().toISOString() };
-  schreibe();
-  return true;
-}
-
 // Meilensteine (§5): einmalig gefeiert, wegklickbar. `feiere` gibt true zurück,
 // wenn der Meilenstein neu ist (Aufrufer zeigt dann die Feier).
-export function hatMeilenstein(id) {
-  return stelleSicher().meilensteine.includes(id);
-}
-
 export function meilensteine() {
   return stelleSicher().meilensteine;
-}
-
-export function alleBestwerte() {
-  return stelleSicher().bestwerte;
 }
 
 export function feiereMeilenstein(id) {

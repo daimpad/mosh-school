@@ -32,12 +32,6 @@ export function sprache() {
   return aktiveSprache;
 }
 
-export async function setzeSprache(neu) {
-  await ladeLabels(neu);
-  aktiveSprache = neu;
-  if (typeof document !== 'undefined') document.documentElement.lang = neu;
-}
-
 function holePfad(wurzel, pfad) {
   let wert = wurzel;
   for (const teil of pfad) {
