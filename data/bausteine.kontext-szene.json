@@ -1,0 +1,186 @@
+{
+  "_meta": {
+    "titel": "Community & Szene",
+    "beschreibung": "Rund ums Instrument: Konzert, Pit-Sicherheit, Awareness, Haltung."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "erstes_konzert_besuchen",
+      "anzeigetitel": {
+        "de": "Das erste Konzert besuchen"
+      },
+      "domaene": [
+        "kontext"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein kleines Konzert läuft anders ab, als es von außen wirkt. Türöffnung und Beginn liegen meist ein bis zwei Stunden auseinander, die erste Band spielt oft vor wenigen Leuten, und der Headliner beginnt spät. Wer die Vorbands mitnimmt, sieht am meisten und trifft die Leute, die später auf der Bühne stehen — in kleinen Szenen sind Publikum und Bands weitgehend dieselben Menschen.\n\nPraktisch hilft wenig Gepäck: Jacken und Taschen sind im Weg, feste Schuhe sind sinnvoll, und Wasser trinken ist keine Nebensache, weil vorne schnell hohe Temperaturen entstehen. Wer nicht ins Gedränge will, findet an den Seiten und hinter dem Mischpult ruhige Plätze mit oft besserem Klang — das ist keine Zweitklassigkeit, sondern eine normale Wahl.\n\nEin Punkt ist nicht verhandelbar: Gehörschutz. Konzerte in kleinen Räumen erreichen Pegel, bei denen schon eine einzige Show messbare Schäden hinterlassen kann, und Hörschäden bilden sich nicht zurück. Gefilterte Ohrstöpsel dämpfen gleichmäßig und erhalten den Klang, während einfache Schaumstoffstöpsel vor allem Höhen wegnehmen. Beides ist besser als nichts — und der Merch-Stand hat oft welche."
+      },
+      "reflexionsaufgabe": {
+        "de": "Planst du genug Zeit ein, um auch die Vorbands zu sehen — dort passiert oft das Interessanteste? Hast du Gehörschutz dabei, und zwar bei jedem Konzert und nicht nur bei den lauten? Und weißt du, dass die Seiten und der Bereich hinter dem Mischpult eine völlig normale Wahl sind, wenn dir das Gedränge zu viel ist?"
+      }
+    },
+    {
+      "id": "pit_grundlagen",
+      "anzeigetitel": {
+        "de": "Wie ein Pit funktioniert"
+      },
+      "domaene": [
+        "kontext",
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Pit ist die offene Fläche vor der Bühne, auf der sich Menschen bewegen, stoßen und rennen. Er sieht von außen chaotisch aus, folgt aber Regeln, die alle kennen, ohne dass sie jemand ausspricht. Verbreitete Formen sind der Circle Pit, bei dem eine Gruppe im Kreis läuft, das Two-Stepping mit ausholenden Schritten und Armen, und das kollektive Aufeinanderzulaufen bei einem angekündigten Einsatz.\n\nEntscheidend ist die Unterscheidung zwischen hart und rücksichtslos. Der Pit ist körperlich und soll es sein; er ist kein Ort, an dem man andere verletzt. Gezieltes Ausholen gegen Umstehende, die gar nicht mitmachen, gilt in den meisten Szenen als Grenzüberschreitung und wird auch so behandelt. Die Fläche gehört denen, die mitmachen wollen — wer am Rand steht, hat sich damit ausdrücklich dagegen entschieden.\n\nAls Neuling gilt: Erst zuschauen, wie es an diesem Abend läuft, denn Intensität und Gepflogenheiten unterscheiden sich je nach Genre, Band und Ort stark. Man kann jederzeit hineingehen und jederzeit wieder heraus. Niemand muss in den Pit, um dazuzugehören."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hast du erst beobachtet, wie der Pit an diesem Abend läuft, bevor du hineingegangen bist? Ist dir die Grenze zwischen körperlich und rücksichtslos klar — und respektierst du, dass die Leute am Rand nicht mitmachen wollen? Und weißt du, dass du nicht in den Pit musst, um Teil des Abends zu sein?"
+      },
+      "voraussetzungen": [
+        "erstes_konzert_besuchen"
+      ]
+    },
+    {
+      "id": "pit_sicherheit",
+      "anzeigetitel": {
+        "de": "Sicherheit und Verantwortung im Pit"
+      },
+      "domaene": [
+        "kontext",
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Es gibt eine Regel, die in praktisch jeder Szene gilt und keine Ausnahme kennt: Wer stürzt, wird sofort aufgehoben. Menschen um die gestürzte Person herum halten an, bilden einen Raum und ziehen sie hoch. Das ist der wichtigste Reflex im Pit überhaupt, weil eine liegende Person in einer dichten Menge sehr schnell in ernste Gefahr gerät. Wenn du nur eine Sache mitnimmst, dann diese.\n\nDazu kommen einige praktische Punkte. Achte auf kleinere und leichtere Menschen in deiner Nähe, die von der Bewegung mitgerissen werden. Sei vorsichtig mit Ellenbogen und Kopfhöhe. Brillen, Piercings und volle Taschen sind ein Risiko. Trink regelmäßig Wasser — Kreislaufprobleme entstehen im Gedränge schneller, als man denkt. Und wer stark betrunken ist, hat im Pit nichts verloren, weil Reaktionsfähigkeit und Rücksicht genau die Fähigkeiten sind, die dort gebraucht werden.\n\nWenn etwas passiert: Handzeichen nach oben und laut rufen funktioniert, das Personal an der Bühne reagiert darauf. Es ist völlig normal und kein Gesichtsverlust, den Pit zu verlassen, sich hinzusetzen oder um Hilfe zu bitten. Verantwortung füreinander ist kein Zusatz zur Szene, sondern das, was sie zusammenhält."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist der Reflex, Gestürzte sofort aufzuheben, für dich selbstverständlich? Achtest du auf Menschen um dich herum, die kleiner oder leichter sind als du? Und würdest du dir zugestehen, den Pit zu verlassen oder Hilfe zu holen, wenn es dir zu viel wird?"
+      },
+      "voraussetzungen": [
+        "pit_grundlagen"
+      ]
+    },
+    {
+      "id": "stagediving_crowdsurfing",
+      "anzeigetitel": {
+        "de": "Stagediving und Crowdsurfing"
+      },
+      "domaene": [
+        "kontext",
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Beim Stagediving springt jemand von der Bühne in die Menge, beim Crowdsurfing wird eine Person über den Köpfen weitergereicht. Beides gehört in vielen Szenen dazu und funktioniert nur, weil die Menge aktiv mitträgt — es ist eine gemeinsame Handlung und nicht die Aktion einer einzelnen Person.\n\nDaraus folgen die Regeln. Sieh nach, ob unten überhaupt genug Leute stehen, die dich auffangen können, und ob sie darauf vorbereitet sind. Springe nicht auf Menschen, die dich nicht sehen oder wegschauen. Schuhe mit harten Sohlen und schwere Stiefel verursachen die meisten Verletzungen — Füße gehören nach unten, nicht nach vorn. Wer trägt, hält Köpfe und Hälse frei und schiebt Richtung Bühne, nicht in Richtung Ausgang oder Absperrung.\n\nZwei Einschränkungen sind wichtig. Viele Veranstaltungsorte verbieten beides ausdrücklich, und dieses Hausrecht gilt — auch wenn es woanders anders gehandhabt wird. Und es gibt eine Zustimmungsfrage: Getragen zu werden bedeutet, dass fremde Hände einen berühren; wer trägt, fasst sachlich an Rücken, Beine und Schultern und nirgendwo sonst. Das ist keine Nebensächlichkeit, sondern in vielen Szenen genau der Punkt, an dem Vertrauen entsteht oder zerstört wird."
+      },
+      "reflexionsaufgabe": {
+        "de": "Prüfst du, ob unten genug vorbereitete Leute stehen, bevor du springst? Achtest du beim Tragen auf Köpfe, Hälse und darauf, wo du anfasst? Und akzeptierst du das Hausrecht eines Veranstaltungsorts, auch wenn es anderswo lockerer zugeht?"
+      },
+      "voraussetzungen": [
+        "pit_sicherheit"
+      ]
+    },
+    {
+      "id": "szene_haltung",
+      "anzeigetitel": {
+        "de": "Woher die Szene kommt und was sie zusammenhält"
+      },
+      "domaene": [
+        "kontext",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Hardcore, Punk und weite Teile des Metal sind nicht nur Musikstile, sondern gewachsene Zusammenhänge mit eigener Geschichte. Vieles davon entstand außerhalb der Musikindustrie: eigene Labels, selbst organisierte Konzerte in Jugendzentren und besetzten Häusern, Fanzines, Tauschnetzwerke. Das Kürzel DIY — do it yourself — beschreibt keine Ästhetik, sondern eine Praxis: Wenn niemand deine Musik veröffentlicht, macht ihr es selbst.\n\nDaraus folgt ein Selbstverständnis, das für Neue wichtig ist: Die Szene ist kein Publikum, das bedient wird, sondern etwas, das von denen getragen wird, die dabei sind. Wer Konzerte besucht, Merch kauft, mithilft oder selbst etwas organisiert, hält sie am Laufen. Das ist auch der Grund, warum kleine Szenen so schnell reagieren, wenn jemand sich danebenbenimmt — es gibt keine anonyme Masse, in der man verschwindet.\n\nGleichzeitig lohnt es, ehrlich zu sein: Diese Zusammenhänge sind nicht automatisch offen für alle. Ob sich Menschen willkommen fühlen, hängt davon ab, wie die Anwesenden sich verhalten — und das ist eine Frage, die jede Szene immer wieder neu beantworten muss."
+      },
+      "reflexionsaufgabe": {
+        "de": "Verstehst du die Szene als etwas, das getragen wird, oder als Angebot, das du konsumierst? Was könntest du beitragen — mithelfen, organisieren, Bands unterstützen? Und ist dir aufgefallen, wer bei den Konzerten, die du besuchst, fehlt?"
+      }
+    },
+    {
+      "id": "rechte_codes_erkennen",
+      "anzeigetitel": {
+        "de": "Rechte Codes erkennen und einordnen"
+      },
+      "domaene": [
+        "kontext",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "In einigen extremen Musikbereichen — am sichtbarsten im Black Metal — gibt es eine kleine, aber reale rechtsextreme Strömung. Sie tritt selten offen auf, sondern arbeitet mit Andeutungen: mehrdeutigen Symbolen, historischen Anspielungen, Zahlen- und Runenzeichen, und mit der Behauptung, man sei „unpolitisch“ oder es gehe „nur um die Musik“. Genau diese Behauptung ist oft das erste Warnsignal, weil sie Kritik abwehren soll, ohne etwas zu bestreiten.\n\nDu brauchst kein Lexikon der Symbole, um dich zu orientieren — hilfreicher ist, auf Verbindungen zu achten. Auf welchem Label erscheint eine Band, mit wem teilt sie Split-Veröffentlichungen und Konzerte, welche Nebenprojekte gibt es, und wie äußern sich die Beteiligten in Interviews, wenn sie direkt gefragt werden. Bei bekannteren Fällen ist die Recherche meist gut dokumentiert. Im Zweifel fragst du Leute vor Ort: In gewachsenen Szenen weiß man in der Regel sehr genau, wer wo einzuordnen ist.\n\nWichtig ist die Unterscheidung zwischen düsterer Ästhetik und politischem Inhalt. Extreme Musik arbeitet mit Kälte, Gewalt und Grenzüberschreitung — das ist nicht dasselbe wie menschenfeindliche Ideologie. Wer beides in einen Topf wirft, wird der Musik nicht gerecht; wer den Unterschied leugnet, macht sich blind. Und ein praktischer Hinweis für Anfängerinnen und Anfänger: Es ist kein Makel, etwas nicht zu erkennen. Es ist nur ein Makel, es nach dem Hinweis weiter zu ignorieren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Achtest du bei neuen Bands auf Label, Splits und Nebenprojekte, statt nur auf die Musik? Wie reagierst du, wenn dir jemand sagt, eine Band, die du magst, sei problematisch — prüfst du es oder wehrst du ab? Und kannst du zwischen düsterer Ästhetik und menschenfeindlicher Ideologie unterscheiden?"
+      },
+      "voraussetzungen": [
+        "szene_haltung"
+      ]
+    },
+    {
+      "id": "awareness_strukturen",
+      "anzeigetitel": {
+        "de": "Awareness, Grenzen und Übergriffe"
+      },
+      "domaene": [
+        "kontext",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Viele Veranstaltungsorte und Festivals haben inzwischen Awareness-Strukturen: ansprechbare Personen, oft erkennbar gekennzeichnet, an die man sich wenden kann, wenn etwas passiert oder man sich unwohl fühlt. Daneben gibt es Hausordnungen, die diskriminierendes Verhalten ausschließen, und Türpolitik, die genau das durchsetzt. Das ist keine Bevormundung, sondern die Voraussetzung dafür, dass ein enger, dunkler, lauter Raum für alle funktioniert.\n\nZwei Dinge sind für Neue praktisch wichtig. Erstens: Du darfst dich melden, auch wenn du unsicher bist, ob es „schlimm genug“ war. Awareness-Teams sind genau dafür da, und die Einschätzung liegt nicht bei dir allein. Zweitens: Der Pit hebt Zustimmung nicht auf. Körperkontakt beim Anrempeln ist Teil des Geschehens, gezieltes Begrabschen ist es nicht — die Enge ist keine Erlaubnis.\n\nWenn du etwas beobachtest, ist Wegsehen die schlechteste Option. Es reicht oft, sich danebenzustellen, die betroffene Person anzusprechen und zu fragen, ob alles in Ordnung ist, oder jemanden vom Personal zu holen. Du musst niemanden konfrontieren und schon gar nicht körperlich eingreifen. Präsenz und ein geholter Erwachsener bewirken in den meisten Situationen mehr als eine Auseinandersetzung."
+      },
+      "reflexionsaufgabe": {
+        "de": "Weißt du, an wen du dich auf einem Konzert wenden kannst, wenn etwas passiert? Ist dir klar, dass Enge im Pit keine Zustimmung zu allem bedeutet? Und was wäre dein konkreter erster Schritt, wenn du siehst, dass es jemandem neben dir nicht gut geht?"
+      },
+      "voraussetzungen": [
+        "szene_haltung"
+      ]
+    },
+    {
+      "id": "neu_in_der_szene",
+      "anzeigetitel": {
+        "de": "Neu dabei sein: Gatekeeping und Zugehörigkeit"
+      },
+      "domaene": [
+        "kontext",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Neue treffen in Musikszenen regelmäßig auf Gatekeeping: die Vorstellung, man müsse sich Zugehörigkeit erst verdienen — durch Plattenwissen, das richtige Shirt, die Kenntnis obskurer Bands. Ein Teil davon ist harmloses Spiel, ein Teil ist schlicht Abwertung. In beiden Fällen gilt: Niemand hat als Kind mit einer vollständigen Plattensammlung angefangen, und wer so tut, hat seinen eigenen Anfang vergessen.\n\nEin paar Dinge machen den Einstieg leichter. Fragen ist besser als Vortäuschen — die meisten Menschen reden ausgesprochen gern über Musik, die sie mögen. Kleine Konzerte sind zugänglicher als Festivals. Merch der Band zu kaufen, deren Shirt man trägt, ist eine nette Geste, aber keine Pflicht. Und Geschmack darf sich ändern und Lücken haben; niemand kennt alles.\n\nUmgekehrt lohnt es, die eigene Rolle im Blick zu behalten, sobald man länger dabei ist. Wer neu ist, merkt sich sehr genau, wer freundlich war und wer herablassend. Die Szenen, die lebendig bleiben, sind die, in denen Neue nicht geprüft, sondern begrüßt werden — und das entscheidet sich nicht in Grundsatzdebatten, sondern in einzelnen Gesprächen am Rand des Raums."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hast du dich schon mal nicht getraut zu fragen, weil du keine Lücke zeigen wolltest? Wie reagierst du selbst, wenn jemand eine Band nicht kennt, die für dich selbstverständlich ist? Und welche eine Geste hätte dir deinen Einstieg leichter gemacht?"
+      },
+      "voraussetzungen": [
+        "szene_haltung"
+      ]
+    }
+  ]
+}
