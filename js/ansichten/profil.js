@@ -10,7 +10,7 @@ import { balkenHtml, bausteinIcon, esc, meilensteinLabel, neuRendern, ringHtml, 
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { instrumentRinge, wasAlsNaechstes } from '../mastery.js';
 import { kompetenzpfad } from '../pfade.js';
-import { diagnose, einstellungen, kontinuitaet, meilensteine, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
+import { diagnose, einstellungen, exportiereZustand, importiereZustand, kontinuitaet, meilensteine, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 
 
@@ -225,6 +225,16 @@ export function renderProfil(el, daten) {
         <label for="pf-transfer">${esc(t('transfer_schalter'))}<span class="leise" style="display:block">${esc(t('transfer_schalter_text'))}</span></label>
         <input type="checkbox" id="pf-transfer" ${e.transferKuerzelSichtbar ? 'checked' : ''}>
       </div>
+      <div class="profil-backup">
+        <p>${esc(t('backup_titel'))}</p>
+        <p class="leise">${esc(t('backup_text'))}</p>
+        <div class="knopf-zeile" style="justify-content:flex-start">
+          <button class="knopf knopf-sekundaer" id="pf-export"><i class="fa-solid fa-download" aria-hidden="true"></i> ${esc(t('backup_export'))}</button>
+          <button class="knopf knopf-sekundaer" id="pf-import-knopf"><i class="fa-solid fa-upload" aria-hidden="true"></i> ${esc(t('backup_import'))}</button>
+          <input type="file" id="pf-import" accept="application/json,.json" hidden>
+        </div>
+        <p class="leise pf-backup-status" role="status" aria-live="polite"></p>
+      </div>
       <div class="knopf-zeile">
         <button class="knopf knopf-gefahr" id="pf-reset">${esc(t('daten_reset'))}</button>
       </div>
@@ -286,6 +296,41 @@ export function renderProfil(el, daten) {
 
   el.querySelector('#pf-transfer').addEventListener('change', (ereignis) => {
     setzeEinstellung('transferKuerzelSichtbar', ereignis.target.checked);
+  });
+
+  // Backup herunterladen: den kompletten Zustand als JSON-Datei (portables Konto-
+  // los-Backup). Datei-URL wird nach dem Klick wieder freigegeben.
+  el.querySelector('#pf-export')?.addEventListener('click', () => {
+    const inhalt = JSON.stringify(exportiereZustand(), null, 2);
+    const url = URL.createObjectURL(new Blob([inhalt], { type: 'application/json' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `moshschool-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const status = el.querySelector('.pf-backup-status');
+    if (status) status.textContent = t('backup_export_ok');
+  });
+
+  // Backup laden: Datei einlesen, importieren, dann die App neu laden — so greift
+  // das ggf. mitgesicherte Thema und alle Sichten zeigen frisch den neuen Stand.
+  el.querySelector('#pf-import-knopf')?.addEventListener('click', () => el.querySelector('#pf-import')?.click());
+  el.querySelector('#pf-import')?.addEventListener('change', async (ereignis) => {
+    const status = el.querySelector('.pf-backup-status');
+    const datei = ereignis.target.files?.[0];
+    if (!datei) return;
+    try {
+      const objekt = JSON.parse(await datei.text());
+      if (!importiereZustand(objekt)) throw new Error('ungueltig');
+      if (status) status.textContent = t('backup_import_ok');
+      setTimeout(() => window.location.reload(), 700);
+    } catch {
+      if (status) status.textContent = t('backup_import_fehler');
+    } finally {
+      ereignis.target.value = '';
+    }
   });
 
   el.querySelector('#pf-reset').addEventListener('click', async () => {
