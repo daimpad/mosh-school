@@ -542,6 +542,9 @@ a.karte-link {
 @media (min-width: 34rem) {
   .pfad-gitter { grid-template-columns: 1fr 1fr; }
 }
+/* Instrumente: schon auf Mobil zweispaltig; die Band-Kachel nimmt die ganze Reihe. */
+.instr-gitter { grid-template-columns: 1fr 1fr; }
+.instr-gitter .band-kachel { grid-column: 1 / -1; }
 .pfad-kachel {
   margin-bottom: 0;
   position: relative;
@@ -699,7 +702,10 @@ a.karte-link {
    Stopp-Knopf im Pattern-Werkzeug, der nur während der Wiedergabe erscheint). */
 .chip[hidden] { display: none; }
 
-.chip-akzent { background: var(--primaer-weich); color: var(--primaer-tief); }
+/* Aktiver/ausgewählter Chip: satte Akzentfläche mit VOLLWEISSER Schrift (nicht
+   das rote --primaer-tief) — klar erkennbarer Ausgewählt-Zustand, lesbar in
+   beiden Themes. */
+.chip-akzent { background: var(--primaer); color: #fff; border-color: var(--primaer); }
 
 /* Signal-Badges (Ampellogik) — weiche Fläche, kräftige Schrift, farbige Kante. */
 .chip-rot { background: var(--signal-rot-weich); color: var(--signal-rot-text); border: 1px solid var(--signal-rot); }
@@ -765,7 +771,7 @@ a.chip:focus-visible { outline: 2px solid var(--primaer); outline-offset: 2px; }
    WCAG-AA-Kontrast für den meistgenutzten Button. Der Akzent
    bleibt für Links/Rahmen/Icons; der Dunkelmodus kippt unten zurück auf --primaer
    (dort trägt der Button ohnehin dunkle Schrift). */
-.knopf-primaer { background: var(--primaer-tief); color: #fff; box-shadow: 0 6px 16px -6px rgba(56, 164, 241, 0.55); }
+.knopf-primaer { background: var(--primaer-tief); color: #fff; box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.4); }
 .knopf-primaer:active { background: var(--primaer-dunkel); }
 .knopf-sekundaer { border-color: var(--linie); background: var(--flaeche); }
 .knopf-leise { color: var(--tinte-2); font-weight: 500; }
@@ -1742,9 +1748,32 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 /* Knöpfe: hart, blockig, Versalien; Primär = Blutrot mit Tinten-Schrift (bold, AA) */
 .knopf { border-radius: 2px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 700; border-width: 1.5px; }
 .knopf-primaer { background: var(--primaer); color: #0b0b0c; border: 1.5px solid var(--primaer); box-shadow: var(--schatten-weich); }
-:root[data-theme='dunkel'] .knopf-primaer, 
+:root[data-theme='dunkel'] .knopf-primaer,
 .knopf-primaer { color: #0b0b0c; }
 .knopf-sekundaer { border: 1.5px solid var(--linie-stark); background: transparent; }
+
+/* „Als gelesen/erledigt markieren"-CTAs (Quittierung, [data-quittiere]): so groß
+   wie Fließtext und OHNE Versalien — ruhiger als die harten Aktions-Buttons, dem
+   Lesetext angeglichen. Im Dunkel-Theme kehrt sich der Kontrast um: weiße Fläche
+   mit roter Schrift + roter Kante (klar als Aktion lesbar). */
+.knopf-primaer[data-quittiere] {
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 600;
+  font-size: 1rem;
+}
+:root[data-theme='dunkel'] .knopf-primaer[data-quittiere] {
+  background: #fff;
+  color: var(--primaer);
+  border-color: var(--primaer);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) .knopf-primaer[data-quittiere] {
+    background: #fff;
+    color: var(--primaer);
+    border-color: var(--primaer);
+  }
+}
 
 /* Kopfzeile mit harter Unterkante */
 .kopf { border-bottom: 2px solid var(--linie-stark); }
@@ -1837,7 +1866,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 /* Aktiver Auswahl-Chip: die Akzentfläche muss die neutrale .chip-waehlbar-Fläche
    schlagen (gleiche Spezifität, aber diese Regel kommt später) — sonst bliebe der
    Aktiv-Zustand nur an der Textfarbe erkennbar. */
-.chip-waehlbar.chip-akzent { background: var(--primaer-weich); color: var(--primaer-tief); }
+.chip-waehlbar.chip-akzent { background: var(--primaer); color: #fff; border-color: var(--primaer); }
 .chip-waehlbar svg { width: 1em; height: 1em; vertical-align: -0.15em; }
 .stimm-detail { margin-top: 1.2rem; }
 .stimm-saiten { display: flex; flex-direction: column; gap: 0.35rem; margin: 1rem 0; max-width: 460px; }
@@ -2017,6 +2046,26 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .wz-tuner-richtung.passt::before { content: "\2713\00a0"; }
 .wz-saiten-zeile .wz-saite { min-width: 3rem; justify-content: center; font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { .wz-tuner-nadel { transition: none; } }
+
+/* Eigene-Stimmung-Editor: je Saite eine Zeile — Zielton (zupfbar), Halbton ±,
+   Cent-Feinstimmung. Umbrechend, damit auf Mobil nichts abgeschnitten wird. */
+.wz-eigen { margin: 1.25rem 0; }
+.wz-eigen-saiten { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.9rem 0; }
+.wz-eigen-saite {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.7rem;
+  padding: 0.5rem 0.6rem; border: 1px solid var(--linie-stark); border-radius: 2px; background: var(--flaeche-2);
+}
+.wz-eigen-zupf { min-width: 6.5rem; justify-content: flex-start; font-weight: 700; }
+.wz-eigen-label { font-variant-numeric: tabular-nums; }
+.wz-eigen-halbton { display: inline-flex; gap: 0.3rem; }
+.wz-eigen-cents-feld { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--tinte-2); flex: 1 1 12rem; }
+.wz-eigen-cents { flex: 1 1 auto; min-width: 6rem; }
+.wz-eigen-cents-wert { font-variant-numeric: tabular-nums; min-width: 3.2rem; text-align: right; font-weight: 700; }
+.wz-eigen-speicherzeile { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.6rem 0.9rem; margin: 0.6rem 0; }
+.wz-eigen-name-feld { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.78rem; color: var(--tinte-2); }
+.wz-eigen-name { min-width: 12rem; }
+.wz-eigen-liste-titel { font-size: 0.95rem; margin: 1rem 0 0.4rem; }
+.wz-eigen-eintrag { display: inline-flex; align-items: center; gap: 0.15rem; }
 
 /* === Pedalboard-Baukasten =================================================== */
 .wz-pb-h { font-size: 1.05rem; margin: 1.1rem 0 0.4rem; }
@@ -2705,10 +2754,12 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .genre-featured-pfeil { color: var(--primaer); flex: none; }
 
 /* Instrument-Seite: In-Page-Reiter (Theorie · Praxis · Tools · Prüfung · Geräte
-   · [Stimmung/Patterns]). Waagerecht scrollbar auf schmalen Screens. */
+   · [Stimmung/Patterns]). Umbrechend statt waagerecht scrollbar — so sind ALLE
+   Reiter auf einen Blick sichtbar (auch mobil), keiner versteckt sich hinter
+   einem Scroll-Rand. */
 .instr-reiter {
-  display: flex; gap: 0.4rem; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
-  margin: 0.2rem 0 1rem; padding-bottom: 0.35rem; scrollbar-width: thin;
+  display: flex; gap: 0.4rem; flex-wrap: wrap;
+  margin: 0.2rem 0 1rem; padding-bottom: 0.35rem;
 }
 .instr-reiter-knopf { flex: none; white-space: nowrap; }
 .instr-reiter-knopf .fa-solid { font-size: 0.85em; margin-right: 0.1rem; }

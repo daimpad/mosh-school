@@ -99,6 +99,36 @@ export function renderHeim(el, daten) {
     text: esc(t('profil_intro')),
   });
 
+  // Weitere Bereiche als Kacheln (Startseite als vollständiger Einstieg).
+  const kontextKachel = kachel({
+    href: '#/pfad/umgebung', hue: 'pf-sky', icon: 'fa-people-group',
+    titel: esc(t('pfad_umgebung')), text: esc(t('pfad_umgebung_text')),
+  });
+  const pruefungKachel = kachel({
+    href: '#/koennenscheck', hue: 'pf-teal', icon: 'fa-flag-checkered',
+    titel: esc(t('nav_koennenscheck')), text: esc(t('koennenscheck_untertitel')),
+  });
+  const stimmungenKachel = kachel({
+    href: '#/stimmungen', hue: 'pf-teal', icon: 'fa-sliders',
+    titel: esc(t('nav_stimmungen')), text: esc(t('stimm_untertitel')),
+  });
+  const patternsKachel = kachel({
+    href: '#/patterns', hue: 'pf-indigo', icon: 'fa-repeat',
+    titel: esc(t('nav_patterns')), text: esc(t('pattern_untertitel')),
+  });
+  const geraeteKachel = kachel({
+    href: '#/werkzeug/explorer', hue: 'pf-schiefer', icon: 'fa-magnifying-glass',
+    titel: esc(t('wz_explorer_titel')), text: esc(t('wz_explorer_kurz')),
+  });
+  const experimentierenKachel = kachel({
+    href: '#/experimentieren', hue: 'pf-violett', icon: 'fa-seedling',
+    titel: esc(t('nav_experimentieren')), text: esc(t('exp_untertitel')),
+  });
+  const ueberKachel = kachel({
+    href: '#/ueber', hue: 'pf-blau', icon: 'fa-compass',
+    titel: esc(t('nav_ueber')), text: esc(t('heim_ueber_text')),
+  });
+
   // Instrument-Kacheln (Gitarre/Bass/Drums/Vocals) + Band-Querschnitt.
   const instrumentKacheln = instrumentUebersicht(daten)
     .map(({ domaene, anzahl }) => `
@@ -124,17 +154,30 @@ export function renderHeim(el, daten) {
     ${speicherIstVerfuegbar() ? '' : `<div class="banner-hinweis">${esc(t('speicher_warnung'))}</div>`}
     ${fortsetzenStreifen}
     <h2 class="abschnitt-titel">${esc(t('instrumente'))}</h2>
-    <div class="pfad-gitter">
+    <div class="pfad-gitter instr-gitter">
       ${instrumentKacheln}
       ${bandKachel}
     </div>
-    <h2 class="abschnitt-titel">${esc(t('pfade'))}</h2>
+    <h2 class="abschnitt-titel">${esc(t('heim_gruppe_lernwege'))}</h2>
     <div class="pfad-gitter">
       ${genreKachel}
-      ${songsKachel}
+      ${kontextKachel}
       ${trainingKachel}
       ${individualKachel}
+      ${pruefungKachel}
+    </div>
+    <h2 class="abschnitt-titel">${esc(t('heim_gruppe_werkzeuge'))}</h2>
+    <div class="pfad-gitter">
       ${werkzeugeKachel}
+      ${stimmungenKachel}
+      ${patternsKachel}
+      ${geraeteKachel}
+    </div>
+    <h2 class="abschnitt-titel">${esc(t('heim_gruppe_entdecken'))}</h2>
+    <div class="pfad-gitter">
+      ${songsKachel}
+      ${experimentierenKachel}
+      ${ueberKachel}
       ${profilKachel}
     </div>`;
 }
