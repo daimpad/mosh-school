@@ -423,6 +423,10 @@ body.im-onboarding main { padding-bottom: 2rem; }
   color: var(--primaer);
 }
 
+/* Aktivitäts-Hauptpunkte (Lernen/Üben/Experimentieren/Songwriting): kräftiger
+   als die abgesetzten Referenzpunkte darunter. */
+.menue-haupt { font-weight: 700; font-size: 1.2rem; }
+
 /* Gestaffeltes Hereingleiten der Menüpunkte. */
 .menue.offen .menue-punkt { opacity: 1; transform: translateX(0); }
 .menue.offen .menue-punkt:nth-of-type(1) { transition-delay: 60ms; }
@@ -2370,6 +2374,14 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .koennen-naechst-icon { flex: 0 0 auto; width: 1.4em; height: 1.4em; display: inline-flex; align-items: center; justify-content: center; color: var(--primaer); }
 .koennen-naechst > span:not(.koennen-naechst-icon) { flex: 1 1 auto; min-width: 0; }
 .koennen-naechst .fa-arrow-right { color: var(--primaer); flex: 0 0 auto; }
+
+/* Geräte-Landing je Instrument: Liste der Ausrüstungs-Bausteine (wie „Was als Nächstes"). */
+.geraete-liste { display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.4rem; }
+.geraete-eintrag { display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem 0.8rem; margin: 0; }
+.geraete-eintrag-icon { flex: 0 0 auto; width: 1.5em; height: 1.5em; display: inline-flex; align-items: center; justify-content: center; color: var(--primaer); }
+.geraete-eintrag-icon svg { width: 1.4em; height: 1.4em; }
+.geraete-eintrag-text { flex: 1 1 auto; min-width: 0; font-weight: 600; }
+.geraete-eintrag .fa-arrow-right { color: var(--primaer); flex: 0 0 auto; }
 
 /* --- Übe-Log (§2e) auf der Baustein-Seite --- */
 .ube-log { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.2rem; }
