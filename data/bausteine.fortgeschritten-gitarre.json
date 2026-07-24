@@ -114,6 +114,119 @@
           "steigerung": "Mehr Akkorde in die Folge aufnehmen und die Zahl der Anschläge pro Akkord verkürzen.",
           "selbstkontrolle": "Das Tremolo läuft beim Wechsel gleichmäßig weiter, und die Akkordwechsel sitzen genau auf dem Schlag."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "bpm": 160,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "tuning": [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4"
+        ],
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 2,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 2,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          }
+        ]
       }
     },
     {

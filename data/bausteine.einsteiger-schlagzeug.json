@@ -825,6 +825,54 @@
           "steigerung": "Setz die betonten Schläge auf synkopierte Positionen, wie sie mit Gitarren-Chugs zusammenfallen würden.",
           "selbstkontrolle": "Der Wechsel sitzt im Timing; die betonten Schläge sind klar und druckvoll."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 130,
+        "taktart": "4/4",
+        "aufloesung": 8,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        ]
       }
     },
     {

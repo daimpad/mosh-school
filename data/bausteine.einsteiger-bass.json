@@ -464,6 +464,57 @@
           "steigerung": "Übe schnellere, gleichmäßige Achtel- oder Sechzehntel-Muster präzise auf den Klick.",
           "selbstkontrolle": "Deine Töne und der Klick verschmelzen; du hörst kein Flattern zwischen beiden."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "bpm": 120,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ]
       }
     },
     {
