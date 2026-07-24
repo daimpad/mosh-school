@@ -49,7 +49,12 @@ export function renderUeber(el, daten) {
     ${absaetze ? `<section class="karte">${absaetze}</section>` : ''}
     ${abschnittHtml(u.danksagungen)}
     ${abschnittHtml(u.credits_lizenz)}
-    ${links ? `<section class="karte">${links}</section>` : ''}`;
+    ${links ? `<section class="karte">${links}</section>` : ''}
+    <section class="karte">
+      <h2>${esc(t('nav_mitmachen'))}</h2>
+      <p class="leise">${esc(t('profil_mitmachen_text'))}</p>
+      <p class="info-cta"><a class="knopf knopf-sekundaer" href="#/mitmachen"><i class="fa-solid fa-comments" aria-hidden="true"></i> ${esc(t('nav_mitmachen'))}</a></p>
+    </section>`;
 }
 
 // Rechtstexte (Impressum / Datenschutz): schlichte Titel-+-Absätze-Ansicht aus
