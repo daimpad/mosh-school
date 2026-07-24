@@ -13,6 +13,7 @@ import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
 import { renderSongs } from './ansichten/songs.js';
 import { renderBrandAlert } from './ansichten/brand-alert.js';
+import { renderGlossar } from './ansichten/glossar.js';
 import { renderWerkzeuge } from './ansichten/werkzeuge.js';
 import { renderWerkzeugMetronom } from './ansichten/werkzeug-metronom.js';
 import { renderWerkzeugLoops } from './ansichten/werkzeug-loops.js';
@@ -119,15 +120,17 @@ function aktualisiereNavigation(segmente) {
                       ? 'patterns'
                       : s0 === 'brand-alert'
                         ? 'brandalert'
-                        : s0 === 'ueber'
-                          ? 'ueber'
-                          : s0 === 'pfad' && segmente[1] === 'stil'
-                            ? 'genres'
-                            : s0 === 'pfad' && segmente[1] === 'umgebung'
-                              ? 'kontext'
-                              : s0 === 'pfad' && segmente[1] === 'themen' && segmente[2] === 'kontext'
-                                ? 'community'
-                                : null;
+                        : s0 === 'glossar'
+                          ? 'glossar'
+                          : s0 === 'ueber'
+                            ? 'ueber'
+                            : s0 === 'pfad' && segmente[1] === 'stil'
+                              ? 'genres'
+                              : s0 === 'pfad' && segmente[1] === 'umgebung'
+                                ? 'kontext'
+                                : s0 === 'pfad' && segmente[1] === 'themen' && segmente[2] === 'kontext'
+                                  ? 'community'
+                                  : null;
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const istAktiv = verweis.dataset.nav === aktiv;
     verweis.classList.toggle('aktiv', istAktiv);
@@ -142,7 +145,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
   // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'community', 'geraete', 'stimmungen', 'patterns', 'brandalert', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'community', 'geraete', 'stimmungen', 'patterns', 'brandalert', 'glossar', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -199,6 +202,7 @@ function beschrifteRahmen() {
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
     brandalert: t('nav_brand_alert'),
+    glossar: t('nav_glossar'),
     community: t('nav_kontext'),
     ueber: t('nav_ueber'),
   };
@@ -366,6 +370,8 @@ function rendern() {
     renderPatterns(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'brand-alert') {
     renderBrandAlert(el, daten);
+  } else if (segmente[0] === 'glossar') {
+    renderGlossar(el, daten);
   } else if (segmente[0] === 'songs') {
     renderSongs(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'werkzeuge') {
