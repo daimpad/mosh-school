@@ -2403,6 +2403,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   font-family: var(--schrift-display, inherit); font-size: 1.05rem;
   margin: 0 0 0.7rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--linie-stark);
 }
+.ba-physik { margin: -0.3rem 0 0.7rem; font-size: 0.86rem; }
 .ba-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
 .ba-eintrag {
   padding: 0.8rem 0.9rem; background: var(--flaeche);
