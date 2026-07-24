@@ -8,7 +8,7 @@ import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, leerHtml, 
 import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
-import { genreInszenierungHtml, genreKurz, genreMotivSvg, genrePlatzhalterSvg, landingHeroHtml } from '../genre-inszenierung.js';
+import { genreInszenierungHtml, genreKurz, genreMotivSvg, landingHeroHtml } from '../genre-inszenierung.js';
 import { zeichneKoennenscheck } from './koennenscheck.js';
 
 // In der Liste ordnet bereits die Reihenfolge; der „Empfohlen vorher"-Hinweis
@@ -137,14 +137,9 @@ export function renderStil(el, daten, stil) {
           </a>`;
       })
       .join('');
-    const hero = `
-      <section class="marke-hero klein hue pf-magenta genre-hub-hero">
-        <div class="marke-hero-text">
-          <h1>${esc(t('pfad_stil'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('pfad_stil_text'))}</p>
-        </div>
-        ${genrePlatzhalterSvg()}
-      </section>`;
+    // Inszenierter Hero wie die übrigen Landing-Hubs (Motiv-Backdrop + Reinbox),
+    // statt des früheren flachen Kastens — konsistent zu Lernen/Üben/Songwriting.
+    const hero = landingHeroHtml('fa-fire', t('pfad_stil'), t('pfad_stil_text'), 'pf-magenta', 'genres');
     // Unten featured: Beispielsongs + Gefühlslandkarte — bewusst in einem anderen
     // Stil als die Genre-Karten (breite Feature-Kacheln mit Icon).
     const featured = `
