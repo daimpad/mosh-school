@@ -68,6 +68,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.brand-alert.json',
   'data/bausteine.kontext-szene.json',
   'data/bausteine.kontext-praxis.json',
+  'data/bausteine.bass-drums-detail.json',
   'data/bausteine.gear-schlagzeug-gesang.json',
   'data/bausteine.grenzgaenger.json',
   'data/bausteine.experimentieren.json',
