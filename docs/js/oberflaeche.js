@@ -300,6 +300,6 @@ const INSTRUMENT_SVG = {
 
 export function domaeneIcon(domaene) {
   if (INSTRUMENT_SVG[domaene]) return INSTRUMENT_SVG[domaene];
-  const fa = { koerper: 'fa-heart-pulse', mentales: 'fa-brain', theorie: 'fa-book-open', ausruestung: 'fa-toolbox' }[domaene];
+  const fa = { koerper: 'fa-heart-pulse', mentales: 'fa-brain', theorie: 'fa-book-open', ausruestung: 'fa-toolbox', kontext: 'fa-people-group' }[domaene];
   return fa ? `<i class="fa-solid ${fa}" aria-hidden="true"></i>` : '';
 }

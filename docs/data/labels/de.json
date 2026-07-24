@@ -349,6 +349,8 @@
     "klang_skala_aria": "Skala {name} aufwärts anspielen",
     "nav_patterns": "Patterns",
     "nav_brand_alert": "Brand Alert",
+    "nav_kontext": "Community & Szene",
+    "kontext_untertitel": "Rund ums Instrument: Konzert, Pit-Sicherheit, Awareness, Haltung.",
     "ba_titel": "Brand Alert",
     "ba_untertitel": "Wenn Modelle wirklich eine Rolle spielen — der markierte Ausnahmebereich.",
     "ba_alternative_label": "Bezahlbar:",
@@ -1209,7 +1211,15 @@
     "bauform_ergonomie": "Bauform: was sie wirklich bestimmt",
     "bauform_und_bauteilpaket": "Form gegen Bauteil-Paket: woher der Klang kommt",
     "bauform_kultur_buehne": "Formen als Zeichen: Kultur, Bühne, Praxis",
-    "brand_alert": "Brand Alert: wenn Modelle wirklich eine Rolle spielen"
+    "brand_alert": "Brand Alert: wenn Modelle wirklich eine Rolle spielen",
+    "erstes_konzert_besuchen": "Das erste Konzert besuchen",
+    "pit_grundlagen": "Wie ein Pit funktioniert",
+    "pit_sicherheit": "Sicherheit und Verantwortung im Pit",
+    "stagediving_crowdsurfing": "Stagediving und Crowdsurfing",
+    "szene_haltung": "Woher die Szene kommt und was sie zusammenhält",
+    "rechte_codes_erkennen": "Rechte Codes erkennen und einordnen",
+    "awareness_strukturen": "Awareness, Grenzen und Übergriffe",
+    "neu_in_der_szene": "Neu dabei sein: Gatekeeping und Zugehörigkeit"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
@@ -1464,7 +1474,8 @@
       "theorie": "Theorie",
       "koerper": "Körper & Gesundheit",
       "ausruestung": "Equipment",
-      "mentales": "Kopf & Fokus"
+      "mentales": "Kopf & Fokus",
+      "kontext": "Community"
     },
     "kompetenzstufe": {
       "einsteiger": "Einsteiger",
