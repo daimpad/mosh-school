@@ -125,6 +125,9 @@ function renderDurchlauf(el, daten, einheit, referenzen) {
       sitzung.index += 1;
     }
     neuRendern();
+    // Nach „weiter" an den Anfang der neuen Übung scrollen — sonst bleibt der Blick
+    // beim in-place-Rendern (gleiche Route) auf halber Höhe hängen.
+    window.scrollTo(0, 0);
   });
 }
 

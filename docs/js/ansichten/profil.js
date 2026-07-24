@@ -256,11 +256,10 @@ export function renderProfil(el, daten) {
     </section>
 
     <section class="karte">
-      <h2>${esc(t('ueber'))}</h2>
-      <p class="leise">${esc(t('ueber_text'))}</p>
+      <h2>${esc(t('nav_mitmachen'))}</h2>
+      <p class="leise">${esc(t('profil_mitmachen_text'))}</p>
       <div class="knopf-zeile" style="justify-content:flex-start">
-        <a class="knopf knopf-sekundaer" href="#/ueber">${esc(t('nav_ueber'))}</a>
-        <a class="knopf knopf-leise" href="#/mitmachen">${esc(t('nav_mitmachen'))}</a>
+        <a class="knopf knopf-sekundaer" href="#/mitmachen">${esc(t('nav_mitmachen'))}</a>
       </div>
     </section>`;
 

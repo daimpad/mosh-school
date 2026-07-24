@@ -49,6 +49,27 @@ Crossminton-Lern-Engine geforkt — die Engine ist themenneutral, der Inhalt ist
   geerbten Achsen **Spielform/Umgebung** sind derzeit inhaltlich unbespielt (dormant) — die
   Home-Kacheln blenden sich bei 0 Treffern aus.
 
+## Informationsarchitektur (Navigation)
+
+Die App ist nach **Tätigkeit** geordnet, nicht nach Inhaltstyp. Vier Aktivitäts-Hubs
+sind reine Sammelseiten (`js/ansichten/hub.js` + `experimentieren.js`), die auf bestehende
+Routen zeigen — **keine eigenen Inhalte, kein eigener Fortschritt**; Werkzeuge dürfen bewusst
+in mehreren Hubs auftauchen:
+
+- **Lernen** (`#/lernen`) — Instrumente, Genres, Kontext, Kompetenz, Suche, Geräte, Prüfung.
+- **Üben** (`#/ueben`) — Training, Profil, Metronom/Stimmgerät/Loops, Patterns.
+- **Songwriting** (`#/songwriting`) — Song-Struktur/Riff-/Mehrspur-Recorder, Amp-Box, Songs.
+- **Experimentieren** (`#/experimentieren`) — eigener View (Deck + Grenzgänger).
+
+**Untere Leiste (mobil):** Home · Tools (`#/werkzeuge`) · Profil · Mehr (öffnet das Menü).
+**Menü:** die vier Hubs als Hauptpunkte (`.menue-haupt`), abgesetzt die Referenzbereiche
+(Genres, Kontext, Geräte, Stimmungen, Patterns), abgesetzt Über/Impressum/Datenschutz. Der
+**Themen-Umschalter lebt nur im Profil** (nicht mehr im Menü). Aktiv-Zustand + Rahmen-Labels
+in `js/app.js` (`aktualisiereNavigation`/`beschrifteRahmen`); `data-nav`-Schlüssel = Label-Key.
+**Geräte** (`#/werkzeug/explorer`) trägt vier Instrument-Kacheln zu den Geräte-Landings
+(`#/geraete/<instrument>`, `js/ansichten/geraete.js`) — daten-getrieben aus `domaene ⊇
+{ausruestung, <instrument>}`.
+
 ## Wo was liegt
 
 | Ebene | Dateien | Regel |
