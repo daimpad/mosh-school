@@ -26,6 +26,19 @@
           "de": "Danke an [Platzhalter] für Feedback, Testen und Support aus der Szene."
         }
       ]
+    },
+    "credits_lizenz": {
+      "titel": {
+        "de": "Open Source & Lizenz"
+      },
+      "eintraege": [
+        {
+          "de": "Der Code steht unter der MIT-Lizenz — nutze, verändere und teile ihn frei."
+        },
+        {
+          "de": "Die Inhalte stehen unter Creative Commons BY-NC 4.0: Namensnennung, nicht kommerziell."
+        }
+      ]
     }
   },
   "mitmachen": {
