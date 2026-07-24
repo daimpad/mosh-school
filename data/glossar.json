@@ -1,0 +1,447 @@
+{
+  "titel": "Szene-Glossar",
+  "hinweis": "Kurzsprache aus der Praxis, kein Geheimcode. Nichts davon muss man auswendig können — nachschlagen genügt, und Nachfragen ist immer erlaubt.",
+  "kategorien": [
+    "Konzert & Bühne",
+    "Publikum & Pit",
+    "Veröffentlichen",
+    "Szene & Strukturen",
+    "Musik & Spielweise"
+  ],
+  "anzahl": 66,
+  "begriffe": [
+    {
+      "id": "gl_001",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Backline",
+      "erklaerung": "Die vor Ort bereitstehende Rückwand-Ausrüstung: Verstärker, Boxen, oft ein Schlagzeug ohne Becken und Snare.",
+      "bezug": "proberaum_ausruestung"
+    },
+    {
+      "id": "gl_002",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Load-in / Get-in",
+      "erklaerung": "Der Zeitpunkt, zu dem Bands ihr Material einladen und aufbauen dürfen."
+    },
+    {
+      "id": "gl_003",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Line Check",
+      "erklaerung": "Kurze Prüfung, ob jedes Signal am Pult ankommt — schneller als ein voller Soundcheck.",
+      "bezug": "soundcheck_ablauf"
+    },
+    {
+      "id": "gl_004",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Soundcheck",
+      "erklaerung": "Einstellen von Saal- und Monitorklang vor dem Konzert, meist in umgekehrter Auftrittsreihenfolge.",
+      "bezug": "soundcheck_ablauf"
+    },
+    {
+      "id": "gl_005",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "FOH",
+      "erklaerung": "Front of House: der Mischplatz im Saal, an dem der Klang für das Publikum gemacht wird."
+    },
+    {
+      "id": "gl_006",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Monitor / Wedge",
+      "erklaerung": "Der Lautsprecher, der zur Bühne zeigt, damit die Band sich selbst hört."
+    },
+    {
+      "id": "gl_007",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "In-Ears",
+      "erklaerung": "Ohrhörer statt Monitorboxen; leiser auf der Bühne und besser fürs Gehör.",
+      "bezug": "gehoerschutz_lautstaerke"
+    },
+    {
+      "id": "gl_008",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "DI-Box",
+      "erklaerung": "Wandelt ein Instrumentensignal so um, dass es über lange Kabel sauber ans Pult geht."
+    },
+    {
+      "id": "gl_009",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Stageplan",
+      "erklaerung": "Skizze, wer wo auf der Bühne steht und welche Kanäle gebraucht werden.",
+      "bezug": "buehne_aufstellung_show"
+    },
+    {
+      "id": "gl_010",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Rider",
+      "erklaerung": "Liste der Anforderungen einer Band: technisch (Technical Rider) oder Verpflegung und Unterkunft (Hospitality Rider)."
+    },
+    {
+      "id": "gl_011",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Headliner",
+      "erklaerung": "Die Band, die zuletzt und am längsten spielt."
+    },
+    {
+      "id": "gl_012",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Support / Opener",
+      "erklaerung": "Vorbands; der Opener eröffnet den Abend.",
+      "bezug": "erstes_konzert_besuchen"
+    },
+    {
+      "id": "gl_013",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Local Support",
+      "erklaerung": "Ortsansässige Band, die eine durchreisende Band ergänzt und Publikum mitbringt."
+    },
+    {
+      "id": "gl_014",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Curfew",
+      "erklaerung": "Die Uhrzeit, zu der Schluss sein muss — meist aus Lärmschutzgründen.",
+      "bezug": "konzert_selbst_organisieren"
+    },
+    {
+      "id": "gl_015",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Guestlist",
+      "erklaerung": "Namensliste für freien Eintritt, meist stark begrenzt."
+    },
+    {
+      "id": "gl_016",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Merch-Tisch",
+      "erklaerung": "Verkaufsstand für Shirts und Tonträger; für kleine Bands die wichtigste Einnahmequelle.",
+      "bezug": "labels_distros_zines"
+    },
+    {
+      "id": "gl_017",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Merch-Cut",
+      "erklaerung": "Anteil, den ein Veranstaltungsort von den Merch-Einnahmen einbehält.",
+      "bezug": "tuergeld_und_abrechnung"
+    },
+    {
+      "id": "gl_018",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Doorsplit",
+      "erklaerung": "Aufteilung der Türeinnahmen unter den Bands nach Abzug der Kosten.",
+      "bezug": "tuergeld_und_abrechnung"
+    },
+    {
+      "id": "gl_019",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Gage",
+      "erklaerung": "Fest zugesagter Betrag für einen Auftritt, unabhängig von der Besucherzahl.",
+      "bezug": "tuergeld_und_abrechnung"
+    },
+    {
+      "id": "gl_020",
+      "kategorie": "Konzert & Bühne",
+      "begriff": "Barriere",
+      "erklaerung": "Absperrung zwischen Bühne und Publikum; in kleinen Räumen meist nicht vorhanden."
+    },
+    {
+      "id": "gl_021",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Pit",
+      "erklaerung": "Die offene Fläche vor der Bühne, auf der sich bewegt und gestoßen wird.",
+      "bezug": "pit_grundlagen"
+    },
+    {
+      "id": "gl_022",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Circle Pit",
+      "erklaerung": "Gruppe, die im Kreis um die Pit-Mitte läuft.",
+      "bezug": "pit_grundlagen"
+    },
+    {
+      "id": "gl_023",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Wall of Death",
+      "erklaerung": "Angekündigtes Teilen des Publikums in zwei Hälften, die aufeinander zulaufen.",
+      "bezug": "pit_grundlagen"
+    },
+    {
+      "id": "gl_024",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Two-Step",
+      "erklaerung": "Tanzform mit ausholenden Schritten und Armen, verbreitet im Hardcore.",
+      "bezug": "pit_grundlagen"
+    },
+    {
+      "id": "gl_025",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Crowdkilling",
+      "erklaerung": "Gezieltes Ausholen gegen Unbeteiligte — in den meisten Szenen eine Grenzüberschreitung.",
+      "bezug": "pit_grundlagen"
+    },
+    {
+      "id": "gl_026",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Stagedive",
+      "erklaerung": "Sprung von der Bühne in die Menge.",
+      "bezug": "stagediving_crowdsurfing"
+    },
+    {
+      "id": "gl_027",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Crowdsurfing",
+      "erklaerung": "Über den Köpfen der Menge weitergereicht werden.",
+      "bezug": "stagediving_crowdsurfing"
+    },
+    {
+      "id": "gl_028",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Mosh Part",
+      "erklaerung": "Songabschnitt, der auf körperliche Bewegung im Publikum angelegt ist."
+    },
+    {
+      "id": "gl_029",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Awareness",
+      "erklaerung": "Ansprechbare Struktur bei Konzerten für Übergriffe und Unwohlsein.",
+      "bezug": "awareness_strukturen"
+    },
+    {
+      "id": "gl_030",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Safer Space",
+      "erklaerung": "Raum mit ausdrücklichen Regeln gegen diskriminierendes Verhalten — safer, nicht safe.",
+      "bezug": "awareness_strukturen"
+    },
+    {
+      "id": "gl_031",
+      "kategorie": "Publikum & Pit",
+      "begriff": "Türpolitik",
+      "erklaerung": "Durchsetzung dieser Regeln am Einlass.",
+      "bezug": "awareness_strukturen"
+    },
+    {
+      "id": "gl_032",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Demo",
+      "erklaerung": "Erste, meist rohe Aufnahme; dient dazu, gehört zu werden, nicht dazu, perfekt zu sein.",
+      "bezug": "demo_warum_wozu"
+    },
+    {
+      "id": "gl_033",
+      "kategorie": "Veröffentlichen",
+      "begriff": "EP",
+      "erklaerung": "Kurze Veröffentlichung, meist drei bis sechs Stücke."
+    },
+    {
+      "id": "gl_034",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Split",
+      "erklaerung": "Gemeinsame Veröffentlichung zweier oder mehrerer Bands auf einem Tonträger."
+    },
+    {
+      "id": "gl_035",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Sampler / Comp",
+      "erklaerung": "Zusammenstellung mit Stücken vieler Bands, oft label- oder szenegebunden."
+    },
+    {
+      "id": "gl_036",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Tape",
+      "erklaerung": "Kassette; in DIY-Szenen verbreitet, weil sehr günstig in Kleinauflage."
+    },
+    {
+      "id": "gl_037",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Tracking",
+      "erklaerung": "Der Aufnahmevorgang selbst, Spur für Spur.",
+      "bezug": "tracking_reihenfolge"
+    },
+    {
+      "id": "gl_038",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Reamping",
+      "erklaerung": "Ein trocken aufgenommenes Instrumentensignal nachträglich durch Verstärker und Box schicken.",
+      "bezug": "signal_aufnehmen"
+    },
+    {
+      "id": "gl_039",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Mix",
+      "erklaerung": "Zusammenführen und Ausbalancieren der Einzelspuren.",
+      "bezug": "mischen_grundlagen"
+    },
+    {
+      "id": "gl_040",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Master",
+      "erklaerung": "Letzter Arbeitsschritt für Lautheit und Klangbild über alle Stücke hinweg."
+    },
+    {
+      "id": "gl_041",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Test Pressing",
+      "erklaerung": "Erstes Prüfexemplar einer Schallplatte vor der Auflage."
+    },
+    {
+      "id": "gl_042",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Repress",
+      "erklaerung": "Nachpressung einer vergriffenen Auflage."
+    },
+    {
+      "id": "gl_043",
+      "kategorie": "Veröffentlichen",
+      "begriff": "Pre-Order",
+      "erklaerung": "Vorbestellung, mit der eine Auflage vorfinanziert wird."
+    },
+    {
+      "id": "gl_044",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "DIY",
+      "erklaerung": "Do it yourself: selbst organisieren statt auf Industrie warten — Praxis, nicht Ästhetik.",
+      "bezug": "szene_haltung"
+    },
+    {
+      "id": "gl_045",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Distro",
+      "erklaerung": "Kleiner Vertrieb, der Tonträger anderer verkauft und tauscht, oft als Tisch beim Konzert.",
+      "bezug": "labels_distros_zines"
+    },
+    {
+      "id": "gl_046",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Zine / Fanzine",
+      "erklaerung": "Selbstgemachtes Heft mit Interviews und Rezensionen.",
+      "bezug": "labels_distros_zines"
+    },
+    {
+      "id": "gl_047",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Booking",
+      "erklaerung": "Das Organisieren von Auftritten und Touren.",
+      "bezug": "konzert_selbst_organisieren"
+    },
+    {
+      "id": "gl_048",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Promoter",
+      "erklaerung": "Person oder Kollektiv, das ein Konzert veranstaltet und dafür haftet.",
+      "bezug": "konzert_selbst_organisieren"
+    },
+    {
+      "id": "gl_049",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "AZ / Jugendzentrum",
+      "erklaerung": "Selbstverwaltetes Zentrum beziehungsweise Jugendhaus — typische Orte für kleine Konzerte.",
+      "bezug": "konzert_selbst_organisieren"
+    },
+    {
+      "id": "gl_050",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Solikonzert",
+      "erklaerung": "Konzert, dessen Einnahmen einem politischen oder sozialen Zweck zugutekommen."
+    },
+    {
+      "id": "gl_051",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Straight Edge",
+      "erklaerung": "Verzicht auf Alkohol, Tabak und Drogen als bewusste Haltung; entstand im Hardcore."
+    },
+    {
+      "id": "gl_052",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Kutte / Battle Jacket",
+      "erklaerung": "Weste oder Jacke mit aufgenähten Bandaufnähern."
+    },
+    {
+      "id": "gl_053",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Patch",
+      "erklaerung": "Aufnäher mit Bandlogo."
+    },
+    {
+      "id": "gl_054",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Gatekeeping",
+      "erklaerung": "Zugehörigkeit an Wissen oder Herkunft knüpfen; erschwert Neuen den Einstieg.",
+      "bezug": "neu_in_der_szene"
+    },
+    {
+      "id": "gl_055",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "Poser",
+      "erklaerung": "Abwertung für vermeintlich unechte Zugehörigkeit — meist ein Zeichen von Gatekeeping.",
+      "bezug": "neu_in_der_szene"
+    },
+    {
+      "id": "gl_056",
+      "kategorie": "Szene & Strukturen",
+      "begriff": "NSBM",
+      "erklaerung": "Rechtsextreme Strömung im Black Metal; in ernsthaften Szenen ausgeschlossen.",
+      "bezug": "rechte_codes_erkennen"
+    },
+    {
+      "id": "gl_057",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Riff",
+      "erklaerung": "Kurze, wiederkehrende musikalische Figur — der Grundbaustein dieser Musik."
+    },
+    {
+      "id": "gl_058",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Breakdown",
+      "erklaerung": "Langsamer, schwerer Abschnitt, meist auf körperliche Wirkung angelegt."
+    },
+    {
+      "id": "gl_059",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Blast Beat",
+      "erklaerung": "Sehr schnelles Schlagzeugmuster mit abwechselnden oder gleichzeitigen Schlägen."
+    },
+    {
+      "id": "gl_060",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "D-Beat",
+      "erklaerung": "Treibendes Punk-Schlagzeugmuster, benannt nach der Discharge-Schule."
+    },
+    {
+      "id": "gl_061",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Chug",
+      "erklaerung": "Kurzer, abgedämpfter Anschlag auf tiefer Saite."
+    },
+    {
+      "id": "gl_062",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Gang Vocals",
+      "erklaerung": "Von mehreren Stimmen gemeinsam gerufene Passage."
+    },
+    {
+      "id": "gl_063",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Drop Tuning",
+      "erklaerung": "Herunterstimmen der tiefsten Saite für tiefere Powerchords mit einem Finger.",
+      "bezug": "drop_tuning"
+    },
+    {
+      "id": "gl_064",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Feedback",
+      "erklaerung": "Rückkopplung zwischen Lautsprecher und Instrument; als Effekt gezielt einsetzbar.",
+      "bezug": "feedback_als_instrument"
+    },
+    {
+      "id": "gl_065",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Half-Time",
+      "erklaerung": "Gefühlte Halbierung des Tempos bei gleichbleibendem Puls."
+    },
+    {
+      "id": "gl_066",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Klick",
+      "erklaerung": "Metronom im Kopfhörer, meist bei Aufnahmen.",
+      "bezug": "timing_klick"
+    }
+  ]
+}
