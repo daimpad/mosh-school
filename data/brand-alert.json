@@ -1,0 +1,441 @@
+{
+  "titel": "Brand Alert",
+  "hinweis": "Ausnahmeliste. Die App nennt sonst keine Marken. Hier stehen nur Geräte, deren Name zum Verständnis eines Genre-Klangs nötig ist, sowie bewährte Klassiker. Keine Kaufempfehlung, keine bezahlte Nennung. Jeder Eintrag führt eine bezahlbare Alternative mit — und der eigene Sound entsteht ohnehin eher neben den Klassikern als auf ihnen.",
+  "kategorien": [
+    "Verstärker",
+    "Boxen & Lautsprecher",
+    "Pedale & Effekte",
+    "Gitarren",
+    "Bässe",
+    "Drums",
+    "Mikrofone",
+    "Software (Open Source)"
+  ],
+  "anzahl": 53,
+  "eintraege": [
+    {
+      "id": "ba_001",
+      "kategorie": "Verstärker",
+      "bezeichnung": "Marshall JCM800 (2203/2204)",
+      "warum": "Der Rhythmusklang von 80er-Thrash und Hardcore.",
+      "einordnung": "Einkanaliger Röhrentopteil mit mittenbetonter, tighter Zerre; wenig Gain nach heutigen Maßstäben, oft mit Booster davor.",
+      "alternative": "Zahllose Nachbauten dieser Schaltung, Modeling-Profile und Impulsantworten liegen klanglich sehr nah."
+    },
+    {
+      "id": "ba_002",
+      "kategorie": "Verstärker",
+      "bezeichnung": "Peavey 5150/6505",
+      "warum": "De-facto-Standard für modernen Metal, Metalcore und Deathcore.",
+      "einordnung": "Hochverstärkender Röhrentopteil mit sehr straffem Bass und aggressiven oberen Mitten.",
+      "alternative": "Günstigere Röhren-Topteile derselben Bauart und Modeling-Nachbildungen sind weit verbreitet."
+    },
+    {
+      "id": "ba_003",
+      "kategorie": "Verstärker",
+      "bezeichnung": "Mesa/Boogie Dual Rectifier",
+      "warum": "Prägte den gescoopten Metal-Klang der 90er und 2000er.",
+      "einordnung": "Mehrkanaliger Röhrenverstärker mit umschaltbarer Gleichrichtung, sehr bassstark und lose im Anschlag.",
+      "alternative": "Modeling deckt diesen Klang gut ab; gebraucht sind ähnliche Bauarten deutlich billiger."
+    },
+    {
+      "id": "ba_004",
+      "kategorie": "Verstärker",
+      "bezeichnung": "Sunn Model T",
+      "warum": "Namensgebend für Drone- und Doom-Ästhetik.",
+      "einordnung": "Sehr lauter, cleaner bis grob übersteuernder Röhrenverstärker mit enormem Tiefbass.",
+      "alternative": "Jeder laute Vollröhren-Verstärker mit viel Headroom und wenig Zerre erzeugt ein ähnliches Verhalten."
+    },
+    {
+      "id": "ba_005",
+      "kategorie": "Verstärker",
+      "bezeichnung": "Orange (Rockerverb/OR-Serie)",
+      "warum": "Eng mit Stoner, Sludge und Doom verbunden.",
+      "einordnung": "Röhrenverstärker mit warmer, mittenreicher Zerre und viel Bassfundament.",
+      "alternative": "Andere britisch abgestimmte Röhrenverstärker liefern vergleichbare Grundcharakteristik."
+    },
+    {
+      "id": "ba_006",
+      "kategorie": "Verstärker",
+      "bezeichnung": "Roland JC-120",
+      "warum": "Der Referenz-Cleansound für Post-Punk und dunkle Wave-Gitarren.",
+      "einordnung": "Transistorverstärker mit sehr sauberem Headroom und eingebautem Stereo-Chorus.",
+      "alternative": "Jeder headroomstarke Transistoramp plus ein Chorus-Pedal kommt sehr nah."
+    },
+    {
+      "id": "ba_007",
+      "kategorie": "Verstärker",
+      "bezeichnung": "Ampeg SVT",
+      "warum": "Der Standard für lauten Bass in Metal, Sludge und Punk.",
+      "einordnung": "Sehr leistungsstarker Röhren-Bassverstärker mit charakteristischer Sättigung bei hoher Last.",
+      "alternative": "Moderne Transistor- und Class-D-Bassverstärker mit Overdrive-Sektion sind leichter und günstiger."
+    },
+    {
+      "id": "ba_008",
+      "kategorie": "Boxen & Lautsprecher",
+      "bezeichnung": "Celestion Vintage 30",
+      "warum": "Der meistverwendete Lautsprecher in Metal-Boxen.",
+      "einordnung": "12-Zoll-Lautsprecher mit ausgeprägten oberen Mitten, die sich im Bandmix durchsetzen.",
+      "alternative": "Andere Hersteller bauen vergleichbare Bestückungen; Impulsantworten bilden das Verhalten sehr genau ab."
+    },
+    {
+      "id": "ba_009",
+      "kategorie": "Boxen & Lautsprecher",
+      "bezeichnung": "Celestion Greenback",
+      "warum": "Trägt den Klang vieler klassischer Hard-Rock- und Doom-Aufnahmen.",
+      "einordnung": "Lautsprecher mit geringerer Belastbarkeit, komprimiert und bricht früher auf.",
+      "alternative": "Nachbauten und Impulsantworten sind weit verbreitet und günstig."
+    },
+    {
+      "id": "ba_010",
+      "kategorie": "Boxen & Lautsprecher",
+      "bezeichnung": "Ampeg 8x10",
+      "warum": "Die Standardbox für lauten Bass auf großen Bühnen.",
+      "einordnung": "Acht 10-Zoll-Lautsprecher, hohe Belastbarkeit, gerichtete Abstrahlung, sehr schwer.",
+      "alternative": "Kleinere 4x10- oder 2x12-Boxen reichen für die meisten Bühnen; DI plus Impulsantwort ersetzt sie im Studio."
+    },
+    {
+      "id": "ba_011",
+      "kategorie": "Boxen & Lautsprecher",
+      "bezeichnung": "Impulsantworten (IR)",
+      "warum": "Verändern die Praxis stärker als jede einzelne Box.",
+      "einordnung": "Digitale Abbildung von Box, Lautsprecher, Mikrofon und Position; ersetzt das Mikrofonieren im Direktbetrieb.",
+      "alternative": "Es gibt zahlreiche kostenlose und quelloffene IR-Sammlungen."
+    },
+    {
+      "id": "ba_012",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Boss HM-2",
+      "warum": "Das prägendste Einzelgerät eines Genres: der schwedische Death-Metal-Klang.",
+      "einordnung": "Verzerrer mit zwei Klangreglern; der Signature-Klang entsteht mit allen Reglern voll aufgedreht.",
+      "alternative": "Zahlreiche Nachbauten und Klone kosten einen Bruchteil des Sammlerpreises."
+    },
+    {
+      "id": "ba_013",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "ProCo RAT",
+      "warum": "Fest verbunden mit Noise Rock, Sludge und frühem Alternative.",
+      "einordnung": "Verzerrer mit harter Klippung und einem Filter statt einer klassischen Klangregelung.",
+      "alternative": "Der Schaltungstyp ist mehrfach nachgebaut und in vielen günstigen Pedalen enthalten."
+    },
+    {
+      "id": "ba_014",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Electro-Harmonix Big Muff",
+      "warum": "Der Fuzz für Doom, Stoner und Shoegaze.",
+      "einordnung": "Vierstufiger Fuzz mit ausgeprägter Mittenabsenkung und langem Sustain.",
+      "alternative": "Die Schaltung ist gut dokumentiert und in vielen preiswerten Varianten verfügbar."
+    },
+    {
+      "id": "ba_015",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Tube Screamer (TS808/TS9)",
+      "warum": "Der Standard-Booster vor High-Gain-Verstärkern.",
+      "einordnung": "Overdrive mit angehobenen Mitten und beschnittenem Bass; strafft die tiefen Frequenzen vor der Zerre.",
+      "alternative": "Der Schaltungstyp ist der meistgeklonte überhaupt; günstige Varianten funktionieren identisch."
+    },
+    {
+      "id": "ba_016",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Boss MT-2 Metal Zone",
+      "warum": "Berüchtigt und dennoch prägend für eine Generation.",
+      "einordnung": "Verzerrer mit parametrischer Mittenregelung und sehr hohem Gain.",
+      "alternative": "Fast jedes moderne High-Gain-Pedal bietet mehr Flexibilität zum ähnlichen Preis."
+    },
+    {
+      "id": "ba_017",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Digitech Whammy",
+      "warum": "Charakteristische Oktavsprünge in Nu Metal und modernem Metal.",
+      "einordnung": "Digitaler Pitchshifter mit Pedalsteuerung.",
+      "alternative": "Mehrere Hersteller bieten vergleichbare Pitchshifter, teils in kleinerem Format."
+    },
+    {
+      "id": "ba_018",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Dunlop Cry Baby",
+      "warum": "Das Wah der meisten Metal-Soli.",
+      "einordnung": "Filterpedal mit fußgesteuerter Resonanzfrequenz.",
+      "alternative": "Wah-Schaltungen sind einfach und in vielen günstigen Modellen gut umgesetzt."
+    },
+    {
+      "id": "ba_019",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Boss CE-2 Chorus",
+      "warum": "Der klare, kalte Gitarrenklang von Post-Punk und Dark Wave.",
+      "einordnung": "Analoger Chorus mit Eimerkettenschaltung.",
+      "alternative": "Digitale und analoge Chorus-Pedale liefern denselben Effekt für wenig Geld."
+    },
+    {
+      "id": "ba_020",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Electro-Harmonix Memory Man",
+      "warum": "Warme, modulierte Delays im Post-Punk und Post-Metal.",
+      "einordnung": "Analoges Delay mit Eimerkette und Modulation.",
+      "alternative": "Digitale Delays mit Analog-Modus bilden das Verhalten gut nach."
+    },
+    {
+      "id": "ba_021",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Sansamp Bass Driver DI",
+      "warum": "Standard für angezerrten Bass direkt ins Pult.",
+      "einordnung": "Vorverstärker mit Verzerrung, Klangregelung und DI-Ausgang.",
+      "alternative": "Viele Bass-Preamp-Pedale bieten dieselbe Funktion, oft mit Clean-Blend."
+    },
+    {
+      "id": "ba_022",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Darkglass B7K",
+      "warum": "Moderner Standard für Metal-Bass mit Biss.",
+      "einordnung": "Bass-Overdrive mit getrenntem Clean-Anteil und parametrischer Klangregelung.",
+      "alternative": "Andere Bass-Preamps mit Blend-Regler erreichen ein sehr ähnliches Ergebnis."
+    },
+    {
+      "id": "ba_023",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Rauschunterdrückung (Noise Gate)",
+      "warum": "Praktisch unverzichtbar bei hoher Verzerrung.",
+      "einordnung": "Schaltet das Signal unterhalb einer Schwelle stumm; im Einschleifweg deutlich wirksamer.",
+      "alternative": "Günstige Gates arbeiten zuverlässig; die Einschleifverkabelung ist wichtiger als das Modell."
+    },
+    {
+      "id": "ba_024",
+      "kategorie": "Gitarren",
+      "bezeichnung": "Gibson SG (Doom-Referenz)",
+      "warum": "Untrennbar mit dem Ursprung des Doom verbunden.",
+      "einordnung": "Doppel-Cutaway mit Humbuckern und kurzer Mensur; leicht und halslastig.",
+      "alternative": "Viele Hersteller bauen dieselbe Konfiguration; das Bauteil-Paket ist entscheidend, nicht der Umriss."
+    },
+    {
+      "id": "ba_025",
+      "kategorie": "Gitarren",
+      "bezeichnung": "Gibson Flying V / Explorer",
+      "warum": "Visuelle Signatur des Metal seit den 80ern.",
+      "einordnung": "Humbucker, kurze Mensur, ausgeprägte Halslastigkeit.",
+      "alternative": "Zahlreiche günstige Varianten existieren; die Form bestimmt Ergonomie, nicht Klang."
+    },
+    {
+      "id": "ba_026",
+      "kategorie": "Gitarren",
+      "bezeichnung": "Superstrat (Ibanez/Jackson-Bauart)",
+      "warum": "Die funktional durchdachte Metal-Gitarre.",
+      "einordnung": "Tiefer Doppel-Cutaway, flacher Hals, oft verriegelndes Vibrato und Steg-Humbucker.",
+      "alternative": "Diese Bauart ist in allen Preisklassen verfügbar und im Einstiegssegment sehr gut geworden."
+    },
+    {
+      "id": "ba_027",
+      "kategorie": "Gitarren",
+      "bezeichnung": "Fender Jazzmaster / Jaguar",
+      "warum": "Klangbild von Shoegaze und Noise Rock.",
+      "einordnung": "Offset-Korpus, kurze bis mittlere Mensur, schwebendes Vibrato mit flachem Saitenwinkel.",
+      "alternative": "Günstige Nachbauten dieser Bauart sind verbreitet; die lose Saitenlage ist Teil des Reizes."
+    },
+    {
+      "id": "ba_028",
+      "kategorie": "Gitarren",
+      "bezeichnung": "Ibanez Universe (7-Saiter)",
+      "warum": "Erste breit verfügbare Siebensaiter, Grundlage für Nu Metal und Djent.",
+      "einordnung": "Erweiterter Tonumfang nach unten ohne Umstimmen.",
+      "alternative": "Sieben- und Achtsaiter sind heute in allen Preisklassen erhältlich."
+    },
+    {
+      "id": "ba_029",
+      "kategorie": "Bässe",
+      "bezeichnung": "Fender Precision Bass",
+      "warum": "Der Standardbass für Punk, Hardcore und Metal.",
+      "einordnung": "Splitcoil-Tonabnehmer in Mittelposition, kräftige Mitten, sehr durchsetzungsfähig.",
+      "alternative": "Die Bauart ist überall verfügbar; günstige Instrumente sind funktional gleichwertig."
+    },
+    {
+      "id": "ba_030",
+      "kategorie": "Bässe",
+      "bezeichnung": "Fender Jazz Bass",
+      "warum": "Der zweite Standard, schlanker und flexibler.",
+      "einordnung": "Zwei Singlecoils, schmaler Hals, mischbare Klangfarben.",
+      "alternative": "Ebenfalls in jeder Preisklasse verfügbar."
+    },
+    {
+      "id": "ba_031",
+      "kategorie": "Bässe",
+      "bezeichnung": "Rickenbacker 4001/4003",
+      "warum": "Der schneidende, klare Bassklang im Post-Punk.",
+      "einordnung": "Zwei Tonabnehmer, ausgeprägte Höhen, Stereo-Ausgang.",
+      "alternative": "Der Klang lässt sich mit hellen Saiten, Plektrum und Mittenanhebung weitgehend annähern."
+    },
+    {
+      "id": "ba_032",
+      "kategorie": "Drums",
+      "bezeichnung": "Tama / Sonor / Ludwig (Kessel)",
+      "warum": "In Metal-Aufnahmen häufig vertreten.",
+      "einordnung": "Kesselmaterial und Größe bestimmen Grundton und Attack.",
+      "alternative": "Der Klang hängt weit stärker von Fellen, Stimmung, Raum und Mikrofonierung ab als vom Hersteller."
+    },
+    {
+      "id": "ba_033",
+      "kategorie": "Drums",
+      "bezeichnung": "Ludwig Black Beauty / Bell-Brass-Snares",
+      "warum": "Auf vielen prägenden Metal-Platten zu hören.",
+      "einordnung": "Metallkessel mit hohem Obertonanteil und großer Lautstärkereserve.",
+      "alternative": "Preiswerte Metallsnares klingen nach guter Stimmung überraschend nah."
+    },
+    {
+      "id": "ba_034",
+      "kategorie": "Drums",
+      "bezeichnung": "DW 5000/9000, Axis, Trick (Fußmaschinen)",
+      "warum": "Verbreitet für schnelles Double-Bass-Spiel.",
+      "einordnung": "Unterschiedliche Antriebe und Federspannungen verändern Rückschlag und Ansprache.",
+      "alternative": "Solide Mittelklasse-Maschinen genügen; die Einstellung ist wichtiger als das Modell."
+    },
+    {
+      "id": "ba_035",
+      "kategorie": "Drums",
+      "bezeichnung": "Roland V-Drums / ddrum-Trigger",
+      "warum": "Standard für leises Üben und getriggerte Aufnahmen.",
+      "einordnung": "Pads oder Sensoren lösen Samples aus; gleichmäßig und direkt aufnehmbar.",
+      "alternative": "Günstige E-Kits und Trigger arbeiten für Übe- und Demozwecke zuverlässig."
+    },
+    {
+      "id": "ba_036",
+      "kategorie": "Mikrofone",
+      "bezeichnung": "Shure SM57",
+      "warum": "Das am häufigsten benutzte Mikrofon vor Gitarrenboxen.",
+      "einordnung": "Dynamisches Nierenmikrofon, sehr belastbar, mittenbetont.",
+      "alternative": "Es ist selbst schon günstig — ein gutes Beispiel dafür, dass teuer nicht besser heißt."
+    },
+    {
+      "id": "ba_037",
+      "kategorie": "Mikrofone",
+      "bezeichnung": "Shure SM58",
+      "warum": "Der Live-Standard für Gesang, auch für Screams.",
+      "einordnung": "Dynamisches Nierenmikrofon mit Poppschutz, robust und rückkopplungsarm.",
+      "alternative": "Zahlreiche günstige Bühnenmikrofone derselben Bauart funktionieren gut."
+    },
+    {
+      "id": "ba_038",
+      "kategorie": "Mikrofone",
+      "bezeichnung": "Shure SM7B",
+      "warum": "Moderner Standard für harsche Vocals im Studio.",
+      "einordnung": "Dynamisches Mikrofon mit hoher Pegelfestigkeit und weicher Höhenwiedergabe; braucht viel Vorverstärkung.",
+      "alternative": "Andere dynamische Großmembranen liefern ähnliche Ergebnisse deutlich günstiger."
+    },
+    {
+      "id": "ba_039",
+      "kategorie": "Mikrofone",
+      "bezeichnung": "Sennheiser MD421",
+      "warum": "Klassiker für Toms und Gitarrenboxen.",
+      "einordnung": "Dynamisches Mikrofon mit umschaltbarem Tiefenfilter.",
+      "alternative": "Günstige dynamische Instrumentenmikrofone sind für Demozwecke ausreichend."
+    },
+    {
+      "id": "ba_040",
+      "kategorie": "Mikrofone",
+      "bezeichnung": "AKG D112 / Beta 52 (Bassdrum)",
+      "warum": "Standard für Bassdrum-Aufnahmen.",
+      "einordnung": "Dynamische Mikrofone mit angehobenem Tiefbass und Attack-Bereich.",
+      "alternative": "Preiswerte Bassdrum-Mikrofone bilden dieselbe Frequenzkurve ab."
+    },
+    {
+      "id": "ba_041",
+      "kategorie": "Mikrofone",
+      "bezeichnung": "Kondensator-Paare als Overheads",
+      "warum": "Bestimmen den Gesamtklang des Schlagzeugs stärker als jedes Einzelmikrofon.",
+      "einordnung": "Zwei möglichst gleiche Kleinmembran-Kondensatoren erfassen Becken und Kitbild.",
+      "alternative": "Günstige gematchte Paare sind für Demoaufnahmen völlig ausreichend."
+    },
+    {
+      "id": "ba_042",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Ardour",
+      "warum": "Vollwertige quelloffene DAW.",
+      "einordnung": "Mehrspuraufnahme, Bearbeitung, Automation, Plugin-Unterstützung. GPL.",
+      "alternative": "Kostenlos aus dem Quellcode oder als bezahlte Fertigversion zur Projektunterstützung."
+    },
+    {
+      "id": "ba_043",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Zrythm",
+      "warum": "Moderne quelloffene DAW mit Clip-Ansatz.",
+      "einordnung": "Zeitleisten- und Clip-basierte Produktion. AGPL.",
+      "alternative": "Quellcode frei; fertige Binärpakete kosten wenig."
+    },
+    {
+      "id": "ba_044",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "LMMS",
+      "warum": "Quelloffenes Musikproduktionsprogramm mit Fokus auf Programmierung.",
+      "einordnung": "Pattern-basierte Komposition mit integrierten Instrumenten. GPL.",
+      "alternative": "Gut geeignet für programmierte Drums und Skizzen."
+    },
+    {
+      "id": "ba_045",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Audacity / Tenacity",
+      "warum": "Quelloffene Editoren für Aufnahme und Schnitt.",
+      "einordnung": "Zweispurige bis mehrspurige Bearbeitung, Formatkonvertierung. GPL.",
+      "alternative": "Tenacity ist die telemetriefreie Abspaltung."
+    },
+    {
+      "id": "ba_046",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Hydrogen",
+      "warum": "Quelloffener Drumcomputer.",
+      "einordnung": "Pattern-basiertes Programmieren von Schlagzeugspuren. GPL.",
+      "alternative": "Ideal, um Parts vor der Probe hörbar zu machen."
+    },
+    {
+      "id": "ba_047",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "DrumGizmo",
+      "warum": "Quelloffenes Sample-Schlagzeug mit Mehrkanalausgabe.",
+      "einordnung": "Spielt gesampelte Kits mit getrennten Mikrofonkanälen. GPL.",
+      "alternative": "Gute Wahl für DIY-Aufnahmen ohne akustisches Kit."
+    },
+    {
+      "id": "ba_048",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Neural Amp Modeler (NAM)",
+      "warum": "Quelloffenes Amp-Modeling auf neuronalen Netzen.",
+      "einordnung": "Bildet Verstärker anhand von Messaufnahmen nach; große freie Profilbibliothek. MIT.",
+      "alternative": "Sehr nah an teurer Modeling-Hardware, kostenlos."
+    },
+    {
+      "id": "ba_049",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Guitarix",
+      "warum": "Quelloffene Verstärker- und Effektsimulation.",
+      "einordnung": "Röhrenverstärker-Simulation samt Effektkette. GPL.",
+      "alternative": "Zusammen mit freien Impulsantworten ein vollständiges Gitarrensetup."
+    },
+    {
+      "id": "ba_050",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Surge XT",
+      "warum": "Quelloffener Synthesizer mit großem Funktionsumfang.",
+      "einordnung": "Hybrider Synthesizer mit umfangreicher Modulation. GPL.",
+      "alternative": "Für Intros, Flächen und Industrial-Elemente."
+    },
+    {
+      "id": "ba_051",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "Airwindows-Plugins",
+      "warum": "Quelloffene Effekt- und Sättigungsplugins.",
+      "einordnung": "Große Sammlung schlanker Einzelplugins. MIT.",
+      "alternative": "Kostenlos und in Mischungen weit verbreitet."
+    },
+    {
+      "id": "ba_052",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "LSP / Calf / x42",
+      "warum": "Quelloffene Plugin-Sammlungen für Mischung und Mastering.",
+      "einordnung": "Equalizer, Kompressoren, Analysewerkzeuge. LGPL/GPL.",
+      "alternative": "Deckt den Grundbedarf einer Mischung vollständig ab."
+    },
+    {
+      "id": "ba_053",
+      "kategorie": "Software (Open Source)",
+      "bezeichnung": "MuseScore / TuxGuitar",
+      "warum": "Quelloffene Notation und Tabulatur.",
+      "einordnung": "Notensatz, Tabulaturen, Wiedergabe. GPL/LGPL.",
+      "alternative": "Praktisch, um Riffs und Arrangements in der Band zu teilen."
+    }
+  ]
+}

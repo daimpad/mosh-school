@@ -12,6 +12,7 @@ import { renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
 import { renderSongs } from './ansichten/songs.js';
+import { renderBrandAlert } from './ansichten/brand-alert.js';
 import { renderWerkzeuge } from './ansichten/werkzeuge.js';
 import { renderWerkzeugMetronom } from './ansichten/werkzeug-metronom.js';
 import { renderWerkzeugLoops } from './ansichten/werkzeug-loops.js';
@@ -116,13 +117,15 @@ function aktualisiereNavigation(segmente) {
                     ? 'stimmungen'
                     : s0 === 'patterns'
                       ? 'patterns'
-                      : s0 === 'ueber'
-                        ? 'ueber'
-                        : s0 === 'pfad' && segmente[1] === 'stil'
-                          ? 'genres'
-                          : s0 === 'pfad' && segmente[1] === 'umgebung'
-                            ? 'kontext'
-                            : null;
+                      : s0 === 'brand-alert'
+                        ? 'brandalert'
+                        : s0 === 'ueber'
+                          ? 'ueber'
+                          : s0 === 'pfad' && segmente[1] === 'stil'
+                            ? 'genres'
+                            : s0 === 'pfad' && segmente[1] === 'umgebung'
+                              ? 'kontext'
+                              : null;
   for (const verweis of document.querySelectorAll('[data-nav]')) {
     const istAktiv = verweis.dataset.nav === aktiv;
     verweis.classList.toggle('aktiv', istAktiv);
@@ -137,7 +140,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
   // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'brandalert', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -193,6 +196,7 @@ function beschrifteRahmen() {
     geraete: t('wz_explorer_titel'),
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
+    brandalert: t('nav_brand_alert'),
     ueber: t('nav_ueber'),
   };
   for (const verweis of document.querySelectorAll('[data-nav]')) {
@@ -357,6 +361,8 @@ function rendern() {
     renderStimmungen(el, daten);
   } else if (segmente[0] === 'patterns') {
     renderPatterns(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
+  } else if (segmente[0] === 'brand-alert') {
+    renderBrandAlert(el, daten);
   } else if (segmente[0] === 'songs') {
     renderSongs(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'werkzeuge') {
