@@ -64,3 +64,11 @@
 @media (prefers-color-scheme: dark) {
   .kommentare-scope:not(.kommentare-light) { --k-accent-ink: #08151f; }
 }
+
+/* Der Floating-Kommentator-Button darf auf Mobil die untere Navigationsleiste
+   (.fussnav, fix am unteren Rand, sichtbar unter 768px) nicht überlagern —
+   höher setzen, damit „Mehr" & Co. frei bleiben. feedback.css lädt nach der
+   Vendor-CSS, die Regel gewinnt also. */
+@media (max-width: 767.98px) {
+  .kommentare-fab { bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
+}
