@@ -105,6 +105,7 @@ export function renderLernen(el, daten) {
           kachel({ href: '#/werkzeug/explorer', hue: 'pf-teal', icon: 'fa-microchip', titel: t('wz_explorer_titel'), text: t('wz_explorer_kurz') }),
           kachel({ href: '#/koennenscheck', hue: 'pf-teal', icon: 'fa-flag-checkered', titel: t('nav_koennenscheck'), text: t('koennenscheck_untertitel') }),
           kachel({ href: '#/brand-alert', hue: 'pf-magenta', icon: 'fa-triangle-exclamation', titel: t('nav_brand_alert'), text: t('ba_untertitel') }),
+          kachel({ href: '#/pfad/themen/kontext', hue: 'pf-sky', icon: 'fa-people-group', titel: t('nav_kontext'), text: t('kontext_untertitel') }),
         ].join(''),
       },
     ],
