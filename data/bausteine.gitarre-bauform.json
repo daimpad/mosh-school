@@ -1,0 +1,82 @@
+{
+  "_meta": {
+    "titel": "Gitarre — Bauform",
+    "beschreibung": "Korpusform der E-Gitarre: Ergonomie, Bauteil-Paket, Kultur und Bühnenpraxis."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "bauform_ergonomie",
+      "anzeigetitel": {
+        "de": "Bauform: was sie wirklich bestimmt"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Korpusform entscheidet zuverlässig über Ergonomie, nicht über Klang. Der wichtigste Punkt ist die Balance: Ob eine Gitarre am Gurt nach vorn kippt, hängt davon ab, wo der Schwerpunkt gegenüber dem oberen Gurtpin liegt. Ein weit nach vorn gezogenes oberes Horn verlängert den Hebel und hält den Hals oben; Formen ohne dieses Horn — die V-Form und die Explorer-Form sind die bekanntesten Beispiele — kippen konstruktionsbedingt. Die einzige wirksame Abhilfe ist, den Gurtpin weiter Richtung Hals zu versetzen, nicht ein leichterer Hals oder schwerere Mechaniken.\n\nDie Sitzposition ist der zweite harte Unterschied. Eine V lässt sich im Sitzen nur zwischen den Beinen oder auf dem hinteren Flügel spielen; die versetzt geschnittenen Offset-Formen wurden ausdrücklich dafür entworfen, im Sitzen stabil auf dem Bein zu liegen. Wer viel im Sitzen übt und im Stehen spielt, sollte beide Haltungen vor dem Kauf prüfen — sie unterscheiden sich je nach Form stark.\n\nDazu kommen drei Details mit spürbarer Wirkung: die Tiefe des Cutaways und die Halsplatte bestimmen, wie weit man in den hohen Lagen bequem greifen kann; Bauch- und Unterarmfräsungen machen über zwei Stunden einen deutlichen Komfortunterschied gegenüber einem flachen Brett; und Korpusdicke sowie Gewicht belasten Schulter und Rücken. Die funktional durchdachteste Metal-Form ist deshalb meist nicht die spektakulärste, sondern die konturierte Doppel-Cutaway-Bauweise mit tiefem Halsübergang."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kippt deine Gitarre am Gurt nach vorn — und hast du schon versucht, den Gurtpin zu versetzen, statt mit dem Halten zu kämpfen? Hast du deine Form im Sitzen und im Stehen geprüft, bevor du sie gewählt hast? Und kommst du in den hohen Lagen bequem an die Saiten, oder blockiert der Halsübergang?"
+      },
+      "voraussetzungen": [
+        "korpus_bauformen"
+      ]
+    },
+    {
+      "id": "bauform_und_bauteilpaket",
+      "anzeigetitel": {
+        "de": "Form gegen Bauteil-Paket: woher der Klang kommt"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der häufigste Denkfehler beim Gitarrenkauf ist, den Klang der Form zuzuschreiben. Tatsächlich klingt keine Kontur; was klingt, ist das Bauteil-Paket, das historisch mit dieser Form ausgeliefert wurde — Mensur, Tonabnehmertyp und -position, Stegkonstruktion, Potiwerte und Halsverbindung. Weil diese Pakete jahrzehntelang stabil blieben, wurde die Form zum Kürzel für den Klang. Das Kürzel ist praktisch, aber physikalisch irreführend.\n\nZwei Beispiele machen das greifbar. Der helle, schneidende Ton der klassischen Einzel-Cutaway-Brettgitarre entsteht aus einem Steg-Single-Coil in einer metallenen Grundplatte, einer langen Mensur von rund 648 mm und Saiten, die durch den Korpus geführt werden — nicht aus dem Umriss. Die versetzte Offset-Bauweise wiederum kombiniert typischerweise eine kurze Mensur von etwa 610 mm mit einem schwebenden Vibrato und einem flachen Saitenwinkel über dem Steg: weniger Spannung, lockerere Saiten, die eher aus den Reitern springen und schnarren. Genau diese Instabilität wurde in Shoegaze und Noise Rock zum Stilmittel — ein Fall, in dem eine konstruktive Schwäche musikalisch nutzbar wurde.\n\nHeute sind die Pakete entkoppelt: Es gibt V-Formen mit langer Mensur und Single Coils, Offset-Korpusse mit Humbuckern und festem Steg, Bretter mit verriegelndem Vibrato. Daraus folgt die praktische Regel: Lies das Datenblatt, nicht den Umriss. Frag nach Mensur, Tonabnehmern, Steg und Potiwerten — diese vier Angaben sagen dir mehr über den zu erwartenden Klang als jedes Foto."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beurteilst du Gitarren nach ihrem Umriss oder nach Mensur, Tonabnehmern und Steg? Welche vier Angaben würdest du beim nächsten Instrument zuerst nachschlagen? Und ist dir schon einmal aufgefallen, dass zwei gleich aussehende Gitarren völlig unterschiedlich klangen?"
+      },
+      "voraussetzungen": [
+        "bauform_ergonomie",
+        "tonabnehmer_detail",
+        "mensur_wahl_tuning"
+      ]
+    },
+    {
+      "id": "bauform_kultur_buehne",
+      "anzeigetitel": {
+        "de": "Formen als Zeichen: Kultur, Bühne, Praxis"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Dass bestimmte Formen als Metal-Gitarren gelten, ist eine kulturelle Zuschreibung, keine akustische Eigenschaft. Spitze und kantige Umrisse setzten sich über Bühnenbilder, Plattencover und Fotos durch — sie signalisieren Zugehörigkeit, bevor ein Ton erklingt. Das ist kein Argument gegen sie: Für eine Bühnenperformance ist ein starkes visuelles Zeichen ein echter Wert. Es sollte nur nicht mit Klang verwechselt werden.\n\nUmgekehrt hat die Bühnenpraxis handfeste Konsequenzen, die vor dem Kauf selten bedacht werden. Spitze Formen passen in keinen Standardkoffer und brauchen ein Spezialgehäuse; sie lassen sich nirgends sicher anlehnen und stehen ohne Ständer nicht; auf engen Bühnen kollidieren lange Hörner mit Mitmusikern, Beckenständern und Mikrofonstativen. Wer viel unterwegs ist, zahlt für ein Zeichen mit Transport- und Handhabungsaufwand.\n\nDaraus lässt sich eine nüchterne Entscheidungshilfe ableiten: Trenne die drei Ebenen bewusst. Was soll die Gitarre klanglich können — das beantwortet das Bauteil-Paket. Wie soll sie sich über zwei Stunden anfühlen — das beantwortet die Ergonomie. Und welches Bild willst du auf der Bühne abgeben — das beantwortet die Form. Alle drei sind legitim; problematisch wird es erst, wenn eine Ebene für eine andere gehalten wird."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wählst du eine Form wegen ihres Klangs, ihrer Ergonomie oder ihres Bildes — und ist dir die Unterscheidung bewusst? Passt dein Instrument in einen Standardkoffer und steht es auf einer engen Bühne sicher? Und wie viel Transportaufwand ist dir das visuelle Zeichen wert?"
+      },
+      "voraussetzungen": [
+        "bauform_und_bauteilpaket"
+      ]
+    }
+  ]
+}
