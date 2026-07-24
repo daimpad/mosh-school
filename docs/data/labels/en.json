@@ -349,6 +349,8 @@
     "klang_skala_aria": "",
     "nav_patterns": "",
     "nav_brand_alert": "",
+    "nav_kontext": "",
+    "kontext_untertitel": "",
     "ba_titel": "",
     "ba_untertitel": "",
     "ba_alternative_label": "",
@@ -1209,7 +1211,15 @@
     "bauform_ergonomie": "",
     "bauform_und_bauteilpaket": "",
     "bauform_kultur_buehne": "",
-    "brand_alert": ""
+    "brand_alert": "",
+    "erstes_konzert_besuchen": "",
+    "pit_grundlagen": "",
+    "pit_sicherheit": "",
+    "stagediving_crowdsurfing": "",
+    "szene_haltung": "",
+    "rechte_codes_erkennen": "",
+    "awareness_strukturen": "",
+    "neu_in_der_szene": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
@@ -1464,7 +1474,8 @@
       "theorie": "",
       "koerper": "",
       "ausruestung": "",
-      "mentales": ""
+      "mentales": "",
+      "kontext": ""
     },
     "kompetenzstufe": {
       "einsteiger": "",
