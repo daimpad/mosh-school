@@ -348,6 +348,11 @@
     "klang_skalen": "Skalen & Modi",
     "klang_skala_aria": "Skala {name} aufwärts anspielen",
     "nav_patterns": "Patterns",
+    "nav_brand_alert": "Brand Alert",
+    "ba_titel": "Brand Alert",
+    "ba_untertitel": "Wenn Modelle wirklich eine Rolle spielen — der markierte Ausnahmebereich.",
+    "ba_alternative_label": "Bezahlbar:",
+    "ba_leer": "Noch keine Einträge.",
     "nav_songs": "Songs",
     "songs_titel": "Beispielsongs",
     "songs_untertitel": "Zehn Songs pro Genre zum Reinhören — stilistisch breit gestreut, zufällig gezogen aus einem größeren Pool.",
@@ -1202,7 +1207,8 @@
     "experiment_dokumentieren": "Experimente festhalten und auswerten",
     "bauform_ergonomie": "Bauform: was sie wirklich bestimmt",
     "bauform_und_bauteilpaket": "Form gegen Bauteil-Paket: woher der Klang kommt",
-    "bauform_kultur_buehne": "Formen als Zeichen: Kultur, Bühne, Praxis"
+    "bauform_kultur_buehne": "Formen als Zeichen: Kultur, Bühne, Praxis",
+    "brand_alert": "Brand Alert: wenn Modelle wirklich eine Rolle spielen"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
