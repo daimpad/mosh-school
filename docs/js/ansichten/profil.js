@@ -8,9 +8,9 @@ import { bausteinAbsolviert, globaleProjektion, projektion } from '../fortschrit
 import { label, t } from '../i18n.js';
 import { balkenHtml, bausteinIcon, esc, meilensteinLabel, neuRendern, ringHtml, wendeThemaAn, zeigeMeilenstein } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
-import { geuebteTage, instrumentRinge, uebeKalender, wasAlsNaechstes } from '../mastery.js';
+import { instrumentRinge, wasAlsNaechstes } from '../mastery.js';
 import { kompetenzpfad } from '../pfade.js';
-import { alleBestwerte, diagnose, einstellungen, kontinuitaet, meilensteine, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
+import { diagnose, einstellungen, kontinuitaet, meilensteine, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 
 
@@ -166,35 +166,10 @@ export function renderProfil(el, daten) {
     ? erreicht.map((id) => `<li class="meilenstein-eintrag"><i class="fa-solid fa-medal" aria-hidden="true"></i> ${esc(meilensteinLabel(id))}</li>`).join('')
     : `<li class="leise">${esc(t('meilensteine_leer'))}</li>`;
 
-  // Persönliche Bestwerte (§5): Tempo je Baustein, nicht-vergleichend.
-  const bwEintraege = Object.entries(alleBestwerte())
-    .filter(([, werte]) => typeof werte.tempo_bpm === 'number')
-    .map(([schluessel, werte]) => {
-      const titel = daten.bausteinVonId.has(schluessel) ? label('baustein', schluessel) : schluessel;
-      return `<li class="bestwert-eintrag"><span>${esc(titel)}</span><span class="bestwert-tempo">${werte.tempo_bpm}&nbsp;BPM</span></li>`;
-    })
-    .join('');
-
-  // Übe-Kalender (§5): geloggte Tage der letzten 10 Wochen. KEIN Streak — Pausen
-  // werden nicht bestraft; die Legende sagt das ausdrücklich.
-  const kalender = uebeKalender(70);
-  const tage = geuebteTage();
-  const kalenderZellen = kalender
-    .map((d) => {
-      const stufe = d.anzahl === 0 ? 0 : d.anzahl === 1 ? 1 : d.anzahl <= 3 ? 2 : 3;
-      const titel = d.anzahl > 0 ? `${d.iso}: ${t('mal_geuebt', { n: d.anzahl })}` : d.iso;
-      return `<span class="kal-tag kal-stufe-${stufe}" title="${esc(titel)}"></span>`;
-    })
-    .join('');
   const loopSektion = `
     <section class="karte profil-loop">
       <h2>${esc(t('meilensteine_titel'))}</h2>
       <ul class="meilenstein-liste">${meilensteinListe}</ul>
-      ${bwEintraege ? `<h3>${esc(t('bestwerte_titel'))}</h3><ul class="bestwert-liste">${bwEintraege}</ul>` : ''}
-      <h3>${esc(t('kalender_titel'))}</h3>
-      <p class="leise">${esc(t('kalender_intro', { n: tage }))}</p>
-      <div class="ube-kalender" role="img" aria-label="${esc(t('kalender_aria', { n: tage }))}">${kalenderZellen}</div>
-      <p class="leise kalender-legende">${esc(t('kalender_legende'))}</p>
     </section>`;
 
   el.innerHTML = `
