@@ -52,11 +52,6 @@ export function istBereit() {
   return !!kontext && kontext.state === 'running';
 }
 
-// Setzt den Master-Pegel (0..1). Für ein globales „leiser/lauter" der Werkzeuge.
-export function setzeMasterPegel(pegel) {
-  if (masterGain) masterGain.gain.value = Math.max(0, Math.min(1, pegel));
-}
-
 // Eine Sekunde weißes Rauschen, einmal erzeugt — Basis für Snare/Hi-Hat/Klick.
 // An einen Ziel-Kontext gebunden (auch OfflineAudioContext beim WAV-Export).
 export function holeRauschen(ctx) {
