@@ -1580,6 +1580,156 @@
           }
         ]
       }
+    },
+    {
+      "id": "screamo_dynamik_session",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Bruch zwischen Flüstern und Ausbruch — Dynamik als Stilmittel"
+      },
+      "beschreibung": {
+        "de": "Eine Einheit rund um den Bruch zwischen sehr leise und Ausbruch. Der klare Arpeggio-Klang und der harte Umschlag werden getrennt geübt und am Ende zusammengeführt. Es geht nicht um Tempo, sondern um die Spannweite und darum, dass der Umschlag exakt sitzt. Der Baustein zu den Screamo-Vocals ist bewusst eine Reflexion und kein Teil dieser Einheit — die hohe, gepresste Stimmfarbe gehört an eine Gesangslehrkraft und nicht in eine Übungsroutine. Lies ihn vor der Session, wenn du in diese Richtung singst."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wachwerden lassen, bevor es laut wird."
+            }
+          },
+          {
+            "baustein": "anschlaghand_grundlagen",
+            "hinweis": {
+              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wachwerden lassen, bevor es laut wird."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "twinkly_arpeggien",
+            "hinweis": {
+              "de": "Gegriffene Töne und leere Saiten zusammenklingen lassen. Clean oder mit minimaler Zerre, damit alles hörbar bleibt."
+            }
+          },
+          {
+            "baustein": "screamo_dynamik",
+            "hinweis": {
+              "de": "Den Wechsel zwischen leise und Ausbruch auf den Schlag setzen. Erst hart auf Schlag eins, dann anwachsend über zwei Takte."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "twinkly_arpeggien",
+            "hinweis": {
+              "de": "Vier Takte Klangbett, dann Umschlag, dann zurück. Aufnehmen und prüfen, ob der leise Teil wirklich leise war."
+            }
+          },
+          {
+            "baustein": "screamo_dynamik",
+            "hinweis": {
+              "de": "Vier Takte Klangbett, dann Umschlag, dann zurück. Aufnehmen und prüfen, ob der leise Teil wirklich leise war."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mathcore_praezision_session",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Exakte Stopps, wechselnde Taktarten, kontrollierte Dissonanz"
+      },
+      "beschreibung": {
+        "de": "Eine Einheit zu den drei Kernfähigkeiten des Mathcore: exakte Stopps, wechselnde Taktarten und dissonante Riffs. Alles läuft zum Klick, weil die Wirkung dieser Musik vollständig an der Genauigkeit hängt. Tempo ist hier zweitrangig. Eine langsam und exakt gespielte Passage ist musikalisch wirksamer als eine schnelle, die ausfranst — nimm auf und prüfe die Stopps, statt dich auf dein Gefühl zu verlassen."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "wechselschlag",
+            "hinweis": {
+              "de": "Langsam und gleichmäßig zum Klick. Erst wenn das sitzt, wird es interessant."
+            }
+          },
+          {
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Langsam und gleichmäßig zum Klick. Erst wenn das sitzt, wird es interessant."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "mathcore_stopps",
+            "hinweis": {
+              "de": "Töne aktiv beenden statt nur aufhören. Die Stille innerlich weiterzählen, dann exakt einsetzen."
+            }
+          },
+          {
+            "baustein": "mathcore_taktwechsel",
+            "hinweis": {
+              "de": "Gruppen fühlen statt Zahlen zählen. Den Klick nur auf den Gruppenanfang legen, sobald die Kette sitzt."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "mathcore_dissonanz",
+            "hinweis": {
+              "de": "Reibende Zusammenklänge mit einem festen Anker, damit die Figur nachvollziehbar bleibt."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "noise_klang_session",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Klang als Material: veränderte Stimmung, Rückkopplung, treibender Bass"
+      },
+      "beschreibung": {
+        "de": "Eine Einheit, in der nicht Technik im Vordergrund steht, sondern Klang: veränderte Stimmungen, kontrollierte Rückkopplung und der Bass als führende Stimme. Ergebnisoffen — festhalten ist wichtiger als sauber spielen. Diese Einheit arbeitet zwangsläufig laut. Gehörschutz ist Pflicht, die Rückkopplungsphase bleibt kurz, und Hörschäden bilden sich nicht zurück. Halte alles auf, was entsteht — der Ertrag dieser Session sind Ideen, keine sauberen Durchgänge."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Kurz und unaufgeregt. Danach wird ohnehin alles anders klingen."
+            }
+          },
+          {
+            "baustein": "bass_greifhand",
+            "hinweis": {
+              "de": "Kurz und unaufgeregt. Danach wird ohnehin alles anders klingen."
+            }
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "noise_tunings",
+            "hinweis": {
+              "de": "Eine Saite bewusst verstimmen und notieren. Vertraute Griffe spielen und hören, was passiert."
+            }
+          },
+          {
+            "baustein": "feedback_als_instrument",
+            "hinweis": {
+              "de": "Mit Gehörschutz und bewusst kurz. Nur so laut, dass Rückkopplung gerade entsteht — nicht lauter."
+            }
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "noise_bass_treibend",
+            "hinweis": {
+              "de": "Eine Bassfigur schreiben, die allein trägt, und die Gitarre nur Fläche beisteuern lassen."
+            }
+          }
+        ]
+      }
     }
   ]
 }

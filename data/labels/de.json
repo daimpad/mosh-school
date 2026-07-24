@@ -1716,7 +1716,10 @@
     "experte_gitarre_lead": "Experte: Lead-Gitarre (Tapping & Harmonics)",
     "deathcore_vocals": "Deathcore: Gutturals & Squeals (Vocals)",
     "erste_gemeinsame_probe": "Erste gemeinsame Probe: zusammen tight werden",
-    "band_zusammen_session": "Ganze Band: zusammen tight werden"
+    "band_zusammen_session": "Ganze Band: zusammen tight werden",
+    "screamo_dynamik_session": "Session: Dynamik-Extreme",
+    "mathcore_praezision_session": "Session: Präzision und Brüche",
+    "noise_klang_session": "Session: Klang als Material"
   },
   "lehrgrafiken": {
     "grundbeat": "Grundbeat im Achtel-Raster: oben Hi-Hat (x), Mitte Snare (Ring), unten Kick (Punkt) — Snare auf 2 und 4, Kick auf 1 und 3.",
