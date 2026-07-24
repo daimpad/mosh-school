@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "titel": "Brand Alert",
+    "beschreibung": "Markierter Ausnahmebereich: Einleitung zur einzigen Stelle, an der Modelle genannt werden."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "brand_alert",
+      "anzeigetitel": {
+        "de": "Brand Alert: wenn Modelle wirklich eine Rolle spielen"
+      },
+      "domaene": [
+        "ausruestung",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "voraussetzungen": [
+        "amp_grundlagen",
+        "pedalboard_grundlagen",
+        "gitarre_entscheiden"
+      ],
+      "erklaerteil": {
+        "de": "Diese Seite nennt bewusst fast nie Marken — Klang entsteht aus Bauteilen und Physik, nicht aus Logos. An wenigen Stellen wäre Schweigen aber unehrlich: Manche Geräte haben einen Genre-Klang so stark geprägt, dass man ihn ohne ihren Namen nicht erklären kann. Dieser Baustein ist die Ausnahme, und er ist als Ausnahme markiert. Es geht um historische Einordnung, nicht um Kaufempfehlungen; niemand bezahlt dafür, hier genannt zu werden.\n\nWichtig ist, wie diese Klassiker entstanden sind. Fast keiner wurde als Referenz geplant. Der Verzerrer, der den schwedischen Death-Metal-Klang definierte, war ein kommerzieller Misserfolg und wurde gebraucht spottbillig — deshalb landete er in einer ganzen Szene. Viele Signature-Sounds sind zweckentfremdete Fehlbedienung: alle Regler voll aufgedreht, ein Pedal in einen ohnehin übersteuerten Verstärker, ein Instrument in einer Stimmung, für die es nie gebaut wurde. Was heute als Goldstandard gilt, war meist billig, verfügbar und falsch benutzt. Die hohen Preise vieler Originale kommen aus Sammlerknappheit, nicht aus Überlegenheit.\n\nDaraus folgt zweierlei. Erstens: Bezahlbares Equipment ist heute erstaunlich gut — Nachbauten dieser Schaltungen kosten einen Bruchteil, Modeling und Impulsantworten sind messbar nah dran, und der Abstand zwischen günstig und teuer ist kleiner als je zuvor. Zweitens, und wichtiger: Wer die Klassiker exakt nachbaut, bekommt einen Klang, den es schon gibt. Der eigene Sound entsteht eher daneben — mit dem falschen Gerät, dem unüblichen Instrument, der Kombination, die niemand für sinnvoll hält. Nutze diese Liste, um zu verstehen, warum etwas so klingt, wie es klingt — nicht als Einkaufszettel."
+      },
+      "reflexionsaufgabe": {
+        "de": "Willst du einen bestimmten Klang erreichen, oder willst du das Gerät besitzen, das ihn erzeugt hat — und ist dir der Unterschied klar? Welches deiner vorhandenen, günstigen Geräte hast du noch nie bewusst zweckentfremdet? Und wenn die Klassiker durch falsche Benutzung entstanden sind: Was wäre deine Version davon?"
+      }
+    }
+  ]
+}
