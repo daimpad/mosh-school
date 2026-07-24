@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "titel": "Community — Praxis",
+    "beschreibung": "Einstieg, DIY-Ökonomie, Band-Absprachen, Szene-Sprache."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "szene_sprache",
+      "anzeigetitel": {
+        "de": "Die Sprache der Szene"
+      },
+      "domaene": [
+        "kontext"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Szenen entwickeln eine eigene Kurzsprache, und sie wird selten erklärt. Wer zum ersten Mal hört, die Backline stehe schon, der Load-in sei um sechs und man mache einen Doorsplit, versteht kein Wort — obwohl der Satz nur beschreibt, welche Verstärker bereitstehen, wann eingeladen wird und wie das Geld aufgeteilt wird.\n\nDiese Begriffe sind kein Geheimcode, sondern gewachsene Abkürzungen aus der Praxis. Viele stammen aus dem Englischen, weil die Strukturen international sind. Sie zu kennen erspart Missverständnisse an genau den Stellen, an denen sie teuer werden: bei Absprachen über Technik, Zeiten und Geld.\n\nDas Glossar sammelt die gebräuchlichsten. Du musst es nicht auswendig lernen — schlag nach, wenn dir etwas begegnet. Und wenn du in einem Gespräch etwas nicht verstehst, ist Nachfragen die schnellste Lösung: Fast niemand erwartet, dass Neue diese Sprache schon können."
+      },
+      "reflexionsaufgabe": {
+        "de": "Welche Begriffe hast du zuletzt gehört und nur ungefähr verstanden? Fragst du nach, wenn dir in Absprachen ein Wort fehlt — gerade wenn es um Technik, Zeiten oder Geld geht? Und ist dir klar, dass niemand diese Sprache mitbringt, sondern sie alle irgendwann gelernt haben?"
+      }
+    },
+    {
+      "id": "erstes_instrument_kaufen",
+      "anzeigetitel": {
+        "de": "Das erste Instrument kaufen"
+      },
+      "domaene": [
+        "kontext",
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der teuerste Fehler beim ersten Kauf ist, das Geld falsch zu verteilen. Bei Gitarre und Bass entscheidet der Verstärker stärker über den hörbaren Klang als das Instrument; ein günstiges Instrument an einem brauchbaren Verstärker klingt besser als umgekehrt. Ein sinnvoller Ansatz ist deshalb, das Budget etwa hälftig zu teilen und einen Teil für ein Setup zurückzuhalten.\n\nDer Gebrauchtmarkt ist für Einsteiger fast immer die bessere Wahl, weil Instrumente wenig verschleißen und Wertverlust bereits eingetreten ist. Beim Ansehen prüfst du wenige Dinge: Ist der Hals gerade, wenn du am Sattel und am letzten Bund gleichzeitig drückst? Schnarren Töne über das ganze Griffbrett? Sind die Bünde abgespielt? Funktionieren alle Regler und Buchsen ohne Kratzen? Sitzt der Hals fest? Rost und stumpfe Saiten sind harmlos, Risse im Hals und starke Verzüge nicht.\n\nZwei oft vergessene Posten: Ein professionelles Setup kostet wenig und verwandelt ein zähes Instrument in ein spielbares — bei einem Gebrauchtkauf ist das fast immer gut angelegtes Geld. Und beim Schlagzeug liegt der Wert im Zubehör: Gebrauchte Kessel sind billig, aber Felle, Becken und Hardware machen den eigentlichen Preis aus. Für den Anfang genügt ein kleines, gut gestimmtes Kit."
+      },
+      "reflexionsaufgabe": {
+        "de": "Verteilst du dein Budget bewusst zwischen Instrument, Verstärker und Setup — oder geht alles ins Instrument? Weißt du, worauf du bei einem Gebrauchtinstrument achten musst, und würdest du jemanden mitnehmen, der sich auskennt? Und hast du Geld für ein Setup eingeplant?"
+      }
+    },
+    {
+      "id": "mitmusiker_finden",
+      "anzeigetitel": {
+        "de": "Mitspielende und die lokale Szene finden"
+      },
+      "domaene": [
+        "kontext",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die häufigste Blockade nach den ersten Monaten am Instrument ist nicht Technik, sondern das Fehlen von Leuten zum Zusammenspielen. Allein zu üben hat Grenzen: Timing, Lautstärkeverhältnisse und das Reagieren aufeinander lernt man nur mit anderen.\n\nDie ergiebigsten Wege sind unspektakulär. Geh zu kleinen Konzerten in deiner Nähe und bleib danach da — dort stehen genau die Leute, die du suchst. Proberaumzentren, Musikläden, Jugendzentren und Musikschulen haben oft Aushänge oder wissen, wer jemanden sucht. Online funktionieren lokale Gruppen und Foren besser als große Plattformen, weil Nähe der entscheidende Faktor ist: Eine Band, die eine Stunde Fahrt auseinanderliegt, probt selten.\n\nFür das erste Treffen gilt: Erwartungen früh aussprechen. Wie oft wollt ihr proben, wie ernst ist es gemeint, welche Musik wollt ihr machen, wie viel Zeit und Geld könnt ihr einbringen. Unterschiedliche Antworten darauf sind der häufigste Grund, warum frühe Bands wieder auseinandergehen — und sie lassen sich in zehn Minuten klären, statt nach einem halben Jahr zu enttäuschen. Und: Es ist völlig normal, mit mehreren Leuten zu jammen, bevor etwas Festes entsteht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wo in deiner Nähe kommen Leute zusammen, die deine Musik machen — und warst du schon dort? Sprichst du Erwartungen an Probenfrequenz, Ernsthaftigkeit und Zeitaufwand früh an? Und traust du dich, mit mehreren Leuten zu spielen, bevor du dich festlegst?"
+      }
+    },
+    {
+      "id": "konzert_selbst_organisieren",
+      "anzeigetitel": {
+        "de": "Ein Konzert selbst organisieren"
+      },
+      "domaene": [
+        "kontext"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Selbst zu veranstalten ist der direkteste Weg, Teil einer Szene zu werden — und deutlich weniger kompliziert, als es aussieht. Die Grundbestandteile sind überschaubar: ein Raum, ein Datum, zwei bis vier Bands, eine Anlage, jemand am Mischpult, jemand an der Tür, Getränke und ein bisschen Werbung.\n\nDie Reihenfolge ist entscheidend. Zuerst Raum und Datum, denn beides ist am schwersten zu bekommen; erst danach Bands anfragen. Realistisch sind Jugendzentren, selbstverwaltete Häuser, Kneipen mit Nebenraum und Vereinsheime — viele davon haben eine Anlage. Klärt früh, was der Raum stellt und was ihr mitbringen müsst, wann Schluss sein muss, wer für Lärm und Schäden haftet und wie es mit Getränkeverkauf aussieht. Ein häufig unterschätzter Punkt sind Anwohner und Lärmschutz; wer das vorher regelt, veranstaltet öfter als einmal.\n\nDie realistische Erwartung: Das erste selbst organisierte Konzert bringt kein Geld, sondern Erfahrung und Kontakte. Rechne konservativ, plane einen Puffer für Ausfälle ein und sag Bands ehrlich, mit welchen Einnahmen sie rechnen können. Genau diese Ehrlichkeit entscheidet, ob Leute wiederkommen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kennst du einen Raum in deiner Nähe, in dem so etwas möglich wäre — und hast du dort schon gefragt? Ist dir klar, dass Raum und Datum vor der Bandanfrage kommen? Und würdest du Bands ehrlich sagen, wenn wenig oder nichts herauskommt?"
+      },
+      "voraussetzungen": [
+        "szene_haltung"
+      ]
+    },
+    {
+      "id": "tuergeld_und_abrechnung",
+      "anzeigetitel": {
+        "de": "Türgeld, Gagen und faire Abrechnung"
+      },
+      "domaene": [
+        "kontext"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Geld ist in kleinen Szenen selten viel, aber oft Anlass für Streit — meist wegen unklarer Absprachen, nicht wegen Gier. Deshalb lohnt es, die Modelle zu kennen. Beim Doorsplit teilen sich die Bands die Türeinnahmen nach Abzug der Kosten, oft zu gleichen Teilen oder mit einem Vorabbetrag für die weiteste Anreise. Bei einer festen Gage bekommt eine Band einen zugesagten Betrag unabhängig von der Besucherzahl; das Risiko liegt beim Veranstalter. Manche Konzerte arbeiten mit einer Garantie plus Beteiligung, wenn es besser läuft als erwartet.\n\nVor dem Abend gehören drei Dinge geklärt: Was zählt zu den Kosten, die vorab abgezogen werden — Anlage, Technikerin, Raummiete, Flyer. Wer bekommt was, wenn wenig kommt. Und wie wird der Merch behandelt: Merch-Einnahmen gehören üblicherweise der Band, manche Veranstaltungsorte behalten einen Anteil ein, was vorher gesagt sein muss.\n\nDie ungeschriebene Regel in DIY-Zusammenhängen lautet: Zuerst kommen die Kosten der Anreisenden, dann die lokalen Bands. Wer von weit her kommt und Sprit oder Bahn bezahlt hat, geht nicht mit leeren Händen nach Hause, während die einheimische Band, die zu Fuß da war, den gleichen Anteil nimmt. Rechnet offen ab, am besten sichtbar für alle Beteiligten."
+      },
+      "reflexionsaufgabe": {
+        "de": "Klärt ihr vor dem Konzert, was zu den Kosten zählt und wie geteilt wird — oder erst danach? Berücksichtigt ihr Anreisekosten, bevor lokale Bands etwas nehmen? Und rechnet ihr offen ab, sodass alle nachvollziehen können, was hereinkam?"
+      },
+      "voraussetzungen": [
+        "konzert_selbst_organisieren"
+      ]
+    },
+    {
+      "id": "labels_distros_zines",
+      "anzeigetitel": {
+        "de": "Labels, Distros und Zines"
+      },
+      "domaene": [
+        "kontext"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Neben den großen Plattformen existiert ein eigenes Netz aus kleinen Labels, Distros und Zines, das den größten Teil dieser Musik trägt. Ein kleines Label finanziert und veröffentlicht Tonträger, meist in überschaubarer Auflage und häufig mit einer Aufteilung, bei der die Band einen Teil der Auflage selbst erhält. Eine Distro verkauft und tauscht Tonträger anderer — oft ein Tisch am Rand des Konzertsaals. Zines sind selbstgemachte Hefte mit Interviews und Rezensionen; sie erreichen wenige Menschen, aber genau die richtigen.\n\nFür eine junge Band ist die nüchterne Einordnung wichtig: Streaming bringt bei kleinen Zahlen praktisch nichts, während der direkte Verkauf von Tonträgern und Merch am Merch-Tisch und über Plattformen mit hoher Ausschüttung den überwiegenden Teil der Einnahmen ausmacht. Wer Musik veröffentlicht, sollte deshalb nicht auf Klickzahlen schauen, sondern darauf, ob Menschen zu den Konzerten kommen und etwas mitnehmen.\n\nEin Label ist kein Ziel an sich. Es lohnt, wenn es Reichweite, Vertrieb und Vorfinanzierung bringt, die ihr selbst nicht habt. Prüft vorher, was genau geboten wird, wie viele Tonträger ihr bekommt, wem die Aufnahmen gehören und wie lange die Vereinbarung gilt. Ein selbst veröffentlichtes Tape mit funktionierendem Merch-Tisch ist einem schlechten Vertrag klar vorzuziehen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Weißt du, wie viel Streaming bei euren Zahlen realistisch einbringt — und worauf ihr stattdessen setzen solltet? Was müsste ein Label bieten, damit es sich für euch lohnt? Und kennst du Distros oder Zines, die zu eurer Musik passen?"
+      },
+      "voraussetzungen": [
+        "demo_veroeffentlichen"
+      ]
+    },
+    {
+      "id": "band_absprachen",
+      "anzeigetitel": {
+        "de": "Absprachen in der Band: Rechte, Geld, Aufgaben"
+      },
+      "domaene": [
+        "kontext",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Bands scheitern selten am Können und oft an ungeklärten Fragen. Vier davon lohnen eine frühe, ausdrückliche Absprache: Wem gehören die Songs? Wie wird Geld aufgeteilt? Wer übernimmt welche Aufgaben außerhalb der Musik? Und wem gehört der Bandname?\n\nBei den Songs ist die übliche Streitlinie die zwischen dem, der ein Riff mitbrachte, und denen, die daraus einen Song machten. Zwei verbreitete Modelle: alles zu gleichen Teilen unabhängig davon, wer was beisteuerte — einfach und konfliktarm — oder eine Aufteilung nach Beitrag, die genauer ist, aber ständige Bewertung verlangt. Wichtiger als die Wahl ist, sie früh und gemeinsam zu treffen, solange es noch um nichts geht.\n\nDie unsichtbare Arbeit ist der zweite Punkt: Booking, Social Media, Merch bestellen, Fahrten organisieren, Aufnahmen koordinieren. Wenn das dauerhaft an einer Person hängt, entsteht Unzufriedenheit, lange bevor jemand darüber spricht. Verteilt es ausdrücklich. Und schreibt eure Absprachen auf, und sei es in einer gemeinsamen Notiz — nicht aus Misstrauen, sondern weil Erinnerungen auseinandergehen. Sobald echtes Geld, Verträge oder eingetragene Namen ins Spiel kommen, ist rechtliche Beratung sinnvoll; die Regeln dazu unterscheiden sich je nach Land."
+      },
+      "reflexionsaufgabe": {
+        "de": "Habt ihr geklärt, wem die Songs gehören und wie Geld geteilt wird — bevor es um etwas geht? Wer erledigt bei euch die unsichtbare Arbeit, und ist das bewusst verteilt? Und ist irgendetwas davon aufgeschrieben?"
+      },
+      "voraussetzungen": [
+        "band_gruenden"
+      ]
+    },
+    {
+      "id": "band_konflikt_ausstieg",
+      "anzeigetitel": {
+        "de": "Konflikte und Ausstieg"
+      },
+      "domaene": [
+        "kontext",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Konflikte in Bands entstehen fast immer an denselben Stellen: unterschiedliche Ernsthaftigkeit, ungleiche Arbeitsverteilung, musikalische Richtung und Kritik, die persönlich ankommt. Weil man viel Zeit auf engem Raum verbringt, wirken kleine Reibungen schnell groß.\n\nZwei Dinge helfen praktisch. Erstens: Trennt musikalische Kritik von persönlicher — sprecht über den Part, nicht über die Person, und sagt, was ihr stattdessen wollt, statt nur, was nicht funktioniert. Zweitens: Redet außerhalb der Probe. Im Proberaum stehen alle unter Zeitdruck und mit Instrument in der Hand; die schwierigen Gespräche gelingen besser bei einem Kaffee ohne Verstärker.\n\nWenn jemand aussteigt, ist ein sauberer Abschluss viel wert. Klärt, was mit gemeinsamen Aufnahmen, Songs, Namen und Anschaffungen passiert, und ob bereits zugesagte Konzerte noch gespielt werden. Ein Ausstieg ist kein Scheitern — Leute ziehen um, bekommen Kinder, ändern ihre Prioritäten. Szenen sind klein, und man begegnet sich wieder: Wie ein Ende abläuft, entscheidet oft darüber, ob daraus später wieder etwas Gemeinsames entstehen kann."
+      },
+      "reflexionsaufgabe": {
+        "de": "Sprecht ihr über Parts oder über Personen, wenn ihr Kritik äußert? Führt ihr schwierige Gespräche außerhalb der Probe? Und wüsstet ihr, was mit Songs, Namen und Anschaffungen passiert, wenn jemand aussteigt?"
+      },
+      "voraussetzungen": [
+        "band_absprachen"
+      ]
+    }
+  ]
+}
