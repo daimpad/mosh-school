@@ -146,7 +146,79 @@
       "voraussetzungen": [
         "metronom_prinzip",
         "taktarten_unterteilungen"
-      ]
+      ],
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 150,
+        "taktart": "4/4",
+        "aufloesung": 16,
+        "takte": 1,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "mathcore_taktwechsel",
@@ -185,7 +257,108 @@
       "voraussetzungen": [
         "ungerade_takte_theorie",
         "taktarten_unterteilungen"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "bpm": 140,
+        "taktart": "7/8",
+        "aufloesung": 7,
+        "takte": 2,
+        "tuning": [
+          "D2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4"
+        ],
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 1,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 1,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 1,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 1,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ]
+      }
     },
     {
       "id": "mathcore_dissonanz",
