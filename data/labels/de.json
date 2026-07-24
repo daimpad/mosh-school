@@ -47,7 +47,7 @@
     "hub_songwriting_werkzeuge": "Bauen & aufnehmen",
     "hub_songwriting_klang": "Klang & Referenz",
     "geraete_titel": "Equipment: {instrument}",
-    "geraete_intro": "Die Ausrüstungs-Bausteine für {instrument} — Anatomie, Signalweg und Auswahl, Schritt für Schritt.",
+    "geraete_intro": "Die Equipment-Bausteine für {instrument} — Anatomie, Signalweg und Auswahl, Schritt für Schritt.",
     "geraete_leer": "Für dieses Instrument sind noch keine Equipment-Bausteine hinterlegt.",
     "wz_exp_wissen_titel": "Wissensbereiche je Instrument",
     "wz_exp_wissen_intro": "Alle Equipment-Bausteine gebündelt pro Instrument — zum Durchgehen statt Antippen auf der Karte.",
@@ -752,7 +752,8 @@
     "heim_gruppe_lernwege": "Lernwege",
     "heim_gruppe_werkzeuge": "Werkzeuge",
     "heim_gruppe_entdecken": "Entdecken & mehr",
-    "heim_ueber_text": "Wer dahintersteckt, wie du mitmachst und die rechtlichen Infos."
+    "heim_ueber_text": "Wer dahintersteckt, wie du mitmachst und die rechtlichen Infos.",
+    "hub_songwriting_lernen": "Songwriting lernen"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",

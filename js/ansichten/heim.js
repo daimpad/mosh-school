@@ -117,7 +117,7 @@ export function renderHeim(el, daten) {
     titel: esc(t('nav_patterns')), text: esc(t('pattern_untertitel')),
   });
   const geraeteKachel = kachel({
-    href: '#/werkzeug/explorer', hue: 'pf-schiefer', icon: 'fa-magnifying-glass',
+    href: '#/werkzeug/explorer', hue: 'pf-schiefer', icon: 'fa-microchip',
     titel: esc(t('wz_explorer_titel')), text: esc(t('wz_explorer_kurz')),
   });
   const experimentierenKachel = kachel({
