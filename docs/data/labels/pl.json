@@ -348,6 +348,11 @@
     "klang_skalen": "",
     "klang_skala_aria": "",
     "nav_patterns": "",
+    "nav_brand_alert": "",
+    "ba_titel": "",
+    "ba_untertitel": "",
+    "ba_alternative_label": "",
+    "ba_leer": "",
     "nav_songs": "",
     "songs_titel": "",
     "songs_untertitel": "",
@@ -1202,7 +1207,8 @@
     "experiment_dokumentieren": "",
     "bauform_ergonomie": "",
     "bauform_und_bauteilpaket": "",
-    "bauform_kultur_buehne": ""
+    "bauform_kultur_buehne": "",
+    "brand_alert": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
