@@ -34,7 +34,7 @@ import { renderGeraete } from './ansichten/geraete.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
-import { ladeDaten } from './daten.js';
+import { ladeDaten, ladeSuchindex } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
 import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
@@ -462,17 +462,9 @@ async function boot() {
   const el = document.getElementById('ansicht');
   // Baustein-Grafiken laufen beiläufig mit: Fehlt die Datei, bleibt die Registry
   // leer und bausteinIcon fällt auf die FA-/Domänen-Icons zurück (kein Bruch).
-  const lehrgrafikenLaden = fetch('data/lehrgrafiken.json')
-    .then((a) => (a.ok ? a.json() : {}))
-    .catch(() => ({}));
-  const grafikenLaden = fetch('data/grafiken.json')
-    .then((antwort) => (antwort.ok ? antwort.json() : {}))
-    .catch(() => ({}));
   try {
     await initI18n(einstellungen().sprache);
     daten = await ladeDaten();
-    setzeGrafiken(await grafikenLaden);
-    setzeLehrgrafiken(await lehrgrafikenLaden);
   } catch (fehler) {
     try {
       await initI18n('de');
@@ -505,6 +497,22 @@ async function boot() {
   window.addEventListener('hashchange', rendern);
   window.addEventListener('app:rendern', rendern);
   rendern();
+
+  // Nicht-kritische Daten ERST NACH dem ersten Anstrich holen (die Startseite
+  // braucht keins davon) — so konkurrieren die großen Dateien nicht mit den
+  // Kern-Daten um Bandbreite und der Erst-Render kommt früher. bausteinIcon/
+  // lehrgrafik fallen bis dahin leer bzw. auf FA-/Domänen-Icons zurück (kein
+  // Bruch); der Such-Index (index.json, ~200 KB gzip) ist nur für die Suche.
+  // Jeder Nachlade-Schritt löst einen idempotenten Neu-Render aus.
+  Promise.all([
+    fetch('data/grafiken.json').then((a) => (a.ok ? a.json() : {})).catch(() => ({})),
+    fetch('data/lehrgrafiken.json').then((a) => (a.ok ? a.json() : {})).catch(() => ({})),
+  ]).then(([g, lg]) => {
+    setzeGrafiken(g);
+    setzeLehrgrafiken(lg);
+    rendern();
+  });
+  ladeSuchindex(daten).then(() => rendern());
 
   // Feedback-Modus (nur bei ?feedback in der URL): Kommentator nachladen. Läuft
   // beiläufig — schlägt es fehl, bleibt die App davon unberührt. Der Knopf unter
