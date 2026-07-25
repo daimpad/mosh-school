@@ -11,7 +11,7 @@
     "Mikrofone",
     "Software (Open Source)"
   ],
-  "anzahl": 53,
+  "anzahl": 61,
   "eintraege": [
     {
       "id": "ba_001",
@@ -436,6 +436,70 @@
       "warum": "Quelloffene Notation und Tabulatur.",
       "einordnung": "Notensatz, Tabulaturen, Wiedergabe. GPL/LGPL.",
       "alternative": "Praktisch, um Riffs und Arrangements in der Band zu teilen."
+    },
+    {
+      "id": "ba_054",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Grafischer EQ (Boss GE-7 / MXR 10-Band)",
+      "warum": "Das Werkzeug, mit dem viele Metal-Sounds erst sitzen: Mitten formen, Matsch raus, Solo-Boost.",
+      "einordnung": "Ein Grafik-EQ vor dem Amp oder im Einschleifweg hebt und senkt einzelne Frequenzbänder — gegen die Bassdrum freiräumen, Höhen zähmen, für Soli anblasen.",
+      "alternative": "Günstige Grafik-EQ-Pedale (u. a. Caline, Mooer, Behringer) leisten technisch dasselbe; der Amp-eigene Klangregler deckt schon einen Teil ab."
+    },
+    {
+      "id": "ba_055",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Cleaner Booster (MXR Micro Amp / EP-Booster)",
+      "warum": "Vor den Amp geschaltet macht er den High-Gain-Ton tighter und lauter, ohne ihn umzufärben.",
+      "einordnung": "Ein transparenter Pegel-Boost — anders als der Tube Screamer ohne betonte Mitten, eher zum Antreiben der Endstufe und für Soli.",
+      "alternative": "Zahlreiche günstige Clean-Boost- und Buffer-Pedale erfüllen denselben Zweck."
+    },
+    {
+      "id": "ba_056",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Tight-Metal-Overdrive (Precision-Drive-Klasse)",
+      "warum": "Der moderne, extrem tighte Rhythmus-Ton von Djent und Deathcore — oft mit eingebautem Gate.",
+      "einordnung": "Ein Overdrive fürs Anblasen von High-Gain-Amps mit straffem Bass und integriertem Noise-Gate gegen das Rauschen bei tiefen Tunings.",
+      "alternative": "Günstige Tight-OD-Klone (u. a. Joyo, Mooer) kommen nah; ein Tube-Screamer-Typ plus separates Gate deckt dasselbe Terrain ab."
+    },
+    {
+      "id": "ba_057",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Reverb-Pedal (EHX Holy Grail / Strymon-Klasse)",
+      "warum": "Die atmosphärischen Wände von Post-Metal, atmosphärischem Black Metal und Shoegaze.",
+      "einordnung": "Ein Hall-Pedal (Hall, Plate, Shimmer) legt Raum und Fahnen um den Ton — trocken für Riffs, weit aufgedreht als Klangfläche.",
+      "alternative": "Günstige Digital-Reverbs (u. a. Boss RV-6, TC Hall of Fame, Mooer) klingen sehr brauchbar; teure Geräte bieten vor allem mehr Programme."
+    },
+    {
+      "id": "ba_058",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Digitales Delay (Boss DD-Serie)",
+      "warum": "Rhythmische Achtel und Ambient-Fahnen im Post-Metal und in weiten Clean-Parts.",
+      "einordnung": "Ein tempo-synchrones Delay (per Tap) für punktierte Muster oder lange Wiederholungen als Fläche.",
+      "alternative": "Zahllose günstige Digital-Delays (u. a. Joyo, Mooer, TC) tun dasselbe; für reines Timing hilft schon das Metronom-Werkzeug."
+    },
+    {
+      "id": "ba_059",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Pitch-Shifter fürs Drop-Tuning (Digitech Drop)",
+      "warum": "Live tiefer stimmen ohne Instrumentenwechsel — verbreitet im modernen Metal und Deathcore.",
+      "einordnung": "Ein Pitch-Shifter, der die ganze Gitarre um ein festes Intervall nach unten rechnet, damit ein Instrument mehrere Tunings abdeckt.",
+      "alternative": "Ehrliche Einschränkung: günstige Pitch-Pedale tracken meist nur Einzeltöne sauber, nicht volle Akkorde — für echtes Drop-Tuning ist eine zweite, tiefer gestimmte oder eine Baritone-Gitarre oft der bessere und kaum teurere Weg."
+    },
+    {
+      "id": "ba_060",
+      "kategorie": "Pedale & Effekte",
+      "bezeichnung": "Bass-Oktaver (EHX / Boss OC)",
+      "warum": "Die Sub-Oktave unter Doom- und Sludge-Bässen — Gewicht, das aus dem Verstärker allein nicht kommt.",
+      "einordnung": "Ein Oktaver legt einen Ton eine Oktave tiefer unter das Original; monophon gespielt (ein Ton nach dem anderen) bleibt das Tracking sauber.",
+      "alternative": "Günstige Oktaver (u. a. Mooer, Joyo) tracken einstimmig sauber genug; polyfones Spiel bleibt auch teuren Geräten schwer."
+    },
+    {
+      "id": "ba_061",
+      "kategorie": "Gitarren",
+      "bezeichnung": "Baritone- / Longscale-Gitarre",
+      "warum": "Die saubere Lösung für sehr tiefe Tunings in Deathcore, Djent und Doom — statt Schlabbersaiten auf kurzer Mensur.",
+      "einordnung": "Eine längere Mensur (etwa 27 Zoll und mehr) hält tiefe Töne straff und definiert; oft mit dickeren Saiten und tieferer Werkstimmung.",
+      "alternative": "Günstige Baritone- und Multiscale-Modelle (u. a. Harley Benton, Ibanez Iron Label) machen tiefe Tunings bezahlbar zugänglich."
     }
   ]
 }
