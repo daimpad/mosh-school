@@ -1,0 +1,87 @@
+{
+  "titel": "Powerchord-Griffe",
+  "hinweis": "Powerchords sind verschiebbar: dieselbe Form klingt auf jedem Bund, nur der Grundton (R) wandert. Die × markieren stumm gehaltene Saiten — im Metal fast immer palm-muted und in tiefer Stimmung, die Griffe bleiben trotzdem gleich.",
+  "griffe": [
+    {
+      "id": "pc_e_2",
+      "name": { "de": "E-Form (Wurzel 6. Saite)" },
+      "toene": { "de": "Grundton + Quinte" },
+      "kurz": { "de": "Die beweglichste Powerchord-Form: Grundton auf der tiefen E-Saite, die Quinte eine Saite höher und zwei Bünde weiter. Der Zeigefinger hält den Grundton, der Ringfinger die Quinte." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "stumm" }
+      ]
+    },
+    {
+      "id": "pc_e_3",
+      "name": { "de": "E-Form mit Oktave" },
+      "toene": { "de": "Grundton + Quinte + Oktave" },
+      "kurz": { "de": "Wie die E-Form, dazu die Oktave auf der D-Saite (kleiner Finger). Voller und dicker — der Standard für die meisten Riffs." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "stumm" }
+      ]
+    },
+    {
+      "id": "pc_a",
+      "name": { "de": "A-Form (Wurzel 5. Saite)" },
+      "toene": { "de": "Grundton + Quinte + Oktave" },
+      "kurz": { "de": "Dieselbe Form eine Saite höher: Grundton auf der A-Saite. Die tiefe E-Saite bleibt stumm — der Zeigefinger legt sich leicht an, um sie abzudämpfen." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "stumm" },
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "stumm" },
+        { "status": "stumm" }
+      ]
+    },
+    {
+      "id": "pc_d",
+      "name": { "de": "D-Form (Wurzel 4. Saite)" },
+      "toene": { "de": "Grundton + Quinte + Oktave" },
+      "kurz": { "de": "Grundton auf der D-Saite — für höhere Powerchords, ohne die Greifhand weit nach oben zu schieben. E- und A-Saite bleiben stumm." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "stumm" }
+      ]
+    },
+    {
+      "id": "pc_drop",
+      "name": { "de": "Drop-Tuning: Ein-Finger-Powerchord" },
+      "toene": { "de": "Grundton + Quinte + Oktave" },
+      "stimmung": { "de": "Drop-Stimmung" },
+      "kurz": { "de": "In Drop-Stimmung (z. B. Drop D oder Drop C) liegen Grundton, Quinte und Oktave auf einem Bund über den drei tiefsten Saiten — ein Finger legt sich flach darüber. Die schnellste Form für tiefe, treibende Riffs." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 1, "finger": 1 },
+        { "status": "oktave", "bund": 1, "finger": 1 },
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "stumm" }
+      ]
+    }
+  ]
+}

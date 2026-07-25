@@ -2452,6 +2452,22 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 .ba-alternative-label { font-weight: 700; color: var(--primaer-tief); }
 
+/* --- Powerchord-Griffe (Referenzbereich: Griffbild-Diagramme) --- */
+.griffe-hinweis { margin: 0 0 1.4rem; max-width: 64ch; }
+.griff-gitter { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1rem; }
+.griff-karte { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; }
+.griff-bild { flex: 0 0 auto; }
+.griff-svg { width: 96px; height: auto; color: var(--tinte); display: block; }
+.griff-svg line { stroke: var(--tinte-2); }
+.griff-svg .griff-grundton { fill: var(--primaer); stroke: none; }
+.griff-svg .griff-ton { fill: var(--tinte); stroke: none; }
+.griff-svg .griff-x { fill: var(--tinte-2); font-size: 15px; font-weight: 700; }
+.griff-svg .griff-r { fill: #fff; font-size: 11px; font-weight: 700; }
+.griff-info { flex: 1 1 auto; min-width: 0; }
+.griff-name { margin: 0 0 0.4rem; font-size: 1rem; }
+.griff-chips { margin: 0 0 0.5rem; }
+.griff-kurz { margin: 0; font-size: 0.9rem; line-height: 1.45; color: var(--tinte-2); }
+
 /* --- Szene-Glossar (Referenzbereich: durchsuchbar + kategorie-gefiltert) --- */
 .glossar-hinweis { margin: 0 0 1rem; }
 .glossar-intro { margin-bottom: 1.2rem; }
