@@ -2413,11 +2413,26 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   font-size: 0.92rem; line-height: 1.5;
 }
 .ba-intro { margin-bottom: 1.4rem; }
-.ba-gruppen { display: flex; flex-direction: column; gap: 1.6rem; }
-.ba-kategorie-titel {
-  font-family: var(--schrift-display, inherit); font-size: 1.05rem;
-  margin: 0 0 0.7rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--linie-stark);
+/* Kategorie-Filterleiste (wie Glossar): Chips zum Ein-/Ausblenden. */
+.ba-filter { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.6rem; }
+.ba-kat-chip { cursor: pointer; }
+.ba-kat-chip.aktiv { border-color: var(--primaer); color: var(--primaer-tief); background: color-mix(in srgb, var(--primaer) 10%, transparent); }
+/* Mehr Luft zwischen den Kategorien; jede trägt ein Symbol neben dem Titel. */
+.ba-gruppen { display: flex; flex-direction: column; gap: 3rem; }
+.ba-kategorie-kopf {
+  display: flex; align-items: center; gap: 0.7rem;
+  margin: 0 0 0.7rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--linie-stark);
 }
+.ba-kategorie-icon {
+  flex: 0 0 auto; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center;
+  color: var(--primaer); border: 1px solid var(--linie-stark); border-radius: var(--radius-klein);
+  background: var(--flaeche);
+}
+.ba-kategorie-icon svg, .ba-kategorie-icon .dom-svg { width: 1.3rem; height: 1.3rem; }
+.ba-kategorie-titel {
+  font-family: var(--schrift-display, inherit); font-size: 1.05rem; margin: 0;
+}
+.ba-kategorie-zahl { font-family: var(--schrift, inherit); font-size: 0.8rem; font-weight: 400; }
 .ba-physik { margin: -0.3rem 0 0.7rem; font-size: 0.86rem; }
 .ba-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
 .ba-eintrag {
