@@ -29,6 +29,33 @@ function taktSchlaege(demo) {
   return m ? Number(m[1]) : 4;
 }
 
+// Gesamt-Schrittzahl eines Rasters: bei `gruppierung` (ungerade/verkettete Metren)
+// deren Summe, sonst die Musterlänge (Pattern) bzw. aufloesung*takte (Tab).
+function gesamtSchritte(demo) {
+  if (Array.isArray(demo.gruppierung) && demo.gruppierung.length) {
+    return demo.gruppierung.reduce((a, b) => a + b, 0);
+  }
+  if (demo.typ === 'pattern') return (demo.spuren?.[0]?.schritte || []).length;
+  return demo.aufloesung * (demo.takte || 1);
+}
+
+// Spalten, die einen Taktstrich/Akzent tragen: bei `gruppierung` die Gruppen-
+// anfänge (0, g0, g0+g1, …), sonst jeder stepsProBeat-te Schritt.
+function taktMarken(demo, stepsProBeat) {
+  const set = new Set();
+  if (Array.isArray(demo.gruppierung) && demo.gruppierung.length) {
+    let acc = 0;
+    for (const g of demo.gruppierung) {
+      set.add(acc);
+      acc += g;
+    }
+  } else {
+    const gesamt = gesamtSchritte(demo);
+    for (let i = 0; i < gesamt; i += Math.max(1, stepsProBeat)) set.add(i);
+  }
+  return set;
+}
+
 function frequenzFuerEvent(demo, ev) {
   const tuning = demo.tuning || [];
   const idx = demo.saiten_reihenfolge === '6_ist_tiefste' ? tuning.length - ev.saite : ev.saite - 1;
@@ -38,11 +65,11 @@ function frequenzFuerEvent(demo, ev) {
 
 // --- Rendering ---
 
-function rasterPattern(demo, stepsProBeat) {
+function rasterPattern(demo, marken) {
   return demo.spuren
     .map((spur) => {
       const zellen = spur.schritte
-        .map((an, i) => `<span class="demo-zelle${an ? ' an' : ''}${i % stepsProBeat === 0 ? ' takt' : ''}" data-col="${i}" aria-hidden="true"></span>`)
+        .map((an, i) => `<span class="demo-zelle${an ? ' an' : ''}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true"></span>`)
         .join('');
       const label = t('demo_instr_' + spur.instrument);
       return `<div class="demo-zeile"><span class="demo-zeilen-label">${esc(label)}</span>
@@ -51,7 +78,7 @@ function rasterPattern(demo, stepsProBeat) {
     .join('');
 }
 
-function rasterTab(demo, cols, stepsProBeat) {
+function rasterTab(demo, cols, marken) {
   const evMap = new Map();
   for (const ev of demo.events) evMap.set(ev.saite + ':' + ev.schritt, ev);
   const tuning = demo.tuning || [];
@@ -63,7 +90,7 @@ function rasterTab(demo, cols, stepsProBeat) {
     for (let i = 0; i < cols; i++) {
       const ev = evMap.get(saiteNr + ':' + i);
       const tech = ev ? ` an technik-${ev.technik || 'normal'}` : '';
-      zellen.push(`<span class="demo-zelle demo-tab-zelle${tech}${i % stepsProBeat === 0 ? ' takt' : ''}" data-col="${i}" aria-hidden="true">${ev ? esc(String(ev.bund)) : ''}</span>`);
+      zellen.push(`<span class="demo-zelle demo-tab-zelle${tech}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true">${ev ? esc(String(ev.bund)) : ''}</span>`);
     }
     zeilen.push(`<div class="demo-zeile"><span class="demo-zeilen-label demo-saite-label">${esc(note)}</span>
       <div class="demo-zellen" style="grid-template-columns:repeat(${cols},1fr)">${zellen.join('')}</div></div>`);
@@ -103,12 +130,14 @@ export function demonstrationHtml(demo) {
   if (demo.typ !== 'pattern' && demo.typ !== 'tab') return '';
   const beats = taktSchlaege(demo);
   const stepsProBeat = Math.max(1, Math.round(demo.aufloesung / beats));
-  const cols = demo.aufloesung * (demo.takte || 1);
-  const raster = demo.typ === 'tab' ? rasterTab(demo, cols, stepsProBeat) : rasterPattern(demo, stepsProBeat);
+  const marken = taktMarken(demo, stepsProBeat);
+  const cols = gesamtSchritte(demo);
+  const raster = demo.typ === 'tab' ? rasterTab(demo, cols, marken) : rasterPattern(demo, marken);
   return `
     <section class="demo" data-demo-typ="${esc(demo.typ)}">
       <h2><i class="fa-solid fa-play" aria-hidden="true"></i> ${esc(t('demo_titel'))}</h2>
       <div class="demo-raster demo-raster-${esc(demo.typ)}">${raster}</div>
+      ${demo.hinweis ? `<p class="leise demo-hinweis">${esc(demo.hinweis)}</p>` : ''}
       ${steuerung(demo)}
     </section>`;
 }
@@ -158,7 +187,7 @@ function starteDemo(sektion, demo, cfg) {
   const sched = erzeugeScheduler(ctx);
   const beats = taktSchlaege(demo);
   const stepsProBeat = Math.max(1, Math.round(demo.aufloesung / beats));
-  const gesamt = demo.aufloesung * (demo.takte || 1);
+  const gesamt = gesamtSchritte(demo);
   const countinSteps = cfg.countin ? demo.aufloesung : 0;
   const timers = [];
 
