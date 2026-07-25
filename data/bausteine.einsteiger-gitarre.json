@@ -492,68 +492,72 @@
       ],
       "demonstration": {
         "typ": "tab",
-        "bpm": 120,
-        "taktart": "4/4",
-        "aufloesung": 8,
-        "takte": 1,
+        "instrument": "gitarre",
         "tuning": [
-          "E2",
-          "A2",
-          "D3",
-          "G3",
-          "B3",
-          "E4"
+          "C2",
+          "G2",
+          "C3",
+          "F3",
+          "A3",
+          "D4"
         ],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 1,
+        "loop": true,
         "events": [
           {
             "schritt": 0,
-            "saite": 1,
+            "saite": 6,
             "bund": 0,
             "technik": "normal"
           },
           {
             "schritt": 0,
-            "saite": 2,
-            "bund": 2,
-            "technik": "normal"
-          },
-          {
-            "schritt": 2,
-            "saite": 1,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 2,
-            "saite": 2,
-            "bund": 2,
-            "technik": "normal"
-          },
-          {
-            "schritt": 4,
-            "saite": 1,
+            "saite": 5,
             "bund": 0,
             "technik": "normal"
           },
           {
             "schritt": 4,
-            "saite": 2,
-            "bund": 2,
-            "technik": "normal"
-          },
-          {
-            "schritt": 6,
-            "saite": 1,
+            "saite": 6,
             "bund": 0,
             "technik": "normal"
           },
           {
-            "schritt": 6,
-            "saite": 2,
-            "bund": 2,
+            "schritt": 4,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           }
-        ]
+        ],
+        "hinweis": "Drop-Stimmung: Powerchord mit einem Finger über die beiden tiefsten Saiten."
       }
     },
     {
@@ -605,21 +609,28 @@
         "typ": "tab",
         "instrument": "gitarre",
         "tuning": [
-          "E2",
-          "A2",
-          "D3",
-          "G3",
-          "B3",
-          "E4"
+          "C2",
+          "G2",
+          "C3",
+          "F3",
+          "A3",
+          "D4"
         ],
         "saiten_reihenfolge": "6_ist_tiefste",
-        "bpm": 200,
-        "aufloesung": 16,
+        "taktart": "4/4",
+        "bpm": 190,
+        "aufloesung": 8,
         "takte": 1,
         "loop": true,
         "events": [
           {
             "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
@@ -631,7 +642,19 @@
             "technik": "palm_mute"
           },
           {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
             "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
@@ -643,30 +666,13 @@
             "technik": "palm_mute"
           },
           {
-            "schritt": 8,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 10,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 12,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 14,
+            "schritt": 7,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
           }
-        ]
+        ],
+        "hinweis": "Gleichmäßige Achtel, ausschließlich Abschläge."
       }
     },
     {
@@ -712,15 +718,16 @@
         "typ": "tab",
         "instrument": "gitarre",
         "tuning": [
-          "E2",
-          "A2",
-          "D3",
-          "G3",
-          "B3",
-          "E4"
+          "C2",
+          "G2",
+          "C3",
+          "F3",
+          "A3",
+          "D4"
         ],
         "saiten_reihenfolge": "6_ist_tiefste",
-        "bpm": 200,
+        "taktart": "4/4",
+        "bpm": 180,
         "aufloesung": 16,
         "takte": 1,
         "loop": true,
@@ -728,100 +735,101 @@
           {
             "schritt": 0,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 1,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 2,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 3,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 4,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 5,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 6,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 7,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 8,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 9,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 10,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 11,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 12,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 13,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 14,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 15,
             "saite": 6,
-            "bund": 0,
+            "bund": 3,
             "technik": "normal"
           }
-        ]
+        ],
+        "hinweis": "Durchgehende Sechzehntel auf einem Ton, Wechselschlag."
       }
     },
     {
@@ -864,6 +872,123 @@
           "steigerung": "Spiel ein kurzes Riff in Drop D; für tiefere Stimmungen nutze passend dickere Saiten.",
           "selbstkontrolle": "Die Stimmung bleibt stabil, der Ein-Finger-Powerchord klingt klar und ohne Schnarren."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": [
+          "C2",
+          "G2",
+          "C3",
+          "F3",
+          "A3",
+          "D4"
+        ],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 150,
+        "aufloesung": 16,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 5,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 2,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 2,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 2,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 5,
+            "bund": 2,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Bewegliche Ein-Finger-Powerchords in Drop-Stimmung."
       }
     },
     {
@@ -910,14 +1035,15 @@
         "typ": "tab",
         "instrument": "gitarre",
         "tuning": [
-          "E2",
-          "A2",
-          "D3",
-          "G3",
-          "B3",
-          "E4"
+          "C2",
+          "G2",
+          "C3",
+          "F3",
+          "A3",
+          "D4"
         ],
         "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
         "bpm": 200,
         "aufloesung": 16,
         "takte": 1,
@@ -995,7 +1121,8 @@
             "bund": 0,
             "technik": "palm_mute"
           }
-        ]
+        ],
+        "hinweis": "Achtel plus zwei Sechzehntel je Zählzeit, durchgehend abgedämpft."
       }
     },
     {
@@ -1044,15 +1171,16 @@
         "typ": "tab",
         "instrument": "gitarre",
         "tuning": [
-          "E2",
-          "A2",
-          "D3",
-          "G3",
-          "B3",
-          "E4"
+          "C2",
+          "G2",
+          "C3",
+          "F3",
+          "A3",
+          "D4"
         ],
         "saiten_reihenfolge": "6_ist_tiefste",
-        "bpm": 110,
+        "taktart": "4/4",
+        "bpm": 120,
         "aufloesung": 16,
         "takte": 1,
         "loop": true,
@@ -1088,7 +1216,7 @@
             "technik": "chug"
           },
           {
-            "schritt": 10,
+            "schritt": 11,
             "saite": 6,
             "bund": 0,
             "technik": "chug"
@@ -1100,12 +1228,13 @@
             "technik": "chug"
           },
           {
-            "schritt": 15,
+            "schritt": 14,
             "saite": 6,
             "bund": 0,
             "technik": "chug"
           }
-        ]
+        ],
+        "hinweis": "Synkopierte Chugs mit Lücken — die Pausen tragen den Groove."
       }
     },
     {
@@ -1150,68 +1279,48 @@
       },
       "demonstration": {
         "typ": "tab",
-        "bpm": 70,
-        "taktart": "4/4",
-        "aufloesung": 8,
-        "takte": 2,
+        "instrument": "gitarre",
         "tuning": [
-          "D2",
-          "A2",
-          "D3",
-          "G3",
-          "B3",
-          "E4"
+          "C2",
+          "G2",
+          "C3",
+          "F3",
+          "A3",
+          "D4"
         ],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 60,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
         "events": [
           {
             "schritt": 0,
-            "saite": 1,
+            "saite": 6,
             "bund": 0,
             "technik": "normal"
           },
           {
-            "schritt": 0,
-            "saite": 2,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 4,
-            "saite": 1,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 4,
-            "saite": 2,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 8,
-            "saite": 1,
+            "schritt": 3,
+            "saite": 6,
             "bund": 3,
             "technik": "normal"
           },
           {
-            "schritt": 8,
-            "saite": 2,
+            "schritt": 5,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
             "bund": 3,
-            "technik": "normal"
-          },
-          {
-            "schritt": 12,
-            "saite": 1,
-            "bund": 5,
-            "technik": "normal"
-          },
-          {
-            "schritt": 12,
-            "saite": 2,
-            "bund": 5,
             "technik": "normal"
           }
-        ]
+        ],
+        "hinweis": "Sehr langsam, lange stehende Töne, viel Raum zwischen den Anschlaegen."
       }
     },
     {

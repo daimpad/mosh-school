@@ -149,30 +149,22 @@
       ],
       "demonstration": {
         "typ": "pattern",
-        "bpm": 150,
-        "taktart": "4/4",
-        "aufloesung": 16,
+        "bpm": 170,
+        "taktart": "7/8",
+        "aufloesung": 8,
         "takte": 1,
+        "loop": true,
         "spuren": [
           {
-            "instrument": "crash",
+            "instrument": "hihat_closed",
             "schritte": [
               1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
+              1,
+              1,
               1,
               0,
               0,
-              0
+              1
             ]
           },
           {
@@ -180,19 +172,10 @@
             "schritte": [
               0,
               0,
-              0,
-              0,
               1,
               0,
               0,
               0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
               0
             ]
           },
@@ -205,19 +188,16 @@
               0,
               0,
               0,
-              1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0
+              1
             ]
           }
-        ]
+        ],
+        "gruppierung": [
+          2,
+          2,
+          3
+        ],
+        "hinweis": "Lückenmuster: nach Schritt 3 steht Stille, der Einsatz kommt auf Schritt 6."
       }
     },
     {
@@ -259,105 +239,73 @@
         "taktarten_unterteilungen"
       ],
       "demonstration": {
-        "typ": "tab",
-        "bpm": 140,
-        "taktart": "7/8",
-        "aufloesung": 7,
-        "takte": 2,
-        "tuning": [
-          "D2",
-          "A2",
-          "D3",
-          "G3",
-          "B3",
-          "E4"
-        ],
-        "events": [
+        "typ": "pattern",
+        "bpm": 160,
+        "taktart": "5/8+7/8",
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "spuren": [
           {
-            "schritt": 0,
-            "saite": 1,
-            "bund": 0,
-            "technik": "normal"
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
           },
           {
-            "schritt": 1,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
           },
           {
-            "schritt": 2,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 3,
-            "saite": 1,
-            "bund": 3,
-            "technik": "normal"
-          },
-          {
-            "schritt": 4,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 5,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 6,
-            "saite": 1,
-            "bund": 5,
-            "technik": "normal"
-          },
-          {
-            "schritt": 7,
-            "saite": 1,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 8,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 9,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 10,
-            "saite": 1,
-            "bund": 3,
-            "technik": "normal"
-          },
-          {
-            "schritt": 11,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 12,
-            "saite": 1,
-            "bund": 2,
-            "technik": "normal"
-          },
-          {
-            "schritt": 13,
-            "saite": 1,
-            "bund": 0,
-            "technik": "palm_mute"
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
           }
-        ]
+        ],
+        "gruppierung": [
+          2,
+          3,
+          2,
+          2,
+          3
+        ],
+        "hinweis": "Zwölf Achtel als Kette 2-3 (5/8) plus 2-2-3 (7/8); Akzente auf den Gruppenanfängen."
       }
     },
     {
