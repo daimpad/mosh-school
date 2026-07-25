@@ -371,7 +371,7 @@ function rendern() {
   } else if (segmente[0] === 'brand-alert') {
     renderBrandAlert(el, daten);
   } else if (segmente[0] === 'glossar') {
-    renderGlossar(el, daten);
+    renderGlossar(el, daten, query);
   } else if (segmente[0] === 'songs') {
     renderSongs(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'werkzeuge') {

@@ -74,8 +74,12 @@ function kategorieChips(daten) {
     .join('');
 }
 
-export function renderGlossar(el, daten) {
+export function renderGlossar(el, daten, query) {
   const g = daten.glossar || {};
+  // Deep-Link aus der Baustein-Auto-Verlinkung (#/glossar?q=<begriff>) belegt die
+  // Suche vor; unbekannte/fehlende Parameter lassen den Modul-State unberührt.
+  const q = query?.get?.('q');
+  if (q) sucheText = q;
   if (!(g.begriffe || []).length) {
     el.innerHTML = `<article><p class="leise">${esc(t('glossar_leer'))}</p></article>`;
     return;

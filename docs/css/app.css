@@ -1420,6 +1420,21 @@ details[open] summary { margin-bottom: 0.5rem; }
   max-width: 64ch;
 }
 
+/* Glossar-Auto-Verlinkung im Fließtext: dezent (gepunktete Akzent-Unterlinie),
+   klar als Nachschlage-Link erkennbar, aber leiser als echte Aktions-Links. */
+.glossar-link {
+  color: inherit;
+  text-decoration: underline dotted var(--primaer);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  cursor: help;
+}
+.glossar-link:hover,
+.glossar-link:focus-visible {
+  color: var(--primaer-tief);
+  text-decoration-style: solid;
+}
+
 /* Stationszahl in der Baustein-Ansicht als dezentes Kapitälchen-Label. */
 .stationszahl {
   display: inline-block;
