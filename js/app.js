@@ -145,7 +145,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
   // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'community', 'geraete', 'stimmungen', 'patterns', 'brandalert', 'glossar', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -201,9 +201,6 @@ function beschrifteRahmen() {
     geraete: t('wz_explorer_titel'),
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
-    brandalert: t('nav_brand_alert'),
-    glossar: t('nav_glossar'),
-    community: t('nav_kontext'),
     ueber: t('nav_ueber'),
   };
   for (const verweis of document.querySelectorAll('[data-nav]')) {
