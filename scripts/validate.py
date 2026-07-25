@@ -44,7 +44,9 @@ UMLAUT_VERDACHT = re.compile(
     r'\b(ausser|groess\w*|fuer|koenn\w*|koerp\w*|muede|muess\w*|schoen\w*|'
     r'hoeher|frueh\w*|ueb\w*|ueber\w*|fuehl\w*|fuehr\w*|gehoert|zerstoer\w*|'
     r'stoerung|loesung\w*|erhoeht|natuerlich|ungefaehr|waehrend|maessig|'
-    r'grundsaetzlich|regelmaessig|massnahme\w*|schluessel\w*)',
+    r'grundsaetzlich|regelmaessig|massnahme\w*|schluessel\w*|lueck\w*|'
+    r'zwoelf|toen\w*|geruest\w*|gleichmaessig\w*|abschlaeg\w*|zaehl\w*|'
+    r'gruppenanfaeng\w*|daempf\w*)',
     re.IGNORECASE,
 )
 
@@ -66,20 +68,31 @@ def pruefe_demonstration(bid, demo, fehler):
     if typ not in ('pattern', 'tab', 'hoerbeispiel'):
         fehler.append(f'{bid}: demonstration.typ "{typ}" ungültig (pattern|tab|hoerbeispiel)')
         return
+    # `gruppierung` (optional): Gruppenlängen für ungerade/verkettete Metren
+    # (z. B. 5/8+7/8 → [2,3,2,2,3]). Ist sie gesetzt, ergibt sich die Schrittzahl
+    # aus ihrer Summe, NICHT aus aufloesung*takte (7/8 hat 7 Schritte, nicht 8).
+    grp = demo.get('gruppierung')
+    if grp is not None and (not isinstance(grp, list) or not grp
+                            or any(not isinstance(x, int) or x < 1 for x in grp)):
+        fehler.append(f'{bid}: demonstration.gruppierung muss eine Liste positiver Ganzzahlen sein')
+        grp = None
     if typ == 'pattern':
         spuren = demo.get('spuren')
         if not isinstance(spuren, list) or not spuren:
             fehler.append(f'{bid}: demonstration(pattern) ohne spuren')
             return
         aufl = demo.get('aufloesung')
+        soll = sum(grp) if isinstance(grp, list) else (
+            aufl * (demo.get('takte') or 1) if isinstance(aufl, int) else None)
         for sp in spuren:
             if sp.get('instrument') not in DEMO_INSTRUMENTE:
                 fehler.append(f'{bid}: demonstration-Instrument "{sp.get("instrument")}" ungültig')
             schritte = sp.get('schritte')
             if not isinstance(schritte, list) or any(x not in (0, 1) for x in schritte):
                 fehler.append(f'{bid}: demonstration-schritte müssen eine 0/1-Liste sein')
-            elif isinstance(aufl, int) and len(schritte) != aufl * (demo.get('takte') or 1):
-                fehler.append(f'{bid}: demonstration-schritte-Länge passt nicht zu aufloesung*takte')
+            elif soll is not None and len(schritte) != soll:
+                fehler.append(f'{bid}: demonstration-schritte-Länge passt nicht zu '
+                              f'{"gruppierung-Summe" if isinstance(grp, list) else "aufloesung*takte"}')
     elif typ == 'tab':
         events = demo.get('events')
         if not isinstance(events, list) or not events:
