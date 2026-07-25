@@ -447,52 +447,36 @@
       },
       "demonstration": {
         "typ": "pattern",
-        "bpm": 210,
+        "bpm": 200,
         "taktart": "4/4",
-        "aufloesung": 16,
+        "aufloesung": 8,
         "takte": 1,
         "loop": true,
         "spuren": [
           {
             "instrument": "hihat_closed",
             "schritte": [
-              0,
-              0,
               1,
-              0,
-              0,
-              0,
               1,
-              0,
-              0,
-              0,
               1,
-              0,
-              0,
-              0,
               1,
-              0
+              1,
+              1,
+              1,
+              1
             ]
           },
           {
             "instrument": "snare",
             "schritte": [
               0,
-              0,
-              0,
+              1,
               0,
               1,
               0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
               1,
               0,
-              0,
-              0
+              1
             ]
           },
           {
@@ -500,23 +484,16 @@
             "schritte": [
               1,
               0,
-              0,
-              0,
-              0,
-              0,
-              0,
+              1,
               0,
               1,
               0,
-              0,
-              0,
-              0,
-              0,
-              0,
+              1,
               0
             ]
           }
-        ]
+        ],
+        "hinweis": "Kick auf die Zählzeiten, Snare dazwischen — das klassische Thrash-Feel."
       }
     },
     {
@@ -665,6 +642,56 @@
           "steigerung": "Im Half-Time-Teil das China (oder Crash) statt der Hi-Hat führen und Akzente aufs Riff setzen.",
           "selbstkontrolle": "Der Wechsel fühlt sich nach halbem Tempo an, obwohl der Klick unverändert weiterläuft."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "bpm": 140,
+        "taktart": "4/4",
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "china",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "hinweis": "Half-Time: Snare nur auf 3, China als Akzent — wirkt halb so schnell."
       }
     },
     {
