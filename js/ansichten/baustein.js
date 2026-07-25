@@ -6,8 +6,9 @@
 import { schalteTeil } from '../aktionen.js';
 import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, witterungVon } from '../daten.js';
 import { label, t, text } from '../i18n.js';
-import { absaetze, bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein, zeigeMeilensteine } from '../oberflaeche.js';
+import { bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein, zeigeMeilensteine } from '../oberflaeche.js';
 import { pruefeMeilensteine } from '../mastery.js';
+import { absaetzeMitGlossar, baueGlossarVerlinker } from '../glossar-links.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
@@ -217,6 +218,11 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const b = station.baustein;
   merkeZuletzt(b.id); // „Fortsetzen wo du warst" auf der Startseite
 
+  // Glossar-Auto-Verlinkung: erste Fundstelle je Begriff baustein-weit (das
+  // `gesehen`-Set wird über Erklär- und Reflexionsteil geteilt, Erklärteil zuerst).
+  const glossarVerlinker = baueGlossarVerlinker(daten.glossar);
+  const glossarGesehen = new Set();
+
 
   const delta = station.delta;
   const kuerzelSichtbar = einstellungen().transferKuerzelSichtbar;
@@ -293,7 +299,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       <div class="abschnitt-kopf"><h2>${esc(t('erklaerteil'))}</h2>${statusChip(station.status.erklaerteil)}</div>
       ${deltaHinweis}
       ${buendelung}
-      ${absaetze(erklaertext)}
+      ${absaetzeMitGlossar(erklaertext, glossarVerlinker, glossarGesehen)}
       <div class="knopf-zeile">${quittierKnopf(b.id, 'erklaerteil', station.status.erklaerteil, t('als_gelesen'), t('gelesen'))}</div>
     </section>`;
 
@@ -331,7 +337,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     reflexionsSektion = `
       <section class="abschnitt">
         <div class="abschnitt-kopf"><h2><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> ${esc(t('reflexionsaufgabe'))}</h2>${statusChip(status)}</div>
-        ${absaetze(text(b.reflexionsaufgabe))}
+        ${absaetzeMitGlossar(text(b.reflexionsaufgabe), glossarVerlinker, glossarGesehen)}
         <div class="knopf-zeile">${quittierKnopf(b.id, 'reflexionsaufgabe', status, t('als_mitgenommen'), t('mitgenommen'))}</div>
       </section>`;
   }
