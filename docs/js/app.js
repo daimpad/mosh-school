@@ -11,6 +11,7 @@ import { renderBand, renderIndividual, renderInstrument, renderKompetenzpfad, re
 import { renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
+import { renderGriffe } from './ansichten/griffe.js';
 import { renderSongs } from './ansichten/songs.js';
 import { renderBrandAlert } from './ansichten/brand-alert.js';
 import { renderGlossar } from './ansichten/glossar.js';
@@ -118,6 +119,8 @@ function aktualisiereNavigation(segmente) {
                     ? 'stimmungen'
                     : s0 === 'patterns'
                       ? 'patterns'
+                      : s0 === 'griffe'
+                        ? 'griffe'
                       : s0 === 'brand-alert'
                         ? 'brandalert'
                         : s0 === 'glossar'
@@ -145,7 +148,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
   // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'griffe', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -201,6 +204,7 @@ function beschrifteRahmen() {
     geraete: t('wz_explorer_titel'),
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
+    griffe: t('nav_griffe'),
     ueber: t('nav_ueber'),
   };
   for (const verweis of document.querySelectorAll('[data-nav]')) {
@@ -365,6 +369,8 @@ function rendern() {
     renderStimmungen(el, daten);
   } else if (segmente[0] === 'patterns') {
     renderPatterns(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
+  } else if (segmente[0] === 'griffe') {
+    renderGriffe(el, daten);
   } else if (segmente[0] === 'brand-alert') {
     renderBrandAlert(el, daten);
   } else if (segmente[0] === 'glossar') {

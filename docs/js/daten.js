@@ -107,13 +107,14 @@ function songSlug(pfad) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
     holeJson('data/koennenscheck.json'),
     holeJson('data/tunings.json'),
     holeJson('data/patterns.json'),
+    holeJson('data/griffe.json').catch(() => null),
     holeJson('data/pedale.json'),
     holeJson('data/ampbox.json'),
     holeJson('data/genres.json').catch(() => null),
@@ -140,6 +141,9 @@ export async function ladeDaten() {
     meta: patterns?._meta || {},
     patterns: patterns?.patterns || [],
   };
+  // Powerchord-Griffe (grafische Griffbild-Referenz): Referenzbereich, kein
+  // Fortschritt — die Formen werden aus den Daten gezeichnet.
+  daten.griffe = griffe || { titel: '', hinweis: '', griffe: [] };
   // Pedalboard-Baukasten (Pedal-Katalog): Referenzbereich, kein Fortschritt.
   daten.pedale = {
     meta: pedale?._meta || {},
