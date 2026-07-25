@@ -289,7 +289,9 @@ export function bausteinIcon(bausteinId, klasse = '') {
 // erbt die Medaillen-Hue. Fällt für Nicht-Instrument-Domänen auf ein FA-Icon zurück.
 const INSTRUMENT_SVG = {
   gitarre:
-    '<svg class="dom-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 7c2-3 12-3 14 0 2 2.6-1.5 12-7 15C6.5 19 3 9.6 5 7Z"/></svg>',
+    // Flying-V-Silhouette: schmaler Hals von der Kopfplatte, unten der V-Korpus
+    // (zwei gespreizte Flügel mit Kerbe zur Mitte). Ein Polygon, currentColor.
+    '<svg class="dom-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="10.7,2.4 13.3,2.4 13.3,11.5 20.5,20.6 12,15.4 3.5,20.6 10.7,11.5"/></svg>',
   bass:
     '<svg class="dom-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8.5" y="2.5" width="7" height="19" rx="1.4"/><line x1="10.6" y1="2.5" x2="10.6" y2="21.5"/><line x1="13.4" y1="2.5" x2="13.4" y2="21.5"/></svg>',
   schlagzeug:

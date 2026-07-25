@@ -383,7 +383,17 @@ export function renderUmgebung(el, daten, achse, wert) {
     ${landingHeroHtml('fa-people-group', t('pfad_umgebung'), t('pfad_umgebung_text'), 'pf-sky', 'kontext')}
     ${facettenSektion('umgebung_wetter', witt, 'witterung')}
     <h2>${esc(t('umgebung_alle'))}</h2>
-    ${liste}`;
+    ${liste}
+    <h2 class="abschnitt-titel">${esc(t('kontext_mehr_titel'))}</h2>
+    <a class="karte karte-link geraete-eintrag" href="#/pfad/themen/kontext">
+      <span class="geraete-eintrag-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+      <span class="geraete-eintrag-text">${esc(t('nav_kontext'))}</span>
+      <i class="fa-solid fa-arrow-right geraete-eintrag-pfeil" aria-hidden="true"></i>
+    </a>
+    <a class="karte karte-link geraete-eintrag" href="#/glossar">
+      <span class="geraete-eintrag-text">${esc(t('glossar_titel'))}</span>
+      <i class="fa-solid fa-arrow-right geraete-eintrag-pfeil" aria-hidden="true"></i>
+    </a>`;
 }
 
 export function renderIndividual(el, daten) {
