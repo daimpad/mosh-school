@@ -106,8 +106,17 @@ function songSlug(pfad) {
   return pfad.replace(/^data\/songs\./, '').replace(/\.json$/, '');
 }
 
+// Lädt den Such-/Metadaten-Index (index.json) nach und hängt ihn an `daten`.
+// Bewusst getrennt vom Boot-Promise.all: die Datei ist groß und nur für die Suche
+// nötig, deshalb erst nach dem ersten Render (siehe app.js boot()).
+export async function ladeSuchindex(daten) {
+  const idx = await holeJson('data/index.json').catch(() => null);
+  daten.suchindex = idx?.eintraege || [];
+  return daten.suchindex;
+}
+
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, suchindex, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -122,7 +131,6 @@ export async function ladeDaten() {
     holeJson('data/experimente.json').catch(() => null),
     holeJson('data/brand-alert.json').catch(() => null),
     holeJson('data/glossar.json').catch(() => null),
-    holeJson('data/index.json').catch(() => null),
     Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
@@ -172,7 +180,10 @@ export async function ladeDaten() {
   daten.glossar = glossar || { titel: '', hinweis: '', kategorien: [], begriffe: [] };
   // Such-/Metadaten-Index (generiert via scripts/build_index.py): kompakte
   // Einträge für die clientseitige Volltextsuche + Facetten (Trainings-Loop §0a/§3c).
-  daten.suchindex = suchindex?.eintraege || [];
+  // Bewusst NICHT im Boot-Promise.all — index.json ist die größte Einzeldatei
+  // (~200 KB gzip) und nur die Suche braucht sie. `ladeSuchindex()` holt sie nach
+  // dem ersten Anstrich nach; bis dahin bleibt der Index leer (Suche zeigt nichts).
+  daten.suchindex = [];
   // Beispielsongs (Genre → Songliste): Referenzbereich, kein Fortschritt. Jeder
   // Eintrag trägt seinen Slug für Deep-Links (#/songs/<slug>).
   daten.songs = SONGDATEIEN.map((pfad, i) => ({
