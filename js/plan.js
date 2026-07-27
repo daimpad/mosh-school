@@ -95,7 +95,7 @@ export function planAlsIcal(plan, beschriftung, jetztStempel) {
   const zeilen = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//mosh school//Trainingsplan//DE',
+    'PRODID:-//ZERRER//Trainingsplan//DE',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
   ];
@@ -105,11 +105,11 @@ export function planAlsIcal(plan, beschriftung, jetztStempel) {
     const ende = plusTage(s.datum, 1).replace(/-/g, '');
     zeilen.push(
       'BEGIN:VEVENT',
-      `UID:msh-${tag}-${i}@mosh-school`,
+      `UID:msh-${tag}-${i}@ZERRER`,
       `DTSTAMP:${jetztStempel}`,
       `DTSTART;VALUE=DATE:${tag}`,
       `DTEND;VALUE=DATE:${ende}`,
-      `SUMMARY:${icalEscape('mosh school – ' + (b.titel || s.einheit))}`,
+      `SUMMARY:${icalEscape('ZERRER – ' + (b.titel || s.einheit))}`,
       `DESCRIPTION:${icalEscape(b.schwerpunkt || '')}`,
       'END:VEVENT',
     );

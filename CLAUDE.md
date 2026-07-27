@@ -5,12 +5,33 @@ was der Code schon sagt; hier steht nur, was man **wissen muss, bevor** man etwa
 
 ## Was das ist
 
-**mosh school** — eine clientseitige Lernapp fürs Spielen von Extreme-Metal-Instrumenten
+**ZERRER** — eine clientseitige Lernapp fürs Spielen von Extreme-Metal-Instrumenten
 (Gitarre, Bass, Schlagzeug, Gesang) in den Genres Hardcore, Metalcore, Thrash, Death,
 Black und Doom. Rein statisch: HTML/CSS/JS als ES-Module, **kein Build-Schritt, keine
 Server-Komponente, keine npm-Laufzeitabhängigkeiten**. Inhalte kommen aus JSON in `data/`,
 Fortschritt lebt in `localStorage`. Quellsprache Deutsch, du-Form. (Die App ist aus einer
 Crossminton-Lern-Engine geforkt — die Engine ist themenneutral, der Inhalt ist Metal.)
+
+## Name, Speicher, Pfade — drei Ebenen, die auseinanderfallen dürfen
+
+Das Projekt heißt seit der Umbenennung **ZERRER**, Subline **„Mosh School"**. Drei
+Dinge tragen den alten Namen weiter, und zwar mit Absicht:
+
+- **Speicher-Schlüssel bleiben `moshschool.*`** (`zustand.v1`, `werkzeuge.v1`,
+  `songs.v1`) und die IndexedDB-Datenbanken `moshschool-aufnahmen` /
+  `moshschool-mehrspur`. Sie umzubenennen hieße: **jeder bestehende Nutzer
+  verliert seinen Fortschritt und seine Aufnahmen.** Der Schlüssel ist eine
+  technische Adresse, kein Anzeigename — er wird nicht mitgezogen. Das gilt auch
+  für das Inline-Theme-Skript im `<head>` von `index.html`, das denselben
+  Schlüssel liest.
+- **Repository und Deployment heißen weiter `mosh-school`.** Die Seite liegt
+  unter `daimpad.github.io/mosh-school/`; `canonical`, `og:url`, `sitemap.xml`,
+  `robots.txt` und der Quelltext-Link zeigen dorthin. Die Domain `zerrer.org`
+  ist beschlossen, aber noch nicht geschaltet — wer sie scharf stellt, legt eine
+  `CNAME`-Datei an, setzt die Pages-Custom-Domain und zieht erst *dann* die
+  Meta-Angaben nach.
+- **Sichtbarer Name kommt aus `t('app_titel')`** (= „ZERRER"), die Subline aus
+  `t('hero_untertitel')` (= „Mosh School"). Nie hart schreiben.
 
 ## Nicht verhandelbare Architektur
 
