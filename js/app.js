@@ -37,8 +37,8 @@ import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten, ladeSuchindex } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
-import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
-import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung } from './zustand.js';
+import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
+import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb } from './zustand.js';
 
 let daten = null;
 let letzteRoute = null;
@@ -477,28 +477,6 @@ async function boot() {
 
   document.getElementById('hamburger').addEventListener('click', oeffneMenue);
   document.getElementById('mehr-knopf')?.addEventListener('click', oeffneMenue);
-
-  // Theme-Umschalter im Menü: kippt zwischen hell und dunkel (die volle 3-fach-
-  // Wahl inkl. „auto" bleibt im Profil). Icon zeigt das Ziel — Sonne, wenn aktuell
-  // dunkel (zu hell wechseln), sonst Mond. Persistiert über den Zustand.
-  const themaKnopf = document.getElementById('menue-thema');
-  if (themaKnopf) {
-    const themaIcon = themaKnopf.querySelector('i');
-    const istDunkel = () => {
-      const t = einstellungen().thema;
-      return t === 'dunkel' || (t !== 'hell' && window.matchMedia?.('(prefers-color-scheme: dark)').matches);
-    };
-    const zeigeThemaIcon = () => {
-      if (themaIcon) themaIcon.className = istDunkel() ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-    };
-    zeigeThemaIcon();
-    themaKnopf.addEventListener('click', () => {
-      const neu = istDunkel() ? 'hell' : 'dunkel';
-      setzeEinstellung('thema', neu);
-      wendeThemaAn(neu);
-      zeigeThemaIcon();
-    });
-  }
   // Skip-Link: Fokus auf den Inhalt lenken, OHNE den Hash zu ändern — der Router
   // würde "#ansicht" sonst als (unbekannte) Route deuten und die Startseite zeigen.
   // #ansicht trägt tabindex="-1", ist also programmatisch fokussierbar.

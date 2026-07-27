@@ -15,10 +15,11 @@ import { zeichneKoennenscheck } from './koennenscheck.js';
 // gehört zum Zugriffsmoment und lebt in der Baustein-Ansicht (Spez. 4.4).
 // Hier erscheint nur, was die Liste selbst nicht zeigen kann: Voraussetzungen
 // außerhalb der gefilterten Menge (Individualpfad, 6.2).
-function hinweisZeilen(station) {
-  if (station.status.absolviert || station.ausserhalbMenge.length === 0) return '';
-  const namen = station.ausserhalbMenge.map((id) => label('baustein', id)).join(', ');
-  return `<span class="station-hinweis">${esc(`${t('ausserhalb_auswahl')} ${namen}`)}</span>`;
+function hinweisZeilen() {
+  // Der „Außerhalb deiner Zielauswahl: …"-Hinweis wurde entfernt (zu viel Text in
+  // der Liste); die Reihenfolge ordnet ohnehin, Voraussetzungen zeigt die Baustein-
+  // Ansicht beim Zugriff.
+  return '';
 }
 
 function stationslisteHtml(stationen, kontext, { mitSkip = false } = {}) {
@@ -162,7 +163,7 @@ export function renderStil(el, daten, stil) {
           <i class="fa-solid fa-arrow-right genre-featured-pfeil" aria-hidden="true"></i>
         </a>
       </div>`;
-    el.innerHTML = `${hero}${zeilen || leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}${zeilen ? featured : ''}`;
+    el.innerHTML = `${hero}${zeilen ? `<div class="genre-gitter">${zeilen}</div>${featured}` : leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}`;
     return;
   }
   const pfad = stilpfad(daten, stil);
