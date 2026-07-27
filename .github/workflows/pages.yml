@@ -1,0 +1,54 @@
+# Deployment der statischen App nach GitHub Pages — der EINZIGE Deploy-Weg.
+#
+# Die App ist buildfrei: Es gibt nichts zu kompilieren, das Wurzelverzeichnis
+# IST die Seite. Der Stand wird deshalb unveraendert als Pages-Artefakt
+# hochgeladen und veroeffentlicht.
+#
+# Vorgeschichte, damit hier nicht wieder Dubletten entstehen: Es gab drei
+# konkurrierende Deploy-Workflows — zwei mit identischem Namen ueber die
+# offizielle Pages-Route (static.yml, static2.yml) und einen dritten, der ueber
+# eine Drittanbieter-Action einen gh-pages-Branch publizieren wollte. Der
+# dritte schlug bei jedem Lauf fehl, und der gh-pages-Branch existierte nie.
+# Beide ueberfluessigen Wege sind entfernt. Die Pages-Quelle des Repositories
+# ist "GitHub Actions" — was dieser Workflow veroeffentlicht, ist die Seite.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Nur ein Deployment gleichzeitig; ein laufendes wird nicht abgebrochen, damit
+# eine Veroeffentlichung immer zu Ende laeuft.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Pages vorbereiten
+        uses: actions/configure-pages@v5
+
+      - name: Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Das gesamte Repository — die App laeuft direkt aus der Wurzel.
+          path: '.'
+
+      - name: Nach GitHub Pages veroeffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v5
