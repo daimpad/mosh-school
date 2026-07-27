@@ -8,7 +8,7 @@
 // hub-übergreifend (ein Zustand), die Hubs sind nur der Ort der Ausführung.
 
 import { label, t } from '../i18n.js';
-import { bausteinIcon, domaeneIcon, esc } from '../oberflaeche.js';
+import { bausteinIcon, domaeneHue, domaeneIcon, esc } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { instrumentUebersicht } from '../pfade.js';
 
@@ -60,7 +60,7 @@ function kachel({ href, hue, icon, titel, text = '' }) {
 function instrumentKacheln(daten) {
   return instrumentUebersicht(daten)
     .map(({ domaene, anzahl }) => `
-      <a class="karte karte-link pfad-kachel instr-kachel pf-blau" href="#/instrument/${esc(domaene)}">
+      <a class="karte karte-link pfad-kachel instr-kachel ${domaeneHue(domaene)}" href="#/instrument/${esc(domaene)}">
         <div class="pfad-kachel-kopf">
           <span class="pfad-medaille">${domaeneIcon(domaene)}</span>
           <h3>${esc(label('domaene', domaene))}</h3>

@@ -15,21 +15,11 @@
 // bleiben) — kein Bruch, nur ruhiger.
 
 import { label, t } from '../i18n.js';
-import { domaeneIcon, esc } from '../oberflaeche.js';
+import { domaeneHue, domaeneIcon, esc } from '../oberflaeche.js';
 import { bildKachelHtml, markeHeroInszeniert } from '../genre-inszenierung.js';
 import { instrumentUebersicht, stile } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar, zuletzt } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
-
-// Je Instrument eine eigene Hue — vorher trugen alle vier dasselbe Blau. Mit dem
-// Bildhintergrund lohnt sich die Unterscheidung: Die Hue färbt Augenbraue,
-// Verlauf und Motiv und macht die vier Kacheln auf einen Blick auseinanderhaltbar.
-const INSTRUMENT_HUE = {
-  gitarre: 'pf-magenta',
-  bass: 'pf-indigo',
-  schlagzeug: 'pf-sky',
-  gesang: 'pf-teal',
-};
 
 export function renderHeim(el, daten) {
   const d = diagnose();
@@ -73,7 +63,7 @@ export function renderHeim(el, daten) {
   const instrumentKacheln = instrumentUebersicht(daten)
     .map(({ domaene, anzahl }) => bildKachel({
       href: `#/instrument/${esc(domaene)}`,
-      hue: INSTRUMENT_HUE[domaene] || 'pf-blau',
+      hue: domaeneHue(domaene),
       schluessel: `instrument:${domaene}`,
       iconHtml: domaeneIcon(domaene),
       augenbraue: t('kicker_instrument'),

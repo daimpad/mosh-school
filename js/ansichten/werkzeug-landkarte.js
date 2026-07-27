@@ -201,10 +201,22 @@ function starteFelder(canvas, genres, onGenre) {
       ctx.arc(cx, cy, rad, 0, Math.PI * 2);
       ctx.fill();
     });
-    // Beschriftung (über dem Blending). Damit sich die Namen nicht überlagern
-    // (bei eng beieinander liegenden Genres), werden nahe Etiketten senkrecht
-    // auseinandergeschoben: nach cy sortieren, bei zu geringem Abstand UND
-    // horizontaler Nähe das untere nach unten nudgen, dann in den Canvas clampen.
+    // Beschriftung (über dem Blending).
+    //
+    // Die Namen dürfen sich nicht überlagern — im dichten Bereich der Karte
+    // (Doom/Sludge/Noise Rock/Deathcore) liegen bis zu fünf Felder fast
+    // aufeinander. Die frühere Fassung schob nur gegen den DIREKTEN Vorgänger
+    // und schätzte die Breite aus der Zeichenzahl; beides reicht in einem
+    // Cluster nicht: Ein Etikett wich dem einen aus und landete auf dem
+    // übernächsten, und die Schätzung lag bei kurzen Namen zu hoch, bei langen
+    // zu niedrig.
+    //
+    // Jetzt echtes Ausweichen: Breite über measureText, Prüfung gegen ALLE
+    // bereits gesetzten Etiketten und Ausweichen abwechselnd nach unten und
+    // oben (nur nach unten hiesse, dass der Cluster sich am unteren Rand
+    // staut). Findet sich kein freier Platz, bleibt das Etikett an seinem Ort —
+    // ein leicht überlappendes Etikett ist besser als eines, das weit weg von
+    // seinem Feld sitzt und dadurch dem falschen Genre zugeordnet wird.
     ctx.globalCompositeOperation = 'source-over';
     ctx.font = '600 12px Rubik, system-ui, sans-serif';
     ctx.textAlign = 'center';
@@ -213,25 +225,41 @@ function starteFelder(canvas, genres, onGenre) {
     genres.forEach((g, i) => {
       if (aktiv && !aktiv.has(i)) return;
       const { fx, fy } = feldPos(g);
-      etiketten.push({ name: landkarteName(g.genre), cx: fx * w, cy: fy * h });
+      const name = landkarteName(g.genre);
+      etiketten.push({ name, cx: fx * w, cy: fy * h, halb: ctx.measureText(name).width / 2 });
     });
     etiketten.sort((a, b) => a.cy - b.cy || a.cx - b.cx);
-    const minAbstand = 15;
-    for (let k = 1; k < etiketten.length; k++) {
-      const vor = etiketten[k - 1];
-      const cur = etiketten[k];
-      const naheX = (vor.name.length + cur.name.length) * 3.1;
-      if (cur.cy - vor.cy < minAbstand && Math.abs(cur.cx - vor.cx) < naheX) {
-        cur.cy = vor.cy + minAbstand;
-      }
-    }
+
+    const zeile = 14; // Zeilenhöhe inkl. Luft — auch der Schritt beim Ausweichen
+    const luft = 3; // waagerechter Mindestabstand zwischen zwei Namen
+    const obenGrenze = 9;
+    const untenGrenze = h - 7;
+    const gesetzt = [];
+    const frei = (e, y) =>
+      y >= obenGrenze
+      && y <= untenGrenze
+      && !gesetzt.some(
+        (a) =>
+          Math.abs(a.y - y) < zeile
+          && Math.abs(a.cx - e.cx) < a.halb + e.halb + luft,
+      );
     for (const e of etiketten) {
-      const cy = Math.max(9, Math.min(h - 7, e.cy));
+      const start = Math.max(obenGrenze, Math.min(untenGrenze, e.cy));
+      let y = start;
+      // Abwechselnd nach unten und oben suchen, in Schritten einer Zeilenhöhe.
+      for (let schritt = 1; schritt <= 8 && !frei(e, y); schritt++) {
+        const runter = start + schritt * zeile;
+        const hoch = start - schritt * zeile;
+        if (frei(e, runter)) y = runter;
+        else if (frei(e, hoch)) y = hoch;
+        else y = start; // weiter suchen, Ausgangslage als Rückfall behalten
+      }
+      gesetzt.push({ cx: e.cx, halb: e.halb, y });
       ctx.lineWidth = 3;
       ctx.strokeStyle = 'rgba(0,0,0,0.6)';
-      ctx.strokeText(e.name, e.cx, cy);
+      ctx.strokeText(e.name, e.cx, y);
       ctx.fillStyle = '#fff';
-      ctx.fillText(e.name, e.cx, cy);
+      ctx.fillText(e.name, e.cx, y);
     }
   }
 

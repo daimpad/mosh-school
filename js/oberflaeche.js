@@ -325,3 +325,20 @@ export function domaeneIcon(domaene) {
   const fa = { koerper: 'fa-heart-pulse', mentales: 'fa-brain', theorie: 'fa-book-open', ausruestung: 'fa-toolbox', kontext: 'fa-people-group' }[domaene];
   return fa ? `<i class="fa-solid ${fa}" aria-hidden="true"></i>` : '';
 }
+
+// Hue je Domäne — die zweite Hälfte der visuellen Identität neben dem Icon:
+// Sie färbt Augenbraue, Verlauf, Medaille und Motiv. Die Zuordnung steht hier
+// und NUR hier, damit dieselbe Kachel auf Startseite, Lernen-Hub, Instrument-
+// Picker und Geräte-Landing dieselbe Farbe trägt. (Sie lag vorher doppelt in
+// heim.js und pfad.js, während hub.js und die Landing-Heros pauschal pf-blau
+// nahmen — im Lernen-Hub sahen dadurch alle vier Instrumente gleich aus.)
+const DOMAENE_HUE = {
+  gitarre: 'pf-magenta',
+  bass: 'pf-indigo',
+  schlagzeug: 'pf-sky',
+  gesang: 'pf-teal',
+};
+
+export function domaeneHue(domaene, ersatz = 'pf-blau') {
+  return DOMAENE_HUE[domaene] || ersatz;
+}
