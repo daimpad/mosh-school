@@ -806,7 +806,9 @@
     "klang_stil_leer": "Keine Einträge für dieses Genre.",
     "kicker_instrument": "Instrument",
     "kicker_zusammenspiel": "Zusammenspiel",
-    "kicker_lernweg": "Lernweg"
+    "kicker_lernweg": "Lernweg",
+    "kicker_werkzeug": "Werkzeug",
+    "haltung_quelltext": "Quelltext offen"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",

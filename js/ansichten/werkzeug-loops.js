@@ -12,6 +12,7 @@ import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import { klick, kick, snare, hihat, crash } from '../audio/stimmen.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const STIMME = { kick, snare, hihat, crash };
 const SPUR_ORDNUNG = ['crash', 'hihat', 'snare', 'kick'];
@@ -189,14 +190,8 @@ export function renderWerkzeugLoops(el, daten, query) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-drum', t('wz_loops_titel'), t('wz_loops_untertitel'), 'pf-teal', 'werkzeug:loops', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-drum" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_loops_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_loops_untertitel'))}</p>
-        </div>
-      </section>
 
       <div class="wz-audio-tor" ${audioBereit ? 'hidden' : ''}>
         <p class="leise">${esc(t('wz_audio_hinweis'))}</p>

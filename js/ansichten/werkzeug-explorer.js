@@ -10,6 +10,7 @@
 
 import { label, t, text } from '../i18n.js';
 import { bausteinIcon, domaeneIcon, esc } from '../oberflaeche.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 // Vier Ansichten mit ihren Schema-SVGs (eingebettet, monochrom, Hotspots).
 const SCHEMATA = {
@@ -74,14 +75,8 @@ export function renderWerkzeugExplorer(el, daten, query) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-magnifying-glass', t('wz_explorer_titel'), t('wz_explorer_untertitel'), 'pf-teal', 'werkzeug:explorer', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_explorer_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_explorer_untertitel'))}</p>
-        </div>
-      </section>
 
       <p class="chip-zeile">${ansichtKnoepfe}</p>
       <p class="leise">${esc(t('wz_exp_hint'))}</p>
