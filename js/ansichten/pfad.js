@@ -5,7 +5,7 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { bildEbene } from '../hintergrundbilder.js';
 import { label, t } from '../i18n.js';
-import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
+import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, nichtGefundenHtml, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
 import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
@@ -107,6 +107,14 @@ export function renderThemen(el, daten, domaene) {
     el.innerHTML = `${landingHeroHtml('fa-layer-group', t('pfad_themen'), t('pfad_themen_text'), 'pf-teal')}${zeilen}`;
     return;
   }
+  // Unbekannte Domäne: Nicht-gefunden statt einer erfundenen Seite mit dem rohen
+  // Slug als Überschrift. Geprüft wird gegen das Vokabular, nicht gegen die
+  // Trefferzahl — eine gültige, aber (für Nicht-Trainer) leere Domäne bleibt eine
+  // echte Seite mit Leer-Zustand.
+  if (!(daten.vokabulare.domaene || []).includes(domaene)) {
+    el.innerHTML = nichtGefundenHtml('#/pfad/themen', t('pfad_themen'));
+    return;
+  }
   const pfad = themenpfad(daten, domaene);
   const inhalt =
     pfad.stationen.length === 0
@@ -165,6 +173,11 @@ export function renderStil(el, daten, stil) {
         </a>
       </div>`;
     el.innerHTML = `${hero}${zeilen ? `<div class="genre-gitter">${zeilen}</div>${featured}` : leerHtml(t('leer_domaene'), 'fa-compass', entdeckenAktion())}`;
+    return;
+  }
+  // Unbekanntes Genre: dasselbe wie oben — kein Fantasie-Genre aus dem Slug bauen.
+  if (!(daten.vokabulare.stil || []).includes(stil)) {
+    el.innerHTML = nichtGefundenHtml('#/pfad/stil', t('pfad_stil'));
     return;
   }
   const pfad = stilpfad(daten, stil);

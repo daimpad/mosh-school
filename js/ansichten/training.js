@@ -7,7 +7,7 @@
 import { einheitReferenzen } from '../daten.js';
 import { projektion } from '../fortschritt.js';
 import { label, t, text } from '../i18n.js';
-import { bausteinIcon, entdeckenAktion, esc, leerHtml, neuRendern } from '../oberflaeche.js';
+import { bausteinIcon, entdeckenAktion, esc, leerHtml, neuRendern, nichtGefundenHtml } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { kompetenzpfad, trainingsuebersicht } from '../pfade.js';
 import { kontinuitaet, registriereEinheitAbschluss, setzeTeilStatus, teilStatus } from '../zustand.js';
@@ -139,7 +139,7 @@ export function renderTraining(el, daten, einheitId) {
   const einheit = daten.einheitVonId.get(einheitId);
   const referenzen = einheit ? referenzenVon(daten, einheit) : [];
   if (!einheit || referenzen.length === 0) {
-    el.innerHTML = `<div class="karte"><p>${esc(t('nicht_gefunden'))}</p><a class="knopf knopf-sekundaer" href="#/training">${esc(t('zur_liste'))}</a></div>`;
+    el.innerHTML = nichtGefundenHtml('#/training', t('zur_liste'));
     return;
   }
   if (!sitzung || sitzung.einheitId !== einheitId) {

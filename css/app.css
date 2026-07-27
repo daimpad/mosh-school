@@ -3370,3 +3370,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
 @media print {
   .seiten-aktionen { display: none; }
 }
+
+/* Nicht-gefunden-Karte: Überschrift bewusst klein — sie soll die Seite
+   strukturieren, nicht den Fehlschlag zelebrieren. */
+.nicht-gefunden-titel { font-size: 1.15rem; margin: 0.2rem 0 0.4rem; }
