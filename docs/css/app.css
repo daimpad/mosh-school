@@ -151,7 +151,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--tinte);
-  background-color: #000;
+  background-color: var(--hintergrund);
   /* Ganz hinten (NUR der Seitenrahmen, hinter dem Inhalt): kräftige,
      chaotische Kratzer + schweres analoges Korn. Textur/Mischung je Thema
      über --backdrop-* (Creme: dunkel/multiply, Dunkel: hell/normal). Der
@@ -230,7 +230,7 @@ main {
   /* Inhalts-Fläche über --sheet-bg: Creme = saubere Papierfläche; Dunkel =
      dunkler Schleier, durch den der Flyer-Collage-Hintergrund gedimmt scheint.
      Text sitzt auf den dunklen Karten/Abschnitten (starker Kontrast). */
-  background: #000;
+  background: var(--sheet-bg, var(--flaeche));
 }
 
 /* Einstiegs-Übergang: die Blöcke der Ansicht gleiten gestaffelt herein — nur
@@ -1800,9 +1800,12 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
    damit das Papier „aufliegt". Die feine Körnung der Inhalts-Fläche (main) trägt
    den analogen Eindruck; die Kratzer liegen NUR im Hintergrund/Rahmen. */
 .karte, .marke-hero, .pfad-kachel, .station, .baustein-hero, .abschnitt {
-  border: 0;
+  border: 2px solid transparent;
   box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7);
 }
+/* Hover zeigt eine 2px-Kante (Interaktions-Affordanz) — kein Layout-Sprung, da
+   die Kante schon transparent vorhanden ist. */
+.karte:hover, .station:hover, .pfad-kachel:hover, .abschnitt:hover { border-color: var(--primaer); }
 .karte-akzent { border-left: 4px solid var(--primaer); }
 
 /* Leichte Schräglage (aufgeklebter Schnipsel) — bewusst minimal, wechselnd.
@@ -3023,3 +3026,21 @@ button.menue-punkt { width: 100%; background: none; border: 0; font-family: inhe
 /* CC-Lizenzlink in der Footer-Schlusszeile. */
 .footer-schluss a { color: var(--primaer); text-decoration: none; }
 .footer-schluss a:hover, .footer-schluss a:focus-visible { text-decoration: underline; }
+
+
+/* ===== Hintergründe je Thema: reines Schwarz (dunkel) / reines Weiß (hell),
+   ohne Grain-Textur. Dunkel wird über höhere Spezifität/Reihenfolge erzwungen. ===== */
+body { background-image: none; }
+:root, :root[data-theme='hell'] {
+  --hintergrund: #ffffff; --hintergrund-2: #ffffff;
+  --flaeche: #ffffff; --flaeche-2: #f4f4f4;
+  --sheet-bg: #ffffff; --backdrop-image: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) { --hintergrund: #000000; --flaeche-2: #0d0d0d; --sheet-bg: #000000; --backdrop-image: none; }
+}
+:root[data-theme='dunkel'] { --hintergrund: #000000; --flaeche-2: #0d0d0d; --sheet-bg: #000000; --backdrop-image: none; }
+
+/* Genre-Übersicht als Raster statt Liste. */
+.genre-gitter { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 0.8rem; margin: 0 0 1.4rem; }
+.genre-gitter .genre-karte { margin: 0; }
