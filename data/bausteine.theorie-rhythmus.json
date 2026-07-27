@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "theorie-rhythmus",
+    "hinweis": "Theorie-Zweig, Strang 4 (Rhythmus und Metrum): Puls, Metrum und Takt, Groove und Synkope, wandernde Akzente, ungerade Metren als Gruppierung, Verzahnung Gitarre/Drums, gefühltes Tempo über die Unterteilung. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "puls_und_metrum",
+      "anzeigetitel": {
+        "de": "Puls, Metrum, Taktart"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Drei Begriffe werden oft verwechselt, obwohl sie verschiedene Dinge meinen. Der Puls ist der gleichmäßige Schlag, zu dem man mit dem Fuß mitwippt — er ist das Fundament und läuft durch, ob gespielt wird oder nicht. Das Metrum ist die Gruppierung dieser Schläge zu wiederkehrenden Einheiten, meist in Vierer- oder Dreiergruppen. Die Taktart ist nur die Schreibweise dafür.\n\nEntscheidend fürs Hören ist, dass das Metrum durch Betonung entsteht, nicht durch Zählen. Man erkennt eine Vierergruppe daran, dass der erste Schlag schwerer wirkt als die übrigen — nicht daran, dass jemand bis vier zählt. Deshalb kann man auch dann im Metrum bleiben, wenn nichts gespielt wird: Der Puls läuft innerlich weiter, und der Einsatz landet auf der richtigen Stelle.\n\nDaraus folgt eine praktische Einsicht: Wer den Puls verliert, verliert das Stück, auch wenn alle Töne stimmen. Wer den Puls hält, kann fast alles darüber legen — verschobene Betonungen, Pausen, ungewöhnliche Gruppen — und bleibt verständlich. Der Puls ist das, wogegen alles andere hörbar wird."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kannst du den Puls halten, während du nichts spielst? Erkennst du das Metrum an der Betonung, statt mitzuzählen? Und merkst du, wenn du bei komplizierten Stellen anfängst zu rechnen statt zu fühlen?"
+      },
+      "voraussetzungen": [
+        "energie_tempo_dichte"
+      ]
+    },
+    {
+      "id": "groove_und_synkope",
+      "anzeigetitel": {
+        "de": "Groove und Synkope"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Groove entsteht aus dem Verhältnis zwischen dem, was das Ohr erwartet, und dem, was tatsächlich passiert. Liegt jeder Anschlag genau auf der erwarteten Stelle, klingt es korrekt, aber leblos. Verschiebt man Betonungen gezielt auf unerwartete Punkte — meist auf die Zwischenschläge — entsteht Zug: Das Ohr wird ein Stück weit vorwärtsgezogen, weil es die Auflösung auf dem nächsten schweren Schlag erwartet.\n\nGenau das ist eine Synkope: eine Betonung dort, wo eigentlich keine hingehört. Sie funktioniert aber nur, solange der Puls klar bleibt. Ohne diesen Bezugspunkt hört man keine Verschiebung, sondern nur Unordnung — dasselbe Prinzip wie bei Dissonanz und Chromatik: Die Abweichung braucht etwas, wovon sie abweicht.\n\nIn harter Musik ist das ein zentrales Mittel. Viele Breakdowns bestehen aus verschobenen Akzenten über einem stur durchlaufenden Puls im Schlagzeug; die Wucht entsteht nicht aus Tempo, sondern aus dieser Reibung zwischen Erwartung und Ereignis. Wer will, dass ein Riff zieht statt nur schnell zu sein, arbeitet hier — nicht am Metronom."
+      },
+      "reflexionsaufgabe": {
+        "de": "Liegen deine Betonungen alle auf den erwarteten Stellen? Bleibt bei deinen Verschiebungen der Puls für Zuhörende erkennbar? Und suchst du Zug über Akzente oder nur über mehr Tempo?"
+      },
+      "voraussetzungen": [
+        "puls_und_metrum",
+        "betonung_und_luecke"
+      ]
+    },
+    {
+      "id": "akzente_verschieben",
+      "anzeigetitel": {
+        "de": "Akzente verschieben"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Diese Übung macht den Unterschied zwischen korrekt und lebendig unmittelbar hörbar. Man spielt ein gleichbleibendes Muster — etwa durchgehende Achtel — und ändert nichts als die Betonung. Die Töne bleiben, das Tempo bleibt, nur der Schwerpunkt wandert.\n\nDer Effekt ist größer, als man erwartet: Dieselbe Tonfolge kann treibend, stolpernd oder schwer wirken, je nachdem, wo die Akzente sitzen. Das ist die günstigste Art, ein Riff zu verändern — sie kostet keine neuen Töne und keine neue Technik.\n\nWichtig ist, den Klick durchlaufen zu lassen. Er ist der Bezugspunkt, gegen den die Verschiebung überhaupt erst hörbar wird. Wer den Klick abschaltet, weil die Akzente nicht dazu passen, hat den Sinn der Übung verloren."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gleiches Muster, wandernder Akzent",
+          "ziel": "Hören, wie Betonung allein den Charakter einer Figur verändert.",
+          "schritte": [
+            "Stelle einen Klick auf ein bequemes Tempo und spiele durchgehende Achtel auf einem Ton.",
+            "Betone zunächst nur den ersten Schlag jeder Vierergruppe.",
+            "Verschiebe die Betonung auf den zweiten, dann auf den dritten und vierten Schlag.",
+            "Betone anschließend nur die Zwischenschläge und höre den Zug, der entsteht.",
+            "Nimm zwei Fassungen auf und beschreibe den Unterschied in eigenen Worten."
+          ],
+          "steigerung": "Lege die Akzentfolge über zwei Takte, sodass sie sich erst nach acht Schlägen wiederholt.",
+          "selbstkontrolle": "Bleibt der Puls beim Verschieben stabil? Kannst du benennen, wie sich der Charakter ändert?"
+        }
+      },
+      "voraussetzungen": [
+        "groove_und_synkope"
+      ]
+    },
+    {
+      "id": "ungerade_metren",
+      "anzeigetitel": {
+        "de": "Ungerade Metren verstehen"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ungerade Metren wie Fünf oder Sieben wirken kompliziert, sind es aber nicht — sie sind Kombinationen aus Zweier- und Dreiergruppen. Sieben Achtel sind je nach Aufteilung zwei plus zwei plus drei oder drei plus zwei plus zwei; fünf sind zwei plus drei oder drei plus zwei. Die Gruppierung entscheidet über das Gefühl, nicht die Zahl.\n\nDeshalb ist Zählen der schlechteste Zugang. Zählen ist eine bewusste Tätigkeit und bricht bei Tempo zusammen; Gruppen dagegen erkennt man als rhythmische Gestalten wieder, so wie man Wörter erkennt, ohne Buchstaben zu zählen. Wer eine Siebenergruppe als kurz-kurz-lang fühlt, kann sie schnell spielen; wer bis sieben zählt, kann es nicht.\n\nDaraus ergibt sich der praktische Weg: die Gruppen laut mitsprechen, zunächst nur einen Schlag pro Gruppenanfang spielen und den Klick auf die Gruppenanfänge legen statt auf jede Zählzeit. Erst wenn die Kette von selbst läuft, kommt das Riff darüber. Ungerade Metren sind kein Rechenproblem, sondern ein Wiedererkennungsproblem."
+      },
+      "reflexionsaufgabe": {
+        "de": "Fühlst du ungerade Metren als Gruppen oder zählst du mit? Sprichst du die Gruppen mit, bevor du spielst? Und legst du den Klick auf die Gruppenanfänge, statt gegen jede Zählzeit anzukämpfen?"
+      },
+      "voraussetzungen": [
+        "puls_und_metrum"
+      ]
+    },
+    {
+      "id": "verzahnung_gitarre_drums",
+      "anzeigetitel": {
+        "de": "Wie Gitarre und Schlagzeug sich verzahnen"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "In dieser Musik entsteht Wucht selten aus einem Instrument allein, sondern aus dem Verhältnis zweier Ebenen. Die Bassdrum und die abgedämpften tiefen Anschläge der Gitarre treffen dieselbe Frequenzregion und denselben rhythmischen Raum — liegen sie exakt aufeinander, verschmelzen sie zu einem Schlag von großer Wucht; liegen sie leicht versetzt, entsteht Unschärfe, die als schlampig gehört wird.\n\nDeshalb gilt für schwere Parts eine einfache Regel: Die tiefen Gitarrenanschläge und die Bassdrum sollten dieselben Stellen treffen. Genau das macht einen Breakdown wuchtig — nicht die Tiefe der Stimmung. Umgekehrt kann man mit bewusstem Versatz arbeiten, etwa wenn die Gitarre synkopiert und die Bassdrum stur den Puls hält; dann darf der Versatz aber nicht zufällig sein, sondern muss gesetzt und beidseitig bekannt sein.\n\nDie Snare hat eine andere Rolle: Sie markiert das Metrum und gibt dem Ohr Halt. Wenn Gitarre und Bassdrum sich zusammen bewegen und die Snare den Rahmen hält, entsteht der typische Zug harter Musik. Wer im Proberaum das Gefühl hat, es klinge matschig, obwohl alle richtig spielen, sollte zuerst diese Verzahnung prüfen — meist liegt es dort und nicht an der Ausrüstung."
+      },
+      "reflexionsaufgabe": {
+        "de": "Treffen deine tiefen Anschläge dieselben Stellen wie die Bassdrum? Ist ein Versatz bei euch gesetzt und beiden bekannt, oder passiert er zufällig? Und prüft ihr bei Matsch zuerst die Verzahnung, bevor ihr an den Verstärkern dreht?"
+      },
+      "voraussetzungen": [
+        "groove_und_synkope"
+      ]
+    },
+    {
+      "id": "tempo_gefuehl_bauen",
+      "anzeigetitel": {
+        "de": "Tempo-Gefühl statt Tempo-Zahl"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre",
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein verbreiteter Irrtum ist, Intensität über die Tempozahl zu suchen. Tatsächlich hängt die gefühlte Geschwindigkeit stärker davon ab, wie dicht innerhalb des Pulses gespielt wird — dieselbe Zahl auf dem Metronom kann gemächlich oder rasend wirken, je nachdem, ob Viertel, Achtel oder Sechzehntel laufen.\n\nDiese Übung macht das erfahrbar, indem das Tempo konstant bleibt und nur die Unterteilung wechselt. Das Ergebnis überrascht die meisten: Der Wechsel von Achteln zu Sechzehnteln wirkt wie eine Verdopplung der Geschwindigkeit, obwohl sich am Puls nichts geändert hat. Umgekehrt lässt sich mit halbierter Unterteilung ein Teil massiv verlangsamen, ohne das Tempo anzufassen — das Prinzip hinter Half-Time-Parts.\n\nWer das beherrscht, kann Energie steuern, ohne die Band umzustellen: Ein Stück kann durchgehend im selben Tempo laufen und trotzdem zwischen schleppend und rasend wechseln."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Dichte statt Tempo",
+          "ziel": "Gefühlte Geschwindigkeit über die Unterteilung steuern, nicht über die Tempozahl.",
+          "schritte": [
+            "Stelle einen Klick auf ein mittleres Tempo und spiele zunächst nur Viertel auf einem Ton.",
+            "Wechsle auf Achtel, ohne den Klick zu verändern, und achte auf die gefühlte Beschleunigung.",
+            "Wechsle auf Sechzehntel und dann zurück auf Viertel.",
+            "Baue eine Figur, die alle acht Takte die Unterteilung wechselt, bei gleichbleibendem Tempo.",
+            "Nimm auf und prüfe, ob die Wechsel als Tempowechsel gehört werden, obwohl keiner stattfand."
+          ],
+          "steigerung": "Kombiniere den Unterteilungswechsel mit einem Registerwechsel, um den Effekt zu verstärken.",
+          "selbstkontrolle": "Bleibt der Puls bei allen Unterteilungen stabil? Klingen die Abschnitte unterschiedlich schnell, obwohl das Tempo gleich ist?"
+        }
+      },
+      "voraussetzungen": [
+        "puls_und_metrum",
+        "energie_tempo_dichte"
+      ]
+    }
+  ]
+}
