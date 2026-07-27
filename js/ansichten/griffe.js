@@ -67,6 +67,10 @@ function griffKarte(gr) {
     </article>`;
 }
 
+// Anzeigereihenfolge der Kategorien; die Überschrift kommt aus den Labels
+// (t('griffe_kat_<key>')). Griffe ohne bekannte Kategorie landen unter „sonstige".
+const KATEGORIEN = ['powerchord', 'barre', 'oktave', 'offen'];
+
 export function renderGriffe(el, daten) {
   const g = daten.griffe || {};
   const griffe = g.griffe || [];
@@ -74,10 +78,27 @@ export function renderGriffe(el, daten) {
     el.innerHTML = `<article><p class="leise">${esc(t('griffe_leer'))}</p></article>`;
     return;
   }
+  // Nach Kategorie gruppieren (Reihenfolge = KATEGORIEN, Unbekanntes ans Ende).
+  const reihenfolge = [...KATEGORIEN];
+  for (const gr of griffe) {
+    const k = gr.kategorie || 'sonstige';
+    if (!reihenfolge.includes(k)) reihenfolge.push(k);
+  }
+  const gruppen = reihenfolge
+    .map((k) => {
+      const eintraege = griffe.filter((gr) => (gr.kategorie || 'sonstige') === k);
+      if (eintraege.length === 0) return '';
+      return `
+        <section class="griff-gruppe">
+          <h2 class="griff-gruppe-titel">${esc(t('griffe_kat_' + k))}</h2>
+          <div class="griff-gitter">${eintraege.map(griffKarte).join('')}</div>
+        </section>`;
+    })
+    .join('');
   el.innerHTML = `
     <article class="griffe-seite">
       ${landingHeroHtml('', t('griffe_titel'), t('griffe_untertitel'), 'pf-magenta', 'griffe', '', domaeneIcon('gitarre'))}
       ${g.hinweis ? `<p class="griffe-hinweis leise">${esc(g.hinweis)}</p>` : ''}
-      <div class="griff-gitter">${griffe.map(griffKarte).join('')}</div>
+      ${gruppen}
     </article>`;
 }
