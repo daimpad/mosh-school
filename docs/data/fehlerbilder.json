@@ -3872,6 +3872,456 @@
           "korrektur": "Diese Fragen früh und ausdrücklich stellen, solange sie unbelastet sind, und die Antworten aufschreiben. Als Anleitung genügt eine gemeinsame Notiz. Sobald echtes Geld, Verträge oder eingetragene Namen im Spiel sind, gehört rechtliche Beratung dazu — das ist nicht Aufgabe der Lehrkraft."
         }
       }
+    },
+    {
+      "id": "fb_wirkung_geschmackssache",
+      "typ": "fehlerbild",
+      "basis_baustein": "warum_toene_wirken",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Auf die Frage, warum ein Riff bedrohlich klingt, kommt nur „klingt halt so“ oder „ist Geschmackssache“. Die Person kann Wirkung beschreiben, aber nicht auf eine Ursache zurückführen — und übernimmt deshalb beim eigenen Schreiben, was sie kennt, statt gezielt zu wählen.",
+          "ursache": "Der Zusammenhang zwischen Tonabstand und Wirkung wurde gelesen und abgehakt, aber nie am eigenen Instrument überprüft. Solange die Reibung nicht gehört wurde, bleibt sie eine Behauptung aus einem Text.",
+          "korrektur": "Zwei Zusammenklänge direkt hintereinander spielen lassen — Quinte und kleine Sekunde über demselben Grundton — und nach dem Unterschied fragen, bevor irgendein Begriff fällt. Erst wenn die Person den Unterschied in eigenen Worten benennt, den Namen und die Erklärung dazugeben. Die Reihenfolge ist entscheidend: hören, benennen, erklären."
+        }
+      }
+    },
+    {
+      "id": "fb_intervalle_gerechnet",
+      "typ": "fehlerbild",
+      "basis_baustein": "intervalle_hoeren",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Vor jeder Antwort wandert der Blick aufs Griffbrett und die Bünde werden abgezählt. Ohne Sicht aufs Instrument gelingt keine Zuordnung, und im Tempo bricht die Zuordnung ganz weg.",
+          "ursache": "Die Übung wurde als Rechenaufgabe verstanden. Der Abstand in Bünden ist aber nur die Eselsbrücke zum Klang, nicht das Lernziel — gebraucht wird das Wiedererkennen, nicht das Ausrechnen.",
+          "korrektur": "Auf drei Intervalle eingrenzen, die maximal verschieden klingen: kleine Sekunde, Quinte, Oktave. Abgewandt spielen, damit nichts abgezählt werden kann, und nur raten lassen. Erst wenn diese drei sicher sitzen, ein viertes dazunehmen. Die Bundzahl bleibt Kontrolle im Nachhinein, nie Weg zur Antwort."
+        }
+      }
+    },
+    {
+      "id": "fb_spannung_gleich_lautstaerke",
+      "typ": "fehlerbild",
+      "basis_baustein": "spannung_und_aufloesung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Soll ein Teil gespannter wirken, wird lauter und verzerrter gespielt. Die Frage, wo im Riff die Spannung entsteht und wo sie sich löst, kann die Person nicht beantworten — obwohl sie das Riff selbst geschrieben hat.",
+          "ursache": "Spannung wird als Intensität missverstanden statt als Erwartung. Damit fehlt der Zugriff auf das eigentliche Mittel: den Zusammenklang, der etwas offen lässt, und den, der es schließt.",
+          "korrektur": "Ein zweitaktiges Riff so bauen lassen, dass es auf einem gespannten Klang stehen bleibt, und es zweimal spielen: einmal mit Auflösung am Ende, einmal ohne. Beide Male gleich laut. Die Person soll benennen, welche Version sie weiterspielen will — und warum. Erst danach über Dynamik reden."
+        }
+      }
+    },
+    {
+      "id": "fb_energie_nur_tempo",
+      "typ": "fehlerbild",
+      "basis_baustein": "energie_tempo_dichte",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Wirkt ein Teil zu zahm, wird zuerst und meist ausschließlich das Tempo erhöht. Das Ergebnis klingt hektisch statt wuchtig, und die Band kommt an ihre Grenze, ohne dass der Teil gewinnt.",
+          "ursache": "Tempo, Dichte und Register werden als eine einzige Größe behandelt. Dabei sind es drei unabhängige Regler — und der wirksamste ist selten das Tempo.",
+          "korrektur": "Das Metronom festnageln und nur die Unterteilung ändern lassen: Viertel, dann Achtel, dann Sechzehntel bei identischer Zahl. Danach dasselbe Riff eine Oktave tiefer. Die Person führt Protokoll, welcher der drei Eingriffe am meisten gebracht hat. Fast immer ist es nicht das Tempo — und genau das ist die Lernerfahrung."
+        }
+      }
+    },
+    {
+      "id": "fb_dissonanz_ohne_bezug",
+      "typ": "fehlerbild",
+      "basis_baustein": "dissonanz_gezielt",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Riff ist voller dissonanter Töne, klingt aber nicht bedrohlich, sondern ungeordnet — als wäre es verspielt. Auf Nachfrage kann die Person nicht sagen, wogegen die Reibung entsteht.",
+          "ursache": "Es fehlt der gehaltene Ton, gegen den gerieben wird. Dissonanz braucht einen Bezugspunkt; ohne ihn hört das Ohr keine Spannung, sondern nur Unklarheit.",
+          "korrektur": "Die tiefe leere Saite als Bordun mitlaufen lassen und darüber genau einen dissonanten Ton setzen — nicht mehr. Halten lassen, bis die Reibung deutlich hörbar ist, dann bewusst auflösen. Erst wenn ein einzelner Reibton wirkt, einen zweiten erlauben. Die Regel dahinter laut aussprechen: Reibung braucht etwas, woran sie reibt."
+        }
+      }
+    },
+    {
+      "id": "fb_dauerspannung",
+      "typ": "fehlerbild",
+      "basis_baustein": "konsonanz_als_kontrast",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Stück ist von vorn bis hinten dissonant und laut. Nach einer halben Minute wirkt es nicht mehr bedrohlich, sondern gleichgültig — Hörer steigen aus, obwohl jedes einzelne Riff für sich funktioniert.",
+          "ursache": "Die ruhigen Punkte wurden nicht geplant, weil sie als Schwäche gelten. Dabei entsteht die Wirkung der Dissonanz erst aus dem Abstand zur Konsonanz, gegen die sie steht.",
+          "korrektur": "Im bestehenden Stück eine einzige Stelle suchen lassen, an der etwas weggenommen werden kann — ein offener Powerchord, ein Takt Stille, ein cleaner Ton. Diese eine Änderung einbauen und das Stück erneut hören. Nicht diskutieren, sondern vergleichen lassen. Der Effekt ist meist so deutlich, dass das Argument sich erübrigt."
+        }
+      }
+    },
+    {
+      "id": "fb_riff_ohne_gestalt",
+      "typ": "fehlerbild",
+      "basis_baustein": "was_ist_ein_riff",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Figur wandert lang über das Griffbrett, ohne wiederzukehren. Bittet man die Person, das Riff ohne Instrument zu klopfen oder zu summen, gelingt es ihr selbst nicht.",
+          "ursache": "Es wurde eine Abfolge von Tönen gebaut, keine Gestalt. Was ein Riff zum Riff macht — ein auffälliger Anfang, eine gerichtete Bewegung, ein erkennbarer Schluss und Kürze — ist nicht gesetzt worden.",
+          "korrektur": "Der Nachklopf-Test als Regel einführen: Was du nicht ohne Instrument wiedergeben kannst, ist noch kein Riff. Die Figur auf einen Takt kürzen und diesen zweimal spielen lassen. Meist entsteht die Gestalt genau in dem Moment, in dem gekürzt und wiederholt wird."
+        }
+      }
+    },
+    {
+      "id": "fb_beides_gleichzeitig",
+      "typ": "fehlerbild",
+      "basis_baustein": "rhythmus_vor_tonhoehe",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Beim Schreiben wird gleichzeitig an Tonhöhen und Rhythmus gefeilt. Das Ergebnis ist weder rhythmisch klar noch melodisch — und die Person verheddert sich, verwirft und fängt von vorn an.",
+          "ursache": "Zwei Entscheidungen werden parallel getroffen, die sich gegenseitig stören. Der Rhythmus trägt die Wiedererkennung, muss also zuerst stehen.",
+          "korrektur": "Die Trennung erzwingen: Nur ein einziger Ton ist erlaubt, bis das rhythmische Muster überzeugt und ohne Instrument klopfbar ist. Erst danach dürfen Tonhöhen verteilt werden. Trägt das Muster auf einem Ton nicht, wird es auch mit Melodie nicht tragen — dann früh verwerfen statt lange retten."
+        }
+      }
+    },
+    {
+      "id": "fb_variation_zu_gross",
+      "typ": "fehlerbild",
+      "basis_baustein": "motiv_und_wiederholung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Variation klingt wie ein zweites, neues Riff. Der Zusammenhang zum Ausgangsmotiv ist weg, und das Stück zerfällt in unverbundene Einfälle statt sich zu entwickeln.",
+          "ursache": "Es wurden mehrere Elemente gleichzeitig geändert — Rhythmus, Tonhöhen und Länge. Gezielt wirkt eine Variation aber nur, wenn bei sonst gleichem Motiv wenig verändert wird.",
+          "korrektur": "Eine harte Grenze setzen: pro Variation genau ein verändertes Element. Die Person muss vor dem Spielen ansagen, welches — Ton, Rhythmus, Länge oder Dynamik. Drei Varianten desselben Motivs nach dieser Regel bauen lassen und anschließend prüfen, ob das Ausgangsmotiv noch erkennbar ist."
+        }
+      }
+    },
+    {
+      "id": "fb_keine_luecken",
+      "typ": "fehlerbild",
+      "basis_baustein": "betonung_und_luecke",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Durchgehende Achtel ohne jede Kontur: kein Schlag ist wichtiger als der andere, keine Pause unterbricht. Das Riff hat Tempo, aber keinen Zug, und ermüdet nach wenigen Takten.",
+          "ursache": "Betonung und Pause werden als Lücken im Material gesehen statt als Mittel. Solange jeder Anschlag gleich behandelt wird, kann keine Erwartung entstehen — und ohne Erwartung kein Groove.",
+          "korrektur": "Aus dem bestehenden Muster zwei Anschläge streichen lassen, ohne sonst etwas zu ändern, und zwei weitere deutlich betonen. Nichts hinzufügen. Beide Versionen direkt vergleichen. Danach die Frage stellen, die den Baustein trägt: Wo lässt du weg, damit der nächste Schlag zählt?"
+        }
+      }
+    },
+    {
+      "id": "fb_beschraenkung_aufgeweicht",
+      "typ": "fehlerbild",
+      "basis_baustein": "riff_aus_beschraenkung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Aus den vorgegebenen drei Tönen werden im Lauf der Übung fünf, aus einem Takt werden zwei. Das Ergebnis ähnelt wieder dem, was die Person ohnehin immer spielt.",
+          "ursache": "Die Enge wird als Hindernis erlebt, nicht als Werkzeug. Genau sie sollte aber Entscheidungen erzwingen — wird sie aufgeweicht, greift die Gewohnheit sofort zurück.",
+          "korrektur": "Die Grenze sichtbar machen: die drei erlaubten Töne aufschreiben oder markieren, alles andere ist gesperrt. Wird es eng, ist nicht ein vierter Ton die Lösung, sondern eine Änderung an Rhythmus, Betonung oder Lücke. Erst nach einem fertigen Ergebnis darf erweitert werden — und dann bewusst, nicht nebenbei."
+        }
+      }
+    },
+    {
+      "id": "fb_riff_sofort_bewertet",
+      "typ": "fehlerbild",
+      "basis_baustein": "riff_bewerten",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Direkt nach dem Finden gilt das Riff als stark; am nächsten Tag trägt es nicht mehr. Umgekehrt werden brauchbare Ideen sofort verworfen. Beim Überarbeiten wird ergänzt statt weggelassen.",
+          "ursache": "Bewertet wird im Moment der größten Begeisterung, wenn das Urteil am unzuverlässigsten ist. Und Überarbeiten wird als Hinzufügen verstanden, obwohl die stärkste Version meist die reduzierte ist.",
+          "korrektur": "Zwei Regeln einführen. Erstens Abstand: aufnehmen und frühestens am nächsten Tag beurteilen — die Aufnahme entscheidet, nicht die Erinnerung. Zweitens Wegnahme zuerst: Bei jeder Überarbeitung wird zunächst gestrichen, nicht ergänzt. Lässt sich ein Riff nur durch Hinzufügen retten, ist meist die Gestalt das Problem."
+        }
+      }
+    },
+    {
+      "id": "fb_matsch_als_gear_problem",
+      "typ": "fehlerbild",
+      "basis_baustein": "warum_powerchords",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Volle Dur- oder Moll-Akkorde bei hoher Zerre klingen breiig. Gesucht wird die Ursache im Verstärker, im Pedal oder in der Box — neue Ausrüstung soll das Problem lösen.",
+          "ursache": "Die Terz im Akkord erzeugt unter starker Verzerrung zusätzliche Reibungstöne. Das ist ein Harmonik-Problem, kein Ausrüstungsproblem; kein Gerät kann es beheben.",
+          "korrektur": "Denselben Akkord dreimal hintereinander spielen lassen: voll, dann ohne Terz, dann nur Grundton und Quinte — bei identischer Einstellung. Der Unterschied ist sofort hörbar und beendet die Gear-Suche. Danach zeigen, wann volle Akkorde trotzdem passen: clean oder leicht angezerrt."
+        }
+      }
+    },
+    {
+      "id": "fb_skalenname_statt_ton",
+      "typ": "fehlerbild",
+      "basis_baustein": "modale_faerbung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Skalennamen werden auswendig aufgesagt, aber der klangliche Unterschied wird nicht gehört. Auf die Frage, welcher Ton eine Färbung ausmacht, folgt der Name der Tonleiter statt eines Tons.",
+          "ursache": "Gelernt wurde ein Vokabular, kein Zusammenhang. Der Baustein zielt aber genau umgekehrt: nicht die Skala benennen, sondern den einen Ton finden, der den Charakter trägt.",
+          "korrektur": "Eine kurze Figur zweimal spielen lassen, die sich in genau einem Ton unterscheidet, und nur nach dem Unterschied im Charakter fragen — Namen sind für den Moment verboten. Erst wenn die Person den wirksamen Ton zeigen kann, den Namen als Etikett nachliefern. Namen sind Ablage, nicht Werkzeug."
+        }
+      }
+    },
+    {
+      "id": "fb_sucht_richtige_skala",
+      "typ": "fehlerbild",
+      "basis_baustein": "einen_ton_veraendern",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Statt zu verschieben und zu hören, fragt die Person nach der richtigen Skala für das Genre und wartet auf eine Antwort, bevor sie spielt. Die Übung wird abgebrochen, sobald das Ergebnis „falsch“ klingt.",
+          "ursache": "Die Übung wird als Aufgabe mit Lösung missverstanden. Sie ist bewusst ergebnisoffen — der Ertrag liegt im gehörten Zusammenhang zwischen einem Ton und der Gesamtwirkung, nicht in einem korrekten Ergebnis.",
+          "korrektur": "Die Frage zurückgeben: Was hat sich verändert, als du den Ton bewegt hast? Ausdrücklich sagen, dass es keine richtige Version gibt, und beide Varianten notieren lassen — die gemochte und die abgelehnte, jeweils mit einem Wort zur Wirkung. „Klingt falsch“ ist ein brauchbares Ergebnis und wird als solches gewürdigt."
+        }
+      }
+    },
+    {
+      "id": "fb_chromatik_ohne_ziel",
+      "typ": "fehlerbild",
+      "basis_baustein": "chromatik_und_bewegung",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Halbtonschritte durchziehen das ganze Riff. Es klingt zunächst unheimlich, wirkt aber schnell beliebig — nichts sticht mehr heraus, weil alles rutscht.",
+          "ursache": "Chromatik wurde als Klangfarbe eingesetzt statt als Bewegung. Ohne festen Punkt, von dem sie ausgeht oder auf den sie zuläuft, verliert sie ihren Effekt.",
+          "korrektur": "Ein Ziel setzen lassen: Der chromatische Lauf muss auf einem Powerchord landen, der gehalten wird. Danach denselben Lauf ohne Ziel spielen und vergleichen. Als Faustregel mitgeben — Chromatik ist ein Weg, kein Zustand. Wo alles chromatisch ist, wirkt nichts mehr chromatisch."
+        }
+      }
+    },
+    {
+      "id": "fb_bordun_abgedaempft",
+      "typ": "fehlerbild",
+      "basis_baustein": "bordun_und_liegende_toene",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die tiefe leere Saite ist zwar Teil des Riffs, verstummt aber zwischen den Anschlägen — der Handballen dämpft sie mit ab. Der Effekt bleibt aus: Das Riff klingt dünn, obwohl alle Töne stimmen.",
+          "ursache": "Die Dämpfungsgewohnheit aus dem Palm Muting läuft weiter, während der Bordun gerade klingen soll. Der durchgehende Ton ist aber der ganze Punkt der Konstruktion.",
+          "korrektur": "Zuerst nur die leere Saite anschlagen und wirklich ausklingen lassen — Handballen bewusst abheben. Dann eine einzelne gegriffene Bewegung darüberlegen, ohne dass die leere Saite abbricht. Kontrolle: Klingt der tiefe Ton noch, wenn die Greifhand sich bewegt? Erst dann das vollständige Riff."
+        }
+      }
+    },
+    {
+      "id": "fb_wirkung_hinterher_erklaert",
+      "typ": "fehlerbild",
+      "basis_baustein": "harmonik_riff_bauen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Gebaut wird wie immer nach Gefühl, die harmonische Begründung folgt danach als Rechtfertigung. Auf die Bitte, gezielt ein bedrohliches und danach ein getragenes Riff zu bauen, entsteht zweimal ungefähr dasselbe.",
+          "ursache": "Die Reihenfolge der Übung wurde umgedreht. Legt man die Wirkung nicht vorher fest, bleibt das Ergebnis ein Zufallsfund und ist nicht wiederholbar.",
+          "korrektur": "Die Absicht schriftlich vorwegnehmen lassen: ein Wort zur Wirkung und das gewählte Mittel — Bordun, chromatischer Anlauf, gesenkte zweite Stufe. Erst dann darf gespielt werden. Anschließend prüfen, ob das Gehörte zur Ansage passt. Trifft es nicht, ist das kein Scheitern, sondern die eigentliche Information."
+        }
+      }
+    },
+    {
+      "id": "fb_zaehlen_statt_fuehlen",
+      "typ": "fehlerbild",
+      "basis_baustein": "puls_und_metrum",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Es wird durchgehend laut mitgezählt. Sobald Synkopen oder Pausen dazukommen, bricht die Zählung ab und das Riff kippt — obwohl alle Töne sitzen.",
+          "ursache": "Der Puls wird aus dem Zählen abgeleitet statt aus der Bewegung. Zählen ist eine Hilfskonstruktion, die bei jeder Verschiebung mitgestört wird; der Puls muss unabhängig weiterlaufen.",
+          "korrektur": "Den Puls in den Körper verlegen: Fuß oder Nicken laufen durch, das Zählen wird abgestellt. Erst nur auf jeden Gruppenanfang spielen lassen, während der Fuß alles trägt. Wenn der Fuß bei einer Synkope stehen bleibt, war der Puls nie unabhängig — dann zurück auf ein einfacheres Muster."
+        }
+      }
+    },
+    {
+      "id": "fb_synkope_ohne_puls",
+      "typ": "fehlerbild",
+      "basis_baustein": "groove_und_synkope",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Verschiebungen klingen nicht nach Zug, sondern nach Unordnung. Mitspielende finden nicht hinein, und im Zusammenspiel driftet der Teil auseinander.",
+          "ursache": "Es wurde verschoben, ohne dass ein klarer Bezug durchläuft. Synkope wirkt nur gegen eine Erwartung — fehlt der stabile Puls, hört das Ohr keinen Versatz, sondern einen Fehler.",
+          "korrektur": "Den Bezug wieder hörbar machen: Schlagzeug oder Klick halten stur den geraden Puls, die Gitarre spielt die verschobenen Akzente dagegen. Zuerst nur eine einzige Verschiebung pro Takt. Die Wucht entsteht aus der Reibung zwischen beiden Ebenen — verschwindet eine, verschwindet der Effekt."
+        }
+      }
+    },
+    {
+      "id": "fb_klick_abgeschaltet",
+      "typ": "fehlerbild",
+      "basis_baustein": "akzente_verschieben",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Weil die verschobenen Akzente nicht zum Klick passen, wird er als störend empfunden und ausgeschaltet. Danach klingt die Übung sauber — die Verschiebung ist aber nicht mehr hörbar.",
+          "ursache": "Der Klick wird als Bewertung missverstanden statt als Bezugspunkt. Gerade dass die Akzente nicht auf ihm liegen, ist der Inhalt der Übung.",
+          "korrektur": "Den Klick wieder einschalten und seine Rolle ausdrücklich neu erklären: Er ist das Gitter, gegen das die Verschiebung erst sichtbar wird, kein Prüfer. Zurück auf durchgehende Achtel mit genau einem verschobenen Akzent, bis das Nebeneinander aushaltbar ist. Erst dann weitere Akzente."
+        }
+      }
+    },
+    {
+      "id": "fb_ungerade_gerechnet",
+      "typ": "fehlerbild",
+      "basis_baustein": "ungerade_metren",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Sieben Achtel werden einzeln durchgezählt. Bei langsamem Tempo funktioniert das, im Stücktempo bricht es zusammen — und der Einstieg nach einer Pause gelingt nicht.",
+          "ursache": "Das Metrum wird als Rechenaufgabe behandelt statt als Gruppierung. Ungerade Metren sind aber Kombinationen aus Zweier- und Dreiergruppen; wiedererkannt wird die Kette der Gruppen, nicht die Zahl.",
+          "korrektur": "Die Aufteilung festlegen und laut mitsprechen lassen — etwa „zwei-zwei-drei“ statt bis sieben zu zählen. Zunächst nur einen Schlag pro Gruppenanfang spielen, den Klick auf die Gruppenanfänge legen statt auf jede Zählzeit. Erst wenn die Kette von selbst läuft, das vollständige Muster füllen."
+        }
+      }
+    },
+    {
+      "id": "fb_matsch_am_mischpult",
+      "typ": "fehlerbild",
+      "basis_baustein": "verzahnung_gitarre_drums",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Im Proberaum ist der tiefe Bereich eine undeutliche Masse. Gedreht wird am EQ, an Gain und Lautstärke — der Ansatz, das Timing zwischen Bassdrum und tiefen Gitarrenanschlägen zu prüfen, kommt gar nicht auf.",
+          "ursache": "Bassdrum und abgedämpfte tiefe Anschläge belegen denselben Frequenz- und Rhythmusraum. Liegen sie leicht versetzt, verschmieren sie — das ist ein Timing-Problem, das kein Klangregler behebt.",
+          "korrektur": "Alles andere stummschalten und nur Bassdrum plus tiefe Gitarrenanschläge laufen lassen, langsam. Beide sollen als ein einziger Schlag hörbar werden. Erst wenn das steht, kommen Snare und der Rest dazu. Als Reihenfolge festhalten: erst die Verzahnung prüfen, dann den Klang."
+        }
+      }
+    },
+    {
+      "id": "fb_intensitaet_ueber_bpm",
+      "typ": "fehlerbild",
+      "basis_baustein": "tempo_gefuehl_bauen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Soll ein Teil rasender wirken, wird das Metronom hochgedreht. Die Band kommt an ihre Grenze, der Teil verliert an Präzision — und wirkt trotzdem nicht schneller.",
+          "ursache": "Gefühlte Geschwindigkeit wird mit der Tempozahl gleichgesetzt. Sie hängt aber stärker davon ab, wie dicht innerhalb des Pulses gespielt wird.",
+          "korrektur": "Die Tempozahl sperren und nur die Unterteilung wechseln lassen: Viertel, Achtel, Sechzehntel bei identischem Metronomwert. Die Person soll benennen, ab wann es „schnell“ wirkt. Danach der praktische Schluss: Ein Stück kann durchgehend im selben Tempo laufen und trotzdem zwischen schleppend und rasend wechseln."
+        }
+      }
+    },
+    {
+      "id": "fb_teile_ohne_funktion",
+      "typ": "fehlerbild",
+      "basis_baustein": "teile_und_funktion",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Stück besteht aus Teilen, die einzeln überzeugen, trägt aber nicht. Schreibt man die Funktionen auf, steht zweimal hintereinander dasselbe Wort — oder ein Teil bekommt gar keins.",
+          "ursache": "Die Teile wurden nach Qualität ausgewählt, nicht nach Aufgabe. Ein Teil, der weder aufbaut noch löst noch kontrastiert, ist überflüssig, egal wie gut das Riff für sich ist.",
+          "korrektur": "Das Prüfverfahren aus dem Baustein anwenden: Teile in ihrer Reihenfolge notieren und zu jedem in genau einem Wort festhalten, was er leisten soll. Wiederholt sich ein Wort direkt, muss einer der beiden Teile weichen oder anders gestaltet werden. Über die Liste entscheiden, nicht über die Riffs — sie ist die eigentliche Songform."
+        }
+      }
+    },
+    {
+      "id": "fb_flache_linie",
+      "typ": "fehlerbild",
+      "basis_baustein": "spannungsbogen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Von Anfang bis Ende läuft alles auf voller Intensität. Das Stück fühlt sich zäh und lang an, obwohl es kurz ist, und niemand kann sagen, wo der Höhepunkt liegt.",
+          "ursache": "Es wurde auf Pegel gearbeitet statt auf Verlauf. Bleibt das Maximum durchgehend, wird es zur neuen Normalität — und damit wirkungslos.",
+          "korrektur": "Den Energieverlauf als einfache Linie über die Zeit aufzeichnen lassen, ein Teil pro Punkt. Eine flache Linie zeigt das Problem schneller als jede Diskussion. Dann genau eine Senke einbauen — Wegnahme vor dem stärksten Teil — und erneut hören. Das Maximum wirkt erst durch das, was davor kleiner war."
+        }
+      }
+    },
+    {
+      "id": "fb_riffs_aneinandergeklebt",
+      "typ": "fehlerbild",
+      "basis_baustein": "uebergaenge_bauen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Teile sind gut, der Wechsel dazwischen stolpert. Das Stück zerfällt hörbar in Einzelteile, und im Proberaum finden nicht alle gleichzeitig in den neuen Teil.",
+          "ursache": "Der Übergang wurde nicht gebaut, sondern ist nur die Stelle, an der ein Riff aufhört und das nächste anfängt. Häufig sitzt der Wechsel zusätzlich nicht auf einem klaren metrischen Punkt.",
+          "korrektur": "Zuerst prüfen, wo genau der Wechsel liegt — er gehört auf einen eindeutigen Punkt, an dem alle zählen können. Dann eine der drei Grundarten bewusst wählen: harter Schnitt, Vorbereitung oder Verzahnung. Als stärkstes und billigstes Mittel die Stille direkt vor dem Wechsel ausprobieren lassen: dieselbe Logik wie die Lücke im Riff, nur eine Ebene höher."
+        }
+      }
+    },
+    {
+      "id": "fb_keine_wiederkehr",
+      "typ": "fehlerbild",
+      "basis_baustein": "wiederholung_im_grossen",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Das Stück läuft durch, ohne dass ein Teil zurückkehrt. Es wirkt beliebig und bleibt nicht hängen — auch wenn jedes Material für sich stark ist.",
+          "ursache": "Wiederkehr wird als Einfallslosigkeit gewertet und deshalb vermieden. Sie ist aber das, was ein Stück zur Einheit macht statt zur Aneinanderreihung.",
+          "korrektur": "Einen prägnanten Teil auswählen und ihn ein zweites Mal einsetzen — zunächst unverändert. Das Stück erneut hören und den Unterschied im Zusammenhalt benennen lassen. Danach die Steigerung zeigen: veränderte Wiederkehr, die ohne neues Material mehr erreicht. Und als Aufbaustufe die enttäuschte Erwartung — zweimal gleich auflösen, beim dritten Mal anders."
+        }
+      }
+    },
+    {
+      "id": "fb_material_vor_form",
+      "typ": "fehlerbild",
+      "basis_baustein": "form_skizzieren",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Die Skizze wird übersprungen oder erst nachträglich angefertigt, um die vorhandenen Riffs zu sortieren. Das Ergebnis besteht wieder aus guten Teilen ohne Verlauf.",
+          "ursache": "Die Übung dreht bewusst die gewohnte Reihenfolge um. Wird zuerst gesammelt, bekommt kein Riff eine Aufgabe — und die Form wird zur nachträglichen Verwaltung statt zur Entscheidung.",
+          "korrektur": "Auf die Skizze bestehen, aber klein halten: fünf bis sieben Teile, je ein Funktionswort, dazu eine Energielinie. Das dauert wenige Minuten. Dann bewusst ein Riff für eine bestimmte Stelle suchen lassen — etwa dünn und gespannt vor der Entladung. Ausdrücklich dazusagen, dass die Skizze kein Vertrag ist: Sie darf verlassen werden, aber bewusst."
+        }
+      }
+    },
+    {
+      "id": "fb_formmodell_als_rezept",
+      "typ": "fehlerbild",
+      "basis_baustein": "form_typen_im_genre",
+      "kompetenzstufe": [
+        "trainer"
+      ],
+      "erklaerteil": {
+        "de": {
+          "symptom": "Ein Formtyp wird übernommen, weil er im Genre üblich ist — ohne Bezug zu dem, was das Stück erreichen soll. Auf die Frage, warum diese Form, kommt der Name einer Band statt einer Wirkung.",
+          "ursache": "Die Modelle wurden als Vorschriften gelesen statt als Erklärungen. Sie beschreiben, was eine Form leistet; die Wahl bleibt eine musikalische Entscheidung.",
+          "korrektur": "Die Frage umdrehen: erst festlegen, was das Stück tun soll — im Gedächtnis bleiben, sich unaufhaltsam entwickeln oder Wucht stapeln —, dann die passende Form dazu wählen. Zu jedem Modell auch das Risiko benennen lassen. Wer Stärke und Risiko nennen kann, benutzt das Modell; wer nur den Namen nennt, wird von ihm benutzt."
+        }
+      }
     }
   ]
 }
