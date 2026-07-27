@@ -3089,12 +3089,19 @@ body { background-image: none; }
      --bild-weich       Weichzeichnung im Hero; Kacheln bekommen davon --blur-faktor
      --bild-deckkraft   wie deutlich das Foto durchkommt
      --bild-saettigung  1 = Originalfarben, 0 = Graustufen
-   Die erste Fassung („Nebel", 18px/.35/.4) war als reine Textur gedacht und im
-   dunklen Theme praktisch nicht mehr zu sehen — die Fotos sollen erkennbar sein. */
+   Weg dahin, zur Erinnerung: „Nebel" (18px/.35/.4) war als reine Textur hinter
+   EINEM grossen Hero gedacht und ueber zehn Kacheln verteilt nicht mehr zu sehen.
+   Danach 5px/.62/.95 — sichtbar, aber immer noch weichgezeichnet. Jetzt scharf:
+   Die Fotos sollen als Fotos lesbar sein, nicht als Textur. */
 :root {
-  --bild-weich: 5px;
-  --bild-deckkraft: 0.62;
-  --bild-saettigung: 0.95;
+  --bild-weich: 0px;
+  --bild-deckkraft: 0.8;
+  --bild-saettigung: 1;
+  /* Ueberzoom gab es nur, weil der Blur sonst die hellen Bildraender in die
+     Kante zieht. Ohne Weichzeichnung entfaellt der Grund — es bleibt ein Hauch,
+     damit an den Kanten keine Subpixel-Blitzer stehen. Wer --bild-weich wieder
+     hochdreht, sollte auch hier auf etwa 1.18 zurueck. */
+  --bild-zoom: 1.02;
 }
 
 /* Bildebene": stark weichgezeichnet, entsättigt, heruntergeregelt. Es
@@ -3114,9 +3121,15 @@ body { background-image: none; }
   background-repeat: no-repeat;
   filter: blur(calc(var(--bild-weich) * var(--blur-faktor, 1))) saturate(var(--bild-saettigung));
   opacity: var(--bild-deckkraft);
-  /* Überzoom: sonst zieht der Blur die hellen Ränder des Bildes herein. */
-  transform: scale(1.18);
+  transform: scale(var(--bild-zoom));
 }
+
+/* Motiv zurücknehmen, WO ein Foto liegt. Hinter der alten Weichzeichnung trat
+   das Motiv-SVG von selbst zurück; über einem scharfen Foto kreuzen sich zwei
+   Zeichnungen und das Bild wird unruhig. Der Geschwister-Selektor greift nur,
+   wenn tatsächlich eine Bildebene da ist — ohne Foto bleibt das Motiv wie bisher
+   der Träger der Fläche. */
+.genre-landing-bg ~ .genre-landing-bild { opacity: 0.1; }
 
 /* Weichzeichnung an die Elementhöhe koppeln. 18 px wirken auf 300 px Hero-Höhe
    richtig, lassen aber eine 170 px hohe Kachel zu einem Farbfleck zusammenfallen. */
@@ -3164,11 +3177,14 @@ a.karte-link.bildkachel {
 .bildkachel-inhalt::before {
   content: '';
   position: absolute;
-  inset: -0.8rem -1.05rem -1rem;
+  /* Oben bewusst weit über den Inhalt hinaus: Die Augenbraue ist die oberste
+     Zeile des Blocks und säße sonst mitten im Ausblendbereich — klein, in der
+     Hue-Farbe und über einem hellen Foto ist sie dann nicht mehr zu lesen. */
+  inset: -1.5rem -1.05rem -1rem;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(to top, var(--flaeche) 62%, rgba(0, 0, 0, 0) 100%);
-  opacity: 0.88;
+  background: linear-gradient(to top, var(--flaeche) 84%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.9;
 }
 .bildkachel-augenbraue {
   display: flex;
