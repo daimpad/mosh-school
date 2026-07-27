@@ -2846,11 +2846,19 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
    auf schmalen Mobil-Breiten, wo der alte Logo-links/Text-rechts-Hero drängte. */
 .startseite-hero { align-items: flex-start; min-height: 300px; }
 .startseite-hero .genre-landing-inhalt { align-self: flex-end; }
+/* Logo NEBEN dem Schriftzug, nicht darüber: zusammen sind sie eine Marke, keine
+   zwei gestapelten Elemente. Baseline-Ausrichtung über align-items:center; das
+   Logo skaliert mit der Überschrift (em), damit es auf jeder Breite passt. */
+.startseite-hero-marke {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
 .startseite-hero-mark {
-  display: block;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 0.55rem;
+  flex: none;
+  width: 0.9em;
+  height: 0.9em;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
 }
 .startseite-hero-themen {
@@ -2870,7 +2878,6 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .startseite-hero .marke-hero-cta .knopf { flex: 0 0 auto; }
 @media (min-width: 40rem) {
   .startseite-hero { min-height: 340px; }
-  .startseite-hero-mark { width: 60px; height: 60px; }
   .startseite-hero-themen { font-size: 1rem; }
 }
 

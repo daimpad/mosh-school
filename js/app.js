@@ -33,7 +33,6 @@ import { renderLernen, renderSongwriting, renderUeben } from './ansichten/hub.js
 import { renderGeraete } from './ansichten/geraete.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
-import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten, ladeSuchindex } from './daten.js';
 import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
@@ -324,27 +323,20 @@ function rendern() {
   // Steuerelements merken, um ihn nach dem Neu-Rendern zurückzusetzen.
   const fokusVorher = letzteRoute !== null && roh === letzteRoute ? fokusSchluessel(document.activeElement) : null;
 
-  // Erstlauf: Willkommensseite mit den zwei Einstiegen; der Wizard ist einer
-  // davon. Nur die leere Route zeigt die Willkommensseite — aktive Navigation
-  // tritt frei ein (s. u.).
-  let erstlauf = !istOnboardingAbgeschlossen();
-  // Zwei-Ebenen-Logik (4.4): Zugriff wird nie gesperrt. Navigiert die Person vor
-  // Abschluss des Onboardings aktiv in einen echten Bereich (z. B. über die
-  // Kopf-Navigation), gilt das als freier Einstieg — wie „Freies Handbuch" —
-  // statt sie auf die Willkommensseite zurückzuwerfen. So funktioniert die
-  // Navigation von Anfang an, und Kopf-Icons bleiben durchgehend sichtbar.
-  if (erstlauf && segmente.length > 0 && segmente[0] !== 'onboarding') {
+  // Beim ersten Besuch stand hier eine eigene Willkommensseite mit nur zwei
+  // Auswahlkacheln („Freies Handbuch" / „Geführter Einstieg"). Sie ist entfernt:
+  // Wer die App zum ersten Mal öffnet, soll sehen, WAS es gibt — die Startseite
+  // zeigt Instrumente, Genres, Lernwege und Werkzeuge auf einen Blick und trägt
+  // den geführten Einstieg als CTA im Hero. Eine Auswahlseite davor verzögert
+  // den Überblick, statt ihn zu geben.
+  //
+  // Zwei-Ebenen-Logik (4.4) bleibt: Zugriff wird nie gesperrt. Wer vor dem
+  // Onboarding irgendwohin navigiert, gilt als freier Einstieg.
+  if (!istOnboardingAbgeschlossen() && segmente.length > 0 && segmente[0] !== 'onboarding') {
     schliesseOnboardingAb();
-    erstlauf = false;
   }
-  document.body.classList.toggle('im-onboarding', segmente[0] === 'onboarding' || erstlauf);
+  document.body.classList.toggle('im-onboarding', segmente[0] === 'onboarding');
   beschrifteRahmen();
-
-  if (erstlauf && segmente.length === 0) {
-    renderWillkommen(el, daten);
-    aktualisiereNavigation(segmente);
-    return;
-  }
 
   if (segmente[0] === 'onboarding') {
     renderOnboarding(el, daten);
