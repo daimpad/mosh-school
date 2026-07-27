@@ -12,6 +12,7 @@ import { t, text } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
 import { pedalGrafik } from '../geraete-grafik.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const MINIMAL = { gitarre: ['tuner', 'distortion', 'noise_gate'], bass: ['tuner', 'kompressor', 'bass_overdrive'] };
 
@@ -157,14 +158,8 @@ export function renderWerkzeugPedalboard(el, daten, query) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-layer-group', t('wz_pedalboard_titel'), t('wz_pedalboard_untertitel'), 'pf-teal', 'werkzeug:pedalboard', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_pedalboard_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_pedalboard_untertitel'))}</p>
-        </div>
-      </section>
 
       <p class="chip-zeile">${instrumentKnoepfe}</p>
       <p class="chip-zeile">

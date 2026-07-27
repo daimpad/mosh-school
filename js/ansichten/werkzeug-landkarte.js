@@ -16,6 +16,7 @@
 import { t } from '../i18n.js';
 import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { landkarteName } from '../genre-namen.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 // Modus überlebt ein Neu-Rendern (Modul-State wie in Suche/Stimmungen).
 let modus = 'gefuehl';
@@ -432,14 +433,8 @@ export function renderWerkzeugLandkarte(el, daten) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-compass', t('wz_landkarte_titel'), t('wz_landkarte_untertitel'), 'pf-teal', 'werkzeug:landkarte', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_landkarte_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_landkarte_untertitel'))}</p>
-        </div>
-      </section>
 
       <p class="lk-hinweis banner-hinweis" role="note">
         <span><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> ${esc(lk.hinweis || t('wz_lk_hinweis_fallback'))}</span>
