@@ -149,6 +149,32 @@
     </button>
   </nav>
 
+  <!-- Seiten-Footer: NUR Desktop (ab 768px, wo die mobile Bottom-Bar entfällt).
+       Quick-Links auf die wichtigsten Bereiche; per CSS media-query ein-/ausgeblendet. -->
+  <footer class="seiten-footer" aria-label="Fußzeile">
+    <div class="footer-innen">
+      <div class="footer-marke">
+        <span class="footer-marke-name">mosh school</span>
+        <span class="footer-marke-claim">Extreme Musik spielen lernen.</span>
+      </div>
+      <nav class="footer-spalte" aria-label="Schnellzugriff">
+        <span class="footer-titel">Schnellzugriff</span>
+        <a href="#/griffe">Powerchords</a>
+        <a href="#/stimmungen">Tunings</a>
+        <a href="#/werkzeuge">Tools</a>
+        <a href="#/profil">Profil</a>
+      </nav>
+      <nav class="footer-spalte" aria-label="Info">
+        <span class="footer-titel">Info</span>
+        <a href="#/ueber">Über</a>
+        <a href="#/mitmachen">Kontakt</a>
+        <a href="#/impressum">Impressum</a>
+        <a href="#/datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+    <div class="footer-schluss">buildfrei · clientseitig · offline-fähig</div>
+  </footer>
+
   <div class="menue" id="hauptmenue" hidden>
     <div class="menue-schleier" data-menue-zu></div>
     <nav class="menue-lade" aria-label="Menü">
