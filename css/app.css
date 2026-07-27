@@ -228,11 +228,15 @@ code { font-size: 0.85em; word-break: break-all; }
   gap: 0.8rem;
 }
 
+/* Wortmarke in Tinte, nicht in Rot: Das rote Plektrum daneben ist der Akzent —
+   traegt der Schriftzug dieselbe Farbe, konkurrieren zwei rote Flaechen in der
+   Kopfzeile miteinander und keine der beiden fuehrt. Schwarz auf Weiss bzw.
+   Weiss auf Schwarz laesst dem Logo den Auftritt. */
 .marke {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primaer);
+  color: var(--tinte);
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -342,8 +346,9 @@ body.im-onboarding .seiten-footer { display: none; }
     display: flex; flex-wrap: wrap; gap: 1.6rem 3rem; align-items: flex-start;
   }
   .footer-marke { display: flex; flex-direction: column; gap: 0.2rem; margin-right: auto; }
+  /* Dieselbe Wortmarke wie in der Kopfzeile — also auch dieselbe Tinte. */
   .footer-marke-name {
-    font-family: var(--schrift-display, inherit); color: var(--primaer);
+    font-family: var(--schrift-display, inherit); color: var(--tinte);
     font-size: 1.15rem; letter-spacing: 0.02em;
   }
   .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
@@ -2857,8 +2862,11 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   /* Seitlich weit ueber den Hero hinaus, damit die Kante des Rueckhalts nicht
      als heller Kasten im Foto steht — der Hero hat overflow:hidden und schneidet
      sie sauber ab. Vertikal dagegen eng am Text: Oben genau so viel Vorlauf, dass
-     die Augenbraue nicht im Ausblendbereich sitzt. */
-  inset: -1.35rem -100% -1rem -2.5rem;
+     die Augenbraue nicht im Ausblendbereich sitzt.
+     vw statt %: Ein Prozentwert bezieht sich auf den Inhaltsblock (~310 px), was
+     auf schmalen Schirmen reichte, auf dem Desktop-Hero aber nicht — dort stand
+     die Kante wieder als Kasten im Bild. */
+  inset: -1.35rem -100vw -1rem -100vw;
   z-index: -1;
   pointer-events: none;
   background: var(--hero-rueckhalt, none);
@@ -2900,7 +2908,30 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 /* Startseiten-Hero: inszeniert wie die Landingpages (Motiv + Reinbox), aber mit
    Marken-Logo, Themenzeile und den Einstiegs-CTAs. Inhalt stapelt sauber — auch
    auf schmalen Mobil-Breiten, wo der alte Logo-links/Text-rechts-Hero drängte. */
-.startseite-hero { align-items: flex-start; min-height: 300px; }
+/* Der Startseiten-Hero fuellt den Schirm. Abgezogen wird, was ueber ihm steht:
+   die klebende Kopfzeile plus das obere Innenmass von main (mobil ~80 px, ab
+   Tablet ~92 px). svh statt vh, weil vh auf Mobilgeraeten die einklappbare
+   Browserleiste mitrechnet und der Hero beim Scrollen sonst springt; die
+   vh-Zeile davor ist der Rueckfall fuer Browser ohne svh. Bewusst ein paar
+   Pixel zu kurz statt zu lang: So lugt die naechste Ueberschrift knapp herein
+   und zeigt, dass es weitergeht. */
+.startseite-hero {
+  align-items: flex-start;
+  /* Abzug mobil: Kopfzeile + oberes Innenmass von main (~5 rem) UND die fixierte
+     untere Leiste (~3.7 rem inkl. Safe Area) — die liegt ueber dem Inhalt, ohne
+     Abzug verschwaenden die CTA-Knoepfe dahinter. */
+  min-height: calc(100vh - 9rem - env(safe-area-inset-bottom));
+  min-height: calc(100svh - 9rem - env(safe-area-inset-bottom));
+}
+/* Der Scrim laeuft sonst prozentual mit: Auf 300 px Hoehe deckte er das untere
+   Drittel, auf voller Schirmhoehe waere das die halbe Seite in Weiss. Feste
+   Pixelmasse halten den Textrueckhalt unten, wo der Text steht, und lassen das
+   Foto darueber frei. */
+.startseite-hero .genre-landing-scrim {
+  background:
+    linear-gradient(to top, var(--flaeche) 40px, rgba(0, 0, 0, 0) 360px),
+    radial-gradient(120% 260px at 18% 100%, var(--flaeche) 0%, rgba(0, 0, 0, 0) 70%);
+}
 .startseite-hero .genre-landing-inhalt { align-self: flex-end; }
 /* Logo NEBEN dem Schriftzug, nicht darüber: zusammen sind sie eine Marke, keine
    zwei gestapelten Elemente. Baseline-Ausrichtung über align-items:center; das
@@ -2933,8 +2964,15 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 .startseite-hero .marke-hero-cta .knopf { flex: 0 0 auto; }
 @media (min-width: 40rem) {
-  .startseite-hero { min-height: 340px; }
   .startseite-hero-themen { font-size: 1rem; }
+}
+/* Ab Tablet faellt die untere Leiste weg (siehe .fussnav), der Abzug schrumpft
+   auf Kopfzeile + Innenmass. */
+@media (min-width: 768px) {
+  .startseite-hero {
+    min-height: calc(100vh - 6.5rem);
+    min-height: calc(100svh - 6.5rem);
+  }
 }
 
 /* „Reinboxen" (etwas kräftig): der Hero fährt leicht überskaliert über eine
@@ -3326,6 +3364,15 @@ a.karte-link.verweiszeile {
    Spalte machte die Startseite endlos und das Muster unsichtbar. */
 .bild-gitter { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.4rem; }
 .bild-gitter .voll-breit { grid-column: 1 / -1; }
+/* Lernwege mobil einspaltig. Die vier Instrumente tragen je ein Wort und gehen
+   als 2x2 glatt auf; die Lernwege heissen „Kontext & Community" oder
+   „Individueller Weg" und brechen in einer halben Spalte auf drei Zeilen um.
+   Ganze Breite gibt jedem Weg eine lesbare Zeile — und die Reihenfolge, in der
+   sie gelesen werden sollen. Ab Tablet ist Platz fuer zwei Spalten. */
+.lernwege-gitter { grid-template-columns: 1fr; }
+@media (min-width: 40rem) {
+  .lernwege-gitter { grid-template-columns: 1fr 1fr; }
+}
 /* Werkzeuge: fest zwei Spalten. auto-fill erzeugte auf dem Desktop vier sehr
    schmale Kacheln (von der Beschreibung blieb „Audio-Werkzeuge,…"), drei Spalten
    ließen die vierte Kachel als Waise in einer eigenen Reihe stehen. Zwei Spalten

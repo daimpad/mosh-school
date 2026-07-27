@@ -165,7 +165,7 @@ export function renderHeim(el, daten) {
       ${bandKachel}
     </div>
     <h2 class="abschnitt-titel">${esc(t('heim_gruppe_lernwege'))}</h2>
-    <div class="bild-gitter">
+    <div class="bild-gitter lernwege-gitter">
       ${genreKachel}
       ${kontextKachel}
       ${trainingKachel}
