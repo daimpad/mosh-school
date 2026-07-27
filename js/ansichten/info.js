@@ -5,7 +5,7 @@
 
 import { aktiviereFeedback, feedbackAktiv } from '../feedback.js';
 import { t, text } from '../i18n.js';
-import { esc, externesZiel } from '../oberflaeche.js';
+import { esc, externesZiel, nichtGefundenHtml } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 function istPlatzhalter(wert) {
@@ -69,7 +69,7 @@ function haltungHtml() {
 export function renderUeber(el, daten) {
   const u = daten.appInfo?.ueber;
   if (!u) {
-    el.innerHTML = `<div class="karte"><p>${esc(t('nicht_gefunden'))}</p></div>`;
+    el.innerHTML = nichtGefundenHtml();
     return;
   }
   const absaetze = (u.absaetze || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
@@ -93,7 +93,7 @@ export function renderUeber(el, daten) {
 export function renderRechtstext(el, daten, schluessel) {
   const block = daten.appInfo?.rechtliches?.[schluessel];
   if (!block) {
-    el.innerHTML = `<div class="karte"><p>${esc(t('nicht_gefunden'))}</p></div>`;
+    el.innerHTML = nichtGefundenHtml();
     return;
   }
   const absaetze = (block.absaetze || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
@@ -105,7 +105,7 @@ export function renderRechtstext(el, daten, schluessel) {
 export function renderMitmachen(el, daten) {
   const m = daten.appInfo?.mitmachen;
   if (!m) {
-    el.innerHTML = `<div class="karte"><p>${esc(t('nicht_gefunden'))}</p></div>`;
+    el.innerHTML = nichtGefundenHtml();
     return;
   }
   const einleitung = (m.einleitung || []).map((e) => `<p class="leise">${esc(text(e) ?? '')}</p>`).join('');
