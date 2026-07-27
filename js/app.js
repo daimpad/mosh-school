@@ -183,7 +183,10 @@ function fokusSchluessel(elem) {
 }
 
 function beschrifteRahmen() {
-  document.title = t('app_titel');
+  // Marke plus Subline — dasselbe wie im statischen <title>. Ohne das wechselte
+  // der Tab-Titel beim Laden von „ZERRER — Mosh School" auf nur „ZERRER", und
+  // Lesezeichen hingen davon ab, wann man sie gesetzt hat.
+  document.title = `${t('app_titel')} — ${t('hero_untertitel')}`;
   const zumInhalt = document.querySelector('.zum-inhalt');
   if (zumInhalt) zumInhalt.textContent = t('skip_link');
   document.querySelector('.marke-text').textContent = t('app_titel');

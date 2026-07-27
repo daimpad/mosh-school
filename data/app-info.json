@@ -4,11 +4,11 @@
   },
   "ueber": {
     "titel": {
-      "de": "Über mosh school"
+      "de": "Über ZERRER"
     },
     "absaetze": [
       {
-        "de": "mosh school bringt dir extreme Metal-Instrumente Riff für Riff bei — vom ersten Powerchord bis zum Blastbeat. Kostenlos, werbefrei, direkt im Browser."
+        "de": "ZERRER bringt dir extreme Metal-Instrumente Riff für Riff bei — vom ersten Powerchord bis zum Blastbeat. Kostenlos, werbefrei, direkt im Browser."
       },
       {
         "de": "Die App läuft komplett auf deinem Gerät und speichert deinen Fortschritt lokal. Kein Login, kein Tracking."
@@ -47,7 +47,7 @@
     },
     "einleitung": [
       {
-        "de": "mosh school ist offen und wächst mit der Community — mit dir."
+        "de": "ZERRER ist offen und wächst mit der Community — mit dir."
       }
     ],
     "moeglichkeiten": [
@@ -102,7 +102,7 @@
       },
       "absaetze": [
         {
-          "de": "mosh school speichert deinen Fortschritt ausschließlich lokal (localStorage). Es werden keine personenbezogenen Daten an einen Server übertragen."
+          "de": "ZERRER speichert deinen Fortschritt ausschließlich lokal (localStorage). Es werden keine personenbezogenen Daten an einen Server übertragen."
         }
       ]
     }

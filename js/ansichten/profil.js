@@ -432,7 +432,7 @@ export function renderProfil(el, daten) {
     const url = URL.createObjectURL(new Blob([inhalt], { type: 'application/json' }));
     const a = document.createElement('a');
     a.href = url;
-    a.download = `moshschool-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `zerrer-backup-${new Date().toISOString().slice(0, 10)}.json`;
     document.body.appendChild(a);
     a.click();
     a.remove();

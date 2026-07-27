@@ -6,8 +6,8 @@
     "offen": "Keine offenen Label-Posten."
   },
   "ui": {
-    "app_titel": "mosh school",
-    "hero_untertitel": "Alles rund um Hardcore, Extreme Metal und mehr erlernen …",
+    "app_titel": "ZERRER",
+    "hero_untertitel": "Mosh School",
     "hero_themen": "Gitarre · Bass · Drums · Vocals",
     "profil_intro": "Deine Angaben, dein Fortschritt und deine Einstellungen — jederzeit änderbar.",
     "backup_titel": "Datensicherung",
@@ -16,7 +16,7 @@
     "backup_import": "Backup laden",
     "backup_export_ok": "Backup heruntergeladen.",
     "backup_import_ok": "Backup geladen — App wird neu geladen …",
-    "backup_import_fehler": "Konnte die Datei nicht lesen — ist es ein gültiges mosh-school-Backup?",
+    "backup_import_fehler": "Konnte die Datei nicht lesen — ist es ein gültiges ZERRER-Backup?",
     "profil_mitmachen_text": "Feedback geben, Fehler melden oder mitbauen — jede Rückmeldung hilft, die App besser zu machen.",
     "haltung_titel": "Haltung",
     "haltung_no_ads": "No Ads",
