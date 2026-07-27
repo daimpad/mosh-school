@@ -9,7 +9,7 @@ import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, leerHtml, 
 import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
-import { genreInszenierungHtml, genreKurz, genreMotivSvg, landingHeroHtml } from '../genre-inszenierung.js';
+import { bildKachelHtml, genreInszenierungHtml, genreKurz, genreMotivSvg, landingHeroHtml } from '../genre-inszenierung.js';
 import { zeichneKoennenscheck } from './koennenscheck.js';
 
 // In der Liste ordnet bereits die Reihenfolge; der „Empfohlen vorher"-Hinweis
@@ -276,26 +276,37 @@ function instrumentReiterInhalt(daten, domaene, pfad, id) {
   return '';
 }
 
+// Hue je Instrument — identisch zur Startseite (js/ansichten/heim.js), damit
+// dieselbe Kachel an beiden Orten dieselbe Farbe traegt.
+const INSTRUMENT_HUE = {
+  gitarre: 'pf-magenta',
+  bass: 'pf-indigo',
+  schlagzeug: 'pf-sky',
+  gesang: 'pf-teal',
+};
+
 export function renderInstrument(el, daten, domaene) {
   if (!domaene || !INSTRUMENTE.includes(domaene)) {
+    // Dieselben vier Instrumente stehen auf der Startseite als Bild-Kacheln —
+    // hier flache Karten zu zeigen, waere ein Bruch. Gleiche Kachel, gleiche
+    // Hues, gleicher Bild-/Motiv-Schluessel: Wer von der Startseite kommt,
+    // erkennt seine Kachel wieder.
+    const cta = `<span class="pfad-cta">${esc(t('instrument_oeffnen'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>`;
     const karten = instrumentUebersicht(daten)
-      .map(
-        ({ domaene: d, anzahl }) => `
-        <a class="karte karte-link pfad-kachel instr-kachel pf-blau" href="#/instrument/${esc(d)}">
-          <div class="pfad-kachel-kopf">
-            <span class="pfad-medaille">${domaeneIcon(d)}</span>
-            <h3>${esc(label('domaene', d))}</h3>
-          </div>
-          <div class="pfad-kachel-text">
-            <p class="leise">${esc(t('n_bausteine', { n: anzahl }))}</p>
-            <span class="pfad-cta">${esc(t('instrument_oeffnen'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-          </div>
-        </a>`
-      )
+      .map(({ domaene: d, anzahl }) => bildKachelHtml({
+        href: `#/instrument/${esc(d)}`,
+        hue: INSTRUMENT_HUE[d] || 'pf-blau',
+        schluessel: `instrument:${d}`,
+        iconHtml: domaeneIcon(d),
+        augenbraue: t('kicker_instrument'),
+        titel: esc(label('domaene', d)),
+        text: esc(t('n_bausteine', { n: anzahl })),
+        cta,
+      }))
       .join('');
     el.innerHTML = `
       ${landingHeroHtml('fa-bolt', t('instrument_picker_titel'), t('instrument_picker_text'), 'pf-blau')}
-      <div class="pfad-gitter instr-picker">${karten}</div>`;
+      <div class="bild-gitter instr-picker">${karten}</div>`;
     return;
   }
 

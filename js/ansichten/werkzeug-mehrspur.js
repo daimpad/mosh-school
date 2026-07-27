@@ -14,6 +14,7 @@ import { aktiviere, holeKontext, holeAusgang } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import { klick } from '../audio/stimmen.js';
 import { speichereSpur, alleSpuren, aktualisiereSpur, loescheSpur } from '../audio/spuren-db.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const zustand = { latenz: 0, klickAn: true, bpm: 140 };
 let spuren = [];
@@ -249,14 +250,8 @@ export function renderWerkzeugMehrspur(el) {
   }
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-sliders', t('wz_mehrspur_titel'), t('wz_mehrspur_untertitel'), 'pf-teal', 'werkzeug:mehrspur', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_mehrspur_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_mehrspur_untertitel'))}</p>
-        </div>
-      </section>
 
       <div class="wz-rec-panel">
         <div class="wz-feld-reihe">

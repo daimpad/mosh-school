@@ -12,6 +12,7 @@ import { t } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
 import { landkarteName } from '../genre-namen.js';
 import { holeZiele, setzeZiel } from '../zustand.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 import {
   alleTags,
   atmoSchluessel,
@@ -172,14 +173,8 @@ export function renderWerkzeugGenremix(el, daten, query) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-right-left', t('wz_genremix_titel'), t('wz_genremix_untertitel'), 'pf-teal', 'werkzeug:genremix', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-right-left" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_genremix_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_genremix_untertitel'))}</p>
-        </div>
-      </section>
 
       <p class="lk-hinweis banner-hinweis" role="note">
         <span><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> ${esc(lk.hinweis || t('wz_lk_hinweis_fallback'))}</span>

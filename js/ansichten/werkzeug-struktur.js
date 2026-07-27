@@ -11,6 +11,7 @@
 import { t } from '../i18n.js';
 import { esc } from '../oberflaeche.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const BLOCK_TYPEN = ['intro', 'vers', 'refrain', 'breakdown', 'bridge', 'solo', 'outro'];
 const UEBERGAENGE = ['direkt', 'break', 'fill', 'anschwellen', 'ritardando', 'tempowechsel'];
@@ -151,14 +152,8 @@ export function renderWerkzeugStruktur(el, daten, query) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-list-check', t('wz_struktur_titel'), t('wz_struktur_untertitel'), 'pf-teal', 'werkzeug:struktur', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_struktur_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_struktur_untertitel'))}</p>
-        </div>
-      </section>
 
       <div class="wz-feld-reihe">
         <label>${esc(t('wz_st_bpm'))}<input type="number" class="wz-st-bpm" min="40" max="300" value="${zustand.bpm}"></label>

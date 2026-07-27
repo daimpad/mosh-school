@@ -14,10 +14,9 @@
 // images/bg/bilder.json, rendern dieselben Kacheln ohne Foto (Motiv + Scrim
 // bleiben) — kein Bruch, nur ruhiger.
 
-import { bildEbene } from '../hintergrundbilder.js';
 import { label, t } from '../i18n.js';
 import { domaeneIcon, esc } from '../oberflaeche.js';
-import { markeHeroInszeniert, motivSvg } from '../genre-inszenierung.js';
+import { bildKachelHtml, markeHeroInszeniert } from '../genre-inszenierung.js';
 import { instrumentUebersicht, stile } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar, zuletzt } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
@@ -47,26 +46,10 @@ export function renderHeim(el, daten) {
   const cta = `<span class="pfad-cta">${esc(t('ansehen'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>`;
 
   // ---- Bild-Kachel: der Hero-Aufbau im Container-Maßstab -------------------
-  // Schichtung wie im Hero und in derselben Reihenfolge: Bild → Motiv → Scrim →
-  // Text. `schluessel` bestimmt beides deterministisch (Motivform und Bildwahl),
-  // damit eine Kachel über Reloads hinweg gleich aussieht.
-  const bildKachel = ({ href, hue, schluessel, icon = '', iconHtml = '', augenbraue,
-    titel, meta = '', text = '', extra = '', breit = false }) => {
-    const symbol = iconHtml || (icon ? `<i class="fa-solid ${icon}" aria-hidden="true"></i>` : '');
-    return `
-    <a class="karte karte-link pfad-kachel bildkachel ${breit ? 'voll-breit ' : ''}${hue}" href="${esc(href)}">
-      ${bildEbene(schluessel)}
-      ${motivSvg(schluessel)}
-      <div class="bildkachel-scrim" aria-hidden="true"></div>
-      <div class="bildkachel-inhalt">
-        <p class="bildkachel-augenbraue">${symbol}${esc(augenbraue)}</p>
-        <h3 class="bildkachel-titel">${titel}${meta}</h3>
-        ${text ? `<p class="bildkachel-text">${text}</p>` : ''}
-        ${extra}
-        ${cta}
-      </div>
-    </a>`;
-  };
+  // Sie lebt in genre-inszenierung.js — dieselbe Kachel
+  // benutzt die Instrument-Auswahl (#/instrument), und beide zeigen dieselben
+  // Bereiche. Zwei Kopien wären zwei Stellen zum Auseinanderlaufen.
+  const bildKachel = (opt) => bildKachelHtml({ ...opt, cta });
 
   // ---- Werkzeug-Kachel: flach, nur Icon ------------------------------------
   const werkzeugKachel = ({ href, hue, icon, titel, text = '' }) => `
