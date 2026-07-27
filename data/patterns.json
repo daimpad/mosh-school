@@ -309,6 +309,77 @@
       }
     },
     {
+      "id": "black_arpeggio_riff",
+      "genre": "black_metal",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Black-Riff: kaltes Arpeggio"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 150,
+      "schritte": [
+        [
+          {
+            "saite": 2,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 2,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 2,
+            "bund": 0
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Ein gebrochener Moll-Akkord, kalt und repetitiv über die mittleren Saiten getremolt — die „frostige\", melodische Seite des Black Metal jenseits des reinen Tremolo-Riffs."
+      }
+    },
+    {
       "id": "doom_powerchords",
       "genre": "doom",
       "domaene": "gitarre",
@@ -1866,37 +1937,37 @@
       "spuren": {
         "hihat": [
           1,
-          0,
           1,
-          0,
           1,
-          0,
           1,
-          0
+          1,
+          1,
+          1,
+          1
         ],
         "snare": [
-          0,
           1,
-          0,
           1,
-          0,
           1,
-          0,
+          1,
+          1,
+          1,
+          1,
           1
         ],
         "kick": [
           1,
-          0,
           1,
-          0,
           1,
-          0,
           1,
-          0
+          1,
+          1,
+          1,
+          1
         ]
       },
       "hinweis": {
-        "de": "Der Bombblast: Kick und Snare greifen versetzt ineinander statt gleichzeitig wie beim reinen Blast — etwas offener und tiefer im Puls. Locker bleiben."
+        "de": "Der Bombblast (Hammerblast): Kick und Snare schlagen gleichzeitig auf jeder Achtel — eine dichte, wuchtige Wand statt der abwechselnden Schläge des traditionellen Blasts. Locker bleiben, sonst verkrampft der Unterarm."
       }
     },
     {
@@ -2010,7 +2081,52 @@
         ]
       },
       "hinweis": {
-        "de": "Der treibende Blast unter der kalten Tremolo-Melodie — hoch, dünn, unerbittlich. Nicht mit Kraft, sondern mit Lockerheit über lange Strecken tragen. Gehörschutz."
+        "de": "Der traditionelle Blast: Kick+Hi-Hat und Snare wechseln sich als durchlaufender Einzelschlag-Wirbel ab (eine Hand/ein Fuß pro Achtel) — hoch, dünn, unerbittlich unter der kalten Tremolo-Melodie. Nicht mit Kraft, sondern mit Lockerheit tragen."
+      }
+    },
+    {
+      "id": "black_rock_beat",
+      "genre": "black_metal",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Black-Beat: Midtempo-Stampfer"
+      },
+      "bpm": 150,
+      "spuren": {
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Der stampfende Midtempo-Beat für die Passagen zwischen den Blasts: Snare auf 2 und 4, treibende Hi-Hat, die Kick setzt Akzente. Gibt der Kälte Gewicht und Groove."
       }
     },
     {
@@ -2357,27 +2473,27 @@
         ],
         "snare": [
           0,
-          1,
           0,
           1,
           0,
-          1,
           0,
-          1
-        ],
-        "kick": [
-          1,
-          0,
-          1,
-          0,
-          1,
           0,
           1,
           0
+        ],
+        "kick": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
         ]
       },
       "hinweis": {
-        "de": "Der klassische Two-Step: Kick und Snare wechseln sich im Achtel ab, die Hi-Hat treibt durch — das Fundament fürs Two-Stepping im Pit. Roh und nach vorn."
+        "de": "Der Two-Step: Snare als Backbeat auf 2 und 4, die Kick tänzelt drumherum („boom-boom-CHK\") — das Fundament fürs Two-Stepping im Pit. Rauer und bouncender als der gerade Skank."
       }
     },
     {
@@ -2835,7 +2951,13 @@
         [
           {
             "saite": 0,
-            "bund": 1
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 6
           }
         ],
         [
@@ -2847,30 +2969,24 @@
         [
           {
             "saite": 0,
-            "bund": 3
+            "bund": 0
           }
         ],
         [
           {
             "saite": 0,
-            "bund": 3
+            "bund": 5
           }
         ],
         [
           {
             "saite": 0,
-            "bund": 2
-          }
-        ],
-        [
-          {
-            "saite": 0,
-            "bund": 1
+            "bund": 6
           }
         ]
       ],
       "hinweis": {
-        "de": "Ein schnelles, getremoltes Intro auf sehr tiefer Saite, bevor der Breakdown einsetzt — dicht und bedrohlich. Gleichmäßig picken, sauber dämpfen (Drop C)."
+        "de": "Getremoltes Pedal auf der sehr tiefen Saite mit Tritonus-Stößen (b5) vor dem Breakdown — dicht und bedrohlich. Gleichmäßig picken, sauber dämpfen (Drop-Stimmung)."
       }
     },
     {
@@ -2883,17 +2999,15 @@
       },
       "bpm": 180,
       "spuren": {
-        "crash": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
         "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
           1,
           0,
           1,
@@ -2911,21 +3025,37 @@
           0,
           1,
           0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
           1
         ],
         "kick": [
           1,
+          0,
           1,
+          0,
           1,
+          0,
           1,
+          0,
           1,
+          0,
           1,
+          0,
           1,
-          1
+          0,
+          1,
+          0
         ]
       },
       "hinweis": {
-        "de": "Die schnelle Blast-Sektion vor dem Absturz: durchlaufende Kick, wechselnde Hi-Hat und Snare. Der Kontrast zur folgenden Stille macht den Breakdown härter."
+        "de": "Die schnelle Blast-Sektion: traditioneller Blast in Sechzehnteln (doppelt so dicht wie der Achtel-Blast) — treibt die getremolten Deathcore-Parts. Gleichmäßig und entspannt, sonst bricht das Tempo ein."
       }
     },
     {
@@ -3049,6 +3179,77 @@
       }
     },
     {
+      "id": "grind_chromatic_burst",
+      "genre": "grindcore",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Grind-Riff: chromatischer Burst"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 220,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Ein chromatischer Achtel-Burst auf der tiefen Saite — der kurze, lärmende Ausbruch, der im Grind zwischen Blast und D-Beat gestopft wird. Alles aus dem Handgelenk, kompromisslos tight."
+      }
+    },
+    {
       "id": "grind_bass_wall",
       "genre": "grindcore",
       "domaene": "bass",
@@ -3150,16 +3351,85 @@
         "kick": [
           1,
           0,
-          0,
           1,
           1,
+          1,
           0,
-          0,
+          1,
           1
         ]
       },
       "hinweis": {
-        "de": "Der D-Beat aus dem Crust, ins Grind-Tempo gezogen — die Kick-Snare-Verzahnung schiebt roh nach vorn. Wechselt live oft mit dem Blast. Gehörschutz, kurze Blöcke."
+        "de": "Der D-Beat aus dem Crust, ins Grind-Tempo gezogen und mit Kick-Doublings verdichtet — schiebt roh nach vorn und wechselt live oft mit dem Blast. Locker aus dem Handgelenk, kurze Sets."
+      }
+    },
+    {
+      "id": "grind_gravity_blast",
+      "genre": "grindcore",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Grind-Beat: Gravity-Blast"
+      },
+      "bpm": 240,
+      "spuren": {
+        "hihat": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "snare": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Der Gravity-Blast: die Snare rollt in Sechzehnteln über den Handgelenk-Rebound (ein Schlag hin, einer zurück), die Kick hält die Viertel — die extremste Grind-Geschwindigkeit. Nur mit lockerer Technik machbar."
       }
     },
     {
@@ -3205,6 +3475,61 @@
       },
       "hinweis": {
         "de": "Ein lässiger Halftime-Groove leicht hinter dem Puls — der Beat atmet, statt zu treiben. Raum lassen, den Riff regieren lassen, nicht drängen."
+      }
+    },
+    {
+      "id": "stoner_halftime_shuffle",
+      "genre": "stoner_post",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Stoner-Beat: Halftime-Shuffle"
+      },
+      "bpm": 95,
+      "spuren": {
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Halftime mit viel Raum: die Snare erst auf der 3, die Kick tänzelt lose davor, ein Crash öffnet den Takt — der groovende, verrauchte Puls von Stoner und Post-Metal. Bewusst hinter dem Beat."
       }
     },
     {
