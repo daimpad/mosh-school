@@ -3,6 +3,7 @@
 
 import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
+import { bildEbene } from '../hintergrundbilder.js';
 import { label, t } from '../i18n.js';
 import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
 import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, witterungen } from '../pfade.js';
@@ -181,6 +182,7 @@ export function renderStil(el, daten, stil) {
   el.innerHTML = `
     <div class="genre-landing">
       <section class="marke-hero genre-landing-hero pf-magenta">
+        ${bildEbene('genre:' + stil)}
         ${genreMotivSvg(stil)}
         <div class="genre-landing-scrim" aria-hidden="true"></div>
         <div class="genre-landing-inhalt">

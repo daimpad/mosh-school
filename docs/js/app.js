@@ -35,6 +35,7 @@ import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten, ladeSuchindex } from './daten.js';
+import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
 import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
@@ -473,6 +474,9 @@ async function boot() {
     renderFehler(el, fehler);
     return;
   }
+  // Bildebene der Heros/Kacheln scharf schalten. Muss VOR dem ersten Anstrich
+  // stehen — sonst zeichnet die Startseite einmal ohne Bilder und flackert nach.
+  setzeHintergrundbilder(daten.hintergrundbilder);
   for (const warnung of daten.warnungen) console.warn('[daten]', warnung);
 
   document.getElementById('hamburger').addEventListener('click', oeffneMenue);
