@@ -14,7 +14,7 @@ import { bausteinAbsolviert } from '../fortschritt.js';
 import { label, t } from '../i18n.js';
 import { esc, zeigeMeilenstein } from '../oberflaeche.js';
 import { stile } from '../pfade.js';
-import { schliesseOnboardingAb, setzeDiagnose, setzeOnboarding } from '../zustand.js';
+import { diagnose, schliesseOnboardingAb, setzeDiagnose, setzeOnboarding } from '../zustand.js';
 import { gewaehlteZiele, zielwahlHtml } from './zielwahl.js';
 
 const INSTRUMENTE = ['gitarre', 'bass', 'schlagzeug', 'gesang'];
@@ -183,7 +183,13 @@ function schliesseAb(el, daten, mitVormarkierung) {
     }
   }
   assistent = null;
-  location.hash = '#/';
+  // Nach dem letzten Schritt NICHT auf die Startseite: Dort steht man ohne
+  // Anschluss und muss sich neu orientieren — genau der Moment, in dem der eben
+  // gefasste Vorsatz verpufft. Stattdessen direkt in den Kompetenzpfad der
+  // gewählten Stufe, also auf die erste konkrete Sache zum Tun. Ohne gewählte
+  // Stufe bleibt der Themen-Einstieg die nächstbeste Anlaufstelle.
+  const stufe = diagnose().stufe;
+  location.hash = stufe ? `#/pfad/kompetenz/${stufe}` : '#/pfad/themen';
   if (meilenstein) zeigeMeilenstein(meilenstein);
 }
 

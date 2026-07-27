@@ -105,8 +105,7 @@ export function zeichneKoennenscheck(container, daten, { mitHero = false } = {})
     <p class="kc-zaehler leise" aria-live="polite">${esc(t('koennenscheck_erfuellt', { n: gehakt.size, gesamt }))}</p>
     <div class="kc-gruppen">
       ${gruppen.map(kategorieHtml).join('')}
-    </div>
-    <p class="leise kc-fuss">${esc(t('koennenscheck_hinweis'))}</p>`;
+    </div>`;
 
   for (const knopf of container.querySelectorAll('[data-stufe]')) {
     knopf.addEventListener('click', () => {

@@ -198,7 +198,6 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
 
 
   const delta = station.delta;
-  const kuerzelSichtbar = einstellungen().transferKuerzelSichtbar;
 
   // Domäne + Könnensstufe wandern in den Hero-Untertitel (s. u.); der interne
   // Typ ('micro' auf 96/102 – kein Unterscheidungsmerkmal) wird nicht mehr als
@@ -207,15 +206,10 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     ...witterungVon(b).map((w) => `<span class="chip">${esc(label('witterung', w))}</span>`),
   ].join(' ');
 
-  // Dezente Transfer-Kennzeichnung, per Schalter ausblendbar (Spez. 3.2/6).
-  const transferChips = kuerzelSichtbar
-    ? (b.transfer_herkunft || [])
-        .map((k) => {
-          const aktiv = delta && delta.ersetzt_bei_herkunft === k;
-          return `<span class="chip ${aktiv ? 'chip-akzent' : ''}" title="${esc(label('transfer_herkunft', k))}">${esc(k)}</span>`;
-        })
-        .join(' ')
-    : '';
+  // Die Transfer-Kürzel („git"/„bas" …) standen hier als rohe Codes und sagten
+  // beim Lesen nichts — sie sind von der Baustein-Seite genommen. In der
+  // Stationsliste bleiben sie (dort ordnen sie), gesteuert wie bisher über
+  // einstellungen().transferKuerzelSichtbar.
 
   // Großer Hero je Baustein — gleiche Inszenierung wie die Landing-Hubs
   // (Motiv-Backdrop + Reinbox). Die Augenbraue trägt die übergeordnete Kategorie
@@ -227,12 +221,17 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const heroStufen = (b.kompetenzstufe || []).map((s) => label('kompetenzstufe', s)).join(' · ');
   const heroSymbol = bausteinIcon(b.id) || domaeneIcon(domaenen[0]) || '<i class="fa-solid fa-feather" aria-hidden="true"></i>';
   const heroSektion = landingHeroHtml('', label('baustein', b.id), heroStufen, heroHue, domaenen[0], heroKategorie, heroSymbol);
+  // Die Könnensstufe steht im Hero nur als Text. Als Chip ist sie zusätzlich ein
+  // Anker: von hier direkt in den Kompetenzpfad dieser Stufe, ohne Umweg übers Menü.
+  const stufenAnker = (b.kompetenzstufe || [])
+    .map((stufe) => `<a class="chip chip-stufe chip-stufe-${esc(stufe)} stufen-anker" href="#/pfad/kompetenz/${esc(stufe)}">${esc(label('kompetenzstufe', stufe))}</a>`)
+    .join(' ');
   const schema = lehrgrafik(b.id);
   const schemaSektion = schema
     ? `<figure class="lehrgrafik">${schema}<figcaption>${esc(label('lehrgrafik', b.id))}</figcaption></figure>`
     : '';
-  const chipZeile = metaChips || transferChips
-    ? `<p class="chip-zeile">${metaChips}${metaChips && transferChips ? ' <span class="chip-trenner">·</span> ' : ''}${transferChips}</p>`
+  const chipZeile = metaChips || stufenAnker
+    ? `<p class="chip-zeile">${stufenAnker}${metaChips && stufenAnker ? ' ' : ''}${metaChips}</p>`
     : '';
 
   // „Merken": baustein-gebundene Merkliste (kein Fortschritt). Gemerkte Bausteine
@@ -241,8 +240,30 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const gemerkt = istGemerkt(b.id);
   const merkenAktion = `
     <div class="baustein-aktionen">
-      <button type="button" class="knopf knopf-sekundaer merken-knopf${gemerkt ? ' gemerkt' : ''}" data-merken="${esc(b.id)}" aria-pressed="${gemerkt}">
+      <button type="button" class="knopf knopf-sekundaer knopf-klein merken-knopf${gemerkt ? ' gemerkt' : ''}" data-merken="${esc(b.id)}" aria-pressed="${gemerkt}">
         <i class="fa-solid ${gemerkt ? 'fa-bookmark-filled' : 'fa-bookmark'}" aria-hidden="true"></i> ${esc(gemerkt ? t('gemerkt') : t('merken'))}
+      </button>
+    </div>`;
+
+  // Schwebeleiste rechts: Merken, Merkliste, Teilen. Sie bleibt beim Scrollen
+  // erreichbar — merken will man oft erst, wenn man unten angekommen ist, und
+  // dafür wieder hochzuscrollen ist die Art Reibung, die niemand auf sich nimmt.
+  // Der Merken-Knopf trägt dieselbe data-merken-Verdrahtung wie der obere; nach
+  // dem Klick rendert die Ansicht neu, beide Zustände können nicht auseinanderlaufen.
+  const schwebeAktionen = `
+    <div class="seiten-aktionen" role="group" aria-label="${esc(t('seiten_aktionen'))}">
+      <button type="button" class="seiten-aktion${gemerkt ? ' aktiv' : ''}" data-merken="${esc(b.id)}"
+        aria-pressed="${gemerkt}" title="${esc(gemerkt ? t('gemerkt') : t('merken'))}">
+        <i class="fa-solid ${gemerkt ? 'fa-bookmark-filled' : 'fa-bookmark'}" aria-hidden="true"></i>
+        <span class="seiten-aktion-text">${esc(gemerkt ? t('gemerkt') : t('merken'))}</span>
+      </button>
+      <a class="seiten-aktion" href="#/profil" title="${esc(t('merkliste_oeffnen'))}">
+        <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+        <span class="seiten-aktion-text">${esc(t('merkliste_oeffnen'))}</span>
+      </a>
+      <button type="button" class="seiten-aktion" data-teilen="${esc(b.id)}" title="${esc(t('teilen'))}">
+        <i class="fa-solid fa-link" aria-hidden="true"></i>
+        <span class="seiten-aktion-text">${esc(t('teilen'))}</span>
       </button>
     </div>`;
 
@@ -278,7 +299,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${deltaHinweis}
       ${buendelung}
       ${absaetzeMitGlossar(erklaertext, glossarVerlinker, glossarGesehen)}
-      <div class="knopf-zeile">${quittierKnopf(b.id, 'erklaerteil', station.status.erklaerteil, t('als_gelesen'), t('gelesen'))}</div>
+      <div class="knopf-zeile">${quittierKnopf(b.id, 'erklaerteil', station.status.erklaerteil, t('als_gelesen'), t('abgehakt'))}</div>
     </section>`;
 
   // Mastery-Umschalter (§2a): „Wie sitzt das bei dir?" — NUR bei Übungs-Bausteinen
@@ -302,7 +323,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
         <div class="abschnitt-kopf"><h2>${esc(t('uebungsteil'))}</h2>${statusChip(station.status.uebungsteil)}</div>
         ${delta ? `<p class="leise">${esc(t('delta_uebungsteil_gilt'))}</p>` : ''}
         ${uebungsteilHtml(text(b.uebungsteil))}
-        <div class="knopf-zeile">${quittierKnopf(b.id, 'uebungsteil', station.status.uebungsteil, t('als_erledigt'), t('erledigt'))}</div>
+        <div class="knopf-zeile">${quittierKnopf(b.id, 'uebungsteil', station.status.uebungsteil, t('als_erledigt'), t('abgehakt'))}</div>
         ${masteryToggle}
       </section>`;
   }
@@ -316,7 +337,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       <section class="abschnitt">
         <div class="abschnitt-kopf"><h2><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> ${esc(t('reflexionsaufgabe'))}</h2>${statusChip(status)}</div>
         ${absaetzeMitGlossar(text(b.reflexionsaufgabe), glossarVerlinker, glossarGesehen)}
-        <div class="knopf-zeile">${quittierKnopf(b.id, 'reflexionsaufgabe', status, t('als_mitgenommen'), t('mitgenommen'))}</div>
+        <div class="knopf-zeile">${quittierKnopf(b.id, 'reflexionsaufgabe', status, t('als_mitgenommen'), t('abgehakt'))}</div>
       </section>`;
   }
 
@@ -350,7 +371,33 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${abschlussZeile}
       ${voraussetzungsBanner(station, kontext)}
       ${fussNavigation}
-    </article>`;
+    </article>
+    ${schwebeAktionen}`;
+
+  // Teilen: die native Freigabe, wo es sie gibt (Handy), sonst Link in die
+  // Zwischenablage. Beides kann fehlschlagen (abgebrochener Dialog, verweigerte
+  // Zwischenablage) — dann bleibt es still, statt eine Fehlermeldung zu werfen.
+  for (const knopf of el.querySelectorAll('[data-teilen]')) {
+    knopf.addEventListener('click', async () => {
+      const url = location.href;
+      const titel = label('baustein', knopf.dataset.teilen);
+      try {
+        if (navigator.share) {
+          await navigator.share({ title: titel, url });
+          return;
+        }
+        await navigator.clipboard.writeText(url);
+        const vorher = knopf.querySelector('.seiten-aktion-text').textContent;
+        knopf.querySelector('.seiten-aktion-text').textContent = t('teilen_kopiert');
+        setTimeout(() => {
+          const ziel = knopf.querySelector('.seiten-aktion-text');
+          if (ziel) ziel.textContent = vorher;
+        }, 1800);
+      } catch {
+        // Abgebrochen oder nicht erlaubt — kein Grund, die Seite zu stören.
+      }
+    });
+  }
 
   for (const knopf of el.querySelectorAll('[data-quittiere]')) {
     knopf.addEventListener('click', () => {
