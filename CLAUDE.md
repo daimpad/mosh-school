@@ -257,20 +257,27 @@ Tokens**, nie harte Farben.
   meldet `scripts/validate.py` als Warnung; vorproduzierte IDs (künftige Sets) sind okay.
 - **Hintergrundbilder + Kachel-Muster:** Heros und die Startseiten-Kacheln tragen
   hinter dem Motiv-SVG eine Foto-Ebene (`js/hintergrundbilder.js` → `bildEbene()`,
-  CSS `.genre-landing-bg`). Stärke über **drei Tokens an einer Stelle**:
-  `--bild-weich` (5px), `--bild-deckkraft` (.62), `--bild-saettigung` (.95) im
-  `:root`-Block direkt über der Regel; dazu `scale(1.18)` (Überzoom, sonst zieht
-  der Blur helle Ränder herein). Live vergleichen lassen sich die Werte über die
-  Regler in `mockups/startseite-muster.html` — dessen Vorgaben spiegeln die
-  ausgelieferten Werte, beim Ändern also mitziehen.
+  CSS `.genre-landing-bg`). Stärke über **Tokens an einer Stelle** im
+  `:root`-Block direkt über der Regel: `--bild-weich` (0px = scharf),
+  `--bild-deckkraft` (.8), `--bild-saettigung` (1), `--bild-zoom` (1.02). Der
+  Überzoom existiert nur wegen der Weichzeichnung — wer `--bild-weich` hochdreht,
+  muss `--bild-zoom` auf ~1.18 mitziehen, sonst zieht der Blur helle Bildränder in
+  die Kante. **Wo ein Foto liegt, tritt das Motiv-SVG zurück**
+  (`.genre-landing-bg ~ .genre-landing-bild { opacity: .1 }`) — über einem scharfen
+  Bild kreuzen sich sonst zwei Zeichnungen; ohne Foto bleibt das Motiv der Träger
+  der Fläche. Live vergleichen lassen sich die Werte über die Regler in
+  `mockups/startseite-muster.html` — dessen Vorgaben spiegeln die ausgelieferten
+  Werte, beim Ändern also mitziehen.
   Reihenfolge im DOM = Schichtung: **Bild → Motiv → Scrim → Text**. Bildwahl ist
   deterministisch (FNV-1a über den Bereichs-Schlüssel) und bewusst ohne inhaltliche
   Zuordnung. Zwei Dinge gelten nur im Container-Maßstab: der Blur skaliert mit
-  (`--blur-faktor`, `.bildkachel` = .68), und die Lesbarkeit hängt nicht am
-  flächigen Scrim, sondern an einem **Rückhalt direkt hinter dem Text**
-  (`.bildkachel-inhalt::before`) — er wächst mit der Textlänge mit und lässt das
-  Bild darüber frei. Ein flächiger Scrim, der für die kleine Hue-Augenbraue
-  stark genug wäre, deckt sonst das halbe Foto zu. **Fallstrick:** Das Bild wird
+  (`--blur-faktor`, `.bildkachel` = .68 — greift erst wieder ab `--bild-weich > 0`),
+  und die Lesbarkeit hängt nicht am flächigen Scrim, sondern an einem **Rückhalt
+  direkt hinter dem Text** (`.bildkachel-inhalt::before`) — er wächst mit der
+  Textlänge mit und lässt das Bild darüber frei. Ein flächiger Scrim, der für die
+  kleine Hue-Augenbraue stark genug wäre, deckt sonst das halbe Foto zu. Der
+  Rückhalt reicht oben bewusst weit über den Inhalt hinaus (`inset: -1.5rem …`),
+  weil die Augenbraue sonst im Ausblendbereich säße. **Fallstrick:** Das Bild wird
   inline als `background-image` gesetzt, **nicht** über eine Custom Property — ein
   relatives `url()` in einer Custom Property wird gegen das *Stylesheet* aufgelöst
   (also gegen `css/`) statt gegen das Dokument und läuft ins Leere.
