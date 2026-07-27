@@ -338,6 +338,17 @@ def main():
     if gesehen != len(bausteine):
         fehler.append('ZYKLUS im Voraussetzungsgraph: ' + ', '.join(i for i in offen if offen[i] > 0))
 
+    # Service-Worker-Huelle: jede Inhaltsdatei muss in sw.js SHELL stehen, sonst
+    # bekommen Offline-Nutzer sie nie (CLAUDE.md "SW-Wartung"). Bis hierher deckte
+    # das kein Test ab — die Liste wurde von Hand mitgezogen und konnte lautlos
+    # zurueckfallen.
+    with open(os.path.join(ROOT, 'sw.js'), encoding='utf-8') as f:
+        sw_src = f.read()
+    sw_shell = set(re.findall(r"'([^']+)'", re.search(r'const SHELL\s*=\s*\[(.*?)\];', sw_src, re.S).group(1)))
+    for pfad in dateien:
+        if pfad not in sw_shell:
+            fehler.append(f'sw.js: Inhaltsdatei "{pfad}" fehlt in SHELL (Offline-Nutzer bekommen sie nie)')
+
     # Bericht
     print(f'Pool: {len(bausteine)} Bausteine ueber {len(dateien)} Dateien')
     dom = Counter(d for b in bausteine for d in (b.get('domaene') or []))
