@@ -46,6 +46,9 @@ function vorgabe() {
     onboarding: { instrumente: [], level: null, zielsound: [], erledigt: false },
     // Zuletzt geöffneter Baustein (für die „Fortsetzen"-Kachel auf der Startseite).
     zuletzt: null,
+    // Merkliste: baustein-gebundene Lesezeichen (kein Fortschritt). Reihenfolge =
+    // Reihenfolge des Merkens; im Profil als PDF (Druck-Ansicht) sicherbar.
+    merkliste: [],
   };
 }
 
@@ -256,6 +259,36 @@ export function merkeZuletzt(bausteinId) {
   if (zst.zuletzt?.baustein === bausteinId) return; // kein unnötiges Schreiben/Benachrichtigen
   zst.zuletzt = { baustein: bausteinId, ts: new Date().toISOString() };
   schreibe();
+}
+
+// --- Merkliste (Lesezeichen, kein Fortschritt) ---
+
+// IDs der gemerkten Bausteine, in Merk-Reihenfolge.
+export function merkliste() {
+  return stelleSicher().merkliste;
+}
+
+export function istGemerkt(bausteinId) {
+  return stelleSicher().merkliste.includes(bausteinId);
+}
+
+// Umschalten: gemerkt ⇄ nicht gemerkt. Gibt den neuen Zustand zurück.
+export function schalteGemerkt(bausteinId) {
+  const liste = stelleSicher().merkliste;
+  const i = liste.indexOf(bausteinId);
+  if (i >= 0) liste.splice(i, 1);
+  else liste.push(bausteinId);
+  schreibe();
+  return i < 0;
+}
+
+export function entferneGemerkt(bausteinId) {
+  const liste = stelleSicher().merkliste;
+  const i = liste.indexOf(bausteinId);
+  if (i >= 0) {
+    liste.splice(i, 1);
+    schreibe();
+  }
 }
 
 // Export/Import als ein portables JSON-Envelope (Backup, kein Konto). Import
