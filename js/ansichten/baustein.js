@@ -12,6 +12,7 @@ import { absaetzeMitGlossar, baueGlossarVerlinker } from '../glossar-links.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 import { bausteinStatus, diagnose, einstellungen, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
 
 function kontextZuListe(kontext) {
@@ -244,22 +245,16 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
         .join(' ')
     : '';
 
-  // Kleiner Hero je Baustein: eigenes Icon in der Domänen-Hue + Titel; die
-  // Unterzeile nennt Domäne(n) und Könnensstufe(n), z. B. „Mentales · Experte".
+  // Großer Hero je Baustein — gleiche Inszenierung wie die Landing-Hubs
+  // (Motiv-Backdrop + Reinbox). Die Augenbraue trägt die übergeordnete Kategorie
+  // (primäre Domäne, z. B. „Ausrüstung"/„Gitarre"), die Unterzeile die
+  // Könnensstufe(n). Symbol = Baustein-Grafik bzw. Domänen-Glyph.
   const domaenen = domaenenVon(b);
   const heroHue = DOMAENE_HUE[domaenen[0]] || 'pf-blau';
-  const heroUntertitel = [
-    ...domaenen.map((dd) => label('domaene', dd)),
-    ...(b.kompetenzstufe || []).map((s) => label('kompetenzstufe', s)),
-  ].join(' · ');
-  const heroSektion = `
-    <section class="marke-hero klein hue ${heroHue} baustein-hero">
-      <span class="marke-hero-icon">${bausteinIcon(b.id) || domaeneIcon(domaenen[0]) || '<i class="fa-solid fa-feather" aria-hidden="true"></i>'}</span>
-      <div class="marke-hero-text">
-        <h1>${esc(label('baustein', b.id))}</h1>
-        ${heroUntertitel ? `<p class="marke-hero-untertitel">${esc(heroUntertitel)}</p>` : ''}
-      </div>
-    </section>`;
+  const heroKategorie = label('domaene', domaenen[0]);
+  const heroStufen = (b.kompetenzstufe || []).map((s) => label('kompetenzstufe', s)).join(' · ');
+  const heroSymbol = bausteinIcon(b.id) || domaeneIcon(domaenen[0]) || '<i class="fa-solid fa-feather" aria-hidden="true"></i>';
+  const heroSektion = landingHeroHtml('', label('baustein', b.id), heroStufen, heroHue, domaenen[0], heroKategorie, heroSymbol);
   const schema = lehrgrafik(b.id);
   const schemaSektion = schema
     ? `<figure class="lehrgrafik">${schema}<figcaption>${esc(label('lehrgrafik', b.id))}</figcaption></figure>`
