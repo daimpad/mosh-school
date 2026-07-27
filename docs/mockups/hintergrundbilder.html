@@ -49,6 +49,21 @@
     border-right-color: var(--signal-gelb, #d8a200);
   }
 
+  /* Kaputtes Bild: durchgestrichene Kachel statt stiller Leere. */
+  .mock-daumen.kaputt { border-color: var(--primaer); opacity: .5; }
+  .mock-daumen.kaputt::before {
+    content: "×"; position: absolute; inset: 0; display: grid; place-items: center;
+    color: var(--primaer); font-size: 1.3rem; font-weight: 700;
+  }
+
+  .mock-stoerung {
+    margin: 0 0 1.4rem; padding: .75rem .9rem; line-height: 1.5; font-size: .88rem;
+    background: var(--pf-magenta-weich, rgba(184,60,143,.12));
+    border-left: 3px solid var(--primaer);
+  }
+  .mock-stoerung strong { display: block; }
+  .mock-stoerung span { color: var(--tinte-2); }
+
   .mock-gewicht {
     margin: 0 0 1.4rem; padding: .75rem .9rem; line-height: 1.5; font-size: .88rem;
     background: var(--signal-gelb-weich, rgba(216,162,0,.12));
@@ -190,6 +205,11 @@
     selbst. Oder zieh die Dateien einfach <strong>hier hinein</strong>, dann
     kannst du sofort vergleichen, ohne etwas einzuchecken.
   </div>
+
+  <p class="mock-stoerung" id="stoerung" hidden>
+    <strong>Es ist etwas schiefgelaufen:</strong>
+    <span id="stoerung-liste"></span>
+  </p>
 
   <p class="mock-gewicht" id="gewicht" hidden>
     <strong>Vor dem Einbau verkleinern:</strong>
@@ -339,31 +359,73 @@ function ergaenzeBild(url, name, meta) {
   const schwer = meta && meta.bytes > 800 * 1024;
   const knopf = el(`<button type="button" class="mock-daumen${schwer ? ' schwer' : ''}"
       title="${beschriftung}" aria-pressed="false"><img src="${url}" alt="" loading="lazy"></button>`);
+  // Ein Bild, das nicht laedt (umbenannt, geloescht, Tippfehler im Verzeichnis),
+  // soll sichtbar sein statt still zu fehlen.
+  knopf.querySelector('img').addEventListener('error', () => {
+    knopf.classList.add('kaputt');
+    knopf.title = `${name} — konnte nicht geladen werden`;
+    melde(`Bild nicht ladbar: ${name}`);
+  });
   knopf.addEventListener('click', () => setzeBild(url, knopf));
   leiste.append(knopf);
   if (!aktiv) setzeBild(url, knopf);
   return meta;
 }
 
-// Bildquelle Nr. 1: das eingecheckte Verzeichnis images/bg/bilder.json.
-// Es funktioniert lokal UND auf GitHub Pages — Pages liefert kein
-// Verzeichnislisting, ohne diese Liste bliebe die Seite dort leer.
-// Erzeugt von scripts/build_bg_index.py.
+// Fehler gehoeren auf die Seite, nicht nur in die Konsole. Ohne das sieht man
+// bloss "keine Bilder" und weiss nicht, ob eine Datei fehlt, das Verzeichnis
+// veraltet ist oder der Pfad nicht stimmt.
+const meldungen = [];
+function melde(text) {
+  meldungen.push(text);
+  const kasten = document.getElementById('stoerung');
+  kasten.hidden = false;
+  document.getElementById('stoerung-liste').textContent = meldungen.join(' · ');
+}
+
+// Bildquelle Nr. 1: das eingecheckte Verzeichnis images/bg/bilder.json
+// (erzeugt von scripts/build_bg_index.py). Es funktioniert lokal UND auf
+// GitHub Pages — Pages liefert kein Verzeichnislisting.
+// Quelle Nr. 2 als Rueckfall: das Listing des lokalen http.server. Das hilft,
+// wenn das Verzeichnis noch nicht neu erzeugt wurde, nachdem ein Bild dazukam.
 const schwere = [];
-fetch('../images/bg/bilder.json')
-  .then((a) => (a.ok ? a.json() : Promise.reject(new Error('kein Manifest'))))
-  .then((daten) => {
-    for (const b of daten.bilder || []) {
-      // Dateinamen duerfen Leerzeichen und Klammern enthalten — sauber kodieren.
-      ergaenzeBild('../images/bg/' + encodeURIComponent(b.datei), b.datei, b);
-      if (b.bytes > 800 * 1024) schwere.push(`${b.datei} (${kb(b.bytes)}, ${b.breite}×${b.hoehe})`);
-    }
-    if (schwere.length) {
-      document.getElementById('gewicht').hidden = false;
-      document.getElementById('gewicht-liste').textContent = schwere.join(' · ');
-    }
-  })
-  .catch(() => { /* still — der Leer-Hinweis erklaert den Drag-&-Drop-Weg */ });
+
+async function ausVerzeichnis() {
+  const antwort = await fetch('../images/bg/bilder.json');
+  if (!antwort.ok) throw new Error(`bilder.json: HTTP ${antwort.status}`);
+  const daten = await antwort.json();
+  const bilder = daten.bilder || [];
+  if (!bilder.length) throw new Error('bilder.json enthält keine Bilder');
+  for (const b of bilder) {
+    // Dateinamen duerfen Leerzeichen und Klammern enthalten — sauber kodieren.
+    ergaenzeBild('../images/bg/' + encodeURIComponent(b.datei), b.datei, b);
+    if (b.bytes > 800 * 1024) schwere.push(`${b.datei} (${kb(b.bytes)}, ${b.breite}×${b.hoehe})`);
+  }
+  if (schwere.length) {
+    document.getElementById('gewicht').hidden = false;
+    document.getElementById('gewicht-liste').textContent = schwere.join(' · ');
+  }
+}
+
+async function ausListing() {
+  const antwort = await fetch('../images/bg/');
+  if (!antwort.ok) throw new Error(`Verzeichnislisting: HTTP ${antwort.status}`);
+  const doc = new DOMParser().parseFromString(await antwort.text(), 'text/html');
+  const treffer = [...doc.querySelectorAll('a[href]')]
+    .map((a) => decodeURIComponent(a.getAttribute('href').replace(/^.*\//, '')))
+    .filter((h) => /\.(jpe?g|png|webp|avif|gif)$/i.test(h));
+  if (!treffer.length) throw new Error('Verzeichnislisting enthält keine Bilder');
+  for (const name of treffer) ergaenzeBild('../images/bg/' + encodeURIComponent(name), name);
+  melde('bilder.json fehlte — Bilder über das Verzeichnislisting geladen. '
+    + 'Bitte "python3 scripts/build_bg_index.py" laufen lassen, sonst bleiben sie auf GitHub Pages unsichtbar.');
+}
+
+ausVerzeichnis().catch((fehler1) => {
+  ausListing().catch((fehler2) => {
+    melde(`Keine Bilder gefunden. ${fehler1.message}; ${fehler2.message}. `
+      + 'Du kannst Bilder trotzdem per Drag & Drop auf diese Seite ziehen.');
+  });
+});
 
 // Drag & Drop: sofort vergleichen, ohne irgendetwas einzuchecken.
 const nimmDateien = (dateien) => {
