@@ -8,7 +8,7 @@ import { renderMitmachen, renderRechtstext, renderUeber } from './ansichten/info
 import { renderOnboarding } from './ansichten/onboarding.js';
 import { renderPlan } from './ansichten/plan.js';
 import { renderBand, renderIndividual, renderInstrument, renderKompetenzpfad, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
-import { renderProfil } from './ansichten/profil.js';
+import { renderMerkliste, renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
 import { renderGriffe } from './ansichten/griffe.js';
@@ -101,7 +101,7 @@ function aktualisiereNavigation(segmente) {
   const geraeteRoute = s0 === 'geraete' || (s0 === 'werkzeug' && segmente[1] === 'explorer');
   const aktiv = !s0
     ? 'home'
-    : s0 === 'profil'
+    : s0 === 'profil' || s0 === 'merkliste'
       ? 'profil'
       : geraeteRoute
         ? 'geraete'
@@ -423,6 +423,8 @@ function rendern() {
     renderRechtstext(el, daten, 'datenschutz');
   } else if (segmente[0] === 'baustein' && segmente[1]) {
     renderBaustein(el, daten, sicherDecode(segmente[1]), query.get('kontext') || 'kompetenz');
+  } else if (segmente[0] === 'merkliste') {
+    renderMerkliste(el, daten);
   } else if (segmente[0] === 'profil') {
     renderProfil(el, daten);
   } else {

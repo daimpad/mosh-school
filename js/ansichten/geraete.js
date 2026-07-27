@@ -4,7 +4,7 @@
 // Referenz-Landing, kein eigener Fortschritt (der hängt an den Bausteinen selbst).
 
 import { label, t } from '../i18n.js';
-import { bausteinIcon, domaeneIcon, esc } from '../oberflaeche.js';
+import { bausteinIcon, domaeneIcon, esc, nichtGefundenHtml } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { INSTRUMENTE } from '../pfade.js';
 
@@ -31,7 +31,7 @@ function geraeteBausteine(daten, instrument) {
 
 export function renderGeraete(el, daten, instrument) {
   if (!INSTRUMENTE.includes(instrument)) {
-    el.innerHTML = `<div class="karte"><p>${esc(t('nicht_gefunden'))}</p><a class="knopf knopf-sekundaer" href="#/werkzeug/explorer">${esc(t('wz_explorer_titel'))}</a></div>`;
+    el.innerHTML = nichtGefundenHtml('#/werkzeug/explorer', t('wz_explorer_titel'));
     return;
   }
   const bausteine = geraeteBausteine(daten, instrument);
