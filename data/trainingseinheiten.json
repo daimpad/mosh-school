@@ -1730,6 +1730,171 @@
           }
         ]
       }
+    },
+    {
+      "id": "gitarre_doom_session",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Powerchords, tiefe Stimmung und getragenes Doom-Riffing"
+      },
+      "beschreibung": {
+        "de": "Langsam, schwer, exakt: Vom lockeren Greifen über Powerchords und tiefe Stimmung zum getragenen Doom-Riffing — Abschluss mit bewusster Entspannung der Greifhand."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "greifhand_grundlagen"
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "powerchords"
+          },
+          {
+            "baustein": "drop_tuning"
+          },
+          {
+            "baustein": "doom_riffing"
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "fingerdruck_oekonomie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "drums_dbeat_session",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "D-Beat, Tempo und Ausdauer am Set"
+      },
+      "beschreibung": {
+        "de": "Treibender Hardcore-Puls: Nach dem Rudiment-Warm-up vom stabilen Grundbeat zum D-Beat, geschärft über Akzente — Ausklang im langsamen, schweren Kontrast."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "rudiments_grundlage"
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "grundbeat"
+          },
+          {
+            "baustein": "d_beat"
+          },
+          {
+            "baustein": "dynamik_akzente"
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "doom_feel"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bass_death_metal_session",
+      "kompetenzstufe": "fortgeschritten",
+      "schwerpunkt": {
+        "de": "Anschlag, Tightness und tiefes Fundament"
+      },
+      "beschreibung": {
+        "de": "Tempo mit Fundament: Fingerstyle-Warm-up, dann Dreifinger-Technik, Tremolo und Blast-Begleitung — Ausklang über ruhige Dämpfungskontrolle für einen sauberen Ton."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "fingerstyle"
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "bass_dreifinger"
+          },
+          {
+            "baustein": "bass_tremolo"
+          },
+          {
+            "baustein": "bass_blast_begleitung"
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "greifhand_daempfen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vocals_clean_doom_session",
+      "kompetenzstufe": "einsteiger",
+      "schwerpunkt": {
+        "de": "Cleane Stimme, Atem und getragene Linien"
+      },
+      "beschreibung": {
+        "de": "Getragene Stimme statt Härte: Sanftes Einsingen, dann Tonhöhe, Clean-Gesang und Dynamik — Ausklang über ruhige Haltungs- und Atemarbeit."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "stimmuebungen_sanft"
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "tonhoehe_clean"
+          },
+          {
+            "baustein": "clean_im_metal"
+          },
+          {
+            "baustein": "dynamik_ausdruck"
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "gesang_haltung_atmung"
+          }
+        ]
+      }
+    },
+    {
+      "id": "theorie_satz_klang_werkstatt",
+      "kompetenzstufe": "experte",
+      "schwerpunkt": {
+        "de": "Voicing, Kontrapunkt, Modulation und Form"
+      },
+      "beschreibung": {
+        "de": "Vom Voicing zum Arrangement: Hörend erweiterte Voicings prüfen, dann Kontrapunkt, Modulationswege und den gezielten Einsatz von Dissonanz erarbeiten — Ausklang mit einer Formskizze für ein eigenes Stück."
+      },
+      "phasen": {
+        "erwaermung": [
+          {
+            "baustein": "erweiterte_harmonik"
+          }
+        ],
+        "hauptteil": [
+          {
+            "baustein": "kontrapunkt_stimmfuehrung"
+          },
+          {
+            "baustein": "modulation_vertieft"
+          },
+          {
+            "baustein": "dissonanz_gezielt"
+          }
+        ],
+        "ausklang": [
+          {
+            "baustein": "form_skizzieren"
+          }
+        ]
+      }
     }
   ]
 }
