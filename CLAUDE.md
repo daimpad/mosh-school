@@ -260,7 +260,15 @@ Tokens**, nie harte Farben.
   Komponentenregel**: Lässt sich etwas nicht abschalten, wird der Wert oben zum
   Token gemacht (so entstanden `--schatten-leiste/-schublade/-dialog/-ring`,
   `--filter-marke/-medaille`, `--schatten-plastisch`, `--karten-kante`,
-  `--karten-kante-breite`, `--trennlinie`, `--hue-kachel-bg`, `--trainer-bg`).
+  `--karten-kante-breite`, `--trennlinie`, `--widget-kante`, `--hero-rueckhalt`,
+  `--balken-spur`, `--hue-kachel-bg`, `--trainer-bg`). **Hero-Text über Fotos:**
+  Der flächige `.genre-landing-scrim` läuft erst ab 62 % Höhe an — Titel und
+  Fließtext sitzen darin, die kleine Hue-Augenbraue steht darüber im Bild. In
+  Graustufen trifft sie regelmäßig Mittelgrau, deshalb trägt
+  `.genre-landing-inhalt::before` (über `--hero-rueckhalt`, nur hell) denselben
+  textnahen Rückhalt wie `.bildkachel-inhalt::before`. Er reicht seitlich
+  bewusst über den Hero hinaus (`inset: … -100% … -2.5rem`), sonst steht seine
+  Kante als heller Kasten im Foto.
   **Fallstrick:** `box-shadow: none, inset …`
   ist ungültig — ein abzuschaltender Schatten in einer *Liste* wird zum
   Null-Schatten `0 0 0 0 transparent`, nicht zu `none`. Die Hell-Selektoren
