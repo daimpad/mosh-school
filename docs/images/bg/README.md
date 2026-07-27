@@ -4,17 +4,36 @@ Ablage für die Hero-Hintergrundbilder. Die Dateien hier sind **noch nicht in de
 App verdrahtet** — zum Vergleich der möglichen Umgangsweisen dient
 `mockups/hintergrundbilder.html`.
 
-So vergleichst du:
+## Vergleichen
 
-1. Bilder in diesen Ordner legen (JPG, PNG, WebP oder AVIF).
-2. Im Projektordner `python3 -m http.server 8000` starten.
-3. <http://localhost:8000/mockups/hintergrundbilder.html> öffnen — die Seite
-   liest das Verzeichnis von selbst aus und zeigt jedes Bild in allen Varianten.
+Online, ohne irgendetwas zu starten:
+<https://daimpad.github.io/mosh-school/mockups/hintergrundbilder.html>
 
-Ohne Server geht es auch: Die Dateien lassen sich auf der Mockup-Seite einfach
-per Drag & Drop ablegen.
+Lokal: `python3 -m http.server 8000` im Projektordner, dann
+<http://localhost:8000/mockups/hintergrundbilder.html>.
 
-Vor dem Einbau in die App beachten: Die Bilder liegen im Hero hinter dem
-Motiv-SVG und dem Scrim, tragen also keine Information. Sie sollten großzügig
-beschnitten werden können (die Hero-Höhe schwankt) und komprimiert sein — sie
-gehören sonst in die Service-Worker-Hülle und würden den Erstaufruf belasten.
+Auf beiden Wegen liest die Seite `bilder.json` (siehe unten). Zusätzlich lassen
+sich Bilder per Drag & Drop auf die Seite ziehen — praktisch, um einen Kandidaten
+zu prüfen, bevor er ins Repository wandert.
+
+## `bilder.json` ist generiert
+
+GitHub Pages liefert kein Verzeichnislisting; ohne eine eingecheckte Liste wäre
+der Ordner online unsichtbar. Nach jedem Hinzufügen oder Entfernen eines Bildes:
+
+```sh
+python3 scripts/build_bg_index.py
+```
+
+Die CI prüft bei jedem Pull Request, dass die Liste zum Ordnerinhalt passt.
+
+## Vor dem Einbau in die App
+
+Die Bilder liegen im Hero **hinter** Motiv-SVG und Scrim und werden zusätzlich
+unscharf gezeichnet oder hart kontrastiert — die volle Auflösung ist dort nicht
+sichtbar, kostet aber Ladezeit. Rund **1600 px Breite** und **150–250 KB** je
+Bild reichen aus. Sie sollten sich außerdem großzügig beschneiden lassen, weil
+die Hero-Höhe schwankt (Querformat ist deshalb im Vorteil).
+
+Wandern die Bilder in die App, gehören sie in die Service-Worker-Hülle (`SHELL`
+in `sw.js`) — sonst fehlen sie offline. Genau deshalb zählt jedes Kilobyte.
