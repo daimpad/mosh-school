@@ -12,6 +12,7 @@ import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aktivesInstrument = 'gitarre';
 let aktiveStimmung = null;
+let aktiverKlangStil = null; // Genre-Filter für Intervalle/Akkorde/Skalen (null = alle)
 let audioKontext = null;
 
 // Notenname (wissenschaftlich, A4 = 440 Hz) → Frequenz. Unterstützt # und b.
@@ -183,17 +184,42 @@ export function renderStimmungen(el, daten) {
   const intervalle = werkzeug.intervalle || [];
   const akkorde = werkzeug.akkorde || [];
   const skalen = werkzeug.skalen || [];
+
+  // Genre-Filter über Intervalle/Akkorde/Skalen: die vorkommenden Stile bilden die
+  // Auswahl; ohne Auswahl (null) werden alle Einträge gezeigt. Ein Eintrag „passt",
+  // wenn er den gewählten Stil trägt.
+  const alleKlang = [...intervalle, ...akkorde, ...skalen];
+  const klangStile = [...new Set(alleKlang.flatMap((e) => e.genres || []))].sort((a, b) =>
+    label('stil', a).localeCompare(label('stil', b), 'de'),
+  );
+  const passt = (e) => !aktiverKlangStil || (e.genres || []).includes(aktiverKlangStil);
+  const stilChip = (wert, aktiv, beschriftung) =>
+    `<button type="button" class="chip chip-waehlbar ${aktiv ? 'chip-akzent' : ''}" data-klangstil="${esc(wert)}" aria-pressed="${aktiv}">${esc(beschriftung)}</button>`;
+  const stilFilter = [
+    stilChip('', !aktiverKlangStil, t('klang_stil_alle')),
+    ...klangStile.map((s) => stilChip(s, aktiverKlangStil === s, label('stil', s))),
+  ].join(' ');
+
+  // Unterblock je Klang-Art; leer (nach Filter) → ausgeblendet statt leere Überschrift.
+  const klangBlock = (titelKey, art, spielart, eintraege) => {
+    const gefiltert = eintraege.filter(passt);
+    if (gefiltert.length === 0) return '';
+    return `
+        <h3>${esc(t(titelKey))}</h3>
+        <div class="klang-gitter">${gefiltert.map((e) => klangKnopf(art, spielart, e)).join('')}</div>`;
+  };
+  const bloecke =
+    klangBlock('klang_intervalle', 'intervall', 'akkord', intervalle) +
+    klangBlock('klang_akkorde', 'akkord', 'akkord', akkorde) +
+    klangBlock('klang_skalen', 'skala', 'sequenz', skalen);
   const klangSektion = intervalle.length || akkorde.length || skalen.length
     ? `
       <section class="klang-werkzeug">
         <h2>${esc(t('klang_titel'))}</h2>
         <p class="marke-hero-untertitel">${esc(t('klang_untertitel'))}</p>
-        <h3>${esc(t('klang_intervalle'))}</h3>
-        <div class="klang-gitter">${intervalle.map((e) => klangKnopf('intervall', 'akkord', e)).join('')}</div>
-        <h3>${esc(t('klang_akkorde'))}</h3>
-        <div class="klang-gitter">${akkorde.map((e) => klangKnopf('akkord', 'akkord', e)).join('')}</div>
-        <h3>${esc(t('klang_skalen'))}</h3>
-        <div class="klang-gitter">${skalen.map((e) => klangKnopf('skala', 'sequenz', e)).join('')}</div>
+        <p class="klang-filter-label leise">${esc(t('klang_stil_filter'))}</p>
+        <p class="chip-zeile klang-stilfilter">${stilFilter}</p>
+        ${bloecke || `<p class="leise">${esc(t('klang_stil_leer'))}</p>`}
         <p class="klang-hinweis leise" aria-live="polite"></p>
       </section>`
     : '';
@@ -226,6 +252,13 @@ export function renderStimmungen(el, daten) {
   }
   for (const saite of el.querySelectorAll('.saite')) {
     saite.addEventListener('click', () => spieleTon(frequenzVon(saite.dataset.note)));
+  }
+  for (const knopf of el.querySelectorAll('[data-klangstil]')) {
+    knopf.addEventListener('click', () => {
+      aktiverKlangStil = knopf.dataset.klangstil || null;
+      renderStimmungen(el, daten);
+      el.querySelector(`[data-klangstil="${CSS.escape(aktiverKlangStil || '')}"]`)?.focus();
+    });
   }
   const hinweisFeld = el.querySelector('.klang-hinweis');
   for (const knopf of el.querySelectorAll('.klang-knopf')) {
