@@ -11,6 +11,7 @@ import { t } from '../i18n.js';
 import { esc, meilensteinLabel, registriereAufraeumen, zeigeMeilenstein } from '../oberflaeche.js';
 import { feiereMeilenstein } from '../zustand.js';
 import { speichereClip, alleClips, aktualisiereMeta, loescheClip } from '../audio/riff-db.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aufnahmeLaeuft = false;
 let mediaRecorder = null;
@@ -199,14 +200,8 @@ export function renderWerkzeugRecorder(el, daten, query) {
   kreativMix = (query && query.get('mix')) || '';
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-microphone', t('wz_recorder_titel'), t('wz_recorder_untertitel'), 'pf-teal', 'werkzeug:recorder', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-microphone" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_recorder_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_recorder_untertitel'))}</p>
-        </div>
-      </section>
 
       ${kreativModus ? `<p class="lk-hinweis banner-hinweis" role="note"><span><i class="fa-solid fa-star" aria-hidden="true"></i> ${esc(kreativMix ? t('wz_rec_kreativ_hinweis_mix', { mix: kreativMix.replace(/-/g, ' × ') }) : t('wz_rec_kreativ_hinweis'))}</span></p>` : ''}
 

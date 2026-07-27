@@ -3279,3 +3279,31 @@ a.karte-link.verweiszeile {
   .bildkachel-titel { font-size: 1.12rem; }
   .bild-gitter { gap: 0.6rem; }
 }
+
+/* ---------- Footer: Haltungs-Zeile ----------
+   Dieselben Statements wie auf der Über-Seite, hier auf jeder Seite sichtbar —
+   die Aussage ist Teil der Marke, nicht eine Unterseite. Der GitHub-Verweis
+   steht bewusst daneben: „Quelltext offen" ist eine Haltung, kein Feature.
+   Die Texte setzt beschrifteRahmen() aus den Labels. */
+.footer-haltung {
+  /* Der Footer selbst erscheint erst ab Tablet (.seiten-footer) — die Zeile
+     folgt demselben Breakpoint, sonst stünde sie mobil ohne Footer da. */
+  display: none;
+  max-width: 44rem;
+  margin: 0.9rem auto 0;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.3rem;
+  align-items: center;
+  padding: 0.9rem 0 0;
+  border-top: 1px solid var(--linie);
+  font-size: 0.8rem;
+  color: var(--tinte-2);
+}
+.footer-haltung-eintrag { display: inline-flex; align-items: center; gap: 0.4rem; }
+.footer-haltung-eintrag .fa-solid,
+.footer-haltung-eintrag .fa-brands { color: var(--primaer); }
+a.footer-quelltext { color: var(--tinte); text-decoration: none; }
+a.footer-quelltext:hover, a.footer-quelltext:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
+@media (min-width: 768px) {
+  .footer-haltung { display: flex; }
+}

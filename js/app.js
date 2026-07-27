@@ -224,6 +224,11 @@ function beschrifteRahmen() {
     if (ziel) ziel.textContent = beschriftung;
     else verweis.textContent = beschriftung;
   }
+  // Haltungs-Zeile im Footer: dieselben Labels wie die Über-Seite, damit die
+  // Aussage nur an einer Stelle gepflegt wird (Icons stehen im Markup).
+  for (const eintrag of document.querySelectorAll('[data-haltung]')) {
+    eintrag.textContent = t('haltung_' + eintrag.dataset.haltung);
+  }
 }
 
 // Menü öffnen zwei Auslöser: der Hamburger (Kopf, ab Tablet) und „Mehr"

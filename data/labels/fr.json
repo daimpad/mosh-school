@@ -806,7 +806,9 @@
     "klang_stil_leer": "",
     "kicker_instrument": "",
     "kicker_zusammenspiel": "",
-    "kicker_lernweg": ""
+    "kicker_lernweg": "",
+    "kicker_werkzeug": "",
+    "haltung_quelltext": ""
   },
   "bausteine": {
     "grundhaltung": "",

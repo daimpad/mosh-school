@@ -15,6 +15,7 @@ import { erzeugeScheduler } from '../audio/scheduler.js';
 import { klick } from '../audio/stimmen.js';
 import { rendereWav } from '../audio/wav.js';
 import { holeWerkzeugDaten } from '../werkzeug-speicher.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 // Unterteilungen: Pulse pro Viertel. 1=Viertel, 2=Achtel, 3=Triole, 4=Sechzehntel.
 const UNTERTEILUNGEN = [1, 2, 3, 4];
@@ -296,14 +297,8 @@ export function renderWerkzeugMetronom(el, daten, query) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-stopwatch', t('wz_metronom_titel'), t('wz_metronom_untertitel'), 'pf-teal', 'werkzeug:metronom', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_metronom_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_metronom_untertitel'))}</p>
-        </div>
-      </section>
 
       <div class="wz-audio-tor" ${audioBereit ? 'hidden' : ''}>
         <p class="leise">${esc(t('wz_audio_hinweis'))}</p>

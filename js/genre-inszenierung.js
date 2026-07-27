@@ -194,6 +194,30 @@ export function landingHeroHtml(icon, titel, untertitel = '', hue = 'pf-blau', m
     </section>`;
 }
 
+// Bild-Kachel: derselbe Aufbau wie der Landing-Hero, nur im Container-Maßstab —
+// Bild → Motiv → Scrim → Text. Verwendet auf der Startseite und auf der
+// Instrument-Auswahl; beide zeigen dieselben Bereiche und sollen deshalb gleich
+// aussehen. `schluessel` bestimmt Motivform UND Bildwahl deterministisch, damit
+// eine Kachel über Reloads hinweg stabil bleibt.
+export function bildKachelHtml({ href, hue = 'pf-schiefer', schluessel, icon = '',
+  iconHtml = '', augenbraue = '', titel, meta = '', text = '', extra = '',
+  cta = '', breit = false }) {
+  const symbol = iconHtml || (icon ? `<i class="fa-solid ${esc(icon)}" aria-hidden="true"></i>` : '');
+  return `
+    <a class="karte karte-link pfad-kachel bildkachel ${breit ? 'voll-breit ' : ''}${esc(hue)}" href="${esc(href)}">
+      ${bildEbene(schluessel)}
+      ${motivSvg(schluessel)}
+      <div class="bildkachel-scrim" aria-hidden="true"></div>
+      <div class="bildkachel-inhalt">
+        ${symbol || augenbraue ? `<p class="bildkachel-augenbraue">${symbol}${esc(augenbraue)}</p>` : ''}
+        <h3 class="bildkachel-titel">${titel}${meta}</h3>
+        ${text ? `<p class="bildkachel-text">${text}</p>` : ''}
+        ${extra}
+        ${cta}
+      </div>
+    </a>`;
+}
+
 // Inszenierter Startseiten-Hero: gleiche Motiv-Backdrop- + Reinbox-Inszenierung
 // wie die Landingpages, aber mit Marken-Logo, Titel, Untertitel, Themenzeile und
 // den Einstiegs-CTAs (extra). Blutrote Marken-Hue. Ersetzt den flachen

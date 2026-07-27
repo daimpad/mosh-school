@@ -24,6 +24,7 @@ import { referenzDrone } from '../audio/stimmen.js';
 import { holeMikro } from '../audio/mikro.js';
 import { erkennePitch, frequenzTrifft } from '../audio/tonhoehe.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
+import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const PRESETS = [
   { id: 'standard_e', instrument: 'gitarre', saiten: ['E2', 'A2', 'D3', 'G3', 'B3', 'E4'] },
@@ -321,14 +322,8 @@ export function renderWerkzeugStimmgeraet(el, daten, query) {
 
   el.innerHTML = `
     <article class="wz-werkzeug">
+      ${landingHeroHtml('fa-wave-square', t('wz_stimmgeraet_titel'), t('wz_stimmgeraet_untertitel'), 'pf-teal', 'werkzeug:stimmgeraet', t('kicker_werkzeug'))}
       <p><a class="chip" href="#/werkzeuge"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_zurueck'))}</a></p>
-      <section class="marke-hero klein hue pf-teal">
-        <span class="marke-hero-icon"><i class="fa-solid fa-wave-square" aria-hidden="true"></i></span>
-        <div class="marke-hero-text">
-          <h1>${esc(t('wz_stimmgeraet_titel'))}</h1>
-          <p class="marke-hero-untertitel">${esc(t('wz_stimmgeraet_untertitel'))}</p>
-        </div>
-      </section>
 
       <div class="wz-audio-tor" ${audioBereit ? 'hidden' : ''}>
         <p class="leise">${esc(t('wz_audio_hinweis'))}</p>
