@@ -1,9 +1,10 @@
 {
-  "titel": "Powerchord-Griffe",
-  "hinweis": "Powerchords sind verschiebbar: dieselbe Form klingt auf jedem Bund, nur der Grundton (R) wandert. Die × markieren stumm gehaltene Saiten — im Metal fast immer palm-muted und in tiefer Stimmung, die Griffe bleiben trotzdem gleich.",
+  "titel": "Griffe",
+  "hinweis": "Die wichtigsten Gitarrengriffe fürs harte Spiel als Griffbild — von den beweglichen Powerchords über Barré-Formen und Oktaven bis zu offenen Akkorden für cleane Passagen. Powerchords und Barré-Formen sind verschiebbar: dieselbe Form klingt auf jedem Bund, nur der Grundton (R) wandert. Die × markieren stumm gehaltene Saiten — im Metal fast immer palm-muted und in tiefer Stimmung, die Griffe bleiben trotzdem gleich.",
   "griffe": [
     {
       "id": "pc_e_2",
+      "kategorie": "powerchord",
       "name": { "de": "E-Form (Wurzel 6. Saite)" },
       "toene": { "de": "Grundton + Quinte" },
       "kurz": { "de": "Die beweglichste Powerchord-Form: Grundton auf der tiefen E-Saite, die Quinte eine Saite höher und zwei Bünde weiter. Der Zeigefinger hält den Grundton, der Ringfinger die Quinte." },
@@ -20,6 +21,7 @@
     },
     {
       "id": "pc_e_3",
+      "kategorie": "powerchord",
       "name": { "de": "E-Form mit Oktave" },
       "toene": { "de": "Grundton + Quinte + Oktave" },
       "kurz": { "de": "Wie die E-Form, dazu die Oktave auf der D-Saite (kleiner Finger). Voller und dicker — der Standard für die meisten Riffs." },
@@ -36,6 +38,7 @@
     },
     {
       "id": "pc_a",
+      "kategorie": "powerchord",
       "name": { "de": "A-Form (Wurzel 5. Saite)" },
       "toene": { "de": "Grundton + Quinte + Oktave" },
       "kurz": { "de": "Dieselbe Form eine Saite höher: Grundton auf der A-Saite. Die tiefe E-Saite bleibt stumm — der Zeigefinger legt sich leicht an, um sie abzudämpfen." },
@@ -52,6 +55,7 @@
     },
     {
       "id": "pc_d",
+      "kategorie": "powerchord",
       "name": { "de": "D-Form (Wurzel 4. Saite)" },
       "toene": { "de": "Grundton + Quinte + Oktave" },
       "kurz": { "de": "Grundton auf der D-Saite — für höhere Powerchords, ohne die Greifhand weit nach oben zu schieben. E- und A-Saite bleiben stumm." },
@@ -68,6 +72,7 @@
     },
     {
       "id": "pc_drop",
+      "kategorie": "powerchord",
       "name": { "de": "Drop-Tuning: Ein-Finger-Powerchord" },
       "toene": { "de": "Grundton + Quinte + Oktave" },
       "stimmung": { "de": "Drop-Stimmung" },
@@ -81,6 +86,176 @@
         { "status": "stumm" },
         { "status": "stumm" },
         { "status": "stumm" }
+      ]
+    },
+    {
+      "id": "barre_e_dur",
+      "kategorie": "barre",
+      "name": { "de": "Barré E-Form, Dur (Wurzel 6. Saite)" },
+      "toene": { "de": "Grundton + große Terz + Quinte" },
+      "kurz": { "de": "Der Zeigefinger legt sich als Sattel über alle Saiten, dahinter greift die E-Dur-Form. Voller Dur-Akkord, überall am Hals spielbar — im Metal meist clean, weil er unter High-Gain schnell breiig wird." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "terz", "bund": 2, "finger": 2 },
+        { "status": "quinte", "bund": 1, "finger": 1 },
+        { "status": "oktave", "bund": 1, "finger": 1 }
+      ]
+    },
+    {
+      "id": "barre_e_moll",
+      "kategorie": "barre",
+      "name": { "de": "Barré E-Form, Moll (Wurzel 6. Saite)" },
+      "toene": { "de": "Grundton + kleine Terz + Quinte" },
+      "kurz": { "de": "Wie die Dur-Barré-Form, aber der Zeigefinger nimmt die G-Saite mit — die Terz wird klein. Der dunkle, volle Moll-Akkord über den ganzen Hals; Basis vieler cleaner Metal-Passagen." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "terz", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 1, "finger": 1 },
+        { "status": "oktave", "bund": 1, "finger": 1 }
+      ]
+    },
+    {
+      "id": "barre_a_dur",
+      "kategorie": "barre",
+      "name": { "de": "Barré A-Form, Dur (Wurzel 5. Saite)" },
+      "toene": { "de": "Grundton + große Terz + Quinte" },
+      "kurz": { "de": "Zeigefinger-Sattel ab der A-Saite, dahinter die A-Dur-Form (oft mit einem Finger als kleines Barré über drei Saiten). Die tiefe E-Saite bleibt stumm." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "stumm" },
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "oktave", "bund": 3, "finger": 3 },
+        { "status": "terz", "bund": 3, "finger": 3 },
+        { "status": "quinte", "bund": 1, "finger": 1 }
+      ]
+    },
+    {
+      "id": "barre_a_moll",
+      "kategorie": "barre",
+      "name": { "de": "Barré A-Form, Moll (Wurzel 5. Saite)" },
+      "toene": { "de": "Grundton + kleine Terz + Quinte" },
+      "kurz": { "de": "Die A-Barré-Form mit kleiner Terz: dunkler Moll-Akkord ab der A-Saite. Die hohe Terz rückt einen Bund tiefer als in der Dur-Form." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "stumm" },
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "quinte", "bund": 3, "finger": 3 },
+        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "terz", "bund": 2, "finger": 2 },
+        { "status": "quinte", "bund": 1, "finger": 1 }
+      ]
+    },
+    {
+      "id": "oktave_form",
+      "kategorie": "oktave",
+      "name": { "de": "Oktav-Griff (6. → 4. Saite)" },
+      "toene": { "de": "Grundton + Oktave" },
+      "kurz": { "de": "Grundton auf der tiefen E-Saite, dieselbe Note eine Oktave höher auf der D-Saite (zwei Bünde weiter). Die A-Saite dazwischen wird vom Zeigefinger abgedämpft. Die Grundform für Oktav-Melodien und doppelte Lead-Linien." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "stumm" },
+        { "status": "oktave", "bund": 3, "finger": 3 },
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "stumm" }
+      ]
+    },
+    {
+      "id": "tritonus_dyade",
+      "kategorie": "oktave",
+      "name": { "de": "Tritonus-Dyade (6. + 5. Saite)" },
+      "toene": { "de": "Grundton + Tritonus" },
+      "kurz": { "de": "Grundton auf der tiefen E-Saite, der Tritonus einen Bund höher auf der A-Saite — der „Diabolus in musica“ als greifbare Zwei-Ton-Form. Das Signatur-Reibungsintervall des Metal, klingt unter Zerre maximal unheilvoll." },
+      "beweglich": true,
+      "baende": 4,
+      "saiten": [
+        { "status": "grundton", "bund": 1, "finger": 1 },
+        { "status": "tritonus", "bund": 2, "finger": 2 },
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "stumm" }
+      ]
+    },
+    {
+      "id": "offen_em",
+      "kategorie": "offen",
+      "name": { "de": "E-Moll (offen)" },
+      "toene": { "de": "Grundton + kleine Terz + Quinte" },
+      "kurz": { "de": "Der einfachste offene Akkord: nur zwei Finger, alle sechs Saiten klingen. Voll und dunkel, ideal für cleane Intros und die leeren, dröhnenden E-Saiten als Drone." },
+      "beweglich": false,
+      "baende": 3,
+      "saiten": [
+        { "status": "offen" },
+        { "status": "quinte", "bund": 2, "finger": 2 },
+        { "status": "oktave", "bund": 2, "finger": 3 },
+        { "status": "offen" },
+        { "status": "offen" },
+        { "status": "offen" }
+      ]
+    },
+    {
+      "id": "offen_am",
+      "kategorie": "offen",
+      "name": { "de": "A-Moll (offen)" },
+      "toene": { "de": "Grundton + kleine Terz + Quinte" },
+      "kurz": { "de": "Offene Moll-Grundform ab der A-Saite. Die tiefe E-Saite bleibt ungespielt. Zusammen mit E-Moll das Rückgrat vieler akustischer und cleaner Metal-Parts." },
+      "beweglich": false,
+      "baende": 3,
+      "saiten": [
+        { "status": "stumm" },
+        { "status": "offen" },
+        { "status": "quinte", "bund": 2, "finger": 2 },
+        { "status": "oktave", "bund": 2, "finger": 3 },
+        { "status": "terz", "bund": 1, "finger": 1 },
+        { "status": "offen" }
+      ]
+    },
+    {
+      "id": "offen_e_dur",
+      "kategorie": "offen",
+      "name": { "de": "E-Dur (offen)" },
+      "toene": { "de": "Grundton + große Terz + Quinte" },
+      "kurz": { "de": "E-Moll mit angehobener Terz (ein Finger mehr auf der G-Saite). Hell und offen — der klassische Rock-'n'-Roll-Grundakkord, im Metal für Auflösungen und Outro-Akkorde." },
+      "beweglich": false,
+      "baende": 3,
+      "saiten": [
+        { "status": "offen" },
+        { "status": "quinte", "bund": 2, "finger": 2 },
+        { "status": "oktave", "bund": 2, "finger": 3 },
+        { "status": "terz", "bund": 1, "finger": 1 },
+        { "status": "offen" },
+        { "status": "offen" }
+      ]
+    },
+    {
+      "id": "offen_dm",
+      "kategorie": "offen",
+      "name": { "de": "D-Moll (offen)" },
+      "toene": { "de": "Grundton + kleine Terz + Quinte" },
+      "kurz": { "de": "Kompakte offene Moll-Form auf den vier hohen Saiten — die beiden tiefen bleiben stumm. Schlank und traurig, gern in ruhigen, melancholischen Passagen." },
+      "beweglich": false,
+      "baende": 3,
+      "saiten": [
+        { "status": "stumm" },
+        { "status": "stumm" },
+        { "status": "offen" },
+        { "status": "quinte", "bund": 2, "finger": 2 },
+        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "terz", "bund": 1, "finger": 1 }
       ]
     }
   ]
