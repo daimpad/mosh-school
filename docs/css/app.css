@@ -298,6 +298,43 @@ main {
 .fussnav-mehr.aktiv .fa-solid { transform: translateY(-1px); color: var(--primaer-tief); }
 
 body.im-onboarding .fussnav { display: none; }
+
+/* ---------- Seiten-Footer (NUR Desktop ≥768px) ---------- */
+/* Auf Mobil trägt die fixierte Bottom-Bar die Navigation — der Footer bleibt aus.
+   Ab Tablet (Bar entfällt) erscheint er als ruhige Quick-Link-Zeile am Seitenende. */
+.seiten-footer { display: none; }
+body.im-onboarding .seiten-footer { display: none; }
+@media (min-width: 768px) {
+  .seiten-footer {
+    display: block;
+    border-top: 1px solid var(--linie);
+    background: var(--kopf-bg, var(--flaeche));
+    padding: 2rem 1.5rem 1.4rem;
+    margin-top: 2rem;
+  }
+  .footer-innen {
+    max-width: 44rem; margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: 1.6rem 3rem; align-items: flex-start;
+  }
+  .footer-marke { display: flex; flex-direction: column; gap: 0.2rem; margin-right: auto; }
+  .footer-marke-name {
+    font-family: var(--schrift-display, inherit); color: var(--primaer);
+    font-size: 1.15rem; letter-spacing: 0.02em;
+  }
+  .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
+  .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
+  .footer-titel {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--tinte-2); font-weight: 700; margin-bottom: 0.15rem;
+  }
+  .footer-spalte a { color: var(--tinte); text-decoration: none; font-size: 0.9rem; }
+  .footer-spalte a:hover, .footer-spalte a:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
+  .footer-schluss {
+    max-width: 44rem; margin: 1.4rem auto 0; padding-top: 1rem;
+    border-top: 1px solid var(--linie); color: var(--tinte-2);
+    font-size: 0.76rem; letter-spacing: 0.02em;
+  }
+}
 body.im-onboarding main { padding-bottom: 2rem; }
 
 /* ---------- Hamburger + Menü (Desktop) ---------- */
