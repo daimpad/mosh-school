@@ -1,55 +1,55 @@
 /* Lokal gehostete Schriften — kein CDN, offline-tauglich.
-   Rubik (OFL, s. assets/fonts/LICENSE-rubik.txt) in 400/500/700,
+   Roboto (Apache 2.0, s. assets/fonts/LICENSE-roboto.txt) in 400/500/700,
    Latin + Latin-Ext (deckt de/en/fr und pl ab).
    Icons: Tabler Icons (MIT, s. assets/LICENSE-tabler-icons.txt) als lokal
    eingebettete Inline-SVG-Masken statt einer Icon-Schrift — s. Icon-Block unten. */
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/fonts/rubik-latin-400-normal.woff2) format('woff2');
+  src: url(../assets/fonts/roboto-latin-400-normal.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(../assets/fonts/rubik-latin-500-normal.woff2) format('woff2');
+  src: url(../assets/fonts/roboto-latin-500-normal.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(../assets/fonts/rubik-latin-700-normal.woff2) format('woff2');
+  src: url(../assets/fonts/roboto-latin-700-normal.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/fonts/rubik-latin-ext-400-normal.woff2) format('woff2');
+  src: url(../assets/fonts/roboto-latin-ext-400-normal.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(../assets/fonts/rubik-latin-ext-500-normal.woff2) format('woff2');
+  src: url(../assets/fonts/roboto-latin-ext-500-normal.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
-  font-family: 'Rubik';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(../assets/fonts/rubik-latin-ext-700-normal.woff2) format('woff2');
+  src: url(../assets/fonts/roboto-latin-ext-700-normal.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -147,6 +147,7 @@
 .fa-stop { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M5%207a2%202%200%200%201%202%20-2h10a2%202%200%200%201%202%202v10a2%202%200%200%201%20-2%202h-10a2%202%200%200%201%20-2%20-2l0%20-10%22%20%2F%3E%3C%2Fsvg%3E"); }
 .fa-stopwatch { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M5%2013a7%207%200%201%200%2014%200a7%207%200%200%200%20-14%200%22%20%2F%3E%20%3Cpath%20d%3D%22M14.5%2010.5l-2.5%202.5%22%20%2F%3E%20%3Cpath%20d%3D%22M17%208l1%20-1%22%20%2F%3E%20%3Cpath%20d%3D%22M14%203h-4%22%20%2F%3E%3C%2Fsvg%3E"); }
 .fa-sun { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M8%2012a4%204%200%201%200%208%200a4%204%200%201%200%20-8%200%22%20%2F%3E%20%3Cpath%20d%3D%22M3%2012h1m8%20-9v1m8%208h1m-9%208v1m-6.4%20-15.4l.7%20.7m12.1%20-.7l-.7%20.7m0%2011.4l.7%20.7m-12.1%20-.7l-.7%20.7%22%20%2F%3E%3C%2Fsvg%3E"); }
+.fa-moon { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M12%203c.132%200%20.263%200%20.393%200a7.5%207.5%200%200%200%207.92%2012.446a9%209%200%201%201%20-8.313%20-12.454z%22%20%2F%3E%3C%2Fsvg%3E"); }
 .fa-table-tennis-paddle-ball { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M3%2012a9%209%200%201%200%2018%200a9%209%200%201%200%20-18%200%22%20%2F%3E%20%3Cpath%20d%3D%22M6%205.3a9%209%200%200%201%200%2013.4%22%20%2F%3E%20%3Cpath%20d%3D%22M18%205.3a9%209%200%200%200%200%2013.4%22%20%2F%3E%3C%2Fsvg%3E"); }
 .fa-toolbox { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M3%2021h4l13%20-13a1.5%201.5%200%200%200%20-4%20-4l-13%2013v4%22%20%2F%3E%20%3Cpath%20d%3D%22M14.5%205.5l4%204%22%20%2F%3E%20%3Cpath%20d%3D%22M12%208l-5%20-5l-4%204l5%205%22%20%2F%3E%20%3Cpath%20d%3D%22M7%208l-1.5%201.5%22%20%2F%3E%20%3Cpath%20d%3D%22M16%2012l5%205l-4%204l-5%20-5%22%20%2F%3E%20%3Cpath%20d%3D%22M16%2017l-1.5%201.5%22%20%2F%3E%3C%2Fsvg%3E"); }
 .fa-tree { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M12%2013l-2%20-2%22%20%2F%3E%20%3Cpath%20d%3D%22M12%2012l2%20-2%22%20%2F%3E%20%3Cpath%20d%3D%22M12%2021v-13%22%20%2F%3E%20%3Cpath%20d%3D%22M9.824%2016a3%203%200%200%201%20-2.743%20-3.69a3%203%200%200%201%20.304%20-4.833a3%203%200%200%201%204.615%20-3.707a3%203%200%200%201%204.614%203.707a3%203%200%200%201%20.305%204.833a3%203%200%200%201%20-2.919%203.695h-4l-.176%20-.005%22%20%2F%3E%3C%2Fsvg%3E"); }

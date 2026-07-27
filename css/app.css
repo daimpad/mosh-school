@@ -147,11 +147,11 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Rubik', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--tinte);
-  background-color: var(--hintergrund);
+  background-color: #000;
   /* Ganz hinten (NUR der Seitenrahmen, hinter dem Inhalt): kräftige,
      chaotische Kratzer + schweres analoges Korn. Textur/Mischung je Thema
      über --backdrop-* (Creme: dunkel/multiply, Dunkel: hell/normal). Der
@@ -162,6 +162,7 @@ body {
   background-attachment: var(--backdrop-attachment);
   background-blend-mode: var(--backdrop-blend);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, p, ul, ol, dl, figure {
@@ -189,7 +190,7 @@ code { font-size: 0.85em; word-break: break-all; }
   z-index: 15;
   background: var(--kopf-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--linie);
+  border-bottom: 0;
   padding: env(safe-area-inset-top) 1rem 0;
 }
 
@@ -229,7 +230,7 @@ main {
   /* Inhalts-Fläche über --sheet-bg: Creme = saubere Papierfläche; Dunkel =
      dunkler Schleier, durch den der Flyer-Collage-Hintergrund gedimmt scheint.
      Text sitzt auf den dunklen Karten/Abschnitten (starker Kontrast). */
-  background: var(--sheet-bg, var(--flaeche));
+  background: #000;
 }
 
 /* Einstiegs-Übergang: die Blöcke der Ansicht gleiten gestaffelt herein — nur
@@ -1799,8 +1800,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
    damit das Papier „aufliegt". Die feine Körnung der Inhalts-Fläche (main) trägt
    den analogen Eindruck; die Kratzer liegen NUR im Hintergrund/Rahmen. */
 .karte, .marke-hero, .pfad-kachel, .station, .baustein-hero, .abschnitt {
-  border: 1.5px solid var(--linie-stark);
-  border-top-color: var(--kante-oben, #6a6a72);
+  border: 0;
   box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7);
 }
 .karte-akzent { border-left: 4px solid var(--primaer); }
@@ -1857,7 +1857,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 }
 
 /* Kopfzeile mit harter Unterkante */
-.kopf { border-bottom: 2px solid var(--linie-stark); }
+.kopf { border-bottom: 0; }
 
 /* Willkommens-Hero im Dunkel: Concrete-Schwarz,
    Blutrot nur als harte Kante — nicht als Fläche. Der weiße Hero-Text bleibt lesbar. */
@@ -1919,8 +1919,8 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
    Überschriften h1–h3 und die Marke. Monospaced → Laufweite auf normal, kein
    negatives Tracking (sonst kleben die Glyphen). */
 h1, h2, h3, .marke-text, .marke-hero-text h1, .abschnitt-titel {
-  font-family: 'Special Elite', 'Courier New', 'Rubik', monospace;
-  font-weight: 400;
+  font-family: 'Special Elite', 'Courier New', 'Roboto', monospace;
+  font-weight: 900;
   letter-spacing: 0;
 }
 
@@ -1966,7 +1966,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .klang-knopf i { font-size: 0.72em; }
 .klang-hinweis { margin-top: 0.9rem; min-height: 1.4em; }
 /* Klang-Eintrag: Play-Chip mit darunterliegenden Genre-Verweisen (typische Genres). */
-.klang-eintrag { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0.25rem; vertical-align: top; }
+.klang-eintrag { display: flex; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
 .klang-genres { display: flex; flex-wrap: wrap; gap: 0.2rem; max-width: 12rem; }
 .klang-genre {
   font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 700;
@@ -2023,7 +2023,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   background: var(--flaeche); padding: 0.85rem 1rem 1rem; margin: 0;
 }
 .kc-gruppe > legend {
-  font-family: 'Rubik', system-ui, sans-serif; font-weight: 700;
+  font-family: 'Roboto', system-ui, sans-serif; font-weight: 700;
   letter-spacing: 0.01em; font-size: 0.95rem; padding: 0 0.4rem; color: var(--ueberschrift);
 }
 .kc-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
@@ -2701,7 +2701,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .gm-leer { padding: 1.2rem 0; text-align: center; }
 .gm-ergebnis { border: 1px solid var(--linie-stark); border-radius: var(--radius); padding: 1rem 1.1rem; background: var(--flaeche-2); box-shadow: var(--schatten-karte); }
 .gm-paar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
-.gm-genre { font-family: 'Special Elite', 'Courier New', 'Rubik', monospace; font-size: 1.5rem; letter-spacing: 0; text-transform: uppercase; line-height: 1.05; }
+.gm-genre { font-family: 'Special Elite', 'Courier New', 'Roboto', monospace; font-size: 1.5rem; letter-spacing: 0; text-transform: uppercase; line-height: 1.05; }
 .gm-mal { color: var(--primaer); font-size: 1.3rem; font-weight: 700; }
 .gm-trio { margin: 0.4rem 0 0; font-weight: 600; }
 .gm-spannung-zeile { margin: 0.35rem 0 0.8rem; }
@@ -2802,7 +2802,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .genre-landing-inhalt {
   position: relative;
   z-index: 1;
-  border-left: 5px solid var(--pf, var(--primaer));
+  border-left: 0;
   padding-left: 0.95rem;
 }
 .genre-landing-augenbraue {
@@ -2988,3 +2988,38 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .exp-haltung-karte { display: flex; align-items: center; gap: 0.7rem; }
 .exp-haltung-karte .grafik-icon, .exp-haltung-karte .fa-solid { width: 1.7rem; height: 1.7rem; flex: none; color: var(--primaer); }
 @media (min-width: 40rem) { .exp-haltung { grid-template-columns: repeat(3, 1fr); } }
+
+
+/* Powerchord-/Klang-Werkzeug: Griffe/Intervalle/Akkorde/Skalen als ordentliches
+   Raster statt chaotischem Flow-Wrap (jeder Eintrag eine ausgerichtete Zelle). */
+.klang-gitter {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+  gap: 0.7rem 0.9rem;
+  align-items: start;
+  margin: 0 0 0.4rem;
+}
+.klang-gitter .klang-genres { max-width: none; }
+
+/* Heros über die volle Breite: Hintergrund randlos, Inhalt bleibt auf Spaltenbreite
+   eingerückt (kein horizontaler Overflow dank overflow-x am body). */
+.marke-hero, .genre-landing-hero {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+  padding-left: max(1.35rem, calc(50vw - 22rem));
+  padding-right: max(1.35rem, calc(50vw - 22rem));
+}
+
+/* Quittier-Buttons („Als gelesen/erledigt/mitgenommen abhaken") kleiner setzen. */
+.knopf[data-quittiere] { font-size: 0.74rem; letter-spacing: 0.02em; padding: 0.45rem 0.7rem; }
+
+/* Theme-Umschalter im Menü ist ein <button> — an das <a>-Aussehen der Menüpunkte
+   angleichen (voller Button-Reset). */
+button.menue-punkt { width: 100%; background: none; border: 0; font-family: inherit; cursor: pointer; text-align: left; }
+
+/* CC-Lizenzlink in der Footer-Schlusszeile. */
+.footer-schluss a { color: var(--primaer); text-decoration: none; }
+.footer-schluss a:hover, .footer-schluss a:focus-visible { text-decoration: underline; }
