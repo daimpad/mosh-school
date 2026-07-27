@@ -6,11 +6,16 @@ App verdrahtet** — zum Vergleich der möglichen Umgangsweisen dient
 
 ## Vergleichen
 
-Online, ohne irgendetwas zu starten:
-<https://daimpad.github.io/mosh-school/mockups/hintergrundbilder.html>
+Zwei Mockup-Seiten nutzen diese Bilder — online, ohne irgendetwas zu starten:
+
+- **Behandlung im Hero** (Varianten 0/A/B/C):
+  <https://daimpad.github.io/mosh-school/mockups/hintergrundbilder.html>
+- **Ganze Startseite als Kachel-System** (Variante A im Container-Maßstab):
+  <https://daimpad.github.io/mosh-school/mockups/startseite-muster.html>
 
 Lokal: `python3 -m http.server 8000` im Projektordner, dann
-<http://localhost:8000/mockups/hintergrundbilder.html>.
+<http://localhost:8000/mockups/hintergrundbilder.html> bzw.
+<http://localhost:8000/mockups/startseite-muster.html>.
 
 Auf beiden Wegen liest die Seite `bilder.json` (siehe unten). Zusätzlich lassen
 sich Bilder per Drag & Drop auf die Seite ziehen — praktisch, um einen Kandidaten
