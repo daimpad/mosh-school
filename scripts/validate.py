@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-File-Validator fuer den mosh-school Baustein-Pool.
+"""Cross-File-Validator fuer den ZERRER Baustein-Pool.
 
 Spiegelt die Konsistenzpruefungen der Engine (js/daten.js -> pruefeDaten,
 js/graph.js -> topoSortiere) gegen den *gemischten* Pool — genau die Dateien,
