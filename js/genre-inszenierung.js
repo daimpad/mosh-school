@@ -4,6 +4,7 @@
 // textlich als anklickbare Chips). Reine HTML-Erzeugung (DOM-frei), monochrom
 // über currentColor. Referenzbereich, kein Fortschritt.
 
+import { bildEbene } from './hintergrundbilder.js';
 import { label, t } from './i18n.js';
 import { esc } from './oberflaeche.js';
 
@@ -182,6 +183,7 @@ export function landingHeroHtml(icon, titel, untertitel = '', hue = 'pf-blau', m
       : '';
   return `
     <section class="marke-hero genre-landing-hero landing-hero ${esc(hue)}">
+      ${bildEbene(key)}
       ${motivSvg(key)}
       <div class="genre-landing-scrim" aria-hidden="true"></div>
       <div class="genre-landing-inhalt">
@@ -200,6 +202,7 @@ export function landingHeroHtml(icon, titel, untertitel = '', hue = 'pf-blau', m
 export function markeHeroInszeniert(extra = '') {
   return `
     <section class="marke-hero genre-landing-hero landing-hero startseite-hero pf-magenta">
+      ${bildEbene('mosh-startseite')}
       ${motivSvg('mosh-startseite')}
       <div class="genre-landing-scrim" aria-hidden="true"></div>
       <div class="genre-landing-inhalt">
