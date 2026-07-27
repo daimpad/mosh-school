@@ -3071,3 +3071,168 @@ body { background-image: none; }
 /* ---------- Tunings: Genre-Filter der Klang-Referenz ---------- */
 .klang-filter-label { margin: 0.8rem 0 0.3rem; }
 .klang-stilfilter { margin: 0 0 1rem; }
+
+/* ============================================================================
+   Bildebene + Kachel-Muster der Startseite (Rhythmus C — „alles mit Bild")
+   ----------------------------------------------------------------------------
+   Vorbereitet und verglichen in mockups/startseite-muster.html. Das Bild liegt
+   IMMER ganz hinten: Bild → Motiv-SVG → Scrim → Text. Die Reihenfolge im DOM ist
+   die Schichtung, deshalb setzen die Ansichten bildEbene() vor motivSvg().
+
+   Die Bilder sind reine Zutat: Fehlt images/bg/bilder.json, liefert bildEbene()
+   nichts und alles sieht aus wie zuvor.
+   ========================================================================= */
+
+/* Bildebene — „Nebel": stark weichgezeichnet, entsättigt, heruntergeregelt. Es
+   bleibt Struktur und Tiefe, kein erkennbarer Gegenstand; der Text bleibt damit
+   über JEDEM Bild gleich gut lesbar.
+
+   Das Bild selbst setzt js/hintergrundbilder.js inline als `background-image` —
+   nicht über eine Custom Property: Ein relatives url() in einer Custom Property
+   wird gegen DIESES Stylesheet aufgelöst (also gegen css/) statt gegen das
+   Dokument und liefe ins Leere. */
+.genre-landing-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(calc(18px * var(--blur-faktor, 1))) saturate(0.4);
+  opacity: 0.35;
+  /* Überzoom: sonst zieht der Blur die hellen Ränder des Bildes herein. */
+  transform: scale(1.18);
+}
+
+/* Weichzeichnung an die Elementhöhe koppeln. 18 px wirken auf 300 px Hero-Höhe
+   richtig, lassen aber eine 170 px hohe Kachel zu einem Farbfleck zusammenfallen. */
+.bildkachel { --blur-faktor: 0.68; }
+
+/* ---------- Bild-Kachel: der Hero-Aufbau im Container-Maßstab ----------
+   Die Layout-Regeln hängen bewusst an `a.karte-link` statt nur an der Kachel-
+   Klasse: `a.karte-link { display: block }` weiter oben ist spezifischer als
+   eine einzelne Klasse und würde das Flex-Layout sonst still aushebeln. */
+a.karte-link.bildkachel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 170px;
+  padding: 0.95rem 1.05rem;
+  background: linear-gradient(160deg, var(--pf-weich) 0%, var(--flaeche) 82%);
+}
+/* Der Hue-Radialfleck von .pfad-kachel liegt über dem Bild und trübt es —
+   auf der Bild-Kachel trägt der Verlauf oben schon dieselbe Aufgabe. */
+.bildkachel::before { content: none; }
+
+/* Scrim — die eine Stelle, an der die Kachel NICHT wie der Hero funktioniert.
+   Der Hero-Scrim (.genre-landing-scrim) läuft erst ab 62 % Höhe an; bei 300 px
+   liegt unter dem Text dadurch noch reichlich Dichte. Auf Kachelhöhe stünde
+   derselbe Text fast im Bild — im hellen Theme kippt die Lesbarkeit dann weg
+   (helles Foto + helle Fläche + Hue-Augenbraue = nichts mehr zu sehen). Der
+   Kachel-Scrim zieht die untere Zone deshalb entschieden auf die Fläche zurück. */
+.bildkachel-scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, var(--flaeche) 26%, rgba(0, 0, 0, 0) 92%),
+    radial-gradient(120% 100% at 8% 118%, var(--flaeche) 0%, rgba(0, 0, 0, 0) 60%);
+  opacity: 0.96;
+}
+
+.bildkachel-inhalt { position: relative; z-index: 1; }
+.bildkachel-augenbraue {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.25rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--pf, var(--primaer));
+}
+.bildkachel-augenbraue svg { width: 1.05em; height: 1.05em; }
+.bildkachel-augenbraue .fa-solid { color: inherit; }
+.bildkachel-titel {
+  margin: 0;
+  line-height: 1.05;
+  color: var(--tinte);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.bildkachel-text {
+  margin: 0.35rem 0 0;
+  max-width: 40ch;
+  color: var(--tinte-2);
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+.bildkachel .pfad-cta { margin-top: 0.5rem; }
+
+/* ---------- Werkzeug-Kachel: flach, nur Icon ----------
+   Bewusst OHNE Bild und ohne Motiv. Werkzeuge werden bedient und
+   wiedergefunden — ein Hintergrund macht das Icon nur schwerer erkennbar. */
+a.karte-link.werkzeugkachel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 0;
+  padding: 0.8rem 0.9rem;
+}
+.werkzeugkachel::before { content: none; }
+.werkzeugkachel .pfad-medaille { width: 2.3rem; height: 2.3rem; font-size: 1rem; }
+.werkzeugkachel h3 { margin: 0; font-size: 0.95rem; }
+.werkzeugkachel p {
+  margin: 0.1rem 0 0;
+  font-size: 0.76rem;
+  /* Die Beschreibungen sind ganze Sätze (dieselben Labels wie auf den
+     Hub-Seiten) — in der kompakten Kachel auf zwei Zeilen kürzen. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Verweis-Zeile: alles, was woanders hinführt ---------- */
+a.karte-link.verweiszeile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 0;
+  padding: 0.7rem 0.9rem;
+}
+.verweiszeile::before { content: none; }
+.verweiszeile h3 { margin: 0; font-size: 0.95rem; }
+.verweiszeile > .fa-solid:first-child { color: var(--pf, var(--primaer)); }
+.verweiszeile-pfeil { margin-left: auto; color: var(--pf, var(--primaer)); }
+
+/* ---------- Raster ----------
+   Bild-Kacheln stehen schon auf dem Handy zweispaltig (wie .instr-gitter) — eine
+   Spalte machte die Startseite endlos und das Muster unsichtbar. */
+.bild-gitter { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.4rem; }
+.bild-gitter .voll-breit { grid-column: 1 / -1; }
+/* Werkzeuge: feste Spaltenzahl statt auto-fill. Mit auto-fill entstanden auf dem
+   Desktop vier sehr schmale Kacheln, in denen von der Beschreibung nur noch
+   „Audio-Werkzeuge,…" übrig blieb. */
+.werkzeug-gitter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+@media (min-width: 34rem) {
+  .werkzeug-gitter { grid-template-columns: repeat(3, 1fr); }
+}
+.verweis-liste { display: grid; gap: 0.45rem; margin-bottom: 0.4rem; }
+
+@media (max-width: 30rem) {
+  .bildkachel { min-height: 138px; padding: 0.75rem 0.8rem; }
+  .bildkachel-titel { font-size: 1.12rem; }
+  .bild-gitter { gap: 0.6rem; }
+}

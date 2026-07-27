@@ -255,6 +255,24 @@ Tokens**, nie harte Farben.
   Strichstärke = Gewicht · Rauigkeit (seeded Jitter) = Verzerrung/Harsh · Hohlkreise =
   Ghost Notes · Grid-Dichtewechsel = Tempo-/Metrik-Wechsel. Neue Bausteine ohne Grafik
   meldet `scripts/validate.py` als Warnung; vorproduzierte IDs (künftige Sets) sind okay.
+- **Hintergrundbilder + Kachel-Muster:** Heros und die Startseiten-Kacheln tragen
+  hinter dem Motiv-SVG eine Foto-Ebene (`js/hintergrundbilder.js` → `bildEbene()`,
+  CSS `.genre-landing-bg`). Behandlung „Nebel": `blur(18px) saturate(.4)`,
+  `opacity:.35`, `scale(1.18)` (Überzoom, sonst zieht der Blur helle Ränder herein).
+  Reihenfolge im DOM = Schichtung: **Bild → Motiv → Scrim → Text**. Bildwahl ist
+  deterministisch (FNV-1a über den Bereichs-Schlüssel) und bewusst ohne inhaltliche
+  Zuordnung. Zwei Dinge gelten nur im Container-Maßstab: der Blur skaliert mit
+  (`--blur-faktor`, `.bildkachel` = .68), und der Scrim ist dichter
+  (`.bildkachel-scrim`) — der weiche Hero-Scrim läuft erst ab 62 % Höhe an und ließe
+  den Titel im hellen Theme im Foto verschwinden. **Fallstrick:** Das Bild wird
+  inline als `background-image` gesetzt, **nicht** über eine Custom Property — ein
+  relatives `url()` in einer Custom Property wird gegen das *Stylesheet* aufgelöst
+  (also gegen `css/`) statt gegen das Dokument und läuft ins Leere.
+  Die Startseite folgt dem Muster „Rhythmus C" (verglichen in
+  `mockups/startseite-muster.html`): Marke/Instrumente/Lernwege mit Bild,
+  Werkzeuge flach mit Icon, Entdecken als Zeilen. Bilder sind reine Zutat — ohne
+  `images/bg/bilder.json` rendert alles wie zuvor. Sie sind **nicht** in der
+  SW-`SHELL` (Gewicht), nur das Verzeichnis ist es.
 - **Lehrgrafiken** (Tranche 4, `scripts/build_svg4.py` → `data/lehrgrafiken.json`):
   breite Erklär-Schemata (viewBox 240×120 — Beat-Raster, Griffbilder, Anschlagsmuster),
   die die Baustein-Ansicht als `<figure>` nach dem Erklärteil rendert (Registry

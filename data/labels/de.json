@@ -803,7 +803,10 @@
     "merkliste_entfernen": "Aus der Merkliste entfernen",
     "klang_stil_filter": "Nach Genre filtern:",
     "klang_stil_alle": "Alle",
-    "klang_stil_leer": "Keine Einträge für dieses Genre."
+    "klang_stil_leer": "Keine Einträge für dieses Genre.",
+    "kicker_instrument": "Instrument",
+    "kicker_zusammenspiel": "Zusammenspiel",
+    "kicker_lernweg": "Lernweg"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",

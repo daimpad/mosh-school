@@ -803,7 +803,10 @@
     "merkliste_entfernen": "",
     "klang_stil_filter": "",
     "klang_stil_alle": "",
-    "klang_stil_leer": ""
+    "klang_stil_leer": "",
+    "kicker_instrument": "",
+    "kicker_zusammenspiel": "",
+    "kicker_lernweg": ""
   },
   "bausteine": {
     "grundhaltung": "",

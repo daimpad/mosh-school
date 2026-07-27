@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'mosh-v137';
+const CACHE = 'mosh-v138';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -36,6 +36,7 @@ const SHELL = [
   'js/feedback.js',
   'js/fortschritt.js',
   'js/graph.js',
+  'js/hintergrundbilder.js',
   'js/i18n.js',
   'js/oberflaeche.js',
   'js/pfade.js',
@@ -162,6 +163,12 @@ const SHELL = [
   'data/experimente.json',
   'data/brand-alert.json',
   'data/glossar.json',
+  // Verzeichnis der Hero-/Kachel-Hintergrundbilder. Winzig und beim ersten
+  // Anstrich gebraucht — deshalb in der Huelle. Die BILDER selbst sind bewusst
+  // NICHT vorgeladen (rund 1,9 MB): Sie sind reine Zutat, ohne sie rendern
+  // Heros und Kacheln unveraendert mit Motiv und Scrim. Beim ersten Ansehen
+  // landen sie ueber stale-while-revalidate von selbst im Cache.
+  'images/bg/bilder.json',
   'data/patterns.json',
   'data/griffe.json',
   'data/tunings.json',
