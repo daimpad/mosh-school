@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "theorie-riffbau",
+    "hinweis": "Theorie-Zweig, Strang 2 (Riff-Bau): wie aus Tönen ein Riff wird — Gestalt statt Tonfolge, Rhythmus vor Tonhöhe, Motiv und Wiederholung, Betonung und Lücke, Bauen aus Beschränkung, Bewerten mit Abstand. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "was_ist_ein_riff",
+      "anzeigetitel": {
+        "de": "Was ein Riff zusammenhält"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Riff ist keine beliebige Folge von Tönen, sondern eine kurze Figur, die man wiedererkennt und im Kopf behält. Der Unterschied zwischen einem Riff und einer Übung liegt genau darin: Ein Riff hat eine Gestalt. Es hat einen Anfang, der auffällt, eine Bewegung, die eine Richtung hat, und ein Ende, das entweder abschließt oder zurück zum Anfang führt.\n\nDas Wichtigste daran ist überraschend: Ein Riff wird zuerst über den Rhythmus wiedererkannt, nicht über die Tonhöhen. Man kann die Töne eines bekannten Riffs verändern, und es bleibt erkennbar, solange der Rhythmus stimmt — umgekehrt zerfällt es, sobald das rhythmische Muster kippt. Deshalb beginnt gutes Riff-Schreiben beim Rhythmus und nicht bei der Melodie.\n\nEin zweiter Punkt ist die Kürze. Die einprägsamsten Riffs sind meist kurz — ein oder zwei Takte, die sich wiederholen. Diese Wiederholung ist kein Mangel an Ideen, sondern das, was ein Riff überhaupt zum Riff macht: Erst durch Wiederkehr wird eine Figur zur Gestalt, die im Gedächtnis bleibt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Erkennst du deine Lieblingsriffs eher am Rhythmus oder an den Tönen? Haben deine eigenen Figuren eine klare Gestalt mit Anfang und Richtung — oder laufen sie einfach? Und traust du dich zu wiederholen, statt ständig Neues anzuhängen?"
+      },
+      "voraussetzungen": [
+        "warum_toene_wirken"
+      ]
+    },
+    {
+      "id": "rhythmus_vor_tonhoehe",
+      "anzeigetitel": {
+        "de": "Rhythmus zuerst"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Weil ein Riff über den Rhythmus erkannt wird, ist der wirksamste Einstieg, den Rhythmus vor der Tonhöhe festzulegen. Das klingt ungewohnt, löst aber ein häufiges Problem: Wer beide gleichzeitig sucht, verheddert sich und produziert Figuren, die weder rhythmisch noch melodisch klar sind.\n\nDie Methode ist einfach. Man legt sich auf einen einzigen Ton fest — etwa die tiefe leere Saite — und sucht nur den Rhythmus. Erst wenn das rhythmische Muster steht und sich gut anfühlt, verteilt man verschiedene Tonhöhen darauf. Der Rhythmus ist das Skelett, die Töne sind das, was man darüber legt.\n\nDieser Weg hat einen weiteren Vorteil: Man merkt sofort, ob ein Riff rhythmisch trägt, weil nichts von der Melodie ablenkt. Ein Muster, das schon auf einem Ton spannend ist, wird mit Tonhöhen fast immer besser — eines, das auf einem Ton langweilt, rettet auch die schönste Tonfolge nicht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Rhythmus vor Tonhöhe",
+          "ziel": "Ein tragfähiges rhythmisches Muster finden, bevor Töne verteilt werden.",
+          "schritte": [
+            "Stimme dich auf einen Klick ein und lege ein festes Tempo fest.",
+            "Spiele ausschließlich die tiefe leere Saite und suche nur ein rhythmisches Muster über ein bis zwei Takte.",
+            "Wiederhole das Muster, bis es sich von selbst trägt und du es ohne Nachdenken spielst.",
+            "Verteile jetzt verschiedene Tonhöhen auf dieses feste Muster, ohne den Rhythmus zu ändern.",
+            "Nimm beide Fassungen auf — nur Rhythmus und mit Tonhöhen — und vergleiche."
+          ],
+          "steigerung": "Baue in das rhythmische Muster eine Pause ein und höre, wie sie das Riff verändert.",
+          "selbstkontrolle": "Trägt dein Muster schon auf einem einzigen Ton? Ist der Rhythmus beim Verteilen der Töne gleich geblieben?"
+        }
+      },
+      "voraussetzungen": [
+        "was_ist_ein_riff"
+      ]
+    },
+    {
+      "id": "motiv_und_wiederholung",
+      "anzeigetitel": {
+        "de": "Motiv, Wiederholung, Variation"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Motiv ist die kleinste Einheit mit Wiedererkennungswert — oft nur drei bis fünf Töne oder eine kurze rhythmische Geste. Aus solchen Motiven baut man Riffs und ganze Stücke, indem man drei Grundoperationen einsetzt: Wiederholung, Variation und Kontrast. Wiederholung schafft Vertrautheit, Variation hält das Interesse wach, Kontrast setzt einen Bruch.\n\nDas Verhältnis dieser drei entscheidet über die Wirkung. Zu viel Wiederholung ermüdet, zu viel Variation verhindert Wiedererkennung, zu viel Kontrast zerfällt in Einzelteile. Eine bewährte Grundform ist, ein Motiv zunächst identisch zu wiederholen, damit es sich einprägt, und es dann leicht zu verändern — die letzte Note anders, der Rhythmus am Ende gedehnt. Das Ohr erkennt die Verwandtschaft und freut sich zugleich über die Abweichung.\n\nVariation kann an vielen Stellen ansetzen: an der Tonhöhe eines einzelnen Tons, am Rhythmus, an der Länge, an der Dynamik. Wichtig ist, jeweils nur wenig zu ändern — ein verändertes Element bei sonst gleichem Motiv wirkt gezielt, mehrere gleichzeitig wirken wie ein neues Motiv. Wer das versteht, kommt mit sehr wenig Material sehr weit."
+      },
+      "reflexionsaufgabe": {
+        "de": "Arbeitest du mit einem wiedererkennbaren Motiv — oder reihst du ständig Neues aneinander? Wiederholst du lange genug, damit sich etwas einprägt, bevor du variierst? Und änderst du jeweils nur ein Element, oder mehrere auf einmal?"
+      },
+      "voraussetzungen": [
+        "was_ist_ein_riff"
+      ]
+    },
+    {
+      "id": "betonung_und_luecke",
+      "anzeigetitel": {
+        "de": "Betonung, Lücke, Erwartung"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Nicht jeder Anschlag ist gleich wichtig. Ein Riff bekommt seine Kontur durch Betonungen — einzelne Schläge, die hervorgehoben werden — und durch Lücken, also bewusste Pausen. Beides arbeitet mit der Erwartung des Hörers: Eine Betonung dort, wo man sie erwartet, wirkt treibend; eine Betonung, wo man sie nicht erwartet, wirkt überraschend und ist die Grundlage der Synkope.\n\nLücken sind das am meisten unterschätzte Werkzeug. Eine Pause ist kein fehlender Ton, sondern ein aktives Ereignis: Sie erzeugt Erwartung und macht den folgenden Einsatz wuchtiger. Viele schwere Riffs bestehen zu einem großen Teil aus Stille — der Groove entsteht gerade dadurch, dass nicht durchgespielt wird. Ein durchgehend gefülltes Riff hat keinen Raum, in dem Wucht entstehen könnte.\n\nDeshalb lohnt es, ein Riff auch von seinen Pausen her zu denken: Wo lasse ich weg, um den nächsten Schlag zu betonen? Wo halte ich inne, damit die Erwartung steigt? Wer Betonung und Lücke bewusst setzt, macht aus einer Tonfolge einen Groove — und Groove ist das, was den Körper in Bewegung bringt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Setzt du Betonungen bewusst, oder spielst du alles gleich laut? Nutzt du Pausen als aktives Mittel, oder füllst du jeden Platz? Und könntest du dein Riff wuchtiger machen, indem du etwas weglässt statt hinzufügst?"
+      },
+      "voraussetzungen": [
+        "rhythmus_vor_tonhoehe"
+      ]
+    },
+    {
+      "id": "riff_aus_beschraenkung",
+      "anzeigetitel": {
+        "de": "Ein Riff aus wenig Material"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die häufigste Ursache für schwache Riffs ist zu viel Material, nicht zu wenig. Wer sich alle Töne und alle Rhythmen erlaubt, greift zu Gewohntem und verliert die Gestalt. Eine enge Beschränkung erzwingt Entscheidungen und macht das Ergebnis fast automatisch klarer.\n\nDiese Übung führt die Werkzeuge des Strangs zusammen: ein kleines Motiv, Wiederholung und eine gezielte Variation, dazu Betonung und Lücke — alles aus sehr wenig Material. Die Beschränkung liegt in der Anzahl der Töne und in der Länge, nicht in der Kreativität. Genau die Enge ist es, die zu einem Ergebnis mit klarer Gestalt führt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein tragfähiges Riff mit klarer Gestalt bauen",
+          "ziel": "Aus stark begrenztem Material ein einprägsames Riff formen.",
+          "schritte": [
+            "Beschränke dich auf drei Töne und einen Takt.",
+            "Finde zuerst nur den Rhythmus auf einem Ton, mit mindestens einer Pause.",
+            "Verteile die drei Töne auf das Muster und lege eine Betonung fest.",
+            "Wiederhole das Motiv einmal identisch, dann einmal mit genau einer Änderung.",
+            "Nimm das Ergebnis auf und höre, ob es eine erkennbare Gestalt hat."
+          ],
+          "steigerung": "Hänge einen zweiten Takt an, der das Motiv beantwortet, statt es nur zu wiederholen.",
+          "selbstkontrolle": "Hat dein Riff eine erkennbare Gestalt? Wäre es mit mehr Tönen wirklich besser — oder nur voller?"
+        }
+      },
+      "voraussetzungen": [
+        "motiv_und_wiederholung",
+        "betonung_und_luecke"
+      ]
+    },
+    {
+      "id": "riff_bewerten",
+      "anzeigetitel": {
+        "de": "Ein Riff prüfen und überarbeiten"
+      },
+      "domaene": [
+        "theorie",
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Riff zu schreiben ist das eine, es ehrlich zu beurteilen das andere. Der häufigste Fehler ist, ein Riff im Moment der Entstehung zu bewerten, wenn die eigene Begeisterung am größten und das Urteil am unzuverlässigsten ist. Hilfreicher ist Abstand: ein Riff aufnehmen und an einem anderen Tag anhören. Was dann noch trägt, trägt wirklich.\n\nEs gibt einige nützliche Prüffragen. Erkennt man das Riff nach einmaligem Hören wieder? Trägt es die Wiederholung, ohne zu langweilen? Hat es eine Stelle, die auffällt — einen Haken? Und lässt sich beschreiben, was es tun soll: treiben, bedrohen, ankommen? Ein Riff, das keine dieser Fragen beantwortet, ist oft nicht schlecht, sondern nur noch nicht fertig.\n\nÜberarbeiten heißt meist weglassen, nicht hinzufügen. Die stärkste Version eines Riffs ist häufig die, aus der man alles entfernt hat, was nicht zur Gestalt gehört. Wer ein Riff nicht verbessern kann, indem er etwas ergänzt, sollte versuchen, es zu verbessern, indem er etwas streicht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beurteilst du deine Riffs mit zeitlichem Abstand, oder im Rausch des Moments? Kannst du benennen, was ein Riff tun soll? Und versuchst du beim Überarbeiten zuerst wegzulassen, bevor du ergänzt?"
+      },
+      "voraussetzungen": [
+        "riff_aus_beschraenkung"
+      ]
+    }
+  ]
+}

@@ -72,6 +72,13 @@ const INHALTSDATEIEN = [
   'data/bausteine.gear-schlagzeug-gesang.json',
   'data/bausteine.grenzgaenger.json',
   'data/bausteine.experimentieren.json',
+  // Theorie-Zweig, fünf aufeinander aufbauende Stränge (Wirkung → Riff-Bau →
+  // Harmonik → Rhythmus → Songform): Wirkung verstehen und daraus schreiben.
+  'data/bausteine.theorie-wirkung.json',
+  'data/bausteine.theorie-riffbau.json',
+  'data/bausteine.theorie-harmonik.json',
+  'data/bausteine.theorie-rhythmus.json',
+  'data/bausteine.theorie-songform.json',
 ];
 
 // Beispielsongs-Referenz (Genre → 30 kuratierte Songs als externe Links). Eigener
