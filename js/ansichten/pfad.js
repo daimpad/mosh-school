@@ -5,7 +5,7 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { bildEbene } from '../hintergrundbilder.js';
 import { label, t } from '../i18n.js';
-import { balkenHtml, bausteinIcon, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, nichtGefundenHtml, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
+import { balkenHtml, bausteinIcon, domaeneHue, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, nichtGefundenHtml, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
 import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
@@ -289,15 +289,6 @@ function instrumentReiterInhalt(daten, domaene, pfad, id) {
   return '';
 }
 
-// Hue je Instrument — identisch zur Startseite (js/ansichten/heim.js), damit
-// dieselbe Kachel an beiden Orten dieselbe Farbe traegt.
-const INSTRUMENT_HUE = {
-  gitarre: 'pf-magenta',
-  bass: 'pf-indigo',
-  schlagzeug: 'pf-sky',
-  gesang: 'pf-teal',
-};
-
 export function renderInstrument(el, daten, domaene) {
   if (!domaene || !INSTRUMENTE.includes(domaene)) {
     // Dieselben vier Instrumente stehen auf der Startseite als Bild-Kacheln —
@@ -308,7 +299,7 @@ export function renderInstrument(el, daten, domaene) {
     const karten = instrumentUebersicht(daten)
       .map(({ domaene: d, anzahl }) => bildKachelHtml({
         href: `#/instrument/${esc(d)}`,
-        hue: INSTRUMENT_HUE[d] || 'pf-blau',
+        hue: domaeneHue(d),
         schluessel: `instrument:${d}`,
         iconHtml: domaeneIcon(d),
         augenbraue: t('kicker_instrument'),
@@ -332,7 +323,7 @@ export function renderInstrument(el, daten, domaene) {
     .join('')}</div>`;
 
   el.innerHTML = `
-    ${landingHeroHtml(null, label('domaene', domaene), t('instrument_untertitel'), 'pf-blau', `instrument-${domaene}`, '', domaeneIcon(domaene))}
+    ${landingHeroHtml(null, label('domaene', domaene), t('instrument_untertitel'), domaeneHue(domaene), `instrument-${domaene}`, '', domaeneIcon(domaene))}
     ${reiterBar}
     <div class="instr-tab-inhalt" role="tabpanel">${instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter)}</div>
     <p class="knopf-zeile instr-fuss">

@@ -4,7 +4,7 @@
 // Referenz-Landing, kein eigener Fortschritt (der hängt an den Bausteinen selbst).
 
 import { label, t } from '../i18n.js';
-import { bausteinIcon, domaeneIcon, esc, nichtGefundenHtml } from '../oberflaeche.js';
+import { bausteinIcon, domaeneHue, domaeneIcon, esc, nichtGefundenHtml } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { INSTRUMENTE } from '../pfade.js';
 
@@ -52,7 +52,7 @@ export function renderGeraete(el, daten, instrument) {
   el.innerHTML = `
     <article>
       <p><a class="chip" href="#/werkzeug/explorer"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('wz_explorer_titel'))}</a></p>
-      ${landingHeroHtml(ICON[instrument] || 'fa-microchip', t('geraete_titel', { instrument: instrumentName }), t('geraete_intro', { instrument: instrumentName }), 'pf-teal', null)}
+      ${landingHeroHtml(ICON[instrument] || 'fa-microchip', t('geraete_titel', { instrument: instrumentName }), t('geraete_intro', { instrument: instrumentName }), domaeneHue(instrument, 'pf-teal'), null)}
       ${liste}
     </article>`;
 }
