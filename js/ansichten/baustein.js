@@ -25,7 +25,7 @@ function kontextZuListe(kontext) {
   return parameter ? `#/pfad/kompetenz/${parameter}` : '#/pfad/kompetenz';
 }
 
-// Ampellogik der CI: offen = Rot, erledigt = Grün (siehe docs/ci.md).
+// Ampellogik der CI: offen = Rot, erledigt = Grün (siehe CLAUDE.md, Abschnitt CI).
 function statusChip(status) {
   const erledigt = status === 'erledigt';
   return `<span class="chip ${erledigt ? 'chip-gruen' : 'chip-rot'}">${esc(label('abschluss_status', erledigt ? 'erledigt' : 'offen'))}</span>`;

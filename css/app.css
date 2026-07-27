@@ -3083,7 +3083,21 @@ body { background-image: none; }
    nichts und alles sieht aus wie zuvor.
    ========================================================================= */
 
-/* Bildebene — „Nebel": stark weichgezeichnet, entsättigt, heruntergeregelt. Es
+/* Die drei Stellschrauben der Bildebene — bewusst an EINER Stelle, damit sich
+   die Wirkung ohne Suche nachjustieren lässt. Vergleichen lassen sie sich live
+   in mockups/startseite-muster.html (Regler „Weichzeichnung/Deckkraft/Sättigung").
+     --bild-weich       Weichzeichnung im Hero; Kacheln bekommen davon --blur-faktor
+     --bild-deckkraft   wie deutlich das Foto durchkommt
+     --bild-saettigung  1 = Originalfarben, 0 = Graustufen
+   Die erste Fassung („Nebel", 18px/.35/.4) war als reine Textur gedacht und im
+   dunklen Theme praktisch nicht mehr zu sehen — die Fotos sollen erkennbar sein. */
+:root {
+  --bild-weich: 5px;
+  --bild-deckkraft: 0.62;
+  --bild-saettigung: 0.95;
+}
+
+/* Bildebene": stark weichgezeichnet, entsättigt, heruntergeregelt. Es
    bleibt Struktur und Tiefe, kein erkennbarer Gegenstand; der Text bleibt damit
    über JEDEM Bild gleich gut lesbar.
 
@@ -3098,8 +3112,8 @@ body { background-image: none; }
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(calc(18px * var(--blur-faktor, 1))) saturate(0.4);
-  opacity: 0.35;
+  filter: blur(calc(var(--bild-weich) * var(--blur-faktor, 1))) saturate(var(--bild-saettigung));
+  opacity: var(--bild-deckkraft);
   /* Überzoom: sonst zieht der Blur die hellen Ränder des Bildes herein. */
   transform: scale(1.18);
 }
@@ -3135,12 +3149,27 @@ a.karte-link.bildkachel {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(to top, var(--flaeche) 26%, rgba(0, 0, 0, 0) 92%),
-    radial-gradient(120% 100% at 8% 118%, var(--flaeche) 0%, rgba(0, 0, 0, 0) 60%);
-  opacity: 0.96;
+    linear-gradient(to top, var(--flaeche) 8%, rgba(0, 0, 0, 0) 72%),
+    radial-gradient(120% 100% at 8% 118%, var(--flaeche) 0%, rgba(0, 0, 0, 0) 55%);
+  opacity: 0.8;
 }
 
 .bildkachel-inhalt { position: relative; z-index: 1; }
+/* Rückhalt direkt hinter dem Text — nicht über die ganze Kachel.
+   Ein flächiger Scrim, der stark genug für die kleine Augenbraue ist, deckt das
+   halbe Bild zu; und wie weit er reichen müsste, hängt an der Textlänge, die je
+   Kachel schwankt. Dieser Verlauf klebt stattdessen am Inhalt selbst: Er wächst
+   mit dem Text mit, lässt das Bild darüber frei und sichert die Lesbarkeit auch
+   dort, wo ein helles Foto und eine helle Hue-Augenbraue zusammentreffen. */
+.bildkachel-inhalt::before {
+  content: '';
+  position: absolute;
+  inset: -0.8rem -1.05rem -1rem;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(to top, var(--flaeche) 62%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.88;
+}
 .bildkachel-augenbraue {
   display: flex;
   align-items: center;
@@ -3217,17 +3246,15 @@ a.karte-link.verweiszeile {
    Spalte machte die Startseite endlos und das Muster unsichtbar. */
 .bild-gitter { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.4rem; }
 .bild-gitter .voll-breit { grid-column: 1 / -1; }
-/* Werkzeuge: feste Spaltenzahl statt auto-fill. Mit auto-fill entstanden auf dem
-   Desktop vier sehr schmale Kacheln, in denen von der Beschreibung nur noch
-   „Audio-Werkzeuge,…" übrig blieb. */
+/* Werkzeuge: fest zwei Spalten. auto-fill erzeugte auf dem Desktop vier sehr
+   schmale Kacheln (von der Beschreibung blieb „Audio-Werkzeuge,…"), drei Spalten
+   ließen die vierte Kachel als Waise in einer eigenen Reihe stehen. Zwei Spalten
+   gehen bei vier Werkzeugen glatt auf und lassen dem Text Platz. */
 .werkzeug-gitter {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.6rem;
   margin-bottom: 0.4rem;
-}
-@media (min-width: 34rem) {
-  .werkzeug-gitter { grid-template-columns: repeat(3, 1fr); }
 }
 .verweis-liste { display: grid; gap: 0.45rem; margin-bottom: 0.4rem; }
 
