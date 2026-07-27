@@ -190,6 +190,17 @@ python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen repro
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
 
+Dieselben Prüfungen laufen bei jedem PR automatisch über
+`.github/workflows/verify.yml` (plus JSON-Wohlgeformtheit und JS-Syntax) — lokal
+vorab laufen lassen bleibt trotzdem schneller als auf die CI zu warten.
+
+**Fallstrick JS-Syntaxprüfung:** `node --check <datei>` ist für die Module dieser
+App **unbrauchbar** — enthält eine Datei ein `import`, erkennt Node sie als ESM
+und liefert Exit 0 **auch bei kaputter Syntax**. Das betrifft praktisch jedes
+Modul, die Prüfung wäre also durchgehend falsch-grün. Richtig ist
+`node --check --input-type=module < datei.js`; nur `sw.js` (klassisches Skript,
+kein Modul) wird mit dem einfachen `node --check sw.js` geprüft.
+
 **Es gibt kein `tests/`-Verzeichnis** (der Fork-Testlauf war crossminton-spezifisch und wurde
 entfernt). `scripts/validate.py` spiegelt die Engine-Prüfungen (`pruefeDaten` + Kahn-Topo aus
 `js/graph.js`): eindeutige IDs, auflösbare `voraussetzungen`, keine Zyklen, genau ein
