@@ -20,7 +20,13 @@ Basis-Motive nutzen kann (Fehlerbild = statisches Motiv + Riss). Statische IDs
 müssen daher disjunkt zu den generierten sein; ein Motiv gehört entweder in
 einen Generator ODER nach svg_static, nicht in beide.
 
-    python3 scripts/build_grafiken.py
+    python3 scripts/build_grafiken.py            # bündeln (schreibt die Bundles)
+    python3 scripts/build_grafiken.py --check    # nur prüfen, nichts schreiben
+
+--check baut in den Speicher und vergleicht mit dem eingecheckten Stand; weicht
+er ab, bricht der Lauf ab. Das ist der Riegel gegen die Drift, die einmal 183
+Motive ohne Quell-SVG im Bundle hinterlassen hatte: Wer das Bundle ändert, ohne
+die Quelle mitzuliefern, fällt hier auf.
 
 Ergebnis: data/grafiken.json als {baustein_id: "<svg …>"} (sortierte Keys).
 Die Grafiken nutzen ausschließlich currentColor und wirken daher nur bei
@@ -33,11 +39,39 @@ import os
 import re
 import runpy
 import shutil
+import sys
 import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 OUT = os.path.join(HERE, '_svg_out')
+
+
+def bundle_text(daten):
+    """Serialisiert ein Bundle exakt so, wie es eingecheckt wird."""
+    return json.dumps(daten, ensure_ascii=False, indent=1, sort_keys=True) + '\n'
+
+
+def schreibe_oder_pruefe(pfad, daten, nur_pruefen, abweichungen):
+    """Schreibt das Bundle — oder vergleicht es im --check-Modus nur.
+
+    --check macht den Lauf zur Prüfung statt zum Schreiben: weicht das
+    eingecheckte Bundle vom frisch gebauten ab, ist es von Hand entstanden
+    oder eine Quelle fehlt. Genau so ist die Drift entstanden, die 183
+    Motive ohne Quell-SVG im Bundle hinterlassen hat.
+    """
+    neu = bundle_text(daten)
+    if not nur_pruefen:
+        with open(pfad, 'w', encoding='utf-8') as f:
+            f.write(neu)
+        return
+    try:
+        with open(pfad, encoding='utf-8') as f:
+            alt = f.read()
+    except FileNotFoundError:
+        alt = None
+    if alt != neu:
+        abweichungen.append(os.path.relpath(pfad, ROOT))
 
 
 def pool_ids():
@@ -51,7 +85,8 @@ def pool_ids():
     return ids
 
 
-def main():
+def main(nur_pruefen=False):
+    abweichungen = []
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT, exist_ok=True)
@@ -93,9 +128,7 @@ def main():
             grafiken[name[:-4]] = f.read()
 
     ziel = os.path.join(ROOT, 'data/grafiken.json')
-    with open(ziel, 'w', encoding='utf-8') as f:
-        json.dump(grafiken, f, ensure_ascii=False, indent=1, sort_keys=True)
-        f.write('\n')
+    schreibe_oder_pruefe(ziel, grafiken, nur_pruefen, abweichungen)
 
     # Lehrgrafiken (Tranche 4) getrennt buendeln: breite Erklaer-Schemata fuer die
     # Baustein-Ansicht, Registry setzeLehrgrafiken() -> lehrgrafik().
@@ -106,9 +139,7 @@ def main():
         with open(os.path.join(lehr_out, name), encoding='utf-8') as f:
             lehrgrafiken[name[:-4]] = f.read()
     lehr_ziel = os.path.join(ROOT, 'data/lehrgrafiken.json')
-    with open(lehr_ziel, 'w', encoding='utf-8') as f:
-        json.dump(lehrgrafiken, f, ensure_ascii=False, indent=1, sort_keys=True)
-        f.write('\n')
+    schreibe_oder_pruefe(lehr_ziel, lehrgrafiken, nur_pruefen, abweichungen)
 
     pool = pool_ids()
     with open(os.path.join(ROOT, 'data/fehlerbilder.json'), encoding='utf-8') as f:
@@ -125,9 +156,17 @@ def main():
           + (f' (ohne Baustein: {", ".join(lehr_waisen)})' if lehr_waisen else ''))
     if vorproduziert:
         print(f'  vorproduziert (noch kein Baustein): {", ".join(vorproduziert)}')
-    if ohne_grafik or fb_ohne_grafik:
+    if abweichungen:
+        print('\nFEHLER (--check): eingechecktes Bundle weicht vom Neubau ab:')
+        for pfad in abweichungen:
+            print(f'  {pfad}')
+        print('  -> build_grafiken.py ohne --check laufen lassen; fehlt eine Quelle,'
+              ' gehoert das Motiv in einen Generator ODER nach scripts/svg_static/.')
+    if ohne_grafik or fb_ohne_grafik or abweichungen:
         raise SystemExit(1)
+    if nur_pruefen:
+        print('\n--check: Bundles sind aus den Quellen reproduzierbar.')
 
 
 if __name__ == '__main__':
-    main()
+    main(nur_pruefen='--check' in sys.argv[1:])
