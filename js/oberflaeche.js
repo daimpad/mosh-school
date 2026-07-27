@@ -71,6 +71,26 @@ export function leerHtml(nachricht, icon = 'fa-compass', aktionHtml = '') {
     </div>`;
 }
 
+// Nicht-gefunden-Karte für unbekannte Slugs. Vorher stand dieselbe Karte an
+// sechs Stellen leicht verschieden im Code — und an zwei weiteren fehlte sie
+// ganz: #/pfad/stil/<unsinn> und #/pfad/themen/<unsinn> bauten stattdessen eine
+// vollwertige Seite mit dem rohen Slug als Überschrift. Ein vertippter oder
+// veralteter geteilter Link sah damit aus wie echter Inhalt.
+export function nichtGefundenHtml(zurueckHref = '#/', zurueckText = '') {
+  // Mit H1: Jede Seite braucht eine Ueberschrift — ohne sie steht ein
+  // Screenreader-Nutzer auf einer Seite ohne Titel und die Dokumentstruktur
+  // bricht ab. Die Nicht-gefunden-Karte war die einzige Ansicht ohne.
+  return `
+    <div class="karte leer-zustand">
+      <i class="fa-solid fa-compass" aria-hidden="true"></i>
+      <h1 class="nicht-gefunden-titel">${esc(t('nicht_gefunden_titel'))}</h1>
+      <p class="leise">${esc(t('nicht_gefunden'))}</p>
+      <div class="knopf-zeile leer-aktion">
+        <a class="knopf knopf-sekundaer" href="${esc(zurueckHref)}">${esc(zurueckText || t('zurueck'))}</a>
+      </div>
+    </div>`;
+}
+
 // Häufiger Ausweg aus einem Leer-Zustand: „Kapitel entdecken" führt in den
 // Themenpfad, „Suche" ins Suchfeld. Gibt fertiges Knopf-HTML für leerHtml zurück.
 export function entdeckenAktion() {

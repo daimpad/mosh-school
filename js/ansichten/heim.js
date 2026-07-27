@@ -133,11 +133,14 @@ export function renderHeim(el, daten) {
   });
 
   // ---- Werkzeuge (flach) ---------------------------------------------------
+  // Eigene Kurztexte statt der Hub-Saetze: In der kompakten Kachel wurden die
+  // ganzen Saetze nach zwei Zeilen abgeschnitten („Audio-Werkzeuge, die die
+  // Uebungen praktisch stuetzen — Klick, Loops, Stimmgeraet und…").
   const werkzeugKacheln = [
-    { href: '#/werkzeuge', hue: 'pf-teal', icon: 'fa-toolbox', titel: esc(t('nav_werkzeuge')), text: esc(t('wz_hub_untertitel')) },
-    { href: '#/stimmungen', hue: 'pf-teal', icon: 'fa-sliders', titel: esc(t('nav_stimmungen')), text: esc(t('stimm_untertitel')) },
-    { href: '#/patterns', hue: 'pf-indigo', icon: 'fa-repeat', titel: esc(t('nav_patterns')), text: esc(t('pattern_untertitel')) },
-    { href: '#/werkzeug/explorer', hue: 'pf-schiefer', icon: 'fa-microchip', titel: esc(t('wz_explorer_titel')), text: esc(t('wz_explorer_kurz')) },
+    { href: '#/werkzeuge', hue: 'pf-teal', icon: 'fa-toolbox', titel: esc(t('nav_werkzeuge')), text: esc(t('wz_kachel_werkzeuge')) },
+    { href: '#/stimmungen', hue: 'pf-teal', icon: 'fa-sliders', titel: esc(t('nav_stimmungen')), text: esc(t('wz_kachel_stimmungen')) },
+    { href: '#/patterns', hue: 'pf-indigo', icon: 'fa-repeat', titel: esc(t('nav_patterns')), text: esc(t('wz_kachel_patterns')) },
+    { href: '#/werkzeug/explorer', hue: 'pf-schiefer', icon: 'fa-microchip', titel: esc(t('wz_explorer_titel')), text: esc(t('wz_kachel_explorer')) },
   ].map(werkzeugKachel).join('');
 
   // ---- Entdecken (Zeilen) --------------------------------------------------

@@ -177,6 +177,64 @@ function oeffneMerklistePdf(daten) {
   return true;
 }
 
+// Merkliste (§ Lesezeichen): gemerkte Bausteine, als PDF (Druck-Ansicht) sicherbar.
+// Als eigene Funktion, weil sie an ZWEI Orten steht: im Profil (wo sie inhaltlich
+// hingehört) und unter #/merkliste (wo der Merken-Knopf der Baustein-Seite
+// hinführt). Vorher zeigte dieser Knopf auf #/profil — dort steht die Merkliste
+// aber gut 1500 px weit unten, man landete oben und musste die halbe Seite
+// scrollen, um zu sehen, was man gerade gemerkt hatte.
+function merklisteSektionHtml(daten) {
+  const merkIds = merkliste();
+  const merkEintraege = merkIds
+    .map((id) => {
+      const b = daten.bausteinVonId.get(id);
+      const titel = b ? label('baustein', id) : id;
+      return `<li class="merk-eintrag">
+        <a class="merk-link" href="#/baustein/${esc(id)}?kontext=kompetenz">
+          <span class="merk-icon">${bausteinIcon(id) || '<i class="fa-solid fa-bookmark" aria-hidden="true"></i>'}</span>
+          <span>${esc(titel)}</span>
+        </a>
+        <button class="knopf knopf-leise merk-entfernen" data-merk-entfernen="${esc(id)}" aria-label="${esc(t('merkliste_entfernen'))}" title="${esc(t('merkliste_entfernen'))}"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </li>`;
+    })
+    .join('');
+  return `
+    <section class="karte profil-merkliste">
+      <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> ${esc(t('merkliste_titel'))}</h2>
+      ${merkIds.length === 0
+        ? `<p class="leise">${esc(t('merkliste_leer'))}</p>`
+        : `<p class="leise">${esc(t('merkliste_text'))}</p>
+           <ul class="merk-liste">${merkEintraege}</ul>
+           <div class="knopf-zeile" style="justify-content:flex-start">
+             <button class="knopf knopf-sekundaer" id="pf-merk-pdf"><i class="fa-solid fa-print" aria-hidden="true"></i> ${esc(t('merkliste_pdf'))}</button>
+           </div>`}
+    </section>`;
+}
+
+// Entfernen + PDF — dieselben Handler für beide Orte. `neuZeichnen` hängt davon
+// ab, in welcher Ansicht wir stehen; sonst würde ein Klick auf #/merkliste die
+// Profil-Ansicht in den Container schreiben.
+function bindeMerkliste(el, daten, neuZeichnen) {
+  for (const knopf of el.querySelectorAll('[data-merk-entfernen]')) {
+    knopf.addEventListener('click', () => {
+      entferneGemerkt(knopf.dataset.merkEntfernen);
+      neuZeichnen();
+    });
+  }
+  el.querySelector('#pf-merk-pdf')?.addEventListener('click', () => oeffneMerklistePdf(daten));
+}
+
+// Eigene Seite für die Merkliste — Ziel des Merken-Knopfs auf der Baustein-Seite.
+export function renderMerkliste(el, daten) {
+  el.innerHTML = `
+    ${landingHeroHtml('fa-bookmark', t('merkliste_titel'), t('merkliste_untertitel'), 'pf-blau', 'merkliste')}
+    ${merklisteSektionHtml(daten)}
+    <p class="knopf-zeile" style="justify-content:flex-start">
+      <a class="knopf knopf-sekundaer" href="#/profil"><i class="fa-solid fa-user" aria-hidden="true"></i> ${esc(t('nav_profil'))}</a>
+    </p>`;
+  bindeMerkliste(el, daten, () => renderMerkliste(el, daten));
+}
+
 export function renderProfil(el, daten) {
   const d = diagnose();
   const e = einstellungen();
@@ -235,32 +293,7 @@ export function renderProfil(el, daten) {
       <ul class="meilenstein-liste">${meilensteinListe}</ul>
     </section>`;
 
-  // Merkliste (§ Lesezeichen): gemerkte Bausteine, als PDF (Druck-Ansicht) sicherbar.
-  const merkIds = merkliste();
-  const merkEintraege = merkIds
-    .map((id) => {
-      const b = daten.bausteinVonId.get(id);
-      const titel = b ? label('baustein', id) : id;
-      return `<li class="merk-eintrag">
-        <a class="merk-link" href="#/baustein/${esc(id)}?kontext=kompetenz">
-          <span class="merk-icon">${bausteinIcon(id) || '<i class="fa-solid fa-bookmark" aria-hidden="true"></i>'}</span>
-          <span>${esc(titel)}</span>
-        </a>
-        <button class="knopf knopf-leise merk-entfernen" data-merk-entfernen="${esc(id)}" aria-label="${esc(t('merkliste_entfernen'))}" title="${esc(t('merkliste_entfernen'))}"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-      </li>`;
-    })
-    .join('');
-  const merklisteSektion = `
-    <section class="karte profil-merkliste">
-      <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> ${esc(t('merkliste_titel'))}</h2>
-      ${merkIds.length === 0
-        ? `<p class="leise">${esc(t('merkliste_leer'))}</p>`
-        : `<p class="leise">${esc(t('merkliste_text'))}</p>
-           <ul class="merk-liste">${merkEintraege}</ul>
-           <div class="knopf-zeile" style="justify-content:flex-start">
-             <button class="knopf knopf-sekundaer" id="pf-merk-pdf"><i class="fa-solid fa-print" aria-hidden="true"></i> ${esc(t('merkliste_pdf'))}</button>
-           </div>`}
-    </section>`;
+  const merklisteSektion = merklisteSektionHtml(daten);
 
   el.innerHTML = `
     ${landingHeroHtml('fa-user', t('nav_profil'), t('profil_intro'), 'pf-blau')}
@@ -380,16 +413,7 @@ export function renderProfil(el, daten) {
     else renderProfil(el, daten);
   });
 
-  for (const knopf of el.querySelectorAll('[data-merk-entfernen]')) {
-    knopf.addEventListener('click', () => {
-      entferneGemerkt(knopf.dataset.merkEntfernen);
-      renderProfil(el, daten);
-    });
-  }
-
-  el.querySelector('#pf-merk-pdf')?.addEventListener('click', () => {
-    oeffneMerklistePdf(daten);
-  });
+  bindeMerkliste(el, daten, () => renderProfil(el, daten));
 
   el.querySelector('#pf-thema').addEventListener('change', (ereignis) => {
     const neu = ereignis.target.value;

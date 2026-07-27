@@ -806,7 +806,13 @@
     "teilen": "Teilen",
     "teilen_kopiert": "Link kopiert",
     "merkliste_oeffnen": "Merkliste",
-    "seiten_aktionen": "Seiten-Aktionen"
+    "seiten_aktionen": "Seiten-Aktionen",
+    "merkliste_untertitel": "Was du dir zum Wiederkommen markiert hast.",
+    "wz_kachel_werkzeuge": "Klick, Loops, Stimmgerät",
+    "wz_kachel_stimmungen": "Tunings aller Genres",
+    "wz_kachel_patterns": "Riffs und Drumpattern",
+    "wz_kachel_explorer": "Geräte und Signalweg",
+    "nicht_gefunden_titel": "Nicht gefunden"
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",

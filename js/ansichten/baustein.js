@@ -6,7 +6,7 @@
 import { schalteTeil } from '../aktionen.js';
 import { domaenenVon, fehlerbilderFuer, hatReflexionsaufgabe, hatUebungsteil, witterungVon } from '../daten.js';
 import { label, t, text } from '../i18n.js';
-import { bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, zeigeMeilenstein, zeigeMeilensteine } from '../oberflaeche.js';
+import { bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRendern, nichtGefundenHtml, zeigeMeilenstein, zeigeMeilensteine } from '../oberflaeche.js';
 import { pruefeMeilensteine } from '../mastery.js';
 import { absaetzeMitGlossar, baueGlossarVerlinker } from '../glossar-links.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
@@ -184,7 +184,7 @@ const DOMAENE_HUE = {
 export function renderBaustein(el, daten, bausteinId, kontext) {
   const info = stationImKontext(daten, bausteinId, kontext);
   if (!info) {
-    el.innerHTML = `<div class="karte"><p>${esc(t('nicht_gefunden'))}</p><a class="knopf knopf-sekundaer" href="#/">${esc(t('zurueck'))}</a></div>`;
+    el.innerHTML = nichtGefundenHtml('#/', t('zurueck'));
     return;
   }
   const { station, sequenz, index, vorherige, naechste } = info;
@@ -257,7 +257,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
         <i class="fa-solid ${gemerkt ? 'fa-bookmark-filled' : 'fa-bookmark'}" aria-hidden="true"></i>
         <span class="seiten-aktion-text">${esc(gemerkt ? t('gemerkt') : t('merken'))}</span>
       </button>
-      <a class="seiten-aktion" href="#/profil" title="${esc(t('merkliste_oeffnen'))}">
+      <a class="seiten-aktion" href="#/merkliste" title="${esc(t('merkliste_oeffnen'))}">
         <i class="fa-solid fa-list-check" aria-hidden="true"></i>
         <span class="seiten-aktion-text">${esc(t('merkliste_oeffnen'))}</span>
       </a>
