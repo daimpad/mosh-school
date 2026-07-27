@@ -1,0 +1,59 @@
+# Haelt images/bg/bilder.json automatisch aktuell.
+#
+# Warum: GitHub Pages liefert kein Verzeichnislisting, deshalb braucht die
+# Vergleichsseite (mockups/hintergrundbilder.html) eine eingecheckte Liste der
+# Bilder. Die von Hand nachzuziehen ist leicht zu vergessen — und wird es
+# vergessen, bleiben neue Bilder online unsichtbar. Dieser Workflow erzeugt die
+# Liste nach jedem Push auf images/bg/ neu und committet sie, falls sie sich
+# geaendert hat. Bilder ablegen und pushen genuegt also.
+#
+# Endlosschleife: Der eigene Commit traegt "[skip bg]" im Text, und der Job
+# ueberspringt solche Commits. Zusaetzlich wird nur committet, wenn sich
+# tatsaechlich etwas geaendert hat.
+
+name: Bilder-Verzeichnis aktualisieren
+
+on:
+  push:
+    paths:
+      - 'images/bg/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Nicht zwei Laeufe gleichzeitig auf demselben Branch — sie wuerden sich beim
+# Pushen gegenseitig ueberholen.
+concurrency:
+  group: bg-index-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  aktualisieren:
+    if: "!contains(github.event.head_commit.message, '[skip bg]')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Python bereitstellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Verzeichnis neu erzeugen
+        run: python3 scripts/build_bg_index.py
+
+      - name: Bei Aenderung committen und pushen
+        run: |
+          if git diff --quiet -- images/bg/bilder.json; then
+            echo "Verzeichnis war bereits aktuell — nichts zu tun."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/bg/bilder.json
+          git commit -m "chore: Bilder-Verzeichnis aktualisieren [skip bg]"
+          git push origin HEAD:${{ github.ref_name }}
