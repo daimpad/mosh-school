@@ -13,7 +13,7 @@ import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
 import { stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
-import { bausteinStatus, diagnose, einstellungen, merkeZuletzt, setzeBausteinStatus } from '../zustand.js';
+import { bausteinStatus, diagnose, einstellungen, istGemerkt, merkeZuletzt, schalteGemerkt, setzeBausteinStatus } from '../zustand.js';
 
 function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
@@ -163,37 +163,9 @@ function voraussetzungsBanner(station, kontext) {
   const verweise = station.fehlendeVoraussetzungen
     .map((id) => `<a href="#/baustein/${esc(id)}?kontext=${encodeURIComponent(kontext)}">${esc(label('baustein', id))}</a>`)
     .join(', ');
-  return `<div class="banner-hinweis">${esc(t('empfohlen_vorher'))} ${verweise}</div>`;
-}
-
-function einordnungHtml(baustein, kuerzelSichtbar) {
-  const zeile = (begriff, wert) => (wert ? `<dt>${esc(begriff)}</dt><dd>${wert}</dd>` : '');
-  // Domäne + Könnensstufe stehen bei JEDEM Baustein (die Einordnung ist damit nie
-  // leer). Die übrigen Zeilen erscheinen nur, wenn das Feld gesetzt ist.
-  const domaenen = domaenenVon(baustein).map((d) => esc(label('domaene', d))).join(', ');
-  const stufen = (baustein.kompetenzstufe || []).map((s) => esc(label('kompetenzstufe', s))).join(', ');
-  const spielziele = (baustein.spielziele || []).map((f) => esc(label('spielziel_faktor', f))).join(', ');
-  const vermittlungsziele = (baustein.vermittlungsziele || []).map((f) => esc(label('vermittlungsziel_faktor', f))).join(', ');
-  const witterung = witterungVon(baustein).map((w) => esc(label('witterung', w))).join(', ');
-  const transfer = kuerzelSichtbar
-    ? (baustein.transfer_herkunft || []).map((k) => esc(label('transfer_herkunft', k))).join(', ')
-    : '';
-  const voraussetzungen = (baustein.voraussetzungen || [])
-    .map((id) => `<a href="#/baustein/${esc(id)}?kontext=kompetenz">${esc(label('baustein', id))}</a>`)
-    .join(', ');
-  return `
-    <details class="einordnung karte">
-      <summary>${esc(t('einordnung'))}</summary>
-      <dl>
-        ${zeile(t('meta_domaene'), domaenen)}
-        ${zeile(t('meta_kompetenzstufe'), stufen)}
-        ${zeile(t('meta_spielziele'), spielziele)}
-        ${zeile(t('meta_vermittlungsziele'), vermittlungsziele)}
-        ${zeile(t('meta_witterung'), witterung)}
-        ${zeile(t('meta_transfer'), transfer)}
-        ${zeile(t('meta_voraussetzungen'), voraussetzungen)}
-      </dl>
-    </details>`;
+  // Ruhiger Hinweis (keine Signalfarbe): die Voraussetzungen sperren nie, sie
+  // ordnen nur ein — daher am Seitenende statt als gelbes Banner oben.
+  return `<p class="voraussetzung-hinweis leise">${esc(t('empfohlen_vorher'))} ${verweise}</p>`;
 }
 
 // Domänen-Hue für den Baustein-Hero (analog zu den Startseiten-Kacheln): färbt
@@ -262,6 +234,17 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const chipZeile = metaChips || transferChips
     ? `<p class="chip-zeile">${metaChips}${metaChips && transferChips ? ' <span class="chip-trenner">·</span> ' : ''}${transferChips}</p>`
     : '';
+
+  // „Merken": baustein-gebundene Merkliste (kein Fortschritt). Gemerkte Bausteine
+  // lassen sich im Profil als PDF (Druck-Ansicht) sichern. Signal doppelt kodiert
+  // (Symbol + Text), damit der Zustand nicht nur an der Farbe hängt.
+  const gemerkt = istGemerkt(b.id);
+  const merkenAktion = `
+    <div class="baustein-aktionen">
+      <button type="button" class="knopf knopf-sekundaer merken-knopf${gemerkt ? ' gemerkt' : ''}" data-merken="${esc(b.id)}" aria-pressed="${gemerkt}">
+        <i class="fa-solid ${gemerkt ? 'fa-bookmark-filled' : 'fa-bookmark'}" aria-hidden="true"></i> ${esc(gemerkt ? t('gemerkt') : t('merken'))}
+      </button>
+    </div>`;
 
   const positionsZeile =
     index >= 0
@@ -355,7 +338,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${positionsZeile}
       ${heroSektion}
       ${chipZeile}
-      ${voraussetzungsBanner(station, kontext)}
+      ${merkenAktion}
       ${erklaerSektion}
       ${schemaSektion}
       ${demonstrationHtml(b.demonstration)}
@@ -365,7 +348,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${werkzeugSektionHtml(b)}
       ${trainerLayerHtml(daten, b)}
       ${abschlussZeile}
-      ${einordnungHtml(b, kuerzelSichtbar)}
+      ${voraussetzungsBanner(station, kontext)}
       ${fussNavigation}
     </article>`;
 
@@ -385,6 +368,13 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     if (neue.length > 0) zeigeMeilensteine(neue.map((id) => ({ text: meilensteinLabel(id) })));
     else neuRendern();
   };
+
+  for (const knopf of el.querySelectorAll('[data-merken]')) {
+    knopf.addEventListener('click', () => {
+      schalteGemerkt(knopf.dataset.merken);
+      neuRendern();
+    });
+  }
 
   for (const knopf of el.querySelectorAll('[data-mastery]')) {
     knopf.addEventListener('click', () => {
