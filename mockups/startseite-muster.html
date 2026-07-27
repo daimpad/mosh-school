@@ -26,9 +26,9 @@
   /* Vorgaben = die Werte, die in der App stehen (css/app.css, --bild-*).
      Das Mockup soll zeigen, was wirklich ausgeliefert ist. */
   :root {
-    --mock-blur: 5px;
-    --mock-op: .62;
-    --mock-sat: .95;
+    --mock-blur: 0px;
+    --mock-op: .8;
+    --mock-sat: 1;
   }
   body { padding-bottom: 4rem; }
   .mock-wrap { max-width: 62rem; margin: 0 auto; padding: 0 1rem; }
@@ -143,8 +143,12 @@
     background: center / cover no-repeat var(--hero-bild);
     filter: blur(calc(var(--mock-blur) * var(--blur-faktor, 1))) saturate(var(--mock-sat));
     opacity: var(--mock-op);
-    transform: scale(1.18);
+    /* Ueberzoom gab es nur wegen des Blurs; ohne Weichzeichnung bleibt ein Hauch. */
+    transform: scale(1.02);
   }
+  /* Motiv zurücknehmen, WO ein Foto liegt — über einem scharfen Bild kreuzen
+     sich sonst zwei Zeichnungen. Ohne Foto bleibt es der Träger der Fläche. */
+  .genre-landing-bg ~ .genre-landing-bild { opacity: .1; }
 
   /* Scrim — die eine Stelle, an der eine Kachel NICHT wie der Hero funktioniert.
      Der Hero-Scrim (.genre-landing-scrim) läuft erst ab 62 % Höhe an; bei 300 px
@@ -163,9 +167,9 @@
   /* Rückhalt direkt hinter dem Text statt über der ganzen Kachel: Er wächst mit
      der Textlänge mit und lässt das Bild darüber frei. */
   .kachel-inhalt::before {
-    content: ""; position: absolute; inset: -.8rem -1rem -.9rem; z-index: -1;
-    pointer-events: none; opacity: .88;
-    background: linear-gradient(to top, var(--flaeche) 62%, rgba(0, 0, 0, 0) 100%);
+    content: ""; position: absolute; inset: -1.5rem -1rem -.9rem; z-index: -1;
+    pointer-events: none; opacity: .9;
+    background: linear-gradient(to top, var(--flaeche) 84%, rgba(0, 0, 0, 0) 100%);
   }
   /* Beim großen Marken-Element bleibt der weiche Hero-Verlauf richtig — dort ist
      Platz, und die harte Kante würde das Bild abschneiden. */
@@ -288,15 +292,15 @@
     </label>
     <label class="mock-feld">
       <span>Weichzeichnung <b class="mock-wert" id="blur-w"></b></span>
-      <input type="range" id="blur" min="0" max="40" value="5">
+      <input type="range" id="blur" min="0" max="40" value="0">
     </label>
     <label class="mock-feld">
       <span>Deckkraft <b class="mock-wert" id="op-w"></b></span>
-      <input type="range" id="op" min="0" max="100" value="62">
+      <input type="range" id="op" min="0" max="100" value="80">
     </label>
     <label class="mock-feld">
       <span>Sättigung <b class="mock-wert" id="sat-w"></b></span>
-      <input type="range" id="sat" min="0" max="200" value="95">
+      <input type="range" id="sat" min="0" max="200" value="100">
     </label>
     <label class="mock-feld">
       <span>Thema</span>
@@ -345,12 +349,14 @@
     </ol>
     <h2>Was beim Verkleinern auffiel</h2>
     <p style="margin:0;color:var(--tinte-2);font-size:.88rem;line-height:1.5;max-width:64ch">
-      Der Hero-Look überträgt sich <b>nicht</b> unverändert auf Kachelgröße: Bei
-      18&nbsp;px Weichzeichnung fällt eine 116&nbsp;px hohe Kachel zu einem Farbfleck
-      zusammen, und der weiche Hero-Scrim (läuft erst ab 62&nbsp;% Höhe an) lässt den
-      Titel im hellen Thema im Foto verschwinden. Beides ist hier gelöst — Blur
-      skaliert mit der Kachel, der Scrim ist dichter. Der Schalter „Blur unabhängig
-      von der Größe" und der Themenwechsel zeigen den Unterschied.
+      Der Hero-Look überträgt sich <b>nicht</b> unverändert auf Kachelgröße. Die
+      Weichzeichnung ist inzwischen ganz raus — was als Textur hinter einem großen
+      Hero funktionierte, war über zehn Kacheln verteilt nicht mehr zu erkennen;
+      jetzt sind die Fotos scharf. Geblieben sind zwei Dinge: Das <b>Motiv tritt
+      zurück, wo ein Foto liegt</b> (sonst kreuzen sich zwei Zeichnungen), und die
+      Lesbarkeit trägt ein <b>Rückhalt direkt hinter dem Text</b> statt eines
+      flächigen Scrims — ein Scrim, der für die kleine Augenbraue im hellen Thema
+      stark genug wäre, deckt das halbe Foto zu. Der Themenwechsel zeigt es.
     </p>
   </section>
 
@@ -375,11 +381,12 @@
 
   <details class="mock-legende" style="padding-bottom:0">
     <summary style="padding:1rem 0;cursor:pointer;font-weight:700">CSS zum Übernehmen</summary>
-    <pre style="overflow-x:auto;font-size:.78rem;line-height:1.5"><code>/* So steht es jetzt in css/app.css — drei Stellschrauben an einer Stelle. */
+    <pre style="overflow-x:auto;font-size:.78rem;line-height:1.5"><code>/* So steht es in css/app.css — die Stellschrauben an einer Stelle. */
 :root {
-  --bild-weich: 5px;        /* Weichzeichnung im Hero */
-  --bild-deckkraft: .62;    /* wie deutlich das Foto durchkommt */
-  --bild-saettigung: .95;   /* 1 = Originalfarben, 0 = Graustufen */
+  --bild-weich: 0px;        /* 0 = scharf */
+  --bild-deckkraft: .8;     /* wie deutlich das Foto durchkommt */
+  --bild-saettigung: 1;     /* 1 = Originalfarben, 0 = Graustufen */
+  --bild-zoom: 1.02;        /* Überzoom braucht es nur bei Weichzeichnung */
 }
 
 .genre-landing-bg {
@@ -387,15 +394,20 @@
   background-position: center; background-size: cover; background-repeat: no-repeat;
   filter: blur(calc(var(--bild-weich) * var(--blur-faktor, 1))) saturate(var(--bild-saettigung));
   opacity: var(--bild-deckkraft);
-  transform: scale(1.18);   /* Überzoom: sonst zieht der Blur helle Ränder herein */
+  transform: scale(var(--bild-zoom));
 }
 
-/* Weichzeichnung an die Kachelgröße koppeln — 5px wirken auf 170px Kachelhöhe
-   stärker als auf 300px Hero-Höhe. */
+/* Motiv zurücknehmen, WO ein Foto liegt — sonst kreuzen sich zwei Zeichnungen. */
+.genre-landing-bg ~ .genre-landing-bild { opacity: .1; }
+
+/* Weichzeichnung an die Kachelgröße koppeln (greift erst wieder, wenn
+   --bild-weich > 0 ist). */
 .bildkachel { --blur-faktor: .68; }
 
-/* Flächiger Scrim nur leicht, dafür ein Rückhalt direkt hinter dem Text: Er
-   wächst mit der Textlänge mit und lässt das Bild darüber frei. */
+/* Lesbarkeit trägt nicht der flächige Scrim, sondern ein Rückhalt direkt hinter
+   dem Text: Er wächst mit der Textlänge mit und lässt das Foto darüber frei.
+   Oben weit über den Inhalt hinaus, sonst säße die kleine Augenbraue im
+   Ausblendbereich. */
 .bildkachel-scrim {
   position: absolute; inset: 0; pointer-events: none; opacity: .8;
   background:
@@ -403,9 +415,9 @@
     radial-gradient(120% 100% at 8% 118%, var(--flaeche) 0%, rgba(0,0,0,0) 55%);
 }
 .bildkachel-inhalt::before {
-  content: ''; position: absolute; inset: -.8rem -1.05rem -1rem; z-index: -1;
-  pointer-events: none; opacity: .88;
-  background: linear-gradient(to top, var(--flaeche) 62%, rgba(0,0,0,0) 100%);
+  content: ''; position: absolute; inset: -1.5rem -1.05rem -1rem; z-index: -1;
+  pointer-events: none; opacity: .9;
+  background: linear-gradient(to top, var(--flaeche) 84%, rgba(0,0,0,0) 100%);
 }</code></pre>
   </details>
 
