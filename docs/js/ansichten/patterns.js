@@ -66,18 +66,26 @@ function holeRauschen(ctx) {
 }
 
 // --- Gitarrenton: weicher Dreieck-Oszillator, leicht überlappend gehalten. ---
-function spieleNote(ctx, frequenz, t0, dauer, pegel) {
-  const osc = ctx.createOscillator();
-  const huelle = ctx.createGain();
-  osc.type = 'triangle';
-  osc.frequency.value = frequenz;
-  huelle.gain.setValueAtTime(0.0001, t0);
-  huelle.gain.exponentialRampToValueAtTime(pegel, t0 + 0.008);
-  huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer * 1.5);
-  osc.connect(huelle).connect(ctx.destination);
-  osc.start(t0);
-  osc.stop(t0 + dauer * 1.6);
-  merke(osc);
+// `bass=true`: die Bass-Stimmungen liegen eine Oktave unter der Gitarre (E1/D1/C1,
+// ~32–41 Hz Grundton). So tiefe Töne geben kleine Laptop-/Handy-Lautsprecher kaum
+// wieder — sie klängen „stumm". Wir legen deshalb einen Oktav-Oberton dazu: die
+// gespielte Tonhöhe/Notation bleibt korrekt tief, die Linie wird aber hörbar.
+function spieleNote(ctx, frequenz, t0, dauer, pegel, bass = false) {
+  const spiele = (freq, p) => {
+    const osc = ctx.createOscillator();
+    const huelle = ctx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.value = freq;
+    huelle.gain.setValueAtTime(0.0001, t0);
+    huelle.gain.exponentialRampToValueAtTime(p, t0 + 0.008);
+    huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer * 1.5);
+    osc.connect(huelle).connect(ctx.destination);
+    osc.start(t0);
+    osc.stop(t0 + dauer * 1.6);
+    merke(osc);
+  };
+  spiele(frequenz, pegel);
+  if (bass) spiele(frequenz * 2, pegel * 0.55); // hörbarer Oktav-Oberton
 }
 
 // --- Drum-Stimmen (synthetisch) ---
@@ -175,12 +183,13 @@ function planeTab(pattern, karte) {
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
   const start = ctx.currentTime + 0.07;
+  const bass = pattern.domaene === 'bass';
   pattern.schritte.forEach((schritt, i) => {
     const t0 = start + i * step;
     const pegel = 0.16 / Math.max(1, schritt.length);
     for (const { saite, bund } of schritt) {
       const offen = frequenzVon(pattern.stimmung[saite]);
-      if (offen) spieleNote(ctx, offen * 2 ** (bund / 12), t0, step, pegel);
+      if (offen) spieleNote(ctx, offen * 2 ** (bund / 12), t0, step, pegel, bass);
     }
   });
   markiereLauf(karte, ctx, start, step, pattern.schritte.length);
