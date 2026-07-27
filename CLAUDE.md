@@ -246,13 +246,22 @@ Tokens**, nie harte Farben.
   als einzige Fläche, **keine Schatten**, Hero-Fotos in **Graustufen**
   (`--bild-saettigung: 0`), neutrale statt warmer Tinte. Was im Dunkeln der
   Versatz-Schatten leistet — Container trennen —, leistet hier die Tintenkante
-  (`--karten-kante`). Alles davon steht **ausschliesslich als Token** im Block
+  (`--karten-kante`, 1px). **Die Kante ist eine Klick-Zusage**: Sie erscheint nur
+  an `a.karte-link`, `button.karte` und `.station` — Heros, `.abschnitt` und reine
+  Inhalts-Karten bleiben randlos und tragen ihre Struktur über Überschrift und
+  Abstand. Dieselbe Regel gilt für Hover (Kante rot, Anheben): nur wo geklickt
+  werden kann. Die Breite (`--karten-kante-breite`) liegt an **allen** Containern
+  transparent an, damit das Setzen der Farbe keinen Layout-Sprung auslöst.
+  Trennlinien *innerhalb* eines Containers sind keine Ränder und laufen über
+  `--trennlinie` (hell deutlich leichter als `--linie`, dunkel identisch) — sonst
+  zerschneidet jede Listenzeile die Karte. Alles davon steht **ausschliesslich als Token** im Block
   „HELLES THEMA — weisses Blatt" **am Ende von `css/app.css`** (er muss später
   stehen als die `--bild-*`-Tokens). Der Block enthält bewusst **keine
   Komponentenregel**: Lässt sich etwas nicht abschalten, wird der Wert oben zum
   Token gemacht (so entstanden `--schatten-leiste/-schublade/-dialog/-ring`,
   `--filter-marke/-medaille`, `--schatten-plastisch`, `--karten-kante`,
-  `--hue-kachel-bg`, `--trainer-bg`). **Fallstrick:** `box-shadow: none, inset …`
+  `--karten-kante-breite`, `--trennlinie`, `--hue-kachel-bg`, `--trainer-bg`).
+  **Fallstrick:** `box-shadow: none, inset …`
   ist ungültig — ein abzuschaltender Schatten in einer *Liste* wird zum
   Null-Schatten `0 0 0 0 transparent`, nicht zu `none`. Die Hell-Selektoren
   (`:root[data-theme='hell']` + `@media (prefers-color-scheme: light) :root:not([data-theme='dunkel'])`)
