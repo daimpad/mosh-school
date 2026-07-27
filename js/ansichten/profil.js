@@ -3,14 +3,15 @@
 // Einstellungen (Sprache, Transfer-Schalter, Zurücksetzen).
 
 import { markiereAbsolviert } from '../aktionen.js';
-import { deltaFuer, niedrigsteStufe } from '../daten.js';
+import { deltaFuer, domaenenVon, niedrigsteStufe } from '../daten.js';
 import { bausteinAbsolviert, globaleProjektion, projektion } from '../fortschritt.js';
-import { label, t } from '../i18n.js';
+import { label, t, text } from '../i18n.js';
 import { balkenHtml, bausteinIcon, esc, meilensteinLabel, neuRendern, ringHtml, wendeThemaAn, zeigeMeilenstein } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
+import { uebungsteilHtml } from './baustein.js';
 import { instrumentRinge, wasAlsNaechstes } from '../mastery.js';
 import { kompetenzpfad } from '../pfade.js';
-import { diagnose, einstellungen, exportiereZustand, importiereZustand, kontinuitaet, meilensteine, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
+import { diagnose, einstellungen, entferneGemerkt, exportiereZustand, importiereZustand, kontinuitaet, meilensteine, merkliste, setzeDiagnose, setzeEinstellung, setzeZurueck } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
 
 
@@ -114,6 +115,68 @@ function vormarkierenHtml(daten, d) {
   return `<details class="karte"><summary>${esc(t('vormarkieren_profil'))}</summary>${inhalt}</details>`;
 }
 
+// Merkliste als PDF: buildfrei über die Druck-Ansicht des Browsers (keine
+// PDF-Bibliothek). Ein neues Fenster mit sauberem, druckoptimiertem HTML wird
+// geöffnet und der Druckdialog aufgerufen — dort wählt man „Als PDF speichern".
+function absaetzePdf(rohtext) {
+  return String(rohtext ?? '')
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter(Boolean)
+    .map((p) => `<p>${esc(p)}</p>`)
+    .join('');
+}
+
+function oeffneMerklistePdf(daten) {
+  const ids = merkliste();
+  const teile = ids
+    .map((id) => {
+      const b = daten.bausteinVonId.get(id);
+      if (!b) return '';
+      const kat = domaenenVon(b).map((d) => esc(label('domaene', d))).join(' · ');
+      const stufen = (b.kompetenzstufe || []).map((s) => esc(label('kompetenzstufe', s))).join(' · ');
+      const meta = [kat, stufen].filter(Boolean).join(' — ');
+      const erklaer = absaetzePdf(text(b.erklaerteil));
+      let aufgabe = '';
+      if (b.uebungsteil) aufgabe = uebungsteilHtml(text(b.uebungsteil));
+      else if (b.reflexionsaufgabe) aufgabe = `<h3>${esc(t('reflexionsaufgabe'))}</h3>${absaetzePdf(text(b.reflexionsaufgabe))}`;
+      return `<article class="pdf-baustein">
+        ${meta ? `<p class="pdf-kat">${meta}</p>` : ''}
+        <h2>${esc(label('baustein', id))}</h2>
+        ${erklaer}
+        ${aufgabe}
+      </article>`;
+    })
+    .join('');
+  const stil = `
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #111; background: #fff; max-width: 46rem; margin: 2rem auto; padding: 0 1.2rem; line-height: 1.5; }
+    h1 { font-size: 1.7rem; margin: 0 0 0.2rem; }
+    .pdf-intro { color: #555; margin: 0 0 1.6rem; }
+    .pdf-baustein { padding: 1rem 0 0.4rem; border-top: 2px solid #111; page-break-inside: avoid; }
+    .pdf-baustein h2 { font-size: 1.25rem; margin: 0.1rem 0 0.5rem; }
+    .pdf-kat { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; color: #666; margin: 0; }
+    .pdf-baustein h3, .pdf-baustein h4 { font-size: 0.95rem; margin: 0.9rem 0 0.2rem; }
+    .pdf-baustein p { margin: 0.35rem 0; }
+    ol { margin: 0.3rem 0 0.3rem 1.2rem; padding: 0; }
+    li { margin: 0.15rem 0; }
+    @media print { body { margin: 0; max-width: none; } a { color: inherit; text-decoration: none; } }
+  `;
+  const dok = `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>${esc(t('merkliste_pdf_titel'))}</title><style>${stil}</style></head><body>
+    <h1>${esc(t('merkliste_pdf_titel'))}</h1>
+    <p class="pdf-intro">mosh school — ${esc(t('merkliste_titel'))}</p>
+    ${teile}
+    <script>window.addEventListener('load',function(){window.focus();window.print();});<\/script>
+  </body></html>`;
+  const w = window.open('', '_blank');
+  if (!w) return false;
+  w.document.open();
+  w.document.write(dok);
+  w.document.close();
+  return true;
+}
+
 export function renderProfil(el, daten) {
   const d = diagnose();
   const e = einstellungen();
@@ -172,6 +235,33 @@ export function renderProfil(el, daten) {
       <ul class="meilenstein-liste">${meilensteinListe}</ul>
     </section>`;
 
+  // Merkliste (§ Lesezeichen): gemerkte Bausteine, als PDF (Druck-Ansicht) sicherbar.
+  const merkIds = merkliste();
+  const merkEintraege = merkIds
+    .map((id) => {
+      const b = daten.bausteinVonId.get(id);
+      const titel = b ? label('baustein', id) : id;
+      return `<li class="merk-eintrag">
+        <a class="merk-link" href="#/baustein/${esc(id)}?kontext=kompetenz">
+          <span class="merk-icon">${bausteinIcon(id) || '<i class="fa-solid fa-bookmark" aria-hidden="true"></i>'}</span>
+          <span>${esc(titel)}</span>
+        </a>
+        <button class="knopf knopf-leise merk-entfernen" data-merk-entfernen="${esc(id)}" aria-label="${esc(t('merkliste_entfernen'))}" title="${esc(t('merkliste_entfernen'))}"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </li>`;
+    })
+    .join('');
+  const merklisteSektion = `
+    <section class="karte profil-merkliste">
+      <h2><i class="fa-solid fa-bookmark" aria-hidden="true"></i> ${esc(t('merkliste_titel'))}</h2>
+      ${merkIds.length === 0
+        ? `<p class="leise">${esc(t('merkliste_leer'))}</p>`
+        : `<p class="leise">${esc(t('merkliste_text'))}</p>
+           <ul class="merk-liste">${merkEintraege}</ul>
+           <div class="knopf-zeile" style="justify-content:flex-start">
+             <button class="knopf knopf-sekundaer" id="pf-merk-pdf"><i class="fa-solid fa-print" aria-hidden="true"></i> ${esc(t('merkliste_pdf'))}</button>
+           </div>`}
+    </section>`;
+
   el.innerHTML = `
     ${landingHeroHtml('fa-user', t('nav_profil'), t('profil_intro'), 'pf-blau')}
 
@@ -193,6 +283,8 @@ export function renderProfil(el, daten) {
     ${koennenSektion}
 
     ${loopSektion}
+
+    ${merklisteSektion}
 
     <section class="karte">
       <h2>${esc(t('fortschritt'))}</h2>
@@ -286,6 +378,17 @@ export function renderProfil(el, daten) {
     }
     if (meilenstein) zeigeMeilenstein(meilenstein);
     else renderProfil(el, daten);
+  });
+
+  for (const knopf of el.querySelectorAll('[data-merk-entfernen]')) {
+    knopf.addEventListener('click', () => {
+      entferneGemerkt(knopf.dataset.merkEntfernen);
+      renderProfil(el, daten);
+    });
+  }
+
+  el.querySelector('#pf-merk-pdf')?.addEventListener('click', () => {
+    oeffneMerklistePdf(daten);
   });
 
   el.querySelector('#pf-thema').addEventListener('change', (ereignis) => {

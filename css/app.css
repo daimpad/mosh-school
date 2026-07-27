@@ -3044,3 +3044,30 @@ body { background-image: none; }
 /* Genre-Übersicht als Raster statt Liste. */
 .genre-gitter { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 0.8rem; margin: 0 0 1.4rem; }
 .genre-gitter .genre-karte { margin: 0; }
+
+/* ---------- Merken / Merkliste ---------- */
+
+/* Aktionszeile unter dem Baustein-Hero (Merken-Knopf). */
+.baustein-aktionen { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1rem; }
+.merken-knopf.gemerkt { color: var(--primaer); border-color: var(--primaer); }
+
+/* Voraussetzungs-Hinweis am Seitenende — ruhig, ohne Signalfarbe (sperrt nie). */
+.voraussetzung-hinweis { margin: 1rem 0 0.4rem; font-size: 0.9rem; }
+.voraussetzung-hinweis a { color: var(--primaer); font-weight: 600; }
+
+/* Merkliste im Profil. */
+.merk-liste { list-style: none; margin: 0.6rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+.merk-eintrag { display: flex; align-items: center; gap: 0.5rem; }
+.merk-link { display: flex; align-items: center; gap: 0.6rem; flex: 1; min-width: 0; padding: 0.5rem 0.6rem; border: 1px solid var(--linie); border-radius: var(--radius); color: inherit; text-decoration: none; }
+.merk-link:hover { border-color: var(--primaer); }
+.merk-icon { display: inline-flex; width: 1.4rem; height: 1.4rem; flex: none; color: var(--primaer); }
+.merk-icon svg { width: 100%; height: 100%; }
+.merk-entfernen { flex: none; padding: 0.3rem 0.5rem; }
+
+/* ---------- Griffe: Kategorie-Gruppen ---------- */
+.griff-gruppe { margin: 0 0 1.6rem; }
+.griff-gruppe-titel { margin: 0 0 0.7rem; }
+
+/* ---------- Tunings: Genre-Filter der Klang-Referenz ---------- */
+.klang-filter-label { margin: 0.8rem 0 0.3rem; }
+.klang-stilfilter { margin: 0 0 1rem; }

@@ -363,7 +363,12 @@
       ],
       "hinweis": {
         "de": "Maximale Reibung — der Halbton direkt über dem Grundton. Das Gründungsintervall von Black Metal und Doom."
-      }
+      },
+      "genres": [
+        "black_metal",
+        "doom",
+        "death_metal"
+      ]
     },
     {
       "id": "grosse_sekunde",
@@ -373,7 +378,12 @@
       ],
       "hinweis": {
         "de": "Der Ganzton — der übliche Schritt in Riffs und Tonleitern. Neutral, treibt vorwärts."
-      }
+      },
+      "genres": [
+        "thrash",
+        "hardcore",
+        "metalcore"
+      ]
     },
     {
       "id": "kleine_terz",
@@ -383,7 +393,14 @@
       ],
       "hinweis": {
         "de": "Der dunkle, moll-typische Klang — Basis fast aller Metal-Melodik."
-      }
+      },
+      "genres": [
+        "doom",
+        "black_metal",
+        "death_metal",
+        "metalcore",
+        "sludge"
+      ]
     },
     {
       "id": "grosse_terz",
@@ -393,7 +410,11 @@
       ],
       "hinweis": {
         "de": "Der helle, dur-typische Klang — im Metal seltener, weil er unter Verzerrung schnell süßlich wirkt."
-      }
+      },
+      "genres": [
+        "stoner_post",
+        "thrash"
+      ]
     },
     {
       "id": "quarte",
@@ -403,7 +424,12 @@
       ],
       "hinweis": {
         "de": "Offen und stabil — die Quarte trägt viele Riffs und Sprünge."
-      }
+      },
+      "genres": [
+        "hardcore",
+        "metalcore",
+        "djent"
+      ]
     },
     {
       "id": "tritonus",
@@ -413,7 +439,13 @@
       ],
       "hinweis": {
         "de": "Der „Diabolus in musica“ — genau zwischen Quarte und Quinte, instabil und unheilvoll. Das Signatur-Intervall des Metal."
-      }
+      },
+      "genres": [
+        "black_metal",
+        "death_metal",
+        "thrash",
+        "deathcore"
+      ]
     },
     {
       "id": "quinte",
@@ -423,7 +455,14 @@
       ],
       "hinweis": {
         "de": "Stabil und kraftvoll — das Rückgrat des Powerchords."
-      }
+      },
+      "genres": [
+        "thrash",
+        "hardcore",
+        "metalcore",
+        "death_metal",
+        "doom"
+      ]
     },
     {
       "id": "kleine_sexte",
@@ -433,7 +472,12 @@
       ],
       "hinweis": {
         "de": "Dunkel und sehnsuchtsvoll — die kleine Sexte gibt Doom- und Death-Melodien ihre Schwermut."
-      }
+      },
+      "genres": [
+        "doom",
+        "death_metal",
+        "black_metal"
+      ]
     },
     {
       "id": "grosse_sexte",
@@ -443,7 +487,11 @@
       ],
       "hinweis": {
         "de": "Offen und weit — seltener im harten Metal, aber wirkungsvoll in melodischen und Post-Metal-Momenten."
-      }
+      },
+      "genres": [
+        "stoner_post",
+        "metalcore"
+      ]
     },
     {
       "id": "kleine_septime",
@@ -453,7 +501,12 @@
       ],
       "hinweis": {
         "de": "Die Spannungsnote schlechthin — Grundlage von Moll-Riffs und dem Dominant-Sound."
-      }
+      },
+      "genres": [
+        "death_metal",
+        "metalcore",
+        "djent"
+      ]
     },
     {
       "id": "grosse_septime",
@@ -463,7 +516,11 @@
       ],
       "hinweis": {
         "de": "Extreme Reibung knapp unter der Oktave — scharf und dissonant, gern im dissonanten Death/Black."
-      }
+      },
+      "genres": [
+        "death_metal",
+        "black_metal"
+      ]
     },
     {
       "id": "oktave",
@@ -473,7 +530,13 @@
       ],
       "hinweis": {
         "de": "„Derselbe Ton, nur höher“ — voll und rund, ohne jede Reibung."
-      }
+      },
+      "genres": [
+        "thrash",
+        "hardcore",
+        "djent",
+        "metalcore"
+      ]
     }
   ],
   "akkorde": [
@@ -486,7 +549,22 @@
       ],
       "hinweis": {
         "de": "Grundton, Quinte, Oktave — keine Terz. Genau darum bleibt er unter Verzerrung klar statt matschig."
-      }
+      },
+      "genres": [
+        "thrash",
+        "hardcore",
+        "metalcore",
+        "death_metal",
+        "doom",
+        "djent",
+        "deathcore",
+        "crust",
+        "grindcore",
+        "powerviolence",
+        "black_metal",
+        "sludge",
+        "stoner_post"
+      ]
     },
     {
       "id": "sus2",
@@ -527,7 +605,11 @@
       ],
       "hinweis": {
         "de": "Grundton, große Terz, Quinte — hell. Voll gespielt unter High-Gain wird er schnell breiig; im Metal meist clean."
-      }
+      },
+      "genres": [
+        "stoner_post",
+        "thrash"
+      ]
     },
     {
       "id": "moll",
@@ -571,7 +653,10 @@
       ],
       "hinweis": {
         "de": "Dominantseptakkord — Dur mit kleiner Septime, bluesig und gespannt. Wurzel des Stoner/Hard-Rock-Sounds."
-      }
+      },
+      "genres": [
+        "stoner_post"
+      ]
     },
     {
       "id": "moll7",
@@ -583,7 +668,13 @@
       ],
       "hinweis": {
         "de": "Moll mit kleiner Septime — dunkel, aber weicher als der reine Moll-Akkord; trägt melodische und atmosphärische Teile."
-      }
+      },
+      "genres": [
+        "doom",
+        "sludge",
+        "stoner_post",
+        "black_metal"
+      ]
     },
     {
       "id": "vermindert7",
@@ -617,7 +708,11 @@
       ],
       "hinweis": {
         "de": "Dur (Ionisch) — die helle Grundtonleiter. Im Metal seltener, aber Bezugspunkt für alle Modi."
-      }
+      },
+      "genres": [
+        "stoner_post",
+        "thrash"
+      ]
     },
     {
       "id": "moll_natuerlich",
