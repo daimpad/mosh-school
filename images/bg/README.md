@@ -16,16 +16,21 @@ Auf beiden Wegen liest die Seite `bilder.json` (siehe unten). Zusätzlich lassen
 sich Bilder per Drag & Drop auf die Seite ziehen — praktisch, um einen Kandidaten
 zu prüfen, bevor er ins Repository wandert.
 
-## `bilder.json` ist generiert
+## Bilder ergänzen
 
-GitHub Pages liefert kein Verzeichnislisting; ohne eine eingecheckte Liste wäre
-der Ordner online unsichtbar. Nach jedem Hinzufügen oder Entfernen eines Bildes:
+Datei in diesen Ordner legen, committen, pushen — fertig. Um `bilder.json`
+kümmert sich der Workflow `.github/workflows/bg-index.yml`: Er erzeugt das
+Verzeichnis nach jedem Push auf `images/bg/` neu und committet es, falls es sich
+geändert hat.
+
+Diese Liste ist nötig, weil GitHub Pages kein Verzeichnislisting ausliefert —
+ohne sie blieben neue Bilder online unsichtbar. Wer sie lokal sofort aktuell
+haben will (etwa um die Seite ohne Push zu prüfen), kann den Generator auch von
+Hand aufrufen:
 
 ```sh
 python3 scripts/build_bg_index.py
 ```
-
-Die CI prüft bei jedem Pull Request, dass die Liste zum Ordnerinhalt passt.
 
 ## Vor dem Einbau in die App
 
