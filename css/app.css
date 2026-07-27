@@ -1,4 +1,4 @@
-/* mosh school — Blutrot als Akzent, Rubik (lokal).
+/* ZERRER — Blutrot als Akzent, Rubik (lokal).
    Hell & Dunkel über umgeschaltete Tokens (System oder Profil-Umschalter);
    Container-Radius 14px, weiche mehrlagige Elevation, moderne Übergänge.
    Untere Leiste nur mobil; ab 768px Hamburger-Menü oben rechts. */
@@ -1691,7 +1691,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 }
 
 /* ============================================================================
-   mosh school — GRUNGY HARDCORE SKIN
+   ZERRER — GRUNGY HARDCORE SKIN
    Überschreibt die Basistokens (Kaskade: später gewinnt). Düster, hart,
    zerkratzt: Concrete-Schwarz, Knochen-Weiss, Blutrot als Spot; harte Kanten,
    harte Versatz-Schatten (Siebdruck), Filmkorn-Overlay, fette Versalien.
@@ -1887,7 +1887,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
 /* Medaillen/Icons hart einrahmen (Stempel-Look) */
 .pfad-medaille, .marke-hero-icon, .such-medaille { border-radius: 2px; border: 1.5px solid currentColor; }
 
-/* mosh school — Medaillen-Hues (hardcore, warm) */
+/* ZERRER — Medaillen-Hues (hardcore, warm) */
 :root {
   --pf-blau: #a81a10; --pf-blau-weich: #f0dcd7;
   --pf-teal: #5f6a72; --pf-teal-weich: #e2e0d8;
@@ -1918,7 +1918,7 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
   --pf-schiefer: #b3afa5; --pf-schiefer-weich: #201f22;
 }
 
-/* mosh school — Display-Schrift Special Elite (Schreibmaschinen-Grunge) für die
+/* ZERRER — Display-Schrift Special Elite (Schreibmaschinen-Grunge) für die
    Überschriften h1–h3 und die Marke. Monospaced → Laufweite auf normal, kein
    negatives Tracking (sonst kleben die Glyphen). */
 h1, h2, h3, .marke-text, .marke-hero-text h1, .abschnitt-titel {

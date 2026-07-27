@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤘 mosh school
+# 🤘 ZERRER
 
 **Extreme Metal spielen lernen — Riff für Riff, direkt im Browser.**
 
@@ -23,7 +23,7 @@ Gitarre · Bass · Schlagzeug · Gesang — für Hardcore, Metalcore, Thrash, De
 
 ## Was ist das?
 
-**mosh school** ist eine clientseitige Lern-App fürs Spielen von Extreme-Metal-Instrumenten —
+**ZERRER** ist eine clientseitige Lern-App fürs Spielen von Extreme-Metal-Instrumenten —
 vom ersten Powerchord bis zum Blastbeat. Sie läuft **komplett auf deinem Gerät**: kein Login,
 kein Server, kein Tracking. Der Fortschritt lebt im `localStorage`, offline funktioniert alles.
 
@@ -53,7 +53,7 @@ kein Server, kein Tracking. Der Fortschritt lebt im `localStorage`, offline funk
 
 ```sh
 git clone https://github.com/daimpad/mosh-school.git
-cd mosh-school
+cd ZERRER
 python3 -m http.server 8000
 # dann http://localhost:8000 öffnen
 ```
