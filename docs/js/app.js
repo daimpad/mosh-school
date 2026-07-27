@@ -37,8 +37,8 @@ import { renderWillkommen } from './ansichten/willkommen.js';
 import { ladeDaten, ladeSuchindex } from './daten.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
-import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
-import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb } from './zustand.js';
+import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
+import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung } from './zustand.js';
 
 let daten = null;
 let letzteRoute = null;
@@ -148,7 +148,7 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
   // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'griffe', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'profil', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -204,7 +204,6 @@ function beschrifteRahmen() {
     geraete: t('wz_explorer_titel'),
     stimmungen: t('nav_stimmungen'),
     patterns: t('nav_patterns'),
-    griffe: t('nav_griffe'),
     ueber: t('nav_ueber'),
   };
   for (const verweis of document.querySelectorAll('[data-nav]')) {
@@ -478,6 +477,28 @@ async function boot() {
 
   document.getElementById('hamburger').addEventListener('click', oeffneMenue);
   document.getElementById('mehr-knopf')?.addEventListener('click', oeffneMenue);
+
+  // Theme-Umschalter im Menü: kippt zwischen hell und dunkel (die volle 3-fach-
+  // Wahl inkl. „auto" bleibt im Profil). Icon zeigt das Ziel — Sonne, wenn aktuell
+  // dunkel (zu hell wechseln), sonst Mond. Persistiert über den Zustand.
+  const themaKnopf = document.getElementById('menue-thema');
+  if (themaKnopf) {
+    const themaIcon = themaKnopf.querySelector('i');
+    const istDunkel = () => {
+      const t = einstellungen().thema;
+      return t === 'dunkel' || (t !== 'hell' && window.matchMedia?.('(prefers-color-scheme: dark)').matches);
+    };
+    const zeigeThemaIcon = () => {
+      if (themaIcon) themaIcon.className = istDunkel() ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    };
+    zeigeThemaIcon();
+    themaKnopf.addEventListener('click', () => {
+      const neu = istDunkel() ? 'hell' : 'dunkel';
+      setzeEinstellung('thema', neu);
+      wendeThemaAn(neu);
+      zeigeThemaIcon();
+    });
+  }
   // Skip-Link: Fokus auf den Inhalt lenken, OHNE den Hash zu ändern — der Router
   // würde "#ansicht" sonst als (unbekannte) Route deuten und die Startseite zeigen.
   // #ansicht trägt tabindex="-1", ist also programmatisch fokussierbar.
