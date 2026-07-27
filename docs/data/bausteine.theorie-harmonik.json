@@ -1,0 +1,176 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "theorie-harmonik",
+    "hinweis": "Theorie-Zweig, Strang 3 (Harmonik ohne Noten): Powerchord ohne Terz, modale Färbung über einen einzigen Ton, Chromatik als Weg, Bordun und liegende Töne, Riff mit harmonischer Absicht. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "warum_powerchords",
+      "anzeigetitel": {
+        "de": "Warum Powerchords funktionieren"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Powerchord besteht nur aus zwei verschiedenen Tönen: einem Grundton und seiner Quinte, meist ergänzt durch die Oktave. Er lässt genau den Ton weg, der in einem vollen Akkord über Dur oder Moll entscheidet — die Terz. Deshalb ist er weder fröhlich noch traurig, sondern klanglich neutral und offen.\n\nDas ist kein Mangel, sondern der Grund für seine Eignung in verzerrter Musik. Verzerrung erzeugt zusätzliche Töne, die nicht im Originalsignal stecken; je mehr verschiedene Töne gleichzeitig anliegen, desto mehr Zwischenprodukte entstehen und desto matschiger wird der Klang. Ein Akkord aus drei oder vier verschiedenen Tönen wird bei hoher Verzerrung unsauber, ein Powerchord bleibt stabil — weil Grundton und Quinte in einem sehr einfachen Schwingungsverhältnis stehen und ihre Zwischenprodukte zum Klang passen.\n\nDaraus folgt zweierlei. Erstens: Wer bei hoher Zerre volle Akkorde spielt und Matsch hört, hat kein Ausrüstungsproblem, sondern ein Harmonik-Problem. Zweitens: Die klangliche Neutralität ist eine Freiheit — dieselbe Powerchord-Folge kann bedrohlich oder erhaben wirken, je nachdem, was Tempo, Register und Melodie darüber tun. Der Powerchord legt sich nicht fest."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist dir klar, dass der Powerchord bewusst offen bleibt, weil die entscheidende Terz fehlt? Hast du schon einmal Matsch bei hoher Zerre gehört und die Ursache in der Ausrüstung gesucht statt in der Harmonik? Und nutzt du die Neutralität bewusst, indem du die Wirkung anderswo festlegst?"
+      },
+      "voraussetzungen": [
+        "intervalle_hoeren",
+        "powerchords"
+      ]
+    },
+    {
+      "id": "modale_faerbung",
+      "anzeigetitel": {
+        "de": "Modale Färbung: warum Genres anders klingen"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Eine Tonleiter ist eine Auswahl von Tönen, aus der eine Melodie schöpft. Zwischen den verbreiteten Auswahlen gibt es oft nur ein oder zwei Töne Unterschied — und trotzdem klingen sie völlig verschieden, weil genau diese Töne die charakteristischen Reibungen bestimmen. Man muss dafür keine Skalen auswendig lernen: Es reicht zu wissen, welcher einzelne Ton die Färbung trägt.\n\nDrei Beispiele aus dieser Musik. Wird die zweite Stufe um einen Halbton gesenkt, entsteht die enge Reibung direkt über dem Grundton — dieser Klang wird oft als orientalisch oder unheilvoll beschrieben und ist im Death Metal und in düsterem Doom verbreitet. Wird stattdessen die sechste Stufe angehoben, klingt eine Molltonleiter plötzlich weniger schwer und eher schwebend — eine Färbung, die in melodischem Metal und Post-Metal auftaucht. Und die sogenannte Phrygisch-Dominante Färbung, bei der über dem gesenkten zweiten Ton eine große Terz steht, ergibt den scharfen, exotischen Klang vieler klassischer Metal-Soli.\n\nEntscheidend ist das Prinzip, nicht die Namen: Ein einziger veränderter Ton verändert den Charakter eines ganzen Abschnitts. Wer wissen will, warum eine Band anders klingt als eine andere, sucht deshalb nicht nach der Skala, sondern nach dem einen auffälligen Ton — dem, der reibt oder überrascht."
+      },
+      "reflexionsaufgabe": {
+        "de": "Kannst du in einem Riff den einen Ton finden, der die Färbung trägt? Suchst du bei einem fremden Klang nach dem auffälligen Ton statt nach dem Skalennamen? Und hast du ausprobiert, in einer eigenen Figur nur einen Ton um einen Halbton zu verschieben?"
+      },
+      "voraussetzungen": [
+        "intervalle_hoeren",
+        "spannung_und_aufloesung"
+      ]
+    },
+    {
+      "id": "einen_ton_veraendern",
+      "anzeigetitel": {
+        "de": "Einen Ton verändern, alles verändern"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die wirksamste Art, modale Färbung zu begreifen, ist nicht Lesen, sondern Verschieben. Man nimmt eine bestehende Figur und bewegt genau einen Ton um einen Bund — nach oben oder unten — und hört, was mit dem Charakter passiert. Der Rest bleibt unverändert, damit der Unterschied eindeutig zuzuordnen ist.\n\nBesonders aufschlussreich sind zwei Stellen: der zweite Ton über dem Grundton und der Ton, der eine Terz über dem Grundton liegt. Am zweiten Ton entscheidet sich, ob es eng und bedrohlich oder offen klingt; an der Terzstelle entscheidet sich, ob eine Figur dunkel oder hell wirkt. Ein einziger Bund Unterschied kippt die Stimmung vollständig.\n\nDiese Übung ist bewusst ergebnisoffen. Es geht nicht darum, die richtige Skala zu finden, sondern darum, den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung selbst zu hören. Wer das einmal am eigenen Riff erlebt hat, braucht dafür nie wieder eine Tabelle."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Einen Bund verschieben und hören",
+          "ziel": "Den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung erfahren.",
+          "schritte": [
+            "Spiele eine kurze eigene Figur über einer gehaltenen tiefen Saite und merke dir ihren Charakter.",
+            "Verschiebe den zweiten Ton der Figur um einen Bund nach unten und spiele sie erneut.",
+            "Höre, wie sich die Wirkung ändert, und benenne sie mit eigenen Worten.",
+            "Setze den Ton zurück und verschiebe stattdessen den Ton eine Terz über dem Grundton um einen Bund.",
+            "Nimm alle Fassungen auf und vergleiche sie nacheinander."
+          ],
+          "steigerung": "Verschiebe zwei Töne gleichzeitig und prüfe, ob du die Wirkung noch eindeutig zuordnen kannst.",
+          "selbstkontrolle": "Kannst du benennen, was sich durch den einen Ton geändert hat? Hörst du den Unterschied auch ohne Vergleich direkt danach?"
+        }
+      },
+      "voraussetzungen": [
+        "modale_faerbung"
+      ]
+    },
+    {
+      "id": "chromatik_und_bewegung",
+      "anzeigetitel": {
+        "de": "Chromatik: Bewegung ohne Tonleiter"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Chromatik bedeutet, sich in Halbtonschritten zu bewegen — also Bund für Bund, ohne Rücksicht auf eine Tonleiter. Weil dabei keine Auswahl mehr gilt, entsteht ein besonderer Effekt: Der Klang verliert seinen Bezugspunkt und wirkt rutschend, unruhig oder bedrohlich. Genau deshalb ist Chromatik in extremer Musik so verbreitet.\n\nSie wirkt auf zwei Arten. Als Bewegung ist sie ein Weg von einem Ort zum anderen — eine chromatische Linie zieht das Ohr mit, weil jeder Schritt der kleinstmögliche ist und keine Lücke lässt. Als Zustand, etwa in einem chromatisch absteigenden Riff, erzeugt sie Orientierungslosigkeit, weil das Ohr keinen Grundton mehr festmachen kann. Beides ist musikalisch nutzbar, aber nicht dasselbe.\n\nDie Gefahr ist Beliebigkeit: Wenn alles chromatisch ist, wirkt nichts mehr. Wirksam wird Chromatik dort, wo sie von einem festen Punkt ausgeht oder auf einen zuläuft. Ein chromatischer Anlauf, der auf einem Powerchord landet, ist stärker als eine chromatische Figur ohne Ziel — dasselbe Prinzip wie bei der Dissonanz: Reibung braucht einen Bezugspunkt, um Richtung zu bekommen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nutzt du Chromatik als Weg zu einem Ziel oder als Dauerzustand? Hat deine chromatische Bewegung einen festen Punkt, von dem sie ausgeht oder auf den sie zuläuft? Und wo würde ein chromatischer Anlauf einen Einsatz bei dir wuchtiger machen?"
+      },
+      "voraussetzungen": [
+        "modale_faerbung"
+      ]
+    },
+    {
+      "id": "bordun_und_liegende_toene",
+      "anzeigetitel": {
+        "de": "Bordun: der feste Bezugspunkt"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Ein Bordun ist ein durchgehend klingender Ton, über dem sich alles andere bewegt. Auf der Gitarre ist das meist die tiefe leere Saite, die zwischen den Anschlägen weiterklingt oder immer wieder mit angeschlagen wird. Diese Technik ist uralt und in vielen Musikkulturen zu Hause — und sie ist einer der Gründe, warum tief gestimmte Gitarrenmusik so gut funktioniert.\n\nDer Bordun leistet zweierlei. Erstens gibt er dem Ohr einen festen Bezugspunkt, gegen den jede Bewegung hörbar wird: Dieselbe Tonfolge wirkt über einem liegenden Ton spannungsreicher als allein, weil jeder Schritt ein Verhältnis zu diesem Anker bildet. Zweitens erzeugt er Dichte ohne zusätzliche Stimmen — ein einzelnes Instrument klingt voller, weil ständig zwei Ebenen laufen.\n\nIn tiefen Stimmungen ist das besonders wirksam, weil die leere tiefe Saite jederzeit greifbar ist, ohne die Greifhand zu binden. Viele Riffs im Doom, Black Metal und Sludge bestehen im Kern aus genau dieser Konstruktion: unten ein bleibender Ton, darüber eine Bewegung. Wer den Effekt sucht, braucht keine zweite Gitarre — nur die Entscheidung, den tiefen Ton stehen zu lassen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nutzt du die leere tiefe Saite als bleibenden Bezugspunkt, oder nur als Grundton einzelner Akkorde? Hörst du, wie eine Figur über einem liegenden Ton an Spannung gewinnt? Und wo in deinen Riffs könntest du Dichte erzeugen, ohne etwas hinzuzufügen?"
+      },
+      "voraussetzungen": [
+        "dissonanz_gezielt",
+        "chromatik_und_bewegung"
+      ]
+    },
+    {
+      "id": "harmonik_riff_bauen",
+      "anzeigetitel": {
+        "de": "Ein Riff mit harmonischer Absicht"
+      },
+      "domaene": [
+        "theorie",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Diese Übung führt den Strang zusammen. Statt ein Riff zu suchen und hinterher zu erklären, warum es wirkt, wird die Wirkung vorher festgelegt und dann gezielt gebaut. Das ist der Unterschied zwischen Zufallsfund und Handwerk — und es macht die Ergebnisse wiederholbar.\n\nDie Werkzeuge liegen jetzt alle vor: der Powerchord als stabiler, offener Klang, die Färbung über einen einzelnen charakteristischen Ton, die chromatische Bewegung als Anlauf und der Bordun als Bezugspunkt. Man wählt aus, was zur beabsichtigten Wirkung passt, statt alles gleichzeitig zu verwenden.\n\nWichtig bleibt die Reihenfolge aus dem vorigen Strang: Der Rhythmus steht zuerst. Harmonik entscheidet über den Charakter, nicht über die Gestalt — ein harmonisch kluges Riff mit schwachem Rhythmus bleibt ein schwaches Riff."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Wirkung festlegen, dann bauen",
+          "ziel": "Ein Riff mit vorher bestimmter Wirkung gezielt konstruieren.",
+          "schritte": [
+            "Lege in einem Wort fest, was das Riff tun soll — bedrohen, treiben, schweben oder ankommen.",
+            "Bestimme zuerst den Rhythmus auf einem Ton, mit mindestens einer Pause.",
+            "Wähle einen Bezugspunkt: eine liegende tiefe Saite oder einen wiederkehrenden Powerchord.",
+            "Setze einen charakteristischen Ton, der die gewählte Färbung trägt, und prüfe die Wirkung.",
+            "Ergänze bei Bedarf einen chromatischen Anlauf, der auf einen betonten Schlag zuläuft.",
+            "Nimm auf und prüfe, ob jemand anderes die beabsichtigte Wirkung erkennen würde."
+          ],
+          "steigerung": "Baue eine zweite Fassung desselben Riffs mit gegenteiliger Wirkung, ohne den Rhythmus zu ändern.",
+          "selbstkontrolle": "Erkennt eine andere Person die beabsichtigte Wirkung? Trägt der Rhythmus auch ohne die harmonischen Mittel?"
+        }
+      },
+      "voraussetzungen": [
+        "warum_powerchords",
+        "einen_ton_veraendern",
+        "bordun_und_liegende_toene"
+      ]
+    }
+  ]
+}
