@@ -3307,3 +3307,59 @@ a.footer-quelltext:hover, a.footer-quelltext:focus-visible { color: var(--primae
 @media (min-width: 768px) {
   .footer-haltung { display: flex; }
 }
+
+/* ---------- Baustein: Merken kompakt, Aktionen rechts ---------- */
+/* „Merken" ist eine Nebenhandlung — sie stand als breiter Knopf links über dem
+   Erklärteil und wog dort schwerer als das Lesen selbst. */
+.baustein-aktionen { justify-content: flex-end; }
+.knopf-klein { font-size: 0.78rem; padding: 0.35rem 0.6rem; letter-spacing: 0.02em; }
+
+/* Stufen-Anker: die Könnensstufe als Link in den passenden Kompetenzpfad. */
+a.stufen-anker { text-decoration: none; }
+a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer); color: var(--primaer); }
+
+/* ---------- Schwebende Seiten-Aktionen (Baustein) ----------
+   Merken, Merkliste, Teilen bleiben beim Scrollen erreichbar. Merken will man
+   oft erst, wenn man unten angekommen ist — dafür wieder hochzuscrollen ist die
+   Art Reibung, die niemand auf sich nimmt.
+   Mobil sitzt die untere Leiste im Weg, deshalb liegt die Spalte dort höher. */
+.seiten-aktionen {
+  position: fixed;
+  right: 0.7rem;
+  bottom: 5.2rem;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.seiten-aktion {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.6rem;
+  border: 1.5px solid var(--linie-stark, var(--linie));
+  border-radius: 2px;
+  background: var(--flaeche);
+  color: var(--tinte);
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--schatten-karte), 0 10px 22px -12px rgba(0, 0, 0, 0.8);
+  transition: border-color var(--uebergang), color var(--uebergang);
+}
+.seiten-aktion:hover, .seiten-aktion:focus-visible { border-color: var(--primaer); color: var(--primaer); }
+.seiten-aktion .fa-solid { color: var(--primaer); }
+.seiten-aktion.aktiv { border-color: var(--primaer); color: var(--primaer); }
+/* Auf schmalen Schirmen nur die Symbole — die Spalte soll den Text nicht zudecken. */
+@media (max-width: 30rem) {
+  .seiten-aktion-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .seiten-aktion { padding: 0.55rem; }
+}
+@media (min-width: 768px) {
+  .seiten-aktionen { bottom: 1.6rem; }
+}
+@media print {
+  .seiten-aktionen { display: none; }
+}
