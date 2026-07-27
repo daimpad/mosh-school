@@ -52,11 +52,12 @@ jobs:
         run: |
           python3 scripts/lift.py
           python3 scripts/build_index.py
-          # Nur die Ausgaben der beiden Generatoren pruefen — nicht den ganzen
-          # Baum, damit der Schritt genau das meldet, was er verantwortet.
-          if ! git diff --quiet -- data/labels data/index.json; then
-            echo "::error::Generierte Dateien sind nicht aktuell. Bitte scripts/lift.py und scripts/build_index.py laufen lassen und das Ergebnis committen."
-            git diff --stat -- data/labels data/index.json
+          python3 scripts/build_bg_index.py
+          # Nur die Ausgaben der Generatoren pruefen — nicht den ganzen Baum,
+          # damit der Schritt genau das meldet, was er verantwortet.
+          if ! git diff --quiet -- data/labels data/index.json images/bg/bilder.json; then
+            echo "::error::Generierte Dateien sind nicht aktuell. Bitte scripts/lift.py, scripts/build_index.py und scripts/build_bg_index.py laufen lassen und das Ergebnis committen."
+            git diff --stat -- data/labels data/index.json images/bg/bilder.json
             exit 1
           fi
 

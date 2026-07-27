@@ -41,6 +41,21 @@
   }
   .mock-daumen img { width: 100%; height: 100%; object-fit: cover; }
   .mock-daumen[aria-pressed="true"] { border-color: var(--primaer); }
+  /* Schwere Datei: nicht nur ueber Farbe kennzeichnen, sondern mit einer Ecke. */
+  .mock-daumen.schwer { position: relative; }
+  .mock-daumen.schwer::after {
+    content: ""; position: absolute; top: 0; right: 0;
+    border: 7px solid transparent; border-top-color: var(--signal-gelb, #d8a200);
+    border-right-color: var(--signal-gelb, #d8a200);
+  }
+
+  .mock-gewicht {
+    margin: 0 0 1.4rem; padding: .75rem .9rem; line-height: 1.5; font-size: .88rem;
+    background: var(--signal-gelb-weich, rgba(216,162,0,.12));
+    border-left: 3px solid var(--signal-gelb, #d8a200);
+  }
+  .mock-gewicht strong { display: block; }
+  .mock-gewicht span { color: var(--tinte-2); }
 
   .mock-leer {
     padding: 1.1rem 1.2rem; margin: 0 0 1.6rem;
@@ -176,6 +191,15 @@
     kannst du sofort vergleichen, ohne etwas einzuchecken.
   </div>
 
+  <p class="mock-gewicht" id="gewicht" hidden>
+    <strong>Vor dem Einbau verkleinern:</strong>
+    <span id="gewicht-liste"></span><br>
+    <span>Als Hero-Hintergrund liegen die Bilder hinter Motiv und Scrim und werden
+      zusätzlich unscharf oder hart kontrastiert — die volle Auflösung ist dort
+      nicht sichtbar, kostet aber Ladezeit. Rund 1600&nbsp;px Breite und
+      150–250&nbsp;KB je Bild reichen aus.</span>
+  </p>
+
   <div id="varianten"></div>
 
 </div>
@@ -302,26 +326,44 @@ function setzeBild(url, knopf) {
   leer.hidden = true;
 }
 
-function ergaenzeBild(url, name) {
-  const knopf = el(`<button type="button" class="mock-daumen" title="${name}" aria-pressed="false"><img src="${url}" alt=""></button>`);
+function kb(bytes) {
+  return bytes >= 1024 * 1024 ? `${(bytes / 1024 / 1024).toFixed(1)} MB` : `${Math.round(bytes / 1024)} KB`;
+}
+
+function ergaenzeBild(url, name, meta) {
+  // Das Gewicht steht am Daumennagel: Ein Hintergrund von mehreren Megabyte ist
+  // eine Entscheidung mit Preis, und der soll beim Vergleichen sichtbar sein.
+  const beschriftung = meta
+    ? `${name} — ${meta.breite}×${meta.hoehe}, ${kb(meta.bytes)}`
+    : name;
+  const schwer = meta && meta.bytes > 800 * 1024;
+  const knopf = el(`<button type="button" class="mock-daumen${schwer ? ' schwer' : ''}"
+      title="${beschriftung}" aria-pressed="false"><img src="${url}" alt="" loading="lazy"></button>`);
   knopf.addEventListener('click', () => setzeBild(url, knopf));
   leiste.append(knopf);
   if (!aktiv) setzeBild(url, knopf);
+  return meta;
 }
 
-// Automatisch: Verzeichnislisting von images/bg/ auslesen. Das funktioniert mit
-// "python3 -m http.server", das genau so ein Listing ausliefert — auf GitHub
-// Pages gibt es keins, dort bleibt der Drag-&-Drop-Weg.
-fetch('../images/bg/')
-  .then((a) => (a.ok ? a.text() : Promise.reject(new Error('kein Listing'))))
-  .then((html) => {
-    const doc = new DOMParser().parseFromString(html, 'text/html');
-    const treffer = [...doc.querySelectorAll('a[href]')]
-      .map((a) => a.getAttribute('href'))
-      .filter((h) => /\.(jpe?g|png|webp|avif|gif)$/i.test(h));
-    for (const h of treffer) ergaenzeBild('../images/bg/' + h.replace(/^.*\//, ''), h);
+// Bildquelle Nr. 1: das eingecheckte Verzeichnis images/bg/bilder.json.
+// Es funktioniert lokal UND auf GitHub Pages — Pages liefert kein
+// Verzeichnislisting, ohne diese Liste bliebe die Seite dort leer.
+// Erzeugt von scripts/build_bg_index.py.
+const schwere = [];
+fetch('../images/bg/bilder.json')
+  .then((a) => (a.ok ? a.json() : Promise.reject(new Error('kein Manifest'))))
+  .then((daten) => {
+    for (const b of daten.bilder || []) {
+      // Dateinamen duerfen Leerzeichen und Klammern enthalten — sauber kodieren.
+      ergaenzeBild('../images/bg/' + encodeURIComponent(b.datei), b.datei, b);
+      if (b.bytes > 800 * 1024) schwere.push(`${b.datei} (${kb(b.bytes)}, ${b.breite}×${b.hoehe})`);
+    }
+    if (schwere.length) {
+      document.getElementById('gewicht').hidden = false;
+      document.getElementById('gewicht-liste').textContent = schwere.join(' · ');
+    }
   })
-  .catch(() => { /* still — der Leer-Hinweis erklaert beide Wege */ });
+  .catch(() => { /* still — der Leer-Hinweis erklaert den Drag-&-Drop-Weg */ });
 
 // Drag & Drop: sofort vergleichen, ohne irgendetwas einzuchecken.
 const nimmDateien = (dateien) => {
