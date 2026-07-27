@@ -48,16 +48,20 @@ jobs:
 
       # lift.py und build_index.py sind Generatoren mit eingecheckter Ausgabe.
       # Laufen sie hier und aendern etwas, wurden sie vor dem Commit vergessen.
+      # images/bg/bilder.json ist hier bewusst NICHT dabei: Diese Datei gehoert
+      # dem Workflow bg-index.yml, der sie nach jedem Push auf images/bg/ selbst
+      # neu erzeugt und committet. Wuerde sie hier mitgeprueft, leuchtete bei
+      # jedem Bild-Push kurz eine rote Ampel auf, die sich Sekunden spaeter von
+      # selbst erledigt — eine Warnung, die niemand ernst nehmen kann.
       - name: Generierte Artefakte sind aktuell
         run: |
           python3 scripts/lift.py
           python3 scripts/build_index.py
-          python3 scripts/build_bg_index.py
-          # Nur die Ausgaben der Generatoren pruefen — nicht den ganzen Baum,
-          # damit der Schritt genau das meldet, was er verantwortet.
-          if ! git diff --quiet -- data/labels data/index.json images/bg/bilder.json; then
-            echo "::error::Generierte Dateien sind nicht aktuell. Bitte scripts/lift.py, scripts/build_index.py und scripts/build_bg_index.py laufen lassen und das Ergebnis committen."
-            git diff --stat -- data/labels data/index.json images/bg/bilder.json
+          # Nur die Ausgaben dieser beiden Generatoren pruefen — nicht den
+          # ganzen Baum, damit der Schritt genau das meldet, was er verantwortet.
+          if ! git diff --quiet -- data/labels data/index.json; then
+            echo "::error::Generierte Dateien sind nicht aktuell. Bitte scripts/lift.py und scripts/build_index.py laufen lassen und das Ergebnis committen."
+            git diff --stat -- data/labels data/index.json
             exit 1
           fi
 
