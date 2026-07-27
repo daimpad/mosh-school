@@ -189,11 +189,11 @@ export function renderStimmungen(el, daten) {
         <h2>${esc(t('klang_titel'))}</h2>
         <p class="marke-hero-untertitel">${esc(t('klang_untertitel'))}</p>
         <h3>${esc(t('klang_intervalle'))}</h3>
-        <p class="chip-zeile">${intervalle.map((e) => klangKnopf('intervall', 'akkord', e)).join(' ')}</p>
+        <div class="klang-gitter">${intervalle.map((e) => klangKnopf('intervall', 'akkord', e)).join('')}</div>
         <h3>${esc(t('klang_akkorde'))}</h3>
-        <p class="chip-zeile">${akkorde.map((e) => klangKnopf('akkord', 'akkord', e)).join(' ')}</p>
+        <div class="klang-gitter">${akkorde.map((e) => klangKnopf('akkord', 'akkord', e)).join('')}</div>
         <h3>${esc(t('klang_skalen'))}</h3>
-        <p class="chip-zeile">${skalen.map((e) => klangKnopf('skala', 'sequenz', e)).join(' ')}</p>
+        <div class="klang-gitter">${skalen.map((e) => klangKnopf('skala', 'sequenz', e)).join('')}</div>
         <p class="klang-hinweis leise" aria-live="polite"></p>
       </section>`
     : '';
