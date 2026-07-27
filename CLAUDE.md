@@ -242,6 +242,22 @@ Tokens**, nie harte Farben.
   `data-theme` flackerfrei vor dem ersten Anstrich, `wendeThemaAn()` (`js/oberflaeche.js`)
   zur Laufzeit. **Wichtig:** Das Inline-Skript liest denselben `localStorage`-Schlüssel wie
   `js/zustand.js` (`moshschool.zustand.v1`) — bei einer Schlüssel-Änderung beide nachziehen.
+- **Hell ist ein eigener Zustand, kein aufgehelltes Dunkel.** Weisses Blatt: `#ffffff`
+  als einzige Fläche, **keine Schatten**, Hero-Fotos in **Graustufen**
+  (`--bild-saettigung: 0`), neutrale statt warmer Tinte. Was im Dunkeln der
+  Versatz-Schatten leistet — Container trennen —, leistet hier die Tintenkante
+  (`--karten-kante`). Alles davon steht **ausschliesslich als Token** im Block
+  „HELLES THEMA — weisses Blatt" **am Ende von `css/app.css`** (er muss später
+  stehen als die `--bild-*`-Tokens). Der Block enthält bewusst **keine
+  Komponentenregel**: Lässt sich etwas nicht abschalten, wird der Wert oben zum
+  Token gemacht (so entstanden `--schatten-leiste/-schublade/-dialog/-ring`,
+  `--filter-marke/-medaille`, `--schatten-plastisch`, `--karten-kante`,
+  `--hue-kachel-bg`, `--trainer-bg`). **Fallstrick:** `box-shadow: none, inset …`
+  ist ungültig — ein abzuschaltender Schatten in einer *Liste* wird zum
+  Null-Schatten `0 0 0 0 transparent`, nicht zu `none`. Die Hell-Selektoren
+  (`:root[data-theme='hell']` + `@media (prefers-color-scheme: light) :root:not([data-theme='dunkel'])`)
+  schliessen Dunkel beide aus — deshalb braucht es keine Rücknahme, dafür die
+  Doppelung des Token-Blocks.
 - **Blutrot ist Akzent** (Links, Aktion, Aktiv-Zustand, Icons), keine Flächenfarbe;
   Ampellogik für Status (offen/teilweise/erledigt). Hell & Dunkel über denselben Token-Satz.
 - **Kondensierte Display-Schrift** (Anton, lokal als `assets/fonts/anton-regular.ttf`) für
