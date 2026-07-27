@@ -46,7 +46,14 @@ jobs:
       - name: Verzeichnis neu erzeugen
         run: python3 scripts/build_bg_index.py
 
+      # Push mit Rebase und Wiederholung: Auf denselben Push hin laeuft auch
+      # sync-root-to-docs.yml und schiebt seinerseits einen Commit nach main.
+      # Wer zweiter ist, wird abgelehnt ("fetch first"). Ohne Rebase gibt der
+      # Lauf dann auf — genau daran ist der erste Einsatz gescheitert, und das
+      # Verzeichnis blieb still veraltet.
       - name: Bei Aenderung committen und pushen
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           if git diff --quiet -- images/bg/bilder.json; then
             echo "Verzeichnis war bereits aktuell — nichts zu tun."
@@ -56,4 +63,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add images/bg/bilder.json
           git commit -m "chore: Bilder-Verzeichnis aktualisieren [skip bg]"
-          git push origin HEAD:${{ github.ref_name }}
+
+          for versuch in 1 2 3; do
+            if git push origin "HEAD:$BRANCH"; then
+              echo "Verzeichnis aktualisiert (Versuch $versuch)."
+              exit 0
+            fi
+            echo "Push abgelehnt — jemand war schneller. Rebase und neuer Versuch."
+            git pull --rebase origin "$BRANCH" || {
+              echo "::error::Rebase fehlgeschlagen — bitte von Hand nachziehen."
+              exit 1
+            }
+          done
+          echo "::error::Push nach drei Versuchen nicht durchgekommen."
+          exit 1
