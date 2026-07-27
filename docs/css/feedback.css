@@ -29,8 +29,8 @@
   --k-radius-sm: var(--radius-klein);
   --k-shadow: var(--schatten-karte);
   --k-shadow-lg: var(--schatten-hover);
-  --k-ui: 'Rubik', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --k-serif: 'Rubik', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --k-ui: 'Roboto', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --k-serif: 'Roboto', ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
 /* „auto"-Dunkel (kein .kommentare-dark, nur OS-Präferenz): muss die gleich-
@@ -72,3 +72,9 @@
 @media (max-width: 767.98px) {
   .kommentare-fab { bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
 }
+
+/* Der runde Kommentator-Button erbt sonst den harten Versatz-Schatten des App-CI
+   (--schatten-hover: 6px 6px 0 rot) — auf einem Kreis wirkt das wie ein zweiter,
+   versetzter Kreis. Hier auf einen weichen Schatten setzen (kein Doppelkreis). */
+.kommentare-fab { box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.55); }
+.kommentare-fab:hover { box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6); }
