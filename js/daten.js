@@ -123,7 +123,7 @@ export async function ladeSuchindex(daten) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, bgBilder, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -138,6 +138,7 @@ export async function ladeDaten() {
     holeJson('data/experimente.json').catch(() => null),
     holeJson('data/brand-alert.json').catch(() => null),
     holeJson('data/glossar.json').catch(() => null),
+    holeJson('images/bg/bilder.json').catch(() => null),
     Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
   ]);
@@ -185,6 +186,11 @@ export async function ladeDaten() {
   // sortierbar/durchsuchbar. Jeder Begriff verweist optional auf einen vertiefenden
   // Baustein. Referenzbereich, kein Fortschritt.
   daten.glossar = glossar || { titel: '', hinweis: '', kategorien: [], begriffe: [] };
+  // Hintergrundbilder für Heros und Kacheln (images/bg/bilder.json, erzeugt von
+  // scripts/build_bg_index.py). Winzige Datei, deshalb im Boot-Bündel: Die
+  // Startseite braucht sie beim ersten Anstrich. Fehlt sie, bleibt die Liste
+  // leer und alles rendert wie ohne Bilder — reine Zutat, nie Voraussetzung.
+  daten.hintergrundbilder = bgBilder?.bilder || [];
   // Such-/Metadaten-Index (generiert via scripts/build_index.py): kompakte
   // Einträge für die clientseitige Volltextsuche + Facetten (Trainings-Loop §0a/§3c).
   // Bewusst NICHT im Boot-Promise.all — index.json ist die größte Einzeldatei
