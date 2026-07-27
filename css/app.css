@@ -61,6 +61,18 @@
   --schatten-weich: 0 1px 2px rgba(20, 30, 45, 0.05);
   --schatten-karte: 0 1px 2px rgba(20, 30, 45, 0.04), 0 10px 26px -14px rgba(20, 30, 45, 0.12);
   --schatten-hover: 0 2px 6px rgba(20, 30, 45, 0.06), 0 20px 42px -18px rgba(56, 164, 241, 0.30);
+  /* Einzelfall-Schatten, die nicht aus --schatten-weich/-karte/-hover fallen.
+     Als Token, damit ein Thema sie geschlossen abschalten kann — sonst bliebe
+     jeder davon beim Themenwechsel als fest verdrahteter Rest stehen. */
+  --schatten-leiste: 0 -4px 16px rgba(31, 41, 51, 0.06);
+  --schatten-schublade: -12px 0 40px rgba(31, 41, 51, 0.18);
+  --schatten-dialog: 0 24px 60px rgba(22, 51, 74, 0.25);
+  --schatten-ring: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  --filter-marke: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+  --filter-medaille: drop-shadow(0 2px 3px rgba(31, 41, 51, 0.25));
+  /* Kante der grossen Container. Im Dunkeln transparent (dort trennt der
+     Versatz-Schatten), im Hellen die Tintenkante. */
+  --karten-kante: transparent;
   --uebergang: 200ms cubic-bezier(0.33, 1, 0.5, 1);
 }
 
@@ -263,7 +275,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   background: var(--flaeche);
   border-top: 1px solid var(--linie);
-  box-shadow: 0 -4px 16px rgba(31, 41, 51, 0.06);
+  box-shadow: var(--schatten-leiste);
   padding-bottom: env(safe-area-inset-bottom);
 }
 
@@ -401,7 +413,7 @@ body.im-onboarding main { padding-bottom: 2rem; }
   width: min(21rem, 88vw);
   background: var(--flaeche);
   border-radius: var(--radius) 0 0 var(--radius);
-  box-shadow: -12px 0 40px rgba(31, 41, 51, 0.18);
+  box-shadow: var(--schatten-schublade);
   padding: 1.1rem 1.2rem;
   display: flex;
   flex-direction: column;
@@ -1072,7 +1084,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 .trainer-layer {
   border-left: 4px solid var(--primaer);
-  background: linear-gradient(180deg, var(--primaer-weich) 0%, var(--flaeche) 60%);
+  background: var(--trainer-bg, linear-gradient(180deg, var(--primaer-weich) 0%, var(--flaeche) 60%));
 }
 
 .trainer-layer .abschnitt-kopf h2 { display: inline-flex; align-items: center; gap: 0.45rem; }
@@ -1238,7 +1250,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 .meilenstein-karte {
   background: var(--flaeche);
   border-radius: var(--radius);
-  box-shadow: 0 24px 60px rgba(22, 51, 74, 0.25);
+  box-shadow: var(--schatten-dialog);
   padding: 1.7rem 1.5rem;
   max-width: 22rem;
   text-align: center;
@@ -1252,7 +1264,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 .meilenstein-zeichen .fa-solid {
   color: var(--signal-gelb);
-  filter: drop-shadow(0 2px 3px rgba(31, 41, 51, 0.25));
+  filter: var(--filter-medaille);
 }
 
 /* ---------- Hover (nur Geräte mit Zeiger) ---------- */
@@ -1290,7 +1302,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 .haltung-liste li { display: flex; align-items: center; gap: 0.7rem; font-weight: 600; }
 .haltung-liste .fa-solid { width: 1.5rem; text-align: center; color: var(--primaer); font-size: 1.05rem; }
 .pride-flag { display: inline-flex; flex: 0 0 auto; width: 1.5rem; justify-content: center; }
-.pride-svg { border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); }
+.pride-svg { border-radius: 2px; box-shadow: var(--schatten-ring); }
 
 /* Noch nicht gefüllter Platzhalter — sichtbar gelassen, monospace als Signal. */
 .info-platzhalter {
@@ -1379,7 +1391,7 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 /* Farbige Variante (Pfad-Landingpages): leichte Hue-Tönung + Icon in der Pfad-Hue,
    passend zur jeweiligen Startseiten-Kachel. Ohne .hue bleibt der Hero neutral. */
-.marke-hero.klein.hue { background: linear-gradient(160deg, var(--pf-weich) 0%, var(--flaeche) 78%); }
+.marke-hero.klein.hue { background: var(--hue-kachel-bg, linear-gradient(160deg, var(--pf-weich) 0%, var(--flaeche) 78%)); }
 .marke-hero.klein.hue .marke-hero-icon { background: var(--pf-weich); color: var(--pf); }
 .marke-hero.klein.hue .marke-hero-icon .fa-solid { color: inherit; }
 /* Baustein-Hero: der Titel ist die Hauptüberschrift der Seite, etwas größer. */
@@ -1697,27 +1709,19 @@ details[open] summary { margin-bottom: 0.5rem; }
    harte Versatz-Schatten (Siebdruck), Filmkorn-Overlay, fette Versalien.
    ============================================================================ */
 
-/* Hell = distressed Xerox-Flyer (Knochenpapier + Tinte + Rot) */
+/* Hell = Xerox-Flyer auf weissem Blatt.
+   Hier stehen nur noch die Werte, die das helle Thema allein traegt: Rot-Rampe
+   und die Ampel-Signalfarben. Flaechen, Tinte, Kanten, Schatten und die weichen
+   Fuellungen setzt der Block „HELLES THEMA — weisses Blatt" am Dateiende — er
+   muss spaeter stehen als die Bildebenen-Tokens weiter unten. Werte fuer Hell
+   also NICHT hier ergaenzen, sonst gibt es zwei Wahrheiten. */
 :root {
   --primaer: #cc2418;
   --primaer-dunkel: #a81a10;
   --primaer-tief: #a81a10;
-  --primaer-weich: #f3ded9;
-  --hintergrund: #dcd8cd;
-  --hintergrund-2: #d0ccbf;
-  --flaeche: #ebe8df;
-  --flaeche-2: #dedacd;
-  --tinte: #17140f;
-  --tinte-2: #4a453d;
-  --tinte-3: #6b655b;
-  --linie: #17140f;
-  --linie-stark: #17140f;
-  --ueberschrift: #17140f;
-  --kopf-bg: rgba(220,216,205,0.94);
-  --overlay: rgba(23,20,15,0.55);
-  --signal-rot: #b23a26; --signal-rot-text: #9a2c19; --signal-rot-weich: #f0ddd7;
-  --signal-gelb: #c79a12; --signal-gelb-text: #7d5f04; --signal-gelb-weich: #f3e8cb;
-  --signal-gruen: #4f7a1f; --signal-gruen-text: #3c5f15; --signal-gruen-weich: #e2ecd4;
+  --signal-rot: #b23a26; --signal-rot-text: #9a2c19;
+  --signal-gelb: #c79a12; --signal-gelb-text: #7d5f04;
+  --signal-gruen: #4f7a1f; --signal-gruen-text: #3c5f15;
 }
 
 /* Dunkel = die Haupt-Identität: Concrete-Schwarz */
@@ -1772,6 +1776,11 @@ details[open] summary { margin-bottom: 0.5rem; }
   --schatten-weich: 3px 3px 0 rgba(0,0,0,0.55);
   --schatten-karte: 4px 4px 0 rgba(0,0,0,0.6);
   --schatten-hover: 6px 6px 0 var(--primaer);
+  /* Der zusammengesetzte „Papier liegt auf"-Schatten (harter Versatz PLUS
+     weicher Ambient) als EIN Token — nur so lässt er sich themenweise
+     abschalten: `box-shadow: none, …` wäre ungültig, ein Null-Schatten
+     (`0 0 0 0 transparent`) dagegen listen-tauglich und unsichtbar. */
+  --schatten-plastisch: 4px 4px 0 rgba(0,0,0,0.6), 0 12px 26px -12px rgba(0,0,0,0.7);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) {
@@ -1779,6 +1788,7 @@ details[open] summary { margin-bottom: 0.5rem; }
     --schatten-weich: 3px 3px 0 rgba(0,0,0,0.85);
     --schatten-karte: 4px 4px 0 rgba(0,0,0,0.8);
     --schatten-hover: 6px 6px 0 var(--primaer);
+    --schatten-plastisch: 4px 4px 0 rgba(0,0,0,0.8), 0 12px 26px -12px rgba(0,0,0,0.7);
   }
 }
 
@@ -1800,8 +1810,8 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
    damit das Papier „aufliegt". Die feine Körnung der Inhalts-Fläche (main) trägt
    den analogen Eindruck; die Kratzer liegen NUR im Hintergrund/Rahmen. */
 .karte, .marke-hero, .pfad-kachel, .station, .baustein-hero, .abschnitt {
-  border: 2px solid transparent;
-  box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--karten-kante);
+  box-shadow: var(--schatten-plastisch);
 }
 /* Hover zeigt eine 2px-Kante (Interaktions-Affordanz) — kein Layout-Sprung, da
    die Kante schon transparent vorhanden ist. */
@@ -2859,7 +2869,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   flex: none;
   width: 0.9em;
   height: 0.9em;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+  filter: var(--filter-marke);
 }
 .startseite-hero-themen {
   margin: 0.5rem 0 0;
@@ -2896,9 +2906,9 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   100% { opacity: 1; transform: translateY(0); }
 }
 @keyframes genre-rahmenblitz {
-  0%, 40% { box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 0 var(--pf, var(--primaer)); }
-  56%     { box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 3.5px var(--pf, var(--primaer)); }
-  100%    { box-shadow: var(--schatten-karte), 0 12px 26px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 0 var(--pf, var(--primaer)); }
+  0%, 40% { box-shadow: var(--schatten-plastisch), inset 0 0 0 0 var(--pf, var(--primaer)); }
+  56%     { box-shadow: var(--schatten-plastisch), inset 0 0 0 3.5px var(--pf, var(--primaer)); }
+  100%    { box-shadow: var(--schatten-plastisch), inset 0 0 0 0 var(--pf, var(--primaer)); }
 }
 .anim-reveal .genre-landing-hero {
   animation: genre-boxin 660ms cubic-bezier(0.2, 0.8, 0.2, 1) both,
@@ -3035,18 +3045,19 @@ button.menue-punkt { width: 100%; background: none; border: 0; font-family: inhe
 .footer-schluss a:hover, .footer-schluss a:focus-visible { text-decoration: underline; }
 
 
-/* ===== Hintergründe je Thema: reines Schwarz (dunkel) / reines Weiß (hell),
-   ohne Grain-Textur. Dunkel wird über höhere Spezifität/Reihenfolge erzwungen. ===== */
+/* ===== Hintergrund DUNKEL: reines Schwarz, ohne Grain-Textur.
+   Das Gegenstück für Hell steht im Themenblock ganz am Dateiende — es muss
+   später stehen als die Bildebenen-Tokens weiter unten. ===== */
 body { background-image: none; }
-:root, :root[data-theme='hell'] {
-  --hintergrund: #ffffff; --hintergrund-2: #ffffff;
-  --flaeche: #ffffff; --flaeche-2: #f4f4f4;
-  --sheet-bg: #ffffff; --backdrop-image: none;
-}
+:root, :root[data-theme='hell'] { --flaeche-2: #f4f4f4; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='hell']) { --hintergrund: #000000; --flaeche-2: #0d0d0d; --sheet-bg: #000000; --backdrop-image: none; }
+  :root:not([data-theme='hell']) {
+    --hintergrund: #000000; --flaeche-2: #0d0d0d; --sheet-bg: #000000; --backdrop-image: none;
+  }
 }
-:root[data-theme='dunkel'] { --hintergrund: #000000; --flaeche-2: #0d0d0d; --sheet-bg: #000000; --backdrop-image: none; }
+:root[data-theme='dunkel'] {
+  --hintergrund: #000000; --flaeche-2: #0d0d0d; --sheet-bg: #000000; --backdrop-image: none;
+}
 
 /* Genre-Übersicht als Raster statt Liste. */
 .genre-gitter { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: 0.8rem; margin: 0 0 1.4rem; }
@@ -3353,7 +3364,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: var(--schatten-karte), 0 10px 22px -12px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--schatten-plastisch);
   transition: border-color var(--uebergang), color var(--uebergang);
 }
 .seiten-aktion:hover, .seiten-aktion:focus-visible { border-color: var(--primaer); color: var(--primaer); }
@@ -3374,3 +3385,162 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
 /* Nicht-gefunden-Karte: Überschrift bewusst klein — sie soll die Seite
    strukturieren, nicht den Fehlschlag zelebrieren. */
 .nicht-gefunden-titel { font-size: 1.15rem; margin: 0.2rem 0 0.4rem; }
+
+/* =========================================================================
+   HELLES THEMA — weisses Blatt
+   =========================================================================
+   Das helle Thema ist kein aufgehelltes dunkles Thema, sondern ein eigener
+   Zustand: reines Weiss als einzige Flaeche, keine Schatten, Fotos in
+   Graustufen. Getragen wird die Struktur von der harten Tintenkante —
+   Xerox-Flyer statt App-Karte.
+
+   Scoping: Hell greift bei explizit gewaehltem `data-theme='hell'` UND bei
+   'auto' (kein data-theme) auf einem hellen System. Beide Selektoren schliessen
+   Dunkel aus, deshalb braucht es keine Ruecknahme fuer das dunkle Thema — das
+   ist der Grund fuer die Doppelung des Token-Blocks (dieselbe Konvention wie
+   beim dunklen Thema weiter oben).
+
+   Der Block steht bewusst am Dateiende: Er muss die frueheren
+   `:root`-Definitionen ueberschreiben (u. a. --bild-saettigung).
+
+   Ausschliesslich Tokens — keine Komponentenregel. Wer hier etwas nicht
+   abschalten kann, macht den betreffenden Wert oben zum Token, statt hier eine
+   Regel mit beiden Hell-Selektoren nachzuziehen.
+   ========================================================================= */
+
+:root[data-theme='hell'] {
+  /* Grundflaechen: reines Weiss, nichts dahinter. */
+  --hintergrund: #ffffff;
+  --hintergrund-2: #ffffff;
+  --flaeche: #ffffff;
+  --sheet-bg: #ffffff;
+  --kopf-bg: rgba(255, 255, 255, 0.94);
+  --backdrop-image: none;
+  --hue-kachel-bg: #ffffff;
+  --trainer-bg: #ffffff;
+
+  /* Keine Schatten — alle Ebenen. Der zusammengesetzte Schatten wird zum
+     Null-Schatten statt zu `none`, damit die Rahmenblitz-Animation ihre
+     Schattenliste behaelt (`box-shadow: none, inset …` waere ungueltig). */
+  --schatten-weich: none;
+  --schatten-karte: none;
+  --schatten-hover: none;
+  --schatten-leiste: none;
+  --schatten-schublade: none;
+  --schatten-dialog: none;
+  --schatten-ring: none;
+  --filter-marke: none;
+  --filter-medaille: none;
+  --schatten-plastisch: 0 0 0 0 transparent;
+
+  /* Was im Dunkeln der Versatz-Schatten leistet — Container voneinander
+     trennen —, leistet hier die Tintenkante. Die 2px liegen ohnehin schon
+     (transparent) an, es aendert sich nur die Farbe: kein Layout-Sprung,
+     und der rote Hover-Rahmen greift unveraendert. */
+  --karten-kante: var(--linie);
+
+  /* Hero-Fotos in Graustufen. */
+  --bild-saettigung: 0;
+
+  /* Tinte neutral statt warm: Ohne Creme-Papier wirkt ein braunstichiges Grau
+     auf reinem Weiss schmutzig. */
+  --tinte: #111111;
+  --tinte-2: #4a4a4a;
+  --tinte-3: #6a6a6a;
+  --linie: #111111;
+  --linie-stark: #111111;
+  --ueberschrift: #111111;
+  --overlay: rgba(17, 17, 17, 0.55);
+
+  /* Die weichen Akzentfuellungen (Chips, Medaillen, Ampel-Zustaende) trugen
+     denselben Creme-Stich. Sie bleiben — sie sind Zustandsanzeige, keine
+     Flaeche —, hellen aber von Weiss aus auf statt von Knochenpapier. */
+  --primaer-weich: #fdeceb;
+  --signal-rot-weich: #fdeceb;
+  --signal-gelb-weich: #fdf3d6;
+  --signal-gruen-weich: #e8f4dc;
+
+  /* Kompetenzstufen-Rampe: neutrale Graustufen (hell -> tief), bewusst ohne
+     Ampelfarben — die bleiben dem Status vorbehalten. */
+  --stufe-1-flaeche: #ededed; --stufe-1-text: #4a4a4a;
+  --stufe-2-flaeche: #cfcfcf; --stufe-2-text: #2b2b2b;
+  --stufe-3-flaeche: #3d3d3d; --stufe-3-text: #f5f5f5;
+
+  /* Medaillen-Hues: gleiche Farbwerte, nur die weiche Fuellung von Weiss aus. */
+  --pf-blau-weich: #fbe7e4;
+  --pf-teal-weich: #ececef;
+  --pf-violett-weich: #fbe8e1;
+  --pf-indigo-weich: #fbf1d8;
+  --pf-magenta-weich: #fdeceb;
+  --pf-sky-weich: #eaf3dc;
+  --pf-schiefer-weich: #ededef;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dunkel']) {
+    /* Grundflaechen: reines Weiss, nichts dahinter. */
+    --hintergrund: #ffffff;
+    --hintergrund-2: #ffffff;
+    --flaeche: #ffffff;
+    --sheet-bg: #ffffff;
+    --kopf-bg: rgba(255, 255, 255, 0.94);
+    --backdrop-image: none;
+    --hue-kachel-bg: #ffffff;
+    --trainer-bg: #ffffff;
+
+    /* Keine Schatten — alle Ebenen. Der zusammengesetzte Schatten wird zum
+       Null-Schatten statt zu `none`, damit die Rahmenblitz-Animation ihre
+       Schattenliste behaelt (`box-shadow: none, inset …` waere ungueltig). */
+    --schatten-weich: none;
+    --schatten-karte: none;
+    --schatten-hover: none;
+    --schatten-leiste: none;
+    --schatten-schublade: none;
+    --schatten-dialog: none;
+    --schatten-ring: none;
+    --filter-marke: none;
+    --filter-medaille: none;
+    --schatten-plastisch: 0 0 0 0 transparent;
+
+    /* Was im Dunkeln der Versatz-Schatten leistet — Container voneinander
+       trennen —, leistet hier die Tintenkante. Die 2px liegen ohnehin schon
+       (transparent) an, es aendert sich nur die Farbe: kein Layout-Sprung,
+       und der rote Hover-Rahmen greift unveraendert. */
+    --karten-kante: var(--linie);
+
+    /* Hero-Fotos in Graustufen. */
+    --bild-saettigung: 0;
+
+    /* Tinte neutral statt warm: Ohne Creme-Papier wirkt ein braunstichiges Grau
+       auf reinem Weiss schmutzig. */
+    --tinte: #111111;
+    --tinte-2: #4a4a4a;
+    --tinte-3: #6a6a6a;
+    --linie: #111111;
+    --linie-stark: #111111;
+    --ueberschrift: #111111;
+    --overlay: rgba(17, 17, 17, 0.55);
+
+    /* Die weichen Akzentfuellungen (Chips, Medaillen, Ampel-Zustaende) trugen
+       denselben Creme-Stich. Sie bleiben — sie sind Zustandsanzeige, keine
+       Flaeche —, hellen aber von Weiss aus auf statt von Knochenpapier. */
+    --primaer-weich: #fdeceb;
+    --signal-rot-weich: #fdeceb;
+    --signal-gelb-weich: #fdf3d6;
+    --signal-gruen-weich: #e8f4dc;
+
+    /* Kompetenzstufen-Rampe: neutrale Graustufen (hell -> tief), bewusst ohne
+       Ampelfarben — die bleiben dem Status vorbehalten. */
+    --stufe-1-flaeche: #ededed; --stufe-1-text: #4a4a4a;
+    --stufe-2-flaeche: #cfcfcf; --stufe-2-text: #2b2b2b;
+    --stufe-3-flaeche: #3d3d3d; --stufe-3-text: #f5f5f5;
+
+    /* Medaillen-Hues: gleiche Farbwerte, nur die weiche Fuellung von Weiss aus. */
+    --pf-blau-weich: #fbe7e4;
+    --pf-teal-weich: #ececef;
+    --pf-violett-weich: #fbe8e1;
+    --pf-indigo-weich: #fbf1d8;
+    --pf-magenta-weich: #fdeceb;
+    --pf-sky-weich: #eaf3dc;
+    --pf-schiefer-weich: #ededef;
+  }
+}

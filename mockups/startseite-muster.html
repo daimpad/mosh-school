@@ -389,6 +389,11 @@
   --bild-zoom: 1.02;        /* Überzoom braucht es nur bei Weichzeichnung */
 }
 
+/* Die Sättigung ist themenabhängig: Das helle Thema zeigt die Fotos in
+   Graustufen (weisses Blatt, schwarze Tinte). Gesetzt im Themenblock am Ende
+   von css/app.css — hier steht nur der dunkle Ausgangswert. */
+:root[data-theme='hell'] { --bild-saettigung: 0; }
+
 .genre-landing-bg {
   position: absolute; inset: 0; pointer-events: none;
   background-position: center; background-size: cover; background-repeat: no-repeat;
@@ -631,8 +636,19 @@ for (const [id, prop, zuCss, zuText] of [
   setze();
 }
 
+// Die Sättigung ist in der App KEIN globaler Wert mehr, sondern themenabhängig:
+// dunkel = Originalfarben (1), hell = Graustufen (0). Der Regler zieht deshalb
+// beim Themenwechsel auf den ausgelieferten Wert nach — sonst zeigte das Mockup
+// im hellen Thema bunte Fotos, die die App so nie ausliefert. Wer danach am
+// Regler dreht, überschreibt das bewusst.
+const SAETTIGUNG_JE_THEMA = { dunkel: 100, hell: 0 };
 document.getElementById('thema').addEventListener('change', (e) => {
   document.documentElement.dataset.theme = e.target.value;
+  const vorgabe = SAETTIGUNG_JE_THEMA[e.target.value];
+  if (vorgabe === undefined) return;
+  const regler = document.getElementById('sat');
+  regler.value = String(vorgabe);
+  regler.dispatchEvent(new Event('input'));
 });
 document.getElementById('muster').addEventListener('change', (e) => baue(e.target.value));
 document.getElementById('je-kachel').addEventListener('change', verteileBilder);
