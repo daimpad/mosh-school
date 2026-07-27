@@ -184,10 +184,22 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
 ## Verifikation (Pflicht vor jedem Commit)
 
 ```sh
-python3 scripts/validate.py     # Cross-File-Konsistenz über den gemischten Pool
-python3 scripts/lift.py         # idempotent — Titel geliftet, Skelette aktuell
-python3 -m http.server 8000     # dann im Browser / per Playwright durchklicken
+python3 scripts/validate.py              # Cross-File-Konsistenz über den gemischten Pool
+python3 scripts/lift.py                  # idempotent — Titel geliftet, Skelette aktuell
+python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
+python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
+
+Dieselben Prüfungen laufen bei jedem PR automatisch über
+`.github/workflows/verify.yml` (plus JSON-Wohlgeformtheit und JS-Syntax) — lokal
+vorab laufen lassen bleibt trotzdem schneller als auf die CI zu warten.
+
+**Fallstrick JS-Syntaxprüfung:** `node --check <datei>` ist für die Module dieser
+App **unbrauchbar** — enthält eine Datei ein `import`, erkennt Node sie als ESM
+und liefert Exit 0 **auch bei kaputter Syntax**. Das betrifft praktisch jedes
+Modul, die Prüfung wäre also durchgehend falsch-grün. Richtig ist
+`node --check --input-type=module < datei.js`; nur `sw.js` (klassisches Skript,
+kein Modul) wird mit dem einfachen `node --check sw.js` geprüft.
 
 **Es gibt kein `tests/`-Verzeichnis** (der Fork-Testlauf war crossminton-spezifisch und wurde
 entfernt). `scripts/validate.py` spiegelt die Engine-Prüfungen (`pruefeDaten` + Kahn-Topo aus
@@ -224,9 +236,15 @@ Tokens**, nie harte Farben.
   `js/oberflaeche.js`); Baustein-Icons in `BAUSTEIN_ICONS`.
 - **Baustein-Grafiken:** Jeder Baustein hat eine abstrakte, monochrome SVG-Grafik
   (`data/grafiken.json`, `{id: "<svg…>"}`). Quelle der Wahrheit sind die deterministischen
-  Generatoren `scripts/build_svg.py`/`build_svg2.py`/`build_svg3.py`;
+  Generatoren `scripts/build_svg.py`/`build_svg2.py`/`build_svg3.py`/`build_svg4.py` sowie
+  die eingecheckten Einzelmotive in `scripts/svg_static/`;
   `python3 scripts/build_grafiken.py` führt sie in dieser Reihenfolge aus und bündelt das
   JSON — **Motive dort korrigieren und neu generieren, nie SVGs/Bundle von Hand editieren**.
+  **Jedes Motiv braucht eine Quelle**: entweder einen Generator ODER eine Datei in
+  `svg_static/` — nie beides. `python3 scripts/build_grafiken.py --check` baut nur in den
+  Speicher und bricht ab, wenn das eingecheckte Bundle davon abweicht; damit fällt ein
+  quellenloser Bundle-Eintrag sofort auf (genau so entstand einmal eine Drift von 183
+  Motiven ohne Quelle, die den Vollbau unbrauchbar machte).
   Auch **Fehlerbilder** tragen Grafiken (Trainer-Layer): Tranche 3 komponiert sie
   deterministisch aus dem abgeblendeten Basis-Motiv plus gezacktem Riss (Seed =
   `crc32(fehlerbild_id)`) — sie werden nie einzeln gezeichnet, sondern folgen dem

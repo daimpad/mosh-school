@@ -1,0 +1,101 @@
+# Verifikation der Inhalts-Pipeline bei jedem PR und auf main.
+#
+# Die App ist buildfrei und hat kein tests/-Verzeichnis — die Konsistenz haengt
+# ganz an den Skripten in scripts/, die bis hierher nur von Hand liefen. Genau
+# deshalb konnte die Grafik-Drift (183 Motive ohne Quell-SVG) monatelang
+# unbemerkt bleiben. Dieser Workflow macht die dokumentierten Pflichtpruefungen
+# aus CLAUDE.md automatisch.
+#
+# Alle Schritte brauchen nur die Python-Standardbibliothek — keine
+# Abhaengigkeiten, kein Bundler, passend zur buildfreien Architektur.
+
+name: Verifikation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Bei schneller Folge von Pushes nur den letzten Lauf behalten.
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Python bereitstellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Cross-File-Konsistenz ueber den gemischten Pool: eindeutige IDs,
+      # aufloesbare Voraussetzungen, keine Zyklen, genau ein Aufgabenteil je
+      # Baustein, gueltige Vokabelwerte, Trainingseinheiten-Referenzen und die
+      # Vollstaendigkeit der Service-Worker-Huelle.
+      - name: Struktur validieren
+        run: python3 scripts/validate.py
+
+      # Die Bundles muessen aus ihren Quellen reproduzierbar sein. Schlaegt fehl,
+      # wenn ein Motiv ohne Quell-SVG im Bundle landet.
+      - name: Grafik-Bundles gegen die Quellen pruefen
+        run: python3 scripts/build_grafiken.py --check
+
+      # lift.py und build_index.py sind Generatoren mit eingecheckter Ausgabe.
+      # Laufen sie hier und aendern etwas, wurden sie vor dem Commit vergessen.
+      - name: Generierte Artefakte sind aktuell
+        run: |
+          python3 scripts/lift.py
+          python3 scripts/build_index.py
+          # Nur die Ausgaben der beiden Generatoren pruefen — nicht den ganzen
+          # Baum, damit der Schritt genau das meldet, was er verantwortet.
+          if ! git diff --quiet -- data/labels data/index.json; then
+            echo "::error::Generierte Dateien sind nicht aktuell. Bitte scripts/lift.py und scripts/build_index.py laufen lassen und das Ergebnis committen."
+            git diff --stat -- data/labels data/index.json
+            exit 1
+          fi
+
+      # Die JSON-Dateien werden zur Laufzeit per fetch() geladen — eine kaputte
+      # Datei zeigt sich sonst erst im Browser der Nutzerin.
+      - name: JSON-Dateien sind wohlgeformt
+        run: |
+          python3 - <<'PY'
+          import glob, json, sys
+          fehler = []
+          for pfad in sorted(glob.glob('data/**/*.json', recursive=True) + ['manifest.json']):
+              try:
+                  with open(pfad, encoding='utf-8') as f:
+                      json.load(f)
+              except Exception as e:
+                  fehler.append(f'{pfad}: {e}')
+          for f in fehler:
+              print(f'::error::{f}')
+          print(f'{len(glob.glob("data/**/*.json", recursive=True)) + 1} JSON-Dateien geprueft, {len(fehler)} fehlerhaft')
+          sys.exit(1 if fehler else 0)
+          PY
+
+      # Syntaxpruefung der ES-Module. Ein Tippfehler in einer Ansicht laesst
+      # sonst nur zur Laufzeit die Seite leer.
+      #
+      # ACHTUNG: "node --check <datei>" ist hier NICHT brauchbar — sobald eine
+      # Datei ein import-Statement enthaelt, erkennt Node sie als ESM und gibt
+      # 0 zurueck, auch bei kaputter Syntax. Das betrifft praktisch alle Module
+      # der App, die Pruefung waere also durchgehend falsch-gruen. Ueber stdin
+      # mit --input-type=module wird wirklich als Modul geparst.
+      - name: JavaScript-Syntax pruefen
+        run: |
+          fehler=0
+          for datei in $(find js -name '*.js' | sort); do
+            node --check --input-type=module < "$datei" \
+              || { echo "::error file=$datei::Syntaxfehler"; fehler=1; }
+          done
+          # sw.js ist bewusst ein klassisches Skript (kein Modul) — so pruefen,
+          # wie der Browser es laedt.
+          node --check sw.js || { echo "::error file=sw.js::Syntaxfehler"; fehler=1; }
+          echo "$(find js -name '*.js' | wc -l) Module + sw.js geprueft"
+          exit $fehler
