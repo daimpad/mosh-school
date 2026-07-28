@@ -275,13 +275,20 @@ Tokens**, nie harte Farben.
   (`:root[data-theme='hell']` + `@media (prefers-color-scheme: light) :root:not([data-theme='dunkel'])`)
   schliessen Dunkel beide aus — deshalb braucht es keine Rücknahme, dafür die
   Doppelung des Token-Blocks.
-- **Hero-Aufbau** (`landingHeroHtml`): Augenbraue → H1 → Unterzeile. Die Augenbraue ist
-  ein **weißer Chip mit roter Schrift und roter Kante** und trägt **kein Symbol** — das
-  kleine rote Icon stand im Foto und war je nach Bildstelle nicht zu erkennen. Mit
-  `augenbraueHref` wird sie zum Link auf ihren Bereich. Titel und Unterzeile tragen
-  `--hero-textschatten` (dunkel schwarz, hell weiß) — die Buchstabenkante muss über
-  jedem Bildausschnitt halten. Für HTML statt Text in der Unterzeile gibt es
-  `untertitelHtml` (so sitzt der Stufen-Chip im Baustein-Hero).
+- **Hero-Aufbau** (`landingHeroHtml`): Augenbraue → H1 → Unterzeile, alle drei in
+  `var(--tinte)` und mit `--hero-textschatten` (dunkel schwarz, hell weiß) — die
+  Buchstabenkante muss über jedem Bildausschnitt halten. Die Augenbraue trägt
+  **kein Symbol und keine Fläche**: Das kleine rote Icon stand im Foto und war je
+  nach Bildstelle nicht zu erkennen, ein weißer Chip war ein zweites Kästchen über
+  dem Titel. Mit `augenbraueHref` wird sie zum Link auf ihren Bereich. Für HTML
+  statt Text in der Unterzeile gibt es `untertitelHtml` (so sitzt der Stufen-Chip
+  im Baustein-Hero).
+- **Hero-Text steht in derselben Spalte wie der Fließtext.** Der Hintergrund läuft
+  randlos (`width: 100vw` + negative Margins), das Innenmass spiegelt `main` GENAU:
+  `max(1rem, calc(50vw - 21rem))` bzw. ab 768 px `max(1.5rem, calc(50vw - 20.5rem))`
+  — 22rem für die halbe `max-width` **minus** dessen eigenes Innenmass. Heros tragen
+  deshalb auch **keine** (auch keine transparente) Kante: ihre 2 px schöben den Text
+  um genau diese 2 px aus der Spalte.
 - **Blutrot ist Akzent** (Links, Aktion, Aktiv-Zustand, Icons), keine Flächenfarbe;
   Ampellogik für Status (offen/teilweise/erledigt). Hell & Dunkel über denselben Token-Satz.
   **Primär-CTA:** hell rot mit **weißer** Schrift (5,48:1 — Tinte auf Rot wären nur
@@ -292,10 +299,17 @@ Tokens**, nie harte Farben.
   hell auf hell. **Jeder** Knopf fällt im Hover rot (Sekundär wie Primär); der
   Hover ändert nur die Farbe, nie den Schatten — ein mitwachsender Schatten
   lässt den Knopf beim Überfahren zappeln.
-- **Kopfzeilen-Knöpfe** (Hamburger, Lupe) tragen dieselbe weiße Marke wie die
-  Hero-Augenbraue: weiße Fläche, rote Kante, rotes Zeichen, im Hover rot gefüllt.
-  Der Hamburger war vorher ein roter Block und damit die größte rote Fläche der
-  Seite.
+- **Kopfzeilen-Knöpfe** (Hamburger, Lupe): weißes Zeichen auf schwarzem Grund, im
+  Hover rot gefüllt. Sie sind Navigation, kein Inhalt — Schwarz setzt sie in beiden
+  Themen gleich ab, ohne Rot zu verbrauchen (das gehört der Aktion).
+- **Icons in aktiven Chips erben die Schriftfarbe** (`.chip-akzent .fa-solid`,
+  `.chip.aktiv .fa-solid`). Ohne das behalten sie ihr globales Rot und stehen im
+  gefüllten Zustand rot auf rot — unsichtbar genau dann, wenn der Filter greift.
+  Im Ruhezustand bleibt das rote Icon der Akzent auf neutraler Fläche.
+- **Eine Größe für alle Knopf-Varianten** (`min-height: 40px`, `0.82rem`) und
+  **ein Radius für alles** (`--radius`, 2px). Beides ist schon zweimal
+  auseinandergelaufen: einmal, als nur der Primärknopf verkleinert wurde, und
+  einmal über die Pillen-Radien der Mastery-Knöpfe aus dem Fork.
 - **Hover an Containern** ist **gestrichelte Tinte**, nicht Rot: Rot ist die
   Aktionsfarbe und nutzt sich als Rahmen um jede Kachel ab. Die Strichelung wirkt
   nicht-farblich und in beiden Themen; nur der Stil wechselt, die Breite bleibt.

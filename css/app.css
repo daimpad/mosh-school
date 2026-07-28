@@ -205,7 +205,13 @@ h4 { font-size: 0.78rem; font-weight: 600; color: var(--tinte-2); text-transform
 
 /* Icons sind immer farbig, nie schwarz — Default Hauptfarbe, Status in Signalfarben. */
 .fa-solid { color: var(--primaer); }
-.knopf .fa-solid, .hero .fa-solid, .menue-schliessen .fa-solid, .hamburger .fa-solid { color: inherit; }
+.knopf .fa-solid, .hero .fa-solid, .menue-schliessen .fa-solid,
+.hamburger .fa-solid, .kopf-suche .fa-solid { color: inherit; }
+/* Icons in AKTIVEN Chips erben die Schriftfarbe. Ohne das behielten sie ihr
+   globales Rot und standen im gefuellten Zustand rot auf rot — das Icon war
+   genau dann unsichtbar, wenn der Filter greift. Im Ruhezustand bleibt das
+   rote Icon: dort ist es der Akzent auf neutraler Flaeche. */
+.chip-akzent .fa-solid, .chip.aktiv .fa-solid, .mastery-knopf.aktiv .fa-solid { color: inherit; }
 
 a { color: var(--primaer-tief); }
 
@@ -374,17 +380,18 @@ body.im-onboarding main { padding-bottom: 2rem; }
 
 /* ---------- Hamburger + Menü (Desktop) ---------- */
 
-/* Kopfzeilen-Knoepfe (Menue und Suche) tragen dieselbe weisse Flaeche wie die
-   Hero-Augenbraue: eine helle Marke mit rotem Zeichen. Der Hamburger war vorher
-   ein roter Block und damit die groesste rote Flaeche der Seite — mehr Gewicht,
-   als eine Navigation braucht. Die rote Kante haelt beide im hellen Thema
-   zusammen, wo sonst weisse Flaeche in weisser Kopfzeile verlaufen wuerde. */
+/* Kopfzeilen-Knoepfe (Menue und Suche): weisses Zeichen auf schwarzem Grund.
+   Sie sind Navigation, kein Inhalt — der schwarze Block setzt sie in beiden
+   Themen gleich vom Blatt ab, ohne Rot zu verbrauchen (das gehoert der Aktion).
+   Vorher war der Hamburger ein roter Block und damit die groesste rote Flaeche
+   der Seite, danach eine weisse Marke, die im hellen Thema in der Kopfzeile
+   verlief. */
 .hamburger,
 .kopf-suche {
   border-radius: var(--radius);
-  border: 1.5px solid var(--primaer);
-  background: #ffffff;
-  color: var(--primaer-tief);
+  border: 1.5px solid #0b0b0c;
+  background: #0b0b0c;
+  color: #ffffff;
   cursor: pointer;
   transition: background var(--uebergang), color var(--uebergang), border-color var(--uebergang), transform var(--uebergang);
 }
@@ -1853,8 +1860,16 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
    Versatz-Schatten PLUS weicher Ambient-Schatten) + hell aufliegende Oberkante,
    damit das Papier „aufliegt". Die feine Körnung der Inhalts-Fläche (main) trägt
    den analogen Eindruck; die Kratzer liegen NUR im Hintergrund/Rahmen. */
-.karte, .marke-hero, .pfad-kachel, .station, .baustein-hero, .abschnitt {
+.karte, .pfad-kachel, .station, .abschnitt {
   border: var(--karten-kante-breite) solid transparent;
+  box-shadow: var(--schatten-plastisch);
+}
+/* Heros ohne Kante — auch ohne transparente. Die transparente Kante existiert
+   nur, damit ein Hover die Farbe setzen kann, ohne das Layout zu verschieben;
+   Heros hovern nie. Ihre 2 px schoben den Hero-Text um genau diese 2 px aus der
+   Textspalte, in der er buendig stehen soll. */
+.marke-hero, .baustein-hero {
+  border: 0;
   box-shadow: var(--schatten-plastisch);
 }
 /* Sichtbar wird die Kante nur an Elementen, die auch etwas tun: Kachel-Links,
@@ -1884,7 +1899,19 @@ a.karte-link:hover, button.karte:hover, .station:hover {
 }
 
 /* Knöpfe: hart, blockig, Versalien; Primär = Blutrot mit Tinten-Schrift (bold, AA) */
-.knopf { border-radius: 2px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 700; border-width: 1.5px; }
+/* EINE Groesse fuer alle Knopf-Varianten. Nur der Primaerknopf war zuletzt auf
+   40 px/0.82rem geschrumpft, Sekundaer/Leise/Gefahr blieben bei 44 px/1rem — der
+   wichtigste Knopf der Seite war damit der kleinste. */
+.knopf {
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  border-width: 1.5px;
+  min-height: 40px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+}
 /* Kompakter als der Rest: Der Primaerknopf war so gross wie eine Ueberschrift und
    zog in jedem Abschnitt den Blick auf sich, auch wo er nur die zweite Wahl war.
    40 px Mindesthoehe bleiben deutlich ueber dem WCAG-Mindestziel (24 px) und
@@ -1898,9 +1925,6 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   color: #ffffff;
   border: 1.5px solid var(--primaer);
   box-shadow: var(--schatten-weich);
-  min-height: 40px;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.82rem;
 }
 .knopf-sekundaer { border: 1.5px solid var(--linie-stark); background: transparent; }
 /* Der Sekundaerknopf ist im Ruhezustand nur Kante und Tinte — im Hover faellt er
@@ -2511,9 +2535,13 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .such-facette-gruppe { display: flex; flex-direction: column; gap: 0.35rem; }
 .such-facette-titel { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--tinte-2); }
 .such-facette-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.such-facette-chip { cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; }
+/* Facetten- und Kategorie-Chips sind Auswahl-Chips wie .chip-waehlbar und tragen
+   deshalb dieselbe Schrift — vorher waren sie 500 statt 400 und wirkten in
+   derselben Zeile schwerer als ihre Nachbarn. */
+.such-facette-chip, .glossar-kat-chip { cursor: pointer; font-weight: inherit; }
+.such-facette-chip { display: inline-flex; align-items: center; gap: 0.3rem; }
 .such-facette-chip:hover { border-color: var(--primaer); color: var(--tinte); }
-.such-facette-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; font-weight: 600; }
+.such-facette-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; }
 .such-facette-zahl { font-size: 0.66rem; opacity: 0.7; font-variant-numeric: tabular-nums; }
 .such-filter-reset { align-self: flex-start; }
 
@@ -2671,7 +2699,6 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 .glossar-suche:focus-visible { outline: 2px solid var(--primaer); outline-offset: 1px; }
 .glossar-kats { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.glossar-kat-chip { cursor: pointer; }
 .glossar-kat-chip.aktiv { border-color: var(--primaer); color: var(--primaer-tief); background: color-mix(in srgb, var(--primaer) 10%, transparent); }
 .glossar-gruppe { margin-bottom: 1.5rem; }
 .glossar-kat-titel {
@@ -2695,7 +2722,9 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .mastery-knoepfe { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .mastery-knopf {
   display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer;
-  padding: 0.35rem 0.8rem; border-radius: 999px; font-size: 0.85rem; font-weight: 500;
+  /* Harte Kante wie jeder andere Knopf. Der Pillen-Radius war der einzige
+     runde Umriss der App und stammte aus dem Fork. */
+  padding: 0.35rem 0.8rem; border-radius: var(--radius); font-size: 0.85rem; font-weight: 500;
   background: transparent; border: 1px solid var(--linie-stark); color: var(--tinte-2);
 }
 .mastery-knopf:hover { border-color: var(--primaer); color: var(--tinte); }
@@ -2815,7 +2844,8 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 
 /* Blickrichtungs-Umschalter */
 .lk-modus { margin: 0.8rem 0 0.6rem; gap: 0.4rem; }
-.lk-modus-knopf { font-size: 0.82rem; }
+/* Modus-Umschalter der Landkarte: derselbe Auswahl-Chip wie ueberall, also auch
+   dieselbe Groesse (vorher 0.82rem gegen 0.72rem der uebrigen Chips). */
 
 /* Modus „Gefühl → Genre": bunte, fließende Felder (bewusst farbig — Ausnahme
    vom Monochrom-System). Der Canvas ist dekorativ; die Bedienung läuft über die
@@ -2929,7 +2959,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   display: flex;
   align-items: flex-end;
   min-height: 210px;
-  padding: 1.6rem 1.5rem;
+  padding: 1.6rem 0;
   margin-bottom: 1.3rem;
   color: var(--pf, var(--primaer));
   background: linear-gradient(160deg, var(--pf-weich) 0%, var(--flaeche) 82%);
@@ -2954,11 +2984,19 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
     radial-gradient(130% 90% at 18% 118%, var(--flaeche) 0%, rgba(0, 0, 0, 0) 58%);
   opacity: 0.92;
 }
+/* Der Hero laeuft randlos ueber die ganze Breite, sein TEXT aber steht in
+   derselben Spalte wie der Fliesstext darunter: gleiche max-width, gleiche
+   Zentrierung, gleiches Innenmass wie main. Vorher trug der Hero das Innenmass
+   selbst und der Text sass mobil 23 px weiter rechts, auf dem Desktop 7 px
+   weiter links als alles andere — keine Kante der Seite stand auf einer Linie. */
 .genre-landing-inhalt {
   position: relative;
   z-index: 1;
   border-left: 0;
-  padding-left: 0.95rem;
+  /* Kein eigener Einzug mehr: Die Spalte setzt der Hero selbst (s. u. bei
+     „Heros ueber die volle Breite"), und die 0.95rem hier schoben den Text
+     zusaetzlich nach rechts. */
+  padding-left: 0;
 }
 /* Rückhalt hinter dem Hero-Text — dasselbe Mittel wie bei .bildkachel-inhalt,
    aus demselben Grund. Der flächige .genre-landing-scrim läuft erst ab 62 %
@@ -2989,37 +3027,32 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
    macht sie unabhaengig davon lesbar, welche Bildstelle gerade darunter liegt.
    Rot statt Hue, damit sie ueber allen Hero-Farben gleich aussieht. */
 .genre-landing-augenbraue {
-  margin: 0 0 0.45rem;
+  /* Mehr Luft nach unten: Augenbraue und Titel klebten aneinander und lasen sich
+     als eine zweizeilige Ueberschrift statt als Einordnung plus Titel. */
+  margin: 0 0 0.9rem;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   line-height: 1;
 }
+/* Nur Schrift, keine Flaeche: Der weisse Chip mit roter Kante war ein zweites
+   Kaestchen ueber dem Titel und stahl ihm die Aufmerksamkeit. Die Lesbarkeit
+   ueber dem Foto traegt jetzt derselbe Textschatten wie Titel und Unterzeile. */
 .genre-landing-augenbraue-link,
 .genre-landing-augenbraue-marke {
   display: inline-block;
-  padding: 0.3rem 0.55rem;
-  /* Rote Kante statt weisser: Auf einem hellen Bildausschnitt im hellen Thema
-     verlaeuft sonst weisse Flaeche in weissem Foto und der Chip verliert seine
-     Form — die Kante haelt ihn in beiden Themen zusammen. */
-  border: 1.5px solid var(--primaer);
-  border-radius: 2px;
-  background: #ffffff;
-  color: var(--primaer-tief);
+  /* --tinte statt hartem Weiss: Im Dunkeln IST das Weiss, im hellen Thema waere
+     hartes Weiss unsichtbar — der Hero-Rueckhalt zieht die Flaeche dort auf
+     Weiss. Dieselbe Farbe wie der Titel, die Hierarchie traegt die Groesse. */
+  color: var(--tinte);
   text-decoration: none;
-  transition: background var(--uebergang), color var(--uebergang), border-color var(--uebergang);
+  text-shadow: var(--hero-textschatten);
+  transition: color var(--uebergang);
 }
 @media (hover: hover) {
   .genre-landing-augenbraue-link:hover,
-  .genre-landing-augenbraue-link:focus-visible {
-    background: var(--primaer);
-    border-color: var(--primaer);
-    /* Tinte, nicht Weiss: --primaer ist im Dunkeln das hellere #ff3b2e, dort
-       kaeme Weiss nur auf 3.55:1 — Schwarz auf 5.54:1. Auf dem Hover aendert
-       sich damit nur die Flaeche, die Schrift bleibt wie im Ruhezustand. */
-    color: #0b0b0c;
-  }
+  .genre-landing-augenbraue-link:focus-visible { color: var(--primaer); }
 }
 .genre-landing-hero h1 {
   margin: 0;
@@ -3030,14 +3063,18 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 .genre-landing-kurz {
   margin: 0.55rem 0 0;
-  max-width: 44ch;
-  color: var(--tinte-2);
+  /* Keine 44ch-Begrenzung mehr: Der Hero-Text brach frueher um als der Fliesstext
+     darunter, dadurch stand keine Kante der Seite auf einer Linie. Weiss statt
+     --tinte-2, weil der Text auf dem Foto sitzt und nicht auf der Flaeche —
+     gedaempfte Tinte verliert dort. --tinte statt hartem Weiss, damit die Zeile
+     im hellen Thema nicht auf dem weissen Rueckhalt verschwindet. */
+  color: var(--tinte);
   text-shadow: var(--hero-textschatten);
   font-size: 0.98rem;
   line-height: 1.4;
 }
 @media (min-width: 40rem) {
-  .genre-landing-hero { min-height: 250px; padding: 2rem 2.1rem; }
+  .genre-landing-hero { min-height: 250px; padding: 2rem 0; }
 }
 
 /* Startseiten-Hero: inszeniert wie die Landingpages (Motiv + Reinbox), aber mit
@@ -3052,11 +3089,15 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
    und zeigt, dass es weitergeht. */
 .startseite-hero {
   align-items: flex-start;
+  /* Direkt unter die Kopfzeile: Das obere Innenmass von main stand als Streifen
+     zwischen Leiste und Foto und liess den Hero haengen. Der Abzug in min-height
+     schrumpft entsprechend mit. */
+  margin-top: calc(-1 * var(--main-oben, 1.1rem));
   /* Abzug mobil: Kopfzeile + oberes Innenmass von main (~5 rem) UND die fixierte
      untere Leiste (~3.7 rem inkl. Safe Area) — die liegt ueber dem Inhalt, ohne
      Abzug verschwaenden die CTA-Knoepfe dahinter. */
-  min-height: calc(100vh - 9rem - env(safe-area-inset-bottom));
-  min-height: calc(100svh - 9rem - env(safe-area-inset-bottom));
+  min-height: calc(100vh - 7.9rem - env(safe-area-inset-bottom));
+  min-height: calc(100svh - 7.9rem - env(safe-area-inset-bottom));
 }
 /* Der Scrim laeuft sonst prozentual mit: Auf 300 px Hoehe deckte er das untere
    Drittel, auf voller Schirmhoehe waere das die halbe Seite in Weiss. Feste
@@ -3071,11 +3112,25 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 /* Logo NEBEN dem Schriftzug, nicht darüber: zusammen sind sie eine Marke, keine
    zwei gestapelten Elemente. Baseline-Ausrichtung über align-items:center; das
    Logo skaliert mit der Überschrift (em), damit es auf jeder Breite passt. */
-.startseite-hero-marke {
+/* Der Schriftzug fuellt die Spalte. 17vw traegt „ZERRER" (sechs Versalien in
+   einer kondensierten Display-Schrift) bis fast an beide Kanten; das clamp
+   deckelt ihn auf breiten Schirmen, damit er nicht ueber die Textspalte
+   hinauswaechst. nowrap, weil ein Umbruch die Marke zerlegen wuerde. */
+.startseite-hero .startseite-hero-marke {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  flex-wrap: wrap;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  /* Der Schriftzug fuellt die Spalte fast bis an beide Kanten. Die Marke ist
+     rund 4.9x so breit wie ihre Schriftgroesse (sechs Versalien in Anton
+     plus Logo), 18.5vw trifft damit auf schmalen Schirmen genau die Spaltenbreite.
+     Der Deckel bei 8.2rem greift ab ~710 px: Ab da waechst nicht mehr die
+     Textspalte, sondern nur noch der Rand — die Spalte bleibt bei 42rem stehen.
+     Die hoehere Spezifitaet ist noetig, weil .genre-landing-hero h1 (0,1,1)
+     sonst gewinnt. nowrap, weil ein Umbruch die Marke zerlegen wuerde. */
+  font-size: clamp(3rem, 18.5vw, 8.2rem);
+  line-height: 0.92;
+  white-space: nowrap;
 }
 .startseite-hero-mark {
   flex: none;
@@ -3105,8 +3160,9 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
    auf Kopfzeile + Innenmass. */
 @media (min-width: 768px) {
   .startseite-hero {
-    min-height: calc(100vh - 6.5rem);
-    min-height: calc(100svh - 6.5rem);
+    --main-oben: 1.6rem;
+    min-height: calc(100vh - 4.9rem);
+    min-height: calc(100svh - 4.9rem);
   }
 }
 
@@ -3240,16 +3296,26 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 .klang-gitter .klang-genres { max-width: none; }
 
-/* Heros über die volle Breite: Hintergrund randlos, Inhalt bleibt auf Spaltenbreite
-   eingerückt (kein horizontaler Overflow dank overflow-x am body). */
+/* Heros über die volle Breite: Hintergrund randlos, Inhalt auf der Spalte des
+   Fliesstexts (kein horizontaler Overflow dank overflow-x am body).
+   Die Zahlen spiegeln main GENAU: max-width 44rem (also 22rem je Seite ab der
+   Mitte) PLUS dessen Innenmass von 1rem — daher 21rem. Vorher stand hier
+   1.35rem/22rem, und der Hero-Text sass mobil 23 px weiter rechts, auf dem
+   Desktop 7 px weiter links als alles darunter. */
 .marke-hero, .genre-landing-hero {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   border-radius: 0;
-  padding-left: max(1.35rem, calc(50vw - 22rem));
-  padding-right: max(1.35rem, calc(50vw - 22rem));
+  padding-left: max(1rem, calc(50vw - 21rem));
+  padding-right: max(1rem, calc(50vw - 21rem));
+}
+@media (min-width: 768px) {
+  .marke-hero, .genre-landing-hero {
+    padding-left: max(1.5rem, calc(50vw - 20.5rem));
+    padding-right: max(1.5rem, calc(50vw - 20.5rem));
+  }
 }
 
 /* Quittier-Buttons („Als gelesen/erledigt/mitgenommen abhaken") kleiner setzen. */
