@@ -374,19 +374,27 @@ body.im-onboarding main { padding-bottom: 2rem; }
 
 /* ---------- Hamburger + Menü (Desktop) ---------- */
 
+/* Kopfzeilen-Knoepfe (Menue und Suche) tragen dieselbe weisse Flaeche wie die
+   Hero-Augenbraue: eine helle Marke mit rotem Zeichen. Der Hamburger war vorher
+   ein roter Block und damit die groesste rote Flaeche der Seite — mehr Gewicht,
+   als eine Navigation braucht. Die rote Kante haelt beide im hellen Thema
+   zusammen, wo sonst weisse Flaeche in weisser Kopfzeile verlaufen wuerde. */
+.hamburger,
+.kopf-suche {
+  border-radius: var(--radius);
+  border: 1.5px solid var(--primaer);
+  background: #ffffff;
+  color: var(--primaer-tief);
+  cursor: pointer;
+  transition: background var(--uebergang), color var(--uebergang), border-color var(--uebergang), transform var(--uebergang);
+}
 .hamburger {
   display: none;
   align-items: center;
   justify-content: center;
   width: 46px;
   height: 46px;
-  border: none;
-  border-radius: var(--radius);
-  background: var(--primaer);
-  color: #fff;
   font-size: 1.35rem;
-  cursor: pointer;
-  transition: background var(--uebergang), box-shadow var(--uebergang), transform var(--uebergang);
 }
 
 .kopf-rechts {
@@ -403,13 +411,15 @@ body.im-onboarding main { padding-bottom: 2rem; }
   justify-content: center;
   width: 42px;
   height: 42px;
-  border-radius: var(--radius);
-  color: var(--primaer);
   text-decoration: none;
-  transition: background var(--uebergang), box-shadow var(--uebergang), transform var(--uebergang);
 }
 @media (hover: hover) {
-  .kopf-suche:hover { background: var(--primaer-weich); box-shadow: var(--schatten-hover); transform: translateY(-1px); }
+  .hamburger:hover, .hamburger:focus-visible,
+  .kopf-suche:hover, .kopf-suche:focus-visible {
+    background: var(--primaer);
+    border-color: var(--primaer);
+    color: #ffffff;
+  }
 }
 
 .menue {
@@ -1304,10 +1314,11 @@ details[open] summary { margin-bottom: 0.5rem; }
     border-color: var(--tinte);
     border-style: dashed;
   }
-  .knopf:hover:not([disabled]) { box-shadow: var(--schatten-hover); }
+  /* Knoepfe aendern im Hover NUR die Farbe — kein zusaetzlicher oder wachsender
+     Schatten. Der Farbwechsel (rote Fuellung) ist Signal genug; ein mitwachsender
+     Schatten laesst den Knopf beim Ueberfahren zappeln. */
   .knopf-primaer:hover:not([disabled]) { background: var(--primaer-dunkel); }
   .knopf-leise:hover { color: var(--primaer-tief); box-shadow: none; }
-  .hamburger:hover { background: var(--primaer-dunkel); box-shadow: var(--schatten-hover); transform: translateY(-1px); }
   .menue-schliessen:hover { background: var(--primaer-weich); box-shadow: var(--schatten-hover); }
   .menue-punkt:hover { background: var(--primaer-weich); color: var(--primaer-tief); }
   .fussnav a:hover, .fussnav-mehr:hover { color: var(--primaer-tief); }
@@ -1804,7 +1815,11 @@ details[open] summary { margin-bottom: 0.5rem; }
   --radius: 2px; --radius-gross: 2px; --radius-klein: 1px;
   --schatten-weich: 3px 3px 0 rgba(0,0,0,0.55);
   --schatten-karte: 4px 4px 0 rgba(0,0,0,0.6);
-  --schatten-hover: 6px 6px 0 var(--primaer);
+  /* Hover wirft KEINEN roten Schatten mehr: Der rote Versatz lag zusaetzlich
+     zur roten Kante an jedem Knopf und jeder Kachel und machte den Hover zum
+     lautesten Zustand der Seite. Er behaelt jetzt einfach den Ruhe-Schatten —
+     die Bewegung (Anheben) und die gestrichelte Kante tragen das Signal. */
+  --schatten-hover: var(--schatten-karte);
   /* Der zusammengesetzte „Papier liegt auf"-Schatten (harter Versatz PLUS
      weicher Ambient) als EIN Token — nur so lässt er sich themenweise
      abschalten: `box-shadow: none, …` wäre ungültig, ein Null-Schatten
@@ -1816,7 +1831,7 @@ details[open] summary { margin-bottom: 0.5rem; }
     --radius: 2px; --radius-gross: 2px; --radius-klein: 1px;
     --schatten-weich: 3px 3px 0 rgba(0,0,0,0.85);
     --schatten-karte: 4px 4px 0 rgba(0,0,0,0.8);
-    --schatten-hover: 6px 6px 0 var(--primaer);
+    --schatten-hover: var(--schatten-karte);
     --schatten-plastisch: 4px 4px 0 rgba(0,0,0,0.8), 0 12px 26px -12px rgba(0,0,0,0.7);
   }
 }
@@ -1888,6 +1903,29 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   font-size: 0.82rem;
 }
 .knopf-sekundaer { border: 1.5px solid var(--linie-stark); background: transparent; }
+/* Der Sekundaerknopf ist im Ruhezustand nur Kante und Tinte — im Hover faellt er
+   rot, genau wie der weisse Primaerknopf im dunklen Thema. Damit hat jeder Knopf
+   denselben Hover-Zustand, egal in welchem Thema er gerade wie aussieht.
+   Schriftfarbe je Thema: hell Weiss auf #cc2418 (5.48:1), dunkel Tinte auf dem
+   helleren #ff3b2e (5.54:1) — umgekehrt waeren es 3.59:1 bzw. 3.55:1. */
+@media (hover: hover) {
+  .knopf-sekundaer:not([disabled]):hover,
+  .knopf-sekundaer:not([disabled]):focus-visible {
+    background: var(--primaer);
+    border-color: var(--primaer);
+    color: #ffffff;
+  }
+  :root[data-theme='dunkel'] .knopf-sekundaer:not([disabled]):hover,
+  :root[data-theme='dunkel'] .knopf-sekundaer:not([disabled]):focus-visible {
+    color: #0b0b0c;
+  }
+}
+@media (hover: hover) and (prefers-color-scheme: dark) {
+  :root:not([data-theme='hell']) .knopf-sekundaer:not([disabled]):hover,
+  :root:not([data-theme='hell']) .knopf-sekundaer:not([disabled]):focus-visible {
+    color: #0b0b0c;
+  }
+}
 
 /* Dunkles Thema: Der Primaer-CTA kehrt sich um — weisse Flaeche, schwarze
    Schrift, die rote Fuellung erst im Hover. Auf schwarzem Grund ist Weiss das
@@ -1946,6 +1984,10 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   background: transparent;
   border-style: dashed;
   box-shadow: none;
+  /* Eigene Schriftfarbe, NICHT die des gefuellten Primaerknopfs: Der ist seit
+     dem Kontrast-Fix weiss beschriftet — auf der transparenten Ghost-Flaeche
+     waere das im hellen Thema weisse Schrift auf weissem Grund. */
+  color: var(--tinte);
 }
 :root[data-theme='dunkel'] .knopf-primaer[data-quittiere] {
   background: transparent;
@@ -3242,15 +3284,6 @@ body { background-image: none; }
 
 /* ---------- Merken / Merkliste ---------- */
 
-/* Aktionszeile unter dem Baustein-Hero (Merken-Knopf) — erst ab Tablet.
-   Auf dem Handy steht Merken ohnehin in der Schwebeleiste rechts (.seiten-aktionen),
-   und zwar durchgehend beim Scrollen; der Knopf oben war dieselbe Funktion ein
-   zweites Mal und hat nur Platz zwischen Hero und Erklaerteil gekostet. */
-.baustein-aktionen { display: none; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1rem; }
-@media (min-width: 768px) {
-  .baustein-aktionen { display: flex; }
-}
-.merken-knopf.gemerkt { color: var(--primaer); border-color: var(--primaer); }
 
 /* Voraussetzungs-Hinweis am Seitenende — ruhig, ohne Signalfarbe (sperrt nie). */
 .voraussetzung-hinweis { margin: 1rem 0 0.4rem; font-size: 0.9rem; }
@@ -3518,11 +3551,25 @@ a.footer-quelltext:hover, a.footer-quelltext:focus-visible { color: var(--primae
   .footer-haltung { display: flex; }
 }
 
-/* ---------- Baustein: Merken kompakt, Aktionen rechts ---------- */
-/* „Merken" ist eine Nebenhandlung — sie stand als breiter Knopf links über dem
-   Erklärteil und wog dort schwerer als das Lesen selbst. */
-.baustein-aktionen { justify-content: flex-end; }
-.knopf-klein { font-size: 0.78rem; padding: 0.35rem 0.6rem; letter-spacing: 0.02em; }
+
+/* Chips im Hero: EIN Aussehen fuer alle. In der Zeile unter dem Titel stehen
+   Stufe und Kontext nebeneinander und tun dasselbe — den Baustein einordnen.
+   Die Stufen-Rampe (hell -> tief) bleibt ueberall sonst erhalten, wo Stufen
+   nebeneinander VERGLICHEN werden (Suche, Facetten); hier stuende sie fuer
+   einen Unterschied, den es in einer einzigen Zeile nicht gibt. */
+.genre-landing-kurz .chip {
+  background: var(--flaeche-2);
+  color: var(--tinte-2);
+  border: 1px solid var(--linie-stark);
+  vertical-align: middle;
+}
+@media (hover: hover) {
+  .genre-landing-kurz a.chip:hover,
+  .genre-landing-kurz a.chip:focus-visible {
+    border-color: var(--primaer);
+    color: var(--primaer);
+  }
+}
 
 /* Stufen-Anker: die Könnensstufe als Link in den passenden Kompetenzpfad. */
 a.stufen-anker { text-decoration: none; }
