@@ -227,6 +227,11 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const stufenAnker = (b.kompetenzstufe || [])
     .map((stufe) => `<a class="chip chip-stufe chip-stufe-${esc(stufe)} stufen-anker" href="#/pfad/kompetenz/${esc(stufe)}">${esc(label('kompetenzstufe', stufe))}</a>`)
     .join(' ');
+  // Alle Chips des Bausteins stehen in EINER Zeile unter dem Titel: Stufe zuerst
+  // (sie ordnet den Baustein ein), dann die Kontext-Chips. Vorher standen sie auf
+  // zwei Ebenen — Stufe im Hero, Kontext darunter — und sahen unterschiedlich aus,
+  // obwohl beide dasselbe tun: den Baustein einordnen.
+  const heroChips = [stufenAnker, metaChips].filter(Boolean).join(' ');
   // Die Augenbraue nennt die Domäne — und führt jetzt auch dorthin. Instrumente
   // haben eine eigene Landing, alles andere die Themen-Seite der Domäne.
   const heroBereich = INSTRUMENTE.includes(domaenen[0])
@@ -234,25 +239,17 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     : `#/pfad/themen/${encodeURIComponent(domaenen[0])}`;
   const heroSektion = landingHeroHtml(
     '', label('baustein', b.id), heroStufen, heroHue, domaenen[0], heroKategorie, heroSymbol,
-    { untertitelHtml: stufenAnker, augenbraueHref: heroBereich },
+    { untertitelHtml: heroChips, augenbraueHref: heroBereich },
   );
   const schema = lehrgrafik(b.id);
   const schemaSektion = schema
     ? `<figure class="lehrgrafik">${schema}<figcaption>${esc(label('lehrgrafik', b.id))}</figcaption></figure>`
     : '';
-  // stufenAnker ist in den Hero gewandert — hier bleiben nur die uebrigen Chips.
-  const chipZeile = metaChips ? `<p class="chip-zeile">${metaChips}</p>` : '';
-
   // „Merken": baustein-gebundene Merkliste (kein Fortschritt). Gemerkte Bausteine
-  // lassen sich im Profil als PDF (Druck-Ansicht) sichern. Signal doppelt kodiert
-  // (Symbol + Text), damit der Zustand nicht nur an der Farbe hängt.
+  // lassen sich im Profil als PDF (Druck-Ansicht) sichern. Der Zustand haengt
+  // ausschliesslich an der Schwebeleiste rechts (s. u.) — ein zweiter Knopf oben
+  // war dieselbe Funktion doppelt und stand zwischen Hero und Erklaerteil im Weg.
   const gemerkt = istGemerkt(b.id);
-  const merkenAktion = `
-    <div class="baustein-aktionen">
-      <button type="button" class="knopf knopf-sekundaer knopf-klein merken-knopf${gemerkt ? ' gemerkt' : ''}" data-merken="${esc(b.id)}" aria-pressed="${gemerkt}">
-        <i class="fa-solid ${gemerkt ? 'fa-bookmark-filled' : 'fa-bookmark'}" aria-hidden="true"></i> ${esc(gemerkt ? t('gemerkt') : t('merken'))}
-      </button>
-    </div>`;
 
   // Schwebeleiste rechts: Merken, Merkliste, Teilen. Sie bleibt beim Scrollen
   // erreichbar — merken will man oft erst, wenn man unten angekommen ist, und
@@ -359,7 +356,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const fussNavigation = `
     <nav class="baustein-fussnav" aria-label="${esc(t('baustein_navigation'))}">
       ${vorherige ? `<a class="knopf knopf-sekundaer" href="#/baustein/${esc(vorherige.baustein.id)}?kontext=${encodeURIComponent(kontext)}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(label('baustein', vorherige.baustein.id))}</a>` : ''}
-      <a class="knopf knopf-leise" href="${listeHref}">${esc(t('zur_liste'))}</a>
+      <a class="knopf knopf-primaer" href="${listeHref}"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('zur_liste'))}</a>
       ${naechste ? `<a class="knopf ${station.status.absolviert ? 'knopf-primaer' : 'knopf-sekundaer'}" href="#/baustein/${esc(naechste.baustein.id)}?kontext=${encodeURIComponent(kontext)}">${esc(label('baustein', naechste.baustein.id))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>` : ''}
     </nav>`;
 
@@ -367,8 +364,6 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
     <article class="baustein">
       ${positionsZeile}
       ${heroSektion}
-      ${chipZeile}
-      ${merkenAktion}
       ${erklaerSektion}
       ${schemaSektion}
       ${demonstrationHtml(b.demonstration)}
