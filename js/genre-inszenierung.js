@@ -174,22 +174,35 @@ export function motivSvg(schluessel) {
 // Wiederverwendbarer großer Landing-Hero (Motiv-Backdrop + Reinbox-Effekt), im
 // selben Stil wie der Genre-Hero — für alle Bereiche aus Startseite/Menü. Nutzt
 // die bestehenden .genre-landing-*-Klassen (Box-in-Animation greift automatisch).
-export function landingHeroHtml(icon, titel, untertitel = '', hue = 'pf-blau', motivKey = null, augenbraue = '', iconHtml = '') {
+// `icon`/`iconHtml` werden NICHT mehr gezeichnet: Das kleine rote Symbol vor der
+// Augenbraue stand im Foto und war je nach Bildstelle nicht zu erkennen — die
+// Augenbraue traegt ihre Bedeutung im Wort. Die beiden Parameter bleiben vorerst
+// in der Signatur, weil 42 Aufrufstellen sie positionsgebunden uebergeben; sie
+// ersatzlos zu streichen waere eine eigene, rein mechanische Aenderung.
+//
+// `extra` buendelt, was ueber den Grundfall hinausgeht:
+//   untertitelHtml   fertiges HTML statt escaptem Text (z. B. Stufen-Chips)
+//   augenbraueHref   macht die Augenbraue zum Link auf ihren Bereich
+export function landingHeroHtml(
+  icon, titel, untertitel = '', hue = 'pf-blau', motivKey = null, augenbraue = '', iconHtml = '', extra = {},
+) {
   const key = motivKey || titel || 'mosh';
-  const iconTeil = iconHtml
-    ? `<span class="genre-landing-symbol" aria-hidden="true">${iconHtml}</span>`
-    : icon
-      ? `<i class="fa-solid ${esc(icon)}" aria-hidden="true"></i>`
-      : '';
+  const { untertitelHtml = '', augenbraueHref = '' } = extra;
+  const augenbraueTeil = augenbraue
+    ? augenbraueHref
+      ? `<p class="genre-landing-augenbraue"><a class="genre-landing-augenbraue-link" href="${esc(augenbraueHref)}">${esc(augenbraue)}</a></p>`
+      : `<p class="genre-landing-augenbraue"><span class="genre-landing-augenbraue-marke">${esc(augenbraue)}</span></p>`
+    : '';
+  const unten = untertitelHtml || (untertitel ? esc(untertitel) : '');
   return `
     <section class="marke-hero genre-landing-hero landing-hero ${esc(hue)}">
       ${bildEbene(key)}
       ${motivSvg(key)}
       <div class="genre-landing-scrim" aria-hidden="true"></div>
       <div class="genre-landing-inhalt">
-        ${iconTeil || augenbraue ? `<p class="genre-landing-augenbraue">${iconTeil}${augenbraue ? ` ${esc(augenbraue)}` : ''}</p>` : ''}
+        ${augenbraueTeil}
         <h1>${esc(titel)}</h1>
-        ${untertitel ? `<p class="genre-landing-kurz">${esc(untertitel)}</p>` : ''}
+        ${unten ? `<p class="genre-landing-kurz">${unten}</p>` : ''}
       </div>
     </section>`;
 }

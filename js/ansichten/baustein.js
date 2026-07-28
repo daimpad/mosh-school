@@ -10,7 +10,7 @@ import { bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRender
 import { pruefeMeilensteine } from '../mastery.js';
 import { absaetzeMitGlossar, baueGlossarVerlinker } from '../glossar-links.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
-import { stationImKontext } from '../pfade.js';
+import { INSTRUMENTE, stationImKontext } from '../pfade.js';
 import { werkzeugeFuer } from '../werkzeug-links.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { bausteinStatus, diagnose, einstellungen, istGemerkt, merkeZuletzt, schalteGemerkt, setzeBausteinStatus } from '../zustand.js';
@@ -220,19 +220,28 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   const heroKategorie = label('domaene', domaenen[0]);
   const heroStufen = (b.kompetenzstufe || []).map((s) => label('kompetenzstufe', s)).join(' · ');
   const heroSymbol = bausteinIcon(b.id) || domaeneIcon(domaenen[0]) || '<i class="fa-solid fa-feather" aria-hidden="true"></i>';
-  const heroSektion = landingHeroHtml('', label('baustein', b.id), heroStufen, heroHue, domaenen[0], heroKategorie, heroSymbol);
-  // Die Könnensstufe steht im Hero nur als Text. Als Chip ist sie zusätzlich ein
-  // Anker: von hier direkt in den Kompetenzpfad dieser Stufe, ohne Umweg übers Menü.
+  // Die Könnensstufe stand doppelt auf der Seite: als Text im Hero und gleich
+  // darunter als Chip. Jetzt nur noch einmal — der Chip sitzt IM Hero an der
+  // Stelle, an der vorher der Text stand. Er bleibt dabei ein Anker: von hier
+  // direkt in den Kompetenzpfad dieser Stufe, ohne Umweg übers Menü.
   const stufenAnker = (b.kompetenzstufe || [])
     .map((stufe) => `<a class="chip chip-stufe chip-stufe-${esc(stufe)} stufen-anker" href="#/pfad/kompetenz/${esc(stufe)}">${esc(label('kompetenzstufe', stufe))}</a>`)
     .join(' ');
+  // Die Augenbraue nennt die Domäne — und führt jetzt auch dorthin. Instrumente
+  // haben eine eigene Landing, alles andere die Themen-Seite der Domäne.
+  const heroBereich = INSTRUMENTE.includes(domaenen[0])
+    ? `#/instrument/${encodeURIComponent(domaenen[0])}`
+    : `#/pfad/themen/${encodeURIComponent(domaenen[0])}`;
+  const heroSektion = landingHeroHtml(
+    '', label('baustein', b.id), heroStufen, heroHue, domaenen[0], heroKategorie, heroSymbol,
+    { untertitelHtml: stufenAnker, augenbraueHref: heroBereich },
+  );
   const schema = lehrgrafik(b.id);
   const schemaSektion = schema
     ? `<figure class="lehrgrafik">${schema}<figcaption>${esc(label('lehrgrafik', b.id))}</figcaption></figure>`
     : '';
-  const chipZeile = metaChips || stufenAnker
-    ? `<p class="chip-zeile">${stufenAnker}${metaChips && stufenAnker ? ' ' : ''}${metaChips}</p>`
-    : '';
+  // stufenAnker ist in den Hero gewandert — hier bleiben nur die uebrigen Chips.
+  const chipZeile = metaChips ? `<p class="chip-zeile">${metaChips}</p>` : '';
 
   // „Merken": baustein-gebundene Merkliste (kein Fortschritt). Gemerkte Bausteine
   // lassen sich im Profil als PDF (Druck-Ansicht) sichern. Signal doppelt kodiert
