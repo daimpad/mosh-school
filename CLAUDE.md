@@ -287,7 +287,15 @@ Tokens**, nie harte Farben.
   **Primär-CTA:** hell rot mit **weißer** Schrift (5,48:1 — Tinte auf Rot wären nur
   3,59:1), dunkel umgekehrt weiße Fläche mit Tinte und erst im Hover rot gefüllt.
   Quittier-CTAs (`[data-quittiere]`) sind davon ausgenommen und behalten ihren
-  Ghost-Look, der Zustand zeigt statt Wichtigkeit.
+  Ghost-Look, der Zustand zeigt statt Wichtigkeit — **mit eigener Schriftfarbe**
+  (`var(--tinte)`), sonst erben sie das Weiß des gefüllten Knopfes und stehen
+  hell auf hell. **Jeder** Knopf fällt im Hover rot (Sekundär wie Primär); der
+  Hover ändert nur die Farbe, nie den Schatten — ein mitwachsender Schatten
+  lässt den Knopf beim Überfahren zappeln.
+- **Kopfzeilen-Knöpfe** (Hamburger, Lupe) tragen dieselbe weiße Marke wie die
+  Hero-Augenbraue: weiße Fläche, rote Kante, rotes Zeichen, im Hover rot gefüllt.
+  Der Hamburger war vorher ein roter Block und damit die größte rote Fläche der
+  Seite.
 - **Hover an Containern** ist **gestrichelte Tinte**, nicht Rot: Rot ist die
   Aktionsfarbe und nutzt sich als Rahmen um jede Kachel ab. Die Strichelung wirkt
   nicht-farblich und in beiden Themen; nur der Stil wechselt, die Breite bleibt.
