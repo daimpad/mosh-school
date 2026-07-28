@@ -41,7 +41,7 @@ function stationslisteHtml(stationen, kontext, { mitSkip = false } = {}) {
           <a class="station-link" href="#/baustein/${esc(station.baustein.id)}?kontext=${encodeURIComponent(kontext)}">
             <span class="station-nummer" aria-hidden="true">${i + 1}</span>
             <span class="station-mitte">
-              <span class="station-titel">${bausteinIcon(station.baustein.id, 'station-icon')} ${esc(label('baustein', station.baustein.id))} ${deltaChip}</span>
+              <span class="station-titel">${esc(label('baustein', station.baustein.id))} ${deltaChip}</span>
               ${hinweisZeilen(station)}
             </span>
             ${statusPunktHtml(station)}
