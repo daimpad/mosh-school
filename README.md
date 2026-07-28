@@ -41,24 +41,11 @@ kein Server, kein Tracking. Der Fortschritt lebt im `localStorage`, offline funk
 | 🩺 **Trainer-Layer** | Typische Fehlerbilder als Diagnose — mit abstrakten, monochromen SVG-Grafiken. |
 | 🎲 **Experimentieren** | Impuls-Karten, Gefühlslandkarte (Gefühl → Genre) und Genre-Mix-Generator. |
 | 📴 **Offline-first PWA** | Service Worker cacht die ganze Hülle; einmal geladen, läuft alles ohne Netz. |
-| 🩹 **Gesundheitsrahmen** | Technik-, Athletik- und Gesangsinhalte betonen Prinzip statt Dosierung: aufwärmen, bei Schmerz stoppen, im Zweifel Coach/Arzt. |
 
 ## Live ausprobieren
 
 👉 **[daimpad.github.io/mosh-school](https://daimpad.github.io/mosh-school/)**
 
-## Lokal starten
-
-`file://` reicht nicht — die JSON-Inhalte brauchen HTTP. Ein beliebiger statischer Server genügt:
-
-```sh
-git clone https://github.com/daimpad/mosh-school.git
-cd ZERRER
-python3 -m http.server 8000
-# dann http://localhost:8000 öffnen
-```
-
-Kein `npm install`, kein Build-Schritt — es gibt keinen.
 
 ## Architektur in einem Absatz
 
@@ -91,6 +78,5 @@ Es gibt sogar einen eingebauten Review-Modus (Kommentator) über den `?feedback`
 
 <div align="center">
 
-*Gebaut von Damian Paderta. Aus einer themenneutralen Lern-Engine geforkt — die Engine ist neutral, der Inhalt ist Metal.* 🖤
 
 </div>
