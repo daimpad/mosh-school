@@ -275,8 +275,22 @@ Tokens**, nie harte Farben.
   (`:root[data-theme='hell']` + `@media (prefers-color-scheme: light) :root:not([data-theme='dunkel'])`)
   schliessen Dunkel beide aus — deshalb braucht es keine Rücknahme, dafür die
   Doppelung des Token-Blocks.
+- **Hero-Aufbau** (`landingHeroHtml`): Augenbraue → H1 → Unterzeile. Die Augenbraue ist
+  ein **weißer Chip mit roter Schrift und roter Kante** und trägt **kein Symbol** — das
+  kleine rote Icon stand im Foto und war je nach Bildstelle nicht zu erkennen. Mit
+  `augenbraueHref` wird sie zum Link auf ihren Bereich. Titel und Unterzeile tragen
+  `--hero-textschatten` (dunkel schwarz, hell weiß) — die Buchstabenkante muss über
+  jedem Bildausschnitt halten. Für HTML statt Text in der Unterzeile gibt es
+  `untertitelHtml` (so sitzt der Stufen-Chip im Baustein-Hero).
 - **Blutrot ist Akzent** (Links, Aktion, Aktiv-Zustand, Icons), keine Flächenfarbe;
   Ampellogik für Status (offen/teilweise/erledigt). Hell & Dunkel über denselben Token-Satz.
+  **Primär-CTA:** hell rot mit **weißer** Schrift (5,48:1 — Tinte auf Rot wären nur
+  3,59:1), dunkel umgekehrt weiße Fläche mit Tinte und erst im Hover rot gefüllt.
+  Quittier-CTAs (`[data-quittiere]`) sind davon ausgenommen und behalten ihren
+  Ghost-Look, der Zustand zeigt statt Wichtigkeit.
+- **Hover an Containern** ist **gestrichelte Tinte**, nicht Rot: Rot ist die
+  Aktionsfarbe und nutzt sich als Rahmen um jede Kachel ab. Die Strichelung wirkt
+  nicht-farblich und in beiden Themen; nur der Stil wechselt, die Breite bleibt.
 - **Kondensierte Display-Schrift** (Anton, lokal als `assets/fonts/anton-regular.ttf`) für
   H1/H2/Marke; Fließtext Rubik. Hart-kantige Container, versetzte Schatten, Grain-Overlay.
 - **Icons:** **Tabler Icons** (MIT), lokal eingebettet als **Inline-SVG-Masken** in
