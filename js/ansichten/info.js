@@ -88,18 +88,24 @@ export function renderUeber(el, daten) {
     </section>`;
 }
 
-// Rechtstexte (Impressum / Datenschutz): schlichte Titel-+-Absätze-Ansicht aus
-// app-info.json `rechtliches`. Platzhalter in [eckigen Klammern] bleiben sichtbar.
+// Rechtstexte (Impressum / Datenschutz): Titel + optionale Einleitungs-Absätze
+// aus app-info.json `rechtliches`, dazu optionale betitelte `abschnitte`
+// (§-Paragrafen als h2 + Absätze) für strukturierte Rechtstexte. Platzhalter
+// in [eckigen Klammern] bleiben sichtbar, bis der Betreiber sie füllt.
 export function renderRechtstext(el, daten, schluessel) {
   const block = daten.appInfo?.rechtliches?.[schluessel];
   if (!block) {
     el.innerHTML = nichtGefundenHtml();
     return;
   }
-  const absaetze = (block.absaetze || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
+  const absaetzeHtml = (liste) => (liste || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
+  const einleitung = absaetzeHtml(block.absaetze);
+  const abschnitte = (block.abschnitte || [])
+    .map((a) => `<h2>${esc(text(a.titel) ?? '')}</h2>${absaetzeHtml(a.absaetze)}`)
+    .join('');
   el.innerHTML = `
     <h1>${esc(text(block.titel) ?? '')}</h1>
-    <section class="karte">${absaetze}</section>`;
+    <section class="karte">${einleitung}${abschnitte}</section>`;
 }
 
 export function renderMitmachen(el, daten) {
