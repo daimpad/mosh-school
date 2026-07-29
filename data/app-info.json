@@ -84,15 +84,43 @@
       "titel": {
         "de": "Impressum"
       },
-      "absaetze": [
+      "abschnitte": [
         {
-          "de": "[Name]"
+          "titel": { "de": "Angaben gemäß § 5 TMG" },
+          "absaetze": [
+            { "de": "Damian Paderta" },
+            { "de": "Kaiser-Karl-Ring 26, 53111 Bonn, Deutschland" }
+          ]
         },
         {
-          "de": "[Anschrift]"
+          "titel": { "de": "Kontakt" },
+          "absaetze": [
+            { "de": "E-Mail: contact@nozilla.de" }
+          ]
         },
         {
-          "de": "[E-Mail]"
+          "titel": { "de": "Privater, nicht-kommerzieller Betrieb" },
+          "absaetze": [
+            { "de": "ZERRER ist ein privates, nicht-kommerzielles Projekt ohne Gewinnerzielungsabsicht. Es gibt keine Werbung, kein Affiliate-Marketing und keine kostenpflichtigen Angebote." }
+          ]
+        },
+        {
+          "titel": { "de": "Haftung für Inhalte" },
+          "absaetze": [
+            { "de": "Die Inhalte dieser Seite wurden mit Sorgfalt erstellt, für Richtigkeit, Vollständigkeit und Aktualität kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich, nach §§ 8 bis 10 TMG jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Bei Bekanntwerden entsprechender Rechtsverletzungen werden betroffene Inhalte umgehend entfernt." }
+          ]
+        },
+        {
+          "titel": { "de": "Haftung für Links" },
+          "absaetze": [
+            { "de": "Diese Seite verlinkt auf externe Webseiten Dritter (z. B. GitHub), auf deren Inhalte kein Einfluss besteht. Für diese fremden Inhalte kann keine Gewähr übernommen werden — verantwortlich ist stets der jeweilige Anbieter der verlinkten Seite. Verlinkte Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße geprüft; eine permanente inhaltliche Kontrolle ohne konkrete Anhaltspunkte findet nicht statt." }
+          ]
+        },
+        {
+          "titel": { "de": "Urheberrecht" },
+          "absaetze": [
+            { "de": "Der Quellcode dieses Projekts steht unter der MIT-Lizenz, die Lerninhalte unter Creative Commons BY-NC 4.0 (Details unter „Über\"). Für eingebundene Schriften und Icons gelten die Lizenzen der jeweiligen Urheber." }
+          ]
         }
       ]
     },
@@ -101,8 +129,54 @@
         "de": "Datenschutz"
       },
       "absaetze": [
+        { "de": "Der Schutz deiner Daten ist mir wichtig. Diese Erklärung beschreibt, welche Daten bei der Nutzung von ZERRER anfallen und wie damit umgegangen wird." }
+      ],
+      "abschnitte": [
         {
-          "de": "ZERRER speichert deinen Fortschritt ausschließlich lokal (localStorage). Es werden keine personenbezogenen Daten an einen Server übertragen."
+          "titel": { "de": "Verantwortlicher" },
+          "absaetze": [
+            { "de": "Damian Paderta, Kaiser-Karl-Ring 26, 53111 Bonn, Deutschland" },
+            { "de": "E-Mail: contact@nozilla.de" }
+          ]
+        },
+        {
+          "titel": { "de": "Grundsatz: Daten bleiben auf deinem Gerät" },
+          "absaetze": [
+            { "de": "ZERRER läuft vollständig im Browser. Lernfortschritt, Werkzeug-Einstellungen und eigene Aufnahmen (Riff-Recorder, Mehrspur-Skizzen) werden ausschließlich lokal gespeichert — im localStorage bzw. in der IndexedDB deines Geräts. Diese Daten werden nie an einen Server übertragen; es gibt kein Nutzerkonto, kein Login und kein Backend, das diese Inhalte einsehen könnte." },
+            { "de": "Du kannst diese Daten jederzeit über die Einstellungen deines Browsers oder die Lösch-/Export-Funktionen der App selbst entfernen." }
+          ]
+        },
+        {
+          "titel": { "de": "Server-Logfiles (Hosting)" },
+          "absaetze": [
+            { "de": "Diese Website wird bei netcup GmbH gehostet und über eine verschlüsselte HTTPS-Verbindung ausgeliefert. Beim Aufruf der Seite verarbeitet der Webserver automatisch technische Daten, die dein Browser übermittelt: IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Datei/URL, HTTP-Statuscode, übertragene Datenmenge, Referrer-URL sowie Browsertyp und Betriebssystem (User-Agent)." },
+            { "de": "Diese Verarbeitung dient ausschließlich der technischen Bereitstellung der Seite, der Systemsicherheit und der Fehleranalyse. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren, funktionsfähigen Betrieb). Es findet keine Zusammenführung mit anderen Datenquellen und kein Tracking oder Profiling statt; die Logfiles werden nach kurzer Zeit automatisch gelöscht bzw. anonymisiert." }
+          ]
+        },
+        {
+          "titel": { "de": "Cookies und Tracking" },
+          "absaetze": [
+            { "de": "ZERRER setzt keine Cookies, keine Analyse- oder Tracking-Tools und keine Werbenetzwerke ein. Schriften und Icons sind lokal eingebettet — es werden keine Ressourcen von externen Anbietern (z. B. Google Fonts) nachgeladen." }
+          ]
+        },
+        {
+          "titel": { "de": "Kontaktaufnahme und Feedback" },
+          "absaetze": [
+            { "de": "Schreibst du mir per E-Mail oder nutzt den Kommentator unter „Mitmachen\", verarbeite ich die dabei mitgeteilten Daten (z. B. deine E-Mail-Adresse und den Inhalt der Nachricht) ausschließlich zur Bearbeitung deiner Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Der Kommentator übergibt deine Anmerkungen an dein eigenes E-Mail-Programm oder als lokale Datei — dafür gibt es keinen eigenen Server, der diese Daten sammelt." }
+          ]
+        },
+        {
+          "titel": { "de": "Deine Rechte" },
+          "absaetze": [
+            { "de": "Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten sowie ein Widerspruchsrecht gegen die Verarbeitung (Art. 15 bis 18 und 21 DSGVO). Da praktisch alle App-Daten ohnehin nur lokal bei dir liegen, genügt dafür in der Regel das Löschen im Browser." },
+            { "de": "Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO) — zuständig für Bonn/Nordrhein-Westfalen ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)." }
+          ]
+        },
+        {
+          "titel": { "de": "Änderungen dieser Erklärung" },
+          "absaetze": [
+            { "de": "Diese Datenschutzerklärung wird angepasst, wenn sich die App oder die rechtlichen Vorgaben ändern. Es gilt jeweils die auf dieser Seite veröffentlichte Fassung." }
+          ]
         }
       ]
     }
