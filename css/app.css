@@ -387,11 +387,21 @@ body.im-onboarding .seiten-footer { display: none; }
 }
 .footer-spalte a { color: var(--tinte); text-decoration: none; font-size: 0.9rem; }
 .footer-spalte a:hover, .footer-spalte a:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
+/* Bildmarke-Platzhalter links, Rechtstext-Links, GoatCounter-Hinweis rechts —
+   dieselbe Reihe wie die Voraenderung: `.footer-schluss-recht` traegt
+   `margin-right: auto`, damit der Goat-Link auch bei wenig Inhalt ganz rechts
+   bleibt statt direkt neben Impressum/Datenschutz zu kleben. */
 .footer-schluss {
   max-width: 52rem; margin: 1.4rem auto 0; padding-top: 1rem;
   border-top: 1px solid var(--trennlinie); color: var(--tinte-2);
   font-size: 0.76rem; letter-spacing: 0.02em;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.1rem;
 }
+/* Dieselbe leere Platzhalter-Flaeche wie `.marke-logo` (Kopfzeile/Hero), nur
+   kleiner passend zur Fusszeilen-Schrift — reserviert fuer dasselbe kommende
+   SVG-Logo. */
+.footer-schluss-logo { width: 20px; height: 20px; flex-shrink: 0; display: block; }
+.footer-schluss-recht { display: flex; align-items: center; gap: 0.7rem; margin-right: auto; }
 /* Ab Tablet faellt die fixierte Bottom-Bar weg (siehe .fussnav) — dann braucht
    der Footer den Platzhalter fuer sie nicht mehr. */
 @media (min-width: 768px) {
@@ -1384,6 +1394,9 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 /* GitHub-Logo (Inline-SVG) im „Über"-Reiter unter Lizenz/Credits. */
 .github-logo { fill: currentColor; flex: none; vertical-align: -0.2em; margin-right: 0.15rem; }
+/* Ziegenkopf-Icon (Inline-SVG) für den GoatCounter-Hinweis im „Über"-Reiter
+   und im Footer-Schluss — dieselbe Zeichnung an beiden Stellen. */
+.goat-logo { flex: none; vertical-align: -0.2em; margin-right: 0.15rem; }
 
 /* ---------- Willkommen: Hero + Einstiegs-CTAs ---------- */
 
@@ -3114,11 +3127,15 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
      zwischen Leiste und Foto und liess den Hero haengen. Der Abzug in min-height
      schrumpft entsprechend mit. */
   margin-top: calc(-1 * var(--main-oben, 1.1rem));
-  /* Abzug mobil: Kopfzeile + oberes Innenmass von main (~5 rem) UND die fixierte
-     untere Leiste (~3.7 rem inkl. Safe Area) — die liegt ueber dem Inhalt, ohne
-     Abzug verschwaenden die CTA-Knoepfe dahinter. */
-  min-height: calc(100vh - 7.9rem - env(safe-area-inset-bottom));
-  min-height: calc(100svh - 7.9rem - env(safe-area-inset-bottom));
+  /* Der Inhalt sitzt unten im Hero (align-self:flex-end an .genre-landing-inhalt) —
+     je hoeher der Hero, desto mehr LEERE Flaeche zwischen Kopfzeile und
+     Schriftzug. 68vh statt (fast) voller Schirmhoehe haelt die Wortmarke nah an
+     der Navigation, laesst aber genug Bild fuer die Foto-Ebene stehen. Der
+     Abzug bleibt derselbe wie vorher: Kopfzeile + oberes Innenmass von main UND
+     (mobil) die fixierte untere Leiste (~3.7rem inkl. Safe Area) — die liegt
+     ueber dem Inhalt, ohne Abzug verschwaenden die CTA-Knoepfe dahinter. */
+  min-height: calc(68vh - 7.9rem - env(safe-area-inset-bottom));
+  min-height: calc(68svh - 7.9rem - env(safe-area-inset-bottom));
 }
 /* Der Scrim laeuft sonst prozentual mit: Auf 300 px Hoehe deckte er das untere
    Drittel, auf voller Schirmhoehe waere das die halbe Seite in Weiss. Feste
@@ -3132,26 +3149,37 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .startseite-hero .genre-landing-inhalt { align-self: flex-end; }
 /* Logo NEBEN dem Schriftzug, nicht darüber: zusammen sind sie eine Marke, keine
    zwei gestapelten Elemente. Baseline-Ausrichtung über align-items:center; das
-   Logo skaliert mit der Überschrift (em), damit es auf jeder Breite passt. */
-/* Der Schriftzug fuellt die Spalte. 17vw traegt „ZERRER" (sechs Versalien in
-   einer kondensierten Display-Schrift) bis fast an beide Kanten; das clamp
-   deckelt ihn auf breiten Schirmen, damit er nicht ueber die Textspalte
-   hinauswaechst. nowrap, weil ein Umbruch die Marke zerlegen wuerde. */
+   Logo skaliert mit der Überschrift (em), damit es auf jeder Breite passt.
+   Bricht bewusst aus der 44rem-Textspalte des Heros aus: die Wortmarke ist
+   keine Fliesstext-Ueberschrift, sondern soll den Schirm fuellen (wie im
+   abgestimmten Mockup, mockups/hero-glitch.html) — Themenzeile/CTA darunter
+   bleiben in der normalen Spalte (.genre-landing-inhalt). Gleiche Technik wie
+   der Hero-Hintergrund selbst (s. `.marke-hero, .genre-landing-hero`): negative
+   Margin hebt genau das Innenmass auf, das der Hero links/rechts setzt, damit
+   die Marke bis an dieselbe Kante wie der Hero selbst reicht. min() statt max()
+   weil die Werte hier negiert sind (-max(a,b) = min(-a,-b)). */
 .startseite-hero .startseite-hero-marke {
   display: flex;
   align-items: center;
   gap: 0.4rem;
   flex-wrap: nowrap;
-  /* Der Schriftzug fuellt die Spalte fast bis an beide Kanten. Die Marke ist
-     rund 4.9x so breit wie ihre Schriftgroesse (sechs Versalien in Special
-     Elite plus Logo), 18.5vw trifft damit auf schmalen Schirmen genau die Spaltenbreite.
-     Der Deckel bei 8.2rem greift ab ~710 px: Ab da waechst nicht mehr die
-     Textspalte, sondern nur noch der Rand — die Spalte bleibt bei 42rem stehen.
-     Die hoehere Spezifitaet ist noetig, weil .genre-landing-hero h1 (0,1,1)
-     sonst gewinnt. nowrap, weil ein Umbruch die Marke zerlegen wuerde. */
-  font-size: clamp(3rem, 18.5vw, 8.2rem);
+  width: 100vw;
+  margin-left: min(-1rem, calc(21rem - 50vw));
+  margin-right: min(-1rem, calc(21rem - 50vw));
+  padding: 0 clamp(0.7rem, 2.2vw, 1.6rem);
+  /* Praezise Fuellung uebernimmt js/hero-glitch.js (`passeMarkeGroesseAn`) —
+     die Marke bricht aus der Textspalte aus (s. o.), ein einzelner vw-Faktor
+     traefe je nach Schirmbreite mal zu klein, mal zu gross. Das clamp() ist
+     nur der Erstanstrich/Ohne-JS-Rueckfall, bevor die Messung greift. */
+  font-size: var(--marke-groesse, clamp(3rem, 20vw, 11rem));
   line-height: 0.92;
   white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .startseite-hero .startseite-hero-marke {
+    margin-left: min(-1.5rem, calc(20.5rem - 50vw));
+    margin-right: min(-1.5rem, calc(20.5rem - 50vw));
+  }
 }
 /* Leerer Platzhalter statt des Plektrum-Bilds (wie .marke-logo) — reserviert
    die Flaeche neben dem Glitch-Schriftzug fuer ein kommendes SVG-Logo.
@@ -3220,8 +3248,8 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 @media (min-width: 768px) {
   .startseite-hero {
     --main-oben: 1.6rem;
-    min-height: calc(100vh - 4.9rem);
-    min-height: calc(100svh - 4.9rem);
+    min-height: calc(68vh - 4.9rem);
+    min-height: calc(68svh - 4.9rem);
   }
 }
 
@@ -3384,9 +3412,10 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
    angleichen (voller Button-Reset). */
 button.menue-punkt { width: 100%; background: none; border: 0; font-family: inherit; cursor: pointer; text-align: left; }
 
-/* CC-Lizenzlink in der Footer-Schlusszeile. */
+/* Rechtstext-Links + GoatCounter-Hinweis in der Footer-Schlusszeile. */
 .footer-schluss a { color: var(--primaer); text-decoration: none; }
 .footer-schluss a:hover, .footer-schluss a:focus-visible { text-decoration: underline; }
+.footer-schluss-goat { display: inline-flex; align-items: center; gap: 0.3rem; }
 
 
 /* ===== Hintergrund DUNKEL: reines Schwarz, ohne Grain-Textur.

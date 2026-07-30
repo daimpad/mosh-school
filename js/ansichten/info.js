@@ -26,6 +26,27 @@ function externerLink(ziel, beschriftung, klasse) {
 const GITHUB_SVG =
   '<svg class="github-logo" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>';
 
+// Abstraktes Ziegenkopf-Icon (Inline-SVG, eigene Zeichnung — keine Reproduktion
+// des GoatCounter-Markenlogos) fuer den Reichweitenmessungs-Hinweis unten in
+// diesem Abschnitt; dieselbe Zeichnung traegt index.html und build_seiten.py.
+const GOAT_SVG =
+  '<svg class="goat-logo" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21c-2.8 0-5-2.1-5-4.8v-2.8c0-2.9 2.2-5.2 5-5.2s5 2.3 5 5.2v2.8c0 2.7-2.2 4.8-5 4.8Z"/><path d="M7.8 8.6C6 6.7 5 4.6 5 2.4c2 .1 3.8 1.1 4.8 3"/><path d="M16.2 8.6C18 6.7 19 4.6 19 2.4c-2 .1-3.8 1.1-4.8 3"/><path d="M12 21v1.4"/><circle cx="10.1" cy="11.4" r=".9" fill="currentColor" stroke="none"/><circle cx="13.9" cy="11.4" r=".9" fill="currentColor" stroke="none"/></svg>';
+
+// Lizenz-/Credits-Absatz: dieselben echten Links wie im Footer (index.html),
+// hier zentral im „Über"-Reiter statt im Footer selbst (der traegt seit der
+// Fussnav-Ueberarbeitung nur noch Impressum/Datenschutz + die Logos). Bewusst
+// hartes HTML statt JSON-`eintraege` (die werden escaped) — echte Links
+// gehoeren nicht in escapten Fliesstext. `titel` bleibt aus app-info.json,
+// damit die Ueberschrift editierbar bleibt.
+function creditsLizenzHtml(titel) {
+  return `<section class="karte">
+    <h2>${esc(titel ?? 'Open Source & Lizenz')}</h2>
+    <p class="leise">Der Code steht unter der <a href="https://github.com/daimpad/mosh-school/blob/main/LICENSE" rel="license noopener" target="_blank">MIT-Lizenz</a> — nutze, verändere und teile ihn frei. Die Inhalte stehen unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a>: Namensnennung, nicht kommerziell.</p>
+    <p class="leise">Gebaut von <a href="https://paderta.com" rel="noopener" target="_blank">Damian Paderta</a> (<a href="https://nozilla.de" rel="noopener" target="_blank">Nozilla — bits and bytes with heart</a>) · <a href="#/kollektiv">ZERRER-Kollektiv</a>.</p>
+    <p class="leise">${GOAT_SVG} Anonyme Reichweitenmessung mit <a href="https://www.goatcounter.com/" rel="noopener" target="_blank">GoatCounter</a> — Details in der <a href="#/datenschutz">Datenschutzerklärung</a>.</p>
+  </section>`;
+}
+
 function abschnittHtml(block) {
   if (!block) return '';
   const eintraege = (block.eintraege || []).map((e) => `<p class="leise">${esc(text(e) ?? '')}</p>`).join('');
@@ -79,7 +100,7 @@ export function renderUeber(el, daten) {
     ${absaetze ? `<section class="karte">${absaetze}</section>` : ''}
     ${haltungHtml()}
     ${abschnittHtml(u.danksagungen)}
-    ${abschnittHtml(u.credits_lizenz)}
+    ${creditsLizenzHtml(text(u.credits_lizenz?.titel))}
     ${links ? `<section class="karte">${links}</section>` : ''}
     <section class="karte">
       <h2>${esc(t('nav_mitmachen'))}</h2>
