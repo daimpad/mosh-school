@@ -79,6 +79,23 @@
       }
     }
   },
+  "kollektiv": {
+    "titel": {
+      "de": "ZERRA-Kollektiv"
+    },
+    "absaetze": [
+      { "de": "Das ZERRA-Kollektiv macht Konzerte im Raum Köln und Bonn — und manchmal darüber hinaus." }
+    ],
+    "abschnitte": [
+      {
+        "titel": { "de": "Kontakt" },
+        "absaetze": [
+          { "de": "Du willst spielen, einen Abend mitorganisieren oder einfach wissen, was als Nächstes ansteht? Schreib uns:" },
+          { "de": "kollektiv@zerra.org" }
+        ]
+      }
+    ]
+  },
   "rechtliches": {
     "impressum": {
       "titel": {

@@ -357,8 +357,16 @@ Tokens**, nie harte Farben.
 - **Hover an Containern** ist **gestrichelte Tinte**, nicht Rot: Rot ist die
   Aktionsfarbe und nutzt sich als Rahmen um jede Kachel ab. Die Strichelung wirkt
   nicht-farblich und in beiden Themen; nur der Stil wechselt, die Breite bleibt.
-- **Kondensierte Display-Schrift** (Anton, lokal als `assets/fonts/anton-regular.ttf`) für
-  H1/H2/Marke; Fließtext Rubik. Hart-kantige Container, versetzte Schatten, Grain-Overlay.
+- **Schreibmaschinen-Display-Schrift** (**Special Elite**, lokal als
+  `assets/fonts/special-elite-latin-400-normal.woff2`) für H1/H2/H3, `.marke-text` und
+  `.abschnitt-titel` — gesetzt in `css/app.css` (`font-weight: 900`, Versalien).
+  **Fließtext Roboto** (`assets/fonts/roboto-latin-*.woff2`, 400/500/700). Hart-kantige
+  Container, versetzte Schatten, Grain-Overlay. **Fallstrick:** Das Token
+  `--schrift-display` wird an einigen Stellen gelesen (`.footer-marke-name`,
+  `.genre-abschnitt-titel` u. a.), ist aber **nirgends definiert** — es fällt still auf
+  `inherit` zurück, diese Elemente laufen also auf Roboto, nicht auf Special Elite. Wer
+  das vereinheitlichen will, definiert das Token, statt weitere harte
+  `font-family`-Zeilen zu streuen.
 - **Icons:** **Tabler Icons** (MIT), lokal eingebettet als **Inline-SVG-Masken** in
   `css/schriften.css` — keine Icon-Schrift, kein CDN. Jede `.fa-*`-Klasse trägt ein Tabler-
   Outline-SVG als CSS-`mask` (`--ti`), die Fläche kommt aus `background-color: currentColor`
