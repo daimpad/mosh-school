@@ -200,9 +200,14 @@ zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artef
   plus je eine Hub-Übersichtsseite (`pfad/stil/`, `pfad/kompetenz/`, `pfad/themen/`), auf die
   `index.html` im Footer mit echten (Nicht-Hash-)Links zeigt — Crawler-Einstiegspunkt
   unabhängig von der Sitemap-Einreichung in der Search Console.
-- **Bewusst nicht dabei:** Instrument-Landingpages (`#/instrument/<name>`) — echte
-  interaktive Tab-Logik (Theorie/Praxis/Tools/Prüfung/Geräte), keine verlustfreie statische
-  Übersetzung; eigene Folge-Iteration.
+- `instrument/<name>/` — die vier Instrument-Landingpages plus Hub (`instrument/`). Die App
+  zeigt die Bereiche als **In-Page-Reiter** (Theorie/Praxis/Tools/Prüfung/Geräte/Stimmung/
+  Patterns); statisch werden daraus **gestapelte Abschnitte** — Reiter sparen Platz auf dem
+  Schirm, statisch gibt es diesen Zwang nicht und alles landet in EINEM crawlbaren Dokument
+  statt hinter Klicks. Reihenfolge Praxis → Equipment → Tools → (Tuning/Patterns) → Theorie:
+  Das Instrument-Eigene steht oben, die auf allen vier Seiten identische Theorie-Menge unten.
+  Der Reiter **Prüfung** (Könnens-Check) entfällt — ein reines Frage-Antwort-Widget aus
+  clientseitigem Zustand, das statisch nichts aussagt; er wird stattdessen verlinkt.
 - Jede Seite: eigenes `<title>`/`canonical`/`og:*`/JSON-LD, lesbarer Inhalt aus denselben
   Quellen wie die SPA, **kein** clientseitiger Zustand (Mastery/Merken/Demo-Player entfallen),
   CTA „In ZERRER üben" → `#/baustein/<id>` in die echte App. **Kein** automatischer

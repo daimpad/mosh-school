@@ -529,4 +529,9 @@
   <url><loc>https://zerrer.org/pfad/themen/mentales/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://zerrer.org/pfad/themen/kontext/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://zerrer.org/pfad/themen/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerrer.org/instrument/gitarre/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://zerrer.org/instrument/bass/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://zerrer.org/instrument/schlagzeug/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://zerrer.org/instrument/gesang/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://zerrer.org/instrument/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
