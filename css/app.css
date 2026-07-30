@@ -3122,8 +3122,8 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   gap: 0.4rem;
   flex-wrap: nowrap;
   /* Der Schriftzug fuellt die Spalte fast bis an beide Kanten. Die Marke ist
-     rund 4.9x so breit wie ihre Schriftgroesse (sechs Versalien in Anton
-     plus Logo), 18.5vw trifft damit auf schmalen Schirmen genau die Spaltenbreite.
+     rund 4.9x so breit wie ihre Schriftgroesse (sechs Versalien in Special
+     Elite plus Logo), 18.5vw trifft damit auf schmalen Schirmen genau die Spaltenbreite.
      Der Deckel bei 8.2rem greift ab ~710 px: Ab da waechst nicht mehr die
      Textspalte, sondern nur noch der Rand — die Spalte bleibt bei 42rem stehen.
      Die hoehere Spezifitaet ist noetig, weil .genre-landing-hero h1 (0,1,1)
@@ -3137,6 +3137,40 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   width: 0.9em;
   height: 0.9em;
   filter: var(--filter-marke);
+}
+
+/* Glitch-Animation des Schriftzugs (js/hero-glitch.js) — "kaputter Film".
+   `.zerr-basis` traegt Layout + die statische Darstellung; ohne JS oder bei
+   reduzierter Bewegung bleibt sie sichtbar und nichts hier greift. Aktiviert
+   das Skript, kommen zwei Chroma-Geister (RGB-Split) + Baender als Geschwister
+   dazu, die Basis wird unsichtbar (.zerr-aktiv), und alle Variablen unten
+   werden pro Frame aktualisiert. Werte + Aufbau: mockups/hero-glitch.html. */
+.zerr-wort { position: relative; display: inline-block; }
+.zerr-aktiv .zerr-basis { visibility: hidden; }
+.zerr-lage {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform:
+    translate3d(var(--zerr-x, 0px), var(--zerr-y, 0px), 0)
+    skewX(var(--zerr-neigung, 0deg))
+    scaleY(var(--zerr-stauchung, 1));
+  filter: blur(var(--zerr-blur, 0px));
+  opacity: var(--zerr-deckkraft, 1);
+}
+.zerr-chroma {
+  mix-blend-mode: screen;
+  opacity: var(--zerr-farbstaerke, 0);
+}
+.zerr-chroma-a { color: var(--zerr-farbe-a, transparent); transform: translate3d(calc(-1 * var(--zerr-split, 0px)), 0, 0); }
+.zerr-chroma-b { color: var(--zerr-farbe-b, transparent); transform: translate3d(var(--zerr-split, 0px), 0, 0); }
+/* Ein Band: --o/--u schneiden oben/unten weg, zusammen kacheln alle Baender
+   die volle Hoehe — seitlich ueberstehend (-12%) geschnitten, damit ein weit
+   weggerissenes Band nicht an der eigenen Kante abgeschnitten wird. */
+.zerr-scheibe {
+  clip-path: inset(var(--o, 0%) -12% var(--u, 0%) -12%);
+  transform: translate3d(var(--dx, 0px), var(--dy, 0px), 0);
+  opacity: var(--sop, 1);
 }
 .startseite-hero-themen {
   margin: 0.5rem 0 0;
