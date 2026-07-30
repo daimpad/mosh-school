@@ -119,6 +119,11 @@ function songSlug(pfad) {
 export async function ladeSuchindex(daten) {
   const idx = await holeJson('data/index.json').catch(() => null);
   daten.suchindex = idx?.eintraege || [];
+  // Fehlschlag festhalten, statt ihn zu verschlucken: ein leerer Index sieht in
+  // der Suche exakt aus wie „nichts gefunden" — der Nutzer sucht dann weiter und
+  // bekommt zu JEDEM Begriff null Treffer, ohne zu erfahren, dass der Index gar
+  // nicht geladen wurde. Die Such-Ansicht liest das Flag und sagt es.
+  daten.suchindexFehler = idx === null;
   return daten.suchindex;
 }
 

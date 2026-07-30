@@ -163,6 +163,12 @@ function clipHtml(clip, url) {
 }
 
 async function ladeUndRendere(el) {
+  // Kopf IMMER mitzeichnen — er traegt die Fehlerzeile. Vorher setzte der
+  // onstop-Handler `letzterFehler` (z. B. wenn speichereClip wegen vollem
+  // Speicher/Privatmodus wirft) und rief nur ladeUndRendere: Die Aufnahme war
+  // weg, aber es stand nirgends, warum. Auch die frühen `return`s unten
+  // (DB-Fehler, leere Liste) kamen so nie zur Fehleranzeige.
+  zeichneKopf(el);
   // Alte Objekt-URLs freigeben, bevor neue erzeugt werden.
   for (const u of clipURLs) URL.revokeObjectURL(u);
   clipURLs = [];
@@ -261,10 +267,25 @@ export function renderWerkzeugRecorder(el, daten, query) {
 function verdrahteClips(el) {
   for (const clipEl of el.querySelectorAll('.wz-rec-clip')) {
     const id = clipEl.dataset.id;
-    clipEl.querySelector('.wz-rec-name')?.addEventListener('change', (e) => aktualisiereMeta(id, { name: e.target.value }));
-    clipEl.querySelector('.wz-rec-notiz')?.addEventListener('change', (e) => aktualisiereMeta(id, { notiz: e.target.value }));
-    clipEl.querySelector('.wz-rec-tempo')?.addEventListener('change', (e) => aktualisiereMeta(id, { tempo: Math.max(0, Math.round(Number(e.target.value) || 0)) }));
+    // Schreibfehler sichtbar machen: Ohne .catch war das ein Fire-and-forget —
+    // scheiterte der Schreibvorgang (Speicher voll, Privatmodus), blieb der neue
+    // Name im Feld stehen, war aber nicht gespeichert, und es gab nur eine
+    // unbehandelte Promise-Ablehnung in der Konsole.
+    const meta = (teil) => {
+      aktualisiereMeta(id, teil).catch(() => {
+        letzterFehler = t('wz_rec_speicher_fehler');
+        zeichneKopf(el);
+      });
+    };
+    clipEl.querySelector('.wz-rec-name')?.addEventListener('change', (e) => meta({ name: e.target.value }));
+    clipEl.querySelector('.wz-rec-notiz')?.addEventListener('change', (e) => meta({ notiz: e.target.value }));
+    clipEl.querySelector('.wz-rec-tempo')?.addEventListener('change', (e) => meta({ tempo: Math.max(0, Math.round(Number(e.target.value) || 0)) }));
     clipEl.querySelector('.wz-rec-loeschen')?.addEventListener('click', async () => {
+      // Aufnahmen liegen nur lokal in IndexedDB — geloescht ist geloescht, es
+      // gibt keinen Papierkorb und kein Undo. Ein Fehlklick neben „Abspielen"
+      // kostete bisher die Aufnahme ohne jede Rueckfrage.
+      const name = clipEl.querySelector('.wz-rec-name')?.value || '';
+      if (!window.confirm(t('wz_rec_loeschen_bestaetigen', { name }))) return;
       await loescheClip(id).catch(() => {});
       await ladeUndRendere(el);
     });

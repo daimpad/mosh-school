@@ -17,6 +17,11 @@ const PLANUNG_S = 0.1; // wie weit im Voraus geplant wird
 
 export function erzeugeScheduler(ctx) {
   let timer = null;
+  // Der beiEnde-Rueckruf laeuft ueber einen eigenen, verzoegerten Timer. Ohne
+  // Handle konnte stoppe() ihn nicht abraeumen: Wer kurz vor dem Ende stoppt und
+  // sofort neu startet, bekam den alten beiEnde mitten in den neuen Lauf
+  // geschossen — der frisch gestartete Klick stoppte sich selbst wieder.
+  let endeTimer = null;
   let laufend = false;
   let schritt = 0;
   let naechsteZeit = 0;
@@ -34,7 +39,7 @@ export function erzeugeScheduler(ctx) {
           clearTimeout(timer);
           timer = null;
         }
-        if (konfig.beiEnde) window.setTimeout(konfig.beiEnde, endeMs);
+        if (konfig.beiEnde) endeTimer = window.setTimeout(konfig.beiEnde, endeMs);
         return;
       }
       konfig.beiSchritt(naechsteZeit, schritt);
@@ -60,6 +65,10 @@ export function erzeugeScheduler(ctx) {
     if (timer) {
       clearTimeout(timer);
       timer = null;
+    }
+    if (endeTimer) {
+      clearTimeout(endeTimer);
+      endeTimer = null;
     }
   }
 

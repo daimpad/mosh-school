@@ -11,7 +11,7 @@
 // #/werkzeug/ampbox?instrument=bass.
 
 import { t, text } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, halteFokus } from '../oberflaeche.js';
 import { ampGrafik, boxGrafik } from '../geraete-grafik.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
@@ -206,7 +206,10 @@ export function renderWerkzeugAmpbox(el, daten, query) {
 }
 
 function verdrahte(el, daten) {
-  const neu = () => renderWerkzeugAmpbox(el, daten, null);
+  // Ueber halteFokus, sonst faellt der Fokus bei jedem Chip-Klick auf <body>:
+  // diese Ansicht zeichnet sich SELBST neu und geht damit an der
+  // Fokus-Rettung des Routers vorbei (die greift nur bei neuRendern()).
+  const neu = () => halteFokus(el, () => renderWerkzeugAmpbox(el, daten, null));
   const chip = (sel, feld, cast = (v) => v) => {
     for (const knopf of el.querySelectorAll(sel)) {
       knopf.addEventListener('click', () => {

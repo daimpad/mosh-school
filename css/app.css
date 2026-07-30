@@ -826,7 +826,16 @@ a.karte-link {
   font-weight: 500;
   letter-spacing: 0.01em;
   vertical-align: middle;
+  /* Ein Chip ist ein einzeiliges Etikett (nowrap) — ohne Deckel schob ein langer
+     Baustein-Titel aber die GANZE SEITE seitlich raus: auf 360 px waren
+     #/griffe und #/training horizontal scrollbar (gemessen 376 bzw. 371 px
+     Dokumentbreite). max-width haelt den Chip in seinem Container, die Ellipse
+     kuerzt statt zu ueberlaufen. Chips, die ohnehin passen, sehen unveraendert
+     aus — nur der vorher kaputte Fall aendert sich. */
   white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* display: inline-block würde sonst das [hidden]-Attribut aushebeln (z. B. der
    Stopp-Knopf im Pattern-Werkzeug, der nur während der Wiedergabe erscheint). */

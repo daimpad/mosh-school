@@ -51,6 +51,10 @@ const zustand = {
 let entwurf = null;
 
 let mikro = null; // { analyser, liesZeitsignal, stop }
+// Läuft gerade ein Startversuch? Zwischen Klick und erteilter Freigabe liegt der
+// Berechtigungsdialog — ohne diese Sperre erzeugte ein zweiter Klick einen
+// zweiten Mikro-Strom, den niemand mehr stoppen konnte.
+let mikroStartLaeuft = false;
 let rafId = null;
 let drone = null; // aktives Referenzton-Handle
 let geglaetteteCents = 0;
@@ -167,6 +171,12 @@ function stoppeTuner() {
 
 async function starteMikro(el) {
   const status = el.querySelector('.wz-tuner-status');
+  // Doppelklick-Sperre: Zwischen Klick und erteilter Freigabe vergehen leicht
+  // ein paar Sekunden (Berechtigungsdialog). Ein zweiter Klick startete einen
+  // ZWEITEN Strom; `mikro` zeigte danach nur noch auf den letzten, der erste
+  // blieb offen — das Aufnahme-Symbol des Browsers erlosch nie.
+  if (mikro || mikroStartLaeuft) return;
+  mikroStartLaeuft = true;
   try {
     await aktiviere();
     mikro = await holeMikro();
@@ -181,6 +191,8 @@ async function starteMikro(el) {
       status.textContent =
         fehler && fehler.name === 'NotAllowedError' ? t('wz_tuner_verweigert') : t('wz_tuner_kein_mikro');
     }
+  } finally {
+    mikroStartLaeuft = false;
   }
 }
 

@@ -122,12 +122,18 @@ function stoppe(el) {
 function markiere(el, ctx, zeit, schritt) {
   if (reduziert()) return;
   const verzoegerung = Math.max(0, (zeit - ctx.currentTime) * 1000);
-  laufTimer.push(
-    window.setTimeout(() => {
-      for (const z of el.querySelectorAll('.schritt-aktiv')) z.classList.remove('schritt-aktiv');
-      for (const z of el.querySelectorAll(`[data-schritt="${schritt}"]`)) z.classList.add('schritt-aktiv');
-    }, verzoegerung)
-  );
+  // Jeder Sechzehntel legt einen Marker-Timer an (~12/s bei 180 BPM). Ohne das
+  // Herausnehmen beim Feuern wuchs `laufTimer` bei einer Dauer-Session ins
+  // Zehntausendfache — geraeumt wurde erst beim Stoppen. Die ID nach dem
+  // Ausloesen entfernen haelt die Liste auf der Groesse der wirklich offenen
+  // Timer; stoppeMarker() raeumt weiter alles Verbliebene.
+  const id = window.setTimeout(() => {
+    const pos = laufTimer.indexOf(id);
+    if (pos !== -1) laufTimer.splice(pos, 1);
+    for (const z of el.querySelectorAll('.schritt-aktiv')) z.classList.remove('schritt-aktiv');
+    for (const z of el.querySelectorAll(`[data-schritt="${schritt}"]`)) z.classList.add('schritt-aktiv');
+  }, verzoegerung);
+  laufTimer.push(id);
 }
 
 function setzeLaufZustand(el, laeuft) {
@@ -166,12 +172,18 @@ function rasterHtml(beat) {
 
 // --- Preset aus der URL ---
 function wendePresetAn(query) {
+  // `query` ist immer ein URLSearchParams (aus parseHash), nie null — der alte
+  // Frueh-Ausstieg griff also nie und `zustand.bpm = aktiverBeat().bpm` lief bei
+  // JEDEM Betreten der Route. Ergebnis: das selbst eingestellte Tempo war nach
+  // einem Ausflug ins Menue und zurueck wieder weg. Tempo nur noch zuruecksetzen,
+  // wenn das Preset den Beat tatsaechlich gewechselt hat (oder beim Erstaufbau).
   if (!query) return;
+  const vorher = zustand.beatId;
   const beatParam = query.get('beat');
   if (beatParam && BEATS.some((b) => b.id === beatParam)) zustand.beatId = beatParam;
   const stil = query.get('stil');
   if (stil && STIL_ZU_BEAT[stil]) zustand.beatId = STIL_ZU_BEAT[stil];
-  zustand.bpm = aktiverBeat().bpm;
+  if (zustand.beatId !== vorher || zustand.bpm == null) zustand.bpm = aktiverBeat().bpm;
   const bpm = Number(query.get('bpm'));
   if (Number.isFinite(bpm) && bpm >= 40 && bpm <= 300) zustand.bpm = Math.round(bpm);
 }

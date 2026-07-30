@@ -21,7 +21,7 @@ import {
   normalisiereIndex,
   sucheIndex,
 } from '../suche.js';
-import { bausteinStatus } from '../zustand.js';
+import { bausteinStatus, diagnose } from '../zustand.js';
 
 let letzteAnfrage = '';
 const filter = { domaene: new Set(), kompetenzstufe: new Set(), stil: new Set(), spielziel: new Set(), typ: new Set() };
@@ -143,7 +143,14 @@ function startVorschlaege() {
 
 function ergebnisseHtml(daten) {
   const roh = letzteAnfrage.trim();
-  const treffer = sucheIndex(daten.suchindex, roh, filter);
+  // Nicht geladener Index != „nichts gefunden": ohne diesen Hinweis probiert man
+  // Begriff um Begriff und bekommt immer null Treffer, ohne die Ursache zu sehen.
+  if (daten.suchindexFehler) {
+    return `<div class="karte such-start" role="status"><p>${esc(t('suche_index_fehlt'))}</p></div>`;
+  }
+  // Trainer-Perspektive weiterreichen: ohne sie liefert die Suche auch die
+  // reinen Trainer-Fehlerbilder, deren Inhalt auf der Zielseite ausgeblendet ist.
+  const treffer = sucheIndex(daten.suchindex, roh, filter, { trainer: !!diagnose().trainer });
   const zaehlung = facettenZaehlung(treffer.map((tr) => tr.eintrag));
   // Gewählte Facettenwerte immer sichtbar halten (auch bei 0 Treffern) — sonst
   // verschwinden bei einer Filterkombination ohne Ergebnis alle Chips und die

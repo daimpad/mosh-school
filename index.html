@@ -302,6 +302,15 @@
       // Erweiterung/Firewall blockiertes <script>, falscher MIME-Typ, 404).
       window.addEventListener('error', function (e) {
         if (e && e.target && e.target.nodeName === 'SCRIPT' && e.target.src) {
+          // NUR eigene Skripte zählen. Das GoatCounter-Zählpixel (gc.zgo.at) ist
+          // fremd und wird von jedem Werbeblocker gekippt — das ist kein
+          // Boot-Fehler. Vorher landete genau diese Meldung in `ersterFehler`,
+          // wodurch der Wächter (a) den automatischen Neuversuch übersprang und
+          // (b) Blocker-Nutzern bei jedem langsamen Laden eine Fehlerseite mit
+          // irreführendem technischem Hinweis zeigte.
+          try {
+            if (new URL(e.target.src, location.href).origin !== location.origin) return;
+          } catch (x) { return; }
           merke('Skript blockiert oder nicht ladbar: ' + e.target.src);
         } else if (e && e.message) {
           merke(e.message + (e.filename ? ' (' + e.filename + ':' + e.lineno + ')' : ''));

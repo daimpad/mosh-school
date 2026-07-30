@@ -19,8 +19,24 @@ function oeffne() {
     };
     anfrage.onsuccess = () => resolve(anfrage.result);
     anfrage.onerror = () => reject(anfrage.error);
+    // Ohne onblocked bliebe das Promise ewig offen, wenn ein anderer Tab noch
+    // eine aeltere DB-Version haelt — die aufrufende View wartet dann fuer immer.
+    anfrage.onblocked = () => reject(new Error('indexeddb-blockiert'));
   });
 }
+
+// Eine Transaktion endet auf DREI Wegen: complete, error — und abort. Fehlte
+// onabort, settlete das Promise bei einem Abbruch (Speicherkontingent voll,
+// Nutzer loescht Website-Daten waehrend des Schreibens) NIE: der await haengt,
+// und die Mehrspur-Ansicht friert dauerhaft ein.
+function alsTxPromise(tx, wert) {
+  return new Promise((resolve, reject) => {
+    tx.oncomplete = () => resolve(wert);
+    tx.onerror = () => reject(tx.error || new Error('indexeddb-fehler'));
+    tx.onabort = () => reject(tx.error || new Error('indexeddb-abbruch'));
+  });
+}
+
 function alsPromise(anfrage) {
   return new Promise((resolve, reject) => {
     anfrage.onsuccess = () => resolve(anfrage.result);
@@ -32,10 +48,7 @@ export async function speichereSpur(spur) {
   const db = await oeffne();
   const tx = db.transaction(STORE, 'readwrite');
   tx.objectStore(STORE).put(spur);
-  return new Promise((resolve, reject) => {
-    tx.oncomplete = () => resolve(spur);
-    tx.onerror = () => reject(tx.error);
-  });
+  return alsTxPromise(tx, spur);
 }
 
 // Alle Spuren, älteste zuerst (Aufnahme-Reihenfolge = Spurreihenfolge).
@@ -52,18 +65,12 @@ export async function aktualisiereSpur(id, teil) {
   const store = tx.objectStore(STORE);
   const spur = await alsPromise(store.get(id));
   if (spur) store.put({ ...spur, ...teil });
-  return new Promise((resolve, reject) => {
-    tx.oncomplete = () => resolve();
-    tx.onerror = () => reject(tx.error);
-  });
+  return alsTxPromise(tx);
 }
 
 export async function loescheSpur(id) {
   const db = await oeffne();
   const tx = db.transaction(STORE, 'readwrite');
   tx.objectStore(STORE).delete(id);
-  return new Promise((resolve, reject) => {
-    tx.oncomplete = () => resolve();
-    tx.onerror = () => reject(tx.error);
-  });
+  return alsTxPromise(tx);
 }
