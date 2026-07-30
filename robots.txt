@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daimpad.github.io/mosh-school/sitemap.xml
+Sitemap: https://zerrer.org/sitemap.xml

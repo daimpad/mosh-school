@@ -24,12 +24,19 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   technische Adresse, kein Anzeigename — er wird nicht mitgezogen. Das gilt auch
   für das Inline-Theme-Skript im `<head>` von `index.html`, das denselben
   Schlüssel liest.
-- **Repository und Deployment heißen weiter `mosh-school`.** Die Seite liegt
-  unter `daimpad.github.io/mosh-school/`; `canonical`, `og:url`, `sitemap.xml`,
-  `robots.txt` und der Quelltext-Link zeigen dorthin. Die Domain `zerrer.org`
-  ist beschlossen, aber noch nicht geschaltet — wer sie scharf stellt, legt eine
-  `CNAME`-Datei an, setzt die Pages-Custom-Domain und zieht erst *dann* die
-  Meta-Angaben nach.
+- **Repository und GitHub-Pages-Deployment heißen weiter `mosh-school`.**
+  Produktiv läuft die Seite unter der Domain **`zerrer.org`**, gehostet bei
+  netcup: ein Webhook auf netcup zieht bei jedem Push nach `main` den
+  aktuellen Stand direkt von GitHub — **kein** GitHub-Pages-Custom-Domain-
+  Mechanismus, also auch keine `CNAME`-Datei. `.github/workflows/pages.yml`
+  veröffentlicht denselben Stand parallel weiter unter
+  `daimpad.github.io/mosh-school/` (Repo-Name/Pages-URL ziehen den
+  Domain-Wechsel bewusst nicht nach). Weil beide Kopien exakt denselben
+  statischen Stand ausliefern, verhindert allein ein korrektes `canonical`
+  auf `https://zerrer.org/` Duplicate-Content — deshalb zeigen `canonical`,
+  `og:url`, das `ld+json` in `index.html`, `sitemap.xml` und `robots.txt` auf
+  `zerrer.org`. DNS und TLS-Zertifikat für `zerrer.org` liegen bei netcup,
+  nicht in diesem Repo.
 - **Sichtbarer Name kommt aus `t('app_titel')`** (= „ZERRER"), die Subline aus
   `t('hero_untertitel')` (= „Mosh School"). Nie hart schreiben.
 

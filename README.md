@@ -6,7 +6,7 @@
 
 Gitarre · Bass · Schlagzeug · Gesang — für Hardcore, Metalcore, Thrash, Death, Black & Doom.
 
-[![Live Demo](https://img.shields.io/badge/live-daimpad.github.io%2Fmosh--school-cc2418?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://daimpad.github.io/mosh-school/)
+[![Live Demo](https://img.shields.io/badge/live-zerrer.org-cc2418?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://zerrer.org/)
 
 ![Code: MIT](https://img.shields.io/badge/Code-MIT-24bd47?style=flat-square)
 ![Inhalte: CC BY-NC 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--NC%204.0-1568ad?style=flat-square)
@@ -44,7 +44,7 @@ kein Server, kein Tracking. Der Fortschritt lebt im `localStorage`, offline funk
 
 ## Live ausprobieren
 
-👉 **[daimpad.github.io/mosh-school](https://daimpad.github.io/mosh-school/)**
+👉 **[zerrer.org](https://zerrer.org/)**
 
 
 ## Architektur in einem Absatz
