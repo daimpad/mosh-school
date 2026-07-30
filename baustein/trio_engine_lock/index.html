@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Bass", "Drums", "Fortgeschritten"], "description": "Bass, Schlagzeug und Rhythmusgitarre bilden zusammen die Riff-Maschine. Nachdem Bass und Bassdrum gekoppelt sind (Rhythmusgruppe) und Gitarre und Bass…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Rhythmusgruppe + Gitarre: als Trio locken", "url": "https://zerrer.org/baustein/trio_engine_lock/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Rhythmusgruppe + Gitarre: als Trio locken</h1><p class="leise">Gitarre · Bass · Drums · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Bass, Schlagzeug und Rhythmusgitarre bilden zusammen die Riff-Maschine. Nachdem Bass und Bassdrum gekoppelt sind (Rhythmusgruppe) und Gitarre und Bass gelockt (Riff), fügt dieses Trio beide Achsen zu einem Motor: Alle drei Anschläge fallen auf denselben Impuls.</p><p>Übt schichtweise: erst Bass und Bassdrum, dann die Gitarre dazu, ohne dass sich der gemeinsame Attack verwischt. Der Klick bleibt die neutrale Referenz für alle drei.</p></section><section class="abschnitt"><h2>Übungsteil: Drei auf einen Impuls</h2><p><strong>Ziel:</strong> Gitarre, Bass und Bassdrum zu einem gemeinsamen Attack verbinden.</p><p>So gehst du vor:</p><ol><li>Bass und Bassdrum locken zunächst allein zum Klick.</li><li>Die Gitarre kommt dazu und legt ihre Anschläge auf denselben Impuls.</li><li>Nehmt es auf und prüft, ob alle drei als ein Schlag klingen.</li></ol><p><strong>Steigerung:</strong> Erhöht das Tempo in kleinen Schritten und haltet den gemeinsamen Attack.</p><p><strong>Selbstkontrolle:</strong> Gitarre, Bass und Kick fallen zu einem Impuls zusammen; kein Flattern.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/duo_bd_kick_lock/">Bass &amp; Drums: an die Bassdrum koppeln</a></li><li><a href="../../baustein/duo_gb_lock/">Gitarre &amp; Bass: gemeinsames Locking</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Trio: der Attack verwischt</h3><p><strong>Symptom:</strong> Beim Zusammenfügen von Bass, Bassdrum und Gitarre verwischt der gemeinsame Attack — statt eines Impulses hört man ein Flattern aus drei dicht beieinanderliegenden Anschlägen, besonders bei höherem Tempo.</p><p><strong>Ursache:</strong> Die Gitarre kommt hinzu, ohne sich exakt auf die schon gekoppelte Achse aus Bass und Bassdrum zu legen; nicht alle drei zielen auf denselben Klick-Impuls.</p><p><strong>Korrektur &amp; Ansage:</strong> Schichtweise aufbauen: erst Bass und Bassdrum allein locken, dann die Gitarre auf denselben Impuls legen, ohne den Attack zu verwischen. Langsam zum Klick, per Aufnahme prüfen, ob alle drei als ein Schlag klingen, dann erst steigern.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/trio_engine_lock">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/trio_engine_lock">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

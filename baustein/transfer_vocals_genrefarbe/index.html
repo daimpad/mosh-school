@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Fortgeschritten"], "description": "Jedes Genre hat seine typische Stimmfarbe — und wer die Register bewusst wählen kann, gestaltet Gesang, statt nur laut zu sein. Wichtig vorweg: Diese Übung…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Vocals: Register nach Genre", "url": "https://zerrer.org/baustein/transfer_vocals_genrefarbe/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Vocals: Register nach Genre</h1><p class="leise">Vocals · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Jedes Genre hat seine typische Stimmfarbe — und wer die Register bewusst wählen kann, gestaltet Gesang, statt nur laut zu sein. Wichtig vorweg: Diese Übung ist eine Zuordnung und ein bewusstes Umschalten zwischen Techniken, die du bereits gesund beherrschst — sie ist kein Freibrief, neue, fordernde Techniken auf einmal zu stapeln.</p><p>Die grobe Landkarte: tiefe Growls tragen Death Metal und (noch komprimierter) Deathcore; hohe, schneidende Screams gehören zum Black Metal und zum Metalcore; raue, mittige Shouts prägen Hardcore und Crust; verzweifelt-kehlige Schreie den Sludge; getragene oder psychedelische Cleans den Stoner und den melodischen Post-Metal, oft neben einem einzelnen rauen Klimax. Viele Genres kombinieren mehrere Register bewusst als Kontrast.</p><p>Die Kunst ist die Passung: Zum treibenden Hardcore-Groove passt der direkte Shout, zum weiten Doom-Riff der getragene, tiefe Ton, zum Post-Metal-Aufbau die ruhige Clean-Linie mit einem gezielten Ausbruch. Register-Wahl ist Ausdruck, nicht Kraftprotzerei — das richtige Register am richtigen Ort trägt weiter als das extremste.</p><p>Der Gesundheitsrahmen bleibt strikt: nur zwischen Techniken wechseln, die einzeln und gesund sitzen; gründlich aufwärmen; jede Verzerrung aus Luft und Resonanz, nie aus Kehlkopf-Druck; nach jeder Einheit der Sprechtest; bei Kratzen oder Engegefühl sofort stoppen. Neue oder unsichere Register gehören an die Seite einer erfahrenen Lehrperson, anhaltende Heiserkeit in die HNO-Praxis.</p></section><section class="abschnitt"><h2>Übungsteil: Das passende Register wählen</h2><p><strong>Ziel:</strong> Zwischen bereits gesund beherrschten Registern bewusst umschalten und sie passend zum Genre-Feel einsetzen.</p><p>So gehst du vor:</p><ol><li>Wärm gründlich auf. Arbeite NUR mit Registern, die du bereits einzeln und mühelos beherrschst — diese Übung ist Zuordnung, kein Neuland.</li><li>Ordne zu: Spiel dir kurze Loops in verschiedenen Feels vor (treibend, weit-schwer, ruhig-atmosphärisch) und wähle je das passende Register — direkter Shout, getragener tiefer Ton, ruhige Clean-Linie. Leise, Timing vor Lautstärke.</li><li>Übe das bewusste Umschalten mit Abstand: Register A — bewusster Atem, Kehle offen — Register B, jeweils leise. Der Wechsel darf keines der Register verspannen.</li><li>Setz Register gezielt als Kontrast: eine ruhige Clean-Passage, die in einen einzelnen rauen Ausbruch mündet — das Maß trägt, nicht die Dauerintensität.</li></ol><p><strong>Steigerung:</strong> Erst wenn die Wechsel über Wochen beschwerdefrei sitzen, sie Richtung Songtempo bringen — immer nur so intensiv, wie alle beteiligten Register frei bleiben. Neue Register nimmst du NICHT hier dazu, sondern einzeln und angeleitet.</p><p><strong>Selbstkontrolle:</strong> Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Passt das gewählte Register zum Feel — oder drückst du ein extremes Register in einen Kontext, der ein ruhigeres verlangt? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/growl_resonanz/">Growls formen: Resonanz &amp; Vokale</a></li><li><a href="../../baustein/clean_im_metal/">Clean-Gesang im Metal</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Register-Wechsel: zu viel auf einmal</h3><p><strong>Symptom:</strong> Beim Zuordnen der Register zu Genres werden neue, fordernde Techniken auf einmal gestapelt; die Stimme wird schnell eng und müde.</p><p><strong>Ursache:</strong> Die Übung wird als Freibrief missverstanden, unsichere Register gleichzeitig zu üben — statt nur zwischen bereits gesund beherrschten Registern umzuschalten.</p><p><strong>Korrektur &amp; Ansage:</strong> Nur mit Registern arbeiten, die einzeln und mühelos sitzen; die Übung ist Zuordnung, kein Neuland. Neue Register einzeln und angeleitet aufbauen. Nach jeder Einheit Sprechtest; jedes Enger-Werden ist die Warnlampe — leiser, im Zweifel stoppen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/transfer_vocals_genrefarbe">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/transfer_vocals_genrefarbe">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

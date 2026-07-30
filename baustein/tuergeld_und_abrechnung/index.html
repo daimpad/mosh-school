@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Community", "Fortgeschritten"], "description": "Geld ist in kleinen Szenen selten viel, aber oft Anlass für Streit — meist wegen unklarer Absprachen, nicht wegen Gier. Deshalb lohnt es, die Modelle zu…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Türgeld, Gagen und faire Abrechnung", "url": "https://zerrer.org/baustein/tuergeld_und_abrechnung/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Türgeld, Gagen und faire Abrechnung</h1><p class="leise">Community · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Geld ist in kleinen Szenen selten viel, aber oft Anlass für Streit — meist wegen unklarer Absprachen, nicht wegen Gier. Deshalb lohnt es, die Modelle zu kennen. Beim Doorsplit teilen sich die Bands die Türeinnahmen nach Abzug der Kosten, oft zu gleichen Teilen oder mit einem Vorabbetrag für die weiteste Anreise. Bei einer festen Gage bekommt eine Band einen zugesagten Betrag unabhängig von der Besucherzahl; das Risiko liegt beim Veranstalter. Manche Konzerte arbeiten mit einer Garantie plus Beteiligung, wenn es besser läuft als erwartet.</p><p>Vor dem Abend gehören drei Dinge geklärt: Was zählt zu den Kosten, die vorab abgezogen werden — Anlage, Technikerin, Raummiete, Flyer. Wer bekommt was, wenn wenig kommt. Und wie wird der Merch behandelt: Merch-Einnahmen gehören üblicherweise der Band, manche Veranstaltungsorte behalten einen Anteil ein, was vorher gesagt sein muss.</p><p>Die ungeschriebene Regel in DIY-Zusammenhängen lautet: Zuerst kommen die Kosten der Anreisenden, dann die lokalen Bands. Wer von weit her kommt und Sprit oder Bahn bezahlt hat, geht nicht mit leeren Händen nach Hause, während die einheimische Band, die zu Fuß da war, den gleichen Anteil nimmt. Rechnet offen ab, am besten sichtbar für alle Beteiligten.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Klärt ihr vor dem Konzert, was zu den Kosten zählt und wie geteilt wird — oder erst danach? Berücksichtigt ihr Anreisekosten, bevor lokale Bands etwas nehmen? Und rechnet ihr offen ab, sodass alle nachvollziehen können, was hereinkam?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/konzert_selbst_organisieren/">Ein Konzert selbst organisieren</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/tuergeld_und_abrechnung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/tuergeld_und_abrechnung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

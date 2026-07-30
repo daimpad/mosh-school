@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Kopf & Fokus", "Fortgeschritten", "Screamo / Emoviolence"], "description": "Screamo und Emoviolence leben vom Bruch. Sehr leise, oft arpeggierte Passagen stehen unmittelbar neben chaotischen Ausbrüchen — der Reiz entsteht nicht aus…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Dynamik-Extreme: leise und Ausbruch", "url": "https://zerrer.org/baustein/screamo_dynamik/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Dynamik-Extreme: leise und Ausbruch</h1><p class="leise">Gitarre · Kopf &amp; Fokus · Fortgeschritten · Screamo / Emoviolence</p><section class="abschnitt"><h2>Erklärteil</h2><p>Screamo und Emoviolence leben vom Bruch. Sehr leise, oft arpeggierte Passagen stehen unmittelbar neben chaotischen Ausbrüchen — der Reiz entsteht nicht aus Lautstärke allein, sondern aus dem Abstand zwischen beiden Zuständen. Je leiser der leise Teil, desto gewaltiger wirkt der laute, ohne dass er lauter gespielt werden müsste.</p><p>Der häufigste Fehler ist, die leisen Passagen zu laut und zu sicher zu spielen. Damit schrumpft die Spannweite, und der Ausbruch verpufft. Echte Dynamik verlangt, im leisen Teil wirklich zurückzugehen: weniger Anschlagskraft, klarer Ton, keine Verzerrung — und dann im Umschlag alles zu geben.</p><p>Entscheidend ist der Übergang selbst. Er kann hart auf einen Schlag kippen oder über wenige Takte anwachsen; beides muss bewusst entschieden und geprobt sein, sonst franst er aus.</p></section><section class="abschnitt"><h2>Übungsteil: Vom Flüstern in den Ausbruch</h2><p><strong>Ziel:</strong> Die dynamische Spannweite vergrößern und den Umschlag präzise setzen.</p><p>So gehst du vor:</p><ol><li>Spiele eine einfache, arpeggierte Figur so leise wie möglich, ohne dass Töne verschwinden.</li><li>Spiele dieselbe Figur als verzerrten Akkord-Ausbruch mit voller Kraft.</li><li>Verbinde beides: vier Takte leise, dann auf Schlag eins des fünften Takts der Umschlag.</li><li>Nimm beides auf und prüfe, ob der leise Teil wirklich leise war — oder nur gedacht leise.</li><li>Probiere die zweite Variante: den Ausbruch über zwei Takte anwachsen lassen.</li></ol><p><strong>Steigerung:</strong> Verlängere den leisen Teil auf acht Takte, ohne dass er langweilig wird — Variation statt Wiederholung.</p><p><strong>Selbstkontrolle:</strong> Wie groß ist der Abstand zwischen leise und laut in deiner Aufnahme? Kippt der Umschlag exakt auf den Schlag?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/dynamik_akzente/">Dynamik &amp; Akzente</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Der leise Teil ist nicht leise</h3><p><strong>Symptom:</strong> Der Ausbruch wirkt kraftlos, obwohl die laute Stelle mit voller Kraft gespielt wird. Auf der Aufnahme ist der Unterschied zwischen beiden Teilen kleiner, als er sich beim Spielen angefühlt hat.</p><p><strong>Ursache:</strong> Ist fast immer die leise Passage, nicht die laute: Sie wird aus Unsicherheit zu fest angeschlagen, oft mit stehender Verzerrung. Damit schrumpft die Spannweite, und der Umschlag hat nichts mehr, wovon er sich abheben könnte.</p><p><strong>Korrektur &amp; Ansage:</strong> Zerrgrad im leisen Teil deutlich zurücknehmen, den Anschlag bewusst schwächer setzen und beides getrennt aufnehmen — der Vergleich in der Aufnahme überzeugt schneller als jede Ansage.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/screamo_dynamik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/screamo_dynamik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

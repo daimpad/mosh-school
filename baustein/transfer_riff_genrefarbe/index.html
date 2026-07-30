@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten"], "description": "Dasselbe Tonmaterial kann in völlig verschiedenen Genres zu Hause sein — was es einordnet, ist nicht die Notenfolge, sondern die Behandlung: Tempo,…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Gitarre: ein Riff, mehrere Genres", "url": "https://zerrer.org/baustein/transfer_riff_genrefarbe/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Gitarre: ein Riff, mehrere Genres</h1><p class="leise">Gitarre · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Dasselbe Tonmaterial kann in völlig verschiedenen Genres zu Hause sein — was es einordnet, ist nicht die Notenfolge, sondern die Behandlung: Tempo, Anschlag, Dämpfung, Ton und Feel. Wer einen einzigen Riff durch mehrere Genre-Farben schicken kann, versteht die Genres von innen und wird als Gitarrist enorm flexibel.</p><p>Nimm einen schlichten Powerchord-Riff aus wenigen Tönen. Als Thrash gespielt: schnell, tight palm-gemutet, harter Wechselschlag, aggressiver Mitten-Ton. Als Doom: auf ein Viertel des Tempos gezogen, jeder Akkord voll ausgehalten, schwer und klingend. Als Sludge: dasselbe langsame Tempo, aber dreckig, mit angerissenen Bendings und Noise zwischen den Tönen. Als Djent: die Töne kurz und perkussiv gemutet, in verschobene Gruppen über einen geraden Puls gelegt. Als Stoner: mittleres Tempo, fuzziger Ton, eine Lücke eingebaut, bluesig phrasiert. Ein Riff — fünf Welten.</p><p>Diese Übung schult zweierlei: die Kontrolle über die Parameter, die den Ton eines Genres ausmachen (denn du musst sie bewusst umschalten), und das Verständnis, dass Genre vor allem Haltung und Behandlung ist. Wer das beherrscht, kann in einer Fusion gezielt einfärben, statt nur Töne aneinanderzureihen.</p></section><section class="abschnitt"><h2>Übungsteil: Fünf Farben, ein Riff</h2><p><strong>Ziel:</strong> Einen einfachen Riff bewusst durch mehrere Genre-Behandlungen schicken und die Parameter sauber umschalten.</p><p>So gehst du vor:</p><ol><li>Wähl einen schlichten Riff aus drei bis vier Powerchords, den du sicher spielst. Spiel ihn zuerst neutral zum Klick, damit die Töne sitzen.</li><li>Färb ihn thrashig: schnelles Tempo, tight palm-gemutet, harter Wechselschlag. Nimm auf und prüf: Klingt es nach Thrash, oder nur schnell?</li><li>Färb denselben Riff doomig: Tempo geviertelt, jeder Akkord voll ausgehalten, schwerer Anschlag. Dann sludgig: gleiches Tempo, aber Dreck, ein angerissenes Bending, Noise dazwischen.</li><li>Färb ihn zuletzt djentig (kurze, perkussive Chugs in verschobenen Gruppen über geradem Puls) und/oder stonerig (mittleres Tempo, Fuzz, eine Lücke, bluesige Phrasierung). Spiel die Farben direkt hintereinander und hör den Unterschied.</li></ol><p><strong>Steigerung:</strong> Bau die Farbwechsel in EIN Stück: derselbe Riff als Vers thrashig, als Bridge doomig, als Finale djentig — ein Mini-Song aus einem Riff. Der Kontrast der Behandlungen trägt die Dramaturgie.</p><p><strong>Selbstkontrolle:</strong> Nimm alle Farben nacheinander auf und lass sie (idealerweise) jemanden blind zuordnen: Erkennt man die Genres an deiner Behandlung, obwohl die Töne gleich sind? Wenn zwei Farben gleich klingen, hast du einen Parameter nicht umgeschaltet — meist Dämpfung, Ausklang oder Feel.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/palm_mute_systeme/">Tighte Palm-Mute-Systeme</a></li><li><a href="../../baustein/doom_riffing/">Doom-Riffing</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Genre-Farben: Riff klingt überall gleich</h3><p><strong>Symptom:</strong> Derselbe Riff soll in mehreren Genre-Farben klingen, aber zwei oder mehr Behandlungen klingen praktisch identisch.</p><p><strong>Ursache:</strong> Ein klangbestimmender Parameter wurde nicht umgeschaltet — meist Dämpfung, Ausklang oder Feel; die Töne ändern sich, die Behandlung nicht.</p><p><strong>Korrektur &amp; Ansage:</strong> Pro Genre den entscheidenden Parameter benennen (Tempo, Palm-Mute/offen, Ausklang, Feel) und bewusst umstellen. Die Farben nacheinander aufnehmen und blind zuordnen lassen: Erkennt man die Genres an der Behandlung, obwohl die Töne gleich sind?</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/transfer_riff_genrefarbe">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/transfer_riff_genrefarbe">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

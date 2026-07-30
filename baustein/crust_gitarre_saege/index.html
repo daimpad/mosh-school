@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Crust"], "description": "Die Crust-Gitarre ist ein Ausdauerinstrument: simple Powerchord-Folgen, überwiegend heruntergepickt, unter einer sägenden Zerre — und das über ganze Songs…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Crust-Gitarre: die Säge führen", "url": "https://zerrer.org/baustein/crust_gitarre_saege/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Crust-Gitarre: die Säge führen</h1><p class="leise">Gitarre · Fortgeschritten · Crust</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die Crust-Gitarre ist ein Ausdauerinstrument: simple Powerchord-Folgen, überwiegend heruntergepickt, unter einer sägenden Zerre — und das über ganze Songs ohne Verschnaufpause. Die Kunst liegt nicht in den Griffen, sondern in der rechten Hand: Der Anschlag muss über Minuten gleich hart, gleich lang und exakt mit dem D-Beat verzahnt bleiben. Eine müde werdende Anschlagshand hört man im Crust sofort, weil nichts sie versteckt.</p><p>Zwei Dinge halten die Säge im Schnitt: Erstens die Ökonomie — Downpicking aus einem lockeren Handgelenk mit kleiner Bewegung, nicht aus dem Unterarm gestemmt; wo das Tempo dauerhaft über der eigenen Downpicking-Grenze liegt, ist strikter Wechselschlag die ehrlichere Wahl, solange die Akzente weiter nach unten klingen. Zweitens die Dämpfungsdisziplin: Unter der breiten Zerre wachsen alle Nebengeräusche mit — die nicht gespielten Saiten brauchen ständige Kontrolle, sonst sägt es nicht, es rauscht.</p><p>Und wie beim D-Beat-Dauerlauf gilt: Belastung steigern statt erzwingen, bei Ziehen oder Brennen im Unterarm pausieren — und bei wiederkehrenden Beschwerden ärztlich abklären lassen.</p></section><section class="abschnitt"><h2>Übungsteil: Der lange Schnitt</h2><p><strong>Ziel:</strong> Eine simple Crust-Riff-Folge über Minuten mit konstantem Anschlag und sauberer Dämpfung halten.</p><p>So gehst du vor:</p><ol><li>Bau eine Zwei-Akkord-Folge (Powerchords, etwa im D-Beat-Tempo um 160 BPM) und spiel sie zwei Minuten am Stück heruntergepickt zum Klick. Fokus: kleine Bewegung, lockeres Handgelenk, Schultern unten.</li><li>Nimm die zwei Minuten auf und vergleich Anfang und Ende wie beim D-Beat-Dauerlauf: Ist der letzte Takt genauso hart und pünktlich wie der erste — oder wird der Anschlag flacher und eilig?</li><li>Kontrollier die Dämpfung unter Zerre: Stopp mitten im Lauf für einen Schlag alle Saiten ab — es muss SOFORT still sein. Wenn es nachrauscht, arbeitet die Dämpfung nicht mit; bau diesen Stopp alle acht Takte ein, bis Stille auf Kommando sitzt.</li><li>Verzahn dich mit dem Beat: Spiel die Folge über einen D-Beat-Loop (oder mit Schlagzeug) und akzentuier exakt die Snare-Schläge mit. Gitarre und Beat müssen wie ein Instrument klingen.</li></ol><p><strong>Steigerung:</strong> Verlängere auf drei, vier Minuten im selben Tempo, bevor du schneller wirst — und markier wie beim Dauerlauf die Stellen, an denen du unbewusst Kraft aufbaust, um genau dort zu lockern.</p><p><strong>Selbstkontrolle:</strong> Auf der Aufnahme: Bleiben alle Anschläge über die volle Dauer gleich laut? Ist zwischen den Riffs echte Stille statt Rauschteppich? Brennende Unterarme heißen: Bewegung zu groß oder zu verkrampft — kürzer üben, lockerer spielen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/downpicking/">Downpicking</a></li><li><a href="../../baustein/crust_sound_dreck/">Crust-Sound: Dreck mit Absicht</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=crust">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Crust-Gitarre: keine Sägekante</h3><p><strong>Symptom:</strong> Die charakteristische Säge-Kante fehlt — der Ton klingt zu sauber oder zu dünn.</p><p><strong>Ursache:</strong> Zu wenig Biss und Anzerrung, und der Anschlag ist zu weich; die Kante wird nicht bewusst geformt.</p><p><strong>Korrektur &amp; Ansage:</strong> Anschlag und Ton auf die Kante bringen — dreckig, aber kontrolliert. Im Zusammenklang prüfen, ob die Gitarre sägt statt zu verschwinden.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/crust_gitarre_saege">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/crust_gitarre_saege">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

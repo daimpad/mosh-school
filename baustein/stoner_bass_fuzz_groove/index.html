@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Fortgeschritten", "Stoner / Post-Metal"], "description": "Im Stoner und Post-Metal ist der Bass selten nur das Fundament — er ist oft die zweite Stimme des Riffs und trägt einen erheblichen Teil des…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Stoner-Bass: Fuzz, Fundament & Bewegung", "url": "https://zerrer.org/baustein/stoner_bass_fuzz_groove/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Stoner-Bass: Fuzz, Fundament &amp; Bewegung</h1><p class="leise">Bass · Fortgeschritten · Stoner / Post-Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Im Stoner und Post-Metal ist der Bass selten nur das Fundament — er ist oft die zweite Stimme des Riffs und trägt einen erheblichen Teil des Klangcharakters. Ein fuzziger, mittenreicher Bass verschmilzt mit der Gitarre zu einer breiten, warmen Wand oder übernimmt in den ruhigen Passagen sogar die Führung, wenn die Gitarre nur Flächen legt. Weil das Genre von Groove und Dynamik lebt (nicht von Tempo), hat der Bass hier viel Raum, sich zu bewegen.</p><p>Zwei Rollen wechseln sich ab. In den groovenden Stoner-Teilen folgt der Bass dem Riff, aber mit eigener Bewegung: kleine Läufe, Bendings, das Ausfüllen der Lücken, die die Gitarre lässt — ein Bass, der mitatmet statt nur Grundtöne zu halten. In den ruhigen Post-Metal-Passagen wird er zum Anker der Atmosphäre: wenige, warme, lang gehaltene Töne, die den Aufbau tragen, bis die Wand kommt.</p><p>Der Ton ist Genre-Sache: Ein leicht angezerrter oder gefuzzter Bass mit präsenten Mitten setzt sich durch und verschmilzt zugleich mit der Gitarre. Wichtig ist die Balance — genug Fuzz für den Charakter, genug Definition, dass die Bewegung hörbar bleibt und nicht im Matsch verschwindet.</p></section><section class="abschnitt"><h2>Übungsteil: Fundament, das mitatmet</h2><p><strong>Ziel:</strong> Zwischen groovender Riff-Begleitung mit eigener Bewegung und tragender Atmosphäre-Rolle wechseln.</p><p>So gehst du vor:</p><ol><li>Stell einen warmen, leicht angezerrten Ton mit präsenten Mitten ein. Spiel zu einem Stoner-Riff (Aufnahme oder mitgedacht) zuerst nur die Grundtöne — satt und im Groove, leicht hinter dem Klick.</li><li>Füll die Lücken: Dort, wo die Gitarre Raum lässt, setz einen kleinen Lauf oder ein Bending — der Bass antwortet dem Riff, statt nur mitzulaufen. Spiel es, bis Bass und Gitarre ein Gespräch sind, kein Unisono.</li><li>Wechsel die Rolle: Spiel vier Takte groovende Begleitung, dann eine ruhige Passage, in der nur du wenige lange, warme Töne hältst (die Gitarre denkst du dir als Fläche). Der Übergang ist bewusst, nicht zufällig.</li><li>Prüf die Ton-Balance: Spiel die bewegte Linie einmal mit viel Fuzz und einmal cleaner — bleibt die Bewegung im Fuzz noch hörbar? Genug Charakter, genug Definition.</li></ol><p><strong>Steigerung:</strong> Übe den langen Aufbau: Beginne eine Passage sehr leise und schlicht und steigere über acht Takte Gewicht und Bewegung, bis der Bass die Wand mitträgt — ohne das Tempo zu ändern, nur Intensität.</p><p><strong>Selbstkontrolle:</strong> Hör die Aufnahme mit Gitarre: Verschmilzt der Bass zur warmen Wand UND bleibt seine Bewegung hörbar? Trägt er die ruhige Passage wirklich, oder fällt sie in sich zusammen? Wird die bewegte Linie im Fuzz zu Matsch, fehlt Mitten-Definition, nicht Lautstärke.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/doom_bass/">Doom-Bass: schwer und getragen</a></li><li><a href="../../baustein/bass_akkordspiel/">Powerchords &amp; Doppelgriffe am Bass</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=stoner_post">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Stoner-Bass: Bewegung im Fuzz-Matsch</h3><p><strong>Symptom:</strong> Der bewegliche Bass verschwindet im Fuzz — die kleinen Läufe und Bendings sind nicht mehr hörbar, es bleibt ein wolliger Teppich.</p><p><strong>Ursache:</strong> Zu viel Fuzz ohne Mitten-Definition; der Anschlag hat keinen Kern, mit dem sich die Bewegung durchsetzt.</p><p><strong>Korrektur &amp; Ansage:</strong> Mitten präsent lassen und Attack aus dem Anschlag holen; im Zweifel etwas weniger Fuzz. Die bewegte Linie einmal cleaner und einmal gefuzzt vergleichen — bleibt die Bewegung im Fuzz hörbar? Fehlt sie, ist es Definition, nicht Lautstärke.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/stoner_bass_fuzz_groove">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/stoner_bass_fuzz_groove">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Fortgeschritten", "Doom"], "description": "Doom-Songs sind oft acht, zwölf, zwanzig Minuten lang — und leben von einer Dramaturgie, die mit Pop-Strukturen nichts mehr zu tun hat: Wiederholung wird…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Doom-Dramaturgie: Spannung über Länge", "url": "https://zerrer.org/baustein/doom_dramaturgie/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Doom-Dramaturgie: Spannung über Länge</h1><p class="leise">Theorie · Fortgeschritten · Doom</p><section class="abschnitt"><h2>Erklärteil</h2><p>Doom-Songs sind oft acht, zwölf, zwanzig Minuten lang — und leben von einer Dramaturgie, die mit Pop-Strukturen nichts mehr zu tun hat: Wiederholung wird zur Trance, minimale Veränderung zum Großereignis, und die Dynamik bewegt sich in langen Bögen statt in Strophe-Refrain-Sprüngen.</p><p>Das Handwerk dahinter ist eine Ökonomie der Ereignisse: Je länger ein Riff unverändert arbeitet, desto größer wirkt die kleinste Veränderung — ein zusätzliches Becken, eine zweite Gitarrenstimme, ein Oktavsprung im Bass können nach zwei Minuten Wiederholung wie ein Ausbruch wirken. Die Kunst liegt darin, die Grenze zwischen Trance und Langeweile zu spüren: den Punkt, an dem die Wiederholung gerade noch trägt, und dort — und erst dort — das nächste Ereignis zu setzen.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Nimm dir einen langen Doom-Song vor (acht Minuten oder mehr) und kartiere ihn beim Hören: Notier auf einer Zeitleiste, wann sich WIRKLICH etwas ändert — ein neues Riff, eine neue Klangfarbe, ein Tempo- oder Dynamikwechsel, der Einsatz des Gesangs. Miss die Abstände: Wie lange lässt der Song ein einzelnes Riff arbeiten, bevor er es verändert? Und wie klein sind die Veränderungen, die trotzdem wie Ereignisse wirken?
 
 Überleg zum Schluss: An welcher Stelle wäre dir als Hörer fast langweilig geworden — und womit fängt der Song dich genau dort wieder ein? Wenn du selbst schreibst: Wo könntest du in deinem Material eine Veränderung WEGLASSEN und der Wiederholung mehr Zeit geben?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/songstruktur_breakdown/">Songstruktur &amp; Breakdown</a></li><li><a href="../../baustein/arrangement_dichte/">Arrangement: Dichte, Register, Raum</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=doom">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Doom-Dramaturgie: die Ungeduld</h3><p><strong>Symptom:</strong> Die selbstgeschriebenen langen Songs wirken kurzatmig: Alle dreißig Sekunden passiert etwas Neues, die Trance stellt sich nie ein — oder das Gegenteil: Ein Riff läuft acht Minuten, und irgendwann hört niemand mehr zu.</p><p><strong>Ursache:</strong> Das Verhältnis von Wiederholung und Ereignis ist nicht kalibriert: Entweder fehlt das Vertrauen in die Wiederholung (jede Angst vor Langeweile wird sofort mit einem Wechsel beantwortet), oder die Grenze zwischen Trance und Langeweile wurde nie bewusst gesucht — Wiederholung allein ist noch keine Dramaturgie.</p><p><strong>Korrektur &amp; Ansage:</strong> Mit der Stoppuhr hören lassen: bei zwei, drei großen Doom-Songs die Abstände zwischen echten Veränderungen messen und daneben die eigene Skizze legen — der Unterschied ist meist drastisch. Dann die Übung umdrehen: im eigenen Material eine geplante Veränderung ersatzlos streichen und der Wiederholung doppelt so viel Zeit geben; anschließend prüfen, wo die Aufmerksamkeit wirklich kippt, und GENAU dort das kleine Ereignis setzen (ein Becken, eine zweite Stimme — nicht gleich ein neues Riff).</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/doom_dramaturgie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/doom_dramaturgie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

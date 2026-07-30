@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Fortgeschritten", "Hardcore"], "description": "Gang-Shouts sind das Gemeinschaftsritual des Hardcore: mehrere Stimmen, die dieselbe Parole gleichzeitig rufen — live oft mit dem halben Publikum am Mikro.…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Gang-Shouts & Mitgröl-Parts", "url": "https://zerrer.org/baustein/hardcore_gangshouts/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Gang-Shouts &amp; Mitgröl-Parts</h1><p class="leise">Vocals · Fortgeschritten · Hardcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Gang-Shouts sind das Gemeinschaftsritual des Hardcore: mehrere Stimmen, die dieselbe Parole gleichzeitig rufen — live oft mit dem halben Publikum am Mikro. Damit das nach Wucht klingt und nicht nach Chaos, braucht es zwei Dinge: rhythmische Präzision (alle Silben exakt zusammen, wie ein perkussiver Schlag) und eine gesunde Ruftechnik.</p><p>Denn Shouten ist nicht Schreien: Ein tragfähiger Shout kommt aus der Stütze und aus Resonanz — der Körper arbeitet, der Hals bleibt weit. Wer aus dem Hals ruft, ist nach drei Songs heiser; wer aus dem Körper ruft, trägt einen ganzen Auftritt. Das Prinzip ist dasselbe wie beim Rufen über einen Sportplatz: Zwerchfell-Impuls, offener Rachen, kurze und entschlossene Töne statt gepresster Länge.</p><p>Gesundheitsrahmen wie immer: leise beginnen, Lautstärke über Wochen aufbauen, bei Kratzen oder Engegefühl sofort stoppen — und wer regelmäßig shoutet, wärmt die Stimme genauso auf wie für jeden anderen Gesang. Bei anhaltender Heiserkeit gehört die Stimme in die HNO-Praxis.</p></section><section class="abschnitt"><h2>Übungsteil: Der präzise Ruf</h2><p><strong>Ziel:</strong> Kurze Shout-Phrasen rhythmisch exakt und stimmlich gesund platzieren.</p><p>So gehst du vor:</p><ol><li>Wärm die Stimme auf. Sprich eine kurze Parole (zwei bis vier Silben) zuerst rhythmisch im Sprechton zu einem langsamen Klick — jede Silbe exakt auf ihren Schlag.</li><li>Steiger zum halblauten Ruf aus der Stütze: Impuls aus der Körpermitte, Hals bleibt locker, die Silben bleiben kurz. Lautstärke nur so weit, wie es mühelos bleibt.</li><li>Platzier die Shouts in einen musikalischen Kontext: Ruf die Parole an einer festen Stelle über ein geloopte Riff oder eine Aufnahme (etwa als Antwort auf die Hauptstimme). Timing vor Lautstärke.</li><li>Übe den Wechsel: eine Zeile normale Stimme oder Harsh-Ansatz, dann der Gang-Shout, dann zurück — der Shout darf die folgende Phrase nicht beschädigen.</li></ol><p><strong>Steigerung:</strong> Wenn du mit anderen üben kannst: Ruft die Parole zu zweit oder dritt und nehmt euch auf — das Ziel ist EIN gemeinsamer Schlag pro Silbe, nicht drei fast gleichzeitige.</p><p><strong>Selbstkontrolle:</strong> Fühlt sich der Hals nach zehn Shouts neutral an? Sitzen alle Silben auf der Aufnahme exakt zusammen bzw. auf dem Klick? Heiserkeit oder Kratzen heißt: zu laut oder zu sehr aus dem Hals — leiser und zurück zu Schritt 2.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/rhythmus_phrasierung/">Rhythmus &amp; Phrasierung</a></li><li><a href="../../baustein/harsh_stile_ueberblick/">Harsh-Vocal-Stile im Überblick</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=hardcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gang-Shouts: aus dem Hals gerufen</h3><p><strong>Symptom:</strong> Nach wenigen Shouts wird die Stimme rau, der Ruf klingt gequetscht statt wuchtig — und im Ensemble kleckern die Silben, statt als ein Schlag zu treffen.</p><p><strong>Ursache:</strong> Gerufen wird mit dem Hals statt mit dem Körper: kein Stütz-Impuls, enger Rachen, zu lange und zu laute Töne. Dazu fehlt die rhythmische Verabredung — jeder ruft gefühlt richtig, aber niemand exakt auf dem Schlag.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Rufe neu verankern: erst im Sprechton rhythmisch exakt zum Klick, dann halblaut aus der Stütze (Impuls aus der Körpermitte, kurze entschlossene Silben), Lautstärke nur so weit, wie es mühelos bleibt. Timing vor Wucht: Silben wie perkussive Schläge behandeln und im Ensemble auf EINEN gemeinsamen Schlag hin üben. Kratzen oder Heiserkeit heißt sofort leiser — und Aufwärmen gilt auch für Shouts.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_gangshouts">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_gangshouts">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

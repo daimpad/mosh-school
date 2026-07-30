@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Bass", "Profi"], "description": "Das zentrale Problem beim verzerrten Bass ist physikalisch: Verzerrung komprimiert und erzeugt Obertöne, wodurch der Grundton relativ leiser wird. Wer das…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Bass-Signalkette: Zerre ohne Tiefenverlust", "url": "https://zerrer.org/baustein/bass_signalkette_detail/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Bass-Signalkette: Zerre ohne Tiefenverlust</h1><p class="leise">Equipment · Bass · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Das zentrale Problem beim verzerrten Bass ist physikalisch: Verzerrung komprimiert und erzeugt Obertöne, wodurch der Grundton relativ leiser wird. Wer das gesamte Signal verzerrt, verliert genau das Fundament, das der Bass beisteuern soll — der Ton wird zwar aggressiver, aber der Mix bekommt ein Loch im Tiefbass.</p><p>Die verbreitete Lösung ist das Aufteilen des Signals. Ein Clean-Blend mischt ein unverzerrtes Signal parallel zum verzerrten, sodass die Tiefen erhalten bleiben. Noch sauberer arbeitet eine Frequenzweiche: Der Bassanteil unterhalb einer Trennfrequenz bleibt clean, nur der obere Bereich wird verzerrt. Beides erreicht dasselbe Ziel — Biss in den Mitten, Fundament unten.</p><p>Für die Praxis wichtig: Ein DI-Ausgang liefert dem Mischpult ein sauberes Signal unabhängig vom Bühnenklang, weshalb viele Bassisten unverzerrt oder mit separatem DI-Abgriff ins Pult gehen und die Zerre nur auf der Bühne oder als zweites Signal führen. Ein Kompressor mit moderater Einstellung gleicht Anschlagunterschiede aus und hilft der Basslinie, gleichmäßig zu tragen — zu viel davon nimmt jedoch genau die Dynamik, die den Anschlag interessant macht.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Verlierst du beim Verzerren dein Fundament — und arbeitest du schon mit Clean-Blend oder Frequenzweiche? Weißt du, welches Signal beim Konzert tatsächlich ins Pult geht? Und ist deine Kompression moderat genug, dass Anschlagdynamik erhalten bleibt?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/bass_signalkette/">Signalkette: Kompression, Zerr-Split, DI</a></li><li><a href="../../baustein/bass_aktiv_passiv/">Aktiv oder passiv: Elektronik am Bass</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Verzerrter Bass ohne Fundament</h3><p><strong>Symptom:</strong> Der Bass klingt allein aggressiv und gut, hinterlässt im Bandkontext aber ein Loch: Der Mix wirkt dünn, obwohl der Bass hörbar ist.</p><p><strong>Ursache:</strong> Die Verzerrung wirkt auf das gesamte Frequenzband. Sie erzeugt Obertöne und komprimiert, wodurch der Grundton relativ leiser wird — genau das Fundament fehlt dann.</p><p><strong>Korrektur &amp; Ansage:</strong> Clean-Blend beimischen oder eine Frequenzweiche einsetzen, sodass nur der obere Bereich verzerrt wird. Prüfen lässt sich das im Zusammenspiel, nicht allein: Ein Bass, der solo perfekt klingt, ist im Bandkontext oft falsch eingestellt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/bass_signalkette_detail">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/bass_signalkette_detail">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Einsteiger", "Thrash", "Death Metal"], "description": "Jetzt fügst du die Bausteine zusammen. Ein typisches Metal-Riff kombiniert palm-muted Töne auf der tiefen Saite mit eingestreuten Powerchords oder offenen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Einfaches Riff zusammensetzen", "url": "https://zerrer.org/baustein/einfaches_riff/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Einfaches Riff zusammensetzen</h1><p class="leise">Gitarre · Einsteiger · Thrash · Death Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Jetzt fügst du die Bausteine zusammen. Ein typisches Metal-Riff kombiniert palm-muted Töne auf der tiefen Saite mit eingestreuten Powerchords oder offenen Akzenten — aus wenigen Elementen entsteht ein wiedererkennbares Muster.</p><p>Der Schlüssel ist der saubere Übergang: von gedämpft zu offen, von Einzelton zu Powerchord, ohne dass der Rhythmus stockt. Genau an diesen Nahtstellen zeigt sich, ob die vorherigen Grundlagen sitzen.</p><p>Üb das Riff zuerst langsam und ganz, bevor du das Tempo anziehst. Ein langsam sauberes Riff wird schnell; ein schnell gespieltes, unsauberes bleibt unsauber.</p></section><section class="abschnitt"><h2>Übungsteil: Zwei-Takt-Riff bauen</h2><p><strong>Ziel:</strong> Grundtechniken zu einem flüssigen Riff verbinden.</p><p>So gehst du vor:</p><ol><li>Spiel einen Takt palm-muted Chugs auf der tiefen Saite.</li><li>Setz im zweiten Takt zwei Powerchords als Akzente dazu.</li><li>Spiel beide Takte langsam im Wechselschlag, bis die Übergänge sauber laufen.</li></ol><p><strong>Steigerung:</strong> Erhöhe das Tempo in kleinen Schritten und variiere Reihenfolge oder Töne.</p><p><strong>Selbstkontrolle:</strong> Das Riff läuft flüssig; die Wechsel zwischen gedämpft und offen sind sauber und im Takt.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/palm_muting/">Palm Muting</a></li><li><a href="../../baustein/powerchords/">Powerchords</a></li><li><a href="../../baustein/wechselschlag/">Wechselschlag</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=thrash">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Riff: Nahtstellen zerfallen</h3><p><strong>Symptom:</strong> Das Riff zerfällt an den Übergängen: Zwischen gedämpften Chugs und offenen Akkorden entsteht eine Lücke oder ein Stolpern, obwohl beide Teile einzeln sauber laufen.</p><p><strong>Ursache:</strong> Die Nahtstellen wurden nie isoliert geübt — der Handballen hebt zu spät oder zu früh ab, und die Greifhand kommt beim Akkordwechsel nicht rechtzeitig an.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Naht als eigene Übung: nur die letzten zwei Chugs plus den ersten Akkord loopen, langsam, mit Fokus auf den Handballen-Moment. Dann die umgekehrte Naht (Akkord zurück zu Chugs). Erst wenn beide Nähte sitzen, wieder das ganze Riff — die Lücke ist dann meist verschwunden.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/einfaches_riff">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/einfaches_riff">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

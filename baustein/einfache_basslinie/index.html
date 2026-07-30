@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Einsteiger", "Thrash", "Death Metal", "Metalcore"], "description": "Jetzt fügst du die Bausteine zusammen: Du folgst den Grundtönen eines Riffs, hältst mit der Greifhand die Nebengeräusche in Schach und gibst dem Ganzen mit…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Einfache Basslinie zum Riff", "url": "https://zerrer.org/baustein/einfache_basslinie/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Einfache Basslinie zum Riff</h1><p class="leise">Bass · Einsteiger · Thrash · Death Metal · Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Jetzt fügst du die Bausteine zusammen: Du folgst den Grundtönen eines Riffs, hältst mit der Greifhand die Nebengeräusche in Schach und gibst dem Ganzen mit gedämpftem Anschlag Kontur.</p><p>Der Schlüssel sind saubere Übergänge und stabiles Timing. Eine einfache, verlässliche Basslinie, die tight sitzt, ist mehr wert als eine komplizierte, die eiert. Genau an den Saitenwechseln und Akzenten zeigt sich, ob die Grundlagen greifen.</p><p>Übe die Linie erst langsam und ganz, bevor du das Tempo anziehst — eine langsam saubere Linie wird schnell, eine schnell unsaubere bleibt unsauber.</p></section><section class="abschnitt"><h2>Übungsteil: Basslinie zu einem kurzen Riff</h2><p><strong>Ziel:</strong> Grundtöne, Dämpfung und Timing zu einer tighten Linie verbinden.</p><p>So gehst du vor:</p><ol><li>Wähl ein kurzes Riff und spiel seine Grundtöne im passenden Rhythmus.</li><li>Dämpf ungewollte Saiten mit der Greifhand und gib den Tönen mit leichtem Palm Muting Kontur.</li><li>Spiel die Linie langsam, bis Übergänge und Timing sauber laufen.</li></ol><p><strong>Steigerung:</strong> Erhöhe das Tempo in kleinen Schritten und setz einzelne Akzente oder Durchgangstöne.</p><p><strong>Selbstkontrolle:</strong> Die Linie sitzt tight zum Riff; saubere Übergänge, keine Nebengeräusche, stabiles Timing.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/grundton_folgen/">Grundtönen folgen</a></li><li><a href="../../baustein/palm_muting_bass/">Palm Muting am Bass</a></li><li><a href="../../baustein/greifhand_daempfen/">Dämpfen mit der Greifhand</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=thrash">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Bass: Linie nicht am Riff</h3><p><strong>Symptom:</strong> Die einfache Basslinie läuft ungefähr neben Riff und Kick her, statt mit ihnen gekoppelt zu sein — das Fundament wirkt weich.</p><p><strong>Ursache:</strong> Die Linie folgt dem Grundton, ohne sich rhythmisch an Riff und Bassdrum auszurichten; die gemeinsamen Anschläge fallen nicht zusammen.</p><p><strong>Korrektur &amp; Ansage:</strong> Erst den Grundtönen des Riffs sicher folgen, dann die Anschläge bewusst mit der Kick koppeln. Langsam zum Klick, bis Bass, Riff und Kick als ein Fundament wirken.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/einfache_basslinie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/einfache_basslinie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

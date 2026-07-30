@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Körper & Gesundheit", "Profi"], "description": "Mehrere Shows pro Woche sind die härteste Prüfung für eine Extreme-Metal-Stimme — hier entscheidet nicht die Technik des besten Abends, sondern der Haushalt…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Tour-Haushalt: viele Shows, eine Stimme", "url": "https://zerrer.org/baustein/vocals_tour_haushalt/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Tour-Haushalt: viele Shows, eine Stimme</h1><p class="leise">Körper &amp; Gesundheit · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Mehrere Shows pro Woche sind die härteste Prüfung für eine Extreme-Metal-Stimme — hier entscheidet nicht die Technik des besten Abends, sondern der Haushalt über die ganze Strecke. Die Rechnung ist unbestechlich: Was ein Abend an Substanz kostet, muss vor dem nächsten regeneriert sein, sonst beginnt jede Show mit einem Defizit, das sich aufzinst.</p><p>Die Stellschrauben außerhalb der Bühne wiegen dabei am schwersten: konsequente Stimmruhe zwischen den Shows (das laute Reden im Van und auf der Aftershow kostet oft mehr als das Set), Schlaf als nicht verhandelbare Größe, Flüssigkeit, und ein tägliches, kurzes Auf- und Abwärm-Ritual als fester Anker. Kranke Tage sind Sondersituationen: Mit angeschlagener Stimme intensiv zu singen ist das größte Einzelrisiko überhaupt — hier helfen nur Reduktion, Umbau des Sets oder die Absage.</p><p>Profis kennen zudem ihre Frühwarnzeichen aus Erfahrung: das bestimmte Gefühl am Morgen, die Tonlücke, das schnellere Ermüden — und sie haben für jedes ein Protokoll. Wer erst reagiert, wenn die Stimme weg ist, hat die Tour verloren. Eine begleitende HNO-/Stimmärztin, die die eigene Stimme kennt, gehört auf diesem Niveau zur Ausstattung wie das Mikrofon.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Entwirf deinen Tour-Tag als Stundenplan aus Stimm-Sicht: Wann sind Ruhefenster, wann Auf- und Abwärmen, welche Regeln gelten für Van, Aftershow und Schlaf? Definiere außerdem drei persönliche Frühwarnzeichen und für jedes ein konkretes Protokoll (reduzieren, umbauen, pausieren) — und ab welchem Punkt eine Show für dich nicht mehr verantwortbar ist.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/set_pacing/">Set-Planung &amp; Pacing</a></li><li><a href="../../baustein/stimm_regeneration/">Regeneration &amp; Warnzeichen</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/vocals_tour_haushalt">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/vocals_tour_haushalt">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

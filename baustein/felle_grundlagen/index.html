@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Equipment", "Einsteiger"], "description": "Das Fell ist am Schlagzeug, was die Saite an der Gitarre ist: das schwingende Element, das den Ton macht — und der billigste große Hebel für deinen Sound.…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Felle: Schlag- und Resonanzfell", "url": "https://zerrer.org/baustein/felle_grundlagen/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Felle: Schlag- und Resonanzfell</h1><p class="leise">Drums · Equipment · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Das Fell ist am Schlagzeug, was die Saite an der Gitarre ist: das schwingende Element, das den Ton macht — und der billigste große Hebel für deinen Sound. Zwei sitzen auf jeder Trommel: das Schlagfell oben (worauf du spielst) und das Resonanzfell unten (das mitschwingt und den Ausklang formt).</p><p>Die Grundunterscheidungen: Aufgeraut (coated) klingt wärmer und kürzer, mit mehr Attack-Definition — der Metal-Standard für Snare und oft für Toms. Klar (clear) klingt offener, lauter und obertonreicher. Einlagig (1-ply) ist sensibel und offen; doppellagig (2-ply, oft mit Öl-Dämpfung) ist robuster, kürzer und kontrollierter — für hartes, schnelles Metal-Spiel die verbreitete Wahl, weil es weniger unkontrollierte Obertöne wirft und mehr aushält.</p><p>Das Resonanzfell ist meist dünner und klar. Faustregel für den Anfang: Schlagfelle doppellagig (Haltbarkeit und Kontrolle), Snare-Schlagfell aufgeraut. Wichtig ist vor allem, dass die Felle nicht durchgespielt und ausgebeult sind — ein totes Fell klingt tot und lässt sich nicht mehr sauber stimmen, egal wie gut das Set ist.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Inventarisiere die Felle deines Sets (oder des Proberaum-Sets): Welche Trommel trägt oben was — aufgeraut oder klar, ein- oder doppellagig? Sind sie noch gut, oder ausgebeult und stumpf? Drück in die Mitte jedes Schlagfells: Eine sichtbare bleibende Delle heißt, das Fell ist durch.
 
 Überleg dann für dein Spiel: Klingt deine Snare zu obertonreich und undefiniert (dann wäre ein aufgerautes, evtl. doppellagiges Schlagfell ein Gewinn) oder zu tot? Welches EINE Fell würdest du als Erstes tauschen, um den größten Sound-Sprung zu bekommen — und warum genau dieses?</p></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/felle_grundlagen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/felle_grundlagen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

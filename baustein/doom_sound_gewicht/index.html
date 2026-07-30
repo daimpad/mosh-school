@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Fortgeschritten", "Doom", "Stoner / Post-Metal"], "description": "Der Doom-Sound ist ein eigenes Rezept: Statt der eng kontrollierten High-Gain-Zerre des Death Metal dominieren Fuzz und aufgerissene Amps — Verzerrung, die…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Doom-Sound: Gewicht statt Gain", "url": "https://zerrer.org/baustein/doom_sound_gewicht/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Doom-Sound: Gewicht statt Gain</h1><p class="leise">Equipment · Fortgeschritten · Doom · Stoner / Post-Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Doom-Sound ist ein eigenes Rezept: Statt der eng kontrollierten High-Gain-Zerre des Death Metal dominieren Fuzz und aufgerissene Amps — Verzerrung, die breit, rau und ungezähmt klingt. Dazu kommen tiefe Stimmungen mit entsprechend dicken Saiten (sonst schlackert die Tiefe nur), und ein Element, das oft unterschätzt wird: Lautstärke als Klangfarbe. Viele Doom-Bands spielen laut, weil bewegte Luft und einsetzendes Feedback Teil des Sounds sind, nicht Dekoration.</p><p>Und nicht verhandelbar: Wer mit Lautstärke als Klangelement arbeitet, trägt Gehörschutz — bei jeder Probe, ohne Ausnahme. Ein Doom-Sound ist es nicht wert, ihn in zehn Jahren nur noch mit Tinnitus zu hören.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Hör dir zwei sehr unterschiedliche schwere Sounds an — etwa einen klassischen Doom-Fuzz und eine moderne Metalcore-Produktion — und beschreib den Unterschied in eigenen Worten: Wo sitzt die Verzerrung (breit und rau gegen kontrolliert und komprimiert)? Was macht der Tiefbass (offen wummernd gegen straff)? Wie viel Raum und Ausklang ist hörbar?
 
 Überleg dann für dein eigenes Setup: Mit welchen Mitteln kämst du dem Doom-Gewicht am nächsten — weniger Gain, aber mehr Amp-Arbeit? Dickere Saiten fürs tiefe Tuning? Welche Rolle bekämen Bass und Gitarre in deiner Wand — und wer von beiden hält das Tief?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/drop_tuning/">Drop-Tunings &amp; Stimmen</a></li><li><a href="../../baustein/bass_ton_gear/">Ton &amp; Durchsetzen im Mix</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=doom">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Doom-Sound: Gewicht mit Gain verwechselt</h3><p><strong>Symptom:</strong> Der Sound soll schwer werden, aber er wird nur dichter: mehr Verzerrung, tieferes Tuning mit den alten dünnen Saiten — und das Ergebnis schlackert, matscht und wird im Bandkontext eher kleiner als größer.</p><p><strong>Ursache:</strong> Die Doom-Schwere wird am falschen Regler gesucht: High-Gain-Kompression statt breiter, offener Zerre; Tiefe ohne die passende Saitenstärke; und die Rolle von Lautstärke und bewegter Luft im Klang wird ignoriert oder ohne Schutz gesucht. Das Rezept des Genres — Fuzz, dicke Saiten, Amp-Arbeit — ist schlicht nicht bekannt.</p><p><strong>Korrektur &amp; Ansage:</strong> Das Hörexperiment an den Anfang stellen: einen klassischen Doom-Fuzz neben eine moderne High-Gain-Produktion legen und den Unterschied benennen lassen (breit-offen gegen komprimiert-dicht). Dann das Setup in dieser Reihenfolge anpassen: Saitenstärke zum Tuning, weniger Gain und dafür mehr Amp und Anschlag, Zerre eher breit als heiß. Und die Grundregel verankern: Wer Lautstärke als Klangfarbe nutzt, trägt Gehörschutz — ohne Ausnahme.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/doom_sound_gewicht">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/doom_sound_gewicht">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

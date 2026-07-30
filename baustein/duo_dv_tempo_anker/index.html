@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Vocals", "Fortgeschritten"], "description": "Ohne harmonisches Instrument braucht die Stimme einen klaren zeitlichen Anker — das Schlagzeug. Gerade rhythmisch gesprochene oder geschriene Passagen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Drums & Gesang: das Schlagzeug als Anker", "url": "https://zerrer.org/baustein/duo_dv_tempo_anker/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Drums &amp; Gesang: das Schlagzeug als Anker</h1><p class="leise">Drums · Vocals · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ohne harmonisches Instrument braucht die Stimme einen klaren zeitlichen Anker — das Schlagzeug. Gerade rhythmisch gesprochene oder geschriene Passagen müssen sich am Puls der Drums festhalten, sonst verlieren sie die Form.</p><p>Die Stimme hört bewusst auf Kick und Snare als Raster und platziert ihre Phrasen darin. Der Drummer hält den Puls so stabil, dass die Stimme sich verlassen kann — ein Zusammenspiel wie zwischen Bass und Bassdrum, nur mit der Stimme.</p></section><section class="abschnitt"><h2>Übungsteil: Am Puls festhalten</h2><p><strong>Ziel:</strong> Vocal-Phrasen ohne Harmonieinstrument am Drum-Puls verankern.</p><p>So gehst du vor:</p><ol><li>Der Drummer spielt eine einfache, stabile Figur zum Klick.</li><li>Die Stimme platziert rhythmische Phrasen bewusst auf Kick und Snare.</li><li>Reduziert den Klick und prüft, ob die Stimme am Drum-Puls stabil bleibt.</li></ol><p><strong>Steigerung:</strong> Nehmt eine komplexere Drum-Figur und haltet die Phrasen sauber im Raster.</p><p><strong>Selbstkontrolle:</strong> Die Vocal-Phrasen sitzen stabil im Puls; ohne Klick bleibt die Form erhalten.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/timing_klick/">Zum Klick &amp; zur Band spielen</a></li><li><a href="../../baustein/zur_musik_singen/">Zur Musik &amp; zum Klick singen</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Drums &amp; Gesang: Phrasen verlieren den Puls</h3><p><strong>Symptom:</strong> Ohne Harmonieinstrument verlieren rhythmisch gesprochene oder geschriene Phrasen die Form — die Stimme hält sich nicht am Puls des Schlagzeugs fest und eiert.</p><p><strong>Ursache:</strong> Die Stimme hört nicht bewusst auf Kick und Snare als Raster; der Drummer hält den Puls nicht stabil genug, als dass die Stimme sich verlassen könnte.</p><p><strong>Korrektur &amp; Ansage:</strong> Der Drummer spielt eine einfache, stabile Figur zum Klick; die Stimme platziert ihre Phrasen bewusst auf Kick und Snare. Reduziert den Klick schrittweise und prüft, ob die Form am Drum-Puls stabil bleibt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/duo_dv_tempo_anker">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/duo_dv_tempo_anker">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

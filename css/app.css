@@ -339,42 +339,58 @@ main {
 
 body.im-onboarding .fussnav { display: none; }
 
-/* ---------- Seiten-Footer (NUR Desktop ≥768px) ---------- */
-/* Auf Mobil trägt die fixierte Bottom-Bar die Navigation — der Footer bleibt aus.
-   Ab Tablet (Bar entfällt) erscheint er als ruhige Quick-Link-Zeile am Seitenende. */
-.seiten-footer { display: none; }
+/* ---------- Seiten-Footer (auf ALLEN Breiten) ---------- */
+/* Frueher nur ab 768px sichtbar — auf Mobil trug die fixierte Bottom-Bar die
+   Navigation, und der Footer blieb ganz aus. Damit waren Impressum, Datenschutz
+   und die Seiten-Uebersicht auf dem Telefon nur ueber das Menue erreichbar.
+   Jetzt steht er ueberall; auf Mobil sorgt das Innenmass unten dafuer, dass die
+   letzte Zeile nicht unter der fixierten Leiste verschwindet.
+   Dieselben Regeln tragen die statischen Tier-2-Seiten (scripts/build_seiten.py),
+   die dasselbe Markup ohne JS ausliefern — deshalb duerfen sie NICHT an
+   Zustands-Klassen haengen. */
+.seiten-footer {
+  display: block;
+  border-top: 1px solid var(--linie);
+  background: var(--kopf-bg, var(--flaeche));
+  padding: 2rem 1.5rem calc(1.4rem + 4.2rem + env(safe-area-inset-bottom));
+  margin-top: 2rem;
+}
 body.im-onboarding .seiten-footer { display: none; }
+/* Vier gleichrangige Teile (Marke + drei Link-Spalten) in EINER Reihe. Vorher
+   war das ein flex-wrap-Band bei 44rem: Sobald die vierte Spalte dazukam, brach
+   sie in eine zweite Zeile um. Grid statt Flex, damit die Aufteilung fest ist,
+   und 52rem statt 44rem, weil vier Spalten in der Textspalten-Breite gedraengt
+   stehen — der Footer ist ein eigenes Band mit eigener Flaeche und muss das
+   Innenmass von `main` nicht spiegeln. */
+.footer-innen {
+  max-width: 52rem; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr; gap: 1.5rem 2.4rem; align-items: start;
+}
+@media (min-width: 34rem) { .footer-innen { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 62rem) { .footer-innen { grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); } }
+.footer-marke { display: flex; flex-direction: column; gap: 0.2rem; }
+/* Dieselbe Wortmarke wie in der Kopfzeile — also auch dieselbe Tinte. */
+.footer-marke-name {
+  font-family: var(--schrift-display, inherit); color: var(--tinte);
+  font-size: 1.15rem; letter-spacing: 0.02em;
+}
+.footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
+.footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
+.footer-titel {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--tinte-2); font-weight: 700; margin-bottom: 0.15rem;
+}
+.footer-spalte a { color: var(--tinte); text-decoration: none; font-size: 0.9rem; }
+.footer-spalte a:hover, .footer-spalte a:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
+.footer-schluss {
+  max-width: 52rem; margin: 1.4rem auto 0; padding-top: 1rem;
+  border-top: 1px solid var(--trennlinie); color: var(--tinte-2);
+  font-size: 0.76rem; letter-spacing: 0.02em;
+}
+/* Ab Tablet faellt die fixierte Bottom-Bar weg (siehe .fussnav) — dann braucht
+   der Footer den Platzhalter fuer sie nicht mehr. */
 @media (min-width: 768px) {
-  .seiten-footer {
-    display: block;
-    border-top: 1px solid var(--linie);
-    background: var(--kopf-bg, var(--flaeche));
-    padding: 2rem 1.5rem 1.4rem;
-    margin-top: 2rem;
-  }
-  .footer-innen {
-    max-width: 44rem; margin: 0 auto;
-    display: flex; flex-wrap: wrap; gap: 1.6rem 3rem; align-items: flex-start;
-  }
-  .footer-marke { display: flex; flex-direction: column; gap: 0.2rem; margin-right: auto; }
-  /* Dieselbe Wortmarke wie in der Kopfzeile — also auch dieselbe Tinte. */
-  .footer-marke-name {
-    font-family: var(--schrift-display, inherit); color: var(--tinte);
-    font-size: 1.15rem; letter-spacing: 0.02em;
-  }
-  .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
-  .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
-  .footer-titel {
-    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
-    color: var(--tinte-2); font-weight: 700; margin-bottom: 0.15rem;
-  }
-  .footer-spalte a { color: var(--tinte); text-decoration: none; font-size: 0.9rem; }
-  .footer-spalte a:hover, .footer-spalte a:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
-  .footer-schluss {
-    max-width: 44rem; margin: 1.4rem auto 0; padding-top: 1rem;
-    border-top: 1px solid var(--trennlinie); color: var(--tinte-2);
-    font-size: 0.76rem; letter-spacing: 0.02em;
-  }
+  .seiten-footer { padding-bottom: 1.4rem; }
 }
 body.im-onboarding main { padding-bottom: 2rem; }
 
@@ -3629,10 +3645,10 @@ a.karte-link.verweiszeile {
    steht bewusst daneben: „Quelltext offen" ist eine Haltung, kein Feature.
    Die Texte setzt beschrifteRahmen() aus den Labels. */
 .footer-haltung {
-  /* Der Footer selbst erscheint erst ab Tablet (.seiten-footer) — die Zeile
-     folgt demselben Breakpoint, sonst stünde sie mobil ohne Footer da. */
-  display: none;
-  max-width: 44rem;
+  /* Läuft mit dem Footer auf allen Breiten mit (früher erst ab Tablet, weil
+     der Footer selbst mobil ausgeblendet war). */
+  display: flex;
+  max-width: 52rem;
   margin: 0.9rem auto 0;
   flex-wrap: wrap;
   gap: 0.5rem 1.3rem;
@@ -3647,9 +3663,6 @@ a.karte-link.verweiszeile {
 .footer-haltung-eintrag .fa-brands { color: var(--primaer); }
 a.footer-quelltext { color: var(--tinte); text-decoration: none; }
 a.footer-quelltext:hover, a.footer-quelltext:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
-@media (min-width: 768px) {
-  .footer-haltung { display: flex; }
-}
 
 
 /* Chips im Hero: EIN Aussehen fuer alle. In der Zeile unter dem Titel stehen

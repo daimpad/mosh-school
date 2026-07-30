@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Equipment", "Profi"], "description": "Das Schlagzeug hat mehr bewegliche Verschleißteile als jedes andere Bandinstrument — und live gilt dieselbe Regel wie für die ganze Backline: Nicht das…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Wartung & Ausfallsicherheit am Set", "url": "https://zerrer.org/baustein/drums_wartung_backup/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Wartung &amp; Ausfallsicherheit am Set</h1><p class="leise">Drums · Equipment · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Das Schlagzeug hat mehr bewegliche Verschleißteile als jedes andere Bandinstrument — und live gilt dieselbe Regel wie für die ganze Backline: Nicht das beste Set gewinnt, sondern das, das den Abend übersteht. Ein gerissenes Fell mitten im Set, ein gebrochenes Becken oder eine kaputte Fußmaschinen-Feder beendet ohne Vorbereitung deinen Auftritt.</p><p>Die Standards, nach Wahrscheinlichkeit: Sticks brechen zuerst und am häufigsten — mehrere Paare griffbereit AM Set (im Stick-Bag am Floor-Tom), nie in der Tasche hinter der Bühne. Snare-Schlagfelle reißen bei hartem Spiel — ein gestimmtes Ersatzfell (plus Stimmschlüssel, der immer dabei ist) gehört ins Gepäck. Fußmaschinen-Federn und -Schlägel sind Verschleiß — Ersatzteile und im Zweifel eine ganze Reserve-Maschine. Becken reißen selten spontan, aber ein Riss kündigt sich an: regelmäßig die Ränder prüfen, ein rissiges Becken vor der Show tauschen. Filze, Flügelmuttern und Teppich-Reserven wiegen nichts und fehlen im Ernstfall genau dann.</p><p>Dazu die Routine: Vor der Show einmal alle Schrauben und Klemmen auf festen Sitz prüfen (Vibration lockert alles), den Stimmschlüssel griffbereit haben — und den Ausfall-Plan mit der Band teilen. Reißt dir ein Fell mitten im Song, gilt die Weiterspielen-Regel für die anderen: Sie überbrücken, du löst das Problem beim nächsten Break oder spielst notfalls reduziert weiter.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Schreib deine Drum-Ausfall-Matrix: die vier wahrscheinlichsten Ausfälle (Stick, Snare-Fell, Feder/Schlägel, Becken) und daneben ehrlich deinen aktuellen Plan B — inklusive „hab keinen“. Pack dann konkret deine Notfall-Kiste: Was fehlt an Ersatz-Sticks, gestimmtem Reserve-Fell, Stimmschlüssel, Kleinteilen?
 
 Mach außerdem den Festigkeits-Check: Geh vor der nächsten Probe einmal alle Klemmen und Schrauben durch — wie viele waren locker? Und besprich mit der Band den Fell-reißt-mitten-im-Song-Fall: Wer überbrückt wie, was ist das Zeichen, dass du kurz raus musst? Einmal geklärt, ist es im Ernstfall Routine statt Panik.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/hardware_stabilitaet/">Hardware &amp; Stabilität</a></li><li><a href="../../baustein/backline_ausfallsicherheit/">Backline &amp; Ausfallsicherheit</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/drums_wartung_backup">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/drums_wartung_backup">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

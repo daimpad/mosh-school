@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Death Metal", "Metalcore"], "description": "Palm Muting kennst du als Grundtechnik — fortgeschritten wird es als System: bewusst gesetzte Betonungen, schnelle Wechsel zwischen gedämpft und offen und…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Tighte Palm-Mute-Systeme", "url": "https://zerrer.org/baustein/palm_mute_systeme/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Tighte Palm-Mute-Systeme</h1><p class="leise">Gitarre · Fortgeschritten · Death Metal · Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Palm Muting kennst du als Grundtechnik — fortgeschritten wird es als System: bewusst gesetzte Betonungen, schnelle Wechsel zwischen gedämpft und offen und synkopierte Muster, die das Riff rhythmisch aufbrechen. Der Handballen wird zum Dynamik-Werkzeug, nicht nur zum Dämpfer.</p><p>Entscheidend ist die Kontrolle über den Dämpfungsgrad. Etwas mehr Druck macht den Chug kürzer und perkussiver, etwas weniger lässt mehr Ton stehen. Wenn du diese Abstufung bewusst steuerst, bekommt eine Reihe gleicher Töne plötzlich Kontur.</p><p>Die zweite Ebene ist das exakte An- und Abschalten der Dämpfung. Ein offener Akzent mitten in einer Chug-Reihe wirkt nur, wenn der Handballen im richtigen Moment kurz abhebt und sofort wieder auflegt. Präzision schlägt hier Tempo — ein tightes, mittelschnelles System klingt brutaler als ein hektisches.</p></section><section class="abschnitt"><h2>Übungsteil: Gedämpft, offen, betont</h2><p><strong>Ziel:</strong> Dämpfung und Akzente innerhalb eines Riffs bewusst steuern.</p><p>So gehst du vor:</p><ol><li>Spiel eine Reihe palm-gemuteter Sechzehntel auf der tiefen Saite in gleichmäßigem Puls.</li><li>Setze an festen Stellen einen offenen, betonten Ton, indem der Handballen kurz abhebt.</li><li>Variiere den Dämpfungsdruck, sodass manche Chugs kürzer und härter klingen als andere.</li></ol><p><strong>Steigerung:</strong> Die Akzente synkopisch verschieben (auf schwache Zählzeiten) und das Muster im Loop spielen.</p><p><strong>Selbstkontrolle:</strong> Gedämpfte und offene Töne sind klar getrennt, die Akzente sitzen im Timing, und die Dämpfung schwankt nicht unbeabsichtigt.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/palm_muting/">Palm Muting</a></li><li><a href="../../baustein/einfaches_riff/">Einfaches Riff zusammensetzen</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=death_metal">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gitarre: Palm-Mutes inkonsistent</h3><p><strong>Symptom:</strong> Die Palm-Mutes sind inkonsistent — mal offen, mal ganz tot — und nicht tight zum Beat.</p><p><strong>Ursache:</strong> Die Handballen-Position wandert, und der Anschlag ist ungleich stark.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Handballen-Position konstant halten und tight zum Klick spielen. Per Aufnahme prüfen, ob alle gedämpften Anschläge gleich klingen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/palm_mute_systeme">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/palm_mute_systeme">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

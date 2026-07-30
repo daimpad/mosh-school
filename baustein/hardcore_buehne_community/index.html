@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Kopf & Fokus", "Fortgeschritten", "Hardcore"], "description": "Ein Hardcore-Konzert ist keine Vorführung, sondern ein gemeinsames Ereignis: Die Grenze zwischen Bühne und Publikum ist absichtlich durchlässig — Mikro ins…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Bühne & Community: Hardcore live", "url": "https://zerrer.org/baustein/hardcore_buehne_community/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Bühne &amp; Community: Hardcore live</h1><p class="leise">Kopf &amp; Fokus · Fortgeschritten · Hardcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ein Hardcore-Konzert ist keine Vorführung, sondern ein gemeinsames Ereignis: Die Grenze zwischen Bühne und Publikum ist absichtlich durchlässig — Mikro ins Publikum, Stagediving, ein Pit, der zum Song gehört. Für die Band heißt das: Präsenz entsteht nicht aus Distanz und Show, sondern aus Ernsthaftigkeit und Energie. Ein Raum spürt sofort, ob eine Band meint, was sie spielt.</p><p>Mental ist das eine eigene Disziplin: Die Energie des Raums annehmen, ohne sich von ihr das Set zerlegen zu lassen — das Tempo nicht mit der Aufregung davonziehen lassen, die Songs auch im Chaos strukturiert halten, und nach einem umgeworfenen Mikroständer einfach weiterspielen. Routine entsteht durch Proben unter realistischen Bedingungen: im Stehen, in Bewegung, mit Unterbrechungen.</p><p>Und Verantwortung gehört dazu: Ein guter Pit lebt davon, dass aufeinander geachtet wird — wer fällt, wird aufgehoben. Die Band setzt diesen Ton mit, in Ansagen und im Umgang miteinander. Community ist im Hardcore kein Dekor, sondern die Grundlage des Ganzen.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Denk an das intensivste Hardcore- oder Punk-Konzert, das du erlebt hast (im Zweifel: such dir ein gut gefilmtes Live-Set an einem kleinen Ort an). Was genau hat die Intensität erzeugt — die Musik selbst, das Verhalten der Band, die Reaktion des Raums, das Zusammenspiel von allem? Woran hast du gemerkt, dass die Grenze zwischen Bühne und Publikum verschwand?
 
 Überleg dann für dich oder deine Band: Was davon lässt sich vorbereiten, ohne dass es einstudiert wirkt? Prüf konkret: Spielt ihr eure Songs auch im Stehen und in Bewegung sicher? Wisst ihr, wer nach einer Unterbrechung wieder einzählt? Und welche Ansage würdet ihr machen, wenn im Pit jemand stürzt und nicht sofort aufsteht?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/set_pacing/">Set-Planung &amp; Pacing</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=hardcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Hardcore live: Show statt Ernsthaftigkeit</h3><p><strong>Symptom:</strong> Der Auftritt wirkt einstudiert: choreografierte Posen, Ansagen wie vom Zettel, Distanz zum Publikum — und der Raum bleibt kalt, obwohl die Songs sitzen. Oder das Gegenteil: Das Chaos ist echt, aber nach jeder Störung bricht das Set auseinander.</p><p><strong>Ursache:</strong> Präsenz wird mit Inszenierung verwechselt (oder Echtheit mit Unvorbereitetheit): Es fehlt die Unterscheidung zwischen dem, was man vorbereiten kann — Songs im Stehen und in Bewegung, Wiedereinstieg nach Unterbrechungen, wer zählt ein — und dem, was echt sein muss: die Energie, die Ansagen, der Umgang mit dem Raum.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Probe realistisch machen: im Stehen, in Bewegung, mit absichtlichen Störungen (Mikroständer fällt, jemand patzt) — und der Wiedereinstieg wird geübt wie ein Songteil. Ansagen nicht skripten, aber die zwei wichtigen Situationen durchsprechen: Was sagen wir, wenn im Pit jemand stürzt? Was, wenn die Technik ausfällt? Dann live die Kontrolle abgeben, wo sie hingehört: Die Setlist ist das Gerüst, die Energie des Raums füllt sie.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_buehne_community">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_buehne_community">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>
