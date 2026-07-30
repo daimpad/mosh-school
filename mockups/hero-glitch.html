@@ -12,6 +12,15 @@
 <link rel="stylesheet" href="../css/schriften.css">
 <link rel="stylesheet" href="../css/app.css">
 
+<!-- NUR fuer dieses Vergleichs-Mockup: ein paar zusaetzliche Metal-/Horror-
+     Display-Schriften von Google Fonts, um den Schriftzug probeweise in
+     einer anderen Schrift als Special Elite zu sehen (Schriftart-Regler
+     unten). Kein Widerspruch zum "kein CDN"-Grundsatz der App (CLAUDE.md) —
+     dieses Mockup wird nie ausgeliefert, nur zum Entscheiden benutzt. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Metal+Mania&family=Nosifer&family=Eater&family=Butcherman&family=Pirata+One&display=swap" rel="stylesheet">
+
 <style>
   /* ==========================================================================
      Nur fuer dieses Mockup. Zwei Sorten Regeln liegen hier beieinander:
@@ -280,6 +289,16 @@
           <option value="zittern">Nur Zittern</option>
         </select></label>
       <label class="mock-schalter"><input type="checkbox" id="zeitlupe"> Zeitlupe (8&times;)</label>
+      <label class="mock-feld"><span>Schriftart</span>
+        <select id="schriftart">
+          <option value="special-elite" selected>Special Elite (aktuell)</option>
+          <option value="new-rocker">New Rocker</option>
+          <option value="metal-mania">Metal Mania</option>
+          <option value="nosifer">Nosifer</option>
+          <option value="eater">Eater</option>
+          <option value="butcherman">Butcherman</option>
+          <option value="pirata-one">Pirata One</option>
+        </select></label>
     </div>
 
     <div class="mock-reihe">
@@ -704,6 +723,26 @@ Object.keys(REGLER).forEach((id) => {
 
 document.getElementById('palette').addEventListener('change', (e) => {
   S.palette = e.target.value; wendeStatischesAn();
+});
+// Schriftart-Regler: nur ein Vergleichswerkzeug fuer dieses Mockup, KEIN
+// Teil der App-Einbindung (die bleibt bei Special Elite, s. CLAUDE.md). Das
+// Neusetzen von --zerr-groesse via passeGroesseAn() ist noetig, weil jede
+// Schrift ein anderes Breite/Hoehe-Verhaeltnis hat.
+const SCHRIFTEN = {
+  'special-elite': "'Special Elite', 'Courier New', monospace",
+  'new-rocker': "'New Rocker', 'Special Elite', cursive",
+  'metal-mania': "'Metal Mania', 'Special Elite', cursive",
+  'nosifer': "'Nosifer', 'Special Elite', cursive",
+  'eater': "'Eater', 'Special Elite', cursive",
+  'butcherman': "'Butcherman', 'Special Elite', cursive",
+  'pirata-one': "'Pirata One', 'Special Elite', cursive",
+};
+document.getElementById('schriftart').addEventListener('change', (e) => {
+  zerr.style.fontFamily = SCHRIFTEN[e.target.value] || SCHRIFTEN['special-elite'];
+  // Nachgeladene Google Font kann beim ersten Wechsel noch nicht bereitstehen —
+  // einmal sofort und einmal nach document.fonts.ready neu vermessen.
+  passeGroesseAn();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(passeGroesseAn);
 });
 document.getElementById('sorte').addEventListener('change', (e) => {
   S.sorte = e.target.value; schreibeAusgabe();

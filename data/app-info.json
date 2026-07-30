@@ -11,7 +11,7 @@
         "de": "ZERRER bringt dir extreme Metal-Instrumente Riff für Riff bei — vom ersten Powerchord bis zum Blastbeat. Kostenlos, werbefrei, direkt im Browser."
       },
       {
-        "de": "Die App läuft komplett auf deinem Gerät und speichert deinen Fortschritt lokal. Kein Login, kein Tracking."
+        "de": "Die App läuft komplett auf deinem Gerät und speichert deinen Fortschritt lokal. Kein Login, keine Cookies."
       }
     ],
     "danksagungen": {
@@ -30,15 +30,7 @@
     "credits_lizenz": {
       "titel": {
         "de": "Open Source & Lizenz"
-      },
-      "eintraege": [
-        {
-          "de": "Der Code steht unter der MIT-Lizenz — nutze, verändere und teile ihn frei."
-        },
-        {
-          "de": "Die Inhalte stehen unter Creative Commons BY-NC 4.0: Namensnennung, nicht kommerziell."
-        }
-      ]
+      }
     }
   },
   "mitmachen": {
