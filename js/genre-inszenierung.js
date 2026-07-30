@@ -245,7 +245,9 @@ export function markeHeroInszeniert(extra = '') {
       <div class="genre-landing-inhalt">
         <h1 class="startseite-hero-marke">
           <img class="startseite-hero-mark" src="assets/images/logo.svg" alt="" width="52" height="52">
-          <span>${esc(t('app_titel'))}</span>
+          <span class="zerr-wort" aria-label="${esc(t('app_titel'))}">
+            <span class="zerr-basis" aria-hidden="true">${esc(t('app_titel'))}</span>
+          </span>
         </h1>
         <p class="genre-landing-kurz">${esc(t('hero_untertitel'))}</p>
         <p class="startseite-hero-themen">${esc(t('hero_themen'))}</p>
