@@ -416,6 +416,13 @@ def seiten_fuss(tiefe, app_href):
 <div class="footer-haltung">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div>
 <div class="footer-schluss">Code unter <a href="https://github.com/daimpad/mosh-school/blob/main/LICENSE" rel="license noopener" target="_blank">MIT-Lizenz</a>, Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. Gebaut von <a href="https://paderta.com" rel="noopener" target="_blank">Damian Paderta</a> (<a href="https://nozilla.de" rel="noopener" target="_blank">Nozilla — bits and bytes with heart</a>) · <a href="{w}kollektiv/">ZERRER-Kollektiv</a></div>
 </footer>
+<!-- Reichweitenmessung (GoatCounter, siehe #/datenschutz) — keine Cookies,
+     keine gespeicherten IP-Adressen. Anders als in index.html KEIN
+     no_onload/Hash-Zaehler noetig: jede statische Seite ist ihr eigenes
+     Dokument mit eigenem Pfad, der automatische Pageview beim Laden zaehlt
+     also schon richtig. -->
+<script data-goatcounter="https://nozilla.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 '''

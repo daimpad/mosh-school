@@ -43,7 +43,15 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
 ## Nicht verhandelbare Architektur
 
 - **Rein clientseitig, buildfrei.** Keine Abhängigkeit, die einen Bundler oder eine Laufzeit
-  voraussetzt. Bibliotheken/Schriften nur als lokal eingecheckte statische Datei.
+  voraussetzt. Bibliotheken/Schriften nur als lokal eingecheckte statische Datei. **Eine
+  dokumentierte Ausnahme:** das Reichweitenmessungs-Skript von GoatCounter (`gc.zgo.at/count.js`,
+  eingebunden am Ende von `index.html` und in jeder von `scripts/build_seiten.py` erzeugten
+  Tier-2-Seite). GoatCounter rät selbst vom Vendoren/Self-Hosting des Skripts ab, weil es
+  synchron mit der Server-Version bleiben muss — ein lokal eingecheckter Stand würde
+  stillschweigend veralten. In der SPA läuft es mit `no_onload`: `js/app.js` (`rendern()`)
+  zählt stattdessen selbst bei jedem echten Routenwechsel (`window.goatcounter?.count?.(…)`),
+  sonst zählte eine Hash-Routing-App nur den ersten Aufruf. Details/Rechtsgrundlage:
+  `data/app-info.json` → `rechtliches.datenschutz` (Abschnitt „Cookies und Tracking").
 - **Inhalt getrennt von der Engine.** `js/` ist themenneutral. Bausteine sind JSON in `data/`;
   sichtbare Texte kommen aus `data/labels/<sprache>.json`. Nie einen Anzeigetext hart in
   JS/HTML schreiben — immer `t()`, `label()` oder `text()` aus `js/i18n.js`.
