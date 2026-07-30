@@ -357,7 +357,7 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 <header class="kopf">
 <div class="kopf-innen">
 <a class="marke" href="{w}">
-<img class="marke-logo" src="{w}assets/images/logo.svg" alt="" width="32" height="32">
+<span class="marke-logo" aria-hidden="true"></span>
 <span class="marke-text">ZERRER</span>
 </a>
 </div>
@@ -401,7 +401,6 @@ def seiten_fuss(tiefe, app_href):
 <nav class="footer-spalte" aria-label="Info">
 <span class="footer-titel">Info</span>
 <a href="{w}#/ueber">Über</a>
-<a href="{w}kollektiv/">ZERRER-Kollektiv</a>
 <a href="{w}#/mitmachen">Kontakt</a>
 <a href="{w}#/impressum">Impressum</a>
 <a href="{w}#/datenschutz">Datenschutz</a>
@@ -415,7 +414,7 @@ def seiten_fuss(tiefe, app_href):
 </nav>
 </div>
 <div class="footer-haltung">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
+<div class="footer-schluss">Code unter <a href="https://github.com/daimpad/mosh-school/blob/main/LICENSE" rel="license noopener" target="_blank">MIT-Lizenz</a>, Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. Gebaut von <a href="https://paderta.com" rel="noopener" target="_blank">Damian Paderta</a> (<a href="https://nozilla.de" rel="noopener" target="_blank">Nozilla — bits and bytes with heart</a>) · <a href="{w}kollektiv/">ZERRER-Kollektiv</a></div>
 </footer>
 </body>
 </html>
