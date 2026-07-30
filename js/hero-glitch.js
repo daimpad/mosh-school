@@ -35,13 +35,52 @@ const SORTEN = ['riss', 'versatz', 'aussetzer', 'zittern'];
 const zufall = (a, b) => a + Math.random() * (b - a);
 const wuerfel = (n) => Math.floor(Math.random() * n);
 
+// Die Marke (Logo-Platzhalter + Schriftzug) bricht bewusst aus der Textspalte
+// des Heros aus und soll den Schirm exakt fuellen (css/app.css
+// `.startseite-hero .startseite-hero-marke`) — dieselbe Mess-Technik wie im
+// abgestimmten Mockup (mockups/hero-glitch.html `passeGroesseAn()`): bei
+// Referenzgroesse 100px die natuerliche Breite von Logo + Wort nehmen und
+// linear hochskalieren. Ein einzelner vw-Faktor traefe die Breite nur
+// ungefaehr — je nach Schirmbreite waere er auf der einen Seite zu klein, auf
+// der anderen zu gross (die Marke ist nicht mehr an die 44rem-Spalte gebunden).
+function passeMarkeGroesseAn(marke) {
+  const logo = marke.querySelector('.startseite-hero-mark');
+  const wort = marke.querySelector('.zerr-wort');
+  if (!logo || !wort) return;
+  const stil = getComputedStyle(marke);
+  const verfuegbar = marke.getBoundingClientRect().width
+    - parseFloat(stil.paddingLeft) - parseFloat(stil.paddingRight);
+  if (!verfuegbar) return;
+  const vorher = marke.style.getPropertyValue('--marke-groesse');
+  marke.style.setProperty('--marke-groesse', '100px');
+  const gap = parseFloat(getComputedStyle(marke).columnGap) || 0;
+  const naturBei100 = logo.getBoundingClientRect().width + wort.getBoundingClientRect().width + gap;
+  if (!naturBei100) {
+    marke.style.setProperty('--marke-groesse', vorher);
+    return;
+  }
+  const groesse = (100 * verfuegbar) / naturBei100;
+  marke.style.setProperty('--marke-groesse', groesse.toFixed(2) + 'px');
+}
+
 // Baut Chroma-Geister + Bänder in `wort` und startet den Ausbruch-Scheduler.
-// Bricht früh ab (Basis bleibt sichtbar) ohne `.zerr-basis`, ohne
-// requestAnimationFrame oder bei `prefers-reduced-motion: reduce`.
+// Die Groessenmessung (s. o.) laeuft IMMER, auch ohne Animation (reduzierte
+// Bewegung, alter Browser) — nur die eigentliche Glitch-Schleife bricht dann
+// frueh ab (Basis bleibt als normales, unbewegtes Wort sichtbar).
 export function initHeroGlitch(wort) {
   if (!wort) return;
   const basis = wort.querySelector('.zerr-basis');
   if (!basis) return;
+
+  const marke = wort.closest('.startseite-hero-marke');
+  if (marke) {
+    const anpassen = () => passeMarkeGroesseAn(marke);
+    anpassen();
+    if (document.fonts?.ready) document.fonts.ready.then(anpassen);
+    window.addEventListener('resize', anpassen);
+    registriereAufraeumen(() => window.removeEventListener('resize', anpassen));
+  }
+
   if (typeof requestAnimationFrame !== 'function') return;
   if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
 
