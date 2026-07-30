@@ -110,7 +110,7 @@
   <header class="kopf">
     <div class="kopf-innen">
       <a class="marke" href="#/">
-        <img class="marke-logo" src="assets/images/logo.svg" alt="" width="32" height="32">
+        <span class="marke-logo" aria-hidden="true"></span>
         <span class="marke-text">ZERRER</span>
       </a>
       <div class="kopf-rechts">
@@ -165,7 +165,6 @@
       <nav class="footer-spalte" aria-label="Info">
         <span class="footer-titel">Info</span>
         <a href="#/ueber">Über</a>
-        <a href="#/kollektiv">ZERRER-Kollektiv</a>
         <a href="#/mitmachen">Kontakt</a>
         <a href="#/impressum">Impressum</a>
         <a href="#/datenschutz">Datenschutz</a>
@@ -193,7 +192,7 @@
         <i class="fa-brands fa-github" aria-hidden="true"></i><span data-haltung="quelltext"></span>
       </a>
     </div>
-    <div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
+    <div class="footer-schluss">Code unter <a href="https://github.com/daimpad/mosh-school/blob/main/LICENSE" rel="license noopener" target="_blank">MIT-Lizenz</a>, Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. Gebaut von <a href="https://paderta.com" rel="noopener" target="_blank">Damian Paderta</a> (<a href="https://nozilla.de" rel="noopener" target="_blank">Nozilla — bits and bytes with heart</a>) · <a href="#/kollektiv">ZERRER-Kollektiv</a></div>
   </footer>
 
   <div class="menue" id="hauptmenue" hidden>
@@ -334,5 +333,18 @@
       window.addEventListener('load', function () { pruefe(0); });
     })();
   </script>
+
+  <!-- Reichweitenmessung (GoatCounter, siehe #/datenschutz): keine Cookies, keine
+       gespeicherten IP-Adressen, kein Fingerprinting. Dokumentierte Ausnahme vom
+       „kein CDN"-Grundsatz (CLAUDE.md) — GoatCounter rät selbst vom Vendoren des
+       Skripts ab, weil es sich mit der Server-Version synchron halten muss.
+
+       ZERRER ist eine Hash-Routing-SPA: Ohne Weiteres zaehlt GoatCounter nur den
+       ersten Aufruf, jede weitere Route bliebe unsichtbar. `no_onload` schaltet
+       den automatischen Pageview ab; js/app.js zaehlt stattdessen bei jedem
+       echten Routenwechsel selbst (Pfad + Hash), also inklusive des ersten. -->
+  <script>window.goatcounter = { no_onload: true };</script>
+  <script data-goatcounter="https://nozilla.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

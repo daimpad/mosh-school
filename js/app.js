@@ -441,6 +441,11 @@ function rendern() {
     const ersterLauf = letzteRoute === null;
     window.scrollTo(0, 0);
     letzteRoute = roh;
+    // Reichweitenmessung (GoatCounter, index.html laedt mit no_onload): bei
+    // jedem ECHTEN Routenwechsel zaehlen, nicht bei einer In-Place-Neuzeichnung
+    // derselben Route (sonst zaehlte jedes Quittieren als neuer Seitenaufruf).
+    // window.goatcounter fehlt lautlos, wenn das Skript blockiert/offline ist.
+    window.goatcounter?.count?.({ path: location.pathname + location.hash });
     // Einstiegs-Übergang nur bei Routenwechsel, nicht bei Zustands-Neuzeichnung.
     el.classList.remove('einstieg');
     void el.offsetWidth;

@@ -173,7 +173,8 @@
         {
           "titel": { "de": "Cookies und Tracking" },
           "absaetze": [
-            { "de": "ZERRER setzt keine Cookies, keine Analyse- oder Tracking-Tools und keine Werbenetzwerke ein. Schriften und Icons sind lokal eingebettet — es werden keine Ressourcen von externen Anbietern (z. B. Google Fonts) nachgeladen." }
+            { "de": "ZERRER setzt keine Cookies und keine Werbenetzwerke ein. Für eine anonyme Reichweitenmessung wird der Dienst GoatCounter eingebunden (Skript von gc.zgo.at, Auswertung unter nozilla.goatcounter.com, betrieben von Damian Paderta/Nozilla). Schriften und Icons bleiben lokal eingebettet — GoatCounter ist die einzige Ausnahme vom Grundsatz, keine Ressourcen von externen Anbietern nachzuladen." },
+            { "de": "GoatCounter setzt keinen Cookie und keinen wiedererkennbaren Identifier, erstellt kein Nutzungsprofil und speichert keine IP-Adressen im Klartext. Erfasst werden je Seitenaufruf: aufgerufener Pfad (inklusive der Route innerhalb der App), Referrer, grobe Browser-/Betriebssystem-Angaben sowie ein aus der IP-Adresse abgeleitetes Land — die IP-Adresse selbst wird dabei nicht gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer datensparsamen Reichweitenmessung, ohne die eigenen Nutzer:innen zu identifizieren). Details zur Verarbeitung durch GoatCounter selbst: gc.zgo.at/privacy. Da kein Identifier gesetzt wird, gibt es keinen technischen Opt-out-Schalter — mit einem Werbe-/Tracking-Blocker lässt sich das Skript wie jede externe Ressource blockieren, ohne dass ZERRER dadurch eingeschränkt ist." }
           ]
         },
         {
