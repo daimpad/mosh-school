@@ -285,6 +285,9 @@ export function baueIndizes(inhaltRoh, einheitenRoh, fehlerbilderRoh, appInfoRoh
     ueber: appInfoRoh?.ueber || null,
     mitmachen: appInfoRoh?.mitmachen || null,
     rechtliches: appInfoRoh?.rechtliches || null,
+    // ZERRA-Kollektiv: eigene Info-Seite (Konzerte/Kontakt), gleiche Bauform wie
+    // die Rechtstexte — Titel + Absätze + betitelte Abschnitte.
+    kollektiv: appInfoRoh?.kollektiv || null,
   };
   // Turnier-Regularium: eigener Referenzbereich (wie Regeln), NICHT im Baustein-Pool.
   // Je Turnierstufe explizite Werte (nicht rein kumulativ); Varianten (Doppel/Junior)

@@ -4,7 +4,7 @@
 
 import { renderBaustein } from './ansichten/baustein.js';
 import { renderHeim } from './ansichten/heim.js';
-import { renderMitmachen, renderRechtstext, renderUeber } from './ansichten/info.js';
+import { renderKollektiv, renderMitmachen, renderRechtstext, renderUeber } from './ansichten/info.js';
 import { renderOnboarding } from './ansichten/onboarding.js';
 import { renderPlan } from './ansichten/plan.js';
 import { renderBand, renderIndividual, renderInstrument, renderKompetenzpfad, renderStil, renderThemen, renderUmgebung } from './ansichten/pfad.js';
@@ -149,7 +149,7 @@ function aktualisiereNavigation(segmente) {
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
   // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
   const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'profil', 'ueber'];
-  const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'impressum', 'datenschutz'].includes(s0);
+  const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'kollektiv', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
     mehr.classList.toggle('aktiv', imMehr);
@@ -420,6 +420,8 @@ function rendern() {
     renderUeber(el, daten);
   } else if (segmente[0] === 'mitmachen') {
     renderMitmachen(el, daten);
+  } else if (segmente[0] === 'kollektiv') {
+    renderKollektiv(el, daten);
   } else if (segmente[0] === 'impressum') {
     renderRechtstext(el, daten, 'impressum');
   } else if (segmente[0] === 'datenschutz') {

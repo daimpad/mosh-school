@@ -566,6 +566,37 @@ def instrument_html(domaene):
     return seite(tiefe, titel, beschreibung, f'instrument/{domaene}/', jsonld, body, f'#/instrument/{domaene}')
 
 
+def kollektiv_html():
+    """ZERRA-Kollektiv (Konzerte Köln/Bonn) aus data/app-info.json.
+
+    Als statische Seite mitgebaut, weil sie ortsbezogen ist: „Konzerte Köln"
+    findet man über die Suche, nicht über eine Hash-Route.
+    """
+    block = lade('data/app-info.json').get('kollektiv')
+    if not block:
+        return None
+    tiefe = 1  # kollektiv/index.html
+    titel = (block.get('titel') or {}).get('de') or 'ZERRA-Kollektiv'
+    absaetze = [(a.get('de') or '') for a in (block.get('absaetze') or [])]
+    koerper = ''.join(f'<p>{esc(a)}</p>' for a in absaetze if a)
+    for abschnitt in (block.get('abschnitte') or []):
+        koerper += f'<h2>{esc((abschnitt.get("titel") or {}).get("de") or "")}</h2>'
+        koerper += ''.join(
+            f'<p>{esc(a.get("de") or "")}</p>' for a in (abschnitt.get('absaetze') or [])
+        )
+    beschreibung = kurzfassung(' '.join(absaetze)) or titel
+    body = f'<h1>{esc(titel)}</h1>{koerper}'
+    jsonld = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        'name': titel,
+        'description': beschreibung,
+        'url': f'{SITE}/kollektiv/',
+        'areaServed': ['Köln', 'Bonn'],
+    }
+    return seite(tiefe, titel, beschreibung, 'kollektiv/', jsonld, body, '#/kollektiv')
+
+
 def instrument_hub_html(eintraege):
     """eintraege: Liste von (domaene, label, anzahl)."""
     tiefe = 1  # instrument/index.html
@@ -741,6 +772,11 @@ def build_all():
     manifest['instrument/index.html'] = instrument_hub_html(hub_eintraege)
     sitemap_eintraege.append(('instrument/', '0.9'))
 
+    kollektiv = kollektiv_html()
+    if kollektiv:
+        manifest['kollektiv/index.html'] = kollektiv
+        sitemap_eintraege.append(('kollektiv/', '0.6'))
+
     manifest['sitemap.xml'] = sitemap_xml(sitemap_eintraege)
     return manifest
 
@@ -749,7 +785,7 @@ def main(nur_pruefen=False):
     manifest = build_all()
 
     if not nur_pruefen:
-        for d in ('baustein', 'pfad', 'instrument'):
+        for d in ('baustein', 'pfad', 'instrument', 'kollektiv'):
             voll = os.path.join(ROOT, d)
             if os.path.isdir(voll):
                 shutil.rmtree(voll)
@@ -777,7 +813,7 @@ def main(nur_pruefen=False):
             abweichungen.append(relpfad)
 
     vorhanden = set()
-    for d in ('baustein', 'pfad', 'instrument'):
+    for d in ('baustein', 'pfad', 'instrument', 'kollektiv'):
         voll_d = os.path.join(ROOT, d)
         for dirpath, _, dateinamen in os.walk(voll_d):
             for name in dateinamen:
