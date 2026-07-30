@@ -374,12 +374,29 @@ body.im-onboarding .seiten-footer { display: none; }
 @media (min-width: 34rem) { .footer-innen { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 62rem) { .footer-innen { grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); } }
 .footer-marke { display: flex; flex-direction: column; gap: 0.2rem; }
+.footer-marke-kopf { display: flex; align-items: center; gap: 0.4rem; }
+/* Dieselbe leere Platzhalter-Flaeche wie `.marke-logo` (Kopfzeile/Hero), nur
+   kleiner passend zur Fusszeilen-Schrift — reserviert fuer dasselbe kommende
+   SVG-Logo. */
+.footer-marke-logo { width: 20px; height: 20px; flex-shrink: 0; display: block; }
 /* Dieselbe Wortmarke wie in der Kopfzeile — also auch dieselbe Tinte. */
 .footer-marke-name {
   font-family: var(--schrift-display, inherit); color: var(--tinte);
   font-size: 1.15rem; letter-spacing: 0.02em;
 }
 .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
+/* GoatCounter-Hinweis + Rechtstext-Links: rechtsbündig UNTER der Marke, also
+   auf die Breite von Spalte 1 begrenzt (linker Bereich des Footers) statt wie
+   vorher über die volle Fusszeile gespannt. */
+.footer-marke-rechtliches {
+  display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center;
+  gap: 0.5rem 0.9rem; margin-top: 0.7rem; padding-top: 0.7rem;
+  border-top: 1px solid var(--trennlinie); color: var(--tinte-2);
+  font-size: 0.76rem; letter-spacing: 0.02em;
+}
+.footer-marke-rechtliches a { color: var(--primaer); text-decoration: none; }
+.footer-marke-rechtliches a:hover, .footer-marke-rechtliches a:focus-visible { text-decoration: underline; }
+.footer-marke-goat { display: inline-flex; align-items: center; gap: 0.3rem; }
 .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
 .footer-titel {
   font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
@@ -387,21 +404,6 @@ body.im-onboarding .seiten-footer { display: none; }
 }
 .footer-spalte a { color: var(--tinte); text-decoration: none; font-size: 0.9rem; }
 .footer-spalte a:hover, .footer-spalte a:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
-/* Bildmarke-Platzhalter links, Rechtstext-Links, GoatCounter-Hinweis rechts —
-   dieselbe Reihe wie die Voraenderung: `.footer-schluss-recht` traegt
-   `margin-right: auto`, damit der Goat-Link auch bei wenig Inhalt ganz rechts
-   bleibt statt direkt neben Impressum/Datenschutz zu kleben. */
-.footer-schluss {
-  max-width: 52rem; margin: 1.4rem auto 0; padding-top: 1rem;
-  border-top: 1px solid var(--trennlinie); color: var(--tinte-2);
-  font-size: 0.76rem; letter-spacing: 0.02em;
-  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.1rem;
-}
-/* Dieselbe leere Platzhalter-Flaeche wie `.marke-logo` (Kopfzeile/Hero), nur
-   kleiner passend zur Fusszeilen-Schrift — reserviert fuer dasselbe kommende
-   SVG-Logo. */
-.footer-schluss-logo { width: 20px; height: 20px; flex-shrink: 0; display: block; }
-.footer-schluss-recht { display: flex; align-items: center; gap: 0.7rem; margin-right: auto; }
 /* Ab Tablet faellt die fixierte Bottom-Bar weg (siehe .fussnav) — dann braucht
    der Footer den Platzhalter fuer sie nicht mehr. */
 @media (min-width: 768px) {
@@ -3411,12 +3413,6 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 /* Theme-Umschalter im Menü ist ein <button> — an das <a>-Aussehen der Menüpunkte
    angleichen (voller Button-Reset). */
 button.menue-punkt { width: 100%; background: none; border: 0; font-family: inherit; cursor: pointer; text-align: left; }
-
-/* Rechtstext-Links + GoatCounter-Hinweis in der Footer-Schlusszeile. */
-.footer-schluss a { color: var(--primaer); text-decoration: none; }
-.footer-schluss a:hover, .footer-schluss a:focus-visible { text-decoration: underline; }
-.footer-schluss-goat { display: inline-flex; align-items: center; gap: 0.3rem; }
-
 
 /* ===== Hintergrund DUNKEL: reines Schwarz, ohne Grain-Textur.
    Das Gegenstück für Hell steht im Themenblock ganz am Dateiende — es muss
