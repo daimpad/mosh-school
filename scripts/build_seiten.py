@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Baut die statischen, crawlbaren Tier-2-SEO-Seiten (Baustein-Detailseiten +
-Genre-/Kompetenz-/Themen-Landingpages + 3 Hub-Übersichtsseiten) sowie
-sitemap.xml.
+Genre-/Kompetenz-/Themen-/Instrument-Landingpages + 4 Hub-Übersichtsseiten)
+sowie sitemap.xml.
 
 Hintergrund: ZERRER ist eine Hash-Routing-SPA (#/baustein/<id>, #/pfad/stil/
 <stil>, …) — fuer Suchmaschinen zaehlt alles hinter "#" als dieselbe URL wie
@@ -12,15 +12,13 @@ der 1:1 auf die Hash-Routen zeigt, aber ohne JS/Zustand auskommt. Die
 interaktive SPA bleibt unveraendert; jede generierte Seite verlinkt per CTA
 in die Hash-Route ("In ZERRER ueben").
 
-    python3 scripts/build_seiten.py            # baustein/**, pfad/**, sitemap.xml schreiben
+    python3 scripts/build_seiten.py            # baustein/**, pfad/**, instrument/**, sitemap.xml
     python3 scripts/build_seiten.py --check     # nur pruefen (Drift + Waisen), nichts schreiben
 
 Buildfrei, nur Standardbibliothek. Generiertes Artefakt (wie data/index.json/
 data/grafiken.json) — wird eingecheckt, kein Build-Schritt beim Deploy.
 Quellen: js/daten.js (INHALTSDATEIEN), data/bausteine.*.json, data/labels/
-de.json, data/genres.json, data/fehlerbilder.json. Instrument-Landingpages
-(#/instrument/<name>) sind bewusst NICHT dabei (echte interaktive Tab-Logik,
-keine verlustfreie statische Uebersetzung) — eigene Folge-Iteration.
+de.json, data/genres.json, data/fehlerbilder.json.
 """
 import html
 import json
@@ -154,6 +152,51 @@ def standard_sortierschluessel(b):
     dom = domaenen_von(b)
     idx = DOMAENE_ORDNUNG.index(dom[0]) if dom and dom[0] in DOMAENE_ORDNUNG else len(DOMAENE_ORDNUNG)
     return (idx, POOL_INDEX.get(b['id'], 0))
+
+
+# ---------------------------------------------------------------------------
+# Instrument-Achse — Port der Mengenbildung aus js/pfade.js `instrumentpfad`
+# und der Reiter-Konstanten aus js/ansichten/pfad.js.
+# ---------------------------------------------------------------------------
+
+INSTRUMENTE = ['gitarre', 'bass', 'schlagzeug', 'gesang']
+INSTR_STUFEN = ['einsteiger', 'fortgeschritten', 'experte']
+INSTR_STIMMUNG = ['gitarre', 'bass']
+INSTR_WERKZEUGE = {
+    'gitarre': ['stimmgeraet', 'metronom', 'pedalboard', 'ampbox', 'loops', 'recorder'],
+    'bass': ['stimmgeraet', 'metronom', 'pedalboard', 'ampbox', 'loops', 'recorder'],
+    'schlagzeug': ['metronom', 'loops', 'struktur', 'recorder', 'mehrspur'],
+    'gesang': ['stimmgeraet', 'recorder', 'metronom', 'loops', 'struktur'],
+}
+
+
+def instrument_stufe(b):
+    for s in INSTR_STUFEN:
+        if s in (b.get('kompetenzstufe') or []):
+            return s
+    return 'einsteiger'
+
+
+def instrument_mengen(domaene):
+    """Die drei Inhaltsmengen einer Instrument-Seite — wie `instrumentpfad`.
+
+    Theorie ist bewusst instrumentuebergreifend (die Musiktheorie-Domaene plus
+    die Reflexions-Bausteine des Instruments): dieselbe Menge steht damit auf
+    allen vier Seiten. Das ist so gewollt — das Wissens-Fundament gehoert an
+    jedes Instrument — und faellt fuer die Suche nicht ins Gewicht, weil Praxis
+    und Equipment die Seiten deutlich voneinander unterscheiden.
+    """
+    sichtbar = lambda b: not ist_nur_trainer(b) and not ist_umgebungs_baustein(b)
+    ist_gear = lambda b: 'ausruestung' in domaenen_von(b)
+    am_instrument = [b for b in BAUSTEINE if domaene in domaenen_von(b) and sichtbar(b)]
+    theorie = [
+        b for b in BAUSTEINE
+        if sichtbar(b) and ('theorie' in domaenen_von(b)
+                            or (domaene in domaenen_von(b) and b.get('reflexionsaufgabe') is not None))
+    ]
+    praxis = [b for b in am_instrument if not ist_gear(b) and b.get('reflexionsaufgabe') is None]
+    ausruestung = sorted([b for b in am_instrument if ist_gear(b)], key=standard_sortierschluessel)
+    return theorie, praxis, ausruestung
 
 
 # ---------------------------------------------------------------------------
@@ -428,6 +471,125 @@ def baustein_html(b):
 
 
 # ---------------------------------------------------------------------------
+# Instrument-Landingpages
+#
+# Die App zeigt die Bereiche als In-Page-Reiter (Theorie/Praxis/Tools/Pruefung/
+# Geraete/Stimmung/Patterns). Reiter sparen Platz auf dem Schirm — auf einer
+# statischen Seite gibt es diesen Zwang nicht, und gestapelte Abschnitte bringen
+# ALLES in ein crawlbares Dokument statt hinter Klicks. Deshalb hier: ein
+# Abschnitt je Reiter, untereinander.
+#
+# Bewusst NICHT dabei: der Reiter "Pruefung" (Koennens-Check) — ein reines
+# Frage-Antwort-Widget aus clientseitigem Zustand, das statisch nichts aussagt.
+# Er wird stattdessen verlinkt.
+# ---------------------------------------------------------------------------
+
+def instrument_html(domaene):
+    tiefe = 2  # instrument/<name>/index.html
+    w = wurzel(tiefe)
+    titel = label_vok('domaene', domaene)
+    theorie, praxis, ausruestung = instrument_mengen(domaene)
+
+    def nach_stufen(menge):
+        """Bausteine nach Koennensstufe gruppiert — wie `stufenListe` in der App."""
+        blocks = ''
+        for stufe in INSTR_STUFEN:
+            teil = sorted([b for b in menge if instrument_stufe(b) == stufe], key=standard_sortierschluessel)
+            if not teil:
+                continue
+            blocks += (f'<h3>{esc(label_vok("kompetenzstufe", stufe))}</h3>'
+                       + stationsliste(teil, tiefe))
+        return blocks or f'<p class="leise">{esc(uitext("instrument_leer_abschnitt"))}</p>'
+
+    def werkzeugliste(ids):
+        eintraege = ''
+        for wid in ids:
+            route = WERKZEUG_META.get(wid, (f'#/werkzeug/{wid}', None))[0]
+            eintraege += f'<li><a href="{w}{route}">{esc(uitext("wz_" + wid + "_titel"))}</a></li>'
+        return f'<ul class="werkzeug-anbindung">{eintraege}</ul>'
+
+    abschnitte = (
+        f'<section class="abschnitt"><h2>{esc(uitext("instrument_praxis"))}</h2>'
+        f'{nach_stufen(praxis)}</section>'
+        f'<section class="abschnitt"><h2>{esc(uitext("wz_explorer_titel"))}</h2>'
+        + (stationsliste(ausruestung, tiefe) if ausruestung
+           else f'<p class="leise">{esc(uitext("instrument_keine_ausruestung"))}</p>')
+        + '</section>'
+        f'<section class="abschnitt"><h2>{esc(uitext("nav_werkzeuge"))}</h2>'
+        f'<p class="leise">{esc(uitext("instrument_tools_text"))}</p>'
+        f'{werkzeugliste(INSTR_WERKZEUGE.get(domaene, []))}</section>'
+    )
+
+    if domaene in INSTR_STIMMUNG:
+        abschnitte += (
+            f'<section class="abschnitt"><h2>{esc(uitext("instrument_stimmung"))}</h2>'
+            f'<p class="leise">{esc(uitext("instrument_stimmung_text"))}</p>'
+            f'<ul class="werkzeug-anbindung">'
+            f'<li><a href="{w}#/stimmungen">{esc(uitext("nav_stimmungen"))}</a></li>'
+            f'<li><a href="{w}#/werkzeug/stimmgeraet">{esc(uitext("wz_stimmgeraet_titel"))}</a></li>'
+            f'</ul></section>'
+        )
+    if domaene == 'schlagzeug':
+        abschnitte += (
+            f'<section class="abschnitt"><h2>{esc(uitext("nav_patterns"))}</h2>'
+            f'<p class="leise">{esc(uitext("instrument_patterns_text"))}</p>'
+            f'<ul class="werkzeug-anbindung">'
+            f'<li><a href="{w}#/patterns">{esc(uitext("nav_patterns"))}</a></li>'
+            f'<li><a href="{w}#/werkzeug/metronom">{esc(uitext("wz_metronom_titel"))}</a></li>'
+            f'</ul></section>'
+        )
+
+    # Theorie steht bewusst NACH Praxis und Equipment: Sie ist auf allen vier
+    # Instrument-Seiten dieselbe Menge, das Instrument-Eigene gehoert nach oben.
+    abschnitte += (
+        f'<section class="abschnitt"><h2>{esc(uitext("instrument_theorie"))}</h2>'
+        f'{nach_stufen(theorie)}</section>'
+    )
+
+    beschreibung = (f'{titel} für Extreme Metal lernen: {len(praxis)} Technik-Bausteine, '
+                    f'{len(ausruestung)} zum Equipment und {len(theorie)} zur Theorie — '
+                    f'kostenlos und werbefrei im Browser.')
+    body = (
+        f'<h1>{esc(titel)}</h1>'
+        f'<p class="leise">{esc(uitext("instrument_untertitel"))}</p>'
+        + abschnitte
+    )
+    jsonld = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        'name': titel,
+        'description': beschreibung,
+        'url': f'{SITE}/instrument/{domaene}/',
+        'inLanguage': 'de',
+        'isAccessibleForFree': True,
+    }
+    return seite(tiefe, titel, beschreibung, f'instrument/{domaene}/', jsonld, body, f'#/instrument/{domaene}')
+
+
+def instrument_hub_html(eintraege):
+    """eintraege: Liste von (domaene, label, anzahl)."""
+    tiefe = 1  # instrument/index.html
+    titel = uitext('instrument_picker_titel')
+    beschreibung = uitext('instrument_picker_text')
+    zeilen = ''.join(
+        f'<li><a href="{esc(d)}/">{esc(lab)}</a> <span class="chip">{n}</span></li>'
+        for d, lab, n in eintraege
+    )
+    body = (f'<h1>{esc(titel)}</h1><p>{esc(beschreibung)}</p>'
+            f'<ul class="stationsliste">{zeilen}</ul>')
+    jsonld = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        'name': titel,
+        'description': beschreibung,
+        'url': f'{SITE}/instrument/',
+        'inLanguage': 'de',
+        'isAccessibleForFree': True,
+    }
+    return seite(tiefe, titel, beschreibung, 'instrument/', jsonld, body, '#/instrument')
+
+
+# ---------------------------------------------------------------------------
 # Landingpages (Genre/Kompetenz/Themen) + Hubs
 # ---------------------------------------------------------------------------
 
@@ -568,6 +730,17 @@ def build_all():
     )
     sitemap_eintraege.append(('pfad/themen/', '0.8'))
 
+    # Instrument-Achse: die vier Einstiegsseiten mit der hoechsten Suchrelevanz
+    # ("Gitarre lernen", "Growlen lernen") — entsprechend hohe Prioritaet.
+    hub_eintraege = []
+    for domaene in INSTRUMENTE:
+        _, praxis, ausruestung = instrument_mengen(domaene)
+        manifest[f'instrument/{domaene}/index.html'] = instrument_html(domaene)
+        sitemap_eintraege.append((f'instrument/{domaene}/', '0.9'))
+        hub_eintraege.append((domaene, label_vok('domaene', domaene), len(praxis) + len(ausruestung)))
+    manifest['instrument/index.html'] = instrument_hub_html(hub_eintraege)
+    sitemap_eintraege.append(('instrument/', '0.9'))
+
     manifest['sitemap.xml'] = sitemap_xml(sitemap_eintraege)
     return manifest
 
@@ -576,7 +749,7 @@ def main(nur_pruefen=False):
     manifest = build_all()
 
     if not nur_pruefen:
-        for d in ('baustein', 'pfad'):
+        for d in ('baustein', 'pfad', 'instrument'):
             voll = os.path.join(ROOT, d)
             if os.path.isdir(voll):
                 shutil.rmtree(voll)
@@ -588,7 +761,8 @@ def main(nur_pruefen=False):
         seiten = len(manifest) - 1  # minus sitemap.xml
         print(f'{seiten} statische Seiten + sitemap.xml geschrieben '
               f'({len(BAUSTEINE)} Bausteine, {len(STIL_ORDNUNG)} Genres, '
-              f'{len(KOENNENS_ORDNUNG)} Könnensstufen, {len(DOMAENE_ORDNUNG)} Themen + 3 Hubs)')
+              f'{len(KOENNENS_ORDNUNG)} Könnensstufen, {len(DOMAENE_ORDNUNG)} Themen, '
+              f'{len(INSTRUMENTE)} Instrumente + 4 Hubs)')
         return
 
     abweichungen = []
@@ -603,7 +777,7 @@ def main(nur_pruefen=False):
             abweichungen.append(relpfad)
 
     vorhanden = set()
-    for d in ('baustein', 'pfad'):
+    for d in ('baustein', 'pfad', 'instrument'):
         voll_d = os.path.join(ROOT, d)
         for dirpath, _, dateinamen in os.walk(voll_d):
             for name in dateinamen:
