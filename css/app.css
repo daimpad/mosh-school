@@ -379,23 +379,26 @@ body.im-onboarding .seiten-footer { display: none; }
    kleiner passend zur Fusszeilen-Schrift — reserviert fuer dasselbe kommende
    SVG-Logo. */
 .footer-marke-logo { width: 20px; height: 20px; flex-shrink: 0; display: block; }
-/* Dieselbe Wortmarke wie in der Kopfzeile — also auch dieselbe Tinte. */
+/* Dieselbe Wortmarke wie in der Kopfzeile — also auch dieselbe Tinte + Schrift
+   (New Rocker, s. css/schriften.css). */
 .footer-marke-name {
-  font-family: var(--schrift-display, inherit); color: var(--tinte);
+  font-family: 'New Rocker', 'Special Elite', cursive; font-weight: 400; color: var(--tinte);
   font-size: 1.15rem; letter-spacing: 0.02em;
 }
 .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
-/* GoatCounter-Hinweis + Rechtstext-Links: rechtsbündig UNTER der Marke, also
+/* GoatCounter-Hinweis + Rechtstext-Links: linksbündig UNTER der Marke, also
    auf die Breite von Spalte 1 begrenzt (linker Bereich des Footers) statt wie
-   vorher über die volle Fusszeile gespannt. */
+   vorher über die volle Fusszeile gespannt. Tinte statt Blutrot — die Links
+   sind Pflichtangaben, kein Aufruf zur Aktion, und sollen nicht mit dem
+   Akzent konkurrieren. */
 .footer-marke-rechtliches {
-  display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center;
+  display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
   gap: 0.5rem 0.9rem; margin-top: 0.7rem; padding-top: 0.7rem;
   border-top: 1px solid var(--trennlinie); color: var(--tinte-2);
   font-size: 0.76rem; letter-spacing: 0.02em;
 }
-.footer-marke-rechtliches a { color: var(--primaer); text-decoration: none; }
-.footer-marke-rechtliches a:hover, .footer-marke-rechtliches a:focus-visible { text-decoration: underline; }
+.footer-marke-rechtliches a { color: var(--tinte); text-decoration: none; }
+.footer-marke-rechtliches a:hover, .footer-marke-rechtliches a:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
 .footer-marke-goat { display: inline-flex; align-items: center; gap: 0.3rem; }
 .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
 .footer-titel {
@@ -2129,12 +2132,21 @@ a.karte-link:hover, button.karte:hover, .station:hover {
 }
 
 /* ZERRER — Display-Schrift Special Elite (Schreibmaschinen-Grunge) für die
-   Überschriften h1–h3 und die Marke. Monospaced → Laufweite auf normal, kein
-   negatives Tracking (sonst kleben die Glyphen). */
-h1, h2, h3, .marke-text, .marke-hero-text h1, .abschnitt-titel {
+   Überschriften h1–h3. Monospaced → Laufweite auf normal, kein negatives
+   Tracking (sonst kleben die Glyphen). Die Marke selbst (.marke-text) traegt
+   New Rocker, s. u. — eigene Regel statt hier mitgelistet, weil New Rocker
+   nur in 400 vorliegt (900 wuerde der Browser nur synthetisch fett faelschen). */
+h1, h2, h3, .marke-hero-text h1, .abschnitt-titel {
   font-family: 'Special Elite', 'Courier New', 'Roboto', monospace;
   font-weight: 900;
   letter-spacing: 0;
+}
+/* ZERRER-Wortmarke in der Kopfzeile — New Rocker (s. css/schriften.css),
+   dieselbe Schrift wie im Startseiten-Hero und im Footer. Laufweite bleibt
+   die schon abgestimmte 0.04em von weiter oben (.marke-text). */
+.marke-text {
+  font-family: 'New Rocker', 'Special Elite', cursive;
+  font-weight: 400;
 }
 
 /* Instrument-SVGs in den Icon-Medaillen skalieren + einfärben (currentColor). */
@@ -3148,40 +3160,45 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
     linear-gradient(to top, var(--flaeche) 40px, rgba(0, 0, 0, 0) 360px),
     radial-gradient(120% 260px at 18% 100%, var(--flaeche) 0%, rgba(0, 0, 0, 0) 70%);
 }
-.startseite-hero .genre-landing-inhalt { align-self: flex-end; }
+/* flex-grow:1 ist noetig, nicht nur Kosmetik: Ohne feste Breite waere
+   .genre-landing-inhalt (und damit die Marke darin) shrink-to-fit — bei einem
+   nowrap-Schriftzug haengt dessen Breite an seiner AKTUELLEN Schriftgroesse,
+   die wiederum aus genau dieser Breite berechnet wird (js/hero-glitch.js
+   `passeMarkeGroesseAn`). Diese Rueckkopplung liess die Marke auf einen
+   falschen (zu grossen) Fixpunkt einschwingen statt auf die echte Spaltenbreite.
+   flex-grow:1 gibt .genre-landing-inhalt eine von der Schriftgroesse
+   UNABHAENGIGE Breite (die volle Innenflaeche des Heros, die dessen eigenes
+   Innenmass bereits auf main's Spaltenbreite bringt) und bricht die Schleife. */
+.startseite-hero .genre-landing-inhalt { align-self: flex-end; flex: 1 1 auto; }
 /* Logo NEBEN dem Schriftzug, nicht darüber: zusammen sind sie eine Marke, keine
    zwei gestapelten Elemente. Baseline-Ausrichtung über align-items:center; das
    Logo skaliert mit der Überschrift (em), damit es auf jeder Breite passt.
-   Bricht bewusst aus der 44rem-Textspalte des Heros aus: die Wortmarke ist
-   keine Fliesstext-Ueberschrift, sondern soll den Schirm fuellen (wie im
-   abgestimmten Mockup, mockups/hero-glitch.html) — Themenzeile/CTA darunter
-   bleiben in der normalen Spalte (.genre-landing-inhalt). Gleiche Technik wie
-   der Hero-Hintergrund selbst (s. `.marke-hero, .genre-landing-hero`): negative
-   Margin hebt genau das Innenmass auf, das der Hero links/rechts setzt, damit
-   die Marke bis an dieselbe Kante wie der Hero selbst reicht. min() statt max()
-   weil die Werte hier negiert sind (-max(a,b) = min(-a,-b)). */
+   Bleibt bewusst in der 44rem-Textspalte des Heros (.genre-landing-inhalt) —
+   genau so breit wie der Bodyinhalt und an ihm ausgerichtet, wie der Rest der
+   Seite. `width: 100%` gibt der Marke dieselbe (jetzt feste) Breite wie
+   .genre-landing-inhalt; `justify-content: center` zentriert Logo+Wort MITTIG
+   darin statt sie linksbuendig zu setzen. */
 .startseite-hero .startseite-hero-marke {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   gap: 0.4rem;
   flex-wrap: nowrap;
-  width: 100vw;
-  margin-left: min(-1rem, calc(21rem - 50vw));
-  margin-right: min(-1rem, calc(21rem - 50vw));
-  padding: 0 clamp(0.7rem, 2.2vw, 1.6rem);
   /* Praezise Fuellung uebernimmt js/hero-glitch.js (`passeMarkeGroesseAn`) —
-     die Marke bricht aus der Textspalte aus (s. o.), ein einzelner vw-Faktor
-     traefe je nach Schirmbreite mal zu klein, mal zu gross. Das clamp() ist
-     nur der Erstanstrich/Ohne-JS-Rueckfall, bevor die Messung greift. */
+     die Spaltenbreite ist responsiv (44rem-Deckel, aber mobil schmaler), ein
+     einzelner vw-Faktor traefe sie nur ungefaehr. Das clamp() ist nur der
+     Erstanstrich/Ohne-JS-Rueckfall, bevor die Messung greift; MARKE_MAX_PX
+     (940px) in hero-glitch.js deckelt zusaetzlich, faellt hier aber praktisch
+     nie ins Gewicht, weil die Spalte selbst schon schmaler ist. */
   font-size: var(--marke-groesse, clamp(3rem, 20vw, 11rem));
+  /* New Rocker (s. css/schriften.css) — dieselbe Marken-Schrift wie Kopfzeile
+     und Footer; nur 400 verfuegbar, deshalb explizit (sonst faelscht der
+     Browser aus dem geerbten h1-Gewicht 900 einen unsauberen Fettdruck). */
+  font-family: 'New Rocker', 'Special Elite', cursive;
+  font-weight: 400;
   line-height: 0.92;
   white-space: nowrap;
-}
-@media (min-width: 768px) {
-  .startseite-hero .startseite-hero-marke {
-    margin-left: min(-1.5rem, calc(20.5rem - 50vw));
-    margin-right: min(-1.5rem, calc(20.5rem - 50vw));
-  }
 }
 /* Leerer Platzhalter statt des Plektrum-Bilds (wie .marke-logo) — reserviert
    die Flaeche neben dem Glitch-Schriftzug fuer ein kommendes SVG-Logo.
