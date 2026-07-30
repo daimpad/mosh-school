@@ -17,6 +17,7 @@
 import { label, t } from '../i18n.js';
 import { domaeneHue, domaeneIcon, esc } from '../oberflaeche.js';
 import { bildKachelHtml, markeHeroInszeniert } from '../genre-inszenierung.js';
+import { initHeroGlitch } from '../hero-glitch.js';
 import { instrumentUebersicht, stile } from '../pfade.js';
 import { diagnose, speicherIstVerfuegbar, zuletzt } from '../zustand.js';
 import { zielLabels } from './zielwahl.js';
@@ -176,4 +177,6 @@ export function renderHeim(el, daten) {
     <div class="werkzeug-gitter">${werkzeugKacheln}</div>
     <h2 class="abschnitt-titel">${esc(t('heim_gruppe_entdecken'))}</h2>
     <div class="verweis-liste">${verweisZeilen}</div>`;
+
+  initHeroGlitch(el.querySelector('.startseite-hero-marke .zerr-wort'));
 }
