@@ -349,6 +349,13 @@ def main():
         if pfad not in sw_shell:
             fehler.append(f'sw.js: Inhaltsdatei "{pfad}" fehlt in SHELL (Offline-Nutzer bekommen sie nie)')
 
+    # Tier-2-SEO-Seiten (generiert via scripts/build_seiten.py): jeder Pool-Baustein
+    # soll eine statische, crawlbare Detailseite haben, sonst fehlt er der Sitemap
+    # und bleibt fuer Suchmaschinen unsichtbar. Nur Warnung, da leicht nachzuziehen.
+    for bid in sorted(idset):
+        if not os.path.isfile(os.path.join(ROOT, 'baustein', bid, 'index.html')):
+            warnung.append(f'{bid}: keine generierte Seite (scripts/build_seiten.py laufen lassen)')
+
     # Bericht
     print(f'Pool: {len(bausteine)} Bausteine ueber {len(dateien)} Dateien')
     dom = Counter(d for b in bausteine for d in (b.get('domaene') or []))
