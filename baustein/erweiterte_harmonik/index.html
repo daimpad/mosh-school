@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Profi"], "description": "Der Powerchord ist das Fundament — aber die interessantesten Metal-Harmonien entstehen, wenn du ihm gezielt Farben beimischst: Die hinzugefügte None (add9)…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Erweiterte Harmonik jenseits der Quinte", "url": "https://zerrer.org/baustein/erweiterte_harmonik/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Erweiterte Harmonik jenseits der Quinte</h1><p class="leise">Theorie · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Powerchord ist das Fundament — aber die interessantesten Metal-Harmonien entstehen, wenn du ihm gezielt Farben beimischst: Die hinzugefügte None (add9) macht einen Akkord weit und melancholisch, die Sus-Varianten (Quarte oder Sekunde statt Terz) erzeugen schwebende Spannung, und eine große Septime über dem Grundton klingt unheilvoll schön. Moderner Post-Black-Metal und progressiver Death Metal leben von genau diesen Erweiterungen.</p><p>Unter Verzerrung gilt die bekannte Physik verschärft: Je mehr Töne, desto mehr Reibung. Erweiterte Akkorde funktionieren verzerrt am besten weit gelagert (die Zusatzfarbe eine Oktave höher statt direkt neben dem Grundton) oder in Passagen mit weniger Gain. Die Entscheidung „welche Farbe, wie gelagert, wie viel Zerre“ ist eine einzige Gestaltungsfrage mit drei Reglern.</p><p>Höre Erweiterungen als Emotionen, nicht als Zahlen: add9 = Weite, sus4 = Aufschub, maj7 = schöner Schrecken. Wer die Farben am Klang erkennt, setzt sie beim Schreiben gezielt ein — ein einziger erweiterter Akkord an der richtigen Stelle verändert die Temperatur eines ganzen Riffs.</p></section><section class="abschnitt"><h2>Übungsteil: Farben über dem Powerchord</h2><p><strong>Ziel:</strong> add9, sus4 und maj7 am Klang erkennen und gezielt einsetzen.</p><p>So gehst du vor:</p><ol><li>Spiel (oder lass dir vorspielen) einen Powerchord und füge nacheinander None, Quarte und große Septime hinzu — benenne die Stimmung jeder Farbe in einem Wort.</li><li>Vergleich jede Erweiterung eng gelagert und weit gelagert (Zusatzton eine Oktave höher) — erst clean, dann verzerrt.</li><li>Wähle die Variante, die verzerrt am klarsten trägt, und setz sie als Ereignis in eine Vier-Takt-Folge aus reinen Powerchords.</li></ol><p><strong>Steigerung:</strong> Dieselbe Folge mit zwei verschiedenen Farben an derselben Stelle vergleichen und die Wirkung beschreiben.</p><p><strong>Selbstkontrolle:</strong> Du erkennst die drei Farben blind und kannst begründen, welche Lagerung unter Zerre überlebt.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/akkordfolgen_metal/">Akkordfolgen: warum Riffs funktionieren</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Erweiterte Harmonik: Farben verwechselt</h3><p><strong>Symptom:</strong> add9, sus4 und maj7 werden nicht sicher unterschieden oder klingen unter Zerre matschig.</p><p><strong>Ursache:</strong> Die Farben werden nur theoretisch gewusst, nicht am Klang erkannt; die Lagerung passt nicht zur Verzerrung.</p><p><strong>Korrektur &amp; Ansage:</strong> Die drei Farben einzeln und im Vergleich hören und blind erkennen üben; unter Zerre schlanke Lagerungen wählen und prüfen, was durchkommt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/erweiterte_harmonik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/erweiterte_harmonik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Fortgeschritten", "Doom"], "description": "Doom klingt nicht nur langsam — er klingt nach einem eigenen harmonischen Vokabular. Die Zutaten sind überschaubar: der Tritonus als Gründungsintervall des…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Doom-Harmonik: die Sprache der Schwere", "url": "https://zerrer.org/baustein/doom_harmonik/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Doom-Harmonik: die Sprache der Schwere</h1><p class="leise">Theorie · Fortgeschritten · Doom</p><section class="abschnitt"><h2>Erklärteil</h2><p>Doom klingt nicht nur langsam — er klingt nach einem eigenen harmonischen Vokabular. Die Zutaten sind überschaubar: der Tritonus als Gründungsintervall des Genres, das Pendel zwischen Grundton und kleiner Sekunde oder kleiner Terz, absteigende Halbtonrückungen und Moll- und Phrygisch-Färbungen, die in Zeitlupe erst richtig wirken.</p><p>Denn das ist der eigentliche Punkt: Im Doom verändert die Dauer die Wirkung. Eine Reibung, die im Thrash als Durchgangston vorbeihuscht, steht im Doom sekundenlang im Raum — sie wird vom Effekt zum Zustand. Deshalb funktionieren im Doom so einfache Mittel: Zwei Akkorde, die sich einen Halbton bewegen, tragen einen ganzen Songteil, weil jeder Wechsel ein Ereignis ist.</p><p>Wer Doom schreiben oder verstehen will, hört deshalb auf die Ökonomie: Wie wenige Töne bewegt das Riff — und wie viel Gewicht bekommt jede einzelne Bewegung?</p></section><section class="abschnitt"><h2>Übungsteil: Zwei Töne, volle Wirkung</h2><p><strong>Ziel:</strong> Die typischen Doom-Intervalle hörend erkennen und ihre Wirkung in Zeitlupe erleben.</p><p>So gehst du vor:</p><ol><li>Spiel oder sing das Pendel Grundton–kleine Sekunde in zwei Tempi: einmal zügig als Achtelbewegung, einmal extrem langsam mit vier Schlägen pro Ton. Beschreib den Unterschied der Wirkung in einem Satz.</li><li>Wiederhole das Experiment mit dem Tritonus: Grundton anspielen, Tritonus dazu — erst kurz, dann lang stehen lassen. Wann kippt die Reibung von interessant zu bedrohlich?</li><li>Hör einen langsamen Doom-Song deiner Wahl und identifiziere das harmonische Grundmaterial: Wie viele verschiedene Töne oder Akkorde trägt das Hauptriff? Notier die Bewegung (Halbton runter? Tritonus-Sprung? Pendel?).</li><li>Bau selbst ein Miniatur-Doom-Riff aus maximal drei Tönen, davon mindestens eine Reibung (kleine Sekunde oder Tritonus) — und spiel es so langsam, dass jede Bewegung ein Ereignis ist.</li></ol><p><strong>Steigerung:</strong> Ersetz in deinem Miniatur-Riff die Reibung durch eine reine Quinte und vergleich: Was verliert das Riff? So hörst du, wie viel Arbeit das eine dissonante Intervall leistet.</p><p><strong>Selbstkontrolle:</strong> Kannst du bei drei fremden Doom-Riffs benennen, welches Intervall die Schwere erzeugt? Wenn du nur „klingt dunkel“ sagen kannst, wiederhole Schritt 1 und 2 mit mehr Geduld pro Ton.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/tritonus_dissonanz/">Tritonus &amp; Dissonanz</a></li><li><a href="../../baustein/moll_phrygisch/">Moll &amp; Phrygisch: dunkle Farben</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=doom">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Doom-Harmonik: Intervall nicht benannt</h3><p><strong>Symptom:</strong> Bei fremden Doom-Riffs kann nur „klingt dunkel“ gesagt werden, das tragende Intervall wird nicht benannt.</p><p><strong>Ursache:</strong> Die typischen Doom-Intervalle wurden zu schnell und nicht in Zeitlupe gehört.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Schlüssel-Intervalle einzeln und sehr langsam anhören, ihre Wirkung erleben, dann an drei fremden Riffs das tragende Intervall bestimmen; bei Unsicherheit langsamer wiederholen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/doom_harmonik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/doom_harmonik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Gitarre", "Fortgeschritten"], "description": "Die Tonabnehmerhöhe ist die wirksamste kostenlose Klangänderung an einer Gitarre — und die am seltensten genutzte. Näher an den Saiten bedeutet mehr…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Tonabnehmerhöhe einstellen", "url": "https://zerrer.org/baustein/pickup_hoehe_einstellen/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Tonabnehmerhöhe einstellen</h1><p class="leise">Equipment · Gitarre · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die Tonabnehmerhöhe ist die wirksamste kostenlose Klangänderung an einer Gitarre — und die am seltensten genutzte. Näher an den Saiten bedeutet mehr Ausgangsleistung, mehr Bass und mehr Kompression; weiter weg bedeutet weniger Pegel, mehr Dynamik und klarere Trennung der Töne.</p><p>Es gibt jedoch eine physikalische Obergrenze: Der Magnet zieht an der schwingenden Saite. Steht der Tonabnehmer zu nah, bremst und verzieht diese Anziehung die Schwingung — hörbar als schlechtes Sustain, seltsame Schwebungen und unsaubere Intonation, besonders auf den tiefen Saiten und in den hohen Lagen. Der Effekt ist bei starken Keramikmagneten deutlicher als bei schwächeren Alnico-Typen.</p><p>Deshalb lautet die Regel: so nah wie nötig für den gewünschten Pegel, so weit wie möglich, um die Saite frei schwingen zu lassen. Steg- und Halstonabnehmer werden dabei getrennt eingestellt, meist der Hals etwas tiefer, damit beide gleich laut sind.</p></section><section class="abschnitt"><h2>Übungsteil: Höhe einstellen ohne Magnetbremse</h2><p><strong>Ziel:</strong> Pegel und Klarheit ausbalancieren, ohne die Saitenschwingung magnetisch zu stören.</p><p>So gehst du vor:</p><ol><li>Greife die höchste Lage auf der tiefsten Saite und miss den Abstand zwischen Saite und Polstück.</li><li>Erhöhe den Tonabnehmer schrittweise und höre auf Pegel und Bassanteil.</li><li>Prüfe bei jedem Schritt Sustain und Sauberkeit der tiefen Saite in hoher Lage.</li><li>Gehe zurück, sobald Schwebungen, kürzeres Sustain oder unsaubere Intonation auftreten.</li><li>Gleiche danach die Lautstärke von Hals- und Stegtonabnehmer aneinander an.</li></ol><p><strong>Steigerung:</strong> Stelle die Polstücke einzelner Saiten nach, wenn eine Saite deutlich lauter oder leiser ist.</p><p><strong>Selbstkontrolle:</strong> Klingt die tiefe Saite in hoher Lage sauber und lange? Sind beide Tonabnehmer im Umschalten gleich laut?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/tonabnehmer_detail/">Tonabnehmer im Detail: was den Klang wirklich bestimmt</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Tonabnehmer zu nah an den Saiten</h3><p><strong>Symptom:</strong> Auf den tiefen Saiten und in hohen Lagen entstehen seltsame Schwebungen, das Sustain bricht früh ab, und einzelne Töne intonieren unsauber, obwohl der Steg richtig eingestellt ist.</p><p><strong>Ursache:</strong> Der Magnet zieht so stark an der Saite, dass er ihre Schwingung bremst und verzieht. Der Effekt tritt bei kräftigen Keramikmagneten früher auf als bei schwächeren Typen.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Tonabnehmer schrittweise absenken und dabei die tiefe Saite in hoher Lage prüfen, bis Schwebungen und vorzeitiges Absterben verschwinden; danach die Lautstärke zwischen Hals und Steg neu angleichen. Mehr Pegel holt man am Verstärker, nicht durch Nähe.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/pickup_hoehe_einstellen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/pickup_hoehe_einstellen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

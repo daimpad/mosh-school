@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Fortgeschritten", "Djent / Prog-Metalcore"], "description": "Djent klingt kompliziert, folgt aber einer einfachen Idee: Ein gerader Grundpuls (meist 4/4) bleibt konstant, und darüber werden die Schläge in Paketen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Djent-Theorie: Polymetrik & Gruppierung", "url": "https://zerrer.org/baustein/djent_theorie_polymetrik/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Djent-Theorie: Polymetrik &amp; Gruppierung</h1><p class="leise">Theorie · Fortgeschritten · Djent / Prog-Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Djent klingt kompliziert, folgt aber einer einfachen Idee: Ein gerader Grundpuls (meist 4/4) bleibt konstant, und darüber werden die Schläge in Paketen gruppiert, deren Länge nicht in den Takt aufgeht. Spielst du Achtel in Fünfer-Gruppen über einen 4/4-Takt, wandert die Betonung jedes Mal um eine Achtel weiter und trifft die Eins erst nach fünf Takten wieder. Das ist Polymetrik — ein Muster gegen den Puls verschoben —, und sie ist der theoretische Kern des Genres.</p><p>Der entscheidende Begriff ist Gruppierung: Man ändert nicht die Taktart, sondern nur, wie die Noten innerhalb des geraden Takts betont werden. Ein Muster aus 5+5+3+3 Achteln füllt genau einen Takt aus 16 Achteln (also zwei 4/4-Takte zu 8), fühlt sich aber völlig ungerade an, obwohl der Puls stur gerade bleibt. Genau diese Spannung — ungerade Betonung über geradem Boden — ist der Effekt. Wichtig ist, dass die Summe wieder aufgeht: Nur dann kehrt das Muster zur Eins zurück und groovt, statt sich zu verlaufen.</p><p>Wer Djent schreiben will, denkt in zwei Ebenen zugleich: unten der Puls, der nie wackelt, oben die Gruppierung, die wandert. Die Kunst ist nicht, möglichst kompliziert zu sein, sondern die Verschiebung so zu bauen, dass sie sich auflöst und der Hörer den Groove spürt, ohne mitzählen zu müssen.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Nimm dir zwei Djent- oder Prog-Metalcore-Songs vor und versuch, die Gruppierung zu hören: Bleibt der Grundpuls (Hi-Hat, dein Nicken) gerade, während die Gitarren-Betonung wandert? Kannst du die Paketlänge schätzen — sind es Fünfer, Siebener, oder ein Wechsel?
 
 Bau dann selbst eine Gruppierung auf Papier oder am Instrument: Schreib 16 Achtel (zwei 4/4-Takte) und teil sie in ein ungerades Muster, das aufgeht — etwa 5+5+3+3 oder 7+5+4. Klopf den geraden Viertel-Puls mit dem Fuß und die Gruppierung mit der Hand. Prüf die Kernfrage: Kehrt deine Betonung sauber zur Eins zurück (geht die Summe auf)? Und fühlt es sich ungerade an, obwohl der Fuß stur gerade bleibt? Wenn die Summe nicht aufgeht, verläuft sich das Muster — genau daran arbeitet die Djent-Theorie.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/polyrhythmik_theorie/">Polyrhythmus vs. Polymetrik</a></li><li><a href="../../baustein/ungerade_takte_theorie/">Ungerade Takte: Zweier und Dreier</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=djent">Play-along-Loops</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/djent_theorie_polymetrik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/djent_theorie_polymetrik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

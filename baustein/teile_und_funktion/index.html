@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Fortgeschritten"], "description": "Ein Stück besteht aus Teilen, und jeder Teil hat eine Aufgabe. Diese Aufgabe ist wichtiger als der Name: Ob man etwas Strophe, Refrain oder Bridge nennt,…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Teile und ihre Funktion", "url": "https://zerrer.org/baustein/teile_und_funktion/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Teile und ihre Funktion</h1><p class="leise">Theorie · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ein Stück besteht aus Teilen, und jeder Teil hat eine Aufgabe. Diese Aufgabe ist wichtiger als der Name: Ob man etwas Strophe, Refrain oder Bridge nennt, ist zweitrangig — entscheidend ist, was der Teil im Verlauf tut. Ein Teil kann einführen, aufbauen, entladen, kontrastieren oder abschließen.</p><p>Die nützlichste Frage beim Anordnen lautet deshalb nicht wie heißt dieser Teil, sondern was soll hier passieren. Ein Teil, der nichts tut — der weder Spannung aufbaut noch löst noch kontrastiert — ist meist überflüssig, egal wie gut das Riff für sich ist. Genau daran scheitern viele Stücke: Sie bestehen aus guten Riffs ohne Funktion.</p><p>Daraus folgt ein einfaches Prüfverfahren. Man schreibt die Teile in ihrer Reihenfolge auf und notiert zu jedem in einem Wort, was er leisten soll. Steht zweimal hintereinander dasselbe Wort, ist einer der beiden Teile vermutlich entbehrlich oder muss anders gestaltet werden. Diese Liste ist die eigentliche Songform — nicht das Buchstabenschema.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Kannst du zu jedem Teil deines Stücks in einem Wort sagen, was er tut? Gibt es Teile, die nur da sind, weil das Riff gut ist? Und stehen bei dir zwei Teile mit derselben Funktion nebeneinander?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/was_ist_ein_riff/">Was ein Riff zusammenhält</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gute Riffs ohne Funktion</h3><p><strong>Symptom:</strong> Das Stück besteht aus Teilen, die einzeln überzeugen, trägt aber nicht. Schreibt man die Funktionen auf, steht zweimal hintereinander dasselbe Wort — oder ein Teil bekommt gar keins.</p><p><strong>Ursache:</strong> Die Teile wurden nach Qualität ausgewählt, nicht nach Aufgabe. Ein Teil, der weder aufbaut noch löst noch kontrastiert, ist überflüssig, egal wie gut das Riff für sich ist.</p><p><strong>Korrektur &amp; Ansage:</strong> Das Prüfverfahren aus dem Baustein anwenden: Teile in ihrer Reihenfolge notieren und zu jedem in genau einem Wort festhalten, was er leisten soll. Wiederholt sich ein Wort direkt, muss einer der beiden Teile weichen oder anders gestaltet werden. Über die Liste entscheiden, nicht über die Riffs — sie ist die eigentliche Songform.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/teile_und_funktion">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/teile_und_funktion">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

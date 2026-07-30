@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Drums", "Fortgeschritten"], "description": "Die meisten schlecht klingenden Schlagzeuge sind nicht schlecht gebaut, sondern ungleichmäßig gestimmt. Ein Fell klingt nur dann sauber, wenn es an allen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Systematisch stimmen", "url": "https://zerrer.org/baustein/stimmen_systematik/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Systematisch stimmen</h1><p class="leise">Equipment · Drums · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die meisten schlecht klingenden Schlagzeuge sind nicht schlecht gebaut, sondern ungleichmäßig gestimmt. Ein Fell klingt nur dann sauber, wenn es an allen Spannschrauben gleich straff sitzt; ist eine Stelle lockerer, entstehen Schwebungen und ein wabernder Ton, den man weder wegdämpfen noch weglauter spielen kann.</p><p>Die Prüfmethode ist einfach: Tippe mit dem Stock etwa zwei bis drei Zentimeter neben jeder Spannschraube auf das Fell und höre die Tonhöhe. Alle sollen gleich klingen. Anfangs hört man das kaum — mit etwas Übung wird der Unterschied deutlich, und genau dieses Hören ist die eigentliche Fähigkeit.</p><p>Gestimmt wird immer über Kreuz, nie im Kreis, damit sich die Spannung gleichmäßig verteilt. Und ein neues Fell muss zuerst gesetzt werden: einmal deutlich über die Zielspannung ziehen, kurz in die Mitte drücken, wieder lösen und dann sauber aufbauen.</p></section><section class="abschnitt"><h2>Übungsteil: Alle Schrauben auf eine Tonhöhe</h2><p><strong>Ziel:</strong> Ein Fell gleichmäßig stimmen und Schwebungen beseitigen.</p><p>So gehst du vor:</p><ol><li>Ziehe alle Schrauben zunächst nur handfest an, über Kreuz.</li><li>Setze das Fell: kurz deutlich höher spannen, in die Mitte drücken, wieder lösen.</li><li>Spanne über Kreuz in kleinen Schritten auf die gewünschte Grundspannung.</li><li>Tippe neben jeder Schraube und gleiche Abweichungen einzeln an.</li><li>Stimme danach das Resonanzfell und bestimme das Verhältnis zum Schlagfell.</li></ol><p><strong>Steigerung:</strong> Stimme mehrere Toms in klaren Abständen zueinander, damit sie als Reihe funktionieren.</p><p><strong>Selbstkontrolle:</strong> Klingen alle Punkte am Rand gleich hoch? Ist das Wabern verschwunden, ohne dass du dämpfen musstest?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/felle_detail/">Felle im Detail: Aufbau und Wirkung</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Trommel wabert trotz Dämpfung</h3><p><strong>Symptom:</strong> Der Ton der Trommel schwebt und wabert; auch nach dem Aufbringen von Dämpfungsmaterial klingt sie unruhig, nur eben leiser und dumpfer.</p><p><strong>Ursache:</strong> Das Fell ist an den Spannschrauben ungleich straff. Die Schwebung entsteht aus zwei leicht verschiedenen Tonhöhen im selben Fell und lässt sich weder wegdämpfen noch weglauter spielen.</p><p><strong>Korrektur &amp; Ansage:</strong> Dämpfung entfernen, an jeder Schraube etwa zwei Zentimeter neben dem Rand antippen und die Tonhöhen angleichen; über Kreuz arbeiten. Erst danach entscheiden, ob überhaupt gedämpft werden muss — meist nicht.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/stimmen_systematik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/stimmen_systematik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

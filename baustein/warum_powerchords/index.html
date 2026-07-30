@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Gitarre", "Einsteiger"], "description": "Der Powerchord besteht nur aus zwei verschiedenen Tönen: einem Grundton und seiner Quinte, meist ergänzt durch die Oktave. Er lässt genau den Ton weg, der…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Warum Powerchords funktionieren", "url": "https://zerrer.org/baustein/warum_powerchords/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Warum Powerchords funktionieren</h1><p class="leise">Theorie · Gitarre · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Powerchord besteht nur aus zwei verschiedenen Tönen: einem Grundton und seiner Quinte, meist ergänzt durch die Oktave. Er lässt genau den Ton weg, der in einem vollen Akkord über Dur oder Moll entscheidet — die Terz. Deshalb ist er weder fröhlich noch traurig, sondern klanglich neutral und offen.</p><p>Das ist kein Mangel, sondern der Grund für seine Eignung in verzerrter Musik. Verzerrung erzeugt zusätzliche Töne, die nicht im Originalsignal stecken; je mehr verschiedene Töne gleichzeitig anliegen, desto mehr Zwischenprodukte entstehen und desto matschiger wird der Klang. Ein Akkord aus drei oder vier verschiedenen Tönen wird bei hoher Verzerrung unsauber, ein Powerchord bleibt stabil — weil Grundton und Quinte in einem sehr einfachen Schwingungsverhältnis stehen und ihre Zwischenprodukte zum Klang passen.</p><p>Daraus folgt zweierlei. Erstens: Wer bei hoher Zerre volle Akkorde spielt und Matsch hört, hat kein Ausrüstungsproblem, sondern ein Harmonik-Problem. Zweitens: Die klangliche Neutralität ist eine Freiheit — dieselbe Powerchord-Folge kann bedrohlich oder erhaben wirken, je nachdem, was Tempo, Register und Melodie darüber tun. Der Powerchord legt sich nicht fest.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Ist dir klar, dass der Powerchord bewusst offen bleibt, weil die entscheidende Terz fehlt? Hast du schon einmal Matsch bei hoher Zerre gehört und die Ursache in der Ausrüstung gesucht statt in der Harmonik? Und nutzt du die Neutralität bewusst, indem du die Wirkung anderswo festlegst?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/intervalle_hoeren/">Intervalle hören und benennen</a></li><li><a href="../../baustein/powerchords/">Powerchords</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Matsch wird der Ausrüstung angelastet</h3><p><strong>Symptom:</strong> Volle Dur- oder Moll-Akkorde bei hoher Zerre klingen breiig. Gesucht wird die Ursache im Verstärker, im Pedal oder in der Box — neue Ausrüstung soll das Problem lösen.</p><p><strong>Ursache:</strong> Die Terz im Akkord erzeugt unter starker Verzerrung zusätzliche Reibungstöne. Das ist ein Harmonik-Problem, kein Ausrüstungsproblem; kein Gerät kann es beheben.</p><p><strong>Korrektur &amp; Ansage:</strong> Denselben Akkord dreimal hintereinander spielen lassen: voll, dann ohne Terz, dann nur Grundton und Quinte — bei identischer Einstellung. Der Unterschied ist sofort hörbar und beendet die Gear-Suche. Danach zeigen, wann volle Akkorde trotzdem passen: clean oder leicht angezerrt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/warum_powerchords">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/warum_powerchords">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

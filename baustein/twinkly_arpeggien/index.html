@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Screamo / Emoviolence"], "description": "Der klare, glockige Gitarrenklang dieser Community entsteht durch eine einfache Idee: Töne überlappen lassen, statt sie sauber zu trennen. Gegriffene Töne…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Klare Arpeggien mit offenen Saiten", "url": "https://zerrer.org/baustein/twinkly_arpeggien/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Klare Arpeggien mit offenen Saiten</h1><p class="leise">Gitarre · Fortgeschritten · Screamo / Emoviolence</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der klare, glockige Gitarrenklang dieser Community entsteht durch eine einfache Idee: Töne überlappen lassen, statt sie sauber zu trennen. Gegriffene Töne in höheren Lagen werden mit leeren Saiten kombiniert, sodass beide zusammen klingen — das erzeugt Reibung und Weite zugleich.</p><p>Technisch heißt das: Finger stehen lassen, statt abzudämpfen, und die leeren Saiten bewusst mitklingen lassen. Oft entstehen dabei Sekundreibungen zwischen gegriffener und leerer Saite, die im Metal-Kontext ungewohnt sind — hier sind sie erwünscht, weil sie die schwebende, unaufgelöste Stimmung tragen.</p><p>Gespielt wird das meist ohne Verzerrung oder mit sehr wenig, damit die einzelnen Töne unterscheidbar bleiben. Ein zu hoher Zerrgrad matscht die überlappenden Töne zu einem Klangbrei.</p></section><section class="abschnitt"><h2>Übungsteil: Überlappende Arpeggien</h2><p><strong>Ziel:</strong> Gegriffene Töne und leere Saiten zusammenklingen lassen.</p><p>So gehst du vor:</p><ol><li>Greife eine Figur in der siebten bis zwölften Lage auf den beiden hohen Saiten.</li><li>Spiele sie arpeggiert und lass jeden Finger stehen, statt abzudämpfen.</li><li>Nimm eine leere Saite dazu, die mitklingt — achte auf die entstehende Reibung.</li><li>Spiele clean oder mit minimaler Verzerrung und prüfe, ob alle Töne unterscheidbar bleiben.</li><li>Variiere die Figur, ohne das Klangbett zu verlassen.</li></ol><p><strong>Steigerung:</strong> Wechsle die Lage, ohne dass die leere Saite ihre Funktion verliert — sie wird zum Bezugston.</p><p><strong>Selbstkontrolle:</strong> Klingen die Töne wirklich zusammen, oder trennst du sie unbewusst? Bleibt bei deinem Zerrgrad alles hörbar?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/greifhand_grundlagen/">Greifhand-Grundlagen</a></li><li><a href="../../baustein/dissonante_intervalle/">Dissonante Intervalle &amp; Tritonus</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Arpeggien matschen statt zu klingen</h3><p><strong>Symptom:</strong> Die überlappenden Töne verschmelzen zu einem undeutlichen Klangbrei; einzelne Töne sind nicht mehr unterscheidbar.</p><p><strong>Ursache:</strong> Zwei Ursachen treten meist gemeinsam auf. Erstens ein zu hoher Zerrgrad, der die gleichzeitig klingenden Töne komprimiert und ihre Trennung aufhebt. Zweitens ein zu voller Bassbereich, der die Reibung zwischen gegriffener und leerer Saite zudeckt.</p><p><strong>Korrektur &amp; Ansage:</strong> Zerre deutlich zurücknehmen oder ganz weglassen und die Tiefen absenken. Wenn die Figur clean klar klingt, aber verzerrt nicht, liegt es nie an der Greifhand.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/twinkly_arpeggien">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/twinkly_arpeggien">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

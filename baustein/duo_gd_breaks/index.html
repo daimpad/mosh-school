@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Drums", "Fortgeschritten"], "description": "Stops und gesetzte Akzente wirken nur, wenn Gitarre und Schlagzeug sie als eine Bewegung treffen: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg.…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Gitarre & Drums: gemeinsame Stops & Akzente", "url": "https://zerrer.org/baustein/duo_gd_breaks/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Gitarre &amp; Drums: gemeinsame Stops &amp; Akzente</h1><p class="leise">Gitarre · Drums · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Stops und gesetzte Akzente wirken nur, wenn Gitarre und Schlagzeug sie als eine Bewegung treffen: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg. Gerade an diesen exponierten Stellen fällt jede Ungenauigkeit auf.</p><p>Der kritische Punkt ist wie immer die Eins nach dem Stop. Wer den Puls während der Stille innerlich hält, steigt gemeinsam wieder ein; wer schätzt, stolpert. Übt die zwei Takte um den Break isoliert, nicht ganze Parts.</p></section><section class="abschnitt"><h2>Übungsteil: Zusammen stoppen</h2><p><strong>Ziel:</strong> Stops und Akzente von Gitarre und Drums deckungsgleich setzen.</p><p>So gehst du vor:</p><ol><li>Spielt einen einfachen Part und baut an fester Stelle einen gemeinsamen Stop von einer Zählzeit ein.</li><li>Zählt beide innerlich weiter und steigt exakt gemeinsam auf der Eins wieder ein.</li><li>Prüft per Aufnahme, ob Stop und Wiedereinstieg wie ein Schlag klingen.</li></ol><p><strong>Steigerung:</strong> Setzt einen gemeinsamen Akzent mitten in die Pause, den beide exakt gleich platzieren.</p><p><strong>Selbstkontrolle:</strong> Stop und Wiedereinstieg fallen zusammen; die Eins danach sitzt bei beiden.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/chugs_breakdown/">Chugs &amp; Breakdown-Gefühl</a></li><li><a href="../../baustein/dynamik_akzente/">Dynamik &amp; Akzente</a></li><li><a href="../../baustein/fills/">Fills &amp; Übergänge</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gitarre &amp; Drums: Stop stolpert</h3><p><strong>Symptom:</strong> Bei gemeinsamen Stops und Akzenten kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Stop ist unsauber, einer setzt zu früh oder zu spät wieder ein. Genau an der exponierten Stelle stolpert der Part.</p><p><strong>Ursache:</strong> Der Puls wird während der Stille nicht gehalten, sondern geschätzt. Länge des Stops und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.</p><p><strong>Korrektur &amp; Ansage:</strong> Übt nur die zwei Takte um den Break in der Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins einsteigen. Per Aufnahme prüfen, ob Stop und Wiedereinstieg wie ein Schlag klingen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/duo_gd_breaks">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/duo_gd_breaks">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

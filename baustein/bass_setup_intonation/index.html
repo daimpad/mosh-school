@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Bass", "Fortgeschritten"], "description": "Ein Bass reagiert auf Setup-Fehler deutlicher als eine Gitarre, weil die Saiten dicker sind und mehr Zug ausüben. Drei Größen greifen ineinander: die…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Bass-Setup und Intonation", "url": "https://zerrer.org/baustein/bass_setup_intonation/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Bass-Setup und Intonation</h1><p class="leise">Equipment · Bass · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ein Bass reagiert auf Setup-Fehler deutlicher als eine Gitarre, weil die Saiten dicker sind und mehr Zug ausüben. Drei Größen greifen ineinander: die Halskrümmung, die Saitenlage am Steg und die Intonation, also die Länge jeder einzelnen Saite. Ändert sich eine, verändern sich die anderen mit — deshalb gibt es eine feste Reihenfolge.</p><p>Zuerst die Halskrümmung, dann die Saitenlage, dann die Intonation. Die Intonation prüfst du, indem du den Ton an der zwölften Bundstelle mit dem Flageolett an derselben Stelle vergleichst: Klingt der gegriffene Ton zu hoch, muss der Reiter nach hinten, klingt er zu tief, nach vorn. Bei tiefen Saiten ist das besonders wichtig, weil sie sonst hörbar verstimmt wirken, sobald man höher greift.</p><p>Am Halsstab wird nur in kleinen Schritten gearbeitet, jeweils höchstens eine Achtelumdrehung, und danach gewartet — Holz braucht Zeit. Wer sich unsicher ist oder auf Widerstand stößt, geht in eine Fachwerkstatt; ein überdrehter Halsstab ist ein teurer Schaden.</p></section><section class="abschnitt"><h2>Übungsteil: Setup in der richtigen Reihenfolge</h2><p><strong>Ziel:</strong> Halskrümmung, Saitenlage und Intonation aufeinander abstimmen.</p><p>So gehst du vor:</p><ol><li>Neue Saiten aufziehen und stimmen, dann eine Weile spielen, damit sie sich setzen.</li><li>Halskrümmung prüfen: erste und letzte Bundstelle gleichzeitig drücken und den Abstand in der Mitte ansehen.</li><li>Nur bei Bedarf am Halsstab korrigieren, in Achtelumdrehungen und mit Wartezeit.</li><li>Saitenlage am Steg einstellen, bis nichts mehr schnarrt und das Spiel leicht bleibt.</li><li>Intonation je Saite über den Vergleich von gegriffenem Ton und Flageolett an der zwölften Bundstelle einstellen.</li></ol><p><strong>Steigerung:</strong> Stelle die Tonabnehmerhöhe im Anschluss nach — dickere Saiten reagieren stärker auf magnetischen Zug.</p><p><strong>Selbstkontrolle:</strong> Stimmt der gegriffene Ton an der zwölften Bundstelle mit dem Flageolett überein? Bleibt das Instrument auch in hohen Lagen sauber?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/bass_saiten_detail/">Basssaiten: Wicklung, Material, Stärke</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Setup in falscher Reihenfolge</h3><p><strong>Symptom:</strong> Nach dem Einstellen stimmt nichts mehr zusammen — die Intonation wandert, es schnarrt an neuen Stellen, und die Arbeit beginnt von vorn.</p><p><strong>Ursache:</strong> Die drei Größen hängen voneinander ab. Wer die Intonation einstellt, bevor Halskrümmung und Saitenlage stehen, arbeitet auf einer Grundlage, die sich anschließend verändert.</p><p><strong>Korrektur &amp; Ansage:</strong> feste Reihenfolge einhalten — erst Saiten aufziehen und einspielen, dann Halskrümmung, dann Saitenlage, dann Intonation, zuletzt Tonabnehmerhöhe. Am Halsstab nur in kleinen Schritten und mit Wartezeit arbeiten; bei Widerstand in die Fachwerkstatt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/bass_setup_intonation">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/bass_setup_intonation">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

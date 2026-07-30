@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Gitarre", "Einsteiger"], "description": "Weil ein Riff über den Rhythmus erkannt wird, ist der wirksamste Einstieg, den Rhythmus vor der Tonhöhe festzulegen. Das klingt ungewohnt, löst aber ein…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Rhythmus zuerst", "url": "https://zerrer.org/baustein/rhythmus_vor_tonhoehe/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Rhythmus zuerst</h1><p class="leise">Theorie · Gitarre · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Weil ein Riff über den Rhythmus erkannt wird, ist der wirksamste Einstieg, den Rhythmus vor der Tonhöhe festzulegen. Das klingt ungewohnt, löst aber ein häufiges Problem: Wer beide gleichzeitig sucht, verheddert sich und produziert Figuren, die weder rhythmisch noch melodisch klar sind.</p><p>Die Methode ist einfach. Man legt sich auf einen einzigen Ton fest — etwa die tiefe leere Saite — und sucht nur den Rhythmus. Erst wenn das rhythmische Muster steht und sich gut anfühlt, verteilt man verschiedene Tonhöhen darauf. Der Rhythmus ist das Skelett, die Töne sind das, was man darüber legt.</p><p>Dieser Weg hat einen weiteren Vorteil: Man merkt sofort, ob ein Riff rhythmisch trägt, weil nichts von der Melodie ablenkt. Ein Muster, das schon auf einem Ton spannend ist, wird mit Tonhöhen fast immer besser — eines, das auf einem Ton langweilt, rettet auch die schönste Tonfolge nicht.</p></section><section class="abschnitt"><h2>Übungsteil: Rhythmus vor Tonhöhe</h2><p><strong>Ziel:</strong> Ein tragfähiges rhythmisches Muster finden, bevor Töne verteilt werden.</p><p>So gehst du vor:</p><ol><li>Stimme dich auf einen Klick ein und lege ein festes Tempo fest.</li><li>Spiele ausschließlich die tiefe leere Saite und suche nur ein rhythmisches Muster über ein bis zwei Takte.</li><li>Wiederhole das Muster, bis es sich von selbst trägt und du es ohne Nachdenken spielst.</li><li>Verteile jetzt verschiedene Tonhöhen auf dieses feste Muster, ohne den Rhythmus zu ändern.</li><li>Nimm beide Fassungen auf — nur Rhythmus und mit Tonhöhen — und vergleiche.</li></ol><p><strong>Steigerung:</strong> Baue in das rhythmische Muster eine Pause ein und höre, wie sie das Riff verändert.</p><p><strong>Selbstkontrolle:</strong> Trägt dein Muster schon auf einem einzigen Ton? Ist der Rhythmus beim Verteilen der Töne gleich geblieben?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/was_ist_ein_riff/">Was ein Riff zusammenhält</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Rhythmus und Tonhöhe gleichzeitig gesucht</h3><p><strong>Symptom:</strong> Beim Schreiben wird gleichzeitig an Tonhöhen und Rhythmus gefeilt. Das Ergebnis ist weder rhythmisch klar noch melodisch — und die Person verheddert sich, verwirft und fängt von vorn an.</p><p><strong>Ursache:</strong> Zwei Entscheidungen werden parallel getroffen, die sich gegenseitig stören. Der Rhythmus trägt die Wiedererkennung, muss also zuerst stehen.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Trennung erzwingen: Nur ein einziger Ton ist erlaubt, bis das rhythmische Muster überzeugt und ohne Instrument klopfbar ist. Erst danach dürfen Tonhöhen verteilt werden. Trägt das Muster auf einem Ton nicht, wird es auch mit Melodie nicht tragen — dann früh verwerfen statt lange retten.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/rhythmus_vor_tonhoehe">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/rhythmus_vor_tonhoehe">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

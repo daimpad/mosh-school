@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Kopf & Fokus", "Fortgeschritten"], "description": "Proberaumzeit ist knapp und teuer — und trotzdem versickert sie oft in Warten, Herumjammen und Diskussionen, statt dass am Ende etwas Besseres steht. Eine…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Proberaum: die Zeit wirklich nutzen", "url": "https://zerrer.org/baustein/kontext_proberaum_effizienz/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Proberaum: die Zeit wirklich nutzen</h1><p class="leise">Kopf &amp; Fokus · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Proberaumzeit ist knapp und teuer — und trotzdem versickert sie oft in Warten, Herumjammen und Diskussionen, statt dass am Ende etwas Besseres steht. Eine Probe ist kein Konzert und kein gemütliches Zusammensein, sondern gemeinsame, gezielte Arbeit. Wer das ernst nimmt, kommt mit weniger Proben weiter als eine Band, die doppelt so oft ziellos zusammensitzt.</p><p>Drei Dinge machen den Unterschied. Erstens die Vorbereitung: Wer seinen Part zu Hause übt, verschwendet die gemeinsame Zeit nicht damit, allein Noten zu lernen — der Proberaum ist für das Zusammenspiel da, nicht fürs Einzelüben. Zweitens ein Ziel pro Probe: Was soll am Ende sitzen (dieser Übergang, dieser neue Teil, dieser Song von vorn bis hinten)? Ein klares Ziel gibt der Probe Richtung. Drittens die Struktur: aufbauen und stimmen, kurz aufwärmen, dann konzentriert am Ziel arbeiten (die schweren Stellen zuerst, nicht immer den Anfang), am Schluss vielleicht zur Belohnung durchspielen.</p><p>Und die Ehrlichkeit: Aufnehmen (auch nur mit dem Handy) zeigt gnadenlos, was wirklich sitzt und was man sich nur einbildet. Eine Probe, aus der eine konkrete Verbesserung mitgeht, war eine gute Probe.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Denk an eure letzten Proben: Wie viel Zeit ging in Warten, Einzelüben und Diskussion, wie viel in konzentriertes Zusammenspiel? Kamt ihr mit einem klaren Ziel — oder habt ihr vor allem gespielt, was schon sitzt?
 
 Plant die nächste Probe bewusst: Einigt euch vorher (kurz per Nachricht) auf EIN Ziel und darauf, dass jeder seinen Part vorbereitet mitbringt. Legt einen groben Ablauf fest (Aufbau, kurzes Warmspielen, die schwerste Stelle zuerst, dann der Rest). Nehmt einen Teil mit dem Handy auf und hört rein: Sitzt es wirklich? Prüft danach ehrlich: War diese Probe produktiver als die davor — und was nehmt ihr als feste Gewohnheit mit?</p></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/kontext_proberaum_effizienz">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/kontext_proberaum_effizienz">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

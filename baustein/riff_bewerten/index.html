@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Kopf & Fokus", "Fortgeschritten"], "description": "Ein Riff zu schreiben ist das eine, es ehrlich zu beurteilen das andere. Der häufigste Fehler ist, ein Riff im Moment der Entstehung zu bewerten, wenn die…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Ein Riff prüfen und überarbeiten", "url": "https://zerrer.org/baustein/riff_bewerten/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Ein Riff prüfen und überarbeiten</h1><p class="leise">Theorie · Kopf &amp; Fokus · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ein Riff zu schreiben ist das eine, es ehrlich zu beurteilen das andere. Der häufigste Fehler ist, ein Riff im Moment der Entstehung zu bewerten, wenn die eigene Begeisterung am größten und das Urteil am unzuverlässigsten ist. Hilfreicher ist Abstand: ein Riff aufnehmen und an einem anderen Tag anhören. Was dann noch trägt, trägt wirklich.</p><p>Es gibt einige nützliche Prüffragen. Erkennt man das Riff nach einmaligem Hören wieder? Trägt es die Wiederholung, ohne zu langweilen? Hat es eine Stelle, die auffällt — einen Haken? Und lässt sich beschreiben, was es tun soll: treiben, bedrohen, ankommen? Ein Riff, das keine dieser Fragen beantwortet, ist oft nicht schlecht, sondern nur noch nicht fertig.</p><p>Überarbeiten heißt meist weglassen, nicht hinzufügen. Die stärkste Version eines Riffs ist häufig die, aus der man alles entfernt hat, was nicht zur Gestalt gehört. Wer ein Riff nicht verbessern kann, indem er etwas ergänzt, sollte versuchen, es zu verbessern, indem er etwas streicht.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Beurteilst du deine Riffs mit zeitlichem Abstand, oder im Rausch des Moments? Kannst du benennen, was ein Riff tun soll? Und versuchst du beim Überarbeiten zuerst wegzulassen, bevor du ergänzt?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/riff_aus_beschraenkung/">Ein Riff aus wenig Material</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Im Moment der Entstehung bewertet</h3><p><strong>Symptom:</strong> Direkt nach dem Finden gilt das Riff als stark; am nächsten Tag trägt es nicht mehr. Umgekehrt werden brauchbare Ideen sofort verworfen. Beim Überarbeiten wird ergänzt statt weggelassen.</p><p><strong>Ursache:</strong> Bewertet wird im Moment der größten Begeisterung, wenn das Urteil am unzuverlässigsten ist. Und Überarbeiten wird als Hinzufügen verstanden, obwohl die stärkste Version meist die reduzierte ist.</p><p><strong>Korrektur &amp; Ansage:</strong> Zwei Regeln einführen. Erstens Abstand: aufnehmen und frühestens am nächsten Tag beurteilen — die Aufnahme entscheidet, nicht die Erinnerung. Zweitens Wegnahme zuerst: Bei jeder Überarbeitung wird zunächst gestrichen, nicht ergänzt. Lässt sich ein Riff nur durch Hinzufügen retten, ist meist die Gestalt das Problem.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/riff_bewerten">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/riff_bewerten">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

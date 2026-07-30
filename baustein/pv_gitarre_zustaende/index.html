@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Powerviolence"], "description": "Die Powerviolence-Gitarre lebt in zwei Welten gleichzeitig: rasendes Geschrammel — dichte, treibende Akkord-Flächen im Blast-Tempo — und erdrückende…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Powerviolence-Gitarre: Zustände schalten", "url": "https://zerrer.org/baustein/pv_gitarre_zustaende/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Powerviolence-Gitarre: Zustände schalten</h1><p class="leise">Gitarre · Fortgeschritten · Powerviolence</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die Powerviolence-Gitarre lebt in zwei Welten gleichzeitig: rasendes Geschrammel — dichte, treibende Akkord-Flächen im Blast-Tempo — und erdrückende Sludge-Blöcke in Zeitlupe. Beides für sich ist machbar; die Disziplin des Genres ist der Schnitt dazwischen: kein Übergangston, kein Ausklingen, kein Anlauf. Der letzte schnelle Schlag wird abgestoppt, und der erste schwere Akkord des Zeitlupen-Teils steht sofort mit vollem Gewicht.</p><p>Technisch sind das zwei Umschaltungen in einem Moment: Die Anschlagshand wechselt von maximaler Dichte auf schweren Einzelanschlag, und die Dämpfung wechselt die Rolle — im schnellen Teil hält sie das Geschrammel kontrolliert, am Schnitt würgt sie alles ab, im langsamen Teil gibt sie den Akkorden Raum. Wie beim Schlagzeug gilt: Das neue Tempo steht aus dem Gedächtnis, nicht aus einer Umrechnung — beide Zustände müssen als Körpergefühl abrufbar sein.</p><p>Wer von Grind kommt, kennt die Schnitte schon — die Powerviolence-Zutat ist die Extremspreizung: Die Zustände liegen so weit auseinander, dass jeder Wechsel wie ein Genrewechsel wirkt.</p></section><section class="abschnitt"><h2>Übungsteil: Zwei Welten, ein Schlag</h2><p><strong>Ziel:</strong> Zwischen Blast-Geschrammel und Sludge-Block auf den Schlag wechseln — abgestoppt, ohne Anlauf.</p><p>So gehst du vor:</p><ol><li>Definier Zustand A: zwei Takte dichtes Tremolo- oder Schrammel-Riff auf einem Powerchord in deinem sicheren Schnelltempo. Spiel A mehrfach einzeln an, bis das Tempo als Gefühl steht.</li><li>Definier Zustand B: zwei Takte Zeitlupen-Riff (um 55 BPM) aus einem oder zwei schweren, voll ausklingenden Powerchords. Auch B einzeln verankern — inklusive Klick-Kontrolle.</li><li>Übe NUR den Schnitt A→B: letzter schneller Schlag, sofortiges Abdämpfen, erster schwerer Akkord exakt auf dem nächsten definierten Schlag. Zehnmal hintereinander, jede Wiederholung mit voller Entschlossenheit.</li><li>Übe die Gegenrichtung B→A: Aus dem ausklingenden schweren Akkord ohne Anlauf ins volle Geschrammel — der erste schnelle Takt darf weder hetzen noch stolpern. Dann beide Richtungen verketten: A–B–A–Stopp.</li></ol><p><strong>Steigerung:</strong> Lass eine zweite Person die Wechsel per Handzeichen auslösen oder würfle die Reihenfolge — unvorhersehbare Schnitte sind die Live-Realität des Genres.</p><p><strong>Selbstkontrolle:</strong> Nimm die Kette auf und bewerte nur die Schnitte: Klingt zwischen letztem A-Schlag und erstem B-Akkord wirklich nichts nach? Steht das B-Tempo sofort, wenn du es mit dem Metronom nachmisst — oder erst nach einem Takt?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/tremolo_riffing/">Tremolo-Riffing mit Akkordwechsel</a></li><li><a href="../../baustein/doom_riffing/">Doom-Riffing</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=powerviolence">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>PV-Gitarre: Zustände unkontrolliert</h3><p><strong>Symptom:</strong> Der Wechsel zwischen den Zuständen (schnell, langsam, Chaos) ist unkontrolliert und bricht.</p><p><strong>Ursache:</strong> Die einzelnen Zustände sind nicht isoliert beherrscht, und das Umschalten wird nicht geübt.</p><p><strong>Korrektur &amp; Ansage:</strong> Jeden Zustand einzeln sicher machen, dann den Umschaltpunkt hart und bewusst üben, bis der Wechsel gewollt wirkt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/pv_gitarre_zustaende">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/pv_gitarre_zustaende">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Fortgeschritten", "Metalcore", "Hardcore", "Sludge"], "description": "Half-Time ist ein Trick mit großer Wirkung: Das Tempo bleibt gleich, aber die Snare rückt von 2-und-4 auf die 3 — und plötzlich fühlt sich alles doppelt so…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Half-Time & China-Akzente", "url": "https://zerrer.org/baustein/halftime_china/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Half-Time &amp; China-Akzente</h1><p class="leise">Drums · Fortgeschritten · Metalcore · Hardcore · Sludge</p><section class="abschnitt"><h2>Erklärteil</h2><p>Half-Time ist ein Trick mit großer Wirkung: Das Tempo bleibt gleich, aber die Snare rückt von 2-und-4 auf die 3 — und plötzlich fühlt sich alles doppelt so schwer und halb so schnell an. Breakdowns leben von genau diesem Gefühl, ohne dass die Band tatsächlich langsamer wird.</p><p>Das China-Becken ist der Klang dazu: trashig, böse, explosiv. In Half-Time-Passagen ersetzt es oft die Hi-Hat und markiert die schweren Schläge — meist zusammen mit der Bassdrum und exakt auf den Akzenten des Riffs. Sein greller Attack verzeiht kein unsauberes Timing.</p><p>Übe den Wechsel zwischen Normal- und Half-Time-Feel als bewusste Umschaltung: gleiche Zählzeit, neues Gewicht. Wer beim Umschalten das Tempo verändert, hat den Trick noch nicht — der Klick deckt das gnadenlos auf.</p></section><section class="abschnitt"><h2>Übungsteil: Feel umschalten, Tempo halten</h2><p><strong>Ziel:</strong> Zwischen Normal- und Half-Time wechseln, ohne das Tempo zu bewegen.</p><p>So gehst du vor:</p><ol><li>Spiel vier Takte Grundbeat (Snare auf 2 und 4) zum Klick.</li><li>Schalte für vier Takte auf Half-Time um: Snare auf die 3, schwere Bassdrum, breite Akzente.</li><li>Wechsle mehrmals hin und her und prüf am Klick, dass das Tempo exakt gleich bleibt.</li></ol><p><strong>Steigerung:</strong> Im Half-Time-Teil das China (oder Crash) statt der Hi-Hat führen und Akzente aufs Riff setzen.</p><p><strong>Selbstkontrolle:</strong> Der Wechsel fühlt sich nach halbem Tempo an, obwohl der Klick unverändert weiterläuft.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/metalcore_groove/">Metalcore-Groove &amp; Breakdown-Gefühl</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li><li><a href="../../#/werkzeug/loops?stil=metalcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Drums: Half-Time schleppt</h3><p><strong>Symptom:</strong> Der Half-Time-Part schleppt, oder die China-Akzente liegen neben dem Beat — das Zeitgefühl verrutscht.</p><p><strong>Ursache:</strong> Im gedehnten Half-Time-Feel wird der Puls langsamer gefühlt und driftet; die Akzente sind nicht bewusst platziert.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Klick auf den Backbeat legen und das Tempo bewusst halten. China-Akzente gezielt setzen und per Aufnahme prüfen, ob es stabil bleibt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/halftime_china">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/halftime_china">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

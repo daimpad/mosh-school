@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Einsteiger"], "description": "Wie hart du triffst, formt den Klang des Kits ebenso wie die Wahl der Trommel. Akzente sind betonte, lautere Schläge; leise Zwischenschläge nennt man Ghost…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Dynamik & Akzente", "url": "https://zerrer.org/baustein/dynamik_akzente/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Dynamik &amp; Akzente</h1><p class="leise">Drums · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Wie hart du triffst, formt den Klang des Kits ebenso wie die Wahl der Trommel. Akzente sind betonte, lautere Schläge; leise Zwischenschläge nennt man Ghost Notes. Der Kontrast zwischen beiden gibt einem Beat Kontur und Groove.</p><p>Auf der Snare erzeugt ein „Rimshot“ — Stick trifft Fell und Rand gleichzeitig — einen besonders lauten, durchsetzungsfähigen Schlag, der im Metal oft den Backbeat trägt. Bewusst gesetzte Akzente lassen selbst einfache Beats druckvoll wirken.</p><p>Übe, Akzente und leise Schläge klar zu trennen. Diese Kontrolle über die Lautstärke ist ein eigenes Handwerk, das deinem Spiel Ausdruck gibt.</p></section><section class="abschnitt"><h2>Übungsteil: Akzente und Ghost Notes</h2><p><strong>Ziel:</strong> Laute und leise Schläge bewusst trennen.</p><p>So gehst du vor:</p><ol><li>Spiel gleichmäßige Sechzehntel auf der Snare, alle gleich leise.</li><li>Setz auf bestimmte Schläge (z. B. jede Zählzeit) einen deutlichen Akzent.</li><li>Halte die übrigen Schläge bewusst leise, sodass ein klarer Kontrast entsteht.</li></ol><p><strong>Steigerung:</strong> Verschieb die Akzente auf andere Positionen und probier einen Rimshot auf dem Backbeat.</p><p><strong>Selbstkontrolle:</strong> Akzente und leise Schläge sind klar unterscheidbar; das Muster bleibt gleichmäßig.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/grundbeat/">Metal-Grundbeat</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Drums: alles gleich laut</h3><p><strong>Symptom:</strong> Betonte Schläge und Ghost Notes klingen gleich laut — der Groove wirkt flach, Akzente sind nicht hörbar.</p><p><strong>Ursache:</strong> Es fehlt der bewusste Kontrast zwischen laut und leise; alle Schläge kommen mit gleicher Kraft.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Kontrast zwischen Akzent und Ghost Note zunächst übertreiben, dann zurücknehmen. Per Aufnahme prüfen, ob die Akzente tragen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/dynamik_akzente">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/dynamik_akzente">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

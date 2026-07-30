@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Profi"], "description": "Die beste Aufnahme entsteht, bevor das Mikrofon steht — in der Pre-Production. Wer unvorbereitet ins Studio geht, verbrennt Geld und bekommt trotzdem ein…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Aufnahme: Vorbereitung & Pre-Production", "url": "https://zerrer.org/baustein/kontext_aufnahme_vorbereitung/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Aufnahme: Vorbereitung &amp; Pre-Production</h1><p class="leise">Equipment · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die beste Aufnahme entsteht, bevor das Mikrofon steht — in der Pre-Production. Wer unvorbereitet ins Studio geht, verbrennt Geld und bekommt trotzdem ein schlechteres Ergebnis. Vorbereitung heißt, alle Entscheidungen, die man vorher treffen kann, auch vorher zu treffen, damit im Studio nur noch das beste Spiel eingefangen werden muss.</p><p>Drei Bereiche gehören dazu. Erstens die Arrangements: Die Songs sollten fertig und erprobt sein — Struktur, Übergänge, welche Gitarrenspur wo liegt, wo Vocal-Schichten kommen. Vieles klärt sich beim Aufnehmen einer groben Demo (auch zu Hause), an der man hört, was trägt und was fehlt. Zweitens der Sound: Tunings, Saitenstärken, welche Verzerrung, welche Amp-Einstellung — je klarer die Klangvorstellung vorher, desto zielgerichteter die Aufnahme (auch wenn im Studio noch feinjustiert wird). Drittens die Ökonomie: Was wird zum Klick gespielt, in welcher Reihenfolge nimmt man auf (meist Schlagzeug zuerst als Fundament), wer muss wann da sein — ein Plan spart Zeit und Stress.</p><p>Und der ehrliche Blick: Eine Demo-Aufnahme deckt Schwächen im Songwriting und im Spiel auf, die man live überhört. Sie zu nutzen, bevor es ernst (und teuer) wird, ist der halbe Weg zu einer guten Produktion.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Stell dir vor, ihr geht in vier Wochen ins Studio (oder nehmt selbst auf): Wie fertig sind eure Songs wirklich — Arrangements, Übergänge, Schichten? Wie klar ist eure Klangvorstellung (Tunings, Zerre, welche Spuren)? Habt ihr einen Ablaufplan?
 
 Mach eine Pre-Production im Kleinen: Nehmt einen Song als grobe Demo auf (auch daheim, zum Klick) und hört gemeinsam kritisch rein — was trägt, was fehlt, welche Stelle ist noch nicht fertig? Legt daraus drei Dinge fest, die vor einer echten Aufnahme geklärt sein müssen (ein Arrangement-Detail, eine Sound-Entscheidung, ein Stück, das noch sicherer werden muss). Prüf die Kernfrage: Was würde euch im Studio am meisten Zeit kosten — und könnt ihr das vorher lösen?</p></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/kontext_aufnahme_vorbereitung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/kontext_aufnahme_vorbereitung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

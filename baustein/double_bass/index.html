@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Einsteiger", "Death Metal", "Thrash", "Black Metal"], "description": "Die Doppel-Bassdrum — zwei Pedale oder ein Doppelpedal — ist ein Kennzeichen des Extreme Metal. Beide Füße wechseln sich ab und erzeugen einen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Double-Bass-Grundlage", "url": "https://zerrer.org/baustein/double_bass/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Double-Bass-Grundlage</h1><p class="leise">Drums · Einsteiger · Death Metal · Thrash · Black Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die Doppel-Bassdrum — zwei Pedale oder ein Doppelpedal — ist ein Kennzeichen des Extreme Metal. Beide Füße wechseln sich ab und erzeugen einen durchgehenden, treibenden Puls unter dem Beat.</p><p>Der Einstieg ist wie beim Wechselschlag der Hände: langsame, gleichmäßige Wechsel zwischen rechts und links, bei denen beide Füße gleich laut und gleich getimt klingen. Der schwächere Fuß ist anfangs ungleichmäßiger — genau daran arbeitest du im langsamen Tempo.</p><p>Gesundheit hat Vorrang: Double Bass belastet Beine und Fußgelenke deutlich. Baue Tempo und Dauer schrittweise auf, halte die Fußgelenke locker und leg bei Schmerz oder Verkrampfung eine Pause ein.</p></section><section class="abschnitt"><h2>Übungsteil: Gleichmäßige Fuß-Wechsel</h2><p><strong>Ziel:</strong> Beide Füße gleich laut und gleich getimt wechseln.</p><p>So gehst du vor:</p><ol><li>Spiel zum Metronom gleichmäßige Achtel im Wechsel beider Füße (R-L-R-L), in ruhigem Tempo.</li><li>Hör hin, ob beide Füße gleich laut klingen, und gleich den schwächeren an.</li><li>Halte den Wechsel über mehrere Takte gleichmäßig, ohne zu verkrampfen.</li></ol><p><strong>Steigerung:</strong> Erhöhe das Tempo in kleinen Schritten und leg unter die Fuß-Achtel einen einfachen Hand-Groove.</p><p><strong>Selbstkontrolle:</strong> Beide Füße klingen gleich und liegen auf dem Klick; Beine und Fußgelenke bleiben locker.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/fusstechnik/">Fußtechnik an der Bassdrum</a></li><li><a href="../../baustein/grundbeat/">Metal-Grundbeat</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li><li><a href="../../#/werkzeug/loops?stil=death_metal">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Double Bass: ein Fuß hinkt</h3><p><strong>Symptom:</strong> Der Double-Bass-Lauf humpelt: Ein Fuß ist lauter oder setzt früher an, aus geraden Sechzehnteln wird ein ungewolltes Galoppieren.</p><p><strong>Ursache:</strong> Der schwächere Fuß hinkt in Kraft und Kontrolle hinterher; häufig verstärken ungleich eingestellte Pedale (Federspannung, Schlägelweg) oder gemischte Techniken (ein Fuß heel-up, einer heel-down) das Problem.</p><p><strong>Korrektur &amp; Ansage:</strong> Zuerst die Mechanik prüfen: beide Pedale identisch einstellen. Dann Läufe konsequent mit dem schwachen Fuß beginnen lassen und in langsamem Tempo auf Lautstärke-Gleichheit hören. Kurze, saubere Strecken vor langen — die Gleichheit wächst über Wochen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/double_bass">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/double_bass">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

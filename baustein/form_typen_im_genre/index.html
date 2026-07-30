@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Fortgeschritten"], "description": "Extreme Musik nutzt einige wiederkehrende Formmodelle, und es hilft, sie zu kennen — nicht um sie nachzubauen, sondern um zu verstehen, was sie leisten. Die…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Formen in dieser Musik", "url": "https://zerrer.org/baustein/form_typen_im_genre/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Formen in dieser Musik</h1><p class="leise">Theorie · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Extreme Musik nutzt einige wiederkehrende Formmodelle, und es hilft, sie zu kennen — nicht um sie nachzubauen, sondern um zu verstehen, was sie leisten. Die verbreitetste ist die Wechselform aus zwei kontrastierenden Teilen, oft mit einer Steigerung zum Schluss. Sie ist robust, verständlich und der Grund, warum so viele Stücke funktionieren, ohne originell zu sein.</p><p>Daneben stehen zwei Gegenmodelle. Die durchlaufende Form kehrt nie zurück, sondern entwickelt sich fortlaufend weiter — verbreitet im Post-Metal und in Teilen des Screamo; sie erzeugt einen langen Bogen, verlangt aber viel Material und riskiert Beliebigkeit. Die Blockform reiht deutlich abgesetzte Teile ohne Übergänge aneinander und lebt vom Bruch — das Prinzip vieler Mathcore-Stücke; sie wirkt aufregend, kann aber ermüden, wenn kein Ruhepunkt vorkommt.</p><p>Die Wahl der Form ist eine musikalische Entscheidung wie jede andere und sollte zur beabsichtigten Wirkung passen. Ein Stück, das sich unaufhaltsam entwickeln soll, braucht keine Refrainform; eines, das im Gedächtnis bleiben soll, profitiert von Wiederkehr. Und wie überall in diesem Zweig gilt: Das Modell erklärt die Wirkung, es schreibt sie nicht vor.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Welche Formmodelle nutzt die Musik, die du magst — und passt das zu dem, was du selbst schreibst? Willst du Wiedererkennung oder Entwicklung? Und triffst du diese Wahl bewusst oder aus Gewohnheit?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/teile_und_funktion/">Teile und ihre Funktion</a></li><li><a href="../../baustein/wiederholung_im_grossen/">Wiederholung und Erwartung im Großen</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Das Formmodell wird zum Rezept</h3><p><strong>Symptom:</strong> Ein Formtyp wird übernommen, weil er im Genre üblich ist — ohne Bezug zu dem, was das Stück erreichen soll. Auf die Frage, warum diese Form, kommt der Name einer Band statt einer Wirkung.</p><p><strong>Ursache:</strong> Die Modelle wurden als Vorschriften gelesen statt als Erklärungen. Sie beschreiben, was eine Form leistet; die Wahl bleibt eine musikalische Entscheidung.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Frage umdrehen: erst festlegen, was das Stück tun soll — im Gedächtnis bleiben, sich unaufhaltsam entwickeln oder Wucht stapeln —, dann die passende Form dazu wählen. Zu jedem Modell auch das Risiko benennen lassen. Wer Stärke und Risiko nennen kann, benutzt das Modell; wer nur den Namen nennt, wird von ihm benutzt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/form_typen_im_genre">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/form_typen_im_genre">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

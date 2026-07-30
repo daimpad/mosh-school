@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Fortgeschritten", "Thrash", "Hardcore"], "description": "Der Skank-Beat ist der Motor des Thrash: Snare und Bassdrum wechseln sich in schnellen Achteln ab (Kick auf den Zählzeiten, Snare auf den „und“s), während…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Skank-Beat (Thrash-Beat)", "url": "https://zerrer.org/baustein/skank_beat/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Skank-Beat (Thrash-Beat)</h1><p class="leise">Drums · Fortgeschritten · Thrash · Hardcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Skank-Beat ist der Motor des Thrash: Snare und Bassdrum wechseln sich in schnellen Achteln ab (Kick auf den Zählzeiten, Snare auf den „und“s), während die Hi-Hat- oder Ride-Hand mitläuft. Er ist der kleine, hektische Bruder des D-Beats — und die Vorstufe zum Blast, mit dem er die Wechselmechanik teilt.</p><p>Seine Tücke liegt im Tempo: Thrash-Tempi verlangen, dass die Snare-Hand entspannt aus dem Handgelenk peitscht, nicht aus dem Arm drischt. Wer drischt, wird langsamer und lauter zugleich — der Beat soll aber treiben, nicht walzen.</p><p>Der Skank lebt außerdem von seiner Berechenbarkeit. Er ist bewusst simpel, damit das Riff glänzen kann. Stabilität über Minuten schlägt jede Variation — ein Thrash-Song verzeiht keinen wandernden Puls.</p></section><section class="abschnitt"><h2>Übungsteil: Treibenden Skank stabilisieren</h2><p><strong>Ziel:</strong> Den Kick-Snare-Wechsel in Achteln über lange Strecken stabil halten.</p><p>So gehst du vor:</p><ol><li>Spiel zum Klick: Bassdrum auf die Zählzeiten, Snare auf die „und“s, Hand läuft in Achteln mit.</li><li>Halte den Beat über sechzehn Takte und prüf, ob Snare-Schläge gleich laut bleiben.</li><li>Achte darauf, dass die Snare-Bewegung aus dem Handgelenk kommt und der Arm ruhig bleibt.</li></ol><p><strong>Steigerung:</strong> Tempo in 5-BPM-Schritten Richtung Thrash anheben; am Phrasenende ein kurzes Fill einbauen und sauber zurückkommen.</p><p><strong>Selbstkontrolle:</strong> Der Beat treibt gleichmäßig ohne Tempodrift; Hände und Schultern bleiben locker.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/d_beat/">D-Beat</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li><li><a href="../../#/werkzeug/loops?stil=thrash">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Skank-Beat: schleppt/verkrampft</h3><p><strong>Symptom:</strong> Der Skank-Beat schleppt oder verkrampft, sobald das Tempo steigt.</p><p><strong>Ursache:</strong> Unökonomische Bewegung und mangelnde Hand-Fuß-Koordination; zu viel Kraft.</p><p><strong>Korrektur &amp; Ansage:</strong> Locker und mit kleiner Bewegung spielen, langsam beginnen und das Tempo erst bei stabiler Koordination steigern.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/skank_beat">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/skank_beat">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

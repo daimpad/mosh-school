@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Fortgeschritten", "Death Metal", "Hardcore"], "description": "False-Cord-Vocals sind der Klang des Death Metal und vieler Hardcore-Shouts: Die Taschenfalten — Gewebefalten oberhalb der eigentlichen Stimmlippen — werden…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Taschenfalten-Ansatz (False Cord)", "url": "https://zerrer.org/baustein/false_cord_ansatz/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Taschenfalten-Ansatz (False Cord)</h1><p class="leise">Vocals · Fortgeschritten · Death Metal · Hardcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>False-Cord-Vocals sind der Klang des Death Metal und vieler Hardcore-Shouts: Die Taschenfalten — Gewebefalten oberhalb der eigentlichen Stimmlippen — werden vom gestützten Luftstrom in Schwingung versetzt und erzeugen die tiefe, breite Verzerrung. Die Stimmlippen selbst bleiben dabei weitgehend entlastet; genau das macht die Technik nachhaltig, wenn sie richtig sitzt.</p><p>Der Zugang führt über ein gehauchtes, warmes Fauchen: viel entspannte Luft, offener Rachen (wie beim Gähnen), und dann ein sanftes „Bellen“ oder Seufzen auf diesem Luftstrom. Wenn es richtig läuft, spürst du eine breite Vibration im Hals — aber keinerlei Enge, Druck oder Kratzen.</p><p>Gesundheit hat Vorrang: Diese Technik lässt sich schriftlich nur als Prinzip vermitteln. Der Unterschied zwischen gesundem Taschenfalten-Klang und schädlichem Pressen ist von außen schwer zu hören und von innen anfangs schwer zu spüren — eine erfahrene Lehrperson ist hier keine Empfehlung, sondern der eigentliche Weg. Alles Übende bleibt leise, kurz und sofort beendet, wenn etwas kratzt oder die Stimme danach belegt ist.</p></section><section class="abschnitt"><h2>Übungsteil: Gehauchtes Fauchen mit offenem Rachen</h2><p><strong>Ziel:</strong> Den entlasteten, breiten Verzerrungsansatz über dem Luftstrom finden.</p><p>So gehst du vor:</p><ol><li>Wärm die Stimme auf, gähne einmal bewusst und behalte die offene Rachenweite bei.</li><li>Atme gestützt und hörbar aus — ein warmes, gehauchtes Fauchen ohne Ton.</li><li>Lass auf diesem Luftstrom ein kurzes, leises Seufz-„Bellen“ entstehen und spür, ob die Vibration breit und frei bleibt — bei jeder Enge sofort stoppen.</li></ol><p><strong>Steigerung:</strong> Die kurzen Impulse minimal verlängern — nur mit Anleitung einer Lehrperson weiter intensivieren.</p><p><strong>Selbstkontrolle:</strong> Breite Vibration ohne Enge; kein Kratzen, kein Hustenreiz, keine belegte oder heisere Stimme danach.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/verzerrung_prinzip/">Verzerrung: das Prinzip</a></li><li><a href="../../baustein/atemstuetze/">Atemstütze</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=death_metal">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>False Cord: verhaucht statt tragfähig</h3><p><strong>Symptom:</strong> Die Verzerrung klingt luftig und dünn, trägt nicht — und die übende Person schiebt hörbar mehr Luft nach, wonach die Stimme trocken wird oder kratzt.</p><p><strong>Ursache:</strong> Der Ansatz verwechselt Luftmenge mit Klang: Statt eines kompakten, gestützten Grundtons, dem die Taschenfalten-Rauigkeit beigemischt wird, wird Luft durch einen offenen Ansatz gepresst — das erschöpft die Stimme, ohne Verzerrung zu erzeugen.</p><p><strong>Korrektur &amp; Ansage:</strong> Führe zurück auf den kompakten Kern: erst ein leiser, klarer, gestützter Ton, dann die Rauigkeit in kleinster Dosis beimischen lassen — leise, kurz, mühelos. Mehr Luft ist nie die Lösung; wird der Klang nur mit Schub tragfähig, ist der Ansatz falsch. Vereinbare die bekannten Stoppregeln (Kratzen, Trockenheit, Räusperzwang beenden die Einheit) und empfiehl für den False-Cord-Aufbau ausdrücklich eine erfahrene Lehrperson.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/false_cord_ansatz">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/false_cord_ansatz">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

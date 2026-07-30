@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Drums", "Fortgeschritten"], "description": "Songs leben in den Übergängen zwischen den Parts. Ein harter Schnitt, ein Drum-Fill, ein Break, ein Aufbau — wie ihr von Part A nach Part B kommt,…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Übergänge zwischen Parts arrangieren", "url": "https://zerrer.org/baustein/uebergaenge_arrangieren/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Übergänge zwischen Parts arrangieren</h1><p class="leise">Theorie · Drums · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Songs leben in den Übergängen zwischen den Parts. Ein harter Schnitt, ein Drum-Fill, ein Break, ein Aufbau — wie ihr von Part A nach Part B kommt, entscheidet, ob der Song fließt oder stolpert. Im Metal tragen Übergänge Gewicht: Ein gut gesetzter Fill oder ein gemeinsamer Stop lässt den nächsten Part härter einschlagen.</p><p>Entscheidend ist, dass die ganze Band den Übergang gemeinsam trifft, nicht jeder für sich. Der kritische Punkt ist die Eins des neuen Parts — dort zeigt sich, ob der Wechsel sitzt. Deshalb wird ein Übergang isoliert geübt: die zwei Takte um die Nahtstelle, nicht der ganze Song.</p><p>Der Typ des Übergangs ist ein Ausdrucksmittel: Ein harter Schnitt wirkt brutal, ein Aufbau schafft Spannung, ein Break gibt Raum. Wählt bewusst, was der Song an dieser Stelle braucht.</p></section><section class="abschnitt"><h2>Übungsteil: Von Part zu Part</h2><p><strong>Ziel:</strong> Zwei Parts mit einem bewussten Übergang verbinden.</p><p>So gehst du vor:</p><ol><li>Nimm zwei fertige Parts und lege fest, wie ihr von A nach B kommt — harter Schnitt, Fill, Break oder Aufbau.</li><li>Übt nur die zwei Takte um den Übergang in der Schleife.</li><li>Spielt A – Übergang – B am Stück und prüft, ob der Wechsel gemeinsam sitzt und trägt.</li></ol><p><strong>Steigerung:</strong> Baut denselben Übergang einmal als harten Schnitt und einmal als Aufbau und vergleicht die Wirkung.</p><p><strong>Selbstkontrolle:</strong> Der Übergang sitzt bei allen gemeinsam; der Wechsel wirkt gewollt, nicht zufällig.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/riff_zu_part_entwickeln/">Vom Riff zum Songpart</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/struktur">Song-Struktur-Baukasten</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Übergang wirkt zufällig</h3><p><strong>Symptom:</strong> Der Wechsel von Part A nach B wirkt zufällig oder holprig — die Band trifft den Übergang nicht gemeinsam, und die Eins des neuen Parts wackelt.</p><p><strong>Ursache:</strong> Der Typ des Übergangs (Schnitt, Fill, Break, Aufbau) ist nicht bewusst gewählt und nicht gemeinsam vereinbart; jeder trifft die Nahtstelle für sich.</p><p><strong>Korrektur &amp; Ansage:</strong> Legt den Übergang bewusst fest und übt nur die zwei Takte um die Nahtstelle in der Schleife. Spielt A – Übergang – B am Stück, bis der Wechsel gemeinsam sitzt und gewollt wirkt. Vergleicht verschiedene Übergangstypen, um den passenden zu finden.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/uebergaenge_arrangieren">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/uebergaenge_arrangieren">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

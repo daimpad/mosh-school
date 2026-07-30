@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Fortgeschritten"], "description": "Nicht jeder Anschlag ist gleich wichtig. Ein Riff bekommt seine Kontur durch Betonungen — einzelne Schläge, die hervorgehoben werden — und durch Lücken,…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Betonung, Lücke, Erwartung", "url": "https://zerrer.org/baustein/betonung_und_luecke/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Betonung, Lücke, Erwartung</h1><p class="leise">Theorie · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Nicht jeder Anschlag ist gleich wichtig. Ein Riff bekommt seine Kontur durch Betonungen — einzelne Schläge, die hervorgehoben werden — und durch Lücken, also bewusste Pausen. Beides arbeitet mit der Erwartung des Hörers: Eine Betonung dort, wo man sie erwartet, wirkt treibend; eine Betonung, wo man sie nicht erwartet, wirkt überraschend und ist die Grundlage der Synkope.</p><p>Lücken sind das am meisten unterschätzte Werkzeug. Eine Pause ist kein fehlender Ton, sondern ein aktives Ereignis: Sie erzeugt Erwartung und macht den folgenden Einsatz wuchtiger. Viele schwere Riffs bestehen zu einem großen Teil aus Stille — der Groove entsteht gerade dadurch, dass nicht durchgespielt wird. Ein durchgehend gefülltes Riff hat keinen Raum, in dem Wucht entstehen könnte.</p><p>Deshalb lohnt es, ein Riff auch von seinen Pausen her zu denken: Wo lasse ich weg, um den nächsten Schlag zu betonen? Wo halte ich inne, damit die Erwartung steigt? Wer Betonung und Lücke bewusst setzt, macht aus einer Tonfolge einen Groove — und Groove ist das, was den Körper in Bewegung bringt.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Setzt du Betonungen bewusst, oder spielst du alles gleich laut? Nutzt du Pausen als aktives Mittel, oder füllst du jeden Platz? Und könntest du dein Riff wuchtiger machen, indem du etwas weglässt statt hinzufügst?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/rhythmus_vor_tonhoehe/">Rhythmus zuerst</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Alles gleich laut, keine Pausen</h3><p><strong>Symptom:</strong> Durchgehende Achtel ohne jede Kontur: kein Schlag ist wichtiger als der andere, keine Pause unterbricht. Das Riff hat Tempo, aber keinen Zug, und ermüdet nach wenigen Takten.</p><p><strong>Ursache:</strong> Betonung und Pause werden als Lücken im Material gesehen statt als Mittel. Solange jeder Anschlag gleich behandelt wird, kann keine Erwartung entstehen — und ohne Erwartung kein Groove.</p><p><strong>Korrektur &amp; Ansage:</strong> Aus dem bestehenden Muster zwei Anschläge streichen lassen, ohne sonst etwas zu ändern, und zwei weitere deutlich betonen. Nichts hinzufügen. Beide Versionen direkt vergleichen. Danach die Frage stellen, die den Baustein trägt: Wo lässt du weg, damit der nächste Schlag zählt?</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/betonung_und_luecke">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/betonung_und_luecke">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

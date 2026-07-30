@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Profi"], "description": "Belting ist der kraftvolle, brustdominierte Klang in der Höhe, der cleanen Metal-Refrains ihre Wucht gibt — die durchsetzungsstarke, offene Stimme, die über…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Belting: kraftvolle Höhe ohne Schaden", "url": "https://zerrer.org/baustein/clean_belting/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Belting: kraftvolle Höhe ohne Schaden</h1><p class="leise">Vocals · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Belting ist der kraftvolle, brustdominierte Klang in der Höhe, der cleanen Metal-Refrains ihre Wucht gibt — die durchsetzungsstarke, offene Stimme, die über der Wand aus Gitarren trägt. Er ist ein Fortgeschrittenen-Werkzeug, weil er leicht falsch, nämlich über Druck, gemacht wird und dann die Stimme gefährdet.</p><p>Sicheres Belting kommt aus starker Stütze, einem offenen Ansatz und gezielter Resonanz, nicht aus Halskraft. Die Kunst ist, die Kraft aus dem Atemfluss und der Resonanz zu holen, während der Hals frei bleibt. Ohne solide Kopfstimme und Stütze als Basis ist Belting riskant.</p><p>Gesundheitsrahmen ist hier zentral: nur kurz und aufgewärmt, nie gegen Widerstand pressen, bei Kratzen, Schmerz oder Heiserkeit sofort stoppen. Belting lernt man am besten mit einer Gesangslehrkraft; bei anhaltenden Beschwerden zur HNO.</p></section><section class="abschnitt"><h2>Übungsteil: Kraft aus Stütze, nicht aus dem Hals</h2><p><strong>Ziel:</strong> Kraftvolle hohe Clean-Töne aus Stütze und Resonanz statt Druck erzeugen.</p><p>So gehst du vor:</p><ol><li>Wärm gründlich auf und finde einen offenen, gestützten Ton in der oberen Mittellage.</li><li>Steigere die Kraft ausschließlich über mehr Atemstütze und Resonanz, während der Hals bewusst frei bleibt.</li><li>Nimm kurze Versuche auf und prüfe, ob der Ton kraftvoll und zugleich mühelos klingt — bei Kratzen sofort stoppen.</li></ol><p><strong>Steigerung:</strong> Übertrage das Belting auf eine kurze Refrain-Zeile, immer noch aus Stütze und mit Pausen zwischen den Versuchen.</p><p><strong>Selbstkontrolle:</strong> Der Ton ist kraftvoll und offen, kommt aus Stütze und Resonanz, und der Hals bleibt frei — kein Druck, kein Kratzen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/clean_kopfstimme/">Kopfstimme &amp; sichere Höhe</a></li><li><a href="../../baustein/resonanz_projektion/">Resonanz &amp; Projektion</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Belting: kippt ins Pressen</h3><p><strong>Symptom:</strong> Der kraftvolle hohe Ton kippt in Pressen, der Hals wird eng, es kratzt.</p><p><strong>Ursache:</strong> Die Kraft kommt aus Halsdruck statt aus Stütze und Resonanz.</p><p><strong>Korrektur &amp; Ansage:</strong> Belting nur kurz und aufgewärmt, den Ton offen aus Stütze und Resonanz aufbauen; bei Enge oder Kratzen sofort stoppen. Diese Technik am besten mit Gesangslehrkraft, bei Beschwerden zur HNO.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/clean_belting">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/clean_belting">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

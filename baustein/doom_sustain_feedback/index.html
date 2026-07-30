@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Doom", "Sludge", "Stoner / Post-Metal"], "description": "Im Doom ist der ausklingende Ton das eigentliche Instrument. Zwischen den Anschlägen liegt so viel Zeit, dass jeder Ton eine Geschichte erzählen muss: wie…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Doom-Gitarre: Sustain & Feedback", "url": "https://zerrer.org/baustein/doom_sustain_feedback/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Doom-Gitarre: Sustain &amp; Feedback</h1><p class="leise">Gitarre · Fortgeschritten · Doom · Sludge · Stoner / Post-Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Im Doom ist der ausklingende Ton das eigentliche Instrument. Zwischen den Anschlägen liegt so viel Zeit, dass jeder Ton eine Geschichte erzählen muss: wie er beginnt, wie er steht, wie er endet. Sustain ist dabei Handarbeit — ein satter, entschlossener Anschlag, eine Greifhand, die den Ton aktiv hält statt nur festzudrücken, und ein Vibrato, das erst spät ins Sustain einsetzt und den Ton am Leben hält, wenn er zu sterben beginnt.</p><p>Die zweite Stufe ist kontrolliertes Feedback: Steht genug Lautstärke im Raum, kippt ein gehaltener Ton irgendwann in einen singenden Oberton. Das ist im Doom kein Unfall, sondern ein Werkzeug — der Punkt, an dem das Instrument von allein weiterklingt. Kontrollierbar wird er über die Position zum Verstärker (Abstand und Winkel verändern, welcher Oberton anspringt) und über die Dämpfung: Alles, was nicht klingen soll, muss konsequent abgestoppt sein, sonst kippt nicht ein Ton, sondern ein Brei.</p><p>Feedback braucht Lautstärke — und Lautstärke braucht Schutz. Gehörschutz ist bei dieser Arbeit nicht verhandelbar, und die Übezeiten bei hoher Lautstärke bleiben kurz.</p></section><section class="abschnitt"><h2>Übungsteil: Der lange Ton</h2><p><strong>Ziel:</strong> Einen einzelnen Ton über seine volle Länge formen — und ihn bei Gelegenheit kontrolliert ins Feedback führen.</p><p>So gehst du vor:</p><ol><li>Wähle einen tiefen Ton und schlag ihn satt an. Hör ihm bis zum völligen Verklingen zu, ohne irgendetwas zu tun — das ist deine Referenz, wie lang der Ton von allein trägt.</li><li>Wiederhole den Ton und setz erst in der zweiten Hälfte des Ausklangs ein breites, langsames Vibrato — der Ton soll hörbar länger leben als in Schritt 1.</li><li>Spiel eine Zwei-Takt-Phrase aus doom_riffing und gestalte jeden langen Ton bewusst: Anschlag, stehen lassen, spätes Vibrato. Kein Ton darf einfach nur passieren.</li><li>Wenn du mit Verstärker und ausreichend Lautstärke übst: Halte einen Ton, dreh dich langsam zum Amp und such den Punkt, an dem er in einen Oberton kippt. Merk dir Position und Abstand — und beende das Feedback bewusst durch Abdämpfen.</li></ol><p><strong>Steigerung:</strong> Bau das Feedback als geplantes Ereignis in eine Phrase ein: letzter Ton der Runde kippt, klingt zwei Schläge als Oberton und wird auf die Eins der nächsten Runde abgedämpft.</p><p><strong>Selbstkontrolle:</strong> Nimm die Phrase auf: Trägt jeder lange Ton bis zum nächsten Anschlag, oder entstehen tote Lücken? Kippt das Feedback dort, wo du es willst — und endet es, wenn du es beendest?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/doom_riffing/">Doom-Riffing</a></li><li><a href="../../baustein/vibrato/">Vibrato</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=doom">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Doom: der lange Ton stirbt</h3><p><strong>Symptom:</strong> Zwischen den Anschlägen entstehen tote Lücken: Der Ton verhungert, bevor der nächste kommt — oder er kippt in unkontrolliertes Feedback, das die ganze Phrase zukleistert.</p><p><strong>Ursache:</strong> Der Ton wird angeschlagen und dann sich selbst überlassen: kein aktives Halten der Greifhand, kein spätes Vibrato, keine bewusste Dämpfungsarbeit. Beim Feedback fehlt die Kontrolle über Position und Abstopp-Moment — es passiert, statt gesetzt zu werden.</p><p><strong>Korrektur &amp; Ansage:</strong> Den einzelnen Ton zur Übung machen: anschlagen, bis zum Verklingen zuhören, dann dieselbe Länge mit spätem Vibrato hörbar überbieten. Feedback als geplantes Ereignis rahmen — Position zum Amp suchen, Kipppunkt merken, Abdämpfen auf einen definierten Schlag. Erst wenn ein Ton eine Geschichte erzählt, zurück in die Phrase.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/doom_sustain_feedback">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/doom_sustain_feedback">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Gitarre", "Kopf & Fokus", "Fortgeschritten"], "description": "Wer den eigenen Klang verbessern will, kann viel Geld an der falschen Stelle ausgeben. Eine nach Wirkung sortierte Reihenfolge hilft: Ganz oben stehen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Entscheidungen priorisieren: was zuerst zählt", "url": "https://zerrer.org/baustein/gitarre_entscheiden/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Entscheidungen priorisieren: was zuerst zählt</h1><p class="leise">Equipment · Gitarre · Kopf &amp; Fokus · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Wer den eigenen Klang verbessern will, kann viel Geld an der falschen Stelle ausgeben. Eine nach Wirkung sortierte Reihenfolge hilft: Ganz oben stehen Verstärker und Lautsprecher — sie prägen den verstärkten Klang stärker als jedes Bauteil der Gitarre. Danach folgen Saiten und ein sauberes Setup, weil sie Spielbarkeit und Intonation bestimmen und beide vergleichsweise wenig kosten.</p><p>An dritter Stelle steht die Tonabnehmerhöhe — kostenlos und wirksam —, danach die Tonabnehmer selbst und die Elektronik. Erst dann kommen Hardware-Fragen wie Steg und Mechaniken, und die betreffen ohnehin eher Stimmstabilität als Klang. Ganz am Ende dieser Kette steht die Holzfrage, deren hörbarer Anteil klein ist.</p><p>Für ein Metal-Instrument lässt sich daraus eine nüchterne Empfehlung ableiten: eine Solidbody mit stabilem Steg, eine zur Stimmung passende Mensur, vergossene Humbucker am Steg und ein Setup, das zu Saitenstärke und Tuning passt. Alles Weitere ist Feinabstimmung — und sollte man erst angehen, wenn diese Grundlagen sitzen.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Setzt du dein Geld dort ein, wo die Wirkung am größten ist — oder tauschst du Bauteile, bevor Setup und Verstärker stimmen? Wann hast du zuletzt Tonabnehmerhöhe und Setup geprüft, statt neue Hardware zu kaufen? Und welche eine Änderung an deinem Instrument würde deinen Klang am spürbarsten verbessern?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/saitenlage_setup/">Saitenlage &amp; Setup: Action, Halskrümmung, Intonation</a></li><li><a href="../../baustein/tonabnehmer_detail/">Tonabnehmer im Detail: was den Klang wirklich bestimmt</a></li><li><a href="../../baustein/gitarren_elektronik/">Potis, Kondensator und Kabel</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Bauteile tauschen, bevor die Basis stimmt</h3><p><strong>Symptom:</strong> Es werden Tonabnehmer, Mechaniken oder Stege getauscht, ohne dass sich das Grundproblem ändert — die Unzufriedenheit bleibt und wandert zum nächsten Bauteil.</p><p><strong>Ursache:</strong> Die Wirkungskette wird von hinten aufgerollt. Verstärker und Lautsprecher prägen den verstärkten Klang stärker als jedes Instrumentenbauteil; danach kommen Saiten und Setup, dann die kostenlose Tonabnehmerhöhe.</p><p><strong>Korrektur &amp; Ansage:</strong> Vor jedem Kauf diese Reihenfolge durchgehen und ausdrücklich benennen, welches Problem gelöst werden soll. Sehr oft löst ein Setup plus neue Saiten das, wofür ein Pickup-Tausch geplant war.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/gitarre_entscheiden">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/gitarre_entscheiden">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

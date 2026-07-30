@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Fortgeschritten", "Hardcore"], "description": "Hardcore-Drumming ist das Handwerk der kontrollierten Eskalation: Der Beat treibt — Two-Step, D-Beat, schnelle Punk-Beats —, aber er hetzt nicht. Die…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Hardcore-Drums: Energie kontrollieren", "url": "https://zerrer.org/baustein/hardcore_drums_energie/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Hardcore-Drums: Energie kontrollieren</h1><p class="leise">Drums · Fortgeschritten · Hardcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Hardcore-Drumming ist das Handwerk der kontrollierten Eskalation: Der Beat treibt — Two-Step, D-Beat, schnelle Punk-Beats —, aber er hetzt nicht. Die Energie kommt aus Entschlossenheit und Akzentsetzung, nicht aus Beschleunigung. Genau das ist die Schwierigkeit: Ein Raum voller Energie zieht das Tempo unweigerlich nach vorn, und die Band folgt dem Schlagzeug.</p><p>Das zweite Werkzeug sind die Übergänge: Hardcore-Songs leben von den Momenten, in denen der schnelle Teil in den halb so schnellen Stomp kippt — der Raum explodiert genau dann, wenn dieser Wechsel knallt. Der Wechsel ist eine Entscheidung, kein Übergang: letzter Schlag des schnellen Teils, mikroskopische Luft, dann der erste schwere Schlag des Stomps mit voller Autorität.</p><p>Fills sind im Hardcore Ansagen: kurz, laut, richtungsweisend. Ein Fill kündigt den Wechsel an — wer es verschleppt, nimmt dem Moment die Wucht.</p></section><section class="abschnitt"><h2>Übungsteil: Eskalation mit Anker</h2><p><strong>Ziel:</strong> Schnelle Hardcore-Beats und Halftime-Stomps stabil wechseln — Energie hoch, Tempo fest.</p><p>So gehst du vor:</p><ol><li>Spiel vier Takte schnellen Beat (Two-Step oder D-Beat, um 180 BPM) zum Klick und geh dann OHNE Tempoveränderung in vier Takte Halftime-Stomp: Die Viertel bleiben identisch, nur das Feel halbiert sich.</li><li>Übe die Kante: Setz vor den Wechsel ein kurzes Ein-Schlag-Fill (Snare oder Tom) und lande mit maximaler Entschlossenheit auf der Eins des Stomps. Kein Ritardando, kein Hineinrutschen.</li><li>Dreh die Richtung um: aus dem Stomp zurück in den schnellen Beat — der erste schnelle Takt neigt zum Hetzen, kontrollier ihn bewusst.</li><li>Simulier den Live-Moment: Spiel die Wechselfolge mit einer energischen Aufnahme oder bewusst „aufgedreht“ — und prüf mit dem Klick, ob die Energie ins Tempo gesickert ist.</li></ol><p><strong>Steigerung:</strong> Bau eine Drei-Stufen-Dramaturgie: acht Takte schnell, vier Takte Stomp, zwei Takte Breakdown-Feel mit China oder Crash-Ride — jede Stufe schwerer, alle im selben Grundtempo.</p><p><strong>Selbstkontrolle:</strong> Nimm die Übung auf und miss die Übergänge: Liegt die erste Eins nach jedem Wechsel exakt auf dem Klick? Wird der schnelle Teil nach dem Stomp schneller als davor? Das ist die häufigste Leckstelle.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/d_beat/">D-Beat</a></li><li><a href="../../baustein/skank_beat/">Skank-Beat (Thrash-Beat)</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=hardcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Hardcore-Drums: Energie sickert ins Tempo</h3><p><strong>Symptom:</strong> Je energischer der Song, desto schneller wird er: Nach dem Stomp ist der schnelle Teil plötzlich flotter als davor, und am Set-Ende liegen die Songs spürbar über ihrem Tempo.</p><p><strong>Ursache:</strong> Energie und Tempo sind nicht getrennt: Die Erregung des Moments — Publikum, Adrenalin, laute Gitarren — wandert unbemerkt in die Hände. Die Übergänge sind die Leckstellen: Jeder Wechsel wird zum kleinen Beschleuniger, weil der erste Takt des neuen Teils ungeprüft übernommen wird.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Wechselkanten mit Klick drillen: schnell in den Stomp und zurück, zehnmal am Stück, und der erste Takt nach jedem Wechsel wird bewusst kontrolliert — er neigt zum Hetzen. Dann den Ernstfall simulieren: bewusst aufgedreht spielen (laute Aufnahme, Stehprobe) und hinterher messen, ob die Energie ins Tempo gesickert ist. Ziel-Formulierung fürs Team: Energie hoch, Viertel unverrückbar.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_drums_energie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_drums_energie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "description": "Mathcore nimmt Metalcore-Härte und zerlegt sie in ungerade Taktarten, abrupte Stopps und dissonante Reibung. Präzision als Gewalt: das Riff, das man erst…", "inLanguage": "de", "isAccessibleForFree": true, "name": "Mathcore", "url": "https://zerrer.org/pfad/stil/mathcore/"}</script>
 <link rel="stylesheet" href="../../../css/schriften.css">
 <link rel="stylesheet" href="../../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -31,13 +50,39 @@
 </div>
 </header>
 <main id="ansicht">
-<h1>Mathcore</h1><p>Mathcore nimmt Metalcore-Härte und zerlegt sie in ungerade Taktarten, abrupte Stopps und dissonante Reibung. Präzision als Gewalt: das Riff, das man erst nach dem dritten Hören zählen kann.</p><p class="leise">3 Bausteine</p><ul class="stationsliste"><li><a href="../../../baustein/mathcore_stopps/">Stopps und Einsätze auf den Punkt</a></li><li><a href="../../../baustein/mathcore_taktwechsel/">Riffs über wechselnde Taktarten</a></li><li><a href="../../../baustein/mathcore_dissonanz/">Dissonante Voicings und kantige Riffs</a></li></ul>
+<section class="marke-hero genre-landing-hero landing-hero pf-blau"><div class="genre-landing-bg" aria-hidden="true" style="background-image:url('../../../images/bg/12742612_10153411957408848_8311764996179138788_n.jpg')"></div><div class="genre-landing-scrim" aria-hidden="true"></div><div class="genre-landing-inhalt"><p class="genre-landing-augenbraue"><span class="genre-landing-augenbraue-marke">Genre</span></p><h1>Mathcore</h1><p class="genre-landing-kurz">Mathcore nimmt Metalcore-Härte und zerlegt sie in ungerade Taktarten, abrupte Stopps und dissonante Reibung. Präzision als Gewalt: das Riff, das man erst nach dem dritten Hören zählen kann.</p></div></section><p class="leise">3 Bausteine</p><ul class="stationsliste"><li><a href="../../../baustein/mathcore_stopps/">Stopps und Einsätze auf den Punkt</a></li><li><a href="../../../baustein/mathcore_taktwechsel/">Riffs über wechselnde Taktarten</a></li><li><a href="../../../baustein/mathcore_dissonanz/">Dissonante Voicings und kantige Riffs</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../../#/pfad/stil/mathcore">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../../#/pfad/stil/mathcore">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../../#/impressum">Impressum</a> · <a href="../../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../../#/griffe">Griffe</a>
+<a href="../../../#/stimmungen">Tunings</a>
+<a href="../../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../../#/ueber">Über</a>
+<a href="../../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../../#/mitmachen">Kontakt</a>
+<a href="../../../#/impressum">Impressum</a>
+<a href="../../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../../instrument/">Alle Instrumente</a>
+<a href="../../../pfad/stil/">Alle Genres</a>
+<a href="../../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>
