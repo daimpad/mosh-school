@@ -174,6 +174,8 @@ Für jede neue `data/bausteine.<stufe>-<instrument>.json`:
    (hebt alle `anzeigetitel.de` nach `labels/de.json`, erzeugt `en/fr/pl` neu).
 3b. **Such-Index neu bauen:** `python3 scripts/build_index.py` (regeneriert
    `data/index.json` aus dem Pool + gelifteten Titeln — generiertes Artefakt, eingecheckt).
+3c. **Statische SEO-Seiten neu bauen:** `python3 scripts/build_seiten.py` (regeneriert
+   `baustein/**`, `pfad/**` und `sitemap.xml` — s. „Tier-2-SEO" unten).
 4. **Service Worker:** die neue Datei in `SHELL` (`sw.js`) aufnehmen **und** `CACHE` erhöhen
    (`mosh-vN` → `mosh-vN+1`). Sonst bekommen Offline-Nutzer die Datei nie.
 5. **Validieren:** `python3 scripts/validate.py` (muss „OK — strukturell sauber" zeigen).
@@ -182,6 +184,35 @@ Für jede neue `data/bausteine.<stufe>-<instrument>.json`:
 **Neuer Vokabelwert** (neuer `stil`, neue `domaene`, neuer `spielziele`-Faktor) ist eine
 *koordinierte* Erweiterung: Wert in `vokabulare` der **kanonischen Gitarren-Datei** ergänzen
 **und** Label unter `vokabeln.*` bzw. `spielziele` in `labels/de.json`. Erst dann nutzbar.
+
+## Tier-2-SEO (statische Seiten)
+
+ZERRER ist eine Hash-Routing-SPA (`#/baustein/<id>`, `#/pfad/stil/<stil>`, …) — für
+Suchmaschinen zählt alles hinter `#` als dieselbe URL wie `/`, bekommt also nie einen eigenen
+Title/Snippet. `scripts/build_seiten.py` erzeugt deshalb einen **zusätzlichen, generierten
+Seiten-Layer** unter echten Pfad-URLs, 1:1 auf die Hash-Routen gespiegelt (kein Build-Schritt
+zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artefakt):
+
+- `baustein/<id>/index.html` — je Pool-Baustein (497), **nicht** für Fehlerbilder (keine
+  eigene Route; sie erscheinen stattdessen als Trainer-Layer-Abschnitt auf der Seite ihres
+  Basis-Bausteins).
+- `pfad/stil/<stil>/`, `pfad/kompetenz/<stufe>/`, `pfad/themen/<domaene>/` — Landingpages,
+  plus je eine Hub-Übersichtsseite (`pfad/stil/`, `pfad/kompetenz/`, `pfad/themen/`), auf die
+  `index.html` im Footer mit echten (Nicht-Hash-)Links zeigt — Crawler-Einstiegspunkt
+  unabhängig von der Sitemap-Einreichung in der Search Console.
+- **Bewusst nicht dabei:** Instrument-Landingpages (`#/instrument/<name>`) — echte
+  interaktive Tab-Logik (Theorie/Praxis/Tools/Prüfung/Geräte), keine verlustfreie statische
+  Übersetzung; eigene Folge-Iteration.
+- Jede Seite: eigenes `<title>`/`canonical`/`og:*`/JSON-LD, lesbarer Inhalt aus denselben
+  Quellen wie die SPA, **kein** clientseitiger Zustand (Mastery/Merken/Demo-Player entfallen),
+  CTA „In ZERRER üben" → `#/baustein/<id>` in die echte App. **Kein** automatischer
+  JS-Redirect: die statische Seite bleibt selbst die dauerhaft indexierte, kanonische URL.
+  `sitemap.xml` wird von hier mitgeneriert (nicht mehr handgepflegt).
+- Nach jeder Pool-Änderung neu bauen: `python3 scripts/build_seiten.py` (Normallauf,
+  räumt `baustein/`+`pfad/` komplett auf und schreibt neu). `--check` (auch in
+  `verify.yml`) baut nur im Speicher und meldet Drift/Waisen, schreibt nichts.
+- `sw.js`: **keine** Änderung nötig — die Seiten liegen bewusst außerhalb von `SHELL` (kein
+  `cache.addAll`-Bloat durch hunderte Einträge) und werden nie als Unterressource geladen.
 
 ## Trainings-Loop (Unterbau)
 
@@ -215,6 +246,7 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
 python3 scripts/validate.py              # Cross-File-Konsistenz über den gemischten Pool
 python3 scripts/lift.py                  # idempotent — Titel geliftet, Skelette aktuell
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
+python3 scripts/build_seiten.py --check   # Tier-2-SEO-Seiten + Sitemap aus den Quellen reproduzierbar
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
 
