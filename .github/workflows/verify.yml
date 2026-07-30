@@ -46,6 +46,12 @@ jobs:
       - name: Grafik-Bundles gegen die Quellen pruefen
         run: python3 scripts/build_grafiken.py --check
 
+      # Die statischen Tier-2-SEO-Seiten (baustein/**, pfad/**, sitemap.xml)
+      # muessen aus dem Baustein-Pool reproduzierbar sein, sonst driftet die
+      # Sitemap von den tatsaechlichen Inhalten weg.
+      - name: Statische SEO-Seiten gegen die Quellen pruefen
+        run: python3 scripts/build_seiten.py --check
+
       # lift.py und build_index.py sind Generatoren mit eingecheckter Ausgabe.
       # Laufen sie hier und aendern etwas, wurden sie vor dem Commit vergessen.
       # images/bg/bilder.json ist hier bewusst NICHT dabei: Diese Datei gehoert
