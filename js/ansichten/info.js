@@ -88,24 +88,31 @@ export function renderUeber(el, daten) {
     </section>`;
 }
 
-// Rechtstexte (Impressum / Datenschutz): Titel + optionale Einleitungs-Absätze
-// aus app-info.json `rechtliches`, dazu optionale betitelte `abschnitte`
-// (§-Paragrafen als h2 + Absätze) für strukturierte Rechtstexte. Platzhalter
-// in [eckigen Klammern] bleiben sichtbar, bis der Betreiber sie füllt.
-export function renderRechtstext(el, daten, schluessel) {
-  const block = daten.appInfo?.rechtliches?.[schluessel];
-  if (!block) {
-    el.innerHTML = nichtGefundenHtml();
-    return;
-  }
+// Schlichte Info-Seite: Titel + optionale Einleitungs-Absätze, dazu optionale
+// betitelte `abschnitte` (h2 + Absätze). Trägt die Rechtstexte (Impressum/
+// Datenschutz) UND die Kollektiv-Seite — gleiche Bauform, eine Stelle.
+// Platzhalter in [eckigen Klammern] bleiben sichtbar, bis der Betreiber sie füllt.
+function infoSeiteHtml(block) {
   const absaetzeHtml = (liste) => (liste || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
   const einleitung = absaetzeHtml(block.absaetze);
   const abschnitte = (block.abschnitte || [])
     .map((a) => `<h2>${esc(text(a.titel) ?? '')}</h2>${absaetzeHtml(a.absaetze)}`)
     .join('');
-  el.innerHTML = `
+  return `
     <h1>${esc(text(block.titel) ?? '')}</h1>
     <section class="karte">${einleitung}${abschnitte}</section>`;
+}
+
+export function renderRechtstext(el, daten, schluessel) {
+  const block = daten.appInfo?.rechtliches?.[schluessel];
+  el.innerHTML = block ? infoSeiteHtml(block) : nichtGefundenHtml();
+}
+
+// ZERRA-Kollektiv: Konzerte im Raum Köln/Bonn und Kontakt. Referenzbereich —
+// NICHT im Baustein-Pool, kein Fortschritt.
+export function renderKollektiv(el, daten) {
+  const block = daten.appInfo?.kollektiv;
+  el.innerHTML = block ? infoSeiteHtml(block) : nichtGefundenHtml();
 }
 
 export function renderMitmachen(el, daten) {
