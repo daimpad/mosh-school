@@ -68,7 +68,10 @@ function ergebnisHtml(res) {
   const tempoGeber = a.x >= b.x ? a : b;
   const atmoGeber = tempoGeber === a ? b : a;
   const gef = gemeinsamesGefuehl(a, b);
-  const linie = gef.linie || t('wz_gm_linie_kontrast');
+  // `geteilt` sind echte Gefühls-Tags aus den Daten (bereits Klartext),
+  // `bruecke` liefert i18n-Schlüssel — die werden hier aufgelöst.
+  const bruecke = gef.bruecke.map((s) => t(s));
+  const linie = gef.linie || (bruecke.length ? bruecke.join(' / ') : t('wz_gm_linie_kontrast'));
   const spannung = distanz(a, b);
   const spannungWort =
     spannung >= 7 ? t('wz_gm_spannung_hoch') : spannung >= 4 ? t('wz_gm_spannung_mittel') : t('wz_gm_spannung_nah');

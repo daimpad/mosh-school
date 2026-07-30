@@ -9,7 +9,7 @@
 // tabindex="0">); die View verdrahtet Fokus, Klick und Enter/Space auf ein Panel.
 
 import { label, t, text } from '../i18n.js';
-import { bausteinIcon, domaeneIcon, esc } from '../oberflaeche.js';
+import { bausteinIcon, domaeneIcon, esc, sage } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 // Vier Ansichten mit ihren Schema-SVGs (eingebettet, monochrom, Hotspots).
@@ -123,6 +123,11 @@ function verdrahte(el, daten) {
   const waehle = (id, g) => {
     aktiveRegion = id;
     if (halter) halter.innerHTML = panelHtml(daten, id);
+    // Die Auswahl aendert nur den Panel-Inhalt weiter unten — am Bildschirm
+    // sichtbar, fuer den Screenreader aber stumm (der Halter wird ersetzt, nicht
+    // aktualisiert, also greift dort auch kein aria-live). Ueber die globale
+    // Live-Region ansagen, welches Bauteil jetzt erklaert wird.
+    if (daten.bausteinVonId.has(id)) sage(label('baustein', id));
     for (const h of el.querySelectorAll('.hotspot')) {
       const an = h === g;
       h.classList.toggle('aktiv', an);

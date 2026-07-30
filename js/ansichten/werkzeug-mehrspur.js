@@ -26,6 +26,13 @@ let stuecke = [];
 let klickScheduler = null;
 let monitorAudios = [];
 let mixAudios = [];
+// Object-URLs der laufenden Wiedergabe/Monitors und die Timer der
+// Latenzkompensation. Beides muss beim Stoppen wieder weg: Jede URL haelt sonst
+// ihren Blob bis zum Neuladen der Seite im Speicher (vier Spuren x zwanzigmal
+// Abspielen = 80 nie freigegebene Blobs), und ein ungetrackter setTimeout
+// startete die Leitspur noch NACH dem Stopp.
+let fluechtigeURLs = [];
+let mixTimer = [];
 let tickTimer = null;
 let startZeit = 0;
 let letzterFehler = '';
@@ -50,7 +57,22 @@ function hoerbare() {
 }
 
 // --- Wiedergabe (Mix) ---
+function gibURLsFrei() {
+  for (const u of fluechtigeURLs) {
+    try {
+      URL.revokeObjectURL(u);
+    } catch {
+      /* egal */
+    }
+  }
+  fluechtigeURLs = [];
+}
+
 function stoppeMix() {
+  // Erst die verzoegerten Starts abraeumen — sonst spielt die Leitspur nach dem
+  // Stopp noch an und laesst sich nur ueber einen Routenwechsel beenden.
+  for (const id of mixTimer) window.clearTimeout(id);
+  mixTimer = [];
   for (const a of mixAudios) {
     try {
       a.pause();
@@ -59,21 +81,29 @@ function stoppeMix() {
     }
   }
   mixAudios = [];
+  gibURLsFrei();
 }
 function spieleMix(el, liste) {
   stoppeMix();
   const offsetS = Math.abs(zustand.latenz) / 1000;
+  // Die Leitspur ist die erste Spur des GESAMTBESTANDS, nicht das erste
+  // Element der abgespielten Liste: `liste` ist bereits um Mute/Solo gefiltert.
+  // Vorher entschied `i === 0` — sobald die Leitspur stummgeschaltet oder eine
+  // Overdub-Spur solo war, verschob die Latenzkompensation die falsche Spur.
+  const leitId = spuren.length ? spuren[0].id : null;
   liste.forEach((spur, i) => {
-    const audio = new Audio(URL.createObjectURL(spur.blob));
+    const url = URL.createObjectURL(spur.blob);
+    fluechtigeURLs.push(url);
+    const audio = new Audio(url);
     audio.volume = typeof spur.pegel === 'number' ? spur.pegel : 1;
     mixAudios.push(audio);
     // Latenzkompensation (approx): positive Latenz → Overdubs sind zu spät, also
     // die Leitspur (i=0) um |Offset| verzögern; negative → Overdubs verzögern.
-    const istLeit = i === 0;
+    const istLeit = leitId ? spur.id === leitId : i === 0;
     const verzoegerung = zustand.latenz >= 0 ? (istLeit ? offsetS * 1000 : 0) : (istLeit ? 0 : offsetS * 1000);
-    window.setTimeout(() => {
+    mixTimer.push(window.setTimeout(() => {
       audio.play().catch(() => {});
-    }, verzoegerung);
+    }, verzoegerung));
   });
 }
 
@@ -96,7 +126,9 @@ async function starteAufnahme(el) {
   // Vorhandene Spuren als Monitor mitlaufen lassen.
   monitorAudios = [];
   for (const spur of hoerbare()) {
-    const audio = new Audio(URL.createObjectURL(spur.blob));
+    const url = URL.createObjectURL(spur.blob);
+    fluechtigeURLs.push(url);
+    const audio = new Audio(url);
     audio.volume = typeof spur.pegel === 'number' ? spur.pegel : 1;
     monitorAudios.push(audio);
     audio.play().catch(() => {});
@@ -124,11 +156,18 @@ async function starteAufnahme(el) {
       }
     }
     monitorAudios = [];
+    gibURLsFrei();
+    // Reihenfolge aus dem hoechsten vergebenen Wert ableiten, NICHT aus der
+    // Anzahl: nach dem Loeschen einer Spur faellt die Anzahl zurueck, die neue
+    // Aufnahme bekaeme dieselbe `reihenfolge` wie eine bestehende Spur — die
+    // Sortierung in spuren-db.js wird dann willkuerlich, und die Leitspur (die
+    // erste) konnte auf eine Overdub-Spur springen.
     const n = spuren.length;
+    const naechste = spuren.reduce((m, s) => Math.max(m, (s.reihenfolge || 0) + 1), 0);
     const spur = {
       id: 's' + Date.now(),
-      name: n === 0 ? t('wz_ms_leitspur') : t('wz_ms_spur', { n: n + 1 }),
-      reihenfolge: n,
+      name: n === 0 ? t('wz_ms_leitspur') : t('wz_ms_spur', { n: naechste + 1 }),
+      reihenfolge: naechste,
       mute: false,
       solo: false,
       pegel: 1,
@@ -348,6 +387,10 @@ function verdrahteSpuren(el) {
     });
     spurEl.querySelector('.wz-ms-pegel')?.addEventListener('change', (e) => aktualisiereSpur(id, { pegel: Number(e.target.value) / 100 }));
     spurEl.querySelector('.wz-ms-loeschen')?.addEventListener('click', async () => {
+      // Wie im Riff-Recorder: die Spur liegt nur lokal, ein Fehlklick war
+      // endgueltig. Rueckfrage vor dem Loeschen.
+      const name = spurEl.querySelector('.wz-ms-name')?.value || '';
+      if (!window.confirm(t('wz_rec_loeschen_bestaetigen', { name }))) return;
       await loescheSpur(id).catch(() => {});
       await ladeUndRendere(el);
     });

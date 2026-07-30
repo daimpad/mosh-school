@@ -148,7 +148,10 @@ function aktualisiereNavigation(segmente) {
   }
   // Der Bar-Knopf „Mehr" spiegelt die im Menü liegenden Ziele (inkl. Rechtstexte
   // und der aus den Hubs erreichbaren Referenzbereiche wie Songs/Suche/Prüfung).
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'profil', 'ueber'];
+  // 'profil' steht bewusst NICHT hier: Es hat einen eigenen Knopf in der unteren
+  // Leiste. Stand es mit drin, trugen auf #/profil sowohl „Profil" als auch
+  // „Mehr" aria-current="page" — die Leiste meldete zwei aktuelle Orte zugleich.
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'kollektiv', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {

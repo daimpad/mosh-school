@@ -36,7 +36,11 @@ export function holeAusgang() {
 // resume()t ihn. Gibt ein Promise auf den laufenden Kontext zurück.
 export async function aktiviere() {
   const ctx = holeKontext();
-  if (ctx.state === 'suspended') {
+  // NICHT nur auf 'suspended' pruefen: Safari/iOS kennt zusaetzlich den Zustand
+  // 'interrupted' (Anruf, andere App uebernimmt die Audio-Session). Ein Kontext
+  // in diesem Zustand blieb hier unberuehrt — „Audio aktivieren" meldete Erfolg,
+  // es kam aber nie wieder ein Ton, bis die Seite neu geladen wurde.
+  if (ctx.state !== 'running') {
     try {
       await ctx.resume();
     } catch {

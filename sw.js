@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v165';
+const CACHE = 'zerrer-v166';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -232,15 +232,26 @@ self.addEventListener('activate', (ereignis) => {
 });
 
 // Navigationsanfragen: erst Netz (frische Hülle), bei Ausfall gecachte index.html.
+//
+// Wichtig: die gecachte index.html verweist auf ihre Bausteine RELATIV
+// (`css/app.css`, `js/app.js`). Wird sie unter einer tieferen URL ausgeliefert —
+// offline etwa unter `/baustein/<id>/`, einer der generierten Tier-2-Seiten —,
+// löst der Browser diese Pfade gegen das tiefe Verzeichnis auf und findet nichts:
+// eine ungestylte, tote Seite. Für solche Tiefen offline lieber an die Wurzel
+// verweisen, wo die App vollständig funktioniert.
 function bedieneNavigation(anfrage) {
-  return fetch(anfrage).catch(() =>
-    caches.match('index.html').then((treffer) => treffer || caches.match('./')),
-  );
+  return fetch(anfrage).catch(() => {
+    const wurzel = new URL('./', self.registration.scope);
+    if (new URL(anfrage.url).pathname !== wurzel.pathname) {
+      return Response.redirect(wurzel.href, 302);
+    }
+    return caches.match('index.html').then((treffer) => treffer || caches.match('./'));
+  });
 }
 
 // Übrige Anfragen: stale-while-revalidate. Cache-Treffer sofort ausliefern,
 // parallel frisch holen und den Cache aktualisieren; ohne Treffer aufs Netz warten.
-function bedieneRest(anfrage) {
+function bedieneRest(anfrage, ereignis) {
   return caches.open(CACHE).then((cache) =>
     cache.match(anfrage).then((gecacht) => {
       const ausNetz = fetch(anfrage)
@@ -251,7 +262,16 @@ function bedieneRest(anfrage) {
           }
           return antwort;
         })
-        .catch(() => gecacht);
+        // Ohne Cache-Treffer UND ohne Netz ergaebe `gecacht` hier `undefined`.
+        // respondWith(undefined) ist ein harter TypeError — genau der Fall, der
+        // offline bei jeder nicht vorgeladenen Datei eintritt (die Hero-Bilder
+        // liegen bewusst nicht in SHELL). Eine echte Antwort halten.
+        .catch(() => gecacht || new Response('', { status: 504, statusText: 'offline' }));
+      // Bei einem Cache-Treffer geht die Antwort sofort raus — der Nachlade-Zweig
+      // liefe dann ohne Halt weiter und durfte vom Browser jederzeit mit dem
+      // Worker abgeräumt werden, bevor er den Cache aktualisiert hat. Genau die
+      // Auffrischung ist aber der Sinn von stale-while-revalidate.
+      if (gecacht && ereignis) ereignis.waitUntil(ausNetz);
       return gecacht || ausNetz;
     }),
   );
@@ -267,5 +287,5 @@ self.addEventListener('fetch', (ereignis) => {
     ereignis.respondWith(bedieneNavigation(anfrage));
     return;
   }
-  ereignis.respondWith(bedieneRest(anfrage));
+  ereignis.respondWith(bedieneRest(anfrage, ereignis));
 });

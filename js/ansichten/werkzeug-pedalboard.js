@@ -9,7 +9,7 @@
 // &kette=tuner-distortion-noise_gate.
 
 import { t, text } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, halteFokus } from '../oberflaeche.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
 import { pedalGrafik } from '../geraete-grafik.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
@@ -187,7 +187,9 @@ export function renderWerkzeugPedalboard(el, daten, query) {
 }
 
 function verdrahte(el, daten) {
-  const neu = () => renderWerkzeugPedalboard(el, daten, null);
+  // Fokus ueber das Selbst-Neuzeichnen retten (s. werkzeug-ampbox.js) — hier
+  // besonders wichtig, weil Hoch/Runter mehrfach hintereinander gedrueckt wird.
+  const neu = () => halteFokus(el, () => renderWerkzeugPedalboard(el, daten, null));
 
   for (const knopf of el.querySelectorAll('.wz-pb-instrument')) {
     knopf.addEventListener('click', () => {
@@ -245,9 +247,17 @@ function verdrahte(el, daten) {
   // Drag-Reorder (Zeiger) — ergänzt die tastaturbedienbaren Hoch/Runter-Knöpfe.
   let ziehIndex = null;
   for (const glied of el.querySelectorAll('.wz-pb-glied')) {
-    glied.addEventListener('dragstart', () => {
+    glied.addEventListener('dragstart', (e) => {
       ziehIndex = Number(glied.dataset.index);
       glied.classList.add('zieht');
+      // Ohne setData() startet Firefox den Drag gar nicht erst — dort war das
+      // Umsortieren per Zeiger komplett tot. Der Nutzinhalt ist egal, das
+      // Ziel liest ohnehin `ziehIndex`; entscheidend ist, dass der
+      // DataTransfer gefuellt ist.
+      try {
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', String(ziehIndex));
+      } catch (x) { /* aelterer Browser ohne dataTransfer — Hoch/Runter bleibt */ }
     });
     glied.addEventListener('dragend', () => glied.classList.remove('zieht'));
     glied.addEventListener('dragover', (e) => e.preventDefault());

@@ -95,11 +95,24 @@ export function normalisiereIndex(index) {
   return index;
 }
 
-export function sucheIndex(index, anfrage, filter) {
+// Nur-Trainer-Einträge (alle 288 Fehlerbilder plus einige Trainer-Bausteine)
+// tragen ausschließlich die Stufe 'trainer' — dasselbe Kriterium wie
+// istNurTrainer()/trainerSichtbar() in js/pfade.js, hier auf dem Index.
+function nurTrainer(eintrag) {
+  const stufen = eintrag.kompetenzstufe;
+  return Array.isArray(stufen) && stufen.length > 0 && stufen.every((s) => s === 'trainer');
+}
+
+// `optionen.trainer` reicht die Trainer-Perspektive des Nutzers herein (die
+// Engine liest keinen Zustand — der View gibt diagnose().trainer weiter). Ohne
+// sie lieferte die Suche jedem Nutzer Trainer-Fehlerbilder als Treffer, die auf
+// der Zielseite gar nicht sichtbar sind: Klick ins Leere.
+export function sucheIndex(index, anfrage, filter, optionen = {}) {
   const roh = normalisiere(anfrage);
   const terme = roh.split(/\s+/).filter(Boolean);
   const treffer = [];
   index.forEach((eintrag, pos) => {
+    if (!optionen.trainer && nurTrainer(eintrag)) return;
     if (!passtFacetten(eintrag, filter)) return;
     let score = 0;
     if (terme.length > 0) {

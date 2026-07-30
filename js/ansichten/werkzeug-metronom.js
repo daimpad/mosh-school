@@ -178,6 +178,12 @@ function zeigePausenHinweis(el) {
 function starte(el) {
   const ctx = holeKontext();
   const ziel = holeAusgang();
+  // Der Kontext kann nach dem Freischalten wieder wegkippen (Tab im
+  // Hintergrund, Anruf/Interruption auf iOS). Dann plant der Scheduler gegen
+  // eine stehende Uhr: kein Ton, die Ansicht meldet aber „Läuft". Vor jedem
+  // Start neu anstossen — der Klick kommt aus einer Nutzergeste, die
+  // Autoplay-Policy erlaubt das resume() hier also.
+  if (ctx.state !== 'running') aktiviere();
   scheduler = scheduler || erzeugeScheduler(ctx);
   stoppeMarker();
   laufSeit = performance.now();
@@ -197,6 +203,11 @@ function starte(el) {
       planeKlick(ctx, ziel, zeit, i, countinTakte);
       markiere(el, ctx, zeit, i, countinTakte);
     },
+    // Mit Tempo-Map endet der Lauf von selbst (schrittDauer liefert null). Ohne
+    // diesen Rueckruf blieb die Oberflaeche danach auf „laeuft" stehen: Der
+    // Knopf zeigte weiter „Stopp", obwohl nichts mehr klang. Gleiche Verdrahtung
+    // wie in demonstration.js.
+    beiEnde: () => stoppe(el),
   });
   setzeLaufZustand(el, true);
 }
@@ -273,7 +284,12 @@ function wendePresetAn(query) {
     const v = Number(query.get(name));
     return Number.isFinite(v) && v >= min && v <= max ? v : null;
   };
-  const bpm = zahl('bpm', 30, 300);
+  // Dieselben Grenzen wie Regler und Zahlenfeld (40..260). Vorher liess das
+  // Preset 30..300 durch — ein Link mit ?bpm=300 setzte einen Wert, den die
+  // Bedienelemente gar nicht darstellen koennen: das Zahlenfeld stand dann
+  // ueber seinem eigenen max, und die erste Beruehrung des Reglers riss das
+  // Tempo ohne erkennbaren Grund auf 260 herunter.
+  const bpm = zahl('bpm', 40, 260);
   if (bpm) zustand.bpm = Math.round(bpm);
   const takt = zahl('takt', 1, 12);
   if (takt) zustand.takt = Math.round(takt);
@@ -394,6 +410,12 @@ export function renderWerkzeugMetronom(el, daten, query) {
   registriereAufraeumen(() => {
     if (scheduler) scheduler.stoppe();
     stoppeMarker();
+    // Laufzeit ausbuchen wie in stoppe(). Ohne das blieb `laufSeit` beim
+    // Verlassen der laufenden Route stehen, der naechste Start ueberschrieb
+    // ihn — die bereits geuebte Zeit war weg und der Gesundheits-/Pausen-
+    // hinweis feuerte nie mehr.
+    if (laufSeit) laufKumuliert += performance.now() - laufSeit;
+    laufSeit = 0;
     clearTimeout(pausenTimer);
   });
 }

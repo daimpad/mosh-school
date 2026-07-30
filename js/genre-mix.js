@@ -49,15 +49,18 @@ const GEFUEHL_CLUSTER = {
   gemeinschaft: ['Gemeinschaft', 'Empowerment', 'Erschöpfung', 'Dreck'],
 };
 
-// Cluster-Klartext für die Brücken-Anzeige.
-export const CLUSTER_LABEL = {
-  aggression: 'Aggression',
-  wucht: 'Wucht & Schwere',
-  katharsis: 'Katharsis',
-  finsternis: 'Finsternis',
-  trance: 'Trance & Groove',
-  chaos: 'Chaos & Bruch',
-  gemeinschaft: 'Erdung',
+// Cluster → i18n-Schlüssel für die Brücken-Anzeige. Hier standen vorher die
+// deutschen Klartexte direkt im Modul — sichtbarer Text gehört aber nach
+// labels/de.json (CLAUDE.md). Gleiches Muster wie tempoSchluessel/atmoSchluessel
+// weiter unten: die Engine liefert Schlüssel, die View löst sie mit t() auf.
+export const CLUSTER_SCHLUESSEL = {
+  aggression: 'wz_gm_cluster_aggression',
+  wucht: 'wz_gm_cluster_wucht',
+  katharsis: 'wz_gm_cluster_katharsis',
+  finsternis: 'wz_gm_cluster_finsternis',
+  trance: 'wz_gm_cluster_trance',
+  chaos: 'wz_gm_cluster_chaos',
+  gemeinschaft: 'wz_gm_cluster_gemeinschaft',
 };
 
 function clusterVon(tag) {
@@ -88,7 +91,9 @@ export function score(a, b) {
 }
 
 // Gemeinsame Gefühlslinie: erst wortgleiche Tags, sonst geteilte Cluster.
-// Rückgabe { geteilt:[tags], bruecke:[clusterLabels], linie:string|null }.
+// Rückgabe { geteilt:[tags], bruecke:[i18n-Schlüssel], linie:string|null }.
+// `geteilt`/`linie` tragen echte Gefühls-Tags aus den Daten (schon Klartext),
+// `bruecke` dagegen Schlüssel — die View setzt beides zusammen.
 export function gemeinsamesGefuehl(a, b) {
   const bt = new Set(b.tags || []);
   const geteilt = (a.tags || []).filter((t) => bt.has(t));
@@ -101,8 +106,8 @@ export function gemeinsamesGefuehl(a, b) {
     if (!ca) continue;
     for (const tb of b.tags || []) if (clusterVon(tb) === ca) cluster.add(ca);
   }
-  const bruecke = [...cluster].map((c) => CLUSTER_LABEL[c] || c);
-  return { geteilt: [], bruecke, linie: bruecke.length ? bruecke.join(' / ') : null };
+  const bruecke = [...cluster].map((c) => CLUSTER_SCHLUESSEL[c] || c);
+  return { geteilt: [], bruecke, linie: null };
 }
 
 // Energie-/Grundton-Merkmal in Worte (für den Kreativ-Prompt). Gibt einen
@@ -161,6 +166,21 @@ export function paarFuerTag(genres, zielTag, rnd = Math.random) {
     }
   }
   if (!kandidaten.length) return null;
+  // Gewichtet ZIEHEN statt den Spitzenreiter zurueckgeben. Vorher entschied
+  // `kandidaten[0]` nach Sortierung — der Zufallsanteil (rnd()*0.5) war kleiner
+  // als die Abstufungen von naehe/distanz und konnte die Spitze praktisch nie
+  // kippen. Ergebnis: „Wuerfeln" im gezielten Modus lieferte bei 50 Wuerfen nur
+  // 1-4 verschiedene Paare (bei manchen Gefuehlen immer dasselbe) — ein toter
+  // Knopf. Gleiche Technik wie ziehePaarGewichtet: hohe Werte bleiben viel
+  // wahrscheinlicher, aber die Auswahl variiert.
+  const summe = kandidaten.reduce((s, k) => s + Math.max(0, k.wert), 0);
+  if (summe > 0) {
+    let ziel = rnd() * summe;
+    for (const k of kandidaten) {
+      ziel -= Math.max(0, k.wert);
+      if (ziel <= 0) return { a: k.a, b: k.b };
+    }
+  }
   kandidaten.sort((x, y) => y.wert - x.wert);
   return { a: kandidaten[0].a, b: kandidaten[0].b };
 }
