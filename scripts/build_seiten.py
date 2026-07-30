@@ -31,6 +31,21 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://zerrer.org'
 
+# Ziegenkopf-Icon (Inline-SVG, eigene Zeichnung) fuer den GoatCounter-Hinweis
+# im Footer-Schluss — dieselbe Zeichnung wie in index.html/js/ansichten/info.js.
+GOAT_SVG = (
+    '<svg class="goat-logo" viewBox="0 0 24 24" width="16" height="16" fill="none" '
+    'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" '
+    'aria-hidden="true" focusable="false">'
+    '<path d="M12 21c-2.8 0-5-2.1-5-4.8v-2.8c0-2.9 2.2-5.2 5-5.2s5 2.3 5 5.2v2.8c0 2.7-2.2 4.8-5 4.8Z"/>'
+    '<path d="M7.8 8.6C6 6.7 5 4.6 5 2.4c2 .1 3.8 1.1 4.8 3"/>'
+    '<path d="M16.2 8.6C18 6.7 19 4.6 19 2.4c-2 .1-3.8 1.1-4.8 3"/>'
+    '<path d="M12 21v1.4"/>'
+    '<circle cx="10.1" cy="11.4" r=".9" fill="currentColor" stroke="none"/>'
+    '<circle cx="13.9" cy="11.4" r=".9" fill="currentColor" stroke="none"/>'
+    '</svg>'
+)
+
 
 def lade(pfad):
     with open(os.path.join(ROOT, pfad), encoding='utf-8') as f:
@@ -401,6 +416,7 @@ def seiten_fuss(tiefe, app_href):
 <nav class="footer-spalte" aria-label="Info">
 <span class="footer-titel">Info</span>
 <a href="{w}#/ueber">Über</a>
+<a href="{w}kollektiv/">ZERRER-Kollektiv</a>
 <a href="{w}#/mitmachen">Kontakt</a>
 <a href="{w}#/impressum">Impressum</a>
 <a href="{w}#/datenschutz">Datenschutz</a>
@@ -414,7 +430,14 @@ def seiten_fuss(tiefe, app_href):
 </nav>
 </div>
 <div class="footer-haltung">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div>
-<div class="footer-schluss">Code unter <a href="https://github.com/daimpad/mosh-school/blob/main/LICENSE" rel="license noopener" target="_blank">MIT-Lizenz</a>, Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. Gebaut von <a href="https://paderta.com" rel="noopener" target="_blank">Damian Paderta</a> (<a href="https://nozilla.de" rel="noopener" target="_blank">Nozilla — bits and bytes with heart</a>) · <a href="{w}kollektiv/">ZERRER-Kollektiv</a></div>
+<div class="footer-schluss">
+<span class="footer-schluss-logo" aria-hidden="true"></span>
+<nav class="footer-schluss-recht" aria-label="Rechtliches">
+<a href="{w}#/impressum">Impressum</a>
+<a href="{w}#/datenschutz">Datenschutz</a>
+</nav>
+<a class="footer-schluss-goat" href="https://www.goatcounter.com/" rel="noopener" target="_blank">{GOAT_SVG}<span>GoatCounter</span></a>
+</div>
 </footer>
 <!-- Reichweitenmessung (GoatCounter, siehe #/datenschutz) — keine Cookies,
      keine gespeicherten IP-Adressen. Anders als in index.html KEIN
