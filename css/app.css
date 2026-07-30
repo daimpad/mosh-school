@@ -253,6 +253,11 @@ code { font-size: 0.85em; word-break: break-all; }
   letter-spacing: 0.01em;
 }
 
+/* Leerer Platzhalter statt des Plektrum-Bilds — reserviert die Flaeche fuer
+   ein kommendes SVG-Logo, ohne das alte Motiv weiter auszuliefern. Sobald das
+   neue SVG da ist, ersetzt es hier den Inhalt (dieselbe Klasse, dieselbe
+   Groesse); bis dahin bleibt die Stelle bewusst leer statt mit einem
+   Uebergangsbild bestueckt. */
 .marke-logo {
   width: 32px;
   height: 32px;
@@ -3148,11 +3153,15 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   line-height: 0.92;
   white-space: nowrap;
 }
+/* Leerer Platzhalter statt des Plektrum-Bilds (wie .marke-logo) — reserviert
+   die Flaeche neben dem Glitch-Schriftzug fuer ein kommendes SVG-Logo.
+   display:inline-block noetig: anders als ein <img> ist ein <span> kein
+   "replaced element" und wuerde width/height sonst ignorieren. */
 .startseite-hero-mark {
+  display: inline-block;
   flex: none;
   width: 0.9em;
   height: 0.9em;
-  filter: var(--filter-marke);
 }
 
 /* Glitch-Animation des Schriftzugs (js/hero-glitch.js) — "kaputter Film".
