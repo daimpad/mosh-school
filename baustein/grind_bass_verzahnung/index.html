@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Fortgeschritten", "Grindcore"], "description": "Im Grindcore hat der Bass eine undankbare und entscheidende Rolle: Bei Blast-Tempo kann niemand hören, ob du jede Sechzehntel der Gitarre mitspielst — aber…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Grind-Bass: Verzahnung im Extremtempo", "url": "https://zerrer.org/baustein/grind_bass_verzahnung/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Grind-Bass: Verzahnung im Extremtempo</h1><p class="leise">Bass · Fortgeschritten · Grindcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Im Grindcore hat der Bass eine undankbare und entscheidende Rolle: Bei Blast-Tempo kann niemand hören, ob du jede Sechzehntel der Gitarre mitspielst — aber jeder hört, ob das Fundament steht. Die Grind-Lösung ist Reduktion mit System: Der Bass spielt die Skelett-Töne der Gitarrenzelle (Grundton, Zieltöne der chromatischen Rutscher) in einem Raster, das er wirklich sauber halten kann — Achtel statt Sechzehntel sind völlig legitim, wenn sie wie eine Wand stehen.</p><p>Entscheidend ist die Verzahnung mit der Kick: Bei Blast-Tempo verschmelzen Bass und Double Bass zu einer Textur. Wer gegeneinander arbeitet, erzeugt Flattern; wer sich verzahnt, erzeugt die Grind-typische Dampfwalze. Praktisch heißt das: Das Bass-Raster wird auf das Kick-Muster gelegt, nicht auf die Gitarre.</p><p>Und in den stampfenden Kontrast-Teilen dreht sich die Rolle um: Plötzlich ist der Bass hörbar und trägt den Groove — die Umschaltung zwischen Textur-Rolle und Träger-Rolle ist die eigentliche Grind-Bass-Kunst.</p></section><section class="abschnitt"><h2>Übungsteil: Skelett statt Sechzehntel</h2><p><strong>Ziel:</strong> Eine Blast-Passage mit reduziertem, kick-verzahntem Raster begleiten und im Kontrast-Teil hörbar den Groove übernehmen.</p><p>So gehst du vor:</p><ol><li>Nimm eine schnelle Riff-Zelle (eigene oder aus grind_riff_reduktion) und bestimme ihre Skelett-Töne: Grundton plus die ein, zwei Zieltöne, auf denen die Zelle landet.</li><li>Spiel zu einem Blast- oder schnellen Beat (Drum-Loop oder Metronom) NUR diese Skelett-Töne in stabilen Achteln. Widersteh dem Reflex, die Gitarre zu doppeln — deine Aufgabe ist die Wand.</li><li>Verzahne dich mit der Kick: Akzentuiere die Bass-Noten, die auf Kick-Schlägen liegen, und halte den Rest gleichmäßig. Nimm auf und prüf, ob Bass und Kick als EINE Textur klingen.</li><li>Übe den Rollenwechsel: vier Takte Blast-Textur, dann harter Schnitt in zwei Takte stampfenden Halftime — dort spielst du weniger Noten, aber jede trägt. Der Schnitt selbst muss auf dem Schlag sitzen.</li></ol><p><strong>Steigerung:</strong> Verkürze im Blast-Teil das Raster schrittweise Richtung Sechzehntel — aber nur so weit, wie die Wand stabil bleibt. Sobald es flattert, zurück: Ein sauberes Achtel-Fundament schlägt jedes unsaubere Sechzehntel-Gedoppel.</p><p><strong>Selbstkontrolle:</strong> Hör die Aufnahme einmal nur auf Bass und Kick ab: eine Textur oder zwei konkurrierende? Und im Halftime-Teil: Übernimmt der Bass hörbar die Führung, oder bleibt er Textur? Beides muss unterscheidbar sein.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/bass_blast_begleitung/">Blasts &amp; hohe Tempi begleiten</a></li><li><a href="../../baustein/bass_hand_sync/">Hand-Synchronisation bei Tempo</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=grindcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Grind-Bass: Verzahnung löst sich</h3><p><strong>Symptom:</strong> Im Extremtempo löst sich die Verzahnung zwischen Bass und Schlagzeug — das Low-End wird zum undefinierten Brei.</p><p><strong>Ursache:</strong> Bei sehr hohem Tempo ist nicht geklärt, welche Schläge gemeinsam sind; der Bass versucht alles mitzuspielen und verliert die Kontur.</p><p><strong>Korrektur &amp; Ansage:</strong> Tempo zurück, die gemeinsamen Akzente mit den Drums festlegen, dazwischen eine tragfähige Linie. Nur die Achse Bass–Drums isoliert aufnehmen und schrittweise steigern.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/grind_bass_verzahnung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/grind_bass_verzahnung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

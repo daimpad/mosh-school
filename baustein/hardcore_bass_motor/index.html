@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Fortgeschritten", "Hardcore"], "description": "Im Hardcore ist der Bass der Motor: treibende Achtel mit hartem Pick-Attack, die den Song nach vorn schieben, ohne schneller zu werden. Das klingt nach…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Hardcore-Bass: der Motor", "url": "https://zerrer.org/baustein/hardcore_bass_motor/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Hardcore-Bass: der Motor</h1><p class="leise">Bass · Fortgeschritten · Hardcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Im Hardcore ist der Bass der Motor: treibende Achtel mit hartem Pick-Attack, die den Song nach vorn schieben, ohne schneller zu werden. Das klingt nach einem Widerspruch, ist aber das Kernhandwerk — Drive entsteht aus Konsequenz und Attack, nicht aus Tempo. Ein Bass, der hetzt, macht den Song nervös; ein Bass, der schiebt, macht ihn zwingend.</p><p>Zwei Werkzeuge dafür: Erstens der Anschlag — jede Note gleich hart, gleich lang, mit hörbarem Attack und präsenten Mitten, damit der Bass im Bandsound als eigene Kante steht. Zweitens die Verzahnung mit der Kick: In den Stomp-Teilen sitzt der Bass exakt auf dem Kick-Pattern, in den schnellen Teilen hält er die Achtel wie ein Uhrwerk, während Gitarre und Schlagzeug darüber arbeiten.</p><p>Und wenn die Gitarre ins Feedback kippt oder ein Break spielt, trägt der Bass allein weiter — diese Momente entscheiden, ob die Band groovt oder auseinanderfällt.</p></section><section class="abschnitt"><h2>Übungsteil: Schieben ohne Hetzen</h2><p><strong>Ziel:</strong> Treibende Achtellinien mit konstantem Attack spielen, die drücken, ohne das Tempo zu ziehen.</p><p>So gehst du vor:</p><ol><li>Spiel zwei Minuten durchgehende Achtel auf einem Ton zum Klick (um 100 BPM) und achte nur auf eines: Jede Note klingt gleich — gleicher Attack, gleiche Länge, gleiche Lautstärke.</li><li>Nimm die Übung auf und hör sie gegen den Klick ab: Wanderst du in den zwei Minuten nach vorn? Das Ziel ist Druck bei stabiler Zeit.</li><li>Verzahne dich mit einem Kick-Pattern (Metronom-App mit Beat oder Aufnahme): Spiel die Achtel und akzentuiere genau die Noten, die auf der Kick liegen — der Rest bleibt gleichmäßig.</li><li>Übe den Alleinträger-Moment: vier Takte Linie mit Band-Aufnahme, dann vier Takte, in denen du dir die anderen Instrumente wegdenkst (Aufnahme leiser drehen) — deine Zeit und dein Druck dürfen sich nicht ändern.</li></ol><p><strong>Steigerung:</strong> Wechsle innerhalb der Linie zwischen Stomp-Verzahnung (Akzente auf der Kick) und treibenden durchgehenden Achteln — die Umschaltung muss ohne Tempoveränderung passieren.</p><p><strong>Selbstkontrolle:</strong> Leg die Aufnahme über den Klick: Bleiben die Achtel über zwei Minuten stabil? Hörst du jede Note als eigenen Anschlag, auch bei Zerre? Wenn es matscht, ist es der Anschlag, nicht der Amp.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/bass_downpicking/">Downpicking-Ausdauer am Bass</a></li><li><a href="../../baustein/bass_synkopen/">Synkopen &amp; Off-Beat-Locks</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=hardcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Hardcore-Bass: der Motor zieht davon</h3><p><strong>Symptom:</strong> Die treibenden Achtel werden über die Minuten schneller: Am Songanfang sitzt der Bass, am Ende drückt er vor dem Schlagzeug — und im Alleinträger-Moment (Gitarren-Break) kippt das Tempo hörbar nach vorn.</p><p><strong>Ursache:</strong> Drive wird mit Eile verwechselt: Der Wunsch zu schieben landet im Tempo statt im Attack. Meist fehlt die Aufnahme-Kontrolle — das Ziehen fühlt sich von innen wie Energie an und fällt erst im Vergleich mit dem Klick auf.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Zwei-Minuten-Messung zum Ritual machen: durchgehende Achtel aufnehmen und gegen den Klick abhören — das Ziel ist Druck bei stabiler Zeit, und der Druck kommt aus konstantem, hartem Anschlag, nicht aus Beschleunigung. Den Alleinträger-Moment isoliert üben: Band-Aufnahme ausblenden und prüfen, ob die eigene Zeit steht. Merksatz: Schieben heißt lauter und entschlossener, nie früher.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_bass_motor">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_bass_motor">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

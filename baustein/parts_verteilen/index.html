@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Kopf & Fokus", "Fortgeschritten"], "description": "Derselbe Songpart kann sehr unterschiedlich klingen, je nachdem, wer was spielt. Parts zu verteilen ist Arrangement-Arbeit: Verdoppelt der Bass die Gitarre…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Parts unter den Instrumenten verteilen", "url": "https://zerrer.org/baustein/parts_verteilen/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Parts unter den Instrumenten verteilen</h1><p class="leise">Theorie · Kopf &amp; Fokus · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Derselbe Songpart kann sehr unterschiedlich klingen, je nachdem, wer was spielt. Parts zu verteilen ist Arrangement-Arbeit: Verdoppelt der Bass die Gitarre oder hält er eine eigene Linie? Harmonisiert eine zweite Gitarre, oder trägt die Stimme einen Abschnitt allein? Setzt das Schlagzeug hier zurück oder treibt es?</p><p>Die Entscheidung fällt gemeinsam und pro Part — nicht danach, wer am lautesten spielt. Gute Arrangements geben jedem Instrument seine Momente und lassen bewusst Platz, wo ein Part atmen soll. Ein voller Klang entsteht nicht dadurch, dass alle ständig alles spielen, sondern durch sinnvolle Verteilung.</p><p>Weniger ist oft mehr: Wenn eine Stimme in den Vordergrund tritt, treten die anderen zurück. Diese Absprache verhindert das Gedränge, in dem alles gleich laut und dadurch undeutlich wird.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Wie entscheidet ihr pro Part, wer führt und wer Raum lässt (Bass verdoppelt oder eigene Linie, zweite Gitarre, Gesang allein)? Bekommt jedes Instrument seine Momente über den Song verteilt? Und wo lasst ihr bewusst Platz, damit ein Part atmet, statt dass alle gleichzeitig alles spielen?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/song_arrangieren_ganz/">Einen ganzen Song arrangieren</a></li><li><a href="../../baustein/duo_gb_rollen_riff/">Gitarre &amp; Bass: Verdopplung oder Gegenstimme</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/struktur">Song-Struktur-Baukasten</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/parts_verteilen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/parts_verteilen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

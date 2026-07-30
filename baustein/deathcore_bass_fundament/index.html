@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Fortgeschritten", "Deathcore"], "description": "Im Deathcore lebt der Bass in extremer Tiefe — oft Drop B, Drop A oder auf dem Fünfsaiter noch darunter. Die Rolle ist doppelt: In den Blast- und…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Deathcore-Bass: das tiefe Fundament", "url": "https://zerrer.org/baustein/deathcore_bass_fundament/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Deathcore-Bass: das tiefe Fundament</h1><p class="leise">Bass · Fortgeschritten · Deathcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Im Deathcore lebt der Bass in extremer Tiefe — oft Drop B, Drop A oder auf dem Fünfsaiter noch darunter. Die Rolle ist doppelt: In den Blast- und Tremolo-Teilen verzahnt er sich als Textur mit der Double Bass (das Skelett-Prinzip aus dem Grind-Bass), im Breakdown wird er zum hörbaren Fundament, das jedem Chug sein Gewicht gibt. Ohne einen definierten Bass klingt selbst der brutalste Breakdown dünn.</p><p>Die Herausforderung ist die Definition bei dieser Tiefe: Sehr tiefe Töne verlieren schnell Kontur und werden zu Wummern. Die Gegenmittel sind bekannt (dicke Saiten für das Tuning, Attack aus dem Anschlag, ein leicht angezerrter oder mit cleanem Anteil gemischter Ton), aber im Deathcore kommt Präzision dazu: Der Bass muss die synkopierten Breakdown-Akzente exakt mit der Gitarre treffen, sonst verschmiert die Kante, die den Breakdown ausmacht.</p><p>Ein Genre-Detail ist der Slam-Einfluss: In langsamen, groovenden Teilen sitzt der Bass extrem satt auf der Eins und lässt Raum — hier trägt er weniger Noten, aber jede mit maximalem Gewicht.</p></section><section class="abschnitt"><h2>Übungsteil: Gewicht mit Kontur</h2><p><strong>Ziel:</strong> In tiefer Stimmung definiert bleiben und die Breakdown-Akzente exakt mit der Gitarre treffen.</p><p>So gehst du vor:</p><ol><li>Stimm tief (Drop C oder tiefer, passende Saiten) und spiel eine langsame Breakdown-Linie: wenige Töne, jeder satt angeschlagen und bewusst abgestoppt. Nimm auf und prüf auf kleinen Lautsprechern, ob jede Tonhöhe erkennbar bleibt.</li><li>Verzahn dich mit einem Chug-Pattern (Aufnahme oder Gitarrist): Deine Bass-Akzente müssen exakt auf denselben Schlägen sitzen wie die Gitarre — spiel es langsam, bis es EIN Schlag ist.</li><li>Übe den Rollenwechsel: vier Takte Blast-Textur (gleichmäßige Achtel, mit der Kick verzahnt), harter Schnitt in vier Takte Breakdown-Fundament (wenige schwere Töne). Der Schnitt sitzt auf dem Schlag.</li><li>Reduzier im Breakdown auf das Minimum: nur die Grundtöne der Gitarre, maximal satt. Weniger Noten, mehr Gewicht — das ist die Slam-Logik.</li></ol><p><strong>Steigerung:</strong> Misch (falls möglich) einen cleanen Tief-Anteil unter die Zerre und vergleich die Definition — oder spiel dieselbe Linie einmal mit hartem Plektrum-Attack und einmal weicher, und hör, was sich besser durchsetzt.</p><p><strong>Selbstkontrolle:</strong> Hör die Aufnahme mit Gitarre und Kick: Ist der Bass als eigene Kante hörbar UND liegen die Akzente exakt übereinander? Wird es bei den tiefsten Tönen zu Wummern? Dann fehlt Saitenstärke oder Attack, nicht Lautstärke.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/bass_downpicking/">Downpicking-Ausdauer am Bass</a></li><li><a href="../../baustein/drop_tuning/">Drop-Tunings &amp; Stimmen</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=deathcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Deathcore-Bass: Wummern statt Definition</h3><p><strong>Symptom:</strong> In extremer Tiefe wird der Bass zu undefiniertem Wummern; auf kleinen Lautsprechern ist keine Tonhöhe mehr erkennbar, und die Breakdown-Akzente verschmieren mit der Gitarre.</p><p><strong>Ursache:</strong> Zu dünne Saiten für die tiefe Stimmung (die Saite schlackert) und/oder fehlender Attack — der Ton hat keinen Anschlagskern, der durch die Dichte sticht. Die Akzente sitzen nicht exakt auf denselben Schlägen wie die Gitarre.</p><p><strong>Korrektur &amp; Ansage:</strong> Saitenstärke an die Stimmung anpassen, Attack aus hartem Plektrum oder angezerrtem Ton holen und auf kleinen Lautsprechern gegenprüfen: Bleibt jede Tonhöhe erkennbar? Die Breakdown-Akzente langsam mit der Gitarre verzahnen, bis sie als EIN Schlag klingen — nicht Lautstärke, sondern Definition ist das Ziel.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/deathcore_bass_fundament">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/deathcore_bass_fundament">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

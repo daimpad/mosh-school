@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Death Metal", "Black Metal"], "description": "Tremolo-Picking ist nichts anderes als sehr schneller Wechselschlag auf einem einzelnen Ton oder einer Saite. Es erzeugt den treibenden, gleichmäßigen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Tremolo-Picking ausbauen", "url": "https://zerrer.org/baustein/tremolo_ausbau/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Tremolo-Picking ausbauen</h1><p class="leise">Gitarre · Fortgeschritten · Death Metal · Black Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Tremolo-Picking ist nichts anderes als sehr schneller Wechselschlag auf einem einzelnen Ton oder einer Saite. Es erzeugt den treibenden, gleichmäßigen Klangteppich, der Death- und Black-Metal-Riffs ihr rasendes Tempo gibt.</p><p>Der Schlüssel liegt in der Bewegungsökonomie, die du vom Wechselschlag schon kennst: Die Bewegung kommt aus dem Handgelenk, der Bewegungsradius bleibt winzig, die Pickspitze steht nur wenig über. Je kürzer der Weg, den das Pick zurücklegt, desto höher das Tempo bei gleicher Anstrengung.</p><p>Wichtiger als reine Geschwindigkeit ist die Gleichmäßigkeit: Alle Anschläge sollen gleich laut und gleich lang sein, sodass kein Puls entsteht, den du nicht willst. Ein sauberes langsames Tremolo ist mehr wert als ein schnelles, das flattert.</p></section><section class="abschnitt"><h2>Übungsteil: Gleichmäßiges Tremolo halten</h2><p><strong>Ziel:</strong> Einen konstanten, dichten Tremolo-Strom auf einem Ton erzeugen.</p><p>So gehst du vor:</p><ol><li>Wähle einen einzelnen gegriffenen Ton und schlage ihn im strengen Wechselschlag so schnell an, dass ein durchgehender Strom entsteht.</li><li>Bleib bewusst unter deinem Grenztempo, sodass jeder Anschlag noch gleich klingt.</li><li>Halte den Ton über vier bis acht Takte, ohne dass Lautstärke oder Dichte schwanken.</li></ol><p><strong>Steigerung:</strong> Erst die Dauer bei gleichem Tempo verlängern, dann das Tempo in kleinen Schritten anheben.</p><p><strong>Selbstkontrolle:</strong> Der Tonstrom klingt gleichmäßig und dicht; es ist kein unbeabsichtigter Puls und kein Aussetzer zu hören.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/tremolo_picking/">Tremolo-Picking</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=death_metal">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gitarre: Tremolo verkrampft</h3><p><strong>Symptom:</strong> Das Tremolo-Picking ist ungleichmäßig und verkrampft, sobald das Tempo steigt.</p><p><strong>Ursache:</strong> Die Bewegung kommt aus dem Arm mit Dauerspannung statt aus einem kleinen, lockeren Handgelenk.</p><p><strong>Korrektur &amp; Ansage:</strong> Klein aus dem Handgelenk und locker spielen, langsam steigern und Pausen machen. Bei Verkrampfung stoppen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/tremolo_ausbau">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/tremolo_ausbau">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

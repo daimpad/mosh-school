@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Fortgeschritten", "Powerviolence"], "description": "Powerviolence-Vocals sind Ausbrüche: kurze, hektische Schrei-Salven, die mit den Schnitten der Musik kommen und gehen — zwei Sekunden Vollgas, harter Stopp,…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Powerviolence-Vocals: Ausbrüche in Serie", "url": "https://zerrer.org/baustein/pv_vocals_ausbruch/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Powerviolence-Vocals: Ausbrüche in Serie</h1><p class="leise">Vocals · Fortgeschritten · Powerviolence</p><section class="abschnitt"><h2>Erklärteil</h2><p>Powerviolence-Vocals sind Ausbrüche: kurze, hektische Schrei-Salven, die mit den Schnitten der Musik kommen und gehen — zwei Sekunden Vollgas, harter Stopp, Zeitlupen-Brüllen im Sludge-Teil, wieder Salve. Diese Sprunghaftigkeit ist stimmlich anspruchsvoller, als sie klingt: Viele kurze Attacken hintereinander verführen dazu, jede einzelne mit einem Druckstoß aus dem Hals zu starten — und genau diese harten Stimmeinsätze summieren sich schneller zu Verschleiß als eine lange Phrase.</p><p>Die gesunde Lösung ist der vorbereitete Einsatz: Vor jeder Salve steht ein kurzer, bewusster Atem-Impuls aus der Stütze — der Ton beginnt auf Luft, nicht auf Druck. Die Härte des Ausbruchs entsteht durch Artikulation und Entschlossenheit (harte Konsonanten, exakte Silben auf dem Schlag), nicht durch Anschlag im Kehlkopf. Und zwischen den Salven ist die Stille deine Verbündete: kurz lösen, atmen, neu ansetzen — die Pausen gehören zur Technik, nicht zur Erholung vom Fehler.</p><p>Gesundheitsrahmen strikt: Salven-Training ist intensiv — kurze Einheiten, leiser Aufbau, nach jeder Runde der Sprechtest. Bei Kratzen oder Engegefühl sofort stoppen, den Aufbau von einer erfahrenen Lehrperson begleiten lassen, bei anhaltender Heiserkeit in die HNO-Praxis.</p></section><section class="abschnitt"><h2>Übungsteil: Salve und Stille</h2><p><strong>Ziel:</strong> Kurze Schrei-Ausbrüche mit vorbereitetem Einsatz in schneller Folge setzen — ohne harte Stimmeinsätze.</p><p>So gehst du vor:</p><ol><li>Wärm die Stimme gründlich auf. Sprich eine kurze Zwei-Sekunden-Phrase (vier bis sechs Silben) zuerst rhythmisch exakt im Sprechton, mit einem bewussten Atem-Impuls davor.</li><li>Steiger zur leisen Harsh-Salve: Atem-Impuls, dann die Phrase als kurzer, entschlossener Ausbruch auf False-Cord-Basis — der Ton beginnt auf Luft. Danach zwei, drei Sekunden bewusste Stille mit Lösen und Atmen.</li><li>Setz vier Salven in Folge mit gleichbleibender Qualität: Jede beginnt vorbereitet, keine wird härter angesetzt als die vorige. Die Stille zwischen den Salven ist Teil der Übung — nie hineinhetzen.</li><li>Leg die Salven auf Musik: über einen schnellen Loop oder eine Aufnahme an festen Stellen einsetzen und an den Schnitten hart stoppen. Timing und vorbereiteter Einsatz zählen — Lautstärke kommt zuletzt.</li></ol><p><strong>Steigerung:</strong> Übe den Registerwechsel im Powerviolence-Stil: Salve hoch, Schnitt, ein getragenes tiefes Brüllen im Zeitlupen-Feel, Schnitt, wieder Salve — jeder Zustand beginnt mit seinem eigenen vorbereiteten Einsatz.</p><p><strong>Selbstkontrolle:</strong> Hör die Aufnahme ab: Beginnt jede Salve sauber oder mit einem hörbaren Knall im Stimmeinsatz? Und der Sprechtest nach der Einheit: Klingt die Alltagsstimme frei? Wenn die vierte Salve härter ansetzt als die erste, war die Serie zu lang — kürzen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/false_cord_ansatz/">Taschenfalten-Ansatz (False Cord)</a></li><li><a href="../../baustein/harsh_artikulation/">Artikulation in harschen Vocals</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=powerviolence">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>PV-Vocals: Ausbrüche kippen</h3><p><strong>Symptom:</strong> In der Serie kurzer, heftiger Powerviolence-Ausbrüche kippt die Stimme oder versagt; die Kontrolle geht mit jedem Ausbruch mehr verloren.</p><p><strong>Ursache:</strong> Die Ausbrüche kommen aus reinem Druck ohne Stütze und ohne Erholung dazwischen; die kurze, extreme Belastung summiert sich.</p><p><strong>Korrektur &amp; Ansage:</strong> Ausbrüche einzeln aus der Stütze anlegen, kurze Erholung zwischen den Stößen bewusst nutzen. Erst wenige, kontrollierte Ausbrüche, dann die Serie. Bei Kratzen, Kippen oder Schmerz sofort stoppen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/pv_vocals_ausbruch">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/pv_vocals_ausbruch">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

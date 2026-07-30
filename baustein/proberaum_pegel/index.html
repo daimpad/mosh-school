@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Einsteiger"], "description": "Das wichtigste Ausrüstungsteil im Metal kostet keine dreißig Euro und wird am häufigsten vergessen: Gehörschutz. Ein Metal-Proberaum liegt regelmäßig über…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Proberaum-Pegel & Gehörschutz", "url": "https://zerrer.org/baustein/proberaum_pegel/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Proberaum-Pegel &amp; Gehörschutz</h1><p class="leise">Equipment · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Das wichtigste Ausrüstungsteil im Metal kostet keine dreißig Euro und wird am häufigsten vergessen: Gehörschutz. Ein Metal-Proberaum liegt regelmäßig über 100 dB — Pegel, bei denen das Gehör in Minuten Schaden nimmt, und Hörschaden ist nicht heilbar. Tinnitus und Hochtonverlust beenden mehr Musikerkarrieren als jede Bandkrise. Deshalb ist die Regel nicht verhandelbar: Im Proberaum und auf Konzerten wird Gehörschutz getragen — immer, von allen.</p><p>Die Standards: Einfache Schaumstoff-Stöpsel schützen, verfärben den Klang aber stark. Musiker-Gehörschutz mit linearem Filter (ab etwa 20–30 Euro) senkt alle Frequenzen gleichmäßig — die Band klingt normal, nur leiser. Wer dauerhaft spielt, investiert irgendwann in angepasste Otoplastiken. Wichtig: von Anfang an mit Schutz proben, dann fehlt auch nichts — das Ohr mischt sich schnell neu ein.</p><p>Der zweite Hebel ist der Pegel selbst: Amps auf Ohrhöhe statt auf den Boden gerichtet (dann muss niemand „lauter als das Schienbein“ drehen), Lautstärke-Wettrüsten in der Band ansprechen statt mitmachen, und bei Klingeln oder Wattegefühl nach der Probe das Ohr ernst nehmen — das ist eine Warnung, keine Gewöhnungsphase. Bei anhaltenden Ohrgeräuschen: ärztlich abklären lassen.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Mach die Bestandsaufnahme: Hast du Gehörschutz — und trägst du ihn wirklich bei jeder Probe? Wenn nein: Was hält dich ab (Klang, Gewohnheit, Gruppendruck), und welches Argument aus dem Erklärteil setzt du dem entgegen? Besorg dir konkret in dieser Woche einen Musiker-Gehörschutz mit Filter, falls noch keiner da ist.
 
 Schau dir außerdem euren Proberaum an: Wohin strahlen die Amps? Wer dreht auf, wenn wer aufdreht? Skizzier eine Aufstellung, bei der sich alle hören, ohne dass einer gewinnt — und sprich sie bei der nächsten Probe an. Und ehrlich: Hattest du nach Proben schon Klingeln oder Druck auf den Ohren? Wenn ja — nimm es als das, was es ist: die letzte Warnung vor dem Schaden.</p></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/proberaum_pegel">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/proberaum_pegel">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

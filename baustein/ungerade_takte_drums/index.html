@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Profi", "Djent / Prog-Metalcore"], "description": "5/4, 7/8, 9/8 — ungerade Taktarten klingen kompliziert, funktionieren aber über einen einfachen Trick: Sie zerfallen in Gruppen aus Zweiern und Dreiern. Ein…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Ungerade Taktarten im Metal", "url": "https://zerrer.org/baustein/ungerade_takte_drums/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Ungerade Taktarten im Metal</h1><p class="leise">Drums · Profi · Djent / Prog-Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>5/4, 7/8, 9/8 — ungerade Taktarten klingen kompliziert, funktionieren aber über einen einfachen Trick: Sie zerfallen in Gruppen aus Zweiern und Dreiern. Ein 7/8 ist fast immer 2+2+3 (oder 3+2+2), ein 5/4 ist 3+2 oder 2+3. Wer die Gruppierung kennt, zählt nicht mehr sieben Schläge, sondern fühlt „kurz-kurz-lang“ — und plötzlich groovt der krumme Takt.</p><p>Der Beat baut sich entlang der Gruppen: Kick auf die Gruppenanfänge, Snare als Backbeat-Ersatz an die markanteste Stelle, Hi-Hat läuft durch. So bekommt der ungerade Takt ein wiedererkennbares Gesicht statt ein gezähltes Rätsel — Tool, Meshuggah und unzählige Prog-Death-Bands bauen genau darauf.</p><p>Übergänge sind die Königsdisziplin: der Wechsel von 4/4 in 7/8 und zurück, ohne dass die Band stolpert. Hier hilft ein durchlaufender gemeinsamer Nenner (die Achtel bleibt konstant!) und ein markantes Signal am Wechselpunkt.</p></section><section class="abschnitt"><h2>Übungsteil: 7/8 als kurz-kurz-lang</h2><p><strong>Ziel:</strong> Einen ungeraden Takt als Gruppen fühlen und stabil grooven.</p><p>So gehst du vor:</p><ol><li>Sprich und klatsch 2+2+3 („kurz-kurz-laaang“), bis die Gruppierung selbstverständlich pulsiert.</li><li>Bau den Beat: Kick auf die drei Gruppenanfänge, Snare auf den Anfang der Dreiergruppe, Hi-Hat-Achtel durchlaufend.</li><li>Spiel vier Takte 4/4 und wechsle nahtlos in vier Takte 7/8 — die Achtel bleibt dabei exakt konstant.</li></ol><p><strong>Steigerung:</strong> Die Gruppierung umstellen (3+2+2) und hören, wie derselbe Takt ein anderes Gesicht bekommt.</p><p><strong>Selbstkontrolle:</strong> Der 7/8 groovt, statt gezählt zu klingen; beim Wechsel aus dem 4/4 wankt die Achtel nicht.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/tempo_wechsel_drums/">Tempo- &amp; Feel-Wechsel setzen</a></li><li><a href="../../baustein/taktarten_unterteilungen/">Takt, Puls &amp; Unterteilungen</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li><li><a href="../../#/werkzeug/loops?stil=djent">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Drums: ungerade Takte verrutschen</h3><p><strong>Symptom:</strong> In 5er-, 7er- oder 9er-Takten geht die Eins verloren und das Muster verrutscht.</p><p><strong>Ursache:</strong> Die Gruppierung des Taktes ist nicht verinnerlicht; er wird gezählt, aber nicht gefühlt.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Takt in Gruppen zählen (etwa 3+2) und langsam üben, bis die Gruppierung sitzt und die Eins sicher ist.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/ungerade_takte_drums">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/ungerade_takte_drums">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

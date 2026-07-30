@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Einsteiger", "Hardcore", "Doom", "Metalcore"], "description": "Powerchords sind das harmonische Rückgrat des Metal. Sie bestehen nur aus Grundton und Quinte (oft plus Oktave) und lassen die Terz weg — dadurch bleiben…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Powerchords", "url": "https://zerrer.org/baustein/powerchords/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Powerchords</h1><p class="leise">Gitarre · Einsteiger · Hardcore · Doom · Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Powerchords sind das harmonische Rückgrat des Metal. Sie bestehen nur aus Grundton und Quinte (oft plus Oktave) und lassen die Terz weg — dadurch bleiben sie unter starker Verzerrung klar und wuchtig, wo volle Akkorde matschen würden.</p><p>Die Form ist beweglich: Ein gegriffenes Muster kannst du unverändert über den ganzen Hals schieben und so schnell die Tonhöhe wechseln. Als Zwei-Finger-Version (Grundton + Quinte) oder Drei-Finger-Version (plus Oktave) klingt der Akkord voller.</p><p>Sauberkeit heißt hier: Nur die gewollten Saiten klingen, benachbarte bleiben still. Das gelingt über den Fingerdruck und leichtes Abdämpfen mit den Handkanten.</p></section><section class="abschnitt"><h2>Übungsteil: E5 verschieben</h2><p><strong>Ziel:</strong> Powerchords sauber greifen und über den Hals bewegen.</p><p>So gehst du vor:</p><ol><li>Greif einen Powerchord an der tiefen Saite (Grundton + Quinte) und schlag ihn an.</li><li>Verschieb dieselbe Form ein paar Bünde weiter und dann auf die nächste Saitengruppe.</li><li>Prüfe, dass beide bzw. alle drei Töne gleichzeitig und sauber klingen.</li></ol><p><strong>Steigerung:</strong> Wechsle zügig zwischen zwei Powerchords und kombiniere sie später mit Palm Muting.</p><p><strong>Selbstkontrolle:</strong> Alle Töne des Akkords klingen zusammen; keine Nebengeräusche von ungewollten Saiten.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/greifhand_grundlagen/">Greifhand-Grundlagen</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=hardcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Powerchords: Nebensaiten klingen mit</h3><p><strong>Symptom:</strong> Der Powerchord klingt unsauber: Nachbarsaiten klingen mit, einzelne Akkordtöne schnarren oder fehlen, und unter Verzerrung wird daraus Matsch.</p><p><strong>Ursache:</strong> Die Dämpfkanten fehlen — Zeigefinger und Handballen legen sich nicht an die ungespielten Saiten — und die Fingerkuppen sitzen zu weit vom Bund entfernt.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Akkord in Zeitlupe aufbauen lassen: erst Fingerpositionen dicht am Bund prüfen, dann bewusst die Dämpfkanten anlegen (Zeigefinger berührt die hohe Nachbarsaite, Ballen die tiefen). Jede Saite einzeln anschlagen: Gewollte klingen, ungewollte sind stumm — erst dann als Akkord.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/powerchords">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/powerchords">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

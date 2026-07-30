@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Bass", "Fortgeschritten"], "description": "Zwei tief gestimmte, verzerrte Instrumente konkurrieren um denselben Raum — teilen sie ihn nicht auf, wird der Sound zu Matsch. Die Faustregel: Der Bass…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Gitarre & Bass: Frequenzen aufteilen", "url": "https://zerrer.org/baustein/duo_gb_frequenztrennung/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Gitarre &amp; Bass: Frequenzen aufteilen</h1><p class="leise">Gitarre · Bass · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Zwei tief gestimmte, verzerrte Instrumente konkurrieren um denselben Raum — teilen sie ihn nicht auf, wird der Sound zu Matsch. Die Faustregel: Der Bass besetzt das Fundament, die Gitarre die Mitten. Gemeinsam ergeben sie das Gewicht, das keine der beiden allein hat.</p><p>Praktisch heißt das, Ton und Anschlag aufeinander abzustimmen: Spielt der Bass sehr tief und rund, gewinnt die Gitarre durch mittige Präsenz und Definition; ist die Gitarre extrem tief gestimmt, braucht der Bass Anzerrung und Mitten, um nicht zu verschwinden. Wer wo Platz macht, ist eine gemeinsame Entscheidung, keine Frage der Lautstärke.</p><p>Hört euren Zusammenklang bewusst als eine Fläche und fragt: Ist jedes Instrument noch trennbar, oder verschmilzt alles zu Dröhnen?</p></section><section class="abschnitt"><h2>Übungsteil: Wer besetzt welchen Raum</h2><p><strong>Ziel:</strong> Ton und Anschlag so abstimmen, dass beide trennbar bleiben.</p><p>So gehst du vor:</p><ol><li>Spielt dieselbe tiefe Passage gemeinsam und hört, ob Bass und Gitarre unterscheidbar sind.</li><li>Verändert nacheinander je einen Parameter (Anschlagpunkt, Anzerrung, Tiefen- oder Mittenanteil) und hört, ob die Trennung besser wird.</li><li>Legt gemeinsam fest, wer die Tiefen trägt und wer die Mitten, und spielt die Passage erneut.</li></ol><p><strong>Steigerung:</strong> Wechselt in einen Part, in dem der Bass eine eigene Linie spielt, und haltet die Trennung auch dort.</p><p><strong>Selbstkontrolle:</strong> Ihr könnt beide Instrumente im Zusammenklang heraushören; nichts verschwindet im Dröhnen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/powerchords/">Powerchords</a></li><li><a href="../../baustein/anschlagpunkt_ton/">Anschlagpunkt &amp; Ton</a></li><li><a href="../../baustein/bass_ton_gear/">Ton &amp; Durchsetzen im Mix</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gitarre &amp; Bass: Tiefen matschen</h3><p><strong>Symptom:</strong> Der Zusammenklang dröhnt, einzelne Instrumente sind nicht mehr heraushörbar; je tiefer die Stimmung, desto breiiger. Der Bass scheint zu „verschwinden“, obwohl er laut ist.</p><p><strong>Ursache:</strong> Beide besetzen denselben Tiefenbereich: Die Gitarre ist zu bassig eingestellt, der Bass hat zu wenig Mitten oder Anzerrung. Niemand hat bewusst Rollen verteilt — Fundament gegen Mitten.</p><p><strong>Korrektur &amp; Ansage:</strong> Lass sie eine tiefe Passage gemeinsam spielen und je einen Parameter isoliert verändern (Anschlagpunkt, Anzerrung, Tiefen- oder Mittenanteil). Vereinbart, wer die Tiefen trägt und wer die Mitten. Kontrolliere über eine Aufnahme, ob beide getrennt hörbar bleiben.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/duo_gb_frequenztrennung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/duo_gb_frequenztrennung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

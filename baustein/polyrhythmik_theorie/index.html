@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Fortgeschritten", "Metalcore", "Djent / Prog-Metalcore"], "description": "Zwei Begriffe, die ständig verwechselt werden: Beim Polyrhythmus laufen zwei verschiedene Unterteilungen im selben Zeitraum — drei Schläge gegen vier, beide…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Polyrhythmus vs. Polymetrik", "url": "https://zerrer.org/baustein/polyrhythmik_theorie/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Polyrhythmus vs. Polymetrik</h1><p class="leise">Theorie · Fortgeschritten · Metalcore · Djent / Prog-Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Zwei Begriffe, die ständig verwechselt werden: Beim Polyrhythmus laufen zwei verschiedene Unterteilungen im selben Zeitraum — drei Schläge gegen vier, beide beginnen und enden gemeinsam. Bei der Polymetrik läuft eine Figur von ungerader Länge über einem geraden Puls und verschiebt sich bei jeder Wiederholung — bis sich beide nach mehreren Takten wieder treffen.</p><p>Der Klang ist entsprechend verschieden: Polyrhythmen erzeugen ein flirrendes „Ineinander“ im Moment, Polymetrik erzeugt eine wandernde Reibung über die Zeit mit einem Erlösungsmoment am Treffpunkt. Meshuggah ist der Klassiker der Polymetrik: gerader 4/4 im Schlagzeug-Grundgerüst, darüber Riff-Zellen von krummer Länge.</p><p>Fürs Hören hilft eine einfache Frage: Verschiebt sich das Muster gegen den Puls (Polymetrik), oder steht es still und reibt nur in sich (Polyrhythmus)? Wer die Unterscheidung sicher hört, kann beim Schreiben gezielt zum passenden Werkzeug greifen.</p></section><section class="abschnitt"><h2>Übungsteil: Beides klatschen, beides hören</h2><p><strong>Ziel:</strong> Polyrhythmus und Polymetrik praktisch unterscheiden.</p><p>So gehst du vor:</p><ol><li>Klatsch den 3-gegen-4-Polyrhythmus (zusammengesetztes Muster aus dem Einsteiger-Baustein) und spür, dass er in sich steht.</li><li>Sprich dann eine Fünfergruppe („1-2-3-4-5“) fortlaufend über einem geklatschten Viererpuls und spür, wie sie wandert.</li><li>Zähl mit, nach wie vielen Vierertakten sich die Fünfergruppe wieder mit der Eins trifft.</li></ol><p><strong>Steigerung:</strong> Hör eine Meshuggah-artige Passage und bestimme: Polyrhythmus oder Polymetrik — und wie lang ist die Zelle?</p><p><strong>Selbstkontrolle:</strong> Du kannst beide Phänomene erzeugen, benennen und beim Hören sicher auseinanderhalten.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/taktarten_unterteilungen/">Takt, Puls &amp; Unterteilungen</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li><li><a href="../../#/werkzeug/loops?stil=metalcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Polyrhythmik: Begriffe vertauscht</h3><p><strong>Symptom:</strong> Polyrhythmus und Polymetrik werden durcheinander erklärt: Eine verschobene Dreier-Figur über 4/4 wird „drei gegen vier“ genannt, oder ein echtes drei-gegen-vier wird als wandernde Figur beschrieben. In der Probe redet man aneinander vorbei.</p><p><strong>Ursache:</strong> Beide Konzepte sind unter demselben Etikett „poly“ abgelegt, ohne die Kernfrage zu trennen: Beim Polyrhythmus teilen zwei Unterteilungen denselben Zeitraum und treffen sich auf jeder Eins — bei der Polymetrik wandert eine ungerade Figur über den Puls und trifft die Eins erst nach mehreren Takten wieder.</p><p><strong>Korrektur &amp; Ansage:</strong> Je Begriff ein klatschbares Minimalbeispiel verankern: drei gegen vier mit beiden Händen (gemeinsame Eins jede Runde) gegen eine Dreiergruppe aus Achteln über 4/4 (die Eins wandert). Dann als Testfrage etablieren: „Treffen sich die Einsen jedes Mal?“ — Ja heißt Polyrhythmus, Nein heißt Polymetrik. Erst wenn die Unterscheidung am Körper sitzt, die Fachwörter benutzen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/polyrhythmik_theorie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/polyrhythmik_theorie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

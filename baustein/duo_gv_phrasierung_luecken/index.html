@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Vocals", "Fortgeschritten"], "description": "Gitarre und Gesang teilen sich denselben Vordergrund — spielen beide gleichzeitig viele Ereignisse, überlagern sie sich zu Brei. Die klassische Lösung ist…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Gitarre & Gesang: Phrasierung in die Lücken", "url": "https://zerrer.org/baustein/duo_gv_phrasierung_luecken/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Gitarre &amp; Gesang: Phrasierung in die Lücken</h1><p class="leise">Gitarre · Vocals · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Gitarre und Gesang teilen sich denselben Vordergrund — spielen beide gleichzeitig viele Ereignisse, überlagern sie sich zu Brei. Die klassische Lösung ist Wechselwirkung: Die Stimme phrasiert in die Lücken des Riffs, das Riff lässt Raum für die Gesangslinie.</p><p>Das ist ein Call-and-Response im Kleinen: ein Riff-Motiv, dann eine Gesangsphrase, dann wieder das Riff. Wo die Stimme lange Linien trägt, hält die Gitarre oft ein einfacheres, offeneres Muster; wo die Gitarre ein komplexes Riff spielt, lässt die Stimme Platz. Diese Absprache ist Arrangement-Arbeit, keine Frage von Können.</p><p>Geht einen Part gemeinsam durch und markiert, wer wann im Vordergrund steht — bewusst, nicht zufällig.</p></section><section class="abschnitt"><h2>Übungsteil: Riff und Stimme im Wechsel</h2><p><strong>Ziel:</strong> Gesang und Gitarre so verzahnen, dass sie sich nicht überlagern.</p><p>So gehst du vor:</p><ol><li>Nehmt einen Part, in dem Riff und Gesang bisher gleichzeitig laufen, und markiert die Lücken im Riff.</li><li>Legt die Gesangsphrasen bewusst in diese Lücken, sodass ein Wechsel aus Riff und Stimme entsteht.</li><li>Spielt den Part gemeinsam und hört, ob beide Ebenen klar bleiben.</li></ol><p><strong>Steigerung:</strong> Baut eine Stelle, an der Riff und Stimme bewusst gleichzeitig laufen — als Kontrast zum Wechsel.</p><p><strong>Selbstkontrolle:</strong> Riff und Gesang sind durchgehend getrennt hörbar; nichts verschwimmt.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/rhythmus_phrasierung/">Rhythmus &amp; Phrasierung</a></li><li><a href="../../baustein/einfaches_riff/">Einfaches Riff zusammensetzen</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gitarre &amp; Gesang: alles gleichzeitig</h3><p><strong>Symptom:</strong> Riff und Gesang laufen dauerhaft gleichzeitig; beide Ebenen verlieren an Kontur, der Text ist schwer verständlich, das Riff tritt in den Hintergrund. Der Part klingt voll, aber undeutlich.</p><p><strong>Ursache:</strong> Es gibt keine Absprache, wer wann im Vordergrund steht. Gesangsphrasen liegen nicht in den Lücken des Riffs, sondern über dessen dichten Stellen.</p><p><strong>Korrektur &amp; Ansage:</strong> Geht den Part gemeinsam durch und markiert die Lücken im Riff. Lass die Gesangsphrasen bewusst dorthin legen, sodass ein Wechsel aus Riff und Stimme entsteht. Ein bewusst gleichzeitiger Moment darf als Kontrast bleiben — aber als Entscheidung, nicht als Dauerzustand.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/duo_gv_phrasierung_luecken">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/duo_gv_phrasierung_luecken">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

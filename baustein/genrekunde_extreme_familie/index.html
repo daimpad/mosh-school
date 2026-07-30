@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Einsteiger", "Hardcore", "Crust", "Grindcore", "Powerviolence", "Sludge", "Doom", "Deathcore", "Djent / Prog-Metalcore", "Stoner / Post-Metal"], "description": "Zwischen Hardcore-Punk und Metal liegt eine ganze Familie von Genres, die sich gegenseitig hervorgebracht haben — und wer die Verwandtschaften kennt, hört…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Genrekunde: die extreme Familie", "url": "https://zerrer.org/baustein/genrekunde_extreme_familie/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Genrekunde: die extreme Familie</h1><p class="leise">Theorie · Einsteiger · Hardcore · Crust · Grindcore · Powerviolence · Sludge · Doom · Deathcore · Djent / Prog-Metalcore · Stoner / Post-Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Zwischen Hardcore-Punk und Metal liegt eine ganze Familie von Genres, die sich gegenseitig hervorgebracht haben — und wer die Verwandtschaften kennt, hört jedes einzelne Genre klarer. Die Kurzfassung: Aus dem Hardcore-Punk der frühen Achtziger wachsen zwei Linien. Die eine wird schneller und dreckiger — der D-Beat führt zum Crust, und wo Crust-Tempo auf Metal-Extremität trifft, entsteht Grindcore: Blastbeats, Sekunden-Songs, totale Verdichtung. Powerviolence ist der eigenwillige Cousin: Hardcore, der zwischen absurdem Tempo und Zeitlupe hin- und herspringt, mit Schnitten statt Übergängen.</p><p>Die andere Linie wird langsamer und schwerer: Doom pflegt das erhabene, majestätische Schleppen aus der Sabbath-Tradition — und Sludge kreuzt genau dieses Tempo mit der Wut und dem Dreck des Hardcore. Gleiches Tempo, völlig andere Haltung: Doom klingt wie ein Ritual, Sludge wie ein Kampf. Aus derselben langsamen Wurzel wachsen zwei weitere Verwandte: der Stoner Rock, der das Gewicht mit fuzzigem Groove und Blues-Farbe füllt (der Riff regiert, es swingt statt zu schleppen), und das Post-Metal, das ganz auf Dynamik setzt — lange, geduldige Aufbauten von der Stille bis zur überwältigenden Wand.</p><p>Die Grenzen sind fließend, und viele Bands leben genau auf den Übergängen. Aber als Landkarte funktioniert das Bild: eine schnelle Linie (Hardcore → Crust → Grind, daneben Powerviolence) und eine langsame (Doom, daneben Sludge) — und alle teilen dieselbe Wurzel aus Direktheit und Dringlichkeit.</p><p>Quer zu beiden Linien liegen die Core-Fusionen: Metalcore und Deathcore verbinden die Härte und die Breakdowns des Hardcore mit Riffing und Extremtechnik des Metal — Deathcore zieht dabei die tiefe Brutalität und die Growls des Death Metal in den Breakdown-Fokus. Aus derselben Metalcore-Wurzel wächst eine ganz andere Linie: Djent und der progressive Metalcore, die die Härte der Breakdowns mit der Rhythmik und den tiefen, erweiterten Saiten des Progressive Metal verbinden — verschobene, perkussive Chugs über geradem Puls statt roher Geschwindigkeit.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Bau dir eine kleine Hör-Landkarte: Such dir je einen typischen Song aus Hardcore, Crust, Grindcore, Powerviolence, Doom und Sludge (Genre-Klassiker findest du mit einer kurzen Suche) und hör jeweils eine Minute konzentriert hinein. Notier zu jedem drei Stichworte: Tempo, Klang (sauber/räudig, dünn/massiv), Gesang.
 
 Prüf dann die Landkarte aus dem Erklärteil an deinen Notizen: Hörst du die schnelle Linie und die langsame Linie? Woran erkennst du den Unterschied zwischen Doom und Sludge, obwohl beide langsam sind — und zwischen Grindcore und Powerviolence, obwohl beide rasen? Zum Schluss: Welches der sechs Genres zieht dich am stärksten — und was genau daran (das Tempo, der Klang, die Haltung)?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/tempo_genres/">Tempo &amp; BPM im Metal</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=hardcore">Play-along-Loops</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/genrekunde_extreme_familie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/genrekunde_extreme_familie">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

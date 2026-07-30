@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Hardcore"], "description": "Hardcore-Riffs leben nicht von Geschwindigkeit oder Komplexität, sondern von Bounce: dem federnden Groove, der einen Raum in Bewegung setzt. Technisch ist…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Hardcore-Riffing: Groove & Bounce", "url": "https://zerrer.org/baustein/hardcore_groove_bounce/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Hardcore-Riffing: Groove &amp; Bounce</h1><p class="leise">Gitarre · Fortgeschritten · Hardcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Hardcore-Riffs leben nicht von Geschwindigkeit oder Komplexität, sondern von Bounce: dem federnden Groove, der einen Raum in Bewegung setzt. Technisch ist das meist simpel — Powerchords, Downpicking, viel Palm Muting —, aber die Platzierung macht den Unterschied: Synkopen, die gegen den Beat drücken, Pausen, die das Riff atmen lassen, und Akzente, die mit der Kick des Schlagzeugs verzahnt sind.</p><p>Der häufigste Fehler ist, Hardcore-Riffs wie Thrash zu spielen: vorwärtsgepeitscht und durchgehend dicht. Hardcore groovt breiter — das Riff sitzt satt AUF dem Beat oder minimal dahinter, und die Lücken zwischen den Schlägen sind Teil der Aussage. Wer den Stomp-Teil eines Hardcore-Songs spielt, spielt vor allem die Pausen mit.</p><p>Hör dir als Referenz klassische NYHC-Riffs an: wenige Töne, viel Gewicht, und ein Groove, zu dem sich ein ganzer Raum synchron bewegt. Genau diese Körperlichkeit ist das Ziel.</p></section><section class="abschnitt"><h2>Übungsteil: Stomp bauen</h2><p><strong>Ziel:</strong> Ein synkopiertes Hardcore-Riff mit hörbarem Bounce spielen — die Pausen gehören zum Riff.</p><p>So gehst du vor:</p><ol><li>Nimm eine simple Powerchord-Folge (zwei bis drei Akkorde) und spiel sie zuerst in durchgehenden gedämpften Achteln zum Klick (um 100 BPM) — das ist die Basis ohne Groove.</li><li>Streich gezielt Schläge: Lass die Zählzeiten 2-und und 4 weg und ersetz sie durch bewusste Stille. Die Dämpfung muss sauber greifen — die Pausen sollen knallen, nicht nachklingen.</li><li>Verschieb einen Akzent auf eine Und-Zeit (Synkope) und halte den Klick dabei stabil. Der Groove entsteht genau aus diesem Gegeneinander von Akzent und Beat.</li><li>Steh auf und spiel das Riff im Stehen: Wenn dein eigener Körper nicht mitgeht, hat das Riff noch keinen Bounce — vereinfache, bis es sich körperlich anfühlt.</li></ol><p><strong>Steigerung:</strong> Spiel dasselbe Riff einmal exakt auf dem Klick und einmal minimal dahinter (laid back) und nimm beides auf — der Unterschied ist der halbe Hardcore-Sound.</p><p><strong>Selbstkontrolle:</strong> Nimm das Riff auf und hör auf die Pausen: Sind sie wirklich still? Nickt dein Kopf beim Anhören von allein mit? Wenn nicht, sind die Akzente noch nicht klar genug gesetzt.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/downpicking/">Downpicking</a></li><li><a href="../../baustein/chugs_breakdown/">Chugs &amp; Breakdown-Gefühl</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=hardcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Hardcore-Riffing: durchgenagelt statt gegroovt</h3><p><strong>Symptom:</strong> Das Riff wird technisch sauber gespielt, aber niemand bewegt sich: Alle Achtel sind gleich laut, die Pausen klingen nach, und das Ganze klingt nach Thrash im falschen Tempo statt nach Stomp.</p><p><strong>Ursache:</strong> Die Lücken werden nicht als Teil des Riffs behandelt: schlampige Dämpfung lässt die Pausen zuwachsen, Akzente und Nicht-Akzente sind gleichberechtigt, und die Synkopen werden dem Beat angeglichen statt gegen ihn gesetzt. Der Körper spielt nicht mit — im Sitzen geübt, im Kopf gezählt.</p><p><strong>Korrektur &amp; Ansage:</strong> Das Riff über die Pausen aufbauen: erst durchgehende gedämpfte Achtel, dann gezielt Schläge streichen und die Stille knallen lassen — die Dämpfung ist die halbe Miete. Akzente bewusst überzeichnen (die Synkope lauter als alles andere), dann zurücknehmen. Und die Körperprobe zur Pflicht machen: im Stehen spielen; wenn der eigene Kopf nicht nickt, weiter vereinfachen statt weiter üben.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_groove_bounce">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/hardcore_groove_bounce">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

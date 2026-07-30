@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Kopf & Fokus", "Theorie", "Fortgeschritten"], "description": "Grenzüberschreitende Bands sind Lehrmeister: Sie zeigen, wie man entfernte Welten überzeugend verschmilzt. Diese Aufgabe nutzt sie als Modell — nicht zum…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Aufgabe: Von der Referenz zum Eigenen", "url": "https://zerrer.org/baustein/von_referenz_zum_eigenen/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Aufgabe: Von der Referenz zum Eigenen</h1><p class="leise">Kopf &amp; Fokus · Theorie · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Grenzüberschreitende Bands sind Lehrmeister: Sie zeigen, wie man entfernte Welten überzeugend verschmilzt. Diese Aufgabe nutzt sie als Modell — nicht zum Nachbauen, sondern zum Verstehen des Prinzips.</p><p>Wähle eine Band, die zwei Welten fusioniert (die Inspirations-Playlist bietet Beispiele), und zerlege, was sie tut: Welche zwei Genres oder Traditionen bringt sie zusammen, und wodurch bleibt es anschlussfähig? Dann übertrage nur das Prinzip auf zwei Welten, die dir gehören.</p><p>So lernst du nicht die Band, sondern ihre Methode — und wendest sie auf dein eigenes Material an.</p></section><section class="abschnitt"><h2>Übungsteil: Von der Referenz zum Eigenen</h2><p><strong>Ziel:</strong> Das Fusions-Prinzip einer grenzüberschreitenden Band verstehen und auf eigenes Material übertragen.</p><p>So gehst du vor:</p><ol><li>Wähle eine grenzüberschreitende Band aus der Inspirations-Playlist.</li><li>Benenne die zwei Welten (Genres oder Traditionen), die sie verschmilzt.</li><li>Finde heraus, was die Fusion anschlussfähig macht — welcher vertraute Anker sie trägt.</li><li>Wähle zwei Welten, die zu dir passen, und übertrage nur das Prinzip, nicht den Klang.</li><li>Skizziere ein kurzes Stück oder Riff nach diesem Prinzip und nimm es auf.</li></ol><p><strong>Steigerung:</strong> Wähle bewusst zwei Welten, deren Kombination du noch nirgends gehört hast.</p><p><strong>Selbstkontrolle:</strong> Hast du das Prinzip übertragen, statt die Band zu kopieren? Ist ein vertrauter Anker erkennbar?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/anschlussfaehigkeit/">Anschlussfähigkeit: im Bekannten verankern</a></li><li><a href="../../baustein/zwei_genres_ein_riff/">Aufgabe: Zwei Genres, ein Riff</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/recorder?kreativ=1">Riff-Recorder</a></li><li><a href="../../#/werkzeug/genremix">Genre-Mix-Generator</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/von_referenz_zum_eigenen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/von_referenz_zum_eigenen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

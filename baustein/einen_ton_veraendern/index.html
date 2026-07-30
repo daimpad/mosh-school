@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Gitarre", "Fortgeschritten"], "description": "Die wirksamste Art, modale Färbung zu begreifen, ist nicht Lesen, sondern Verschieben. Man nimmt eine bestehende Figur und bewegt genau einen Ton um einen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Einen Ton verändern, alles verändern", "url": "https://zerrer.org/baustein/einen_ton_veraendern/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Einen Ton verändern, alles verändern</h1><p class="leise">Theorie · Gitarre · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die wirksamste Art, modale Färbung zu begreifen, ist nicht Lesen, sondern Verschieben. Man nimmt eine bestehende Figur und bewegt genau einen Ton um einen Bund — nach oben oder unten — und hört, was mit dem Charakter passiert. Der Rest bleibt unverändert, damit der Unterschied eindeutig zuzuordnen ist.</p><p>Besonders aufschlussreich sind zwei Stellen: der zweite Ton über dem Grundton und der Ton, der eine Terz über dem Grundton liegt. Am zweiten Ton entscheidet sich, ob es eng und bedrohlich oder offen klingt; an der Terzstelle entscheidet sich, ob eine Figur dunkel oder hell wirkt. Ein einziger Bund Unterschied kippt die Stimmung vollständig.</p><p>Diese Übung ist bewusst ergebnisoffen. Es geht nicht darum, die richtige Skala zu finden, sondern darum, den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung selbst zu hören. Wer das einmal am eigenen Riff erlebt hat, braucht dafür nie wieder eine Tabelle.</p></section><section class="abschnitt"><h2>Übungsteil: Einen Bund verschieben und hören</h2><p><strong>Ziel:</strong> Den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung erfahren.</p><p>So gehst du vor:</p><ol><li>Spiele eine kurze eigene Figur über einer gehaltenen tiefen Saite und merke dir ihren Charakter.</li><li>Verschiebe den zweiten Ton der Figur um einen Bund nach unten und spiele sie erneut.</li><li>Höre, wie sich die Wirkung ändert, und benenne sie mit eigenen Worten.</li><li>Setze den Ton zurück und verschiebe stattdessen den Ton eine Terz über dem Grundton um einen Bund.</li><li>Nimm alle Fassungen auf und vergleiche sie nacheinander.</li></ol><p><strong>Steigerung:</strong> Verschiebe zwei Töne gleichzeitig und prüfe, ob du die Wirkung noch eindeutig zuordnen kannst.</p><p><strong>Selbstkontrolle:</strong> Kannst du benennen, was sich durch den einen Ton geändert hat? Hörst du den Unterschied auch ohne Vergleich direkt danach?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/modale_faerbung/">Modale Färbung: warum Genres anders klingen</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Die richtige Lösung wird gesucht</h3><p><strong>Symptom:</strong> Statt zu verschieben und zu hören, fragt die Person nach der richtigen Skala für das Genre und wartet auf eine Antwort, bevor sie spielt. Die Übung wird abgebrochen, sobald das Ergebnis „falsch“ klingt.</p><p><strong>Ursache:</strong> Die Übung wird als Aufgabe mit Lösung missverstanden. Sie ist bewusst ergebnisoffen — der Ertrag liegt im gehörten Zusammenhang zwischen einem Ton und der Gesamtwirkung, nicht in einem korrekten Ergebnis.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Frage zurückgeben: Was hat sich verändert, als du den Ton bewegt hast? Ausdrücklich sagen, dass es keine richtige Version gibt, und beide Varianten notieren lassen — die gemochte und die abgelehnte, jeweils mit einem Wort zur Wirkung. „Klingt falsch“ ist ein brauchbares Ergebnis und wird als solches gewürdigt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/einen_ton_veraendern">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/einen_ton_veraendern">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

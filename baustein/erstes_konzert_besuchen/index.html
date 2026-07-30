@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Community", "Einsteiger"], "description": "Ein kleines Konzert läuft anders ab, als es von außen wirkt. Türöffnung und Beginn liegen meist ein bis zwei Stunden auseinander, die erste Band spielt oft…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Das erste Konzert besuchen", "url": "https://zerrer.org/baustein/erstes_konzert_besuchen/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Das erste Konzert besuchen</h1><p class="leise">Community · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ein kleines Konzert läuft anders ab, als es von außen wirkt. Türöffnung und Beginn liegen meist ein bis zwei Stunden auseinander, die erste Band spielt oft vor wenigen Leuten, und der Headliner beginnt spät. Wer die Vorbands mitnimmt, sieht am meisten und trifft die Leute, die später auf der Bühne stehen — in kleinen Szenen sind Publikum und Bands weitgehend dieselben Menschen.</p><p>Praktisch hilft wenig Gepäck: Jacken und Taschen sind im Weg, feste Schuhe sind sinnvoll, und Wasser trinken ist keine Nebensache, weil vorne schnell hohe Temperaturen entstehen. Wer nicht ins Gedränge will, findet an den Seiten und hinter dem Mischpult ruhige Plätze mit oft besserem Klang — das ist keine Zweitklassigkeit, sondern eine normale Wahl.</p><p>Ein Punkt ist nicht verhandelbar: Gehörschutz. Konzerte in kleinen Räumen erreichen Pegel, bei denen schon eine einzige Show messbare Schäden hinterlassen kann, und Hörschäden bilden sich nicht zurück. Gefilterte Ohrstöpsel dämpfen gleichmäßig und erhalten den Klang, während einfache Schaumstoffstöpsel vor allem Höhen wegnehmen. Beides ist besser als nichts — und der Merch-Stand hat oft welche.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Planst du genug Zeit ein, um auch die Vorbands zu sehen — dort passiert oft das Interessanteste? Hast du Gehörschutz dabei, und zwar bei jedem Konzert und nicht nur bei den lauten? Und weißt du, dass die Seiten und der Bereich hinter dem Mischpult eine völlig normale Wahl sind, wenn dir das Gedränge zu viel ist?</p></section><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gehörschutz wird ausgelassen</h3><p><strong>Symptom:</strong> Schülerinnen und Schüler gehen ohne Gehörschutz auf Konzerte und in laute Proben, oft mit dem Argument, es klinge damit dumpf oder man wirke übervorsichtig.</p><p><strong>Ursache:</strong> Ist meist Fehlinformation, nicht Leichtsinn: Bekannt sind einfache Schaumstoffstöpsel, die vor allem Höhen wegnehmen und den Klang tatsächlich verschlechtern. Gefilterte Ohrstöpsel dämpfen dagegen gleichmäßig und erhalten das Klangbild.</p><p><strong>Korrektur &amp; Ansage:</strong> gefilterten Gehörschutz zeigen und ausprobieren lassen, die Größenordnung benennen und deutlich machen, dass Hörschäden dauerhaft sind. Vorbildwirkung zählt hier mehr als jede Ansage — wer selbst konsequent Schutz trägt, überzeugt am zuverlässigsten.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/erstes_konzert_besuchen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/erstes_konzert_besuchen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

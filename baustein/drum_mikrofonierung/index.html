@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Drums", "Profi"], "description": "Der Klang einer Schlagzeugaufnahme entsteht überwiegend an zwei Stellen: an den Overheads und im Raum. Die Nahmikrofone liefern Attack und Kontrolle, aber…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Schlagzeug mikrofonieren", "url": "https://zerrer.org/baustein/drum_mikrofonierung/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Schlagzeug mikrofonieren</h1><p class="leise">Equipment · Drums · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Klang einer Schlagzeugaufnahme entsteht überwiegend an zwei Stellen: an den Overheads und im Raum. Die Nahmikrofone liefern Attack und Kontrolle, aber das Gesamtbild — Becken, Balance, Größe — kommt von oben. Wer die Overheads richtig setzt, hat den größten Teil der Arbeit erledigt.</p><p>Das zentrale Problem ist die Phase. Jedes Mikrofon hört jede Trommel, nur zu unterschiedlichen Zeiten; treffen zwei Signale zeitversetzt aufeinander, löschen sich Frequenzen aus und der Klang wird dünn. Zwei Regeln helfen: Halte den Abstand zwischen zwei Mikrofonen mindestens dreimal so groß wie deren Abstand zur Schallquelle, und miss die Overheads so aus, dass beide gleich weit von der Snare entfernt sind — sonst wandert die Snare aus der Mitte. Ein Mikrofon unter der Snare muss in der Polarität gedreht werden, weil es die Fellbewegung von der anderen Seite aufnimmt.</p><p>Für die Bassdrum bestimmt die Position den Klang: nah am Schlagfell mehr Attack, tiefer im Kessel mehr Wucht, außen vor dem Resonanzloch mehr Tiefbass. Und ein einzelnes Raummikrofon in einigen Metern Abstand bringt oft mehr Größe als jedes zusätzliche Nahmikrofon.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Setzt du deine Overheads bewusst symmetrisch zur Snare, oder stehen sie einfach irgendwo? Prüfst du Phasenprobleme, bevor du am Klangregler drehst? Und hast du ein Raummikrofon ausprobiert, statt weitere Nahmikrofone zu ergänzen?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/drums_recording/">Studio-Drums: Klick, Samples, Ehrlichkeit</a></li><li><a href="../../baustein/mikrofon_typen/">Mikrofontypen für Gesang</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Schlagzeugaufnahme klingt dünn</h3><p><strong>Symptom:</strong> Die Aufnahme klingt dünn und kraftlos, obwohl das Kit im Raum gut klingt. Beim Anheben der Tiefen wird es matschig, ohne an Substanz zu gewinnen.</p><p><strong>Ursache:</strong> Phasenprobleme zwischen den Mikrofonen. Jedes Mikrofon nimmt jede Trommel zeitversetzt auf; treffen zwei Signale versetzt aufeinander, löschen sich Frequenzen aus.</p><p><strong>Korrektur &amp; Ansage:</strong> Overheads so ausmessen, dass beide gleich weit von der Snare entfernt sind, den Mindestabstand zwischen Mikrofonen einhalten und die Polarität des Snare-Untermikrofons drehen. Erst danach an die Klangregelung gehen — ein Phasenproblem lässt sich nicht wegregeln.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/drum_mikrofonierung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/drum_mikrofonierung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

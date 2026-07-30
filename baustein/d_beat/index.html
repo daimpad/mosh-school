@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Einsteiger", "Hardcore", "Crust"], "description": "Der D-Beat ist ein schneller, treibender Beat aus dem Hardcore-Punk und Crust, benannt nach der Band Discharge. Er prägt viele Hardcore- und Crust-nahe…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "D-Beat", "url": "https://zerrer.org/baustein/d_beat/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>D-Beat</h1><p class="leise">Drums · Einsteiger · Hardcore · Crust</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der D-Beat ist ein schneller, treibender Beat aus dem Hardcore-Punk und Crust, benannt nach der Band Discharge. Er prägt viele Hardcore- und Crust-nahe Metal-Stile und lebt von rohem, unerbittlichem Vorwärtsdruck.</p><p>Charakteristisch ist das Zusammenspiel von Bassdrum und Snare in einem galoppierenden, durchgehenden Muster, über dem die Hi-Hat oder das Ride gleichmäßig läuft. Das Ergebnis ist ein Beat, der drängt, ohne kompliziert zu sein.</p><p>Wie immer gilt: erst langsam und sauber, dann schneller. Der Reiz des D-Beats liegt in seiner Energie, und die entsteht aus einem stabilen, treibenden Puls.</p></section><section class="abschnitt"><h2>Übungsteil: Treibendes D-Beat-Muster</h2><p><strong>Ziel:</strong> Das galoppierende Bassdrum-Snare-Muster gleichmäßig spielen.</p><p>So gehst du vor:</p><ol><li>Spiel gleichmäßige Achtel auf der Hi-Hat als Grundlage.</li><li>Setz das treibende Wechselmuster aus Bassdrum und Snare darunter, zunächst langsam.</li><li>Achte darauf, dass Bassdrum und Snare exakt ineinandergreifen.</li></ol><p><strong>Steigerung:</strong> Erhöhe das Tempo in kleinen Schritten, bis der Beat drängt, ohne zu eiern.</p><p><strong>Selbstkontrolle:</strong> Das Muster treibt gleichmäßig; Bassdrum und Snare liegen sauber im Timing.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/grundbeat/">Metal-Grundbeat</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?beat=d_beat">Play-along-Loops</a></li><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>D-Beat: Verzahnung zerfällt</h3><p><strong>Symptom:</strong> Der D-Beat verliert seinen Galopp: Kick und Snare greifen nicht mehr ineinander, das Muster klingt nach zwei getrennten Stimmen statt nach einem treibenden Motor.</p><p><strong>Ursache:</strong> Beide Gliedmaßen wurden nur gemeinsam im Zieltempo geübt — die Verzahnung ist nie langsam automatisiert worden, und unter Tempo bricht die Koordination auf.</p><p><strong>Korrektur &amp; Ansage:</strong> Das Muster in halbem Tempo neu verzahnen: Kick und Snare zunächst allein, dann zusammen, mit lautem Zählen der Positionen. Auf die Nahtstellen hören (wo folgt Snare direkt auf Kick?) und diese Übergänge isoliert loopen. Tempo in 5-BPM-Schritten zurückholen — der Galopp muss in jedem Tempo hörbar bleiben.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/d_beat">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/d_beat">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

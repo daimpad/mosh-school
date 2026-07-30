@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Fortgeschritten", "Crust", "Sludge"], "description": "Der Crust-Sound ist bewusst räudig: sägende, breite Verzerrung auf Gitarre UND Bass, wenig Politur, viel Kante. Das ist kein Unvermögen, sondern Ästhetik…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Crust-Sound: Dreck mit Absicht", "url": "https://zerrer.org/baustein/crust_sound_dreck/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Crust-Sound: Dreck mit Absicht</h1><p class="leise">Equipment · Fortgeschritten · Crust · Sludge</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Crust-Sound ist bewusst räudig: sägende, breite Verzerrung auf Gitarre UND Bass, wenig Politur, viel Kante. Das ist kein Unvermögen, sondern Ästhetik mit Tradition — der Sound soll nach Keller, Proberaum und Dringlichkeit klingen, nicht nach Studio. Berühmt ist die skandinavische Schule, die einen simplen Verzerrer mit allen Reglern am Anschlag zum Markenzeichen machte: die Kettensäge.</p><p>Trotzdem ist auch Dreck ein Handwerk: Ein räudiger Sound, der funktioniert, bleibt im Bandkontext lesbar — die Riffs erkennbar, der Bass als eigenes Fundament hörbar, das Schlagzeug nicht zugekleistert. Die Kunst ist, an den richtigen Stellen unsauber zu sein: viel Zerre und raue Kanten ja, aber Attack und Rhythmus müssen durchkommen. Und weil im Crust oft beide Saiteninstrumente stark verzerrt sind, gilt umso mehr: absprechen, wer welchen Frequenzbereich hält.</p><p>Dazu gehört der DIY-Gedanke: Crust-Sounds entstehen traditionell aus dem, was da ist — günstige Pedale, geliehene Amps, Improvisation. Die Haltung ist Teil des Genres.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Hör dir einen klassischen Crust- oder Kängpunk-Song an und daneben eine moderne, polierte Metal-Produktion. Beschreib den Unterschied bewusst wertfrei: Was leistet der Dreck im Crust-Sound — welche Dringlichkeit, welche Haltung transportiert er, die die saubere Produktion nicht hat? Und umgekehrt: Was geht im Dreck verloren?
 
 Prüf dann am Crust-Song die Lesbarkeit: Kannst du trotz der Soundwand das Riff mitsingen, den Bass vom Gitarrensound unterscheiden, jeden Schlagzeugschlag orten? Überleg für dein eigenes Setup: Mit welchen vorhandenen Mitteln (Pedal-Einstellungen, Amp, Anschlag) kämst du diesem Sound nahe — und an welcher Stelle würdest du bewusst NICHT in den Dreck gehen, damit deine Band lesbar bleibt?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/bass_ton_gear/">Ton &amp; Durchsetzen im Mix</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=crust">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Crust-Sound: Dreck als Ausrede</h3><p><strong>Symptom:</strong> Unter der Soundwand ist nichts mehr zu erkennen: kein Riff zum Mitsingen, Bass und Gitarre ununterscheidbar, das Schlagzeug zugekleistert — und auf Nachfrage heißt es, das sei eben Crust.</p><p><strong>Ursache:</strong> Die Ästhetik wird als Freibrief missverstanden: Der Dreck der Vorbilder ist kuratiert (Attack und Rhythmus kommen durch, die Rollen sind gestaffelt), der eigene ist flächendeckend. Oft steckt darunter ein zweites Problem: Unsauberes Spiel versteckt sich gern in der Wand — der Dreck kaschiert, statt zu färben.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Lesbarkeitstest von den Vorbildern lernen: am Referenz-Song zeigen, dass man trotz Kettensäge das Riff mitsingen und jeden Schlagzeugschlag orten kann — dann die eigene Aufnahme demselben Test unterziehen. Danach gezielt aufräumen: Rollen staffeln (wer hält welchen Frequenzbereich), an ein, zwei Stellen bewusst NICHT in den Dreck gehen, und die Passage einmal clean spielen lassen — was clean nicht steht, rettet auch die Zerre nicht.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/crust_sound_dreck">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/crust_sound_dreck">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Körper & Gesundheit", "Fortgeschritten"], "description": "Wer regelmäßig verzerrt singt, braucht Regeneration als festen Teil des Trainings — nicht als Notbremse. Nach intensiven Sessions oder Shows helfen…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Regeneration & Warnzeichen", "url": "https://zerrer.org/baustein/stimm_regeneration/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Regeneration &amp; Warnzeichen</h1><p class="leise">Körper &amp; Gesundheit · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Wer regelmäßig verzerrt singt, braucht Regeneration als festen Teil des Trainings — nicht als Notbremse. Nach intensiven Sessions oder Shows helfen Stimmruhe (auch leises Dauerreden zählt als Belastung), viel Flüssigkeit, sanftes Abwärmen mit leisem Summen und Schlaf. Die Stimme regeneriert wie ein Muskel: in der Pause, nicht in der Belastung.</p><p>Ernst zu nehmende Warnzeichen sind Heiserkeit, die länger als ein, zwei Tage bleibt, ein rauer oder belegter Grundklang, Schmerzen beim Sprechen oder Schlucken, Tonlücken im Umfang oder eine Stimme, die schneller ermüdet als früher. Solche Signale heißen: Belastung sofort herunterfahren und der Stimme echte Ruhe geben.</p><p>Bleiben Beschwerden bestehen oder kehren sie wieder, gehört die Stimme in fachkundige Hände — eine HNO-ärztliche Untersuchung (idealerweise mit Stimmdiagnostik) ist dann keine Übervorsicht, sondern Berufspraxis. Sänger:innen, die lange dabei sind, kennen ihre Ärztin wie ihren Proberaum.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Erstelle deine persönliche Regenerations-Checkliste für die 24 Stunden nach einer intensiven Session oder Show: Was tust du direkt danach, was am nächsten Tag, und worauf verzichtest du? Leg außerdem schriftlich fest, bei welchen Warnzeichen und nach wie vielen Tagen du einen HNO-Termin machst — entschieden wird das jetzt, nicht erst im Ernstfall.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/stimme_schuetzen_alltag/">Stimme schützen: Ruhe, Flüssigkeit, Grenzen</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Heiserkeit nach dem Üben</h3><p><strong>Symptom:</strong> Nach Harsh-Einheiten ist die Stimme wiederholt belegt oder heiser, teils bis zum nächsten Tag; die Sprechstimme klingt verändert.</p><p><strong>Ursache:</strong> Die Gesamtdosis oder die Technik überlastet die Stimme: zu lange oder zu laute Einheiten, Verzerrung mit Druckanteil, fehlendes Auf- und Abwärmen — Heiserkeit ist das Überlastungssignal des Gewebes, kein Trainingseffekt.</p><p><strong>Korrektur &amp; Ansage:</strong> Setz die Harsh-Arbeit sofort aus und vereinbare Regeneration: Stimmschonung, keine intensiven Einheiten, Wiedereinstieg erst bei vollständig klarer Stimme und dann leise und kurz. Die Technik gemeinsam mit einer erfahrenen Lehrperson überprüfen, bevor die Intensität zurückkehrt. Bei anhaltender oder wiederkehrender Heiserkeit ausdrücklich zur ärztlichen Abklärung (HNO) raten — das ist Fürsorge, keine Formalie.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/stimm_regeneration">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/stimm_regeneration">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

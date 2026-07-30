@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Fortgeschritten"], "description": "Bei hohem Tempo entscheidet nicht die schnellste Hand, sondern die Synchronisation beider: Der Greif-Finger muss exakt in dem Moment sitzen, in dem der…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Hand-Synchronisation bei Tempo", "url": "https://zerrer.org/baustein/bass_hand_sync/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Hand-Synchronisation bei Tempo</h1><p class="leise">Bass · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Bei hohem Tempo entscheidet nicht die schnellste Hand, sondern die Synchronisation beider: Der Greif-Finger muss exakt in dem Moment sitzen, in dem der Anschlag kommt. Schon wenige Millisekunden Versatz machen den Ton stumpf, schnarrend oder halb tot — der häufigste Grund, warum schnelle Läufe „unsauber“ klingen, obwohl beide Hände einzeln schnell genug wären.</p><p>Synchronisation übst du paradoxerweise langsam: In einem Tempo, in dem du den Kontaktmoment beider Hände bewusst spüren kannst, brennt sich das richtige Timing ein. Beim Beschleunigen bleibt dann das Muster erhalten.</p><p>Ein bewährter Test ist das Staccato-Spiel: jeder Ton kurz und deutlich, mit bewusstem Treffen beider Hände. Wird es schneller und die Töne verschwimmen, bist du über dem Tempo, in dem die Hände wirklich zusammen sind.</p></section><section class="abschnitt"><h2>Übungsteil: Kontaktmoment spüren</h2><p><strong>Ziel:</strong> Greif- und Anschlaghand bei steigendem Tempo exakt synchron halten.</p><p>So gehst du vor:</p><ol><li>Spiel eine einfache Vier-Ton-Figur sehr langsam und spür bewusst, wie Greifen und Anschlag zusammenfallen.</li><li>Spiel dieselbe Figur staccato — jeder Ton kurz, deutlich und voll.</li><li>Erhöhe das Tempo nur so weit, wie jeder Ton klar definiert bleibt.</li></ol><p><strong>Steigerung:</strong> Die Figur über Saitenwechsel und Lagenwechsel ausdehnen; Aufnahmen machen und kritisch anhören.</p><p><strong>Selbstkontrolle:</strong> Kein Ton klingt stumpf oder halb; auch bei Tempo bleibt jeder Anschlag voll und definiert.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/schnelles_fingerspiel/">Schnelles Fingerspiel</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Hände laufen bei Tempo auseinander</h3><p><strong>Symptom:</strong> Ab einem bestimmten Tempo treffen Greif- und Anschlagimpuls nicht mehr zusammen: Töne knacken, schnarren oder klingen doppelt; darunter ist alles sauber.</p><p><strong>Ursache:</strong> Beide Hände wurden getrennt schneller, ihre Synchronisation aber nicht — meist eilt die Anschlaghand der Greifhand voraus, und die Tonentstehung fällt zwischen die Impulse.</p><p><strong>Korrektur &amp; Ansage:</strong> Bestimme gemeinsam das letzte Tempo, bei dem alles sauber ist, und mach es zum Arbeitspunkt. Von dort in sehr kleinen Metronomschritten steigern lassen, mit Fokus auf das Gefühl des gemeinsamen Impulses beider Hände. Vereinbare, dass knackende oder doppelnde Töne sofort einen Schritt zurück bedeuten — Synchronisation ist das Kriterium, nicht die Zahl auf dem Metronom.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/bass_hand_sync">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/bass_hand_sync">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

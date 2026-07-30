@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Death Metal", "Metalcore"], "description": "In einem Song bleibst du selten nur im Rhythmus oder nur im Lead — du wechselst zwischen beiden. Dieser Übergang ist eine eigene Fähigkeit: Von tighten,…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Wechsel zwischen Rhythmus und Lead", "url": "https://zerrer.org/baustein/rhythmus_lead_wechsel/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Wechsel zwischen Rhythmus und Lead</h1><p class="leise">Gitarre · Fortgeschritten · Death Metal · Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>In einem Song bleibst du selten nur im Rhythmus oder nur im Lead — du wechselst zwischen beiden. Dieser Übergang ist eine eigene Fähigkeit: Von tighten, palm-gemuteten Chugs auf eine fließende Lead-Linie umzuschalten verlangt, dass beide Hände blitzschnell ihre Rolle wechseln.</p><p>Beim Rhythmus liegt der Handballen dämpfend auf den Saiten, der Anschlag ist kurz und hart. Beim Lead löst sich der Handballen, der Anschlag wird weicher, und du nutzt Legato, Bends und Vibrato. Genau dieses Umstellen — Dämpfung lösen, Anschlagpunkt und Attack ändern — muss im Timing passieren, ohne Loch dazwischen.</p><p>Übe die Nahtstelle gezielt: die letzten Chugs vor dem Lead und die ersten Lead-Töne als eine Einheit. Wenn der Übergang sitzt, wirkt der Song wie aus einem Guss statt wie zwei aneinandergeklebte Teile.</p></section><section class="abschnitt"><h2>Übungsteil: Von Chugs ins Lead</h2><p><strong>Ziel:</strong> Sauber und im Timing von Rhythmus- auf Lead-Spiel umschalten.</p><p>So gehst du vor:</p><ol><li>Spiel zwei Takte palm-gemutete Chugs auf der tiefen Saite.</li><li>Wechsle direkt danach in ein kurzes Lead-Lick aus der Pentatonik-Box.</li><li>Achte darauf, dass der Handballen sich löst und der erste Lead-Ton genau im Timing kommt.</li></ol><p><strong>Steigerung:</strong> Auch den Rückweg üben (vom Lead zurück in die Chugs) und das Tempo erhöhen.</p><p><strong>Selbstkontrolle:</strong> Der Übergang sitzt ohne Lücke, die Chugs sind gedämpft, und die Lead-Töne klingen offen und ausdrucksvoll.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/pentatonik_leads/">Pentatonik &amp; erste Leads</a></li><li><a href="../../baustein/palm_mute_systeme/">Tighte Palm-Mute-Systeme</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=death_metal">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Gitarre: Wechsel Rhythmus/Lead holprig</h3><p><strong>Symptom:</strong> Der Wechsel zwischen Rhythmus und Lead ist holprig — Timing oder Ton brechen an der Naht.</p><p><strong>Ursache:</strong> Der Umschaltpunkt und die Hand-/Sound-Umstellung werden nicht bewusst geübt.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Nahtstelle isoliert üben und den Übergang bewusst gestalten, bis er ohne Bruch sitzt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/rhythmus_lead_wechsel">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/rhythmus_lead_wechsel">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

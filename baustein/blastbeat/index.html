@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Einsteiger", "Death Metal", "Black Metal", "Grindcore", "Deathcore"], "description": "Der Blastbeat ist der vielleicht bekannteste Extreme-Metal-Rhythmus: ein sehr schnelles, dichtes Muster, das Death Metal und Black Metal ihren…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Blastbeat-Einführung", "url": "https://zerrer.org/baustein/blastbeat/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Blastbeat-Einführung</h1><p class="leise">Drums · Einsteiger · Death Metal · Black Metal · Grindcore · Deathcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Blastbeat ist der vielleicht bekannteste Extreme-Metal-Rhythmus: ein sehr schnelles, dichtes Muster, das Death Metal und Black Metal ihren Wall-of-Sound-Charakter gibt. In der verbreiteten Grundform wechseln sich Bassdrum und Snare in schnellen Einzelschlägen ab, während die Hi-Hat oder das Becken mitläuft.</p><p>Der Blast ist Koordinations- und Ausdauerübung zugleich — deshalb näherst du dich ihm langsam. Du spielst das Muster zuerst in einem Tempo, in dem jeder Schlag sauber und gleichmäßig sitzt, und erhöhst erst dann. Ein langsam sauberer Blast wird schnell; ein schnell verspielter bleibt unsauber.</p><p>Gesundheit hat Vorrang: Das hohe Tempo verführt zu Verkrampfung. Halte Hände und Füße locker, steigere Tempo und Dauer schrittweise und pausiere bei Schmerz oder Verspannung.</p></section><section class="abschnitt"><h2>Übungsteil: Langsamer Blast</h2><p><strong>Ziel:</strong> Das Blast-Grundmuster sauber und gleichmäßig aufbauen.</p><p>So gehst du vor:</p><ol><li>Spiel im langsamen Tempo abwechselnd Bassdrum und Snare in gleichmäßigen Schlägen.</li><li>Lass eine Hand das Becken oder die Hi-Hat gleichmäßig mitspielen.</li><li>Achte darauf, dass jeder Schlag gleich laut und exakt getimt ist.</li></ol><p><strong>Steigerung:</strong> Erhöhe das Tempo erst in kleinen Schritten, wenn das Muster über mehrere Takte sauber läuft.</p><p><strong>Selbstkontrolle:</strong> Bassdrum und Snare wechseln gleichmäßig und im Timing; Hände und Füße bleiben locker.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/koordination/">Koordination &amp; Unabhängigkeit</a></li><li><a href="../../baustein/rudiments_grundlage/">Einzel- &amp; Doppelschläge</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?beat=blastbeat">Play-along-Loops</a></li><li><a href="../../#/werkzeug/metronom?bpm=160">Klick-Track &amp; Metronom</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Blastbeat: verschmiert über der Kontrollgrenze</h3><p><strong>Symptom:</strong> Der Blast klingt wie ein einziges Rauschen: Snare und Bassdrum sind nicht mehr als getrennte Schläge zu hören, das Tempo schwankt, die Person verkrampft sichtbar.</p><p><strong>Ursache:</strong> Das Tempo liegt über der aktuellen Kontrollgrenze — die Bewegungen werden zu groß, die Gliedmaßen laufen auseinander, und Verkrampfung frisst die Präzision vollends.</p><p><strong>Korrektur &amp; Ansage:</strong> Das Tempo so weit senken, dass jeder einzelne Schlag definiert hörbar ist — das ist oft deutlich langsamer, als das Ego möchte. Von dort in kleinen Schritten steigern, in Intervallen mit Erholungsphasen arbeiten und Lockerheit als Abbruchkriterium vereinbaren: Kippt sie, endet der Durchgang.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/blastbeat">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/blastbeat">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

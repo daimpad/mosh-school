@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Einsteiger"], "description": "Neben den Tonabständen gibt es eine zweite, unabhängige Quelle von Wirkung: die Energie eines Abschnitts. Sie entsteht vor allem aus drei Größen. Das Tempo…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Energie: Tempo, Dichte, Register", "url": "https://zerrer.org/baustein/energie_tempo_dichte/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Energie: Tempo, Dichte, Register</h1><p class="leise">Theorie · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Neben den Tonabständen gibt es eine zweite, unabhängige Quelle von Wirkung: die Energie eines Abschnitts. Sie entsteht vor allem aus drei Größen. Das Tempo bestimmt die gefühlte Geschwindigkeit, ist aber nicht dasselbe wie Energie — ein langsames, dichtes Riff kann wuchtiger wirken als ein schnelles, dünnes. Die Dichte beschreibt, wie viel gleichzeitig und wie oft etwas passiert: viele Anschläge pro Zeit erzeugen Druck, wenige schaffen Raum. Das Register ist die Tonlage — tief wirkt schwer und bedrohlich, hoch wirkt schneidend oder verzweifelt.</p><p>Entscheidend ist, dass diese Größen unabhängig regelbar sind. Man kann das Tempo halten und nur die Dichte erhöhen, indem man Sechzehntel statt Achtel spielt — der Abschnitt wird intensiver, ohne schneller zu werden. Man kann dieselbe Figur eine Oktave tiefer legen und sie wird schwerer, ohne dass sich sonst etwas ändert. Diese Unabhängigkeit ist das eigentliche Werkzeug.</p><p>Die stärkste Wirkung entsteht meist nicht aus einem Maximum, sondern aus dem Kontrast. Ein Blast-Beat wirkt erst neben einem langsamen Teil wirklich schnell; ein tiefer Breakdown wirkt erst nach einem hohen Teil wirklich schwer. Wer nur ein Extrem fährt, stumpft das Ohr ab — Energie lebt vom Wechsel.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Kannst du Tempo, Dichte und Register getrennt denken — oder wirfst du sie zusammen? Erhöhst du Intensität über Dichte, statt nur schneller zu werden? Und arbeitest du mit Kontrast, oder fährst du dauerhaft ein Extrem?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/warum_toene_wirken/">Warum Töne überhaupt wirken</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Mehr Energie heißt schneller</h3><p><strong>Symptom:</strong> Wirkt ein Teil zu zahm, wird zuerst und meist ausschließlich das Tempo erhöht. Das Ergebnis klingt hektisch statt wuchtig, und die Band kommt an ihre Grenze, ohne dass der Teil gewinnt.</p><p><strong>Ursache:</strong> Tempo, Dichte und Register werden als eine einzige Größe behandelt. Dabei sind es drei unabhängige Regler — und der wirksamste ist selten das Tempo.</p><p><strong>Korrektur &amp; Ansage:</strong> Das Metronom festnageln und nur die Unterteilung ändern lassen: Viertel, dann Achtel, dann Sechzehntel bei identischer Zahl. Danach dasselbe Riff eine Oktave tiefer. Die Person führt Protokoll, welcher der drei Eingriffe am meisten gebracht hat. Fast immer ist es nicht das Tempo — und genau das ist die Lernerfahrung.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/energie_tempo_dichte">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/energie_tempo_dichte">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Körper & Gesundheit", "Kopf & Fokus", "Fortgeschritten"], "description": "Ein einzelner Song ist ein Sprint — ein Set oder eine Probe ist ein Rennen über Distanz. Ohne Pacing verheizt du die Stimme in den ersten drei Songs und…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Set-Planung & Pacing", "url": "https://zerrer.org/baustein/set_pacing/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Set-Planung &amp; Pacing</h1><p class="leise">Körper &amp; Gesundheit · Kopf &amp; Fokus · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ein einzelner Song ist ein Sprint — ein Set oder eine Probe ist ein Rennen über Distanz. Ohne Pacing verheizt du die Stimme in den ersten drei Songs und kämpfst den Rest des Abends. Profis planen ein Set stimmlich wie einen Trainingsplan: Wo liegen die fordernden Songs, wo kann die Stimme durchatmen, wo ist der Höhepunkt?</p><p>Praktisch heißt das: die anspruchsvollsten Passagen nicht direkt an den Anfang (die Stimme ist noch nicht ganz warm) und nicht alle hintereinander; zwischen intensiven Songs bewusst Stücke mit mehr Pausen, Instrumentalteilen oder tieferer Lage; Wasser griffbereit; und ein kurzes Einsingen vor dem Auftritt so selbstverständlich wie der Soundcheck.</p><p>Dasselbe gilt für Proben: Zwei Stunden Dauer-Growl sind kein Training, sondern Verschleiß. Markiere Durchläufe, in denen du bewusst leise übst („Marking“), und heb die volle Intensität für gezielte Momente auf — so wächst Ausdauer, statt verbraucht zu werden.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Stell dir dein aktuelles Set (oder deine typische Probe) als Belastungskurve vor: Wo häufen sich die stimmlich teuersten Passagen, und wo sind Erholungsfenster? Ordne die Reihenfolge auf dem Papier einmal stimmfreundlich um und leg fest, welche Durchläufe du künftig nur „markierend“ — also leise und technisch — singst.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/stimme_schuetzen_alltag/">Stimme schützen: Ruhe, Flüssigkeit, Grenzen</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Set-Pacing: nach drei Songs verheizt</h3><p><strong>Symptom:</strong> Die ersten Songs des Sets oder der Probe sind stark — danach bricht die Leistung ein: Die Stimme wird rau, die Arme werden schwer, die letzten Songs sind Schadensbegrenzung.</p><p><strong>Ursache:</strong> Das Set ist als Aneinanderreihung einzelner Songs geplant, jeder für sich auf Anschlag. Es fehlt die Belastungs-Dramaturgie: keine Erholungsinseln, die fordernden Stücke geballt am Anfang, und der Adrenalinschub des Auftritts verführt zusätzlich zum Überziehen.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Setlist als Belastungskurve planen: jeden Song ehrlich nach Anstrengung einstufen und die schwersten Stücke verteilen statt stapeln — nach jedem Maximum eine Erholungsinsel. Das ganze Set mindestens einmal am Stück durchspielen, um die reale Kurve zu erleben, und bewusst unterhalb des Maximums starten: Wer bei Song drei noch Reserven hat, hat richtig geplant. Bei stimmlicher Heiserkeit gilt wie immer die Stoppregel.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/set_pacing">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/set_pacing">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>
