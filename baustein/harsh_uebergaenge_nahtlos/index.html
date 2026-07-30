@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Profi"], "description": "Auf Experten-Niveau geht es nicht mehr nur darum, tiefe Growls, hohe Screams und Cleans einzeln zu beherrschen, sondern sie nahtlos und mitten in der Phrase…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Vocals: nahtlose Register-Übergänge", "url": "https://zerrer.org/baustein/harsh_uebergaenge_nahtlos/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Vocals: nahtlose Register-Übergänge</h1><p class="leise">Vocals · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Auf Experten-Niveau geht es nicht mehr nur darum, tiefe Growls, hohe Screams und Cleans einzeln zu beherrschen, sondern sie nahtlos und mitten in der Phrase zu verbinden — ein Wort clean beginnen und verzerrt enden, von einem tiefen Guttural in einen hohen Scream gleiten, ohne hörbaren Bruch und ohne die Stimme zu belasten. Das ist die hohe Schule der Extreme Vocals.</p><p>Die Voraussetzung ist paradox: Nahtlosigkeit entsteht aus Kontinuität der Stütze, nicht aus mehr Kraft. Über alle Register bleibt die Atemstütze die konstante Basis; was sich ändert, ist nur der Resonanzraum und der Grad der Verzerrung. Wer den Übergang mit Druck erzwingt, bekommt genau den Bruch, den er vermeiden will — und riskiert die Stimme. Der Schlüssel ist, die Register über eine gemeinsame, gesunde Basis zu verbinden und die Verzerrung graduell auf- und abzublenden.</p><p>Genau deshalb ist der Gesundheitsrahmen hier nicht optional, sondern die Bedingung: Solche Übergänge nur auf gesunder Basis und behutsam aufbauen, nie in Heiserkeit üben, nach jeder Einheit den Sprechtest. Diese fortgeschrittenen Techniken gehören an die Seite einer erfahrenen Lehrperson für Extreme Vocals; bei Kratzen oder Engegefühl sofort stoppen, anhaltende Heiserkeit in die HNO-Praxis. Nahtlosigkeit, die die Stimme kostet, ist keine.</p></section><section class="abschnitt"><h2>Übungsteil: Ohne Bruch, ohne Druck</h2><p><strong>Ziel:</strong> Zwischen Registern mitten in der Phrase gleiten — nahtlos, aus Kontinuität der Stütze, gesund.</p><p>So gehst du vor:</p><ol><li>Wärm gründlich auf. Arbeite nur mit Registern, die einzeln und mühelos sitzen. Sichere zuerst einen sauberen Clean und einen leisen, mühelosen Harsh-Ton auf demselben Ton.</li><li>Übe das Auf- und Abblenden der Verzerrung auf EINEM gehaltenen Ton: clean beginnen, die Verzerrung ganz allmählich dazunehmen, wieder zurück — die Stütze bleibt konstant, nur der Anteil ändert sich. Leise.</li><li>Verbinde zwei Register mit gemeinsamer Basis: tiefer Guttural, dann ohne abzusetzen in einen höheren Ton gleiten — der Übergang läuft über die Stütze, nicht über einen Neuansatz. Erst sehr langsam.</li><li>Bau einen nahtlosen Übergang in eine kurze Phrase, an einer festen Stelle, leise. Timing und Gesundheit vor Lautstärke.</li></ol><p><strong>Steigerung:</strong> Erst wenn die Übergänge über Wochen beschwerdefrei sitzen, sie Richtung Songintensität bringen — immer nur so laut, wie der Übergang bruchlos UND frei bleibt. Neue Register nimmst du NICHT hier dazu.</p><p><strong>Selbstkontrolle:</strong> Nach jeder kurzen Einheit der Sprechtest: Klingt die Alltagsstimme frei? Ist der Übergang wirklich nahtlos, oder hörst du einen Bruch/Neuansatz? Und das Wichtigste: Bleibt die Stütze konstant, oder drückst du im Übergang? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen und mit der Lehrperson arbeiten.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/harsh_range_erweiterung/">Verzerrungs-Range erweitern</a></li><li><a href="../../baustein/clean_harsh_wechsel/">Wechsel zwischen Clean &amp; Harsh</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Harsh: Register-Wechsel bricht</h3><p><strong>Symptom:</strong> Der Übergang zwischen clean und harsch oder zwischen Registern bricht hörbar — es gibt einen Knick statt eines nahtlosen Wechsels.</p><p><strong>Ursache:</strong> Die Register werden getrennt gedacht und der Umschaltpunkt nicht geübt; Stütze und Luftfluss brechen im Moment des Wechsels ein.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Wechsel langsam und leise üben, Stütze und Luftfluss über den Umschaltpunkt hinweg halten. Schrittweise annähern, bis der Übergang nahtlos wird; aus der Stütze, bei Beschwerden stoppen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/harsh_uebergaenge_nahtlos">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/harsh_uebergaenge_nahtlos">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

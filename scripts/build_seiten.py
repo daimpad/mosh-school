@@ -26,6 +26,7 @@ import os
 import re
 import shutil
 import sys
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://zerrer.org'
@@ -332,6 +333,25 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False, sort_keys=True)}</script>
 <link rel="stylesheet" href="{w}css/schriften.css">
 <link rel="stylesheet" href="{w}css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {{
+  try {{
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{{}}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') {{ document.documentElement.dataset.theme = 'hell'; }}
+    else if (thema === 'auto') {{ if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }}
+    else {{ document.documentElement.dataset.theme = 'dunkel'; }}
+  }} catch (e) {{}}
+}})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -347,14 +367,55 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 
 
 def seiten_fuss(tiefe, app_href):
+    """Derselbe vierteilige Footer wie in index.html — Marke + drei Link-Spalten.
+
+    WICHTIG: In index.html sind die Haltungs-Texte leere `data-haltung`-Spans,
+    die beschrifteRahmen() aus den Labels fuellt. Hier laeuft KEIN JS, also
+    muessen die Texte ausgeschrieben werden — sonst stuende die Zeile auf den
+    statischen Seiten leer. Sie kommen aus denselben Labels (`haltung_*`),
+    damit die Aussage weiter an einer Stelle gepflegt wird.
+    """
     w = wurzel(tiefe)
+    haltung = ''.join(
+        f'<span class="footer-haltung-eintrag">'
+        f'<i class="fa-solid {icon}" aria-hidden="true"></i>'
+        f'<span>{esc(uitext("haltung_" + key))}</span></span>'
+        for key, icon in (('no_ads', 'fa-ban'), ('no_tracking', 'fa-eye-slash'),
+                          ('no_influencer', 'fa-thumbs-down'), ('no_nsbm', 'fa-shield'))
+    )
     return f'''
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="{w}{app_href}">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="{w}{app_href}">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="{w}#/impressum">Impressum</a> · <a href="{w}#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="{w}#/griffe">Griffe</a>
+<a href="{w}#/stimmungen">Tunings</a>
+<a href="{w}#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="{w}#/ueber">Über</a>
+<a href="{w}kollektiv/">ZERRER-Kollektiv</a>
+<a href="{w}#/mitmachen">Kontakt</a>
+<a href="{w}#/impressum">Impressum</a>
+<a href="{w}#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="{w}instrument/">Alle Instrumente</a>
+<a href="{w}pfad/stil/">Alle Genres</a>
+<a href="{w}pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="{w}pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>
@@ -363,6 +424,90 @@ def seiten_fuss(tiefe, app_href):
 
 def seite(tiefe, titel, beschreibung, pfad, jsonld, body_html, app_href):
     return seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld) + body_html + seiten_fuss(tiefe, app_href)
+
+
+# ---------------------------------------------------------------------------
+# Bildebene + Inszenierung — Port von js/hintergrundbilder.js `bildEbene`.
+#
+# Bewusst NICHT portiert: das Motiv-SVG (motivSvg in js/genre-inszenierung.js).
+# Es ist ein seeded PRNG mit vier Formgeneratoren, und wo ein Foto liegt, tritt
+# es ohnehin fast vollstaendig zurueck (`.genre-landing-bg ~ .genre-landing-bild
+# { opacity: .1 }` in css/app.css). Der optische Gewinn stuende in keinem
+# Verhaeltnis zu einer zweiten, driftanfaelligen Kopie der Zeichenlogik.
+# ---------------------------------------------------------------------------
+
+MAX_BILD_BYTES = 400 * 1024  # dieselbe Grenze wie js/hintergrundbilder.js
+
+
+def _lade_bilder():
+    try:
+        roh = lade('images/bg/bilder.json')
+    except FileNotFoundError:
+        return []
+    liste = roh.get('bilder') if isinstance(roh, dict) else roh
+    return [e for e in (liste or [])
+            if e and e.get('datei') and not (e.get('bytes', 0) > MAX_BILD_BYTES)]
+
+
+BILDER = _lade_bilder()
+
+
+def hash_slug(text):
+    """FNV-1a, identisch zu js/hintergrundbilder.js — gleicher Schlüssel, gleiches Bild."""
+    h = 2166136261
+    for zeichen in text:
+        h ^= ord(zeichen)
+        h = (h * 16777619) & 0xFFFFFFFF
+    return h
+
+
+def bild_ebene(schluessel, tiefe):
+    if not BILDER:
+        return ''
+    eintrag = BILDER[hash_slug('mosh-bg:' + str(schluessel)) % len(BILDER)]
+    url = wurzel(tiefe) + 'images/bg/' + quote(eintrag['datei'])
+    return f'<div class="genre-landing-bg" aria-hidden="true" style="background-image:url(\'{url}\')"></div>'
+
+
+def landing_hero(tiefe, schluessel, augenbraue, titel, untertitel='', hue='pf-blau'):
+    """Grosser Landing-Hero wie `landingHeroHtml` — Foto, Scrim, Text darüber."""
+    return (
+        f'<section class="marke-hero genre-landing-hero landing-hero {esc(hue)}">'
+        + bild_ebene(schluessel, tiefe)
+        + '<div class="genre-landing-scrim" aria-hidden="true"></div>'
+        '<div class="genre-landing-inhalt">'
+        + (f'<p class="genre-landing-augenbraue"><span class="genre-landing-augenbraue-marke">{esc(augenbraue)}</span></p>' if augenbraue else '')
+        + f'<h1>{esc(titel)}</h1>'
+        + (f'<p class="genre-landing-kurz">{esc(untertitel)}</p>' if untertitel else '')
+        + '</div></section>'
+    )
+
+
+def bild_kachel(tiefe, href, schluessel, hue, augenbraue, titel, text=''):
+    """Bild-Kachel wie `bildKachelHtml` — dieselben Klassen, dasselbe Aussehen."""
+    return (
+        f'<a class="karte karte-link pfad-kachel bildkachel {esc(hue)}" href="{esc(href)}">'
+        + bild_ebene(schluessel, tiefe)
+        + '<div class="bildkachel-scrim" aria-hidden="true"></div>'
+        '<div class="bildkachel-inhalt">'
+        + (f'<p class="bildkachel-augenbraue">{esc(augenbraue)}</p>' if augenbraue else '')
+        + f'<h3 class="bildkachel-titel">{esc(titel)}</h3>'
+        + (f'<p class="bildkachel-text">{esc(text)}</p>' if text else '')
+        + '<span class="pfad-cta">Ansehen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>'
+        '</div></a>'
+    )
+
+
+# Hue je Domäne — gespiegelt aus `DOMAENE_HUE`/`domaeneHue` (js/oberflaeche.js).
+# Nur die vier Instrumente sind dort gesetzt, alles Übrige fällt auf pf-blau.
+DOMAENE_HUE = {
+    'gitarre': 'pf-magenta', 'bass': 'pf-indigo',
+    'schlagzeug': 'pf-sky', 'gesang': 'pf-teal',
+}
+
+
+def domaene_hue(domaene):
+    return DOMAENE_HUE.get(domaene, 'pf-blau')
 
 
 def stationsliste(bausteine_liste, tiefe):
@@ -550,8 +695,8 @@ def instrument_html(domaene):
                     f'{len(ausruestung)} zum Equipment und {len(theorie)} zur Theorie — '
                     f'kostenlos und werbefrei im Browser.')
     body = (
-        f'<h1>{esc(titel)}</h1>'
-        f'<p class="leise">{esc(uitext("instrument_untertitel"))}</p>'
+        landing_hero(tiefe, f'instrument:{domaene}', uitext('kicker_instrument'),
+                     titel, uitext('instrument_untertitel'), domaene_hue(domaene))
         + abschnitte
     )
     jsonld = {
@@ -585,7 +730,8 @@ def kollektiv_html():
             f'<p>{esc(a.get("de") or "")}</p>' for a in (abschnitt.get('absaetze') or [])
         )
     beschreibung = kurzfassung(' '.join(absaetze)) or titel
-    body = f'<h1>{esc(titel)}</h1>{koerper}'
+    body = (landing_hero(tiefe, 'kollektiv', 'Community', titel)
+            + f'<section class="karte">{koerper}</section>')
     jsonld = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -602,12 +748,14 @@ def instrument_hub_html(eintraege):
     tiefe = 1  # instrument/index.html
     titel = uitext('instrument_picker_titel')
     beschreibung = uitext('instrument_picker_text')
-    zeilen = ''.join(
-        f'<li><a href="{esc(d)}/">{esc(lab)}</a> <span class="chip">{n}</span></li>'
+    kacheln = ''.join(
+        bild_kachel(tiefe, f'{d}/', f'instrument:{d}', domaene_hue(d),
+                    uitext('kicker_instrument'), lab,
+                    uitext('n_bausteine').replace('{n}', str(n)))
         for d, lab, n in eintraege
     )
-    body = (f'<h1>{esc(titel)}</h1><p>{esc(beschreibung)}</p>'
-            f'<ul class="stationsliste">{zeilen}</ul>')
+    body = (landing_hero(tiefe, 'instrument-hub', 'ZERRER', titel, beschreibung)
+            + f'<div class="bild-gitter">{kacheln}</div>')
     jsonld = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
@@ -651,12 +799,15 @@ def themen_mitglieder(domaene):
     return treffer
 
 
+AUGENBRAUE = {'stil': 'Genre', 'kompetenz': 'Könnensstufe', 'themen': 'Thema'}
+
+
 def landing_html(art, schluessel, titel, blurb, mitglieder):
     tiefe = 3  # pfad/<art>/<schluessel>/index.html
     beschreibung = kurzfassung(blurb) if blurb else f'{titel} bei ZERRER: {len(mitglieder)} Lern-Bausteine.'
+    hue = domaene_hue(schluessel) if art == 'themen' else 'pf-blau'
     body = (
-        f'<h1>{esc(titel)}</h1>'
-        + (f'<p>{esc(blurb)}</p>' if blurb else '')
+        landing_hero(tiefe, f'{art}:{schluessel}', AUGENBRAUE.get(art, ''), titel, blurb, hue)
         + f'<p class="leise">{len(mitglieder)} Bausteine</p>'
         + stationsliste(mitglieder, tiefe)
     )
@@ -675,11 +826,15 @@ def landing_html(art, schluessel, titel, blurb, mitglieder):
 def hub_html(art, titel, beschreibung, eintraege):
     """eintraege: Liste von (schluessel, label, anzahl)."""
     tiefe = 2  # pfad/<art>/index.html
-    zeilen = ''.join(
-        f'<li><a href="{esc(schluessel)}/">{esc(label)}</a> <span class="chip">{anzahl}</span></li>'
+    kacheln = ''.join(
+        bild_kachel(tiefe, f'{schluessel}/', f'{art}:{schluessel}',
+                    domaene_hue(schluessel) if art == 'themen' else 'pf-blau',
+                    AUGENBRAUE.get(art, ''), label,
+                    uitext('n_bausteine').replace('{n}', str(anzahl)))
         for schluessel, label, anzahl in eintraege
     )
-    body = f'<h1>{esc(titel)}</h1><ul class="stationsliste">{zeilen}</ul>'
+    body = (landing_hero(tiefe, f'hub:{art}', 'ZERRER', titel, beschreibung)
+            + f'<div class="bild-gitter">{kacheln}</div>')
     jsonld = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',

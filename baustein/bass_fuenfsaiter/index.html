@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Equipment", "Profi", "Death Metal", "Metalcore"], "description": "Die tiefe H-Saite (oder noch tiefere Tunings) verändert das Instrument grundlegend: mehr Griffbrett, neue Lagenlogik — und eine Saite, die bei jeder…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "5-Saiter & sehr tiefe Tunings", "url": "https://zerrer.org/baustein/bass_fuenfsaiter/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>5-Saiter &amp; sehr tiefe Tunings</h1><p class="leise">Bass · Equipment · Profi · Death Metal · Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die tiefe H-Saite (oder noch tiefere Tunings) verändert das Instrument grundlegend: mehr Griffbrett, neue Lagenlogik — und eine Saite, die bei jeder Unachtsamkeit mitdröhnt. Der 5-Saiter verlangt deshalb vor allem eines: einen erweiterten Dämpfungsplan. Viele legen den Daumen als beweglichen Anker auf die tiefste Saite und wandern mit ihm mit.</p><p>Klanglich ist die Tiefe eine Verantwortung: Unter dem Bass ist nichts mehr, das Fehler kaschiert. Sehr tiefe Töne brauchen präzisen, definierten Anschlag und oft mehr Höhen- und Mittenanteil im Sound, damit sie als Ton statt als Grummeln ankommen. Intonation wird kritisch — dicke, schlaffe Saiten reagieren stark auf zu festen Druck.</p><p>Auch das Setup gehört dazu: passende Saitenstärken für das Ziel-Tuning, saubere Oktavreinheit und eine Halskrümmung, die das Schlackern bändigt. Tiefe ist ein System aus Hand, Instrument und Einstellung — nicht nur eine zusätzliche Saite.</p></section><section class="abschnitt"><h2>Übungsteil: Die tiefe Saite zähmen</h2><p><strong>Ziel:</strong> Auf der tiefsten Saite definiert spielen und alles andere stumm halten.</p><p>So gehst du vor:</p><ol><li>Etabliere den beweglichen Daumen-Anker: Beim Spiel auf höheren Saiten liegt er dämpfend auf der tiefsten.</li><li>Spiel eine langsame Linie auf der tiefen Saite und prüf jeden Ton auf Definition und saubere Intonation (Stimmgerät).</li><li>Wechsle zwischen tiefster und mittlerer Saite, ohne dass die jeweils andere mitklingt.</li></ol><p><strong>Steigerung:</strong> Ein bestehendes Riff auf die tiefe Lage übertragen und mit leichtem Palm Muting Kontur geben.</p><p><strong>Selbstkontrolle:</strong> Kein Dröhnen der ungespielten Saiten; die tiefen Töne kommen als definierte Töne an, nicht als Rumpeln.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/greifhand_daempfen/">Dämpfen mit der Greifhand</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=death_metal">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Fünfsaiter: die H-Saite matscht</h3><p><strong>Symptom:</strong> Die tiefe H-Saite klingt undefiniert und wummernd, schnarrt bei kräftigem Anschlag und verschwindet im Bandkontext als konturloses Dröhnen.</p><p><strong>Ursache:</strong> Meist wirken Technik und Material zusammen: Der Anschlag sitzt zu weit Richtung Hals und zu weich, die schwingende dicke Saite wird nirgends gedämpft — und das Setup (Saitenstärke, Saitenlage, Tonabnehmerhöhe) ist nicht auf die tiefe Saite eingerichtet.</p><p><strong>Korrektur &amp; Ansage:</strong> Trenne die Faktoren: Zuerst den Anschlagpunkt Richtung Steg verlegen und mit kontrollierter, kompakter Kraft spielen lassen — dort gewinnt die H-Saite Definition. Parallel die Dämpfungsroutine auf die zusätzliche Saite erweitern (Daumen oder Handkante legt sie still). Bleibt der Ton matt, das Setup prüfen lassen: ausreichende Saitenstärke und passende Saitenlage sind bei tiefer Stimmung keine Geschmacksfrage, sondern Voraussetzung.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/bass_fuenfsaiter">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/bass_fuenfsaiter">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

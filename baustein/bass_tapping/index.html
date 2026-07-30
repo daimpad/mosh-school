@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Profi"], "description": "Beim Tapping schlägt die Anschlaghand Töne direkt aufs Griffbrett — beide Hände greifen, keine zupft. Am Bass eröffnet das Läufe und Intervallsprünge, die…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Tapping am Bass", "url": "https://zerrer.org/baustein/bass_tapping/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Tapping am Bass</h1><p class="leise">Bass · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Beim Tapping schlägt die Anschlaghand Töne direkt aufs Griffbrett — beide Hände greifen, keine zupft. Am Bass eröffnet das Läufe und Intervallsprünge, die mit konventioneller Technik unmöglich sind, und progressive Metal-Bassisten bauen daraus ganze Passagen.</p><p>Die dicken Saiten verlangen einen entschlossenen, präzisen Tap dicht am Bunddraht — Kraft allein hilft nicht, der Treffpunkt entscheidet. Genauso wichtig ist das Gegenteil: das saubere Beenden jedes Tons und die Dämpfung aller Saiten, die gerade nicht dran sind. Ohne Dämpfungsplan wird jede Tapping-Passage zum Dröhnen.</p><p>Baue Tapping als Farbe ein, nicht als Dauerzustand: ein getappter Lauf als Übergang, ein zweistimmiges Muster als Intro-Motiv. Sparsam eingesetzt wirkt die Technik doppelt.</p></section><section class="abschnitt"><h2>Übungsteil: Zweihand-Muster aufbauen</h2><p><strong>Ziel:</strong> Ein einfaches Tapping-Muster sauber und gedämpft spielen.</p><p>So gehst du vor:</p><ol><li>Tapp mit dem Zeige- oder Mittelfinger der Anschlaghand einen Ton dicht am Bund und zieh ihn mit einem leichten Pull-off ab.</li><li>Verbinde ihn mit zwei gegriffenen Tönen der Greifhand zu einem Drei-Ton-Zyklus.</li><li>Leg die freien Finger beider Hände als Dämpfer auf die übrigen Saiten und loope den Zyklus langsam.</li></ol><p><strong>Steigerung:</strong> Den Zyklus über zwei Saiten erweitern und rhythmisch ans Metronom binden.</p><p><strong>Selbstkontrolle:</strong> Alle Töne sind gleich laut und klar; zwischen den Zyklen herrscht Stille statt Dröhnen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/bass_slides_legato/">Slides, Hammer-ons &amp; Pull-offs</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Tapping: Passage dröhnt</h3><p><strong>Symptom:</strong> Die Tapping-Passage dröhnt: Unter den getappten Tönen klingen Leersaiten mit, und zwischen den Zyklen steht ein Klangteppich statt Stille.</p><p><strong>Ursache:</strong> Es fehlt der Dämpfungsplan — beide Hände konzentrieren sich auf ihre Töne, aber niemand ist für die ungespielten Saiten zuständig.</p><p><strong>Korrektur &amp; Ansage:</strong> Vor der Technik die Zuständigkeiten klären: Welche Finger welcher Hand liegen wann auf welchen Saiten? Die Übung umdrehen — erst „Stille halten“ mit beiden Händen auf allen Saiten, dann einzelne Taps aus dieser Dämpf-Grundstellung heraus. Aufnahme als Kontrolle: Zwischen den Zyklen muss echte Stille stehen.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/bass_tapping">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/bass_tapping">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

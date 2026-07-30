@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Fortgeschritten"], "description": "Ghost Notes sind gedämpfte, tonlose Anschläge — die Greifhand liegt auf der Saite, ohne zu drücken, und der Anschlag erzeugt nur ein perkussives „Tuck“.…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Ghost Notes & perkussives Spiel", "url": "https://zerrer.org/baustein/bass_ghostnotes/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Ghost Notes &amp; perkussives Spiel</h1><p class="leise">Bass · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ghost Notes sind gedämpfte, tonlose Anschläge — die Greifhand liegt auf der Saite, ohne zu drücken, und der Anschlag erzeugt nur ein perkussives „Tuck“. Zwischen die eigentlichen Töne gesetzt, verwandeln sie eine statische Linie in einen Groove, der atmet.</p><p>Die Kunst liegt im Kontrast: Echte Töne klar und voll, Ghost Notes deutlich leiser und komplett tonlos. Wenn die gedämpften Schläge halb mitklingen, wird die Linie matschig — hier zahlt sich deine Dämpfungsarbeit aus der Greifhand direkt aus.</p><p>Im Metal setzen Ghost Notes Akzente zwischen den Kicks und füllen Lücken, ohne harmonisch etwas zu verändern. Sparsam eingesetzt geben sie auch harten, geraden Linien einen menschlichen Puls.</p></section><section class="abschnitt"><h2>Übungsteil: Tuck zwischen den Tönen</h2><p><strong>Ziel:</strong> Ghost Notes klar von vollen Tönen trennen und gezielt platzieren.</p><p>So gehst du vor:</p><ol><li>Leg die Greifhand ohne Druck auf eine Saite und zupf — es soll nur ein tonloses „Tuck“ entstehen.</li><li>Spiel eine einfache Achtellinie und ersetze einzelne Töne durch Ghost Notes.</li><li>Achte darauf, dass volle Töne und Ghost Notes in Lautstärke und Klang klar getrennt bleiben.</li></ol><p><strong>Steigerung:</strong> Ghost Notes auf Sechzehntel-Zwischenpositionen setzen und den Groove zum Klick prüfen.</p><p><strong>Selbstkontrolle:</strong> Die Ghost Notes sind tonlos und leiser; die Linie groovt, ohne zu verwaschen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/fingerstyle/">Zupftechnik (Wechselschlag)</a></li><li><a href="../../baustein/greifhand_daempfen/">Dämpfen mit der Greifhand</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Bass: Ghost Notes zu laut</h3><p><strong>Symptom:</strong> Ghost Notes klingen wie normale Töne statt als perkussives Rauschen; der Groove verliert Definition, weil betonte und tote Noten gleich laut sind.</p><p><strong>Ursache:</strong> Die Dämpfung der Greifhand ist unvollständig und der Anschlag zu kräftig; der Kontrast zwischen betonten und Ghost Notes wird nicht bewusst gestaltet.</p><p><strong>Korrektur &amp; Ansage:</strong> Ghost Notes klar abgedämpft und leise anlegen, betonte Noten deutlich abheben — den Lautstärke-Kontrast übertreiben und dann zurücknehmen. Per Aufnahme prüfen, ob der perkussive Effekt trägt.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/bass_ghostnotes">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/bass_ghostnotes">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

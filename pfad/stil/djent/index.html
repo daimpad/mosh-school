@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "description": "Djent dreht sich um einen Sound: den hoch gegainten, palm-gemuteten Chug auf einer sehr tiefen Saite, dessen Klang dem Genre den Namen gab. Polyrhythmen,…", "inLanguage": "de", "isAccessibleForFree": true, "name": "Djent / Prog-Metalcore", "url": "https://zerrer.org/pfad/stil/djent/"}</script>
 <link rel="stylesheet" href="../../../css/schriften.css">
 <link rel="stylesheet" href="../../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -31,13 +50,39 @@
 </div>
 </header>
 <main id="ansicht">
-<h1>Djent / Prog-Metalcore</h1><p>Djent dreht sich um einen Sound: den hoch gegainten, palm-gemuteten Chug auf einer sehr tiefen Saite, dessen Klang dem Genre den Namen gab. Polyrhythmen, verschobene Betonungen und mathematische Präzision treffen auf luftige, atmosphärische Weiten. Kopf und Nacken zugleich.</p><p class="leise">19 Bausteine</p><ul class="stationsliste"><li><a href="../../../baustein/chugs_breakdown/">Chugs &amp; Breakdown-Gefühl</a></li><li><a href="../../../baustein/djent_technik/">Djent: Syncopen &amp; tiefe Saiten</a></li><li><a href="../../../baustein/polyrhythmik_einstieg/">Polyrhythmik-Einstieg: 3 über 4</a></li><li><a href="../../../baustein/ungerade_takte_drums/">Ungerade Taktarten im Metal</a></li><li><a href="../../../baustein/clean_harsh_wechsel/">Wechsel zwischen Clean &amp; Harsh</a></li><li><a href="../../../baustein/ungerade_takte_theorie/">Ungerade Takte: Zweier und Dreier</a></li><li><a href="../../../baustein/polyrhythmik_theorie/">Polyrhythmus vs. Polymetrik</a></li><li><a href="../../../baustein/genrekunde_extreme_familie/">Genrekunde: die extreme Familie</a></li><li><a href="../../../baustein/djent_gitarre_pocket/">Djent-Gitarre: Pocket, Chug &amp; Polymetrik</a></li><li><a href="../../../baustein/djent_bass_lock/">Djent-Bass: Lock, Tiefe &amp; Groove</a></li><li><a href="../../../baustein/djent_drums_polymetrik/">Djent-Drums: Polymetrik, Pocket &amp; Ghost Notes</a></li><li><a href="../../../baustein/djent_vocals_dynamik/">Prog-Metalcore-Vocals: Clean, Harsh &amp; Phrasierung</a></li><li><a href="../../../baustein/djent_theorie_polymetrik/">Djent-Theorie: Polymetrik &amp; Gruppierung</a></li><li><a href="../../../baustein/djent_dramaturgie_raum/">Djent-Dramaturgie: Härte &amp; Raum</a></li><li><a href="../../../baustein/djent_sound_gear/">Djent-Sound: Attack, Definition &amp; Tightness</a></li><li><a href="../../../baustein/djent_koerper_praezision/">Djent-Körper: Präzision aus Lockerheit</a></li><li><a href="../../../baustein/djent_gitarre_ambient/">Djent: Clean- &amp; Ambient-Schichten</a></li><li><a href="../../../baustein/djent_solo_lead/">Djent: melodisches Lead über dem Fundament</a></li><li><a href="../../../baustein/djent_studio_produktion/">Djent: Produktion als Instrument</a></li></ul>
+<section class="marke-hero genre-landing-hero landing-hero pf-blau"><div class="genre-landing-bg" aria-hidden="true" style="background-image:url('../../../images/bg/1908088_331723500321502_6752954061681545228_n.jpg')"></div><div class="genre-landing-scrim" aria-hidden="true"></div><div class="genre-landing-inhalt"><p class="genre-landing-augenbraue"><span class="genre-landing-augenbraue-marke">Genre</span></p><h1>Djent / Prog-Metalcore</h1><p class="genre-landing-kurz">Djent dreht sich um einen Sound: den hoch gegainten, palm-gemuteten Chug auf einer sehr tiefen Saite, dessen Klang dem Genre den Namen gab. Polyrhythmen, verschobene Betonungen und mathematische Präzision treffen auf luftige, atmosphärische Weiten. Kopf und Nacken zugleich.</p></div></section><p class="leise">19 Bausteine</p><ul class="stationsliste"><li><a href="../../../baustein/chugs_breakdown/">Chugs &amp; Breakdown-Gefühl</a></li><li><a href="../../../baustein/djent_technik/">Djent: Syncopen &amp; tiefe Saiten</a></li><li><a href="../../../baustein/polyrhythmik_einstieg/">Polyrhythmik-Einstieg: 3 über 4</a></li><li><a href="../../../baustein/ungerade_takte_drums/">Ungerade Taktarten im Metal</a></li><li><a href="../../../baustein/clean_harsh_wechsel/">Wechsel zwischen Clean &amp; Harsh</a></li><li><a href="../../../baustein/ungerade_takte_theorie/">Ungerade Takte: Zweier und Dreier</a></li><li><a href="../../../baustein/polyrhythmik_theorie/">Polyrhythmus vs. Polymetrik</a></li><li><a href="../../../baustein/genrekunde_extreme_familie/">Genrekunde: die extreme Familie</a></li><li><a href="../../../baustein/djent_gitarre_pocket/">Djent-Gitarre: Pocket, Chug &amp; Polymetrik</a></li><li><a href="../../../baustein/djent_bass_lock/">Djent-Bass: Lock, Tiefe &amp; Groove</a></li><li><a href="../../../baustein/djent_drums_polymetrik/">Djent-Drums: Polymetrik, Pocket &amp; Ghost Notes</a></li><li><a href="../../../baustein/djent_vocals_dynamik/">Prog-Metalcore-Vocals: Clean, Harsh &amp; Phrasierung</a></li><li><a href="../../../baustein/djent_theorie_polymetrik/">Djent-Theorie: Polymetrik &amp; Gruppierung</a></li><li><a href="../../../baustein/djent_dramaturgie_raum/">Djent-Dramaturgie: Härte &amp; Raum</a></li><li><a href="../../../baustein/djent_sound_gear/">Djent-Sound: Attack, Definition &amp; Tightness</a></li><li><a href="../../../baustein/djent_koerper_praezision/">Djent-Körper: Präzision aus Lockerheit</a></li><li><a href="../../../baustein/djent_gitarre_ambient/">Djent: Clean- &amp; Ambient-Schichten</a></li><li><a href="../../../baustein/djent_solo_lead/">Djent: melodisches Lead über dem Fundament</a></li><li><a href="../../../baustein/djent_studio_produktion/">Djent: Produktion als Instrument</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../../#/pfad/stil/djent">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../../#/pfad/stil/djent">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../../#/impressum">Impressum</a> · <a href="../../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../../#/griffe">Griffe</a>
+<a href="../../../#/stimmungen">Tunings</a>
+<a href="../../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../../#/ueber">Über</a>
+<a href="../../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../../#/mitmachen">Kontakt</a>
+<a href="../../../#/impressum">Impressum</a>
+<a href="../../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../../instrument/">Alle Instrumente</a>
+<a href="../../../pfad/stil/">Alle Genres</a>
+<a href="../../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

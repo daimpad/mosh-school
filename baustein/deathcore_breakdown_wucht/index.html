@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Deathcore"], "description": "Der Breakdown ist im Deathcore nicht ein Teil unter vielen — er ist der Zielpunkt, auf den alles zuläuft. Was ihn zur Waffe macht, ist der maximale…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Deathcore-Gitarre: der Breakdown als Waffe", "url": "https://zerrer.org/baustein/deathcore_breakdown_wucht/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Deathcore-Gitarre: der Breakdown als Waffe</h1><p class="leise">Gitarre · Fortgeschritten · Deathcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Der Breakdown ist im Deathcore nicht ein Teil unter vielen — er ist der Zielpunkt, auf den alles zuläuft. Was ihn zur Waffe macht, ist der maximale Kontrast: davor Chaos aus Blast und Tremolo, dann der Absturz in extreme Tiefe und Langsamkeit, jeder Anschlag ein einzelner, gedämpfter Schlag mit absoluter Stille dazwischen. Genau diese Stille ist die halbe Miete — ohne das Noise Gate aus dem Core-Sound-Baustein wird aus dem Breakdown Matsch statt Wucht.</p><p>Das Handwerk liegt in drei Dingen. Erstens die Präzision der Chugs: Bei tiefen Tunings und maximaler Zerre verzeiht nichts unsaubere Dämpfung — der Ton muss knallen und sofort tot sein. Zweitens das Timing des Einschlags: Der erste Breakdown-Schlag muss exakt auf der Kante sitzen, oft nach einer winzigen bewussten Pause, die den Absturz ankündigt. Drittens die Rhythmik: Deathcore-Breakdowns spielen mit Synkopen und ungeraden Betonungen (der berühmte „brei-brei-BREI“-Effekt), damit der Groove trotz Zeitlupe unvorhersehbar bleibt.</p><p>Die Falle ist die Beliebigkeit: Ein Breakdown wirkt nur, wenn er vorbereitet ist und nicht jeder zweite Takt einer wird. Weniger, aber gezielt platziert, schlägt eine Aneinanderreihung.</p></section><section class="abschnitt"><h2>Übungsteil: Der Absturz</h2><p><strong>Ziel:</strong> Aus einem schnellen Teil sauber und wuchtig in einen synkopierten Breakdown kippen.</p><p>So gehst du vor:</p><ol><li>Spiel vier Takte schnelle gedämpfte Achtel (dein Chaos-Teil) zum Klick, dann eine winzige bewusste Pause, dann den ersten schweren Breakdown-Schlag exakt auf der nächsten Eins. Übe nur diese Kante, zehnmal.</li><li>Bau den Breakdown aus wenigen Tönen mit viel Stille: etwa Schlag – Stille – Schlag-Schlag – lange Stille. Die Dämpfung muss zwischen den Schlägen absolut greifen (Gate hilft, ersetzt aber saubere Hand nicht).</li><li>Setz eine Synkope: Verschieb einen der schweren Schläge auf eine Und-Zeit, sodass der Groove gegen den erwarteten Puls drückt. Nimm auf und prüf, ob es trotzdem tight sitzt.</li><li>Steh auf und spiel den Breakdown im Stehen: Wenn dein eigener Körper nicht mitgeht (Nacken, Gewicht), fehlt die Wucht — vereinfache, bis es körperlich zwingt.</li></ol><p><strong>Steigerung:</strong> Verkette Chaos → Breakdown → kurzes Chaos → längerer Breakdown zu einem Mini-Song und achte darauf, dass der zweite Breakdown schwerer wirkt als der erste (weniger Töne, mehr Stille, tiefere Lage).</p><p><strong>Selbstkontrolle:</strong> Nimm die Kante auf: Ist zwischen den Breakdown-Schlägen wirklich Stille, oder rauscht es? Sitzt der erste schwere Schlag exakt, oder franst er? Und ehrlich: Nickt dein Kopf beim Anhören — oder ist es nur laut?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/chugs_breakdown/">Chugs &amp; Breakdown-Gefühl</a></li><li><a href="../../baustein/sound_core_tight/">Core-Sound: tight &amp; modern</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=deathcore">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Deathcore-Breakdown: Matsch statt Wucht</h3><p><strong>Symptom:</strong> Der Breakdown klingt nach Brei statt nach einzelnen, schweren Schlägen — zwischen den Chugs rauscht die tiefe Saite weiter, die Kante vom schnellen Teil in den Breakdown franst.</p><p><strong>Ursache:</strong> Die Dämpfhand arbeitet nicht sauber: Die Saite wird zwischen den Schlägen nicht abgestoppt, und der erste schwere Schlag sitzt nicht exakt auf der Kante. Oft wird das Noise Gate als Ersatz für saubere Technik missverstanden.</p><p><strong>Korrektur &amp; Ansage:</strong> Nur die Kante isolieren: vier Takte schneller Teil, winzige bewusste Pause, dann EIN schwerer Schlag exakt auf der Eins — zehnmal. Danach den Breakdown aus wenigen Tönen mit echter Stille bauen; die Greif-/Dämpfhand muss zwischen den Schlägen greifen. Gate erst zuschalten, wenn es OHNE Gate schon halbwegs sauber ist.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/deathcore_breakdown_wucht">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/deathcore_breakdown_wucht">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "description": "Black Metal ist Atmosphäre vor allem anderen — kalt, weit, entrückt. Hohe Tremolo-Riffs wie ein Schneesturm, keifende Vocals aus der Ferne, eine Produktion,…", "inLanguage": "de", "isAccessibleForFree": true, "name": "Black Metal", "url": "https://zerrer.org/pfad/stil/black_metal/"}</script>
 <link rel="stylesheet" href="../../../css/schriften.css">
 <link rel="stylesheet" href="../../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -31,13 +50,39 @@
 </div>
 </header>
 <main id="ansicht">
-<h1>Black Metal</h1><p>Black Metal ist Atmosphäre vor allem anderen — kalt, weit, entrückt. Hohe Tremolo-Riffs wie ein Schneesturm, keifende Vocals aus der Ferne, eine Produktion, die Rohheit zur Ästhetik erklärt. Weniger Groove, mehr Sog.</p><p class="leise">33 Bausteine</p><ul class="stationsliste"><li><a href="../../../baustein/tremolo_picking/">Tremolo-Picking</a></li><li><a href="../../../baustein/tremolo_ausbau/">Tremolo-Picking ausbauen</a></li><li><a href="../../../baustein/schnelles_tremolo/">Schnelles Tremolo (Black Metal)</a></li><li><a href="../../../baustein/tremolo_riffing/">Tremolo-Riffing mit Akkordwechsel</a></li><li><a href="../../../baustein/dissonante_intervalle/">Dissonante Intervalle &amp; Tritonus</a></li><li><a href="../../../baustein/sweep_picking_einstieg/">Sweep-Picking-Einstieg</a></li><li><a href="../../../baustein/blast_tempo_riffing/">Riffing auf Blast-Tempo</a></li><li><a href="../../../baustein/dissonanz_voicings/">Dissonante Voicings &amp; Cluster</a></li><li><a href="../../../baustein/grundton_folgen/">Grundtönen folgen</a></li><li><a href="../../../baustein/lock_zur_bassdrum/">Zur Bassdrum locken</a></li><li><a href="../../../baustein/bass_tremolo/">Tremolo am Bass</a></li><li><a href="../../../baustein/bass_blast_begleitung/">Blasts &amp; hohe Tempi begleiten</a></li><li><a href="../../../baustein/bass_kontrapunkt/">Eigenständige Linien &amp; Kontrapunkt</a></li><li><a href="../../../baustein/bass_extremtempo/">Extremtempi: Effizienz an der Grenze</a></li><li><a href="../../../baustein/double_bass/">Double-Bass-Grundlage</a></li><li><a href="../../../baustein/blastbeat/">Blastbeat-Einführung</a></li><li><a href="../../../baustein/blast_varianten/">Blastbeat-Varianten</a></li><li><a href="../../../baustein/blast_ausdauer/">Blast-Ausdauer aufbauen</a></li><li><a href="../../../baustein/blast_spezialformen/">Blast-Spezialformen im Überblick</a></li><li><a href="../../../baustein/drums_dynamik_architektur/">Dynamik-Architektur eines Songs</a></li><li><a href="../../../baustein/harsh_stile_ueberblick/">Harsh-Vocal-Stile im Überblick</a></li><li><a href="../../../baustein/sanfter_einstieg_verzerrung/">Sanfter Einstieg in die Verzerrung</a></li><li><a href="../../../baustein/fry_verzerrung/">Fry-Ansatz: Verzerrung aus dem Knarren</a></li><li><a href="../../../baustein/scream_hoehe/">Höhere Screams: der helle Ansatz</a></li><li><a href="../../../baustein/harsh_range_erweiterung/">Verzerrungs-Range erweitern</a></li><li><a href="../../../baustein/harsh_texturen/">Texturen mischen &amp; Übergänge</a></li><li><a href="../../../baustein/moll_phrygisch/">Moll &amp; Phrygisch: dunkle Farben</a></li><li><a href="../../../baustein/tritonus_dissonanz/">Tritonus &amp; Dissonanz</a></li><li><a href="../../../baustein/harmonisch_moll_exotik/">Harmonisch Moll &amp; exotische Skalen</a></li><li><a href="../../../baustein/chromatik_atonalitaet/">Chromatik &amp; atonale Ansätze</a></li><li><a href="../../../baustein/kontrapunkt_stimmfuehrung/">Kontrapunkt &amp; Stimmführung</a></li><li><a href="../../../baustein/sound_black_frost/">Black-Metal-Sound: Frost &amp; Fläche</a></li><li><a href="../../../baustein/duo_bd_blast_begleitung/">Bass &amp; Drums: schnelle Kick-Muster gemeinsam</a></li></ul>
+<section class="marke-hero genre-landing-hero landing-hero pf-blau"><div class="genre-landing-bg" aria-hidden="true" style="background-image:url('../../../images/bg/band-bgs%20%285%29.JPG')"></div><div class="genre-landing-scrim" aria-hidden="true"></div><div class="genre-landing-inhalt"><p class="genre-landing-augenbraue"><span class="genre-landing-augenbraue-marke">Genre</span></p><h1>Black Metal</h1><p class="genre-landing-kurz">Black Metal ist Atmosphäre vor allem anderen — kalt, weit, entrückt. Hohe Tremolo-Riffs wie ein Schneesturm, keifende Vocals aus der Ferne, eine Produktion, die Rohheit zur Ästhetik erklärt. Weniger Groove, mehr Sog.</p></div></section><p class="leise">33 Bausteine</p><ul class="stationsliste"><li><a href="../../../baustein/tremolo_picking/">Tremolo-Picking</a></li><li><a href="../../../baustein/tremolo_ausbau/">Tremolo-Picking ausbauen</a></li><li><a href="../../../baustein/schnelles_tremolo/">Schnelles Tremolo (Black Metal)</a></li><li><a href="../../../baustein/tremolo_riffing/">Tremolo-Riffing mit Akkordwechsel</a></li><li><a href="../../../baustein/dissonante_intervalle/">Dissonante Intervalle &amp; Tritonus</a></li><li><a href="../../../baustein/sweep_picking_einstieg/">Sweep-Picking-Einstieg</a></li><li><a href="../../../baustein/blast_tempo_riffing/">Riffing auf Blast-Tempo</a></li><li><a href="../../../baustein/dissonanz_voicings/">Dissonante Voicings &amp; Cluster</a></li><li><a href="../../../baustein/grundton_folgen/">Grundtönen folgen</a></li><li><a href="../../../baustein/lock_zur_bassdrum/">Zur Bassdrum locken</a></li><li><a href="../../../baustein/bass_tremolo/">Tremolo am Bass</a></li><li><a href="../../../baustein/bass_blast_begleitung/">Blasts &amp; hohe Tempi begleiten</a></li><li><a href="../../../baustein/bass_kontrapunkt/">Eigenständige Linien &amp; Kontrapunkt</a></li><li><a href="../../../baustein/bass_extremtempo/">Extremtempi: Effizienz an der Grenze</a></li><li><a href="../../../baustein/double_bass/">Double-Bass-Grundlage</a></li><li><a href="../../../baustein/blastbeat/">Blastbeat-Einführung</a></li><li><a href="../../../baustein/blast_varianten/">Blastbeat-Varianten</a></li><li><a href="../../../baustein/blast_ausdauer/">Blast-Ausdauer aufbauen</a></li><li><a href="../../../baustein/blast_spezialformen/">Blast-Spezialformen im Überblick</a></li><li><a href="../../../baustein/drums_dynamik_architektur/">Dynamik-Architektur eines Songs</a></li><li><a href="../../../baustein/harsh_stile_ueberblick/">Harsh-Vocal-Stile im Überblick</a></li><li><a href="../../../baustein/sanfter_einstieg_verzerrung/">Sanfter Einstieg in die Verzerrung</a></li><li><a href="../../../baustein/fry_verzerrung/">Fry-Ansatz: Verzerrung aus dem Knarren</a></li><li><a href="../../../baustein/scream_hoehe/">Höhere Screams: der helle Ansatz</a></li><li><a href="../../../baustein/harsh_range_erweiterung/">Verzerrungs-Range erweitern</a></li><li><a href="../../../baustein/harsh_texturen/">Texturen mischen &amp; Übergänge</a></li><li><a href="../../../baustein/moll_phrygisch/">Moll &amp; Phrygisch: dunkle Farben</a></li><li><a href="../../../baustein/tritonus_dissonanz/">Tritonus &amp; Dissonanz</a></li><li><a href="../../../baustein/harmonisch_moll_exotik/">Harmonisch Moll &amp; exotische Skalen</a></li><li><a href="../../../baustein/chromatik_atonalitaet/">Chromatik &amp; atonale Ansätze</a></li><li><a href="../../../baustein/kontrapunkt_stimmfuehrung/">Kontrapunkt &amp; Stimmführung</a></li><li><a href="../../../baustein/sound_black_frost/">Black-Metal-Sound: Frost &amp; Fläche</a></li><li><a href="../../../baustein/duo_bd_blast_begleitung/">Bass &amp; Drums: schnelle Kick-Muster gemeinsam</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../../#/pfad/stil/black_metal">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../../#/pfad/stil/black_metal">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../../#/impressum">Impressum</a> · <a href="../../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../../#/griffe">Griffe</a>
+<a href="../../../#/stimmungen">Tunings</a>
+<a href="../../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../../#/ueber">Über</a>
+<a href="../../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../../#/mitmachen">Kontakt</a>
+<a href="../../../#/impressum">Impressum</a>
+<a href="../../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../../instrument/">Alle Instrumente</a>
+<a href="../../../pfad/stil/">Alle Genres</a>
+<a href="../../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

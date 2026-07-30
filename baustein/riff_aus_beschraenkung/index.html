@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Theorie", "Gitarre", "Fortgeschritten"], "description": "Die häufigste Ursache für schwache Riffs ist zu viel Material, nicht zu wenig. Wer sich alle Töne und alle Rhythmen erlaubt, greift zu Gewohntem und…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Ein Riff aus wenig Material", "url": "https://zerrer.org/baustein/riff_aus_beschraenkung/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Ein Riff aus wenig Material</h1><p class="leise">Theorie · Gitarre · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Die häufigste Ursache für schwache Riffs ist zu viel Material, nicht zu wenig. Wer sich alle Töne und alle Rhythmen erlaubt, greift zu Gewohntem und verliert die Gestalt. Eine enge Beschränkung erzwingt Entscheidungen und macht das Ergebnis fast automatisch klarer.</p><p>Diese Übung führt die Werkzeuge des Strangs zusammen: ein kleines Motiv, Wiederholung und eine gezielte Variation, dazu Betonung und Lücke — alles aus sehr wenig Material. Die Beschränkung liegt in der Anzahl der Töne und in der Länge, nicht in der Kreativität. Genau die Enge ist es, die zu einem Ergebnis mit klarer Gestalt führt.</p></section><section class="abschnitt"><h2>Übungsteil: Ein tragfähiges Riff mit klarer Gestalt bauen</h2><p><strong>Ziel:</strong> Aus stark begrenztem Material ein einprägsames Riff formen.</p><p>So gehst du vor:</p><ol><li>Beschränke dich auf drei Töne und einen Takt.</li><li>Finde zuerst nur den Rhythmus auf einem Ton, mit mindestens einer Pause.</li><li>Verteile die drei Töne auf das Muster und lege eine Betonung fest.</li><li>Wiederhole das Motiv einmal identisch, dann einmal mit genau einer Änderung.</li><li>Nimm das Ergebnis auf und höre, ob es eine erkennbare Gestalt hat.</li></ol><p><strong>Steigerung:</strong> Hänge einen zweiten Takt an, der das Motiv beantwortet, statt es nur zu wiederholen.</p><p><strong>Selbstkontrolle:</strong> Hat dein Riff eine erkennbare Gestalt? Wäre es mit mehr Tönen wirklich besser — oder nur voller?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/motiv_und_wiederholung/">Motiv, Wiederholung, Variation</a></li><li><a href="../../baustein/betonung_und_luecke/">Betonung, Lücke, Erwartung</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Die Beschränkung wird aufgeweicht</h3><p><strong>Symptom:</strong> Aus den vorgegebenen drei Tönen werden im Lauf der Übung fünf, aus einem Takt werden zwei. Das Ergebnis ähnelt wieder dem, was die Person ohnehin immer spielt.</p><p><strong>Ursache:</strong> Die Enge wird als Hindernis erlebt, nicht als Werkzeug. Genau sie sollte aber Entscheidungen erzwingen — wird sie aufgeweicht, greift die Gewohnheit sofort zurück.</p><p><strong>Korrektur &amp; Ansage:</strong> Die Grenze sichtbar machen: die drei erlaubten Töne aufschreiben oder markieren, alles andere ist gesperrt. Wird es eng, ist nicht ein vierter Ton die Lösung, sondern eine Änderung an Rhythmus, Betonung oder Lücke. Erst nach einem fertigen Ergebnis darf erweitert werden — und dann bewusst, nicht nebenbei.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/riff_aus_beschraenkung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/riff_aus_beschraenkung">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

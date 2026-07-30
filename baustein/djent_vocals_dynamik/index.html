@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Fortgeschritten", "Djent / Prog-Metalcore"], "description": "Progressiver Metalcore und die melodische Seite des Djent leben von der Dynamik zwischen zwei Welten: schneidenden Harsh-Vocals über den perkussiven Riffs…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Prog-Metalcore-Vocals: Clean, Harsh & Phrasierung", "url": "https://zerrer.org/baustein/djent_vocals_dynamik/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Prog-Metalcore-Vocals: Clean, Harsh &amp; Phrasierung</h1><p class="leise">Vocals · Fortgeschritten · Djent / Prog-Metalcore</p><section class="abschnitt"><h2>Erklärteil</h2><p>Progressiver Metalcore und die melodische Seite des Djent leben von der Dynamik zwischen zwei Welten: schneidenden Harsh-Vocals über den perkussiven Riffs und tragenden Clean-Vocals über den offenen, atmosphärischen Teilen. Der Reiz ist der Kontrast — und die Herausforderung ist, beide Register gesund zu beherrschen und sauber zwischen ihnen zu wechseln.</p><p>Handwerklich sind das zwei Baustellen. Der Clean-Gesang trägt oft die Melodie und muss über komplexen, verschobenen Rhythmen sitzen: Die Phrasierung ist hier die eigentliche Kunst — die Gesangslinie kann bewusst gegen die ungerade Metrik der Instrumente laufen (ein ruhiger, langer Bogen über einem hektischen Muster) oder sie nachzeichnen. Das verlangt ein sicheres inneres Zeitgefühl, damit die Melodie schwebt statt zu stolpern. Der Harsh-Teil bleibt, was er in jedem Genre ist: Verzerrung aus Luft und Resonanz, nicht aus Kehlkopf-Druck.</p><p>Der Gesundheitsrahmen ist beim Wechsel besonders wichtig, weil der Sprung zwischen zartem Clean und hartem Harsh die Stimme fordert: gründlich aufwärmen, beide Register einzeln und leise sichern, bevor du sie im Song kombinierst. Nie in Heiserkeit hineinüben, nach jeder Einheit den Sprechtest, bei Kratzen oder Engegefühl sofort stoppen — und die Harsh-Techniken gehören an die Seite einer erfahrenen Lehrperson, anhaltende Heiserkeit in die HNO-Praxis.</p></section><section class="abschnitt"><h2>Übungsteil: Zwei Welten, ein Song</h2><p><strong>Ziel:</strong> Clean- und Harsh-Register gesund halten, sauber wechseln und die Clean-Melodie über verschobene Metrik phrasieren.</p><p>So gehst du vor:</p><ol><li>Wärm gründlich auf. Sichere einzeln und leise: eine ruhige Clean-Phrase mit sicherer Tonhöhe, einen Harsh-Ton aus Luft und Resonanz. Beide müssen mühelos sein, bevor du sie kombinierst.</li><li>Übe den Wechsel mit Abstand: Clean-Phrase — bewusster Atem, Kehle bleibt offen — Harsh-Phrase, jeweils leise. Der harte Sprung darf die Clean-Stimme nicht verspannen; die Stütze bleibt in beiden Registern aktiv.</li><li>Leg eine ruhige Clean-Melodie über ein verschobenes Instrumental-Muster (Aufnahme in ungerader Gruppierung): Sing zuerst einen langen, ruhigen Bogen quer über das hektische Muster — die Melodie schwebt, sie zählt nicht mit.</li><li>Setz dann Harsh-Vocals gezielt auf die dichten Riff-Teile und Clean auf die offenen Teile — an festen Stellen über einen Loop, Timing und Gesundheit vor Lautstärke.</li></ol><p><strong>Steigerung:</strong> Erst wenn beide Register über Wochen stabil und beschwerdefrei sind, den Wechsel Richtung Songtempo beschleunigen — immer nur so schnell, wie beide frei bleiben. Für die Phrasierung: Sing dieselbe Clean-Melodie einmal mit der Metrik laufend und einmal bewusst dagegen und hör den Unterschied.</p><p><strong>Selbstkontrolle:</strong> Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Bleibt die Clean-Stimme nach einem Harsh-Teil genauso klar wie vorher? Schwebt die Melodie über dem verschobenen Muster, oder stolperst du mit? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/clean_harsh_wechsel/">Wechsel zwischen Clean &amp; Harsh</a></li><li><a href="../../baustein/scream_hoehe/">Höhere Screams: der helle Ansatz</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=djent">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Prog-Vocals: Verspannung im Wechsel</h3><p><strong>Symptom:</strong> Der Sprung zwischen zartem Clean und hartem Harsh verspannt die Stimme; die Clean-Linie klingt nach einem Harsh-Teil unruhig und eng.</p><p><strong>Ursache:</strong> Der harte Wechsel wird ohne Abstand und ohne Stütze genommen; die Kehle bleibt vom Harsh-Teil eng, wenn der Clean einsetzt.</p><p><strong>Korrektur &amp; Ansage:</strong> Beide Register einzeln und leise sichern, dann den Wechsel mit großem Abstand üben: Clean — bewusster Atem, Kehle offen — Harsh, jeweils leise. Die Stütze bleibt in beiden aktiv; Tempo erst steigern, wenn beide nach dem Wechsel frei bleiben (Sprechtest).</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/djent_vocals_dynamik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/djent_vocals_dynamik">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

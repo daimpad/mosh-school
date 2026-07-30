@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Kopf & Fokus", "Einsteiger"], "description": "Wie gut man übt, hängt weniger an der Zeit als an der Aufmerksamkeit. Eine halbe Stunde konzentriertes, bewusstes Üben bringt mehr als zwei Stunden nebenbei…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Fokus & Konzentration beim Üben", "url": "https://zerrer.org/baustein/fokus_konzentration/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Fokus &amp; Konzentration beim Üben</h1><p class="leise">Kopf &amp; Fokus · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Wie gut man übt, hängt weniger an der Zeit als an der Aufmerksamkeit. Eine halbe Stunde konzentriertes, bewusstes Üben bringt mehr als zwei Stunden nebenbei mit halbem Kopf. Denn Können entsteht durch aufmerksame Wiederholung — das Gehirn lernt genau das, worauf man achtet. Wer zerstreut übt, festigt auch die Fehler.</p><p>Drei Dinge schärfen den Fokus. Erstens die Ablenkungen weg: Handy außer Reichweite, Benachrichtigungen aus, eine klare Übe-Umgebung. Schon die bloße Anwesenheit des Handys frisst Aufmerksamkeit. Zweitens ein klares Ziel pro Block: nicht einfach spielen, sondern EINE Sache verbessern wollen (diese Stelle sauberer, dieses Tempo halten) — ein Ziel gibt der Aufmerksamkeit eine Richtung. Drittens kurze, intensive Blöcke: Volle Konzentration lässt sich nicht stundenlang halten; mehrere fokussierte Blöcke mit echten Pausen schlagen einen langen, zerfasernden.</p><p>Ein einfacher Test für echten Fokus: Kannst du nach jeder Wiederholung sagen, was besser oder schlechter war? Wenn nicht, hast du gespielt, nicht geübt. Bewusstes Zuhören bei sich selbst ist der Kern von Konzentration.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Beobachte eine typische Übe-Session ehrlich: Wie oft schweifst du ab (Handy, Gedanken), und übst du mit einem klaren Ziel oder spielst du einfach vor dich hin? Kannst du nach den Wiederholungen sagen, was besser wurde?
 
 Probier eine fokussierte Gegen-Session: Handy außer Reichweite, ein einziges klares Ziel für einen kurzen Block (z. B. 15 Minuten), und nach jeder Wiederholung bewusst bewerten, was passiert ist. Vergleich danach: Hast du in der kürzeren, fokussierten Zeit mehr erreicht als sonst in der doppelten? Leg fest, wie du künftig deine Übe-Zeit in fokussierte Blöcke mit klaren Zielen und echten Pausen teilst.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/metronom_prinzip/">Üben mit dem Klick</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/fokus_konzentration">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/fokus_konzentration">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

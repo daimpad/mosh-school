@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Vocals", "Fortgeschritten", "Crust"], "description": "Crust-Vocals sitzen zwischen den Welten: rauer als Hardcore-Shouts, aber nicht so tief und geformt wie Death-Metal-Growls — ein dringliches,…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Crust-Vocals: rau & dringlich", "url": "https://zerrer.org/baustein/crust_vocals_rau/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Crust-Vocals: rau &amp; dringlich</h1><p class="leise">Vocals · Fortgeschritten · Crust</p><section class="abschnitt"><h2>Erklärteil</h2><p>Crust-Vocals sitzen zwischen den Welten: rauer als Hardcore-Shouts, aber nicht so tief und geformt wie Death-Metal-Growls — ein dringliches, angeraut-gebrülltes Rufen, das mehr nach Wut als nach Technik klingt. Genau deshalb ist die Technik dahinter so wichtig: Diese Rauheit MUSS aus Luft und Resonanz kommen, nicht aus dem Kehlkopf. Ein gepresstes Crust-Brüllen ist der schnellste Weg zu einer beschädigten Stimme.</p><p>Der gesunde Ansatz ist derselbe wie bei allen harschen Stilen: Die Verzerrung entsteht über den False-Cord-Mechanismus — viel Stütze, offener Rachen, die Rauheit als Beigabe auf einem stabilen Luftstrom. Die crust-typische Färbung entsteht durch die mittlere Lage und die rufende, sprechnahe Artikulation: Es klingt wie dringliches Rufen mit Schmirgel, nicht wie ein geformtes Monster.</p><p>Gesundheitsrahmen strikt: leise und kurz aufbauen, nie in Heiserkeit hineinüben, bei Kratzen oder Engegefühl sofort stoppen. Den Aufbau begleitet idealerweise eine Lehrperson, die harsche Stile kennt — und anhaltende Heiserkeit gehört in die HNO-Praxis.</p></section><section class="abschnitt"><h2>Übungsteil: Dringlich, nicht gepresst</h2><p><strong>Ziel:</strong> Den rauen, rufenden Crust-Ansatz auf gesunder False-Cord-Basis anlegen.</p><p>So gehst du vor:</p><ol><li>Wärm die Stimme gründlich auf. Ruf eine kurze Phrase zuerst völlig clean und mühelos in mittlerer Lage — wie ein dringlicher Zuruf über die Straße, aus der Stütze, Hals locker.</li><li>Gib auf denselben Zuruf einen Hauch False-Cord-Rauheit — leise, als raues Flüster-Brüllen. Die Lautstärke bleibt niedrig; du suchst die Färbung, nicht die Wucht.</li><li>Sprich-brülle eine zweizeilige Phrase im Rhythmus eines D-Beat-Tempos: kurze Silben, klare Artikulation, jede Zeile mit bewusstem Atem davor. Maximal ein paar Minuten am Stück.</li><li>Hör eine Aufnahme ab: Klingt es nach dringlichem Rufen mit rauer Kante — oder nach Druck? Bei jedem Anflug von Kratzen oder Enge: sofort stoppen, zurück zu Schritt 1.</li></ol><p><strong>Steigerung:</strong> Arbeite die Dynamik heraus: dieselbe Phrase einmal als raunendes, leises Brüllen und einmal voller — der Unterschied entsteht über Luftmenge und Resonanzraum, nie über Hals-Druck.</p><p><strong>Selbstkontrolle:</strong> Kannst du direkt nach der Übung mühelos und klar sprechen? Bleibt die Rauheit auch leise verfügbar? Wenn die Färbung nur laut funktioniert, trägt noch der Druck statt der Technik — eine Stufe zurück.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/harsh_stile_ueberblick/">Harsh-Vocal-Stile im Überblick</a></li><li><a href="../../baustein/false_cord_ansatz/">Taschenfalten-Ansatz (False Cord)</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=crust">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Crust-Vocals: Wut wird Druck</h3><p><strong>Symptom:</strong> Das raue Brüllen funktioniert nur laut: Leise ist die Färbung weg, nach einer Probe ist die Stimme heiser, und die Rauheit klingt von Tag zu Tag anders.</p><p><strong>Ursache:</strong> Die Dringlichkeit wird körperlich erzwungen: Statt False-Cord-Rauheit auf stabilem Luftstrom trägt Kehlkopf-Druck die Färbung. Dass es nur laut geht, ist das Leitsymptom — echte Technik ist in jeder Lautstärke verfügbar, Druck braucht Pegel.</p><p><strong>Korrektur &amp; Ansage:</strong> Zurück auf die leise Basis: der clean gerufene Zuruf aus der Stütze, dann ein Hauch Rauheit als Flüster-Brüllen — die Färbung muss bei niedriger Lautstärke entstehen, sonst trägt noch der Druck. Kurze Einheiten, nach jeder der Sprechtest (klingt die Alltagsstimme frei?). In Heiserkeit wird nie hineingeübt; hält sie an, gehört sie in die HNO-Praxis, und der Aufbau an die Seite einer Lehrperson.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/crust_vocals_rau">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/crust_vocals_rau">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

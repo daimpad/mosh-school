@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Bass", "Fortgeschritten"], "description": "Ein Bass-Fill ist eine kurze Abweichung von der Linie — meist am Ende einer Phrase, um in den nächsten Teil überzuleiten. Gute Fills kündigen den Wechsel…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Fills & Übergänge in der Linie", "url": "https://zerrer.org/baustein/bass_fills_uebergaenge/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Fills &amp; Übergänge in der Linie</h1><p class="leise">Bass · Fortgeschritten</p><section class="abschnitt"><h2>Erklärteil</h2><p>Ein Bass-Fill ist eine kurze Abweichung von der Linie — meist am Ende einer Phrase, um in den nächsten Teil überzuleiten. Gute Fills kündigen den Wechsel an, ohne das Fundament zu verlassen: Sie starten aus der Linie, laufen über wenige Töne und landen punktgenau auf der Eins des neuen Teils.</p><p>Das Material dafür hast du schon: Durchgangstöne aus der Tonleiter, chromatische Annäherungen an den Zielton, Slides und Hammer-ons. Ein Fill aus drei Tönen, das sicher landet, schlägt jede virtuose Kaskade, die die Eins verfehlt.</p><p>Denk vom Ziel her: Erst steht fest, auf welchem Ton der nächste Teil beginnt, dann baust du den kurzen Weg dorthin. So bleibt das Fill funktional — es dient dem Song, nicht der Show.</p></section><section class="abschnitt"><h2>Übungsteil: Vom Fill auf die Eins landen</h2><p><strong>Ziel:</strong> Kurze Übergänge bauen, die exakt auf dem Zielton des nächsten Teils landen.</p><p>So gehst du vor:</p><ol><li>Spiel vier Takte einer einfachen Grundton-Linie und leg den Zielton des fünften Takts fest.</li><li>Bau im vierten Takt einen Übergang aus zwei, drei Tönen, der auf diesen Zielton zuläuft.</li><li>Spiel das Ganze zum Klick und prüf, ob die Landung exakt auf der Eins sitzt.</li></ol><p><strong>Steigerung:</strong> Chromatische Annäherung und Slides in den Übergang einbauen; das Fill rhythmisch variieren.</p><p><strong>Selbstkontrolle:</strong> Die Linie bleibt stabil, das Fill kündigt den Wechsel an, und die Eins sitzt punktgenau.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/einfache_basslinie/">Einfache Basslinie zum Riff</a></li><li><a href="../../baustein/bass_slides_legato/">Slides, Hammer-ons &amp; Pull-offs</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Bass: Fill zerreißt den Groove</h3><p><strong>Symptom:</strong> Ein Fill oder Übergang in der Basslinie reißt den Groove auf und findet nicht sauber auf die Eins zurück; der Part stolpert danach.</p><p><strong>Ursache:</strong> Der Fill ist nicht ins Timing eingebettet — er wird gespielt, ohne den Puls durchzuhalten, und der Wiedereinstieg ist nicht als Ziel gedacht.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Fill isoliert üben, innerlich weiterzählen und den Zielpunkt (die Eins) bewusst ansteuern. Erst wenn der Fill den Groove trägt statt ihn zu unterbrechen, ins volle Tempo.</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/bass_fills_uebergaenge">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/bass_fills_uebergaenge">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

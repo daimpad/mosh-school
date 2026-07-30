@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Drums", "Equipment", "Einsteiger"], "description": "Becken sind die Stimme des Sets nach oben hin — und jedes hat eine klare Rolle. Die Grundausstattung: Die Hi-Hat (zwei Becken auf einem Ständer, per Fuß…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Beckentypen & ihre Rollen", "url": "https://zerrer.org/baustein/becken_typen/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -34,12 +53,38 @@
 <h1>Beckentypen &amp; ihre Rollen</h1><p class="leise">Drums · Equipment · Einsteiger</p><section class="abschnitt"><h2>Erklärteil</h2><p>Becken sind die Stimme des Sets nach oben hin — und jedes hat eine klare Rolle. Die Grundausstattung: Die Hi-Hat (zwei Becken auf einem Ständer, per Fuß geöffnet und geschlossen) hält den Puls und liefert alles von tickend-geschlossen bis zischend-offen. Das Ride ist das große, dickere Becken für durchgehende, definierte Schläge — im Metal auch als treibendes Puls-Instrument in schnellen Parts. Crashes sind die Ausrufezeichen: kurzer, explosiver Akzent, der schnell verklingt.</p><p>Die Metal-Spezialisten: Das China (oft umgedreht montiert) klingt trashig, roh und schneidend — das Signatur-Becken für Blast-Parts und Breakdown-Akzente, weil es sich durch die dichteste Wand schneidet. Splashes sind kleine, kurze Crashes für schnelle Farbtupfer. Stacks (zwei aufeinander montierte Becken) liefern einen kurzen, elektronisch wirkenden „Chick“, sehr beliebt im modernen Core.</p><p>Beim Kauf gilt: Dickere, größere Becken sind lauter und tragen im lauten Metal-Umfeld besser als dünne (die im Bandkontext schnell untergehen). Und wie Felle sind Becken Verschleißteile mit Vorsicht: Ein Riss beginnt oft klein am Rand — regelmäßig prüfen, denn ein gerissenes Becken klingt nicht nur schlecht, es kann auch weiterreißen.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Geh dein Becken-Setup (oder das des Proberaums) durch und ordne jedem Becken seine Rolle zu: Was hält den Puls, was setzt Akzente, was schneidet durch? Fehlt dir für dein Genre ein Typ — etwa ein China für Blast-Akzente oder ein Stack für moderne Core-Sounds?
 
 Prüf außerdem alle Ränder auf beginnende Risse (kleine Kerben, Haarlinien). Und hör bewusst hin: Gehen deine Crashes im Bandsound unter? Dann sind sie vielleicht zu dünn für dein Umfeld. Notier dir das EINE Becken, das dein Setup als Nächstes sinnvoll ergänzen oder ersetzen würde.</p></section><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/explorer?ansicht=schlagzeug&region=becken_typen">Equipment</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/becken_typen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/becken_typen">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>

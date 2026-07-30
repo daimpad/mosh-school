@@ -20,6 +20,25 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Gitarre", "Fortgeschritten", "Stoner / Post-Metal"], "description": "Im Stoner Rock regiert der Riff — nicht als Baustein unter vielen, sondern als das ganze Stück. Ein guter Stoner-Riff ist eingängig, wiederholt sich…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Übungsteil", "name": "Stoner-Gitarre: Fuzz, Groove & der Riff als König", "url": "https://zerrer.org/baustein/stoner_riff_fuzz/"}</script>
 <link rel="stylesheet" href="../../css/schriften.css">
 <link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <header class="kopf">
@@ -32,12 +51,38 @@
 </header>
 <main id="ansicht">
 <h1>Stoner-Gitarre: Fuzz, Groove &amp; der Riff als König</h1><p class="leise">Gitarre · Fortgeschritten · Stoner / Post-Metal</p><section class="abschnitt"><h2>Erklärteil</h2><p>Im Stoner Rock regiert der Riff — nicht als Baustein unter vielen, sondern als das ganze Stück. Ein guter Stoner-Riff ist eingängig, wiederholt sich lustvoll und groovt so, dass man mitwippen muss. Das Vorbild ist der Blues und der frühe Hard Rock, durch einen fetten Fuzz gezogen: warme, sämige Verzerrung statt scharfer High-Gain-Zerre, oft in tieferer Stimmung, aber mit viel Bewegung statt Zeitlupe.</p><p>Drei Dinge machen den Stil aus. Erstens der Ton: Fuzz ist runder und wolliger als Metal-Distortion — er lebt von den Mitten und einem gewissen Zusammensacken bei hartem Anschlag. Zweitens der Groove: Stoner-Riffs swingen oft leicht, sitzen bewusst locker im Puls (nicht davor), und lassen Raum — die Lücke im Riff ist so wichtig wie die Note. Drittens die Phrasierung aus dem Blues: Bendings, Slides und kleine Läufe zwischen den Powerchords geben dem Riff Stimme und Schmutz, statt ihn nur zu hämmern.</p><p>Die Kunst ist die Wiederholung: Ein Stoner-Riff darf und soll oft wiederkommen — aber jede Runde braucht minimale Variation im Anschlag, im Feel, in der Betonung, damit die Hypnose lebt statt zu langweilen. Weniger Töne, mehr Groove und Ton — das ist die Stoner-Ökonomie.</p></section><section class="abschnitt"><h2>Übungsteil: Ein Riff, das groovt</h2><p><strong>Ziel:</strong> Einen fuzzigen Stoner-Riff mit Groove, Raum und bluesiger Phrasierung spielen und lustvoll wiederholen.</p><p>So gehst du vor:</p><ol><li>Stell einen warmen, fuzzigen Ton ein (Fuzz oder weiche Verzerrung, Mitten drin lassen) und spiel einen einfachen Powerchord-Riff mit einer bewussten Lücke drin — vier Töne, eine Pause, statt durchgehend zu hämmern. Die Lücke ist Teil des Riffs.</li><li>Bring Groove rein: Spiel den Riff leicht hinter dem Klick, entspannt statt gehetzt, und betone die Töne, die zum Mitwippen einladen. Nimm auf und prüf: Wippt dein Kopf, oder klingt es steif?</li><li>Setz bluesige Phrasierung ein: ein Bending oder Slide zwischen zwei Powerchords, ein kleiner Lauf am Riff-Ende. Der Schmutz und die Stimme kommen aus diesen Zwischentönen.</li><li>Wiederhol den Riff acht Runden am Stück und variier jede Runde minimal (Anschlagshärte, eine Betonung, ein zusätzlicher Ghost-Ton) — die Wiederholung soll hypnotisch werden, nicht langweilig.</li></ol><p><strong>Steigerung:</strong> Nimm denselben Riff und spiel ihn einmal streng auf dem Klick und einmal bewusst locker dahinter — hör, wie erst das lockere Feel den Groove bringt. Oder bau eine zweite Riff-Variante als Kontrast und wechsle zwischen beiden.</p><p><strong>Selbstkontrolle:</strong> Hör die Aufnahme: Groovt der Riff wirklich (zwingt er zum Mitwippen), oder ist er nur laut? Klingt der Fuzz-Ton warm und voll oder dünn und scharf? Und lebt die Wiederholung durch die kleinen Variationen, oder ermüdet sie? Wenn es steif klingt, sitzt du zu weit vorn im Puls — zurück zu Schritt 2.</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/doom_riffing/">Doom-Riffing</a></li><li><a href="../../baustein/slides_bends/">Slides &amp; Bends im Metal</a></li></ul><p class="leise">Passendes Werkzeug:</p><ul class="werkzeug-anbindung"><li><a href="../../#/werkzeug/loops?stil=stoner_post">Play-along-Loops</a></li></ul><section class="abschnitt trainer-layer"><h2>Trainer-Layer: Fehlerbilder</h2><article class="fb-karte"><h3>Stoner-Riff: steif statt groovy</h3><p><strong>Symptom:</strong> Der fuzzige Riff klingt korrekt, aber tot — er zwingt nicht zum Mitwippen, die Wiederholung langweilt.</p><p><strong>Ursache:</strong> Der Anschlag sitzt zu weit vorn im Puls (gehetzt), die bewusste Lücke im Riff fehlt oder wird zugespielt, und jede Runde klingt exakt gleich.</p><p><strong>Korrektur &amp; Ansage:</strong> Den Riff leicht hinter dem Klick spielen, entspannt statt getrieben, und die Lücke wirklich stehen lassen. Jede Runde minimal variieren (Anschlagshärte, eine Betonung, ein Ghost-Ton); auf der Aufnahme prüfen: Nickt der Kopf?</p></article></section>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/stoner_riff_fuzz">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
 </main>
-<footer class="seiten-footer">
+<footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<p class="info-cta"><a class="knopf knopf-primaer" href="../../#/baustein/stoner_riff_fuzz">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+<div class="footer-marke">
+<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
 </div>
-<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell. · <a href="../../#/impressum">Impressum</a> · <a href="../../#/datenschutz">Datenschutz</a></div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Kontakt</a>
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>No Tracking</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+<div class="footer-schluss">Inhalte unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a> — Namensnennung, nicht kommerziell.</div>
 </footer>
 </body>
 </html>
