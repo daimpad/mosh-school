@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="de" data-theme="dunkel">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZERRER — Glitch-Schriftzug im Hero (Mockup)</title>
+<link rel="icon" href="../assets/images/logo.svg">
+
+<!-- Bewusst die echten Stylesheets der App: Das Mockup soll zeigen, wie es
+     WIRKLICH aussieht. Display-Schrift (Special Elite), Blutrot, Tinte und
+     Flaeche kommen aus denselben Tokens wie die App. -->
+<link rel="stylesheet" href="../css/schriften.css">
+<link rel="stylesheet" href="../css/app.css">
+
+<style>
+  /* ==========================================================================
+     Nur fuer dieses Mockup. Zwei Sorten Regeln liegen hier beieinander:
+
+     (1) MOCKUP-RAHMEN (.mock-*): Steuerleiste, Legende, Ausgabefeld. Wegwerf.
+     (2) GLITCH-SYSTEM (.zerr-*, .gh-*): der eigentliche Vorschlag. Diese Regeln
+         lesen nur Tokens und CSS-Variablen, die das JS setzt — sie koennen
+         ohne Umbau nach css/app.css wandern.
+
+     Die Animation laeuft in JS (requestAnimationFrame), NICHT als
+     CSS-@keyframes: Ein kaputter Film ist nicht periodisch. Eine Schleife mit
+     fester Laenge verraet sich nach zwei Durchlaeufen als Muster; hier wuerfelt
+     ein Scheduler Ausbrueche mit zufaelliger Laenge, Staerke und Sorte aus, und
+     dazwischen ist bewusst Ruhe. Das JS setzt ausschliesslich CSS-Variablen —
+     das Zeichnen bleibt beim Compositor.
+     ========================================================================== */
+
+  body { padding-bottom: 4rem; }
+  .mock-wrap { max-width: 62rem; margin: 0 auto; padding: 0 1rem; }
+  .mock-kopf { padding: 2rem 0 1rem; }
+  .mock-kopf h1 { margin: 0 0 .4rem; font-size: clamp(1.6rem, 5vw, 2.4rem); }
+  .mock-kopf p { margin: 0 0 .6rem; color: var(--tinte-2); max-width: 68ch; line-height: 1.55; }
+
+  /* Steuerleiste klebt oben: Man dreht am Regler und sieht den Hero gleichzeitig. */
+  .mock-steuer {
+    position: sticky; top: 0; z-index: 30;
+    padding: .8rem 1rem .9rem; margin: 1rem 0 1.4rem;
+    background: var(--flaeche); border: 1px solid var(--linie);
+  }
+  .mock-reihe {
+    display: flex; flex-wrap: wrap; gap: .8rem 1.3rem; align-items: flex-end;
+  }
+  .mock-reihe + .mock-reihe {
+    margin-top: .8rem; padding-top: .8rem; border-top: 1px solid var(--linie);
+  }
+  .mock-feld { display: flex; flex-direction: column; gap: .25rem; font-size: .78rem; }
+  .mock-feld > span { text-transform: uppercase; letter-spacing: .1em; color: var(--tinte-2); font-weight: 700; }
+  .mock-feld input[type=range] { width: 8rem; accent-color: var(--primaer); }
+  .mock-feld select { background: var(--flaeche); color: var(--tinte); border: 1px solid var(--linie-stark); padding: .3rem .4rem; font: inherit; }
+  .mock-wert { font-variant-numeric: tabular-nums; color: var(--tinte); }
+  .mock-schalter { display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--tinte); }
+  .mock-schalter input { accent-color: var(--primaer); }
+  .mock-knopf {
+    font: inherit; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+    padding: .45rem .7rem; min-height: 34px; cursor: pointer;
+    background: var(--flaeche); color: var(--tinte); border: 1px solid var(--linie-stark);
+  }
+  .mock-knopf:hover { border-color: var(--primaer); color: var(--primaer); }
+  .mock-knopf[aria-pressed="true"] { background: var(--primaer); border-color: var(--primaer); color: #fff; }
+  .mock-gruppe { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
+  .mock-gruppe > .mock-titel {
+    font-size: .72rem; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--tinte-2); font-weight: 700; margin-right: .2rem;
+  }
+
+  .mock-hinweis {
+    margin: 0 0 1.4rem; padding: .75rem .9rem; line-height: 1.5; font-size: .88rem;
+    border: 1px solid var(--primaer); border-left-width: 4px; background: var(--flaeche);
+  }
+  .mock-legende { border: 1px solid var(--linie); padding: .2rem 1rem 1rem; margin: 1.6rem 0; }
+  .mock-legende h2 { font-size: 1rem; margin: 1rem 0 .5rem; }
+  .mock-legende p, .mock-legende li { font-size: .87rem; line-height: 1.55; color: var(--tinte-2); }
+  .mock-legende li { margin-bottom: .3rem; }
+  .mock-legende code { font-size: .82rem; }
+
+  .mock-ausgabe {
+    width: 100%; min-height: 8rem; font-family: ui-monospace, Menlo, monospace; font-size: .78rem;
+    line-height: 1.5; padding: .7rem; background: var(--flaeche-2, var(--flaeche));
+    color: var(--tinte); border: 1px solid var(--linie-stark); resize: vertical;
+  }
+
+  /* ==========================================================================
+     (2) DAS GLITCH-SYSTEM
+     ========================================================================== */
+
+  /* Der Hero laeuft randlos ueber die volle Breite — der Schriftzug soll den
+     ganzen Schirm fuellen, nicht die 42rem-Textspalte. Das Innenmass bleibt
+     minimal, damit ZERRER wirklich bis an beide Kanten reicht. */
+  .gh-hero {
+    position: relative;
+    width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+    min-height: 78svh; min-height: 78vh;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    overflow: hidden; isolation: isolate;
+    background: #08080a;
+  }
+
+  /* Foto-Ebene wie im echten Hero (js/hintergrundbilder.js -> bildEbene). */
+  .gh-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background-size: cover; background-position: center;
+    opacity: var(--gh-bild-op, .55);
+    filter: saturate(var(--gh-bild-sat, .35)) contrast(1.05);
+  }
+  .gh-scrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      linear-gradient(to top, #08080a 4%, rgba(8,8,10,.55) 32%, rgba(8,8,10,0) 70%),
+      radial-gradient(120% 70% at 50% 100%, rgba(8,8,10,.85) 0%, rgba(8,8,10,0) 75%);
+  }
+
+  .gh-buehne { position: relative; z-index: 2; padding: 0 clamp(.4rem, 1.5vw, 1.2rem) .4rem; }
+
+  /* --- Der Schriftzug -----------------------------------------------------
+     Aufbau in Ebenen, von hinten nach vorn:
+       1. zwei Chroma-Geister (Farbversatz, der RGB-Split alter Baender)
+       2. N Baender ("Scheiben"), die zusammen die volle Hoehe kacheln
+     Die Basis traegt NUR das Layout (Groesse, Zeilenhoehe) und ist unsichtbar —
+     sichtbar sind die Baender. In Ruhe steht jedes Band auf dx=0, dadurch sieht
+     der Schriftzug exakt aus wie ein einziges sauberes Wort. Waehrend eines
+     Ausbruchs wandern einzelne Baender seitlich weg: genau der Riss, den ein
+     springendes Filmband macht. */
+  .zerr {
+    position: relative;
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: .86;
+    letter-spacing: var(--zerr-sperrung, 0em);
+    white-space: nowrap;
+    /* Von JS gesetzt, damit der Schriftzug exakt die Buehnenbreite fuellt. */
+    font-size: var(--zerr-groesse, 12rem);
+    /* Gesamtbewegung: Zittern des ganzen Wortes + gelegentliche Schieflage. */
+    transform:
+      translate3d(var(--zerr-x, 0px), var(--zerr-y, 0px), 0)
+      skewX(var(--zerr-neigung, 0deg))
+      scaleY(var(--zerr-stauchung, 1));
+    filter: blur(var(--zerr-blur, 0px));
+    opacity: var(--zerr-deckkraft, 1);
+    will-change: transform, filter, opacity;
+  }
+  /* Traegt nur das Layout (Hoehe der Zeile + messbare Wortbreite) — nie sichtbar.
+     inline-block, NICHT block: Ein Block-Element waere immer containerbreit, und
+     die Groessenmessung in passeGroesseAn() bekaeme statt der Wortbreite die
+     Buehnenbreite zurueck — die Rechnung ergaebe dann immer dieselbe Groesse. */
+  .zerr-basis { visibility: hidden; display: inline-block; }
+
+  .zerr-lage {
+    position: absolute; inset: 0;
+    display: block;
+    pointer-events: none;
+  }
+
+  /* Chroma-Geister: der Farbstich. Screen-Blend, damit sie sich wie zwei
+     fehljustierte Farbauszuege addieren statt den Text zu uebermalen. */
+  .zerr-chroma {
+    mix-blend-mode: screen;
+    opacity: var(--zerr-farbstaerke, .55);
+    filter: blur(var(--zerr-chroma-blur, 0px));
+  }
+  .zerr-chroma-a { color: var(--zerr-farbe-a, #00e5ff); transform: translate3d(calc(-1 * var(--zerr-split, 0px)), var(--zerr-split-y, 0px), 0); }
+  .zerr-chroma-b { color: var(--zerr-farbe-b, #ff0033); transform: translate3d(var(--zerr-split, 0px), calc(-1 * var(--zerr-split-y, 0px)), 0); }
+
+  /* Ein Band. --o/--u sind die Anteile, die oben/unten weggeschnitten werden;
+     zusammen kacheln alle Baender die volle Hoehe. */
+  .zerr-scheibe {
+    color: var(--tinte);
+    clip-path: inset(var(--o, 0%) -12% var(--u, 0%) -12%);
+    transform: translate3d(var(--dx, 0px), var(--dy, 0px), 0);
+    opacity: var(--sop, 1);
+  }
+
+  /* --- Overlay: Scanlines, Rollbalken, Korn ------------------------------- */
+  .gh-overlay { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+  .gh-scan {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,.42) 0px, rgba(0,0,0,.42) 1px,
+      rgba(0,0,0,0) 1px, rgba(0,0,0,0) 3px);
+    opacity: var(--gh-scan, .3);
+  }
+  /* Der helle Balken, der durchs Bild wandert — das Kennzeichen eines
+     durchrutschenden Bandes. Er laeuft bewusst langsam und wird von JS
+     positioniert, damit ein Ausbruch genau dann ausgeloest werden kann, wenn er
+     den Schriftzug kreuzt. */
+  .gh-balken {
+    position: absolute; left: 0; right: 0;
+    height: 14%;
+    top: var(--gh-balken-y, -20%);
+    background: linear-gradient(to bottom,
+      rgba(255,255,255,0) 0%, rgba(255,255,255,.09) 45%, rgba(255,255,255,.14) 55%, rgba(255,255,255,0) 100%);
+    opacity: var(--gh-balken-op, .8);
+    mix-blend-mode: screen;
+  }
+  .gh-korn {
+    position: absolute; inset: -50%;
+    opacity: var(--gh-korn, .12);
+    background-image: var(--gh-korn-bild);
+    background-size: 180px 180px;
+    animation: gh-korn-wandern .9s steps(3) infinite;
+  }
+  @keyframes gh-korn-wandern {
+    0%   { transform: translate3d(0,0,0); }
+    33%  { transform: translate3d(-3%, 2%, 0); }
+    66%  { transform: translate3d(2%, -3%, 0); }
+    100% { transform: translate3d(0,0,0); }
+  }
+
+  /* --- Text unter dem Schriftzug (wie im echten Hero) ---------------------- */
+  .gh-unten {
+    position: relative; z-index: 4;
+    padding: .5rem clamp(.4rem, 1.5vw, 1.2rem) clamp(1.2rem, 4vw, 2.4rem);
+    max-width: 44rem;
+  }
+  .gh-unten p { margin: 0 0 .2rem; color: #ece9e1; text-shadow: 0 2px 10px rgba(0,0,0,.9); }
+  .gh-sub { font-size: clamp(1rem, 2.4vw, 1.35rem); font-weight: 700; letter-spacing: .02em; }
+  .gh-themen { font-size: .9rem; color: #b9b4ab; }
+  .gh-cta { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1rem; }
+
+  /* Barrierefreiheit: Wer reduzierte Bewegung angefordert hat, bekommt den
+     Schriftzug ruhig. Das JS friert die Animation zusaetzlich ein — die Regel
+     hier ist der Guertel zum Hosentraeger. */
+  @media (prefers-reduced-motion: reduce) {
+    .gh-korn { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mock-wrap">
+  <div class="mock-kopf">
+    <h1>Glitch-Schriftzug im Startseiten-Hero</h1>
+    <p>
+      „ZERRER“ ueber die volle Schirmbreite, animiert wie ein durchrutschendes Filmband:
+      Farbausz&uuml;ge laufen auseinander, einzelne B&auml;nder reissen seitlich weg, das Wort
+      zittert und wird kurz unscharf. Die Animation l&auml;uft in JavaScript &uuml;ber einen
+      Ausbruch-Scheduler — <strong>nicht</strong> als CSS-Schleife, weil sich eine feste
+      Schleife nach zwei Durchl&auml;ufen als Muster verr&auml;t. Dazwischen ist bewusst Ruhe.
+    </p>
+    <p>
+      Dreh an den Reglern, bis es sitzt, und schick mir den Block aus „Werte &uuml;bernehmen“
+      ganz unten zur&uuml;ck — daraus baue ich die Einbindung in die App.
+    </p>
+  </div>
+
+  <div class="mock-hinweis">
+    <strong>Voreinstellung „Kaputter Film“</strong> ist absichtlich zur&uuml;ckhaltend: rund alle
+    3–5 Sekunden ein kurzer Ausbruch. Zum Beurteilen der St&auml;rke hilft der Knopf
+    <em>Jetzt ausl&ouml;sen</em>, statt zu warten.
+  </div>
+
+  <!-- ===================== STEUERLEISTE ===================== -->
+  <div class="mock-steuer">
+    <div class="mock-reihe">
+      <div class="mock-gruppe">
+        <span class="mock-titel">Voreinstellung</span>
+        <button class="mock-knopf" data-preset="dezent">Dezent</button>
+        <button class="mock-knopf" data-preset="film" aria-pressed="true">Kaputter Film</button>
+        <button class="mock-knopf" data-preset="hart">Hart</button>
+        <button class="mock-knopf" data-preset="dauer">Dauerst&ouml;rung</button>
+        <button class="mock-knopf" data-preset="aus">Aus</button>
+      </div>
+      <div class="mock-gruppe">
+        <button class="mock-knopf" id="jetzt">Jetzt ausl&ouml;sen</button>
+        <button class="mock-knopf" id="pause" aria-pressed="false">Pause</button>
+      </div>
+      <!-- Ein Ausbruch dauert 50–250 ms — zum Beurteilen zu schnell. Sorte
+           festnageln + Zeitlupe machen ihn ueberhaupt erst betrachtbar. -->
+      <label class="mock-feld"><span>Sorte</span>
+        <select id="sorte">
+          <option value="zufall">Zuf&auml;llig gemischt</option>
+          <option value="riss">Nur Riss</option>
+          <option value="versatz">Nur Versatz</option>
+          <option value="aussetzer">Nur Aussetzer</option>
+          <option value="zittern">Nur Zittern</option>
+        </select></label>
+      <label class="mock-schalter"><input type="checkbox" id="zeitlupe"> Zeitlupe (8&times;)</label>
+    </div>
+
+    <div class="mock-reihe">
+      <label class="mock-feld"><span>Intensit&auml;t</span>
+        <input type="range" id="intensitaet" min="0" max="100" value="55"><span class="mock-wert" id="v-intensitaet"></span></label>
+      <label class="mock-feld"><span>Geschwindigkeit</span>
+        <input type="range" id="tempo" min="0" max="100" value="30"><span class="mock-wert" id="v-tempo"></span></label>
+      <label class="mock-feld"><span>Verzerrung</span>
+        <input type="range" id="verzerrung" min="0" max="100" value="45"><span class="mock-wert" id="v-verzerrung"></span></label>
+      <label class="mock-feld"><span>Bewegung</span>
+        <input type="range" id="bewegung" min="0" max="100" value="35"><span class="mock-wert" id="v-bewegung"></span></label>
+      <label class="mock-feld"><span>Unsch&auml;rfe</span>
+        <input type="range" id="unschaerfe" min="0" max="100" value="30"><span class="mock-wert" id="v-unschaerfe"></span></label>
+      <label class="mock-feld"><span>B&auml;nder</span>
+        <input type="range" id="baender" min="2" max="18" value="9"><span class="mock-wert" id="v-baender"></span></label>
+    </div>
+
+    <div class="mock-reihe">
+      <label class="mock-feld"><span>Farbversatz</span>
+        <input type="range" id="farbversatz" min="0" max="100" value="40"><span class="mock-wert" id="v-farbversatz"></span></label>
+      <label class="mock-feld"><span>Farbst&auml;rke</span>
+        <input type="range" id="farbstaerke" min="0" max="100" value="55"><span class="mock-wert" id="v-farbstaerke"></span></label>
+      <label class="mock-feld"><span>Farbspiel</span>
+        <select id="palette">
+          <option value="klassisch">Klassisch (Cyan / Rot)</option>
+          <option value="marke">Marke (Blutrot / Stahl)</option>
+          <option value="gift">Gift (Magenta / Gr&uuml;n)</option>
+          <option value="vhs">VHS (Blau / Orange)</option>
+          <option value="mono">Monochrom (nur Wei&szlig;)</option>
+        </select></label>
+      <label class="mock-feld"><span>Scanlines</span>
+        <input type="range" id="scan" min="0" max="100" value="30"><span class="mock-wert" id="v-scan"></span></label>
+      <label class="mock-feld"><span>Korn</span>
+        <input type="range" id="korn" min="0" max="100" value="14"><span class="mock-wert" id="v-korn"></span></label>
+      <label class="mock-feld"><span>Sperrung</span>
+        <input type="range" id="sperrung" min="-60" max="60" value="0"><span class="mock-wert" id="v-sperrung"></span></label>
+    </div>
+
+    <div class="mock-reihe">
+      <label class="mock-feld"><span>F&uuml;llgrad</span>
+        <input type="range" id="fuellgrad" min="60" max="100" value="98"><span class="mock-wert" id="v-fuellgrad"></span></label>
+      <label class="mock-feld"><span>Bild-Deckkraft</span>
+        <input type="range" id="bildop" min="0" max="100" value="55"><span class="mock-wert" id="v-bildop"></span></label>
+      <label class="mock-feld"><span>Bild-S&auml;ttigung</span>
+        <input type="range" id="bildsat" min="0" max="150" value="35"><span class="mock-wert" id="v-bildsat"></span></label>
+      <label class="mock-feld"><span>Hintergrund</span>
+        <select id="bildwahl"></select></label>
+      <label class="mock-schalter"><input type="checkbox" id="rollbalken" checked> Rollbalken</label>
+      <label class="mock-schalter"><input type="checkbox" id="balkenkopplung" checked> Balken l&ouml;st Riss aus</label>
+      <label class="mock-schalter"><input type="checkbox" id="hell"> Helles Thema</label>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DER HERO ===================== -->
+<div class="mock-wrap">
+  <section class="gh-hero" id="hero">
+    <div class="gh-bg" id="gh-bg"></div>
+    <div class="gh-scrim"></div>
+
+    <div class="gh-buehne">
+      <div class="zerr" id="zerr">
+        <span class="zerr-basis" id="zerr-basis">ZERRER</span>
+        <!-- Chroma-Geister + B&auml;nder werden von JS eingesetzt -->
+      </div>
+    </div>
+
+    <div class="gh-unten">
+      <p class="gh-sub">Mosh School</p>
+      <p class="gh-themen">Gitarre &middot; Bass &middot; Drums &middot; Vocals — Hardcore, Metalcore, Death, Black &amp; Doom</p>
+      <div class="gh-cta">
+        <a class="knopf knopf-primaer" href="#">Kapitel entdecken</a>
+        <a class="knopf knopf-sekundaer" href="#">Onboarding</a>
+      </div>
+    </div>
+
+    <div class="gh-overlay" aria-hidden="true">
+      <div class="gh-scan"></div>
+      <div class="gh-balken" id="gh-balken"></div>
+      <div class="gh-korn" id="gh-korn"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== LEGENDE + AUSGABE ===================== -->
+<div class="mock-wrap">
+  <div class="mock-legende">
+    <h2>Was hier woran dreht</h2>
+    <ul>
+      <li><strong>Intensit&auml;t</strong> — ein Multiplikator &uuml;ber alles. Bei 0 steht der Schriftzug still, egal was die anderen Regler sagen.</li>
+      <li><strong>Geschwindigkeit</strong> — wie oft ein Ausbruch kommt (von ~alle 8 s bis mehrmals pro Sekunde). Nicht wie schnell die Bewegung ist — die St&ouml;rung selbst ist immer ruckartig.</li>
+      <li><strong>Verzerrung</strong> — wie weit einzelne B&auml;nder seitlich wegreissen (in % der Wortbreite).</li>
+      <li><strong>Bewegung</strong> — Zittern des ganzen Wortes plus gelegentliche Schieflage und Stauchung.</li>
+      <li><strong>Unsch&auml;rfe</strong> — Bewegungsunsch&auml;rfe w&auml;hrend eines Ausbruchs; die Farbausz&uuml;ge bekommen dauerhaft einen Hauch davon.</li>
+      <li><strong>B&auml;nder</strong> — in wie viele waagerechte Streifen der Schriftzug zerlegt wird. Wenige = grobe Bl&ouml;cke, viele = feines Zerfasern.</li>
+      <li><strong>Farbversatz / Farbst&auml;rke / Farbspiel</strong> — der RGB-Split. Versatz = Abstand der Farbausz&uuml;ge, St&auml;rke = wie kr&auml;ftig sie durchschlagen.</li>
+      <li><strong>Balken l&ouml;st Riss aus</strong> — der wandernde helle Balken zieht einen Ausbruch nach sich, wenn er den Schriftzug kreuzt. Das bindet die St&ouml;rung an eine sichtbare Ursache, statt sie beliebig wirken zu lassen.</li>
+    </ul>
+    <h2>Ausbruch-Sorten (zuf&auml;llig gemischt)</h2>
+    <ul>
+      <li><strong>Riss</strong> — mehrere B&auml;nder springen weit auseinander, kurz und hart.</li>
+      <li><strong>Versatz</strong> — das ganze Wort rutscht seitlich, Farbausz&uuml;ge spreizen stark.</li>
+      <li><strong>Aussetzer</strong> — das Wort bricht f&uuml;r ein paar Frames fast weg (Bildausfall).</li>
+      <li><strong>Zittern</strong> — l&auml;ngeres, feines Vibrieren ohne grosse Spr&uuml;nge.</li>
+    </ul>
+    <h2>F&uuml;r die Einbindung relevant</h2>
+    <p>
+      Das JS setzt ausschliesslich CSS-Variablen auf zwei Elementen — kein Layout-Thrash,
+      keine Style-Neuberechnung pro Buchstabe. Bei <code>prefers-reduced-motion: reduce</code>
+      friert die Animation komplett ein (der Schriftzug bleibt sauber lesbar stehen), und
+      wenn der Hero aus dem Sichtfeld scrollt, pausiert die Schleife per
+      <code>IntersectionObserver</code> — sonst l&auml;uft sie sinnlos im Hintergrund weiter
+      und kostet Akku.
+    </p>
+  </div>
+
+  <h2 style="font-size:1rem;margin:1.6rem 0 .5rem">Werte &uuml;bernehmen</h2>
+  <p style="font-size:.87rem;color:var(--tinte-2);margin:0 0 .5rem">
+    Aktueller Stand als JSON — kopier ihn mir zur&uuml;ck, dann baue ich genau diese Werte ein.
+  </p>
+  <textarea class="mock-ausgabe" id="ausgabe" readonly></textarea>
+</div>
+
+<script>
+/* ===========================================================================
+   Glitch-Engine.
+
+   Zwei Zust&auml;nde, die sich abwechseln:
+
+     RUHE     — der Schriftzug steht. Nur die Farbausz&uuml;ge atmen minimal
+                (langsame Sinus-Bewegung), damit das Bild nicht tot wirkt.
+     AUSBRUCH — kurze, harte St&ouml;rung mit zuf&auml;lliger Sorte, L&auml;nge und St&auml;rke.
+
+   Der Scheduler w&uuml;rfelt die Pause zwischen zwei Ausbr&uuml;chen aus. Genau das
+   macht den Unterschied zu einer CSS-@keyframes-Schleife: Es gibt keine Periode,
+   an der sich das Auge festhalten kann.
+   =========================================================================== */
+
+const wurzel = document.documentElement;
+const zerr = document.getElementById('zerr');
+const basis = document.getElementById('zerr-basis');
+const hero = document.getElementById('hero');
+const balken = document.getElementById('gh-balken');
+
+/* --- Einstellungen (1:1 die Regler) --------------------------------------- */
+const S = {
+  intensitaet: .55, tempo: .30, verzerrung: .45, bewegung: .35, unschaerfe: .30,
+  baender: 9, farbversatz: .40, farbstaerke: .55, palette: 'klassisch',
+  scan: .30, korn: .14, sperrung: 0, fuellgrad: .98,
+  bildop: .55, bildsat: .35, rollbalken: true, balkenkopplung: true,
+  // Nur Werkzeuge zum Beurteilen — gehen NICHT in die App-Einbindung ein.
+  sorte: 'zufall', zeitlupe: false,
+};
+
+const PALETTEN = {
+  klassisch: ['#00e5ff', '#ff0033'],
+  marke:     ['#7ea8c4', '#cc2418'],
+  gift:      ['#ff00c8', '#00ff85'],
+  vhs:       ['#2b6cff', '#ff8a00'],
+  mono:      ['#ffffff', '#ffffff'],
+};
+
+const VOREINSTELLUNGEN = {
+  dezent: { intensitaet:.3, tempo:.18, verzerrung:.25, bewegung:.2, unschaerfe:.2, baender:6, farbversatz:.25, farbstaerke:.35, scan:.2, korn:.1 },
+  film:   { intensitaet:.55, tempo:.30, verzerrung:.45, bewegung:.35, unschaerfe:.3, baender:9, farbversatz:.4, farbstaerke:.55, scan:.3, korn:.14 },
+  hart:   { intensitaet:.85, tempo:.55, verzerrung:.75, bewegung:.6, unschaerfe:.5, baender:13, farbversatz:.65, farbstaerke:.75, scan:.45, korn:.22 },
+  dauer:  { intensitaet:.7, tempo:.92, verzerrung:.6, bewegung:.5, unschaerfe:.45, baender:11, farbversatz:.55, farbstaerke:.7, scan:.4, korn:.2 },
+  aus:    { intensitaet:0, tempo:.3, verzerrung:.45, bewegung:.35, unschaerfe:.3, baender:9, farbversatz:.4, farbstaerke:.55, scan:.3, korn:.14 },
+};
+
+/* --- B&auml;nder + Chroma-Geister aufbauen ------------------------------------
+   Die B&auml;nder kacheln die volle Hoehe: Band i schneidet oben i/n und unten
+   (n-i-1)/n weg. Zusammen ergeben sie l&uuml;ckenlos das ganze Wort — in Ruhe also
+   optisch ein einziger sauberer Schriftzug. Seitlich wird bewusst mit -12%
+   ueberstanden geschnitten, damit ein weit weggerissenes Band nicht an der
+   eigenen Clip-Kante abgeschnitten wird. */
+let scheiben = [];
+let chromaA, chromaB;
+
+function baueEbenen() {
+  zerr.querySelectorAll('.zerr-lage').forEach((e) => e.remove());
+  scheiben = [];
+
+  const wort = basis.textContent;
+  const mach = (klasse) => {
+    const el = document.createElement('span');
+    el.className = 'zerr-lage ' + klasse;
+    el.setAttribute('aria-hidden', 'true');
+    el.textContent = wort;
+    zerr.appendChild(el);
+    return el;
+  };
+
+  chromaA = mach('zerr-chroma zerr-chroma-a');
+  chromaB = mach('zerr-chroma zerr-chroma-b');
+
+  const n = S.baender;
+  for (let i = 0; i < n; i++) {
+    const el = mach('zerr-scheibe');
+    el.style.setProperty('--o', (i / n * 100).toFixed(3) + '%');
+    el.style.setProperty('--u', ((n - i - 1) / n * 100).toFixed(3) + '%');
+    scheiben.push(el);
+  }
+}
+
+/* --- Groesse: der Schriftzug fuellt die Buehne exakt ----------------------
+   Ein clamp() mit vw trifft die Breite nur ungefaehr — je nach Schrift und
+   Sperrung bleibt Luft oder es laeuft ueber. Deshalb einmal messen und die
+   Groesse ausrechnen: bei Referenzgroesse 100px die Wortbreite nehmen und
+   linear hochskalieren. Das sitzt auf jeder Breite auf den Pixel. */
+function passeGroesseAn() {
+  // Das Innenmass der Buehne muss RAUS: getBoundingClientRect() liefert die
+  // Randbox, der Schriftzug darf aber nur die Inhaltsbox fuellen. Ohne den
+  // Abzug wird er um genau das Innenmass zu breit und das letzte Zeichen
+  // laeuft an der Kante ab.
+  const el = zerr.parentElement;
+  const stil = getComputedStyle(el);
+  const buehne = el.getBoundingClientRect().width
+    - parseFloat(stil.paddingLeft) - parseFloat(stil.paddingRight);
+  if (!buehne) return;
+  const vorher = zerr.style.getPropertyValue('--zerr-groesse');
+  zerr.style.setProperty('--zerr-groesse', '100px');
+  const breiteBei100 = basis.getBoundingClientRect().width;
+  if (!breiteBei100) { zerr.style.setProperty('--zerr-groesse', vorher); return; }
+  const groesse = 100 * (buehne * S.fuellgrad) / breiteBei100;
+  zerr.style.setProperty('--zerr-groesse', groesse.toFixed(2) + 'px');
+}
+
+/* --- Hilfen --------------------------------------------------------------- */
+const zufall = (a, b) => a + Math.random() * (b - a);
+const wuerfel = (n) => Math.floor(Math.random() * n);
+
+/* --- Ausbruch-Zustand ----------------------------------------------------- */
+let ausbruch = null;      // { sorte, start, dauer, staerke }
+let naechsterAb = 0;      // Zeitpunkt des naechsten Ausbruchs
+let laeuft = true;
+let sichtbar = true;
+
+const SORTEN = ['riss', 'versatz', 'aussetzer', 'zittern'];
+
+function planeNaechsten(jetzt) {
+  // Tempo 0 -> ~8 s Pause, Tempo 1 -> ~0.12 s. Exponentiell, damit die untere
+  // Haelfte des Reglers feinfuehlig bleibt (dort liegt der brauchbare Bereich).
+  const basisPause = 8000 * Math.pow(0.015, S.tempo);
+  naechsterAb = jetzt + zufall(basisPause * .45, basisPause * 1.55);
+}
+
+function starteAusbruch(jetzt, erzwungeneSorte) {
+  // Die Sorten-Auswahl im Mockup schlaegt die Kopplung, damit man eine Sorte
+  // gezielt beurteilen kann; in der App faellt beides weg (immer zufaellig).
+  const sorte = S.sorte !== 'zufall' ? S.sorte
+              : (erzwungeneSorte || SORTEN[wuerfel(SORTEN.length)]);
+  let dauer = sorte === 'zittern' ? zufall(260, 620)
+            : sorte === 'aussetzer' ? zufall(45, 130)
+            : zufall(70, 240);
+  if (S.zeitlupe) dauer *= 8;
+  ausbruch = { sorte, start: jetzt, dauer, staerke: zufall(.55, 1) };
+}
+
+/* --- Ein Frame ------------------------------------------------------------ */
+function frame(jetzt) {
+  if (!laeuft || !sichtbar) { requestAnimationFrame(frame); return; }
+
+  const I = S.intensitaet;
+
+  // Rollbalken: laeuft konstant durch, unabhaengig von den Ausbruechen.
+  let balkenY = -20;
+  if (S.rollbalken) {
+    const periode = 7000;
+    const p = (jetzt % periode) / periode;
+    balkenY = -20 + p * 140;
+    hero.style.setProperty('--gh-balken-y', balkenY.toFixed(2) + '%');
+    hero.style.setProperty('--gh-balken-op', (.8 * (.35 + I)).toFixed(3));
+    // Kopplung: kreuzt der Balken die Mitte (dort steht der Schriftzug),
+    // zieht er einen Riss nach sich. Das gibt der Stoerung eine sichtbare
+    // Ursache, statt sie beliebig wirken zu lassen.
+    if (S.balkenkopplung && I > 0 && !ausbruch && balkenY > 55 && balkenY < 62) {
+      starteAusbruch(jetzt, 'riss');
+      planeNaechsten(jetzt);
+    }
+  } else {
+    hero.style.setProperty('--gh-balken-op', '0');
+  }
+
+  // Scheduler
+  if (I > 0 && !ausbruch && jetzt >= naechsterAb) {
+    starteAusbruch(jetzt);
+    planeNaechsten(jetzt);
+  }
+
+  // --- Ruhewerte ----------------------------------------------------------
+  // Auch in Ruhe atmen die Farbausz�ge minimal — ein v&ouml;llig stehendes Bild
+  // wirkt wie ein Standbild, nicht wie ein laufender Film.
+  const atem = Math.sin(jetzt / 1400) * .5 + .5;
+  let split = (1 + atem * 1.6) * S.farbversatz * I * 3;
+  let splitY = 0;
+  let wortX = 0, wortY = 0, neigung = 0, stauchung = 1, blur = 0, deckkraft = 1;
+  let bandVersatz = 0, bandAnteil = 0, bandY = 0;
+
+  if (ausbruch) {
+    const t = (jetzt - ausbruch.start) / ausbruch.dauer;
+    if (t >= 1) {
+      ausbruch = null;
+    } else {
+      // Huellkurve: harter Einsatz, schnelles Abklingen — wie ein Bandsprung.
+      const h = Math.pow(1 - t, 1.6) * ausbruch.staerke * I;
+      const s = ausbruch.sorte;
+
+      if (s === 'riss') {
+        bandVersatz = S.verzerrung * h * 14;      // % der Wortbreite
+        bandAnteil = .35 + h * .4;
+        bandY = S.bewegung * h * 6;
+        split += S.farbversatz * h * 26;
+        blur = S.unschaerfe * h * 2.2;
+      } else if (s === 'versatz') {
+        wortX = (Math.random() < .5 ? -1 : 1) * S.bewegung * h * 26;
+        split += S.farbversatz * h * 40;
+        splitY = S.farbversatz * h * 5;
+        neigung = (Math.random() < .5 ? -1 : 1) * S.bewegung * h * 5;
+        blur = S.unschaerfe * h * 3;
+        bandVersatz = S.verzerrung * h * 5;
+        bandAnteil = .2;
+      } else if (s === 'aussetzer') {
+        deckkraft = 1 - h * .92;
+        wortY = S.bewegung * h * 10;
+        stauchung = 1 - h * .12;
+        split += S.farbversatz * h * 18;
+        blur = S.unschaerfe * h * 4;
+      } else { // zittern
+        const f = Math.sin(jetzt / 18) * Math.sin(jetzt / 7.3);
+        wortX = f * S.bewegung * h * 7;
+        wortY = Math.sin(jetzt / 11) * S.bewegung * h * 4;
+        split += S.farbversatz * h * 12;
+        bandVersatz = S.verzerrung * h * 4;
+        bandAnteil = .5;
+        blur = S.unschaerfe * h * 1.2;
+      }
+    }
+  }
+
+  // --- Auf die Elemente schreiben (nur CSS-Variablen) ---------------------
+  zerr.style.setProperty('--zerr-x', wortX.toFixed(2) + 'px');
+  zerr.style.setProperty('--zerr-y', wortY.toFixed(2) + 'px');
+  zerr.style.setProperty('--zerr-neigung', neigung.toFixed(2) + 'deg');
+  zerr.style.setProperty('--zerr-stauchung', stauchung.toFixed(3));
+  zerr.style.setProperty('--zerr-blur', blur.toFixed(2) + 'px');
+  zerr.style.setProperty('--zerr-deckkraft', deckkraft.toFixed(3));
+  zerr.style.setProperty('--zerr-split', split.toFixed(2) + 'px');
+  zerr.style.setProperty('--zerr-split-y', splitY.toFixed(2) + 'px');
+
+  // B&auml;nder: nur ein Teil bewegt sich (bandAnteil), der Rest bleibt stehen —
+  // ein Riss, bei dem ALLE B&auml;nder wandern, sieht aus wie Wackelpudding.
+  for (let i = 0; i < scheiben.length; i++) {
+    const el = scheiben[i];
+    let dx = 0, dy = 0, sop = 1;
+    if (bandVersatz > 0 && Math.random() < bandAnteil) {
+      dx = zufall(-bandVersatz, bandVersatz);
+      dy = zufall(-bandY, bandY);
+      if (Math.random() < .12) sop = zufall(.2, .8);
+    }
+    el.style.setProperty('--dx', dx.toFixed(2) + '%');
+    el.style.setProperty('--dy', dy.toFixed(2) + 'px');
+    el.style.setProperty('--sop', sop.toFixed(2));
+  }
+
+  requestAnimationFrame(frame);
+}
+
+/* --- Statische Werte (aendern sich nur beim Reglerdrehen) ------------------ */
+function wendeStatischesAn() {
+  const [a, b] = PALETTEN[S.palette] || PALETTEN.klassisch;
+  zerr.style.setProperty('--zerr-farbe-a', a);
+  zerr.style.setProperty('--zerr-farbe-b', b);
+  zerr.style.setProperty('--zerr-farbstaerke', (S.farbstaerke * (S.palette === 'mono' ? .5 : 1)).toFixed(3));
+  zerr.style.setProperty('--zerr-chroma-blur', (S.unschaerfe * 1.4).toFixed(2) + 'px');
+  zerr.style.setProperty('--zerr-sperrung', (S.sperrung / 1000).toFixed(4) + 'em');
+  hero.style.setProperty('--gh-scan', (S.scan * .9).toFixed(3));
+  hero.style.setProperty('--gh-korn', S.korn.toFixed(3));
+  hero.style.setProperty('--gh-bild-op', S.bildop.toFixed(3));
+  hero.style.setProperty('--gh-bild-sat', S.bildsat.toFixed(3));
+  passeGroesseAn();
+  schreibeAusgabe();
+}
+
+/* --- Korn als Data-URI (kein externes Asset, wie in der App ueblich) ------- */
+(function setzeKorn() {
+  const svg =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180">' +
+    '<filter id="r"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3"/></filter>' +
+    '<rect width="180" height="180" filter="url(#r)" opacity="0.55"/></svg>';
+  hero.style.setProperty('--gh-korn-bild', 'url("data:image/svg+xml;utf8,' + encodeURIComponent(svg) + '")');
+})();
+
+/* --- Regler verdrahten ---------------------------------------------------- */
+const REGLER = {
+  intensitaet: (v) => v / 100, tempo: (v) => v / 100, verzerrung: (v) => v / 100,
+  bewegung: (v) => v / 100, unschaerfe: (v) => v / 100, baender: (v) => v,
+  farbversatz: (v) => v / 100, farbstaerke: (v) => v / 100, scan: (v) => v / 100,
+  korn: (v) => v / 100, sperrung: (v) => v, fuellgrad: (v) => v / 100,
+  bildop: (v) => v / 100, bildsat: (v) => v / 100,
+};
+const ANZEIGE = {
+  baender: (v) => v + ' B&auml;nder', sperrung: (v) => (v / 1000).toFixed(3) + 'em',
+  fuellgrad: (v) => v + '%', bildop: (v) => v + '%', bildsat: (v) => v + '%',
+};
+
+Object.keys(REGLER).forEach((id) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const zeige = () => {
+    const anzeige = document.getElementById('v-' + id);
+    if (anzeige) anzeige.innerHTML = (ANZEIGE[id] || ((v) => v + '%'))(Number(el.value));
+  };
+  el.addEventListener('input', () => {
+    S[id] = REGLER[id](Number(el.value));
+    if (id === 'baender') baueEbenen();
+    zeige();
+    wendeStatischesAn();
+  });
+  zeige();
+});
+
+document.getElementById('palette').addEventListener('change', (e) => {
+  S.palette = e.target.value; wendeStatischesAn();
+});
+document.getElementById('sorte').addEventListener('change', (e) => {
+  S.sorte = e.target.value; schreibeAusgabe();
+});
+document.getElementById('zeitlupe').addEventListener('change', (e) => {
+  S.zeitlupe = e.target.checked; schreibeAusgabe();
+});
+document.getElementById('rollbalken').addEventListener('change', (e) => {
+  S.rollbalken = e.target.checked; schreibeAusgabe();
+});
+document.getElementById('balkenkopplung').addEventListener('change', (e) => {
+  S.balkenkopplung = e.target.checked; schreibeAusgabe();
+});
+document.getElementById('hell').addEventListener('change', (e) => {
+  wurzel.dataset.theme = e.target.checked ? 'hell' : 'dunkel';
+});
+document.getElementById('jetzt').addEventListener('click', () => {
+  starteAusbruch(performance.now());
+});
+document.getElementById('pause').addEventListener('click', (e) => {
+  laeuft = !laeuft;
+  e.currentTarget.setAttribute('aria-pressed', String(!laeuft));
+  e.currentTarget.textContent = laeuft ? 'Pause' : 'Weiter';
+});
+
+document.querySelectorAll('[data-preset]').forEach((knopf) => {
+  knopf.addEventListener('click', () => {
+    document.querySelectorAll('[data-preset]').forEach((k) => k.setAttribute('aria-pressed', 'false'));
+    knopf.setAttribute('aria-pressed', 'true');
+    const p = VOREINSTELLUNGEN[knopf.dataset.preset];
+    Object.keys(p).forEach((k) => {
+      S[k] = p[k];
+      const el = document.getElementById(k);
+      if (el) {
+        el.value = k === 'baender' || k === 'sperrung' ? p[k] : Math.round(p[k] * 100);
+        el.dispatchEvent(new Event('input'));
+      }
+    });
+    baueEbenen();
+    wendeStatischesAn();
+  });
+});
+
+/* --- Hintergrundbild waehlen (dieselben Fotos wie die App) ---------------- */
+const bildSelect = document.getElementById('bildwahl');
+const bildEbene = document.getElementById('gh-bg');
+fetch('../images/bg/bilder.json')
+  .then((r) => r.json())
+  .then((liste) => {
+    // bilder.json traegt Objekte ({datei, bytes, breite, hoehe}), nicht blosse Namen.
+    const roh = Array.isArray(liste) ? liste : (liste.bilder || []);
+    const namen = roh.map((e) => (typeof e === 'string' ? e : e.datei)).filter(Boolean);
+    bildSelect.innerHTML = '<option value="">(kein Bild)</option>' +
+      namen.map((n, i) => `<option value="${n}">Bild ${i + 1}</option>`).join('');
+    if (namen.length) { bildSelect.value = namen[0]; setzeBild(namen[0]); }
+  })
+  .catch(() => { bildSelect.innerHTML = '<option value="">(bilder.json nicht ladbar)</option>'; });
+
+function setzeBild(name) {
+  bildEbene.style.backgroundImage = name ? `url("../images/bg/${name}")` : 'none';
+}
+bildSelect.addEventListener('change', (e) => setzeBild(e.target.value));
+
+/* --- Ausgabe -------------------------------------------------------------- */
+function schreibeAusgabe() {
+  document.getElementById('ausgabe').value = JSON.stringify(S, null, 2);
+}
+
+/* --- Nur laufen, wenn sichtbar (Akku) + reduzierte Bewegung respektieren --- */
+if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  S.intensitaet = 0;
+  const el = document.getElementById('intensitaet');
+  el.value = 0; el.dispatchEvent(new Event('input'));
+}
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver((e) => { sichtbar = e[0].isIntersecting; }, { threshold: 0 }).observe(hero);
+}
+
+/* --- Start ---------------------------------------------------------------- */
+baueEbenen();
+wendeStatischesAn();
+planeNaechsten(performance.now());
+requestAnimationFrame(frame);
+
+addEventListener('resize', passeGroesseAn);
+// Webfont kommt spaeter als das erste Layout — danach neu messen, sonst sitzt
+// die Groesse auf der Fallback-Schrift.
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(passeGroesseAn);
+</script>
+</body>
+</html>
