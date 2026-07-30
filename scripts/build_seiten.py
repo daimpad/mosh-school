@@ -404,22 +404,30 @@ def seiten_fuss(tiefe, app_href):
 <footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
 <div class="footer-marke">
+<div class="footer-marke-kopf">
+<span class="footer-marke-logo" aria-hidden="true"></span>
 <span class="footer-marke-name">ZERRER</span>
+</div>
 <span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
+<nav class="footer-marke-rechtliches" aria-label="Rechtliches">
+<a href="{w}#/impressum">Impressum</a>
+<a href="{w}#/datenschutz">Datenschutz</a>
+<a class="footer-marke-goat" href="https://www.goatcounter.com/" rel="noopener" target="_blank">{GOAT_SVG}<span>GoatCounter</span></a>
+</nav>
 </div>
 <nav class="footer-spalte" aria-label="Schnellzugriff">
 <span class="footer-titel">Schnellzugriff</span>
 <a href="{w}#/griffe">Griffe</a>
 <a href="{w}#/stimmungen">Tunings</a>
 <a href="{w}#/werkzeuge">Tools</a>
+<a href="{w}#/merkliste">Merkliste</a>
 </nav>
 <nav class="footer-spalte" aria-label="Info">
 <span class="footer-titel">Info</span>
 <a href="{w}#/ueber">Über</a>
 <a href="{w}kollektiv/">ZERRER-Kollektiv</a>
-<a href="{w}#/mitmachen">Kontakt</a>
-<a href="{w}#/impressum">Impressum</a>
-<a href="{w}#/datenschutz">Datenschutz</a>
+<a href="{w}#/mitmachen">Mitmachen</a>
+<a href="{w}#/profil">Profil</a>
 </nav>
 <nav class="footer-spalte" aria-label="Alle Seiten">
 <span class="footer-titel">Alle Seiten</span>
@@ -430,14 +438,6 @@ def seiten_fuss(tiefe, app_href):
 </nav>
 </div>
 <div class="footer-haltung">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div>
-<div class="footer-schluss">
-<span class="footer-schluss-logo" aria-hidden="true"></span>
-<nav class="footer-schluss-recht" aria-label="Rechtliches">
-<a href="{w}#/impressum">Impressum</a>
-<a href="{w}#/datenschutz">Datenschutz</a>
-</nav>
-<a class="footer-schluss-goat" href="https://www.goatcounter.com/" rel="noopener" target="_blank">{GOAT_SVG}<span>GoatCounter</span></a>
-</div>
 </footer>
 <!-- Reichweitenmessung (GoatCounter, siehe #/datenschutz) — keine Cookies,
      keine gespeicherten IP-Adressen. Anders als in index.html KEIN

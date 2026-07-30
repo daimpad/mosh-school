@@ -35,22 +35,27 @@ const SORTEN = ['riss', 'versatz', 'aussetzer', 'zittern'];
 const zufall = (a, b) => a + Math.random() * (b - a);
 const wuerfel = (n) => Math.floor(Math.random() * n);
 
+// Deckel fuer die Wortmarke: auf sehr breiten Schirmen soll sie nicht endlos
+// weiterwachsen, auch wenn sie aus der Textspalte ausbricht (s. u.).
+const MARKE_MAX_PX = 940;
+
 // Die Marke (Logo-Platzhalter + Schriftzug) bricht bewusst aus der Textspalte
-// des Heros aus und soll den Schirm exakt fuellen (css/app.css
-// `.startseite-hero .startseite-hero-marke`) — dieselbe Mess-Technik wie im
-// abgestimmten Mockup (mockups/hero-glitch.html `passeGroesseAn()`): bei
-// Referenzgroesse 100px die natuerliche Breite von Logo + Wort nehmen und
-// linear hochskalieren. Ein einzelner vw-Faktor traefe die Breite nur
-// ungefaehr — je nach Schirmbreite waere er auf der einen Seite zu klein, auf
-// der anderen zu gross (die Marke ist nicht mehr an die 44rem-Spalte gebunden).
+// des Heros aus und soll den Schirm fuellen, aber maximal MARKE_MAX_PX breit
+// werden (css/app.css `.startseite-hero .startseite-hero-marke`) — dieselbe
+// Mess-Technik wie im abgestimmten Mockup (mockups/hero-glitch.html
+// `passeGroesseAn()`): bei Referenzgroesse 100px die natuerliche Breite von
+// Logo + Wort nehmen und linear hochskalieren. Ein einzelner vw-Faktor traefe
+// die Breite nur ungefaehr — je nach Schirmbreite waere er auf der einen
+// Seite zu klein, auf der anderen zu gross.
 function passeMarkeGroesseAn(marke) {
   const logo = marke.querySelector('.startseite-hero-mark');
   const wort = marke.querySelector('.zerr-wort');
   if (!logo || !wort) return;
   const stil = getComputedStyle(marke);
-  const verfuegbar = marke.getBoundingClientRect().width
+  const verfuegbarRoh = marke.getBoundingClientRect().width
     - parseFloat(stil.paddingLeft) - parseFloat(stil.paddingRight);
-  if (!verfuegbar) return;
+  if (!verfuegbarRoh) return;
+  const verfuegbar = Math.min(verfuegbarRoh, MARKE_MAX_PX);
   const vorher = marke.style.getPropertyValue('--marke-groesse');
   marke.style.setProperty('--marke-groesse', '100px');
   const gap = parseFloat(getComputedStyle(marke).columnGap) || 0;
@@ -76,7 +81,20 @@ export function initHeroGlitch(wort) {
   if (marke) {
     const anpassen = () => passeMarkeGroesseAn(marke);
     anpassen();
-    if (document.fonts?.ready) document.fonts.ready.then(anpassen);
+    // Die allererste Messung an der frisch eingefuegten Marke trifft manchmal
+    // noch provisorische Schriftmetriken (beobachtet: auch lange nach
+    // `document.fonts.ready` und mehrere requestAnimationFrame spaeter blieb
+    // sie stehen) — ein paar Frames lang erneut messen behebt das zuverlaessig,
+    // ohne den genauen Timing-Mechanismus dahinter zu kennen. Selbstbegrenzt
+    // (kein endloser rAF-Loop) und je Aufruf unabhaengig, falls die Ansicht
+    // waehrend des Bootens mehrfach neu rendert.
+    let versuche = 0;
+    const nochmal = () => {
+      anpassen();
+      versuche += 1;
+      if (versuche < 20) requestAnimationFrame(nochmal);
+    };
+    requestAnimationFrame(nochmal);
     window.addEventListener('resize', anpassen);
     registriereAufraeumen(() => window.removeEventListener('resize', anpassen));
   }
