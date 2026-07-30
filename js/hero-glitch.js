@@ -39,21 +39,32 @@ const wuerfel = (n) => Math.floor(Math.random() * n);
 // weiterwachsen, auch wenn sie aus der Textspalte ausbricht (s. u.).
 const MARKE_MAX_PX = 940;
 
-// Die Marke (Logo-Platzhalter + Schriftzug) bricht bewusst aus der Textspalte
-// des Heros aus und soll den Schirm fuellen, aber maximal MARKE_MAX_PX breit
-// werden (css/app.css `.startseite-hero .startseite-hero-marke`) — dieselbe
-// Mess-Technik wie im abgestimmten Mockup (mockups/hero-glitch.html
+// Die Marke fuellt die Textspalte des Heros (css/app.css
+// `.startseite-hero .startseite-hero-marke`), gedeckelt bei MARKE_MAX_PX —
+// dieselbe Mess-Technik wie im abgestimmten Mockup (mockups/hero-glitch.html
 // `passeGroesseAn()`): bei Referenzgroesse 100px die natuerliche Breite von
 // Logo + Wort nehmen und linear hochskalieren. Ein einzelner vw-Faktor traefe
 // die Breite nur ungefaehr — je nach Schirmbreite waere er auf der einen
 // Seite zu klein, auf der anderen zu gross.
+//
+// WICHTIG: die verfuegbare Breite wird am HERO gemessen, NICHT an `marke`
+// selbst. `marke` traegt nowrap-Text — ihr eigenes min-content kann nicht
+// unter die aktuelle Textbreite schrumpfen, und ihre Breite haengt (ueber
+// flex-basis:auto) an genau dieser Textbreite. Wuerde man `marke` selbst
+// messen, entstuende eine Rueckkopplung: eine (aus welchem Grund auch immer)
+// zu grosse Messung fuehrt zu einer groesseren Schrift, die beim naechsten
+// Durchlauf `marke` noch breiter macht — beobachtet als ein falscher, zu
+// grosser Fixpunkt statt der echten Spaltenbreite. Der Hero selbst hat eine
+// von der Schriftgroesse voellig unabhaengige Breite (100vw + eigenes
+// Innenmass), daher bricht die Messung an IHM die Rueckkopplung zuverlaessig.
 function passeMarkeGroesseAn(marke) {
   const logo = marke.querySelector('.startseite-hero-mark');
   const wort = marke.querySelector('.zerr-wort');
   if (!logo || !wort) return;
-  const stil = getComputedStyle(marke);
-  const verfuegbarRoh = marke.getBoundingClientRect().width
-    - parseFloat(stil.paddingLeft) - parseFloat(stil.paddingRight);
+  const hero = marke.closest('.genre-landing-hero') || marke.parentElement;
+  const heroStil = getComputedStyle(hero);
+  const verfuegbarRoh = hero.getBoundingClientRect().width
+    - parseFloat(heroStil.paddingLeft) - parseFloat(heroStil.paddingRight);
   if (!verfuegbarRoh) return;
   const verfuegbar = Math.min(verfuegbarRoh, MARKE_MAX_PX);
   const vorher = marke.style.getPropertyValue('--marke-groesse');
