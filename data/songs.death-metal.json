@@ -1,7 +1,7 @@
 {
   "genre": "Death Metal",
-  "anzahl": 26,
-  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 27,
+  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Death",
@@ -184,6 +184,13 @@
       "substil_vermerk": "moderner Death (US)",
       "url": "https://bandcamp.com/search?q=Blood+Incantation+Inner+Paths+%28to+Outer+Space%29&item_type=t",
       "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Deicide",
+      "titel": "Dead by Dawn",
+      "substil_vermerk": "blasphemischer Florida-Death (US)",
+      "url": "https://www.youtube.com/results?search_query=Deicide+Dead+by+Dawn",
+      "quelle": "youtube"
     }
   ]
 }

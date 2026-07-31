@@ -1,7 +1,7 @@
 {
   "genre": "Powerviolence",
-  "anzahl": 29,
-  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 30,
+  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Infest",
@@ -205,6 +205,13 @@
       "substil_vermerk": "moderner PV (US)",
       "url": "https://bandcamp.com/search?q=Sordo+Bestias+del+Sur+Salvaje&item_type=t",
       "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Neanderthal",
+      "titel": "The Lowest Form of Music",
+      "substil_vermerk": "schwerer PV (US)",
+      "url": "https://www.youtube.com/results?search_query=Neanderthal+The+Lowest+Form+of+Music",
+      "quelle": "youtube"
     }
   ]
 }
