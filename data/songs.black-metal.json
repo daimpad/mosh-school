@@ -1,15 +1,8 @@
 {
   "genre": "Black Metal",
   "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
-    {
-      "kuenstler": "Bathory",
-      "titel": "A Fine Day to Die",
-      "substil_vermerk": "proto-/Viking-Black (Schweden)",
-      "url": "https://www.youtube.com/results?search_query=Bathory+A+Fine+Day+to+Die",
-      "quelle": "youtube"
-    },
     {
       "kuenstler": "Celtic Frost",
       "titel": "Circle of the Tyrants",
@@ -22,27 +15,6 @@
       "titel": "Black Metal",
       "substil_vermerk": "proto-Black, Namensgeber (UK)",
       "url": "https://www.youtube.com/results?search_query=Venom+Black+Metal",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Mayhem",
-      "titel": "Freezing Moon",
-      "substil_vermerk": "norwegische zweite Welle",
-      "url": "https://www.youtube.com/results?search_query=Mayhem+Freezing+Moon",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Darkthrone",
-      "titel": "Transilvanian Hunger",
-      "substil_vermerk": "norwegischer Roh-Black",
-      "url": "https://www.youtube.com/results?search_query=Darkthrone+Transilvanian+Hunger",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Emperor",
-      "titel": "I Am the Black Wizards",
-      "substil_vermerk": "symphonischer Black (Norwegen)",
-      "url": "https://www.youtube.com/results?search_query=Emperor+I+Am+the+Black+Wizards",
       "quelle": "youtube"
     },
     {
@@ -60,41 +32,6 @@
       "quelle": "bandcamp"
     },
     {
-      "kuenstler": "Satyricon",
-      "titel": "Mother North",
-      "substil_vermerk": "norwegischer Black",
-      "url": "https://www.youtube.com/results?search_query=Satyricon+Mother+North",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Gorgoroth",
-      "titel": "Incipit Satan",
-      "substil_vermerk": "norwegischer Black",
-      "url": "https://www.youtube.com/results?search_query=Gorgoroth+Incipit+Satan",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Dark Funeral",
-      "titel": "The Secrets of the Black Arts",
-      "substil_vermerk": "schwedischer Fast-Black",
-      "url": "https://www.youtube.com/results?search_query=Dark+Funeral+The+Secrets+of+the+Black+Arts",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Dissection",
-      "titel": "Where Dead Angels Lie",
-      "substil_vermerk": "melodischer Black/Death (Schweden)",
-      "url": "https://www.youtube.com/results?search_query=Dissection+Where+Dead+Angels+Lie",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Watain",
-      "titel": "Malfeitor",
-      "substil_vermerk": "schwedischer Black",
-      "url": "https://bandcamp.com/search?q=Watain+Malfeitor&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
       "kuenstler": "Rotting Christ",
       "titel": "King of a Stellar War",
       "substil_vermerk": "griechischer Black",
@@ -106,34 +43,6 @@
       "titel": "Sunless",
       "substil_vermerk": "schwedischer melodischer Black",
       "url": "https://bandcamp.com/search?q=Naglfar+Sunless&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Windir",
-      "titel": "Journey to the End",
-      "substil_vermerk": "Folk-/Viking-Black (Norwegen)",
-      "url": "https://bandcamp.com/search?q=Windir+Journey+to+the+End&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Kampfar",
-      "titel": "Ravens",
-      "substil_vermerk": "pagan-Black (Norwegen)",
-      "url": "https://bandcamp.com/search?q=Kampfar+Ravens&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Mgla",
-      "titel": "Exercises in Futility I",
-      "substil_vermerk": "moderner Black (Polen)",
-      "url": "https://bandcamp.com/search?q=Mgla+Exercises+in+Futility+I&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Batushka",
-      "titel": "Yekteniya I",
-      "substil_vermerk": "orthodox-thematischer Black (Polen)",
-      "url": "https://bandcamp.com/search?q=Batushka+Yekteniya+I&item_type=t",
       "quelle": "bandcamp"
     },
     {
@@ -200,17 +109,108 @@
       "quelle": "bandcamp"
     },
     {
-      "kuenstler": "Carpathian Forest",
-      "titel": "The Cold Earth Slept Below",
-      "substil_vermerk": "norwegischer Black",
-      "url": "https://bandcamp.com/search?q=Carpathian+Forest+The+Cold+Earth+Slept+Below&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
       "kuenstler": "Mork",
       "titel": "Det Siste Lyset",
       "substil_vermerk": "moderner Roh-Black (Norwegen)",
       "url": "https://bandcamp.com/search?q=Mork+Det+Siste+Lyset&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Dawn Ray’d",
+      "titel": "Fire Sermon",
+      "substil_vermerk": "anarchistischer Black Metal (UK)",
+      "url": "https://bandcamp.com/search?q=Dawn+Rayd+Fire+Sermon&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ashenspire",
+      "titel": "Béton Brut",
+      "substil_vermerk": "avantgardistischer Black Metal (Schottland)",
+      "url": "https://bandcamp.com/search?q=Ashenspire+B%C3%A9ton+Brut&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ultha",
+      "titel": "Cyanide Lips",
+      "substil_vermerk": "atmosphärischer Black Metal (Deutschland)",
+      "url": "https://bandcamp.com/search?q=Ultha+Cyanide+Lips&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Woe",
+      "titel": "Unending Call of Woe",
+      "substil_vermerk": "US-Black Metal",
+      "url": "https://bandcamp.com/search?q=Woe+Unending+Call+of+Woe&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Spectral Wound",
+      "titel": "Imperial Saison Noire",
+      "substil_vermerk": "roher moderner Black (Kanada)",
+      "url": "https://bandcamp.com/search?q=Spectral+Wound+Imperial+Saison+Noire&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Krallice",
+      "titel": "Diotima",
+      "substil_vermerk": "technischer/progressiver Black (US)",
+      "url": "https://bandcamp.com/search?q=Krallice+Diotima&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Mizmor",
+      "titel": "Cairn to God",
+      "substil_vermerk": "Black-Doom (US)",
+      "url": "https://bandcamp.com/search?q=Mizmor+Cairn+to+God&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Ragana",
+      "titel": "Desolation’s Flower",
+      "substil_vermerk": "Black/Doom, queer-feministisch (US)",
+      "url": "https://bandcamp.com/search?q=Ragana+Desolations+Flower&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Gaerea",
+      "titel": "Mirage",
+      "substil_vermerk": "moderner Black Metal (Portugal)",
+      "url": "https://bandcamp.com/search?q=Gaerea+Mirage&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Liturgy",
+      "titel": "Generation",
+      "substil_vermerk": "„transzendentaler“ Black Metal (US)",
+      "url": "https://bandcamp.com/search?q=Liturgy+Generation&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Sylvaine",
+      "titel": "Wistful",
+      "substil_vermerk": "atmosphärischer Black/Blackgaze (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Sylvaine+Wistful&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Alcest",
+      "titel": "Écailles de Lune (Part I)",
+      "substil_vermerk": "Blackgaze (Frankreich)",
+      "url": "https://bandcamp.com/search?q=Alcest+%C3%89cailles+de+Lune+%28Part+I%29&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Møl",
+      "titel": "Storm",
+      "substil_vermerk": "Blackgaze (Dänemark)",
+      "url": "https://bandcamp.com/search?q=M%C3%B8l+Storm&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Oathbreaker",
+      "titel": "Second Son of R.",
+      "substil_vermerk": "Post-Black/Hardcore (Belgien)",
+      "url": "https://bandcamp.com/search?q=Oathbreaker+Second+Son+of+R.&item_type=t",
       "quelle": "bandcamp"
     }
   ]
