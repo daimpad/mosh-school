@@ -7,7 +7,7 @@
 // „sitzt" ist selbst eingeschätzte Beherrschung, getrennt vom teil-genauen
 // „erledigt" (durchgearbeitet) der bestehenden Fortschritts-Projektion.
 
-import { alleStatus, feiereMeilenstein, holeZiele, kontinuitaet, onboarding } from './zustand.js';
+import { alleStatus, feiereMeilenstein, holeZiele, kontinuitaet, onboarding, teilStatus } from './zustand.js';
 
 export const INSTRUMENTE = ['gitarre', 'bass', 'schlagzeug', 'gesang'];
 
@@ -70,6 +70,27 @@ export function wasAlsNaechstes(daten, anzahl = 5) {
 // feiert neu erreichte (feiereMeilenstein ist idempotent). Gibt die NEU erreichten
 // IDs zurück — der Aufrufer zeigt die Feier. IDs: erste_trainingseinheit,
 // grundlagen_<instrument>, spielziel_<wert>, erstes_riff (extern am Recorder).
+// Hat der Nutzer diesen Baustein hinter sich? Die Frage ist je nach Inhaltsart
+// eine ANDERE — und genau daran scheiterten die Meilensteine bisher:
+//
+// Ein Übungs-Baustein trägt den Mastery-Umschalter („Wie sitzt das bei dir?"),
+// ein Reflexions-Baustein bewusst NICHT (die Frage passt inhaltlich nicht — man
+// „beherrscht" keine Reflexion über Gehörschutz). Er trägt stattdessen seine
+// eigene Quittierung, im Text „Mitgenommen".
+//
+// Geprüft wurde aber pauschal `status[id] === 'sitzt'`. Damit verlangten die
+// Meilensteine von der Hälfte des Stoffs eine Markierung, die es dort gar nicht
+// gibt: alle vier `grundlagen_*` waren unerreichbar (Gitarre 11 von 28
+// Einsteiger-Bausteinen ohne Umschalter, Bass 10/23, Schlagzeug 5/20, Gesang
+// 4/14), und dasselbe traf 10 der 20 Spielziele.
+//
+// Jetzt bekommt jeder Baustein die Frage, die er tatsächlich beantwortet.
+function abgeschlossen(b, status) {
+  return b.reflexionsaufgabe != null
+    ? teilStatus(b.id, 'reflexionsaufgabe') === 'erledigt'
+    : status[b.id] === 'sitzt';
+}
+
 export function pruefeMeilensteine(daten) {
   const neue = [];
   const status = alleStatus();
@@ -83,14 +104,14 @@ export function pruefeMeilensteine(daten) {
     const einsteiger = daten.bausteine.filter(
       (b) => (b.domaene || []).includes(dom) && (b.kompetenzstufe || []).includes('einsteiger'),
     );
-    if (einsteiger.length >= GRUNDLAGEN_MIN && einsteiger.every((b) => status[b.id] === 'sitzt')) {
+    if (einsteiger.length >= GRUNDLAGEN_MIN && einsteiger.every((b) => abgeschlossen(b, status))) {
       feiere('grundlagen_' + dom);
     }
   }
 
   for (const z of holeZiele().filter((zz) => zz.art === 'spielziel')) {
     const bs = daten.bausteine.filter((b) => (b.spielziele || []).includes(z.wert));
-    if (bs.length >= 2 && bs.every((b) => status[b.id] === 'sitzt')) feiere('spielziel_' + z.wert);
+    if (bs.length >= 2 && bs.every((b) => abgeschlossen(b, status))) feiere('spielziel_' + z.wert);
   }
 
   return neue;
