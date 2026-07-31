@@ -1,6 +1,6 @@
 {
   "genre": "Powerviolence",
-  "anzahl": 28,
+  "anzahl": 29,
   "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
@@ -23,6 +23,13 @@
       "substil_vermerk": "Grundstein-PV (US)",
       "url": "https://www.youtube.com/results?search_query=No+Comment+Downsided",
       "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Man Is the Bastard",
+      "titel": "Puppy Mill",
+      "substil_vermerk": "anarchistische/tierrechtsbewegte Powerviolence (US)",
+      "url": "https://bandcamp.com/search?q=Man+Is+the+Bastard+Puppy+Mill&item_type=t",
+      "quelle": "bandcamp"
     },
     {
       "kuenstler": "Spazz",
