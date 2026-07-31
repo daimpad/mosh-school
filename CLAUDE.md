@@ -226,6 +226,21 @@ zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artef
   `verify.yml`) baut nur im Speicher und meldet Drift/Waisen, schreibt nichts.
 - `sw.js`: **keine** Änderung nötig — die Seiten liegen bewusst außerhalb von `SHELL` (kein
   `cache.addAll`-Bloat durch hunderte Einträge) und werden nie als Unterressource geladen.
+- **Konstanten werden aus den JS-Quellen GELESEN, nicht kopiert.** `js_liste()`/`js_objekt()`
+  ziehen `INSTRUMENTE`, `INSTR_STUFEN`, `INSTR_WERKZEUGE` (aus `js/mastery.js` bzw.
+  `js/ansichten/pfad.js`) sowie `LOOP_STILE` und `GEAR_REGION` (aus `js/werkzeug-links.js`)
+  direkt aus dem Quelltext — wie schon immer `INHALTSDATEIEN` aus `js/daten.js`. Wer dort
+  einen Wert ergänzt, muss hier **nichts** nachziehen. Beide Leser **brechen hart ab**, wenn
+  sie nicht parsen können (Umbenennung, geändertes Literal-Format): ein Leser, der im Zweifel
+  leer liefert, wäre schlimmer als die Kopie — aus „läuft auseinander" würde „ist lautlos
+  leer". Einzige verbleibende Ausnahme ist `INSTR_STIMMUNG`: das steckt in der App in einer
+  Bedingung, nicht in einem Literal, es gibt dort nichts zu lesen.
+- **Die Mengen-Logik lässt sich nicht lesen** (`instrument_mengen` ist ein Nachbau von
+  `instrumentpfad` in `js/pfade.js` — Code, kein Literal). Dagegen wacht
+  `pruefe_mengen_invarianten()` vor jedem Bau: Theorie/Praxis/Equipment müssen **paarweise
+  disjunkt** sein und den Instrumentbestand vollständig abdecken. Genau diese Regel ist
+  zweimal gebrochen worden (erst Praxis∩Theorie, dann Equipment∩Theorie — jeweils derselbe
+  Baustein zweimal auf einer Seite); ein dritter Fall fällt jetzt beim Bauen auf.
 
 ## Trainings-Loop (Unterbau)
 

@@ -52,14 +52,77 @@ def lade(pfad):
         return json.load(f)
 
 
+# ---------------------------------------------------------------------------
+# Konstanten aus den JS-Quellen lesen statt sie hier zu kopieren.
+#
+# Dieses Skript spiegelt Regeln der Engine. Wo eine Regel ein reines
+# Datenliteral ist, gibt es keinen Grund fuer eine zweite Kopie — sie laeuft
+# frueher oder spaeter auseinander. Genau das ist zweimal passiert: LOOP_STILE
+# hatte drei Genres weniger als js/werkzeug-links.js (9 Bausteine ohne
+# Play-along-Link auf ihrer statischen Seite), und die Mengen-Regeln hinkten
+# zweimal hinter js/pfade.js her.
+#
+# Wichtig: Die Leser brechen HART ab, wenn sie nicht parsen koennen. Ein Leser,
+# der im Zweifel eine leere Liste liefert, waere schlimmer als die Kopie —
+# aus „laeuft auseinander" wuerde „ist lautlos leer".
+# ---------------------------------------------------------------------------
+
+_JS_CACHE = {}
+
+
+def js_quelle(pfad):
+    if pfad not in _JS_CACHE:
+        with open(os.path.join(ROOT, pfad), encoding='utf-8') as f:
+            _JS_CACHE[pfad] = f.read()
+    return _JS_CACHE[pfad]
+
+
+def _js_block(pfad, name, oeffner, schliesser):
+    """Rohtext des Literals hinter `const NAME =` — klammerzaehlend, nicht gierig."""
+    src = js_quelle(pfad)
+    muster = r'(?:export\s+)?const\s+' + re.escape(name) + r'\s*=\s*(?:new Set\()?' + re.escape(oeffner)
+    m = re.search(muster, src)
+    if not m:
+        sys.exit(f'FEHLER: {name} nicht in {pfad} gefunden (Umbenennung? Dann hier nachziehen).')
+    tiefe, i = 1, m.end()
+    while i < len(src) and tiefe:
+        if src[i] == oeffner:
+            tiefe += 1
+        elif src[i] == schliesser:
+            tiefe -= 1
+        i += 1
+    if tiefe:
+        sys.exit(f'FEHLER: {name} in {pfad} ist nicht geschlossen.')
+    return src[m.end():i - 1]
+
+
+def js_liste(pfad, name):
+    """`const NAME = ['a', 'b']` oder `new Set([...])` -> ['a', 'b']."""
+    werte = re.findall(r"'([^']*)'", _js_block(pfad, name, '[', ']'))
+    if not werte:
+        sys.exit(f'FEHLER: {name} in {pfad} ist leer — Format geaendert?')
+    return werte
+
+
+def js_objekt(pfad, name):
+    """`const NAME = { a: 'x', b: ['y'] }` -> {'a': 'x'} bzw. {'b': ['y']}."""
+    roh = _js_block(pfad, name, '{', '}')
+    ergebnis = {}
+    for schluessel, wert in re.findall(r"([A-Za-z_][\w]*)\s*:\s*(\[[^\]]*\]|'[^']*')", roh):
+        ergebnis[schluessel] = (
+            re.findall(r"'([^']*)'", wert) if wert.startswith('[') else wert.strip("'")
+        )
+    if not ergebnis:
+        sys.exit(f'FEHLER: {name} in {pfad} ist leer — Format geaendert?')
+    return ergebnis
+
+
 def inhaltsdateien():
     """Liest die INHALTSDATEIEN-Liste direkt aus js/daten.js (Single Source)."""
-    with open(os.path.join(ROOT, 'js/daten.js'), encoding='utf-8') as f:
-        src = f.read()
-    m = re.search(r'const INHALTSDATEIEN\s*=\s*\[(.*?)\]', src, re.S)
-    if not m:
-        sys.exit('FEHLER: INHALTSDATEIEN nicht in js/daten.js gefunden.')
-    return re.findall(r"'([^']+\.json)'", m.group(1))
+    dateien = [d for d in js_liste('js/daten.js', 'INHALTSDATEIEN') if d.endswith('.json')]
+    if not dateien:
+        sys.exit('FEHLER: INHALTSDATEIEN in js/daten.js enthaelt keine JSON-Pfade.')
+    return dateien
 
 
 def esc(wert):
@@ -171,19 +234,21 @@ def standard_sortierschluessel(b):
 
 
 # ---------------------------------------------------------------------------
-# Instrument-Achse — Port der Mengenbildung aus js/pfade.js `instrumentpfad`
-# und der Reiter-Konstanten aus js/ansichten/pfad.js.
+# Instrument-Achse — Port der Mengenbildung aus js/pfade.js `instrumentpfad`.
+# Die Konstanten werden aus den JS-Quellen GELESEN (s. js_liste/js_objekt), nur
+# die Mengen-Logik selbst ist hier nachgebaut; sie steckt in Code, nicht in
+# einem Literal, und laesst sich deshalb nicht lesen. Gegen genau diese
+# verbleibende Doppelung wacht pruefe_mengen_invarianten() weiter unten.
 # ---------------------------------------------------------------------------
 
-INSTRUMENTE = ['gitarre', 'bass', 'schlagzeug', 'gesang']
-INSTR_STUFEN = ['einsteiger', 'fortgeschritten', 'experte']
+INSTRUMENTE = js_liste('js/mastery.js', 'INSTRUMENTE')
+INSTR_STUFEN = js_liste('js/ansichten/pfad.js', 'INSTR_STUFEN')
+INSTR_WERKZEUGE = js_objekt('js/ansichten/pfad.js', 'INSTR_WERKZEUGE')
+# Bleibt eine eigene Liste: in der App steckt diese Auswahl in einer Bedingung
+# (`INSTR_STIMMUNG.includes(domaene)`), nicht in einem Literal — es gibt dort
+# nichts zu lesen. Nur zwei Werte, und sie folgen aus der Physik: Saiten stimmt
+# man, Trommeln und Stimmbaender nicht.
 INSTR_STIMMUNG = ['gitarre', 'bass']
-INSTR_WERKZEUGE = {
-    'gitarre': ['stimmgeraet', 'metronom', 'pedalboard', 'ampbox', 'loops', 'recorder'],
-    'bass': ['stimmgeraet', 'metronom', 'pedalboard', 'ampbox', 'loops', 'recorder'],
-    'schlagzeug': ['metronom', 'loops', 'struktur', 'recorder', 'mehrspur'],
-    'gesang': ['stimmgeraet', 'recorder', 'metronom', 'loops', 'struktur'],
-}
 
 
 def instrument_stufe(b):
@@ -270,20 +335,9 @@ ID_REGELN = {
 # wiederum mit STIL_ZU_BEAT in js/ansichten/werkzeug-loops.js). Die drei
 # Core/Noise-Stile fehlten hier: 9 Bausteine bekamen auf ihrer statischen Seite
 # keinen Loop-Link, obwohl der Play-along-Beat existiert.
-LOOP_STILE = {
-    'hardcore', 'crust', 'powerviolence', 'grindcore', 'black_metal', 'death_metal',
-    'thrash', 'metalcore', 'djent', 'deathcore', 'doom', 'sludge', 'stoner_post',
-    'mathcore', 'screamo', 'noise_rock',
-}
+LOOP_STILE = set(js_liste('js/werkzeug-links.js', 'LOOP_STILE'))
 
-GEAR_REGION = {
-    'sattel_typen': 'gitarre_bass', 'saitenlage_setup': 'gitarre_bass', 'saiten_mensur': 'gitarre_bass',
-    'tonabnehmer_typen': 'gitarre_bass', 'steg_typen': 'gitarre_bass', 'plektren_saitenpflege': 'gitarre_bass',
-    'pedalboard_grundlagen': 'signalweg', 'amp_grundlagen': 'signalweg', 'box_grundlagen': 'signalweg',
-    'schlagzeug_komponenten': 'schlagzeug', 'felle_stimmung': 'schlagzeug', 'becken_typen': 'schlagzeug',
-    'fussmaschine_double': 'schlagzeug', 'trigger_edrums': 'schlagzeug',
-    'mikrofon_typen': 'gesang', 'proberaum_ausruestung': 'gesang',
-}
+GEAR_REGION = js_objekt('js/werkzeug-links.js', 'GEAR_REGION')
 
 WERKZEUG_META = {
     'metronom': ('#/werkzeug/metronom', 'wz_metronom_titel'),
@@ -987,7 +1041,53 @@ def build_all():
     return manifest
 
 
+def pruefe_mengen_invarianten():
+    """Wacht ueber die eine Regel, die sich nicht aus JS lesen laesst.
+
+    `instrument_mengen` ist ein Nachbau von `instrumentpfad` in js/pfade.js —
+    Logik, kein Literal. Diese Doppelung ist schon ZWEIMAL auseinandergelaufen,
+    beide Male auf dieselbe Art: ein Korb wurde beim Ausschluss vergessen, und
+    derselbe Baustein stand danach zweimal auf einer Seite (erst Praxis/Theorie,
+    dann Equipment/Theorie).
+
+    Die drei Koerbe sind als Aufteilung gedacht. Genau das wird hier geprueft —
+    paarweise disjunkt, und der Instrumentbestand vollstaendig abgedeckt. Ein
+    dritter Fall dieser Art faellt damit beim Bauen auf, nicht erst im Netz.
+    """
+    fehler = []
+    for domaene in INSTRUMENTE:
+        theorie, praxis, ausruestung = instrument_mengen(domaene)
+        t = {b['id'] for b in theorie}
+        p = {b['id'] for b in praxis}
+        a = {b['id'] for b in ausruestung}
+        for name, links, rechts in (('Praxis/Theorie', p, t),
+                                    ('Equipment/Theorie', a, t),
+                                    ('Praxis/Equipment', p, a)):
+            doppelt = links & rechts
+            if doppelt:
+                fehler.append(
+                    f'{domaene}: {len(doppelt)} Baustein(e) in {name} zugleich '
+                    f'({", ".join(sorted(doppelt)[:5])}…)'
+                )
+        sichtbar = lambda b: not ist_nur_trainer(b) and not ist_umgebungs_baustein(b)
+        am_instrument = {b['id'] for b in BAUSTEINE
+                         if domaene in domaenen_von(b) and sichtbar(b)}
+        unversorgt = am_instrument - (t | p | a)
+        if unversorgt:
+            fehler.append(
+                f'{domaene}: {len(unversorgt)} Baustein(e) in keinem Korb '
+                f'({", ".join(sorted(unversorgt)[:5])}…)'
+            )
+    if fehler:
+        print('FEHLER: die Instrument-Koerbe sind keine Aufteilung mehr —')
+        for z in fehler:
+            print(f'  {z}')
+        print('  -> instrument_mengen() gegen instrumentpfad() in js/pfade.js abgleichen.')
+        raise SystemExit(1)
+
+
 def main(nur_pruefen=False):
+    pruefe_mengen_invarianten()
     manifest = build_all()
 
     if not nur_pruefen:
