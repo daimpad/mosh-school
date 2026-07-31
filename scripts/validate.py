@@ -94,6 +94,7 @@ ERSATZ_ERLAUBT = tuple(w.lower() for w in (
     'shoegaze', 'conqueror', 'squeal', 'squelette', 'langue', 'virtue', 'saetia', 'raein',
     'bouquet', 'mooer', 'toe', 'foetus', 'haemorrhag', 'issue', 'venue', 'rescue', 'argue',
     'value', 'tissue', 'blues', 'bluegrass', 'influencer', 'true', 'cruel', 'fuel', 'duel',
+    'woe', 'gaerea',
 ))
 
 
