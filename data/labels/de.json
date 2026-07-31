@@ -828,7 +828,15 @@
     "wz_kachel_stimmungen": "Tunings aller Genres",
     "wz_kachel_patterns": "Riffs und Drumpattern",
     "wz_kachel_explorer": "Geräte und Signalweg",
-    "nicht_gefunden_titel": "Nicht gefunden"
+    "nicht_gefunden_titel": "Nicht gefunden",
+    "nav_zerrtypen": "Zerrtypen",
+    "zerrtypen_titel": "Zerrtypen",
+    "zerrtypen_untertitel": "Booster, Overdrive, Distortion, Fuzz, Preamp, Verstärkerzerre — nach Funktion sortiert, nicht nach Marke.",
+    "zerrtypen_prinzip": "Prinzip",
+    "zerrtypen_klang": "Klang",
+    "zerrtypen_anwendung": "Anwendung",
+    "zerrtypen_achtung": "Achtung:",
+    "zerrtypen_leer": "Noch keine Zerrtypen."
   },
   "bausteine": {
     "grundhaltung": "Grundhaltung & Entspannung",
@@ -1327,7 +1335,19 @@
     "uebergaenge_bauen": "Übergänge zwischen Teilen",
     "wiederholung_im_grossen": "Wiederholung und Erwartung im Großen",
     "form_skizzieren": "Eine Form skizzieren, bevor du schreibst",
-    "form_typen_im_genre": "Formen in dieser Musik"
+    "form_typen_im_genre": "Formen in dieser Musik",
+    "zerrtypen_ueberblick": "Zerrtypen: was wofür",
+    "zerre_stapeln": "Verzerrer stapeln",
+    "zerre_waehlen": "Welche Zerre für welches Ziel",
+    "klippung_grundlagen": "Klippung: woher der Zerrklang kommt",
+    "klippung_ort": "Wo geklippt wird: Dioden, Transistoren, Röhren",
+    "dioden_und_schwelle": "Diodenarten und Schwellspannung",
+    "filter_vor_und_nach": "Filter vor und nach der Klippung",
+    "gain_struktur_einstellen": "Gain-Struktur einstellen",
+    "amp_vorstufe_zerre": "Vorstufenzerre: wo Gain entsteht",
+    "amp_endstufe_saettigung": "Endstufensättigung und Lautstärke",
+    "gleichrichter_und_sag": "Gleichrichter und Sag",
+    "amp_oder_pedal": "Zerre aus dem Verstärker oder aus dem Pedal"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",

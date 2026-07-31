@@ -69,6 +69,7 @@ REFERENZ_DATEIEN = (
     'data/songs.powerviolence.json', 'data/songs.screamo.json', 'data/songs.sludge.json',
     'data/songs.stoner.json', 'data/songs.thrash.json',
     'data/genres.json', 'data/glossar.json', 'data/tunings.json', 'data/griffe.json',
+    'data/zerrtypen.json',
     'data/patterns.json', 'data/brand-alert.json', 'data/pedale.json', 'data/ampbox.json',
     'data/experimente.json', 'data/koennenscheck.json', 'data/gefuehlslandkarte.json',
 )
@@ -82,6 +83,14 @@ REFERENZ_IGNORIERT = frozenset({
 # (brand-alert) — deshalb datei-genau statt global ignoriert.
 REFERENZ_IGNORIERT_EXTRA = {'data/koennenscheck.json': frozenset({'kategorie'})}
 ERSATZ_VERDACHT = re.compile(r'\b[A-Za-zÄÖÜäöüß]*(?:ae|oe|ue)[A-Za-zÄÖÜäöüß]*\b', re.IGNORECASE)
+# `ss` statt `ß` braucht eine Stammliste statt des generischen Musters: „Schluss",
+# „muss" und „Fluss" sind korrekt, „ausschliesslich" und „gross" nicht — generisch
+# waere jedes zweite Wort ein Treffer. Ergaenzt den ae/oe/ue-Scan oben.
+SS_VERDACHT = re.compile(
+    r'\b\w*(?:ausschliess|schliess|ausser|gross|heiss|weiss|fliess|giess|reiss|'
+    r'beiss|massnahm|maessig|strass|gruss|spass|stoss|schoss|blass\w*los)\w*\b',
+    re.IGNORECASE,
+)
 # Legitime Wortbestandteile: echte deutsche ae/oe/ue-Folgen (Quelle, Dauer, bauen,
 # Frequenz …), gaengige Fremdwoerter und Eigennamen aus den Song-Listen.
 ERSATZ_ERLAUBT = tuple(w.lower() for w in (
@@ -113,6 +122,8 @@ def ersatzschreibungen(knoten, pfad='', ignoriert=REFERENZ_IGNORIERT):
             klein = wort.lower()
             if not any(teil in klein for teil in ERSATZ_ERLAUBT):
                 yield pfad, wort
+        for treffer in SS_VERDACHT.finditer(knoten):
+            yield pfad, treffer.group(0)
 
 
 # Demonstrations-Schema (§0c/§1 Trainings-Loop): optionales Feld am Baustein.

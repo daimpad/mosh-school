@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diodenarten und Schwellspannung — ZERRER</title>
+<meta name="description" content="Wenn Dioden das Klippen übernehmen, entscheidet ihre Schwellspannung darüber, ab welchem Pegel abgeschnitten wird — und damit über Lautstärke, Kompression…">
+<meta name="author" content="Damian Paderta">
+<link rel="canonical" href="https://zerrer.org/baustein/dioden_und_schwelle/">
+<link rel="icon" href="../../assets/images/logo.svg">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ZERRER">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Diodenarten und Schwellspannung">
+<meta property="og:description" content="Wenn Dioden das Klippen übernehmen, entscheidet ihre Schwellspannung darüber, ab welchem Pegel abgeschnitten wird — und damit über Lautstärke, Kompression…">
+<meta property="og:url" content="https://zerrer.org/baustein/dioden_und_schwelle/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Diodenarten und Schwellspannung">
+<meta name="twitter:description" content="Wenn Dioden das Klippen übernehmen, entscheidet ihre Schwellspannung darüber, ab welchem Pegel abgeschnitten wird — und damit über Lautstärke, Kompression…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "about": ["Equipment", "Theorie", "Profi"], "description": "Wenn Dioden das Klippen übernehmen, entscheidet ihre Schwellspannung darüber, ab welchem Pegel abgeschnitten wird — und damit über Lautstärke, Kompression…", "inLanguage": "de", "isAccessibleForFree": true, "learningResourceType": "Reflexionsaufgabe", "name": "Diodenarten und Schwellspannung", "url": "https://zerrer.org/baustein/dioden_und_schwelle/"}</script>
+<link rel="stylesheet" href="../../css/schriften.css">
+<link rel="stylesheet" href="../../css/app.css">
+<!-- Dasselbe Inline-Theme-Skript wie in index.html, aus demselben Grund und mit
+     demselben localStorage-Schluessel: ZERRER ist duester per Default. Ohne das
+     hier rendern die statischen Seiten HELL (die :root-Tokens sind hell, dunkel
+     kommt ueber data-theme) — wer aus der dunklen App auf eine Baustein-Seite
+     klickt, bekaeme sonst ein weisses Blatt. Muss inline und synchron laufen,
+     sonst flackert es vor dem ersten Anstrich. Bei einer Schluessel-Aenderung
+     hier, in index.html und in js/zustand.js gemeinsam nachziehen. -->
+<script>
+(function () {
+  try {
+    var z = JSON.parse(localStorage.getItem('moshschool.zustand.v1') || '{}');
+    var thema = z && z.einstellungen && z.einstellungen.thema;
+    var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; }
+    else if (thema === 'auto') { if (osDunkel) document.documentElement.dataset.theme = 'dunkel'; }
+    else { document.documentElement.dataset.theme = 'dunkel'; }
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+<header class="kopf">
+<div class="kopf-innen">
+<a class="marke" href="../../">
+<span class="marke-logo" aria-hidden="true"></span>
+<span class="marke-text">ZERRER</span>
+</a>
+</div>
+</header>
+<main id="ansicht">
+<h1>Diodenarten und Schwellspannung</h1><p class="leise">Equipment · Theorie · Profi</p><section class="abschnitt"><h2>Erklärteil</h2><p>Wenn Dioden das Klippen übernehmen, entscheidet ihre Schwellspannung darüber, ab welchem Pegel abgeschnitten wird — und damit über Lautstärke, Kompression und Härte. Germaniumdioden setzen bei etwa 0,3 Volt ein: früh, weich, mit deutlicher Kompression und wenig Ausgangspegel. Siliziumdioden liegen bei rund 0,6 Volt und klingen härter und lauter. Leuchtdioden schalten erst bei etwa 1,7 Volt und lassen dadurch viel mehr Signal ungeklippt durch — das ergibt mehr Headroom, mehr Dynamik und deutlich mehr Pegel.</p><p>Ein praktisch wichtiger Punkt betrifft Germanium: Seine Kennlinie ist temperaturabhängig. Geräte mit Germaniumbauteilen klingen im kalten Proberaum anders als auf einer heißen Bühne, und die Streuung zwischen einzelnen Exemplaren ist groß. Das ist keine Legende, sondern eine Materialeigenschaft — und der Grund, warum solche Schaltungen als eigenwillig gelten.</p><p>Asymmetrische Bestückung — etwa zwei Dioden auf der einen und eine auf der anderen Seite — beschneidet die Halbwellen unterschiedlich stark und erzeugt geradzahlige Obertöne. Viele Schaltungen mit umschaltbarem Klippungsmodus wechseln genau zwischen solchen Varianten; wer weiß, was der Schalter tut, kann ihn gezielt einsetzen statt nach Gehör zu raten.</p></section><section class="abschnitt"><h2>Reflexionsaufgabe</h2><p>Weißt du, welche Diodenart in deinem Gerät klippt und was das für Pegel und Dynamik bedeutet? Ist dir aufgefallen, dass ein Klippungsschalter Symmetrie und Schwelle ändert? Und wäre mehr Headroom für dich sinnvoller als mehr Kompression?</p></section><p class="leise">Voraussetzungen:</p><ul><li><a href="../../baustein/klippung_ort/">Wo geklippt wird: Dioden, Transistoren, Röhren</a></li></ul>
+<p class="knopf-zeile"><a class="knopf knopf-primaer" href="../../#/baustein/dioden_und_schwelle">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+</main>
+<footer class="seiten-footer" aria-label="Fußzeile">
+<div class="footer-innen">
+<div class="footer-marke">
+<div class="footer-marke-kopf">
+<span class="footer-marke-logo" aria-hidden="true"></span>
+<span class="footer-marke-name">ZERRER</span>
+</div>
+<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
+<nav class="footer-marke-rechtliches" aria-label="Rechtliches">
+<a href="../../#/impressum">Impressum</a>
+<a href="../../#/datenschutz">Datenschutz</a>
+<a class="footer-marke-goat" href="https://www.goatcounter.com/" rel="noopener" target="_blank"><svg class="goat-logo" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21c-2.8 0-5-2.1-5-4.8v-2.8c0-2.9 2.2-5.2 5-5.2s5 2.3 5 5.2v2.8c0 2.7-2.2 4.8-5 4.8Z"/><path d="M7.8 8.6C6 6.7 5 4.6 5 2.4c2 .1 3.8 1.1 4.8 3"/><path d="M16.2 8.6C18 6.7 19 4.6 19 2.4c-2 .1-3.8 1.1-4.8 3"/><path d="M12 21v1.4"/><circle cx="10.1" cy="11.4" r=".9" fill="currentColor" stroke="none"/><circle cx="13.9" cy="11.4" r=".9" fill="currentColor" stroke="none"/></svg><span>GoatCounter</span></a>
+</nav>
+</div>
+<nav class="footer-spalte" aria-label="Schnellzugriff">
+<span class="footer-titel">Schnellzugriff</span>
+<a href="../../#/griffe">Griffe</a>
+<a href="../../#/stimmungen">Tunings</a>
+<a href="../../#/werkzeuge">Tools</a>
+<a href="../../#/merkliste">Merkliste</a>
+</nav>
+<nav class="footer-spalte" aria-label="Info">
+<span class="footer-titel">Info</span>
+<a href="../../#/ueber">Über</a>
+<a href="../../kollektiv/">ZERRER-Kollektiv</a>
+<a href="../../#/mitmachen">Mitmachen</a>
+<a href="../../#/profil">Profil</a>
+</nav>
+<nav class="footer-spalte" aria-label="Alle Seiten">
+<span class="footer-titel">Alle Seiten</span>
+<a href="../../instrument/">Alle Instrumente</a>
+<a href="../../pfad/stil/">Alle Genres</a>
+<a href="../../pfad/kompetenz/">Nach Könnensstufe</a>
+<a href="../../pfad/themen/">Alle Themen</a>
+</nav>
+</div>
+<div class="footer-haltung"><span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span>No Ads</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span>Anonymous &amp; No Account</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span>No Influencer-BS</span></span><span class="footer-haltung-eintrag"><i class="fa-solid fa-shield" aria-hidden="true"></i><span>No NSBM — kein Platz für Faschos</span></span><a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>Quelltext offen</span></a></div>
+</footer>
+<!-- Reichweitenmessung (GoatCounter, siehe #/datenschutz) — keine Cookies,
+     keine gespeicherten IP-Adressen. Anders als in index.html KEIN
+     no_onload/Hash-Zaehler noetig: jede statische Seite ist ihr eigenes
+     Dokument mit eigenem Pfad, der automatische Pageview beim Laden zaehlt
+     also schon richtig. -->
+<script data-goatcounter="https://nozilla.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

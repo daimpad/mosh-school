@@ -471,6 +471,14 @@ Tokens**, nie harte Farben.
   Genre-Zuordnung aus dem `stil`-Vokabular) liegen in `data/tunings.json`, die sichtbaren
   Namen unter `vokabeln.stimmung` in `labels/de.json`. Referenzbereich wie Regeln —
   NICHT im Baustein-Pool, kein Fortschritt.
+- **Zerrtypen** (`#/zerrtypen`, `js/ansichten/zerrtypen.js`, `data/zerrtypen.json`):
+  Referenz der Verzerrer- und Verstärkerzerre-Bauarten, gruppiert von der geringsten
+  zur stärksten Eingriffstiefe (Booster → … → Verstärker). Ebenfalls Referenzbereich,
+  kein Fortschritt. **Alle Typen sind funktional benannt** (Mittenbuckel-Booster,
+  Gegenkopplungs-Overdrive …) — konkrete Modelle gehören ausschließlich in die
+  Ausnahmeliste `data/brand-alert.json` und sind von dort über die Typbezeichnung
+  auffindbar. Neue Typen dieser Regel unterwerfen, sonst wird aus der Typologie ein
+  Marken-Katalog.
 
 ## Sprache & Sicherheit
 

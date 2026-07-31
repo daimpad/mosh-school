@@ -1,0 +1,159 @@
+{
+  "titel": "Zerrtypen",
+  "hinweis": "Funktionale Typologie ohne Markennamen. Geordnet nach Aufgabe in der Kette und Schaltungsprinzip. Modellnennungen ausschließlich im Bereich Brand Alert.",
+  "gruppen": [
+    "Booster",
+    "Overdrive",
+    "Distortion",
+    "Fuzz",
+    "Preamp",
+    "Verstärker"
+  ],
+  "anzahl": 16,
+  "typen": [
+    {
+      "id": "zt_001",
+      "gruppe": "Booster",
+      "bezeichnung": "Clean-Booster",
+      "prinzip": "Verstärkerstufe ohne eigene Klippung, meist mit hohem Headroom.",
+      "klang": "Kein eigener Klang, nur mehr Pegel; treibt die nachfolgende Stufe härter an.",
+      "anwendung": "Vor High-Gain zum Straffen; als Solo-Anhebung im Einschleifweg.",
+      "achtung": "Hebt auch das Rauschen der Vorstufe an; nicht als Klangregler missverstehen."
+    },
+    {
+      "id": "zt_002",
+      "gruppe": "Booster",
+      "bezeichnung": "Mittenbuckel-Booster",
+      "prinzip": "Bandpass vor einer schwach klippenden Stufe; Bass beschnitten, Mitten angehoben.",
+      "klang": "Straff und mittig; wirkt vor allem über das, was er dem Signal wegnimmt.",
+      "anwendung": "Der Standardweg zu tighten tief gestimmten Riffs.",
+      "achtung": "Gain fast zu, Pegel hoch — sonst addiert er Matsch statt ihn zu verhindern."
+    },
+    {
+      "id": "zt_003",
+      "gruppe": "Booster",
+      "bezeichnung": "Höhen-Booster",
+      "prinzip": "Hochpass vor einer Verstärkerstufe; nur die oberen Frequenzen werden angehoben.",
+      "klang": "Schneidend, dünn allein, im Verbund durchsetzungsfähig.",
+      "anwendung": "Historischer Weg, um Röhrenvorstufen zum Singen zu bringen.",
+      "achtung": "Bei bereits hellen Systemen schnell unangenehm scharf."
+    },
+    {
+      "id": "zt_004",
+      "gruppe": "Overdrive",
+      "bezeichnung": "Gegenkopplungs-Overdrive",
+      "prinzip": "Dioden in der Gegenkopplung; die Verstärkung wird ab der Schwelle sanft zurückgenommen.",
+      "klang": "Weiches Einsetzen, Anschlagdynamik bleibt erhalten, öffnet bei zurückgedrehtem Volumenpoti.",
+      "anwendung": "Rhythmusarbeit mit Dynamik; als Booster vor High-Gain.",
+      "achtung": "Allein selten genug Gain für moderne Metal-Rhythmusarbeit."
+    },
+    {
+      "id": "zt_005",
+      "gruppe": "Overdrive",
+      "bezeichnung": "Transparenter Overdrive",
+      "prinzip": "Hohe Betriebsspannung oder Leuchtdioden als Klippungselement; viel Headroom.",
+      "klang": "Wenig Eigenklang, Grundcharakter des Instruments bleibt hörbar.",
+      "anwendung": "Anzerren ohne Klangfärbung; Pegelanhebung mit leichter Sättigung.",
+      "achtung": "Wirkt bei niedrigem Gain fast wie ein Booster — das ist Absicht, kein Defekt."
+    },
+    {
+      "id": "zt_006",
+      "gruppe": "Distortion",
+      "bezeichnung": "Dioden-gegen-Masse-Distortion",
+      "prinzip": "Klippung durch Dioden nach Masse; alles oberhalb der Schwelle wird gekappt.",
+      "klang": "Harte, gleichbleibende Verzerrung; wenig abhängig von der Anschlagstärke.",
+      "anwendung": "Planbarer Rhythmusklang, wenn Dynamik nicht gebraucht wird.",
+      "achtung": "Dynamikverlust ist Bauart, kein Einstellungsfehler."
+    },
+    {
+      "id": "zt_007",
+      "gruppe": "Distortion",
+      "bezeichnung": "Mehrstufige High-Gain-Distortion",
+      "prinzip": "Mehrere kaskadierte Verstärkungsstufen, oft mit Filtern dazwischen.",
+      "klang": "Sehr dicht und komprimiert; hohe Verzerrung bei erhaltener Kontur, wenn die Filter stimmen.",
+      "anwendung": "Moderner Metal-Rhythmusklang ohne Verstärkerabhängigkeit.",
+      "achtung": "Braucht eine Rauschunterdrückung; ab einem Punkt bringt mehr Gain nur Kompression."
+    },
+    {
+      "id": "zt_008",
+      "gruppe": "Distortion",
+      "bezeichnung": "Multiband-Distortion",
+      "prinzip": "Signal wird in Frequenzbänder geteilt, getrennt verzerrt und wieder zusammengeführt.",
+      "klang": "Definition auch bei extremem Gain; Bässe bleiben sauber, Höhen aggressiv.",
+      "anwendung": "Sehr tiefe Stimmungen; Bass-Verzerrung mit erhaltenem Fundament.",
+      "achtung": "Komplexer einzustellen; falsche Trennfrequenz klingt künstlich getrennt."
+    },
+    {
+      "id": "zt_009",
+      "gruppe": "Fuzz",
+      "bezeichnung": "Germanium-Fuzz",
+      "prinzip": "Zwei bis drei Transistorstufen mit Germaniumbauteilen; sehr hohe Verstärkung.",
+      "klang": "Körnig, komprimiert, weich einsetzend; reagiert stark auf das Volumenpoti.",
+      "anwendung": "Schwere, langsame Musik; historische Klangbilder.",
+      "achtung": "Temperaturabhängig und exemplarstreuend; mag hohe Eingangsimpedanz — Pufferpedale davor verändern den Klang deutlich."
+    },
+    {
+      "id": "zt_010",
+      "gruppe": "Fuzz",
+      "bezeichnung": "Silizium-Fuzz",
+      "prinzip": "Gleiche Topologie mit Siliziumtransistoren.",
+      "klang": "Härter, lauter, aggressiver als die Germaniumvariante.",
+      "anwendung": "Noise Rock, Sludge, alles mit rauer Kante.",
+      "achtung": "Weniger dynamisch als Germanium; Reihenfolge im Board beachten."
+    },
+    {
+      "id": "zt_011",
+      "gruppe": "Fuzz",
+      "bezeichnung": "Vierstufiger Fuzz mit Mittenabsenkung",
+      "prinzip": "Vier Klippungsstufen mit ausgeprägtem Bandsperrfilter in den Mitten.",
+      "klang": "Sehr dick, langes Sustain, ausgehöhlte Mitten.",
+      "anwendung": "Doom, Stoner, Shoegaze-Flächen.",
+      "achtung": "Die Mittenabsenkung lässt die Gitarre im Bandmix verschwinden — im Ensemble nachjustieren."
+    },
+    {
+      "id": "zt_012",
+      "gruppe": "Fuzz",
+      "bezeichnung": "Oktav- und Ringmodulations-Fuzz",
+      "prinzip": "Fuzz mit Gleichrichtung oder Frequenzmischung im Signalweg.",
+      "klang": "Unsaubere Oberoktaven, metallisch, teils atonal.",
+      "anwendung": "Noise, Experimentelles, gezielte Klangzerstörung.",
+      "achtung": "Auf tiefen Saiten oft unbrauchbar — funktioniert meist nur in höheren Lagen."
+    },
+    {
+      "id": "zt_013",
+      "gruppe": "Preamp",
+      "bezeichnung": "Preamp- und Kanalpedale",
+      "prinzip": "Vollständige Vorstufe samt Klangregelung, oft mit DI-Ausgang.",
+      "klang": "Ersetzt den Verstärkerkanal; reproduzierbar unabhängig vom Ort.",
+      "anwendung": "Direkt ins Pult, in den Einschleifweg oder als zweiter Kanal.",
+      "achtung": "Klangregelung sitzt an anderer Stelle als im Verstärker — Einstellungen nicht eins zu eins übertragbar."
+    },
+    {
+      "id": "zt_014",
+      "gruppe": "Preamp",
+      "bezeichnung": "Digitales Modeling und neuronale Modelle",
+      "prinzip": "Nachbildung gemessener Verstärker; meist mit Impulsantwort für die Box.",
+      "klang": "Sehr nah an der Vorlage, sofern eine passende Impulsantwort verwendet wird.",
+      "anwendung": "Leise Bühne, Aufnahme, reproduzierbare Klangbilder.",
+      "achtung": "Ohne Impulsantwort klingt es unbrauchbar hart — die Box ist kein Zubehör, sondern Teil des Klangs."
+    },
+    {
+      "id": "zt_015",
+      "gruppe": "Verstärker",
+      "bezeichnung": "Vorstufenzerre",
+      "prinzip": "Kaskadierte Verstärkungsstufen in der Vorstufe des Verstärkers.",
+      "klang": "Dicht und komprimiert; Charakter hängt stark von der Position der Klangregelung ab.",
+      "anwendung": "Der übliche Weg zu High-Gain-Rhythmusklängen.",
+      "achtung": "Ab einem gewissen Gain nimmt nur die Kompression zu, nicht die Härte."
+    },
+    {
+      "id": "zt_016",
+      "gruppe": "Verstärker",
+      "bezeichnung": "Endstufensättigung",
+      "prinzip": "Aussteuerung der Endstufenröhren samt Übertrager und Lautsprecher.",
+      "klang": "Voll, dreidimensional, mit natürlicher Kompression.",
+      "anwendung": "Klassische laute Röhrenklänge.",
+      "achtung": "Braucht hohe Lautstärke — nur mit Gehörschutz und besser mit Leistungsreduktion; nie ohne Last betreiben."
+    }
+  ]
+}

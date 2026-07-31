@@ -62,6 +62,7 @@ const INHALTSDATEIEN = [
   'data/bausteine.koerper-athletik.json',
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
+  'data/bausteine.zerre-detail.json',
   'data/bausteine.instrument-technik.json',
   'data/bausteine.gitarre-detail.json',
   'data/bausteine.gitarre-bauform.json',
@@ -128,7 +129,7 @@ export async function ladeSuchindex(daten) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, bgBilder, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, zerrtypen, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, bgBilder, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -136,6 +137,7 @@ export async function ladeDaten() {
     holeJson('data/tunings.json'),
     holeJson('data/patterns.json'),
     holeJson('data/griffe.json').catch(() => null),
+    holeJson('data/zerrtypen.json').catch(() => null),
     holeJson('data/pedale.json'),
     holeJson('data/ampbox.json'),
     holeJson('data/genres.json').catch(() => null),
@@ -165,6 +167,9 @@ export async function ladeDaten() {
   // Powerchord-Griffe (grafische Griffbild-Referenz): Referenzbereich, kein
   // Fortschritt — die Formen werden aus den Daten gezeichnet.
   daten.griffe = griffe || { titel: '', hinweis: '', griffe: [] };
+  // Zerrtypen (Verzerrer-/Verstärkerzerre-Bauarten): Referenzbereich, kein
+  // Fortschritt. Funktional benannt — Modelle stehen nur in brand-alert.json.
+  daten.zerrtypen = zerrtypen || { titel: '', hinweis: '', gruppen: [], typen: [] };
   // Pedalboard-Baukasten (Pedal-Katalog): Referenzbereich, kein Fortschritt.
   daten.pedale = {
     meta: pedale?._meta || {},

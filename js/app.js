@@ -12,6 +12,7 @@ import { renderMerkliste, renderProfil } from './ansichten/profil.js';
 import { renderStimmungen } from './ansichten/stimmungen.js';
 import { renderPatterns } from './ansichten/patterns.js';
 import { renderGriffe } from './ansichten/griffe.js';
+import { renderZerrtypen } from './ansichten/zerrtypen.js';
 import { renderSongs } from './ansichten/songs.js';
 import { renderBrandAlert } from './ansichten/brand-alert.js';
 import { renderGlossar } from './ansichten/glossar.js';
@@ -138,6 +139,8 @@ function aktualisiereNavigation(segmente) {
                       ? 'patterns'
                       : s0 === 'griffe'
                         ? 'griffe'
+                      : s0 === 'zerrtypen'
+                        ? 'zerrtypen'
                       : s0 === 'brand-alert'
                         ? 'brandalert'
                         : s0 === 'glossar'
@@ -168,7 +171,7 @@ function aktualisiereNavigation(segmente) {
   // 'profil' steht bewusst NICHT hier: Es hat einen eigenen Knopf in der unteren
   // Leiste. Stand es mit drin, trugen auf #/profil sowohl „Profil" als auch
   // „Mehr" aria-current="page" — die Leiste meldete zwei aktuelle Orte zugleich.
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'zerrtypen', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'kollektiv', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -226,6 +229,7 @@ function beschrifteRahmen() {
     kontext: t('pfad_umgebung'),
     geraete: t('wz_explorer_titel'),
     stimmungen: t('nav_stimmungen'),
+    zerrtypen: t('nav_zerrtypen'),
     patterns: t('nav_patterns'),
     ueber: t('nav_ueber'),
   };
@@ -393,6 +397,8 @@ function rendern() {
     renderPatterns(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'griffe') {
     renderGriffe(el, daten);
+  } else if (segmente[0] === 'zerrtypen') {
+    renderZerrtypen(el, daten);
   } else if (segmente[0] === 'brand-alert') {
     renderBrandAlert(el, daten);
   } else if (segmente[0] === 'glossar') {

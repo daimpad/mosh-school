@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v172';
+const CACHE = 'zerrer-v173';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -71,6 +71,7 @@ const SHELL = [
   'js/ansichten/stimmungen.js',
   'js/ansichten/patterns.js',
   'js/ansichten/griffe.js',
+  'js/ansichten/zerrtypen.js',
   'js/ansichten/songs.js',
   'js/ansichten/brand-alert.js',
   'js/ansichten/glossar.js',
@@ -139,6 +140,7 @@ const SHELL = [
   'data/bausteine.koerper-athletik.json',
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
+  'data/bausteine.zerre-detail.json',
   'data/bausteine.instrument-technik.json',
   'data/bausteine.gitarre-detail.json',
   'data/bausteine.gitarre-bauform.json',
@@ -172,6 +174,7 @@ const SHELL = [
   'data/patterns.json',
   'data/griffe.json',
   'data/tunings.json',
+  'data/zerrtypen.json',
   'data/pedale.json',
   'data/ampbox.json',
   'data/songs.hardcore.json',
