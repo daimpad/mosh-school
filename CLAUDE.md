@@ -479,6 +479,19 @@ Tokens**, nie harte Farben.
   Ausnahmeliste `data/brand-alert.json` und sind von dort über die Typbezeichnung
   auffindbar. Neue Typen dieser Regel unterwerfen, sonst wird aus der Typologie ein
   Marken-Katalog.
+- **Zerr-Labor** (`#/werkzeug/zerrlabor`, `js/ansichten/werkzeug-zerrlabor.js`):
+  Werkzeug auf dem gemeinsamen Audio-Kern. Die Kennlinien liegen DOM-frei in
+  `js/audio/zerre.js` (Kette Hochpass → WaveShaper → Tiefpass), die Daten in
+  `data/zerrlabor-kennlinien.json`. **Zwei Fallstricke, beide schon eingetreten:**
+  (1) Die harten Diodenkurven werden **nicht** auf die Schwelle normiert — sonst
+  kehrt sich die Pegelreihenfolge um und Germanium wäre lauter als LED, also genau
+  umgekehrt zur Kapitelaussage. (2) Die Kurventabelle wird **nicht** auf ±1
+  begrenzt; beim WaveShaper spannt nur die Eingangsachse [-1, 1] auf, Ausgangswerte
+  dürfen darüber. Ein Deckel kappte die LED-Kennlinie auf RMS 0,90 statt 1,35.
+  `python3 scripts/pruefe_zerrlabor.py` (auch in `verify.yml`) rechnet beides gegen
+  die Sollwerte nach und prüft die Schwellen-Reihenfolge eigens.
+  **Pegelbegrenzung ist Pflicht** — ein fester, nicht abschaltbarer Begrenzer sitzt
+  vor dem Ausgang, dazu Lautstärke- und (bei Mikrofoneingang) Kopfhörer-Hinweis.
 
 ## Sprache & Sicherheit
 

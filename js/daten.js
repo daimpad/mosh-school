@@ -129,7 +129,7 @@ export async function ladeSuchindex(daten) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, zerrtypen, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, bgBilder, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, zerrtypen, zerrlabor, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, bgBilder, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -138,6 +138,7 @@ export async function ladeDaten() {
     holeJson('data/patterns.json'),
     holeJson('data/griffe.json').catch(() => null),
     holeJson('data/zerrtypen.json').catch(() => null),
+    holeJson('data/zerrlabor-kennlinien.json').catch(() => null),
     holeJson('data/pedale.json'),
     holeJson('data/ampbox.json'),
     holeJson('data/genres.json').catch(() => null),
@@ -170,6 +171,9 @@ export async function ladeDaten() {
   // Zerrtypen (Verzerrer-/Verstärkerzerre-Bauarten): Referenzbereich, kein
   // Fortschritt. Funktional benannt — Modelle stehen nur in brand-alert.json.
   daten.zerrtypen = zerrtypen || { titel: '', hinweis: '', gruppen: [], typen: [] };
+  // Zerr-Labor: Kennlinien für die WaveShaper-Kette (js/audio/zerre.js).
+  // Werkzeug-Daten, kein Fortschritt.
+  daten.zerrlabor = zerrlabor || { titel: '', hinweis: '', kennlinien: [] };
   // Pedalboard-Baukasten (Pedal-Katalog): Referenzbereich, kein Fortschritt.
   daten.pedale = {
     meta: pedale?._meta || {},
