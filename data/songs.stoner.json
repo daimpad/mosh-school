@@ -1,7 +1,7 @@
 {
   "genre": "Stoner",
-  "anzahl": 28,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 30,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Kyuss",
@@ -197,6 +197,20 @@
       "titel": "Strong Reflection",
       "substil_vermerk": "französischer Heavy-Psych/Stoner",
       "url": "https://bandcamp.com/search?q=Mars+Red+Sky+Strong+Reflection&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Queens of the Stone Age",
+      "titel": "Regular John",
+      "substil_vermerk": "Desert/Stoner-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Queens+of+the+Stone+Age+Regular+John",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Church of Misery",
+      "titel": "Beltway Sniper",
+      "substil_vermerk": "Doom/Stoner (Japan)",
+      "url": "https://bandcamp.com/search?q=Church+of+Misery+Beltway+Sniper&item_type=t",
       "quelle": "bandcamp"
     }
   ]

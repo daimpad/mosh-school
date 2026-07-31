@@ -1,7 +1,7 @@
 {
   "genre": "Industrial",
-  "anzahl": 27,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 30,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Cabaret Voltaire",
@@ -191,6 +191,27 @@
       "substil_vermerk": "experimentelles Industrial (Dänemark)",
       "url": "https://bandcamp.com/search?q=Puce+Mary+The+Size+of+Our+Desires&item_type=t",
       "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Throbbing Gristle",
+      "titel": "Hamburger Lady",
+      "substil_vermerk": "Ur-Industrial (UK)",
+      "url": "https://www.youtube.com/results?search_query=Throbbing+Gristle+Hamburger+Lady",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "SPK",
+      "titel": "Metal Dance",
+      "substil_vermerk": "Industrial/EBM-Übergang (Australien)",
+      "url": "https://www.youtube.com/results?search_query=SPK+Metal+Dance",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Rammstein",
+      "titel": "Du Hast",
+      "substil_vermerk": "Neue Deutsche Härte (Deutschland)",
+      "url": "https://www.youtube.com/results?search_query=Rammstein+Du+Hast",
+      "quelle": "youtube"
     }
   ]
 }

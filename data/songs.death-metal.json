@@ -1,7 +1,7 @@
 {
   "genre": "Death Metal",
-  "anzahl": 27,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 29,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Death",
@@ -191,6 +191,20 @@
       "substil_vermerk": "blasphemischer Florida-Death (US)",
       "url": "https://www.youtube.com/results?search_query=Deicide+Dead+by+Dawn",
       "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Cannibal Corpse",
+      "titel": "Hammer Smashed Face",
+      "substil_vermerk": "Brutal Death (US)",
+      "url": "https://www.youtube.com/results?search_query=Cannibal+Corpse+Hammer+Smashed+Face",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Decapitated",
+      "titel": "Spheres of Madness",
+      "substil_vermerk": "technischer Death (Polen)",
+      "url": "https://bandcamp.com/search?q=Decapitated+Spheres+of+Madness&item_type=t",
+      "quelle": "bandcamp"
     }
   ]
 }
