@@ -6,7 +6,7 @@
 // Zieh-/Filter-Auswahl ist flüchtiger Modul-State.
 
 import { label, t } from '../i18n.js';
-import { bausteinIcon, esc } from '../oberflaeche.js';
+import { bausteinIcon, esc, halteFokus } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
 
@@ -188,16 +188,20 @@ export function renderExperimentieren(el, daten) {
     gezogeneId = k ? k.id : null;
     neuZeichnenKarte();
   });
+  // Ueber halteFokus: diese Ansicht zeichnet sich selbst neu und geht damit an
+  // der Fokus-Rettung des Routers vorbei — der geklickte Filter-Chip loeschte
+  // sich also selbst und der Fokus fiel auf <body>.
+  const neu = () => halteFokus(el, () => renderExperimentieren(el, daten));
   for (const knopf of el.querySelectorAll('[data-kat]')) {
     knopf.addEventListener('click', () => {
       filterKat = knopf.dataset.kat || null;
-      renderExperimentieren(el, daten);
+      neu();
     });
   }
   for (const knopf of el.querySelectorAll('[data-aufwand]')) {
     knopf.addEventListener('click', () => {
       filterAufwand = knopf.dataset.aufwand || null;
-      renderExperimentieren(el, daten);
+      neu();
     });
   }
   for (const knopf of el.querySelectorAll('[data-karte]')) {

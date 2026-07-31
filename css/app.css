@@ -3358,6 +3358,14 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   transform: none;
   filter: none;
 }
+/* Nachladen (Grafiken/Suchindex) zeichnet dieselbe Route neu; die frischen
+   .reveal-Blöcke starten dann wieder im Ausgangszustand und blenden Sekunden
+   nach dem ersten Anstrich ein ZWEITES Mal ein. js/app.js markiert sie in
+   diesem Fall sofort als sichtbar — diese Klasse schaltet für den einen Frame
+   den Übergang ab, damit das Markieren nicht selbst eine Animation auslöst. */
+.anim-reveal .reveal.ohne-uebergang {
+  transition: none;
+}
 .anim-reveal .reveal.raus {
   opacity: 0.18;
   transform: translateY(-10px);

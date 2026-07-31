@@ -313,14 +313,23 @@ def main():
     # Baustein-Grafiken (data/grafiken.json, generiert via scripts/build_grafiken.py):
     # jeder Baustein soll eine Grafik tragen; ueberzaehlige IDs sind vorproduziert
     # (kuenftige Sets) und nur eine Info, kein Fehler.
+    bundle_fehlt = False
     try:
         grafiken = set(lade('data/grafiken.json'))
     except FileNotFoundError:
         grafiken = set()
+        bundle_fehlt = True
         warnung.append('data/grafiken.json fehlt (scripts/build_grafiken.py laufen lassen)')
     if grafiken:
         for bid in sorted(idset - grafiken):
             warnung.append(f'{bid}: keine Baustein-Grafik (scripts/build_svg*.py ergaenzen + build_grafiken.py)')
+    elif not bundle_fehlt:
+        # Vorhanden, aber leer: `if grafiken:` sprang bisher stillschweigend
+        # ueber die ganze Pruefung — „keine Grafik fehlt" und „ich konnte gar
+        # nicht pruefen" sahen im Ergebnis identisch aus, obwohl im zweiten Fall
+        # JEDE Grafik fehlt. Der Fall „Datei fehlt" meldet sich schon oben, der
+        # darf hier nicht ein zweites Mal warnen.
+        warnung.append('data/grafiken.json ist leer — Grafik-Abdeckung ungeprueft (scripts/build_grafiken.py laufen lassen)')
 
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
