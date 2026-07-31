@@ -8,12 +8,33 @@
 
 import { label, t, text } from '../i18n.js';
 import { domaeneIcon, esc, registriereAufraeumen } from '../oberflaeche.js';
+import { holeAusgang, holeKontext } from '../audio/kontext.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aktivesInstrument = 'gitarre';
 let aktiveStimmung = null;
 let aktiverKlangStil = null; // Genre-Filter für Intervalle/Akkorde/Skalen (null = alle)
-let audioKontext = null;
+// Toene laufen ueber den gemeinsamen Audio-Kern (CLAUDE.md: EIN AudioContext).
+// Diese Ansicht hielt vorher einen zweiten eigenen und resumte ihn nur bei
+// state === 'suspended' — nach einer Unterbrechung durch das Betriebssystem
+// (iOS meldet dann 'interrupted') blieb sie dauerhaft stumm, ohne Hinweis.
+function kontext() {
+  const ctx = holeKontext();
+  if (ctx.state !== 'running') ctx.resume?.().catch(() => {});
+  return ctx;
+}
+// Noch klingende Toene, damit der Teardown sie wirklich abbrechen kann.
+// Beendete fallen von selbst wieder heraus — sonst waechst die Liste mit jedem
+// angetippten Ton weiter.
+let laufendeToene = [];
+function merkeTon(osc) {
+  laufendeToene.push(osc);
+  osc.addEventListener?.('ended', () => {
+    const i = laufendeToene.indexOf(osc);
+    if (i !== -1) laufendeToene.splice(i, 1);
+  });
+  return osc;
+}
 
 // Notenname (wissenschaftlich, A4 = 440 Hz) → Frequenz. Unterstützt # und b.
 const HALBTON = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 };
@@ -31,8 +52,7 @@ export function frequenzVon(note) {
 // Referenzton: leise, weich, kurz — eine Stimm-Hilfe, kein Instrument.
 function spieleTon(frequenz) {
   if (!frequenz) return;
-  audioKontext = audioKontext || new (window.AudioContext || window.webkitAudioContext)();
-  if (audioKontext.state === 'suspended') audioKontext.resume();
+  const audioKontext = kontext();
   const jetzt = audioKontext.currentTime;
   const osc = audioKontext.createOscillator();
   const huelle = audioKontext.createGain();
@@ -41,7 +61,8 @@ function spieleTon(frequenz) {
   huelle.gain.setValueAtTime(0.0001, jetzt);
   huelle.gain.exponentialRampToValueAtTime(0.14, jetzt + 0.02);
   huelle.gain.exponentialRampToValueAtTime(0.0001, jetzt + 1.6);
-  osc.connect(huelle).connect(audioKontext.destination);
+  osc.connect(huelle).connect(holeAusgang());
+  merkeTon(osc);
   osc.start(jetzt);
   osc.stop(jetzt + 1.7);
 }
@@ -52,8 +73,7 @@ function spieleTon(frequenz) {
 function spieleAkkord(halbtoene, grundton = 'E2') {
   const basis = frequenzVon(grundton);
   if (!basis) return;
-  audioKontext = audioKontext || new (window.AudioContext || window.webkitAudioContext)();
-  if (audioKontext.state === 'suspended') audioKontext.resume();
+  const audioKontext = kontext();
   const jetzt = audioKontext.currentTime;
   const summe = audioKontext.createGain();
   // Gesamtpegel auf die Stimmenzahl normieren, damit ein Akkord nicht übersteuert.
@@ -61,12 +81,13 @@ function spieleAkkord(halbtoene, grundton = 'E2') {
   summe.gain.setValueAtTime(0.0001, jetzt);
   summe.gain.exponentialRampToValueAtTime(pegel, jetzt + 0.02);
   summe.gain.exponentialRampToValueAtTime(0.0001, jetzt + 1.9);
-  summe.connect(audioKontext.destination);
+  summe.connect(holeAusgang());
   for (const h of halbtoene) {
     const osc = audioKontext.createOscillator();
     osc.type = 'triangle';
     osc.frequency.value = basis * 2 ** (h / 12);
     osc.connect(summe);
+    merkeTon(osc);
     osc.start(jetzt);
     osc.stop(jetzt + 2);
   }
@@ -77,8 +98,7 @@ function spieleAkkord(halbtoene, grundton = 'E2') {
 function spieleSequenz(halbtoene, grundton = 'E2') {
   const basis = frequenzVon(grundton);
   if (!basis) return;
-  audioKontext = audioKontext || new (window.AudioContext || window.webkitAudioContext)();
-  if (audioKontext.state === 'suspended') audioKontext.resume();
+  const audioKontext = kontext();
   const start = audioKontext.currentTime;
   const dauer = 0.22;
   halbtoene.forEach((h, i) => {
@@ -90,7 +110,8 @@ function spieleSequenz(halbtoene, grundton = 'E2') {
     huelle.gain.setValueAtTime(0.0001, t0);
     huelle.gain.exponentialRampToValueAtTime(0.12, t0 + 0.02);
     huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer * 0.95);
-    osc.connect(huelle).connect(audioKontext.destination);
+    osc.connect(huelle).connect(holeAusgang());
+    merkeTon(osc);
     osc.start(t0);
     osc.stop(t0 + dauer);
   });
@@ -275,6 +296,18 @@ export function renderStimmungen(el, daten) {
   // Beim Verlassen den Audio-Kontext ruhen legen (Töne sind zwar einmalig, aber
   // der Kontext soll nicht offen weiterlaufen) — wie die übrigen Audio-Ansichten.
   registriereAufraeumen(() => {
-    if (audioKontext && audioKontext.state !== 'closed') audioKontext.suspend();
+    // Toene wirklich abbrechen statt den Kontext schlafen zu legen: suspend()
+    // friert die Audio-Uhr nur ein — der beim Verlassen abgeschnittene Ton stand
+    // weiter in der Planung und setzte beim naechsten Aktivieren wieder ein.
+    // Ausserdem gehoert der Kontext jetzt allen Werkzeugen, ihn hier zu
+    // suspendieren wuerde auch Metronom und Loops treffen.
+    for (const osc of laufendeToene) {
+      try {
+        osc.stop();
+      } catch {
+        /* schon beendet — egal */
+      }
+    }
+    laufendeToene = [];
   });
 }

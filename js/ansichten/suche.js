@@ -10,7 +10,7 @@
 
 import { domaenenVon } from '../daten.js';
 import { label, t } from '../i18n.js';
-import { bausteinIcon, esc, leerHtml } from '../oberflaeche.js';
+import { bausteinIcon, esc, halteFokus, leerHtml } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import {
   FACETTEN,
@@ -178,7 +178,13 @@ function ergebnisseHtml(daten) {
 export function renderSuche(el, daten) {
   normalisiereIndex(daten.suchindex);
 
-  const zeichneErgebnisse = (ziel) => {
+  // Ueber halteFokus, weil die Facetten-Chips IM neu gezeichneten Teilbaum
+  // liegen: der gerade geklickte Chip wurde also von seinem eigenen Klick
+  // zerstoert und der Tastaturfokus fiel auf <body>. Beim Durchfiltern mit der
+  // Tastatur hiess das, sich nach jedem Chip neu durch die Seite zu tabben.
+  // Die Chips tragen data-facette/data-wert, der Reset-Knopf eine id — daraus
+  // findet halteFokus das gleichwertige Element der neuen Ausgabe wieder.
+  const zeichneErgebnisse = (ziel) => halteFokus(ziel, () => {
     ziel.innerHTML = ergebnisseHtml(daten);
     // Facetten-Chips (neu gezeichnet) verdrahten.
     for (const chip of ziel.querySelectorAll('.such-facette-chip')) {
@@ -192,7 +198,7 @@ export function renderSuche(el, daten) {
       for (const f of FACETTEN) filter[f].clear();
       zeichneErgebnisse(ziel);
     });
-  };
+  });
 
   el.innerHTML = `
     ${landingHeroHtml('fa-magnifying-glass', t('suche_titel'), t('suche_intro'), 'pf-blau')}

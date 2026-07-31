@@ -264,8 +264,13 @@ function verdrahte(el) {
   el.querySelector('.wz-audio-aktivieren')?.addEventListener('click', async () => {
     await aktiviere();
     if (istBereit()) {
-      if (tor) tor.hidden = true;
+      // Reihenfolge: erst den Koerper zeigen und den Fokus dorthin setzen, DANN
+      // das Tor verstecken. Andersherum verschwand der gerade gedrueckte Knopf
+      // unter dem eigenen Fokus und der landete auf <body> — mit der Tastatur
+      // musste man sich von vorn durch die Seite arbeiten.
       if (koerper) koerper.hidden = false;
+      koerper?.querySelector('.wz-loop-start')?.focus({ preventScroll: true });
+      if (tor) tor.hidden = true;
     }
   });
 

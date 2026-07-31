@@ -9,12 +9,11 @@
 
 import { label, t, text } from '../i18n.js';
 import { domaeneIcon, esc, registriereAufraeumen } from '../oberflaeche.js';
+import { holeAusgang, holeKontext as holeKernKontext, holeRauschen as holeKernRauschen } from '../audio/kontext.js';
 import { frequenzVon } from './stimmungen.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aktivesGenre = null;
-let audioKontext = null;
-let rauschPuffer = null;
 let laufTimer = [];
 let tempoFaktor = 1; // globaler Tempo-Regler (0.5–1.5), skaliert alle Patterns
 let loopAn = false; // Loop-Schalter: Pattern wiederholt bis Stopp
@@ -27,15 +26,25 @@ function reduziert() {
   return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 }
 
+// Der gemeinsame Audio-Kern statt eines zweiten AudioContext (CLAUDE.md: EIN
+// Kontext fuer alles). Der alte lokale Kontext resumte ausserdem nur bei
+// state === 'suspended' — nach einer Unterbrechung durch das Betriebssystem
+// (iOS: 'interrupted') blieb dieses Werkzeug dauerhaft stumm, ohne Hinweis.
 function holeKontext() {
-  audioKontext = audioKontext || new (window.AudioContext || window.webkitAudioContext)();
-  if (audioKontext.state === 'suspended') audioKontext.resume();
-  return audioKontext;
+  const ctx = holeKernKontext();
+  if (ctx.state !== 'running') ctx.resume?.().catch(() => {});
+  return ctx;
 }
 
 // Merkt eine Klangquelle für den späteren Abbruch vor.
 function merke(quelle) {
   aktiveKlaenge.push(quelle);
+  // Im Dauerloop kamen pro Runde neue Quellen dazu, ohne dass je eine aus der
+  // Liste fiel — nach ein paar Minuten haengen dort Tausende beendeter Nodes.
+  quelle.addEventListener?.('ended', () => {
+    const i = aktiveKlaenge.indexOf(quelle);
+    if (i !== -1) aktiveKlaenge.splice(i, 1);
+  });
   return quelle;
 }
 
@@ -55,15 +64,9 @@ function stoppeKlang() {
   aktiveKlaenge = [];
 }
 
-// Ein Sekunde weißes Rauschen, einmal erzeugt — Basis für Snare/Hi-Hat/China.
-function holeRauschen(ctx) {
-  if (rauschPuffer) return rauschPuffer;
-  const puffer = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
-  const daten = puffer.getChannelData(0);
-  for (let i = 0; i < daten.length; i++) daten[i] = Math.random() * 2 - 1;
-  rauschPuffer = puffer;
-  return puffer;
-}
+// Rauschen (Snare/Hi-Hat/China) kommt aus dem geteilten Puffer des Audio-Kerns —
+// dort steht dieselbe Erzeugung, es gab sie hier nur ein zweites Mal.
+const holeRauschen = holeKernRauschen;
 
 // --- Gitarrenton: weicher Dreieck-Oszillator, leicht überlappend gehalten. ---
 // `bass=true`: die Bass-Stimmungen liegen eine Oktave unter der Gitarre (E1/D1/C1,
@@ -79,7 +82,7 @@ function spieleNote(ctx, frequenz, t0, dauer, pegel, bass = false) {
     huelle.gain.setValueAtTime(0.0001, t0);
     huelle.gain.exponentialRampToValueAtTime(p, t0 + 0.008);
     huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer * 1.5);
-    osc.connect(huelle).connect(ctx.destination);
+    osc.connect(huelle).connect(holeAusgang());
     osc.start(t0);
     osc.stop(t0 + dauer * 1.6);
     merke(osc);
@@ -97,7 +100,7 @@ function kick(ctx, t0) {
   osc.frequency.exponentialRampToValueAtTime(46, t0 + 0.11);
   huelle.gain.setValueAtTime(0.9, t0);
   huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.16);
-  osc.connect(huelle).connect(ctx.destination);
+  osc.connect(huelle).connect(holeAusgang());
   osc.start(t0);
   osc.stop(t0 + 0.18);
   merke(osc);
@@ -113,7 +116,7 @@ function rauschStimme(ctx, t0, { typ, frequenz, guete, dauer, pegel }) {
   const huelle = ctx.createGain();
   huelle.gain.setValueAtTime(pegel, t0);
   huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer);
-  quelle.connect(filter).connect(huelle).connect(ctx.destination);
+  quelle.connect(filter).connect(huelle).connect(holeAusgang());
   quelle.start(t0);
   quelle.stop(t0 + dauer + 0.02);
   merke(quelle);
@@ -127,7 +130,7 @@ function snare(ctx, t0) {
   osc.frequency.value = 190;
   huelle.gain.setValueAtTime(0.3, t0);
   huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.12);
-  osc.connect(huelle).connect(ctx.destination);
+  osc.connect(huelle).connect(holeAusgang());
   osc.start(t0);
   osc.stop(t0 + 0.14);
 }
@@ -179,10 +182,9 @@ function markiereLauf(karte, ctx, start, step, anzahl) {
 
 // Plant eine Runde ein (ohne vorher zu stoppen) und gibt Timing + Schrittzahl
 // zurück, damit der Loop die nächste Runde am Ende neu planen kann.
-function planeTab(pattern, karte) {
+function planeTab(pattern, karte, start) {
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
-  const start = ctx.currentTime + 0.07;
   const bass = pattern.domaene === 'bass';
   pattern.schritte.forEach((schritt, i) => {
     const t0 = start + i * step;
@@ -196,10 +198,9 @@ function planeTab(pattern, karte) {
   return { step, anzahl: pattern.schritte.length };
 }
 
-function planeDrums(pattern, karte) {
+function planeDrums(pattern, karte, start) {
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
-  const start = ctx.currentTime + 0.07;
   const spuren = pattern.spuren || {};
   const anzahl = Math.max(0, ...SPUR_ORDNUNG.map((s) => spuren[s]?.length || 0));
   for (let i = 0; i < anzahl; i++) {
@@ -213,12 +214,21 @@ function planeDrums(pattern, karte) {
 }
 
 // Eine Runde spielen und — wenn Loop an ist — am Ende die nächste planen.
-function laufeEinmal(pattern, karte) {
-  const { step, anzahl } = pattern.typ === 'drums' ? planeDrums(pattern, karte) : planeTab(pattern, karte);
+// Jede Runde wird auf der Audio-Uhr geplant; der Timer weckt nur zum Nachplanen
+// der naechsten. Frueher setzte jede Runde neu bei `currentTime + 0.07` an — der
+// Vorlauf kam also bei JEDEM Durchgang oben drauf: eine hoerbare Luecke am
+// Rundenwechsel, deren Fehler sich ueber die Zeit aufsummierte. Jetzt traegt
+// `naechsterStart` die exakte Grenze weiter, und der Timer feuert davor.
+function laufeEinmal(pattern, karte, start = null) {
+  const ctx = holeKontext();
+  const ab = start != null && start > ctx.currentTime ? start : ctx.currentTime + 0.07;
+  const { step, anzahl } = pattern.typ === 'drums' ? planeDrums(pattern, karte, ab) : planeTab(pattern, karte, ab);
   if (loopAn && anzahl > 0) {
+    const ende = ab + anzahl * step;
+    const weckung = Math.max(0, (ende - ctx.currentTime) * 1000 - 60);
     loopTimer = setTimeout(() => {
-      if (loopAn) laufeEinmal(pattern, karte);
-    }, Math.round(anzahl * step * 1000));
+      if (loopAn) laufeEinmal(pattern, karte, ende);
+    }, Math.round(weckung));
   }
 }
 
@@ -292,6 +302,11 @@ function patternKarteHtml(pattern) {
 }
 
 export function renderPatterns(el, daten, genreParam) {
+  // stoppeKlang() zusaetzlich zu stoppeLauf(): der Genre-Wechsel rendert die
+  // Ansicht neu, der laufende Loop lief aber weiter — und der frisch gezeichnete
+  // Stopp-Knopf gehoerte zu einer anderen Karte. Der Ton liess sich dann nur
+  // noch ueber einen Routenwechsel beenden. Beide Funktionen sind idempotent.
+  stoppeKlang();
   stoppeLauf();
   const alle = (daten.patterns && daten.patterns.patterns) || [];
   // Genres in Erscheinungsreihenfolge, jedes nur einmal.

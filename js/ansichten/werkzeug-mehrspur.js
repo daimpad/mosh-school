@@ -115,12 +115,20 @@ async function starteAufnahme(el) {
     zeichneKopf(el);
     return;
   }
+  const meinLauf = lauf;
   try {
     await aktiviere(); // Kontext für den Klick (User-Geste)
     strom = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } });
   } catch (fehler) {
     letzterFehler = fehler && fehler.name === 'NotAllowedError' ? t('wz_rec_verweigert') : t('wz_rec_kein_mikro');
     zeichneKopf(el);
+    return;
+  }
+  if (meinLauf !== lauf) {
+    // Route waehrend des Wartens verlassen — nichts mehr aufbauen (s. Kommentar
+    // an `lauf`), Strom sofort schliessen.
+    strom.getTracks().forEach((s) => s.stop());
+    strom = null;
     return;
   }
   // Vorhandene Spuren als Monitor mitlaufen lassen.
@@ -280,7 +288,17 @@ async function ladeUndRendere(el) {
   zeichneKopf(el);
 }
 
+// Laufmarke gegen das Wettrennen mit dem Routenwechsel: `getUserMedia` wartet
+// auf Freigabe bzw. Geraet, die Seite bleibt bedienbar. Wechselt die Route in
+// diesem Fenster, laeuft der Aufraeumhaken auf noch leerem Zustand, raeumt
+// nichts und wird verworfen (fuehreAufraeumenAus leert die Liste). Danach lief
+// der Rest von starteAufnahme trotzdem weiter: Monitor-Wiedergabe, Klick-
+// Scheduler, MediaRecorder und Interval liefen ohne Teardown auf JEDER
+// folgenden Seite hoerbar weiter.
+let lauf = 0;
+
 export function renderWerkzeugMehrspur(el) {
+  lauf += 1;
   aufnahmeLaeuft = false;
   stoppeMix();
   if (tickTimer) {
@@ -340,6 +358,7 @@ export function renderWerkzeugMehrspur(el) {
   // Beim Verlassen der Route Mikrofon, Klick-Scheduler, Wiedergabe und Timer
   // stoppen (Mikro bliebe sonst offen, der Klick liefe weiter).
   registriereAufraeumen(() => {
+    lauf += 1;
     if (mediaRecorder && aufnahmeLaeuft) {
       try {
         mediaRecorder.stop();

@@ -49,8 +49,19 @@ function datumText(ms) {
   }
 }
 
+// Laufmarke gegen ein Wettrennen mit dem Routenwechsel: `getUserMedia` wartet
+// auf die Freigabe bzw. das Oeffnen des Geraets (auch mit erteilter Erlaubnis
+// hunderte Millisekunden), die Seite bleibt derweil voll bedienbar. Wechselt die
+// Route in diesem Fenster, laeuft der Aufraeumhaken auf noch leerem Zustand
+// (strom/mediaRecorder null) — er raeumt nichts und wird danach VERWORFEN
+// (fuehreAufraeumenAus leert die Liste). Danach lief der Rest dieser Funktion
+// trotzdem weiter und startete Mikro-Aufnahme und Interval ohne jeden Teardown:
+// Der Aufnahme-Indikator des Browsers blieb bis zum Neuladen an.
+let lauf = 0;
+
 // --- Aufnahme ---
 async function starteAufnahme(el) {
+  const meinLauf = lauf;
   letzterFehler = '';
   if (typeof MediaRecorder === 'undefined') {
     letzterFehler = t('wz_rec_kein_recorder');
@@ -62,6 +73,13 @@ async function starteAufnahme(el) {
   } catch (fehler) {
     letzterFehler = fehler && fehler.name === 'NotAllowedError' ? t('wz_rec_verweigert') : t('wz_rec_kein_mikro');
     zeichneKopf(el);
+    return;
+  }
+  if (meinLauf !== lauf) {
+    // Ansicht inzwischen verlassen: Stream sofort wieder schliessen und nichts
+    // mehr aufbauen.
+    strom.getTracks().forEach((s) => s.stop());
+    strom = null;
     return;
   }
   stuecke = [];
@@ -196,6 +214,7 @@ async function ladeUndRendere(el) {
 }
 
 export function renderWerkzeugRecorder(el, daten, query) {
+  lauf += 1;
   aufnahmeLaeuft = false;
   if (tickTimer) {
     clearInterval(tickTimer);
@@ -243,6 +262,7 @@ export function renderWerkzeugRecorder(el, daten, query) {
   // Beim Verlassen der Route das Mikrofon freigeben (Aufnahme-Indikator bliebe
   // sonst an) und Objekt-URLs aufräumen.
   registriereAufraeumen(() => {
+    lauf += 1;
     if (mediaRecorder && aufnahmeLaeuft) {
       try {
         mediaRecorder.stop();
