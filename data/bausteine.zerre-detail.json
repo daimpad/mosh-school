@@ -1,0 +1,316 @@
+{
+  "_meta": {
+    "titel": "Zerre — Verzerrer und Verstärkerzerre",
+    "beschreibung": "Zerrtypen, Klippung und Verstärkerzerre: von der Anwendung über die Physik zum Verstärker.",
+    "domaene": "ausruestung"
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "zerrtypen_ueberblick",
+      "anzeigetitel": {
+        "de": "Zerrtypen: was wofür"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Verzerrer werden meist nach ihrer Aufgabe in der Signalkette unterschieden, nicht nach ihrer Schaltung. Ein Booster hebt nur den Pegel an und verzerrt kaum selbst — er dient dazu, die nachfolgende Stufe härter anzufahren. Ein Overdrive setzt weich ein und lässt die Anschlagdynamik weitgehend bestehen: Leiser gespielt wird er sauberer, härter gespielt schmutziger. Eine Distortion schneidet härter ab und behält ihren Charakter unabhängig davon, wie kräftig man anschlägt.\n\nDrei weitere Gruppen kommen dazu. Ein Fuzz treibt das Signal so weit, dass es nahezu rechteckig wird — der Klang wird körnig, komprimiert und verliert die Feinzeichnung; das ist keine Übertreibung eines Overdrives, sondern klanglich etwas anderes. Multiband-Verzerrer teilen das Signal in Frequenzbänder und verzerren sie getrennt, was Definition auch bei sehr hohem Gain erhält. Preamp-Pedale enthalten eine vollständige Vorstufe samt Klangregelung und ersetzen im Zweifel den Verstärkerkanal.\n\nFür die Praxis ist die wichtigste Unterscheidung die zwischen dynamisch und statisch: Overdrive und Booster reagieren auf die Anschlagstärke, Distortion und Fuzz kaum. Wer über die Hand steuern will, braucht die erste Gruppe; wer einen gleichbleibenden, planbaren Klang will, die zweite."
+      },
+      "reflexionsaufgabe": {
+        "de": "Willst du deinen Zerrgrad über die Hand steuern oder gleichbleibend haben — und passt dein Pedal dazu? Ist dir der Unterschied zwischen mehr Pegel und mehr Verzerrung klar? Und weißt du, welche Gruppe du eigentlich besitzt?"
+      },
+      "voraussetzungen": [
+        "pedalboard_grundlagen"
+      ]
+    },
+    {
+      "id": "zerre_stapeln",
+      "anzeigetitel": {
+        "de": "Verzerrer stapeln"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Das Stapeln zweier Verzerrer ist die verbreitetste Technik für tighte Metal-Klänge — und sie funktioniert aus einem nachvollziehbaren Grund. Ein Overdrive vor einem stark verzerrenden Verstärker oder Pedal wird dabei meist mit sehr wenig eigener Verzerrung, dafür mit hohem Pegel betrieben. Er beschneidet die tiefen Frequenzen, bevor die eigentliche Verzerrung stattfindet: Was nicht mehr im Signal ist, kann auch keine matschigen Zwischenprodukte erzeugen.\n\nDaraus folgt die typische Einstellung: Gain fast zu, Pegel weit auf, Klangregler in der Mitte oder höher. Wer stattdessen beide Geräte mit viel Gain betreibt, bekommt nicht mehr Härte, sondern mehr Rauschen und weniger Definition. Die Reihenfolge ist entscheidend — das straffende Gerät gehört vor die Hauptverzerrung, nicht dahinter.\n\nDieselbe Logik gilt auch andersherum: Ein Booster hinter der Verzerrung macht nur lauter, kein anderes Klangbild. Wer den Unterschied einmal bewusst hört, versteht die ganze Signalkette besser."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Stapeln und den Unterschied hören",
+          "ziel": "Verstehen, wie ein vorgeschalteter Overdrive den Klang strafft statt ihn nur lauter zu machen.",
+          "schritte": [
+            "Stelle deine Hauptverzerrung so ein, dass sie allein gut, aber unten etwas schwammig klingt.",
+            "Schalte einen Overdrive davor, mit Gain fast zugedreht und Pegel weit aufgedreht.",
+            "Spiele abgedämpfte tiefe Anschläge und höre auf die Definition im Bassbereich.",
+            "Drehe am Overdrive testweise das Gain auf und höre, wie Rauschen und Matsch zunehmen.",
+            "Setze dasselbe Pedal danach in die Kette hinter die Hauptverzerrung und vergleiche."
+          ],
+          "steigerung": "Probiere denselben Aufbau mit einem Booster ohne Klangregelung und achte darauf, was sich nicht ändert.",
+          "selbstkontrolle": "Klingen abgedämpfte tiefe Anschläge definierter als vorher? Hörst du, dass die Reihenfolge einen Unterschied macht?"
+        }
+      },
+      "voraussetzungen": [
+        "zerrtypen_ueberblick"
+      ]
+    },
+    {
+      "id": "zerre_waehlen",
+      "anzeigetitel": {
+        "de": "Welche Zerre für welches Ziel"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Wahl folgt dem Ziel, nicht dem Genre-Etikett. Für schnelle, abgedämpfte Riffs braucht man ein straffes Ansprechverhalten mit wenig Bass vor der Klippung und schnellem Abklingen — hier arbeiten hochverstärkende Distortion- oder Preamp-Schaltungen mit vorgeschaltetem Booster. Für langsame, schwere Musik ist das Gegenteil richtig: viel Tiefbass, weiche Sättigung, langes Ausklingen, oft Fuzz oder ein wenig gefiltertes Overdrive.\n\nFür bissige, aber dynamische Rhythmusarbeit — etwa im Hardcore oder in kantigem Post-Hardcore — ist ein Overdrive an einem schon leicht angezerrten Verstärker meist tragfähiger als ein Distortion-Pedal, weil die Anschlagdynamik erhalten bleibt und die Gitarre bei zurückgenommenem Anschlag aufmacht. Für dichte, atmosphärische Klänge lohnt ein Blick auf die Kombination aus moderater Zerre und nachgeschalteten Effekten statt auf mehr Gain.\n\nZwei Punkte werden regelmäßig übersehen. Erstens gilt für tiefe Stimmungen: Je tiefer gestimmt wird, desto wichtiger ist ein Bassschnitt vor der Verzerrung — sonst wird jedes Riff undeutlich, unabhängig vom Gerät. Zweitens ist mehr Gain fast nie die Lösung für fehlende Durchsetzung; das ist eine Frage der Mitten, nicht der Verzerrungsmenge."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wählst du nach Ziel oder nach Genre-Etikett? Brauchst du Anschlagdynamik oder einen planbar gleichbleibenden Klang? Und suchst du Durchsetzung über die Mitten oder immer noch über mehr Gain?"
+      },
+      "voraussetzungen": [
+        "zerrtypen_ueberblick"
+      ]
+    },
+    {
+      "id": "klippung_grundlagen",
+      "anzeigetitel": {
+        "de": "Klippung: woher der Zerrklang kommt"
+      },
+      "domaene": [
+        "ausruestung",
+        "theorie",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Verzerrung entsteht, wenn ein Signal stärker verstärkt wird, als die Schaltung ausgeben kann. Die Spitzen der Wellenform werden abgeschnitten — daher der Begriff Klippung. Physikalisch bedeutet das: Aus einer runden Schwingung wird eine kantigere, und je kantiger eine Wellenform ist, desto mehr zusätzliche Obertöne enthält sie. Diese Obertöne waren im Originalsignal nicht vorhanden; sie entstehen erst durch das Abschneiden.\n\nZwei Unterscheidungen erklären fast alle Klangunterschiede. Weiche Klippung rundet die Spitzen allmählich ab und setzt graduell ein — das Ergebnis klingt wärmer und bleibt dynamisch, weil leise Passagen die Klippungsgrenze gar nicht erreichen. Harte Klippung schneidet abrupt ab; der Klang wird aggressiver, komprimierter und verhält sich unabhängig von der Anschlagstärke.\n\nDie zweite Unterscheidung ist Symmetrie. Werden positive und negative Halbwellen gleich behandelt, entstehen überwiegend ungeradzahlige Obertöne — das klingt hohl und kantig. Werden sie unterschiedlich beschnitten, kommen geradzahlige Obertöne hinzu, die als voller und musikalischer empfunden werden. Deshalb klingen manche Schaltungen wärmer, ohne weniger zu verzerren."
+      },
+      "reflexionsaufgabe": {
+        "de": "Ist dir klar, dass Verzerrung Obertöne hinzufügt, die vorher nicht da waren? Erkennst du an deinem Pedal, ob es weich oder hart klippt? Und hast du gemerkt, dass Dynamikverlust keine Nebenwirkung, sondern die Folge harter Klippung ist?"
+      },
+      "voraussetzungen": [
+        "zerrtypen_ueberblick"
+      ]
+    },
+    {
+      "id": "klippung_ort",
+      "anzeigetitel": {
+        "de": "Wo geklippt wird: Dioden, Transistoren, Röhren"
+      },
+      "domaene": [
+        "ausruestung",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Ort der Klippung bestimmt den Charakter stärker als jedes andere Bauteil. Drei Bauweisen sind verbreitet. Bei Dioden gegen Masse wird alles oberhalb der Diodenschwelle kurzgeschlossen; das Abschneiden ist hart und der Klang bleibt über den ganzen Regelbereich ähnlich — typisch für Distortion-Pedale. Bei Dioden in der Gegenkopplung des Verstärkerbausteins wird die Verstärkung ab der Schwelle sanft zurückgenommen statt das Signal zu kappen; das Einsetzen ist weicher und die Dynamik bleibt erhalten — das Prinzip klassischer Overdrives.\n\nDie dritte Variante kommt ganz ohne Dioden aus: Transistoren, Feldeffekttransistoren oder Röhren geraten selbst in Sättigung. Diese Sättigung ist von Natur aus weich und meist asymmetrisch, weshalb sie geradzahlige Obertöne erzeugt und als besonders musikalisch gilt. Sie braucht allerdings Pegel und Betriebsspannung, um einzusetzen — der Grund, warum Röhrengeräte laut sein müssen, um so zu klingen.\n\nDaraus lässt sich beim Hören einiges ableiten. Wenn ein Pedal bei zurückgedrehtem Volumenpoti an der Gitarre deutlich sauberer wird, arbeitet es dynamisch — vermutlich Gegenkopplungsklippung oder Sättigung. Bleibt der Klang gleich, wird hart geklippt. Diese Probe kostet nichts und sagt mehr als jedes Datenblatt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Wird dein Pedal sauberer, wenn du das Volumenpoti zurückdrehst — oder bleibt es gleich? Weißt du damit, welche Art von Klippung du benutzt? Und passt dieses Verhalten zu der Art, wie du spielen willst?"
+      },
+      "voraussetzungen": [
+        "klippung_grundlagen"
+      ]
+    },
+    {
+      "id": "dioden_und_schwelle",
+      "anzeigetitel": {
+        "de": "Diodenarten und Schwellspannung"
+      },
+      "domaene": [
+        "ausruestung",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Wenn Dioden das Klippen übernehmen, entscheidet ihre Schwellspannung darüber, ab welchem Pegel abgeschnitten wird — und damit über Lautstärke, Kompression und Härte. Germaniumdioden setzen bei etwa 0,3 Volt ein: früh, weich, mit deutlicher Kompression und wenig Ausgangspegel. Siliziumdioden liegen bei rund 0,6 Volt und klingen härter und lauter. Leuchtdioden schalten erst bei etwa 1,7 Volt und lassen dadurch viel mehr Signal ungeklippt durch — das ergibt mehr Headroom, mehr Dynamik und deutlich mehr Pegel.\n\nEin praktisch wichtiger Punkt betrifft Germanium: Seine Kennlinie ist temperaturabhängig. Geräte mit Germaniumbauteilen klingen im kalten Proberaum anders als auf einer heißen Bühne, und die Streuung zwischen einzelnen Exemplaren ist groß. Das ist keine Legende, sondern eine Materialeigenschaft — und der Grund, warum solche Schaltungen als eigenwillig gelten.\n\nAsymmetrische Bestückung — etwa zwei Dioden auf der einen und eine auf der anderen Seite — beschneidet die Halbwellen unterschiedlich stark und erzeugt geradzahlige Obertöne. Viele Schaltungen mit umschaltbarem Klippungsmodus wechseln genau zwischen solchen Varianten; wer weiß, was der Schalter tut, kann ihn gezielt einsetzen statt nach Gehör zu raten."
+      },
+      "reflexionsaufgabe": {
+        "de": "Weißt du, welche Diodenart in deinem Gerät klippt und was das für Pegel und Dynamik bedeutet? Ist dir aufgefallen, dass ein Klippungsschalter Symmetrie und Schwelle ändert? Und wäre mehr Headroom für dich sinnvoller als mehr Kompression?"
+      },
+      "voraussetzungen": [
+        "klippung_ort"
+      ]
+    },
+    {
+      "id": "filter_vor_und_nach",
+      "anzeigetitel": {
+        "de": "Filter vor und nach der Klippung"
+      },
+      "domaene": [
+        "ausruestung",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der am meisten unterschätzte Teil eines Verzerrers sind seine Filter — und entscheidend ist, auf welcher Seite der Klippung sie sitzen. Ein Filter vor der Klippung bestimmt, welche Frequenzen überhaupt verzerrt werden. Ein Filter danach bestimmt nur noch, was man von dem bereits verzerrten Signal hört. Dieselbe Filtereinstellung wirkt an den beiden Positionen völlig unterschiedlich.\n\nDaraus erklären sich zwei verbreitete Bauweisen. Overdrives, die als Booster vor High-Gain benutzt werden, schneiden vor der Klippung Bass weg und heben die Mitten an: Weil die tiefen Frequenzen gar nicht erst verzerrt werden, entstehen weniger unharmonische Zwischenprodukte und das Ergebnis bleibt straff. Umgekehrt erzeugt eine Bassanhebung vor der Klippung genau den wolligen, dichten Klang, den man in Doom und Sludge sucht.\n\nDer Klangregler am Ende eines Pedals ist dagegen meist ein einfacher Tiefpass hinter der Klippung — er nimmt Schärfe weg, ändert aber nichts am Charakter der Verzerrung. Wer feststellt, dass ein Pedal grundsätzlich matschig oder grundsätzlich dünn klingt, kommt mit diesem Regler nicht weiter; die Ursache liegt vor der Klippung."
+      },
+      "reflexionsaufgabe": {
+        "de": "Weißt du bei deinen Pedalen, welche Regler vor und welche nach der Klippung wirken? Versuchst du Matsch mit dem Klangregler zu beheben, obwohl die Ursache davor liegt? Und nutzt du einen Bassschnitt vor der Zerre, wenn du tief gestimmt spielst?"
+      },
+      "voraussetzungen": [
+        "klippung_grundlagen"
+      ]
+    },
+    {
+      "id": "gain_struktur_einstellen",
+      "anzeigetitel": {
+        "de": "Gain-Struktur einstellen"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Gain-Struktur beschreibt, wie sich die Verstärkung über die gesamte Kette verteilt. Dieselbe Endlautstärke lässt sich auf viele Arten erreichen — mit viel Pegel am Anfang und wenig am Ende oder umgekehrt — und die Ergebnisse klingen deutlich verschieden. Zu viel Verstärkung früh in der Kette erzeugt Rauschen, das alle folgenden Stufen mitverstärken; zu wenig führt dazu, dass spätere Stufen hochgezogen werden müssen und dabei ebenfalls rauschen.\n\nDie Regel lautet, jede Stufe so weit auszusteuern, dass sie ihren Arbeitsbereich nutzt, ohne unbeabsichtigt zu klippen. Dabei gilt: Verzerrung, die früh entsteht, wird von allem Nachfolgenden weiterverarbeitet — sie lässt sich später nicht mehr entfernen. Deshalb wird von vorn nach hinten eingestellt, nicht umgekehrt.\n\nDiese Übung ist die praktische Anwendung der beiden vorigen Bausteine und lohnt sich auch ohne neue Ausrüstung: Die meisten Setups klingen nach sauberer Gain-Struktur hörbar besser, ohne dass ein Gerät getauscht wurde."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von vorn nach hinten aussteuern",
+          "ziel": "Rauschen senken und Definition gewinnen, ohne Geräte zu tauschen.",
+          "schritte": [
+            "Beginne mit allen Verzerrern aus und stelle den Grundklang des Verstärkers ein.",
+            "Schalte das erste Gerät der Kette hinzu und stelle Pegel und Gain so ein, dass es allein gut klingt.",
+            "Ergänze die weiteren Geräte nacheinander und prüfe nach jedem Schritt Rauschen und Definition.",
+            "Spiele zwischendurch mit zurückgedrehtem Volumenpoti an der Gitarre und höre, ob die Kette aufmacht.",
+            "Gleiche zum Schluss die Lautstärke aller Schaltzustände aneinander an."
+          ],
+          "steigerung": "Vergleiche zwei Wege zur selben Endlautstärke — viel Pegel früh gegen viel Pegel spät — und beschreibe den Unterschied.",
+          "selbstkontrolle": "Ist das Rauschen geringer als vorher? Bleibt die Lautstärke beim Umschalten der Pedale gleich?"
+        }
+      },
+      "voraussetzungen": [
+        "klippung_ort",
+        "filter_vor_und_nach"
+      ]
+    },
+    {
+      "id": "amp_vorstufe_zerre",
+      "anzeigetitel": {
+        "de": "Vorstufenzerre: wo Gain entsteht"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "In einem Verstärker entsteht Verzerrung an mehreren Stellen, und die Vorstufe ist die wichtigste. Sie besteht aus mehreren hintereinander geschalteten Verstärkungsstufen; hochverstärkende Kanäle erreichen ihren Klang dadurch, dass mehrere dieser Stufen nacheinander in Sättigung gehen. Jede zusätzliche Stufe erhöht nicht nur die Menge an Verzerrung, sondern auch die Kompression — der Klang wird dichter und gleichmäßiger, aber weniger dynamisch.\n\nEntscheidend ist die Position der Klangregelung. Sitzt sie zwischen den Verstärkungsstufen, verändert sie, was in der nächsten Stufe verzerrt wird; sitzt sie am Ende, filtert sie nur das fertige Ergebnis. Deshalb reagieren Verstärker völlig unterschiedlich auf dieselbe Reglerstellung, und deshalb kann der Bassregler an einem Gerät den Klang aufweichen und an einem anderen kaum wirken.\n\nPraktisch folgt daraus: Wer mehr Definition sucht, senkt oft besser die Bässe vor der Verzerrung ab, statt weniger Gain zu nehmen. Und wer viel Gain fährt, sollte wissen, dass ein Teil der wahrgenommenen Härte in Wirklichkeit Kompression ist — mehr Gain macht ab einem gewissen Punkt nicht mehr härter, sondern nur noch platter."
+      },
+      "reflexionsaufgabe": {
+        "de": "Weißt du, ob die Klangregelung deines Verstärkers vor oder nach der Zerre wirkt? Suchst du Definition über weniger Bass statt über weniger Gain? Und hast du ausprobiert, ab wann mehr Gain nur noch Kompression bringt?"
+      },
+      "voraussetzungen": [
+        "amp_grundlagen",
+        "klippung_ort"
+      ]
+    },
+    {
+      "id": "amp_endstufe_saettigung",
+      "anzeigetitel": {
+        "de": "Endstufensättigung und Lautstärke"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre",
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Die Endstufe erzeugt eine eigene, klanglich andere Verzerrung als die Vorstufe. Sie setzt erst ein, wenn die Endstufenröhren tatsächlich ausgesteuert werden — also bei hoher Lautstärke — und klingt typischerweise voller und dreidimensionaler, weil zusätzlich der Ausgangsübertrager und die Lautsprecher mitarbeiten und das Signal komprimiert wird.\n\nGenau darin liegt das praktische Problem: Endstufensättigung braucht Lautstärke, und die ist in Proberaum und Wohnung selten verfügbar und gehörschädigend. Deshalb gibt es Leistungsregler und Lastwiderstände, die einen Teil der Leistung in Wärme umsetzen, sowie Verstärker mit umschaltbarer Ausgangsleistung. Beide erlauben den Effekt bei geringerer Lautstärke, wenn auch nicht identisch, weil der Lautsprecher weniger stark angetrieben wird.\n\nWichtig für die Gesundheit und für das Material: Die Lautstärke, ab der Endstufensättigung deutlich einsetzt, liegt bei den meisten Röhrenverstärkern weit über dem, was ohne Gehörschutz vertretbar ist. Wer diesen Klang sucht, arbeitet mit Leistungsreduktion und Gehörschutz — nicht mit mehr Pegel im Raum. Und ein Röhrenverstärker darf nie ohne angeschlossene Last betrieben werden, weil sonst der Ausgangsübertrager Schaden nimmt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Suchst du Endstufensättigung, obwohl deine Umgebung die nötige Lautstärke nicht zulässt? Kennst du Leistungsreduktion als Alternative? Und ist dir bewusst, dass ein Röhrenverstärker immer eine Last braucht?"
+      },
+      "voraussetzungen": [
+        "amp_vorstufe_zerre"
+      ]
+    },
+    {
+      "id": "gleichrichter_und_sag",
+      "anzeigetitel": {
+        "de": "Gleichrichter und Sag"
+      },
+      "domaene": [
+        "ausruestung",
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Der Gleichrichter erzeugt aus der Netzwechselspannung die Gleichspannung, mit der die Röhren arbeiten. Seine Bauart hat einen hörbaren Nebeneffekt: Ein Röhrengleichrichter hat einen höheren Innenwiderstand, weshalb die Betriebsspannung bei harten Anschlägen kurz einbricht und dann wieder ansteigt. Dieses Nachgeben nennt man Sag; es wirkt wie eine sehr schnelle Kompression und lässt den Anschlag weicher und elastischer erscheinen.\n\nEin Halbleitergleichrichter hält die Spannung dagegen weitgehend konstant. Der Anschlag bleibt straffer und direkter, die Wiedergabe folgt der Hand präziser — für schnelle, abgedämpfte Riffs meist die günstigere Eigenschaft, während Sag bei langsamer, ausdrucksbetonter Musik reizvoll ist. Verstärker mit umschaltbarem Gleichrichter machen genau diesen Unterschied verfügbar.\n\nEinzuordnen ist der Effekt allerdings nüchtern: Sag ist deutlich subtiler als der Unterschied zwischen zwei Vorstufenkanälen oder zwei Lautsprechern. Er ist real und messbar, aber er steht in der Wirkungskette weit hinter Klangregelung, Gain-Struktur und Box. Wer seinen Klang verbessern will, sollte dort anfangen und nicht hier."
+      },
+      "reflexionsaufgabe": {
+        "de": "Brauchst du eher straffe Direktheit oder ein weiches Nachgeben im Anschlag? Ist dir klar, dass Sag deutlich subtiler wirkt als Kanal und Box? Und arbeitest du an den großen Hebeln, bevor du hier feinjustierst?"
+      },
+      "voraussetzungen": [
+        "amp_endstufe_saettigung"
+      ]
+    },
+    {
+      "id": "amp_oder_pedal",
+      "anzeigetitel": {
+        "de": "Zerre aus dem Verstärker oder aus dem Pedal"
+      },
+      "domaene": [
+        "ausruestung",
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "erklaerteil": {
+        "de": "Beide Wege sind gleichwertig und unterscheiden sich vor allem in der Praxistauglichkeit. Verstärkerzerre klingt oft unmittelbarer, weil das Signal nur eine Kette durchläuft und die Klangregelung an der richtigen Stelle sitzt — sie bindet einen aber an den jeweiligen Verstärker. Pedalzerre ist reproduzierbar: Man nimmt sein Klangbild mit und ist unabhängig davon, was am Veranstaltungsort steht. Für Bands, die viel unterwegs sind, ist das ein handfester Vorteil.\n\nEine wichtige technische Unterscheidung betrifft die Position. Ein Verzerrer vor dem Eingang trifft auf die gesamte Vorstufe und interagiert mit ihr; derselbe Verzerrer im Einschleifweg umgeht die Vorstufe und arbeitet praktisch als Vorstufe für die Endstufe. Zeitbasierte Effekte gehören umgekehrt meist in den Einschleifweg, weil sie sonst mitverzerrt werden und undeutlich klingen.\n\nEine dritte Möglichkeit ist der Preamp- oder Modeling-Weg direkt ins Pult, ganz ohne Verstärker auf der Bühne. Zusammen mit einer Impulsantwort ist das heute klanglich tragfähig, leiser auf der Bühne und für den Mischplatz einfacher — der Grund, warum viele Bands so arbeiten. Klanglich entscheidend bleibt in allen drei Fällen dasselbe: was vor der Klippung passiert."
+      },
+      "reflexionsaufgabe": {
+        "de": "Brauchst du Reproduzierbarkeit unterwegs oder die Unmittelbarkeit eines bestimmten Verstärkers? Nutzt du den Einschleifweg bewusst — Zerre davor, zeitbasierte Effekte danach? Und wäre der direkte Weg ins Pult für deine Situation praktischer?"
+      },
+      "voraussetzungen": [
+        "zerre_stapeln",
+        "amp_vorstufe_zerre"
+      ]
+    }
+  ]
+}

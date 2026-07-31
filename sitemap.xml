@@ -406,6 +406,18 @@
   <url><loc>https://zerrer.org/baustein/pedalboard_grundlagen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://zerrer.org/baustein/amp_grundlagen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://zerrer.org/baustein/box_grundlagen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/zerrtypen_ueberblick/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/zerre_stapeln/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/zerre_waehlen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/klippung_grundlagen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/klippung_ort/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/dioden_und_schwelle/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/filter_vor_und_nach/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/gain_struktur_einstellen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/amp_vorstufe_zerre/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/amp_endstufe_saettigung/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/gleichrichter_und_sag/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerrer.org/baustein/amp_oder_pedal/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://zerrer.org/baustein/tonabnehmer_typen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://zerrer.org/baustein/steg_typen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://zerrer.org/baustein/sattel_typen/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
