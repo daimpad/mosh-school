@@ -1737,7 +1737,21 @@
       "bass_drop_d": "",
       "bass_d_standard": "",
       "bass_drop_c": "",
-      "bass_b_5": ""
+      "bass_b_5": "",
+      "db_standard": "",
+      "b_standard": "",
+      "a_standard": "",
+      "drop_db": "",
+      "drop_a": "",
+      "drop_g": "",
+      "a_standard_7": "",
+      "drop_g_7": "",
+      "e_standard_8": "",
+      "drop_d_8": "",
+      "bass_eb_standard": "",
+      "bass_c_standard": "",
+      "bass_drop_a_5": "",
+      "bass_6": ""
     },
     "intervall": {
       "kleine_sekunde": "",
