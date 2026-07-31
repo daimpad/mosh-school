@@ -25,6 +25,7 @@ import { renderWerkzeugAmpbox } from './ansichten/werkzeug-ampbox.js';
 import { renderWerkzeugStruktur } from './ansichten/werkzeug-struktur.js';
 import { renderWerkzeugRecorder } from './ansichten/werkzeug-recorder.js';
 import { renderWerkzeugMehrspur } from './ansichten/werkzeug-mehrspur.js';
+import { renderWerkzeugZerrlabor } from './ansichten/werkzeug-zerrlabor.js';
 import { renderWerkzeugExplorer } from './ansichten/werkzeug-explorer.js';
 import { renderWerkzeugLandkarte } from './ansichten/werkzeug-landkarte.js';
 import { renderWerkzeugGenremix } from './ansichten/werkzeug-genremix.js';
@@ -423,6 +424,8 @@ function rendern() {
     renderWerkzeugRecorder(el, daten, query);
   } else if (segmente[0] === 'werkzeug' && segmente[1] === 'mehrspur') {
     renderWerkzeugMehrspur(el, daten, query);
+  } else if (segmente[0] === 'werkzeug' && segmente[1] === 'zerrlabor') {
+    renderWerkzeugZerrlabor(el, daten, query);
   } else if (segmente[0] === 'werkzeug' && segmente[1] === 'explorer') {
     renderWerkzeugExplorer(el, daten, query);
   } else if (segmente[0] === 'werkzeug' && segmente[1] === 'landkarte') {
