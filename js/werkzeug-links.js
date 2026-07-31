@@ -39,7 +39,7 @@ const ID_REGELN = {
   pedalboard_grundlagen: [{ werkzeug: 'pedalboard' }, { werkzeug: 'ampbox' }],
   gitarren_sound_architektur: [{ werkzeug: 'pedalboard', params: { instrument: 'gitarre' } }, { werkzeug: 'ampbox', params: { instrument: 'gitarre' } }],
   bass_signalkette: [{ werkzeug: 'pedalboard', params: { instrument: 'bass' } }, { werkzeug: 'ampbox', params: { instrument: 'bass' } }],
-  bass_ton_gear: [{ werkzeug: 'stimmgeraet', params: { tuning: 'bass_standard' } }, { werkzeug: 'pedalboard', params: { instrument: 'bass' } }, { werkzeug: 'ampbox', params: { instrument: 'bass' } }],
+  bass_ton_gear: [{ werkzeug: 'stimmgeraet', params: { tuning: 'bass_e_standard' } }, { werkzeug: 'pedalboard', params: { instrument: 'bass' } }, { werkzeug: 'ampbox', params: { instrument: 'bass' } }],
   // Amp-/Box-Bausteine öffnen den Physik-Baukasten vorbelegt.
   amp_grundlagen: [{ werkzeug: 'ampbox' }],
   box_grundlagen: [{ werkzeug: 'ampbox' }],
