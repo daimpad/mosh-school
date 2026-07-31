@@ -1,7 +1,7 @@
 {
   "genre": "Doom",
-  "anzahl": 28,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 30,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Black Sabbath",
@@ -198,6 +198,20 @@
       "substil_vermerk": "NWOBHM/Doom (UK)",
       "url": "https://www.youtube.com/results?search_query=Witchfinder+General+Witchfinder+General",
       "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Pentagram",
+      "titel": "All Your Sins",
+      "substil_vermerk": "traditioneller Doom (US)",
+      "url": "https://www.youtube.com/results?search_query=Pentagram+All+Your+Sins",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Solstice",
+      "titel": "Death's Crown Is Victory",
+      "substil_vermerk": "Epic Doom (UK)",
+      "url": "https://bandcamp.com/search?q=Solstice+Death%27s+Crown+Is+Victory&item_type=t",
+      "quelle": "bandcamp"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "genre": "Grenzgänger",
-  "anzahl": 28,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 31,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Zeal & Ardor",
@@ -198,6 +198,27 @@
       "substil_vermerk": "Hardcore/Metalcore × Space-Rock/Prog",
       "url": "https://bandcamp.com/search?q=Cave+In+Juggernaut&item_type=t",
       "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Swans",
+      "titel": "The Seer",
+      "substil_vermerk": "No Wave/Post-Punk × experimentelle Schwere",
+      "url": "https://bandcamp.com/search?q=Swans+The+Seer&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Neurosis",
+      "titel": "Locust Star",
+      "substil_vermerk": "Sludge × Post-Rock × Tribal",
+      "url": "https://bandcamp.com/search?q=Neurosis+Locust+Star&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bathory",
+      "titel": "A Fine Day to Die",
+      "substil_vermerk": "Thrash/Black × Viking/Folk (Genre-Erfindung)",
+      "url": "https://www.youtube.com/results?search_query=Bathory+A+Fine+Day+to+Die",
+      "quelle": "youtube"
     }
   ]
 }

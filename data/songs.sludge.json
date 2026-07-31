@@ -1,7 +1,7 @@
 {
   "genre": "Sludge",
-  "anzahl": 26,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 29,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Soilent Green",
@@ -183,6 +183,27 @@
       "titel": "Illusions of the Living",
       "substil_vermerk": "dreckiger Sludge (UK)",
       "url": "https://bandcamp.com/search?q=Moloch+Illusions+of+the+Living+sludge&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Acid Bath",
+      "titel": "The Blue",
+      "substil_vermerk": "NOLA-Sludge/experimentell (US)",
+      "url": "https://www.youtube.com/results?search_query=Acid+Bath+The+Blue",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Lord Mantis",
+      "titel": "Body Choke",
+      "substil_vermerk": "blackened Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Lord+Mantis+Body+Choke&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Indian",
+      "titel": "The Only Cure",
+      "substil_vermerk": "harscher Noise-Sludge (US)",
+      "url": "https://bandcamp.com/search?q=Indian+The+Only+Cure&item_type=t",
       "quelle": "bandcamp"
     }
   ]

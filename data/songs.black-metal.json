@@ -1,7 +1,7 @@
 {
   "genre": "Black Metal",
-  "anzahl": 30,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 40,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Celtic Frost",
@@ -211,6 +211,76 @@
       "titel": "Second Son of R.",
       "substil_vermerk": "Post-Black/Hardcore (Belgien)",
       "url": "https://bandcamp.com/search?q=Oathbreaker+Second+Son+of+R.&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Bathory",
+      "titel": "A Fine Day to Die",
+      "substil_vermerk": "proto-/Viking-Black (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Bathory+A+Fine+Day+to+Die",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Mayhem",
+      "titel": "Freezing Moon",
+      "substil_vermerk": "norwegische zweite Welle",
+      "url": "https://www.youtube.com/results?search_query=Mayhem+Freezing+Moon",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Emperor",
+      "titel": "I Am the Black Wizards",
+      "substil_vermerk": "symphonischer Black (Norwegen)",
+      "url": "https://www.youtube.com/results?search_query=Emperor+I+Am+the+Black+Wizards",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Satyricon",
+      "titel": "Mother North",
+      "substil_vermerk": "norwegischer Black",
+      "url": "https://www.youtube.com/results?search_query=Satyricon+Mother+North",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Gorgoroth",
+      "titel": "Incipit Satan",
+      "substil_vermerk": "norwegischer Black",
+      "url": "https://www.youtube.com/results?search_query=Gorgoroth+Incipit+Satan",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dark Funeral",
+      "titel": "The Secrets of the Black Arts",
+      "substil_vermerk": "schwedischer Fast-Black",
+      "url": "https://www.youtube.com/results?search_query=Dark+Funeral+The+Secrets+of+the+Black+Arts",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Dissection",
+      "titel": "Where Dead Angels Lie",
+      "substil_vermerk": "melodischer Black/Death (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Dissection+Where+Dead+Angels+Lie",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Windir",
+      "titel": "Journey to the End",
+      "substil_vermerk": "Folk-/Viking-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Windir+Journey+to+the+End&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Kampfar",
+      "titel": "Ravens",
+      "substil_vermerk": "pagan-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Kampfar+Ravens&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Batushka",
+      "titel": "Yekteniya I",
+      "substil_vermerk": "orthodox-thematischer Black (Polen)",
+      "url": "https://bandcamp.com/search?q=Batushka+Yekteniya+I&item_type=t",
       "quelle": "bandcamp"
     }
   ]
