@@ -181,14 +181,22 @@ export function instrumentpfad(daten, domaene) {
   // Instrument übt, sucht die Übung unter Praxis; reine Theorie (ohne
   // Instrument-Domäne) bleibt unberührt in Theorie.
   const inPraxis = new Set(praxis.map((b) => b.id));
-  const theorie = daten.bausteine.filter((b) => sichtbar(b) && !inPraxis.has(b.id)
+  // Dasselbe für Equipment: ein Geräte-Baustein MIT Reflexionsaufgabe erfüllte
+  // auch den Theorie-Zweig und stand deshalb zweimal auf derselben Seite
+  // (Gitarre 22, Bass 19, Schlagzeug 20, Gesang 3). Die drei Körbe sind als
+  // Aufteilung gedacht — Equipment war nur der dritte, den nie jemand ausnahm.
+  // Er gewinnt aus demselben Grund wie Praxis: wer etwas über sein Gerät sucht,
+  // sucht es unter „Geräte", nicht in der langen Theorie-Liste darunter.
+  const ausruestung = amInstrument.filter(istGear);
+  const inAusruestung = new Set(ausruestung.map((b) => b.id));
+  const theorie = daten.bausteine.filter((b) => sichtbar(b) && !inPraxis.has(b.id) && !inAusruestung.has(b.id)
     && (domaenenVon(b).includes('theorie') || (domaenenVon(b).includes(domaene) && !!b.reflexionsaufgabe)));
   return {
     art: 'instrument',
     domaene,
     theorie: zuStationen(daten, theorie, kompetenzVergleicher(daten), diagnose().herkunft),
     praxis: zuStationen(daten, praxis, kompetenzVergleicher(daten), diagnose().herkunft),
-    ausruestung: zuStationen(daten, amInstrument.filter(istGear), standardVergleicher(daten), null),
+    ausruestung: zuStationen(daten, ausruestung, standardVergleicher(daten), null),
   };
 }
 

@@ -211,9 +211,13 @@ def instrument_mengen(domaene):
     # (Gitarre 12, Schlagzeug 3, Gesang 1 Doppelnennungen).
     praxis = [b for b in am_instrument if not ist_gear(b) and b.get('reflexionsaufgabe') is None]
     in_praxis = {b['id'] for b in praxis}
+    # Equipment ebenfalls aus Theorie ausschliessen — wie instrumentpfad() in
+    # js/pfade.js. Ein Geraete-Baustein mit Reflexionsaufgabe stand sonst zweimal
+    # auf derselben statischen Seite.
+    in_ausruestung = {b['id'] for b in am_instrument if ist_gear(b)}
     theorie = [
         b for b in BAUSTEINE
-        if sichtbar(b) and b['id'] not in in_praxis
+        if sichtbar(b) and b['id'] not in in_praxis and b['id'] not in in_ausruestung
         and ('theorie' in domaenen_von(b)
              or (domaene in domaenen_von(b) and b.get('reflexionsaufgabe') is not None))
     ]
