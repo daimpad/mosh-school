@@ -172,7 +172,7 @@ function aktualisiereNavigation(segmente) {
   // 'profil' steht bewusst NICHT hier: Es hat einen eigenen Knopf in der unteren
   // Leiste. Stand es mit drin, trugen auf #/profil sowohl „Profil" als auch
   // „Mehr" aria-current="page" — die Leiste meldete zwei aktuelle Orte zugleich.
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'zerrtypen', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'kollektiv', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {

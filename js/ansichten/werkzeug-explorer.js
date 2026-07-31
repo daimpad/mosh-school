@@ -99,6 +99,13 @@ export function renderWerkzeugExplorer(el, daten, query) {
           .join('')}
       </div>
 
+      <h2 class="abschnitt-titel">${esc(t('zerrtypen_titel'))}</h2>
+      <a class="karte karte-link geraete-eintrag" href="#/zerrtypen">
+        <span class="geraete-eintrag-icon"><i class="fa-solid fa-wave-square" aria-hidden="true"></i></span>
+        <span class="geraete-eintrag-text">${esc(t('zerrtypen_untertitel'))}</span>
+        <i class="fa-solid fa-arrow-right geraete-eintrag-pfeil" aria-hidden="true"></i>
+      </a>
+
       <h2 class="abschnitt-titel">${esc(t('ba_titel'))}</h2>
       <a class="karte karte-link geraete-eintrag" href="#/brand-alert">
         <span class="geraete-eintrag-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
