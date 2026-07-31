@@ -11,7 +11,7 @@
       "domaene": "gitarre",
       "typ": "tab",
       "titel": {
-        "de": "Thrash-Riff: gedämpfter Galopp"
+        "de": "Thrash-Riff: gedämpfte Achtel"
       },
       "stimmung": [
         "E2",
@@ -73,7 +73,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Treibende, tight palm-gemutete Achtel auf der tiefen E-Saite mit chromatischen Ausflügen (G, F) — mit hartem Downpicking gespielt. Der Motor des Thrash."
+        "de": "Treibende, tight palm-gemutete Achtel auf der tiefen E-Saite mit chromatischen Ausflügen (G, F) — mit hartem Downpicking gespielt. Der Motor des Thrash; den Galopp („da-da-dumm“) legst du später über dieselben Töne."
       }
     },
     {
@@ -234,7 +234,7 @@
         ]
       },
       "hinweis": {
-        "de": "Der klassische Blastbeat: Hi-Hat und Snare wechseln im Sechzehntel, die Kick läuft als durchgehender Teppich darunter. Lockerheit vor Kraft, in kurzen Blöcken üben."
+        "de": "Der Blast mit durchlaufender Double Bass: Hi-Hat und Snare wechseln sich auf den Achteln ab, die Kick läuft als Teppich darunter. Lockerheit vor Kraft, in kurzen Blöcken üben."
       }
     },
     {
@@ -1082,7 +1082,7 @@
         ]
       },
       "hinweis": {
-        "de": "Der Grind-Blast bei extremem Tempo: Hände (Snare) und Fuß (Kick) wechseln sich im Sechzehntel ab, maximale Verdichtung. Nur in kurzen Blöcken, Gehörschutz, Lockerheit vor Kraft."
+        "de": "Der Grind-Blast bei extremem Tempo: Hände (Snare) und Fuß (Kick) wechseln sich auf den Achteln ab, maximale Verdichtung. Nur in kurzen Blöcken, Gehörschutz, Lockerheit vor Kraft."
       }
     },
     {
@@ -1155,7 +1155,7 @@
       "domaene": "bass",
       "typ": "tab",
       "titel": {
-        "de": "Thrash-Bass: gedämpfter Galopp"
+        "de": "Thrash-Bass: gedämpfte Achtel"
       },
       "stimmung": [
         "E1",
@@ -1215,7 +1215,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Folgt dem Gitarren-Galopp mit hartem Downpicking auf der tiefen Saite — treibend und tight, das Fundament des Thrash-Motors."
+        "de": "Folgt der Gitarre mit hartem Downpicking auf der tiefen Saite — treibend und tight, das Fundament des Thrash-Motors."
       }
     },
     {
@@ -1717,7 +1717,7 @@
           },
           {
             "saite": 1,
-            "bund": 0
+            "bund": 2
           }
         ],
         [],
@@ -1730,7 +1730,7 @@
           },
           {
             "saite": 1,
-            "bund": 3
+            "bund": 5
           }
         ],
         [],
@@ -1741,7 +1741,7 @@
           },
           {
             "saite": 1,
-            "bund": 5
+            "bund": 7
           }
         ],
         []
@@ -2204,7 +2204,7 @@
       "domaene": "gitarre",
       "typ": "tab",
       "titel": {
-        "de": "Black-Riff: dissonante Doppelgriffe"
+        "de": "Black-Riff: kalte Quart-Doppelgriffe"
       },
       "stimmung": [
         "E2",
@@ -2298,7 +2298,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Tremolo-gepickte Doppelgriffe mit reibenden Intervallen — kalt und schneidend statt warm. Der Ton bleibt dünn und hoch, die Reibung ist gewollt."
+        "de": "Tremolo-gepickte Doppelgriffe in parallelen Quarten — offen und kalt statt warm, weil die Terz fehlt und der Klang sich nie nach Dur oder Moll auflöst. Der Ton bleibt dünn und hoch."
       }
     },
     {
@@ -2821,7 +2821,7 @@
         []
       ],
       "hinweis": {
-        "de": "Cleane, weite Akkordklänge auf den hohen Saiten zwischen den perkussiven Chugs — die Atempause im Djent. Viel Hall im Kopf, sparsam anschlagen."
+        "de": "Cleane, lang stehende Einzeltöne auf den hohen Saiten zwischen den perkussiven Chugs — die Atempause im Djent. Viel Hall im Kopf, sparsam anschlagen."
       }
     },
     {
@@ -2866,7 +2866,7 @@
         ]
       },
       "hinweis": {
-        "de": "Ein Groove mit leisen Ghost-Notes auf der Snare zwischen den Hauptschlägen — Feinheit statt Wucht. Die Dynamik zwischen laut und leise macht den Bounce."
+        "de": "Backbeat auf 2 und 4 plus ein Zwischenschlag vor der Vier: Den spielst du als leise Ghost-Note, nicht als vollen Schlag — die Dynamik zwischen laut und leise macht den Bounce. (Das Raster zeigt nur die Position, nicht die Lautstärke.)"
       }
     },
     {
@@ -3055,8 +3055,9 @@
         ]
       },
       "hinweis": {
-        "de": "Die schnelle Blast-Sektion: traditioneller Blast in Sechzehnteln (doppelt so dicht wie der Achtel-Blast) — treibt die getremolten Deathcore-Parts. Gleichmäßig und entspannt, sonst bricht das Tempo ein."
-      }
+        "de": "Die schnelle Blast-Sektion: traditioneller Blast in Sechzehnteln — doppelt so dicht wie der Achtel-Blast und treibt die getremolten Deathcore-Parts. Gleichmäßig und entspannt, sonst bricht das Tempo ein."
+      },
+      "aufloesung": 16
     },
     {
       "id": "deathcore_slam_groove",
@@ -3430,7 +3431,8 @@
       },
       "hinweis": {
         "de": "Der Gravity-Blast: die Snare rollt in Sechzehnteln über den Handgelenk-Rebound (ein Schlag hin, einer zurück), die Kick hält die Viertel — die extremste Grind-Geschwindigkeit. Nur mit lockerer Technik machbar."
-      }
+      },
+      "aufloesung": 16
     },
     {
       "id": "stoner_laidback_beat",
@@ -3474,7 +3476,7 @@
         ]
       },
       "hinweis": {
-        "de": "Ein lässiger Halftime-Groove leicht hinter dem Puls — der Beat atmet, statt zu treiben. Raum lassen, den Riff regieren lassen, nicht drängen."
+        "de": "Ein lässiger Groove leicht hinter dem Puls: Backbeat auf 2 und 4, die Kick tänzelt lose davor — der Beat atmet, statt zu treiben. Raum lassen, den Riff regieren lassen, nicht drängen."
       }
     },
     {
@@ -3483,7 +3485,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Stoner-Beat: Halftime-Shuffle"
+        "de": "Stoner-Beat: weiter Halftime"
       },
       "bpm": 95,
       "spuren": {

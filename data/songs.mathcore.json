@@ -1,12 +1,12 @@
 {
   "genre": "Mathcore",
   "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Kuenstler). Bei tiefen Underground-Eintraegen den genauen Tracktitel vor Release kurz gegenpruefen. Hass-/extremismusfrei kuratiert.",
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Künstler). Bei tiefen Underground-Einträgen den genauen Tracktitel vor Release kurz gegenprüfen. Hass-/extremismusfrei kuratiert.",
   "songs": [
     {
       "kuenstler": "The Dillinger Escape Plan",
       "titel": "Sunshine the Werewolf",
-      "substil_vermerk": "praegender Mathcore (US)",
+      "substil_vermerk": "prägender Mathcore (US)",
       "url": "https://www.youtube.com/results?search_query=The+Dillinger+Escape+Plan+Sunshine+the+Werewolf",
       "quelle": "youtube"
     },
@@ -34,7 +34,7 @@
     {
       "kuenstler": "Cave In",
       "titel": "Terminal Fixation",
-      "substil_vermerk": "frueher Mathcore (US)",
+      "substil_vermerk": "früher Mathcore (US)",
       "url": "https://bandcamp.com/search?q=Cave+In+Terminal+Fixation&item_type=t",
       "quelle": "bandcamp"
     },
