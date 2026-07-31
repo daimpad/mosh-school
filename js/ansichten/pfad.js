@@ -5,7 +5,7 @@ import { markiereAbsolviert } from '../aktionen.js';
 import { projektion } from '../fortschritt.js';
 import { bildEbene } from '../hintergrundbilder.js';
 import { label, t } from '../i18n.js';
-import { balkenHtml, bausteinIcon, domaeneHue, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, nichtGefundenHtml, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
+import { balkenHtml, bausteinIcon, domaeneHue, domaeneIcon, entdeckenAktion, esc, leerHtml, neuRendern, nichtGefundenHtml, sage, statusPunktHtml, zeigeMeilenstein } from '../oberflaeche.js';
 import { INSTRUMENTE, bandpfad, individualpfad, instrumentUebersicht, instrumentpfad, kompetenzpfad, stile, stilpfad, themenDomaenen, themenpfad, umgebungspfad, witterungen } from '../pfade.js';
 import { diagnose, einstellungen, setzeDiagnose } from '../zustand.js';
 import { gewaehlteZiele, zielLabels, zielwahlHtml } from './zielwahl.js';
@@ -219,6 +219,10 @@ const INSTR_WERKZEUGE = {
   schlagzeug: ['metronom', 'loops', 'struktur', 'recorder', 'mehrspur'],
   gesang: ['stimmgeraet', 'recorder', 'metronom', 'loops', 'struktur'],
 };
+// Instrument -> Schema des Gear-Explorers (js/ansichten/werkzeug-explorer.js).
+const EXPLORER_ANSICHT = {
+  gitarre: 'gitarre_bass', bass: 'gitarre_bass', schlagzeug: 'schlagzeug', gesang: 'gesang',
+};
 const WZ_ICON = {
   explorer: 'fa-magnifying-glass', metronom: 'fa-stopwatch', loops: 'fa-drum',
   stimmgeraet: 'fa-wave-square', pedalboard: 'fa-layer-group', ampbox: 'fa-volume-high',
@@ -268,7 +272,11 @@ function instrumentReiterInhalt(daten, domaene, pfad, id) {
   }
   if (id === 'pruefung') return `<p class="leise">${esc(t('instrument_kc_intro', { instrument: label('domaene', domaene) }))}</p><div class="instr-kc"></div>`;
   if (id === 'geraete') {
-    const explorer = `<a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/explorer?ansicht=gitarre_bass"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> ${esc(t('wz_explorer_titel'))}</a>`;
+    // Der Explorer hat vier Schemata — der Reiter muss auf das des eigenen
+    // Instruments zeigen. Vorher stand hier fest `gitarre_bass`, also landeten
+    // auch Schlagzeug und Gesang beim Gitarren-Schema.
+    const ansicht = EXPLORER_ANSICHT[domaene] || 'gitarre_bass';
+    const explorer = `<a class="chip chip-akzent instr-wz-chip" href="#/werkzeug/explorer?ansicht=${esc(ansicht)}"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> ${esc(t('wz_explorer_titel'))}</a>`;
     const gear = pfad.ausruestung.length ? stationslisteHtml(pfad.ausruestung, kontext) : `<p class="leise">${esc(t('instrument_keine_ausruestung'))}</p>`;
     return `<p class="chip-zeile">${explorer}</p>${gear}`;
   }
@@ -318,14 +326,19 @@ export function renderInstrument(el, daten, domaene) {
   const reiter = instrumentReiter(domaene);
   if (!reiter.some((r) => r.id === instrAktiverReiter)) instrAktiverReiter = reiter[0].id;
 
+  // Vollstaendiges Reiter-Muster: role=tab allein reicht nicht. Ohne
+  // aria-controls/aria-labelledby weiss die Hilfstechnik nicht, welcher Bereich
+  // zum Reiter gehoert, und ohne wanderndes tabindex (nur der aktive Reiter ist
+  // tabbar, die uebrigen erreicht man mit den Pfeiltasten) verhaelt sich die
+  // Leiste anders, als ihre eigene Rolle ankuendigt.
   const reiterBar = `<div class="instr-reiter" role="tablist" aria-label="${esc(t('instrument_untertitel'))}">${reiter
-    .map((r) => `<button type="button" class="chip chip-waehlbar instr-reiter-knopf ${r.id === instrAktiverReiter ? 'chip-akzent' : ''}" role="tab" aria-selected="${r.id === instrAktiverReiter}" data-reiter="${esc(r.id)}"><i class="fa-solid ${r.icon}" aria-hidden="true"></i> ${esc(r.titel)}</button>`)
+    .map((r) => `<button type="button" class="chip chip-waehlbar instr-reiter-knopf ${r.id === instrAktiverReiter ? 'chip-akzent' : ''}" role="tab" id="tab-${esc(r.id)}" aria-controls="instr-panel" aria-selected="${r.id === instrAktiverReiter}" tabindex="${r.id === instrAktiverReiter ? '0' : '-1'}" data-reiter="${esc(r.id)}"><i class="fa-solid ${r.icon}" aria-hidden="true"></i> ${esc(r.titel)}</button>`)
     .join('')}</div>`;
 
   el.innerHTML = `
     ${landingHeroHtml(null, label('domaene', domaene), t('instrument_untertitel'), domaeneHue(domaene), `instrument-${domaene}`, '', domaeneIcon(domaene))}
     ${reiterBar}
-    <div class="instr-tab-inhalt" role="tabpanel">${instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter)}</div>
+    <div class="instr-tab-inhalt" role="tabpanel" id="instr-panel" tabindex="-1" aria-labelledby="tab-${esc(instrAktiverReiter)}">${instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter)}</div>
     <p class="knopf-zeile instr-fuss">
       <a class="knopf knopf-sekundaer" href="#/instrument"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('instrument_alle'))}</a>
       <a class="knopf knopf-sekundaer" href="#/training"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('nav_training'))}</a>
@@ -338,18 +351,37 @@ export function renderInstrument(el, daten, domaene) {
   };
   kcVerdrahten();
 
-  for (const knopf of el.querySelectorAll('[data-reiter]')) {
-    knopf.addEventListener('click', () => {
-      instrAktiverReiter = knopf.dataset.reiter;
-      for (const k of el.querySelectorAll('[data-reiter]')) {
-        const an = k.dataset.reiter === instrAktiverReiter;
-        k.classList.toggle('chip-akzent', an);
-        k.setAttribute('aria-selected', String(an));
-      }
-      inhalt.innerHTML = instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter);
-      kcVerdrahten();
-    });
+  const knoepfe = [...el.querySelectorAll('[data-reiter]')];
+  const waehle = (id) => {
+    instrAktiverReiter = id;
+    for (const k of knoepfe) {
+      const an = k.dataset.reiter === instrAktiverReiter;
+      k.classList.toggle('chip-akzent', an);
+      k.setAttribute('aria-selected', String(an));
+      k.tabIndex = an ? 0 : -1;
+    }
+    inhalt.setAttribute('aria-labelledby', 'tab-' + instrAktiverReiter);
+    inhalt.innerHTML = instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter);
+    kcVerdrahten();
+  };
+  for (const knopf of knoepfe) {
+    knopf.addEventListener('click', () => waehle(knopf.dataset.reiter));
   }
+  // Pfeiltasten/Pos1/Ende innerhalb der Leiste — das erwartet jeder, der eine
+  // role="tablist" vorgelesen bekommt.
+  el.querySelector('.instr-reiter')?.addEventListener('keydown', (e) => {
+    const i = knoepfe.findIndex((k) => k === document.activeElement);
+    if (i === -1) return;
+    let ziel = null;
+    if (e.key === 'ArrowRight') ziel = knoepfe[(i + 1) % knoepfe.length];
+    else if (e.key === 'ArrowLeft') ziel = knoepfe[(i - 1 + knoepfe.length) % knoepfe.length];
+    else if (e.key === 'Home') ziel = knoepfe[0];
+    else if (e.key === 'End') ziel = knoepfe[knoepfe.length - 1];
+    if (!ziel) return;
+    e.preventDefault();
+    waehle(ziel.dataset.reiter);
+    ziel.focus();
+  });
 }
 
 // Band-Landing: Querschnittsthemen, die mehrere Instrumente zugleich betreffen
@@ -369,6 +401,14 @@ export function renderBand(el, daten) {
 // Aufnahme, Solo) plus die vollständige Reihe. Einzelne Situationswerte sind
 // eigene Ansichten. Quer zu Stufe und Instrument.
 export function renderUmgebung(el, daten, achse, wert) {
+  // Unbekannter Wert: wie bei Themen und Stil kein Fantasie-Kontext aus dem
+  // Slug. Vorher zeigte #/pfad/witterung/quatsch „quatsch" als Überschrift
+  // (label() fällt auf den rohen Schlüssel zurück) plus Leer-Zustand — das sah
+  // aus wie eine echte Rubrik, deren Inhalt nur noch fehlt.
+  if (achse && wert && !(daten.vokabulare[achse] || []).includes(wert)) {
+    el.innerHTML = nichtGefundenHtml('#/pfad/umgebung', t('pfad_umgebung'));
+    return;
+  }
   if (achse && wert) {
     const pfad = umgebungspfad(daten, achse, wert);
     const inhalt =
@@ -424,7 +464,13 @@ export function renderIndividual(el, daten) {
     el.querySelector('#zielform').addEventListener('submit', (ereignis) => ereignis.preventDefault());
     el.querySelector('#ziel-uebernehmen').addEventListener('click', () => {
       const ziele = gewaehlteZiele(el);
-      if (!ziele) return;
+      // Ohne Auswahl tat der Knopf bisher stumm gar nichts — nicht von einem
+      // kaputten Knopf zu unterscheiden. Jetzt sagt er, was fehlt.
+      if (!ziele) {
+        sage(t('ziel_keins_gewaehlt'));
+        window.alert(t('ziel_keins_gewaehlt'));
+        return;
+      }
       setzeDiagnose({ ziel: ziele });
       neuRendern();
     });
@@ -453,7 +499,11 @@ export function renderIndividual(el, daten) {
   el.querySelector('#zielform').addEventListener('submit', (ereignis) => ereignis.preventDefault());
   el.querySelector('#ziel-uebernehmen').addEventListener('click', () => {
     const ziele = gewaehlteZiele(el);
-    if (!ziele) return;
+    if (!ziele) {
+      sage(t('ziel_keins_gewaehlt'));
+      window.alert(t('ziel_keins_gewaehlt'));
+      return;
+    }
     setzeDiagnose({ ziel: ziele });
     neuRendern();
   });

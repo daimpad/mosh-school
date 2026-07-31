@@ -12,7 +12,12 @@ import { plan as gespeicherterPlan, setzePlan, loeschePlan } from '../zustand.js
 function naechsterMontagISO() {
   const d = new Date();
   d.setDate(d.getDate() + (((8 - d.getDay()) % 7) || 7));
-  return d.toISOString().slice(0, 10);
+  // Lokal formatieren, NICHT über toISOString(): das rechnet nach UTC um, und
+  // östlich von Greenwich (also für praktisch alle Nutzer dieser App) fällt der
+  // lokale Montag 00:00 auf Sonntag 22:00/23:00 UTC zurück — vorgeschlagen wurde
+  // dann der Sonntag davor.
+  const p = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
 // Wochentag + Datum in der aktiven Sprache (Intl); UTC, damit das ISO-Datum nicht kippt.
@@ -43,11 +48,11 @@ function konfigHtml(vorgabe) {
       <p class="leise">${esc(t('plan_intro'))}</p>
       <div class="plan-felder">
         <label class="plan-feld"><span>${esc(t('plan_wochen'))}</span>
-          <input type="number" id="plan-wochen" min="1" max="12" value="${vorgabe.wochen}"></label>
+          <input type="number" id="plan-wochen" min="1" max="12" value="${esc(vorgabe.wochen)}"></label>
         <label class="plan-feld"><span>${esc(t('plan_pro_woche'))}</span>
-          <input type="number" id="plan-pro-woche" min="1" max="4" value="${vorgabe.einheitenProWoche}"></label>
+          <input type="number" id="plan-pro-woche" min="1" max="4" value="${esc(vorgabe.einheitenProWoche)}"></label>
         <label class="plan-feld"><span>${esc(t('plan_start'))}</span>
-          <input type="date" id="plan-start" value="${vorgabe.startISO}"></label>
+          <input type="date" id="plan-start" value="${esc(vorgabe.startISO)}"></label>
       </div>
       <div class="knopf-zeile" style="justify-content:flex-start">
         <button type="submit" class="knopf knopf-primaer"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('plan_generieren'))}</button>

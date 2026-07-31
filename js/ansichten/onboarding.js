@@ -193,6 +193,16 @@ function schliesseAb(el, daten, mitVormarkierung) {
   if (meilenstein) zeigeMeilenstein(meilenstein);
 }
 
+// Schrittwechsel: neu zeichnen UND den Fokus auf die neue Frage setzen. Vorher
+// blieb der Fokus nach „Weiter" auf <body> haengen — mit der Tastatur musste man
+// sich bei JEDEM Schritt neu durch die Seite arbeiten, und ein Screenreader las
+// die neue Frage gar nicht vor, weil sich fuer ihn scheinbar nichts geaendert
+// hatte. Die H1 traegt dafuer tabindex="-1".
+function naechsterSchritt(el, daten) {
+  renderOnboarding(el, daten);
+  el.querySelector('h1')?.focus({ preventScroll: true });
+}
+
 export function renderOnboarding(el, daten) {
   if (!assistent) assistent = frisch();
   const schritte = schrittfolge(daten);
@@ -204,7 +214,7 @@ export function renderOnboarding(el, daten) {
     <section class="onboarding">
       ${assistent.schritt === 0 ? `<p class="onboarding-willkommen">${esc(t('onboarding_titel'))}</p><p class="leise">${esc(t('onboarding_intro'))}</p>` : ''}
       <p class="leise onboarding-schritt">${esc(t('onboarding_schritt', { a: assistent.schritt + 1, b: schritte.length }))}</p>
-      <h1>${esc(inhalt.frage)}</h1>
+      <h1 tabindex="-1">${esc(inhalt.frage)}</h1>
       <form id="ob-form">${inhalt.html}</form>
       <div class="knopf-zeile">
         ${assistent.schritt > 0 ? `<button class="knopf knopf-sekundaer" id="ob-zurueck">${esc(t('zurueck'))}</button>` : ''}
@@ -238,13 +248,13 @@ export function renderOnboarding(el, daten) {
       return;
     }
     assistent.schritt += 1;
-    renderOnboarding(el, daten);
+    naechsterSchritt(el, daten);
   });
 
   el.querySelector('#ob-zurueck')?.addEventListener('click', () => {
     liesSchrittWerte(el, name);
     assistent.schritt -= 1;
-    renderOnboarding(el, daten);
+    naechsterSchritt(el, daten);
   });
 
   // Freier Zugang ohne Wizard: alle Kapitel bleiben zugänglich. Onboarding gilt als
@@ -265,6 +275,6 @@ export function renderOnboarding(el, daten) {
       return;
     }
     assistent.schritt += 1;
-    renderOnboarding(el, daten);
+    naechsterSchritt(el, daten);
   });
 }

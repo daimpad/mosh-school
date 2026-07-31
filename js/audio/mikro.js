@@ -17,12 +17,24 @@ export async function holeMikro({ fftSize = 4096 } = {}) {
   const strom = await navigator.mediaDevices.getUserMedia({
     audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
   });
-  const ctx = holeKontext();
-  const quelle = ctx.createMediaStreamSource(strom);
-  const analyser = ctx.createAnalyser();
-  analyser.fftSize = fftSize;
-  quelle.connect(analyser); // NICHT an destination — kein Monitoring, keine Rückkopplung
-  const puffer = new Float32Array(analyser.fftSize);
+  // Ab hier ist das Mikro AN. Scheitert der Aufbau danach (ungültiger/geschlossener
+  // Kontext, z. B. nach einer iOS-Unterbrechung), muss der Strom wieder freigegeben
+  // werden — sonst wirft die Funktion, die View sieht nur den Fehler, und das
+  // Aufnahme-Symbol des Browsers leuchtet weiter, bis der Tab geschlossen wird.
+  let quelle;
+  let analyser;
+  let puffer;
+  try {
+    const ctx = holeKontext();
+    quelle = ctx.createMediaStreamSource(strom);
+    analyser = ctx.createAnalyser();
+    analyser.fftSize = fftSize;
+    quelle.connect(analyser); // NICHT an destination — kein Monitoring, keine Rückkopplung
+    puffer = new Float32Array(analyser.fftSize);
+  } catch (fehler) {
+    for (const spur of strom.getTracks()) spur.stop();
+    throw fehler;
+  }
 
   return {
     analyser,

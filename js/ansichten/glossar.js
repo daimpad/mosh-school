@@ -39,11 +39,14 @@ function eintragHtml(daten, e) {
     bausteinDa(daten, e.bezug)
       ? `<a class="glossar-bezug" href="#/baustein/${esc(e.bezug)}?kontext=kompetenz">${esc(t('glossar_vertiefen'))}: ${esc(label('baustein', e.bezug))}</a>`
       : '';
+  // <li> ist in einer <dl> nicht erlaubt und zerschneidet das Begriff/Erklaerung-
+  // Paar fuer Hilfstechnik. Ein <div> um dt+dd ist die zulaessige Gruppierung
+  // (HTML-Standard) und traegt dieselbe Klasse, also auch dasselbe Aussehen.
   return `
-    <li class="glossar-eintrag">
+    <div class="glossar-eintrag">
       <dt class="glossar-begriff">${esc(e.begriff)}</dt>
       <dd class="glossar-erklaerung">${esc(e.erklaerung)}${bezug}</dd>
-    </li>`;
+    </div>`;
 }
 
 // Nach Kategorie gruppierte, gefilterte Liste (deklarierte Kategorie-Reihenfolge).

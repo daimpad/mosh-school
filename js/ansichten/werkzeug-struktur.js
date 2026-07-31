@@ -9,7 +9,7 @@
 // lädt und spielt sie über #/werkzeug/metronom?tempomap=1.
 
 import { t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, halteFokus } from '../oberflaeche.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
@@ -184,7 +184,8 @@ export function renderWerkzeugStruktur(el, daten, query) {
 }
 
 function verdrahte(el, daten) {
-  const neu = () => renderWerkzeugStruktur(el, daten, null);
+  // Fokus ueber das Selbst-Neuzeichnen retten (s. werkzeug-ampbox.js).
+  const neu = () => halteFokus(el, () => renderWerkzeugStruktur(el, daten, null));
 
   el.querySelector('.wz-st-bpm')?.addEventListener('change', (e) => {
     zustand.bpm = Math.max(40, Math.min(300, Math.round(Number(e.target.value) || zustand.bpm)));
@@ -241,7 +242,16 @@ function verdrahte(el, daten) {
       const b = zustand.bloecke[i];
       if (!b) return;
       if (name === 'notiz' || name === 'uebergang') b[name] = feld.value;
-      else b[name] = Math.max(0, Math.round(Number(feld.value) || 0));
+      else {
+        // Auf die Grenzen des Feldes selbst klemmen statt pauschal auf >= 0.
+        // „Takte“/„Wdh.“ tragen min="1"; die harte 0 liess einen Block zu, der
+        // in Timeline und Dauer-Rechnung schlicht verschwand (und beim Export
+        // eine leere Struktur ergab), obwohl das Feld 1 als Minimum ausweist.
+        const min = feld.min === '' ? 0 : Number(feld.min);
+        const max = feld.max === '' ? Infinity : Number(feld.max);
+        const roh = Math.round(Number(feld.value) || 0);
+        b[name] = Math.min(max, Math.max(min, roh));
+      }
       speichere();
       aktualisiereAbleitungen(el);
     });

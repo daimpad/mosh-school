@@ -39,6 +39,11 @@ def inhaltsdateien():
 IGNORIERTE_FELDER = {
     'id', 'domaene', 'kompetenzstufe', 'typ', 'stil', 'spielziele',
     'voraussetzungen', 'transfer_herkunft', '_datei', '_meta',
+    # Relations-IDs sind sprachneutral und duerfen ae/oe/ue tragen. Ohne
+    # 'basis_baustein' meldete der Umlaut-Scan bei JEDEM Lauf zwei Fehlerbilder
+    # ("uebergaenge_bauen", "uebergaenge_arrangieren") — Dauer-Falschmeldungen,
+    # die den Abschnitt insgesamt entwerten.
+    'basis_baustein',
 }
 UMLAUT_VERDACHT = re.compile(
     r'\b(ausser|groess\w*|fuer|koenn\w*|koerp\w*|muede|muess\w*|schoen\w*|'

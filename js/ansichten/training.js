@@ -7,7 +7,8 @@
 import { einheitReferenzen } from '../daten.js';
 import { projektion } from '../fortschritt.js';
 import { label, t, text } from '../i18n.js';
-import { bausteinIcon, entdeckenAktion, esc, leerHtml, neuRendern, nichtGefundenHtml } from '../oberflaeche.js';
+import { bausteinIcon, entdeckenAktion, esc, leerHtml, meilensteinLabel, neuRendern, nichtGefundenHtml, zeigeMeilensteine } from '../oberflaeche.js';
+import { pruefeMeilensteine } from '../mastery.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { kompetenzpfad, trainingsuebersicht } from '../pfade.js';
 import { kontinuitaet, registriereEinheitAbschluss, setzeTeilStatus, teilStatus } from '../zustand.js';
@@ -89,8 +90,19 @@ function renderAbschluss(el, daten, einheit) {
       <p>${esc(kontinuitaetText)}</p>
       <p class="leise">${esc(t('kontinuitaet_text'))}</p>
       ${meilensteinZeile}
-      <a class="knopf knopf-primaer" href="#/training">${esc(t('zur_liste'))}</a>
+      <div class="knopf-zeile">
+        <button type="button" class="knopf knopf-primaer" id="einheit-nochmal">${esc(t('einheit_nochmal'))}</button>
+        <a class="knopf knopf-leise" href="#/training">${esc(t('zur_liste'))}</a>
+      </div>
     </section>`;
+  // Ohne diesen Knopf war eine abgeschlossene Einheit eine Sackgasse: die
+  // Sitzung bleibt an ihrer ID haengen, also zeigte #/training/<id> (und damit
+  // „Einheit starten" in der Liste) immer wieder diesen Abschluss statt eines
+  // neuen Durchlaufs — die Einheit liess sich nie wiederholen.
+  el.querySelector('#einheit-nochmal')?.addEventListener('click', () => {
+    sitzung = null;
+    neuRendern();
+  });
 }
 
 function renderDurchlauf(el, daten, einheit, referenzen) {
@@ -121,6 +133,15 @@ function renderDurchlauf(el, daten, einheit, referenzen) {
     if (istLetzte) {
       registriereEinheitAbschluss(einheit.id);
       sitzung.fertig = true;
+      // Meilensteine hier pruefen, wo sie verdient werden. Bisher lief
+      // pruefeMeilensteine NUR in der Baustein-Ansicht — „erste_trainingseinheit"
+      // haengt aber an kontinuitaet().gesamt und wird genau in diesem Moment
+      // erreicht. Gefeiert wurde er dadurch irgendwann spaeter beiläufig, beim
+      // naechsten Mastery-Klick auf irgendeinem Baustein.
+      const neueMeilensteine = pruefeMeilensteine(daten);
+      if (neueMeilensteine.length > 0) {
+        zeigeMeilensteine(neueMeilensteine.map((id) => ({ text: meilensteinLabel(id) })));
+      }
     } else {
       sitzung.index += 1;
     }

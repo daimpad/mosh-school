@@ -205,12 +205,18 @@ def instrument_mengen(domaene):
     sichtbar = lambda b: not ist_nur_trainer(b) and not ist_umgebungs_baustein(b)
     ist_gear = lambda b: 'ausruestung' in domaenen_von(b)
     am_instrument = [b for b in BAUSTEINE if domaene in domaenen_von(b) and sichtbar(b)]
+    # Praxis zuerst bestimmen und aus Theorie ausschliessen — wie instrumentpfad()
+    # in js/pfade.js. Ohne das stand ein Baustein, der zugleich zur Theorie-Domaene
+    # gehoert und am Instrument praktisch geuebt wird, auf derselben Seite ZWEIMAL
+    # (Gitarre 12, Schlagzeug 3, Gesang 1 Doppelnennungen).
+    praxis = [b for b in am_instrument if not ist_gear(b) and b.get('reflexionsaufgabe') is None]
+    in_praxis = {b['id'] for b in praxis}
     theorie = [
         b for b in BAUSTEINE
-        if sichtbar(b) and ('theorie' in domaenen_von(b)
-                            or (domaene in domaenen_von(b) and b.get('reflexionsaufgabe') is not None))
+        if sichtbar(b) and b['id'] not in in_praxis
+        and ('theorie' in domaenen_von(b)
+             or (domaene in domaenen_von(b) and b.get('reflexionsaufgabe') is not None))
     ]
-    praxis = [b for b in am_instrument if not ist_gear(b) and b.get('reflexionsaufgabe') is None]
     ausruestung = sorted([b for b in am_instrument if ist_gear(b)], key=standard_sortierschluessel)
     return theorie, praxis, ausruestung
 
@@ -256,9 +262,14 @@ ID_REGELN = {
     'von_referenz_zum_eigenen': [('recorder', {'kreativ': '1'}), ('genremix', {})],
 }
 
+# Muss mit LOOP_STILE in js/werkzeug-links.js deckungsgleich bleiben (das
+# wiederum mit STIL_ZU_BEAT in js/ansichten/werkzeug-loops.js). Die drei
+# Core/Noise-Stile fehlten hier: 9 Bausteine bekamen auf ihrer statischen Seite
+# keinen Loop-Link, obwohl der Play-along-Beat existiert.
 LOOP_STILE = {
     'hardcore', 'crust', 'powerviolence', 'grindcore', 'black_metal', 'death_metal',
     'thrash', 'metalcore', 'djent', 'deathcore', 'doom', 'sludge', 'stoner_post',
+    'mathcore', 'screamo', 'noise_rock',
 }
 
 GEAR_REGION = {
@@ -949,10 +960,17 @@ def build_all():
     # ("Gitarre lernen", "Growlen lernen") — entsprechend hohe Prioritaet.
     hub_eintraege = []
     for domaene in INSTRUMENTE:
-        _, praxis, ausruestung = instrument_mengen(domaene)
         manifest[f'instrument/{domaene}/index.html'] = instrument_html(domaene)
         sitemap_eintraege.append((f'instrument/{domaene}/', '0.9'))
-        hub_eintraege.append((domaene, label_vok('domaene', domaene), len(praxis) + len(ausruestung)))
+        # Zahl wie instrumentUebersicht() in js/pfade.js: ALLE sichtbaren
+        # Bausteine der Domaene. praxis+ausruestung liess die Reflexions-
+        # Bausteine aus, die auf derselben Seite unter Theorie stehen — die
+        # statische Kachel zeigte fuer Gesang 57 statt 64.
+        sichtbar = [
+            b for b in BAUSTEINE
+            if domaene in domaenen_von(b) and not ist_nur_trainer(b) and not ist_umgebungs_baustein(b)
+        ]
+        hub_eintraege.append((domaene, label_vok('domaene', domaene), len(sichtbar)))
     manifest['instrument/index.html'] = instrument_hub_html(hub_eintraege)
     sitemap_eintraege.append(('instrument/', '0.9'))
 
