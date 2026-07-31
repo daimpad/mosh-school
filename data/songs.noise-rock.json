@@ -1,7 +1,7 @@
 {
   "genre": "Noise Rock",
-  "anzahl": 26,
-  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 30,
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "The Jesus Lizard",
@@ -183,6 +183,34 @@
       "titel": "Stag Party",
       "substil_vermerk": "texanischer Noise-Rock",
       "url": "https://bandcamp.com/search?q=Cherubs+Stag+Party&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Big Black",
+      "titel": "Kerosene",
+      "substil_vermerk": "Drum-Machine-Noise-Rock (US)",
+      "url": "https://www.youtube.com/results?search_query=Big+Black+Kerosene",
+      "quelle": "youtube"
+    },
+    {
+      "kuenstler": "Shellac",
+      "titel": "Prayer to God",
+      "substil_vermerk": "minimalistischer Noise-Rock (US)",
+      "url": "https://bandcamp.com/search?q=Shellac+Prayer+to+God&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Swans",
+      "titel": "Time Is Money (Bastard)",
+      "substil_vermerk": "brachiale Frühphase (US)",
+      "url": "https://bandcamp.com/search?q=Swans+Time+Is+Money+%28Bastard%29&item_type=t",
+      "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Daughters",
+      "titel": "Satan in the Wait",
+      "substil_vermerk": "Noise-Rock-Spätphase (US)",
+      "url": "https://bandcamp.com/search?q=Daughters+Satan+in+the+Wait&item_type=t",
       "quelle": "bandcamp"
     }
   ]
