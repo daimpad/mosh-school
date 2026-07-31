@@ -1,7 +1,7 @@
 {
   "genre": "Noise Rock",
   "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Kuenstler). Bei tiefen Underground-Eintraegen den genauen Tracktitel vor Release kurz gegenpruefen. Hass-/extremismusfrei kuratiert.",
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Künstler). Bei tiefen Underground-Einträgen den genauen Tracktitel vor Release kurz gegenprüfen. Hass-/extremismusfrei kuratiert.",
   "songs": [
     {
       "kuenstler": "Big Black",
@@ -69,7 +69,7 @@
     {
       "kuenstler": "Swans",
       "titel": "Time Is Money (Bastard)",
-      "substil_vermerk": "brachiale Fruehphase (US)",
+      "substil_vermerk": "brachiale Frühphase (US)",
       "url": "https://bandcamp.com/search?q=Swans+Time+Is+Money+%28Bastard%29&item_type=t",
       "quelle": "bandcamp"
     },
@@ -83,7 +83,7 @@
     {
       "kuenstler": "Helmet",
       "titel": "In the Meantime",
-      "substil_vermerk": "praeziser Post-Hardcore-Noise (US)",
+      "substil_vermerk": "präziser Post-Hardcore-Noise (US)",
       "url": "https://www.youtube.com/results?search_query=Helmet+In+the+Meantime",
       "quelle": "youtube"
     },
@@ -104,7 +104,7 @@
     {
       "kuenstler": "Girls Against Boys",
       "titel": "Super-Fire",
-      "substil_vermerk": "zwei-Baesse-Noise-Rock (US)",
+      "substil_vermerk": "zwei-Bässe-Noise-Rock (US)",
       "url": "https://bandcamp.com/search?q=Girls+Against+Boys+Super-Fire&item_type=t",
       "quelle": "bandcamp"
     },
@@ -153,7 +153,7 @@
     {
       "kuenstler": "Daughters",
       "titel": "Satan in the Wait",
-      "substil_vermerk": "Noise-Rock-Spaetphase (US)",
+      "substil_vermerk": "Noise-Rock-Spätphase (US)",
       "url": "https://bandcamp.com/search?q=Daughters+Satan+in+the+Wait&item_type=t",
       "quelle": "bandcamp"
     },

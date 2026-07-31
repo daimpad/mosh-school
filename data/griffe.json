@@ -58,15 +58,15 @@
       "kategorie": "powerchord",
       "name": { "de": "D-Form (Wurzel 4. Saite)" },
       "toene": { "de": "Grundton + Quinte + Oktave" },
-      "kurz": { "de": "Grundton auf der D-Saite — für höhere Powerchords, ohne die Greifhand weit nach oben zu schieben. E- und A-Saite bleiben stumm." },
+      "kurz": { "de": "Grundton auf der D-Saite — für höhere Powerchords, ohne die Greifhand weit nach oben zu schieben. E- und A-Saite bleiben stumm. Achtung: Die Oktave liegt hier einen Bund weiter als bei den anderen Formen, weil zwischen G- und H-Saite eine große Terz statt einer Quarte liegt." },
       "beweglich": true,
-      "baende": 4,
+      "baende": 5,
       "saiten": [
         { "status": "stumm" },
         { "status": "stumm" },
         { "status": "grundton", "bund": 1, "finger": 1 },
         { "status": "quinte", "bund": 3, "finger": 3 },
-        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "oktave", "bund": 4, "finger": 4 },
         { "status": "stumm" }
       ]
     },

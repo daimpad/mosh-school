@@ -1,7 +1,7 @@
 {
   "genre": "Screamo",
   "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Kuenstler). Bei tiefen Underground-Eintraegen den genauen Tracktitel vor Release kurz gegenpruefen. Hass-/extremismusfrei kuratiert.",
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Künstler). Bei tiefen Underground-Einträgen den genauen Tracktitel vor Release kurz gegenprüfen. Hass-/extremismusfrei kuratiert.",
   "songs": [
     {
       "kuenstler": "Orchid",
@@ -41,7 +41,7 @@
     {
       "kuenstler": "Jeromes Dream",
       "titel": "Presence",
-      "substil_vermerk": "Emoviolence, moderne Rueckkehr (US)",
+      "substil_vermerk": "Emoviolence, moderne Rückkehr (US)",
       "url": "https://bandcamp.com/search?q=Jeromes+Dream+Presence&item_type=t",
       "quelle": "bandcamp"
     },
@@ -69,7 +69,7 @@
     {
       "kuenstler": "Funeral Diner",
       "titel": "The Wicked",
-      "substil_vermerk": "atmosphaerischer Screamo (US)",
+      "substil_vermerk": "atmosphärischer Screamo (US)",
       "url": "https://bandcamp.com/search?q=Funeral+Diner+The+Wicked&item_type=t",
       "quelle": "bandcamp"
     },
@@ -97,14 +97,14 @@
     {
       "kuenstler": "Daitro",
       "titel": "Laisser Vivre les Squelettes",
-      "substil_vermerk": "franzoesischer Screamo",
+      "substil_vermerk": "französischer Screamo",
       "url": "https://bandcamp.com/search?q=Daitro+Laisser+Vivre+les+Squelettes&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Amanda Woodward",
       "titel": "Ce Que Nous Sommes",
-      "substil_vermerk": "franzoesischer Screamo",
+      "substil_vermerk": "französischer Screamo",
       "url": "https://bandcamp.com/search?q=Amanda+Woodward+Ce+Que+Nous+Sommes&item_type=t",
       "quelle": "bandcamp"
     },
@@ -181,7 +181,7 @@
     {
       "kuenstler": "Infant Island",
       "titel": "Content",
-      "substil_vermerk": "atmosphaerischer moderner Screamo (US)",
+      "substil_vermerk": "atmosphärischer moderner Screamo (US)",
       "url": "https://bandcamp.com/search?q=Infant+Island+Content&item_type=t",
       "quelle": "bandcamp"
     },

@@ -147,8 +147,13 @@ const DRUM_STIMME = { kick, snare, hihat, crash };
 // Anzeigereihenfolge oben→unten und Symbol je Spur (Beat-Raster-Konvention).
 const SPUR_ORDNUNG = ['crash', 'hihat', 'snare', 'kick'];
 
+// Ein Schritt ist per Vorgabe eine Achtel. `aufloesung` (Schritte pro 4/4-Takt)
+// erlaubt dichtere Raster — 16 macht daraus Sechzehntel. Ohne das Feld spielten
+// Muster, deren Hinweis ausdruecklich von Sechzehnteln spricht (Gravity-Blast,
+// Blast-Sektion), nur halb so dicht wie beschrieben.
 function schrittDauer(pattern) {
-  return 30 / (pattern.bpm * tempoFaktor); // eine Achtel in Sekunden, mit Tempo-Regler
+  const proTakt = pattern.aufloesung || 8;
+  return 240 / (proTakt * pattern.bpm * tempoFaktor);
 }
 
 function stoppeLauf() {
