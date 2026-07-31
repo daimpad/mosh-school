@@ -1,7 +1,7 @@
 {
   "genre": "Hardcore",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 26,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Black Flag",
@@ -15,27 +15,6 @@
       "titel": "Straight Edge",
       "substil_vermerk": "DC-Hardcore, Straight-Edge-Ursprung (US)",
       "url": "https://www.youtube.com/results?search_query=Minor+Threat+Straight+Edge",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Bad Brains",
-      "titel": "Banned in D.C.",
-      "substil_vermerk": "DC-Hardcore (US)",
-      "url": "https://www.youtube.com/results?search_query=Bad+Brains+Banned+in+D.C.",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Agnostic Front",
-      "titel": "Victim in Pain",
-      "substil_vermerk": "NYHC-Grundstein (US)",
-      "url": "https://www.youtube.com/results?search_query=Agnostic+Front+Victim+in+Pain",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Cro-Mags",
-      "titel": "We Gotta Know",
-      "substil_vermerk": "NYHC/Crossover (US)",
-      "url": "https://www.youtube.com/results?search_query=Cro-Mags+We+Gotta+Know",
       "quelle": "youtube"
     },
     {
@@ -78,13 +57,6 @@
       "titel": "New York Crew",
       "substil_vermerk": "Youth Crew/NYHC (US)",
       "url": "https://www.youtube.com/results?search_query=Judge+New+York+Crew",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Warzone",
-      "titel": "As One",
-      "substil_vermerk": "NYHC (US)",
-      "url": "https://www.youtube.com/results?search_query=Warzone+As+One",
       "quelle": "youtube"
     },
     {

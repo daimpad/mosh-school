@@ -1,7 +1,7 @@
 {
   "genre": "Deathcore",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 27,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Suicide Silence",
@@ -158,20 +158,6 @@
       "quelle": "bandcamp"
     },
     {
-      "kuenstler": "Slaughter to Prevail",
-      "titel": "Baptism of Fire",
-      "substil_vermerk": "downtempo/heavy Deathcore (Russland)",
-      "url": "https://www.youtube.com/results?search_query=Slaughter+to+Prevail+Baptism+of+Fire",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Infant Annihilator",
-      "titel": "Decapitation Fornication",
-      "substil_vermerk": "technisch/brutaler Deathcore (UK/US)",
-      "url": "https://bandcamp.com/search?q=Infant+Annihilator+Decapitation+Fornication&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
       "kuenstler": "Acrania",
       "titel": "The Beginning of the End of Humanity",
       "substil_vermerk": "brutaler/slam Deathcore (UK)",
@@ -183,13 +169,6 @@
       "titel": "The Harbinger",
       "substil_vermerk": "Deathcore (US)",
       "url": "https://www.youtube.com/results?search_query=Molotov+Solution+The+Harbinger",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Emmure",
-      "titel": "Nemesis",
-      "substil_vermerk": "nu-/beatdown-Deathcore (US)",
-      "url": "https://www.youtube.com/results?search_query=Emmure+Nemesis",
       "quelle": "youtube"
     },
     {

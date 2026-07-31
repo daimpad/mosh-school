@@ -1,15 +1,8 @@
 {
   "genre": "Dark Post-Punk / Deathrock",
-  "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks. Reiner Song-Pool ohne stil-Wert — dient der Inspiration, nicht als Lernzweig. Hass-/extremismusfrei kuratiert.",
+  "anzahl": 28,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
-    {
-      "kuenstler": "Joy Division",
-      "titel": "Isolation",
-      "substil_vermerk": "kalter Grundstein (UK)",
-      "url": "https://www.youtube.com/results?search_query=Joy+Division+Isolation",
-      "quelle": "youtube"
-    },
     {
       "kuenstler": "Bauhaus",
       "titel": "Bela Lugosi's Dead",
@@ -29,13 +22,6 @@
       "titel": "One Hundred Years",
       "substil_vermerk": "düsterste Phase (UK)",
       "url": "https://www.youtube.com/results?search_query=The+Cure+One+Hundred+Years",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Siouxsie and the Banshees",
-      "titel": "Spellbound",
-      "substil_vermerk": "kantig, tomlastig (UK)",
-      "url": "https://www.youtube.com/results?search_query=Siouxsie+and+the+Banshees+Spellbound",
       "quelle": "youtube"
     },
     {
