@@ -83,7 +83,18 @@ export function ladeZustand() {
     const roh = globalThis.localStorage?.getItem(SPEICHER_KEY);
     if (roh) gespeichert = JSON.parse(roh);
   } catch {
+    // Kaputter Stand: die Vorgabe wird gleich darüber geschrieben, also ist der
+    // Fortschritt sonst unwiederbringlich weg. Den Rohtext vorher einmal zur
+    // Seite legen — daraus lässt sich von Hand noch etwas retten. Bewusst nur
+    // EIN Slot (nicht anwachsend) und ohne eigenes Schema: das ist eine
+    // Trümmerablage, kein zweiter Store.
     gespeichert = null;
+    try {
+      const roh = globalThis.localStorage?.getItem(SPEICHER_KEY);
+      if (roh) globalThis.localStorage?.setItem(SPEICHER_KEY + '.defekt', roh);
+    } catch {
+      /* Speicher voll oder gesperrt — dann eben nicht */
+    }
   }
   z = verschmelze(vorgabe(), gespeichert);
   speichereZustand();
@@ -298,8 +309,23 @@ export function exportiereZustand() {
   return JSON.parse(JSON.stringify(stelleSicher()));
 }
 
+// Erkennungsmerkmale eines ZERRER-Backups. `exportiereZustand()` liefert immer
+// `schemaVersion` (aus vorgabe()) plus die bekannten Bereiche — eine fremde
+// JSON-Datei hat das nicht.
+const BACKUP_BEREICHE = ['fortschritt', 'diagnose', 'einstellungen', 'status', 'onboarding', 'merkliste'];
+
+// Nimmt NUR ein plausibles ZERRER-Backup an. Vorher genügte `typeof === 'object'`:
+// Damit ersetzte jede beliebige JSON-Datei (versehentlich im Dateidialog gewählt)
+// den kompletten Fortschritt — verschmelze() legt sie über die Vorgabe, schreibe()
+// macht es sofort dauerhaft, und der alte Stand ist unwiederbringlich weg.
 export function importiereZustand(objekt) {
-  if (!objekt || typeof objekt !== 'object') return false;
+  if (!objekt || typeof objekt !== 'object' || Array.isArray(objekt)) return false;
+  const hatVersion = typeof objekt.schemaVersion === 'number';
+  const hatBereich = BACKUP_BEREICHE.some((k) => {
+    const v = objekt[k];
+    return v != null && typeof v === 'object';
+  });
+  if (!hatVersion || !hatBereich) return false;
   z = verschmelze(vorgabe(), objekt);
   schreibe();
   return true;

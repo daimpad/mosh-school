@@ -15,6 +15,11 @@ import { werkzeugeFuer } from '../werkzeug-links.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { bausteinStatus, diagnose, einstellungen, istGemerkt, merkeZuletzt, schalteGemerkt, setzeBausteinStatus } from '../zustand.js';
 
+// Rückweg aus dem Baustein in die Liste, aus der man kam. Muss dieselben
+// Kontext-Arten kennen wie sequenzFuer() in js/pfade.js — fehlt ein Arm, fiel
+// der Kontext bisher in den Kompetenz-Zweig und deutete seinen Parameter als
+// Könnensstufe um: `instrument:gitarre` führte auf #/pfad/kompetenz/gitarre,
+// eine leere Seite, die „Gitarre" als Stufe ausgab.
 function kontextZuListe(kontext) {
   const [art, parameter] = String(kontext).split(':');
   if (art === 'themen') return `#/pfad/themen/${parameter}`;
@@ -22,6 +27,8 @@ function kontextZuListe(kontext) {
   if (art === 'umgebung') return '#/pfad/umgebung';
   if (art === 'witterung') return `#/pfad/${art}/${parameter}`;
   if (art === 'individual') return '#/pfad/individual';
+  if (art === 'instrument' && INSTRUMENTE.includes(parameter)) return `#/instrument/${parameter}`;
+  if (art === 'band') return '#/band';
   return parameter ? `#/pfad/kompetenz/${parameter}` : '#/pfad/kompetenz';
 }
 

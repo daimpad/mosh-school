@@ -5,6 +5,7 @@
 // und testbar (kein Date.now()).
 
 import { trainingsuebersicht } from './pfade.js';
+import { t } from './i18n.js';
 
 // n Einheiten gleichmäßig auf die Woche verteilen → n Wochentag-Offsets (0 = Mo … 6 = So).
 function verteileTage(n) {
@@ -109,7 +110,7 @@ export function planAlsIcal(plan, beschriftung, jetztStempel) {
       `DTSTAMP:${jetztStempel}`,
       `DTSTART;VALUE=DATE:${tag}`,
       `DTEND;VALUE=DATE:${ende}`,
-      `SUMMARY:${icalEscape('ZERRER – ' + (b.titel || s.einheit))}`,
+      `SUMMARY:${icalEscape(t('app_titel') + ' – ' + (b.titel || s.einheit))}`,
       `DESCRIPTION:${icalEscape(b.schwerpunkt || '')}`,
       'END:VEVENT',
     );

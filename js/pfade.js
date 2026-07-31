@@ -174,8 +174,15 @@ export function instrumentpfad(daten, domaene) {
   // sind durchweg praktisch). Theorie = das Wissens-Fundament (Musiktheorie-
   // Domäne) — instrumentübergreifend, aber auf jeder Instrument-Seite als „Warum"
   // greifbar. Reflexions-Bausteine des Instruments zählen zur Theorie hinzu.
-  const theorie = daten.bausteine.filter((b) => sichtbar(b) && (domaenenVon(b).includes('theorie') || (domaenenVon(b).includes(domaene) && !!b.reflexionsaufgabe)));
   const praxis = amInstrument.filter((b) => !istGear(b) && !b.reflexionsaufgabe);
+  // Ein Baustein, der BEIDE Domänen trägt (z. B. domaene:[theorie,gitarre] mit
+  // Übungsteil), erfüllte vorher beide Filter und erschien in Theorie UND Praxis
+  // — auf der Gitarren-Seite betraf das 12 Bausteine. Praxis gewinnt: Wer am
+  // Instrument übt, sucht die Übung unter Praxis; reine Theorie (ohne
+  // Instrument-Domäne) bleibt unberührt in Theorie.
+  const inPraxis = new Set(praxis.map((b) => b.id));
+  const theorie = daten.bausteine.filter((b) => sichtbar(b) && !inPraxis.has(b.id)
+    && (domaenenVon(b).includes('theorie') || (domaenenVon(b).includes(domaene) && !!b.reflexionsaufgabe)));
   return {
     art: 'instrument',
     domaene,
@@ -303,7 +310,12 @@ export function trainingsuebersicht(daten) {
 }
 
 // Kontext-Strings der Ansichten: 'kompetenz', 'kompetenz:trainer',
-// 'themen:<domaene>', 'individual'.
+// 'themen:<domaene>', 'individual', 'instrument:<domaene>', 'band'.
+// WICHTIG: Jede Ansicht, die einen Kontext in die Baustein-URL schreibt, braucht
+// hier einen Arm. Fehlt er, greift stillschweigend der Kompetenz-Zweig und
+// deutet den Parameter als Könnensstufe um — `instrument:gitarre` landete so auf
+// kompetenzpfad(daten, 'gitarre'), also einer leeren Sequenz (siehe auch
+// kontextZuListe in js/ansichten/baustein.js, das dieselbe Liste kennen muss).
 export function sequenzFuer(daten, kontext) {
   const [art, parameter] = String(kontext || 'kompetenz').split(':');
   if (art === 'themen') return themenpfad(daten, parameter);
@@ -311,6 +323,13 @@ export function sequenzFuer(daten, kontext) {
   if (art === 'umgebung') return umgebungspfad(daten);
   if (art === 'witterung') return umgebungspfad(daten, 'witterung', parameter);
   if (art === 'individual') return individualpfad(daten);
+  if (art === 'instrument' && INSTRUMENTE.includes(parameter)) {
+    // Reihenfolge wie die Reiter der Instrument-Ansicht (Theorie, Praxis,
+    // Geräte) — so entspricht „vor/zurück" dem, was der Nutzer dort sieht.
+    const p = instrumentpfad(daten, parameter);
+    return { art: 'instrument', domaene: parameter, stationen: [...p.theorie, ...p.praxis, ...p.ausruestung] };
+  }
+  if (art === 'band') return bandpfad(daten);
   return kompetenzpfad(daten, parameter || diagnose().stufe);
 }
 

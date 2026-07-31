@@ -67,9 +67,14 @@ const ID_REGELN = {
 
 // Genres, für die ein Play-along-Loop existiert (deckungsgleich mit STIL_ZU_BEAT
 // in werkzeug-loops.js). Nur diese lösen die generische Loop-Regel aus.
+// Muss mit STIL_ZU_BEAT in js/ansichten/werkzeug-loops.js deckungsgleich bleiben —
+// beide Listen sind schon einmal auseinandergelaufen: mathcore/screamo/noise_rock
+// bekamen ihre Beats, standen hier aber nicht, also blieb der „Passendes
+// Werkzeug"-Chip bei diesen Genres aus, obwohl der Loop existiert.
 const LOOP_STILE = new Set([
   'hardcore', 'crust', 'powerviolence', 'grindcore', 'black_metal', 'death_metal',
   'thrash', 'metalcore', 'djent', 'deathcore', 'doom', 'sludge', 'stoner_post',
+  'mathcore', 'screamo', 'noise_rock',
 ]);
 
 

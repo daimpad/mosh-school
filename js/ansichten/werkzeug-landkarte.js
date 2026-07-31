@@ -290,8 +290,17 @@ function starteFelder(canvas, genres, onGenre) {
   }
   canvas.addEventListener('click', beiKlick);
 
+  // Mit Bewegung zeichnet die rAF-Schleife ohnehin jeden Frame neu und faengt
+  // eine Groessenaenderung von selbst ab. OHNE Bewegung (reduzierte Bewegung)
+  // lief nach dem einen Erstanstrich nichts mehr: beim Drehen des Geraets oder
+  // Aendern der Fenstergroesse blieb der alte Puffer stehen und die Karte war
+  // verzerrt. Deshalb hier nur in diesem Fall auf resize neu zeichnen.
+  const beiResize = () => zeichne(null);
   if (bewegung) raf = requestAnimationFrame(schleife);
-  else zeichne(null);
+  else {
+    zeichne(null);
+    window.addEventListener('resize', beiResize);
+  }
 
   return {
     setzeAktiv(menge) {
@@ -301,6 +310,7 @@ function starteFelder(canvas, genres, onGenre) {
     stop() {
       if (raf) cancelAnimationFrame(raf);
       canvas.removeEventListener('click', beiKlick);
+      window.removeEventListener('resize', beiResize);
     },
   };
 }

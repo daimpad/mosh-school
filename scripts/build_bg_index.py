@@ -94,7 +94,11 @@ def main(nur_pruefen=False):
     for b in bilder:
         kb = b['bytes'] / 1024
         hinweis = '   <-- sehr gross fuer einen Hintergrund' if kb > 800 else ''
-        print(f"  {b['datei']:28} {b['breite']}x{b['hoehe']:<6} {kb:7.0f} KB{hinweis}")
+        # .webp/.avif werden akzeptiert, aber von masse() nicht gelesen — dann
+        # sind breite/hoehe None und die numerische Formatierung brach den Lauf
+        # mit einem TypeError ab, NACH dem Schreiben von bilder.json.
+        masse_text = f"{b['breite']}x{b['hoehe']}" if b['breite'] and b['hoehe'] else '?'
+        print(f"  {b['datei']:28} {masse_text:<13} {kb:7.0f} KB{hinweis}")
 
 
 if __name__ == '__main__':

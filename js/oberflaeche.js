@@ -235,6 +235,49 @@ export function neuRendern() {
   window.dispatchEvent(new CustomEvent('app:rendern'));
 }
 
+// Fokus über ein Neu-Zeichnen retten. Der Router macht das für In-Place-Renders
+// derselben Route selbst; Werkzeug-Ansichten, die sich SELBST neu zeichnen
+// (`renderWerkzeugX(el, daten, null)` statt neuRendern()), gehen an ihm vorbei —
+// dort landete der Fokus nach jedem Chip-Klick auf <body>, und Tastaturnutzer
+// mussten sich jedes Mal neu durch die Seite tabben. `halteFokus` merkt das
+// aktive Element an seinen data-*-Attributen bzw. seiner id, zeichnet neu und
+// setzt den Fokus auf das gleichwertige Element der neuen Ausgabe.
+export function halteFokus(el, zeichneNeu) {
+  const aktiv = document.activeElement;
+  let wahl = null;
+  if (aktiv && el.contains(aktiv) && aktiv.attributes) {
+    const daten = [...aktiv.attributes]
+      .filter((a) => a.name.startsWith('data-'))
+      .map((a) => `[${a.name}="${CSS.escape(a.value)}"]`)
+      .join('');
+    if (daten) wahl = aktiv.tagName.toLowerCase() + daten;
+    else if (aktiv.id) wahl = '#' + CSS.escape(aktiv.id);
+    else if (aktiv.className) wahl = aktiv.tagName.toLowerCase() + '.' + CSS.escape(String(aktiv.className).split(/\s+/)[0]);
+  }
+  zeichneNeu();
+  if (!wahl) return;
+  try {
+    el.querySelector(wahl)?.focus({ preventScroll: true });
+  } catch {
+    /* ungültiger Selektor — dann eben kein Zurücksetzen */
+  }
+}
+
+// Screenreader-Ansage über die globale Live-Region (#ansage in index.html).
+// Die Region existierte von Anfang an, aber NIEMAND hat je hineingeschrieben —
+// sie war totes Markup. Genutzt für Ergebnisse, die nur optisch erscheinen
+// (Auswahl im Gear-Explorer, Prüfergebnis im Amp/Box-Rechner, fehlgeschlagene
+// Aktionen). Der Text wird kurz geleert, damit zweimal dieselbe Ansage auch
+// zweimal vorgelesen wird — sonst schluckt der Screenreader die Wiederholung.
+export function sage(nachricht) {
+  const region = document.getElementById('ansage');
+  if (!region) return;
+  region.textContent = '';
+  window.setTimeout(() => {
+    region.textContent = String(nachricht ?? '');
+  }, 60);
+}
+
 // Ansichts-Aufräumen (Ressourcen-Teardown beim Ansichtswechsel). Views mit
 // laufenden Ressourcen (Audio-Scheduler, Mikrofon-Streams, Timer, Objekt-URLs)
 // registrieren hier eine Stop-Funktion; der Router führt sie beim Verlassen der

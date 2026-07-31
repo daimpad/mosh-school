@@ -165,7 +165,7 @@ function oeffneMerklistePdf(daten) {
   `;
   const dok = `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>${esc(t('merkliste_pdf_titel'))}</title><style>${stil}</style></head><body>
     <h1>${esc(t('merkliste_pdf_titel'))}</h1>
-    <p class="pdf-intro">mosh school — ${esc(t('merkliste_titel'))}</p>
+    <p class="pdf-intro">${esc(t('app_titel'))} — ${esc(t('merkliste_titel'))}</p>
     ${teile}
     <script>window.addEventListener('load',function(){window.focus();window.print();});<\/script>
   </body></html>`;
@@ -221,7 +221,12 @@ function bindeMerkliste(el, daten, neuZeichnen) {
       neuZeichnen();
     });
   }
-  el.querySelector('#pf-merk-pdf')?.addEventListener('click', () => oeffneMerklistePdf(daten));
+  el.querySelector('#pf-merk-pdf')?.addEventListener('click', () => {
+    // window.open() gibt bei blockiertem Pop-up null zurueck; oeffneMerklistePdf
+    // reicht das als false durch. Vorher wurde der Rueckgabewert verworfen — der
+    // Knopf tat dann schlicht nichts, ohne jede Erklaerung.
+    if (!oeffneMerklistePdf(daten)) window.alert(t('pdf_popup_blockiert'));
+  });
 }
 
 // Eigene Seite für die Merkliste — Ziel des Merken-Knopfs auf der Baustein-Seite.

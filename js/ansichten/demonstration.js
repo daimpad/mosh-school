@@ -56,9 +56,18 @@ function taktMarken(demo, stepsProBeat) {
   return set;
 }
 
+// „<n>_ist_tiefste" heisst: die HOECHSTE Saitennummer ist die tiefste Saite.
+// Vorher wurde nur auf die Zeichenkette '6_ist_tiefste' geprueft — der Bass
+// deklariert '4_ist_tiefste', fiel damit durch und wurde umgekehrt gelesen:
+// galopp_bass (Tuning C1-G1-C2-F2, alle Events auf Saite 4) klang auf F2 statt
+// C1 und stand in der Tabulatur auf der falschen Zeile.
+function hoechsteNrIstTief(demo) {
+  return /^\d+_ist_tiefste$/.test(demo.saiten_reihenfolge || '');
+}
+
 function frequenzFuerEvent(demo, ev) {
   const tuning = demo.tuning || [];
-  const idx = demo.saiten_reihenfolge === '6_ist_tiefste' ? tuning.length - ev.saite : ev.saite - 1;
+  const idx = hoechsteNrIstTief(demo) ? tuning.length - ev.saite : ev.saite - 1;
   const basis = frequenzVon(tuning[idx]);
   return basis ? basis * 2 ** ((ev.bund || 0) / 12) : null;
 }
@@ -68,10 +77,14 @@ function frequenzFuerEvent(demo, ev) {
 function rasterPattern(demo, marken) {
   return demo.spuren
     .map((spur) => {
-      const zellen = spur.schritte
-        .map((an, i) => `<span class="demo-zelle${an ? ' an' : ''}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true"></span>`)
-        .join('');
       const label = t('demo_instr_' + spur.instrument);
+      // Die farbige Zelle bleibt fuer Hilfstechnik unsichtbar (sie sagt nichts),
+      // daneben steht der Inhalt als Text. Vorher war das ganze Raster
+      // aria-hidden — Screenreader bekamen weder Rhythmus noch Bundzahlen.
+      const zellen = spur.schritte
+        .map((an, i) => `<span class="demo-zelle${an ? ' an' : ''}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true"></span>`
+          + `<span class="nur-sr">${esc(t('demo_zelle_sr', { n: i + 1, was: an ? label : t('pattern_pause') }))}</span>`)
+        .join('');
       return `<div class="demo-zeile"><span class="demo-zeilen-label">${esc(label)}</span>
         <div class="demo-zellen" style="grid-template-columns:repeat(${spur.schritte.length},1fr)">${zellen}</div></div>`;
     })
@@ -84,13 +97,16 @@ function rasterTab(demo, cols, marken) {
   const tuning = demo.tuning || [];
   const zeilen = [];
   for (let saiteNr = 1; saiteNr <= tuning.length; saiteNr++) {
-    const idx = demo.saiten_reihenfolge === '6_ist_tiefste' ? tuning.length - saiteNr : saiteNr - 1;
+    const idx = hoechsteNrIstTief(demo) ? tuning.length - saiteNr : saiteNr - 1;
     const note = String(tuning[idx] || '').replace(/-?\d+$/, '');
     const zellen = [];
     for (let i = 0; i < cols; i++) {
       const ev = evMap.get(saiteNr + ':' + i);
       const tech = ev ? ` an technik-${ev.technik || 'normal'}` : '';
-      zellen.push(`<span class="demo-zelle demo-tab-zelle${tech}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true">${ev ? esc(String(ev.bund)) : ''}</span>`);
+      zellen.push(
+        `<span class="demo-zelle demo-tab-zelle${tech}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true">${ev ? esc(String(ev.bund)) : ''}</span>`
+          + `<span class="nur-sr">${esc(t('demo_zelle_sr', { n: i + 1, was: ev ? t('demo_bund', { n: ev.bund }) : t('pattern_pause') }))}</span>`
+      );
     }
     zeilen.push(`<div class="demo-zeile"><span class="demo-zeilen-label demo-saite-label">${esc(note)}</span>
       <div class="demo-zellen" style="grid-template-columns:repeat(${cols},1fr)">${zellen.join('')}</div></div>`);
@@ -117,6 +133,15 @@ function steuerung(demo) {
     </div>`;
 }
 
+// `verweis_genre` traegt einen Wert aus dem `stil`-Vokabular (death_metal),
+// die Songs-Routen nutzen aber den Dateinamen-Slug (death-metal). Ohne die
+// Umschrift landete der Knopf auf einem Slug, den es nicht gibt — und weil die
+// Songs-Ansicht bisher still auf das erste Genre zurueckfiel, sah man Hardcore
+// statt Death Metal, ohne dass irgendetwas nach Fehler aussah.
+function songSlugVon(stil) {
+  return String(stil || '').replaceAll('_', '-');
+}
+
 export function demonstrationHtml(demo) {
   if (!demo) return '';
   if (demo.typ === 'hoerbeispiel') {
@@ -124,7 +149,7 @@ export function demonstrationHtml(demo) {
       <section class="demo demo-hoerbeispiel">
         <h2><i class="fa-solid fa-play" aria-hidden="true"></i> ${esc(t('demo_titel'))}</h2>
         <p class="leise">${esc(demo.hinweis || t('demo_hoerbeispiel_text'))}</p>
-        <a class="knopf knopf-sekundaer" href="#/songs/${esc(demo.verweis_genre)}">${esc(t('demo_hoerbeispiel_link'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="knopf knopf-sekundaer" href="#/songs/${esc(songSlugVon(demo.verweis_genre))}">${esc(t('demo_hoerbeispiel_link'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </section>`;
   }
   if (demo.typ !== 'pattern' && demo.typ !== 'tab') return '';
@@ -136,7 +161,7 @@ export function demonstrationHtml(demo) {
   return `
     <section class="demo" data-demo-typ="${esc(demo.typ)}">
       <h2><i class="fa-solid fa-play" aria-hidden="true"></i> ${esc(t('demo_titel'))}</h2>
-      <div class="demo-raster demo-raster-${esc(demo.typ)}">${raster}</div>
+      <div class="demo-raster demo-raster-${esc(demo.typ)}" role="group" aria-label="${esc(t('demo_raster_aria'))}">${raster}</div>
       ${demo.hinweis ? `<p class="leise demo-hinweis">${esc(demo.hinweis)}</p>` : ''}
       ${steuerung(demo)}
     </section>`;
@@ -204,7 +229,11 @@ function starteDemo(sektion, demo, cfg) {
   laufEl = sektion;
   sched.starte({
     schrittDauer: (i) => {
-      if (!cfg.loop && i >= countinSteps + gesamt) return null;
+      // Nur an einer Rundengrenze beenden. Ohne die Modulo-Bedingung riss das
+      // Abwaehlen des Loop-Hakens die Wiedergabe mitten im Takt ab; mit ihr
+      // spielt die laufende Runde zu Ende. Fuer „Loop von Anfang an aus" aendert
+      // sich nichts, weil i == countinSteps + gesamt selbst eine Grenze ist.
+      if (!cfg.loop && i >= countinSteps + gesamt && (i - countinSteps) % gesamt === 0) return null;
       return 60 / cfg.bpm / stepsProBeat;
     },
     beiSchritt: (zeit, i) => {

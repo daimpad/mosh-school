@@ -826,7 +826,16 @@ a.karte-link {
   font-weight: 500;
   letter-spacing: 0.01em;
   vertical-align: middle;
+  /* Ein Chip ist ein einzeiliges Etikett (nowrap) — ohne Deckel schob ein langer
+     Baustein-Titel aber die GANZE SEITE seitlich raus: auf 360 px waren
+     #/griffe und #/training horizontal scrollbar (gemessen 376 bzw. 371 px
+     Dokumentbreite). max-width haelt den Chip in seinem Container, die Ellipse
+     kuerzt statt zu ueberlaufen. Chips, die ohnehin passen, sehen unveraendert
+     aus — nur der vorher kaputte Fall aendert sich. */
   white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* display: inline-block würde sonst das [hidden]-Attribut aushebeln (z. B. der
    Stopp-Knopf im Pattern-Werkzeug, der nur während der Wiedergabe erscheint). */
@@ -835,7 +844,7 @@ a.karte-link {
 /* Aktiver/ausgewählter Chip: satte Akzentfläche mit VOLLWEISSER Schrift (nicht
    das rote --primaer-tief) — klar erkennbarer Ausgewählt-Zustand, lesbar in
    beiden Themes. */
-.chip-akzent { background: var(--primaer); color: #fff; border-color: var(--primaer); }
+.chip-akzent { background: var(--primaer); color: var(--auf-primaer); border-color: var(--primaer); }
 
 /* Signal-Badges (Ampellogik) — weiche Fläche, kräftige Schrift, farbige Kante. */
 .chip-rot { background: var(--signal-rot-weich); color: var(--signal-rot-text); border: 1px solid var(--signal-rot); }
@@ -1076,7 +1085,7 @@ input[type='radio'], input[type='checkbox'] {
 .status-teil { border-color: var(--signal-gelb); background: var(--signal-gelb); }
 .status-teil i { color: #4d4300; }
 .status-voll { border-color: var(--signal-gruen); background: var(--signal-gruen); }
-.status-voll i { color: #0f3d1e; }
+.status-voll i { color: var(--auf-gruen); }
 
 /* ---------- Fortschritt ---------- */
 
@@ -1282,12 +1291,17 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 .profil-zeile {
   display: flex;
+  /* Ohne Umbruch schob das Themen-Auswahlfeld die Zeile bei 320 px ueber den
+     Rand (gemessen: scrollWidth 292 gegen clientWidth 244). */
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem;
   padding: 0.55rem 0;
   border-top: 1px solid var(--trennlinie);
 }
+.profil-zeile > * { min-width: 0; }
+.profil-zeile select { max-width: 100%; }
 
 .profil-zeile p { margin: 0; }
 
@@ -1808,6 +1822,13 @@ details[open] summary { margin-bottom: 0.5rem; }
   --signal-rot: #b23a26; --signal-rot-text: #9a2c19;
   --signal-gelb: #c79a12; --signal-gelb-text: #7d5f04;
   --signal-gruen: #4f7a1f; --signal-gruen-text: #3c5f15;
+  /* Tinte AUF einer gefuellten Signalflaeche. Die Fuellung wechselt mit dem
+     Thema, die Schrift darauf muss mitwechseln — vorher stand ueberall ein
+     hartes #fff bzw. #0b0b0c, das jeweils in EINEM Thema durchfiel (weisser
+     Chip-Text auf dem dunklen Rot: 3,55:1). Hell dunkelt die Fuellung, also
+     traegt sie Weiss; dunkel leuchtet sie, also traegt sie Schwarz. */
+  --auf-primaer: #ffffff;
+  --auf-gruen: #ffffff;
 }
 
 /* Dunkel = die Haupt-Identität: Concrete-Schwarz */
@@ -1823,7 +1844,12 @@ details[open] summary { margin-bottom: 0.5rem; }
     --flaeche-2: #1e1e20;
     --tinte: #ece9e1;
     --tinte-2: #a4a099;
-    --tinte-3: #77736b;
+    /* War #77736b — auf --flaeche 4,12:1 und auf --flaeche-2 nur 3,83:1, also
+       unter AA fuer den Kleintext, der diese Stufe traegt. #8d8981 bringt
+       5,19:1 bzw. 5,58:1 und bleibt klar unter --tinte-2. */
+    --tinte-3: #8d8981;
+    --auf-primaer: #0b0b0c;
+    --auf-gruen: #0b0b0c;
     --linie: #34343a;
     --linie-stark: #55555d;
     --ueberschrift: #ece9e1;
@@ -1845,7 +1871,9 @@ details[open] summary { margin-bottom: 0.5rem; }
   --flaeche-2: #1e1e20;
   --tinte: #ece9e1;
   --tinte-2: #a4a099;
-  --tinte-3: #77736b;
+  --tinte-3: #8d8981;
+  --auf-primaer: #0b0b0c;
+  --auf-gruen: #0b0b0c;
   --linie: #34343a;
   --linie-stark: #55555d;
   --ueberschrift: #ece9e1;
@@ -2068,7 +2096,7 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   background: var(--signal-gruen);
   border-style: solid;
   border-color: var(--signal-gruen);
-  color: #0b0b0c;
+  color: var(--auf-gruen);
   box-shadow: none;
 }
 
@@ -2137,10 +2165,16 @@ a.karte-link:hover, button.karte:hover, .station:hover {
    New Rocker, s. u. — eigene Regel statt hier mitgelistet, weil New Rocker
    nur in 400 vorliegt (900 wuerde der Browser nur synthetisch fett faelschen). */
 h1, h2, h3, .marke-hero-text h1, .abschnitt-titel {
-  font-family: 'Special Elite', 'Courier New', 'Roboto', monospace;
+  font-family: var(--schrift-display);
   font-weight: 900;
   letter-spacing: 0;
 }
+/* Der Stapel als Token, weil ihn ausser den Ueberschriften noch die
+   Kategorie-Titel lesen. Sie taten das schon vorher ueber
+   `var(--schrift-display, inherit)` — nur war das Token nie definiert, der
+   Fallback griff also immer und der Browser faelschte aus dem geerbten Roboto
+   einen synthetischen Fettdruck. */
+:root { --schrift-display: 'Special Elite', 'Courier New', 'Roboto', monospace; }
 /* ZERRER-Wortmarke in der Kopfzeile — New Rocker (s. css/schriften.css),
    dieselbe Schrift wie im Startseiten-Hero und im Footer. Laufweite bleibt
    die schon abgestimmte 0.04em von weiter oben (.marke-text). */
@@ -2172,7 +2206,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 /* Aktiver Auswahl-Chip: die Akzentfläche muss die neutrale .chip-waehlbar-Fläche
    schlagen (gleiche Spezifität, aber diese Regel kommt später) — sonst bliebe der
    Aktiv-Zustand nur an der Textfarbe erkennbar. */
-.chip-waehlbar.chip-akzent { background: var(--primaer); color: #fff; border-color: var(--primaer); }
+.chip-waehlbar.chip-akzent { background: var(--primaer); color: var(--auf-primaer); border-color: var(--primaer); }
 .chip-waehlbar svg { width: 1em; height: 1em; vertical-align: -0.15em; }
 .stimm-detail { margin-top: 1.2rem; }
 .stimm-saiten { display: flex; flex-direction: column; gap: 0.35rem; margin: 1rem 0; max-width: 460px; }
@@ -2475,6 +2509,10 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .intens-3 { background: var(--primaer); }
 .intens-4 { background: var(--signal-gelb-text); }
 .intens-5 { background: var(--signal-rot); }
+/* Nur diese Stufe braucht helle Schrift: --flaeche auf --signal-rot ergab dunkel
+   3,65:1. Weiss bringt 4,96:1 (dunkel) bzw. 5,96:1 (hell). NICHT auf .wz-st-seg
+   insgesamt umstellen — auf Stufe 3 (--primaer) faellt Weiss auf 3,55:1. */
+.wz-st-seg.intens-5 { color: #ffffff; }
 .wz-st-liste { list-style: none; margin: 0.5rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
 .wz-st-block { border: 1px solid var(--linie-stark); border-left-width: 5px; border-radius: var(--radius-klein); padding: 0.6rem 0.75rem; background: var(--flaeche); }
 .wz-st-block.intens-1 { border-left-color: var(--pf-teal); background: var(--flaeche); }
@@ -2587,7 +2625,9 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
    deshalb dieselbe Schrift — vorher waren sie 500 statt 400 und wirkten in
    derselben Zeile schwerer als ihre Nachbarn. */
 .such-facette-chip, .glossar-kat-chip { cursor: pointer; font-weight: inherit; }
-.such-facette-chip { display: inline-flex; align-items: center; gap: 0.3rem; }
+/* Zielgroesse: die Chips lagen bei 18 px, unter dem WCAG-2.2-Minimum von
+   24 px — auf dem Handy ein Trefferspiel. */
+.such-facette-chip { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 24px; }
 .such-facette-chip:hover { border-color: var(--primaer); color: var(--tinte); }
 .such-facette-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; }
 .such-facette-zahl { font-size: 0.66rem; opacity: 0.7; font-variant-numeric: tabular-nums; }
@@ -2635,7 +2675,9 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 
 /* Detailseite: Einstieg, Einordnung, Verwandtschaft. */
 .genre-inszenierung { margin: 0.2rem 0 0.6rem; }
-.genre-abschnitt-titel { font-family: var(--schrift-display, inherit); font-size: 1.1rem; margin: 0 0 0.6rem; }
+/* Bewusst KEINE Display-Schrift (so in CLAUDE.md festgehalten) — jetzt
+   ausdruecklich, nicht mehr als Nebenwirkung eines fehlenden Tokens. */
+.genre-abschnitt-titel { font-family: inherit; font-size: 1.1rem; margin: 0 0 0.6rem; }
 .genre-einordnung { margin-bottom: 1.4rem; }
 .genre-ein-liste { margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
 .genre-ein-zeile {
@@ -2730,7 +2772,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .griff-svg .griff-grundton { fill: var(--primaer); stroke: none; }
 .griff-svg .griff-ton { fill: var(--tinte); stroke: none; }
 .griff-svg .griff-x { fill: var(--tinte-2); font-size: 15px; font-weight: 700; }
-.griff-svg .griff-r { fill: #fff; font-size: 11px; font-weight: 700; }
+.griff-svg .griff-r { fill: var(--auf-primaer); font-size: 11px; font-weight: 700; }
 .griff-info { flex: 1 1 auto; min-width: 0; }
 .griff-name { margin: 0 0 0.4rem; font-size: 1rem; }
 .griff-chips { margin: 0 0 0.5rem; }
@@ -2914,7 +2956,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .gf-wolke { margin: 0.5rem 0 0.9rem; gap: 0.35rem; }
 .gf-chip .gf-zahl, .gf-chip-inline .gf-zahl {
   display: inline-block; min-width: 1.1em; padding: 0 0.25em; margin-left: 0.15em;
-  border-radius: 999px; background: var(--primaer); color: #0b0b0c; font-size: 0.7em; font-weight: 700; text-align: center;
+  border-radius: 999px; background: var(--primaer); color: var(--auf-primaer); font-size: 0.7em; font-weight: 700; text-align: center;
 }
 .gf-ergebnis { min-height: 3.2rem; padding: 0.7rem 0.85rem; border: 1px solid var(--linie); border-radius: var(--radius); background: var(--flaeche-2); }
 .gf-ergebnis-leer { margin: 0; }
@@ -3747,7 +3789,9 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
 .seiten-aktionen {
   position: fixed;
   right: 0.7rem;
-  bottom: 5.2rem;
+  /* Ohne den Sicherheitsabstand schob die Systemleiste auf Geraeten mit
+     abgerundeter Ecke/Home-Indikator die Saeule in die untere Navigation. */
+  bottom: calc(5.2rem + env(safe-area-inset-bottom, 0px));
   z-index: 30;
   display: flex;
   flex-direction: column;

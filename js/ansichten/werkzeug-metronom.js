@@ -118,7 +118,6 @@ function stoppeMarker() {
 }
 
 function markiere(el, ctx, zeit, i, countinTakte) {
-  if (reduziert()) return;
   const { schlag, istSchlag, istEins } = schrittInfo(i);
   if (!istSchlag) return; // nur Schläge visualisieren, nicht jede Unterteilung
   const imCountin = i < countinTakte * zustand.takt * zustand.unterteilung;
@@ -128,15 +127,21 @@ function markiere(el, ctx, zeit, i, countinTakte) {
       const punkt = el.querySelector('.wz-beat-punkt');
       const zahl = el.querySelector('.wz-beat-zahl');
       const status = el.querySelector('.wz-metro-status');
+      // Taktzähler und Statuszeile sind INHALT, nicht Animation. Vorher stand
+      // der Frueh-Ausstieg `if (reduziert()) return;` ganz oben in dieser
+      // Funktion — bei „Bewegung reduzieren" blieb der Zähler deshalb leer und
+      // die Statuszeile dauerhaft auf „Gestoppt", obwohl der Klick lief. Nur
+      // der blinkende Punkt gehört hinter die Schranke.
+      if (zahl) zahl.textContent = imCountin ? t('wz_countin_kurz') : String(schlag + 1);
+      if (status && istEins && !imCountin) {
+        status.textContent = t('wz_status_laeuft', { bpm: Math.round(letztesBpm) });
+      }
+      if (reduziert()) return;
       if (punkt) {
         punkt.classList.remove('an', 'eins');
         void punkt.offsetWidth; // Reflow, damit die Animation neu triggert
         punkt.classList.add('an');
         if (istEins) punkt.classList.add('eins');
-      }
-      if (zahl) zahl.textContent = imCountin ? t('wz_countin_kurz') : String(schlag + 1);
-      if (status && istEins && !imCountin) {
-        status.textContent = t('wz_status_laeuft', { bpm: Math.round(letztesBpm) });
       }
     }, verzoegerung)
   );
@@ -178,6 +183,12 @@ function zeigePausenHinweis(el) {
 function starte(el) {
   const ctx = holeKontext();
   const ziel = holeAusgang();
+  // Der Kontext kann nach dem Freischalten wieder wegkippen (Tab im
+  // Hintergrund, Anruf/Interruption auf iOS). Dann plant der Scheduler gegen
+  // eine stehende Uhr: kein Ton, die Ansicht meldet aber „Läuft". Vor jedem
+  // Start neu anstossen — der Klick kommt aus einer Nutzergeste, die
+  // Autoplay-Policy erlaubt das resume() hier also.
+  if (ctx.state !== 'running') aktiviere();
   scheduler = scheduler || erzeugeScheduler(ctx);
   stoppeMarker();
   laufSeit = performance.now();
@@ -197,6 +208,11 @@ function starte(el) {
       planeKlick(ctx, ziel, zeit, i, countinTakte);
       markiere(el, ctx, zeit, i, countinTakte);
     },
+    // Mit Tempo-Map endet der Lauf von selbst (schrittDauer liefert null). Ohne
+    // diesen Rueckruf blieb die Oberflaeche danach auf „laeuft" stehen: Der
+    // Knopf zeigte weiter „Stopp", obwohl nichts mehr klang. Gleiche Verdrahtung
+    // wie in demonstration.js.
+    beiEnde: () => stoppe(el),
   });
   setzeLaufZustand(el, true);
 }
@@ -222,7 +238,7 @@ function setzeLaufZustand(el, laeuft) {
     const icon = start.querySelector('i');
     if (icon) icon.className = laeuft ? 'fa-solid fa-stop' : 'fa-solid fa-play';
   }
-  if (status && !laeuft) status.textContent = t('wz_status_gestoppt');
+  if (status) status.textContent = laeuft ? t('wz_status_laeuft', { bpm: Math.round(letztesBpm) }) : t('wz_status_gestoppt');
 }
 
 // --- WAV-Export ---
@@ -273,7 +289,12 @@ function wendePresetAn(query) {
     const v = Number(query.get(name));
     return Number.isFinite(v) && v >= min && v <= max ? v : null;
   };
-  const bpm = zahl('bpm', 30, 300);
+  // Dieselben Grenzen wie Regler und Zahlenfeld (40..260). Vorher liess das
+  // Preset 30..300 durch — ein Link mit ?bpm=300 setzte einen Wert, den die
+  // Bedienelemente gar nicht darstellen koennen: das Zahlenfeld stand dann
+  // ueber seinem eigenen max, und die erste Beruehrung des Reglers riss das
+  // Tempo ohne erkennbaren Grund auf 260 herunter.
+  const bpm = zahl('bpm', 40, 260);
   if (bpm) zustand.bpm = Math.round(bpm);
   const takt = zahl('takt', 1, 12);
   if (takt) zustand.takt = Math.round(takt);
@@ -394,6 +415,12 @@ export function renderWerkzeugMetronom(el, daten, query) {
   registriereAufraeumen(() => {
     if (scheduler) scheduler.stoppe();
     stoppeMarker();
+    // Laufzeit ausbuchen wie in stoppe(). Ohne das blieb `laufSeit` beim
+    // Verlassen der laufenden Route stehen, der naechste Start ueberschrieb
+    // ihn — die bereits geuebte Zeit war weg und der Gesundheits-/Pausen-
+    // hinweis feuerte nie mehr.
+    if (laufSeit) laufKumuliert += performance.now() - laufSeit;
+    laufSeit = 0;
     clearTimeout(pausenTimer);
   });
 }
@@ -405,8 +432,13 @@ function verdrahte(el, daten) {
   el.querySelector('.wz-audio-aktivieren')?.addEventListener('click', async () => {
     await aktiviere();
     if (istBereit()) {
-      if (tor) tor.hidden = true;
+      // Reihenfolge: erst den Koerper zeigen und den Fokus dorthin setzen, DANN
+      // das Tor verstecken. Andersherum verschwand der gerade gedrueckte Knopf
+      // unter dem eigenen Fokus und der landete auf <body> — mit der Tastatur
+      // musste man sich von vorn durch die Seite arbeiten.
       if (koerper) koerper.hidden = false;
+      koerper?.querySelector('.wz-metro-start')?.focus({ preventScroll: true });
+      if (tor) tor.hidden = true;
     }
   });
 
