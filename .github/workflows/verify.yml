@@ -52,6 +52,14 @@ jobs:
       - name: Statische SEO-Seiten gegen die Quellen pruefen
         run: python3 scripts/build_seiten.py --check
 
+      # Die Zerr-Kennlinien tragen numerisch geprueffte Sollwerte (RMS, THD). Das
+      # Skript rechnet die Kurven aus js/audio/zerre.js nach und faengt genau die
+      # Fehlerklasse ab, die beim Bau schon zweimal zuschlug: eine faelschlich
+      # normierte Diodenkurve kehrt die Pegelreihenfolge um und macht die
+      # Kernaussage des Kapitels still falsch.
+      - name: Zerr-Kennlinien gegen die Sollwerte pruefen
+        run: python3 scripts/pruefe_zerrlabor.py
+
       # lift.py und build_index.py sind Generatoren mit eingecheckter Ausgabe.
       # Laufen sie hier und aendern etwas, wurden sie vor dem Commit vergessen.
       # images/bg/bilder.json ist hier bewusst NICHT dabei: Diese Datei gehoert
