@@ -828,7 +828,15 @@
     "wz_kachel_stimmungen": "",
     "wz_kachel_patterns": "",
     "wz_kachel_explorer": "",
-    "nicht_gefunden_titel": ""
+    "nicht_gefunden_titel": "",
+    "nav_zerrtypen": "",
+    "zerrtypen_titel": "",
+    "zerrtypen_untertitel": "",
+    "zerrtypen_prinzip": "",
+    "zerrtypen_klang": "",
+    "zerrtypen_anwendung": "",
+    "zerrtypen_achtung": "",
+    "zerrtypen_leer": ""
   },
   "bausteine": {
     "grundhaltung": "",
@@ -1327,7 +1335,19 @@
     "uebergaenge_bauen": "",
     "wiederholung_im_grossen": "",
     "form_skizzieren": "",
-    "form_typen_im_genre": ""
+    "form_typen_im_genre": "",
+    "zerrtypen_ueberblick": "",
+    "zerre_stapeln": "",
+    "zerre_waehlen": "",
+    "klippung_grundlagen": "",
+    "klippung_ort": "",
+    "dioden_und_schwelle": "",
+    "filter_vor_und_nach": "",
+    "gain_struktur_einstellen": "",
+    "amp_vorstufe_zerre": "",
+    "amp_endstufe_saettigung": "",
+    "gleichrichter_und_sag": "",
+    "amp_oder_pedal": ""
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "",
