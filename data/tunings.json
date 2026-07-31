@@ -72,6 +72,27 @@
       }
     },
     {
+      "id": "drop_db",
+      "instrument": "gitarre",
+      "saiten": [
+        "Db2",
+        "Ab2",
+        "Db3",
+        "Gb3",
+        "Bb3",
+        "Eb4"
+      ],
+      "genres": [
+        "metalcore",
+        "hardcore",
+        "death_metal"
+      ],
+      "staerke": "11–52 bis 11–54",
+      "hinweis": {
+        "de": "Drop D um einen Halbton tiefer — dieselben Ein-Finger-Powerchords, etwas mehr Gewicht, kaum mehr Aufwand."
+      }
+    },
+    {
       "id": "d_standard",
       "instrument": "gitarre",
       "saiten": [
@@ -117,6 +138,48 @@
       }
     },
     {
+      "id": "db_standard",
+      "instrument": "gitarre",
+      "saiten": [
+        "Db2",
+        "Gb2",
+        "B2",
+        "E3",
+        "Ab3",
+        "Db4"
+      ],
+      "genres": [
+        "death_metal",
+        "doom",
+        "sludge"
+      ],
+      "staerke": "12–56 bis 13–60",
+      "hinweis": {
+        "de": "Einen Halbton unter D-Standard. Der Schritt, an dem dünne Sätze anfangen zu flattern — hier lohnt sich die dickere Saite mehr als der Kompressor."
+      }
+    },
+    {
+      "id": "drop_b",
+      "instrument": "gitarre",
+      "saiten": [
+        "B1",
+        "Gb2",
+        "B2",
+        "E3",
+        "Ab3",
+        "Db4"
+      ],
+      "genres": [
+        "metalcore",
+        "death_metal",
+        "deathcore"
+      ],
+      "staerke": "12–60 bis 13–62",
+      "hinweis": {
+        "de": "Tiefes Core-Terrain: Breakdowns mit maximalem Gewicht — Intonation und Gate-Disziplin entscheiden hier über Matsch oder Wand."
+      }
+    },
+    {
       "id": "c_standard",
       "instrument": "gitarre",
       "saiten": [
@@ -139,24 +202,87 @@
       }
     },
     {
-      "id": "drop_b",
+      "id": "b_standard",
       "instrument": "gitarre",
       "saiten": [
         "B1",
-        "Gb2",
-        "B2",
-        "E3",
-        "Ab3",
-        "Db4"
+        "E2",
+        "A2",
+        "D3",
+        "F#3",
+        "B3"
       ],
       "genres": [
-        "metalcore",
+        "deathcore",
         "death_metal",
-        "deathcore"
+        "djent"
       ],
-      "staerke": "12–60 bis 13–62",
+      "staerke": "13–62 bis 14–68",
       "hinweis": {
-        "de": "Tiefes Core-Terrain: Breakdowns mit maximalem Gewicht — Intonation und Gate-Disziplin entscheiden hier über Matsch oder Wand."
+        "de": "Sechs Saiten auf dem Terrain, für das sonst der Siebensaiter geholt wird. Kürzere Mensuren kommen hier an ihre Grenze — Bundreinheit vor Tiefe."
+      }
+    },
+    {
+      "id": "drop_a",
+      "instrument": "gitarre",
+      "saiten": [
+        "A1",
+        "E2",
+        "A2",
+        "D3",
+        "F#3",
+        "B3"
+      ],
+      "genres": [
+        "deathcore",
+        "djent",
+        "sludge"
+      ],
+      "staerke": "13–65 bis 14–68",
+      "hinweis": {
+        "de": "Die tiefe Ein-Finger-Lage für sechs Saiten. Ab hier trägt nur noch eine straffe Signalkette: Hochpass vor der Zerre, sonst frisst der Bassbereich alles."
+      }
+    },
+    {
+      "id": "a_standard",
+      "instrument": "gitarre",
+      "saiten": [
+        "A1",
+        "D2",
+        "G2",
+        "C3",
+        "E3",
+        "A3"
+      ],
+      "genres": [
+        "deathcore",
+        "doom",
+        "sludge"
+      ],
+      "staerke": "14–68 bis 15–72",
+      "hinweis": {
+        "de": "Extrem tief für sechs Saiten: Ohne Baritone-Mensur wird der Ton eher Geräusch als Note. Wer hierhin will, braucht Mensur und Saitenstärke, nicht nur Gain."
+      }
+    },
+    {
+      "id": "drop_g",
+      "instrument": "gitarre",
+      "saiten": [
+        "G1",
+        "D2",
+        "G2",
+        "C3",
+        "E3",
+        "A3"
+      ],
+      "genres": [
+        "deathcore",
+        "doom",
+        "sludge"
+      ],
+      "staerke": "14–70 bis 16–76",
+      "hinweis": {
+        "de": "Ganz unten. Die tiefe Saite ist eher Perkussion als Ton — Abdämpfen mit der Anschlaghand entscheidet über Definition."
       }
     },
     {
@@ -205,6 +331,49 @@
       }
     },
     {
+      "id": "a_standard_7",
+      "instrument": "gitarre",
+      "saiten": [
+        "A1",
+        "D2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "genres": [
+        "deathcore",
+        "djent",
+        "death_metal"
+      ],
+      "staerke": "10–62 bis 11–64 (7-Saiter)",
+      "hinweis": {
+        "de": "Der Siebensaiter zwei Halbtöne tiefer. Beliebt, weil die tiefe Saite dann dieselbe Lage hat wie Drop A auf sechs Saiten — nur mit der hohen E-Saite obendrauf."
+      }
+    },
+    {
+      "id": "drop_g_7",
+      "instrument": "gitarre",
+      "saiten": [
+        "G1",
+        "D2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "genres": [
+        "deathcore",
+        "djent"
+      ],
+      "staerke": "11–64 (7-Saiter)",
+      "hinweis": {
+        "de": "A-Standard mit gedroppter tiefster Saite: Ein-Finger-Powerchords ganz unten, volle Skalenlage darüber."
+      }
+    },
+    {
       "id": "f_sharp_standard_8",
       "instrument": "gitarre",
       "saiten": [
@@ -246,6 +415,50 @@
       "staerke": "09–80 (8-Saiter)",
       "hinweis": {
         "de": "Achtsaiter mit auf E heruntergezogener tiefster Saite — maximale Wucht für Djent- und Deathcore-Breakdowns über den Powerchord auf der tiefsten Saite."
+      }
+    },
+    {
+      "id": "e_standard_8",
+      "instrument": "gitarre",
+      "saiten": [
+        "E1",
+        "A1",
+        "D2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "genres": [
+        "djent",
+        "deathcore"
+      ],
+      "staerke": "09–80 bis 10–84 (8-Saiter)",
+      "hinweis": {
+        "de": "Achtsaiter zwei Halbtöne tiefer — die tiefste Saite liegt auf E1, also auf der tiefen Saite eines Basses."
+      }
+    },
+    {
+      "id": "drop_d_8",
+      "instrument": "gitarre",
+      "saiten": [
+        "D1",
+        "A1",
+        "D2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "genres": [
+        "djent",
+        "deathcore"
+      ],
+      "staerke": "10–84 (8-Saiter)",
+      "hinweis": {
+        "de": "E-Standard auf acht Saiten mit gedroppter Achten. Tiefer geht auf der Gitarre kaum noch sinnvoll."
       }
     },
     {
@@ -293,6 +506,25 @@
       }
     },
     {
+      "id": "bass_eb_standard",
+      "instrument": "bass",
+      "saiten": [
+        "Eb1",
+        "Ab1",
+        "Db2",
+        "Gb2"
+      ],
+      "genres": [
+        "thrash",
+        "doom",
+        "stoner_post"
+      ],
+      "staerke": "45–105 bis 50–110",
+      "hinweis": {
+        "de": "Einen Halbton runter, wie beim Es-Standard der Gitarre — der klassische Weg, zur Gitarre zu passen, ohne die Saitenstärke zu ändern."
+      }
+    },
+    {
       "id": "bass_d_standard",
       "instrument": "bass",
       "saiten": [
@@ -333,6 +565,25 @@
       }
     },
     {
+      "id": "bass_c_standard",
+      "instrument": "bass",
+      "saiten": [
+        "C1",
+        "F1",
+        "Bb1",
+        "Eb2"
+      ],
+      "genres": [
+        "deathcore",
+        "doom",
+        "sludge"
+      ],
+      "staerke": "55–115 bis 60–120",
+      "hinweis": {
+        "de": "Vier Halbtöne unter E-Standard. Ohne dickere Saiten wird der Ton schlaff; die Saitenlage muss mit, sonst schnarrt alles."
+      }
+    },
+    {
       "id": "bass_b_5",
       "instrument": "bass",
       "saiten": [
@@ -351,6 +602,46 @@
       "staerke": "45–130 (5-Saiter)",
       "hinweis": {
         "de": "Der 5-Saiter: die tiefe H-Saite deckt fast alle Drop-Tunings der Gitarren ab, ohne umzustimmen — Details im Baustein zum Fünfsaiter."
+      }
+    },
+    {
+      "id": "bass_drop_a_5",
+      "instrument": "bass",
+      "saiten": [
+        "A0",
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "genres": [
+        "deathcore",
+        "djent"
+      ],
+      "staerke": "50–130 (5-Saiter)",
+      "hinweis": {
+        "de": "Der Fünfsaiter mit gedroppter H-Saite: passt zu Drop-A-Gitarren, ohne dass der Bass die Lage wechseln muss."
+      }
+    },
+    {
+      "id": "bass_6",
+      "instrument": "bass",
+      "saiten": [
+        "B0",
+        "E1",
+        "A1",
+        "D2",
+        "G2",
+        "C3"
+      ],
+      "genres": [
+        "djent",
+        "mathcore",
+        "stoner_post"
+      ],
+      "staerke": "30–130 (6-Saiter)",
+      "hinweis": {
+        "de": "Sechs Saiten: tiefe H-Saite unten, hohe C-Saite oben. Mehr Lage ohne Positionswechsel — im Metal vor allem im technischen Bereich."
       }
     }
   ],
