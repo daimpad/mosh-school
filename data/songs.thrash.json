@@ -1,27 +1,13 @@
 {
   "genre": "Thrash",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 28,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Metallica",
       "titel": "Master of Puppets",
       "substil_vermerk": "Bay-Area/Big Four (US)",
       "url": "https://www.youtube.com/results?search_query=Metallica+Master+of+Puppets",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Slayer",
-      "titel": "Angel of Death",
-      "substil_vermerk": "Big Four (US)",
-      "url": "https://www.youtube.com/results?search_query=Slayer+Angel+of+Death",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Megadeth",
-      "titel": "Holy Wars... The Punishment Due",
-      "substil_vermerk": "Big Four (US)",
-      "url": "https://www.youtube.com/results?search_query=Megadeth+Holy+Wars...+The+Punishment+Due",
       "quelle": "youtube"
     },
     {

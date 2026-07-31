@@ -1,7 +1,7 @@
 {
   "genre": "Mathcore",
-  "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Künstler). Bei tiefen Underground-Einträgen den genauen Tracktitel vor Release kurz gegenprüfen. Hass-/extremismusfrei kuratiert.",
+  "anzahl": 29,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "The Dillinger Escape Plan",
@@ -106,13 +106,6 @@
       "titel": "Cloaked",
       "substil_vermerk": "Mathcore mit Ambient-Kontrast (UK)",
       "url": "https://bandcamp.com/search?q=Rolo+Tomassi+Cloaked&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Daughters",
-      "titel": "The Hit",
-      "substil_vermerk": "Noise-Mathcore (US)",
-      "url": "https://bandcamp.com/search?q=Daughters+The+Hit&item_type=t",
       "quelle": "bandcamp"
     },
     {

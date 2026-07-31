@@ -1,22 +1,8 @@
 {
   "genre": "Sludge",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 24,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
-    {
-      "kuenstler": "Acid Bath",
-      "titel": "The Blue",
-      "substil_vermerk": "NOLA-Sludge/experimentell (US)",
-      "url": "https://www.youtube.com/results?search_query=Acid+Bath+The+Blue",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Down",
-      "titel": "Stone the Crow",
-      "substil_vermerk": "NOLA-Sludge/Doom (US)",
-      "url": "https://www.youtube.com/results?search_query=Down+Stone+the+Crow",
-      "quelle": "youtube"
-    },
     {
       "kuenstler": "Soilent Green",
       "titel": "Sewn Mouth Secrets",
@@ -144,31 +130,10 @@
       "quelle": "bandcamp"
     },
     {
-      "kuenstler": "Ilsa",
-      "titel": "Cries the Fallen",
-      "substil_vermerk": "crust/Sludge/Death-Doom (US)",
-      "url": "https://bandcamp.com/search?q=Ilsa+Cries+the+Fallen&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
       "kuenstler": "Coffinworm",
       "titel": "Sympathetic Extinction",
       "substil_vermerk": "blackened Sludge/Death (US)",
       "url": "https://bandcamp.com/search?q=Coffinworm+Sympathetic+Extinction&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Lord Mantis",
-      "titel": "Body Choke",
-      "substil_vermerk": "blackened Sludge (US)",
-      "url": "https://bandcamp.com/search?q=Lord+Mantis+Body+Choke&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Indian",
-      "titel": "The Only Cure",
-      "substil_vermerk": "harscher Noise-Sludge (US)",
-      "url": "https://bandcamp.com/search?q=Indian+The+Only+Cure&item_type=t",
       "quelle": "bandcamp"
     },
     {
@@ -197,13 +162,6 @@
       "titel": "Poison Sludge",
       "substil_vermerk": "industrieller/blackened Sludge (Frankreich)",
       "url": "https://bandcamp.com/search?q=Fange+Poison+Sludge&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Moloch",
-      "titel": "Illusions of the Living",
-      "substil_vermerk": "dreckiger Sludge (UK)",
-      "url": "https://bandcamp.com/search?q=Moloch+Illusions+of+the+Living&item_type=t",
       "quelle": "bandcamp"
     },
     {
