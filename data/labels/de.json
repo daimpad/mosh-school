@@ -1737,7 +1737,21 @@
       "bass_drop_d": "Bass: Drop D",
       "bass_d_standard": "Bass: D-Standard",
       "bass_drop_c": "Bass: Drop C",
-      "bass_b_5": "Bass: 5-Saiter (B)"
+      "bass_b_5": "Bass: 5-Saiter (B)",
+      "db_standard": "C♯-/Des-Standard",
+      "b_standard": "H-Standard (B)",
+      "a_standard": "A-Standard",
+      "drop_db": "Drop C♯",
+      "drop_a": "Drop A",
+      "drop_g": "Drop G",
+      "a_standard_7": "A-Standard (7-Saiter)",
+      "drop_g_7": "Drop G (7-Saiter)",
+      "e_standard_8": "E-Standard (8-Saiter)",
+      "drop_d_8": "Drop D (8-Saiter)",
+      "bass_eb_standard": "Bass: Es-Standard (Eb)",
+      "bass_c_standard": "Bass: C-Standard",
+      "bass_drop_a_5": "Bass: Drop A (5-Saiter)",
+      "bass_6": "Bass: 6-Saiter (H–C)"
     },
     "intervall": {
       "kleine_sekunde": "Kleine Sekunde",
