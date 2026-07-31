@@ -1,7 +1,7 @@
 {
   "genre": "Stoner",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 28,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Kyuss",
@@ -22,13 +22,6 @@
       "titel": "Space Lord",
       "substil_vermerk": "Space-/Stoner-Rock (US)",
       "url": "https://www.youtube.com/results?search_query=Monster+Magnet+Space+Lord",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Queens of the Stone Age",
-      "titel": "Regular John",
-      "substil_vermerk": "Desert/Stoner-Rock (US)",
-      "url": "https://www.youtube.com/results?search_query=Queens+of+the+Stone+Age+Regular+John",
       "quelle": "youtube"
     },
     {
@@ -113,13 +106,6 @@
       "titel": "Mind",
       "substil_vermerk": "psychedelischer Desert-Stoner (Deutschland)",
       "url": "https://bandcamp.com/search?q=Colour+Haze+Mind&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Church of Misery",
-      "titel": "Beltway Sniper",
-      "substil_vermerk": "Doom/Stoner (Japan)",
-      "url": "https://bandcamp.com/search?q=Church+of+Misery+Beltway+Sniper&item_type=t",
       "quelle": "bandcamp"
     },
     {

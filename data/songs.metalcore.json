@@ -1,7 +1,7 @@
 {
   "genre": "Metalcore",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 28,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Killswitch Engage",
@@ -11,24 +11,10 @@
       "quelle": "youtube"
     },
     {
-      "kuenstler": "As I Lay Dying",
-      "titel": "Nothing Left",
-      "substil_vermerk": "melodischer Metalcore (US)",
-      "url": "https://www.youtube.com/results?search_query=As+I+Lay+Dying+Nothing+Left",
-      "quelle": "youtube"
-    },
-    {
       "kuenstler": "Unearth",
       "titel": "The Great Dividing",
       "substil_vermerk": "melodischer Metalcore (US)",
       "url": "https://www.youtube.com/results?search_query=Unearth+The+Great+Dividing",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "All That Remains",
-      "titel": "This Calling",
-      "substil_vermerk": "melodischer Metalcore (US)",
-      "url": "https://www.youtube.com/results?search_query=All+That+Remains+This+Calling",
       "quelle": "youtube"
     },
     {

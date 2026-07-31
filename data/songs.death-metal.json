@@ -1,7 +1,7 @@
 {
   "genre": "Death Metal",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 26,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Death",
@@ -15,20 +15,6 @@
       "titel": "Immortal Rites",
       "substil_vermerk": "Florida-OSDM (US)",
       "url": "https://www.youtube.com/results?search_query=Morbid+Angel+Immortal+Rites",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Cannibal Corpse",
-      "titel": "Hammer Smashed Face",
-      "substil_vermerk": "Brutal Death (US)",
-      "url": "https://www.youtube.com/results?search_query=Cannibal+Corpse+Hammer+Smashed+Face",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Deicide",
-      "titel": "Dead by Dawn",
-      "substil_vermerk": "Florida-OSDM (US)",
-      "url": "https://www.youtube.com/results?search_query=Deicide+Dead+by+Dawn",
       "quelle": "youtube"
     },
     {
@@ -176,20 +162,6 @@
       "titel": "Silent Empire",
       "substil_vermerk": "Death/Thrash (Polen)",
       "url": "https://bandcamp.com/search?q=Vader+Silent+Empire&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Behemoth",
-      "titel": "Demigod",
-      "substil_vermerk": "Blackened Death (Polen)",
-      "url": "https://bandcamp.com/search?q=Behemoth+Demigod&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Decapitated",
-      "titel": "Spheres of Madness",
-      "substil_vermerk": "technischer Death (Polen)",
-      "url": "https://bandcamp.com/search?q=Decapitated+Spheres+of+Madness&item_type=t",
       "quelle": "bandcamp"
     },
     {

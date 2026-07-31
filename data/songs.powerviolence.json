@@ -1,20 +1,13 @@
 {
   "genre": "Powerviolence",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 28,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Infest",
       "titel": "Break",
       "substil_vermerk": "Grundstein-PV (US)",
       "url": "https://www.youtube.com/results?search_query=Infest+Break",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Man Is the Bastard",
-      "titel": "Hispanic Small Man Power",
-      "substil_vermerk": "bass-lastiger PV (US)",
-      "url": "https://www.youtube.com/results?search_query=Man+Is+the+Bastard+Hispanic+Small+Man+Power",
       "quelle": "youtube"
     },
     {
@@ -29,13 +22,6 @@
       "titel": "Downsided",
       "substil_vermerk": "Grundstein-PV (US)",
       "url": "https://www.youtube.com/results?search_query=No+Comment+Downsided",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Neanderthal",
-      "titel": "The Lowest Form of Music",
-      "substil_vermerk": "schwerer PV (US)",
-      "url": "https://www.youtube.com/results?search_query=Neanderthal+The+Lowest+Form+of+Music",
       "quelle": "youtube"
     },
     {

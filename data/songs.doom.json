@@ -1,7 +1,7 @@
 {
   "genre": "Doom",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 28,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Black Sabbath",
@@ -22,13 +22,6 @@
       "titel": "Born Too Late",
       "substil_vermerk": "traditioneller Doom (US)",
       "url": "https://www.youtube.com/results?search_query=Saint+Vitus+Born+Too+Late",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Pentagram",
-      "titel": "All Your Sins",
-      "substil_vermerk": "traditioneller Doom (US)",
-      "url": "https://www.youtube.com/results?search_query=Pentagram+All+Your+Sins",
       "quelle": "youtube"
     },
     {
@@ -72,13 +65,6 @@
       "substil_vermerk": "Epic Doom (US)",
       "url": "https://www.youtube.com/results?search_query=Solitude+Aeturnus+Plague+of+Procreation",
       "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Solstice",
-      "titel": "Death's Crown Is Victory",
-      "substil_vermerk": "Epic Doom (UK)",
-      "url": "https://bandcamp.com/search?q=Solstice+Death%27s+Crown+Is+Victory&item_type=t",
-      "quelle": "bandcamp"
     },
     {
       "kuenstler": "My Dying Bride",
