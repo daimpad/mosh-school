@@ -4043,3 +4043,27 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
     --pf-schiefer-weich: #ededef;
   }
 }
+
+/* --- Zerr-Labor -------------------------------------------------------- */
+/* Warnfeld für den Pegelhinweis: rote Kante links statt Farbfläche — Rot ist
+   Akzent, keine Flächenfarbe (CI-Regel). Wirkt in beiden Themen über Tokens. */
+.zerr-warnung {
+  border-left: 3px solid var(--primaer);
+  padding: 0.6rem 0.85rem;
+  margin: 1rem 0;
+  background: var(--flaeche-2);
+  font-size: 0.9rem;
+}
+.zerr-bild-zeile { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: flex-start; }
+.zerr-kurve {
+  flex: 0 0 auto;
+  width: min(240px, 100%);
+  height: auto;
+  color: var(--primaer);
+  border: var(--karten-kante-breite) solid var(--linie);
+  background: var(--flaeche-2);
+}
+.zerr-beschreibung { flex: 1 1 16rem; min-width: 0; }
+.zerr-beschreibung h3 { margin-top: 0; }
+.zerr-beschreibung code { font-size: 0.82rem; word-break: break-word; }
+.zerrlabor-seite input[type="range"] { width: min(22rem, 100%); }

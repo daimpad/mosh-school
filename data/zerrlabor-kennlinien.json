@@ -1,0 +1,190 @@
+{
+  "titel": "Zerr-Labor",
+  "hinweis": "Kennlinien fuer eine WaveShaper-Kette im gemeinsamen Audio-Kern. Synthese-only, keine Audiodateien. Signalweg je Kennlinie: Hochpass -> Kennlinie -> Tiefpass. Die Kennwerte sind numerisch gepruefte Sollwerte (1 kHz Sinus, Eingangspegel 0.7, Gleichanteil entfernt) und dienen dazu, die Implementierung im Repo zu verifizieren. Die drei Diodenkennlinien nutzen bewusst denselben Gain, damit allein die Schwellspannung wirkt.",
+  "signalweg": [
+    "pre_hochpass_hz",
+    "kennlinie",
+    "post_tiefpass_hz"
+  ],
+  "anzahl": 10,
+  "kennlinien": [
+    {
+      "id": "kl_clean",
+      "name": "Clean (Referenz)",
+      "funktion": "linear",
+      "formel": "y = clip(g*x, -1, 1)",
+      "parameter": {
+        "gain": 1.0
+      },
+      "pre_hochpass_hz": 0,
+      "post_tiefpass_hz": 18000,
+      "beschreibung": "Ausgangspunkt ohne Klippung — dient dem Vergleich.",
+      "kennwerte": {
+        "thd_1khz": 0.0,
+        "anteil_geradzahlig": null,
+        "ausgangspegel_rms": 0.495
+      }
+    },
+    {
+      "id": "kl_soft_saettigung",
+      "name": "Weiche Sättigung (Röhre/Transistor)",
+      "funktion": "tanh",
+      "formel": "y = tanh(g*x)",
+      "parameter": {
+        "gain": 3.0
+      },
+      "pre_hochpass_hz": 60,
+      "post_tiefpass_hz": 9000,
+      "beschreibung": "Graduelles Einsetzen; leise Passagen bleiben nahezu sauber.",
+      "kennwerte": {
+        "thd_1khz": 0.196,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 0.814
+      }
+    },
+    {
+      "id": "kl_gegenkopplung",
+      "name": "Overdrive: Dioden in der Gegenkopplung",
+      "funktion": "diode",
+      "formel": "unterhalb der Schwelle linear, darüber mit flachem Knick weiter",
+      "parameter": {
+        "gain": 4.0,
+        "schwelle": 0.6,
+        "knick": 0.25
+      },
+      "pre_hochpass_hz": 720,
+      "post_tiefpass_hz": 7000,
+      "beschreibung": "Weicher Übergang, Dynamik bleibt; der Hochpass davor erzeugt den Mittenbuckel.",
+      "kennwerte": {
+        "thd_1khz": 0.174,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 0.909
+      }
+    },
+    {
+      "id": "kl_germanium",
+      "name": "Dioden gegen Masse: Germanium",
+      "funktion": "hard",
+      "formel": "y = clip(g*x, -s, s)  — bewusst ohne Normierung auf s",
+      "parameter": {
+        "gain": 3.0,
+        "schwelle": 0.3
+      },
+      "pre_hochpass_hz": 80,
+      "post_tiefpass_hz": 5500,
+      "beschreibung": "Frühe, tiefe Schwelle: viel Kompression, wenig Pegel, weiche Kante.",
+      "kennwerte": {
+        "thd_1khz": 0.426,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 0.292
+      }
+    },
+    {
+      "id": "kl_silizium",
+      "name": "Dioden gegen Masse: Silizium",
+      "funktion": "hard",
+      "formel": "y = clip(g*x, -s, s)  — bewusst ohne Normierung auf s",
+      "parameter": {
+        "gain": 3.0,
+        "schwelle": 0.6
+      },
+      "pre_hochpass_hz": 120,
+      "post_tiefpass_hz": 6500,
+      "beschreibung": "Härtere Kante, mehr Pegel, klarer definierte Klippung.",
+      "kennwerte": {
+        "thd_1khz": 0.356,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 0.562
+      }
+    },
+    {
+      "id": "kl_led",
+      "name": "Dioden gegen Masse: Leuchtdiode",
+      "funktion": "hard",
+      "formel": "y = clip(g*x, -s, s)  — bewusst ohne Normierung auf s",
+      "parameter": {
+        "gain": 3.0,
+        "schwelle": 1.7
+      },
+      "pre_hochpass_hz": 100,
+      "post_tiefpass_hz": 8000,
+      "beschreibung": "Späte Schwelle: viel Headroom, mehr Dynamik, deutlich lauter.",
+      "kennwerte": {
+        "thd_1khz": 0.09,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 1.346
+      }
+    },
+    {
+      "id": "kl_asymmetrisch",
+      "name": "Asymmetrische Klippung",
+      "funktion": "asym_soft",
+      "formel": "y = tanh(a*x) fuer x>=0, y = tanh(b*x) fuer x<0, mit a != b",
+      "parameter": {
+        "gain_positiv": 5.0,
+        "gain_negativ": 1.6
+      },
+      "pre_hochpass_hz": 90,
+      "post_tiefpass_hz": 7000,
+      "beschreibung": "Halbwellen werden unterschiedlich stark gesaettigt. Das erzeugt geradzahlige Obertoene, die als voller empfunden werden — im Gegensatz zu beidseitig harter Klippung, die nur einen Gleichspannungsversatz und ungeradzahlige Obertoene ergibt.",
+      "kennwerte": {
+        "thd_1khz": 0.219,
+        "anteil_geradzahlig": 0.103,
+        "ausgangspegel_rms": 0.757
+      }
+    },
+    {
+      "id": "kl_fuzz",
+      "name": "Fuzz: nahezu rechteckig",
+      "funktion": "fuzz",
+      "formel": "y = clip(tanh(4*g*x)*h, -1, 1)",
+      "parameter": {
+        "gain": 12.0,
+        "haerte": 2.5
+      },
+      "pre_hochpass_hz": 40,
+      "post_tiefpass_hz": 4500,
+      "beschreibung": "Extreme Kompression, körnig; Feinzeichnung geht verloren.",
+      "kennwerte": {
+        "thd_1khz": 0.438,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 0.979
+      }
+    },
+    {
+      "id": "kl_highgain_kaskade",
+      "name": "Kaskadierte High-Gain-Vorstufe",
+      "funktion": "tanh_kaskade",
+      "formel": "dreimal tanh mit Hochpass zwischen den Stufen",
+      "parameter": {
+        "gain": 3.5,
+        "stufen": 3,
+        "zwischen_hochpass_hz": 180
+      },
+      "pre_hochpass_hz": 150,
+      "post_tiefpass_hz": 6000,
+      "beschreibung": "Mehrere Stufen nacheinander: dicht und komprimiert statt nur lauter.",
+      "kennwerte": {
+        "hinweis": "Kaskade bzw. Multiband — im Repo zu implementieren und dort zu pruefen"
+      }
+    },
+    {
+      "id": "kl_multiband",
+      "name": "Multiband-Verzerrung",
+      "funktion": "multiband",
+      "formel": "Aufteilung bei der Trennfrequenz, getrennte Klippung, Summierung",
+      "parameter": {
+        "trennfrequenz_hz": 250,
+        "gain_tief": 2.0,
+        "gain_hoch": 9.0
+      },
+      "pre_hochpass_hz": 0,
+      "post_tiefpass_hz": 7000,
+      "beschreibung": "Tiefen bleiben sauber, Höhen werden hart verzerrt — Definition bei extremem Gain.",
+      "kennwerte": {
+        "hinweis": "Kaskade bzw. Multiband — im Repo zu implementieren und dort zu pruefen"
+      }
+    }
+  ],
+  "_hinweis_implementierung": "Die Kennwerte sind gegen scripts/pruefe_zerrlabor.py nachgerechnet. Verbindlich ist ausgangspegel_rms (trifft bei allen sieben geschlossen angebbaren Kurven auf drei Nachkommastellen); thd_1khz und anteil_geradzahlig weichen um bis zu 0,04 ab, weil die Referenz eine andere Messdefinition benutzt — sie dienen als Groessenordnung, nicht als exakte Zielmarke."
+}
