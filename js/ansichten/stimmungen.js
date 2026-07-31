@@ -126,6 +126,17 @@ function stimmungenFuer(daten, instrument) {
   return (daten.stimmungen || []).filter((s) => s.instrument === instrument);
 }
 
+// Reihenfolge der Art-Gruppen; alles ohne `art` landet unter „standard".
+export const ARTEN = ['standard', 'drop', 'offen'];
+
+// Nach Art gruppiert, Reihenfolge innerhalb der Gruppe = Dateireihenfolge (die
+// Stimmungs-Leiter von hoch nach tief). Leere Gruppen fallen heraus.
+export function nachArt(stimmungen) {
+  return ARTEN.map((art) => ({ art, eintraege: stimmungen.filter((s) => (s.art || 'standard') === art) })).filter(
+    (g) => g.eintraege.length > 0,
+  );
+}
+
 function saitenHtml(stimmung) {
   // Tiefste Saite zuerst (Index 0) — gezeichnet von oben (hoch/dünn) nach unten
   // (tief/dick), wie man auf ein liegendes Griffbrett schaut.
@@ -158,14 +169,22 @@ export function renderStimmungen(el, daten) {
     )
     .join(' ');
 
-  const stimmungsKnoepfe = verfuegbar
+  // Nach Art gruppiert: 25 Gitarren-Stimmungen in EINER Chip-Zeile waren nicht mehr
+  // zu überblicken — Standard, Drop und Offen sind drei verschiedene Fragen.
+  const stimmungsKnoepfe = nachArt(verfuegbar)
     .map(
-      (s) => `
-      <button type="button" class="chip chip-waehlbar ${s.id === aktiveStimmung ? 'chip-akzent' : ''}" data-stimmung="${esc(s.id)}" aria-pressed="${s.id === aktiveStimmung}">
-        ${esc(label('stimmung', s.id))}
-      </button>`
+      (gruppe) => `
+      <p class="stimm-art-titel leise">${esc(label('stimmungsart', gruppe.art))}</p>
+      <p class="chip-zeile">${gruppe.eintraege
+        .map(
+          (s) => `
+        <button type="button" class="chip chip-waehlbar ${s.id === aktiveStimmung ? 'chip-akzent' : ''}" data-stimmung="${esc(s.id)}" aria-pressed="${s.id === aktiveStimmung}">
+          ${esc(label('stimmung', s.id))}
+        </button>`,
+        )
+        .join(' ')}</p>`,
     )
-    .join(' ');
+    .join('');
 
   const detail = gewaehlt
     ? `
@@ -249,7 +268,7 @@ export function renderStimmungen(el, daten) {
     <article>
       ${landingHeroHtml('fa-sliders', t('nav_stimmungen'), t('stimm_untertitel'), 'pf-teal', 'stimmungen')}
       <p class="chip-zeile">${instrumentKnoepfe}</p>
-      <p class="chip-zeile">${stimmungsKnoepfe}</p>
+      ${stimmungsKnoepfe}
       ${detail}
       ${klangSektion}
       <p class="leise">${esc(t('stimm_hinweis_pegel'))}</p>

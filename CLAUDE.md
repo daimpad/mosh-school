@@ -470,7 +470,20 @@ Tokens**, nie harte Farben.
   ist eine interaktive Referenz mit WebAudio-Tönen; seine Daten (kuratierte Tunings mit
   Genre-Zuordnung aus dem `stil`-Vokabular) liegen in `data/tunings.json`, die sichtbaren
   Namen unter `vokabeln.stimmung` in `labels/de.json`. Referenzbereich wie Regeln —
-  NICHT im Baustein-Pool, kein Fortschritt.
+  NICHT im Baustein-Pool, kein Fortschritt. **`data/tunings.json` ist die einzige
+  Tuning-Quelle** — das Stimmgerät (`#/werkzeug/stimmgeraet`) liest denselben Pool
+  und beschriftet über `label('stimmung', id)`. Es hielt bis v179 eine zweite,
+  handgepflegte Preset-Liste mit eigenen IDs und eigenen `wz_tuning_*`-Labels; die
+  blieb beim Ausbau der Referenz stehen und wich in der Schreibweise ab (`A#2`
+  statt `Bb2`). Eine neue Stimmung gehört deshalb **nur** in die JSON plus ein
+  Label — beide Ansichten ziehen automatisch nach. Jeder Eintrag trägt
+  `art` (`standard`/`drop`/`offen`); danach gruppieren beide Ansichten ihre Chips
+  (`nachArt()` in `stimmungen.js`). Alt-IDs der früheren Preset-Liste stehen als
+  `ALT_IDS` im Stimmgerät, damit `?tuning=…`-Lesezeichen weiter treffen.
+  Saitenstärken (`staerke`) sind **Praxis-Empfehlungen in handelsüblichen Sätzen**,
+  keine gerechneten Werte: Sie müssen die Stimmungs-Leiter hinab monoton schwerer
+  werden, aber Drop-Stimmungen stimmen nur die tiefste Saite um und der 6-Saiter-Bass
+  ergänzt eine Saite nach **oben** — eine reine `d ∝ 2^(n/12)`-Formel geht dort fehl.
 - **Zerrtypen** (`#/zerrtypen`, `js/ansichten/zerrtypen.js`, `data/zerrtypen.json`):
   Referenz der Verzerrer- und Verstärkerzerre-Bauarten, gruppiert von der geringsten
   zur stärksten Eingriffstiefe (Booster → … → Verstärker). Ebenfalls Referenzbereich,

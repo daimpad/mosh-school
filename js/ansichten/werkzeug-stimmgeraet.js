@@ -16,9 +16,9 @@
 // Modul-State; #/werkzeug/stimmgeraet?tuning=<id> bzw. ?note=<note> belegt vor.
 // Mikro wird erst beim „Mikro starten" angefragt; Ablehnung wird abgefangen.
 
-import { t } from '../i18n.js';
-import { esc, registriereAufraeumen } from '../oberflaeche.js';
-import { frequenzVon } from './stimmungen.js';
+import { label, t } from '../i18n.js';
+import { domaeneIcon, esc, registriereAufraeumen } from '../oberflaeche.js';
+import { frequenzVon, nachArt } from './stimmungen.js';
 import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext.js';
 import { referenzDrone } from '../audio/stimmen.js';
 import { holeMikro } from '../audio/mikro.js';
@@ -26,24 +26,35 @@ import { erkennePitch, frequenzTrifft } from '../audio/tonhoehe.js';
 import { holeWerkzeugDaten, setzeWerkzeugDaten } from '../werkzeug-speicher.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
-const PRESETS = [
-  { id: 'standard_e', instrument: 'gitarre', saiten: ['E2', 'A2', 'D3', 'G3', 'B3', 'E4'] },
-  { id: 'drop_d', instrument: 'gitarre', saiten: ['D2', 'A2', 'D3', 'G3', 'B3', 'E4'] },
-  { id: 'd_standard', instrument: 'gitarre', saiten: ['D2', 'G2', 'C3', 'F3', 'A3', 'D4'] },
-  { id: 'drop_c', instrument: 'gitarre', saiten: ['C2', 'G2', 'C3', 'F3', 'A3', 'D4'] },
-  { id: 'c_standard', instrument: 'gitarre', saiten: ['C2', 'F2', 'A#2', 'D#3', 'G3', 'C4'] },
-  { id: 'drop_b', instrument: 'gitarre', saiten: ['B1', 'F#2', 'B2', 'E3', 'G#3', 'C#4'] },
-  { id: 'drop_a', instrument: 'gitarre', saiten: ['A1', 'E2', 'A2', 'D3', 'F#3', 'B3'] },
-  { id: 'sieben_standard', instrument: 'gitarre', saiten: ['B1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4'] },
-  { id: 'sieben_drop_a', instrument: 'gitarre', saiten: ['A1', 'E2', 'A2', 'D3', 'G3', 'B3', 'E4'] },
-  { id: 'bass_standard', instrument: 'bass', saiten: ['E1', 'A1', 'D2', 'G2'] },
-  { id: 'bass_drop_d', instrument: 'bass', saiten: ['D1', 'A1', 'D2', 'G2'] },
-  { id: 'bass_fuenf', instrument: 'bass', saiten: ['B0', 'E1', 'A1', 'D2', 'G2'] },
-];
+// Die Preset-Tunings kommen aus data/tunings.json — derselbe Pool, den die
+// Stimmungs-Referenz (#/stimmungen) zeigt. Vorher stand hier eine zweite, von
+// Hand gepflegte Liste mit eigenen IDs und eigenen Labels (`wz_tuning_*`); sie
+// war beim Ausbau der Referenz auf 35 Stimmungen stehengeblieben und wich in der
+// Schreibweise ab (A#2 statt Bb2). Gesetzt wird der Pool beim Rendern, weil die
+// Daten erst dann vorliegen.
+let poolTunings = [];
+
+// Notnagel, falls die Datei fehlt (Offline-Erststart mit kaltem Cache): ohne ihn
+// stünde das Werkzeug ganz ohne Saiten da. Bewusst genau eine Stimmung.
+const NOTFALL = { id: 'e_standard', instrument: 'gitarre', art: 'standard', saiten: ['E2', 'A2', 'D3', 'G3', 'B3', 'E4'] };
+
+const STANDARD_ID = 'e_standard';
+
+// Alt-IDs der früheren Eigenliste → Pool-IDs. Gespeicherte Lesezeichen und ältere
+// ?tuning=…-Links sollen weiter das gemeinte Tuning treffen statt still auf
+// E-Standard zurückzufallen.
+const ALT_IDS = {
+  standard_e: 'e_standard',
+  sieben_standard: 'b_standard_7',
+  sieben_drop_a: 'drop_a_7',
+  bass_standard: 'bass_e_standard',
+  bass_fuenf: 'bass_b_5',
+};
 
 const zustand = {
-  tuningId: 'standard_e',
+  tuningId: STANDARD_ID,
   droneNote: 'E2',
+  instrument: 'gitarre', // Filter der Preset-Zeile; eigene Stimmungen stehen immer darunter
 };
 
 // Editor-Entwurf (flüchtig): Liste { note, cents }. Erst beim ersten Rendern aus
@@ -60,15 +71,19 @@ let drone = null; // aktives Referenzton-Handle
 let geglaetteteCents = 0;
 
 // --- Notenrechnung (Halbton-Transponierung, mikrotonale Frequenz) ---
-const SEMI = { C: 0, 'C#': 1, D: 2, 'D#': 3, E: 4, F: 5, 'F#': 6, G: 7, 'G#': 8, A: 9, 'A#': 10, B: 11 };
+const SEMI = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 };
 const NAMEN = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 const MIDI_MIN = 12; // C0
 const MIDI_MAX = 96; // C7
 
+// Nimmt # UND b: der Pool schreibt die tiefen Stimmungen als Eb2/Ab2/Bb2, das
+// Halbton-Verschieben des Editors lieferte für solche Noten vorher gar nichts
+// zurück (Regex kannte nur #) — der Knopf tat still nichts.
 function zuMidi(note) {
-  const m = /^([A-G]#?)(-?\d+)$/.exec(note);
+  const m = /^([A-G])([#b]?)(-?\d+)$/.exec(note);
   if (!m) return null;
-  return (parseInt(m[2], 10) + 1) * 12 + SEMI[m[1]];
+  const versetzung = m[2] === '#' ? 1 : m[2] === 'b' ? -1 : 0;
+  return (parseInt(m[3], 10) + 1) * 12 + SEMI[m[1]] + versetzung;
 }
 function vonMidi(midi) {
   const pc = ((midi % 12) + 12) % 12;
@@ -90,12 +105,17 @@ function speichereEigene(liste) {
   setzeWerkzeugDaten('stimmgeraet', { eigene: liste });
 }
 
-// Alle wählbaren Tunings: Presets + gespeicherte eigene (als Presets normiert).
+// Alle wählbaren Tunings: Pool-Stimmungen + gespeicherte eigene.
 function alleTunings() {
-  return [...PRESETS, ...ladeEigene().map((e) => ({ ...e, eigen: true }))];
+  const pool = poolTunings.length ? poolTunings : [NOTFALL];
+  return [...pool, ...ladeEigene().map((e) => ({ ...e, eigen: true }))];
 }
 function aktivesTuning() {
-  return alleTunings().find((u) => u.id === zustand.tuningId) || PRESETS[0];
+  const liste = alleTunings();
+  return liste.find((u) => u.id === zustand.tuningId) || liste.find((u) => u.id === STANDARD_ID) || liste[0];
+}
+function tuningName(u) {
+  return u.eigen ? u.name : label('stimmung', u.id);
 }
 
 // Saiten sind entweder Noten-Strings (Preset) oder { note, cents } (eigen).
@@ -310,11 +330,36 @@ function saitenHtml(tuning) {
     .join(' ');
 }
 
+function tuningChip(u) {
+  const aktiv = u.id === zustand.tuningId;
+  return `<button type="button" class="chip chip-waehlbar wz-tuning ${aktiv ? 'chip-akzent' : ''}" data-tuning="${esc(u.id)}" aria-pressed="${aktiv}">${esc(tuningName(u))}</button>`;
+}
+
+// Preset-Zeile: nach Instrument gefiltert und nach Art (Standard/Drop/Offen)
+// gruppiert. 35 Stimmungen in einer einzigen Zeile wären nicht mehr zu treffen.
+// Eigene Stimmungen hängen als letzte Gruppe an — sie tragen keine Art.
 function tuningKnoepfeHtml() {
-  return alleTunings()
-    .map((u) => {
-      const name = u.eigen ? esc(u.name) : esc(t('wz_tuning_' + u.id));
-      return `<button type="button" class="chip chip-waehlbar wz-tuning ${u.id === zustand.tuningId ? 'chip-akzent' : ''}" data-tuning="${esc(u.id)}" aria-pressed="${u.id === zustand.tuningId}">${name}</button>`;
+  const alle = alleTunings();
+  const gruppen = nachArt(alle.filter((u) => !u.eigen && u.instrument === zustand.instrument)).map((g) => ({
+    titel: label('stimmungsart', g.art),
+    eintraege: g.eintraege,
+  }));
+  const eigene = alle.filter((u) => u.eigen);
+  if (eigene.length) gruppen.push({ titel: t('wz_tuning_eigene'), eintraege: eigene });
+  return gruppen
+    .map(
+      (g) => `
+      <p class="stimm-art-titel leise">${esc(g.titel)}</p>
+      <p class="chip-zeile">${g.eintraege.map(tuningChip).join(' ')}</p>`,
+    )
+    .join('');
+}
+
+function instrumentKnoepfeHtml() {
+  return ['gitarre', 'bass']
+    .map((inst) => {
+      const aktiv = zustand.instrument === inst;
+      return `<button type="button" class="chip chip-waehlbar wz-tuning-instrument ${aktiv ? 'chip-akzent' : ''}" data-tuning-instrument="${inst}" aria-pressed="${aktiv}">${domaeneIcon(inst)} ${esc(label('domaene', inst))}</button>`;
     })
     .join(' ');
 }
@@ -364,15 +409,25 @@ function eigenListeHtml() {
 // --- Preset aus der URL ---
 function wendePresetAn(query) {
   if (!query) return;
-  const tuning = query.get('tuning');
+  const roh = query.get('tuning');
+  const tuning = ALT_IDS[roh] || roh;
   if (tuning && alleTunings().some((u) => u.id === tuning)) zustand.tuningId = tuning;
   const note = query.get('note');
   if (note && frequenzVon(note)) zustand.droneNote = note;
   else zustand.droneNote = saiteNote(aktivesTuning().saiten[0]);
 }
 
+// Instrument-Filter dem aktiven Tuning nachziehen — sonst zeigt die Zeile nach
+// einem ?tuning=bass_drop_d-Deeplink Gitarren-Chips, und der aktive ist nicht dabei.
+function synchronisiereInstrument() {
+  const inst = aktivesTuning()?.instrument;
+  if (inst === 'gitarre' || inst === 'bass') zustand.instrument = inst;
+}
+
 export function renderWerkzeugStimmgeraet(el, daten, query) {
+  poolTunings = daten?.tunings?.stimmungen || [];
   wendePresetAn(query);
+  synchronisiereInstrument();
   stoppeTuner();
   stoppeDrone(null);
   const tuning = aktivesTuning();
@@ -414,8 +469,10 @@ export function renderWerkzeugStimmgeraet(el, daten, query) {
 
         <section class="wz-tunings">
           <h2>${esc(t('wz_tunings_titel'))}</h2>
-          <p class="chip-zeile wz-tuning-zeile">${tuningKnoepfeHtml()}</p>
+          <p class="chip-zeile wz-tuning-instrumente">${instrumentKnoepfeHtml()}</p>
+          <div class="wz-tuning-zeile">${tuningKnoepfeHtml()}</div>
           <p class="leise">${esc(t('wz_tunings_hinweis'))}</p>
+          <p><a class="chip" href="#/stimmungen"><i class="fa-solid fa-sliders" aria-hidden="true"></i> ${esc(t('nav_stimmungen'))}</a></p>
           <p class="chip-zeile wz-saiten-zeile">${saitenHtml(tuning)}</p>
         </section>
 
@@ -464,6 +521,11 @@ export function renderWerkzeugStimmgeraet(el, daten, query) {
 
 // Aktualisiert Tuning-Chips + Saiten-Zeile in-place (ohne Mikro-Neustart).
 function aktualisiereTuningAnzeige(el) {
+  const instrumente = el.querySelector('.wz-tuning-instrumente');
+  if (instrumente) {
+    instrumente.innerHTML = instrumentKnoepfeHtml();
+    verdrahteInstrumentChips(el);
+  }
   const zeile = el.querySelector('.wz-tuning-zeile');
   if (zeile) {
     zeile.innerHTML = tuningKnoepfeHtml();
@@ -512,6 +574,18 @@ function verdrahteSaiten(el) {
     saite.addEventListener('click', () => {
       const idx = Number(saite.dataset.saite);
       zupfeFrequenz(saiteFrequenz(tuning.saiten[idx]));
+    });
+  }
+}
+
+// Instrument-Filter: wechselt nur die angezeigte Auswahl, nicht das aktive
+// Tuning — sonst spränge der Zielton beim bloßen Blättern weg.
+function verdrahteInstrumentChips(el) {
+  for (const knopf of el.querySelectorAll('.wz-tuning-instrument')) {
+    knopf.addEventListener('click', () => {
+      zustand.instrument = knopf.dataset.tuningInstrument;
+      aktualisiereTuningAnzeige(el);
+      el.querySelector(`.wz-tuning-instrument[data-tuning-instrument="${CSS.escape(zustand.instrument)}"]`)?.focus();
     });
   }
 }
@@ -588,7 +662,7 @@ function verdrahteEigenListe(el) {
       const id = knopf.dataset.id;
       speichereEigene(ladeEigene().filter((e) => e.id !== id));
       if (zustand.tuningId === id) {
-        zustand.tuningId = 'standard_e';
+        zustand.tuningId = STANDARD_ID;
         zustand.droneNote = saiteNote(aktivesTuning().saiten[0]);
       }
       aktualisiereTuningAnzeige(el);
@@ -613,6 +687,7 @@ function verdrahte(el) {
   el.querySelector('.wz-tuner-start')?.addEventListener('click', () => starteMikro(el));
 
   verdrahteSaiten(el);
+  verdrahteInstrumentChips(el);
   verdrahteTuningChips(el);
   verdrahteEditor(el);
   verdrahteEigenListe(el);
