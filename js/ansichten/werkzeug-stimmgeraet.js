@@ -144,8 +144,23 @@ function starteTunerSchleife(el) {
     if (statusEl) statusEl.textContent = text;
   };
 
+  // Die Autokorrelation kostet je Durchgang rund 4 Mio. Multiplikationen (Puffer
+  // 4096, ~1160 Offsets). Pro Animationsframe waren das ~240 Mio./s — auf dem
+  // Handy blockiert das spuerbar den Hauptthread. Ein Stimmgeraet braucht diese
+  // Rate nicht: die Anzeige wird ohnehin geglaettet, und 30/s sind vom Auge
+  // nicht von 60/s zu unterscheiden. Das halbiert die Last, ohne am Verfahren
+  // oder am Fenster zu drehen (das grosse Fenster traegt die tiefen Tunings).
+  const ANALYSE_ABSTAND_MS = 33;
+  let letzteAnalyse = 0;
+
   const tick = () => {
     if (!mikro) return;
+    const jetzt = performance.now();
+    if (jetzt - letzteAnalyse < ANALYSE_ABSTAND_MS) {
+      rafId = window.requestAnimationFrame(tick);
+      return;
+    }
+    letzteAnalyse = jetzt;
     const buf = mikro.liesZeitsignal();
     const ctx = holeKontext();
     const freq = erkennePitch(buf, ctx.sampleRate);
@@ -461,12 +476,26 @@ function aktualisiereTuningAnzeige(el) {
   }
 }
 
+// Grenzen des Entwurfs (3..8 Saiten) sichtbar machen. Vorher stiegen die beiden
+// Knoepfe an der Grenze nur still aus (`if (… >= 8) return;`) — ein Klick, der
+// nichts tut und nichts sagt, ist von einem kaputten Knopf nicht zu unterscheiden.
+const EIGEN_MIN_SAITEN = 3;
+const EIGEN_MAX_SAITEN = 8;
+
+function aktualisiereEditorGrenzen(el) {
+  const hinzu = el.querySelector('.wz-eigen-saite-hinzu');
+  const weg = el.querySelector('.wz-eigen-saite-weg');
+  if (hinzu) hinzu.disabled = entwurf.length >= EIGEN_MAX_SAITEN;
+  if (weg) weg.disabled = entwurf.length <= EIGEN_MIN_SAITEN;
+}
+
 function zeichneEditor(el) {
   const feld = el.querySelector('.wz-eigen-saiten');
   if (feld) {
     feld.innerHTML = editorRowsHtml();
     verdrahteEditor(el);
   }
+  aktualisiereEditorGrenzen(el);
 }
 
 function zeichneEigenListe(el) {
@@ -587,16 +616,17 @@ function verdrahte(el) {
   verdrahteTuningChips(el);
   verdrahteEditor(el);
   verdrahteEigenListe(el);
+  aktualisiereEditorGrenzen(el);
 
   // Editor-Struktur: Saite anhängen/entfernen, aus aktueller Stimmung übernehmen.
   el.querySelector('.wz-eigen-saite-hinzu')?.addEventListener('click', () => {
-    if (entwurf.length >= 8) return;
+    if (entwurf.length >= EIGEN_MAX_SAITEN) return;
     const tiefste = entwurf[0] || { note: 'E2', cents: 0 };
     entwurf.unshift({ note: transponiere(tiefste.note, -5), cents: 0 });
     zeichneEditor(el);
   });
   el.querySelector('.wz-eigen-saite-weg')?.addEventListener('click', () => {
-    if (entwurf.length <= 3) return;
+    if (entwurf.length <= EIGEN_MIN_SAITEN) return;
     entwurf.shift();
     zeichneEditor(el);
   });

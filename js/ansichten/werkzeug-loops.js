@@ -86,6 +86,11 @@ function stoppeMarker() {
 function starte(el) {
   const ctx = holeKontext();
   const ziel = holeAusgang();
+  // Wie im Metronom: Der Kontext kann nach dem Freischalten wieder wegkippen
+  // (Tab im Hintergrund, Anruf/Interruption auf iOS). Dann plant der Scheduler
+  // gegen eine stehende Uhr — kein Ton, die Ansicht meldet aber „Läuft". Der
+  // Start kommt aus einer Nutzergeste, die Autoplay-Policy erlaubt das resume().
+  if (ctx.state !== 'running') aktiviere();
   scheduler = scheduler || erzeugeScheduler(ctx);
   stoppeMarker();
   const beat = aktiverBeat();

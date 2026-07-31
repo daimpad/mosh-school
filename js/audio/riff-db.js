@@ -10,8 +10,18 @@ const DB_NAME = 'moshschool-aufnahmen';
 const DB_VERSION = 1;
 const STORE = 'riffs';
 
+let dbVerbindung = null;
+let dbOeffnung = null;
+
 function oeffne() {
-  return new Promise((resolve, reject) => {
+  // Verbindung wiederverwenden statt je Aufruf eine neue zu oeffnen. Vorher
+  // legte JEDE Operation (speichern, laden, umbenennen, loeschen) eine eigene
+  // IDBDatabase an, die nie geschlossen wurde — bei laengerer Arbeit im
+  // Recorder sammeln sich so dutzende offene Verbindungen, und eine davon
+  // blockiert spaeter jeden Versionswechsel der Datenbank.
+  if (dbVerbindung) return Promise.resolve(dbVerbindung);
+  if (dbOeffnung) return dbOeffnung;
+  dbOeffnung = new Promise((resolve, reject) => {
     if (!('indexedDB' in window)) {
       reject(new Error('kein-indexeddb'));
       return;
@@ -23,12 +33,27 @@ function oeffne() {
         db.createObjectStore(STORE, { keyPath: 'id' });
       }
     };
-    anfrage.onsuccess = () => resolve(anfrage.result);
+    anfrage.onsuccess = () => {
+      dbVerbindung = anfrage.result;
+      // Wird die Verbindung von aussen beendet (Nutzer loescht Website-Daten,
+      // anderer Tab erzwingt einen Versionswechsel), den Zwischenspeicher
+      // leeren, damit der naechste Aufruf sauber neu oeffnet.
+      dbVerbindung.onclose = () => { dbVerbindung = null; };
+      dbVerbindung.onversionchange = () => {
+        dbVerbindung?.close();
+        dbVerbindung = null;
+      };
+      resolve(dbVerbindung);
+    };
     anfrage.onerror = () => reject(anfrage.error);
     // Ohne onblocked bliebe das Promise ewig offen, wenn ein anderer Tab noch
     // eine aeltere DB-Version haelt — die aufrufende View wartet dann fuer immer.
     anfrage.onblocked = () => reject(new Error('indexeddb-blockiert'));
+  }).catch((fehler) => {
+    dbOeffnung = null; // beim naechsten Versuch neu aufbauen
+    throw fehler;
   });
+  return dbOeffnung;
 }
 
 // Eine Transaktion endet auf DREI Wegen: complete, error — und abort. Fehlte

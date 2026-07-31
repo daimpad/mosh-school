@@ -8,7 +8,7 @@
 // Mikro-Ablehnung wird sauber abgefangen.
 
 import { t } from '../i18n.js';
-import { esc, meilensteinLabel, registriereAufraeumen, zeigeMeilenstein } from '../oberflaeche.js';
+import { esc, meilensteinLabel, registriereAufraeumen, sage, zeigeMeilenstein } from '../oberflaeche.js';
 import { feiereMeilenstein } from '../zustand.js';
 import { speichereClip, alleClips, aktualisiereMeta, loescheClip } from '../audio/riff-db.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
@@ -308,6 +308,12 @@ function verdrahteClips(el) {
       if (!window.confirm(t('wz_rec_loeschen_bestaetigen', { name }))) return;
       await loescheClip(id).catch(() => {});
       await ladeUndRendere(el);
+      // Die ganze Liste wird neu gezeichnet, der geklickte Knopf verschwindet
+      // dabei — ohne das hier faellt der Fokus auf <body> und es gibt keinerlei
+      // Rueckmeldung, dass das Loeschen geklappt hat. Der Aufnahme-Knopf ist der
+      // bestaendige Bedienpunkt der Ansicht und damit das sinnvolle Ziel.
+      sage(t('wz_rec_geloescht'));
+      el.querySelector('.wz-rec-knopf')?.focus({ preventScroll: true });
     });
   }
 }
