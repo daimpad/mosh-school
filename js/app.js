@@ -38,7 +38,7 @@ import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
 import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
-import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb } from './zustand.js';
+import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, uebernehmeFremdenStand } from './zustand.js';
 
 let daten = null;
 let letzteRoute = null;
@@ -53,7 +53,12 @@ const bewegungErlaubt =
   !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let revealBeobachter = null;
 
-function richteRevealEin(el) {
+// `ohneEinblenden`: bei einer In-Place-Neuzeichnung derselben Route (Nachladen
+// von Grafiken/Suchindex, Zustandsaenderung) sind die .reveal-Bloecke frisch und
+// damit wieder im Ausgangszustand — sie blendeten Sekunden nach dem ersten
+// Anstrich ein zweites Mal ein. Was schon im Bild steht, wird deshalb sofort und
+// uebergangslos als sichtbar markiert; nur echte Routenwechsel animieren.
+function richteRevealEin(el, ohneEinblenden = false) {
   if (revealBeobachter) {
     revealBeobachter.disconnect();
     revealBeobachter = null;
@@ -61,6 +66,18 @@ function richteRevealEin(el) {
   if (!bewegungErlaubt || typeof IntersectionObserver !== 'function') return;
   const ziele = el.querySelectorAll('.reveal');
   if (!ziele.length) return;
+  if (ohneEinblenden) {
+    const hoehe = window.innerHeight || 0;
+    const vorab = [...ziele].filter((z) => {
+      const r = z.getBoundingClientRect();
+      return r.top < hoehe && r.bottom > 0;
+    });
+    for (const z of vorab) z.classList.add('ohne-uebergang', 'sichtbar');
+    // Reflow erzwingen, damit der uebergangslose Zustand wirklich uebernommen
+    // ist, bevor der Uebergang wieder erlaubt wird.
+    void el.offsetWidth;
+    for (const z of vorab) z.classList.remove('ohne-uebergang');
+  }
   revealBeobachter = new IntersectionObserver(
     (eintraege) => {
       for (const e of eintraege) {
@@ -327,7 +344,9 @@ function rendern() {
 
   // Bei einer In-Place-Neuzeichnung (gleiche Route) den Fokus des gerade bedienten
   // Steuerelements merken, um ihn nach dem Neu-Rendern zurückzusetzen.
-  const fokusVorher = letzteRoute !== null && roh === letzteRoute ? fokusSchluessel(document.activeElement) : null;
+  // Muss VOR dem Setzen von letzteRoute weiter unten festgehalten werden.
+  const gleicheRoute = letzteRoute !== null && roh === letzteRoute;
+  const fokusVorher = gleicheRoute ? fokusSchluessel(document.activeElement) : null;
 
   // Beim ersten Besuch stand hier eine eigene Willkommensseite mit nur zwei
   // Auswahlkacheln („Freies Handbuch" / „Geführter Einstieg"). Sie ist entfernt:
@@ -463,7 +482,7 @@ function rendern() {
 
   // Scroll-Einblendungen der aktuellen Ansicht neu verdrahten (Beobachter wird
   // intern zuerst getrennt — auch bei In-Place-Neuzeichnung kein Leck).
-  richteRevealEin(el);
+  richteRevealEin(el, gleicheRoute);
 }
 
 async function boot() {
@@ -511,6 +530,13 @@ async function boot() {
 
   window.addEventListener('hashchange', rendern);
   window.addEventListener('app:rendern', rendern);
+  // Fortschritt aus einem zweiten Tab übernehmen (s. uebernehmeFremdenStand).
+  // `ereignis.key === null` heisst „Speicher komplett geleert" — auch dann neu
+  // einlesen. Fremde Schlüssel (Werkzeug-Speicher) ignorieren wir.
+  window.addEventListener('storage', (ereignis) => {
+    if (ereignis.key !== null && ereignis.key !== 'moshschool.zustand.v1') return;
+    if (uebernehmeFremdenStand()) rendern();
+  });
   rendern();
 
   // Nicht-kritische Daten ERST NACH dem ersten Anstrich holen (die Startseite

@@ -384,7 +384,15 @@ function verdrahteSpuren(el) {
   for (const spurEl of el.querySelectorAll('.wz-ms-spur')) {
     const id = spurEl.dataset.id;
     const spur = spuren.find((s) => s.id === id);
-    spurEl.querySelector('.wz-ms-name')?.addEventListener('change', (e) => aktualisiereSpur(id, { name: e.target.value }));
+    // Wie im Riff-Recorder: nicht fire-and-forget. Scheitert das Schreiben
+    // (Speicher voll, Privatmodus), stand der neue Name im Feld, war aber nicht
+    // gespeichert — sichtbar war das nur als unbehandelte Promise-Ablehnung.
+    const meldeSchreibfehler = () => {
+      letzterFehler = t('wz_rec_speicher_fehler');
+      zeichneKopf(el);
+    };
+    spurEl.querySelector('.wz-ms-name')?.addEventListener('change', (e) =>
+      aktualisiereSpur(id, { name: e.target.value }).catch(meldeSchreibfehler));
     spurEl.querySelector('.wz-ms-mute')?.addEventListener('click', async (e) => {
       const an = !(spur.mute);
       spur.mute = an;
@@ -404,7 +412,8 @@ function verdrahteSpuren(el) {
       const audio = spurEl.querySelector('.wz-ms-audio');
       if (audio) audio.volume = spur.pegel;
     });
-    spurEl.querySelector('.wz-ms-pegel')?.addEventListener('change', (e) => aktualisiereSpur(id, { pegel: Number(e.target.value) / 100 }));
+    spurEl.querySelector('.wz-ms-pegel')?.addEventListener('change', (e) =>
+      aktualisiereSpur(id, { pegel: Number(e.target.value) / 100 }).catch(meldeSchreibfehler));
     spurEl.querySelector('.wz-ms-loeschen')?.addEventListener('click', async () => {
       // Wie im Riff-Recorder: die Spur liegt nur lokal, ein Fehlklick war
       // endgueltig. Rueckfrage vor dem Loeschen.

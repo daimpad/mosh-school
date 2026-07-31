@@ -77,6 +77,27 @@ function verschmelze(basis, gespeichert) {
   return ergebnis;
 }
 
+// Fremd-Schreibung aus einem ANDEREN Tab übernehmen. Ohne das galt schlicht
+// „wer zuletzt schreibt, gewinnt": Tab A und B laden denselben Stand, B trägt
+// etwas ein, A schreibt später seinen veralteten Stand darüber — Bs Fortschritt
+// ist weg, ohne dass irgendwo etwas passiert wäre.
+//
+// Bewusst OHNE Rückschreiben (sonst lösen sich zwei Tabs gegenseitig immer
+// wieder aus) und ohne Verschmelzen mit dem lokalen Stand: der gespeicherte
+// Stand ist die Wahrheit, sobald ihn jemand anders angefasst hat.
+export function uebernehmeFremdenStand() {
+  let gespeichert = null;
+  try {
+    const roh = globalThis.localStorage?.getItem(SPEICHER_KEY);
+    if (!roh) return false;
+    gespeichert = JSON.parse(roh);
+  } catch {
+    return false;
+  }
+  z = verschmelze(vorgabe(), gespeichert);
+  return true;
+}
+
 export function ladeZustand() {
   let gespeichert = null;
   try {

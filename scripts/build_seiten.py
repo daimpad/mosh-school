@@ -1024,12 +1024,23 @@ def main(nur_pruefen=False):
     waisen = sorted(vorhanden - set(manifest))
 
     if abweichungen or waisen:
-        print('FEHLER (--check): generierte Seiten weichen vom Quellstand ab:')
+        # Die Gesamtzahl gehoert nach OBEN: die Liste ist gekappt, und wer nur
+        # den Anfang sieht, unterschaetzt sonst das Ausmass der Drift.
+        print(
+            f'FEHLER (--check): {len(abweichungen)} geaenderte, {len(waisen)} verwaiste '
+            'Dateien weichen vom Quellstand ab:'
+        )
+        gezeigt = 0
         for pfad in abweichungen[:40]:
             print(f'  geaendert: {pfad}')
+            gezeigt += 1
         for pfad in waisen[:40]:
             print(f'  WAISE (nicht mehr erzeugt): {pfad}')
-        rest = len(abweichungen) + len(waisen) - 80
+            gezeigt += 1
+        # Vorher stand hier fest `- 80`, als waeren beide Listen immer voll
+        # gekappt. Bei 100 Aenderungen und 0 Waisen meldete das „20 weitere"
+        # statt 60. Jetzt gegen das tatsaechlich Gezeigte rechnen.
+        rest = len(abweichungen) + len(waisen) - gezeigt
         if rest > 0:
             print(f'  … und {rest} weitere')
         print('  -> python3 scripts/build_seiten.py ohne --check laufen lassen.')
