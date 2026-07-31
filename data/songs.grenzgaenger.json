@@ -1,7 +1,7 @@
 {
   "genre": "Grenzgänger",
-  "anzahl": 30,
-  "hinweis": "Grenzüberschreitende Bands als praktische Beispiele zum Baustein 'von_referenz_zum_eigenen'. Jede Zeile nennt die verschmolzenen Welten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar), optional durch verifizierte Deep-Links ersetzbar. Hass-/extremismusfrei kuratiert.",
+  "anzahl": 28,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Zeal & Ardor",
@@ -134,20 +134,6 @@
       "titel": "Autre Temps",
       "substil_vermerk": "Blackgaze × Dream Pop",
       "url": "https://bandcamp.com/search?q=Alcest+Autre+Temps&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Swans",
-      "titel": "The Seer",
-      "substil_vermerk": "No Wave/Post-Punk × experimentelle Schwere",
-      "url": "https://bandcamp.com/search?q=Swans+The+Seer&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Neurosis",
-      "titel": "Locust Star",
-      "substil_vermerk": "Sludge × Post-Rock × Tribal",
-      "url": "https://bandcamp.com/search?q=Neurosis+Locust+Star&item_type=t",
       "quelle": "bandcamp"
     },
     {

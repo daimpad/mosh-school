@@ -1,15 +1,8 @@
 {
   "genre": "Post-Metal",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 29,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
-    {
-      "kuenstler": "Neurosis",
-      "titel": "Through Silver in Blood",
-      "substil_vermerk": "prägender Post-Metal (US)",
-      "url": "https://bandcamp.com/search?q=Neurosis+Through+Silver+in+Blood&item_type=t",
-      "quelle": "bandcamp"
-    },
     {
       "kuenstler": "Isis",
       "titel": "In Fiction",

@@ -1,7 +1,7 @@
 {
   "genre": "Screamo",
   "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Künstler). Bei tiefen Underground-Einträgen den genauen Tracktitel vor Release kurz gegenprüfen. Hass-/extremismusfrei kuratiert.",
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Orchid",

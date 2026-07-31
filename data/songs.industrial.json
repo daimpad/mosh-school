@@ -1,27 +1,13 @@
 {
   "genre": "Industrial",
-  "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Künstler). Hass-/extremismusfrei kuratiert.",
+  "anzahl": 27,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
-    {
-      "kuenstler": "Throbbing Gristle",
-      "titel": "Hamburger Lady",
-      "substil_vermerk": "Ur-Industrial (UK)",
-      "url": "https://www.youtube.com/results?search_query=Throbbing+Gristle+Hamburger+Lady",
-      "quelle": "youtube"
-    },
     {
       "kuenstler": "Cabaret Voltaire",
       "titel": "Nag Nag Nag",
       "substil_vermerk": "frühes elektronisches Industrial (UK)",
       "url": "https://www.youtube.com/results?search_query=Cabaret+Voltaire+Nag+Nag+Nag",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "SPK",
-      "titel": "Metal Dance",
-      "substil_vermerk": "Industrial/EBM-Übergang (Australien)",
-      "url": "https://www.youtube.com/results?search_query=SPK+Metal+Dance",
       "quelle": "youtube"
     },
     {
@@ -134,13 +120,6 @@
       "titel": "Genius",
       "substil_vermerk": "Industrial-Metal (UK)",
       "url": "https://www.youtube.com/results?search_query=Pitchshifter+Genius",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Rammstein",
-      "titel": "Du Hast",
-      "substil_vermerk": "Neue Deutsche Härte (Deutschland)",
-      "url": "https://www.youtube.com/results?search_query=Rammstein+Du+Hast",
       "quelle": "youtube"
     },
     {

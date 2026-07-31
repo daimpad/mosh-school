@@ -1,7 +1,7 @@
 {
   "genre": "Grindcore",
-  "anzahl": 30,
-  "hinweis": "URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler. Optional vor Release durch verifizierte Deep-Links ersetzbar; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 26,
+  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Napalm Death",
@@ -32,27 +32,6 @@
       "quelle": "youtube"
     },
     {
-      "kuenstler": "General Surgery",
-      "titel": "Ominous Lament",
-      "substil_vermerk": "goregrind (Schweden)",
-      "url": "https://bandcamp.com/search?q=General+Surgery+Ominous+Lament&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Last Days of Humanity",
-      "titel": "In Advanced Haemorrhaging Condition",
-      "substil_vermerk": "goregrind/noisegrind (NL)",
-      "url": "https://www.youtube.com/results?search_query=Last+Days+of+Humanity+In+Advanced+Haemorrhaging+Condition",
-      "quelle": "youtube"
-    },
-    {
-      "kuenstler": "Regurgitate",
-      "titel": "Sightless",
-      "substil_vermerk": "goregrind (Schweden)",
-      "url": "https://bandcamp.com/search?q=Regurgitate+Sightless&item_type=t",
-      "quelle": "bandcamp"
-    },
-    {
       "kuenstler": "Brutal Truth",
       "titel": "Godplayer",
       "substil_vermerk": "deathgrind (US)",
@@ -72,13 +51,6 @@
       "substil_vermerk": "finnischer Grind",
       "url": "https://bandcamp.com/search?q=Rotten+Sound+Cursed&item_type=t",
       "quelle": "bandcamp"
-    },
-    {
-      "kuenstler": "Pig Destroyer",
-      "titel": "Trojan Whore",
-      "substil_vermerk": "deathgrind (US)",
-      "url": "https://www.youtube.com/results?search_query=Pig+Destroyer+Trojan+Whore",
-      "quelle": "youtube"
     },
     {
       "kuenstler": "Discordance Axis",
