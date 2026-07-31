@@ -1,7 +1,7 @@
 {
   "genre": "Industrial",
   "anzahl": 30,
-  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Kuenstler). Hass-/extremismusfrei kuratiert.",
+  "hinweis": "Stilistisch breit gestreut. URLs sind offizielle Bandcamp-/YouTube-Suchlinks (immer erreichbar, landen auf dem richtigen Künstler). Hass-/extremismusfrei kuratiert.",
   "songs": [
     {
       "kuenstler": "Throbbing Gristle",
@@ -13,19 +13,19 @@
     {
       "kuenstler": "Cabaret Voltaire",
       "titel": "Nag Nag Nag",
-      "substil_vermerk": "fruehes elektronisches Industrial (UK)",
+      "substil_vermerk": "frühes elektronisches Industrial (UK)",
       "url": "https://www.youtube.com/results?search_query=Cabaret+Voltaire+Nag+Nag+Nag",
       "quelle": "youtube"
     },
     {
       "kuenstler": "SPK",
       "titel": "Metal Dance",
-      "substil_vermerk": "Industrial/EBM-Uebergang (Australien)",
+      "substil_vermerk": "Industrial/EBM-Übergang (Australien)",
       "url": "https://www.youtube.com/results?search_query=SPK+Metal+Dance",
       "quelle": "youtube"
     },
     {
-      "kuenstler": "Einstuerzende Neubauten",
+      "kuenstler": "Einstürzende Neubauten",
       "titel": "Halber Mensch",
       "substil_vermerk": "Metallperkussion (Deutschland)",
       "url": "https://www.youtube.com/results?search_query=Einstuerzende+Neubauten+Halber+Mensch",
@@ -48,7 +48,7 @@
     {
       "kuenstler": "Foetus",
       "titel": "Verklemmt",
-      "substil_vermerk": "orchestral-verstoerend (US/AU)",
+      "substil_vermerk": "orchestral-verstörend (US/AU)",
       "url": "https://bandcamp.com/search?q=Foetus+Verklemmt&item_type=t",
       "quelle": "bandcamp"
     },
@@ -209,7 +209,7 @@
     {
       "kuenstler": "Puce Mary",
       "titel": "The Size of Our Desires",
-      "substil_vermerk": "experimentelles Industrial (Daenemark)",
+      "substil_vermerk": "experimentelles Industrial (Dänemark)",
       "url": "https://bandcamp.com/search?q=Puce+Mary+The+Size+of+Our+Desires&item_type=t",
       "quelle": "bandcamp"
     }

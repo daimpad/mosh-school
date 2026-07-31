@@ -55,6 +55,64 @@ UMLAUT_VERDACHT = re.compile(
     re.IGNORECASE,
 )
 
+# --- Umlaut-Scan fuer die Referenzbereiche ausserhalb des Baustein-Pools ------
+# Andere Bauart als oben: generisch (jedes Wort mit ae/oe/ue) plus eine Liste
+# legitimer Treffer. Eine Stamm-Allowlist muesste jedes neue Wort kennen; dieser
+# Weg meldet unbekannte Woerter von selbst und braucht nur bei echten deutschen
+# ae/oe/ue-Woertern und Eigennamen gepflegt zu werden.
+REFERENZ_DATEIEN = (
+    'data/songs.black-metal.json', 'data/songs.crust.json', 'data/songs.dark-post-punk.json',
+    'data/songs.death-metal.json', 'data/songs.deathcore.json', 'data/songs.doom.json',
+    'data/songs.grenzgaenger.json', 'data/songs.grindcore.json', 'data/songs.hardcore.json',
+    'data/songs.industrial.json', 'data/songs.mathcore.json', 'data/songs.metalcore.json',
+    'data/songs.noise-rock.json', 'data/songs.post-hardcore.json', 'data/songs.post-metal.json',
+    'data/songs.powerviolence.json', 'data/songs.screamo.json', 'data/songs.sludge.json',
+    'data/songs.stoner.json', 'data/songs.thrash.json',
+    'data/genres.json', 'data/glossar.json', 'data/tunings.json', 'data/griffe.json',
+    'data/patterns.json', 'data/brand-alert.json', 'data/pedale.json', 'data/ampbox.json',
+    'data/experimente.json', 'data/koennenscheck.json', 'data/gefuehlslandkarte.json',
+)
+# Schluessel, deren Werte sprachneutrale IDs/URLs sind — nie Anzeigetext.
+REFERENZ_IGNORIERT = frozenset({
+    'id', 'url', 'quelle', 'instrument', 'domaene', 'kompetenzstufe', 'stil', 'typ',
+    'werkzeug', 'baustein', 'basis_baustein', 'verweis_genre', 'spielziele',
+    'voraussetzungen', 'genres', 'cta_ziel', 'saiten', 'halbtoene', '_meta',
+})
+# `kategorie` traegt je nach Datei ID (koennenscheck) oder Anzeigetext
+# (brand-alert) — deshalb datei-genau statt global ignoriert.
+REFERENZ_IGNORIERT_EXTRA = {'data/koennenscheck.json': frozenset({'kategorie'})}
+ERSATZ_VERDACHT = re.compile(r'\b[A-Za-zÄÖÜäöüß]*(?:ae|oe|ue)[A-Za-zÄÖÜäöüß]*\b', re.IGNORECASE)
+# Legitime Wortbestandteile: echte deutsche ae/oe/ue-Folgen (Quelle, Dauer, bauen,
+# Frequenz …), gaengige Fremdwoerter und Eigennamen aus den Song-Listen.
+ERSATZ_ERLAUBT = tuple(w.lower() for w in (
+    'quell', 'quer', 'frequenz', 'konsequen', 'sequenz', 'dauer', 'teuer', 'steuer', 'bequem',
+    'bau', 'neu', 'trauen', 'traue', 'schauen', 'klauen', 'streuen', 'zuerst', 'zueinander',
+    'genau', 'raue', 'grau', 'feuer', 'aktuell', 'manuell', 'visuell', 'individuell',
+    'eventuell', 'ritual', 'rituel', 'graduell', 'punktuell', 'virtuell', 'silhouette',
+    'museum', 'poet', 'duett', 'statue', 'aeon', 'aeturnus', 'queer', 'queen', 'que',
+    'guest', 'guitar', 'league', 'due', 'doe', 'goes', 'blue', 'plague', 'vogue', 'tongue',
+    'shoegaze', 'conqueror', 'squeal', 'squelette', 'langue', 'virtue', 'saetia', 'raein',
+    'bouquet', 'mooer', 'toe', 'foetus', 'haemorrhag', 'issue', 'venue', 'rescue', 'argue',
+    'value', 'tissue', 'blues', 'bluegrass', 'influencer', 'true', 'cruel', 'fuel', 'duel',
+))
+
+
+def ersatzschreibungen(knoten, pfad='', ignoriert=REFERENZ_IGNORIERT):
+    """Liefert (pfad, wort) fuer jedes verdaechtige Wort in sichtbaren Texten."""
+    if isinstance(knoten, dict):
+        for k, v in knoten.items():
+            if k in ignoriert:
+                continue
+            yield from ersatzschreibungen(v, f'{pfad}.{k}', ignoriert)
+    elif isinstance(knoten, list):
+        for i, v in enumerate(knoten):
+            yield from ersatzschreibungen(v, f'{pfad}[{i}]', ignoriert)
+    elif isinstance(knoten, str):
+        for wort in ERSATZ_VERDACHT.findall(knoten):
+            klein = wort.lower()
+            if not any(teil in klein for teil in ERSATZ_ERLAUBT):
+                yield pfad, wort
+
 
 # Demonstrations-Schema (§0c/§1 Trainings-Loop): optionales Feld am Baustein.
 DEMO_INSTRUMENTE = {
@@ -330,6 +388,21 @@ def main():
         # JEDE Grafik fehlt. Der Fall „Datei fehlt" meldet sich schon oben, der
         # darf hier nicht ein zweites Mal warnen.
         warnung.append('data/grafiken.json ist leer — Grafik-Abdeckung ungeprueft (scripts/build_grafiken.py laufen lassen)')
+
+    # Referenzbereiche (Songs, Genres, Glossar, Stimmungen, Griffe, Patterns …)
+    # liegen ausserhalb von INHALTSDATEIEN und wurden vom Umlaut-Scan bis hierher
+    # gar nicht erfasst: 34 Ersatzschreibungen standen in sichtbarem Text, davon
+    # ein Bandname ("Einstuerzende Neubauten"). Hier laeuft deshalb der generische
+    # Detektor statt der Stamm-Allowlist oben — die kennt nur ~30 Woerter und
+    # haette "duesterste"/"praegender"/"Baesse" auch im Pool durchgelassen.
+    for datei in REFERENZ_DATEIEN:
+        try:
+            inhalt = lade(datei)
+        except FileNotFoundError:
+            continue
+        ignoriert = REFERENZ_IGNORIERT | REFERENZ_IGNORIERT_EXTRA.get(datei, frozenset())
+        for pfad, wort in ersatzschreibungen(inhalt, '', ignoriert):
+            umlaut.append(f'{datei}{pfad}: ASCII-Umlaut-Verdacht "{wort}"')
 
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
