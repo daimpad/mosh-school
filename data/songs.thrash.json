@@ -1,7 +1,7 @@
 {
   "genre": "Thrash",
-  "anzahl": 28,
-  "hinweis": "Kuratiert ohne Bands mit dokumentierten rechtsextremen, gewalttätigen oder NSBM-nahen Verstrickungen — im Zweifel nicht aufgenommen. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "anzahl": 29,
+  "hinweis": "Kuratiert ohne Bands mit dokumentiertem Verhalten von Mitgliedern, das der Haltung dieser Seite widerspricht: rechtsextreme oder rassistische Aussagen, NSBM-Nähe, Gewalt- und Missbrauchsfälle, Homo- und Transfeindlichkeit. Maßstab ist belegtes Verhalten, NICHT Bandname, Artwork oder Textthema — sonst würde die Liste Genres aussortieren statt Verhalten. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Metallica",
@@ -198,6 +198,13 @@
       "substil_vermerk": "moderner Crossover/Thrash (US)",
       "url": "https://bandcamp.com/search?q=Power+Trip+Executioner%27s+Tax+%28Swing+of+the+Axe%29&item_type=t",
       "quelle": "bandcamp"
+    },
+    {
+      "kuenstler": "Megadeth",
+      "titel": "Holy Wars... The Punishment Due",
+      "substil_vermerk": "technischer US-Thrash",
+      "url": "https://www.youtube.com/results?search_query=Megadeth+Holy+Wars...+The+Punishment+Due",
+      "quelle": "youtube"
     }
   ]
 }
