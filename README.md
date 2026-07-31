@@ -15,7 +15,7 @@ Gitarre · Bass · Schlagzeug · Gesang — für Hardcore, Metalcore, Thrash, De
 ![Vanilla JS](https://img.shields.io/badge/Vanilla-JS%20ESM-f7df1e?style=flat-square&logo=javascript&logoColor=black)
 ![Sprache](https://img.shields.io/badge/Sprache-Deutsch-cc2418?style=flat-square)
 
-`No Ads` · `No Tracking` · `No Influencer-BS` · `No NSBM` · 🏳️‍🌈 *Queer willkommen*
+`No Ads` · `No Cookies` · `No Influencer-BS` · `No NSBM` · 🏳️‍🌈 *Queer willkommen*
 
 </div>
 
@@ -25,22 +25,41 @@ Gitarre · Bass · Schlagzeug · Gesang — für Hardcore, Metalcore, Thrash, De
 
 **ZERRER** ist eine clientseitige Lern-App fürs Spielen von Extreme-Metal-Instrumenten —
 vom ersten Powerchord bis zum Blastbeat. Sie läuft **komplett auf deinem Gerät**: kein Login,
-kein Server, kein Tracking. Der Fortschritt lebt im `localStorage`, offline funktioniert alles.
+kein Konto, keine Server-Komponente. Der Fortschritt lebt im `localStorage`, offline
+funktioniert alles.
 
 > Rein statisch, **buildfrei**: HTML/CSS/JS als ES-Module, keine Bundler, keine Laufzeit-
 > Abhängigkeiten. Inhalte kommen aus JSON, sichtbare Texte laufen durch eine kleine i18n-Schicht.
+
+**Zum Datenschutz, genau:** ZERRER setzt keine Cookies, bindet keine Werbenetzwerke ein und legt
+kein Nutzerprofil an. Für eine anonyme Reichweitenmessung ist
+[GoatCounter](https://www.goatcounter.com/) eingebunden — die **einzige** Ausnahme vom Grundsatz,
+keine Ressourcen von externen Anbietern zu laden. Schriften, Icons und Bibliotheken liegen alle
+lokal im Repo. Nachzulesen in der [Datenschutzerklärung](https://zerrer.org/#/datenschutz).
+
+## In Zahlen
+
+| | |
+| --- | --- |
+| **497** Bausteine | über 60 Inhaltsdateien, 4 Instrumente + 5 Querschnitts-Domänen |
+| **288** Fehlerbilder | Trainer-Layer: typische Fehler als Diagnose |
+| **41** Trainingseinheiten | kuratierte Sitzungen (Erwärmung → Hauptteil → Ausklang) |
+| **16** Genres | von Hardcore bis Noise Rock |
+| **811** SVG-Grafiken | 785 Baustein-Motive + 26 Lehrgrafiken, alle deterministisch erzeugt |
+| **12** Audio-Werkzeuge | auf einem gemeinsamen, DOM-freien Kern |
 
 ## Features
 
 | | |
 | --- | --- |
 | 🎸 **Vier Instrumente** | Gitarre, Bass, Schlagzeug, Gesang — je nach Könnensstufe (Einsteiger → Fortgeschritten → Experte). |
-| 🔥 **Genre-Achse** | Hardcore, Thrash, Death, Black, Doom, Djent, Deathcore, Grind, Sludge, Core/Noise & mehr. |
+| 🔥 **Genre-Achse** | Hardcore, Metalcore, Thrash, Death, Black, Doom, Crust, Grind, Powerviolence, Sludge, Deathcore, Djent, Stoner/Post, Screamo, Mathcore, Noise Rock. |
 | 🧭 **Nach Tätigkeit geordnet** | Lernen · Üben · Songwriting · Experimentieren — Werkzeuge tauchen dort auf, wo man sie braucht. |
-| 🛠️ **Audio-Werkzeuge** | Metronom mit Tempo-Ramp, Stimmgerät (inkl. eigener, mikrotonaler Tunings), Play-along-Loops, Pattern-Bibliothek, Pedalboard- & Amp/Box-Baukasten, Song-Struktur, Riff- & Mehrspur-Recorder. |
+| 🛠️ **Audio-Werkzeuge** | Metronom mit Tempo-Ramp, Stimmgerät (inkl. eigener, mikrotonaler Tunings), Play-along-Loops, Pattern-Bibliothek, Gear-Explorer, Pedalboard- & Amp/Box-Baukasten, Song-Struktur, Riff- & Mehrspur-Recorder. |
 | 🩺 **Trainer-Layer** | Typische Fehlerbilder als Diagnose — mit abstrakten, monochromen SVG-Grafiken. |
 | 🎲 **Experimentieren** | Impuls-Karten, Gefühlslandkarte (Gefühl → Genre) und Genre-Mix-Generator. |
 | 📴 **Offline-first PWA** | Service Worker cacht die ganze Hülle; einmal geladen, läuft alles ohne Netz. |
+| 🔎 **Crawlbare Zwillingsseiten** | 534 statische Seiten unter echten Pfad-URLs — für Suchmaschinen, die hinter `#/` nicht schauen. |
 
 ## Live ausprobieren
 
@@ -56,15 +75,40 @@ gemeinsamer, DOM-freier **Audio-Kern** (`js/audio/`) trägt alle Werkzeuge — e
 ein Lookahead-Scheduler, synthetische Stimmen, WAV-Export. Der Fortschritt ist baustein-gebunden
 in einem einzigen, versionierten `localStorage`-Schema.
 
+Die App ist eine **Hash-Routing-SPA** (`#/baustein/<id>`). Weil Suchmaschinen alles hinter `#`
+als dieselbe URL sehen, erzeugt `scripts/build_seiten.py` zusätzlich einen **statischen
+Seiten-Layer** unter echten Pfaden (`/baustein/<id>/`) — eingecheckt wie jedes andere generierte
+Artefakt, kein Build-Schritt beim Deploy.
+
 ```
 js/            Engine + Ansichten (ES-Module, buildfrei)
 js/audio/      themenneutraler Audio-Kern (Kontext, Scheduler, Stimmen, WAV)
 data/          Inhalte als JSON (Bausteine, Labels, Grafiken, Songs, Tunings …)
-scripts/       Python-Helfer: validate / lift / Index- & Grafik-Build
+css/           ein Stylesheet, alles über Tokens (dunkel ist Default)
+scripts/       Python-Helfer: validate · lift · Index-, Grafik- & Seiten-Build
+baustein/ pfad/ instrument/   generierte statische Seiten (Artefakt, eingecheckt)
 sw.js          Service Worker (Offline-Hülle)
 ```
 
 Details für Beitragende und KI-Assistenten stehen in [`CLAUDE.md`](CLAUDE.md).
+
+## Lokal starten
+
+Nichts zu installieren — nur ein Server, weil `fetch()` der JSON-Dateien über `file://`
+nicht funktioniert:
+
+```sh
+python3 -m http.server 8000     # dann http://localhost:8000 öffnen
+```
+
+Vor jedem Commit (dieselben Prüfungen laufen in der CI):
+
+```sh
+python3 scripts/validate.py                # Cross-File-Konsistenz über den Pool
+python3 scripts/lift.py                    # Titel geliftet, Sprach-Skelette aktuell
+python3 scripts/build_grafiken.py --check  # Grafik-Bundles reproduzierbar
+python3 scripts/build_seiten.py --check    # statische Seiten + Sitemap reproduzierbar
+```
 
 ## Mitmachen
 
