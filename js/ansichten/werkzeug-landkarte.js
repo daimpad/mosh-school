@@ -14,7 +14,7 @@
 // respektiert prefers-reduced-motion und wird beim Verlassen aufgeräumt.
 
 import { t } from '../i18n.js';
-import { esc, registriereAufraeumen } from '../oberflaeche.js';
+import { esc, halteFokus, registriereAufraeumen } from '../oberflaeche.js';
 import { landkarteName } from '../genre-namen.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
@@ -406,6 +406,10 @@ function verdrahteFelder(el, genres, index) {
     panel.innerHTML = ergebnisPanel({ typ: 'genre', genre: genres[i] });
     markiereChips();
     verdrahteInline();
+    // „Leeren" hing bisher allein an der Gefuehls-Mehrfachauswahl. Wer ein Genre
+    // antippte, hob damit ein Feld hervor, hatte aber keinen Weg zurueck zur
+    // Gesamtansicht — der Knopf blieb versteckt, weil `gewaehlt` leer ist.
+    if (leerenKnopf) leerenKnopf.hidden = false;
   }
   // Inline-Gefühl-Chips im Ergebnis (Genre → seine Gefühle) übernehmen ins Set.
   function verdrahteInline() {
@@ -424,7 +428,10 @@ function verdrahteFelder(el, genres, index) {
   if (leerenKnopf) {
     leerenKnopf.addEventListener('click', () => {
       gewaehlt.clear();
+      // aktualisiere() setzt bei leerer Auswahl auf „alle Felder voll" zurueck —
+      // damit raeumt derselbe Knopf auch eine reine Genre-Hervorhebung ab.
       aktualisiere();
+      leerenKnopf.focus({ preventScroll: true });
     });
   }
 }
@@ -491,7 +498,8 @@ export function renderWerkzeugLandkarte(el, daten) {
     knopf.addEventListener('click', () => {
       if (modus === knopf.dataset.modus) return;
       modus = knopf.dataset.modus;
-      renderWerkzeugLandkarte(el, daten);
+      // Selbst-Neuzeichnen geht an der Fokus-Rettung des Routers vorbei.
+      halteFokus(el, () => renderWerkzeugLandkarte(el, daten));
     });
   }
 
