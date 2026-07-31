@@ -118,7 +118,6 @@ function stoppeMarker() {
 }
 
 function markiere(el, ctx, zeit, i, countinTakte) {
-  if (reduziert()) return;
   const { schlag, istSchlag, istEins } = schrittInfo(i);
   if (!istSchlag) return; // nur Schläge visualisieren, nicht jede Unterteilung
   const imCountin = i < countinTakte * zustand.takt * zustand.unterteilung;
@@ -128,15 +127,21 @@ function markiere(el, ctx, zeit, i, countinTakte) {
       const punkt = el.querySelector('.wz-beat-punkt');
       const zahl = el.querySelector('.wz-beat-zahl');
       const status = el.querySelector('.wz-metro-status');
+      // Taktzähler und Statuszeile sind INHALT, nicht Animation. Vorher stand
+      // der Frueh-Ausstieg `if (reduziert()) return;` ganz oben in dieser
+      // Funktion — bei „Bewegung reduzieren" blieb der Zähler deshalb leer und
+      // die Statuszeile dauerhaft auf „Gestoppt", obwohl der Klick lief. Nur
+      // der blinkende Punkt gehört hinter die Schranke.
+      if (zahl) zahl.textContent = imCountin ? t('wz_countin_kurz') : String(schlag + 1);
+      if (status && istEins && !imCountin) {
+        status.textContent = t('wz_status_laeuft', { bpm: Math.round(letztesBpm) });
+      }
+      if (reduziert()) return;
       if (punkt) {
         punkt.classList.remove('an', 'eins');
         void punkt.offsetWidth; // Reflow, damit die Animation neu triggert
         punkt.classList.add('an');
         if (istEins) punkt.classList.add('eins');
-      }
-      if (zahl) zahl.textContent = imCountin ? t('wz_countin_kurz') : String(schlag + 1);
-      if (status && istEins && !imCountin) {
-        status.textContent = t('wz_status_laeuft', { bpm: Math.round(letztesBpm) });
       }
     }, verzoegerung)
   );
@@ -233,7 +238,7 @@ function setzeLaufZustand(el, laeuft) {
     const icon = start.querySelector('i');
     if (icon) icon.className = laeuft ? 'fa-solid fa-stop' : 'fa-solid fa-play';
   }
-  if (status && !laeuft) status.textContent = t('wz_status_gestoppt');
+  if (status) status.textContent = laeuft ? t('wz_status_laeuft', { bpm: Math.round(letztesBpm) }) : t('wz_status_gestoppt');
 }
 
 // --- WAV-Export ---
@@ -427,8 +432,13 @@ function verdrahte(el, daten) {
   el.querySelector('.wz-audio-aktivieren')?.addEventListener('click', async () => {
     await aktiviere();
     if (istBereit()) {
-      if (tor) tor.hidden = true;
+      // Reihenfolge: erst den Koerper zeigen und den Fokus dorthin setzen, DANN
+      // das Tor verstecken. Andersherum verschwand der gerade gedrueckte Knopf
+      // unter dem eigenen Fokus und der landete auf <body> — mit der Tastatur
+      // musste man sich von vorn durch die Seite arbeiten.
       if (koerper) koerper.hidden = false;
+      koerper?.querySelector('.wz-metro-start')?.focus({ preventScroll: true });
+      if (tor) tor.hidden = true;
     }
   });
 

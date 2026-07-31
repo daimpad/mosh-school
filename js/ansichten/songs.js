@@ -9,7 +9,7 @@
 // frische Ziehung je Aufruf zurück.
 
 import { t } from '../i18n.js';
-import { esc } from '../oberflaeche.js';
+import { esc, nichtGefundenHtml } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const SPEICHER = 'moshschool.songs.v1';
@@ -94,6 +94,14 @@ export function renderSongs(el, daten, slug) {
   const genres = daten.songs || [];
   if (genres.length === 0) {
     el.innerHTML = `<article><p class="leise">${esc(t('songs_leer'))}</p></article>`;
+    return;
+  }
+  // Unbekannter Slug: „nicht gefunden" statt stiller Rueckfall auf das erste
+  // Genre. Vorher zeigte ein veraltetes Lesezeichen (oder ein falsch gebauter
+  // Link) die Hardcore-Songs unter der erwarteten Ueberschrift — falscher
+  // Inhalt, der wie richtiger aussieht.
+  if (slug && !genres.some((g) => g.slug === slug)) {
+    el.innerHTML = nichtGefundenHtml('#/songs', t('songs_titel'));
     return;
   }
   const aktiv = genres.find((g) => g.slug === slug) || genres[0];

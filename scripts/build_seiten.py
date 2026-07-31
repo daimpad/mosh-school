@@ -960,10 +960,17 @@ def build_all():
     # ("Gitarre lernen", "Growlen lernen") — entsprechend hohe Prioritaet.
     hub_eintraege = []
     for domaene in INSTRUMENTE:
-        _, praxis, ausruestung = instrument_mengen(domaene)
         manifest[f'instrument/{domaene}/index.html'] = instrument_html(domaene)
         sitemap_eintraege.append((f'instrument/{domaene}/', '0.9'))
-        hub_eintraege.append((domaene, label_vok('domaene', domaene), len(praxis) + len(ausruestung)))
+        # Zahl wie instrumentUebersicht() in js/pfade.js: ALLE sichtbaren
+        # Bausteine der Domaene. praxis+ausruestung liess die Reflexions-
+        # Bausteine aus, die auf derselben Seite unter Theorie stehen — die
+        # statische Kachel zeigte fuer Gesang 57 statt 64.
+        sichtbar = [
+            b for b in BAUSTEINE
+            if domaene in domaenen_von(b) and not ist_nur_trainer(b) and not ist_umgebungs_baustein(b)
+        ]
+        hub_eintraege.append((domaene, label_vok('domaene', domaene), len(sichtbar)))
     manifest['instrument/index.html'] = instrument_hub_html(hub_eintraege)
     sitemap_eintraege.append(('instrument/', '0.9'))
 

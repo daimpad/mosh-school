@@ -326,14 +326,19 @@ export function renderInstrument(el, daten, domaene) {
   const reiter = instrumentReiter(domaene);
   if (!reiter.some((r) => r.id === instrAktiverReiter)) instrAktiverReiter = reiter[0].id;
 
+  // Vollstaendiges Reiter-Muster: role=tab allein reicht nicht. Ohne
+  // aria-controls/aria-labelledby weiss die Hilfstechnik nicht, welcher Bereich
+  // zum Reiter gehoert, und ohne wanderndes tabindex (nur der aktive Reiter ist
+  // tabbar, die uebrigen erreicht man mit den Pfeiltasten) verhaelt sich die
+  // Leiste anders, als ihre eigene Rolle ankuendigt.
   const reiterBar = `<div class="instr-reiter" role="tablist" aria-label="${esc(t('instrument_untertitel'))}">${reiter
-    .map((r) => `<button type="button" class="chip chip-waehlbar instr-reiter-knopf ${r.id === instrAktiverReiter ? 'chip-akzent' : ''}" role="tab" aria-selected="${r.id === instrAktiverReiter}" data-reiter="${esc(r.id)}"><i class="fa-solid ${r.icon}" aria-hidden="true"></i> ${esc(r.titel)}</button>`)
+    .map((r) => `<button type="button" class="chip chip-waehlbar instr-reiter-knopf ${r.id === instrAktiverReiter ? 'chip-akzent' : ''}" role="tab" id="tab-${esc(r.id)}" aria-controls="instr-panel" aria-selected="${r.id === instrAktiverReiter}" tabindex="${r.id === instrAktiverReiter ? '0' : '-1'}" data-reiter="${esc(r.id)}"><i class="fa-solid ${r.icon}" aria-hidden="true"></i> ${esc(r.titel)}</button>`)
     .join('')}</div>`;
 
   el.innerHTML = `
     ${landingHeroHtml(null, label('domaene', domaene), t('instrument_untertitel'), domaeneHue(domaene), `instrument-${domaene}`, '', domaeneIcon(domaene))}
     ${reiterBar}
-    <div class="instr-tab-inhalt" role="tabpanel">${instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter)}</div>
+    <div class="instr-tab-inhalt" role="tabpanel" id="instr-panel" tabindex="-1" aria-labelledby="tab-${esc(instrAktiverReiter)}">${instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter)}</div>
     <p class="knopf-zeile instr-fuss">
       <a class="knopf knopf-sekundaer" href="#/instrument"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('instrument_alle'))}</a>
       <a class="knopf knopf-sekundaer" href="#/training"><i class="fa-solid fa-list-check" aria-hidden="true"></i> ${esc(t('nav_training'))}</a>
@@ -346,18 +351,37 @@ export function renderInstrument(el, daten, domaene) {
   };
   kcVerdrahten();
 
-  for (const knopf of el.querySelectorAll('[data-reiter]')) {
-    knopf.addEventListener('click', () => {
-      instrAktiverReiter = knopf.dataset.reiter;
-      for (const k of el.querySelectorAll('[data-reiter]')) {
-        const an = k.dataset.reiter === instrAktiverReiter;
-        k.classList.toggle('chip-akzent', an);
-        k.setAttribute('aria-selected', String(an));
-      }
-      inhalt.innerHTML = instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter);
-      kcVerdrahten();
-    });
+  const knoepfe = [...el.querySelectorAll('[data-reiter]')];
+  const waehle = (id) => {
+    instrAktiverReiter = id;
+    for (const k of knoepfe) {
+      const an = k.dataset.reiter === instrAktiverReiter;
+      k.classList.toggle('chip-akzent', an);
+      k.setAttribute('aria-selected', String(an));
+      k.tabIndex = an ? 0 : -1;
+    }
+    inhalt.setAttribute('aria-labelledby', 'tab-' + instrAktiverReiter);
+    inhalt.innerHTML = instrumentReiterInhalt(daten, domaene, pfad, instrAktiverReiter);
+    kcVerdrahten();
+  };
+  for (const knopf of knoepfe) {
+    knopf.addEventListener('click', () => waehle(knopf.dataset.reiter));
   }
+  // Pfeiltasten/Pos1/Ende innerhalb der Leiste — das erwartet jeder, der eine
+  // role="tablist" vorgelesen bekommt.
+  el.querySelector('.instr-reiter')?.addEventListener('keydown', (e) => {
+    const i = knoepfe.findIndex((k) => k === document.activeElement);
+    if (i === -1) return;
+    let ziel = null;
+    if (e.key === 'ArrowRight') ziel = knoepfe[(i + 1) % knoepfe.length];
+    else if (e.key === 'ArrowLeft') ziel = knoepfe[(i - 1 + knoepfe.length) % knoepfe.length];
+    else if (e.key === 'Home') ziel = knoepfe[0];
+    else if (e.key === 'End') ziel = knoepfe[knoepfe.length - 1];
+    if (!ziel) return;
+    e.preventDefault();
+    waehle(ziel.dataset.reiter);
+    ziel.focus();
+  });
 }
 
 // Band-Landing: Querschnittsthemen, die mehrere Instrumente zugleich betreffen

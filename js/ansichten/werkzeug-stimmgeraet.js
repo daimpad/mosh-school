@@ -128,6 +128,22 @@ function starteTunerSchleife(el) {
   const nadel = el.querySelector('.wz-tuner-nadel');
   const richtung = el.querySelector('.wz-tuner-richtung');
 
+  // Die drei Felder oben werden pro Animationsframe neu beschrieben (~60/s).
+  // Als aria-live-Regionen war das fuer Screenreader eine Dauersalve, in der
+  // nichts mehr zu verstehen war. Sie sind jetzt reine Sichtanzeige; angesagt
+  // wird ueber die vorhandene role="status"-Zeile, und zwar nur, wenn sich der
+  // Ton oder das Passt-Ergebnis tatsaechlich aendert — gedrosselt auf 1/s.
+  let letzteAnsage = '';
+  let ansageZeit = 0;
+  const melde = (text) => {
+    const jetzt = performance.now();
+    if (text === letzteAnsage || jetzt - ansageZeit < 1000) return;
+    letzteAnsage = text;
+    ansageZeit = jetzt;
+    const statusEl = el.querySelector('.wz-tuner-status');
+    if (statusEl) statusEl.textContent = text;
+  };
+
   const tick = () => {
     if (!mikro) return;
     const buf = mikro.liesZeitsignal();
@@ -140,11 +156,12 @@ function starteTunerSchleife(el) {
       if (anzeige) anzeige.textContent = `${notenText(treffer.note)}${treffer.oktave}`;
       if (centsFeld) centsFeld.textContent = (c > 0 ? '+' : '') + c + ' ¢';
       if (nadel) nadel.style.left = `${Math.max(0, Math.min(100, 50 + geglaetteteCents))}%`;
+      const wort = Math.abs(c) <= 5 ? t('wz_tuner_passt') : c < 0 ? t('wz_tuner_tief') : t('wz_tuner_hoch');
       if (richtung) {
-        richtung.textContent =
-          Math.abs(c) <= 5 ? t('wz_tuner_passt') : c < 0 ? t('wz_tuner_tief') : t('wz_tuner_hoch');
+        richtung.textContent = wort;
         richtung.classList.toggle('passt', Math.abs(c) <= 5);
       }
+      melde(`${notenText(treffer.note)}${treffer.oktave} — ${wort}`);
     } else {
       if (anzeige) anzeige.textContent = '—';
       if (centsFeld) centsFeld.textContent = '';
@@ -152,13 +169,23 @@ function starteTunerSchleife(el) {
         richtung.textContent = t('wz_tuner_still');
         richtung.classList.remove('passt');
       }
+      melde(t('wz_tuner_still'));
     }
     rafId = window.requestAnimationFrame(tick);
   };
   rafId = window.requestAnimationFrame(tick);
 }
 
+// Abbruchmarke gegen das Wettrennen mit dem Routenwechsel: holeMikro() wartet
+// auf die Freigabe, waehrenddessen sind `mikro` und `rafId` noch null — der
+// Aufraeumhaken lief also ins Leere und wurde danach verworfen. Anschliessend
+// setzte starteMikro trotzdem `mikro` und startete die rAF-Analyseschleife:
+// Mikro und Autokorrelation liefen fuer den Rest der Sitzung weiter, obwohl das
+// Stimmgeraet laengst verlassen war.
+let mikroAbbruch = false;
+
 function stoppeTuner() {
+  mikroAbbruch = true;
   if (rafId) {
     window.cancelAnimationFrame(rafId);
     rafId = null;
@@ -177,9 +204,15 @@ async function starteMikro(el) {
   // blieb offen — das Aufnahme-Symbol des Browsers erlosch nie.
   if (mikro || mikroStartLaeuft) return;
   mikroStartLaeuft = true;
+  mikroAbbruch = false;
   try {
     await aktiviere();
-    mikro = await holeMikro();
+    const strom = await holeMikro();
+    if (mikroAbbruch) {
+      strom.stop();
+      return;
+    }
+    mikro = strom;
     if (status) status.textContent = t('wz_tuner_laeuft');
     const tor = el.querySelector('.wz-tuner-start-zeile');
     if (tor) tor.hidden = true;
@@ -354,13 +387,13 @@ export function renderWerkzeugStimmgeraet(el, daten, query) {
           </p>
           <p class="wz-tuner-status leise" role="status" aria-live="polite"></p>
           <div class="wz-tuner-anzeige" hidden>
-            <div class="wz-tuner-note" aria-live="polite">—</div>
+            <div class="wz-tuner-note">—</div>
             <div class="wz-tuner-skala" role="img" aria-label="${esc(t('wz_tuner_skala_aria'))}">
               <span class="wz-tuner-mitte" aria-hidden="true"></span>
               <span class="wz-tuner-nadel" style="left:50%" aria-hidden="true"></span>
             </div>
-            <div class="wz-tuner-cents" aria-live="polite"></div>
-            <div class="wz-tuner-richtung" aria-live="polite"></div>
+            <div class="wz-tuner-cents"></div>
+            <div class="wz-tuner-richtung"></div>
           </div>
         </section>
 
