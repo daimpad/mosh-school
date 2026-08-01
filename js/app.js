@@ -39,7 +39,7 @@ import { ladeDaten, ladeSuchindex } from './daten.js';
 import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
-import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
+import { esc, fuehreAufraeumenAus, markenZeilenHtml, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, uebernehmeFremdenStand } from './zustand.js';
 
 let daten = null;
@@ -214,6 +214,11 @@ function beschrifteRahmen() {
   const zumInhalt = document.querySelector('.zum-inhalt');
   if (zumInhalt) zumInhalt.textContent = t('skip_link');
   document.querySelector('.marke-text').textContent = t('app_titel');
+  // Fußzeilen-Claim: dieselben zwei Zweige wie im Startseiten-Hero, hier ohne
+  // Chips (die Links stehen schon in den Spalten daneben). Steht leer im HTML,
+  // damit der Text nur an EINER Stelle gepflegt wird.
+  const fussClaim = document.querySelector('.footer-marke-claim');
+  if (fussClaim) fussClaim.innerHTML = markenZeilenHtml();
   const beschriftungen = {
     // Untere Leiste
     home: t('nav_home'),
