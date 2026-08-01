@@ -6,7 +6,7 @@
 
 import { bildEbene } from './hintergrundbilder.js';
 import { label, t } from './i18n.js';
-import { esc } from './oberflaeche.js';
+import { esc, markenZeilenHtml } from './oberflaeche.js';
 
 // Reihenfolge der Einordnungs-Dimensionen (Feld -> i18n-Titel).
 const EINORDNUNG = ['tempo', 'sound', 'vocals', 'struktur', 'herkunft'];
@@ -249,7 +249,7 @@ export function markeHeroInszeniert(extra = '') {
             <span class="zerr-basis" aria-hidden="true">${esc(t('app_titel'))}</span>
           </span>
         </h1>
-        <p class="genre-landing-kurz">${esc(t('hero_untertitel'))}</p>
+        ${markenZeilenHtml({ chips: true, klasse: 'startseite-hero-zweige' })}
         <p class="startseite-hero-themen">${esc(t('hero_themen'))}</p>
         ${extra}
       </div>

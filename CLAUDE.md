@@ -37,8 +37,18 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   `og:url`, das `ld+json` in `index.html`, `sitemap.xml` und `robots.txt` auf
   `zerrer.org`. DNS und TLS-Zertifikat für `zerrer.org` liegen bei netcup,
   nicht in diesem Repo.
-- **Sichtbarer Name kommt aus `t('app_titel')`** (= „ZERRER"), die Subline aus
-  `t('hero_untertitel')` (= „Mosh School"). Nie hart schreiben.
+- **Sichtbarer Name kommt aus `t('app_titel')`** (= „ZERRER"), die Subline im
+  Seitentitel aus `t('hero_untertitel')` (= „Mosh School"). Nie hart schreiben.
+- **Die zwei Zweige unter der Marke** — „Zerrer Mosh Skool" (Lernangebot) und
+  „Zerrer Kollektiv" (Shows Köln/Bonn) — stehen an drei Stellen: Startseiten-Hero,
+  Fußzeile der App und Fußzeile der statischen Tier-2-Seiten. Gerendert werden
+  sie aus **einer** Quelle: `markenZeilenHtml()` in `js/oberflaeche.js` (App) und
+  `marken_zeilen()` in `scripts/build_seiten.py` (statisch), beide über dieselben
+  vier Labels `marke_{schule,kollektiv}_{name,kurz}`. Die Fußzeile trug vorher
+  einen eigenen, hart in `index.html` geschriebenen Claim — deshalb steht dort
+  jetzt ein leeres `<span class="footer-marke-claim">`, das `beschrifteRahmen()`
+  füllt. Im Hero tragen die Namen einen Chip und verlinken ihren Bereich
+  (`#/lernen`, `#/kollektiv`), in den Fußzeilen bleiben es Textzeilen.
 
 ## Nicht verhandelbare Architektur
 

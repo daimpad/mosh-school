@@ -3289,6 +3289,73 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   transform: translate3d(var(--dx, 0px), var(--dy, 0px), 0);
   opacity: var(--sop, 1);
 }
+/* Die zwei Marken-Zweige (Schule/Kollektiv). Schmal stapelt jeder Zweig: Name,
+   darunter die Beschreibung. Mit umbrechendem Flex sah das uneinheitlich aus —
+   der kürzere Zweig passte in eine Zeile, der längere brach um, und die beiden
+   Zeilen standen unterschiedlich da. Ab Tablet greift stattdessen das Raster
+   weiter unten. */
+.marken-zweige {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0.7rem 0 0;
+}
+.marken-zeile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.marken-name { font-weight: 700; color: var(--tinte); }
+.marken-kurz { color: var(--tinte-2); }
+
+/* Im Hero sitzt der Text über dem Foto: Beschreibung in voller Tinte statt
+   gedämpft (gedämpfte Tinte verliert auf dem Bild) und mit derselben
+   Buchstabenkante wie Titel und Untertitel. */
+.startseite-hero-zweige {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+.startseite-hero-zweige .marken-kurz {
+  color: var(--tinte);
+  text-shadow: var(--hero-textschatten);
+}
+/* Marken-Chip: etwas kräftiger als ein Filter-Chip — er benennt einen Bereich,
+   er schaltet nichts. Das Icon erbt die Schriftfarbe (sonst stünde es im Hover
+   rot auf rot, wie schon bei den aktiven Filter-Chips). */
+.chip-marke {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--flaeche);
+  border-color: var(--linie-stark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.chip-marke .fa-solid { color: currentColor; }
+@media (hover: hover) {
+  a.chip-marke:hover,
+  a.chip-marke:focus-visible { border-color: var(--primaer); color: var(--primaer); }
+}
+/* Ab Tablet stehen Name und Beschreibung im Hero in zwei Spalten, damit beide
+   Beschreibungen auf einer Kante beginnen — die Chips sind unterschiedlich
+   breit, gestapelt fransten die Zeilen sonst aus. Bewusst NUR im Hero: in der
+   schmalen Fußzeilen-Spalte bliebe für die zweite Spalte so wenig Platz, dass
+   jede Beschreibung dreizeilig umbräche. */
+@media (min-width: 40rem) {
+  .startseite-hero-zweige { font-size: 1.02rem; }
+  .startseite-hero-zweige.marken-zweige {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 0.4rem 0.7rem;
+  }
+  .startseite-hero-zweige .marken-zeile { display: contents; }
+}
+
+/* In der Fußzeile ersetzen die beiden Zeilen den früheren Ein-Zeilen-Claim. */
+.footer-marke-claim .marken-zweige { margin: 0; gap: 0.2rem; }
+.footer-marke-claim .marken-zeile { gap: 0.1rem 0.4rem; }
+
 .startseite-hero-themen {
   margin: 0.5rem 0 0;
   color: var(--tinte-2);
