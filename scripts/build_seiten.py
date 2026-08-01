@@ -311,7 +311,7 @@ ID_REGELN = {
     'pedalboard_grundlagen': [('pedalboard', {}), ('ampbox', {})],
     'gitarren_sound_architektur': [('pedalboard', {'instrument': 'gitarre'}), ('ampbox', {'instrument': 'gitarre'})],
     'bass_signalkette': [('pedalboard', {'instrument': 'bass'}), ('ampbox', {'instrument': 'bass'})],
-    'bass_ton_gear': [('stimmgeraet', {'tuning': 'bass_standard'}), ('pedalboard', {'instrument': 'bass'}), ('ampbox', {'instrument': 'bass'})],
+    'bass_ton_gear': [('stimmgeraet', {'tuning': 'bass_e_standard'}), ('pedalboard', {'instrument': 'bass'}), ('ampbox', {'instrument': 'bass'})],
     'amp_grundlagen': [('ampbox', {})],
     'box_grundlagen': [('ampbox', {})],
     'song_arrangieren_ganz': [('struktur', {})],

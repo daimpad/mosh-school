@@ -663,18 +663,7 @@
     "wz_drone_hinweis": "",
     "wz_drone_toggle": "",
     "wz_drone_gesundheit": "",
-    "wz_tuning_standard_e": "",
-    "wz_tuning_drop_d": "",
-    "wz_tuning_d_standard": "",
-    "wz_tuning_drop_c": "",
-    "wz_tuning_c_standard": "",
-    "wz_tuning_drop_b": "",
-    "wz_tuning_drop_a": "",
-    "wz_tuning_sieben_standard": "",
-    "wz_tuning_sieben_drop_a": "",
-    "wz_tuning_bass_standard": "",
-    "wz_tuning_bass_drop_d": "",
-    "wz_tuning_bass_fuenf": "",
+    "wz_tuning_eigene": "",
     "koennenscheck_untertitel": "",
     "koennenscheck_intro": "",
     "koennenscheck_stufenwahl": "",
@@ -1751,7 +1740,17 @@
       "bass_eb_standard": "",
       "bass_c_standard": "",
       "bass_drop_a_5": "",
-      "bass_6": ""
+      "bass_6": "",
+      "open_d": "",
+      "open_c": "",
+      "open_g": "",
+      "open_e": "",
+      "dadgad": ""
+    },
+    "stimmungsart": {
+      "standard": "",
+      "drop": "",
+      "offen": ""
     },
     "intervall": {
       "kleine_sekunde": "",

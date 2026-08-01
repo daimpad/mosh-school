@@ -416,6 +416,43 @@ def main():
         for pfad, wort in ersatzschreibungen(inhalt, '', ignoriert):
             umlaut.append(f'{datei}{pfad}: ASCII-Umlaut-Verdacht "{wort}"')
 
+    # Stimmungen (data/tunings.json): seit v179 die EINZIGE Tuning-Quelle — die
+    # Referenz (#/stimmungen) und das Stimmgeraet lesen beide diesen Pool und
+    # beschriften ueber label('stimmung', id). Ein Eintrag ohne Label rendert
+    # deshalb still seine rohe ID, ohne dass irgendwo ein Fehler auffiele.
+    try:
+        stimmungen = lade('data/tunings.json').get('stimmungen') or []
+    except FileNotFoundError:
+        stimmungen = []
+        warnung.append('data/tunings.json fehlt (Stimmungs-Referenz + Stimmgeraet stehen dann leer)')
+    stimm_labels = lade('data/labels/de.json').get('vokabeln', {}).get('stimmung') or {}
+    art_labels = lade('data/labels/de.json').get('vokabeln', {}).get('stimmungsart') or {}
+    NOTE = re.compile(r'^[A-G][#b]?-?\d$')
+    gesehene_stimmungen = set()
+    for s in stimmungen:
+        sid = s.get('id') or '<ohne id>'
+        if sid in gesehene_stimmungen:
+            fehler.append(f'stimmung {sid}: doppelte id')
+        gesehene_stimmungen.add(sid)
+        if sid not in stimm_labels:
+            fehler.append(f'stimmung {sid}: kein Label (vokabeln.stimmung in labels/de.json)')
+        art = s.get('art')
+        if art not in art_labels:
+            fehler.append(f'stimmung {sid}: art "{art}" ohne Label (vokabeln.stimmungsart)')
+        if s.get('instrument') not in ('gitarre', 'bass'):
+            fehler.append(f'stimmung {sid}: instrument "{s.get("instrument")}" (erlaubt: gitarre, bass)')
+        for note in s.get('saiten') or []:
+            # frequenzVon() in js/ansichten/stimmungen.js gibt fuer alles andere
+            # null zurueck — der Referenzton bliebe stumm, ohne Fehlermeldung.
+            if not NOTE.match(str(note)):
+                fehler.append(f'stimmung {sid}: Note "{note}" nicht lesbar (erwartet z. B. E2, Eb2, F#1)')
+        for g in s.get('genres') or []:
+            if not gueltig(voka.get('stil'), g):
+                fehler.append(f'stimmung {sid}: unbekanntes Genre "{g}"')
+    if stimmungen:
+        arten = Counter(s.get('art') for s in stimmungen)
+        print(f'  Stimmungen: {len(stimmungen)} ({dict(arten)})')
+
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
     offen = {b['id']: 0 for b in bausteine}
