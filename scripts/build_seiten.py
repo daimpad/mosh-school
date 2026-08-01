@@ -194,6 +194,19 @@ def uitext(schluessel):
     return UI.get(schluessel) or schluessel
 
 
+def marken_zeilen():
+    """Fusszeilen-Claim: die beiden Zweige (Schule/Kollektiv) aus denselben
+    Labels, aus denen markenZeilenHtml() in js/oberflaeche.js sie zieht. Ohne
+    Chips wie dort in der Fusszeile — statisch gibt es nichts anzuklicken, was
+    die Spalten daneben nicht schon anboeten."""
+    zeilen = ''.join(
+        f'<span class="marken-zeile"><span class="marken-name">{esc(uitext(f"marke_{k}_name"))}</span>'
+        f'<span class="marken-kurz">{esc(uitext(f"marke_{k}_kurz"))}</span></span>'
+        for k in ('schule', 'kollektiv')
+    )
+    return f'<span class="marken-zweige">{zeilen}</span>'
+
+
 def domaenen_von(b):
     d = b.get('domaene')
     return d if isinstance(d, list) else [d] if d else []
@@ -477,7 +490,7 @@ def seiten_fuss(tiefe, app_href):
 <span class="footer-marke-logo" aria-hidden="true"></span>
 <span class="footer-marke-name">ZERRER</span>
 </div>
-<span class="footer-marke-claim">Alles rund um Hardcore, Extreme Metal und mehr erlernen.</span>
+<span class="footer-marke-claim">{marken_zeilen()}</span>
 <nav class="footer-marke-rechtliches" aria-label="Rechtliches">
 <a href="{w}#/impressum">Impressum</a>
 <a href="{w}#/datenschutz">Datenschutz</a>

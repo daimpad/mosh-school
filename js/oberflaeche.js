@@ -99,6 +99,31 @@ export function entdeckenAktion() {
     <a class="knopf knopf-leise" href="#/suche">${esc(t('nav_suche'))}</a>`;
 }
 
+// Die beiden Zweige hinter ZERRER — Lernangebot und Kollektiv. Sie stehen an
+// zwei Stellen (Startseiten-Hero, Fußzeile) und kommen deshalb aus EINER Quelle;
+// vorher trug die Fußzeile ihren eigenen, hart geschriebenen Claim, der beim
+// nächsten Wording-Wechsel stehengeblieben wäre.
+//
+// `chips`: im Hero tragen die Namen einen Chip und verlinken ihren Bereich; in
+// der Fußzeile bleiben es ruhige Textzeilen — dort sitzen die Links schon in den
+// Spalten daneben, ein zweiter Satz Knöpfe wäre Dopplung.
+const MARKEN_ZWEIGE = [
+  { schluessel: 'schule', ziel: '#/lernen', icon: 'fa-book-open' },
+  { schluessel: 'kollektiv', ziel: '#/kollektiv', icon: 'fa-people-group' },
+];
+
+export function markenZeilenHtml({ chips = false, klasse = '' } = {}) {
+  const zeilen = MARKEN_ZWEIGE.map((z) => {
+    const name = t(`marke_${z.schluessel}_name`);
+    const kurz = t(`marke_${z.schluessel}_kurz`);
+    const kopf = chips
+      ? `<a class="chip chip-marke" href="${z.ziel}"><i class="fa-solid ${z.icon}" aria-hidden="true"></i> ${esc(name)}</a>`
+      : `<span class="marken-name">${esc(name)}</span>`;
+    return `<span class="marken-zeile">${kopf}<span class="marken-kurz">${esc(kurz)}</span></span>`;
+  }).join('');
+  return `<span class="marken-zweige${chips ? ' marken-zweige-chips' : ''}${klasse ? ' ' + klasse : ''}">${zeilen}</span>`;
+}
+
 // Marken-Hero (Logo links, Text rechts, Akzentleiste unten). Groß auf Startseite
 // + Willkommen; die Landingpages nutzen landingHeroHtml (js/genre-inszenierung.js).
 // Alle Farben aus Tokens — hell/dunkel kippen automatisch mit.
