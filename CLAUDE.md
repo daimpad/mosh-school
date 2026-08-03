@@ -110,7 +110,10 @@ in mehreren Hubs auftauchen:
 **Untere Leiste (mobil):** Home · Tools (`#/werkzeuge`) · Profil · Mehr (öffnet das Menü).
 **Menü:** die vier Hubs als Hauptpunkte (`.menue-haupt`), abgesetzt die Referenzbereiche
 (Genres, Kontext, Geräte, Stimmungen, Patterns), abgesetzt Über/Impressum/Datenschutz. Der
-**Themen-Umschalter lebt nur im Profil** (nicht mehr im Menü). Aktiv-Zustand + Rahmen-Labels
+**Themen-Umschalter steht in der Kopfzeile und im Profil** (nicht im Menü): in der
+Kopfzeile als Icon-Knopf neben der Lupe, der nur zwischen hell und dunkel wechselt —
+die dritte Stellung `auto` bleibt dem Profil-Auswahlfeld vorbehalten, weil ein Knopf
+ohne Beschriftung drei Zustände nicht unterscheidbar anzeigen kann. Aktiv-Zustand + Rahmen-Labels
 in `js/app.js` (`aktualisiereNavigation`/`beschrifteRahmen`); `data-nav`-Schlüssel = Label-Key.
 **Geräte** (`#/werkzeug/explorer`) trägt vier Instrument-Kacheln zu den Geräte-Landings
 (`#/geraete/<instrument>`, `js/ansichten/geraete.js`) — daten-getrieben aus `domaene ⊇
@@ -314,11 +317,18 @@ Themen-/Kompetenz-/Genre-Achse und Deep-Links der neuen Bausteine — **ohne Kon
 Farben/Typografie sind CSS-Variablen in `css/app.css` (`:root`) — Ansichten lesen **nur
 Tokens**, nie harte Farben.
 
-- **Dunkel ist Default.** Der Umschalter (Menü + Profil) setzt `einstellungen.thema`
-  (`auto`/`hell`/`dunkel`); das **Inline-Skript im `<head>`** von `index.html` setzt
-  `data-theme` flackerfrei vor dem ersten Anstrich, `wendeThemaAn()` (`js/oberflaeche.js`)
-  zur Laufzeit. **Wichtig:** Das Inline-Skript liest denselben `localStorage`-Schlüssel wie
-  `js/zustand.js` (`moshschool.zustand.v1`) — bei einer Schlüssel-Änderung beide nachziehen.
+- **Dunkel ist Default.** Beide Umschalter (Kopfzeile + Profil) setzen
+  `einstellungen.thema` (`auto`/`hell`/`dunkel`); das **Inline-Skript im `<head>`** von
+  `index.html` setzt `data-theme` flackerfrei vor dem ersten Anstrich, `wendeThemaAn()`
+  (`js/oberflaeche.js`) zur Laufzeit. **Wichtig:** Das Inline-Skript liest denselben
+  `localStorage`-Schlüssel wie `js/zustand.js` (`moshschool.zustand.v1`) — bei einer
+  Schlüssel-Änderung beide nachziehen. Der Kopfzeilen-Knopf zeigt das Thema, in das er
+  **wechselt**, nicht das geltende (ein Knopf, der den Ist-Zustand zeigt, wird
+  regelmässig andersherum gelesen); das `aria-label` sagt es ausdrücklich. Er hängt am
+  Ereignis `app:thema`, das `wendeThemaAn()` feuert — **nicht** am eigenen Klick: Das
+  Profil-Auswahlfeld rendert bewusst nicht neu (sonst verlöre es den Fokus), und ohne
+  den Mithörer blieb der Knopf nach einer Umstellung im Profil auf dem alten Symbol
+  stehen und bot den Wechsel in das Thema an, das bereits galt.
 - **Hell ist ein eigener Zustand, kein aufgehelltes Dunkel.** Weisses Blatt: `#ffffff`
   als einzige Fläche, **keine Schatten**, Hero-Fotos in **Graustufen**
   (`--bild-saettigung: 0`), neutrale statt warmer Tinte. Was im Dunkeln der
@@ -449,7 +459,14 @@ Tokens**, nie harte Farben.
   Bild kreuzen sich sonst zwei Zeichnungen; ohne Foto bleibt das Motiv der Träger
   der Fläche. Live vergleichen lassen sich die Werte über die Regler in
   `mockups/startseite-muster.html` — dessen Vorgaben spiegeln die ausgelieferten
-  Werte, beim Ändern also mitziehen.
+  Werte, beim Ändern also mitziehen. **Schriften gegeneinander halten** lässt sich in
+  `mockups/schriften-container.html`: dort ist je Container-Ebene (Hero-h1,
+  Abschnitt-h2, Karten-h3, Wortmarke) zwischen Special Elite, New Rocker und Roboto
+  umschaltbar, dazu Fotoebene an/aus, Thema hell/dunkel und ein Druck-Layout. Die Seite
+  liest die echten Stylesheets und ändert nichts an der App — sie setzt nur
+  `--probe-*`-Properties auf ihre eigene Bühne. Wer New Rocker dort für eine
+  Überschrift wählt, bekommt automatisch Gewicht 400: Die Schrift liegt nur in 400 vor,
+  aus einem geerbten 900 fälschte der Browser einen synthetischen Fettdruck.
   Reihenfolge im DOM = Schichtung: **Bild → Motiv → Scrim → Text**. Bildwahl ist
   deterministisch (FNV-1a über den Bereichs-Schlüssel) und bewusst ohne inhaltliche
   Zuordnung. Zwei Dinge gelten nur im Container-Maßstab: der Blur skaliert mit

@@ -39,8 +39,8 @@ import { ladeDaten, ladeSuchindex } from './daten.js';
 import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
-import { esc, fuehreAufraeumenAus, markenZeilenHtml, setzeGrafiken, setzeLehrgrafiken } from './oberflaeche.js';
-import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, uebernehmeFremdenStand } from './zustand.js';
+import { esc, fuehreAufraeumenAus, markenZeilenHtml, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
+import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung, uebernehmeFremdenStand } from './zustand.js';
 
 let daten = null;
 let letzteRoute = null;
@@ -206,6 +206,33 @@ function fokusSchluessel(elem) {
   return null;
 }
 
+// Schnellumschalter hell/dunkel in der Kopfzeile. Er zeigt das Thema, in das er
+// wechselt, nicht das gerade geltende — ein Knopf, der den Ist-Zustand zeigt,
+// wird regelmäßig andersherum gelesen, und ohne Beschriftung lässt sich das
+// nicht auflösen. Das aria-label sagt es deshalb ausdrücklich.
+//
+// Bei der Einstellung „auto" gibt es keinen gespeicherten Wert, an dem sich das
+// ablesen ließe — dann entscheidet das WIRKSAME Thema (data-theme bzw. die
+// OS-Vorgabe), was als Nächstes kommt. Die dritte Stellung bleibt dem Profil
+// vorbehalten; ein Kopfzeilen-Icon kann drei Zustände nicht unterscheidbar
+// anzeigen, und der schnelle Wechsel ist der eigentliche Bedarf.
+function wirksamesThema() {
+  const gesetzt = document.documentElement.dataset.theme;
+  if (gesetzt === 'hell' || gesetzt === 'dunkel') return gesetzt;
+  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dunkel' : 'hell';
+}
+
+function aktualisiereThemaKnopf() {
+  const knopf = document.getElementById('kopf-thema');
+  if (!knopf) return;
+  const ziel = wirksamesThema() === 'dunkel' ? 'hell' : 'dunkel';
+  knopf.dataset.ziel = ziel;
+  knopf.setAttribute('aria-label', t(`thema_wechsel_${ziel}`));
+  knopf.title = t(`thema_wechsel_${ziel}`);
+  const icon = knopf.querySelector('i');
+  if (icon) icon.className = `fa-solid ${ziel === 'hell' ? 'fa-sun' : 'fa-moon'}`;
+}
+
 function beschrifteRahmen() {
   // Marke plus Subline — dasselbe wie im statischen <title>. Ohne das wechselte
   // der Tab-Titel beim Laden von „ZERRER — Mosh School" auf nur „ZERRER", und
@@ -246,6 +273,7 @@ function beschrifteRahmen() {
   document.querySelector('.menue-titel').textContent = t('menue');
   document.getElementById('hamburger').setAttribute('aria-label', t('menue'));
   document.getElementById('kopf-suche')?.setAttribute('aria-label', t('nav_suche'));
+  aktualisiereThemaKnopf();
   document.querySelector('.menue-schliessen').setAttribute('aria-label', t('menue_schliessen'));
   // Impressum/Datenschutz stehen mit Icon im „Mehr"-Menü — nur den .nav-text-Träger
   // ersetzen, wenn vorhanden (Icon nicht zerstören).
@@ -537,7 +565,24 @@ async function boot() {
   for (const element of document.querySelectorAll('[data-menue-zu], .menue-punkt, .menue-mini')) {
     element.addEventListener('click', schliesseMenue);
   }
-  // Der Themen-Umschalter lebt nur noch im Profil (nicht mehr im Menü).
+  // Schnellumschalter in der Kopfzeile. Er schreibt dieselbe Einstellung wie das
+  // Profil-Auswahlfeld; neuRendern() über 'app:rendern' zieht ein offenes Profil
+  // nach, damit dort nicht die alte Auswahl stehen bleibt.
+  document.getElementById('kopf-thema')?.addEventListener('click', () => {
+    const neu = document.getElementById('kopf-thema').dataset.ziel === 'hell' ? 'hell' : 'dunkel';
+    setzeEinstellung('thema', neu);
+    wendeThemaAn(neu);
+    window.dispatchEvent(new CustomEvent('app:rendern'));
+  });
+  // Der Knopf hängt am Ereignis, nicht am eigenen Klick: Das Profil-Auswahlfeld
+  // ruft wendeThemaAn() ebenfalls, rendert dabei aber bewusst nicht neu (sonst
+  // verlöre das Feld den Fokus). Ohne diesen Mithörer blieb der Kopfzeilen-Knopf
+  // nach einer Umstellung im Profil auf dem alten Symbol stehen und bot den
+  // Wechsel in das Thema an, das bereits galt.
+  window.addEventListener('app:thema', aktualisiereThemaKnopf);
+  // Folgt das Thema dem Betriebssystem („auto"), kippt es ohne unser Zutun —
+  // der Knopf muss dann sein Ziel umdrehen, sonst zeigt er ins Leere.
+  window.matchMedia?.('(prefers-color-scheme: dark)').addEventListener?.('change', aktualisiereThemaKnopf);
   window.addEventListener('keydown', (ereignis) => {
     if (ereignis.key === 'Escape') schliesseMenue();
   });

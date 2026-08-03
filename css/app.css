@@ -206,7 +206,7 @@ h4 { font-size: 0.78rem; font-weight: 600; color: var(--tinte-2); text-transform
 /* Icons sind immer farbig, nie schwarz — Default Hauptfarbe, Status in Signalfarben. */
 .fa-solid { color: var(--primaer); }
 .knopf .fa-solid, .hero .fa-solid, .menue-schliessen .fa-solid,
-.hamburger .fa-solid, .kopf-suche .fa-solid { color: inherit; }
+.hamburger .fa-solid, .kopf-suche .fa-solid, .kopf-thema .fa-solid { color: inherit; }
 /* Icons in AKTIVEN Chips erben die Schriftfarbe. Ohne das behielten sie ihr
    globales Rot und standen im gefuellten Zustand rot auf rot — das Icon war
    genau dann unsichtbar, wenn der Filter greift. Im Ruhezustand bleibt das
@@ -423,7 +423,8 @@ body.im-onboarding main { padding-bottom: 2rem; }
    der Seite, danach eine weisse Marke, die im hellen Thema in der Kopfzeile
    verlief. */
 .hamburger,
-.kopf-suche {
+.kopf-suche,
+.kopf-thema {
   border-radius: var(--radius);
   border: 1.5px solid #0b0b0c;
   background: #0b0b0c;
@@ -456,8 +457,23 @@ body.im-onboarding main { padding-bottom: 2rem; }
   height: 42px;
   text-decoration: none;
 }
+/* Themen-Schnellschalter: dieselbe Groesse und derselbe schwarze Block wie die
+   Lupe — beide sind Bedienung, kein Inhalt. Die volle Wahl (auto/hell/dunkel)
+   bleibt im Profil; hier steht nur der schnelle Wechsel zwischen hell und
+   dunkel, weil ein Knopf ohne Beschriftung drei Zustaende nicht unterscheidbar
+   anzeigen kann. */
+.kopf-thema {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  font-size: 1.05rem;
+  padding: 0;
+}
 @media (hover: hover) {
   .hamburger:hover, .hamburger:focus-visible,
+  .kopf-thema:hover, .kopf-thema:focus-visible,
   .kopf-suche:hover, .kopf-suche:focus-visible {
     background: var(--primaer);
     border-color: var(--primaer);
