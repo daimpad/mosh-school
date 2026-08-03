@@ -14,6 +14,76 @@
         "de": "Die App läuft komplett auf deinem Gerät und speichert deinen Fortschritt lokal. Kein Login, keine Cookies."
       }
     ],
+    "steckbrief": [
+      {
+        "id": "was",
+        "titel": { "de": "Was ZERRER ist" },
+        "absaetze": [
+          { "de": "ZERRER ist eine Lern-App für Extreme-Metal- und Hardcore-Instrumente — Gitarre, Bass, Schlagzeug, Gesang — über {genres} Genres von Hardcore und Thrash über Death, Black und Doom bis Crust, Grindcore, Powerviolence, Screamo, Mathcore und Sludge." },
+          { "de": "Technisch ist sie das Gegenteil einer üblichen Lernplattform: rein clientseitig, ohne Server, ohne Konto, ohne Registrierung. Alle Inhalte liegen als JSON neben dem Code und werden als statische Dateien ausgeliefert. Dein Fortschritt lebt im Speicher deines Geräts, deine Aufnahmen ebenso." },
+          { "de": "Ein Service Worker macht die App offline benutzbar — im Proberaum ohne Empfang funktioniert alles weiter, Werkzeuge eingeschlossen." },
+          { "de": "Unter der Marke stehen zwei Zweige: die Zerrer Mosh Skool (das Lernangebot, um das es hier geht) und das Zerrer Kollektiv (Shows im Raum Köln/Bonn)." }
+        ]
+      },
+      {
+        "id": "kann",
+        "titel": { "de": "Was ZERRER kann" },
+        "absaetze": [
+          { "de": "Kern sind {bausteine} Bausteine. Ein Baustein ist die kleinste Lerneinheit: ein Erklärteil plus genau eine Aufgabe — entweder ein Übungsteil mit Ziel, Schritten, Steigerung und Selbstkontrolle für Bewegungsthemen, oder eine Reflexionsaufgabe für Wissens- und Haltungsthemen." },
+          { "de": "Neben der Instrumentaltechnik stehen die Querschnittsthemen gleichberechtigt: Gesundheit und Aufwärmen, Mentales, Ausrüstung und Musiktheorie. Genau das unterscheidet ZERRER von einer Sammlung Riff-Tutorials." },
+          { "de": "Dazu kommen {fehlerbilder} Fehlerbilder — jedes mit Symptom, Ursache und Korrektur, verankert an seinem Baustein. Das ist die Ebene, die sonst nur eine anwesende Lehrperson liefert: Das klingt so, daran liegt es, das änderst du." }
+        ],
+        "punkte": [
+          { "de": "Vier Wege durch denselben Stoff: nach Könnensstufe, nach Genre, nach Thema oder nach deinem Spielziel — dazu {einheiten} fertige Trainingseinheiten." },
+          { "de": "Der Voraussetzungsgraph sortiert, er sperrt nicht: Fehlendes erscheint als Hinweis, nie als Schloss. Niemand wird von Inhalten ausgesperrt, für die er sich interessiert." },
+          { "de": "Interaktive Audio-Werkzeuge auf einem gemeinsamen Kern, alles synthetisiert statt aus Klangdateien: Metronom mit Tempo-Rampen, Play-along-Loops, Stimmgerät mit Live-Tuner übers Mikro, Zerr-Labor, Pedalboard- und Amp-Baukasten, Song-Struktur, Riff- und Mehrspur-Recorder, Gefühlslandkarte und Genre-Mix." },
+          { "de": "Referenzbereiche zum Nachschlagen, ohne Fortschrittslogik: {stimmungen} Stimmungen mit Saitenstärke und Genre-Zuordnung, {patterns} Rhythmus-Patterns, {glossar} Glossarbegriffe, {experimente} Experimentier-Methoden und {songs} Beispielsongs in Genre-Pools." },
+          { "de": "Volltextsuche mit Facetten über den gesamten Bestand — komplett im Browser gerechnet, ohne Anfrage nach draußen." },
+          { "de": "Könnens-Check zur ehrlichen Selbsteinschätzung je Stufe, und eine Datensicherung, mit der du deinen Fortschritt als Datei mitnimmst. Ohne Konto ist das die einzige Brücke zwischen zwei Geräten." }
+        ]
+      },
+      {
+        "id": "wozu",
+        "titel": { "de": "Wozu du ZERRER brauchen kannst" },
+        "punkte": [
+          { "de": "Strukturiert allein lernen. Der übliche Weg in diese Musik ist Videoplattform plus Zufall. Hier bekommst du eine sortierte Reihenfolge mit Begründung — und zu jedem Baustein, worauf er aufbaut und wohin er führt." },
+          { "de": "Gezielt ein Problem lösen. Wenn du weißt, was nicht klingt, suchst du das Fehlerbild statt eines ganzen Kurses." },
+          { "de": "Ein Genre erschließen. Die Genre-Achse bündelt quer über alle Instrumente, was einen Stil ausmacht — vom Anschlag über die Stimmung bis zum Sound." },
+          { "de": "Üben mit Werkzeug statt daneben. Metronom, Loops, Stimmgerät und Recorder sind in genau den Bausteinen verlinkt, in denen du sie brauchst — kein Wechsel zwischen fünf Apps." },
+          { "de": "Equipment verstehen, bevor Geld fließt. Die Ausrüstungs-Bausteine und die Bau-Werkzeuge erklären Funktionsprinzipien, nicht Kaufempfehlungen. Zerrtypen sind deshalb funktional benannt statt nach Modellen." },
+          { "de": "Unterricht vorbereiten. Fehlerbilder und Trainingseinheiten sind so geschnitten, dass Lehrende sie als Übungsvorrat und als gemeinsame Sprache mit Schülern nutzen können." },
+          { "de": "Offline im Proberaum arbeiten — ohne Netz, ohne Datenverbrauch." }
+        ]
+      },
+      {
+        "id": "fuerwen",
+        "titel": { "de": "Für wen das gedacht ist" },
+        "punkte": [
+          { "de": "Einsteigende in extreme Genres. Die Einsteiger-Ebene setzt keine Vorbildung voraus — und der Gesundheitsrahmen ist gerade hier wichtig, weil Extreme Vocals und harte Anschlagstechnik Menschen regelmäßig verletzen, die sie sich falsch selbst beibringen." },
+          { "de": "Fortgeschrittene mit Lücken. Das ist die größte Ebene, gedacht für alle, die spielen können, aber merken, dass Theorie, Sound oder Körperarbeit fehlt." },
+          { "de": "Sänger:innen und alle, die schreien wollen. Grundsatz überall: Verzerrung kommt aus Luft und Resonanz, nicht aus Pressen — und bei Beschwerden geht es zum HNO-Arzt, nicht ins nächste Video." },
+          { "de": "Bands und Proberaum-Gruppen. Songwriting-Werkzeuge und die Kontext-Bausteine zu Ensemble und Proberaum zielen auf die Gruppe, nicht auf die Einzelperson." },
+          { "de": "Lehrende, Coaches und Workshopleitende. Der Trainer-Layer ist ausdrücklich für sie gebaut." },
+          { "de": "Alle mit Gear-Fragen. Wer nicht weiß, warum der Bass im Mix verschwindet oder was ein Zerrer eigentlich tut, findet hier Physik statt Forenmeinung." },
+          { "de": "Beitragende und Entwickler:innen. Buildfrei, Inhalte als JSON, Engine sauber vom Inhalt getrennt — die Hürde für inhaltliche Beiträge ist bewusst niedrig." }
+        ]
+      },
+      {
+        "id": "nicht",
+        "titel": { "de": "Was ZERRER ausdrücklich nicht ist" },
+        "absaetze": [
+          { "de": "Der Ehrlichkeit halber, weil es die Einordnung bestimmt:" }
+        ],
+        "punkte": [
+          { "de": "Kein Ersatz für Unterricht oder ärztlichen Rat. Bei Schmerz, Kratzen oder Beschwerden gilt überall: sofort stoppen, Coach oder Ärztin fragen." },
+          { "de": "Kein Konto und keine Synchronisation. Dein Fortschritt hängt am Gerät. Wer wechselt, exportiert ihn vorher." },
+          { "de": "Nur auf Deutsch. Die Gerüste für weitere Sprachen liegen bereit, sind aber leer." },
+          { "de": "Keine Community-Funktionen — kein Forum, keine Kommentare, keine Nutzerprofile." },
+          { "de": "Keine Tabs oder Noten fremder Songs. Die Beispielsongs sind Hörempfehlungen mit Quellenverweis, kein Notenmaterial." },
+          { "de": "Die Songlisten sind nach einem einzigen, offengelegten Maßstab kuratiert: Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren, stehen nicht drin. Andere Kontroversen führen ausdrücklich nicht zum Ausschluss — darüber urteilen diese Listen nicht." }
+        ]
+      }
+    ],
     "danksagungen": {
       "titel": {
         "de": "Wer & Danke"
