@@ -1216,27 +1216,23 @@ details[open] summary { margin-bottom: 0.5rem; }
 
 /* ---------- Regeln (Referenz-Reiter) ---------- */
 
-/* Quellenangabe: sichtbar, aber zurückhaltend — Herausgeber und Stand. */
-.regeln-quelle {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.1rem;
-}
-
-/* Abschnitt = aufklappbares <details> mit H2-Titel und eigener Chevron-Marke
-   (die FA-Chevrons liegen nicht im Subset — daher CSS-gezeichnet). */
-.regel-abschnitt { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.regel-abschnitt > summary {
+/* Aufklappbarer Abschnitt: <details> mit H2-Titel und CSS-gezeichneter
+   Chevron-Marke (die Chevrons liegen nicht im Icon-Subset). Traegt den
+   Steckbrief im „Über"-Reiter.
+   Die uebrigen .regel-*-Regeln standen hier noch aus dem entfernten
+   Regeln-Bereich (regeln.json) und hatten seither keinen Traeger mehr im
+   Markup — sie sind mit diesem Umzug entfallen. */
+.klapp-abschnitt { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.klapp-abschnitt > summary {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   list-style: none;
   padding: 0.3rem 0;
+  cursor: pointer;
 }
-.regel-abschnitt > summary::-webkit-details-marker { display: none; }
-.regel-abschnitt > summary::before {
+.klapp-abschnitt > summary::-webkit-details-marker { display: none; }
+.klapp-abschnitt > summary::before {
   content: '';
   flex: none;
   width: 0.5rem;
@@ -1246,46 +1242,13 @@ details[open] summary { margin-bottom: 0.5rem; }
   transform: rotate(-45deg);
   transition: transform var(--uebergang);
 }
-.regel-abschnitt[open] > summary::before { transform: rotate(45deg); }
-.regel-abschnitt > summary h2 { margin: 0; }
-.regel-einleitung { margin-top: 0; }
-
-.regel-karte {
-  border: 1px solid var(--linie);
-  border-radius: var(--radius);
-  background: var(--flaeche);
-  padding: 0.9rem 1rem;
-  margin-top: 0.8rem;
-}
-
-.regel-titel { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
-.regel-nummer {
-  flex: none;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--primaer-tief);
-  background: var(--primaer-weich);
-  border-radius: 999px;
-  padding: 0.12rem 0.5rem;
-}
-
-.regel-feld { margin-bottom: 0.6rem; }
-.regel-feld:last-child { margin-bottom: 0; }
-.regel-feld h4 { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem; }
-.regel-feld p { margin: 0; }
-
-/* Erklärteil ("Was das bedeutet"): dezent abgesetzt, Glühbirne im Hinweis-Gelb. */
-.regel-erklaerung {
-  background: var(--flaeche-2);
-  border-radius: var(--radius);
-  padding: 0.6rem 0.75rem;
-}
-.regel-erklaerung h4 .fa-lightbulb { color: var(--signal-gelb-text); }
-
-.regel-verweise { margin: 0.7rem 0 0; font-size: 0.9rem; }
-.regel-verweise-titel { color: var(--tinte-2); }
-.regel-verweis { display: inline-flex; align-items: center; gap: 0.3rem; margin-right: 0.6rem; white-space: nowrap; }
-.regel-verweis .fa-arrow-right { font-size: 0.75em; }
+.klapp-abschnitt[open] > summary::before { transform: rotate(45deg); }
+.klapp-abschnitt > summary h2 { margin: 0; }
+/* Aufzaehlung im Steckbrief: etwas Luft je Punkt, sonst kleben die mehrzeiligen
+   Eintraege aneinander. */
+.steckbrief-liste { margin: 0.6rem 0 0; padding-left: 1.1rem; }
+.steckbrief-liste li { margin-bottom: 0.55rem; }
+.steckbrief-liste li:last-child { margin-bottom: 0; }
 
 /* ---------- Profil ---------- */
 

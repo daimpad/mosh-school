@@ -37,6 +37,9 @@ kein Nutzerprofil an. Für eine anonyme Reichweitenmessung ist
 keine Ressourcen von externen Anbietern zu laden. Schriften, Icons und Bibliotheken liegen alle
 lokal im Repo. Nachzulesen in der [Datenschutzerklärung](https://zerrer.org/#/datenschutz).
 
+Ausführlicher — was ZERRER kann, wofür es taugt, für wen es gedacht ist und was es
+ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
+
 ## In Zahlen
 
 | | |

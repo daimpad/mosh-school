@@ -87,6 +87,55 @@ function haltungHtml() {
     </section>`;
 }
 
+// Steckbrief: die ausführliche Selbstbeschreibung (Was ist es / was kann es /
+// wozu / für wen / was nicht), aufklappbar statt als Textwand — die Absätze
+// füllen sonst den halben Reiter, bevor Haltung und Credits überhaupt kommen.
+//
+// Die Zahlen darin stehen NICHT im Text, sondern als Platzhalter `{bausteine}`
+// & Co. Ein Bestand, der wöchentlich wächst, wäre als ausgeschriebene Zahl in
+// der JSON binnen eines Monats falsch — und zwar lautlos, weil kein Test einen
+// Fließtext gegen den Pool prüft. Unbekannte Platzhalter bleiben unersetzt
+// stehen, damit ein Tippfehler auffällt statt eine leere Lücke zu hinterlassen.
+function steckbriefZahlen(daten) {
+  return {
+    bausteine: daten.bausteine?.length ?? 0,
+    fehlerbilder: daten.fehlerbilder?.length ?? 0,
+    einheiten: daten.einheiten?.length ?? 0,
+    genres: Object.keys(daten.genres || {}).length,
+    stimmungen: daten.tunings?.stimmungen?.length ?? 0,
+    patterns: daten.patterns?.patterns?.length ?? 0,
+    glossar: daten.glossar?.begriffe?.length ?? 0,
+    experimente: daten.experimente?.experimente?.length ?? 0,
+    songs: (daten.songs || []).reduce((summe, pool) => summe + (pool.songs?.length ?? 0), 0),
+  };
+}
+
+function setzeZahlen(roh, zahlen) {
+  return String(roh).replace(/\{(\w+)\}/g, (treffer, name) =>
+    zahlen[name] == null ? treffer : String(zahlen[name]),
+  );
+}
+
+function steckbriefHtml(abschnitte, zahlen) {
+  if (!Array.isArray(abschnitte) || abschnitte.length === 0) return '';
+  return abschnitte
+    .map((a) => {
+      const absaetze = (a.absaetze || [])
+        .map((p) => `<p>${esc(setzeZahlen(text(p) ?? '', zahlen))}</p>`)
+        .join('');
+      const punkte = (a.punkte || [])
+        .map((p) => `<li>${esc(setzeZahlen(text(p) ?? '', zahlen))}</li>`)
+        .join('');
+      return `
+      <details class="karte klapp-abschnitt">
+        <summary><h2>${esc(text(a.titel) ?? '')}</h2></summary>
+        ${absaetze}
+        ${punkte ? `<ul class="steckbrief-liste">${punkte}</ul>` : ''}
+      </details>`;
+    })
+    .join('');
+}
+
 export function renderUeber(el, daten) {
   const u = daten.appInfo?.ueber;
   if (!u) {
@@ -98,6 +147,7 @@ export function renderUeber(el, daten) {
   el.innerHTML = `
     ${landingHeroHtml('fa-compass', text(u.titel) ?? t('nav_ueber'), '', 'pf-blau')}
     ${absaetze ? `<section class="karte">${absaetze}</section>` : ''}
+    ${steckbriefHtml(u.steckbrief, steckbriefZahlen(daten))}
     ${haltungHtml()}
     ${abschnittHtml(u.danksagungen)}
     ${creditsLizenzHtml(text(u.credits_lizenz?.titel))}
