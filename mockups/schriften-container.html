@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="de" data-theme="dunkel">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZERRER — Schriften &amp; Hintergrundbilder durchprobieren (Mockup)</title>
+<link rel="icon" href="../assets/images/logo.svg">
+
+<!-- Bewusst die echten Stylesheets der App: Diese Seite soll zeigen, wie es
+     WIRKLICH aussieht. Farben, Kanten, Schatten und vor allem die beiden
+     Schriften kommen aus denselben Dateien wie die App. -->
+<link rel="stylesheet" href="../css/schriften.css">
+<link rel="stylesheet" href="../css/app.css">
+
+<style>
+  /* ==========================================================================
+     Nur für dieses Mockup — nichts davon geht so in die App.
+
+     Zweck: Die beiden Display-Schriften nebeneinander halten. New Rocker trägt
+     in der App AUSSCHLIESSLICH das Wort „ZERRER" (Kopfzeile, Startseiten-Hero,
+     Footer); Special Elite trägt alle Überschriften. Hier lässt sich je
+     Container-Ebene durchschalten, wer was trägt — und ob die Fotoebene hinter
+     Heros und Kacheln überhaupt an ist.
+
+     Die Umschaltung läuft über Custom Properties auf <html>, damit sie den
+     echten App-Regeln vorgeht, ohne sie zu verbiegen: Die Bühne setzt
+     `font-family: var(--probe-h1)` usw. auf ihre Überschriften, die Werte
+     kommen aus den Knöpfen. In der App bleibt alles, wie es ist.
+     ========================================================================== */
+
+  :root {
+    /* Vorgabe = der ausgelieferte Stand. Special Elite überall, New Rocker nur
+       für die Wortmarke. */
+    --probe-h1: 'Special Elite', 'Courier New', monospace;
+    --probe-h2: 'Special Elite', 'Courier New', monospace;
+    --probe-h3: 'Special Elite', 'Courier New', monospace;
+    --probe-marke: 'New Rocker', 'Special Elite', cursive;
+    /* Gewicht folgt der Schrift: New Rocker liegt NUR in 400 vor. Bei 900 würde
+       der Browser einen synthetischen Fettdruck fälschen — genau der Fehler, den
+       die App an drei Stellen eigens vermeidet. */
+    --probe-h1-gewicht: 900;
+    --probe-h2-gewicht: 900;
+    --probe-h3-gewicht: 900;
+  }
+
+  body { padding-bottom: 4rem; }
+  .mock-wrap { max-width: 62rem; margin: 0 auto; padding: 0 1rem; }
+  .mock-kopf { padding: 2rem 0 1rem; }
+  .mock-kopf h1 { margin: 0 0 .4rem; font-size: clamp(1.6rem, 5vw, 2.4rem); }
+  .mock-kopf p { margin: 0 0 .6rem; color: var(--tinte-2); max-width: 68ch; line-height: 1.5; }
+
+  /* Steuerleiste klebt oben — man vergleicht mit wandernden Werten. */
+  .mock-steuer {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--flaeche);
+    border: 1px solid var(--linie-stark);
+    border-radius: var(--radius);
+    padding: .8rem 1rem;
+    margin-bottom: 1.6rem;
+    display: grid;
+    gap: .9rem;
+  }
+  .mock-reihe { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .8rem; }
+  .mock-reihe > b { min-width: 12rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
+  .mock-knopf {
+    font: inherit;
+    font-size: .78rem;
+    min-height: 34px;
+    padding: .25rem .7rem;
+    cursor: pointer;
+    background: var(--flaeche-2);
+    color: var(--tinte);
+    border: 1px solid var(--linie-stark);
+    border-radius: var(--radius);
+  }
+  .mock-knopf[aria-pressed='true'] { background: var(--primaer); border-color: var(--primaer); color: #fff; }
+  .mock-hinweis { margin: 0; font-size: .8rem; color: var(--tinte-2); line-height: 1.45; }
+
+  /* --- Die Bühne: echte App-Bausteine, nur mit umschaltbarer Schrift --------- */
+  .probe h1, .probe .marke-hero-text h1 { font-family: var(--probe-h1); font-weight: var(--probe-h1-gewicht); }
+  .probe h2, .probe .abschnitt-titel { font-family: var(--probe-h2); font-weight: var(--probe-h2-gewicht); }
+  .probe h3 { font-family: var(--probe-h3); font-weight: var(--probe-h3-gewicht); }
+  .probe .probe-marke { font-family: var(--probe-marke); font-weight: 400; }
+
+  .probe-block { margin: 0 0 2.4rem; }
+  .probe-label {
+    display: block;
+    margin: 0 0 .5rem;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--tinte-2);
+  }
+  .probe-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 260px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.4rem;
+    border-radius: var(--radius);
+  }
+  .probe-hero-inhalt { position: relative; z-index: 3; }
+  .probe-hero-inhalt h1 { margin: 0 0 .3rem; font-size: clamp(1.9rem, 6vw, 3rem); text-shadow: var(--hero-textschatten); }
+  .probe-hero-inhalt p { margin: 0; color: var(--tinte); text-shadow: var(--hero-textschatten); }
+  .probe-marke-gross { font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1; display: block; }
+
+  /* Fotoebene: dieselbe Rezeptur wie .genre-landing-bg in der App (Tokens!). */
+  .probe-bild {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    filter: blur(var(--bild-weich, 0px)) saturate(var(--bild-saettigung, 1));
+    opacity: var(--bild-deckkraft, .8);
+    transform: scale(var(--bild-zoom, 1.02));
+  }
+  .probe-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, transparent 46%, var(--flaeche) 100%);
+  }
+  /* Bilder aus: Ebene weg, damit die Container ihre reine Flächenwirkung zeigen. */
+  .bilder-aus .probe-bild { display: none; }
+  .bilder-aus .probe-hero, .bilder-aus .probe-kachel { background: var(--flaeche-2); }
+
+  .probe-kacheln { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .probe-kachel {
+    position: relative;
+    overflow: hidden;
+    min-height: 160px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: var(--karten-kante-breite, 1px) solid var(--karten-kante, transparent);
+  }
+  .probe-kachel h3 { position: relative; z-index: 3; margin: 0; text-shadow: var(--hero-textschatten); }
+
+  /* --- Druck ---------------------------------------------------------------
+     Die Seite soll auf Papier vergleichbar bleiben: Steuerleiste weg, helle
+     Grundfarben, keine zerrissenen Container. Hintergrundfotos druckt der
+     Browser nur, wenn im Druckdialog „Hintergrundgrafiken" aktiv ist — darauf
+     weist die Seite oben hin, erzwingen lässt es sich nicht. */
+  @media print {
+    .mock-steuer, .mock-druck-hinweis { display: none !important; }
+    body { padding: 0; }
+    .mock-wrap { max-width: none; padding: 0; }
+    .probe-block { break-inside: avoid; page-break-inside: avoid; margin-bottom: 1.2rem; }
+    .probe-hero { min-height: 180px; }
+    .probe-kachel { min-height: 120px; }
+    .probe-hero, .probe-kachel, .karte, .abschnitt { box-shadow: none !important; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="mock-wrap">
+
+  <header class="mock-kopf">
+    <h1>Schriften &amp; Hintergrundbilder durchprobieren</h1>
+    <p>
+      In der App trägt <b>New Rocker</b> ausschließlich das Wort „ZERRER" — Kopfzeile,
+      Startseiten-Hero, Footer. Alle Überschriften trägt <b>Special Elite</b>. Hier lässt
+      sich beides je Container-Ebene tauschen, dazu die Fotoebene hinter Heros und Kacheln
+      abschalten. Nichts davon ändert die App; die Seite liest nur deren Stylesheets.
+    </p>
+    <p class="mock-hinweis mock-druck-hinweis">
+      <b>Zum Ausdrucken:</b> Die Steuerleiste wird nicht mitgedruckt. Damit die Fotos und
+      die dunkle Fläche auf dem Papier erscheinen, im Druckdialog
+      <b>„Hintergrundgrafiken drucken"</b> aktivieren — ohne das lässt der Browser jede
+      Hintergrundebene weg, und der Vergleich zeigt nur noch die Schrift.
+    </p>
+  </header>
+
+  <div class="mock-steuer" role="group" aria-label="Darstellung umschalten">
+    <div class="mock-reihe">
+      <b>Hero-Titel (h1)</b>
+      <button type="button" class="mock-knopf" data-schrift="h1" data-wert="elite" aria-pressed="true">Special Elite</button>
+      <button type="button" class="mock-knopf" data-schrift="h1" data-wert="rocker" aria-pressed="false">New Rocker</button>
+      <button type="button" class="mock-knopf" data-schrift="h1" data-wert="roboto" aria-pressed="false">Roboto</button>
+    </div>
+    <div class="mock-reihe">
+      <b>Abschnitt-Titel (h2)</b>
+      <button type="button" class="mock-knopf" data-schrift="h2" data-wert="elite" aria-pressed="true">Special Elite</button>
+      <button type="button" class="mock-knopf" data-schrift="h2" data-wert="rocker" aria-pressed="false">New Rocker</button>
+      <button type="button" class="mock-knopf" data-schrift="h2" data-wert="roboto" aria-pressed="false">Roboto</button>
+    </div>
+    <div class="mock-reihe">
+      <b>Karten-Titel (h3)</b>
+      <button type="button" class="mock-knopf" data-schrift="h3" data-wert="elite" aria-pressed="true">Special Elite</button>
+      <button type="button" class="mock-knopf" data-schrift="h3" data-wert="rocker" aria-pressed="false">New Rocker</button>
+      <button type="button" class="mock-knopf" data-schrift="h3" data-wert="roboto" aria-pressed="false">Roboto</button>
+    </div>
+    <div class="mock-reihe">
+      <b>Wortmarke</b>
+      <button type="button" class="mock-knopf" data-schrift="marke" data-wert="rocker" aria-pressed="true">New Rocker</button>
+      <button type="button" class="mock-knopf" data-schrift="marke" data-wert="elite" aria-pressed="false">Special Elite</button>
+    </div>
+    <div class="mock-reihe">
+      <b>Hintergrundbilder</b>
+      <button type="button" class="mock-knopf" id="bilder-an" aria-pressed="true">an</button>
+      <button type="button" class="mock-knopf" id="bilder-aus" aria-pressed="false">aus</button>
+      <b style="min-width:auto">Thema</b>
+      <button type="button" class="mock-knopf" data-thema="dunkel" aria-pressed="true">dunkel</button>
+      <button type="button" class="mock-knopf" data-thema="hell" aria-pressed="false">hell</button>
+      <button type="button" class="mock-knopf" id="drucken">Drucken …</button>
+      <button type="button" class="mock-knopf" id="zuruecksetzen">Auslieferungsstand</button>
+    </div>
+    <p class="mock-hinweis">
+      New Rocker liegt nur im Gewicht 400 vor. Wo sie eine Überschrift trägt, setzt diese
+      Seite das Gewicht deshalb auf 400 — sonst fälschte der Browser aus dem geerbten 900
+      einen synthetischen Fettdruck (derselbe Fallstrick, den die App an drei Stellen
+      eigens umgeht).
+    </p>
+  </div>
+
+  <div class="probe" id="buehne">
+
+    <section class="probe-block">
+      <span class="probe-label">Startseiten-Hero — Wortmarke über Foto</span>
+      <div class="probe-hero" data-bild="1">
+        <div class="probe-bild"></div>
+        <div class="probe-scrim" aria-hidden="true"></div>
+        <div class="probe-hero-inhalt">
+          <span class="probe-marke probe-marke-gross">ZERRER</span>
+          <p><b>Zerrer Mosh Skool</b> — Lernressourcen für extremen Sound</p>
+          <p><b>Zerrer Kollektiv</b> — Shows im Raum Köln/Bonn</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="probe-block">
+      <span class="probe-label">Genre-Landing-Hero — h1 über Foto</span>
+      <div class="probe-hero" data-bild="2">
+        <div class="probe-bild"></div>
+        <div class="probe-scrim" aria-hidden="true"></div>
+        <div class="probe-hero-inhalt">
+          <h1>Doom</h1>
+          <p>Langsam, schwer, tief gestimmt — Gewicht statt Tempo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="probe-block">
+      <span class="probe-label">Bildkacheln — h3 über Foto</span>
+      <div class="probe-kacheln">
+        <div class="probe-kachel" data-bild="3"><div class="probe-bild"></div><div class="probe-scrim" aria-hidden="true"></div><h3>Gitarre</h3></div>
+        <div class="probe-kachel" data-bild="4"><div class="probe-bild"></div><div class="probe-scrim" aria-hidden="true"></div><h3>Schlagzeug</h3></div>
+        <div class="probe-kachel" data-bild="5"><div class="probe-bild"></div><div class="probe-scrim" aria-hidden="true"></div><h3>Gesang</h3></div>
+      </div>
+    </section>
+
+    <section class="probe-block">
+      <span class="probe-label">Abschnitt + Karten — h2 und h3 auf Fläche</span>
+      <h2 class="abschnitt-titel">Palm Mute &amp; Downpicking</h2>
+      <section class="karte">
+        <h3>Worum es geht</h3>
+        <p>
+          Der Handballen liegt locker auf den Saiten kurz vor dem Steg. Zu weit vorn erstickt
+          der Ton, zu weit hinten klingt er offen — dazwischen liegt der straffe, trockene
+          Anschlag, von dem Thrash und Death leben.
+        </p>
+        <p class="leise">Einsteiger · Gitarre · Thrash</p>
+      </section>
+      <section class="karte">
+        <h3>Häufiges Fehlerbild</h3>
+        <p>
+          <b>Symptom:</b> Die tiefe Saite scheppert, die hohen klingen nach.
+          <b>Ursache:</b> Der Ballen liegt schräg auf. <b>Korrektur:</b> Hand parallel zum
+          Steg drehen, Druck aus dem Unterarm nehmen.
+        </p>
+      </section>
+    </section>
+
+    <section class="probe-block">
+      <span class="probe-label">Fußzeile — Wortmarke klein</span>
+      <section class="karte">
+        <p><span class="probe-marke" style="font-size:1.6rem">ZERRER</span></p>
+        <p class="leise">Zerrer Mosh Skool — Lernressourcen für extremen Sound</p>
+        <p class="leise">Zerrer Kollektiv — Shows im Raum Köln/Bonn</p>
+      </section>
+    </section>
+
+  </div>
+</div>
+
+<script type="module">
+  // Bilderliste aus derselben Quelle wie die App. Fehlt sie, bleiben die Flächen
+  // leer — die Seite funktioniert weiter, nur ohne Fotos (wie in der App auch).
+  const STAPEL = {
+    elite: { schrift: "'Special Elite', 'Courier New', monospace", gewicht: 900 },
+    rocker: { schrift: "'New Rocker', 'Special Elite', cursive", gewicht: 400 },
+    roboto: { schrift: "'Roboto', system-ui, sans-serif", gewicht: 700 },
+  };
+  const VORGABE = { h1: 'elite', h2: 'elite', h3: 'elite', marke: 'rocker' };
+
+  const wurzel = document.documentElement;
+
+  function setzeSchrift(ebene, wert) {
+    const eintrag = STAPEL[wert];
+    if (!eintrag) return;
+    wurzel.style.setProperty(`--probe-${ebene}`, eintrag.schrift);
+    // Gewicht nur für die Überschriften-Ebenen; die Wortmarke steht ohnehin auf 400.
+    if (ebene !== 'marke') wurzel.style.setProperty(`--probe-${ebene}-gewicht`, String(eintrag.gewicht));
+    for (const k of document.querySelectorAll(`[data-schrift="${ebene}"]`)) {
+      k.setAttribute('aria-pressed', String(k.dataset.wert === wert));
+    }
+  }
+
+  for (const knopf of document.querySelectorAll('[data-schrift]')) {
+    knopf.addEventListener('click', () => setzeSchrift(knopf.dataset.schrift, knopf.dataset.wert));
+  }
+
+  const an = document.getElementById('bilder-an');
+  const aus = document.getElementById('bilder-aus');
+  function setzeBilder(sichtbar) {
+    document.getElementById('buehne').classList.toggle('bilder-aus', !sichtbar);
+    an.setAttribute('aria-pressed', String(sichtbar));
+    aus.setAttribute('aria-pressed', String(!sichtbar));
+  }
+  an.addEventListener('click', () => setzeBilder(true));
+  aus.addEventListener('click', () => setzeBilder(false));
+
+  for (const knopf of document.querySelectorAll('[data-thema]')) {
+    knopf.addEventListener('click', () => {
+      wurzel.dataset.theme = knopf.dataset.thema;
+      for (const k of document.querySelectorAll('[data-thema]')) {
+        k.setAttribute('aria-pressed', String(k.dataset.thema === knopf.dataset.thema));
+      }
+    });
+  }
+
+  document.getElementById('drucken').addEventListener('click', () => window.print());
+  document.getElementById('zuruecksetzen').addEventListener('click', () => {
+    for (const [ebene, wert] of Object.entries(VORGABE)) setzeSchrift(ebene, wert);
+    setzeBilder(true);
+  });
+
+  // Fotos verteilen — deterministisch über den data-bild-Index, damit ein Reload
+  // dasselbe Bild an dieselbe Stelle legt und der Vergleich stabil bleibt.
+  try {
+    const antwort = await fetch('../images/bg/bilder.json');
+    const liste = (await antwort.json()).bilder || [];
+    if (liste.length) {
+      for (const feld of document.querySelectorAll('[data-bild]')) {
+        const bild = liste[(Number(feld.dataset.bild) * 3) % liste.length];
+        feld.querySelector('.probe-bild').style.backgroundImage =
+          `url("../images/bg/${encodeURIComponent(bild.datei)}")`;
+      }
+    }
+  } catch {
+    /* keine Bilderliste — Flächen bleiben leer, genau wie in der App */
+  }
+</script>
+</body>
+</html>
