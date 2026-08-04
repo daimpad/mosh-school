@@ -164,8 +164,13 @@
       "pre_hochpass_hz": 150,
       "post_tiefpass_hz": 6000,
       "beschreibung": "Mehrere Stufen nacheinander: dicht und komprimiert statt nur lauter.",
+      "messung": "ende_zu_ende",
       "kennwerte": {
-        "hinweis": "Kaskade bzw. Multiband — im Repo zu implementieren und dort zu pruefen"
+        "thd_1khz": 0.455,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 1.0,
+        "ausgangspegel_rms_leise": 0.539,
+        "thd_80hz": 1.56
       }
     },
     {
@@ -181,10 +186,16 @@
       "pre_hochpass_hz": 0,
       "post_tiefpass_hz": 7000,
       "beschreibung": "Tiefen bleiben sauber, Höhen werden hart verzerrt — Definition bei extremem Gain.",
+      "messung": "ende_zu_ende",
       "kennwerte": {
-        "hinweis": "Kaskade bzw. Multiband — im Repo zu implementieren und dort zu pruefen"
+        "thd_1khz": 0.435,
+        "anteil_geradzahlig": 0.0,
+        "ausgangspegel_rms": 0.456,
+        "ausgangspegel_rms_leise": 0.065,
+        "thd_80hz": 0.256
       }
     }
   ],
-  "_hinweis_implementierung": "Die Kennwerte sind gegen scripts/pruefe_zerrlabor.py nachgerechnet. Verbindlich ist ausgangspegel_rms (trifft bei allen sieben geschlossen angebbaren Kurven auf drei Nachkommastellen); thd_1khz und anteil_geradzahlig weichen um bis zu 0,04 ab, weil die Referenz eine andere Messdefinition benutzt — sie dienen als Groessenordnung, nicht als exakte Zielmarke."
+  "_hinweis_implementierung": "Die Kennwerte sind gegen scripts/pruefe_zerrlabor.py nachgerechnet. Verbindlich ist ausgangspegel_rms (trifft bei allen sieben geschlossen angebbaren Kurven auf drei Nachkommastellen); thd_1khz und anteil_geradzahlig weichen um bis zu 0,04 ab, weil die Referenz eine andere Messdefinition benutzt — sie dienen als Groessenordnung, nicht als exakte Zielmarke.",
+  "_hinweis_ende_zu_ende": "Eintraege mit messung=\"ende_zu_ende\" (kl_highgain_kaskade, kl_multiband) lassen sich nicht als eine gedaechtnislose Kurve schreiben — die Kaskade hat einen Hochpass zwischen den Stufen, das Multiband zwei parallel geklippte Zweige. Ihre Kennwerte sind deshalb an der GANZEN Kette gemessen (48 kHz, 1 kHz Sinus, Amplitude 0.7, inklusive Vor-Hochpass und Nach-Tiefpass) und mit den acht Einzelkurven NICHT direkt vergleichbar: deren Werte entstehen ohne Filter. Weil sie aus der Umsetzung selbst stammen, belegen sie nichts, sondern frieren den Ist-Zustand ein — ein Regressionsanker. Die inhaltliche Pruefung leisten die Kapitelaussagen in pruefe_zerrlabor.py: Zwischen-Hochpass haelt den Bass straff, Multiband laesst Tiefen sauberer als Hoehen."
 }

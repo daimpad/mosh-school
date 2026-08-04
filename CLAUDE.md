@@ -297,6 +297,8 @@ python3 scripts/validate.py              # Cross-File-Konsistenz über den gemis
 python3 scripts/lift.py                  # idempotent — Titel geliftet, Skelette aktuell
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
 python3 scripts/build_seiten.py --check   # Tier-2-SEO-Seiten + Sitemap aus den Quellen reproduzierbar
+python3 scripts/pruefe_zerrlabor.py      # Zerr-Kennlinien treffen ihre Sollwerte
+python3 scripts/pruefe_zerrlabor_mutation.py  # …und die Pruefung schlaegt bei Fehlern auch an
 python3 scripts/pruefe_boxen.py          # Box-Impulsantworten treffen ihre Beschreibung
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
@@ -556,6 +558,25 @@ Tokens**, nie harte Farben.
   dürfen darüber. Ein Deckel kappte die LED-Kennlinie auf RMS 0,90 statt 1,35.
   `python3 scripts/pruefe_zerrlabor.py` (auch in `verify.yml`) rechnet beides gegen
   die Sollwerte nach und prüft die Schwellen-Reihenfolge eigens.
+  **Zwei Kennlinien sind keine einzelne Kurve** — `kl_highgain_kaskade` (Hochpass
+  zwischen den Stufen) und `kl_multiband` (zwei parallel geklippte Zweige). Sie
+  fielen deshalb lange ganz aus der Prüfung heraus und trugen statt Kennwerten
+  einen Platzhalter. Sie werden jetzt **end-zu-ende** gemessen (`messung:
+  "ende_zu_ende"`, Kette samt Filtern, 48 kHz) — ihre Werte sind mit den acht
+  Einzelkurven **nicht vergleichbar**, die stehen ohne Filter. Weil diese Werte aus
+  der Umsetzung selbst stammen, **belegen sie nichts**, sie frieren nur den Ist-Zustand
+  ein. Deshalb zwei Ergänzungen: (a) zwei Kapitelaussagen als eigene Tests — der
+  Zwischen-Hochpass muss den Bass straffen, ohne 1 kHz anzufassen, und beim Multiband
+  muss ein tiefer Ton sauberer bleiben als ein hoher; (b)
+  `python3 scripts/pruefe_zerrlabor_mutation.py` (auch in `verify.yml`) setzt zehn
+  Parameter absichtlich falsch und verlangt, dass die Prüfung anschlägt **und richtig
+  begründet**. Genau das fand zwei Löcher: Bei Pegel 0,7 sättigen zwei und drei
+  Kaskadenstufen zur selben Rechteckwelle (deshalb zusätzlich
+  `ausgangspegel_rms_leise` bei Amplitude 0,02), und `gain_tief` verschob den
+  1-kHz-Wert nur um 0,015 (deshalb `thd_80hz`). Der hohe Prüfton des Multibands liegt
+  bei **800 Hz, nicht 2 kHz**: Dort verlöre er seine Oberwellen an den Nach-Tiefpass,
+  und eine Tiefpass-Änderung hätte die Meldung „gain vertauscht?" ausgelöst — richtig
+  angeschlagen, falsch begründet.
   **Pegelbegrenzung ist Pflicht** — ein fester, nicht abschaltbarer Begrenzer sitzt
   vor dem Ausgang, dazu Lautstärke- und (bei Mikrofoneingang) Kopfhörer-Hinweis.
 - **Boxensimulation** (`js/audio/box.js`, `data/boxen.json`): Hinter der Kennlinie

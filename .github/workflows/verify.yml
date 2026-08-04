@@ -60,6 +60,13 @@ jobs:
       - name: Zerr-Kennlinien gegen die Sollwerte pruefen
         run: python3 scripts/pruefe_zerrlabor.py
 
+      # Prueft den Pruefer: Die Kennwerte der beiden mehrstufigen Ketten stammen
+      # aus der Umsetzung selbst und belegen sie deshalb nicht — sie frieren sie
+      # nur ein. Was so ein Anker wert ist, haengt allein daran, ob er bei einer
+      # Aenderung wirklich ausschlaegt. Genau das rechnet dieser Lauf nach.
+      - name: Mutationstest der Zerr-Pruefung
+        run: python3 scripts/pruefe_zerrlabor_mutation.py
+
       - name: Boxen-Impulsantworten nachrechnen
         run: python3 scripts/pruefe_boxen.py
 
