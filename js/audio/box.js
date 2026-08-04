@@ -119,6 +119,26 @@ export function impulsantwortDaten(box, sampleRate) {
     filtere(d, biquad('peaking', box.praesenz_hz, sampleRate, box.praesenz_guete ?? 1.2, box.praesenz_db));
   }
 
+  // 4b. Cone-Resonanzen: eine Handvoll schmaler Anhebungen und Senken.
+  //
+  // Das ist der EINE Punkt, an dem eine gemessene Impulsantwort mehr kann als
+  // diese Synthese. Der Frequenzgang einer echten Box besteht nicht aus glatten
+  // Filterflanken, sondern trägt viele schmale Zacken — sie entstehen aus
+  // Cone-Aufbrüchen und Mehrweg-Interferenz zwischen Membran, Gehäuse und
+  // Mikrofonposition. Ohne sie klingt eine gefaltete Box wie das, was sie dann
+  // auch ist: eine Filterkette. Genau bei High-Gain, dem Schwerpunkt dieser App,
+  // formen diese Zacken den Charakter der Zerre.
+  //
+  // Die Werte sind BAUART-TYPISCH, nicht gemessen: Ein großer Konus bricht
+  // tiefer auf als ein kleiner, ein geschlossenes Gehäuse anders als ein
+  // offenes. Sie bilden kein bestimmtes Produkt ab — das wäre gegen die
+  // Zerrtypen-Regel und wäre ohne Messung ohnehin erfunden. Ihr Zweck ist,
+  // dass das Spektrum überhaupt eine Feinstruktur HAT, nicht dass sie einer
+  // bestimmten Box entspricht. Wer echte Messungen einpflegt, ersetzt sie.
+  for (const r of box.resonanzen || []) {
+    filtere(d, biquad('peaking', r.hz, sampleRate, r.guete ?? 4, r.db));
+  }
+
   // 5. Auf Spitzenwert normieren. Ohne das schwankt die Lautstärke beim
   //    Box-Wechsel um mehrere dB, und man vergleicht Pegel statt Klang.
   let spitze = 0;

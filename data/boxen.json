@@ -25,6 +25,12 @@
       "mikro_pegel": 0.55,
       "reflexion_ms": 8,
       "reflexion_pegel": 0.06,
+      "resonanzen": [
+        { "hz": 1150, "db": 3.5, "guete": 5 },
+        { "hz": 1900, "db": -4.0, "guete": 6 },
+        { "hz": 3200, "db": 2.5, "guete": 4 },
+        { "hz": 4200, "db": -3.0, "guete": 5 }
+      ],
       "dauer_ms": 70,
       "ausgleich": 2.4,
       "hinweis": {
@@ -43,6 +49,11 @@
       "mikro_pegel": 0.7,
       "reflexion_ms": 16,
       "reflexion_pegel": 0.12,
+      "resonanzen": [
+        { "hz": 1250, "db": 3.0, "guete": 4 },
+        { "hz": 2100, "db": -3.5, "guete": 5 },
+        { "hz": 3600, "db": 2.0, "guete": 4 }
+      ],
       "dauer_ms": 90,
       "ausgleich": 2.6,
       "hinweis": {
@@ -61,6 +72,11 @@
       "mikro_pegel": 0.5,
       "reflexion_ms": 10,
       "reflexion_pegel": 0.07,
+      "resonanzen": [
+        { "hz": 900, "db": 3.0, "guete": 4 },
+        { "hz": 1600, "db": -3.5, "guete": 5 },
+        { "hz": 2600, "db": 1.5, "guete": 4 }
+      ],
       "dauer_ms": 80,
       "ausgleich": 3.0,
       "hinweis": {
@@ -79,6 +95,11 @@
       "mikro_pegel": 0.6,
       "reflexion_ms": 12,
       "reflexion_pegel": 0.07,
+      "resonanzen": [
+        { "hz": 1400, "db": 2.5, "guete": 5 },
+        { "hz": 2200, "db": -3.0, "guete": 6 },
+        { "hz": 2800, "db": 2.0, "guete": 5 }
+      ],
       "dauer_ms": 90,
       "ausgleich": 2.2,
       "hinweis": {
@@ -97,6 +118,11 @@
       "mikro_pegel": 0.7,
       "reflexion_ms": 18,
       "reflexion_pegel": 0.10,
+      "resonanzen": [
+        { "hz": 700, "db": 2.5, "guete": 4 },
+        { "hz": 1250, "db": -3.0, "guete": 5 },
+        { "hz": 1800, "db": 1.5, "guete": 4 }
+      ],
       "dauer_ms": 110,
       "ausgleich": 2.4,
       "hinweis": {

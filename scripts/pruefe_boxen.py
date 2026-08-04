@@ -160,6 +160,9 @@ def impulsantwort(box, sr=SR, ohne=(), normieren=True):
     if box.get('praesenz_db') and 'praesenz' not in ohne:
         filtere(d, biquad('peaking', box['praesenz_hz'], sr,
                           box.get('praesenz_guete', 1.2), box['praesenz_db']))
+    if 'resonanzen' not in ohne:
+        for r in box.get('resonanzen') or []:
+            filtere(d, biquad('peaking', r['hz'], sr, r.get('guete', 4), r['db']))
     if not normieren:
         return d
     spitze = max(abs(x) for x in d)
@@ -298,6 +301,43 @@ def main(argv=None):
                           f'({einbruch:+.1f} dB gegenueber derselben Box ohne den '
                           f'zweiten Schallweg) — Mikrofonabstand wirkungslos')
 
+        # 4b. Cone-Resonanzen. Sie sind der einzige Grund, warum der Frequenzgang
+        #     nicht glatt ist — und genau das unterscheidet eine gefaltete Box von
+        #     einer Filterkette. Geprueft wird beides: dass jede einzelne wirkt
+        #     (differenziell an ihrer Mitte) und dass sie zusammen eine messbare
+        #     WELLIGKEIT erzeugen. Ohne den zweiten Teil koennte jemand alle
+        #     Resonanzen auf 0 dB setzen und die Einzelpruefungen blieben still.
+        # PFLICHTFELD, nicht optional: Beim ersten Mutationslauf war die Pruefung
+        # in ein `if resonanzen:` gehuellt — eine Box ohne das Feld rutschte
+        # stillschweigend durch, und zwar bei genau der Eigenschaft, die eine
+        # gefaltete Box von einer Filterkette unterscheidet. Dieselbe Fehlerklasse
+        # wie ueberall sonst in dieser Datei: eine Pruefung, die sich selbst
+        # ueberspringt, meldet gruen und hat nichts geprueft.
+        resonanzen = box.get('resonanzen') or []
+        welligkeit = 0.0
+        if not resonanzen:
+            fehler.append(f'{bez}: keine Resonanzen — ohne sie ist der Frequenzgang glatt '
+                          f'und die Faltung waere reine Filterung (siehe kaum Welligkeit)')
+        else:
+            for r in resonanzen:
+                hub = unterschied(('resonanzen',), r['hz'])
+                if abs(hub - r['db']) > 1.5:
+                    fehler.append(f'{bez}: Resonanz bei {r["hz"]} Hz hebt um {hub:+.1f} dB '
+                                  f'statt der angegebenen {r["db"]:+.1f} dB')
+                if not box['hochpass_hz'] < r['hz'] < box['tiefpass_hz']:
+                    fehler.append(f'{bez}: Resonanz bei {r["hz"]} Hz liegt ausserhalb des '
+                                  f'Durchlassbereichs ({box["hochpass_hz"]}..{box["tiefpass_hz"]} Hz)')
+            # Welligkeit: groesster Pegelunterschied zwischen benachbarten
+            # Messpunkten im Durchlassbereich, gegen dieselbe Box ohne Resonanzen.
+            glatt = impulsantwort(box, ohne=('resonanzen',), normieren=False)
+            punkte = [box['hochpass_hz'] * 2 * (1.1 ** k) for k in range(40)]
+            punkte = [f for f in punkte if f < box['tiefpass_hz'] * 0.8]
+            abweichung = [pegel_db(voll, f) - pegel_db(glatt, f) for f in punkte]
+            welligkeit = max(abweichung) - min(abweichung)
+            if welligkeit < 3.0:
+                fehler.append(f'{bez}: Resonanzen erzeugen kaum Welligkeit ({welligkeit:.1f} dB '
+                              f'Spanne im Durchlassbereich) — der Frequenzgang bleibt glatt')
+
         # 5. Reflexionsschwanz — DIFFERENZIELL, wie alle anderen Bauteile auch.
         #
         #    Vorher war es die lauteste Probe ab Sample 64. Das ist aber
@@ -344,7 +384,8 @@ def main(argv=None):
                           f'weniger Energie')
 
         print(f'  {bez:22} {len(ir):5} Samples · Hoehen {ueber:+6.1f} · Bass {an_ecke:+5.1f}/{unter:+6.1f} '
-              f'· Kamm {f_notch:5.0f} Hz ({einbruch:+5.1f}) · Schwanz {beitrag:.3f}')
+              f'· Kamm {f_notch:5.0f} Hz ({einbruch:+5.1f}) · Schwanz {beitrag:.3f} '
+              f'· Welligkeit {welligkeit:4.1f} dB ({len(resonanzen)} Res.)')
 
     if fehler:
         print('\nFEHLER:', file=sys.stderr)
