@@ -179,6 +179,29 @@
           "steigerung": "Wechsel die Gruppengröße der Kick (Fünfer → Siebener) ohne den Hi-Hat-Puls zu ändern. Oder verschieb die Ride auf eine ungerade Gruppierung und lass die Kick gerade — die umgekehrte Polymetrik.",
           "selbstkontrolle": "Nimm auf: Bleibt die Hi-Hat wirklich stur gerade, während die Kick wandert — oder zieht der Fuß die Hände mit? Klingen die Ghost Notes wie Atmen oder wie Fehler? Und der Pocket-Test: Groovt es, oder klingt es gerechnet? Gerechnet heißt, der gerade Boden wackelt noch — zurück zu Schritt 1."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]
+          }
+        ],
+        "hinweis": "Hi-Hat und Snare bleiben gerade, die Kick läuft in Fünfergruppen. Erst nach zwei Takten treffen sich beide wieder auf der Eins — daher wandert das Muster."
       }
     },
     {

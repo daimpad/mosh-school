@@ -120,6 +120,29 @@
           "steigerung": "Bau ein Doom-Fill: maximal drei schwere Schläge am Taktende, mit bewusstem Raum davor. Nimm auf und prüf, ob das Fill die Schwere verstärkt oder das Tempo anschiebt.",
           "selbstkontrolle": "Nimm vier Takte mit Klick nur auf der Eins auf und miss nach: Sitzen deine Backbeats, oder wanderst du? Klingt das Crash aus, oder erstickst du es aus Gewohnheit?"
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 55,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "ride",
+            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0]
+          }
+        ],
+        "hinweis": "Derselbe Groove im Achtel-Raster: Die großen Lücken werden sichtbar. Genau dort driftet man weg, wenn man die Unterteilung innerlich fallen lässt."
       }
     },
     {
@@ -157,6 +180,11 @@
           "steigerung": "Sing die Passage über eine Aufnahme oder ein geloopte Riff und gestalte die Dynamik über die Phrase: leiser Beginn, Schwerpunkt in der Mitte, ruhiges Ende.",
           "selbstkontrolle": "Nimm dich auf: Klingen die Phrasenenden frei oder gequetscht? Fühlt sich der Hals nach der Übung neutral an? Wenn nicht, war die Phrase zu lang oder zu laut — kürzen und leiser werden, nicht durchbeißen."
         }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "doom",
+        "hinweis": "Lange Bögen bei sehr langsamem Tempo. Hör, wie früh im Doom geatmet wird — die Stütze muss bis zum letzten Ton der Phrase tragen."
       }
     },
     {
