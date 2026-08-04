@@ -75,6 +75,68 @@
           "steigerung": "Nimm das Riff auf und hör auf die Lücken: Ist da wirklich Stille vor jedem neuen Anschlag? Dann probier dasselbe Riff bei 50 BPM — je langsamer, desto ehrlicher.",
           "selbstkontrolle": "Sitzen deine Anschläge auf der Aufnahme exakt auf dem Klick, auch nach vier Runden? Klingt jeder Akkord gleich satt? Wenn das Riff „wackelt“, übe Schritt 1 und 2 einzeln — das Halten und das Abstoppen sind die eigentliche Übung."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 65,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Vier Powerchords über zwei Takte bei 65 BPM. Jeder darf voll ausklingen — und wird dann bewusst abgestoppt, statt einfach zu verhallen."
       }
     },
     {

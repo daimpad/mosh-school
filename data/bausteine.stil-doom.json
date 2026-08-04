@@ -44,6 +44,32 @@
           "steigerung": "Bau das Feedback als geplantes Ereignis in eine Phrase ein: letzter Ton der Runde kippt, klingt zwei Schläge als Oberton und wird auf die Eins der nächsten Runde abgedämpft.",
           "selbstkontrolle": "Nimm die Phrase auf: Trägt jeder lange Ton bis zum nächsten Anschlag, oder entstehen tote Lücken? Kippt das Feedback dort, wo du es willst — und endet es, wenn du es beendest?"
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 55,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwei Töne auf acht Vierteln. Was dazwischen passiert, entscheidet alles: ausklingen lassen, den Ton mit dem Körper formen, notfalls ins Feedback führen."
       }
     },
     {
@@ -83,6 +109,44 @@
           "steigerung": "Falls du eine Möglichkeit für zwei Signalwege hast (Zerrpedal mit Clean-Blend, zwei Spuren beim Aufnehmen): Misch einen cleanen Tief-Anteil unter die Zerre und vergleich, wie viel stabiler das Fundament steht.",
           "selbstkontrolle": "Hör die Aufnahme auf kleinen Lautsprechern ab: Erkennst du jede Tonhöhe und jeden Anschlag? Wenn die Linie nur noch Fläche ist, war es zu viel Zerre — nicht zu wenig Lautstärke."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 58,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 1,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Vier Töne auf acht Vierteln, tief und lang. Mit Fuzz wird jeder Ton größer — und jeder unsaubere Wechsel auch. Deshalb hier so wenige."
       }
     },
     {

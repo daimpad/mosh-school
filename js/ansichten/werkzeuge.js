@@ -21,6 +21,7 @@ const WERKZEUGE = [
   { id: 'recorder', route: '#/werkzeug/recorder', icon: 'fa-microphone', bereit: true },
   { id: 'mehrspur', route: '#/werkzeug/mehrspur', icon: 'fa-sliders', bereit: true },
   { id: 'zerrlabor', route: '#/werkzeug/zerrlabor', icon: 'fa-bolt', bereit: true },
+  { id: 'tab', route: '#/werkzeug/tab', icon: 'fa-list-check', bereit: true },
   { id: 'landkarte', route: '#/werkzeug/landkarte', icon: 'fa-compass', bereit: true },
   { id: 'genremix', route: '#/werkzeug/genremix', icon: 'fa-right-left', bereit: true },
 ];
