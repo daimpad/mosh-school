@@ -453,6 +453,32 @@ def main():
         arten = Counter(s.get('art') for s in stimmungen)
         print(f'  Stimmungen: {len(stimmungen)} ({dict(arten)})')
 
+    # UI-Label-Schluessel: jeder literale t('…')-Aufruf in js/ muss unter `ui` in
+    # labels/de.json stehen. Ein Treffer daneben wirft KEINEN Fehler — i18n gibt
+    # den rohen Schluessel zurueck, und der steht dann als Text auf der Seite.
+    # Genau so stand im Zerr-Labor „AUDIO_AKTIVIEREN" auf dem Knopf (der Aufruf
+    # las `audio_aktivieren` statt `wz_audio_aktivieren`), und keine Pruefung
+    # schlug an — bis es jemandem im Browser auffiel.
+    #
+    # Zusammengesetzte Schluessel (`t('such_status_' + wert)`) sind nicht
+    # statisch aufloesbar; sie enden im Quelltext auf `_` und werden bewusst
+    # uebersprungen, statt reihenweise falsch zu melden.
+    ui_labels = lade('data/labels/de.json').get('ui') or {}
+    T_AUFRUF = re.compile(r"\bt\(\s*'([a-z0-9_]+)'")
+    for wurzel, _, namen in os.walk(os.path.join(ROOT, 'js')):
+        for name in sorted(namen):
+            if not name.endswith('.js'):
+                continue
+            pfad = os.path.join(wurzel, name)
+            with open(pfad, encoding='utf-8') as f:
+                quelle = f.read()
+            rel = os.path.relpath(pfad, ROOT)
+            for schluessel in sorted({m.group(1) for m in T_AUFRUF.finditer(quelle)}):
+                if schluessel.endswith('_'):
+                    continue
+                if schluessel not in ui_labels:
+                    fehler.append(f'{rel}: t("{schluessel}") hat kein Label unter `ui` in labels/de.json')
+
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
     offen = {b['id']: 0 for b in bausteine}
