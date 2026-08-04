@@ -9,13 +9,17 @@
 // WARUM EINE ECHTE GITARRE: Ein Sägezahn hat keine Saitenresonanz, kein
 // Plektrum-Geräusch und keinen Anschlag, der über die Zeit dunkler wird — auf so
 // einem Signal klingt jede Kennlinie plausibel, und der Vergleich sagt nichts.
-// Die Klangproben (assets/sounds/gitarre-e2-*.wav, aus dem CC0-Bestand unter
-// assets/sounds/solotones/ über scripts/build_gitarrenprobe.mjs erzeugt) sind
-// bewusst DIREKTSIGNAL ohne Verstärker: Das Werkzeug hängt seine eigene Zerre und
-// Box dahinter — ein bereits verzerrtes Sample würde doppelt verzerrt und die
-// Kennlinien wären nicht mehr auseinanderzuhalten.
-// Zwei Anschlagsstärken statt einer, weil genau daran hängt, was ein Zerrer tut:
-// Bei weichem Anschlag klippt dieselbe Schaltung deutlich weniger.
+// Die Klangproben (assets/sounds/gitarre-*.wav, erzeugt von
+// scripts/build_gitarrenprobe.mjs aus einem CC0-Bestand — siehe
+// assets/sounds/HERKUNFT.txt) sind bewusst DIREKTSIGNAL ohne Verstärker: Das
+// Werkzeug hängt seine eigene Zerre und Box dahinter — ein bereits verzerrtes
+// Sample würde doppelt verzerrt und die Kennlinien wären nicht mehr
+// auseinanderzuhalten.
+//
+// Aus fünf Einzeltönen baut die Ansicht mehrere CLIPS (s. u.). Ein einzelnes
+// Signal reicht nicht: Intermodulation zeigt sich erst am Powerchord,
+// Kompression erst am stehenden Ton, Anschlagsdynamik erst im Wechsel von
+// weichem und hartem Schlag.
 //
 // Einstellungen sind flüchtiger, gerätelokaler Modul-State (wie patterns.js).
 //
@@ -37,6 +41,7 @@ const zustand = {
   gain: 1,              // Faktor auf den Kennlinien-Gain
   filter: 1,            // Faktor auf Hoch-/Tiefpass
   quelle: 'gitarre',    // 'gitarre' | 'riff' | 'mikro'
+  clip: 'chugs',        // id aus CLIPS; nur bei quelle === 'gitarre'
   laeuft: false,
   vergleich: false,     // true = kl_clean statt der gewählten Kennlinie
   box: null,            // id aus data/boxen.json; null = ohne Boxensimulation
@@ -141,18 +146,18 @@ const RIFF_HART = [true, false, false, true, false, false, true, false];
 // Plant einen Takt und weckt sich per Timer zum nächsten. Die Zeiten hängen an
 // ctx.currentTime, der Timer plant nur nach — naives setTimeout-Timing für
 // einzelne Töne wäre hörbar ungenau.
-function taktSchleife(ctx, planeTakt) {
+function taktSchleife(ctx, planeTakt, laenge) {
   const spiele = () => {
     planeTakt(ctx.currentTime + 0.02);
-    riffTimer = setTimeout(spiele, 8 * RIFF_SCHRITT * 1000 - 40);
+    riffTimer = setTimeout(spiele, laenge * 1000 - 40);
   };
   spiele();
   return { stop: () => { clearTimeout(riffTimer); riffTimer = null; } };
 }
 
 // Synthetisiertes Riff als Quelle: gedämpfte Achtel auf einem tiefen Grundton,
-// wie die Pattern-Demos. Fällt ein, wenn die Klangprobe nicht geladen werden
-// kann (offline) — deshalb bleibt es erhalten.
+// wie die Pattern-Demos. Fällt ein, wenn die Klangproben nicht geladen werden
+// können (offline) — deshalb bleibt es erhalten.
 function starteRiff(ctx, ziel) {
   const grund = 82.41 / 2; // E1, tief genug, damit die Klippung deutlich wird
   return taktSchleife(ctx, (t0) => {
@@ -170,62 +175,140 @@ function starteRiff(ctx, ziel) {
       osc.start(zeit);
       osc.stop(zeit + RIFF_SCHRITT);
     }
-  });
+  }, 8 * RIFF_SCHRITT);
 }
 
-// Dasselbe Riff aus echten Gitarrentönen. Die Klangprobe ist die tiefe
-// Leersaite E2 (82,4 Hz) — die Halbtonschritte des Riffs entstehen über
-// playbackRate. Bei höchstens drei Halbtönen ist das unauffällig; für mehr
-// bräuchte es weitere Proben und damit weitere Ladelast.
-function starteGitarrenriff(ctx, ziel, proben) {
+// --- Klangproben und Clips ------------------------------------------------
+// Fünf Töne, aus denen alle Clips gebaut werden. Volle Pfad-Literale, damit
+// scripts/validate.py sie findet und prüfen kann, ob die Dateien da und im
+// erwarteten Format sind (ein zusammengesetzter Pfad wäre dort unsichtbar).
+const PROBEN = {
+  e2_hart: 'assets/sounds/gitarre-e2-hart.wav',
+  e2_weich: 'assets/sounds/gitarre-e2-weich.wav',
+  a2_hart: 'assets/sounds/gitarre-a2-hart.wav',
+  e3_hart: 'assets/sounds/gitarre-e3-hart.wav',
+  g3_hart: 'assets/sounds/gitarre-g3-hart.wav',
+};
+
+// Ein Clip ist eine Folge von Anschlägen auf dem Achtel-Raster:
+//   schritt  Position in Achteln (RIFF_SCHRITT)
+//   probe    Schlüssel aus PROBEN
+//   halbton  Transposition über playbackRate (0 = Originalton)
+//   dauer    Klingdauer in Sekunden (kurz = abgedämpft, lang = stehen lassen)
+//   pegel    Eingangspegel in die Kennlinie
+//   versatz  optionale Verzögerung in Sekunden (Anschlag über die Saiten)
+//
+// WARUM MEHRERE CLIPS: Eine Zerrkennlinie verhält sich nicht überall gleich.
+// Ein Powerchord zeigt Intermodulation, die ein Einzelton gar nicht erzeugen
+// kann; ein stehender Ton zeigt, wie stark die Kennlinie komprimiert; die hohe
+// Lage zeigt, was der Nach-Tiefpass mit den Obertönen macht. Mit nur einem
+// Signal bliebe jeder dieser Effekte unhörbar.
+//
+// PEGEL: Alle Clips sind gegen das synthetische Riff eingemessen (Ausgangs-RMS
+// ~0,065). Bei ungleichem Pegel klippt die Kennlinie beim Clipwechsel
+// unterschiedlich stark — dann verglichen die Clips Lautstärke statt Signal.
+const CLIPS = [
+  {
+    // Das Riff des synthetischen Gegenstücks, Note für Note: gedämpfte Achtel,
+    // harter Anschlag auf der Eins und den beiden Wechseltönen. Nur wenn beide
+    // Quellen dasselbe spielen, vergleicht der Quellenwechsel das Signal.
+    id: 'chugs',
+    schritte: 8,
+    noten: RIFF_STUFEN.map((halbton, i) => ({
+      schritt: i,
+      probe: RIFF_HART[i] ? 'e2_hart' : 'e2_weich',
+      halbton,
+      dauer: i === 7 ? 0.5 : 0.14,
+      pegel: RIFF_HART[i] ? 0.27 : 0.17,
+    })),
+  },
+  {
+    // Vier weiche, dann vier harte Anschläge auf demselben Ton. Der Pegelsprung
+    // ist Absicht und echt: Weicher Anschlag ist leiser UND dunkler, und genau
+    // daran hängt, ob eine Kennlinie überhaupt anspricht.
+    id: 'dynamik',
+    schritte: 8,
+    noten: [0, 2, 4, 6].map((schritt) => ({
+      schritt,
+      probe: schritt < 4 ? 'e2_weich' : 'e2_hart',
+      dauer: 0.3,
+      pegel: schritt < 4 ? 0.11 : 0.33,
+    })),
+  },
+  {
+    // E5 auf den Saiten 1–3 (E2 + H2 + E3), zweimal angeschlagen und klingen
+    // gelassen. Die Quinte entsteht aus A2 zwei Halbtöne höher — auf der
+    // A-Saite wird sie auch gegriffen. Der Versatz ist der Schlag über die
+    // Saiten: gleichzeitig angerissen klänge es nach Tastendruck.
+    id: 'powerchord',
+    schritte: 12,
+    noten: [0, 6].flatMap((schritt) => [
+      { schritt, probe: 'e2_hart', dauer: 1.1, pegel: 0.2 },
+      { schritt, probe: 'a2_hart', halbton: 2, dauer: 1.1, pegel: 0.17, versatz: 0.012 },
+      { schritt, probe: 'e3_hart', dauer: 1.1, pegel: 0.16, versatz: 0.024 },
+    ]),
+  },
+  {
+    // Ein Ton, voll ausklingend. Zeigt die Kompression: Je härter die Kennlinie
+    // klippt, desto länger bleibt der Ton auf gleicher Lautstärke stehen.
+    id: 'stehend',
+    schritte: 12,
+    noten: [{ schritt: 0, probe: 'e2_hart', dauer: 1.75, pegel: 0.34 }],
+  },
+  {
+    // Höhere Lage (G3, 196 Hz): Dieselbe Kennlinie klingt hier deutlich anders,
+    // weil die Obertöne weiter oben liegen und der Nach-Tiefpass sie greift.
+    id: 'lead',
+    schritte: 8,
+    noten: [
+      { schritt: 0, probe: 'g3_hart', dauer: 0.45, pegel: 0.3 },
+      { schritt: 3, probe: 'g3_hart', halbton: 3, dauer: 0.45, pegel: 0.3 },
+      { schritt: 6, probe: 'g3_hart', halbton: 5, dauer: 0.7, pegel: 0.3 },
+    ],
+  },
+];
+
+function gewaehlterClip() {
+  return CLIPS.find((c) => c.id === zustand.clip) || CLIPS[0];
+}
+
+// Spielt einen Clip in Schleife. Gleiche Bauart wie das synthetische Riff:
+// ein Takt wird im Voraus gegen die Audio-Uhr geplant, der Timer weckt nur.
+function starteClip(ctx, ziel, clip, puffer) {
   return taktSchleife(ctx, (t0) => {
-    for (let i = 0; i < 8; i++) {
-      const zeit = t0 + i * RIFF_SCHRITT;
-      const letzte = i === 7;
+    for (const note of clip.noten) {
+      const zeit = t0 + note.schritt * RIFF_SCHRITT + (note.versatz || 0);
       const quelle = ctx.createBufferSource();
-      quelle.buffer = RIFF_HART[i] ? proben.hart : proben.weich;
-      quelle.playbackRate.value = 2 ** (RIFF_STUFEN[i] / 12);
-      // Beide Proben sind auf denselben Spitzenwert normiert — die
-      // Anschlagsstärke steckt in der Klangfarbe, den Pegel setzt das Riff.
-      // Die Werte sind gegen das synthetische Riff eingemessen (gleicher
-      // Ausgangs-RMS): Ein gestrichener Ton trägt deutlich mehr Energie als
-      // der kurze Sägezahn-Anschlag, und bei ungleichem Pegel klippt die
-      // Kennlinie beim Quellenwechsel unterschiedlich stark — dann verglichen
-      // die beiden Quellen Lautstärke statt Signalcharakter.
-      const pegel = RIFF_HART[i] ? 0.27 : 0.17;
-      // Abgedämpfte Achtel; der letzte Ton klingt aus, damit man auch hört, was
-      // die Kennlinie mit einem stehenden Ton macht.
-      const dauer = letzte ? 0.5 : 0.14;
+      quelle.buffer = puffer[note.probe];
+      quelle.playbackRate.value = 2 ** ((note.halbton || 0) / 12);
       const h = ctx.createGain();
-      h.gain.setValueAtTime(pegel, zeit);
-      h.gain.setValueAtTime(pegel, zeit + dauer * 0.7);
-      h.gain.exponentialRampToValueAtTime(0.0001, zeit + dauer);
+      h.gain.setValueAtTime(note.pegel, zeit);
+      h.gain.setValueAtTime(note.pegel, zeit + note.dauer * 0.7);
+      h.gain.exponentialRampToValueAtTime(0.0001, zeit + note.dauer);
       quelle.connect(h);
       h.connect(ziel);
       quelle.start(zeit);
-      quelle.stop(zeit + dauer + 0.02);
+      quelle.stop(zeit + note.dauer + 0.02);
     }
-  });
+  }, clip.schritte * RIFF_SCHRITT);
 }
 
-const PROBEN = {
-  hart: 'assets/sounds/gitarre-e2-hart.wav',
-  weich: 'assets/sounds/gitarre-e2-weich.wav',
-};
+// Lädt nur die Töne, die dieser Clip wirklich braucht. Der Standard-Clip kostet
+// damit zwei Dateien statt fünf — die übrigen kommen erst, wenn jemand sie
+// tatsächlich anwählt.
+async function ladeProben(ctx, clip) {
+  const gebraucht = [...new Set(clip.noten.map((n) => n.probe))];
+  const puffer = {};
+  await Promise.all(gebraucht.map(async (schluessel) => {
+    puffer[schluessel] = await ladeKlangprobe(ctx, PROBEN[schluessel]);
+  }));
+  return puffer;
+}
 
-// Rückgabewert von starte() → Label-Schlüssel für die Statuszeile.
 const MELDUNG = {
   mikro_fehlt: 'zerrlabor_mikro_fehlt',
   probe_fehlt: 'zerrlabor_probe_fehlt',
 };
-
-async function ladeProben(ctx) {
-  const [hart, weich] = await Promise.all([
-    ladeKlangprobe(ctx, PROBEN.hart),
-    ladeKlangprobe(ctx, PROBEN.weich),
-  ]);
-  return { hart, weich };
-}
 
 function stoppe() {
   clearTimeout(riffTimer);
@@ -277,14 +360,15 @@ async function starte(daten) {
   } else if (zustand.quelle === 'gitarre') {
     // Ohne Netz (die Klangproben stehen bewusst nicht in der SW-Hülle) fällt das
     // Werkzeug auf das synthetische Riff zurück, statt stumm zu bleiben.
-    const proben = await ladeProben(ctx).catch(() => null);
+    const clip = gewaehlterClip();
+    const proben = await ladeProben(ctx, clip).catch(() => null);
     if (!proben) {
       zustand.quelle = 'riff';
       quelleNode = starteRiff(ctx, kette.eingang);
       zustand.laeuft = true;
       return 'probe_fehlt';
     }
-    quelleNode = starteGitarrenriff(ctx, kette.eingang, proben);
+    quelleNode = starteClip(ctx, kette.eingang, clip, proben);
   } else {
     quelleNode = starteRiff(ctx, kette.eingang);
   }
@@ -375,7 +459,13 @@ export function renderWerkzeugZerrlabor(el, daten) {
           <button type="button" class="chip${zustand.quelle === 'riff' ? ' chip-akzent' : ''}" data-quelle="riff">${esc(t('zerrlabor_quelle_riff'))}</button>
           <button type="button" class="chip${zustand.quelle === 'mikro' ? ' chip-akzent' : ''}" data-quelle="mikro">${esc(t('zerrlabor_quelle_mikro'))}</button>
         </p>
-        ${zustand.quelle === 'gitarre' ? `<p class="leise">${esc(t('zerrlabor_quelle_hinweis'))}</p>` : ''}
+        ${zustand.quelle === 'gitarre' ? `
+        <p class="chip-zeile">
+          ${CLIPS.map((c) => `<button type="button" class="chip${c.id === zustand.clip ? ' chip-akzent' : ''}"
+            data-clip="${esc(c.id)}"${c.id === zustand.clip ? ' aria-current="true"' : ''}>${esc(t(`zerrlabor_clip_${c.id}`))}</button>`).join(' ')}
+        </p>
+        <p class="leise">${esc(t(`zerrlabor_clip_${gewaehlterClip().id}_text`))}</p>
+        <p class="leise">${esc(t('zerrlabor_quelle_hinweis'))}</p>` : ''}
         ${zustand.quelle === 'mikro' ? `<p class="zerr-warnung">${esc(t('zerrlabor_kopfhoerer'))}</p>` : ''}
         <p class="chip-zeile">
           <button type="button" class="knopf knopf-primaer" data-start ${bereit ? '' : 'disabled'}>
@@ -411,6 +501,20 @@ export function renderWerkzeugZerrlabor(el, daten) {
       if (zustand.laeuft) await starte(daten);
       renderWerkzeugZerrlabor(el, daten);
       el.querySelector(`[data-box="${CSS.escape(zustand.box || '')}"]`)?.focus();
+    });
+  }
+
+  for (const knopf of el.querySelectorAll('[data-clip]')) {
+    knopf.addEventListener('click', async () => {
+      zustand.clip = knopf.dataset.clip;
+      let fehler = null;
+      // Der neue Clip braucht womöglich Töne, die noch nicht geladen sind —
+      // starte() holt sie nach und fällt bei Misserfolg auf das Riff zurück.
+      if (zustand.laeuft) fehler = await starte(daten);
+      renderWerkzeugZerrlabor(el, daten);
+      const m = el.querySelector('[data-meldung]');
+      if (m && fehler) m.textContent = t(MELDUNG[fehler]);
+      el.querySelector(`[data-clip="${CSS.escape(zustand.clip)}"]`)?.focus();
     });
   }
 
