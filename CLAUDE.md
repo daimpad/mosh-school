@@ -191,8 +191,9 @@ Für jede neue `data/bausteine.<stufe>-<instrument>.json`:
    und **genau eines** von `uebungsteil` (`{titel, ziel, schritte[], steigerung,
    selbstkontrolle}`) oder `reflexionsaufgabe` (Text).
 2. **Pfad in `INHALTSDATEIEN`** (`js/daten.js`) ergänzen. Reihenfolge = Erzählreihenfolge.
-3. **Titel liften + Skelette regenerieren:** `python3 scripts/lift.py`
-   (hebt alle `anzeigetitel.de` nach `labels/de.json`, erzeugt `en/fr/pl` neu).
+3. **Titel liften:** `python3 scripts/lift.py` (hebt alle `anzeigetitel.de` nach
+   `labels/de.json`). **Nur `de.json`** — die leeren `en/fr/pl`-Skelette sind entfernt,
+   `--skelette` erzeugt sie bei Bedarf wieder.
 3b. **Such-Index neu bauen:** `python3 scripts/build_index.py` (regeneriert
    `data/index.json` aus dem Pool + gelifteten Titeln — generiertes Artefakt, eingecheckt).
 3c. **Statische SEO-Seiten neu bauen:** `python3 scripts/build_seiten.py` (regeneriert
@@ -294,10 +295,13 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
 
 ```sh
 python3 scripts/validate.py              # Cross-File-Konsistenz über den gemischten Pool
-python3 scripts/lift.py                  # idempotent — Titel geliftet, Skelette aktuell
+python3 scripts/lift.py                  # idempotent — Titel nach labels/de.json geliftet
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
 python3 scripts/build_seiten.py --check   # Tier-2-SEO-Seiten + Sitemap aus den Quellen reproduzierbar
+python3 scripts/pruefe_zerrlabor.py      # Zerr-Kennlinien treffen ihre Sollwerte
+python3 scripts/pruefe_zerrlabor_mutation.py  # …und die Pruefung schlaegt bei Fehlern auch an
 python3 scripts/pruefe_boxen.py          # Box-Impulsantworten treffen ihre Beschreibung
+node scripts/pruefe_tonhoehe.mjs         # Stimmgeraet deckt den ganzen Stimmungs-Pool ab
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
 
@@ -517,6 +521,24 @@ Tokens**, nie harte Farben.
   `art` (`standard`/`drop`/`offen`); danach gruppieren beide Ansichten ihre Chips
   (`nachArt()` in `stimmungen.js`). Alt-IDs der früheren Preset-Liste stehen als
   `ALT_IDS` im Stimmgerät, damit `?tuning=…`-Lesezeichen weiter treffen.
+  **Die Erkennung muss den ganzen Pool abdecken — das tat sie nicht.** Die
+  Untergrenze von `erkennePitch()` lag bei 40 Hz und damit **über neun Saiten, die
+  `data/tunings.json` selbst anbietet**: das tiefe A eines Drop-A-Fünfsaiters
+  (27,5 Hz), das tiefe H von Fünf-/Sechssaitern, das C eines C-Basses, das tiefe D
+  eines Achtsaiters. Das Stimmgerät zeigte diese Stimmungen als Chips an und
+  erkannte ihre tiefste Saite nicht — **ohne Fehlermeldung**, die Anzeige blieb auf
+  „—". Untergrenze jetzt 25 Hz, `fftSize` 8192 statt 4096 (eine Periode bei 27,5 Hz
+  sind gut 1700 Samples; mit 4096 lag A0 bis zu 17 Cent daneben, mit 8192 unter 3).
+  Damit das bezahlbar bleibt, sucht `erkennePitch()` **zweistufig**: grob auf einem
+  um Faktor 4 dezimierten Signal über den ganzen Bereich, dann fein bei voller
+  Abtastrate nur im Fenster um den gefundenen Versatz. Das ist mit dem doppelt so
+  langen Fenster **schneller als die alte Fassung** (1,6 ms statt 6,7 ms; die naive
+  Vollsuche über 8192 hätte 22 ms gekostet, bei 33 ms Analysetakt untragbar).
+  `node scripts/pruefe_tonhoehe.mjs` (auch in `verify.yml`) misst das über **vier
+  Oberwellenprofile** — zwei davon mit schwächerem Grundton als erster Oberwelle,
+  weil genau dort Autokorrelation eine Oktave danebengreift. Ein Test mit Sinus
+  wäre ein Freibrief. Der geprüfte Bereich wird **aus `tunings.json` gelesen**: Eine
+  neue, tiefere Stimmung lässt die Prüfung von selbst umfallen.
   Saitenstärken (`staerke`) sind **Praxis-Empfehlungen in handelsüblichen Sätzen**,
   keine gerechneten Werte: Sie müssen die Stimmungs-Leiter hinab monoton schwerer
   werden, aber Drop-Stimmungen stimmen nur die tiefste Saite um und der 6-Saiter-Bass
@@ -556,6 +578,25 @@ Tokens**, nie harte Farben.
   dürfen darüber. Ein Deckel kappte die LED-Kennlinie auf RMS 0,90 statt 1,35.
   `python3 scripts/pruefe_zerrlabor.py` (auch in `verify.yml`) rechnet beides gegen
   die Sollwerte nach und prüft die Schwellen-Reihenfolge eigens.
+  **Zwei Kennlinien sind keine einzelne Kurve** — `kl_highgain_kaskade` (Hochpass
+  zwischen den Stufen) und `kl_multiband` (zwei parallel geklippte Zweige). Sie
+  fielen deshalb lange ganz aus der Prüfung heraus und trugen statt Kennwerten
+  einen Platzhalter. Sie werden jetzt **end-zu-ende** gemessen (`messung:
+  "ende_zu_ende"`, Kette samt Filtern, 48 kHz) — ihre Werte sind mit den acht
+  Einzelkurven **nicht vergleichbar**, die stehen ohne Filter. Weil diese Werte aus
+  der Umsetzung selbst stammen, **belegen sie nichts**, sie frieren nur den Ist-Zustand
+  ein. Deshalb zwei Ergänzungen: (a) zwei Kapitelaussagen als eigene Tests — der
+  Zwischen-Hochpass muss den Bass straffen, ohne 1 kHz anzufassen, und beim Multiband
+  muss ein tiefer Ton sauberer bleiben als ein hoher; (b)
+  `python3 scripts/pruefe_zerrlabor_mutation.py` (auch in `verify.yml`) setzt zehn
+  Parameter absichtlich falsch und verlangt, dass die Prüfung anschlägt **und richtig
+  begründet**. Genau das fand zwei Löcher: Bei Pegel 0,7 sättigen zwei und drei
+  Kaskadenstufen zur selben Rechteckwelle (deshalb zusätzlich
+  `ausgangspegel_rms_leise` bei Amplitude 0,02), und `gain_tief` verschob den
+  1-kHz-Wert nur um 0,015 (deshalb `thd_80hz`). Der hohe Prüfton des Multibands liegt
+  bei **800 Hz, nicht 2 kHz**: Dort verlöre er seine Oberwellen an den Nach-Tiefpass,
+  und eine Tiefpass-Änderung hätte die Meldung „gain vertauscht?" ausgelöst — richtig
+  angeschlagen, falsch begründet.
   **Pegelbegrenzung ist Pflicht** — ein fester, nicht abschaltbarer Begrenzer sitzt
   vor dem Ausgang, dazu Lautstärke- und (bei Mikrofoneingang) Kopfhörer-Hinweis.
 - **Boxensimulation** (`js/audio/box.js`, `data/boxen.json`): Hinter der Kennlinie
@@ -606,5 +647,15 @@ Tokens**, nie harte Farben.
 - **Genau eines von `uebungsteil`/`reflexionsaufgabe`** je Baustein. Bewegungs-Bausteine tragen
   den Übungsteil; Wissens-/Reflexions-Bausteine (Mentales, Gesundheit, Ausrüstung) die
   Reflexionsaufgabe. `validate.py` prüft das.
-- **Skelette nach Datenänderung neu erzeugen** (`scripts/lift.py`): `labels/{en,fr,pl}.json`
-  sind strukturgleiche, leere Gerüste von `de.json` (leere Werte fallen zur Laufzeit auf de zurück).
+- **Die App ist einsprachig, und das steht jetzt auch so da.** `labels/{en,fr,pl}.json`
+  waren strukturgleiche Gerüste von `de.json` — 1934 Blätter je Datei, **davon 1934 leer**.
+  Drei Dateien zu je 57 KB ohne ein übersetztes Wort, die in der SW-`SHELL` standen (also
+  jede Installation mitlud) und bei **jeder** Inhaltsänderung mit-geschrieben wurden. Sie
+  sind entfernt; `scripts/lift.py --skelette` erzeugt sie wieder, falls eine Übersetzung
+  ansteht. Zur Laufzeit ändert sich nichts: `initI18n()` fängt eine fehlende Sprachdatei ab
+  und bleibt bei `de` — auch bei Nutzern, die noch ein altes `einstellungen.sprache` im
+  `localStorage` haben. Damit dieser Altbestand nicht bei **jedem** Start einen 404 ins Log
+  schreibt (der Rückfall griff, der Fehler blieb trotzdem stehen), listet `js/i18n.js` die
+  tatsächlich ausgelieferten Sprachen in `SPRACHEN`; alles andere wird gar nicht erst
+  geholt. **Eine neue Sprache gehört an drei Stellen:** Datei erzeugen
+  (`lift.py --skelette`), `SPRACHEN` in `js/i18n.js`, `SHELL` in `sw.js`.

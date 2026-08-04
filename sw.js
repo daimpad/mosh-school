@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v190';
+const CACHE = 'zerrer-v192';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -206,10 +206,10 @@ const SHELL = [
   'data/songs.grenzgaenger.json',
   'data/trainingseinheiten.json',
   'data/koennenscheck.json',
+  // Nur de: Die Skelette en/fr/pl waren zu 100 % leer (1934 Blaetter, 0 uebersetzt)
+  // und luden trotzdem bei jeder Installation 170 KB mit. Kommt eine Uebersetzung,
+  // wird sie hier wieder aufgenommen (erzeugen mit scripts/lift.py --skelette).
   'data/labels/de.json',
-  'data/labels/en.json',
-  'data/labels/fr.json',
-  'data/labels/pl.json',
   'assets/fonts/special-elite-latin-400-normal.woff2',
   'assets/fonts/special-elite-latin-ext-400-normal.woff2',
   'assets/fonts/new-rocker-latin-400-normal.woff2',
