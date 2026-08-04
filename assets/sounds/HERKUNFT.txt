@@ -1,0 +1,30 @@
+Klangproben — Herkunft und Verwendung
+=====================================
+
+solotones/  (122 Dateien, ~124 MB, FLAC 24 bit / 48 kHz / stereo)
+    Rohbestand: einzeln angeschlagene Töne einer E-Gitarre, sauberes
+    Direktsignal ohne Verstärker und ohne Zerre. Dateiname = Ton + Saite +
+    Anschlagsvariante, z. B. E2_s1_01 (Ton E2, Saite 1 = tiefe E-Saite,
+    Nimm 01); Dateien mit _soft_ sind derselbe Ton weicher angeschlagen.
+    Saitenzählung von tief nach hoch, Standardstimmung.
+    Lizenz: CC0 1.0 Universal (Public Domain Dedication), Volltext in cc0.txt.
+    Der Bestand wird NICHT ausgeliefert — er ist reines Quellmaterial.
+
+gitarre-e2-hart.wav / gitarre-e2-weich.wav  (je ~155 KB, WAV 16 bit / 44,1 kHz / mono)
+    Daraus erzeugt von scripts/build_gitarrenprobe.mjs: 1,8 s ab dem Anschlag,
+    ein Kanal (nicht summiert — die beiden Spuren des Rohmaterials sind um
+    wenige Samples versetzt und ergäben summiert einen Kammfilter), beide auf
+    denselben Spitzenwert normiert. Diese zwei Dateien liefert die App aus;
+    das Zerr-Labor (#/werkzeug/zerrlabor) spielt daraus sein Riff.
+    Nicht von Hand bearbeiten — neu bauen:
+        python3 -m http.server 8123 &
+        node scripts/build_gitarrenprobe.mjs
+
+WARUM DIREKTSIGNAL: Das Zerr-Labor hängt seine eigene Zerre und Boxensimulation
+hinter das Signal. Eine bereits verstärkte oder verzerrte Aufnahme würde doppelt
+verzerrt — die Kennlinien wären nicht mehr auseinanderzuhalten, und genau das
+Auseinanderhalten ist der Zweck des Werkzeugs.
+
+WARUM VERLUSTFREI: Ein verlustbehafteter Codec legt seine Artefakte genau in den
+Bereich, den eine Zerrkennlinie danach kräftig anhebt. Was bei normaler Wiedergabe
+unhörbar wäre, stünde hinter 30 dB Verstärkung deutlich im Klangbild.
