@@ -178,7 +178,71 @@
       },
       "voraussetzungen": [
         "tonabnehmer_detail"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 60,
+        "aufloesung": 4,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 12,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 12,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 1,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwei Testfiguren, keine Klangdemonstration. Erst die tiefe Saite in hoher Lage lang stehen lassen: Wird das Sustain kürzer oder fängt der Ton an zu schweben, zieht der Magnet an der Saite — Tonabnehmer tiefer. Dann derselbe Bund über alle sechs Saiten: Sticht eine heraus oder verschwindet eine, muss ihr Polstück nach. Beurteilt wird dein Instrument; die Demo gibt nur die Figur vor."
+      }
     },
     {
       "id": "gitarren_elektronik",
