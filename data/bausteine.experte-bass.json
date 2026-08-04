@@ -619,6 +619,140 @@
           "steigerung": "Ein bestehendes Riff auf die tiefe Lage übertragen und mit leichtem Palm Muting Kontur geben.",
           "selbstkontrolle": "Kein Dröhnen der ungespielten Saiten; die tiefen Töne kommen als definierte Töne an, nicht als Rumpeln."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["B0", "E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "5_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 70,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 3,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 18,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 5,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 20,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 5,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 24,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 3,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 26,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 5,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 3,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 30,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 5,
+            "bund": 0,
+            "technik": "dead_note"
+          }
+        ],
+        "hinweis": "Zwei Takte langsame Linie auf der tiefen H-Saite — jeder Ton auf Definition und Intonation prüfen, notfalls mit dem Stimmgerät. Dann der Wechsel zwischen der tiefen H- und der mittleren A-Saite: Die gestrichelten Schläge sind die jeweils abgedämpfte andere Saite. Genau die klingt beim Fünfsaiter mit, wenn der Daumen-Anker nicht mitwandert."
       }
     },
     {

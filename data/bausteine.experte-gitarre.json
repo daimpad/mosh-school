@@ -912,6 +912,212 @@
           "steigerung": "Die markierten Stellen isoliert üben und den Doppel-Test wiederholen, bis die Breitwand steht.",
           "selbstkontrolle": "Die Summe beider Takes klingt fett statt phasig; kein hörbares Echo zwischen links und rechts."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 32,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 33,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 35,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 38,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 39,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 42,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 43,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 46,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 49,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 51,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 54,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 55,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 58,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 60,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 60,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Die Vorlage für beide Takes — ein Riff, dessen Töne klar ENDEN: gedämpfte Chugs mit echten Lücken und am Taktende ein offener Akkord, dessen Länge du selbst bestimmst. Genau dort läuft Doubletracking auseinander, nicht am Anschlag: am Notenende und am Wechsel. Zweimal geloopt sind es die acht Takte der Übung."
       }
     },
     {
