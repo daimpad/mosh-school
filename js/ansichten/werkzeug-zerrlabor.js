@@ -211,7 +211,7 @@ export function renderWerkzeugZerrlabor(el, daten) {
       <p class="zerr-warnung"><strong>${esc(t('zerrlabor_lautstaerke_titel'))}</strong>
         ${esc(t('zerrlabor_lautstaerke'))}</p>
 
-      ${bereit ? '' : `<p><button type="button" class="knopf knopf-primaer" data-audio-an>${esc(t('audio_aktivieren'))}</button></p>`}
+      ${bereit ? '' : `<p><button type="button" class="knopf knopf-primaer" data-audio-an>${esc(t('wz_audio_aktivieren'))}</button></p>`}
 
       <section class="abschnitt">
         <h2 class="abschnitt-titel">${esc(t('zerrlabor_kennlinie'))}</h2>
