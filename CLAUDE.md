@@ -158,6 +158,13 @@ eine eigene View + Route `#/werkzeug/<name>`.
     nimmt `ctx`+`ziel` entgegen, damit sie live **und** im `OfflineAudioContext`
     (WAV-Export) identisch klingt. **Synthese statt Samples** (offline, leicht) —
     Samples nur, wenn nötig, dann vendored + im SW gecacht.
+  - `klangprobe.js` — die eine gezogene Ausnahme von „Synthese statt Samples":
+    lädt und dekodiert eine Datei zu einem `AudioBuffer`, mit Cache je URL.
+    Bewusst schmal — **kein Sampler**, keine Tonhöhen-Zuordnung, keine
+    Velocity-Schichten; was mit dem Puffer passiert, entscheidet das Werkzeug.
+    Genutzt bisher nur vom Zerr-Labor, wo die Aussage des Werkzeugs am echten
+    Instrumentensignal hängt (s. u.). Fehler werden **nicht** geschluckt, damit
+    der Aufrufer offline auf Synthese zurückfallen kann.
   - `wav.js` — rendert eine geplante Klangfolge über `OfflineAudioContext` in einen
     WAV-Blob (DAW-tauglicher als `MediaRecorder`-WebM/Opus).
 - **Verlinkungs-Konvention Baustein → Werkzeug** (`js/werkzeug-links.js`):
@@ -303,6 +310,8 @@ python3 scripts/pruefe_zerrlabor_mutation.py  # …und die Pruefung schlaegt bei
 python3 scripts/pruefe_boxen.py          # Box-Impulsantworten treffen ihre Beschreibung
 python3 scripts/pruefe_boxen_mutation.py # …und die Pruefung schlaegt bei Fehlern auch an
 node scripts/pruefe_tonhoehe.mjs         # Stimmgeraet deckt den ganzen Stimmungs-Pool ab
+node scripts/build_gitarrenprobe.mjs --check  # Klangproben aus dem Rohbestand reproduzierbar
+                                         # (braucht Chromium + Server auf :8123, daher nicht in der CI)
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
 
@@ -600,6 +609,32 @@ Tokens**, nie harte Farben.
   angeschlagen, falsch begründet.
   **Pegelbegrenzung ist Pflicht** — ein fester, nicht abschaltbarer Begrenzer sitzt
   vor dem Ausgang, dazu Lautstärke- und (bei Mikrofoneingang) Kopfhörer-Hinweis.
+  **Die Standard-Quelle ist eine echte Gitarre, nicht der Synthese-Kern.** Ein
+  Sägezahn hat keine Saitenresonanz und kein Plektrum-Geräusch — darauf klingt
+  jede Kennlinie gleich plausibel, und der Vergleich, für den es das Werkzeug
+  gibt, sagt nichts. Ausgeliefert werden zwei Klangproben
+  (`assets/sounds/gitarre-e2-{hart,weich}.wav`, je ~155 KB, 16 bit/44,1 kHz/mono),
+  erzeugt von `node scripts/build_gitarrenprobe.mjs` aus dem CC0-Rohbestand
+  `assets/sounds/solotones/` (124 MB FLAC, reines Quellmaterial, wird **nicht**
+  ausgeliefert). Details in `assets/sounds/HERKUNFT.txt`. Vier Punkte hängen daran:
+  - **Direktsignal, kein Verstärkerton.** Das Werkzeug hängt seine eigene Zerre
+    und Box dahinter; ein bereits verzerrtes Sample wäre doppelt verzerrt und die
+    Kennlinien nicht mehr auseinanderzuhalten.
+  - **Verlustfrei, kein MP3/Opus.** Codec-Artefakte sitzen genau in dem Bereich,
+    den die Kennlinie danach um zig dB anhebt.
+  - **Ein Kanal, nicht summiert.** Die beiden Spuren des Rohbestands sind
+    dieselbe Aufnahme um 3–13 Samples versetzt — summiert ergäben sie einen
+    Kammfilter, der in der Aufnahme nicht drin ist.
+  - **Beide Quellen sind pegelgleich eingemessen** (Ausgangs-RMS 0,070 gegen
+    0,063). Bei ungleichem Pegel klippt die Kennlinie beim Quellenwechsel
+    unterschiedlich stark, und die Chips verglichen Lautstärke statt Signal.
+  Der Generator braucht Chromium (FLAC lässt sich weder mit Node- noch mit
+  Python-Bordmitteln dekodieren) und läuft deshalb **nicht** in `verify.yml`;
+  dort prüft `validate.py` nur, dass die zwei WAVs existieren und Mono/16 bit/
+  44,1 kHz sind. Fällt der Ladeversuch aus (offline — die WAVs stehen bewusst
+  nicht in der SW-`SHELL`), schaltet das Werkzeug selbst auf das synthetische
+  Riff zurück und sagt es in der Statuszeile. Ein neues Sample gehört in
+  `PROBEN` im Generator, nicht von Hand ins `assets/`-Verzeichnis.
 - **Boxensimulation** (`js/audio/box.js`, `data/boxen.json`): Hinter der Kennlinie
   sitzt wahlweise ein `ConvolverNode` mit einer **synthetisierten** Impulsantwort.
   Bewusst keine gemessenen Cabinet-IRs: Die wären Binärdateien fremder Herkunft
