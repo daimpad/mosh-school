@@ -236,11 +236,6 @@ export function alleStatus() {
   return out;
 }
 
-// Übe-Tagebuch (§2e): schlanke, chronologische Einträge. `ts` einspeisbar (Tests).
-export function holeLog() {
-  return stelleSicher().log;
-}
-
 // Selbstgesetzte Ziele ({ art, wert, gesetzt }). Doppelte (art+wert) werden
 // zusammengeführt, nicht dupliziert.
 export function holeZiele() {
