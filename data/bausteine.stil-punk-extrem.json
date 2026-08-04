@@ -153,6 +153,11 @@
           "steigerung": "Arbeite die Dynamik heraus: dieselbe Phrase einmal als raunendes, leises Brüllen und einmal voller — der Unterschied entsteht über Luftmenge und Resonanzraum, nie über Hals-Druck.",
           "selbstkontrolle": "Kannst du direkt nach der Übung mühelos und klar sprechen? Bleibt die Rauheit auch leise verfügbar? Wenn die Färbung nur laut funktioniert, trägt noch der Druck statt der Technik — eine Stufe zurück."
         }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "crust",
+        "hinweis": "Der rufende Crust-Ansatz liegt zwischen Sprechen und Brüllen. Hör, wie kurz die Silben bleiben und wie viel Dringlichkeit ohne Dauerdruck entsteht."
       }
     },
     {
@@ -227,6 +232,11 @@
           "steigerung": "Erst wenn die Wechsel über Wochen stabil und beschwerdefrei sind: das Ganze in Richtung Songtempo beschleunigen — immer nur so schnell, wie beide Register frei bleiben.",
           "selbstkontrolle": "Nimm die Wechsel auf: Klingen beide Seiten nach dem Umschalten genauso frei wie einzeln? Fühlt sich der Hals nach der Session neutral an? Ein Register, das nach dem Wechsel enger klingt, ist die Warnlampe — Abstand vergrößern, leiser werden."
         }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "grindcore",
+        "hinweis": "Tief und hoch im Wechsel innerhalb weniger Sekunden — hör in Grind-Aufnahmen, wo die Atempausen liegen. Ohne sie trägt keiner der beiden Ansätze."
       }
     },
     {
@@ -290,6 +300,33 @@
           "steigerung": "Lass eine zweite Person die Wechsel per Zuruf oder Handzeichen auslösen — unvorhersehbare Kanten trainieren genau die Reaktionsschärfe, die das Genre live braucht.",
           "selbstkontrolle": "Nimm die Miniatur auf und hör die Kanten im Detail: Liegt der erste Schlag jedes neuen Teils exakt, oder franst er aus? Stimmen die Tempi der Teile mit deinen Referenzwerten überein, wenn du mit dem Metronom nachmisst?"
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 190,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "crash",
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          }
+        ],
+        "hinweis": "Zwei Takte volles Tempo, dann auf den Schlag in die Zeitlupe — dieselbe BPM, ein Bruchteil der Dichte. Die Kante ist die ganze Übung."
       }
     },
     {
@@ -390,6 +427,29 @@
           "steigerung": "Verkürze die Blöcke auf einen Takt pro Form — Grind-Realität. Erst wenn die Nähte bei entspanntem Tempo sauber sind, das Tempo in kleinen Schritten anheben.",
           "selbstkontrolle": "Zähl auf der Aufnahme die Nähte, die ein Loch oder einen leisen ersten Schlag haben. Ziel: null. Und ehrlich prüfen: Bleibt das Grundtempo über die ganze Kette konstant, oder schiebt jede Naht ein paar BPM nach?"
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 200,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1]
+          }
+        ],
+        "hinweis": "Takt 1–2 Blast, Takt 3–4 Kontrast-Feel (schneller Punk-Beat). Achte auf den ersten Schlag nach der Naht: gleich laut, gleich pünktlich wie alle anderen."
       }
     },
     {

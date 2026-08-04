@@ -83,6 +83,29 @@
           "steigerung": "Bau eine Drei-Stufen-Dramaturgie: acht Takte schnell, vier Takte Stomp, zwei Takte Breakdown-Feel mit China oder Crash-Ride — jede Stufe schwerer, alle im selben Grundtempo.",
           "selbstkontrolle": "Nimm die Übung auf und miss die Übergänge: Liegt die erste Eins nach jedem Wechsel exakt auf dem Klick? Wird der schnelle Teil nach dem Stomp schneller als davor? Das ist die häufigste Leckstelle."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 165,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0]
+          }
+        ],
+        "hinweis": "Zwei Takte D-Beat, dann OHNE Tempowechsel zwei Takte Halftime-Stomp. Der erste schnelle Takt nach dem Stomp neigt zum Hetzen."
       }
     },
     {
@@ -109,6 +132,11 @@
           "steigerung": "Wenn du mit anderen üben kannst: Ruft die Parole zu zweit oder dritt und nehmt euch auf — das Ziel ist EIN gemeinsamer Schlag pro Silbe, nicht drei fast gleichzeitige.",
           "selbstkontrolle": "Fühlt sich der Hals nach zehn Shouts neutral an? Sitzen alle Silben auf der Aufnahme exakt zusammen bzw. auf dem Klick? Heiserkeit oder Kratzen heißt: zu laut oder zu sehr aus dem Hals — leiser und zurück zu Schritt 2."
         }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "hardcore",
+        "hinweis": "Gang-Shouts leben von mehreren Stimmen auf denselben kurzen Silben. Hör in Hardcore-Songs auf die Präzision der Einsätze, nicht auf die Lautstärke."
       }
     },
     {

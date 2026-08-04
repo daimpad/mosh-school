@@ -143,6 +143,29 @@
           "steigerung": "Nimm Sechzehntel dazu und wechsle zwischen den Unterteilungen, während der Klick gleich bleibt.",
           "selbstkontrolle": "Deine Schläge liegen exakt auf dem Klick; die Unterteilungen bleiben gleichmäßig."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 90,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+          }
+        ],
+        "hinweis": "Takt 1 Viertel, Takt 2 Achtel — derselbe Puls, doppelte Dichte. Zähl laut mit, damit der Wechsel den Puls nicht verschiebt."
       }
     },
     {
@@ -303,6 +326,29 @@
           "steigerung": "Führe kleine Variationen bei Snare oder Hi-Hat ein, während der Rest läuft.",
           "selbstkontrolle": "Die veränderte Stimme sitzt sauber, ohne dass die anderen aus dem Timing geraten."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1]
+          }
+        ],
+        "hinweis": "Hi-Hat und Snare bleiben identisch, nur die Bassdrum wandert. Genau das ist Unabhängigkeit: eine Stimme ändern, ohne die anderen mitzuziehen."
       }
     },
     {
@@ -702,6 +748,33 @@
           "steigerung": "Arbeite mit Dynamik und probier schwere Fills, die den langsamen Puls betonen.",
           "selbstkontrolle": "Trotz langsamem Tempo sitzt jeder Schlag; der Beat wirkt schwer und stabil."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 55,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "ride",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 1, 0, 0, 0, 1, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 1, 0, 0, 0]
+          }
+        ],
+        "hinweis": "55 BPM, Viertel-Raster. Die Schläge sind wenige — jeder einzelne muss sitzen, weil zwischen ihnen nichts ist, was einen Fehler verdeckt."
       }
     },
     {
@@ -739,6 +812,41 @@
           "steigerung": "Verlängere das Fill oder verteile es über mehr Trommeln, ohne das Timing zu verlieren.",
           "selbstkontrolle": "Das Fill sitzt im Timing, und du kommst sauber auf der Eins zurück in den Beat."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 110,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "hihat_closed",
+            "schritte": [0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0]
+          },
+          {
+            "instrument": "tom_hi",
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "tom_lo",
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+          }
+        ],
+        "hinweis": "Takt 1 Grundbeat, Takt 2 Fill über Snare und Toms. Wichtig ist die Landung: der Crash auf der Eins danach — hier der Anfang der Schleife."
       }
     },
     {
