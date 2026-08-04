@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v184';
+const CACHE = 'zerrer-v185';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -57,6 +57,7 @@ const SHELL = [
   'js/audio/stimmen.js',
   'js/audio/wav.js',
   'js/audio/zerre.js',
+  'js/audio/box.js',
   'js/audio/tonhoehe.js',
   'js/audio/mikro.js',
   'js/audio/riff-db.js',
@@ -178,6 +179,7 @@ const SHELL = [
   'data/tunings.json',
   'data/zerrtypen.json',
   'data/zerrlabor-kennlinien.json',
+  'data/boxen.json',
   'data/pedale.json',
   'data/ampbox.json',
   'data/songs.hardcore.json',

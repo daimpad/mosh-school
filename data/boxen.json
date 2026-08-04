@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "zweck": "Boxensimulation für das Zerr-Labor: Beschreibungen, aus denen js/audio/box.js die Impulsantwort für den ConvolverNode synthetisiert.",
+    "keine_messung": "Das sind KEINE gemessenen Impulsantworten und keine Nachbildungen konkreter Produkte. Jeder Eintrag beschreibt eine Bauart über ihre hörbaren Merkmale — dieselbe Regel wie bei data/zerrtypen.json: funktional benannt, Modelle stehen ausschliesslich in data/brand-alert.json.",
+    "felder": {
+      "hochpass_hz": "untere Grenze des Gehäuses — darunter gibt der Lautsprecher nichts mehr ab",
+      "tiefpass_hz": "Höhenabfall des Konus; zweifach kaskadiert (24 dB/Oktave), das prägt den Boxenklang am stärksten",
+      "praesenz_hz/_db/_guete": "Konus-Aufbruch: der Buckel, der einer Box ihren Biss gibt",
+      "mikro_abstand_cm/mikro_pegel": "Laufzeit des zweiten Schallwegs — erzeugt den Kammfilter der Mikrofonposition",
+      "reflexion_ms/_pegel": "abklingende Gehäuse-Reflexionen; offene Gehäuse länger und lauter als geschlossene",
+      "dauer_ms": "Länge der Impulsantwort",
+      "ausgleich": "Ausgangs-Gain, damit die Bauarten gleich laut vergleichbar sind"
+    }
+  },
+  "boxen": [
+    {
+      "id": "box_412_geschlossen",
+      "instrument": "gitarre",
+      "hochpass_hz": 85,
+      "tiefpass_hz": 4800,
+      "praesenz_hz": 2400,
+      "praesenz_db": 4,
+      "praesenz_guete": 1.4,
+      "mikro_abstand_cm": 4,
+      "mikro_pegel": 0.55,
+      "reflexion_ms": 8,
+      "reflexion_pegel": 0.06,
+      "dauer_ms": 70,
+      "ausgleich": 2.4,
+      "hinweis": {
+        "de": "Die Standardbauart im Metal: geschlossenes Gehäuse, vier Zwölfzöller. Straffer Bass ohne Rückwandatmung, kräftiger Präsenzbuckel um 2,4 kHz — daher kommt der Biss, den ein Riff im Bandkontext braucht."
+      }
+    },
+    {
+      "id": "box_112_offen",
+      "instrument": "gitarre",
+      "hochpass_hz": 105,
+      "tiefpass_hz": 5600,
+      "praesenz_hz": 3000,
+      "praesenz_db": 3,
+      "praesenz_guete": 1.1,
+      "mikro_abstand_cm": 7,
+      "mikro_pegel": 0.7,
+      "reflexion_ms": 16,
+      "reflexion_pegel": 0.12,
+      "dauer_ms": 90,
+      "ausgleich": 2.6,
+      "hinweis": {
+        "de": "Offenes Gehäuse, ein Zwölfzöller: weniger Tiefbass, mehr Luft und Raum. Für Punk, Crust und alles, was eher schneiden als drücken soll — im dichten Mix setzt sich das schlechter durch als eine geschlossene Box."
+      }
+    },
+    {
+      "id": "box_212_dunkel",
+      "instrument": "gitarre",
+      "hochpass_hz": 78,
+      "tiefpass_hz": 3400,
+      "praesenz_hz": 1600,
+      "praesenz_db": 2,
+      "praesenz_guete": 1.0,
+      "mikro_abstand_cm": 3,
+      "mikro_pegel": 0.5,
+      "reflexion_ms": 10,
+      "reflexion_pegel": 0.07,
+      "dauer_ms": 80,
+      "ausgleich": 3.0,
+      "hinweis": {
+        "de": "Dunkle, träge Bauart mit früh einsetzendem Höhenabfall — die Doom- und Sludge-Ecke. Nimmt einer harschen Zerre die Schärfe und lässt das Gewicht stehen; für schnelle Riffs verwischt sie zu viel."
+      }
+    },
+    {
+      "id": "box_810_bass",
+      "instrument": "bass",
+      "hochpass_hz": 45,
+      "tiefpass_hz": 3000,
+      "praesenz_hz": 900,
+      "praesenz_db": 3,
+      "praesenz_guete": 1.0,
+      "mikro_abstand_cm": 5,
+      "mikro_pegel": 0.6,
+      "reflexion_ms": 12,
+      "reflexion_pegel": 0.07,
+      "dauer_ms": 90,
+      "ausgleich": 2.2,
+      "hinweis": {
+        "de": "Acht Zehnzöller: viele kleine Membranen, die schnell reagieren. Der Mittenbuckel um 900 Hz ist der Grund, warum ein angezerrter Bass damit im Mix hörbar bleibt, statt nur zu wummern."
+      }
+    },
+    {
+      "id": "box_115_bass",
+      "instrument": "bass",
+      "hochpass_hz": 38,
+      "tiefpass_hz": 2200,
+      "praesenz_hz": 600,
+      "praesenz_db": 2,
+      "praesenz_guete": 0.9,
+      "mikro_abstand_cm": 9,
+      "mikro_pegel": 0.7,
+      "reflexion_ms": 18,
+      "reflexion_pegel": 0.10,
+      "dauer_ms": 110,
+      "ausgleich": 2.4,
+      "hinweis": {
+        "de": "Ein Fünfzehnzöller: tiefer und weicher, dafür träger und deutlich dunkler. Trägt getragene Doom-Linien, verliert bei schnellem Fingerspiel die Definition."
+      }
+    }
+  ]
+}

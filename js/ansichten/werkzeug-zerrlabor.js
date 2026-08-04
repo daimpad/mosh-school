@@ -17,6 +17,7 @@ import { t } from '../i18n.js';
 import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeAusgang, holeKontext, istBereit } from '../audio/kontext.js';
 import { baueKette, uebertragung } from '../audio/zerre.js';
+import { baueBox } from '../audio/box.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const zustand = {
@@ -26,6 +27,7 @@ const zustand = {
   quelle: 'riff',       // 'riff' | 'mikro'
   laeuft: false,
   vergleich: false,     // true = kl_clean statt der gewählten Kennlinie
+  box: null,            // id aus data/boxen.json; null = ohne Boxensimulation
 };
 
 // Eigene Mikrofon-Quelle statt audio/mikro.js: Jenes Modul verbindet bewusst NUR
@@ -41,6 +43,7 @@ async function mikroQuelle(ctx) {
 }
 
 let kette = null;
+let boxKette = null;
 let quelleNode = null;
 let begrenzer = null;
 let mikroStrom = null;
@@ -55,6 +58,14 @@ function gewaehlte(daten) {
   if (!liste.length) return null;
   if (zustand.vergleich) return liste.find((k) => k.id === 'kl_clean') || liste[0];
   return liste.find((k) => k.id === zustand.kennlinie) || liste[0];
+}
+
+function boxen(daten) {
+  return daten.boxen?.boxen || [];
+}
+
+function gewaehlteBox(daten) {
+  return boxen(daten).find((b) => b.id === zustand.box) || null;
 }
 
 // --- Kurvenbild -----------------------------------------------------------
@@ -145,6 +156,8 @@ function stoppe() {
   }
   kette?.trenne();
   kette = null;
+  boxKette?.trenne();
+  boxKette = null;
   begrenzer?.trenne();
   begrenzer = null;
   zustand.laeuft = false;
@@ -157,7 +170,17 @@ async function starte(daten) {
   const ctx = holeKontext();
   begrenzer = baueBegrenzer(ctx);
   kette = baueKette(ctx, kl, { gainFaktor: zustand.gain, filterFaktor: zustand.filter });
-  kette.ausgang.connect(begrenzer.eingang);
+  // Box zwischen Kennlinie und Begrenzer — genau dort sitzt sie auch in echt:
+  // Der Lautsprecher hört das verzerrte Signal, nicht umgekehrt. Ohne Box geht
+  // es direkt weiter, damit der Vergleich „mit/ohne" nur EINE Sache ändert.
+  const box = gewaehlteBox(daten);
+  if (box) {
+    boxKette = baueBox(ctx, box);
+    kette.ausgang.connect(boxKette.eingang);
+    boxKette.ausgang.connect(begrenzer.eingang);
+  } else {
+    kette.ausgang.connect(begrenzer.eingang);
+  }
 
   if (zustand.quelle === 'mikro') {
     const mikro = await mikroQuelle(ctx).catch(() => null);
@@ -232,6 +255,18 @@ export function renderWerkzeugZerrlabor(el, daten) {
       </section>
 
       <section class="abschnitt">
+        <h2 class="abschnitt-titel">${esc(t('zerrlabor_box'))}</h2>
+        <p class="chip-zeile">
+          <button type="button" class="chip${zustand.box ? '' : ' chip-akzent'}" data-box="">${esc(t('zerrlabor_box_ohne'))}</button>
+          ${boxen(daten)
+            .map((b) => `<button type="button" class="chip${zustand.box === b.id ? ' chip-akzent' : ''}" data-box="${esc(b.id)}">${esc(t('box_' + b.id))}</button>`)
+            .join(' ')}
+        </p>
+        <p class="leise">${esc(gewaehlteBox(daten)?.hinweis?.de || t('zerrlabor_box_hinweis'))}</p>
+        <p class="leise">${esc(t('zerrlabor_box_synthese'))}</p>
+      </section>
+
+      <section class="abschnitt">
         <h2 class="abschnitt-titel">${esc(t('zerrlabor_regler'))}</h2>
         <p class="wz-feld">
           <label for="zl-gain">${esc(t('zerrlabor_gain'))}: <output id="zl-gain-wert">${zustand.gain.toFixed(2)}×</output></label>
@@ -272,6 +307,16 @@ export function renderWerkzeugZerrlabor(el, daten) {
       if (lief) await starte(daten);
       renderWerkzeugZerrlabor(el, daten);
       el.querySelector(`[data-kennlinie="${CSS.escape(zustand.kennlinie)}"]`)?.focus();
+    });
+  }
+  for (const knopf of el.querySelectorAll('[data-box]')) {
+    knopf.addEventListener('click', async () => {
+      zustand.box = knopf.dataset.box || null;
+      // Läuft gerade Ton, wird die Kette neu gebaut — der ConvolverNode lässt
+      // sich nicht im laufenden Betrieb umhängen, ohne zu knacken.
+      if (zustand.laeuft) await starte(daten);
+      renderWerkzeugZerrlabor(el, daten);
+      el.querySelector(`[data-box="${CSS.escape(zustand.box || '')}"]`)?.focus();
     });
   }
 
