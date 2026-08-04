@@ -159,6 +159,29 @@
           "steigerung": "Erst die Blast-Strecke verlängern (sechs, acht Takte), erst danach das Tempo anheben.",
           "selbstkontrolle": "Der letzte Blast-Takt klingt wie der erste; du atmest durchgehend und bleibst locker."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 180,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+          }
+        ],
+        "hinweis": "Takt 1 Blast, Takt 2 lockerer Grundbeat — der Wechsel IST die Übung. Nicht das Blast-Tempo entscheidet, sondern ob du danach wieder locker wirst."
       }
     },
     {
@@ -601,6 +624,33 @@
           "steigerung": "Auf Sextolen verdichten und das Fill mit einem Beckenakzent auf der Landung abschließen.",
           "selbstkontrolle": "Das Fill rollt hörbar in Dreiergruppen, und die Landung auf der Eins sitzt punktgenau."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 12,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0]
+          },
+          {
+            "instrument": "tom_lo",
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          }
+        ],
+        "hinweis": "Takt 2 trägt Dreiergruppen: jede Zählzeit exakt drei Schläge. Das Raster zeigt zwölf Spalten statt acht — daran erkennst du die Triole."
       }
     },
     {
