@@ -645,6 +645,21 @@ Tokens**, nie harte Farben.
   *innerhalb* der plausiblen Spanne verschoben wird (Präsenz von 2400 auf 1000 Hz).
   Das ergibt eine andere, aber legitime Box — es gibt keine externe Referenz dafür,
   wo der Buckel eines 4×12 „richtig" sitzt.
+  **Cone-Resonanzen** (`resonanzen`, Pflichtfeld je Box): drei bis vier schmale
+  Anhebungen/Senken im Durchlassbereich. Sie sind der EINE Punkt, an dem eine
+  gemessene Impulsantwort mehr kann als diese Synthese — der Frequenzgang einer
+  echten Box besteht nicht aus glatten Filterflanken, sondern trägt viele schmale
+  Zacken aus Cone-Aufbrüchen und Mehrweg-Interferenz. Ohne sie klingt eine
+  gefaltete Box wie das, was sie dann auch ist: eine Filterkette. Die Werte sind
+  **bauart-typisch, nicht gemessen** (ein großer Konus bricht tiefer auf als ein
+  kleiner) und bilden kein bestimmtes Produkt ab; ihr Zweck ist, dass das Spektrum
+  überhaupt eine Feinstruktur HAT. Geprüft wird beides: jede Resonanz einzeln
+  (differenziell an ihrer Mitte, und im Durchlassbereich liegend) **und** die
+  resultierende Welligkeit über den ganzen Durchlassbereich — ohne den zweiten
+  Teil könnte jemand alle auf 0 dB setzen und die Einzelprüfungen blieben still.
+  Das Feld ist **Pflicht**: Beim ersten Mutationslauf hing die Prüfung an einem
+  `if resonanzen:` und übersprang sich bei einer Box ohne das Feld selbst — genau
+  die Fehlerklasse, gegen die diese Datei sonst überall anschreibt.
 
 ## Sprache & Sicherheit
 
