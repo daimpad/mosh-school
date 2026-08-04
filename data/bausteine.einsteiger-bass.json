@@ -74,6 +74,68 @@
           "steigerung": "Wiederhole im Stehen und finde die Gurthöhe, bei der die Handposition der im Sitzen entspricht.",
           "selbstkontrolle": "Nach einigen Minuten fühlt sich nichts verspannt oder taub an; die Greifhand erreicht auch tiefe Lagen ohne Abknicken."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 65,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Acht lockere Anschläge auf der leeren A-Saite. Der Bass ist schwerer als eine Gitarre — prüf zwischen den Anschlägen bewusst, ob Schulter und Greifhand-Handgelenk das Gewicht tragen oder dagegen arbeiten."
       }
     },
     {
@@ -112,7 +174,69 @@
       },
       "transfer_herkunft": [
         "GIT"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 65,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Vier Finger auf vier benachbarten Bünden in mittlerer Lage, hinauf und zurück. Die Bassbünde liegen weit auseinander — in tiefer Lage ist die Drei-Finger-Aufteilung völlig legitim, solange jeder Ton klar bleibt."
+      }
     },
     {
       "id": "greifhand_daempfen",

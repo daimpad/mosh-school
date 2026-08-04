@@ -885,6 +885,154 @@
           "steigerung": "Verkürze im Blast-Teil das Raster schrittweise Richtung Sechzehntel — aber nur so weit, wie die Wand stabil bleibt. Sobald es flattert, zurück: Ein sauberes Achtel-Fundament schlägt jedes unsaubere Sechzehntel-Gedoppel.",
           "selbstkontrolle": "Hör die Aufnahme einmal nur auf Bass und Kick ab: eine Textur oder zwei konkurrierende? Und im Halftime-Teil: Übernimmt der Bass hörbar die Führung, oder bleibt er Textur? Beides muss unterscheidbar sein."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 200,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 38,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 44,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 54,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 60,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwei Takte Blast-Textur (gleichmäßige Achtel als Wand, nicht als Gitarren-Verdopplung), dann harter Schnitt in zwei Takte Halftime — dort wenige Töne, jeder trägt. Der Schnitt selbst muss auf dem Schlag sitzen."
       }
     },
     {

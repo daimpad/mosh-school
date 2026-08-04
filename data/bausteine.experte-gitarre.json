@@ -545,6 +545,74 @@
           "steigerung": "Zwei Arpeggio-Formen verbinden (z. B. Moll und Dur derselben Lage) und erst dann das Tempo anheben.",
           "selbstkontrolle": "In jeder Geschwindigkeit klingt exakt ein Ton zur Zeit; die Welle läuft ohne Knick durch den Umkehrpunkt."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 65,
+        "aufloesung": 4,
+        "takte": 3,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 12,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 14,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 14,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 2,
+            "bund": 13,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 1,
+            "bund": 12,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 2,
+            "bund": 13,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 14,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 14,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 12,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Fünf Saiten, ein Ton je Saite, hinauf und zurück — so langsam, dass jeder Ton einzeln beurteilbar ist. Am höchsten Ton wendet die Bewegung; genau dort verwischen zwei Töne am häufigsten zu einem Akkord."
       }
     },
     {
@@ -584,6 +652,116 @@
           "steigerung": "Die dissonanten Voicings arpeggieren oder im Tremolo halten und in ein bestehendes Riff einweben.",
           "selbstkontrolle": "Jedes Voicing ist verzerrt noch als Klang identifizierbar; der Wechsel stabil/dissonant erzeugt hörbare Spannung."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwei Takte stabiler Powerchord, zwei Takte dissonantes Voicing — erst die große Septime, dann der Tritonus über demselben Grundton. Die Reibung wirkt nur, weil vorher zwei Takte lang keine war."
       }
     },
     {
@@ -620,6 +798,82 @@
           "steigerung": "Die Phrasen über einen Akkordwechsel legen und die Zieltöne bewusst auf die Wechsel setzen.",
           "selbstkontrolle": "Die gespielte Version klingt wie die gesungene; Pausen und Zielton sind hörbar gestaltet, nicht zufällig."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 90,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 16,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal",
+            "betonung": 1
+          }
+        ],
+        "hinweis": "Zwei Phrasen mit echter Atempause: Die erste stellt etwas hin und bleibt auf einem hervorgehobenen Ton stehen, die zweite antwortet und schließt tiefer. Die Pausen gehören zur Phrase — ohne sie wird aus Musik eine Übung."
       }
     },
     {

@@ -41,7 +41,119 @@
       },
       "voraussetzungen": [
         "dynamik_akzente"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 16,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Vier Takte in zwei Zuständen: erst eine dünne, hohe Arpeggio-Figur auf leeren Saiten, dann auf Schlag eins der Ausbruch in tiefe Akkorde. Das Raster zeigt die Dichte — die Lautstärke lieferst du, und der leise Teil muss wirklich leise sein."
+      }
     },
     {
       "id": "twinkly_arpeggien",
@@ -79,7 +191,117 @@
       "voraussetzungen": [
         "greifhand_grundlagen",
         "dissonante_intervalle"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 1,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 10,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 1,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 1,
+            "bund": 12,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Gegriffene Töne in hoher Lage gegen eine leere Saite, die stehen bleibt. Jeder Finger bleibt liegen, statt abzudämpfen — die Reibung zwischen leerer und gegriffener Saite ist der ganze Klang."
+      }
     },
     {
       "id": "screamo_vocals_sicher",
@@ -505,7 +727,93 @@
       },
       "voraussetzungen": [
         "drop_tuning"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "A3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 95,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Dieselben Griffformen wie in Standardstimmung — nur die H-Saite steht einen Ganzton tiefer, auf A. Sie klingt hier als leere Saite mit: Aus dem vertrauten Akkord wird ein anderer Zusammenklang, ohne dass sich deine Hand ändert."
+      }
     },
     {
       "id": "feedback_als_instrument",
@@ -581,7 +889,81 @@
       "voraussetzungen": [
         "einfache_basslinie",
         "anschlagpunkt_ton"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 125,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Eine Figur mit eigener melodischer Kontur — steigend, dann fallend — statt einer Grundtonfolge. Prüf beim Mitspielen: Trägt sie acht Takte allein, ohne dass sie langweilig wird? Das ist die Messlatte für eine Hauptstimme."
+      }
     }
   ]
 }
