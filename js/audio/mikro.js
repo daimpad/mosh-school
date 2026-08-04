@@ -9,8 +9,17 @@
 import { holeKontext } from './kontext.js';
 
 // Öffnet das Mikro und liefert { analyser, stop() }. Wirft bei Ablehnung/kein
-// Gerät. fftSize groß (4096), damit tiefe Drop-Tunings ins Fenster passen.
-export async function holeMikro({ fftSize = 4096 } = {}) {
+// Gerät.
+//
+// fftSize 8192 (170 ms bei 48 kHz), nicht 4096: Für die tiefste Saite im
+// Stimmungs-Pool (A0, 27,5 Hz) ist eine Periode gut 1700 Samples lang, und eine
+// stabile Autokorrelation braucht mehrere davon. Gemessen lag A0 mit 4096
+// Samples um bis zu 17 Cent daneben — für ein Stimmgerät unbrauchbar, das
+// „stimmt" bei ±5 Cent zieht —, mit 8192 unter 3 Cent. Die Kosten dafür trägt
+// nicht die Fenstergröße, sondern die Suchstrategie: erkennePitch() sucht grob
+// auf einem dezimierten Signal vor (js/audio/tonhoehe.js), deshalb ist die
+// Analyse mit dem doppelt so langen Fenster trotzdem schneller als vorher.
+export async function holeMikro({ fftSize = 8192 } = {}) {
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
     throw new Error('kein-mikro');
   }
