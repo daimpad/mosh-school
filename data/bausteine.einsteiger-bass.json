@@ -183,6 +183,68 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und übe Saitenwechsel bei durchlaufendem Wechsel.",
           "selbstkontrolle": "Zeige- und Mittelfinger sind im Klang nicht zu unterscheiden; kein Stolpern beim Saitenwechsel."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 90,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Acht gleichmäßige Achtel auf der leeren A-Saite — im Wechsel Zeige-, Mittelfinger. Die Demo gibt nur das Raster vor; die Fingerfolge liegt bei dir."
       }
     },
     {
@@ -306,7 +368,69 @@
       },
       "transfer_herkunft": [
         "GIT"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Achtel auf der tiefen E-Saite, Handballen nah am Steg. Kurz und definiert — aber die Tonhöhe bleibt hörbar."
+      }
     },
     {
       "id": "grundton_folgen",
@@ -345,6 +469,44 @@
           "steigerung": "Folge schnelleren Linien mit durchlaufenden Achteln und halte dabei das Timing.",
           "selbstkontrolle": "Deine Töne passen harmonisch zum Riff und sitzen rhythmisch; nichts eiert."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Vier Grundtöne auf den Vierteln: E — G — A — E. Genau die Bewegung, die ein einfaches Riff unter sich hat."
       }
     },
     {
@@ -646,6 +808,32 @@
           "steigerung": "Verlängere die Phrasen und arbeite bewusster mit Ausklang und Dynamik.",
           "selbstkontrolle": "Trotz langsamem Tempo sitzt das Timing; die Töne klingen voll und satt."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 60,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwei ganze Töne bei 60 BPM. Der Ton steht so lange, wie das Instrument ihn trägt — die Kunst ist der exakte Einsatz nach der langen Pause."
       }
     },
     {
@@ -688,6 +876,104 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und setz einzelne Akzente oder Durchgangstöne.",
           "selbstkontrolle": "Die Linie sitzt tight zum Riff; saubere Übergänge, keine Nebengeräusche, stabiles Timing."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Gedämpfter Grundton als Motor, dazu zwei offene Zieltöne (G und A). Palm Muting gibt der Linie Kontur, ohne sie zu ersticken."
       }
     },
     {

@@ -47,6 +47,29 @@
           "steigerung": "Erst wenn die Wippe mühelos ist, Zyklen verlängern — Tempo kommt Wochen später, nie am ersten Tag.",
           "selbstkontrolle": "Kein Druckschmerz in Handgelenk oder Daumen; die Bewegung fühlt sich nach Hebel an, nicht nach Kraft."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+          }
+        ],
+        "hinweis": "Takt 1 traditioneller Blast (Hände im Wechsel), Takt 2 die doppelte Snare-Dichte der Gravity-Bewegung. Bewusst langsam notiert — Tempo kommt zuletzt."
       }
     },
     {
