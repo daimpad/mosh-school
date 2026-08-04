@@ -40,10 +40,6 @@ export function setzeHintergrundbilder(liste) {
     : [];
 }
 
-export function hatHintergrundbilder() {
-  return BILDER.length > 0;
-}
-
 // FNV-1a über den Schlüssel — derselbe Hash wie in genre-inszenierung.js, hier
 // aber lokal gehalten: Die beiden Module sollen sich nicht gegenseitig brauchen.
 function hashSlug(str) {
