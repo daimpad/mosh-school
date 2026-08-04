@@ -301,6 +301,7 @@ python3 scripts/build_seiten.py --check   # Tier-2-SEO-Seiten + Sitemap aus den 
 python3 scripts/pruefe_zerrlabor.py      # Zerr-Kennlinien treffen ihre Sollwerte
 python3 scripts/pruefe_zerrlabor_mutation.py  # …und die Pruefung schlaegt bei Fehlern auch an
 python3 scripts/pruefe_boxen.py          # Box-Impulsantworten treffen ihre Beschreibung
+python3 scripts/pruefe_boxen_mutation.py # …und die Pruefung schlaegt bei Fehlern auch an
 node scripts/pruefe_tonhoehe.mjs         # Stimmgeraet deckt den ganzen Stimmungs-Pool ab
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
@@ -622,6 +623,28 @@ Tokens**, nie harte Farben.
   verschiebt das die Kerbe um 300 Hz), und der Reflexionspegel muss deutlich unter
   dem Direktschall liegen (0,06–0,12) — bei 0,3 überragt der Rauschschwanz nach der
   Bandbegrenzung den Direktschall.
+  **Die relative Messung sieht die Zahlen selbst nicht.** „Eine Oktave über der
+  Eckfrequenz mindestens 12 dB Abfall" stimmt für *jede* Eckfrequenz — geprüft wurde
+  damit, ob sich die Umsetzung wie ein Filter verhält, nicht ob der Wert plausibel
+  ist. `python3 scripts/pruefe_boxen_mutation.py` (auch in `verify.yml`) hat das
+  aufgedeckt: **9 von 10 absichtlich falschen Werten kamen durch**, darunter ein
+  Tiefpass bei 15 kHz und ein Hochpass bei 8 Hz. Dagegen stehen jetzt
+  **Plausibilitätsgrenzen** (`GRENZEN` in `pruefe_boxen.py`) plus die Kopplung
+  „Tiefpass mindestens Faktor 8 über dem Hochpass" und „Präsenzbuckel im
+  Durchlassbereich". Zwei weitere Prüfungen waren **tot**: Der Reflexionsschwanz
+  wurde als lauteste Probe ab Sample 64 gemessen — das ist überwiegend das
+  Ausschwingen des *gefilterten Direktimpulses*, mit `reflexion_pegel: 0` stand dort
+  immer noch 0,06–0,15, „kein Reflexionsschwanz" konnte also nie auslösen. Er wird
+  jetzt differenziell und über **Energie statt Spitze** gemessen (der Schwanz ist
+  Rauschen, sein höchster Einzelwert hängt an der Saat), und geprüft wird der
+  **Mechanismus** — wirksam und proportional zum Pegel — statt eines globalen
+  Pegel-Grenzwerts, den eine offene Box legitim reißen würde. Und `praesenz_guete`
+  war unbeschränkt: Ein Peaking-Filter hebt an seiner Mitte exakt um `praesenz_db`,
+  egal wie schmal er ist; eine Güte von 12 wäre als Nadel durchgegangen. Geprüft
+  wird jetzt die **Breite**. **Was bewusst nicht geprüft wird:** ein Wert, der
+  *innerhalb* der plausiblen Spanne verschoben wird (Präsenz von 2400 auf 1000 Hz).
+  Das ergibt eine andere, aber legitime Box — es gibt keine externe Referenz dafür,
+  wo der Buckel eines 4×12 „richtig" sitzt.
 
 ## Sprache & Sicherheit
 
