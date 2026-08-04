@@ -484,6 +484,182 @@
           "steigerung": "Spiel dieselbe Linie zu einem wechselnden Song (Aufnahme, die das Genre wechselt) und passe deine Rolle in Echtzeit an — das ist die Bandrealität. Oder wechsle die Rolle alle vier Takte auf Ansage.",
           "selbstkontrolle": "Nimm die Rollen auf: Hört man den Haltungswechsel, obwohl die Töne gleich bleiben? Trägt der Doom-Teil wirklich Gewicht, verzahnt sich das Grind-Skelett, sitzt der Djent-Lock exakt? Wenn alle Rollen gleich klingen, spielst du noch Töne statt Haltung."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 33,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 34,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 37,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 38,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 42,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 43,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 44,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 47,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 48,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 50,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 52,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 54,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 56,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 58,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 60,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 62,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Vier Rollen über vier Takte, ein Tempo: Doom-Gewicht (zwei ausgehaltene Töne), Grind-Skelett (gleichmäßige Achtel, Attack vor Melodie), Djent-Lock (gedämpft auf eine verschobene Gruppierung), Hardcore-Motor (satt nach vorn). Dieselbe Grundlinie, vier Haltungen."
       }
     },
     {

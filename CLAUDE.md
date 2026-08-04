@@ -280,6 +280,15 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
   über den **Audio-Kern der Werkzeuge** (Synthese, kein Asset). `validate.py`
   akzeptiert Abwesenheit und prüft bei Anwesenheit die Struktur (erlaubte
   Instrumente/Techniken, Rasterlänge = `aufloesung*takte`, `saite` 1..6).
+  **Betonung** (optional, additiv): `-1` leise (Ghost Note) / `0` normal / `+1`
+  betont — beim Pattern als Liste `betonung` je Spur (gleich lang wie
+  `schritte`), beim Tab direkt am Ereignis. Ohne diese Ebene klingen Akzent-,
+  Ghost-Note- und Rebound-Übungen wie eine Reihe gleich lauter Schläge, also
+  genau NICHT wie das, was ihr Übungsteil beschreibt. Umgesetzt ist sie über
+  **drei vorbereitete Gain-Knoten je Wiedergabe** (`js/ansichten/demonstration.js`),
+  nicht über einen Pegel-Parameter an den Stimmen: Die Stimmen sollen live und
+  im `OfflineAudioContext` identisch klingen, und ein Knoten je Schlag wären
+  bei 16 Schlägen im Takt mit Schleife hunderte Knoten pro Minute.
 
 ## Verifikation (Pflicht vor jedem Commit)
 

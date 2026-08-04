@@ -45,7 +45,262 @@
       "spielziele": [
         "timing_zum_klick",
         "riff_praezision"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 190,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 17,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 19,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 21,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 23,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 48,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 49,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 50,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 51,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 52,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 53,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 54,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 55,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 56,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 57,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 58,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 59,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 60,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 61,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 62,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 63,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Schneller Part, dann ein abrupter Stop über anderthalb Takte — und exakt auf der Eins der hervorgehobene Wiedereinstieg. In der Stille zählst du innerlich weiter; genau dort entscheidet sich, ob Stop und Einstieg wie ein Schlag klingen."
+      }
     },
     {
       "id": "pv_koerper_explosivitaet",
@@ -214,7 +469,45 @@
       "spielziele": [
         "schwererer_ton",
         "definierter_anschlag"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 58,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 1,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Vier lange, tiefe Töne über zwei Takte. Mit Fuzz wird jeder Ton größer — deshalb so wenige. Die Wand entsteht aus gemeinsamem Anschlag UND gemeinsamer Länge mit der Gitarre, nicht aus mehr Noten."
+      }
     },
     {
       "id": "sludge_sound_gear",
