@@ -75,7 +75,6 @@ export function t(schluessel, ersetzungen) {
 const LABEL_PFADE = {
   baustein: (id) => ['bausteine', id],
   fehlerbild: (id) => ['fehlerbilder', id],
-  grafik: (id) => ['grafiken', id],
   lehrgrafik: (id) => ['lehrgrafiken', id],
   einheit: (id) => ['trainingseinheiten', id],
   spielziel_bereich: (id) => ['spielziele', 'bereiche', id],
@@ -85,7 +84,7 @@ const LABEL_PFADE = {
 };
 
 // Sichtbares Label zu einer sprachneutralen ID.
-// Gruppen: baustein, grafik, einheit, spielziel_*, vermittlungsziel_* oder ein Vokabularname
+// Gruppen: baustein, fehlerbild, lehrgrafik, einheit, spielziel_*, vermittlungsziel_* oder ein Vokabularname
 // (domaene, kompetenzstufe, baustein_typ, transfer_herkunft, witterung, abschluss_status).
 export function label(gruppe, id) {
   const bau = LABEL_PFADE[gruppe];
