@@ -135,7 +135,90 @@
       "spielziele": [
         "schwererer_ton",
         "timing_zum_klick"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 60,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          }
+        ],
+        "hinweis": "Ein Takt schnelle Chugs, dann drei einzelne, sehr schwere Schläge mit viel schwarzem Raum dazwischen. Die Pause auszuhalten IST die Übung — wer sie füllt, nimmt dem Schlag sein Gewicht."
+      }
     },
     {
       "id": "deathcore_intro_atmosphaere",
@@ -225,7 +308,51 @@
       },
       "spielziele": [
         "saubere_uebergaenge"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 90,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 1,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Fünf hohe Töne auf vier Takten — mehr nicht. Die Fläche entsteht erst durch Delay und Hall, die die Demo nicht hat. Was sie zeigt, ist die Sparsamkeit: Der Raum zwischen den Tönen ist das Instrument."
+      }
     },
     {
       "id": "djent_solo_lead",
@@ -265,7 +392,165 @@
       "spielziele": [
         "stimmsicherheit",
         "timing_zum_klick"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 2,
+            "bund": 12,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Chug-Fundament und Lead-Phrase im selben Raster: Die Lead-Töne sitzen in den Lücken der Fünfergruppen, nicht darüber hinweg. Erst dadurch bleibt die Melodie im Groove statt daneben."
+      }
     },
     {
       "id": "djent_studio_produktion",

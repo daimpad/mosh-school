@@ -37,6 +37,143 @@
           "steigerung": "Feile an der Anordnung, bis auch schnelle Wechsel zwischen den Trommeln entspannt gelingen.",
           "selbstkontrolle": "Du erreichst alle Klangkörper ohne Strecken; Schultern und Rücken bleiben locker."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 70,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "tom_hi",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "tom_lo",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hinweis": "Eine Runde über das ganze Kit: Hi-Hat, Snare, beide Toms, Bassdrum, Crash. Spiel sie locker nacheinander und achte auf genau eine Frage — musst du dich für irgendetwas davon strecken oder den Oberkörper verdrehen?"
       }
     },
     {
@@ -72,6 +209,88 @@
           "steigerung": "Nutze den Rückprall für schnellere, gleichmäßige Schläge, ohne den Griff zu verkrampfen.",
           "selbstkontrolle": "Die Schläge klingen gleichmäßig, die Hände bleiben locker; bei Verkrampfung machst du Pause."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 90,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "snare",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "betonung": [
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1
+            ]
+          }
+        ],
+        "hinweis": "Schlag und Rückprall im Wechsel: Der hohe Balken kommt aus der Hand, der flache aus dem Stock. Klingen beide gleich laut, drückst du den zweiten Schlag — dann arbeitest du gegen den Rebound statt mit ihm."
       }
     },
     {
@@ -108,6 +327,59 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und probier bei Bedarf Heel-up für mehr Geschwindigkeit.",
           "selbstkontrolle": "Die Schläge klingen gleichmäßig; Bein und Fußgelenk bleiben entspannt, kein Schmerz."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 85,
+        "aufloesung": 4,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "hinweis": "Gleichmäßige Viertel auf der Bassdrum, ruhiges Tempo. Der Tritt federt aus dem Fußgelenk, statt zu pressen — prüf über vier Takte, ob Lautstärke und Abstand wirklich konstant bleiben oder mit der Zeit schwerer werden."
       }
     },
     {
@@ -201,6 +473,88 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und wechsle zwischen Einzel- und Doppelschlägen.",
           "selbstkontrolle": "Rechte und linke Hand klingen gleich; die Muster bleiben gleichmäßig und im Timing."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 95,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "snare",
+            "schritte": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "betonung": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1,
+              1,
+              -1
+            ]
+          }
+        ],
+        "hinweis": "Takt 1 Einzelschläge, Takt 2 Doppelschläge — die Hände bewegen sich gleich schnell, es klingen doppelt so viele Schläge. Genau dafür gibt es den Doppelschlag: Der zweite Schlag kostet keine neue Bewegung, sondern nutzt den Rückprall."
       }
     },
     {
@@ -385,6 +739,88 @@
           "steigerung": "Verschieb die Akzente auf andere Positionen und probier einen Rimshot auf dem Backbeat.",
           "selbstkontrolle": "Akzente und leise Schläge sind klar unterscheidbar; das Muster bleibt gleichmäßig."
         }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "snare",
+            "schritte": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "betonung": [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1
+            ]
+          }
+        ],
+        "hinweis": "Durchgehende Sechzehntel, Akzent auf jeder Zählzeit. Die Übung sind nicht die lauten Schläge, sondern die leisen: Nur wenn sie wirklich leise bleiben, entsteht ein Kontrast statt einer Reihe mittellauter Schläge."
       }
     },
     {

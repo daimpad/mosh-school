@@ -149,6 +149,68 @@
           "steigerung": "Wiederhole dasselbe im Stehen und finde die Gurthöhe, bei der das Handgelenk neutral bleibt.",
           "selbstkontrolle": "Nach ein paar Minuten fühlt sich nichts verspannt oder taub an; die Greifhand erreicht den Hals ohne Abknicken."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 70,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Acht lockere Anschläge auf der leeren A-Saite, bewusst langsam. Nicht die Töne sind die Übung, sondern was Schulter, Arm und Handgelenk dazwischen tun — bleibt zwischen zwei Anschlägen wirklich alles locker?"
       }
     },
     {
@@ -184,6 +246,68 @@
           "steigerung": "Wechsle auf die nächste Saite und erhöhe das Tempo erst, wenn alle Töne sauber sind.",
           "selbstkontrolle": "Kein Schnarren, kein Abwürgen; die Finger bewegen sich knapp und ruhig."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 70,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zeige- bis Kleinfinger auf vier benachbarten Bünden, hinauf und zurück. Jeder Ton klingt einzeln und klar — bleibt einer stumpf, liegt der Finger zu flach oder zu weit vom Bundstäbchen entfernt."
       }
     },
     {
@@ -220,6 +344,68 @@
           "steigerung": "Behalte den Minimaldruck auch bei Lagenwechseln und einfachen Wechseln zwischen zwei Tönen bei.",
           "selbstkontrolle": "Die Töne klingen sauber, die Greifhand bleibt spürbar locker; bei Verspannung machst du Pause."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 80,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 5,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 1,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 5,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 3,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 5,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 5,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 5,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 7,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Immer im Wechsel: derselbe Griff einmal ohne Druck (dumpf, gestrichelt markiert) und einmal mit gerade genug Druck (sauber). Der Abstand zwischen beiden ist kleiner als die meisten glauben — genau ihn suchst du."
       }
     },
     {
@@ -252,6 +438,116 @@
           "steigerung": "Wechsle die Saite und füge später Aufschläge hinzu; steigere das Tempo in kleinen Schritten.",
           "selbstkontrolle": "Jeder Anschlag klingt gleich laut; der Arm bleibt entspannt, die Bewegung klein."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Sechzehn gleichmäßige Achtel auf der leeren Saite, nur Abschläge. Der Arm bleibt ruhig, die Bewegung kommt aus dem Handgelenk. Gleich laut und gleich weit auseinander ist schwerer als schnell."
       }
     },
     {

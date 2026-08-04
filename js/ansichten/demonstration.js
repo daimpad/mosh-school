@@ -23,6 +23,7 @@ const GEDAEMPFT = new Set(['palm_mute', 'dead_note', 'chug']);
 let laufSched = null;
 let laufTimers = [];
 let laufEl = null;
+let laufPegel = null;
 
 function taktSchlaege(demo) {
   const m = /^(\d+)/.exec(demo.taktart || '');
@@ -74,6 +75,27 @@ function frequenzFuerEvent(demo, ev) {
 
 // --- Rendering ---
 
+// Betonung eines Schlages: -1 leise (Ghost Note), 0 normal, +1 betont. Optional
+// je Spur; fehlt das Feld, ist alles normal. Ohne diese Ebene klingen Akzente,
+// Ghost Notes und Rebound-Uebungen wie eine Reihe gleich lauter Schlaege —
+// also genau NICHT wie das, was der Uebungsteil beschreibt.
+const PEGEL = { '-1': 0.4, 0: 1, 1: 1.6 };
+
+function betonungVon(spur, i) {
+  const b = Array.isArray(spur.betonung) ? spur.betonung[i] : 0;
+  return b === 1 || b === -1 ? b : 0;
+}
+
+// Dieselbe Stufe am Tab-Ereignis: dort steht sie direkt am Ton, weil ein Tab
+// keine Spuren hat, in denen eine parallele Liste liegen koennte.
+function betonungEv(ev) {
+  return ev.betonung === 1 || ev.betonung === -1 ? ev.betonung : 0;
+}
+
+function betonungKlasse(bet) {
+  return bet === 1 ? ' betont' : bet === -1 ? ' geist' : '';
+}
+
 function rasterPattern(demo, marken) {
   return demo.spuren
     .map((spur) => {
@@ -82,8 +104,16 @@ function rasterPattern(demo, marken) {
       // daneben steht der Inhalt als Text. Vorher war das ganze Raster
       // aria-hidden — Screenreader bekamen weder Rhythmus noch Bundzahlen.
       const zellen = spur.schritte
-        .map((an, i) => `<span class="demo-zelle${an ? ' an' : ''}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true"></span>`
-          + `<span class="nur-sr">${esc(t('demo_zelle_sr', { n: i + 1, was: an ? label : t('pattern_pause') }))}</span>`)
+        .map((an, i) => {
+          const bet = an ? betonungVon(spur, i) : 0;
+          const klasse = betonungKlasse(bet);
+          const was = an
+            ? (bet === 1 ? t('demo_betont', { was: label })
+              : bet === -1 ? t('demo_geist', { was: label }) : label)
+            : t('pattern_pause');
+          return `<span class="demo-zelle${an ? ' an' : ''}${klasse}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true"></span>`
+            + `<span class="nur-sr">${esc(t('demo_zelle_sr', { n: i + 1, was }))}</span>`;
+        })
         .join('');
       return `<div class="demo-zeile"><span class="demo-zeilen-label">${esc(label)}</span>
         <div class="demo-zellen" style="grid-template-columns:repeat(${spur.schritte.length},1fr)">${zellen}</div></div>`;
@@ -103,9 +133,13 @@ function rasterTab(demo, cols, marken) {
     for (let i = 0; i < cols; i++) {
       const ev = evMap.get(saiteNr + ':' + i);
       const tech = ev ? ` an technik-${ev.technik || 'normal'}` : '';
+      const bet = ev ? betonungEv(ev) : 0;
+      const bund = ev ? t('demo_bund', { n: ev.bund }) : t('pattern_pause');
+      const was = bet === 1 ? t('demo_betont', { was: bund })
+        : bet === -1 ? t('demo_geist', { was: bund }) : bund;
       zellen.push(
-        `<span class="demo-zelle demo-tab-zelle${tech}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true">${ev ? esc(String(ev.bund)) : ''}</span>`
-          + `<span class="nur-sr">${esc(t('demo_zelle_sr', { n: i + 1, was: ev ? t('demo_bund', { n: ev.bund }) : t('pattern_pause') }))}</span>`
+        `<span class="demo-zelle demo-tab-zelle${tech}${betonungKlasse(bet)}${marken.has(i) ? ' takt' : ''}" data-col="${i}" aria-hidden="true">${ev ? esc(String(ev.bund)) : ''}</span>`
+          + `<span class="nur-sr">${esc(t('demo_zelle_sr', { n: i + 1, was }))}</span>`
       );
     }
     zeilen.push(`<div class="demo-zeile"><span class="demo-zeilen-label demo-saite-label">${esc(note)}</span>
@@ -184,6 +218,10 @@ export function stoppeDemo() {
   if (laufSched) laufSched.stoppe();
   laufTimers.forEach((id) => clearTimeout(id));
   laufTimers = [];
+  if (laufPegel) {
+    for (const knoten of Object.values(laufPegel)) knoten.disconnect();
+    laufPegel = null;
+  }
   if (laufEl) {
     for (const z of laufEl.querySelectorAll('.demo-zelle.playhead')) z.classList.remove('playhead');
     setzePlayZustand(laufEl, false);
@@ -192,16 +230,23 @@ export function stoppeDemo() {
   laufEl = null;
 }
 
-function spieleStep(ctx, ziel, zeit, demo, step) {
+function spieleStep(ctx, ziel, zeit, demo, step, pegelZiele) {
   if (demo.typ === 'pattern') {
     for (const spur of demo.spuren) {
-      if (spur.schritte[step]) DRUM_STIMME[spur.instrument]?.(ctx, ziel, zeit);
+      if (!spur.schritte[step]) continue;
+      // Die Stimmen nehmen keinen Pegel entgegen (und sollen es auch nicht —
+      // sie klingen live und im Offline-Rendern identisch). Der Unterschied
+      // kommt deshalb aus drei vorbereiteten Gain-Knoten, nicht aus drei
+      // Varianten jeder Stimme.
+      const ziel2 = pegelZiele?.[betonungVon(spur, step)] || ziel;
+      DRUM_STIMME[spur.instrument]?.(ctx, ziel2, zeit);
     }
   } else {
     for (const ev of demo.events) {
       if (ev.schritt !== step) continue;
       const frequenz = frequenzFuerEvent(demo, ev);
-      saite(ctx, ziel, zeit, { frequenz, gedaempft: GEDAEMPFT.has(ev.technik) });
+      const ziel2 = pegelZiele?.[betonungEv(ev)] || ziel;
+      saite(ctx, ziel2, zeit, { frequenz, gedaempft: GEDAEMPFT.has(ev.technik) });
     }
   }
 }
@@ -215,6 +260,15 @@ function starteDemo(sektion, demo, cfg) {
   const gesamt = gesamtSchritte(demo);
   const countinSteps = cfg.countin ? demo.aufloesung : 0;
   const timers = [];
+  // Ein Knoten je Betonungsstufe, nicht einer je Schlag: bei 16 Schlaegen pro
+  // Takt und Schleife waeren das sonst hunderte Knoten pro Minute.
+  const pegelZiele = {};
+  for (const [stufe, faktor] of Object.entries(PEGEL)) {
+    const g = ctx.createGain();
+    g.gain.value = faktor;
+    g.connect(ziel);
+    pegelZiele[stufe] = g;
+  }
 
   const markiere = (col, zeit) => {
     const ms = Math.max(0, (zeit - ctx.currentTime) * 1000);
@@ -227,6 +281,7 @@ function starteDemo(sektion, demo, cfg) {
   laufSched = sched;
   laufTimers = timers;
   laufEl = sektion;
+  laufPegel = pegelZiele;
   sched.starte({
     schrittDauer: (i) => {
       // Nur an einer Rundengrenze beenden. Ohne die Modulo-Bedingung riss das
@@ -242,7 +297,7 @@ function starteDemo(sektion, demo, cfg) {
         return;
       }
       const step = (i - countinSteps) % gesamt;
-      spieleStep(ctx, ziel, zeit, demo, step);
+      spieleStep(ctx, ziel, zeit, demo, step, pegelZiele);
       markiere(step, zeit);
     },
     beiEnde: () => stoppeDemo(),
