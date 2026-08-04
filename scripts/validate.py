@@ -479,6 +479,31 @@ def main():
                 if schluessel not in ui_labels:
                     fehler.append(f'{rel}: t("{schluessel}") hat kein Label unter `ui` in labels/de.json')
 
+    # Icon-Masken: jede in js/ verwendete .fa-*-Klasse braucht eine `--ti`-Maske
+    # in css/schriften.css. Fehlt sie, faerbt `background-color: currentColor`
+    # die ganze Flaeche — der Knopf wird zum gefuellten Kasten. Kein Fehler, kein
+    # Log, nur ein Klotz. Genau so stand `.fa-trash` seit dem Bau der eigenen
+    # Stimmungen im Stimmgeraet, gesehen hat es niemand.
+    with open(os.path.join(ROOT, 'css', 'schriften.css'), encoding='utf-8') as f:
+        icon_css = f.read()
+    vorhanden = set(re.findall(r'^\.fa-([a-z0-9-]+)\s*\{', icon_css, re.M))
+    ICON_KLASSE = re.compile(r"fa-solid\s+fa-([a-z0-9-]+)|icon:\s*'fa-([a-z0-9-]+)'")
+    benutzt = {}
+    for wurzel, _, namen in os.walk(os.path.join(ROOT, 'js')):
+        for name in sorted(namen):
+            if not name.endswith('.js'):
+                continue
+            pfad = os.path.join(wurzel, name)
+            with open(pfad, encoding='utf-8') as f:
+                quelle = f.read()
+            for m in ICON_KLASSE.finditer(quelle):
+                benutzt.setdefault(m.group(1) or m.group(2), set()).add(os.path.relpath(pfad, ROOT))
+    for icon in sorted(benutzt):
+        if icon not in vorhanden:
+            wo = ', '.join(sorted(benutzt[icon]))
+            fehler.append(f'css/schriften.css: Icon "fa-{icon}" hat keine Maske '
+                          f'(benutzt in {wo}) — rendert als gefuellter Kasten')
+
     # Zyklen (Kahn) ueber den ganzen Pool
     von_id = {b['id']: b for b in bausteine}
     offen = {b['id']: 0 for b in bausteine}

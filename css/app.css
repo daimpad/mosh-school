@@ -2200,6 +2200,44 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .stimm-fakten dt { font-weight: 700; }
 .stimm-fakten dd { margin: 0; }
 
+/* Tabulatur-Werkzeug: Eingabefeld + Raster.
+   Die Eingabe MUSS monospace sein — ein ASCII-Tab ist ein Zeichenraster, in
+   einer Proportionalschrift verrutschen die Spalten gegeneinander und der Tab
+   ist nicht mehr lesbar, obwohl er korrekt ist. */
+.tab-eingabe {
+  width: 100%;
+  font-family: 'Courier New', ui-monospace, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  background: var(--flaeche-2);
+  color: var(--tinte);
+  border: 1px solid var(--linie-stark);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.7rem;
+  resize: vertical;
+}
+.tab-raster { display: flex; flex-direction: column; gap: 0.2rem; margin: 0.6rem 0; overflow-x: auto; }
+.tab-zeile { display: flex; align-items: center; gap: 0.5rem; }
+.tab-saite { min-width: 1.6rem; font-weight: 700; font-size: 0.78rem; color: var(--tinte-2); }
+.tab-zellen { display: grid; flex: 1; gap: 2px; min-width: max-content; }
+.tab-zelle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.5rem;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  border: 1px solid var(--trennlinie);
+  border-radius: 2px;
+  color: var(--tinte-2);
+}
+.tab-zelle.an { background: var(--primaer); border-color: var(--primaer); color: var(--auf-primaer); font-weight: 700; }
+/* Taktanfang: linke Kante kräftiger — dieselbe Sprache wie das Demo-Raster. */
+.tab-zelle.takt { border-left-color: var(--linie-stark); }
+/* Laufmarke: nicht-farbliches Signal reicht hier nicht (die Zelle IST schon
+   farbig), deshalb zusätzlich ein Ring. */
+.tab-zelle.jetzt { outline: 2px solid var(--tinte); outline-offset: -2px; }
+
 /* Klang-Werkzeug (Intervalle & Akkorde zum Anhören) */
 .klang-werkzeug { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--linie-stark); }
 .klang-werkzeug h3 { margin: 1rem 0 0.4rem; font-size: 0.95rem; }
