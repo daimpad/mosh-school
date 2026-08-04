@@ -60,8 +60,24 @@ jobs:
       - name: Zerr-Kennlinien gegen die Sollwerte pruefen
         run: python3 scripts/pruefe_zerrlabor.py
 
+      # Prueft den Pruefer: Die Kennwerte der beiden mehrstufigen Ketten stammen
+      # aus der Umsetzung selbst und belegen sie deshalb nicht — sie frieren sie
+      # nur ein. Was so ein Anker wert ist, haengt allein daran, ob er bei einer
+      # Aenderung wirklich ausschlaegt. Genau das rechnet dieser Lauf nach.
+      - name: Mutationstest der Zerr-Pruefung
+        run: python3 scripts/pruefe_zerrlabor_mutation.py
+
       - name: Boxen-Impulsantworten nachrechnen
         run: python3 scripts/pruefe_boxen.py
+
+      # Die Untergrenze der Tonhoehen-Erkennung lag bei 40 Hz und damit UEBER
+      # neun Saiten, die data/tunings.json selbst anbietet. Das Stimmgeraet zeigte
+      # diese Stimmungen an und erkannte ihre tiefste Saite nicht — ohne Fehler,
+      # die Anzeige blieb auf "—". Der gepruefte Bereich kommt aus den Daten,
+      # nicht aus einer Konstante: Eine neue, tiefere Stimmung laesst diesen Lauf
+      # von selbst umfallen.
+      - name: Tonhoehen-Erkennung ueber den Stimmungs-Pool
+        run: node scripts/pruefe_tonhoehe.mjs
 
       # lift.py und build_index.py sind Generatoren mit eingecheckter Ausgabe.
       # Laufen sie hier und aendern etwas, wurden sie vor dem Commit vergessen.

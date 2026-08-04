@@ -1,20 +1,31 @@
 #!/usr/bin/env python3
-"""Titel-Lift + Skelett-Regeneration fuer mosh-school.
+"""Titel-Lift fuer mosh-school.
 
-1. Hebt alle anzeigetitel.de aus den INHALTSDATEIEN (js/daten.js) nach
-   data/labels/de.json, Abschnitt "bausteine" (id -> sichtbarer Titel). Die
-   Inhaltsdatei ist die Quelle der Wahrheit; bestehende Eintraege werden
-   aktualisiert, Reihenfolge = Pool-Reihenfolge.
-2. Erzeugt data/labels/{en,fr,pl}.json als strukturgleiche Skelette von de.json
-   neu: jedes Text-Blatt wird "" — ausser die Zielsprache traegt dort bereits
-   eine nicht-leere Uebersetzung, die bleibt erhalten. Leere Werte fallen zur
-   Laufzeit ohnehin auf de zurueck (js/i18n.js).
+Hebt alle anzeigetitel.de aus den INHALTSDATEIEN (js/daten.js) nach
+data/labels/de.json, Abschnitt "bausteine" (id -> sichtbarer Titel). Die
+Inhaltsdatei ist die Quelle der Wahrheit; bestehende Eintraege werden
+aktualisiert, Reihenfolge = Pool-Reihenfolge.
 
     python3 scripts/lift.py
+    python3 scripts/lift.py --skelette      # zusaetzlich en/fr/pl erzeugen
+
+WARUM DIE SKELETTE NICHT MEHR STANDARDMAESSIG ENTSTEHEN
+data/labels/{en,fr,pl}.json waren strukturgleiche Klone von de.json mit leeren
+Werten — 1934 Blaetter je Datei, davon 1934 leer. Also drei Dateien zu je 57 KB
+ohne ein einziges uebersetztes Wort. Sie kosteten dreierlei: Platz in der
+SW-SHELL (jede Installation lud sie mit), ein Rauschen von drei geaenderten
+Dateien bei JEDER Inhaltsaenderung, und den falschen Eindruck, die App sei
+mehrsprachig. Der Sprachumschalter ist laengst aus dem Menue verschwunden.
+
+Der Weg zurueck bleibt offen: `--skelette` erzeugt sie wieder, und js/i18n.js
+laedt eine Zielsprache nach wie vor, wenn die Datei existiert. Faellt sie weg,
+faengt initI18n() das ab und bleibt bei de — auch fuer Nutzer, die noch ein
+altes `einstellungen.sprache` im localStorage stehen haben.
 """
 import json
 import os
 import re
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIELSPRACHEN = ('en', 'fr', 'pl')
@@ -58,7 +69,9 @@ def skelett(vorlage, bestehend):
     return vorlage
 
 
-def main():
+def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    skelette = '--skelette' in argv
     de = lade('data/labels/de.json')
     titel = de.setdefault('bausteine', {})
 
@@ -84,6 +97,9 @@ def main():
         print('  neu:', ', '.join(neu))
     if waisen:
         print('  entfernt:', ', '.join(waisen))
+
+    if not skelette:
+        return
 
     for lang in ZIELSPRACHEN:
         rel = f'data/labels/{lang}.json'

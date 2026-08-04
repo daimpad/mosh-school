@@ -4,6 +4,15 @@
 
 export const QUELLSPRACHE = 'de';
 
+// Welche Sprachdateien es tatsächlich gibt. Ohne diese Liste versucht initI18n()
+// jede gespeicherte Sprache zu laden und erzeugt für Altbestands-Nutzer (die noch
+// `einstellungen.sprache = 'en'` im localStorage haben, aus der Zeit vor dem
+// Entfernen des Umschalters) bei JEDEM Start einen 404 in der Konsole. Der
+// Rückfall auf de funktionierte auch so — aber ein dauerhafter Fehler im Log ist
+// genau das Rauschen, das echte Fehler unsichtbar macht.
+// Kommt eine Übersetzung dazu: hier eintragen UND in die SHELL von sw.js.
+export const SPRACHEN = ['de'];
+
 let aktiveSprache = QUELLSPRACHE;
 const geladen = {};
 
@@ -17,11 +26,13 @@ async function ladeLabels(sprache) {
 
 export async function initI18n(sprache) {
   await ladeLabels(QUELLSPRACHE);
-  aktiveSprache = sprache || QUELLSPRACHE;
+  const gewuenscht = sprache || QUELLSPRACHE;
+  aktiveSprache = SPRACHEN.includes(gewuenscht) ? gewuenscht : QUELLSPRACHE;
   if (aktiveSprache !== QUELLSPRACHE) {
     try {
       await ladeLabels(aktiveSprache);
     } catch {
+      // Datei gelistet, aber nicht ladbar (Deploy unvollständig) — dann de.
       aktiveSprache = QUELLSPRACHE;
     }
   }
