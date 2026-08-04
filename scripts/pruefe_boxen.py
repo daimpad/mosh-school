@@ -20,6 +20,30 @@ Warum ueberhaupt: Die Beschreibungen in boxen.json sind Zahlen, die niemand
 hoert. Ohne diese Pruefung koennte ein Tippfehler (4800 statt 480) die Box
 lautlos unbrauchbar machen — der Klang waere immer noch „irgendwie dumpf".
 
+WAS DIESE PRUEFUNG LANGE NICHT KONNTE
+Genau den Tippfehler aus dem Absatz darueber. Alle Frequenz-Pruefungen messen
+RELATIV zum angegebenen Wert: „eine Oktave ueber der Eckfrequenz mindestens
+12 dB Abfall" stimmt fuer JEDE Eckfrequenz. Damit wurde geprueft, ob die
+Umsetzung sich wie ein Filter verhaelt — nicht, ob die Zahl in den Daten
+plausibel ist. scripts/pruefe_boxen_mutation.py hat das aufgedeckt: Von sieben
+absichtlich falschen Werten kamen fuenf durch, darunter ein Tiefpass bei
+15 kHz und ein Hochpass bei 8 Hz. Deshalb gibt es jetzt zusaetzlich
+PLAUSIBILITAETSGRENZEN fuer die deklarierten Werte selbst (GRENZEN weiter
+unten) — grob genug, um jede sinnvolle Bauart zuzulassen, eng genug, um eine
+verrutschte Stelle zu fangen.
+
+Zwei weitere Loecher aus demselben Lauf:
+  * Der Reflexionsschwanz wurde als „lauteste Probe ab Sample 64" gemessen.
+    Das ist aber ueberwiegend das Ausschwingen des GEFILTERTEN Direktimpulses:
+    Mit reflexion_pegel = 0 stand dort immer noch 0,06 bis 0,15, die Pruefung
+    „kein Reflexionsschwanz" konnte also nie ausloesen. Ein tiefer gesetzter
+    Tiefpass liess sie umgekehrt faelschlich als „zu laut" anschlagen. Sie
+    misst jetzt differenziell wie alle anderen Bauteile.
+  * praesenz_guete war unbeschraenkt: Ein Peaking-Filter hebt an seiner
+    Mittenfrequenz exakt um praesenz_db, egal wie schmal er ist. Eine Guete
+    von 12 haette eine nadelduenne Resonanz erzeugt und waere durchgegangen.
+    Geprueft wird jetzt die BREITE des Buckels.
+
 Laeuft ohne numpy: die DFT wird an wenigen Stuetzstellen direkt ausgewertet.
 """
 
@@ -32,6 +56,28 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SR = 48000
 SCHALL_M_PRO_S = 343
+
+# Plausibilitaetsgrenzen der DEKLARIERTEN Werte. Sie ersetzen keine Messung —
+# sie fangen die Fehlerklasse, die eine relative Messung prinzipiell nicht
+# sehen kann: eine verrutschte Zehnerstelle. Bewusst weit: Jede Bauart, die
+# als Gitarren- oder Bassbox durchgeht, muss hineinpassen. Zu enge Grenzen
+# waeren schlimmer als keine, weil sie eine legitime neue Box blockieren und
+# dann jemand die Pruefung entschaerft statt die Zahl.
+GRENZEN = {
+    'hochpass_hz': (20, 200),        # Gehaeuse-Abstimmung; Bass tiefer als Gitarre
+    'tiefpass_hz': (1500, 8000),     # Membran-Obergrenze; darueber gibt es keine Box
+    'praesenz_hz': (300, 6000),
+    'praesenz_db': (-12, 12),
+    'mikro_abstand_cm': (0.5, 40),
+    'mikro_pegel': (0.1, 1.0),
+    'reflexion_ms': (2, 60),
+    'reflexion_pegel': (0.01, 0.3),  # darueber uebertoent der Rauschschwanz den Direktschall
+    'dauer_ms': (30, 300),
+}
+# Der Tiefpass muss deutlich ueber dem Hochpass liegen, sonst bleibt kein
+# Durchlassbereich — das faengt vertauschte Werte, die einzeln je fuer sich
+# noch in ihren Grenzen laegen.
+MIN_BANDBREITE = 8
 
 
 def lade(pfad):
@@ -137,8 +183,17 @@ def pegel_db(daten, f, sr=SR):
     return 20 * math.log10(max(abs(summe), 1e-12))
 
 
-def main():
-    daten = lade('data/boxen.json')
+def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    # --quelle erlaubt es, gegen eine Kopie zu pruefen. Genutzt von
+    # scripts/pruefe_boxen_mutation.py, das absichtlich falsche Werte einsetzt
+    # und sehen will, ob dieses Skript anschlaegt — ohne dafuer die
+    # eingecheckte Datei anfassen zu muessen.
+    if '--quelle' in argv:
+        with open(argv[argv.index('--quelle') + 1], encoding='utf-8') as f:
+            daten = json.load(f)
+    else:
+        daten = lade('data/boxen.json')
     boxen = daten.get('boxen') or []
     if not boxen:
         print('data/boxen.json enthaelt keine Boxen', file=sys.stderr)
@@ -179,13 +234,45 @@ def main():
             fehler.append(f'{bez}: Bassabfall zu flach ({unter:+.1f} dB eine Oktave unter '
                           f'{box["hochpass_hz"]} Hz gegenueber {an_ecke:+.1f} dB an der Ecke)')
 
-        # 3. Praesenzbuckel hebt um genau so viel, wie angegeben ist.
+        # 0. Plausibilitaet der DEKLARIERTEN Werte. Muss vor den Messungen
+        #    stehen: Alles Folgende misst relativ zu diesen Zahlen und kann
+        #    deshalb nicht bemerken, wenn eine davon um eine Zehnerstelle
+        #    danebenliegt.
+        for feld, (unten, oben) in GRENZEN.items():
+            if feld not in box:
+                continue
+            wert = box[feld]
+            if not unten <= wert <= oben:
+                fehler.append(f'{bez}: {feld} = {wert} liegt ausserhalb der plausiblen '
+                              f'Spanne {unten}..{oben} — Zehnerstelle verrutscht?')
+        if box['tiefpass_hz'] < box['hochpass_hz'] * MIN_BANDBREITE:
+            fehler.append(f'{bez}: kein Durchlassbereich — Tiefpass {box["tiefpass_hz"]} Hz '
+                          f'liegt weniger als Faktor {MIN_BANDBREITE} ueber dem Hochpass '
+                          f'{box["hochpass_hz"]} Hz')
+        if box.get('praesenz_db') and not (box['hochpass_hz'] * 2 < box['praesenz_hz']
+                                           < box['tiefpass_hz']):
+            fehler.append(f'{bez}: Praesenzbuckel bei {box["praesenz_hz"]} Hz liegt nicht im '
+                          f'Durchlassbereich ({box["hochpass_hz"]}..{box["tiefpass_hz"]} Hz) — '
+                          f'er hebt dort etwas an, das ohnehin weggefiltert ist')
+
+        # 3. Praesenzbuckel hebt um genau so viel, wie angegeben ist — UND ist
+        #    ein Buckel, keine Nadel. Ein Peaking-Filter hebt an seiner
+        #    Mittenfrequenz exakt um praesenz_db, voellig unabhaengig von der
+        #    Guete; ohne die Breitenpruefung waere eine Guete von 12 (eine
+        #    schmale Resonanz statt einer Klangfarbe) nicht von der
+        #    beabsichtigten 1,0 zu unterscheiden.
         if box.get('praesenz_db'):
             hub = unterschied(('praesenz',), box['praesenz_hz'])
             soll = box['praesenz_db']
             if abs(hub - soll) > 1.5:
                 fehler.append(f'{bez}: Praesenzbuckel hebt um {hub:+.1f} dB statt der '
                               f'angegebenen {soll:+.1f} dB')
+            flanke = max(unterschied(('praesenz',), box['praesenz_hz'] / 1.5),
+                         unterschied(('praesenz',), box['praesenz_hz'] * 1.5))
+            if abs(hub) > 0.5 and flanke / hub < 0.25:
+                fehler.append(f'{bez}: Praesenzbuckel ist zu schmal — eine Quinte neben der '
+                              f'Mitte bleiben nur {flanke:+.2f} dB von {hub:+.2f} dB '
+                              f'({flanke / hub:.0%}, erwartet >= 25%). Guete zu hoch?')
 
         # 4. Mikrofonabstand. Die Ausloeschung liegt NICHT bei c/(2*d), sondern
         #    bei sr/(2*versatz): js/audio/box.js rundet die Laufzeit auf ganze
@@ -194,31 +281,70 @@ def main():
         #    idealen Stelle und fand dort folgerichtig keinen Einbruch.
         versatz = round(box['mikro_abstand_cm'] / 100 / SCHALL_M_PRO_S * SR)
         f_notch = SR / (2 * versatz) if versatz > 0 else float('inf')
-        if f_notch < box['tiefpass_hz']:
-            # OHNE den Reflexionsschwanz gemessen: Bei der offenen Box fuellt er
-            # die Kerbe teilweise auf (Pegel 0.12 gegenueber 0.06 der
-            # geschlossenen) — physikalisch richtig, aber hier soll geprueft
-            # werden, ob der zweite Schallweg ueberhaupt und an der richtigen
-            # Stelle wirkt, nicht wie hoerbar er am Ende bleibt.
-            ohne_beide = pegel_db(impulsantwort(box, ohne=('mikro', 'reflexion'), normieren=False), f_notch)
-            nur_reflexionslos = pegel_db(impulsantwort(box, ohne=('reflexion',), normieren=False), f_notch)
-            einbruch = nur_reflexionslos - ohne_beide
-            if einbruch > -2.0:
-                fehler.append(f'{bez}: kein Kammfilter-Einbruch bei {f_notch:.0f} Hz '
-                              f'({einbruch:+.1f} dB gegenueber derselben Box ohne den '
-                              f'zweiten Schallweg) — Mikrofonabstand wirkungslos')
-        else:
-            einbruch = float('nan')
+        # OHNE Reflexionsschwanz UND ohne Tiefpass gemessen. Der Schwanz fuellt
+        # die Kerbe bei der offenen Box teilweise auf (Pegel 0,12 gegenueber
+        # 0,06 der geschlossenen); der Tiefpass drueckt sie bei drei der fuenf
+        # Boxen unter seine eigene Eckfrequenz. Vorher wurde die Pruefung in
+        # genau diesen drei Faellen UEBERSPRUNGEN und der Bericht zeigte „nan" —
+        # der Mikrofonabstand war dort also voellig ungeprueft. Ohne beide
+        # Bauteile ist die Kerbe immer messbar, unabhaengig davon, wo der
+        # Tiefpass sitzt.
+        ohne_lp = ('reflexion', 'tiefpass')
+        ohne_beide = pegel_db(impulsantwort(box, ohne=ohne_lp + ('mikro',), normieren=False), f_notch)
+        mit_mikro = pegel_db(impulsantwort(box, ohne=ohne_lp, normieren=False), f_notch)
+        einbruch = mit_mikro - ohne_beide
+        if einbruch > -2.0:
+            fehler.append(f'{bez}: kein Kammfilter-Einbruch bei {f_notch:.0f} Hz '
+                          f'({einbruch:+.1f} dB gegenueber derselben Box ohne den '
+                          f'zweiten Schallweg) — Mikrofonabstand wirkungslos')
 
-        # 5. Reflexionsschwanz vorhanden, aber leiser als der Direktschall.
-        schwanz = max(abs(x) for x in ir[64:]) if len(ir) > 64 else 0
-        if schwanz <= 0:
-            fehler.append(f'{bez}: kein Reflexionsschwanz — die Faltung waere reine Filterung')
-        elif schwanz > 0.5:
-            fehler.append(f'{bez}: Reflexionsschwanz zu laut ({schwanz:.2f} vom Spitzenwert)')
+        # 5. Reflexionsschwanz — DIFFERENZIELL, wie alle anderen Bauteile auch.
+        #
+        #    Vorher war es die lauteste Probe ab Sample 64. Das ist aber
+        #    ueberwiegend das Ausschwingen des gefilterten Direktimpulses: Mit
+        #    reflexion_pegel = 0 stand dort immer noch 0,06 bis 0,15, die
+        #    Pruefung „kein Reflexionsschwanz" konnte also nie ausloesen, und
+        #    ein tiefer gesetzter Tiefpass liess sie faelschlich als „zu laut"
+        #    anschlagen.
+        #
+        #    Gemessen wird ENERGIE (RMS), nicht die Spitze: Der Schwanz ist
+        #    Rauschen, sein hoechster Einzelwert haengt vom Zufall der Saat ab.
+        #    Mit der Spitze ueberlappten die fuenf gelieferten Boxen (0,11–0,41)
+        #    und eine verdoppelte Mutation (0,21–0,82) so weit, dass keine
+        #    Schwelle sie trennen konnte.
+        #
+        #    Geprueft wird der MECHANISMUS statt des Pegels, weil die Boxen
+        #    konstruktiv unterschiedlich viel Schwanz haben sollen (eine offene
+        #    Box mehr als eine geschlossene) und eine globale Pegelschwelle
+        #    deshalb entweder die offene Box verbietet oder gar nichts faengt:
+        #      a) wirksam    — ohne Schwanz nahe null, mit Schwanz deutlich mehr
+        #      b) proportional — halber Pegel ergibt halbe Energie
+        #    Was das NICHT faengt, ist ein von Hand geaenderter, aber immer noch
+        #    plausibler Pegel (0,06 -> 0,12). Dagegen steht GRENZEN oben.
+        mit_schwanz = impulsantwort(box, normieren=False)
+        ohne_schwanz = impulsantwort(box, ohne=('reflexion',), normieren=False)
+        halb = impulsantwort({**box, 'reflexion_pegel': box['reflexion_pegel'] / 2},
+                             normieren=False)
+
+        def rms(werte):
+            return math.sqrt(sum(x * x for x in werte) / len(werte)) if werte else 0.0
+
+        direkt = rms(ohne_schwanz) or 1.0
+        beitrag = rms([a - b for a, b in zip(mit_schwanz, ohne_schwanz)]) / direkt
+        beitrag_halb = rms([a - b for a, b in zip(halb, ohne_schwanz)]) / direkt
+        if beitrag < 0.05:
+            fehler.append(f'{bez}: kein Reflexionsschwanz ({beitrag:.3f} der Direktschall-'
+                          f'Energie) — die Faltung waere reine Filterung')
+        elif beitrag > 3.0:
+            fehler.append(f'{bez}: Reflexionsschwanz uebertoent den Direktschall '
+                          f'({beitrag:.2f}-fache Energie)')
+        elif beitrag_halb > 0 and not 1.8 < beitrag / beitrag_halb < 2.2:
+            fehler.append(f'{bez}: der Reflexionspegel steuert den Schwanz nicht proportional — '
+                          f'halber Pegel ergibt {beitrag / beitrag_halb:.2f}-fach statt 2-fach '
+                          f'weniger Energie')
 
         print(f'  {bez:22} {len(ir):5} Samples · Hoehen {ueber:+6.1f} · Bass {an_ecke:+5.1f}/{unter:+6.1f} '
-              f'· Kamm {f_notch:5.0f} Hz ({einbruch:+5.1f}) · Schwanz {schwanz:.2f}')
+              f'· Kamm {f_notch:5.0f} Hz ({einbruch:+5.1f}) · Schwanz {beitrag:.3f}')
 
     if fehler:
         print('\nFEHLER:', file=sys.stderr)
