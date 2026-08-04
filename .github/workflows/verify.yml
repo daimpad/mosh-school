@@ -70,6 +70,13 @@ jobs:
       - name: Boxen-Impulsantworten nachrechnen
         run: python3 scripts/pruefe_boxen.py
 
+      # Auch hier: Prueft den Pruefer. Beim ersten Lauf kamen 9 von 10
+      # absichtlich falschen Werten durch — alle Frequenz-Pruefungen massen
+      # relativ zur angegebenen Zahl und konnten deshalb nicht bemerken, wenn
+      # die Zahl selbst um eine Zehnerstelle danebenlag.
+      - name: Mutationstest der Boxen-Pruefung
+        run: python3 scripts/pruefe_boxen_mutation.py
+
       # Die Untergrenze der Tonhoehen-Erkennung lag bei 40 Hz und damit UEBER
       # neun Saiten, die data/tunings.json selbst anbietet. Das Stimmgeraet zeigte
       # diese Stimmungen an und erkannte ihre tiefste Saite nicht — ohne Fehler,
