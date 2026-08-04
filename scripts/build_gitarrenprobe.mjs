@@ -40,20 +40,35 @@ const { chromium } = ladePlaywright();
 const BASIS = 'http://127.0.0.1:8123';
 const PRUEFEN = process.argv.includes('--check');
 
-// Ausgewählt wird die tiefe Leersaite E2 (82,4 Hz) in zwei Anschlagsstärken.
-// E2 ist der tiefste Ton einer normal gestimmten Gitarre — das synthetische
-// Riff daneben liegt auf E1 und damit unterhalb dessen, was eine Gitarre
-// überhaupt hergibt.
+// Fünf Töne, aus denen die Clips des Zerr-Labors zusammengesetzt werden. Die
+// Auswahl folgt dem Griffbrett, nicht der Bequemlichkeit: Ein Powerchord wird
+// auf den Saiten 1–3 gegriffen, also stammen seine Töne auch aus Aufnahmen
+// dieser Saiten statt aus einem hochgezogenen tiefen E. Nur die Quinte (H2)
+// entsteht durch Transponieren aus A2 — zwei Halbtöne, das hört man nicht.
+//
+// E2 (tiefste Saite, 82,4 Hz) liegt in beiden Anschlagsstärken vor: Daran hängt
+// die Aussage des Werkzeugs zur Anschlagsdynamik. Die übrigen Töne tragen nur
+// kurze bzw. klingende Einzelschläge und brauchen deshalb weniger Länge.
 const PROBEN = [
-  { quelle: 'assets/sounds/solotones/E2_s1_01.flac', ziel: 'assets/sounds/gitarre-e2-hart.wav' },
-  { quelle: 'assets/sounds/solotones/E2_s1_soft_01.flac', ziel: 'assets/sounds/gitarre-e2-weich.wav' },
+  { quelle: 'assets/sounds/solotones/E2_s1_01.flac', ziel: 'assets/sounds/gitarre-e2-hart.wav', dauer: 1.8 },
+  { quelle: 'assets/sounds/solotones/E2_s1_soft_01.flac', ziel: 'assets/sounds/gitarre-e2-weich.wav', dauer: 1.8 },
+  { quelle: 'assets/sounds/solotones/A2_s2_01.flac', ziel: 'assets/sounds/gitarre-a2-hart.wav', dauer: 1.5 },
+  { quelle: 'assets/sounds/solotones/E3_s3_01.flac', ziel: 'assets/sounds/gitarre-e3-hart.wav', dauer: 1.5 },
+  { quelle: 'assets/sounds/solotones/G3_s4_01.flac', ziel: 'assets/sounds/gitarre-g3-hart.wav', dauer: 1.5 },
 ];
 
 const ABTASTRATE = 44100;
-const DAUER = 1.8;      // s — trägt die längste Note des Riffs samt Ausklang
-const SPITZE = 0.9;     // beide Proben auf denselben Spitzenwert
+const SPITZE = 0.9;     // alle Proben auf denselben Spitzenwert
 
 async function baue() {
+  // Der Rohbestand ist bewusst NICHT eingecheckt (124 MB). Ohne ihn kann dieses
+  // Skript nichts tun — das soll deutlich dastehen und nicht als 404 im Browser
+  // enden. Woher er kommt, steht in assets/sounds/HERKUNFT.txt.
+  if (!existsSync(PROBEN[0].quelle)) {
+    console.error(`Rohbestand fehlt: ${PROBEN[0].quelle}`);
+    console.error('Er ist bewusst nicht eingecheckt (124 MB). Siehe assets/sounds/HERKUNFT.txt.');
+    process.exit(2);
+  }
   const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
   const seite = await browser.newPage();
   await seite.goto(`${BASIS}/index.html`);
@@ -98,7 +113,7 @@ async function baue() {
       const bytes = new Uint8Array(i16.buffer);
       for (let i = 0; i < bytes.length; i += 8192) bin += String.fromCharCode(...bytes.subarray(i, i + 8192));
       return btoa(bin);
-    }, [probe.quelle, ABTASTRATE, DAUER, SPITZE]);
+    }, [probe.quelle, ABTASTRATE, probe.dauer, SPITZE]);
     ergebnis.push({ ...probe, daten: wavKopf(Buffer.from(b64, 'base64')) });
   }
   await browser.close();
