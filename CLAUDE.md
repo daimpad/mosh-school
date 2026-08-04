@@ -612,11 +612,23 @@ Tokens**, nie harte Farben.
   **Die Standard-Quelle ist eine echte Gitarre, nicht der Synthese-Kern.** Ein
   Sägezahn hat keine Saitenresonanz und kein Plektrum-Geräusch — darauf klingt
   jede Kennlinie gleich plausibel, und der Vergleich, für den es das Werkzeug
-  gibt, sagt nichts. Ausgeliefert werden zwei Klangproben
-  (`assets/sounds/gitarre-e2-{hart,weich}.wav`, je ~155 KB, 16 bit/44,1 kHz/mono),
-  erzeugt von `node scripts/build_gitarrenprobe.mjs` aus dem CC0-Rohbestand
-  `assets/sounds/solotones/` (124 MB FLAC, reines Quellmaterial, wird **nicht**
-  ausgeliefert). Details in `assets/sounds/HERKUNFT.txt`. Vier Punkte hängen daran:
+  gibt, sagt nichts. Ausgeliefert werden **fünf Einzeltöne**
+  (`assets/sounds/gitarre-{e2-hart,e2-weich,a2-hart,e3-hart,g3-hart}.wav`,
+  je 129–155 KB, 16 bit/44,1 kHz/mono), erzeugt von
+  `node scripts/build_gitarrenprobe.mjs` aus einem CC0-Rohbestand (122 FLACs,
+  124 MB), der **bewusst nicht eingecheckt** ist — er wäre Ballast in jedem Klon
+  und jedem Deploy für einen Generator, der selten läuft. Fehlt er, bricht das
+  Skript mit Meldung ab; Details und Neubau-Anleitung in
+  `assets/sounds/HERKUNFT.txt`.
+  **Aus den fünf Tönen baut die Ansicht mehrere `CLIPS`** (Chugs, Anschlags-
+  dynamik, Powerchord, stehender Ton, hohe Lage) — ein einzelnes Signal reicht
+  nicht: Intermodulation zeigt sich erst am Powerchord, Kompression erst am
+  stehenden Ton, Ansprache erst im Wechsel von weichem und hartem Anschlag.
+  Geladen wird **je Clip nur, was er braucht** (Standard: zwei Dateien, nicht
+  fünf). Ein neuer Clip ist ein Eintrag in `CLIPS` plus zwei Labels
+  (`zerrlabor_clip_<id>` und `…_text`) — braucht er einen neuen Ton, kommt der
+  in `PROBEN` **im Generator** dazu, nie von Hand ins `assets/`-Verzeichnis.
+  Vier Punkte hängen daran:
   - **Direktsignal, kein Verstärkerton.** Das Werkzeug hängt seine eigene Zerre
     und Box dahinter; ein bereits verzerrtes Sample wäre doppelt verzerrt und die
     Kennlinien nicht mehr auseinanderzuhalten.
@@ -625,9 +637,14 @@ Tokens**, nie harte Farben.
   - **Ein Kanal, nicht summiert.** Die beiden Spuren des Rohbestands sind
     dieselbe Aufnahme um 3–13 Samples versetzt — summiert ergäben sie einen
     Kammfilter, der in der Aufnahme nicht drin ist.
-  - **Beide Quellen sind pegelgleich eingemessen** (Ausgangs-RMS 0,070 gegen
-    0,063). Bei ungleichem Pegel klippt die Kennlinie beim Quellenwechsel
-    unterschiedlich stark, und die Chips verglichen Lautstärke statt Signal.
+  - **Echte Saiten statt Transposition.** Die Powerchord-Töne stammen aus
+    Aufnahmen der Saiten, auf denen man sie auch greift; nur die Quinte entsteht
+    aus A2 zwei Halbtöne höher.
+  - **Alle Quellen und Clips sind pegelgleich eingemessen** (Ausgangs-RMS
+    0,062–0,070 gegen 0,063 beim synthetischen Riff). Bei ungleichem Pegel
+    klippt die Kennlinie beim Wechsel unterschiedlich stark, und die Chips
+    verglichen Lautstärke statt Signal — der Powerchord lag zunächst 2,4 dB
+    daneben.
   Der Generator braucht Chromium (FLAC lässt sich weder mit Node- noch mit
   Python-Bordmitteln dekodieren) und läuft deshalb **nicht** in `verify.yml`;
   dort prüft `validate.py` nur, dass die zwei WAVs existieren und Mono/16 bit/
