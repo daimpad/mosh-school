@@ -148,6 +148,68 @@
           "steigerung": "Spiel kurze, rhythmische Tonfolgen und sorg dafür, dass die Pausen wirklich still sind.",
           "selbstkontrolle": "Nur die gespielte Saite klingt; keine mitschwingenden Nachbarsaiten, saubere Pausen."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 0,
+            "technik": "dead_note"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "dead_note"
+          }
+        ],
+        "hinweis": "Nach jedem Ton ein gedämpfter Schlag. Die Greifhand legt sich locker auf — so entsteht Stille statt Nachklingen, und genau das trennt eine tighte Linie von Matsch."
       }
     },
     {
@@ -289,7 +351,117 @@
       },
       "transfer_herkunft": [
         "GIT"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 130,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Sechzehn gleichmäßige Anschläge. Beim Plektrum entscheidet der Winkel: zu steil klackt es, zu flach verliert der Ton die Kante."
+      }
     },
     {
       "id": "anschlagpunkt_ton",
@@ -546,6 +718,212 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und zieh die Figur später über Saitenwechsel.",
           "selbstkontrolle": "Der Ton fließt gleichmäßig; bei Verkrampfung oder Brennen stoppst du und lockerst die Hand."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Sechzehntel bei 120 — das sind acht Anschläge pro Sekunde. Wechsle die Finger strikt, auch wenn es langsamer erst mühsam wirkt."
       }
     },
     {

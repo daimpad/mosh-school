@@ -195,6 +195,404 @@
           "steigerung": "Ersetz in Riff A einen Ton durch einen dissonanteren Nachbarn (kleine Sekunde, Tritonus) und prüf, ob die Zelle dadurch mehr Biss bekommt — Grind-Riffs vertragen mehr Reibung, als man denkt.",
           "selbstkontrolle": "Nimm die Miniatur auf: Sind die Schnitte wirklich abrupt (kein Nachklingen, kein Zögern)? Bleibt das Tremolo bis zum Schnitt gleichmäßig dicht? Und ehrlich: Ist irgendein Takt drin, der nichts sagt?"
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 220,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 33,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 34,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 35,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 36,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 37,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 38,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 39,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 40,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 41,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 42,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 43,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 44,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 45,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 46,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 47,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 49,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 50,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 51,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 52,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 53,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 54,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 55,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 56,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 57,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 58,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 59,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 60,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 61,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 62,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 63,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwei Takte Riff A, zwei Takte Riff B — mehr braucht eine Grind-Miniatur nicht. Der Schnitt dazwischen ist hart und ohne Ankündigung."
       }
     },
     {
@@ -561,6 +959,260 @@
           "steigerung": "Lass eine zweite Person die Wechsel per Handzeichen auslösen oder würfle die Reihenfolge — unvorhersehbare Schnitte sind die Live-Realität des Genres.",
           "selbstkontrolle": "Nimm die Kette auf und bewerte nur die Schnitte: Klingt zwischen letztem A-Schlag und erstem B-Akkord wirklich nichts nach? Steht das B-Tempo sofort, wenn du es mit dem Metronom nachmisst — oder erst nach einem Takt?"
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 190,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 40,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 40,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 56,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 56,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwei Takte Geschrammel, dann auf den Schlag in den Block: dieselbe BPM, ein Achtel der Dichte. Powerviolence ist der Schalter zwischen zwei Zuständen, nicht das Tempo."
       }
     },
     {
@@ -598,6 +1250,116 @@
           "steigerung": "Verlängere auf drei, vier Minuten im selben Tempo, bevor du schneller wirst — und markier wie beim Dauerlauf die Stellen, an denen du unbewusst Kraft aufbaust, um genau dort zu lockern.",
           "selbstkontrolle": "Auf der Aufnahme: Bleiben alle Anschläge über die volle Dauer gleich laut? Ist zwischen den Riffs echte Stille statt Rauschteppich? Brennende Unterarme heißen: Bewegung zu groß oder zu verkrampft — kürzer üben, lockerer spielen."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 175,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 5,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Drei Griffe, durchgehende Achtel, kein Innehalten. Die Säge lebt davon, dass sich nichts ändert — auch nicht nach fünf Minuten."
       }
     },
     {
@@ -635,6 +1397,116 @@
           "steigerung": "Wechsle innerhalb der Linie zwischen exakter Gitarren-Doppelung und einer eigenen Figur (Oktave, ein Durchgang zum nächsten Grundton) — die Wand darf sich bewegen, solange die Verzahnung mit der Kick steht.",
           "selbstkontrolle": "Auf der Aufnahme mit allen Instrumenten: Kannst du den Bass als eigene Kante hören UND das Riff der Gitarre noch mitsingen? Im Alleinträger-Teil: Bleibt das Tempo exakt, oder sackt es, sobald die Gitarre fehlt?"
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 175,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 4,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 4,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 4,
+            "bund": 5,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Exakt dieselbe Figur wie die Crust-Gitarre, eine Oktave tiefer. Nur wenn beide auf denselben Achteln sitzen, entsteht eine Wand statt Brei."
       }
     }
   ]

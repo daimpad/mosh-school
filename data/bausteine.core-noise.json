@@ -345,7 +345,129 @@
       "voraussetzungen": [
         "dissonante_intervalle",
         "string_skipping"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 3,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 3,
+            "bund": 2,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Kleine Sekunden und Sprünge über das ganze Griffbrett, dazu unregelmäßige Abstände. Kantig ist nicht dasselbe wie zufällig — das Muster wiederholt sich."
+      }
     },
     {
       "id": "noise_tunings",

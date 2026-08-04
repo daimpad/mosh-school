@@ -330,7 +330,105 @@
       },
       "spielziele": [
         "timing_zum_klick"
-      ]
+      ],
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 105,
+        "aufloesung": 12,
+        "takte": 2,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hinweis": "Zwölfer-Raster statt Sechzehntel: Der Puls teilt sich in Dreiergruppen, daher das Rollende. Die Kick sitzt bewusst leicht hinter der Mitte des Beats."
+      }
     },
     {
       "id": "stoner_jam",

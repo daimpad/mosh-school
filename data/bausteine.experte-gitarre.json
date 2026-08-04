@@ -46,6 +46,122 @@
           "steigerung": "Das Muster über die Taktgrenze verlängern (z. B. 3,5 Schläge lang) und gegen den Klick loopen.",
           "selbstkontrolle": "Auf der Aufnahme sind Anschläge und Pausen messerscharf getrennt; nichts klingt nach."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Chugs in ungleichen Gruppen, dazwischen echte Stille. Die Pausen sind der Inhalt — wer sie füllt, spielt kein Djent, sondern nur schnell."
       }
     },
     {
@@ -88,6 +204,308 @@
           "steigerung": "Die Ausflüge verlängern und ein echtes Riff (Tonwechsel!) statt eines Einzeltons verwenden.",
           "selbstkontrolle": "Die 100-%-Takte klingen wie die 85-%-Takte — nur schneller; danach ist die Hand sofort wieder locker."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 200,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 32,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 34,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 36,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 38,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 40,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 42,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 44,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 46,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 48,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 50,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 52,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 54,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 56,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 58,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 60,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 62,
+            "saite": 6,
+            "bund": 3,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Zwei Takte Sechzehntel auf Blast-Tempo, dann zwei Takte Achtel. Die Kurzpassage ist machbar — die Kunst ist, danach nicht zu hetzen."
       }
     },
     {

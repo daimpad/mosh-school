@@ -42,6 +42,80 @@
           "steigerung": "Leg einen einfachen Clean- oder Lead-Ton über das Ende jeder Phrase — der Kontrast zwischen dem perkussiven Chug-Teil und einem klingenden Ton ist die halbe Djent-Ästhetik. Oder spiel dasselbe Muster eine Terz höher als Akzentnote statt reinem Grundton.",
           "selbstkontrolle": "Nimm dich mit Klick auf: Bleibt der Grundpuls hörbar gerade, während deine Betonung wandert? Knallt jeder Chug und ist tot, oder rauscht die tiefe Saite nach? Und der Ehrlichkeits-Test: Nickt dein Kopf zum Groove — oder zählst du krampfhaft mit? Wenn du zählen musst, ist das Muster noch nicht im Körper — zurück zu Schritt 3."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Die Chugs laufen in Fünfergruppen, der Puls bleibt gerade. Erst nach mehreren Takten treffen sich beide wieder auf der Eins — bis dahin wandert das Muster."
       }
     },
     {

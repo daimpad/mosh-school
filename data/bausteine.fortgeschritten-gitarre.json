@@ -41,6 +41,212 @@
           "steigerung": "Erst die Dauer bei gleichem Tempo verlängern, dann das Tempo in kleinen Schritten anheben.",
           "selbstkontrolle": "Der Tonstrom klingt gleichmäßig und dicht; es ist kein unbeabsichtigter Puls und kein Aussetzer zu hören."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zweiunddreißig Sechzehntel ohne Pause. Nicht das Tempo entscheidet, sondern ob der letzte Anschlag noch so laut ist wie der erste."
       }
     },
     {
@@ -77,6 +283,212 @@
           "steigerung": "Die Melodie um weitere Töne verlängern und das Tempo nur anheben, solange die Hand locker bleibt.",
           "selbstkontrolle": "Der Tremolo-Strom reißt beim Tonwechsel nicht ab, der Unterarm bleibt locker, und die Melodie ist klar herauszuhören."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 150,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Tremolo mit wandernder Tonhöhe: alle vier Sechzehntel ein neuer Griff. Der Strom darf am Lagenwechsel nicht stocken — das ist der Unterschied zum Tremolo auf einem Ton."
       }
     },
     {
@@ -263,6 +675,164 @@
           "steigerung": "Die Galopp-Figuren zwischen zwei Tonhöhen bewegen und das Tempo in kleinen Schritten anheben.",
           "selbstkontrolle": "Beide Varianten sind klar zu unterscheiden, die Sechzehntel bleiben gleich lang, und der Wechsel eilt nicht."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 165,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Takt 1 Standard-Galopp (lang-kurz-kurz), Takt 2 Umkehr-Galopp (kurz-kurz-lang). Beide klingen ähnlich und liegen doch gegeneinander — die Naht macht den Unterschied hörbar."
       }
     },
     {
@@ -300,6 +870,110 @@
           "steigerung": "Die Akzente synkopisch verschieben (auf schwache Zählzeiten) und das Muster im Loop spielen.",
           "selbstkontrolle": "Gedämpfte und offene Töne sind klar getrennt, die Akzente sitzen im Timing, und die Dämpfung schwankt nicht unbeabsichtigt."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 150,
+        "aufloesung": 16,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 13,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Gedämpfter Motor, dazwischen zwei offene Akzente. Die Dämpfung ist kein Dauerzustand, sondern ein Regler — wer ihn nie loslässt, spielt gleichmäßig langweilig."
       }
     },
     {
@@ -336,6 +1010,68 @@
           "steigerung": "Größere Sprünge einbauen (zwei Saiten überspringen) und das Tempo im Wechselschlag anheben.",
           "selbstkontrolle": "Nur die beiden gewollten Töne klingen, die übersprungene Saite bleibt stumm, und du triffst sicher."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 110,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 2,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Zwischen tiefer E- und D-Saite hin und her — die A-Saite dazwischen bleibt stumm. Genau sie stößt man beim Üben zuerst an."
       }
     },
     {
@@ -404,6 +1140,68 @@
           "steigerung": "Längere Legato-Ketten über mehrere Finger bilden und erst dann das Tempo erhöhen.",
           "selbstkontrolle": "Der gehämmerte und der gezogene Ton klingen klar und ähnlich laut wie der angeschlagene, ohne zu verstummen."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Acht Töne, aber nur zwei sollen angeschlagen werden — die übrigen kommen aus der Greifhand. Die Demo spielt jeden Ton an; das Raster zeigt die Bewegung, nicht den Anschlag."
       }
     },
     {
@@ -436,6 +1234,44 @@
           "steigerung": "Slides zwischen zwei Tönen hinzunehmen und Bends auf verschiedenen Saiten üben.",
           "selbstkontrolle": "Der gezogene Ton trifft die Zielhöhe sauber, und Slides landen genau auf dem gewünschten Bund."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 95,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 7,
+            "technik": "slide"
+          },
+          {
+            "schritt": 4,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 2,
+            "bund": 9,
+            "technik": "bend"
+          }
+        ],
+        "hinweis": "Erst ein Slide (Finger bleibt auf der Saite), dann ein Bending (Saite wird quer gezogen) — beide gepunktet markiert. Die Demo spielt sie als normalen Anschlag: Den Weg zum Zielton macht erst deine Hand hörbar, das Raster zeigt nur, wo er hingehört."
       }
     },
     {
@@ -508,6 +1344,116 @@
           "steigerung": "Die Box an einen anderen Bund verschieben und das Lick über ein Riff im Hintergrund spielen.",
           "selbstkontrolle": "Du greifst die Form ohne Suchen, dein Lick klingt musikalisch, und die Verzierung sitzt sauber."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 105,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "A-Moll-Pentatonik in der fünften Lage, einmal hinauf und wieder herunter. Zwei Töne je Saite — daraus besteht praktisch jedes Metal-Lead."
       }
     },
     {
@@ -545,6 +1491,68 @@
           "steigerung": "Den Tritonus ins Tremolo-Riffing übernehmen und weitere dissonante Intervalle ausprobieren.",
           "selbstkontrolle": "Die Dissonanz klingt gewollt und rhythmisch fest, und der Kontrast zum stabilen Akkord ist deutlich hörbar."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 1,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 1,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Erst der Tritonus (E plus B♭), dann zum Vergleich die reine Quinte (E plus H) und zurück. Derselbe Grundton, ein Bund Unterschied — und ein völlig anderer Charakter."
       }
     },
     {
