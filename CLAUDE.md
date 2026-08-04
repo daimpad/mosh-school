@@ -288,6 +288,7 @@ python3 scripts/validate.py              # Cross-File-Konsistenz über den gemis
 python3 scripts/lift.py                  # idempotent — Titel geliftet, Skelette aktuell
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
 python3 scripts/build_seiten.py --check   # Tier-2-SEO-Seiten + Sitemap aus den Quellen reproduzierbar
+python3 scripts/pruefe_boxen.py          # Box-Impulsantworten treffen ihre Beschreibung
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
 
@@ -532,6 +533,29 @@ Tokens**, nie harte Farben.
   die Sollwerte nach und prüft die Schwellen-Reihenfolge eigens.
   **Pegelbegrenzung ist Pflicht** — ein fester, nicht abschaltbarer Begrenzer sitzt
   vor dem Ausgang, dazu Lautstärke- und (bei Mikrofoneingang) Kopfhörer-Hinweis.
+- **Boxensimulation** (`js/audio/box.js`, `data/boxen.json`): Hinter der Kennlinie
+  sitzt wahlweise ein `ConvolverNode` mit einer **synthetisierten** Impulsantwort.
+  Bewusst keine gemessenen Cabinet-IRs: Die wären Binärdateien fremder Herkunft
+  (Lizenz je Datei zu belegen) und bildeten konkrete Produkte ab — genau das, was
+  die Zerrtypen-Regel vermeidet. Eine Box ist hier eine **Bauart**, kein Modell.
+  Die Impulsantwort entsteht aus vier Teilen: Direktschall, ein zweiter
+  Schallweg (Mikrofonabstand → Kammfilter), abklingende Gehäuse-Reflexionen
+  (seeded Rauschen) und die Bandbegrenzung (Hochpass + **zwei kaskadierte**
+  Tiefpässe, 24 dB/Okt. — mit nur einem klingt es gefiltert statt nach Box).
+  **Warum überhaupt Faltung:** Wäre die IR nur die Antwort einer Filterkette,
+  könnte man die Filter direkt einhängen. Den Unterschied machen Kammfilter und
+  Reflexionsschwanz — beides liegt in der Zeitachse, nicht im Frequenzgang.
+  `python3 scripts/pruefe_boxen.py` (auch in `verify.yml`) rechnet die Formeln in
+  Python nach. **Alle Bauteile werden DIFFERENZIELL gemessen** — dieselbe Box mit
+  und ohne das Bauteil, an derselben Frequenz. Ein Vergleich gegen
+  Nachbarfrequenzen misst die Flanken der anderen Bauteile mit und meldete beim
+  ersten Anlauf drei Fehler, wo keine waren; unterhalb von 40 Hz kommt bei 70–110 ms
+  Fensterlänge zusätzlich der Leckeffekt dazu. Zwei Fallstricke stecken in den
+  Zahlen: Die Kammfilter-Kerbe liegt bei `sr/(2·versatz)` und **nicht** bei
+  `c/(2·abstand)`, weil die Laufzeit auf ganze Samples gerundet wird (bei 4 cm
+  verschiebt das die Kerbe um 300 Hz), und der Reflexionspegel muss deutlich unter
+  dem Direktschall liegen (0,06–0,12) — bei 0,3 überragt der Rauschschwanz nach der
+  Bandbegrenzung den Direktschall.
 
 ## Sprache & Sicherheit
 
