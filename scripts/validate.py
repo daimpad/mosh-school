@@ -15,6 +15,7 @@ import json
 import os
 import re
 import sys
+import wave
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -556,6 +557,28 @@ def main():
     for bid in sorted(idset):
         if not os.path.isfile(os.path.join(ROOT, 'baustein', bid, 'index.html')):
             warnung.append(f'{bid}: keine generierte Seite (scripts/build_seiten.py laufen lassen)')
+
+    # Klangproben des Zerr-Labors: Die Pfade stehen in der View, die Dateien
+    # entstehen aus scripts/build_gitarrenprobe.mjs. Jener Generator braucht
+    # Chromium (FLAC-Dekodierung) und laeuft deshalb NICHT in der CI — hier
+    # steht die billige Variante: existiert die Datei, und ist sie das, was die
+    # View erwartet? Ein kaputtes oder versehentlich geloeschtes WAV faellt
+    # sonst erst beim Hoeren auf, und dort nur als stiller Rueckfall aufs
+    # synthetische Riff.
+    zerrlabor_js = os.path.join(ROOT, 'js', 'ansichten', 'werkzeug-zerrlabor.js')
+    with open(zerrlabor_js, encoding='utf-8') as f:
+        proben_pfade = re.findall(r"'(assets/sounds/[^']+\.wav)'", f.read())
+    if not proben_pfade:
+        fehler.append('werkzeug-zerrlabor.js: keine Klangproben-Pfade gefunden (Literal umbenannt?)')
+    for pfad in proben_pfade:
+        voll = os.path.join(ROOT, pfad)
+        if not os.path.isfile(voll):
+            fehler.append(f'Klangprobe "{pfad}" fehlt (node scripts/build_gitarrenprobe.mjs)')
+            continue
+        with wave.open(voll) as w:
+            ist = (w.getnchannels(), w.getsampwidth(), w.getframerate())
+        if ist != (1, 2, 44100):
+            fehler.append(f'Klangprobe "{pfad}": erwartet Mono/16 bit/44100 Hz, ist {ist}')
 
     # Bericht
     print(f'Pool: {len(bausteine)} Bausteine ueber {len(dateien)} Dateien')

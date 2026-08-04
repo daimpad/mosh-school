@@ -843,7 +843,8 @@
     "zerrlabor_start": "Abspielen",
     "zerrlabor_stopp": "Stopp",
     "zerrlabor_vergleich": "Gegen clean vergleichen",
-    "zerrlabor_quelle_riff": "Riff",
+    "zerrlabor_quelle_gitarre": "Echte Gitarre",
+    "zerrlabor_quelle_riff": "Synthetisches Riff",
     "zerrlabor_quelle_mikro": "Mikrofon",
     "zerrlabor_signalweg": "Signalweg",
     "zerrlabor_pegel": "Ausgangspegel",
@@ -854,6 +855,8 @@
     "zerrlabor_lautstaerke": "Klippung hebt den Pegel stark an — zwischen der leisesten und der lautesten Kennlinie liegen über 13 dB. Ein Begrenzer sitzt fest im Ausgang, trotzdem: Lautstärke herunterdrehen, bevor du startest, und Gehörschutz ernst nehmen.",
     "zerrlabor_kopfhoerer": "Mit Mikrofon nur über Kopfhörer — sonst koppelt das verzerrte Signal über die Lautsprecher zurück.",
     "zerrlabor_mikro_fehlt": "Kein Mikrofon verfügbar oder Zugriff abgelehnt — zurück auf das Riff.",
+    "zerrlabor_probe_fehlt": "Die Gitarren-Klangprobe ließ sich nicht laden (offline?) — es läuft das synthetische Riff.",
+    "zerrlabor_quelle_hinweis": "Die echte Gitarre ist ein Direktsignal ohne Verstärker: eine tiefe Leersaite in zwei Anschlagsstärken, aufgenommen ohne jede Zerre. Alles, was du hörst, macht erst die Kennlinie hier.",
     "zerrlabor_leer": "Noch keine Kennlinien."
   },
   "bausteine": {
