@@ -3,8 +3,19 @@
 // Unterschiede hörbar UND sichtbar — die Übertragungskurve wird als SVG gezeichnet,
 // damit man den Zusammenhang zwischen Kurvenform und Klang sieht.
 //
-// Quelle wahlweise ein synthetisiertes Riff (Standard, funktioniert immer) oder das
+// Quelle wahlweise eine echte Gitarre (Standard), ein synthetisiertes Riff oder das
 // Mikrofon/Instrument. Vergleichstaste gegen `kl_clean`.
+//
+// WARUM EINE ECHTE GITARRE: Ein Sägezahn hat keine Saitenresonanz, kein
+// Plektrum-Geräusch und keinen Anschlag, der über die Zeit dunkler wird — auf so
+// einem Signal klingt jede Kennlinie plausibel, und der Vergleich sagt nichts.
+// Die Klangproben (assets/sounds/gitarre-e2-*.wav, aus dem CC0-Bestand unter
+// assets/sounds/solotones/ über scripts/build_gitarrenprobe.mjs erzeugt) sind
+// bewusst DIREKTSIGNAL ohne Verstärker: Das Werkzeug hängt seine eigene Zerre und
+// Box dahinter — ein bereits verzerrtes Sample würde doppelt verzerrt und die
+// Kennlinien wären nicht mehr auseinanderzuhalten.
+// Zwei Anschlagsstärken statt einer, weil genau daran hängt, was ein Zerrer tut:
+// Bei weichem Anschlag klippt dieselbe Schaltung deutlich weniger.
 //
 // Einstellungen sind flüchtiger, gerätelokaler Modul-State (wie patterns.js).
 //
@@ -18,13 +29,14 @@ import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeAusgang, holeKontext, istBereit } from '../audio/kontext.js';
 import { baueKette, uebertragung } from '../audio/zerre.js';
 import { baueBox } from '../audio/box.js';
+import { ladeKlangprobe } from '../audio/klangprobe.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const zustand = {
   kennlinie: null,      // id; null = erste aus den Daten
   gain: 1,              // Faktor auf den Kennlinien-Gain
   filter: 1,            // Faktor auf Hoch-/Tiefpass
-  quelle: 'riff',       // 'riff' | 'mikro'
+  quelle: 'gitarre',    // 'gitarre' | 'riff' | 'mikro'
   laeuft: false,
   vergleich: false,     // true = kl_clean statt der gewählten Kennlinie
   box: null,            // id aus data/boxen.json; null = ohne Boxensimulation
@@ -115,33 +127,104 @@ function baueBegrenzer(ctx) {
   return { eingang: komp, trenne: () => { komp.disconnect(); aus.disconnect(); } };
 }
 
+// Ein Riff, zwei Quellen: dieselben acht Achtel, dieselben Halbtonschritte.
+// Nur so vergleicht der Wechsel zwischen synthetischer und echter Gitarre
+// wirklich das Signal und nicht zwei verschiedene Riffs.
+const RIFF_SCHRITT = 0.16;                          // s je Achtel
+const RIFF_STUFEN = [0, 0, 0, 3, 0, 0, 1, 0];       // Halbtöne über dem Grundton
+// Harter Anschlag auf der Eins und auf den beiden Wechseltönen — dazwischen
+// weich. Das ist die Anschlagsfolge, die ein Mensch spielt, und sie macht den
+// Unterschied zwischen den Kennlinien überhaupt erst hörbar: Ein Zerrer klippt
+// den harten Schlag und lässt den weichen fast durch.
+const RIFF_HART = [true, false, false, true, false, false, true, false];
+
+// Plant einen Takt und weckt sich per Timer zum nächsten. Die Zeiten hängen an
+// ctx.currentTime, der Timer plant nur nach — naives setTimeout-Timing für
+// einzelne Töne wäre hörbar ungenau.
+function taktSchleife(ctx, planeTakt) {
+  const spiele = () => {
+    planeTakt(ctx.currentTime + 0.02);
+    riffTimer = setTimeout(spiele, 8 * RIFF_SCHRITT * 1000 - 40);
+  };
+  spiele();
+  return { stop: () => { clearTimeout(riffTimer); riffTimer = null; } };
+}
+
 // Synthetisiertes Riff als Quelle: gedämpfte Achtel auf einem tiefen Grundton,
-// wie die Pattern-Demos. Kein Sample — der Audio-Kern ist Synthese-only.
+// wie die Pattern-Demos. Fällt ein, wenn die Klangprobe nicht geladen werden
+// kann (offline) — deshalb bleibt es erhalten.
 function starteRiff(ctx, ziel) {
   const grund = 82.41 / 2; // E1, tief genug, damit die Klippung deutlich wird
-  let takt = 0;
-  const spiele = () => {
-    const t0 = ctx.currentTime + 0.02;
+  return taktSchleife(ctx, (t0) => {
     for (let i = 0; i < 8; i++) {
-      const zeit = t0 + i * 0.16;
+      const zeit = t0 + i * RIFF_SCHRITT;
       const osc = ctx.createOscillator();
       const h = ctx.createGain();
       osc.type = 'sawtooth';
-      const stufe = [0, 0, 0, 3, 0, 0, 1, 0][i];
-      osc.frequency.setValueAtTime(grund * 2 ** (stufe / 12), zeit);
+      osc.frequency.setValueAtTime(grund * 2 ** (RIFF_STUFEN[i] / 12), zeit);
       h.gain.setValueAtTime(0.0001, zeit);
       h.gain.exponentialRampToValueAtTime(0.5, zeit + 0.006);
       h.gain.exponentialRampToValueAtTime(0.0001, zeit + 0.14);
       osc.connect(h);
       h.connect(ziel);
       osc.start(zeit);
-      osc.stop(zeit + 0.16);
+      osc.stop(zeit + RIFF_SCHRITT);
     }
-    takt += 1;
-    riffTimer = setTimeout(spiele, 8 * 160 - 40);
-  };
-  spiele();
-  return { stop: () => { clearTimeout(riffTimer); riffTimer = null; } };
+  });
+}
+
+// Dasselbe Riff aus echten Gitarrentönen. Die Klangprobe ist die tiefe
+// Leersaite E2 (82,4 Hz) — die Halbtonschritte des Riffs entstehen über
+// playbackRate. Bei höchstens drei Halbtönen ist das unauffällig; für mehr
+// bräuchte es weitere Proben und damit weitere Ladelast.
+function starteGitarrenriff(ctx, ziel, proben) {
+  return taktSchleife(ctx, (t0) => {
+    for (let i = 0; i < 8; i++) {
+      const zeit = t0 + i * RIFF_SCHRITT;
+      const letzte = i === 7;
+      const quelle = ctx.createBufferSource();
+      quelle.buffer = RIFF_HART[i] ? proben.hart : proben.weich;
+      quelle.playbackRate.value = 2 ** (RIFF_STUFEN[i] / 12);
+      // Beide Proben sind auf denselben Spitzenwert normiert — die
+      // Anschlagsstärke steckt in der Klangfarbe, den Pegel setzt das Riff.
+      // Die Werte sind gegen das synthetische Riff eingemessen (gleicher
+      // Ausgangs-RMS): Ein gestrichener Ton trägt deutlich mehr Energie als
+      // der kurze Sägezahn-Anschlag, und bei ungleichem Pegel klippt die
+      // Kennlinie beim Quellenwechsel unterschiedlich stark — dann verglichen
+      // die beiden Quellen Lautstärke statt Signalcharakter.
+      const pegel = RIFF_HART[i] ? 0.27 : 0.17;
+      // Abgedämpfte Achtel; der letzte Ton klingt aus, damit man auch hört, was
+      // die Kennlinie mit einem stehenden Ton macht.
+      const dauer = letzte ? 0.5 : 0.14;
+      const h = ctx.createGain();
+      h.gain.setValueAtTime(pegel, zeit);
+      h.gain.setValueAtTime(pegel, zeit + dauer * 0.7);
+      h.gain.exponentialRampToValueAtTime(0.0001, zeit + dauer);
+      quelle.connect(h);
+      h.connect(ziel);
+      quelle.start(zeit);
+      quelle.stop(zeit + dauer + 0.02);
+    }
+  });
+}
+
+const PROBEN = {
+  hart: 'assets/sounds/gitarre-e2-hart.wav',
+  weich: 'assets/sounds/gitarre-e2-weich.wav',
+};
+
+// Rückgabewert von starte() → Label-Schlüssel für die Statuszeile.
+const MELDUNG = {
+  mikro_fehlt: 'zerrlabor_mikro_fehlt',
+  probe_fehlt: 'zerrlabor_probe_fehlt',
+};
+
+async function ladeProben(ctx) {
+  const [hart, weich] = await Promise.all([
+    ladeKlangprobe(ctx, PROBEN.hart),
+    ladeKlangprobe(ctx, PROBEN.weich),
+  ]);
+  return { hart, weich };
 }
 
 function stoppe() {
@@ -191,6 +274,17 @@ async function starte(daten) {
     mikroStrom = mikro.strom;
     quelleNode = mikro.knoten;
     quelleNode.connect(kette.eingang);
+  } else if (zustand.quelle === 'gitarre') {
+    // Ohne Netz (die Klangproben stehen bewusst nicht in der SW-Hülle) fällt das
+    // Werkzeug auf das synthetische Riff zurück, statt stumm zu bleiben.
+    const proben = await ladeProben(ctx).catch(() => null);
+    if (!proben) {
+      zustand.quelle = 'riff';
+      quelleNode = starteRiff(ctx, kette.eingang);
+      zustand.laeuft = true;
+      return 'probe_fehlt';
+    }
+    quelleNode = starteGitarrenriff(ctx, kette.eingang, proben);
   } else {
     quelleNode = starteRiff(ctx, kette.eingang);
   }
@@ -277,9 +371,11 @@ export function renderWerkzeugZerrlabor(el, daten) {
           <input id="zl-filter" type="range" min="0.4" max="2.5" step="0.05" value="${zustand.filter}">
         </p>
         <p class="chip-zeile">
+          <button type="button" class="chip${zustand.quelle === 'gitarre' ? ' chip-akzent' : ''}" data-quelle="gitarre">${esc(t('zerrlabor_quelle_gitarre'))}</button>
           <button type="button" class="chip${zustand.quelle === 'riff' ? ' chip-akzent' : ''}" data-quelle="riff">${esc(t('zerrlabor_quelle_riff'))}</button>
           <button type="button" class="chip${zustand.quelle === 'mikro' ? ' chip-akzent' : ''}" data-quelle="mikro">${esc(t('zerrlabor_quelle_mikro'))}</button>
         </p>
+        ${zustand.quelle === 'gitarre' ? `<p class="leise">${esc(t('zerrlabor_quelle_hinweis'))}</p>` : ''}
         ${zustand.quelle === 'mikro' ? `<p class="zerr-warnung">${esc(t('zerrlabor_kopfhoerer'))}</p>` : ''}
         <p class="chip-zeile">
           <button type="button" class="knopf knopf-primaer" data-start ${bereit ? '' : 'disabled'}>
@@ -290,8 +386,6 @@ export function renderWerkzeugZerrlabor(el, daten) {
         <p class="leise" data-meldung aria-live="polite"></p>
       </section>
     </article>`;
-
-  const meldung = el.querySelector('[data-meldung]');
 
   el.querySelector('[data-audio-an]')?.addEventListener('click', async () => {
     await aktiviere();
@@ -323,14 +417,17 @@ export function renderWerkzeugZerrlabor(el, daten) {
   for (const knopf of el.querySelectorAll('[data-quelle]')) {
     knopf.addEventListener('click', async () => {
       zustand.quelle = knopf.dataset.quelle;
-      const lief = zustand.laeuft;
-      if (lief) {
-        const fehler = await starte(daten);
+      let fehler = null;
+      if (zustand.laeuft) {
+        fehler = await starte(daten);
+        // Mikrofon abgelehnt: starte() hat abgebaut, also zurück auf die Quelle,
+        // die immer geht. Bei der Klangprobe hat starte() schon selbst
+        // umgeschaltet und spielt weiter.
         if (fehler === 'mikro_fehlt') zustand.quelle = 'riff';
       }
       renderWerkzeugZerrlabor(el, daten);
       const m = el.querySelector('[data-meldung]');
-      if (m && zustand.quelle === 'riff' && knopf.dataset.quelle === 'mikro') m.textContent = t('zerrlabor_mikro_fehlt');
+      if (m && fehler) m.textContent = t(MELDUNG[fehler]);
       el.querySelector(`[data-quelle="${CSS.escape(zustand.quelle)}"]`)?.focus();
     });
   }
@@ -354,12 +451,17 @@ export function renderWerkzeugZerrlabor(el, daten) {
   });
 
   el.querySelector('[data-start]')?.addEventListener('click', async () => {
+    let fehler = null;
     if (zustand.laeuft) stoppe();
-    else {
-      const fehler = await starte(daten);
-      if (fehler === 'mikro_fehlt' && meldung) meldung.textContent = t('zerrlabor_mikro_fehlt');
-    }
+    else fehler = await starte(daten);
     renderWerkzeugZerrlabor(el, daten);
+    // NACH dem Neuzeichnen setzen und frisch abfragen: Die vorher gemerkte
+    // Referenz zeigt auf ein Element, das innerHTML gerade ersetzt hat — die
+    // Meldung stand dort und war im selben Atemzug wieder weg.
+    if (fehler) {
+      const m = el.querySelector('[data-meldung]');
+      if (m) m.textContent = t(MELDUNG[fehler]);
+    }
     el.querySelector('[data-start]')?.focus();
   });
 

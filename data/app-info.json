@@ -198,7 +198,8 @@
         {
           "titel": { "de": "Urheberrecht" },
           "absaetze": [
-            { "de": "Der Quellcode dieses Projekts steht unter der MIT-Lizenz, die Lerninhalte unter Creative Commons BY-NC 4.0 (Details unter „Über\"). Für eingebundene Schriften und Icons gelten die Lizenzen der jeweiligen Urheber." }
+            { "de": "Der Quellcode dieses Projekts steht unter der MIT-Lizenz, die Lerninhalte unter Creative Commons BY-NC 4.0 (Details unter „Über\"). Für eingebundene Schriften und Icons gelten die Lizenzen der jeweiligen Urheber." },
+            { "de": "Die Gitarren-Klangproben im Zerr-Labor stammen aus einer CC0-Sammlung (Creative Commons Zero 1.0, Public Domain Dedication) und sind für dieses Werkzeug zugeschnitten worden. Der Lizenztext liegt dem Bestand bei: assets/sounds/cc0.txt." }
           ]
         }
       ]
