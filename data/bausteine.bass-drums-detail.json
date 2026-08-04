@@ -154,7 +154,69 @@
       },
       "voraussetzungen": [
         "bass_saiten_detail"
-      ]
+      ],
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 60,
+        "aufloesung": 4,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 12,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 12,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 2,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 2,
+            "bund": 12,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 1,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 1,
+            "bund": 12,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Der Intonations-Test, Saite für Saite: leer, dann zwölfter Bund. Beide müssen exakt eine Oktave auseinanderliegen — in der Demo tun sie das per Rechnung, an deinem Bass entscheidet die Reiterposition. Klingt der gegriffene Ton zu hoch, wandert der Reiter nach hinten; zu tief, nach vorn. Erst Halskrümmung und Saitenlage einstellen, dann das hier — in dieser Reihenfolge."
+      }
     },
     {
       "id": "kessel_material_groesse",
