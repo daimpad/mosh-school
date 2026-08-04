@@ -97,6 +97,16 @@ MUTATIONEN = [
      alle('reflexion_pegel', 0.0), 'kein Reflexionsschwanz'),
     ('Dauer 70 -> 5 ms (Impulsantwort abgeschnitten)',
      setze('box_412_geschlossen', 'dauer_ms', 5), 'plausiblen Spanne'),
+    # Cone-Resonanzen: Sie sind der einzige Grund, warum der Frequenzgang nicht
+    # glatt ist. Alle drei Wege, sie unwirksam zu machen, muessen auffallen.
+    ('Alle Resonanzen auf 0 dB (Frequenzgang wird glatt)',
+     lambda n: [r.update(db=0) for b in n.values() for r in b.get('resonanzen', [])],
+     'kaum Welligkeit'),
+    ('Resonanzen ganz entfernt',
+     lambda n: [b.pop('resonanzen', None) for b in n.values()], 'kaum Welligkeit'),
+    ('Resonanz oberhalb des Tiefpasses (wirkt dort, wo nichts mehr ist)',
+     lambda n: n['box_412_geschlossen']['resonanzen'][0].update(hz=7000),
+     'ausserhalb des Durchlassbereichs'),
 ]
 
 
