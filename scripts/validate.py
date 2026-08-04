@@ -168,6 +168,17 @@ def pruefe_demonstration(bid, demo, fehler):
             elif soll is not None and len(schritte) != soll:
                 fehler.append(f'{bid}: demonstration-schritte-Länge passt nicht zu '
                               f'{"gruppierung-Summe" if isinstance(grp, list) else "aufloesung*takte"}')
+            # `betonung` (optional): -1 leise (Ghost Note) / 0 normal / +1 betont,
+            # gleich lang wie `schritte`. Ohne sie klingen Akzent- und
+            # Ghost-Note-Uebungen wie eine Reihe gleich lauter Schlaege.
+            bet = sp.get('betonung')
+            if bet is not None:
+                if not isinstance(bet, list) or any(x not in (-1, 0, 1) for x in bet):
+                    fehler.append(f'{bid}: demonstration-betonung muss eine Liste aus -1/0/1 sein')
+                elif isinstance(schritte, list) and len(bet) != len(schritte):
+                    fehler.append(f'{bid}: demonstration-betonung-Länge passt nicht zu schritte')
+                elif isinstance(schritte, list) and any(b and not s for b, s in zip(bet, schritte)):
+                    fehler.append(f'{bid}: demonstration-betonung setzt einen Wert auf eine Pause')
     elif typ == 'tab':
         events = demo.get('events')
         if not isinstance(events, list) or not events:
@@ -185,6 +196,9 @@ def pruefe_demonstration(bid, demo, fehler):
                 fehler.append(f'{bid}: demonstration-event bund ungültig')
             if ev.get('technik', 'normal') not in DEMO_TECHNIKEN:
                 fehler.append(f'{bid}: demonstration-Technik "{ev.get("technik")}" ungültig')
+            if ev.get('betonung', 0) not in (-1, 0, 1):
+                fehler.append(f'{bid}: demonstration-event betonung "{ev.get("betonung")}" '
+                              f'ungültig (-1/0/1)')
     elif typ == 'hoerbeispiel':
         if not demo.get('verweis_genre'):
             fehler.append(f'{bid}: demonstration(hoerbeispiel) ohne verweis_genre')

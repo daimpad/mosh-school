@@ -30,6 +30,106 @@
           "steigerung": "Steigere das Tempo nur so weit, wie alle Töne gleich laut und sauber bleiben — bei der ersten Unsauberkeit zurück. Dann denselben Lauf über einen Lagenwechsel oder mit einem Tapping-Sprung erweitern.",
           "selbstkontrolle": "Auf der Aufnahme: Hört man, welche Töne getappt/gezogen sind (Naht) oder klingt alles wie eine Linie? Bleiben die ungenutzten Saiten still? Und hat der Lauf ein Ziel — oder ist er nur schnell? Wenn es verwaschen klingt, fehlt Dämpfung; wenn es holpert, fehlt Gleichmäßigkeit — beides vor dem Tempo lösen."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 90,
+        "aufloesung": 8,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 12,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 3,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 3,
+            "bund": 12,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 12,
+            "saite": 3,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Ein Legato-Lauf mit einem getappten Ton am Umkehrpunkt (hervorgehoben). Die Demo schlägt jeden Ton an — Hammer-on, Pull-off und Tap bildet der Klang nicht nach. Was sie zeigt, ist die Tonfolge und die eigentliche Frage: Ist jeder Ton gleich laut?"
       }
     },
     {
@@ -80,6 +180,93 @@
           "steigerung": "Spiel den Lead-Moment zu einer Aufnahme, die tatsächlich Raum lässt, und triff den Wiedereinstieg ins Fundament exakt auf den Punkt, an dem die Band zurückkommt. Oder erweitere die Melodie um einen Lagenwechsel über zwei Oktaven.",
           "selbstkontrolle": "Trägt die Melodie in der höheren Lage wirklich (Definition, Intonation), oder verschwimmt sie? Sind die Lagenwechsel sauber und im Timing? Und der Bandtest: Findest du rechtzeitig und exakt ins Fundament zurück — oder bleibt eine Lücke? Der Lead wirkt nur mit sauberem Fundament davor und danach."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 95,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 2,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 1,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 1,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 1,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 2,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 2,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          }
+        ],
+        "hinweis": "Zwei Takte tragendes Fundament, dann ein Bass-Break mit der Melodie in hoher Lage — und am Ende der hervorgehobene Rückweg ins Fundament. Der Lagenwechsel muss ohne Kratzen und ohne Timing-Loch sitzen; er ist die eigentliche Übung."
       }
     },
     {
@@ -305,6 +492,120 @@
           "steigerung": "Improvisier über eine Passage, die die Harmonik wechselt, und folge dem Wechsel bewusst mit passenden Tönen. Oder nimm zwei Durchläufe auf und bau aus den besten Momenten ein festes Solo.",
           "selbstkontrolle": "Hör die Aufnahme: Erkennst du Motive und Variationen, oder ist es eine Aneinanderreihung von Tönen? Atmet die Phrasierung (Pausen), oder ist alles vollgespielt? Und reagierst du auf das Riff, oder spielst du daneben? Wenn es beliebig klingt, nimm Material weg und arbeite mit weniger — Gestaltung vor Menge."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 110,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 16,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 24,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 3,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal",
+            "betonung": 1
+          }
+        ],
+        "hinweis": "Ein Motiv aus vier Tönen: gesetzt, identisch wiederholt, dann zweimal mit je einer minimalen Änderung. Dazwischen bleibt Platz. Aus Wiederholung und kleiner Abweichung entsteht eine Aussage — aus Läufen nicht."
       }
     }
   ]

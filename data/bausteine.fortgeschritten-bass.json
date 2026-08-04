@@ -43,6 +43,172 @@
           "steigerung": "Tempo in kleinen Schritten anheben und den Zyklus über Saitenwechsel ziehen.",
           "selbstkontrolle": "Kein hörbares Galoppieren; alle drei Finger klingen gleich, und der Puls bleibt stabil."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 110,
+        "aufloesung": 8,
+        "takte": 3,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 7,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 10,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 13,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 16,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 19,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Gerade Achtel, aber der Dreier-Zyklus Ring–Mittel–Zeige läuft darüber: Der hervorgehobene Schlag ist jeweils der Ringfinger — er wandert durch den Takt und trifft die Eins erst nach drei Takten wieder. Genau daran merkst du, ob die Zählzeit beim Fingerwechsel verrutscht."
       }
     },
     {
@@ -1280,6 +1446,116 @@
           "steigerung": "Die Figur über Saitenwechsel und Lagenwechsel ausdehnen; Aufnahmen machen und kritisch anhören.",
           "selbstkontrolle": "Kein Ton klingt stumpf oder halb; auch bei Tempo bleibt jeder Anschlag voll und definiert."
         }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 3,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 3,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 24,
+            "saite": 3,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 26,
+            "saite": 3,
+            "bund": 3,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 3,
+            "bund": 5,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 3,
+            "bund": 3,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Dieselbe Vier-Ton-Figur zweimal: erst klingend, dann staccato (gestrichelt). Kurz gespielt wird sofort hörbar, ob Greif- und Anschlaghand zusammenfallen — beim langen Ton verdeckt das Ausklingen jede Ungenauigkeit."
       }
     },
     {
