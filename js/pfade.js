@@ -206,9 +206,6 @@ export function instrumentpfad(daten, domaene) {
 function instrumentDomaenen(baustein) {
   return domaenenVon(baustein).filter((d) => INSTRUMENTE.includes(d));
 }
-export function bandAnzahl(daten) {
-  return daten.bausteine.filter((b) => instrumentDomaenen(b).length >= 2 && trainerSichtbar(daten, b) && !umgebungsBaustein(b)).length;
-}
 export function bandpfad(daten) {
   const menge = daten.bausteine.filter((b) => instrumentDomaenen(b).length >= 2 && trainerSichtbar(daten, b) && !umgebungsBaustein(b));
   return { art: 'band', stationen: zuStationen(daten, menge, standardVergleicher(daten), null) };
