@@ -520,6 +520,22 @@ Tokens**, nie harte Farben.
   Ausnahmeliste `data/brand-alert.json` und sind von dort über die Typbezeichnung
   auffindbar. Neue Typen dieser Regel unterwerfen, sonst wird aus der Typologie ein
   Marken-Katalog.
+- **Tabulatur-Werkzeug** (`#/werkzeug/tab`, `js/ansichten/werkzeug-tab.js`,
+  Parser DOM-frei in `js/tabulatur.js`): ASCII-Tab einfügen, im Raster sehen, mit
+  einer Stimmung aus **`data/tunings.json`** (derselbe Pool) über den gemeinsamen
+  Audio-Kern hören. **Eine Spalte = ein Schritt** — die Leseweise, die ein
+  ASCII-Tab selbst nahelegt; Notenwerte stehen dort nicht drin. Eigene Tabs
+  liegen im Werkzeug-Speicher, nicht im Fortschritts-Schema. Das Werkzeug
+  liefert **kein Notenmaterial aus** (nur ein generisches eigenes Beispiel) —
+  was eingefügt wird, verantwortet die Person davor.
+  **Drei Fallstricke im Parser, alle schon eingetreten:** (1) Leere Saitenzeilen
+  (`e|-----|`) dürfen NICHT einzeln verworfen werden, sonst wird aus einem
+  Sechssaiter ein Zweisaiter und jeder Ton landet eine Saite zu tief. Verworfen
+  wird nur ein ganzer Block ohne jeden Ton. (2) Mehrstellige Bünde (`12`) sind
+  EIN Ton und EINE Spalte — zeichenweise gelesen verschiebt sich alles dahinter,
+  und zwar nur in den Zeilen mit hohen Bünden. (3) Zeilen mit abweichender Länge
+  im selben Block sind keine Saiten (Trennlinie über dem Tab); die häufigste
+  Zeilenlänge gewinnt.
 - **Zerr-Labor** (`#/werkzeug/zerrlabor`, `js/ansichten/werkzeug-zerrlabor.js`):
   Werkzeug auf dem gemeinsamen Audio-Kern. Die Kennlinien liegen DOM-frei in
   `js/audio/zerre.js` (Kette Hochpass → WaveShaper → Tiefpass), die Daten in
