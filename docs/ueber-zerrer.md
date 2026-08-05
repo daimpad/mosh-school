@@ -118,7 +118,7 @@ generiert) und 26 Lehrgrafiken (Beat-Raster, Griffbilder, Anschlagsmuster).
 - **Volltextsuche** mit Facetten über alle 797 Einträge, komplett im Browser
 - **Datensicherung** — Fortschritt als portables JSON exportieren und
   importieren; ohne Konto ist das die einzige Brücke zwischen zwei Geräten
-- **545 statische Seiten** parallel zur App, damit die Inhalte für Suchmaschinen
+- **546 statische Seiten** parallel zur App, damit die Inhalte für Suchmaschinen
   überhaupt einzeln auffindbar sind (eine Hash-Routing-App ist es sonst nicht)
 - **Brand-Alert** — 61 Einträge in 8 Kategorien zu problematischen Marken und
   Modellen
