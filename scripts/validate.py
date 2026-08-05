@@ -7,6 +7,9 @@ die INHALTSDATEIEN in js/daten.js laedt. Buildfrei, nur Standardbibliothek.
 
     python3 scripts/validate.py
 
+Zusaetzlich zur Struktur deckelt `pruefe_groessen` die Groesse des eingecheckten
+Bestands — siehe Kommentar dort.
+
 Exit 0 = strukturell sauber. Exit 1 = strukturelle Fehler.
 Der ASCII-Umlaut-Verdacht (ae/oe/ue/ss statt echter Umlaute) und fehlende
 Titel-Lifts warnen nur — sie brechen nicht ab.
@@ -14,6 +17,7 @@ Titel-Lifts warnen nur — sie brechen nicht ab.
 import json
 import os
 import re
+import subprocess
 import sys
 import wave
 from collections import Counter
@@ -203,6 +207,61 @@ def pruefe_demonstration(bid, demo, fehler):
     elif typ == 'hoerbeispiel':
         if not demo.get('verweis_genre'):
             fehler.append(f'{bid}: demonstration(hoerbeispiel) ohne verweis_genre')
+
+
+# --- Groessenbremse ---------------------------------------------------------
+# WARUM ES DIESE PRUEFUNG GIBT: Einmal sind 124 MB Rohaufnahmen (122 FLACs, je
+# rund 1,3 MB) in main gelandet und erst Monate spaeter aufgefallen. Herausholen
+# liess sich das nur mit einem Rewrite der Historie — die unangenehmste
+# Operation, die man an einem Repo machen kann: Sie hat 429 Commit-Signaturen
+# vernichtet und jeden bestehenden Klon ungueltig gemacht. Diese Pruefung soll
+# verhindern, dass es ein zweites Mal so weit kommt.
+#
+# ZWEI GRENZEN, weil eine nicht reicht:
+#   - Je Datei, weil eine einzelne fette Datei sonst durchrutscht.
+#   - Ueber alles, weil genau das der eingetretene Fall war: Keine einzelne
+#     Datei war ungeheuerlich, die Menge war es. Eine reine Pro-Datei-Grenze
+#     haette 122 Dateien knapp ueber der Schwelle gemeldet, eine bei 2 MB gar
+#     nichts.
+#
+# Beide Grenzen sind FEHLER, keine Warnungen: Ein Hinweis, den man wegklicken
+# kann, haette den Fall nicht verhindert. Wird eine Grenze zu eng, gehoert sie
+# bewusst im Diff hochgesetzt — mit Begruendung, von einem Menschen.
+DATEI_GRENZE = 1 * 1024 * 1024        # 1 MB je eingecheckter Datei
+GESAMT_GRENZE = 30 * 1024 * 1024      # 30 MB ueber alle eingecheckten Dateien
+
+
+def pruefe_groessen(fehler):
+    """Deckelt eingecheckte Dateien einzeln und in Summe."""
+    # Gefragt ist der EINGECHECKTE Bestand, nicht der Arbeitsbaum: Ein Lauf ueber
+    # das Dateisystem schluege bei jedem lokalen node_modules/venv an, und eine
+    # Pruefung, die staendig falsch meldet, wird bald ignoriert.
+    try:
+        roh = subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, check=True,
+                             capture_output=True).stdout
+    except (OSError, subprocess.CalledProcessError) as e:
+        # Bewusst hart: Eine Groessenbremse, die im Zweifel nichts prueft, ist
+        # schlimmer als keine — sie meldet Erfolg, wo sie nichts gesehen hat.
+        sys.exit(f'FEHLER: "git ls-files" nicht ausfuehrbar ({e}) — Groessen ungeprueft.')
+
+    gesamt = 0
+    for pfad in roh.decode('utf-8').split('\0'):
+        if not pfad:
+            continue
+        voll = os.path.join(ROOT, pfad)
+        if not os.path.isfile(voll):      # geloescht, aber noch im Index
+            continue
+        groesse = os.path.getsize(voll)
+        gesamt += groesse
+        if groesse > DATEI_GRENZE:
+            fehler.append(
+                f'{pfad}: {groesse / 1048576:.1f} MB ueberschreitet die Grenze von '
+                f'{DATEI_GRENZE / 1048576:.0f} MB je Datei — gehoert sie wirklich ins Repo?')
+    if gesamt > GESAMT_GRENZE:
+        fehler.append(
+            f'Eingecheckter Bestand {gesamt / 1048576:.0f} MB ueberschreitet die Grenze von '
+            f'{GESAMT_GRENZE / 1048576:.0f} MB — Rohmaterial gehoert nicht in die Historie.')
+    return gesamt
 
 
 def sichtbare_texte(obj):
@@ -580,8 +639,11 @@ def main():
         if ist != (1, 2, 44100):
             fehler.append(f'Klangprobe "{pfad}": erwartet Mono/16 bit/44100 Hz, ist {ist}')
 
+    gesamt = pruefe_groessen(fehler)
+
     # Bericht
     print(f'Pool: {len(bausteine)} Bausteine ueber {len(dateien)} Dateien')
+    print(f'  Eingecheckt: {gesamt / 1048576:.1f} MB (Grenze {GESAMT_GRENZE / 1048576:.0f} MB)')
     dom = Counter(d for b in bausteine for d in (b.get('domaene') or []))
     stufe = Counter(s for b in bausteine for s in (b.get('kompetenzstufe') or []))
     print('  Domaenen:', dict(dom))

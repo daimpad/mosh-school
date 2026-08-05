@@ -328,6 +328,20 @@ Modul, die Prüfung wäre also durchgehend falsch-grün. Richtig ist
 `node --check --input-type=module < datei.js`; nur `sw.js` (klassisches Skript,
 kein Modul) wird mit dem einfachen `node --check sw.js` geprüft.
 
+**Groessenbremse:** `validate.py` deckelt den eingecheckten Bestand — **1 MB je Datei**
+und **30 MB insgesamt**, beides als Fehler. Anlass: Einmal sind 124 MB Rohaufnahmen
+(122 FLACs zu je ~1,3 MB) in `main` gelandet und erst Monate später aufgefallen;
+herausholen liess sich das nur mit einem Rewrite der Historie, der 429
+Commit-Signaturen vernichtet und jeden bestehenden Klon ungültig gemacht hat.
+**Zwei Grenzen, weil eine nicht reicht:** Der eingetretene Fall war keine einzelne
+fette Datei, sondern die Menge — eine Pro-Datei-Grenze bei 2 MB hätte gar nichts
+gemeldet. Beide sind bewusst **Fehler statt Warnungen**: Ein Hinweis, den man
+wegklicken kann, hätte den Fall nicht verhindert. Wird eine Grenze zu eng, gehört
+sie im Diff hochgesetzt — von einem Menschen, mit Begründung. Geprüft wird der
+**eingecheckte** Bestand (`git ls-files`), nicht der Arbeitsbaum: Ein Lauf über das
+Dateisystem schlüge bei jedem lokalen `node_modules` an, und eine Prüfung, die
+ständig falsch meldet, wird bald ignoriert.
+
 **Es gibt kein `tests/`-Verzeichnis** (der Fork-Testlauf war crossminton-spezifisch und wurde
 entfernt). `scripts/validate.py` spiegelt die Engine-Prüfungen (`pruefeDaten` + Kahn-Topo aus
 `js/graph.js`): eindeutige IDs, auflösbare `voraussetzungen`, keine Zyklen, genau ein
