@@ -44,12 +44,12 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 
 | | |
 | --- | --- |
-| **497** Bausteine | über 60 Inhaltsdateien, 4 Instrumente + 5 Querschnitts-Domänen |
+| **509** Bausteine | über 61 Inhaltsdateien, 4 Instrumente + 5 Querschnitts-Domänen |
 | **288** Fehlerbilder | Trainer-Layer: typische Fehler als Diagnose |
 | **41** Trainingseinheiten | kuratierte Sitzungen (Erwärmung → Hauptteil → Ausklang) |
 | **16** Genres | von Hardcore bis Noise Rock |
-| **811** SVG-Grafiken | 785 Baustein-Motive + 26 Lehrgrafiken, alle deterministisch erzeugt |
-| **12** Audio-Werkzeuge | auf einem gemeinsamen, DOM-freien Kern |
+| **823** SVG-Grafiken | 797 Baustein-Motive + 26 Lehrgrafiken, alle deterministisch erzeugt |
+| **13** Werkzeuge | die klingenden auf einem gemeinsamen, DOM-freien Audio-Kern |
 
 ## Features
 
@@ -58,11 +58,12 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 | 🎸 **Vier Instrumente** | Gitarre, Bass, Schlagzeug, Gesang — je nach Könnensstufe (Einsteiger → Fortgeschritten → Experte). |
 | 🔥 **Genre-Achse** | Hardcore, Metalcore, Thrash, Death, Black, Doom, Crust, Grind, Powerviolence, Sludge, Deathcore, Djent, Stoner/Post, Screamo, Mathcore, Noise Rock. |
 | 🧭 **Nach Tätigkeit geordnet** | Lernen · Üben · Songwriting · Experimentieren — Werkzeuge tauchen dort auf, wo man sie braucht. |
-| 🛠️ **Audio-Werkzeuge** | Metronom mit Tempo-Ramp, Stimmgerät (inkl. eigener, mikrotonaler Tunings), Play-along-Loops, Pattern-Bibliothek, Gear-Explorer, Pedalboard- & Amp/Box-Baukasten, Song-Struktur, Riff- & Mehrspur-Recorder. |
+| 🛠️ **Werkzeuge** | Metronom mit Tempo-Ramp, Stimmgerät (deckt den ganzen Tuning-Pool ab, bis hinunter zu 27,5 Hz), Play-along-Loops, Pattern-Bibliothek, ASCII-Tabulatur, Gear-Explorer, Pedalboard- & Amp/Box-Baukasten, Song-Struktur, Riff- & Mehrspur-Recorder. |
+| 🎛️ **Zerr-Labor** | Zehn Zerrkennlinien und fünf synthetisierte Boxen-Impulsantworten — hörbar **und** sichtbar als Übertragungskurve. Als Signal fünf Clips aus echten, unverstärkten Gitarrenaufnahmen: Chugs, Anschlagsdynamik, Powerchord, stehender Ton, hohe Lage. |
 | 🩺 **Trainer-Layer** | Typische Fehlerbilder als Diagnose — mit abstrakten, monochromen SVG-Grafiken. |
 | 🎲 **Experimentieren** | Impuls-Karten, Gefühlslandkarte (Gefühl → Genre) und Genre-Mix-Generator. |
-| 📴 **Offline-first PWA** | Service Worker cacht die ganze Hülle; einmal geladen, läuft alles ohne Netz. |
-| 🔎 **Crawlbare Zwillingsseiten** | 534 statische Seiten unter echten Pfad-URLs — für Suchmaschinen, die hinter `#/` nicht schauen. |
+| 📴 **Offline-first PWA** | Service Worker cacht die ganze Hülle; einmal geladen, läuft alles ohne Netz. Nur Fotos und Klangproben bleiben bewusst draußen — sie kommen beim ersten Gebrauch und werden dann mitgecacht. |
+| 🔎 **Crawlbare Zwillingsseiten** | 546 statische Seiten unter echten Pfad-URLs — für Suchmaschinen, die hinter `#/` nicht schauen. |
 
 ## Live ausprobieren
 
@@ -75,8 +76,10 @@ Die **Engine** (`js/`) ist themenneutral und DOM-frei testbar; der **Inhalt** li
 `data/` als JSON. Bausteine tragen sprachneutrale IDs, sichtbare Titel und Texte kommen aus
 `data/labels/<sprache>.json`. Der Voraussetzungsgraph *sortiert* nur, er *sperrt nie*. Ein
 gemeinsamer, DOM-freier **Audio-Kern** (`js/audio/`) trägt alle Werkzeuge — ein `AudioContext`,
-ein Lookahead-Scheduler, synthetische Stimmen, WAV-Export. Der Fortschritt ist baustein-gebunden
-in einem einzigen, versionierten `localStorage`-Schema.
+ein Lookahead-Scheduler, synthetische Stimmen, WAV-Export. Klang entsteht durchweg aus Synthese
+statt aus Samples; die eine Ausnahme ist das Zerr-Labor, dessen Aussage am echten
+Instrumentensignal hängt. Der Fortschritt ist baustein-gebunden in einem einzigen,
+versionierten `localStorage`-Schema.
 
 Die App ist eine **Hash-Routing-SPA** (`#/baustein/<id>`). Weil Suchmaschinen alles hinter `#`
 als dieselbe URL sehen, erzeugt `scripts/build_seiten.py` zusätzlich einen **statischen
@@ -85,10 +88,11 @@ Artefakt, kein Build-Schritt beim Deploy.
 
 ```
 js/            Engine + Ansichten (ES-Module, buildfrei)
-js/audio/      themenneutraler Audio-Kern (Kontext, Scheduler, Stimmen, WAV)
+js/audio/      themenneutraler Audio-Kern (Kontext, Scheduler, Stimmen, Zerre, Box, WAV)
 data/          Inhalte als JSON (Bausteine, Labels, Grafiken, Songs, Tunings …)
+assets/        lokal eingecheckte Schriften, Icons und Klangproben
 css/           ein Stylesheet, alles über Tokens (dunkel ist Default)
-scripts/       Python-Helfer: validate · lift · Index-, Grafik- & Seiten-Build
+scripts/       Helfer: validate · lift · Index-, Grafik- & Seiten-Build · Physik-Prüfungen
 baustein/ pfad/ instrument/   generierte statische Seiten (Artefakt, eingecheckt)
 sw.js          Service Worker (Offline-Hülle)
 ```
@@ -108,10 +112,19 @@ Vor jedem Commit (dieselben Prüfungen laufen in der CI):
 
 ```sh
 python3 scripts/validate.py                # Cross-File-Konsistenz über den Pool
-python3 scripts/lift.py                    # Titel geliftet, Sprach-Skelette aktuell
+python3 scripts/lift.py                    # Titel nach labels/de.json geliftet
 python3 scripts/build_grafiken.py --check  # Grafik-Bundles reproduzierbar
 python3 scripts/build_seiten.py --check    # statische Seiten + Sitemap reproduzierbar
+python3 scripts/pruefe_zerrlabor.py        # Zerr-Kennlinien treffen ihre Sollwerte
+python3 scripts/pruefe_boxen.py            # Box-Impulsantworten treffen ihre Beschreibung
+node scripts/pruefe_tonhoehe.mjs           # Stimmgerät deckt den ganzen Tuning-Pool ab
 ```
+
+Zu den beiden Physik-Prüfungen gehört je ein **Mutationstest**
+(`pruefe_zerrlabor_mutation.py`, `pruefe_boxen_mutation.py`): Er setzt Parameter absichtlich
+falsch und verlangt, dass die Prüfung anschlägt **und richtig begründet**. Ohne ihn wären
+mehrere Prüfungen still wirkungslos gewesen — bei den Boxen kamen im ersten Lauf 9 von 10
+falschen Werten durch.
 
 ## Mitmachen
 

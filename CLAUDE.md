@@ -136,11 +136,13 @@ in `js/app.js` (`aktualisiereNavigation`/`beschrifteRahmen`); `data-nav`-Schlüs
 
 ## Werkzeuge (Audio) — `#/werkzeuge`
 
-Der Bereich **Werkzeuge** bündelt interaktive Audio-Werkzeuge, die die Lern-Bausteine
-praktisch stützen (Gear-Explorer als Karte, Klick/Metronom, Play-along-Loops, Stimmgerät, Song-Struktur,
-Riff-/Mehrspur-Rekorder). Referenzbereich wie Stimmungen/Patterns — **NICHT im
-Baustein-Pool, kein Fortschritt**. Hub-View `js/ansichten/werkzeuge.js`, je Werkzeug
-eine eigene View + Route `#/werkzeug/<name>`.
+Der Bereich **Werkzeuge** bündelt interaktive Werkzeuge, die die Lern-Bausteine
+praktisch stützen — derzeit 13: Gear-Explorer, Klick/Metronom, Play-along-Loops,
+Stimmgerät, Tabulatur, Song-Struktur, Riff- und Mehrspur-Rekorder, Pedalboard,
+Amp/Box, Zerr-Labor, Gefühlslandkarte, Genre-Mix. Referenzbereich wie
+Stimmungen/Patterns — **NICHT im Baustein-Pool, kein Fortschritt**. Hub-View
+`js/ansichten/werkzeuge.js` (die Liste dort ist die Quelle der Wahrheit), je
+Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
 
 - **Ein gemeinsamer Audio-Kern** (`js/audio/`, themenneutral, DOM-frei) trägt ALLE
   Werkzeuge — nie sechs getrennte Audio-Implementierungen:
@@ -222,7 +224,7 @@ Title/Snippet. `scripts/build_seiten.py` erzeugt deshalb einen **zusätzlichen, 
 Seiten-Layer** unter echten Pfad-URLs, 1:1 auf die Hash-Routen gespiegelt (kein Build-Schritt
 zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artefakt):
 
-- `baustein/<id>/index.html` — je Pool-Baustein (497), **nicht** für Fehlerbilder (keine
+- `baustein/<id>/index.html` — je Pool-Baustein (derzeit 509), **nicht** für Fehlerbilder (keine
   eigene Route; sie erscheinen stattdessen als Trainer-Layer-Abschnitt auf der Seite ihres
   Basis-Bausteins).
 - `pfad/stil/<stil>/`, `pfad/kompetenz/<stufe>/`, `pfad/themen/<domaene>/` — Landingpages,
