@@ -422,12 +422,14 @@ body.im-onboarding .fussnav { display: none; }
    Dieselben Regeln tragen die statischen Tier-2-Seiten (scripts/build_seiten.py),
    die dasselbe Markup ohne JS ausliefern — deshalb duerfen sie NICHT an
    Zustands-Klassen haengen. */
+/* Keine Trennlinie nach oben: Die eigene Flaeche setzt den Footer schon ab,
+   und die Linie stand direkt ueber einem ohnehin engen Block. Stattdessen
+   traegt der Abstand die Trennung — der Footer war unten spuerbar gestaucht. */
 .seiten-footer {
   display: block;
-  border-top: 1px solid var(--linie);
   background: var(--kopf-bg, var(--flaeche));
-  padding: 2rem 1.5rem calc(1.4rem + 4.2rem + env(safe-area-inset-bottom));
-  margin-top: 2rem;
+  padding: 3.4rem 1.5rem calc(2.4rem + 4.2rem + env(safe-area-inset-bottom));
+  margin-top: 3rem;
 }
 body.im-onboarding .seiten-footer { display: none; }
 /* Vier gleichrangige Teile (Marke + drei Link-Spalten) in EINER Reihe. Vorher
@@ -438,11 +440,11 @@ body.im-onboarding .seiten-footer { display: none; }
    Innenmass von `main` nicht spiegeln. */
 .footer-innen {
   max-width: 52rem; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr; gap: 1.5rem 2.4rem; align-items: start;
+  display: grid; grid-template-columns: 1fr; gap: 2.4rem 3rem; align-items: start;
 }
 @media (min-width: 34rem) { .footer-innen { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 62rem) { .footer-innen { grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); } }
-.footer-marke { display: flex; flex-direction: column; gap: 0.2rem; }
+.footer-marke { display: flex; flex-direction: column; gap: 0.55rem; }
 .footer-marke-kopf { display: flex; align-items: center; gap: 0.4rem; }
 /* Dieselbe leere Platzhalter-Flaeche wie `.marke-logo` (Kopfzeile/Hero), nur
    kleiner passend zur Fusszeilen-Schrift — reserviert fuer dasselbe kommende
@@ -453,7 +455,7 @@ body.im-onboarding .seiten-footer { display: none; }
    Marke, so bleibt sie bei jeder Schriftgroesse unverzerrt. */
 /* Vollmarke im Fuss (links) und im Menuekopf. Breite statt Hoehe gesetzt — die
    Hoehe ergibt sich aus dem aspect-ratio der Marke, so bleibt sie unverzerrt. */
-.footer-marke-voll { width: min(100%, 15rem); color: var(--tinte); }
+.footer-marke-wort { width: min(100%, 13rem); color: var(--tinte); }
 .menue-marke { width: min(62%, 11rem); color: var(--tinte); }
 .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
 .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
@@ -3884,19 +3886,35 @@ a.karte-link.verweiszeile {
    die Aussage ist Teil der Marke, nicht eine Unterseite. Der GitHub-Verweis
    steht bewusst daneben: „Quelltext offen" ist eine Haltung, kein Feature.
    Die Texte setzt beschrifteRahmen() aus den Labels. */
+/* Letzte Zeile, links und rechts von der Bildmarke flankiert — dieselbe
+   Anordnung, die auch die WortBildmarke selbst hat. Die frühere Trennlinie
+   nach oben ist weg; den Abschnitt trennt jetzt der Abstand.
+   Läuft mit dem Footer auf allen Breiten mit (früher erst ab Tablet, weil
+   der Footer selbst mobil ausgeblendet war). */
 .footer-haltung {
-  /* Läuft mit dem Footer auf allen Breiten mit (früher erst ab Tablet, weil
-     der Footer selbst mobil ausgeblendet war). */
   display: flex;
-  max-width: 52rem;
-  margin: 0.9rem auto 0;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.3rem;
+  /* Breiter als die Spalten darueber (52rem): Die fuenf Statements passen so in
+     EINE Zeile — sonst faellt eines allein in eine zweite und die flankierenden
+     Zeichen stehen an einer Zeile, die es gar nicht mehr gibt. */
+  max-width: 64rem;
+  margin: 2.6rem auto 0;
+  gap: 1.6rem;
   align-items: center;
-  padding: 0.9rem 0 0;
-  border-top: 1px solid var(--trennlinie);
+  justify-content: center;
   font-size: 0.8rem;
   color: var(--tinte-2);
+}
+/* Die flankierenden Zeichen schrumpfen nicht mit (flex: none aus
+   .marke-zeichen) und treten auf schmalen Schirmen ganz zurueck — dort ist die
+   Zeile ohnehin mehrzeilig und die Marke waere blosse Verengung. */
+.footer-haltung-marke { width: 34px; height: 34px; }
+@media (max-width: 46rem) { .footer-haltung-marke { display: none; } }
+.footer-haltung-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.15rem;
+  align-items: center;
+  justify-content: center;
 }
 .footer-haltung-eintrag { display: inline-flex; align-items: center; gap: 0.4rem; }
 .footer-haltung-eintrag .fa-solid,

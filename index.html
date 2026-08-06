@@ -165,10 +165,10 @@
     <div class="footer-innen">
       <div class="footer-marke">
         <div class="footer-marke-kopf">
-          <!-- Vollmarke statt Bild- und Wortmarke nebeneinander. Der zugaengliche
-               Name kommt per aria-label aus beschrifteRahmen() (js/app.js),
-               nie hart geschrieben. -->
-          <span class="footer-marke-voll marke-zeichen marke-wortbild-moshskool" role="img"></span>
+          <!-- Nur die Wortmarke: Die Bildmarke steht unten und flankiert die
+               Haltungszeile. Der zugaengliche Name kommt per aria-label aus
+               beschrifteRahmen() (js/app.js), nie hart geschrieben. -->
+          <span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img"></span>
         </div>
         <!-- Wird von beschrifteRahmen() (js/app.js) aus markenZeilenHtml() gefüllt —
              dieselbe Quelle wie der Startseiten-Hero, damit die beiden Zweige nicht
@@ -204,6 +204,8 @@
          jeder Seite. Die Texte setzt beschrifteRahmen() in js/app.js über
          data-haltung aus den Labels — hier steht bewusst kein fester Text. -->
     <div class="footer-haltung">
+      <span class="footer-haltung-marke marke-zeichen marke-bild" aria-hidden="true"></span>
+      <div class="footer-haltung-liste">
       <span class="footer-haltung-eintrag"><i class="fa-solid fa-ban" aria-hidden="true"></i><span data-haltung="no_ads"></span></span>
       <span class="footer-haltung-eintrag"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i><span data-haltung="no_tracking"></span></span>
       <span class="footer-haltung-eintrag"><i class="fa-solid fa-thumbs-down" aria-hidden="true"></i><span data-haltung="no_influencer"></span></span>
@@ -211,6 +213,8 @@
       <a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank">
         <i class="fa-brands fa-github" aria-hidden="true"></i><span data-haltung="quelltext"></span>
       </a>
+      </div>
+      <span class="footer-haltung-marke marke-zeichen marke-bild" aria-hidden="true"></span>
     </div>
   </footer>
 

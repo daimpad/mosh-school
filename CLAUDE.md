@@ -468,7 +468,9 @@ Tokens**, nie harte Farben.
   `mask-image: none` maskiert nichts weg, es zeigt alles. Die `url()` stehen
   relativ zu `css/app.css` und greifen deshalb unverändert auf den statischen
   Seiten aus wechselnder Verzeichnistiefe. Eingesetzt: Kopfzeile (Bildmarke),
-  Menükopf und Fußzeile (Vollmarke „Mosh Skool"), Lernen-Hub (dieselbe) und
+  Menükopf (Vollmarke „Mosh Skool"), Fußzeile (Wortmarke im Markenblock, dazu
+  die Bildmarke links und rechts als Klammer um die Haltungszeile), Lernen-Hub
+  (Vollmarke „Mosh Skool") und
   Kollektiv-Seite (Vollmarke „Kollektiv", größere Variante
   `.marken-lockup-gross`). **Der Startseiten-Hero trägt KEINE Bildmarke mehr** —
   dort steht der Schriftzug allein und linksbündig, in derselben Kante wie die
@@ -481,6 +483,13 @@ Tokens**, nie harte Farben.
   **„Weiß" ist keine Farbe, die man hier setzen kann:** Menü und Fußzeile liegen
   im hellen Thema auf Weiß. Die Marken laufen deshalb über `currentColor` — im
   dunklen Thema sind sie weiß, im hellen werden sie zu Tinte.
+  **Die Fußzeile trägt keine Trennlinien mehr** — weder nach oben noch vor der
+  Haltungszeile. Sie hat eine eigene Fläche, die sie ohnehin absetzt; die Linien
+  standen über einem ohnehin gedrängten Block. Getrennt wird jetzt über Abstand,
+  und der Block hat insgesamt mehr Luft bekommen. Die Haltungszeile ist dabei
+  **breiter als die Spalten darüber** (64rem statt 52rem): Nur so passen die fünf
+  Statements in EINE Zeile — sonst fällt eines allein in eine zweite, und die
+  flankierenden Zeichen stünden an einer Zeile, die es nicht mehr gibt.
 - **Der Hero-Schriftzug spiegelt die letzten drei Buchstaben** („ZER" + verkehrtes
   „RER", `wortmarkeSchriftzug()` in `js/genre-inszenierung.js`) — so steht es auch
   in der gezeichneten Wortmarke. „RER" ist ein Palindrom, eine Spiegelung dreht

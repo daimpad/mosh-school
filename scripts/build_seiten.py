@@ -459,7 +459,7 @@ def seiten_fuss(tiefe, app_href):
 <div class="footer-innen">
 <div class="footer-marke">
 <div class="footer-marke-kopf">
-<span class="footer-marke-voll marke-zeichen marke-wortbild-moshskool" role="img" aria-label="{esc(uitext("app_titel"))}"></span>
+<span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img" aria-label="{esc(uitext("app_titel"))}"></span>
 </div>
 <span class="footer-marke-claim">{esc(uitext("marke_footer_claim"))}</span>
 </div>
@@ -485,7 +485,7 @@ def seiten_fuss(tiefe, app_href):
 <a href="{w}pfad/themen/">Alle Themen</a>
 </nav>
 </div>
-<div class="footer-haltung">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div>
+<div class="footer-haltung"><span class="footer-haltung-marke marke-zeichen marke-bild" aria-hidden="true"></span><div class="footer-haltung-liste">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div><span class="footer-haltung-marke marke-zeichen marke-bild" aria-hidden="true"></span></div>
 </footer>
 <!-- Reichweitenmessung (GoatCounter, siehe #/datenschutz) — keine Cookies,
      keine gespeicherten IP-Adressen. Anders als in index.html KEIN
