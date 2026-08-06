@@ -185,7 +185,7 @@ function infoSeiteHtml(block, marke = null) {
     .join('');
   const titel = text(block.titel) ?? '';
   const kopf = marke
-    ? `<h1><span class="marken-lockup marke-zeichen marke-wortbild-${esc(marke)}" role="img" aria-label="${esc(titel)}"></span></h1>`
+    ? `<h1><span class="marken-lockup marken-lockup-gross marke-zeichen marke-wortbild-${esc(marke)}" role="img" aria-label="${esc(titel)}"></span></h1>`
     : `<h1>${esc(titel)}</h1>`;
   return `
     ${kopf}

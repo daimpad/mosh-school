@@ -165,11 +165,10 @@
     <div class="footer-innen">
       <div class="footer-marke">
         <div class="footer-marke-kopf">
-          <span class="footer-marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
-          <!-- Wortmarke als Grafik statt als New-Rocker-Text: In der Fusszeile
-               steht die echte Marke. Der zugaengliche Name kommt per aria-label
-               aus beschrifteRahmen() (js/app.js), nie hart geschrieben. -->
-          <span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img"></span>
+          <!-- Vollmarke statt Bild- und Wortmarke nebeneinander. Der zugaengliche
+               Name kommt per aria-label aus beschrifteRahmen() (js/app.js),
+               nie hart geschrieben. -->
+          <span class="footer-marke-voll marke-zeichen marke-wortbild-moshskool" role="img"></span>
         </div>
         <!-- Wird von beschrifteRahmen() (js/app.js) aus markenZeilenHtml() gefüllt —
              dieselbe Quelle wie der Startseiten-Hero, damit die beiden Zweige nicht
@@ -219,7 +218,10 @@
     <div class="menue-schleier" data-menue-zu></div>
     <nav class="menue-lade" aria-label="Menü">
       <div class="menue-kopf">
-        <span class="menue-titel">Menü</span>
+        <!-- Die Marke steht hier anstelle des früheren Worts „Menü": Der Zweck der
+             Schublade sagt schon ihr aria-label, die Fläche gehört der Marke.
+             Weiß im dunklen Thema, Tinte im hellen — currentColor, s. .marke-zeichen. -->
+        <span class="menue-marke marke-zeichen marke-wortbild-moshskool" role="img"></span>
         <button class="menue-schliessen" data-menue-zu aria-label="Menü schließen">
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>

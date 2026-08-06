@@ -467,9 +467,20 @@ Tokens**, nie harte Farben.
   `content: none` legte `::after` eine volle Fläche darüber, denn
   `mask-image: none` maskiert nichts weg, es zeigt alles. Die `url()` stehen
   relativ zu `css/app.css` und greifen deshalb unverändert auf den statischen
-  Seiten aus wechselnder Verzeichnistiefe. Eingesetzt: Kopfzeile + Startseiten-
-  Hero + Fußzeile (Bildmarke), Fußzeile (Wortmarke), Lernen-Hub und
-  Kollektiv-Seite (Vollmarke des jeweiligen Zweigs).
+  Seiten aus wechselnder Verzeichnistiefe. Eingesetzt: Kopfzeile (Bildmarke),
+  Menükopf und Fußzeile (Vollmarke „Mosh Skool"), Lernen-Hub (dieselbe) und
+  Kollektiv-Seite (Vollmarke „Kollektiv", größere Variante
+  `.marken-lockup-gross`). **Der Startseiten-Hero trägt KEINE Bildmarke mehr** —
+  dort steht der Schriftzug allein und linksbündig, in derselben Kante wie die
+  Marken-Zeilen und CTAs darunter.
+  **Fallstrick dabei:** `passeMarkeGroesseAn()` in `js/hero-glitch.js` maß Logo +
+  Wort + Spalt, um den Schriftzug die Textspalte exakt füllen zu lassen — und
+  stieg mit `if (!logo || !wort) return;` aus, sobald das Logo fehlte. Die
+  Anpassung lief damit gar nicht mehr und der Schriftzug fiel still auf den
+  `clamp()`-Erstanstrich zurück. Sie misst jetzt nur noch das Wort.
+  **„Weiß" ist keine Farbe, die man hier setzen kann:** Menü und Fußzeile liegen
+  im hellen Thema auf Weiß. Die Marken laufen deshalb über `currentColor` — im
+  dunklen Thema sind sie weiß, im hellen werden sie zu Tinte.
 - **Der Hero-Schriftzug spiegelt die letzten drei Buchstaben** („ZER" + verkehrtes
   „RER", `wortmarkeSchriftzug()` in `js/genre-inszenierung.js`) — so steht es auch
   in der gezeichneten Wortmarke. „RER" ist ein Palindrom, eine Spiegelung dreht
@@ -487,13 +498,14 @@ Tokens**, nie harte Farben.
   nur Gewicht 400 — SIL OFL, `assets/fonts/LICENSE-new-rocker.txt`): trägt
   **ausschließlich das Wort „ZERRER" als Logo**, an genau drei Stellen — Kopfzeile
   (`.marke-text`), Startseiten-Hero (`.startseite-hero-marke`, inkl. Glitch-Effekt) und
-  Footer (`.footer-marke-name`). Jede der drei Stellen setzt `font-family`/`font-weight`
+  Footer). **Der Footer ist inzwischen raus** — dort steht die gezeichnete
+  Vollmarke; es bleiben Kopfzeile und Hero. Jede Stelle setzt `font-family`/`font-weight`
   explizit selbst (eigene Regeln in `css/app.css`, je mit `'New Rocker', 'Special Elite',
   cursive` und `font-weight: 400` — sonst würde der Browser aus einem geerbten
   900-Gewicht einen unsauberen synthetischen Fettdruck fälschen, da New Rocker nur 400
   vorliegt). **Fallstrick behoben:** Vorher lasen `.footer-marke-name`/`.genre-abschnitt-titel`
   u. a. das nirgends definierte Token `--schrift-display` und fielen still auf `inherit`
-  zurück; `.footer-marke-name` hat jetzt eine explizite Regel, `.genre-abschnitt-titel` bleibt
+  zurück; `.genre-abschnitt-titel` bleibt
   bewusst beim Fallback (kein Marken-Schriftzug).
 - **Icons:** **Tabler Icons** (MIT), lokal eingebettet als **Inline-SVG-Masken** in
   `css/schriften.css` — keine Icon-Schrift, kein CDN. Jede `.fa-*`-Klasse trägt ein Tabler-

@@ -248,8 +248,9 @@ function beschrifteRahmen() {
   // gepflegt wird.
   // Die Fuss-Wortmarke ist eine Grafik; ihren zugaenglichen Namen traegt das
   // aria-label, damit Vorlesesoftware weiter „ZERRER" hoert.
-  const fussWort = document.querySelector('.footer-marke-wort');
-  if (fussWort) fussWort.setAttribute('aria-label', t('app_titel'));
+  for (const marke of document.querySelectorAll('.footer-marke-voll, .menue-marke')) {
+    marke.setAttribute('aria-label', t('app_titel'));
+  }
   const fussClaim = document.querySelector('.footer-marke-claim');
   if (fussClaim) fussClaim.textContent = t('marke_footer_claim');
   const beschriftungen = {
@@ -276,7 +277,6 @@ function beschrifteRahmen() {
     const ziel = verweis.querySelector('.nav-text');
     if (ziel && beschriftungen[verweis.dataset.nav]) ziel.textContent = beschriftungen[verweis.dataset.nav];
   }
-  document.querySelector('.menue-titel').textContent = t('menue');
   document.getElementById('hamburger').setAttribute('aria-label', t('menue'));
   document.getElementById('kopf-suche')?.setAttribute('aria-label', t('nav_suche'));
   aktualisiereThemaKnopf();
