@@ -249,8 +249,7 @@ export function markeHeroInszeniert(extra = '') {
             <span class="zerr-basis" aria-hidden="true">${esc(t('app_titel'))}</span>
           </span>
         </h1>
-        ${markenZeilenHtml({ chips: true, klasse: 'startseite-hero-zweige' })}
-        <p class="startseite-hero-themen">${esc(t('hero_themen'))}</p>
+        ${markenZeilenHtml({ klasse: 'startseite-hero-zweige' })}
         ${extra}
       </div>
     </section>`;

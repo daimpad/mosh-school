@@ -40,7 +40,7 @@ import { ladeDaten, ladeSuchindex } from './daten.js';
 import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
-import { esc, fuehreAufraeumenAus, markenZeilenHtml, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
+import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung, uebernehmeFremdenStand } from './zustand.js';
 
 let daten = null;
@@ -242,11 +242,12 @@ function beschrifteRahmen() {
   const zumInhalt = document.querySelector('.zum-inhalt');
   if (zumInhalt) zumInhalt.textContent = t('skip_link');
   document.querySelector('.marke-text').textContent = t('app_titel');
-  // Fußzeilen-Claim: dieselben zwei Zweige wie im Startseiten-Hero, hier ohne
-  // Chips (die Links stehen schon in den Spalten daneben). Steht leer im HTML,
-  // damit der Text nur an EINER Stelle gepflegt wird.
+  // Fußzeilen-Claim: eine kurze Zeile statt der beiden ausgeschriebenen Zweige —
+  // die stehen im Startseiten-Hero, und ihre Bereiche sind aus den Spalten
+  // daneben verlinkt. Steht leer im HTML, damit der Text nur an EINER Stelle
+  // gepflegt wird.
   const fussClaim = document.querySelector('.footer-marke-claim');
-  if (fussClaim) fussClaim.innerHTML = markenZeilenHtml();
+  if (fussClaim) fussClaim.textContent = t('marke_footer_claim');
   const beschriftungen = {
     // Untere Leiste
     home: t('nav_home'),

@@ -386,20 +386,6 @@ body.im-onboarding .seiten-footer { display: none; }
   font-size: 1.15rem; letter-spacing: 0.02em;
 }
 .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
-/* GoatCounter-Hinweis + Rechtstext-Links: linksbündig UNTER der Marke, also
-   auf die Breite von Spalte 1 begrenzt (linker Bereich des Footers) statt wie
-   vorher über die volle Fusszeile gespannt. Tinte statt Blutrot — die Links
-   sind Pflichtangaben, kein Aufruf zur Aktion, und sollen nicht mit dem
-   Akzent konkurrieren. */
-.footer-marke-rechtliches {
-  display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
-  gap: 0.5rem 0.9rem; margin-top: 0.7rem; padding-top: 0.7rem;
-  border-top: 1px solid var(--trennlinie); color: var(--tinte-2);
-  font-size: 0.76rem; letter-spacing: 0.02em;
-}
-.footer-marke-rechtliches a { color: var(--tinte); text-decoration: none; }
-.footer-marke-rechtliches a:hover, .footer-marke-rechtliches a:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
-.footer-marke-goat { display: inline-flex; align-items: center; gap: 0.3rem; }
 .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
 .footer-titel {
   font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
@@ -1395,6 +1381,9 @@ details[open] summary { margin-bottom: 0.5rem; }
 /* Ziegenkopf-Icon (Inline-SVG) für den GoatCounter-Hinweis im „Über"-Reiter
    und im Footer-Schluss — dieselbe Zeichnung an beiden Stellen. */
 .goat-logo { flex: none; vertical-align: -0.2em; margin-right: 0.15rem; }
+/* Reichweitenmessungs-Hinweis als letzte Zeile der „Über"-Seite — bewusst
+   ohne Karte, damit er als Fußnote liest und nicht als Abschnitt. */
+.ueber-fussnote { margin: 1.2rem 0 0; text-align: center; font-size: 0.78rem; }
 
 /* ---------- Willkommen: Hero + Einstiegs-CTAs ---------- */
 
@@ -3386,17 +3375,10 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   .startseite-hero-zweige .marken-zeile { display: contents; }
 }
 
-/* In der Fußzeile ersetzen die beiden Zeilen den früheren Ein-Zeilen-Claim. */
-.footer-marke-claim .marken-zweige { margin: 0; gap: 0.2rem; }
-.footer-marke-claim .marken-zeile { gap: 0.1rem 0.4rem; }
+/* Fußzeilen-Claim: eine kurze Zeile. Die beiden ausgeschriebenen Zweige stehen
+   nur noch im Startseiten-Hero. */
+.footer-marke-claim { color: var(--tinte-2); font-size: 0.82rem; }
 
-.startseite-hero-themen {
-  margin: 0.5rem 0 0;
-  color: var(--tinte-2);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
 .startseite-hero .marke-hero-cta {
   display: flex;
   flex-wrap: wrap;
@@ -3405,9 +3387,6 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   margin-top: 1.1rem;
 }
 .startseite-hero .marke-hero-cta .knopf { flex: 0 0 auto; }
-@media (min-width: 40rem) {
-  .startseite-hero-themen { font-size: 1rem; }
-}
 /* Ab Tablet faellt die untere Leiste weg (siehe .fussnav), der Abzug schrumpft
    auf Kopfzeile + Innenmass. */
 @media (min-width: 768px) {

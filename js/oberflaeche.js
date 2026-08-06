@@ -104,24 +104,24 @@ export function entdeckenAktion() {
 // vorher trug die Fußzeile ihren eigenen, hart geschriebenen Claim, der beim
 // nächsten Wording-Wechsel stehengeblieben wäre.
 //
-// `chips`: im Hero tragen die Namen einen Chip und verlinken ihren Bereich; in
-// der Fußzeile bleiben es ruhige Textzeilen — dort sitzen die Links schon in den
-// Spalten daneben, ein zweiter Satz Knöpfe wäre Dopplung.
+// Nur noch der Startseiten-Hero rendert die beiden Zweige aus. Die Fußzeile trug
+// sie früher als ruhige Textzeilen; dort steht jetzt ein kurzer Claim
+// (`marke_footer_claim`), weil die Links der beiden Bereiche ohnehin in den
+// Spalten daneben stehen. Der frühere `chips`-Schalter ist damit entfallen — ein
+// Parameter, der nur noch einen Wert kennt, verschleiert mehr, als er erlaubt.
 const MARKEN_ZWEIGE = [
   { schluessel: 'schule', ziel: '#/lernen', icon: 'fa-book-open' },
   { schluessel: 'kollektiv', ziel: '#/kollektiv', icon: 'fa-people-group' },
 ];
 
-export function markenZeilenHtml({ chips = false, klasse = '' } = {}) {
+export function markenZeilenHtml({ klasse = '' } = {}) {
   const zeilen = MARKEN_ZWEIGE.map((z) => {
     const name = t(`marke_${z.schluessel}_name`);
     const kurz = t(`marke_${z.schluessel}_kurz`);
-    const kopf = chips
-      ? `<a class="chip chip-marke" href="${z.ziel}"><i class="fa-solid ${z.icon}" aria-hidden="true"></i> ${esc(name)}</a>`
-      : `<span class="marken-name">${esc(name)}</span>`;
+    const kopf = `<a class="chip chip-marke" href="${z.ziel}"><i class="fa-solid ${z.icon}" aria-hidden="true"></i> ${esc(name)}</a>`;
     return `<span class="marken-zeile">${kopf}<span class="marken-kurz">${esc(kurz)}</span></span>`;
   }).join('');
-  return `<span class="marken-zweige${chips ? ' marken-zweige-chips' : ''}${klasse ? ' ' + klasse : ''}">${zeilen}</span>`;
+  return `<span class="marken-zweige marken-zweige-chips${klasse ? ' ' + klasse : ''}">${zeilen}</span>`;
 }
 
 // Marken-Hero (Logo links, Text rechts, Akzentleiste unten). Groß auf Startseite

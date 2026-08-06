@@ -40,15 +40,22 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
 - **Sichtbarer Name kommt aus `t('app_titel')`** (= „ZERRER"), die Subline im
   Seitentitel aus `t('hero_untertitel')` (= „Mosh School"). Nie hart schreiben.
 - **Die zwei Zweige unter der Marke** — „Zerrer Mosh Skool" (Lernangebot) und
-  „Zerrer Kollektiv" (Shows Köln/Bonn) — stehen an drei Stellen: Startseiten-Hero,
-  Fußzeile der App und Fußzeile der statischen Tier-2-Seiten. Gerendert werden
-  sie aus **einer** Quelle: `markenZeilenHtml()` in `js/oberflaeche.js` (App) und
-  `marken_zeilen()` in `scripts/build_seiten.py` (statisch), beide über dieselben
-  vier Labels `marke_{schule,kollektiv}_{name,kurz}`. Die Fußzeile trug vorher
-  einen eigenen, hart in `index.html` geschriebenen Claim — deshalb steht dort
-  jetzt ein leeres `<span class="footer-marke-claim">`, das `beschrifteRahmen()`
-  füllt. Im Hero tragen die Namen einen Chip und verlinken ihren Bereich
-  (`#/lernen`, `#/kollektiv`), in den Fußzeilen bleiben es Textzeilen.
+  „Zerrer Kollektiv" (Shows Köln/Bonn) — stehen **nur noch im Startseiten-Hero**,
+  gerendert von `markenZeilenHtml()` (`js/oberflaeche.js`) aus den vier Labels
+  `marke_{schule,kollektiv}_{name,kurz}`; die Namen tragen einen Chip und
+  verlinken ihren Bereich (`#/lernen`, `#/kollektiv`). Die **Fußzeilen** (App und
+  statische Tier-2-Seiten) trugen dieselben zwei Zweige ausgeschrieben und tragen
+  jetzt eine kurze Zeile aus `marke_footer_claim` — beide Bereiche sind aus den
+  Spalten daneben ohnehin verlinkt. In `index.html` steht dafür ein leeres
+  `<span class="footer-marke-claim">`, das `beschrifteRahmen()` füllt (nie hart
+  schreiben); `scripts/build_seiten.py` setzt denselben Labelwert statisch ein.
+- **Die Fußzeile trägt keine Rechtstext-Links mehr.** Impressum und Datenschutz
+  stehen im Menü (`index.html`, `.menue-mini`), der GoatCounter-Hinweis als
+  Fußnote am Ende der „Über"-Seite (`goatHinweisHtml()` in
+  `js/ansichten/info.js`). **Achtung Erreichbarkeit:** Die statischen
+  Tier-2-Seiten haben kein Menü — von dort führt seit dieser Änderung kein
+  direkter Weg mehr zum Impressum. Wer die Fußzeile dort wieder anfasst, sollte
+  das mitbedenken.
 
 ## Nicht verhandelbare Architektur
 
