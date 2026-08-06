@@ -3922,6 +3922,13 @@ a.karte-link.verweiszeile {
   align-items: center;
   justify-content: center;
 }
+/* Sobald die Zeile umbricht — also unterhalb der vollen Desktop-Reihe — steht
+   sie linksbuendig. Zentriert ergaeben die Umbrueche eine ausgefranste Treppe,
+   bei der kein Eintrag mehr an einer gemeinsamen Kante beginnt. */
+@media (max-width: 56rem) {
+  .footer-haltung { justify-content: flex-start; }
+  .footer-haltung-liste { justify-content: flex-start; }
+}
 .footer-haltung-eintrag { display: inline-flex; align-items: center; gap: 0.4rem; }
 .footer-haltung-eintrag .fa-solid,
 .footer-haltung-eintrag .fa-brands { color: var(--primaer); }
