@@ -457,12 +457,6 @@ def seiten_fuss(tiefe, app_href):
 </main>
 <footer class="seiten-footer" aria-label="Fußzeile">
 <div class="footer-innen">
-<div class="footer-marke">
-<div class="footer-marke-kopf">
-<span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img" aria-label="{esc(uitext("app_titel"))}"></span>
-</div>
-<span class="footer-marke-claim">{esc(uitext("marke_footer_claim"))}</span>
-</div>
 <nav class="footer-spalte" aria-label="Schnellzugriff">
 <span class="footer-titel">Schnellzugriff</span>
 <a href="{w}#/griffe">Griffe</a>
@@ -484,8 +478,14 @@ def seiten_fuss(tiefe, app_href):
 <a href="{w}pfad/kompetenz/">Nach Könnensstufe</a>
 <a href="{w}pfad/themen/">Alle Themen</a>
 </nav>
+<div class="footer-marke">
+<div class="footer-marke-kopf">
+<span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img" aria-label="{esc(uitext("app_titel"))}"></span>
 </div>
-<div class="footer-haltung"><span class="footer-haltung-marke marke-zeichen marke-bild" aria-hidden="true"></span><div class="footer-haltung-liste">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div><span class="footer-haltung-marke marke-zeichen marke-bild" aria-hidden="true"></span></div>
+<span class="footer-marke-claim">{esc(uitext("marke_footer_claim"))}</span>
+</div>
+</div>
+<div class="footer-haltung"><div class="footer-haltung-liste">{haltung}<a class="footer-haltung-eintrag footer-quelltext" href="https://github.com/daimpad/mosh-school" rel="noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>{esc(uitext('haltung_quelltext'))}</span></a></div></div>
 </footer>
 <!-- Reichweitenmessung (GoatCounter, siehe #/datenschutz) — keine Cookies,
      keine gespeicherten IP-Adressen. Anders als in index.html KEIN
