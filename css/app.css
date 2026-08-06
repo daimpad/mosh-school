@@ -438,13 +438,17 @@ body.im-onboarding .seiten-footer { display: none; }
    und 52rem statt 44rem, weil vier Spalten in der Textspalten-Breite gedraengt
    stehen — der Footer ist ein eigenes Band mit eigener Flaeche und muss das
    Innenmass von `main` nicht spiegeln. */
+/* Dieselbe Breite wie `main` (44rem) — der Footer stand vorher auf einem
+   eigenen, breiteren Band und sprang gegenueber dem Inhalt darueber aus der
+   Flucht. Die Marke sitzt ganz rechts und traegt eine eigene, schmale Spalte. */
 .footer-innen {
-  max-width: 52rem; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr; gap: 2.4rem 3rem; align-items: start;
+  max-width: 44rem; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr; gap: 2.4rem 2rem; align-items: start;
 }
 @media (min-width: 34rem) { .footer-innen { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 62rem) { .footer-innen { grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr)); } }
-.footer-marke { display: flex; flex-direction: column; gap: 0.55rem; }
+@media (min-width: 56rem) { .footer-innen { grid-template-columns: repeat(3, minmax(0, 1fr)) auto; } }
+/* Wortmarke mit der Zeile darunter — beides zentriert in der eigenen Spalte. */
+.footer-marke { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
 .footer-marke-kopf { display: flex; align-items: center; gap: 0.4rem; }
 /* Dieselbe leere Platzhalter-Flaeche wie `.marke-logo` (Kopfzeile/Hero), nur
    kleiner passend zur Fusszeilen-Schrift — reserviert fuer dasselbe kommende
@@ -455,9 +459,20 @@ body.im-onboarding .seiten-footer { display: none; }
    Marke, so bleibt sie bei jeder Schriftgroesse unverzerrt. */
 /* Vollmarke im Fuss (links) und im Menuekopf. Breite statt Hoehe gesetzt — die
    Hoehe ergibt sich aus dem aspect-ratio der Marke, so bleibt sie unverzerrt. */
-.footer-marke-wort { width: min(100%, 13rem); color: var(--tinte); }
+/* Feste Breite statt min(100%, …): Seit der Markenblock zentriert in einer
+   auto-breiten Grid-Spalte sitzt, hat sein Container keine eigene Breite mehr
+   — ein prozentualer Wert loeste dort gegen 0 auf und die Marke verschwand. */
+.footer-marke-wort { width: 9rem; max-width: 100%; color: var(--tinte); }
 .menue-marke { width: min(62%, 11rem); color: var(--tinte); }
-.footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
+/* „KOLLEKTIV + MOSH SCHOOL" unter der Wortmarke: versal, zentriert und in
+   voller Tinte statt im gedaempften Grau — im dunklen Thema also weiss. */
+.footer-marke-claim {
+  color: var(--tinte);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  text-align: center;
+}
 .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
 .footer-titel {
   font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
@@ -3435,7 +3450,6 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 
 /* Fußzeilen-Claim: eine kurze Zeile. Die beiden ausgeschriebenen Zweige stehen
    nur noch im Startseiten-Hero. */
-.footer-marke-claim { color: var(--tinte-2); font-size: 0.82rem; }
 
 .startseite-hero .marke-hero-cta {
   display: flex;
@@ -3893,10 +3907,7 @@ a.karte-link.verweiszeile {
    der Footer selbst mobil ausgeblendet war). */
 .footer-haltung {
   display: flex;
-  /* Breiter als die Spalten darueber (52rem): Die fuenf Statements passen so in
-     EINE Zeile — sonst faellt eines allein in eine zweite und die flankierenden
-     Zeichen stehen an einer Zeile, die es gar nicht mehr gibt. */
-  max-width: 64rem;
+  max-width: 44rem;
   margin: 2.6rem auto 0;
   gap: 1.6rem;
   align-items: center;
@@ -3904,11 +3915,6 @@ a.karte-link.verweiszeile {
   font-size: 0.8rem;
   color: var(--tinte-2);
 }
-/* Die flankierenden Zeichen schrumpfen nicht mit (flex: none aus
-   .marke-zeichen) und treten auf schmalen Schirmen ganz zurueck — dort ist die
-   Zeile ohnehin mehrzeilig und die Marke waere blosse Verengung. */
-.footer-haltung-marke { width: 34px; height: 34px; }
-@media (max-width: 46rem) { .footer-haltung-marke { display: none; } }
 .footer-haltung-liste {
   display: flex;
   flex-wrap: wrap;

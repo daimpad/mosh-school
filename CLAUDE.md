@@ -468,8 +468,7 @@ Tokens**, nie harte Farben.
   `mask-image: none` maskiert nichts weg, es zeigt alles. Die `url()` stehen
   relativ zu `css/app.css` und greifen deshalb unverändert auf den statischen
   Seiten aus wechselnder Verzeichnistiefe. Eingesetzt: Kopfzeile (Bildmarke),
-  Menükopf (Vollmarke „Mosh Skool"), Fußzeile (Wortmarke im Markenblock, dazu
-  die Bildmarke links und rechts als Klammer um die Haltungszeile), Lernen-Hub
+  Menükopf und Fußzeile (Wortmarke), Lernen-Hub
   (Vollmarke „Mosh Skool") und
   Kollektiv-Seite (Vollmarke „Kollektiv", größere Variante
   `.marken-lockup-gross`). **Der Startseiten-Hero trägt KEINE Bildmarke mehr** —
@@ -486,10 +485,15 @@ Tokens**, nie harte Farben.
   **Die Fußzeile trägt keine Trennlinien mehr** — weder nach oben noch vor der
   Haltungszeile. Sie hat eine eigene Fläche, die sie ohnehin absetzt; die Linien
   standen über einem ohnehin gedrängten Block. Getrennt wird jetzt über Abstand,
-  und der Block hat insgesamt mehr Luft bekommen. Die Haltungszeile ist dabei
-  **breiter als die Spalten darüber** (64rem statt 52rem): Nur so passen die fünf
-  Statements in EINE Zeile — sonst fällt eines allein in eine zweite, und die
-  flankierenden Zeichen stünden an einer Zeile, die es nicht mehr gibt.
+  und der Block hat insgesamt mehr Luft bekommen. **Beide Fußzeilen-Reihen liegen
+  auf der Breite von `main` (44rem)** — vorher stand der Footer auf einem eigenen,
+  breiteren Band und sprang gegenüber dem Inhalt darüber aus der Flucht. Der
+  Markenblock (Wortmarke + versale, zentrierte Zeile aus `marke_footer_claim`)
+  sitzt in einer eigenen, schmalen Spalte ganz rechts.
+  **Fallstrick dabei:** Die Marke braucht dort eine feste Breite. Seit der Block
+  zentriert in einer `auto`-breiten Grid-Spalte sitzt, hat sein Container keine
+  eigene Breite mehr — ein `min(100%, …)` löste gegen 0 auf und die Marke war
+  schlicht weg, ohne Fehlermeldung.
 - **Der Hero-Schriftzug spiegelt die letzten drei Buchstaben** („ZER" + verkehrtes
   „RER", `wortmarkeSchriftzug()` in `js/genre-inszenierung.js`) — so steht es auch
   in der gezeichneten Wortmarke. „RER" ist ein Palindrom, eine Spiegelung dreht
