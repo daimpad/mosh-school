@@ -178,6 +178,18 @@ def uitext(schluessel):
     return UI.get(schluessel) or schluessel
 
 
+def wortmarke_schriftzug(titel):
+    """Spiegelt die letzten drei Buchstaben — Gegenstueck zu
+    wortmarkeSchriftzug() in js/genre-inszenierung.js. Bewusst nachgebaut statt
+    gelesen: Es sind vier Zeilen, und die statischen Seiten haben kein JS, das
+    die Funktion ausfuehren koennte. Wer dort etwas aendert, aendert es hier
+    mit — deshalb steht die Regel in beiden Kommentaren."""
+    ende = 'RER'
+    if titel[-len(ende):].upper() != ende:
+        return esc(titel)
+    return f'{esc(titel[:-len(ende)])}<span class="zerr-spiegel">{esc(titel[-len(ende):])}</span>'
+
+
 def domaenen_von(b):
     d = b.get('domaene')
     return d if isinstance(d, list) else [d] if d else []
@@ -427,7 +439,7 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 <div class="kopf-innen">
 <a class="marke" href="{w}">
 <span class="marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
-<span class="marke-text">ZERRER</span>
+<span class="marke-text">{wortmarke_schriftzug(uitext("app_titel"))}</span>
 </a>
 </div>
 </header>

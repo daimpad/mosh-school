@@ -494,9 +494,13 @@ Tokens**, nie harte Farben.
   zentriert in einer `auto`-breiten Grid-Spalte sitzt, hat sein Container keine
   eigene Breite mehr — ein `min(100%, …)` löste gegen 0 auf und die Marke war
   schlicht weg, ohne Fehlermeldung.
-- **Der Hero-Schriftzug spiegelt die letzten drei Buchstaben** („ZER" + verkehrtes
+- **Der Schriftzug spiegelt die letzten drei Buchstaben** („ZER" + verkehrtes
   „RER", `wortmarkeSchriftzug()` in `js/genre-inszenierung.js`) — so steht es auch
-  in der gezeichneten Wortmarke. „RER" ist ein Palindrom, eine Spiegelung dreht
+  in der gezeichneten Wortmarke. Er gilt an **beiden** Textstellen: Startseiten-Hero
+  und Kopfzeile (`beschrifteRahmen()` setzt `.marke-text` deshalb per `innerHTML`).
+  Die statischen Seiten haben kein JS und bauen ihn in `wortmarke_schriftzug()`
+  (`scripts/build_seiten.py`) nach — vier Zeilen, die mit der JS-Fassung
+  mitgeändert werden müssen; beide Kommentare sagen es. „RER" ist ein Palindrom, eine Spiegelung dreht
   deshalb nur die Glyphen, nicht ihre Reihenfolge. **`js/hero-glitch.js` klont
   `innerHTML`, nicht `textContent`:** Sonst trüge die Basis das gespiegelte Wort,
   jede Glitch-Ebene darüber aber das ungespiegelte.

@@ -41,6 +41,7 @@ import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
 import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
+import { wortmarkeSchriftzug } from './genre-inszenierung.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung, uebernehmeFremdenStand } from './zustand.js';
 
 let daten = null;
@@ -241,7 +242,11 @@ function beschrifteRahmen() {
   document.title = `${t('app_titel')} — ${t('hero_untertitel')}`;
   const zumInhalt = document.querySelector('.zum-inhalt');
   if (zumInhalt) zumInhalt.textContent = t('skip_link');
-  document.querySelector('.marke-text').textContent = t('app_titel');
+  // innerHTML statt textContent: Der Schriftzug traegt dieselbe Spiegelung der
+  // letzten drei Buchstaben wie der Startseiten-Hero und die gezeichnete
+  // Wortmarke. Die Quelle ist ein Label, der Aufbau kommt aus EINER Funktion —
+  // zwei Stellen mit eigener Zerlegung liefen unweigerlich auseinander.
+  document.querySelector('.marke-text').innerHTML = wortmarkeSchriftzug(t('app_titel'));
   // Fußzeilen-Claim: eine kurze Zeile statt der beiden ausgeschriebenen Zweige —
   // die stehen im Startseiten-Hero, und ihre Bereiche sind aus den Spalten
   // daneben verlinkt. Steht leer im HTML, damit der Text nur an EINER Stelle
