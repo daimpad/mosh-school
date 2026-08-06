@@ -31,22 +31,6 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://zerrer.org'
 
-# Ziegenkopf-Icon (Inline-SVG, eigene Zeichnung) fuer den GoatCounter-Hinweis
-# im Footer-Schluss — dieselbe Zeichnung wie in index.html/js/ansichten/info.js.
-GOAT_SVG = (
-    '<svg class="goat-logo" viewBox="0 0 24 24" width="16" height="16" fill="none" '
-    'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" '
-    'aria-hidden="true" focusable="false">'
-    '<path d="M12 21c-2.8 0-5-2.1-5-4.8v-2.8c0-2.9 2.2-5.2 5-5.2s5 2.3 5 5.2v2.8c0 2.7-2.2 4.8-5 4.8Z"/>'
-    '<path d="M7.8 8.6C6 6.7 5 4.6 5 2.4c2 .1 3.8 1.1 4.8 3"/>'
-    '<path d="M16.2 8.6C18 6.7 19 4.6 19 2.4c-2 .1-3.8 1.1-4.8 3"/>'
-    '<path d="M12 21v1.4"/>'
-    '<circle cx="10.1" cy="11.4" r=".9" fill="currentColor" stroke="none"/>'
-    '<circle cx="13.9" cy="11.4" r=".9" fill="currentColor" stroke="none"/>'
-    '</svg>'
-)
-
-
 def lade(pfad):
     with open(os.path.join(ROOT, pfad), encoding='utf-8') as f:
         return json.load(f)
@@ -192,19 +176,6 @@ def label_vok(gruppe, wert):
 
 def uitext(schluessel):
     return UI.get(schluessel) or schluessel
-
-
-def marken_zeilen():
-    """Fusszeilen-Claim: die beiden Zweige (Schule/Kollektiv) aus denselben
-    Labels, aus denen markenZeilenHtml() in js/oberflaeche.js sie zieht. Ohne
-    Chips wie dort in der Fusszeile — statisch gibt es nichts anzuklicken, was
-    die Spalten daneben nicht schon anboeten."""
-    zeilen = ''.join(
-        f'<span class="marken-zeile"><span class="marken-name">{esc(uitext(f"marke_{k}_name"))}</span>'
-        f'<span class="marken-kurz">{esc(uitext(f"marke_{k}_kurz"))}</span></span>'
-        for k in ('schule', 'kollektiv')
-    )
-    return f'<span class="marken-zweige">{zeilen}</span>'
 
 
 def domaenen_von(b):
@@ -490,12 +461,7 @@ def seiten_fuss(tiefe, app_href):
 <span class="footer-marke-logo" aria-hidden="true"></span>
 <span class="footer-marke-name">ZERRER</span>
 </div>
-<span class="footer-marke-claim">{marken_zeilen()}</span>
-<nav class="footer-marke-rechtliches" aria-label="Rechtliches">
-<a href="{w}#/impressum">Impressum</a>
-<a href="{w}#/datenschutz">Datenschutz</a>
-<a class="footer-marke-goat" href="https://www.goatcounter.com/" rel="noopener" target="_blank">{GOAT_SVG}<span>GoatCounter</span></a>
-</nav>
+<span class="footer-marke-claim">{esc(uitext("marke_footer_claim"))}</span>
 </div>
 <nav class="footer-spalte" aria-label="Schnellzugriff">
 <span class="footer-titel">Schnellzugriff</span>

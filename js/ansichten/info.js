@@ -43,8 +43,16 @@ function creditsLizenzHtml(titel) {
     <h2>${esc(titel ?? 'Open Source & Lizenz')}</h2>
     <p class="leise">Der Code steht unter der <a href="https://github.com/daimpad/mosh-school/blob/main/LICENSE" rel="license noopener" target="_blank">MIT-Lizenz</a> — nutze, verändere und teile ihn frei. Die Inhalte stehen unter <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" rel="license noopener" target="_blank">Creative Commons BY-NC 4.0</a>: Namensnennung, nicht kommerziell.</p>
     <p class="leise">Gebaut von <a href="https://paderta.com" rel="noopener" target="_blank">Damian Paderta</a> (<a href="https://nozilla.de" rel="noopener" target="_blank">Nozilla — bits and bytes with heart</a>) · <a href="#/kollektiv">ZERRER-Kollektiv</a>.</p>
-    <p class="leise">${GOAT_SVG} Anonyme Reichweitenmessung mit <a href="https://www.goatcounter.com/" rel="noopener" target="_blank">GoatCounter</a> — Details in der <a href="#/datenschutz">Datenschutzerklärung</a>.</p>
   </section>`;
+}
+
+// Reichweitenmessungs-Hinweis: steht als letzte Zeile der „Über"-Seite, nicht
+// mehr in der Fußzeile. Er ist eine Fußnote zum Betrieb der Seite, kein
+// Navigationsziel — in der Fußzeile stand er zwischen Pflichtangaben und bekam
+// dadurch mehr Gewicht, als ihm zusteht. Bewusst als schlichte Zeile ohne Karte:
+// eine Karte mit einer einzigen grauen Zeile liest sich wie ein Rest.
+function goatHinweisHtml() {
+  return `<p class="leise ueber-fussnote">${GOAT_SVG} Anonyme Reichweitenmessung mit <a href="https://www.goatcounter.com/" rel="noopener" target="_blank">GoatCounter</a> — Details in der <a href="#/datenschutz">Datenschutzerklärung</a>.</p>`;
 }
 
 function abschnittHtml(block) {
@@ -156,7 +164,8 @@ export function renderUeber(el, daten) {
       <h2>${esc(t('nav_mitmachen'))}</h2>
       <p class="leise">${esc(t('profil_mitmachen_text'))}</p>
       <p class="info-cta"><a class="knopf knopf-sekundaer" href="#/mitmachen"><i class="fa-solid fa-comments" aria-hidden="true"></i> ${esc(t('nav_mitmachen'))}</a></p>
-    </section>`;
+    </section>
+    ${goatHinweisHtml()}`;
 }
 
 // Schlichte Info-Seite: Titel + optionale Einleitungs-Absätze, dazu optionale
