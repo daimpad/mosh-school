@@ -172,14 +172,23 @@ export function renderUeber(el, daten) {
 // betitelte `abschnitte` (h2 + Absätze). Trägt die Rechtstexte (Impressum/
 // Datenschutz) UND die Kollektiv-Seite — gleiche Bauform, eine Stelle.
 // Platzhalter in [eckigen Klammern] bleiben sichtbar, bis der Betreiber sie füllt.
-function infoSeiteHtml(block) {
+// `marke` (optional) ersetzt die Text-Ueberschrift durch die gezeichnete
+// Vollmarke des Zweigs. Die <h1> bleibt als <h1> stehen — nur ihr Inhalt wird
+// zur Grafik, und der zugaengliche Name kommt ueber aria-label aus demselben
+// Titel wie vorher. Die Rechtstexte (Impressum/Datenschutz) teilen sich diese
+// Funktion und bekommen deshalb weiter ihre schlichte Ueberschrift.
+function infoSeiteHtml(block, marke = null) {
   const absaetzeHtml = (liste) => (liste || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
   const einleitung = absaetzeHtml(block.absaetze);
   const abschnitte = (block.abschnitte || [])
     .map((a) => `<h2>${esc(text(a.titel) ?? '')}</h2>${absaetzeHtml(a.absaetze)}`)
     .join('');
+  const titel = text(block.titel) ?? '';
+  const kopf = marke
+    ? `<h1><span class="marken-lockup marke-zeichen marke-wortbild-${esc(marke)}" role="img" aria-label="${esc(titel)}"></span></h1>`
+    : `<h1>${esc(titel)}</h1>`;
   return `
-    <h1>${esc(text(block.titel) ?? '')}</h1>
+    ${kopf}
     <section class="karte">${einleitung}${abschnitte}</section>`;
 }
 
@@ -192,7 +201,7 @@ export function renderRechtstext(el, daten, schluessel) {
 // NICHT im Baustein-Pool, kein Fortschritt.
 export function renderKollektiv(el, daten) {
   const block = daten.appInfo?.kollektiv;
-  el.innerHTML = block ? infoSeiteHtml(block) : nichtGefundenHtml();
+  el.innerHTML = block ? infoSeiteHtml(block, 'kollektiv') : nichtGefundenHtml();
 }
 
 export function renderMitmachen(el, daten) {

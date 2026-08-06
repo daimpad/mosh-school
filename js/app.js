@@ -246,6 +246,10 @@ function beschrifteRahmen() {
   // die stehen im Startseiten-Hero, und ihre Bereiche sind aus den Spalten
   // daneben verlinkt. Steht leer im HTML, damit der Text nur an EINER Stelle
   // gepflegt wird.
+  // Die Fuss-Wortmarke ist eine Grafik; ihren zugaenglichen Namen traegt das
+  // aria-label, damit Vorlesesoftware weiter „ZERRER" hoert.
+  const fussWort = document.querySelector('.footer-marke-wort');
+  if (fussWort) fussWort.setAttribute('aria-label', t('app_titel'));
   const fussClaim = document.querySelector('.footer-marke-claim');
   if (fussClaim) fussClaim.textContent = t('marke_footer_claim');
   const beschriftungen = {

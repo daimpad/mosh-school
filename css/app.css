@@ -10,6 +10,10 @@
   /* Marke (CI): Blutrot als Akzent + Ampel-Signalfarben. Die „grungy hardcore
      skin" weiter unten überschreibt diese Basistokens pro Theme; sie sind hier
      nur der rote Fallback. */
+  /* Logo-Rot: BEWUSST kein --primaer. Der Akzent der App kippt mit dem Thema
+     (#cc2418 hell, #ff3b2e dunkel); das Rot IM Logo ist eine Marken-Konstante
+     und darf das nicht mitmachen. */
+  --marke-rot: #fa100d;
   --primaer: #cc2418;
   --primaer-dunkel: #a81a10;
   --primaer-tief: #a81a10;
@@ -243,6 +247,68 @@ code { font-size: 0.85em; word-break: break-all; }
    traegt der Schriftzug dieselbe Farbe, konkurrieren zwei rote Flaechen in der
    Kopfzeile miteinander und keine der beiden fuehrt. Schwarz auf Weiss bzw.
    Weiss auf Schwarz laesst dem Logo den Auftritt. */
+/* --- MARKE: zweifarbige Masken-Ebenen ------------------------------------
+   Die Marken sind zweifarbig: ein rotes Zerre-Zeichen plus eine Flaeche, die
+   mit dem Thema kippen muss. Ein <img> kann das nicht — es traegt seine Farben
+   in sich, und ein Wechsel per prefers-color-scheme haenge am Betriebssystem
+   statt am Themen-Umschalter der App (der drei Stellungen hat, nicht zwei).
+   Also derselbe Weg wie bei allen Icons hier: CSS-`mask` plus
+   `background-color`. Die Maske traegt nur die Form, die Farbe kommt aus den
+   Tokens. Eine Maske ist einfarbig, deshalb ZWEI uebereinanderliegende Ebenen
+   je Marke (scripts/build_marken.py erzeugt sie aus scripts/marken_quelle/).
+
+   Die url() stehen relativ zu DIESER Datei (css/), nicht zum Dokument — genau
+   deshalb greifen sie unveraendert auch auf den 546 statischen Seiten, die
+   app.css aus wechselnder Verzeichnistiefe einbinden. */
+.marke-zeichen { position: relative; display: inline-block; flex: none; }
+.marke-zeichen::before,
+.marke-zeichen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+}
+.marke-zeichen::before {
+  background: currentColor;
+  -webkit-mask-image: var(--marke-tinte); mask-image: var(--marke-tinte);
+}
+.marke-zeichen::after {
+  background: var(--marke-rot);
+  -webkit-mask-image: var(--marke-rot-ebene); mask-image: var(--marke-rot-ebene);
+}
+/* Einfarbige Marken haben keine rote Ebene. Ohne dieses `content: none` legte
+   ::after eine volle Flaeche ueber die Marke — `mask-image: none` maskiert
+   nichts weg, es zeigt alles. */
+.marke-einfarbig::after { content: none; }
+
+.marke-bild {
+  --marke-tinte: url(../assets/images/marke/bild-tinte.svg);
+  --marke-rot-ebene: url(../assets/images/marke/bild-rot.svg);
+}
+.marke-wort {
+  --marke-tinte: url(../assets/images/marke/wort.svg);
+  aspect-ratio: 310.63 / 83.91;
+}
+.marke-wortbild-moshskool {
+  --marke-tinte: url(../assets/images/marke/wortbild-moshskool-tinte.svg);
+  --marke-rot-ebene: url(../assets/images/marke/wortbild-moshskool-rot.svg);
+  aspect-ratio: 561.56 / 142.78;
+}
+.marke-wortbild-kollektiv {
+  --marke-tinte: url(../assets/images/marke/wortbild-kollektiv-tinte.svg);
+  --marke-rot-ebene: url(../assets/images/marke/wortbild-kollektiv-rot.svg);
+  aspect-ratio: 561.56 / 142.78;
+}
+/* Vollmarke ueber einer Bereichs-Ueberschrift (Kollektiv, Lernen). Gedeckelt,
+   damit sie auf grossen Schirmen nicht ins Plakathafte waechst. */
+.marken-lockup {
+  display: block;
+  width: min(100%, 22rem);
+  margin: 0 0 0.4rem;
+}
+
 .marke {
   display: inline-flex;
   align-items: center;
@@ -379,12 +445,10 @@ body.im-onboarding .seiten-footer { display: none; }
    kleiner passend zur Fusszeilen-Schrift — reserviert fuer dasselbe kommende
    SVG-Logo. */
 .footer-marke-logo { width: 20px; height: 20px; flex-shrink: 0; display: block; }
-/* Dieselbe Wortmarke wie in der Kopfzeile — also auch dieselbe Tinte + Schrift
-   (New Rocker, s. css/schriften.css). */
-.footer-marke-name {
-  font-family: 'New Rocker', 'Special Elite', cursive; font-weight: 400; color: var(--tinte);
-  font-size: 1.15rem; letter-spacing: 0.02em;
-}
+/* Die echte Wortmarke als Grafik (Maske + currentColor, s. .marke-zeichen).
+   Hoehe statt Breite gesetzt — die Breite ergibt sich aus dem aspect-ratio der
+   Marke, so bleibt sie bei jeder Schriftgroesse unverzerrt. */
+.footer-marke-wort { height: 1.15rem; color: var(--tinte); }
 .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
 .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
 .footer-titel {
@@ -3286,6 +3350,10 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
    dazu, die Basis wird unsichtbar (.zerr-aktiv), und alle Variablen unten
    werden pro Frame aktualisiert. Werte + Aufbau: mockups/hero-glitch.html. */
 .zerr-wort { position: relative; display: inline-block; }
+/* Die letzten drei Buchstaben gespiegelt — so steht es auch in der gezeichneten
+   Wortmarke. inline-block ist Pflicht: Auf ein reines Inline-Element wirkt
+   transform nicht. */
+.zerr-spiegel { display: inline-block; transform: scaleX(-1); }
 .zerr-aktiv .zerr-basis { visibility: hidden; }
 .zerr-lage {
   position: absolute;

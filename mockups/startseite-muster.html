@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZERRER — Startseite als Kachel-Muster (Mockup)</title>
-<link rel="icon" href="../assets/images/logo.svg">
+<link rel="icon" href="../assets/images/favicon/favicon.svg">
 
 <!-- Bewusst die echten Stylesheets der App: Das Mockup soll zeigen, wie es
      WIRKLICH aussieht, nicht wie eine Nachbildung aussieht. Farben, Schriften,
@@ -554,7 +554,7 @@ function kachelHtml(e, behandlung, groesse) {
     ${motivSvg(e.motivKey || e.titel)}
     <div class="kachel-scrim" aria-hidden="true"></div>
     <div class="kachel-inhalt">
-      ${marke ? '<img class="kachel-mark" src="../assets/images/logo.svg" alt="" width="44" height="44">' : ''}
+      ${marke ? '<img class="kachel-mark" src="../assets/images/favicon/favicon.svg" alt="" width="44" height="44">' : ''}
       ${e.augenbraue || iconHtml(e) ? `<p class="kachel-augenbraue">${iconHtml(e)}${e.augenbraue || ''}</p>` : ''}
       <h3 class="kachel-titel">${e.titel}</h3>
       ${e.kurz ? `<p class="kachel-kurz">${e.kurz}</p>` : ''}

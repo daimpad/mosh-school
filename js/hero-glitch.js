@@ -114,13 +114,18 @@ export function initHeroGlitch(wort) {
   if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
 
   wort.classList.add('zerr-aktiv');
-  const text = basis.textContent;
+  // innerHTML statt textContent: Der Schriftzug ist kein flacher Text mehr —
+  // die letzten drei Buchstaben stecken in einem eigenen, gespiegelten Span
+  // (wortmarkeSchriftzug in js/genre-inszenierung.js). Mit textContent truege
+  // die Basis das gespiegelte Wort, jede Glitch-Ebene darueber aber das
+  // ungespiegelte: Der Effekt liefe sichtbar neben dem Wort her.
+  const inhalt = basis.innerHTML;
 
   const mach = (klasse) => {
     const el = document.createElement('span');
     el.className = 'zerr-lage ' + klasse;
     el.setAttribute('aria-hidden', 'true');
-    el.textContent = text;
+    el.innerHTML = inhalt;
     wort.appendChild(el);
     return el;
   };
