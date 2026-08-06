@@ -308,6 +308,9 @@ code { font-size: 0.85em; word-break: break-all; }
   width: min(100%, 22rem);
   margin: 0 0 0.4rem;
 }
+/* Die Kollektiv-Seite traegt ihre Marke als eigentliches Seitenmotiv — dort
+   darf sie deutlich groesser stehen als die Hub-Variante ueber dem Foto-Hero. */
+.marken-lockup-gross { width: min(100%, 36rem); margin-bottom: 0.8rem; }
 
 .marke {
   display: inline-flex;
@@ -448,7 +451,10 @@ body.im-onboarding .seiten-footer { display: none; }
 /* Die echte Wortmarke als Grafik (Maske + currentColor, s. .marke-zeichen).
    Hoehe statt Breite gesetzt — die Breite ergibt sich aus dem aspect-ratio der
    Marke, so bleibt sie bei jeder Schriftgroesse unverzerrt. */
-.footer-marke-wort { height: 1.15rem; color: var(--tinte); }
+/* Vollmarke im Fuss (links) und im Menuekopf. Breite statt Hoehe gesetzt — die
+   Hoehe ergibt sich aus dem aspect-ratio der Marke, so bleibt sie unverzerrt. */
+.footer-marke-voll { width: min(100%, 15rem); color: var(--tinte); }
+.menue-marke { width: min(62%, 11rem); color: var(--tinte); }
 .footer-marke-claim { color: var(--tinte-2); font-size: 0.85rem; }
 .footer-spalte { display: flex; flex-direction: column; gap: 0.45rem; }
 .footer-titel {
@@ -572,14 +578,6 @@ body.im-onboarding main { padding-bottom: 2rem; }
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.4rem;
-}
-
-.menue-titel {
-  font-weight: 700;
-  color: var(--tinte-2);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.8rem;
 }
 
 .menue-schliessen {
@@ -3313,7 +3311,8 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .startseite-hero .startseite-hero-marke {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* Linksbuendig, in derselben Kante wie Marken-Zeilen und CTAs darunter. */
+  justify-content: flex-start;
   width: 100%;
   gap: 0.4rem;
   flex-wrap: nowrap;
@@ -3332,17 +3331,6 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   line-height: 0.92;
   white-space: nowrap;
 }
-/* Leerer Platzhalter statt des Plektrum-Bilds (wie .marke-logo) — reserviert
-   die Flaeche neben dem Glitch-Schriftzug fuer ein kommendes SVG-Logo.
-   display:inline-block noetig: anders als ein <img> ist ein <span> kein
-   "replaced element" und wuerde width/height sonst ignorieren. */
-.startseite-hero-mark {
-  display: inline-block;
-  flex: none;
-  width: 0.9em;
-  height: 0.9em;
-}
-
 /* Glitch-Animation des Schriftzugs (js/hero-glitch.js) — "kaputter Film".
    `.zerr-basis` traegt Layout + die statische Darstellung; ohne JS oder bei
    reduzierter Bewegung bleibt sie sichtbar und nichts hier greift. Aktiviert

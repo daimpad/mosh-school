@@ -459,8 +459,7 @@ def seiten_fuss(tiefe, app_href):
 <div class="footer-innen">
 <div class="footer-marke">
 <div class="footer-marke-kopf">
-<span class="footer-marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
-<span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img" aria-label="{esc(uitext("app_titel"))}"></span>
+<span class="footer-marke-voll marke-zeichen marke-wortbild-moshskool" role="img" aria-label="{esc(uitext("app_titel"))}"></span>
 </div>
 <span class="footer-marke-claim">{esc(uitext("marke_footer_claim"))}</span>
 </div>

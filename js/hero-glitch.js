@@ -58,9 +58,8 @@ const MARKE_MAX_PX = 940;
 // von der Schriftgroesse voellig unabhaengige Breite (100vw + eigenes
 // Innenmass), daher bricht die Messung an IHM die Rueckkopplung zuverlaessig.
 function passeMarkeGroesseAn(marke) {
-  const logo = marke.querySelector('.startseite-hero-mark');
   const wort = marke.querySelector('.zerr-wort');
-  if (!logo || !wort) return;
+  if (!wort) return;
   const hero = marke.closest('.genre-landing-hero') || marke.parentElement;
   const heroStil = getComputedStyle(hero);
   const verfuegbarRoh = hero.getBoundingClientRect().width
@@ -69,8 +68,9 @@ function passeMarkeGroesseAn(marke) {
   const verfuegbar = Math.min(verfuegbarRoh, MARKE_MAX_PX);
   const vorher = marke.style.getPropertyValue('--marke-groesse');
   marke.style.setProperty('--marke-groesse', '100px');
-  const gap = parseFloat(getComputedStyle(marke).columnGap) || 0;
-  const naturBei100 = logo.getBoundingClientRect().width + wort.getBoundingClientRect().width + gap;
+  // Frueher stand links davon die Bildmarke; ihre Breite und der Spalt gingen
+  // hier mit ein. Seit sie raus ist, traegt der Schriftzug die Spalte allein.
+  const naturBei100 = wort.getBoundingClientRect().width;
   if (!naturBei100) {
     marke.style.setProperty('--marke-groesse', vorher);
     return;
