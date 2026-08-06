@@ -388,7 +388,8 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 <meta name="description" content="{esc(beschreibung)}">
 <meta name="author" content="Damian Paderta">
 <link rel="canonical" href="{esc(canonical)}">
-<link rel="icon" href="{w}assets/images/logo.svg">
+<link rel="icon" href="{w}favicon.ico" sizes="48x48">
+<link rel="icon" href="{w}assets/images/favicon/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="ZERRER">
 <meta property="og:locale" content="de_DE">
@@ -425,7 +426,7 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 <header class="kopf">
 <div class="kopf-innen">
 <a class="marke" href="{w}">
-<span class="marke-logo" aria-hidden="true"></span>
+<span class="marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
 <span class="marke-text">ZERRER</span>
 </a>
 </div>
@@ -458,8 +459,8 @@ def seiten_fuss(tiefe, app_href):
 <div class="footer-innen">
 <div class="footer-marke">
 <div class="footer-marke-kopf">
-<span class="footer-marke-logo" aria-hidden="true"></span>
-<span class="footer-marke-name">ZERRER</span>
+<span class="footer-marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
+<span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img" aria-label="{esc(uitext("app_titel"))}"></span>
 </div>
 <span class="footer-marke-claim">{esc(uitext("marke_footer_claim"))}</span>
 </div>

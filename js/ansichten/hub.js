@@ -71,7 +71,10 @@ function instrumentKacheln(daten) {
 }
 
 // Ein Hub rendern: Hero + benannte Abschnitte mit Kachelrastern.
-function renderHub(el, { icon, titel, untertitel, hue }, abschnitte) {
+// `marke` (optional): Statt des Titeltexts traegt der Hero die gezeichnete
+// Vollmarke des Zweigs — dieselbe Behandlung wie die Kollektiv-Seite, damit
+// die beiden Marken-Zweige gleich auftreten.
+function renderHub(el, { icon, titel, untertitel, hue, marke = null }, abschnitte) {
   const bloecke = abschnitte
     .map(
       (a) => `
@@ -80,14 +83,16 @@ function renderHub(el, { icon, titel, untertitel, hue }, abschnitte) {
     )
     .join('');
   el.innerHTML = `
-    ${landingHeroHtml(icon, titel, untertitel, hue, null)}
+    ${landingHeroHtml(icon, titel, untertitel, hue, null, '', '', marke
+      ? { titelHtml: `<span class="marken-lockup marke-zeichen marke-wortbild-${marke}" role="img" aria-label="${esc(titel)}"></span>` }
+      : {})}
     ${bloecke}`;
 }
 
 export function renderLernen(el, daten) {
   renderHub(
     el,
-    { icon: 'fa-book-open', titel: t('nav_lernen'), untertitel: t('hub_lernen_intro'), hue: 'pf-blau' },
+    { icon: 'fa-book-open', titel: t('nav_lernen'), untertitel: t('hub_lernen_intro'), hue: 'pf-blau', marke: 'moshskool' },
     [
       { titel: t('instrumente'), klasse: 'instr-gitter', kacheln: instrumentKacheln(daten) },
       {

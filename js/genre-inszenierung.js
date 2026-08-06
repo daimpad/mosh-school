@@ -187,7 +187,7 @@ export function landingHeroHtml(
   icon, titel, untertitel = '', hue = 'pf-blau', motivKey = null, augenbraue = '', iconHtml = '', extra = {},
 ) {
   const key = motivKey || titel || 'mosh';
-  const { untertitelHtml = '', augenbraueHref = '' } = extra;
+  const { untertitelHtml = '', augenbraueHref = '', titelHtml = '' } = extra;
   const augenbraueTeil = augenbraue
     ? augenbraueHref
       ? `<p class="genre-landing-augenbraue"><a class="genre-landing-augenbraue-link" href="${esc(augenbraueHref)}">${esc(augenbraue)}</a></p>`
@@ -201,7 +201,7 @@ export function landingHeroHtml(
       <div class="genre-landing-scrim" aria-hidden="true"></div>
       <div class="genre-landing-inhalt">
         ${augenbraueTeil}
-        <h1>${esc(titel)}</h1>
+        <h1>${titelHtml || esc(titel)}</h1>
         ${unten ? `<p class="genre-landing-kurz">${unten}</p>` : ''}
       </div>
     </section>`;
@@ -234,6 +234,24 @@ export function bildKachelHtml({ href, hue = 'pf-schiefer', schluessel, icon = '
 // Inszenierter Startseiten-Hero: gleiche Motiv-Backdrop- + Reinbox-Inszenierung
 // wie die Landingpages, aber mit Marken-Logo, Titel, Untertitel, Themenzeile und
 // den Einstiegs-CTAs (extra). Blutrote Marken-Hue. Ersetzt den flachen
+// Der Schriftzug im Hero folgt der gezeichneten Wortmarke: Dort stehen die
+// letzten drei Buchstaben gespiegelt („ZER" + verkehrtes „RER"). „RER" ist ein
+// Palindrom — eine Spiegelung des ganzen Stücks dreht deshalb nur die Glyphen
+// um, nicht ihre Reihenfolge, und aus ZERRER wird genau das Bild der Marke.
+//
+// Die Zerlegung greift nur, wenn der Titel auch wirklich auf ein spiegelbares
+// Dreier-Ende hinausläuft; sonst bleibt das Wort unangetastet. Der zugängliche
+// Name hängt ohnehin am aria-label des Umschlags, nicht an diesen Teilen.
+const SPIEGEL_ENDE = 'RER';
+
+export function wortmarkeSchriftzug(titel) {
+  const wort = String(titel);
+  if (wort.toUpperCase().slice(-SPIEGEL_ENDE.length) !== SPIEGEL_ENDE) return esc(wort);
+  const kopf = wort.slice(0, wort.length - SPIEGEL_ENDE.length);
+  const ende = wort.slice(wort.length - SPIEGEL_ENDE.length);
+  return `${esc(kopf)}<span class="zerr-spiegel">${esc(ende)}</span>`;
+}
+
 // markeHeroGross auf der Startseite; auf Mobil stapelt der Inhalt sauber über dem
 // Motiv statt Logo+Text gedrängt nebeneinander.
 export function markeHeroInszeniert(extra = '') {
@@ -244,9 +262,9 @@ export function markeHeroInszeniert(extra = '') {
       <div class="genre-landing-scrim" aria-hidden="true"></div>
       <div class="genre-landing-inhalt">
         <h1 class="startseite-hero-marke">
-          <span class="startseite-hero-mark" aria-hidden="true"></span>
+          <span class="startseite-hero-mark marke-zeichen marke-bild" aria-hidden="true"></span>
           <span class="zerr-wort" aria-label="${esc(t('app_titel'))}">
-            <span class="zerr-basis" aria-hidden="true">${esc(t('app_titel'))}</span>
+            <span class="zerr-basis" aria-hidden="true">${wortmarkeSchriftzug(t('app_titel'))}</span>
           </span>
         </h1>
         ${markenZeilenHtml({ klasse: 'startseite-hero-zweige' })}

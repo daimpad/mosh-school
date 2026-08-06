@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v197';
+const CACHE = 'zerrer-v198';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -26,7 +26,22 @@ const SHELL = [
   './',
   'index.html',
   'manifest.json',
-  'assets/images/logo.svg',
+  'favicon.ico',
+  'assets/images/favicon/favicon.svg',
+  'assets/images/favicon/favicon-96.png',
+  'assets/images/favicon/apple-touch-icon.png',
+  'assets/images/favicon/app-192.png',
+  'assets/images/favicon/app-512.png',
+  // Marken-Masken: Sie kommen aus css/app.css, sind also Unterressource des
+  // Stylesheets und nicht der Seite — ohne sie stuenden Kopfzeile, Hero und
+  // Fusszeile offline ohne Marke da.
+  'assets/images/marke/bild-tinte.svg',
+  'assets/images/marke/bild-rot.svg',
+  'assets/images/marke/wort.svg',
+  'assets/images/marke/wortbild-moshskool-tinte.svg',
+  'assets/images/marke/wortbild-moshskool-rot.svg',
+  'assets/images/marke/wortbild-kollektiv-tinte.svg',
+  'assets/images/marke/wortbild-kollektiv-rot.svg',
   'css/app.css',
   'css/feedback.css',
   'css/schriften.css',

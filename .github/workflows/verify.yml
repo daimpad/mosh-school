@@ -46,6 +46,12 @@ jobs:
       - name: Grafik-Bundles gegen die Quellen pruefen
         run: python3 scripts/build_grafiken.py --check
 
+      # Die Marken-Masken (assets/images/marke/) sind aus den Logo-Quellen
+      # zerlegt. Ohne diese Pruefung faellt eine von Hand editierte Ebene erst
+      # auf, wenn die Marke im Browser halb fehlt.
+      - name: Marken-Masken gegen die Quellen pruefen
+        run: python3 scripts/build_marken.py --check
+
       # Die statischen Tier-2-SEO-Seiten (baustein/**, pfad/**, sitemap.xml)
       # muessen aus dem Baustein-Pool reproduzierbar sein, sonst driftet die
       # Sitemap von den tatsaechlichen Inhalten weg.

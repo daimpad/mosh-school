@@ -124,24 +124,6 @@ export function markenZeilenHtml({ klasse = '' } = {}) {
   return `<span class="marken-zweige marken-zweige-chips${klasse ? ' ' + klasse : ''}">${zeilen}</span>`;
 }
 
-// Marken-Hero (Logo links, Text rechts, Akzentleiste unten). Groß auf Startseite
-// + Willkommen; die Landingpages nutzen landingHeroHtml (js/genre-inszenierung.js).
-// Alle Farben aus Tokens — hell/dunkel kippen automatisch mit.
-// extra ist optionales Inline-HTML unter dem Hero-Text (Startseite: die Einstiegs-CTAs).
-// Ohne extra bleibt der Hero rein darstellend (Willkommensseite).
-export function markeHeroGross(extra = '') {
-  return `
-    <section class="marke-hero">
-      <img class="marke-hero-bild" src="assets/images/logo.svg" alt="" width="96" height="96">
-      <div class="marke-hero-text">
-        <h1>${esc(t('app_titel'))}</h1>
-        <p class="marke-hero-untertitel">${esc(t('hero_untertitel'))}</p>
-        <p class="marke-hero-themen">${esc(t('hero_themen'))}</p>
-        ${extra}
-      </div>
-    </section>`;
-}
-
 export function statusPunktHtml(station) {
   const { erklaerteil, uebungsteil, reflexionsaufgabe, absolviert } = station.status;
   let klasse = 'offen';

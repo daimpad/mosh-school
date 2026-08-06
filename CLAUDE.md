@@ -313,6 +313,7 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
 python3 scripts/validate.py              # Cross-File-Konsistenz über den gemischten Pool
 python3 scripts/lift.py                  # idempotent — Titel nach labels/de.json geliftet
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
+python3 scripts/build_marken.py --check   # Marken-Masken aus den Logo-Quellen reproduzierbar
 python3 scripts/build_seiten.py --check   # Tier-2-SEO-Seiten + Sitemap aus den Quellen reproduzierbar
 python3 scripts/pruefe_zerrlabor.py      # Zerr-Kennlinien treffen ihre Sollwerte
 python3 scripts/pruefe_zerrlabor_mutation.py  # …und die Pruefung schlaegt bei Fehlern auch an
@@ -452,6 +453,36 @@ Tokens**, nie harte Farben.
   `.abschnitt-titel` — gesetzt in `css/app.css` (`font-weight: 900`, Versalien).
   **Fließtext Roboto** (`assets/fonts/roboto-latin-*.woff2`, 400/500/700). Hart-kantige
   Container, versetzte Schatten, Grain-Overlay.
+- **Marken-Grafik (Logo):** Vier Marken — Bildmarke (quadratisch), Wortmarke und
+  je eine WortBildmarke für „Mosh Skool" und „Kollektiv". Sie sind **zweifarbig**:
+  rotes Zerre-Zeichen (`--marke-rot: #fa100d`, BEWUSST nicht `--primaer` — der
+  Akzent kippt mit dem Thema, ein Logo-Rot darf das nicht) plus eine Fläche, die
+  mit dem Thema kippen muss. Deshalb **keine `<img>`, sondern CSS-Masken**: Ein
+  `<img>` trägt seine Farben in sich, und ein Wechsel per `prefers-color-scheme`
+  hinge am Betriebssystem statt am Themen-Umschalter (der drei Stellungen hat).
+  `scripts/build_marken.py` zerlegt die Quellen in `scripts/marken_quelle/` in je
+  eine Rot- und eine Tinten-Ebene nach `assets/images/marke/`; `.marke-zeichen`
+  legt sie als `::before`/`::after` übereinander (`--check` meldet Drift).
+  **Fallstrick:** Einfarbige Marken brauchen `.marke-einfarbig` — ohne das
+  `content: none` legte `::after` eine volle Fläche darüber, denn
+  `mask-image: none` maskiert nichts weg, es zeigt alles. Die `url()` stehen
+  relativ zu `css/app.css` und greifen deshalb unverändert auf den statischen
+  Seiten aus wechselnder Verzeichnistiefe. Eingesetzt: Kopfzeile + Startseiten-
+  Hero + Fußzeile (Bildmarke), Fußzeile (Wortmarke), Lernen-Hub und
+  Kollektiv-Seite (Vollmarke des jeweiligen Zweigs).
+- **Der Hero-Schriftzug spiegelt die letzten drei Buchstaben** („ZER" + verkehrtes
+  „RER", `wortmarkeSchriftzug()` in `js/genre-inszenierung.js`) — so steht es auch
+  in der gezeichneten Wortmarke. „RER" ist ein Palindrom, eine Spiegelung dreht
+  deshalb nur die Glyphen, nicht ihre Reihenfolge. **`js/hero-glitch.js` klont
+  `innerHTML`, nicht `textContent`:** Sonst trüge die Basis das gespiegelte Wort,
+  jede Glitch-Ebene darüber aber das ungespiegelte.
+- **Favicons/App-Icons** liegen in `assets/images/favicon/` (plus `favicon.ico`
+  im Wurzelverzeichnis). Die gelieferten Apple-Touch- und PWA-Grössen hatten
+  einen transparenten Hintergrund mit weisser unterer Marken-Hälfte — auf hellem
+  Grund blieb davon nur die rote Spitze übrig. Sie werden deshalb von
+  `node scripts/build_appicons.mjs` aus `favicon.svg` gerastert (braucht Chromium,
+  läuft nicht in der CI). Im Manifest stehen sie **ohne** `purpose: maskable`:
+  Das Motiv ist ein abgerundetes Quadrat, kein randlos gefülltes Bild.
 - **Marken-Schrift New Rocker** (lokal als `assets/fonts/new-rocker-latin-400-normal.woff2`,
   nur Gewicht 400 — SIL OFL, `assets/fonts/LICENSE-new-rocker.txt`): trägt
   **ausschließlich das Wort „ZERRER" als Logo**, an genau drei Stellen — Kopfzeile

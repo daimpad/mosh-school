@@ -8,8 +8,10 @@
   <meta name="author" content="Damian Paderta">
   <meta name="theme-color" content="#0f151c">
   <link rel="canonical" href="https://zerrer.org/">
-  <link rel="icon" href="assets/images/logo.svg">
-  <link rel="apple-touch-icon" href="images/icon-180.png">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/images/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
 
   <!-- Social-Vorschau (Open Graph + Twitter/X) -->
@@ -110,7 +112,7 @@
   <header class="kopf">
     <div class="kopf-innen">
       <a class="marke" href="#/">
-        <span class="marke-logo" aria-hidden="true"></span>
+        <span class="marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
         <span class="marke-text">ZERRER</span>
       </a>
       <div class="kopf-rechts">
@@ -163,8 +165,11 @@
     <div class="footer-innen">
       <div class="footer-marke">
         <div class="footer-marke-kopf">
-          <span class="footer-marke-logo" aria-hidden="true"></span>
-          <span class="footer-marke-name">ZERRER</span>
+          <span class="footer-marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
+          <!-- Wortmarke als Grafik statt als New-Rocker-Text: In der Fusszeile
+               steht die echte Marke. Der zugaengliche Name kommt per aria-label
+               aus beschrifteRahmen() (js/app.js), nie hart geschrieben. -->
+          <span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img"></span>
         </div>
         <!-- Wird von beschrifteRahmen() (js/app.js) aus markenZeilenHtml() gefüllt —
              dieselbe Quelle wie der Startseiten-Hero, damit die beiden Zweige nicht
