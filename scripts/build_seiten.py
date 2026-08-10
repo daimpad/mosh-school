@@ -504,7 +504,7 @@ def seiten_fuss(tiefe, app_href):
      no_onload/Hash-Zaehler noetig: jede statische Seite ist ihr eigenes
      Dokument mit eigenem Pfad, der automatische Pageview beim Laden zaehlt
      also schon richtig. -->
-<script data-goatcounter="https://nozilla.goatcounter.com/count"
+<script data-goatcounter="https://zerrer.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
