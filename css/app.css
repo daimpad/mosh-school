@@ -4027,6 +4027,82 @@ a.karte-link.shows-kachel {
 }
 @media (min-width: 48rem) { .intern-rahmen { aspect-ratio: 16 / 10; } }
 
+/* ---------- Shows-Editor (#/shows/login) ----------
+   Ein Formular, kein Inhalt: Die Klassen tragen hier bewusst keine Kachel- und
+   keine Klick-Zusage (--karten-kante), sondern nur Eingabe-Optik. Alles andere
+   — Knoepfe, Chips, .abschnitt, die Vorschau-Kacheln — kommt aus dem
+   vorhandenen Satz, damit die Vorschau AUSSIEHT wie die echte Seite. */
+.editor-warnung { margin: 0 0 1rem; }
+.editor-feld { display: flex; flex-direction: column; gap: 0.3rem; margin: 0 0 0.9rem; }
+.editor-feld label, .editor-feld-titel { font-weight: 600; font-size: 0.9rem; }
+.editor-feld-hinweis { margin: 0; font-size: 0.82rem; }
+.editor-eingabe {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--linie-stark);
+  border-radius: var(--radius);
+  background: var(--flaeche);
+  color: var(--tinte);
+  font: inherit;
+}
+textarea.editor-eingabe { resize: vertical; line-height: 1.5; }
+/* Ein schreibgeschuetztes Feld muss man ansehen koennen: --flaeche-2 sagt
+   „Anzeige, nicht Eingabe", ohne den Text auszugrauen. */
+.editor-eingabe[readonly] { background: var(--flaeche-2); color: var(--tinte-2); }
+/* Zwei Spalten ab Tablet; darunter untereinander, sonst wird jedes Feld zu
+   schmal fuer seinen Inhalt. */
+.editor-gitter { display: grid; gap: 0 0.8rem; }
+@media (min-width: 40rem) { .editor-gitter { grid-template-columns: 1fr 1fr; } }
+
+.editor-pw-form, .editor-token-form {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.5rem; margin: 0 0 0.6rem;
+}
+.editor-pw-form .editor-feld, .editor-token-form .editor-feld { flex: 1 1 18rem; min-width: 0; margin: 0; }
+.editor-token-hinweis { margin: 0 0 0.4rem; }
+.editor-fehler { margin: 0; min-height: 1.2em; color: var(--primaer); font-size: 0.9rem; }
+
+/* Genre-Auswahl: Der Chip IST das Label, die Checkbox sitzt darin und bleibt
+   bedienbar — kein eigener Klick-Handler auf einem <div>, damit Tastatur und
+   Screenreader ohne Zutun funktionieren. */
+.editor-stile { margin: 0; }
+.editor-stil { cursor: pointer; }
+.editor-stil input { margin-right: 0.35rem; }
+
+.editor-pruefung { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+.editor-p { display: flex; gap: 0.5rem; align-items: baseline; font-size: 0.9rem; }
+/* Nicht nur Farbe: Jede Zeile traegt zusaetzlich ein Zeichen (x / ! / Haken).
+   Dieselbe Regel wie bei Stimmgeraet und Klick — ein Zustand, den man nur an
+   der Farbe erkennt, ist fuer einen Teil der Leute gar kein Zustand. */
+.editor-p-marke { font-weight: 700; min-width: 1em; }
+.editor-p-fehler { color: var(--primaer); }
+.editor-p-warnung { color: var(--tinte-2); }
+.editor-p-ok { color: var(--tinte-2); }
+
+/* Die Vorschau-Kachel steht allein — ohne Deckel waere sie so breit wie die
+   Spalte und damit doppelt so gross wie im echten Raster. */
+.editor-vorschau-kachel { grid-template-columns: minmax(0, 14rem); margin-bottom: 1.2rem; }
+/* Die Detailvorschau zeigt eine ganze Seite im Seitenfluss: abgesetzte Flaeche
+   und Innenabstand machen sichtbar, wo sie anfaengt und aufhoert. */
+.editor-vorschau-detail {
+  background: var(--flaeche-2);
+  border: 1px solid var(--trennlinie);
+  padding: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+/* Der Hero der Vorschau darf NICHT randlos aus dem Kasten laufen: In der echten
+   Seite ist er 100vw breit mit negativen Margins — hier wuerde er ueber den
+   Bildschirmrand hinausschiessen. */
+.editor-vorschau-detail .marke-hero { width: auto; margin-left: 0; margin-right: 0; }
+.editor-aktionen { justify-content: flex-start; margin: 0 0 0.6rem; }
+.editor-meldung { margin: 0.4rem 0 0; min-height: 1.2em; font-size: 0.9rem; }
+.editor-meldung-fehler { color: var(--primaer); }
+
+/* Fliesstext der Shows-Detailseite: Die Markdown-Teilmenge erzeugt hier
+   mehrere Absaetze und Aufzaehlungen statt eines einzelnen <p>. */
+.shows-text > :first-child { margin-top: 0; }
+.shows-text > :last-child { margin-bottom: 0; }
+.shows-text ul { padding-left: 1.1rem; }
+
 @media (max-width: 30rem) {
   .bildkachel { min-height: 138px; padding: 0.75rem 0.8rem; }
   .bildkachel-titel { font-size: 1.12rem; }

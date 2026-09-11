@@ -62,6 +62,7 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 | 🎛️ **Zerr-Labor** | Zehn Zerrkennlinien und fünf synthetisierte Boxen-Impulsantworten — hörbar **und** sichtbar als Übertragungskurve. Als Signal fünf Clips aus echten, unverstärkten Gitarrenaufnahmen: Chugs, Anschlagsdynamik, Powerchord, stehender Ton, hohe Lage. |
 | 🩺 **Trainer-Layer** | Typische Fehlerbilder als Diagnose — mit abstrakten, monochromen SVG-Grafiken. |
 | 🖼️ **Shows** | Vergangene Abende des Kollektivs (`#/shows`), dokumentiert über ihre Flyer — ein Mikro-CMS aus zwei Dateien: `data/shows.json` und `images/shows/`, beides über die GitHub-Weboberfläche pflegbar, ohne Build-Schritt. |
+| ✍️ **Editor im Browser** | Unter `#/shows/login` ein Formular für eine Show: Markdown-Text, Flyer-Bild wird im Browser auf Zielmaß gerechnet, Live-Vorschau aus denselben Bauern wie die echte Seite. Speichert Bild und JSON als **einen** Commit auf einen Zweig — ohne Server, ohne Backend, über die GitHub-API. |
 | 🎲 **Experimentieren** | Impuls-Karten, Gefühlslandkarte (Gefühl → Genre) und Genre-Mix-Generator. |
 | 📴 **Offline-first PWA** | Service Worker cacht die ganze Hülle; einmal geladen, läuft alles ohne Netz. Nur Fotos und Klangproben bleiben bewusst draußen — sie kommen beim ersten Gebrauch und werden dann mitgecacht. |
 | 🔎 **Crawlbare Zwillingsseiten** | 546 statische Seiten unter echten Pfad-URLs — für Suchmaschinen, die hinter `#/` nicht schauen. |
@@ -132,7 +133,9 @@ falschen Werten durch.
 Feedback, Fehlermeldungen und Pull Requests sind willkommen — jede Rückmeldung hilft.
 Es gibt sogar einen eingebauten Review-Modus (Kommentator) über den `?feedback`-Link in der App.
 
-**Eine Show eintragen** geht ohne Checkout, direkt auf github.com: Flyer-Bild nach
+**Eine Show eintragen** geht ohne Checkout — entweder über den Editor unter
+`#/shows/login` (Formular, Bild wird im Browser verkleinert, ein Commit auf einen Zweig)
+oder direkt auf github.com: Flyer-Bild nach
 [`images/shows/`](images/shows/) hochladen, dann einen Eintrag in
 [`data/shows.json`](data/shows.json) ergänzen. Die Feldliste steht in derselben Datei unter
 `_meta`, die Bildvorgaben in [`images/shows/README.md`](images/shows/README.md). Zwei Commits,

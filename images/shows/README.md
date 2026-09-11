@@ -9,7 +9,20 @@ Bewusst **zwei getrennte Orte**: `images/bg/bilder.json` daneben ist ein
 gepflegter Inhalt. Beides in einer Datei hiesse, dass ein Generator in das
 schreibt, was ein Mensch über die GitHub-Weboberfläche editiert.
 
-## Eine Show einpflegen
+## Eine Show einpflegen — der bequeme Weg
+
+Über den Editor unter **`#/shows/login`** (Passwort steht in `js/ansichten/shows-editor.js`):
+Formular ausfüllen, Bild wählen — es wird im Browser auf Zielmaß gerechnet —,
+speichern. Das legt Bild und Eintrag als **einen** Commit auf den Zweig
+`shows/editor`; auf github.com bleibt der Merge. Dafür braucht es einmal einen
+fein granulierten GitHub-Token (nur dieses Repository, „Contents: read and
+write"), den der Editor lokal im Browser behält.
+
+Ohne Token kann derselbe Editor Bild und fertige `shows.json` zum Herunterladen
+anbieten — dann bleibt der Weg von Hand, aber ohne Tippen und ohne
+Bildbearbeitung.
+
+## Eine Show einpflegen — von Hand
 
 Zwei Commits, beide im Browser auf github.com — ein Commit kann nicht zugleich
 eine Datei hochladen und eine Textdatei ändern:
