@@ -14,9 +14,11 @@ Exit 0 = strukturell sauber. Exit 1 = strukturelle Fehler.
 Der ASCII-Umlaut-Verdacht (ae/oe/ue/ss statt echter Umlaute) und fehlende
 Titel-Lifts warnen nur — sie brechen nicht ab.
 """
+import datetime
 import json
 import os
 import re
+import struct
 import subprocess
 import sys
 import wave
@@ -77,6 +79,7 @@ REFERENZ_DATEIEN = (
     'data/zerrtypen.json',
     'data/patterns.json', 'data/brand-alert.json', 'data/pedale.json', 'data/ampbox.json',
     'data/experimente.json', 'data/koennenscheck.json', 'data/gefuehlslandkarte.json',
+    'data/flyer.json',
 )
 # Schluessel, deren Werte sprachneutrale IDs/URLs sind — nie Anzeigetext.
 REFERENZ_IGNORIERT = frozenset({
@@ -86,7 +89,15 @@ REFERENZ_IGNORIERT = frozenset({
 })
 # `kategorie` traegt je nach Datei ID (koennenscheck) oder Anzeigetext
 # (brand-alert) — deshalb datei-genau statt global ignoriert.
-REFERENZ_IGNORIERT_EXTRA = {'data/koennenscheck.json': frozenset({'kategorie'})}
+# `bild` und `datum` in flyer.json sind Dateiname bzw. Zahl, nie Anzeigetext:
+# Ein Dateiname wie "2019-03-08-koeln-sonic.webp" laese der generische Detektor
+# sonst als Ersatzschreibung — und eine Pruefung, die staendig falsch meldet,
+# wird bald ignoriert. `bands`/`gestaltung` bleiben bewusst IM Scan: Ein
+# Bandname mit echtem ae gehoert in ERSATZ_ERLAUBT, nicht an der Pruefung vorbei.
+REFERENZ_IGNORIERT_EXTRA = {
+    'data/koennenscheck.json': frozenset({'kategorie'}),
+    'data/flyer.json': frozenset({'bild', 'datum'}),
+}
 ERSATZ_VERDACHT = re.compile(r'\b[A-Za-zÄÖÜäöüß]*(?:ae|oe|ue)[A-Za-zÄÖÜäöüß]*\b', re.IGNORECASE)
 # `ss` statt `ß` braucht eine Stammliste statt des generischen Musters: „Schluss",
 # „muss" und „Fluss" sind korrekt, „ausschliesslich" und „gross" nicht — generisch
@@ -262,6 +273,271 @@ def pruefe_groessen(fehler):
             f'Eingecheckter Bestand {gesamt / 1048576:.0f} MB ueberschreitet die Grenze von '
             f'{GESAMT_GRENZE / 1048576:.0f} MB — Rohmaterial gehoert nicht in die Historie.')
     return gesamt
+
+
+# --- Flyer-Archiv (data/flyer.json + images/flyer/) --------------------------
+# Das Archiv hat ein EIGENES Budget neben der globalen Gesamtgrenze. Zwei
+# Grenzen, weil eine nicht reicht: Ohne die zweite frisst ein wachsendes
+# Bildarchiv still den Kopfraum, den die Inhalts-Pipeline fuer neue Bausteine
+# braucht (rund 12 KB je Baustein ueber Quelle, Index, Grafik und Tier-2-Seite),
+# und der Knall kaeme spaeter in einem fremden Commit, der mit Flyern nichts zu
+# tun hat. Bei 150 KB je Flyer traegt das Budget rund 68 Eintraege.
+#
+# Die Pro-Bild-Grenze liegt WEIT unter der globalen 1-MB-Grenze und greift vor
+# ihr: Ein Handyfoto eines Flyers (4 MB) riss sonst die globale Grenze — mit
+# einer Meldung, die von "gehoert das wirklich ins Repo?" spricht statt von
+# "verkleinere das Bild". 400 KB ist dieselbe Zahl, die js/hintergrundbilder.js
+# als MAX_BYTES fuer Hintergruende zieht.
+#
+# Wird eine Grenze zu eng, gehoert sie bewusst im Diff hochgesetzt — oder das
+# Archiv bekommt eine generierte Miniatur-Ebene (Gitter laedt Miniaturen,
+# Detailseite das Original), oder die Originale wandern auf den netcup-Speicher.
+# Keiner dieser Wege muss heute gebaut sein; er soll nur nicht erst unter Druck
+# erfunden werden.
+FLYER_ORDNER = 'images/flyer'
+FLYER_BUDGET = 10 * 1024 * 1024       # Summe ueber images/flyer/
+FLYER_BILD_FEHLER = 400 * 1024        # je Bild: Fehler
+FLYER_BILD_WARNUNG = 250 * 1024       # je Bild: Warnung
+FLYER_ID = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*$')
+FLYER_DATUM = re.compile(r'^\d{4}(-\d{2}(-\d{2})?)?$')
+FLYER_ENDUNGEN = ('.webp', '.jpg', '.jpeg', '.png')
+# Verhaeltnis breite/hoehe -> erlaubtes Wort. Grob genug, dass ein Mensch es auf
+# einen Blick richtig tippt, und eng genug, dass ein Vertipper auffaellt.
+FLYER_FORMATE = ('hoch', 'quer', 'quadrat')
+
+
+def bildmasse(pfad):
+    """Breite/Hoehe ohne Fremdbibliothek. Unbekanntes Format -> (None, None).
+
+    Dieselbe Aufgabe wie masse() in scripts/build_bg_index.py, hier zusaetzlich
+    mit WebP: Ohne den RIFF/VP8-Zweig lieferte die Funktion fuer genau das
+    empfohlene Format (None, None), und die Formatpruefung waere lautlos
+    wirkungslos — die Fehlerklasse, gegen die diese Datei sonst ueberall
+    anschreibt.
+    """
+    with open(pfad, 'rb') as f:
+        kopf = f.read(32)
+        if kopf[:8] == b'\x89PNG\r\n\x1a\n':
+            return struct.unpack('>II', kopf[16:24])
+        if kopf[:6] in (b'GIF87a', b'GIF89a'):
+            return struct.unpack('<HH', kopf[6:10])
+        if kopf[:4] == b'RIFF' and kopf[8:12] == b'WEBP':
+            art = kopf[12:16]
+            if art == b'VP8X':          # erweitert: 24-bit-Masse, jeweils minus 1
+                b = struct.unpack('<I', kopf[24:27] + b'\x00')[0] + 1
+                h = struct.unpack('<I', kopf[27:30] + b'\x00')[0] + 1
+                return b, h
+            if art == b'VP8L':          # verlustfrei: 14 bit je Achse, gepackt
+                bits = struct.unpack('<I', kopf[21:25])[0]
+                return (bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1
+            if art == b'VP8 ':          # verlustbehaftet: Keyframe-Kopf
+                return (struct.unpack('<H', kopf[26:28])[0] & 0x3FFF,
+                        struct.unpack('<H', kopf[28:30])[0] & 0x3FFF)
+            return None, None
+        if kopf[:2] == b'\xff\xd8':    # JPEG: bis zum ersten SOF-Marker laufen
+            f.seek(2)
+            while True:
+                byte = f.read(1)
+                if not byte:
+                    break
+                if byte != b'\xff':
+                    continue
+                marker = f.read(1)
+                if marker in (b'\xc0', b'\xc1', b'\xc2', b'\xc3'):
+                    f.read(3)
+                    hoehe, breite = struct.unpack('>HH', f.read(4))
+                    return breite, hoehe
+                if marker in (b'\xd8', b'\xd9') or not marker:
+                    continue
+                laenge = f.read(2)
+                if len(laenge) < 2:
+                    break
+                f.seek(struct.unpack('>H', laenge)[0] - 2, 1)
+    return None, None
+
+
+def formatWort(breite, hoehe):
+    """Gemessenes Verhaeltnis -> 'hoch'/'quadrat'/'quer'."""
+    r = breite / hoehe
+    if r < 0.92:
+        return 'hoch'
+    if r > 1.08:
+        return 'quer'
+    return 'quadrat'
+
+
+def pruefe_flyer(fehler, warnung, voka):
+    """Flyer-Archiv: Datei, Eintraege, Bilder, Ordner-Budget.
+
+    Das Archiv wird ueber die GitHub-Weboberflaeche gepflegt — von Hand, ohne
+    Generator und ohne Build-Schritt. Diese Pruefung ist deshalb das einzige
+    Netz unter der Pflege, und sie ist absichtlich engmaschig: Was hier nicht
+    auffaellt, faellt im Browser als leerer Kasten auf oder gar nicht.
+    """
+    try:
+        datei = lade('data/flyer.json')
+    except FileNotFoundError:
+        warnung.append('data/flyer.json fehlt (Flyer-Archiv steht dann leer)')
+        return
+    except json.JSONDecodeError as e:
+        fehler.append(f'data/flyer.json ist kein gueltiges JSON: {e}')
+        return
+    if not isinstance(datei, dict) or not isinstance(datei.get('flyer'), list):
+        # Ohne diese Pruefung liefe die Schleife unten ins Leere und ALLES
+        # darunter meldete stillschweigend nichts.
+        fehler.append('data/flyer.json: Top-Level muss ein Objekt mit der Liste "flyer" sein')
+        return
+    eintraege = datei['flyer']
+
+    ordner = os.path.join(ROOT, FLYER_ORDNER)
+    vorhanden = set()
+    if os.path.isdir(ordner):
+        vorhanden = {n for n in os.listdir(ordner) if not n.startswith('.') and n != 'README.md'}
+
+    jahr_jetzt = datetime.date.today().year
+    gesehen = {}
+    benutzte_bilder = {}
+    for i, f in enumerate(eintraege):
+        if not isinstance(f, dict):
+            fehler.append(f'data/flyer.json[{i}]: kein Objekt')
+            continue
+        fid = f.get('id')
+        ort = fid if isinstance(fid, str) and fid else f'[{i}]'
+        if not isinstance(fid, str) or not FLYER_ID.match(fid):
+            fehler.append(f'flyer {ort}: id fehlt oder verletzt das Muster '
+                          f'a-z0-9 mit Bindestrich (z. B. 2019-03-08-sonic-ballroom)')
+            continue
+        if fid in gesehen:
+            fehler.append(f'flyer {fid}: doppelte id (auch an Position {gesehen[fid]})')
+        gesehen[fid] = i
+
+        # Datum: Muster, dann ECHTES Datum. 2019-02-30 und 2019-13-01 passen auf
+        # das Muster und ergeben trotzdem keinen Tag.
+        datum = f.get('datum')
+        if not isinstance(datum, str) or not FLYER_DATUM.match(datum):
+            fehler.append(f'flyer {fid}: datum fehlt oder ist nicht JJJJ / JJJJ-MM / JJJJ-MM-TT')
+            datum = ''
+        else:
+            teile = [int(x) for x in datum.split('-')]
+            if not 1975 <= teile[0] <= jahr_jetzt + 2:
+                # Faengt den Zahlendreher 2109 (klebt den Flyer fuer immer an die
+                # Spitze) und 0219 (schiebt ihn unauffindbar ans Ende).
+                fehler.append(f'flyer {fid}: Jahr {teile[0]} ausserhalb 1975..{jahr_jetzt + 2}')
+            elif len(teile) == 2 and not 1 <= teile[1] <= 12:
+                fehler.append(f'flyer {fid}: Monat {teile[1]} gibt es nicht')
+            elif len(teile) == 3:
+                try:
+                    datetime.date(*teile)
+                except ValueError:
+                    fehler.append(f'flyer {fid}: "{datum}" ist kein echter Tag')
+            # Die ID muss mit dem Jahr beginnen. Der haeufigste Pflegefehler beim
+            # Editieren im Browser ist "Eintrag kopiert, Datum geaendert, ID
+            # vergessen" — der faellt als doppelte ID auf. Der umgekehrte Fall
+            # faellt NUR ueber diese Kopplung auf und sortierte den Flyer sonst
+            # still an die falsche Stelle.
+            if datum and not fid.startswith(datum[:4]):
+                fehler.append(f'flyer {fid}: id beginnt nicht mit dem Jahr aus datum ({datum[:4]})')
+
+        for schluessel in ('titel', 'bild'):
+            wert = f.get(schluessel)
+            if not isinstance(wert, str) or not wert.strip():
+                fehler.append(f'flyer {fid}: Pflichtfeld "{schluessel}" fehlt oder ist leer')
+        for schluessel in ('alt', 'ort', 'veranstalter', 'gestaltung', 'quelle', 'text'):
+            if schluessel in f and not isinstance(f[schluessel], str):
+                fehler.append(f'flyer {fid}: "{schluessel}" muss ein Text sein')
+        for schluessel in ('bands', 'stil'):
+            wert = f.get(schluessel)
+            if wert is None:
+                continue
+            # Der klassische Handpflege-Fehler ist "bands": "Band A, Band B".
+            # Die Ansicht iterierte dann ueber die ZEICHEN und renderte
+            # Buchstabensalat, ohne dass irgendwo ein Fehler auftauchte.
+            if not isinstance(wert, list) or any(not isinstance(x, str) or not x.strip() for x in wert):
+                fehler.append(f'flyer {fid}: "{schluessel}" muss eine Liste nicht-leerer Texte sein')
+        stil_voka = voka.get('stil')
+        for stil in f.get('stil') or []:
+            if isinstance(stil, str) and isinstance(stil_voka, list) and stil not in stil_voka:
+                fehler.append(f'flyer {fid}: unbekanntes Genre "{stil}"')
+        if not (f.get('alt') or '').strip():
+            warnung.append(f'flyer {fid}: kein alt-Text — das Bild IST hier der Inhalt')
+
+        fmt = f.get('format')
+        if fmt is not None and fmt not in FLYER_FORMATE:
+            fehler.append(f'flyer {fid}: format "{fmt}" (erlaubt: {", ".join(FLYER_FORMATE)})')
+            fmt = None
+
+        bild = f.get('bild')
+        if not isinstance(bild, str) or not bild.strip():
+            continue
+        if '/' in bild or '\\' in bild or '..' in bild:
+            fehler.append(f'flyer {fid}: bild "{bild}" enthaelt einen Pfad — '
+                          f'erwartet nur den Dateinamen (Ordner ist {FLYER_ORDNER}/)')
+            continue
+        endung = os.path.splitext(bild)[1]
+        if endung not in FLYER_ENDUNGEN:
+            # Gross-/Kleinschreibung ist kein Pedantismus: netcup und GitHub
+            # Pages liefern case-sensitiv aus, eine lokale macOS-Platte nicht.
+            # "Flyer.JPG" funktioniert dann lokal und ist online ein 404.
+            fehler.append(f'flyer {fid}: Endung "{endung}" (erlaubt, klein geschrieben: '
+                          f'{", ".join(FLYER_ENDUNGEN)})')
+            continue
+        benutzte_bilder.setdefault(bild, []).append(fid)
+        voll = os.path.join(ordner, bild)
+        if not os.path.isfile(voll):
+            fehler.append(f'flyer {fid}: Bild fehlt — erwartet {FLYER_ORDNER}/{bild}')
+            continue
+        groesse = os.path.getsize(voll)
+        if groesse > FLYER_BILD_FEHLER:
+            fehler.append(f'flyer {fid}: {FLYER_ORDNER}/{bild} ist {groesse / 1024:.0f} KB '
+                          f'(Grenze {FLYER_BILD_FEHLER // 1024} KB) — verkleinern, '
+                          f'siehe {FLYER_ORDNER}/README.md')
+        elif groesse > FLYER_BILD_WARNUNG:
+            warnung.append(f'flyer {fid}: {FLYER_ORDNER}/{bild} ist {groesse / 1024:.0f} KB '
+                           f'(Zielgroesse 120-200 KB)')
+        breite, hoehe = bildmasse(voll)
+        if not breite or not hoehe:
+            # Faengt die als .webp umbenannte HEIC-Datei vom Telefon — im
+            # Browser nur ein leerer Kasten, sonst nirgends zu sehen.
+            fehler.append(f'flyer {fid}: {FLYER_ORDNER}/{bild} ist kein lesbares Bildformat')
+            continue
+        gemessen = formatWort(breite, hoehe)
+        if fmt and fmt != gemessen:
+            fehler.append(f'flyer {fid}: format "{fmt}", gemessen {breite}x{hoehe} '
+                          f'= "{gemessen}"')
+        kante = max(breite, hoehe)
+        if kante < 800:
+            warnung.append(f'flyer {fid}: laengste Kante {kante} px — auf der Detailseite '
+                           f'kaum lesbar (empfohlen 1200-1600 px)')
+        elif kante > 2000:
+            warnung.append(f'flyer {fid}: laengste Kante {kante} px — unnoetiges Gewicht '
+                           f'(empfohlen 1200-1600 px)')
+
+    for bild, ids in sorted(benutzte_bilder.items()):
+        if len(ids) > 1:
+            warnung.append(f'flyer: {bild} steht bei mehreren Eintraegen ({", ".join(ids)})')
+
+    # WAISEN sind bewusst nur eine WARNUNG, waehrend ein Eintrag ohne Bild ein
+    # FEHLER ist. Die Asymmetrie folgt dem Pflegeweg: Ueber die GitHub-
+    # Weboberflaeche laesst sich in EINEM Commit entweder eine Datei hochladen
+    # oder eine Textdatei aendern, nicht beides. Der normale Ablauf ist also
+    # zwangslaeufig zweistufig, und waere die Waise ein Fehler, liefe die CI bei
+    # JEDEM Pflegevorgang einmal rot. Eine Pruefung, die im Normalbetrieb rot
+    # ist, wird weggeklickt — und dann faellt auch der echte Fehler daneben
+    # nicht mehr auf. Der harte Riegel dagegen ist das Budget weiter unten.
+    for w in sorted(vorhanden - set(benutzte_bilder)):
+        warnung.append(f'flyer: {FLYER_ORDNER}/{w} hat keinen Eintrag — Eintrag ergaenzen '
+                       f'oder Datei loeschen (unsichtbar, zaehlt aber gegen das Budget)')
+
+    summe = sum(os.path.getsize(os.path.join(ordner, n)) for n in vorhanden
+                if os.path.isfile(os.path.join(ordner, n)))
+    if summe > FLYER_BUDGET:
+        fehler.append(f'{FLYER_ORDNER}/: {summe / 1048576:.1f} MB ueberschreitet das '
+                      f'Flyer-Budget von {FLYER_BUDGET / 1048576:.0f} MB — Bilder verkleinern '
+                      f'oder das Budget bewusst im Diff anheben (siehe Kommentar in validate.py)')
+    if eintraege:
+        print(f'  Flyer: {len(eintraege)} Eintraege, {FLYER_ORDNER}/ {summe / 1024:.0f} KB '
+              f'(Budget {FLYER_BUDGET // 1048576} MB)')
+
 
 
 def sichtbare_texte(obj):
@@ -527,6 +803,8 @@ def main():
         arten = Counter(s.get('art') for s in stimmungen)
         print(f'  Stimmungen: {len(stimmungen)} ({dict(arten)})')
 
+    pruefe_flyer(fehler, warnung, voka)
+
     # UI-Label-Schluessel: jeder literale t('…')-Aufruf in js/ muss unter `ui` in
     # labels/de.json stehen. Ein Treffer daneben wirft KEINEN Fehler — i18n gibt
     # den rohen Schluessel zurueck, und der steht dann als Text auf der Seite.
@@ -609,6 +887,15 @@ def main():
     for pfad in dateien:
         if pfad not in sw_shell:
             fehler.append(f'sw.js: Inhaltsdatei "{pfad}" fehlt in SHELL (Offline-Nutzer bekommen sie nie)')
+    # Dieselbe Pruefung fuer Referenzdaten, die NICHT in INHALTSDATEIEN stehen
+    # und deshalb oben durchfielen. data/flyer.json gehoert in die Huelle,
+    # images/flyer/* ausdruecklich NICHT (Gewicht) — ein versehentlich
+    # aufgenommenes Bild zoege jede Installation beim ersten Start mit.
+    if 'data/flyer.json' not in sw_shell:
+        fehler.append('sw.js: "data/flyer.json" fehlt in SHELL (Flyer-Archiv ist offline leer)')
+    for pfad in sorted(p for p in sw_shell if p.startswith('images/flyer/')):
+        warnung.append(f'sw.js: "{pfad}" steht in SHELL — Flyer-Bilder gehoeren bewusst '
+                       f'nicht in die Huelle (Gewicht), wie images/bg/ auch')
 
     # Tier-2-SEO-Seiten (generiert via scripts/build_seiten.py): jeder Pool-Baustein
     # soll eine statische, crawlbare Detailseite haben, sonst fehlt er der Sitemap
