@@ -129,7 +129,7 @@ export async function ladeSuchindex(daten) {
 }
 
 export async function ladeDaten() {
-  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, zerrtypen, zerrlabor, boxenDatei, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, flyer, bgBilder, songDateien, ...inhaltDateien] = await Promise.all([
+  const [einheiten, fehlerbilder, appInfo, koennenscheck, tunings, patterns, griffe, zerrtypen, zerrlabor, boxenDatei, pedale, ampbox, genres, gefuehlslandkarte, experimente, brandAlert, glossar, shows, bgBilder, songDateien, ...inhaltDateien] = await Promise.all([
     holeJson('data/trainingseinheiten.json'),
     holeJson('data/fehlerbilder.json'),
     holeJson('data/app-info.json'),
@@ -147,7 +147,7 @@ export async function ladeDaten() {
     holeJson('data/experimente.json').catch(() => null),
     holeJson('data/brand-alert.json').catch(() => null),
     holeJson('data/glossar.json').catch(() => null),
-    holeJson('data/flyer.json').catch(() => null),
+    holeJson('data/shows.json').catch(() => null),
     holeJson('images/bg/bilder.json').catch(() => null),
     Promise.all(SONGDATEIEN.map(holeJson)),
     ...INHALTSDATEIEN.map(holeJson),
@@ -205,12 +205,12 @@ export async function ladeDaten() {
   // sortierbar/durchsuchbar. Jeder Begriff verweist optional auf einen vertiefenden
   // Baustein. Referenzbereich, kein Fortschritt.
   daten.glossar = glossar || { titel: '', hinweis: '', kategorien: [], begriffe: [] };
-  // Flyer-Archiv (#/flyer): Plakate vergangener Abende des Kollektivs.
-  // Referenzbereich, kein Fortschritt. Die Datei ist Handarbeit über die
+  // Shows (#/shows): vergangene Abende des Kollektivs, dokumentiert über ihre
+  // Flyer. Referenzbereich, kein Fortschritt. Die Datei ist Handarbeit über die
   // GitHub-Weboberfläche — deshalb `.catch(() => null)` und ein voller
-  // Ersatzwert: Ein Tippfehler in der JSON darf die Archiv-Seite leer zeigen,
+  // Ersatzwert: Ein Tippfehler in der JSON darf die Seite leer zeigen,
   // aber nie den Boot der ganzen App verhindern.
-  daten.flyer = { titel: '', hinweis: '', ...(flyer || {}), flyer: flyer?.flyer || [] };
+  daten.shows = { titel: '', hinweis: '', ...(shows || {}), shows: shows?.shows || [] };
   // Hintergrundbilder für Heros und Kacheln (images/bg/bilder.json, erzeugt von
   // scripts/build_bg_index.py). Winzige Datei, deshalb im Boot-Bündel: Die
   // Startseite braucht sie beim ersten Anstrich. Fehlt sie, bleibt die Liste

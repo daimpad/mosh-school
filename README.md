@@ -61,7 +61,7 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 | 🛠️ **Werkzeuge** | Metronom mit Tempo-Ramp, Stimmgerät (deckt den ganzen Tuning-Pool ab, bis hinunter zu 27,5 Hz), Play-along-Loops, Pattern-Bibliothek, ASCII-Tabulatur, Gear-Explorer, Pedalboard- & Amp/Box-Baukasten, Song-Struktur, Riff- & Mehrspur-Recorder. |
 | 🎛️ **Zerr-Labor** | Zehn Zerrkennlinien und fünf synthetisierte Boxen-Impulsantworten — hörbar **und** sichtbar als Übertragungskurve. Als Signal fünf Clips aus echten, unverstärkten Gitarrenaufnahmen: Chugs, Anschlagsdynamik, Powerchord, stehender Ton, hohe Lage. |
 | 🩺 **Trainer-Layer** | Typische Fehlerbilder als Diagnose — mit abstrakten, monochromen SVG-Grafiken. |
-| 🖼️ **Flyer-Archiv** | Plakate vergangener Abende des Kollektivs (`#/flyer`) — ein Mikro-CMS aus zwei Dateien: `data/flyer.json` und `images/flyer/`, beides über die GitHub-Weboberfläche pflegbar, ohne Build-Schritt. |
+| 🖼️ **Shows** | Vergangene Abende des Kollektivs (`#/shows`), dokumentiert über ihre Flyer — ein Mikro-CMS aus zwei Dateien: `data/shows.json` und `images/shows/`, beides über die GitHub-Weboberfläche pflegbar, ohne Build-Schritt. |
 | 🎲 **Experimentieren** | Impuls-Karten, Gefühlslandkarte (Gefühl → Genre) und Genre-Mix-Generator. |
 | 📴 **Offline-first PWA** | Service Worker cacht die ganze Hülle; einmal geladen, läuft alles ohne Netz. Nur Fotos und Klangproben bleiben bewusst draußen — sie kommen beim ersten Gebrauch und werden dann mitgecacht. |
 | 🔎 **Crawlbare Zwillingsseiten** | 546 statische Seiten unter echten Pfad-URLs — für Suchmaschinen, die hinter `#/` nicht schauen. |
@@ -132,10 +132,10 @@ falschen Werten durch.
 Feedback, Fehlermeldungen und Pull Requests sind willkommen — jede Rückmeldung hilft.
 Es gibt sogar einen eingebauten Review-Modus (Kommentator) über den `?feedback`-Link in der App.
 
-**Einen Flyer ins Archiv legen** geht ohne Checkout, direkt auf github.com: Bild nach
-[`images/flyer/`](images/flyer/) hochladen, dann einen Eintrag in
-[`data/flyer.json`](data/flyer.json) ergänzen. Die Feldliste steht in derselben Datei unter
-`_meta`, die Bildvorgaben in [`images/flyer/README.md`](images/flyer/README.md). Zwei Commits,
+**Eine Show eintragen** geht ohne Checkout, direkt auf github.com: Flyer-Bild nach
+[`images/shows/`](images/shows/) hochladen, dann einen Eintrag in
+[`data/shows.json`](data/shows.json) ergänzen. Die Feldliste steht in derselben Datei unter
+`_meta`, die Bildvorgaben in [`images/shows/README.md`](images/shows/README.md). Zwei Commits,
 weil die GitHub-Weboberfläche nicht beides auf einmal kann — dazwischen meldet die CI das Bild
 als Waise (Warnung, kein Fehler), genau damit dieser Weg nicht bei jedem Mal rot läuft.
 

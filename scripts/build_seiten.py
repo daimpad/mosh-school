@@ -480,7 +480,7 @@ def seiten_fuss(tiefe, app_href):
 <span class="footer-titel">Info</span>
 <a href="{w}#/ueber">Über</a>
 <a href="{w}kollektiv/">ZERRER-Kollektiv</a>
-<a href="{w}#/flyer">Flyer-Archiv</a>
+<a href="{w}#/shows">Shows</a>
 <a href="{w}#/mitmachen">Mitmachen</a>
 <a href="{w}#/profil">Profil</a>
 </nav>

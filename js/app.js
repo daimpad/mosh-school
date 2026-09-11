@@ -36,7 +36,7 @@ import { renderLernen, renderSongwriting, renderUeben } from './ansichten/hub.js
 import { renderGeraete } from './ansichten/geraete.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
-import { renderFlyer } from './ansichten/flyer.js';
+import { renderShows } from './ansichten/shows.js';
 import { renderIntern } from './ansichten/intern.js';
 import { ladeDaten, ladeSuchindex } from './daten.js';
 import { setzeHintergrundbilder } from './hintergrundbilder.js';
@@ -142,8 +142,8 @@ function aktualisiereNavigation(segmente) {
                     ? 'stimmungen'
                     : s0 === 'patterns'
                       ? 'patterns'
-                      : s0 === 'flyer'
-                        ? 'flyer'
+                      : s0 === 'shows'
+                        ? 'shows'
                       : s0 === 'griffe'
                         ? 'griffe'
                       : s0 === 'zerrtypen'
@@ -178,7 +178,7 @@ function aktualisiereNavigation(segmente) {
   // 'profil' steht bewusst NICHT hier: Es hat einen eigenen Knopf in der unteren
   // Leiste. Stand es mit drin, trugen auf #/profil sowohl „Profil" als auch
   // „Mehr" aria-current="page" — die Leiste meldete zwei aktuelle Orte zugleich.
-  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'flyer', 'ueber'];
+  const imMehrNav = ['lernen', 'ueben', 'songwriting', 'experimentieren', 'genres', 'kontext', 'geraete', 'stimmungen', 'patterns', 'shows', 'ueber'];
   const imMehr = imMehrNav.includes(aktiv) || ['songs', 'suche', 'koennenscheck', 'mitmachen', 'kollektiv', 'impressum', 'datenschutz'].includes(s0);
   const mehr = document.querySelector('.fussnav-mehr');
   if (mehr) {
@@ -280,7 +280,7 @@ function beschrifteRahmen() {
     stimmungen: t('nav_stimmungen'),
     zerrtypen: t('nav_zerrtypen'),
     patterns: t('nav_patterns'),
-    flyer: t('nav_flyer'),
+    shows: t('nav_shows'),
     ueber: t('nav_ueber'),
   };
   for (const verweis of document.querySelectorAll('[data-nav]')) {
@@ -455,8 +455,8 @@ function rendern() {
     renderGlossar(el, daten, query);
   } else if (segmente[0] === 'songs') {
     renderSongs(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
-  } else if (segmente[0] === 'flyer') {
-    renderFlyer(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
+  } else if (segmente[0] === 'shows') {
+    renderShows(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'intern') {
     renderIntern(el, daten);
   } else if (segmente[0] === 'werkzeuge') {

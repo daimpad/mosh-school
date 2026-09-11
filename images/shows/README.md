@@ -1,21 +1,21 @@
-# Flyer-Archiv — Bildablage
+# Shows — Flyer-Bilder
 
-Hier liegen die Scans der Flyer, die `#/flyer` zeigt. Die Texte dazu stehen in
-[`../../data/flyer.json`](../../data/flyer.json); diese beiden Orte sind das
+Hier liegen die Scans der Flyer, die `#/shows` zeigt. Die Texte dazu stehen in
+[`../../data/shows.json`](../../data/shows.json); diese beiden Orte sind das
 ganze Mikro-CMS.
 
 Bewusst **zwei getrennte Orte**: `images/bg/bilder.json` daneben ist ein
-*generiertes* Verzeichnis (ein Workflow schreibt es), `data/flyer.json` dagegen
+*generiertes* Verzeichnis (ein Workflow schreibt es), `data/shows.json` dagegen
 gepflegter Inhalt. Beides in einer Datei hiesse, dass ein Generator in das
 schreibt, was ein Mensch über die GitHub-Weboberfläche editiert.
 
-## Einen Flyer einpflegen
+## Eine Show einpflegen
 
 Zwei Commits, beide im Browser auf github.com — ein Commit kann nicht zugleich
 eine Datei hochladen und eine Textdatei ändern:
 
 1. **Bild hochladen** in diesen Ordner (`Add file → Upload files`).
-2. **Eintrag ergänzen** in `data/flyer.json` — Pflichtfelder `id`, `datum`,
+2. **Eintrag ergänzen** in `data/shows.json` — Pflichtfelder `id`, `datum`,
    `titel`, `bild`. Welche Felder es sonst gibt, steht in `_meta.felder`
    derselben Datei.
 
@@ -47,10 +47,10 @@ Kommandozeile z. B. `cwebp -q 75 -resize 1400 0 roh.jpg -o flyer.webp`.
 
 Ein Gitter lädt viele Bilder, nicht eins. `scripts/validate.py` deckelt den
 eingecheckten Bestand insgesamt (30 MB) und zusätzlich **diesen Ordner** mit
-einem eigenen Budget (`FLYER_BUDGET`, 10 MB) — sonst frisst das Archiv still
+einem eigenen Budget (`SHOWS_BUDGET`, 10 MB) — sonst frisst das Archiv still
 den Platz, den die Inhalts-Pipeline für neue Bausteine braucht, und der Knall
 käme später in einem fremden Commit. Bei 150 KB je Flyer trägt das Budget rund
-68 Flyer.
+68 Einträge.
 
 Wird es zu eng, gibt es drei Wege — und der wird bewusst im Diff gewählt, von
 einem Menschen, mit Begründung: Budget hochsetzen · eine generierte
@@ -60,7 +60,7 @@ die Originale auf den netcup-Speicher legen und im Repo nur Miniaturen halten.
 ## Rechte
 
 Flyer sind gestaltete Werke von Dritten. `gestaltung` und `quelle` im Eintrag
-sind deshalb keine Deko, sondern der Grund, warum das Archiv zeigbar bleibt.
+sind deshalb keine Deko, sondern der Grund, warum die Seite zeigbar bleibt.
 Wer eine Arbeit hier nicht sehen möchte, schreibt an kollektiv@zerrer.org —
 dann kommt sie raus.
 

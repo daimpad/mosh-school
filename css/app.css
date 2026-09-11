@@ -3889,7 +3889,7 @@ a.karte-link.verweiszeile {
 }
 .verweis-liste { display: grid; gap: 0.45rem; margin-bottom: 0.4rem; }
 
-/* ---------- Flyer-Archiv: Bildergitter + Blatt ----------
+/* ---------- Shows: Flyer-Gitter + Blatt ----------
    Flyer sind INHALT, nicht Stimmungsbild: Sie werden ganz gezeigt (contain, nie
    cover) und tragen keinen Text ueber sich. Deshalb bewusst NICHT ueber
    .bildkachel/bildEbene() gebaut — jene Bildebene zoomt (--bild-zoom), regelt
@@ -3901,7 +3901,7 @@ a.karte-link.verweiszeile {
    Die Kachel selbst ist eine normale .karte.karte-link und erbt damit Flaeche,
    Radius, Schraeglage, plastischen Schatten, die Tintenkante im hellen Thema
    (nur an Klickbarem) und den gestrichelten Hover. */
-.flyer-gitter {
+.shows-gitter {
   display: grid;
   /* auto-fill statt fester Spalten (wie .griff-gitter): Das Archiv waechst.
      min(100%, …) haelt die Kachel auf schmalen Schirmen ganzspaltig. */
@@ -3910,11 +3910,11 @@ a.karte-link.verweiszeile {
   margin: 0 0 1.4rem;
 }
 /* .karte bringt einen eigenen Abstand nach unten mit — im Raster macht das der gap. */
-.flyer-gitter .flyerkachel { margin: 0; }
+.shows-gitter .shows-kachel { margin: 0; }
 /* Selektor mit Elementteil, wie bei .bildkachel: `a.karte-link { display: block }`
    weiter oben ist spezifischer als eine einzelne Klasse und wuerde das
    Flex-Layout sonst still aushebeln. */
-a.karte-link.flyerkachel {
+a.karte-link.shows-kachel {
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
@@ -3922,7 +3922,7 @@ a.karte-link.flyerkachel {
      nur sein Rahmen. */
   padding: 0.6rem;
 }
-.flyer-bild {
+.shows-bild {
   display: block;
   width: 100%;
   /* Festes Feld im Hochformat haelt das Raster ruhig, BEVOR ein Byte Bild da
@@ -3940,15 +3940,15 @@ a.karte-link.flyerkachel {
      INNERHALB des Containers; genau dafuer gibt es --trennlinie. */
   border: 1px solid var(--trennlinie);
 }
-.flyerkachel-titel { margin: 0; font-size: 0.95rem; line-height: 1.2; color: var(--tinte); }
+.shows-kachel-titel { margin: 0; font-size: 0.95rem; line-height: 1.2; color: var(--tinte); }
 /* Datum/Ort tragen zusaetzlich .leise (Farbe + Groesse) — hier nur der Abstand. */
-.flyerkachel-meta { margin: 0; }
+.shows-kachel-meta { margin: 0; }
 /* Faellt ein Bild aus (404, offline, halb uebertragen), nimmt die Ansicht das
    <img> heraus und setzt diese Klasse: Der Kasten bleibt stehen, die Kachel
    fuehrt weiter auf die Detailseite. Ein Archiv, das Eintraege verschluckt,
    weil ein Scan fehlt, ist schlimmer als eines mit Luecken. */
-.flyerkachel.bild-fehlt::before,
-.flyer-blatt.bild-fehlt::before {
+.shows-kachel.bild-fehlt::before,
+.shows-blatt.bild-fehlt::before {
   content: '';
   display: block;
   width: 100%;
@@ -3956,14 +3956,14 @@ a.karte-link.flyerkachel {
   background: var(--flaeche-2);
   border: 1px dashed var(--trennlinie);
 }
-.flyer-blatt.bild-fehlt::before { aspect-ratio: 4 / 3; max-height: 40vh; }
-.flyer-rechte { margin: 1.2rem 0 0; }
+.shows-blatt.bild-fehlt::before { aspect-ratio: 4 / 3; max-height: 40vh; }
+.shows-rechte { margin: 1.2rem 0 0; }
 
 /* Das Blatt auf der Detailseite: gross, ganz, ohne Beschnitt. <figure> wie bei
    der Lehrgrafik in der Baustein-Ansicht — Bild und Unterschrift sind ein
    Element. Der Container bleibt randlos: Er ist nicht anklickbar. */
-.flyer-blatt { margin: 0 0 1.2rem; }
-.flyer-blatt img {
+.shows-blatt { margin: 0 0 1.2rem; }
+.shows-blatt img {
   display: block;
   width: 100%;
   /* Deckel statt fester Hoehe: Ein Querformat darf die Spalte fuellen, ein
@@ -3977,12 +3977,12 @@ a.karte-link.flyerkachel {
   background: var(--flaeche-2);
   border: 1px solid var(--trennlinie);
 }
-.flyer-blatt-text { margin: 0.5rem 0 0; color: var(--tinte-2); font-size: 0.9rem; }
-.flyer-text { margin: 0 0 1rem; }
-.flyer-bands { margin: 0 0 1rem; padding-left: 1.1rem; }
-.flyer-angaben { display: grid; gap: 0.35rem; margin: 0 0 1rem; }
-.flyer-angabe { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.flyer-angabe dd { margin: 0; }
+.shows-blatt-text { margin: 0.5rem 0 0; color: var(--tinte-2); font-size: 0.9rem; }
+.shows-text { margin: 0 0 1rem; }
+.shows-bands { margin: 0 0 1rem; padding-left: 1.1rem; }
+.shows-angaben { display: grid; gap: 0.35rem; margin: 0 0 1rem; }
+.shows-angabe { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.shows-angabe dd { margin: 0; }
 
 /* ---------- Interner Bereich: Passwort-Vorhang + eingebettetes Pad ---------- */
 .intern-warnung { margin: 0 0 1rem; }

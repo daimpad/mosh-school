@@ -1,20 +1,20 @@
 {
   "_meta": {
-    "hinweis": "Flyer-Archiv des ZERRER-Kollektivs (#/flyer). Referenzbereich wie tunings/zerrtypen — NICHT im Baustein-Pool, kein Fortschritt, kein vokabulare-Block, keine Titel-Liftung nach labels/de.json. Sichtbarer Text steht hier in der Datei, so wie bei zerrtypen.json und genres.json auch.",
-    "pflege": "Zwei Schritte, beide über die GitHub-Weboberfläche: (1) Bild nach images/flyer/ hochladen, (2) hier einen Eintrag ergänzen. In dieser Reihenfolge — ein Eintrag ohne Bild ist ein Fehler, ein Bild ohne Eintrag nur eine Warnung. Die Reihenfolge in dieser Liste ist egal, sortiert wird nach `datum` absteigend.",
+    "hinweis": "Shows des ZERRER-Kollektivs (#/shows) — vergangene Abende, dokumentiert über ihre Flyer. Referenzbereich wie tunings/zerrtypen — NICHT im Baustein-Pool, kein Fortschritt, kein vokabulare-Block, keine Titel-Liftung nach labels/de.json. Sichtbarer Text steht hier in der Datei, so wie bei zerrtypen.json und genres.json auch.",
+    "pflege": "Zwei Schritte, beide über die GitHub-Weboberfläche: (1) Flyer-Bild nach images/shows/ hochladen, (2) hier einen Eintrag ergänzen. In dieser Reihenfolge — ein Eintrag ohne Bild ist ein Fehler, ein Bild ohne Eintrag nur eine Warnung. Die Reihenfolge in dieser Liste ist egal, sortiert wird nach `datum` absteigend.",
     "pflichtfelder": [
       "id",
       "datum",
       "titel",
       "bild"
     ],
-    "id_regel": "Kleinbuchstaben, Ziffern, Bindestrich: <jahr>-<monat>-<tag>-<kurzname>, z. B. 2019-03-08-sonic-ballroom. Die ID muss mit dem Jahr aus `datum` beginnen. Umlaute im Kurznamen werden umschrieben (koeln, duesseldorf) — eine ID ist eine Adresse, kein Anzeigetext. EINE VERÖFFENTLICHTE ID WIRD NIE UMBENANNT: Sie ist die URL (#/flyer/<id>), und jemand kann sie verlinkt haben. Tippfehler werden in `titel` korrigiert, nicht in `id`.",
+    "id_regel": "Kleinbuchstaben, Ziffern, Bindestrich: <jahr>-<monat>-<tag>-<kurzname>, z. B. 2019-03-08-sonic-ballroom. Die ID muss mit dem Jahr aus `datum` beginnen. Umlaute im Kurznamen werden umschrieben (koeln, duesseldorf) — eine ID ist eine Adresse, kein Anzeigetext. EINE VERÖFFENTLICHTE ID WIRD NIE UMBENANNT: Sie ist die URL (#/shows/<id>), und jemand kann sie verlinkt haben. Tippfehler werden in `titel` korrigiert, nicht in `id`.",
     "bildvorgabe": "WebP oder JPEG, längste Kante 1200–1600 px, Zielgröße 120–200 KB. Warnung ab 250 KB, Fehler ab 400 KB. Ein Handyfoto direkt aus der Kamera ist zehnmal zu groß — vorher verkleinern.",
     "felder": {
       "id": "Pflicht. Slug, siehe id_regel.",
       "datum": "Pflicht. JJJJ-MM-TT, oder JJJJ-MM / JJJJ, wenn der Flyer nicht mehr hergibt.",
       "titel": "Pflicht. Name des Abends. Trägt der Flyer keinen: Hauptband + Ort.",
-      "bild": "Pflicht. NUR der Dateiname, relativ zu images/flyer/ — kein Pfad, keine URL.",
+      "bild": "Pflicht. NUR der Dateiname, relativ zu images/shows/ — kein Pfad, keine URL.",
       "format": "Optional, 'hoch' (Vorgabe) | 'quer' | 'quadrat'. Wird gegen die gemessenen Maße geprüft.",
       "alt": "Optional, aber empfohlen: Bildbeschreibung. Der Flyer IST hier der Inhalt.",
       "ort": "Optional. Freitext, z. B. 'Sonic Ballroom, Köln'.",
@@ -26,9 +26,9 @@
       "text": "Optional. Fließtext der Detailseite."
     }
   },
-  "titel": "Flyer-Archiv",
+  "titel": "Shows",
   "hinweis": "Plakate und Flyer vergangener Abende. Die Gestaltungen gehören denen, die sie gemacht haben — sie stehen hier zur Dokumentation der Szene, nicht zur Weiterverwendung. Wer eine Arbeit hier nicht sehen möchte, schreibt an kollektiv@zerrer.org; dann kommt sie raus.",
-  "flyer": [
+  "shows": [
     {
       "id": "2026-03-14-beispiel-hoch",
       "datum": "2026-03-14",
@@ -47,7 +47,7 @@
       "bild": "2026-03-14-beispiel-hoch.webp",
       "format": "hoch",
       "alt": "Kopierter Flyer im Hochformat: schwarze Flächen mit weißen Versatzstreifen, der Titel „TESTFLYER“ als ausgeschnittene Schnipsel, eine Silbe davon rot. Darunter drei Bandnamen, Ort, Datum und ein roter Stempel „Testeintrag“.",
-      "text": "Beispieleintrag, damit das Archiv nicht leer dasteht — hier sind alle Felder gefüllt, damit man sieht, wie eine vollständige Detailseite aussieht. Zum Löschen: diesen Eintrag aus data/flyer.json entfernen und images/flyer/2026-03-14-beispiel-hoch.webp dazu.",
+      "text": "Beispieleintrag, damit die Seite nicht leer dasteht — hier sind alle Felder gefüllt, damit man sieht, wie eine vollständige Detailseite aussieht. Zum Löschen: diesen Eintrag aus data/shows.json entfernen und images/shows/2026-03-14-beispiel-hoch.webp dazu.",
       "gestaltung": "Testfixture, im Browser gesetzt aus den Schriften der App",
       "quelle": "kein Scan — erzeugtes Beispielbild"
     },
