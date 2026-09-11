@@ -16,6 +16,7 @@
 
 import { label, t } from '../i18n.js';
 import { esc, nichtGefundenHtml } from '../oberflaeche.js';
+import { markdownHtml } from '../markdown.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const ORDNER = 'images/shows/';
@@ -69,7 +70,7 @@ function altText(f) {
   return f.alt || [f.titel, metaZeile(f)].filter(Boolean).join(' — ');
 }
 
-function kachel(f, index) {
+export function kachelHtml(f, index = 0) {
   // Die ersten sechs Kacheln liegen beim Aufschlagen im Bild: `lazy` würde
   // dort genau das Bild verzögern, das als größter sichtbarer Inhalt zählt.
   // Alles darunter lädt erst beim Heranscrollen — sonst zieht ein Archiv mit
@@ -91,7 +92,7 @@ function kachel(f, index) {
 // FALLSTRICK: `error`-Ereignisse von <img> steigen NICHT auf. Ein Horcher am
 // Container ohne drittes Argument sähe davon nichts — und zwar lautlos, denn
 // registriert ist er ja korrekt. Deshalb die Einfangphase (`true`).
-function bindeBildausfall(el) {
+export function bindeBildausfall(el) {
   el.addEventListener(
     'error',
     (ereignis) => {
@@ -108,7 +109,7 @@ function uebersicht(el, daten) {
   const bereich = daten.shows || {};
   const eintraege = sortiert(liste(daten));
   const gitter = eintraege.length
-    ? `<div class="shows-gitter">${eintraege.map(kachel).join('')}</div>`
+    ? `<div class="shows-gitter">${eintraege.map(kachelHtml).join('')}</div>`
     : `<p class="leise">${esc(t('shows_leer'))}</p>`;
   el.innerHTML = `
     <article class="shows-seite">
@@ -119,7 +120,7 @@ function uebersicht(el, daten) {
   bindeBildausfall(el);
 }
 
-function detail(el, daten, f) {
+export function detailHtml(f) {
   // Untertitel als HTML statt Text: Datum und Ort stehen als ruhige Zeile im
   // Hero, dieselbe Stelle, an der die Baustein-Ansicht ihren Stufen-Chip setzt.
   const untertitelHtml = metaZeile(f) ? esc(metaZeile(f)) : '';
@@ -143,7 +144,7 @@ function detail(el, daten, f) {
         </div>`,
     )
     .join('');
-  el.innerHTML = `
+  return `
     <article class="shows-detail">
       ${landingHeroHtml(
         '', f.titel || f.id, '', 'pf-magenta', f.id, t('shows_titel'), '',
@@ -155,7 +156,7 @@ function detail(el, daten, f) {
         <figcaption class="shows-blatt-text">${esc(t('shows_blatt_hinweis'))}</figcaption>
       </figure>
 
-      ${f.text ? `<p class="shows-text">${esc(f.text)}</p>` : ''}
+      ${f.text ? `<div class="shows-text">${markdownHtml(f.text)}</div>` : ''}
 
       ${
         bands.length
@@ -178,7 +179,6 @@ function detail(el, daten, f) {
 
       <p><a class="chip" href="#/shows"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('shows_zurueck'))}</a></p>
     </article>`;
-  bindeBildausfall(el);
 }
 
 export function renderShows(el, daten, id) {
@@ -194,5 +194,6 @@ export function renderShows(el, daten, id) {
     el.innerHTML = nichtGefundenHtml('#/shows', t('shows_titel'));
     return;
   }
-  detail(el, daten, f);
+  el.innerHTML = detailHtml(f);
+  bindeBildausfall(el);
 }

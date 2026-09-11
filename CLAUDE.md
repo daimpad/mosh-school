@@ -74,7 +74,10 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   Klick entsteht gar kein Drittkontakt, und die Adresse steht nicht im Quelltext (s.
   „Interner Bereich" unten). Deshalb bleibt GoatCounter die einzige Ausnahme *beim
   normalen Besuch*; genau so steht es jetzt auch im Datenschutztext, der sonst zur
-  Falschaussage geworden wäre.
+  Falschaussage geworden wäre. **Eine dritte Verbindung geht nach draußen, aber nie
+  von selbst:** Der Shows-Editor (`#/shows/login`) schreibt über `api.github.com`.
+  Er lädt nichts nach — er sendet, und zwar nur, wenn jemand mit hinterlegtem Token
+  auf „Speichern" klickt. Für einen Besucher passiert dort nichts.
 - **Inhalt getrennt von der Engine.** `js/` ist themenneutral. Bausteine sind JSON in `data/`;
   sichtbare Texte kommen aus `data/labels/<sprache>.json`. Nie einen Anzeigetext hart in
   JS/HTML schreiben — immer `t()`, `label()` oder `text()` aus `js/i18n.js`.
@@ -355,6 +358,64 @@ nur noch dort, wo das Blatt selbst gemeint ist (`bild`, `alt`, Bildunterschrift)
 - **SW:** `data/shows.json` gehört in `SHELL`, die **Bilder ausdrücklich nicht** (Gewicht,
   wie `images/bg/`). `validate.py` prüft beides — die Datei als Fehler, ein Bild in `SHELL`
   als Warnung.
+
+## Shows-Editor (`#/shows/login`) — Mini-CMS im Browser
+
+Formular für eine Show: Angaben, Markdown-Text, Flyer-Bild. Schreibt Bild und
+`data/shows.json` als **einen** Commit auf den Zweig `shows/editor`.
+Ansicht `js/ansichten/shows-editor.js`, GitHub-Zugriff DOM-frei in `js/github.js`.
+
+- **Das Passwort schützt nichts, der Token tut es.** Wie bei `#/intern` steht das
+  Passwort im ausgelieferten Quelltext. Geschrieben wird, weil ein fein
+  granulierter GitHub-Token im Browser liegt (nur dieses Repo, „Contents: read and
+  write"), gespeichert im Werkzeug-Namespace (`moshschool.werkzeuge.v1`) — also
+  **nicht** im Fortschritts-Schema, dessen Export der Nutzer weitergibt. Die Seite
+  sagt das selbst (`editor_hinweis`).
+- **Zweig statt `main`.** Der Editor committet nach `shows/editor`, nie direkt auf
+  `main`. So läuft die CI, BEVOR netcup zieht. Der Preis ist ein Merge-Klick je
+  Stapel; dafür kann ein Tippfehler die Seite nicht umwerfen.
+- **`shows.json` wird VOM SERVER gelesen, nicht aus `daten`** — und zwar vom
+  Arbeitszweig, wenn der der Basis voraus ist, sonst von `main`. Beides ist
+  nötig: Der beim Seitenaufruf geladene Stand wäre veraltet, sobald zwischendurch
+  gemergt wurde, und ein Zweig, der nach dem Mergen ZURÜCKLIEGT, darf nicht
+  weiterbenutzt werden. Sonst macht der dritte Eintrag die ersten beiden wieder
+  rückgängig — lautlos, weil JSON-Ersetzen keinen Konflikt erzeugt.
+- **Ein Commit, nicht zwei** (Git-Data-API: Blob → Tree → Commit → Ref). Die
+  Contents-API schriebe je Datei einen Commit und hinterließe zwischendurch ein
+  Bild ohne Eintrag. Löschen läuft über `sha: null` im Baum, damit Eintrag und
+  Bild im selben Commit verschwinden.
+- **Zweignamen mit Schrägstrich dürfen NICHT `encodeURIComponent` sehen.** Aus
+  `shows/editor` würde `shows%2Feditor`, und GitHub findet den Ref nicht mehr.
+  `refPfad()` kodiert je Segment und lässt den Trenner stehen — im *Query*-Teil
+  (`?ref=…`) ist die Kodierung dagegen richtig.
+- **Das Bild wird im Browser gerechnet**, nicht von Hand vorbereitet: längste
+  Kante 1400 px, WebP, Qualität absteigend bis unter 250 KB. `format` wird aus den
+  gemessenen Maßen abgeleitet und nie getippt. **`imageOrientation: 'from-image'`
+  ist Pflicht:** Handyfotos tragen ihre Drehung im EXIF, ohne das läge ein
+  hochformatiger Flyer quer — und `format` wäre falsch GEMESSEN, also auch von der
+  Prüfung nicht gefangen. HEIC dekodiert kein Browser; das meldet der Editor.
+- **Die Prüfliste spiegelt `pruefe_shows()`** aus `scripts/validate.py` und sperrt
+  den Speichern-Knopf bei Fehlern. Sie ersetzt die CI nicht, sie verhindert nur
+  einen Zweig, der garantiert rot wird. Läuft eine Regel dort auseinander, gehört
+  sie hier nachgezogen.
+- **Die Vorschau benutzt `kachelHtml()`/`detailHtml()` aus `shows.js`**, nicht
+  nachgebautes Markup. Eine zweite Fassung liefe auseinander und zeigte dann
+  etwas, das die echte Seite gar nicht rendert. Deshalb sind die beiden Bauer
+  exportiert und `detailHtml()` liefert einen String, statt selbst zu schreiben.
+- **Rückfall ohne Token:** Bild und fertige `shows.json` zum Herunterladen, Ablegen
+  von Hand auf github.com. Greift auch, wenn der Token abgelaufen ist.
+- **`login` ist als Show-ID gesperrt** (`SHOWS_GESPERRTE_IDS` in `validate.py`).
+  Eine Show mit dieser ID wäre unter `#/shows/login` nicht erreichbar — und das
+  fiele NICHT auf: Die Übersicht zeigte die Kachel, erst der Klick landete im
+  Editor. Der Dispatch in `js/app.js` prüft `segmente[1] === 'login'` deshalb VOR
+  dem ID-Zweig.
+- **Markdown-Teilmenge** in `js/markdown.js` (DOM-frei): Absätze, `**fett**`,
+  `*kursiv*`, `[Text](https://…)`, `- `-Listen. **Escaping zuerst, Auszeichnung
+  danach** — nach `esc()` gibt es keine spitzen Klammern mehr, also kann keine
+  Ersetzung versehentlich Markup öffnen. Links nur mit `http(s)`. Fett vor kursiv,
+  sonst reißt `**` auseinander.
+- `#/shows/login` wird wie `#/intern` **nicht von GoatCounter gezählt** und steht
+  in keiner Navigation.
 
 ## Interner Bereich (`#/intern`) — Vorhang, kein Schloss
 
@@ -946,7 +1007,10 @@ Tokens**, nie harte Farben.
 - **SW-Wartung:** wird eine Kern-Datei neu hinzugefügt/umbenannt (neues `js/`-Modul, neue
   `data/…json` in `INHALTSDATEIEN`, CSS, Schrift), muss sie in `SHELL` **und** der `CACHE`-Name
   erhöht werden. Baustein-Grafiken (`images/*.png`, falls später ergänzt) werden bewusst NICHT
-  vorgeladen. Kein Test deckt die SHELL-Liste ab — von Hand mitziehen.
+  vorgeladen. **Für `js/**/*.js` prüft `validate.py` die SHELL-Liste inzwischen selbst**
+  (inklusive neuer, noch nicht gestagter Dateien — sonst wachte die Prüfung erst nach dem
+  `git add` auf, also genau dann nicht, wenn man sie braucht). Der `CACHE`-Name und alles
+  andere in `SHELL` bleiben Handarbeit.
 - **Genau eines von `uebungsteil`/`reflexionsaufgabe`** je Baustein. Bewegungs-Bausteine tragen
   den Übungsteil; Wissens-/Reflexions-Bausteine (Mentales, Gesundheit, Ausrüstung) die
   Reflexionsaufgabe. `validate.py` prüft das.

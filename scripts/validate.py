@@ -304,6 +304,11 @@ SHOWS_ENDUNGEN = ('.webp', '.jpg', '.jpeg', '.png')
 # Verhaeltnis breite/hoehe -> erlaubtes Wort. Grob genug, dass ein Mensch es auf
 # einen Blick richtig tippt, und eng genug, dass ein Vertipper auffaellt.
 SHOWS_FORMATE = ('hoch', 'quer', 'quadrat')
+# Woerter, die als zweites Routen-Segment schon vergeben sind. Eine Show mit
+# der ID "login" waere unter #/shows/login nicht erreichbar — dort sitzt der
+# Editor. Das faellt sonst NICHT auf: Die Uebersicht zeigte die Kachel, und
+# erst der Klick landete im Editor statt auf der Show.
+SHOWS_GESPERRTE_IDS = frozenset({'login'})
 
 
 def bildmasse(pfad):
@@ -407,6 +412,9 @@ def pruefe_shows(fehler, warnung, voka):
             fehler.append(f'show {ort}: id fehlt oder verletzt das Muster '
                           f'a-z0-9 mit Bindestrich (z. B. 2019-03-08-sonic-ballroom)')
             continue
+        if fid in SHOWS_GESPERRTE_IDS:
+            fehler.append(f'show {fid}: diese id ist als Route vergeben '
+                          f'(#/shows/{fid}) und kann keine Show sein')
         if fid in gesehen:
             fehler.append(f'show {fid}: doppelte id (auch an Position {gesehen[fid]})')
         gesehen[fid] = i
@@ -887,6 +895,27 @@ def main():
     for pfad in dateien:
         if pfad not in sw_shell:
             fehler.append(f'sw.js: Inhaltsdatei "{pfad}" fehlt in SHELL (Offline-Nutzer bekommen sie nie)')
+    # Jedes JS-Modul muss in SHELL stehen. CLAUDE.md fuehrte bisher als
+    # Fallstrick, dass genau das von KEINEM Test gedeckt ist und von Hand
+    # mitgezogen werden muss — ein vergessener Eintrag faellt online nie auf
+    # (der Browser holt das Modul einfach) und offline erst beim Nutzer, als
+    # weisse Seite.
+    #
+    # `--others --exclude-standard` nimmt NEUE, noch nicht gestagte Dateien mit.
+    # Ohne das meldete die Pruefung beim Anlegen eines Moduls nichts und wurde
+    # erst nach dem `git add` wach — also genau dann nicht, wenn man sie braucht.
+    # `--exclude-standard` haelt Ignoriertes draussen, der Pfad `js` den Rest.
+    js_module = sorted(set(
+        p for p in subprocess.run(['git', 'ls-files', '--cached', '--others',
+                                   '--exclude-standard', 'js'],
+                                  cwd=ROOT, check=True, capture_output=True,
+                                  text=True).stdout.split()
+        if p.endswith('.js')))
+    for pfad in js_module:
+        if pfad not in sw_shell:
+            fehler.append(f'sw.js: JS-Modul "{pfad}" fehlt in SHELL '
+                          f'(offline eine weisse Seite, online unauffaellig)')
+
     # Dieselbe Pruefung fuer Referenzdaten, die NICHT in INHALTSDATEIEN stehen
     # und deshalb oben durchfielen. data/shows.json gehoert in die Huelle,
     # images/shows/* ausdruecklich NICHT (Gewicht) — ein versehentlich

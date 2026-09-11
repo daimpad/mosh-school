@@ -37,6 +37,7 @@ import { renderGeraete } from './ansichten/geraete.js';
 import { renderSuche } from './ansichten/suche.js';
 import { renderTraining } from './ansichten/training.js';
 import { renderShows } from './ansichten/shows.js';
+import { renderShowsEditor } from './ansichten/shows-editor.js';
 import { renderIntern } from './ansichten/intern.js';
 import { ladeDaten, ladeSuchindex } from './daten.js';
 import { setzeHintergrundbilder } from './hintergrundbilder.js';
@@ -455,6 +456,8 @@ function rendern() {
     renderGlossar(el, daten, query);
   } else if (segmente[0] === 'songs') {
     renderSongs(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
+  } else if (segmente[0] === 'shows' && segmente[1] === 'login') {
+    renderShowsEditor(el, daten);
   } else if (segmente[0] === 'shows') {
     renderShows(el, daten, segmente[1] ? sicherDecode(segmente[1]) : null);
   } else if (segmente[0] === 'intern') {
@@ -531,10 +534,13 @@ function rendern() {
     // jedem ECHTEN Routenwechsel zaehlen, nicht bei einer In-Place-Neuzeichnung
     // derselben Route (sonst zaehlte jedes Quittieren als neuer Seitenaufruf).
     // window.goatcounter fehlt lautlos, wenn das Skript blockiert/offline ist.
-    // #/intern bleibt ungezaehlt: Der interne Bereich soll nicht als
-    // Existenz- und Nutzungsprotokoll bei einem Dritten landen. Es gibt dort
-    // nichts zu messen — die Seite hat genau einen bekannten Nutzerkreis.
-    if (segmente[0] !== 'intern') {
+    // #/intern und #/shows/login bleiben ungezaehlt: Die internen Seiten
+    // sollen nicht als Existenz- und Nutzungsprotokoll bei einem Dritten
+    // landen. Es gibt dort nichts zu messen — sie haben genau einen
+    // bekannten Nutzerkreis.
+    const internRoute = segmente[0] === 'intern'
+      || (segmente[0] === 'shows' && segmente[1] === 'login');
+    if (!internRoute) {
       window.goatcounter?.count?.({ path: location.pathname + location.hash });
     }
     // Einstiegs-Übergang nur bei Routenwechsel, nicht bei Zustands-Neuzeichnung.
