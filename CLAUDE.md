@@ -69,6 +69,12 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   zählt stattdessen selbst bei jedem echten Routenwechsel (`window.goatcounter?.count?.(…)`),
   sonst zählte eine Hash-Routing-App nur den ersten Aufruf. Details/Rechtsgrundlage:
   `data/app-info.json` → `rechtliches.datenschutz` (Abschnitt „Cookies und Tracking").
+  **Eine zweite Ausnahme, aber anderer Bauart:** das eingebettete Pad unter `#/intern`.
+  Es lädt **nur nach einem ausdrücklichen Klick**, nie beim Aufrufen der Seite — ohne
+  Klick entsteht gar kein Drittkontakt, und die Adresse steht nicht im Quelltext (s.
+  „Interner Bereich" unten). Deshalb bleibt GoatCounter die einzige Ausnahme *beim
+  normalen Besuch*; genau so steht es jetzt auch im Datenschutztext, der sonst zur
+  Falschaussage geworden wäre.
 - **Inhalt getrennt von der Engine.** `js/` ist themenneutral. Bausteine sind JSON in `data/`;
   sichtbare Texte kommen aus `data/labels/<sprache>.json`. Nie einen Anzeigetext hart in
   JS/HTML schreiben — immer `t()`, `label()` oder `text()` aus `js/i18n.js`.
@@ -116,7 +122,7 @@ in mehreren Hubs auftauchen:
 
 **Untere Leiste (mobil):** Home · Tools (`#/werkzeuge`) · Profil · Mehr (öffnet das Menü).
 **Menü:** die vier Hubs als Hauptpunkte (`.menue-haupt`), abgesetzt die Referenzbereiche
-(Genres, Kontext, Geräte, Stimmungen, Patterns), abgesetzt Über/Impressum/Datenschutz. Der
+(Genres, Kontext, Geräte, Stimmungen, Patterns, Flyer), abgesetzt Über/Impressum/Datenschutz. Der
 **Themen-Umschalter steht in der Kopfzeile und im Profil** (nicht im Menü): in der
 Kopfzeile als Icon-Knopf neben der Lupe, der nur zwischen hell und dunkel wechselt —
 die dritte Stellung `auto` bleibt dem Profil-Auswahlfeld vorbehalten, weil ein Knopf
@@ -125,6 +131,17 @@ in `js/app.js` (`aktualisiereNavigation`/`beschrifteRahmen`); `data-nav`-Schlüs
 **Geräte** (`#/werkzeug/explorer`) trägt vier Instrument-Kacheln zu den Geräte-Landings
 (`#/geraete/<instrument>`, `js/ansichten/geraete.js`) — daten-getrieben aus `domaene ⊇
 {ausruestung, <instrument>}`.
+**`#/intern` steht bewusst in KEINER Navigation** — weder Menü noch Fußzeile. Es ist eine
+Arbeitsfläche, kein Angebot; ein Menüpunkt wäre ein Wegweiser auf genau das, was man nicht
+betonen will. Erreichbar nur über die getippte Adresse. Aus demselben Grund steht auch
+nichts davon in `robots.txt`: Hash-Routen haben für Suchmaschinen keine eigene URL, ein
+`Disallow` wäre nur ein öffentlicher Hinweis ohne Wirkung.
+
+**STILLER DURCHFALL bei neuen Routen:** Der letzte `else`-Zweig in `rendern()` (`js/app.js`)
+ruft `renderHeim()`. Es gibt **keine** Not-Found-Route. Wird ein Dispatch-Zweig vergessen,
+zeigt die neue Adresse kommentarlos die Startseite — keine Konsolenmeldung, kein 404. Dieselbe
+Falle innerhalb der Ansicht: Eine unbekannte ID muss die View **selbst** abfangen und
+`nichtGefundenHtml()` rendern.
 
 ## Wo was liegt
 
@@ -271,6 +288,109 @@ zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artef
   disjunkt** sein und den Instrumentbestand vollständig abdecken. Genau diese Regel ist
   zweimal gebrochen worden (erst Praxis∩Theorie, dann Equipment∩Theorie — jeweils derselbe
   Baustein zweimal auf einer Seite); ein dritter Fall fällt jetzt beim Bauen auf.
+
+## Flyer-Archiv (`#/flyer`) — Mikro-CMS in zwei Dateien
+
+Plakate und Flyer vergangener Abende des Kollektivs. Referenzbereich wie Stimmungen/
+Zerrtypen — **NICHT im Baustein-Pool**, kein Fortschritt, kein `vokabulare`-Block, keine
+Titel-Liftung. Das ganze „CMS" sind **zwei Orte**: `data/flyer.json` (Texte) und
+`images/flyer/` (Bilder), beides über die GitHub-Weboberfläche pflegbar. Ansicht:
+`js/ansichten/flyer.js` (Gitter + Detailseite `#/flyer/<id>`).
+
+- **Sichtbare Texte stehen IN der Datei, nicht in `labels/de.json`.** Die Lift-Regel gilt
+  dem Baustein-Pool; die Referenzdateien halten ihren Text bei sich (`zerrtypen.json`:
+  `bezeichnung`, `genres.json`: `kurz`). Ein Flyertitel ist der Eigenname eines Abends. Die
+  **Rahmen**-Beschriftungen der Ansicht laufen dagegen wie überall durch `t()`.
+- **Pflichtfelder** `id`, `datum`, `titel`, `bild`; optional `format`, `alt`, `ort`, `bands`,
+  `stil`, `veranstalter`, `gestaltung`, `quelle`, `text`. Die Feldliste steht in `_meta` der
+  JSON selbst — also dort, wo jemand beim Editieren im Browser sie offen hat, statt nur hier.
+- **IDs sind Adressen und werden NIE umbenannt.** Form `<jahr>-<monat>-<tag>-<kurzname>`,
+  ASCII-klein mit Bindestrich; die ID **muss** mit dem Jahr aus `datum` beginnen (Fehler,
+  nicht Warnung). Der häufigste Pflegefehler ist „Eintrag kopiert, Datum geändert, ID
+  vergessen" — das fällt als doppelte ID auf. Der umgekehrte Fall fällt **nur** über diese
+  Kopplung auf und sortierte den Flyer sonst still an die falsche Stelle.
+- **Keine gepflegten Pixelzahlen.** Das Gitter-Verhältnis steht in CSS (immer hoch, `contain`)
+  und kann deshalb gar nicht driften. Das optionale Wort `format` (`hoch`/`quer`/`quadrat`)
+  wird von `validate.py` gegen die **gemessenen** Maße geprüft (`bildmasse()`, PNG/GIF/JPEG/
+  **WebP** ohne Fremdbibliothek). Getippte `breite`/`hoehe` wären falsch und niemandem fiele
+  es auf — ein falsches Verhältnis springt nur ein bisschen, statt zu krachen.
+- **Waise ist Warnung, Eintrag ohne Bild ist Fehler.** Die Asymmetrie folgt dem Pflegeweg:
+  Über die GitHub-Weboberfläche lässt sich in EINEM Commit entweder eine Datei hochladen
+  ODER eine Textdatei ändern. Der normale Ablauf ist also zweistufig; wäre die Waise ein
+  Fehler, liefe die CI bei **jedem** Pflegevorgang einmal rot — und eine Prüfung, die im
+  Normalbetrieb rot ist, wird weggeklickt.
+- **Eigenes Budget neben der globalen Grenze:** `FLYER_BUDGET` (10 MB über `images/flyer/`)
+  plus 400 KB je Bild als Fehler, 250 KB als Warnung. Ohne die zweite Grenze frisst ein
+  wachsendes Archiv still den Kopfraum, den die Inhalts-Pipeline braucht (~12 KB je neuem
+  Baustein über Quelle, Index, Grafik und Tier-2-Seite), und der Knall käme später in einem
+  fremden Commit. Eskalationswege stehen am Konstantenkommentar und in
+  `images/flyer/README.md`.
+- **Flyer werden NIE über `.bildkachel`/`bildEbene()` gebaut.** Jene Bildebene zoomt
+  (`--bild-zoom`), regelt die Deckkraft herunter und entsättigt im hellen Thema
+  (`--bild-saettigung`). Für ein Foto hinter einer Überschrift richtig, für ein Plakat
+  dreimal falsch: beschnittener Rand (dort steht auf einem Flyer das Datum), ausgewaschene
+  Farbe, und ein Dokument, das je nach Themenschalter anders aussieht. **Die Farbe eines
+  Flyers ist Information** — sie kippt nicht mit dem Thema, aus demselben Grund wie
+  `--marke-rot`. Das ist das erste echte Raster-`<img>` der App; getrennt statt
+  `.karte`-Fläche über `--flaeche-2` als Passepartout und `--trennlinie` als Haarlinie
+  (nicht `--karten-kante`: die verspricht einen Klick).
+- **Fällt ein Bild aus, bleibt der Eintrag stehen** (Klasse `.bild-fehlt`, Titel/Datum/Ort
+  als Textkachel). **Fallstrick:** `error` von `<img>` steigt NICHT auf — ein Horcher am
+  Container ohne drittes Argument sieht davon nichts, und zwar lautlos. Einfangphase (`true`).
+- **Kein Tier-2-SEO für Flyer.** `scripts/build_seiten.py` erzeugt bewusst nichts unter
+  `flyer/`. Statische Zwillinge müssten nach **jeder** Archiv-Änderung neu gebaut werden,
+  und `--check` liefe in der CI rot, sobald jemand einen Flyer über die Weboberfläche
+  ergänzt — genau der Pflegeweg, für den das Archiv gebaut ist. Der Preis ist, dass die
+  Flyer für Suchmaschinen hinter `#` verschwinden; das ist hier der günstigere Tausch.
+- **SW:** `data/flyer.json` gehört in `SHELL`, die **Bilder ausdrücklich nicht** (Gewicht,
+  wie `images/bg/`). `validate.py` prüft beides — die Datei als Fehler, ein Bild in `SHELL`
+  als Warnung.
+
+## Interner Bereich (`#/intern`) — Vorhang, kein Schloss
+
+Bettet ein Pad (CryptPad/Etherpad) per iframe ein, hinter einer Passwortabfrage
+(`js/ansichten/intern.js`).
+
+- **Das ist ein Sichtschutz, kein Zugangsschutz**, und die Seite sagt das selbst
+  (`intern_hinweis`). Die App ist rein clientseitig; das Passwort liegt im ausgelieferten
+  Quelltext. Eine Seite, die „geschützt" verspricht und es nicht ist, wäre schlimmer als
+  eine, die offen sagt, was sie kann. Echter Schutz gehört auf den Server (Basic Auth bei
+  netcup). Folge: Das Passwort darf **nie** eines sein, das anderswo benutzt wird.
+- **Die Pad-Adresse wird NICHT eingecheckt.** Bei CryptPad steckt der Entschlüsselungs-
+  Schlüssel im URL-**Fragment** — die Adresse IST der Schlüssel. Eine committete Pad-URL
+  veröffentlicht das Pad unwiderruflich: Die Historie ist öffentlich und geklont, und der
+  Service Worker verteilte die Adresse zusätzlich in den Offline-Cache jedes Nutzers. Sie
+  wird deshalb einmal im Browser hinterlegt und liegt nur dort (`js/werkzeug-speicher.js`,
+  Namespace `intern`). Bei Etherpad steht der Pad-Name im **Pfad**, geht also an Server- und
+  Proxy-Logs — dort hilft nur ein langer Zufallsname, und auch der ersetzt nur Rateschutz.
+- **Weder Passwort noch Adresse dürfen in die URL.** `js/app.js` zählt die volle Hash-Route
+  samt Query an GoatCounter; ein `#/intern?pw=…` schriebe das dauerhaft in ein fremdes
+  Analytics-Log. Aus demselben Grund zählt der Router `#/intern` **gar nicht** mit.
+- **Das Passwort liegt nirgends.** Nur flüchtiger Modul-State — nicht in `zustand.js`
+  (dessen `exportiereZustand()` landet in der herunterladbaren Backup-JSON, die Nutzer
+  weitergeben), nicht in `localStorage`, nicht in der URL. Ein Reload fragt erneut; auf einer
+  selten besuchten Seite kostet das nichts. Ein gespeicherter Hash brächte übrigens nichts —
+  der Vergleichswert steht ohnehin im öffentlichen Quelltext.
+- **Klick zum Laden.** Das iframe entsteht erst im Klick-Handler, nie im gerenderten Markup.
+  Ohne Klick gibt es keinen Verbindungsaufbau, keine IP-Übermittlung und keine Cookies auf
+  der fremden Origin — das ist der ganze Grund, warum der Datenschutzabschnitt kurz bleiben
+  kann. Beim Routenwechsel räumt ein `registriereAufraeumen`-Haken es ab.
+- **Der Ausweich-Link steht IMMER da**, nicht bedingt. Eine blockierte Einbettung
+  (`X-Frame-Options`/`frame-ancestors` des Dienstes) ist aus dem Elterndokument **nicht**
+  zuverlässig erkennbar: `onerror` feuert nicht, `load` verhält sich je nach Browser anders,
+  `contentDocument` ist cross-origin unlesbar. Ein leeres iframe ist dann ärgerlich statt
+  kaputt.
+- **Zur `sandbox` ehrlich bleiben:** CryptPad braucht `allow-scripts` UND `allow-same-origin`
+  (eigene Krypto, eigener Speicher) — zusammen hebt das den Schutzwert für diese Origin
+  weitgehend auf. Was sie hier wirklich leistet, ist das **fehlende** `allow-top-navigation`:
+  Ohne das kann die eingebettete Seite ZERRER nicht wegnavigieren. Enger gesetzt bricht das
+  Pad, statt sicherer zu werden. Dazu `title` (WCAG), `referrerpolicy="no-referrer"`,
+  `allow=""` und `loading="lazy"`.
+- **Eingegebene Adressen werden geprüft** (`https:` und parsebar). Ohne das nähme das Feld
+  auch `javascript:`/`data:` entgegen.
+- **Datenschutz mitziehen:** `data/app-info.json` → `rechtliches.datenschutz` trägt den
+  eigenen Abschnitt „Eingebettetes Pad (interner Bereich)"; die Aussage „GoatCounter ist die
+  einzige Ausnahme" steht dort jetzt mit dem Zusatz „beim normalen Besuch".
 
 ## Trainings-Loop (Unterbau)
 

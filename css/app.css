@@ -3889,6 +3889,144 @@ a.karte-link.verweiszeile {
 }
 .verweis-liste { display: grid; gap: 0.45rem; margin-bottom: 0.4rem; }
 
+/* ---------- Flyer-Archiv: Bildergitter + Blatt ----------
+   Flyer sind INHALT, nicht Stimmungsbild: Sie werden ganz gezeigt (contain, nie
+   cover) und tragen keinen Text ueber sich. Deshalb bewusst NICHT ueber
+   .bildkachel/bildEbene() gebaut — jene Bildebene zoomt (--bild-zoom), regelt
+   die Deckkraft herunter (--bild-deckkraft) und entsaettigt im hellen Thema
+   (--bild-saettigung). Fuer ein Foto hinter einer Ueberschrift ist das richtig,
+   fuer ein Plakat dreimal falsch: beschnittener Rand (genau dort steht auf einem
+   Flyer das Datum), ausgewaschene Farbe, und im Hellen ein Dokument, das je nach
+   Themenschalter anders aussieht. Die Farbe eines Flyers IST Information.
+   Die Kachel selbst ist eine normale .karte.karte-link und erbt damit Flaeche,
+   Radius, Schraeglage, plastischen Schatten, die Tintenkante im hellen Thema
+   (nur an Klickbarem) und den gestrichelten Hover. */
+.flyer-gitter {
+  display: grid;
+  /* auto-fill statt fester Spalten (wie .griff-gitter): Das Archiv waechst.
+     min(100%, …) haelt die Kachel auf schmalen Schirmen ganzspaltig. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+  gap: 0.8rem;
+  margin: 0 0 1.4rem;
+}
+/* .karte bringt einen eigenen Abstand nach unten mit — im Raster macht das der gap. */
+.flyer-gitter .flyerkachel { margin: 0; }
+/* Selektor mit Elementteil, wie bei .bildkachel: `a.karte-link { display: block }`
+   weiter oben ist spezifischer als eine einzelne Klasse und wuerde das
+   Flex-Layout sonst still aushebeln. */
+a.karte-link.flyerkachel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  /* Enger als die Standardkarte: Im Raster ist das Blatt der Inhalt, die Karte
+     nur sein Rahmen. */
+  padding: 0.6rem;
+}
+.flyer-bild {
+  display: block;
+  width: 100%;
+  /* Festes Feld im Hochformat haelt das Raster ruhig, BEVOR ein Byte Bild da
+     ist — kein Nachrutschen beim Laden. Abweichende Formate sitzen dank contain
+     mittig im Feld statt beschnitten zu werden. Das Verhaeltnis steht deshalb
+     hier in CSS und nicht in den Daten: So kann es gar nicht erst driften. */
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  /* Passepartout statt Schatten: Das helle Thema hat keine Schatten, und ein
+     Scan mit weissem Rand loeste sich auf dem weissen Blatt sonst auf.
+     --flaeche-2 ist in beiden Themen die abgesetzte Flaeche. */
+  background: var(--flaeche-2);
+  /* Haarlinie ums Blatt. Das ist KEINE Kante im Sinne der Klick-Zusage — die
+     traegt die Kachel selbst ueber --karten-kante —, sondern eine Trennlinie
+     INNERHALB des Containers; genau dafuer gibt es --trennlinie. */
+  border: 1px solid var(--trennlinie);
+}
+.flyerkachel-titel { margin: 0; font-size: 0.95rem; line-height: 1.2; color: var(--tinte); }
+/* Datum/Ort tragen zusaetzlich .leise (Farbe + Groesse) — hier nur der Abstand. */
+.flyerkachel-meta { margin: 0; }
+/* Faellt ein Bild aus (404, offline, halb uebertragen), nimmt die Ansicht das
+   <img> heraus und setzt diese Klasse: Der Kasten bleibt stehen, die Kachel
+   fuehrt weiter auf die Detailseite. Ein Archiv, das Eintraege verschluckt,
+   weil ein Scan fehlt, ist schlimmer als eines mit Luecken. */
+.flyerkachel.bild-fehlt::before,
+.flyer-blatt.bild-fehlt::before {
+  content: '';
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--flaeche-2);
+  border: 1px dashed var(--trennlinie);
+}
+.flyer-blatt.bild-fehlt::before { aspect-ratio: 4 / 3; max-height: 40vh; }
+.flyer-rechte { margin: 1.2rem 0 0; }
+
+/* Das Blatt auf der Detailseite: gross, ganz, ohne Beschnitt. <figure> wie bei
+   der Lehrgrafik in der Baustein-Ansicht — Bild und Unterschrift sind ein
+   Element. Der Container bleibt randlos: Er ist nicht anklickbar. */
+.flyer-blatt { margin: 0 0 1.2rem; }
+.flyer-blatt img {
+  display: block;
+  width: 100%;
+  /* Deckel statt fester Hoehe: Ein Querformat darf die Spalte fuellen, ein
+     extremes Hochformat nicht den ganzen Schirm belegen. Bei width: 100% plus
+     max-height haelt der Browser das Seitenverhaeltnis selbst; margin-inline
+     zentriert das dann schmalere Blatt. */
+  max-height: 80vh;
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+  background: var(--flaeche-2);
+  border: 1px solid var(--trennlinie);
+}
+.flyer-blatt-text { margin: 0.5rem 0 0; color: var(--tinte-2); font-size: 0.9rem; }
+.flyer-text { margin: 0 0 1rem; }
+.flyer-bands { margin: 0 0 1rem; padding-left: 1.1rem; }
+.flyer-angaben { display: grid; gap: 0.35rem; margin: 0 0 1rem; }
+.flyer-angabe { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.flyer-angabe dd { margin: 0; }
+
+/* ---------- Interner Bereich: Passwort-Vorhang + eingebettetes Pad ---------- */
+.intern-warnung { margin: 0 0 1rem; }
+.intern-form, .intern-pad-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
+}
+.intern-feld { flex: 1 1 16rem; min-width: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+.intern-feld label { font-weight: 600; font-size: 0.9rem; }
+.intern-eingabe {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--linie-stark);
+  border-radius: var(--radius);
+  background: var(--flaeche);
+  color: var(--tinte);
+  font: inherit;
+}
+.intern-fehler { margin: 0; min-height: 1.2em; color: var(--primaer); font-size: 0.9rem; }
+/* .knopf-zeile richtet global rechtsbuendig aus (Dialog-Konvention). Hier
+   gehoeren die Knoepfe an den linken Rand: Sie folgen unmittelbar auf das
+   Eingabefeld darueber und lesen sich sonst als abgesetzte Dialog-Aktionen. */
+.intern-aktionen { margin: 0.8rem 0 0; justify-content: flex-start; }
+.intern-buehne:empty { display: none; }
+.intern-rahmen {
+  display: block;
+  width: 100%;
+  margin-top: 0.8rem;
+  /* Hoehe ueber das Verhaeltnis statt fester Pixel: Der eingebettete Inhalt ist
+     eine eigene Seite und scrollt selbst; eine feste Hoehe waere mobil zu hoch
+     und auf dem Desktop zu niedrig. */
+  aspect-ratio: 3 / 4;
+  min-height: 24rem;
+  /* --trennlinie, nicht --karten-kante (die versprach einen Klick) und nicht
+     --widget-kante (im hellen Thema transparent — die fremde Seite liefe dann
+     randlos ins weisse Blatt). */
+  border: 1px solid var(--trennlinie);
+  background: var(--flaeche-2);
+}
+@media (min-width: 48rem) { .intern-rahmen { aspect-ratio: 16 / 10; } }
+
 @media (max-width: 30rem) {
   .bildkachel { min-height: 138px; padding: 0.75rem 0.8rem; }
   .bildkachel-titel { font-size: 1.12rem; }
