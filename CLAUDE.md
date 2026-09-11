@@ -122,7 +122,7 @@ in mehreren Hubs auftauchen:
 
 **Untere Leiste (mobil):** Home · Tools (`#/werkzeuge`) · Profil · Mehr (öffnet das Menü).
 **Menü:** die vier Hubs als Hauptpunkte (`.menue-haupt`), abgesetzt die Referenzbereiche
-(Genres, Kontext, Geräte, Stimmungen, Patterns, Flyer), abgesetzt Über/Impressum/Datenschutz. Der
+(Genres, Kontext, Geräte, Stimmungen, Patterns, Shows), abgesetzt Über/Impressum/Datenschutz. Der
 **Themen-Umschalter steht in der Kopfzeile und im Profil** (nicht im Menü): in der
 Kopfzeile als Icon-Knopf neben der Lupe, der nur zwischen hell und dunkel wechselt —
 die dritte Stellung `auto` bleibt dem Profil-Auswahlfeld vorbehalten, weil ein Knopf
@@ -289,17 +289,22 @@ zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artef
   zweimal gebrochen worden (erst Praxis∩Theorie, dann Equipment∩Theorie — jeweils derselbe
   Baustein zweimal auf einer Seite); ein dritter Fall fällt jetzt beim Bauen auf.
 
-## Flyer-Archiv (`#/flyer`) — Mikro-CMS in zwei Dateien
+## Shows (`#/shows`) — Mikro-CMS in zwei Dateien
 
-Plakate und Flyer vergangener Abende des Kollektivs. Referenzbereich wie Stimmungen/
-Zerrtypen — **NICHT im Baustein-Pool**, kein Fortschritt, kein `vokabulare`-Block, keine
-Titel-Liftung. Das ganze „CMS" sind **zwei Orte**: `data/flyer.json` (Texte) und
-`images/flyer/` (Bilder), beides über die GitHub-Weboberfläche pflegbar. Ansicht:
-`js/ansichten/flyer.js` (Gitter + Detailseite `#/flyer/<id>`).
+Vergangene Abende des Kollektivs, dokumentiert über ihre Flyer. Referenzbereich wie
+Stimmungen/Zerrtypen — **NICHT im Baustein-Pool**, kein Fortschritt, kein
+`vokabulare`-Block, keine Titel-Liftung. Das ganze „CMS" sind **zwei Orte**:
+`data/shows.json` (Texte) und `images/shows/` (Flyer-Bilder), beides über die
+GitHub-Weboberfläche pflegbar. Ansicht: `js/ansichten/shows.js` (Gitter + Detailseite
+`#/shows/<id>`).
+
+**Der Bereich heißt „Shows", nicht „Flyer-Archiv".** Der Flyer ist das Dokument, die
+Show der Gegenstand — deshalb `shows_*` bei Labels, Klassen und Konstanten, und „Flyer"
+nur noch dort, wo das Blatt selbst gemeint ist (`bild`, `alt`, Bildunterschrift).
 
 - **Sichtbare Texte stehen IN der Datei, nicht in `labels/de.json`.** Die Lift-Regel gilt
   dem Baustein-Pool; die Referenzdateien halten ihren Text bei sich (`zerrtypen.json`:
-  `bezeichnung`, `genres.json`: `kurz`). Ein Flyertitel ist der Eigenname eines Abends. Die
+  `bezeichnung`, `genres.json`: `kurz`). Der Titel ist der Eigenname eines Abends. Die
   **Rahmen**-Beschriftungen der Ansicht laufen dagegen wie überall durch `t()`.
 - **Pflichtfelder** `id`, `datum`, `titel`, `bild`; optional `format`, `alt`, `ort`, `bands`,
   `stil`, `veranstalter`, `gestaltung`, `quelle`, `text`. Die Feldliste steht in `_meta` der
@@ -319,13 +324,13 @@ Titel-Liftung. Das ganze „CMS" sind **zwei Orte**: `data/flyer.json` (Texte) u
   ODER eine Textdatei ändern. Der normale Ablauf ist also zweistufig; wäre die Waise ein
   Fehler, liefe die CI bei **jedem** Pflegevorgang einmal rot — und eine Prüfung, die im
   Normalbetrieb rot ist, wird weggeklickt.
-- **Eigenes Budget neben der globalen Grenze:** `FLYER_BUDGET` (10 MB über `images/flyer/`)
+- **Eigenes Budget neben der globalen Grenze:** `SHOWS_BUDGET` (10 MB über `images/shows/`)
   plus 400 KB je Bild als Fehler, 250 KB als Warnung. Ohne die zweite Grenze frisst ein
-  wachsendes Archiv still den Kopfraum, den die Inhalts-Pipeline braucht (~12 KB je neuem
+  wachsender Bestand still den Kopfraum, den die Inhalts-Pipeline braucht (~12 KB je neuem
   Baustein über Quelle, Index, Grafik und Tier-2-Seite), und der Knall käme später in einem
   fremden Commit. Eskalationswege stehen am Konstantenkommentar und in
-  `images/flyer/README.md`.
-- **Flyer werden NIE über `.bildkachel`/`bildEbene()` gebaut.** Jene Bildebene zoomt
+  `images/shows/README.md`.
+- **Flyer-Bilder werden NIE über `.bildkachel`/`bildEbene()` gebaut.** Jene Bildebene zoomt
   (`--bild-zoom`), regelt die Deckkraft herunter und entsättigt im hellen Thema
   (`--bild-saettigung`). Für ein Foto hinter einer Überschrift richtig, für ein Plakat
   dreimal falsch: beschnittener Rand (dort steht auf einem Flyer das Datum), ausgewaschene
@@ -337,12 +342,17 @@ Titel-Liftung. Das ganze „CMS" sind **zwei Orte**: `data/flyer.json` (Texte) u
 - **Fällt ein Bild aus, bleibt der Eintrag stehen** (Klasse `.bild-fehlt`, Titel/Datum/Ort
   als Textkachel). **Fallstrick:** `error` von `<img>` steigt NICHT auf — ein Horcher am
   Container ohne drittes Argument sieht davon nichts, und zwar lautlos. Einfangphase (`true`).
-- **Kein Tier-2-SEO für Flyer.** `scripts/build_seiten.py` erzeugt bewusst nichts unter
-  `flyer/`. Statische Zwillinge müssten nach **jeder** Archiv-Änderung neu gebaut werden,
-  und `--check` liefe in der CI rot, sobald jemand einen Flyer über die Weboberfläche
-  ergänzt — genau der Pflegeweg, für den das Archiv gebaut ist. Der Preis ist, dass die
-  Flyer für Suchmaschinen hinter `#` verschwinden; das ist hier der günstigere Tausch.
-- **SW:** `data/flyer.json` gehört in `SHELL`, die **Bilder ausdrücklich nicht** (Gewicht,
+- **Zwei Beispieleinträge** stehen im Bestand (`…-beispiel-hoch`, `…-beispiel-quer`) — sie
+  sind als Testfixture gekennzeichnet (Titel „Testflyer", roter Stempel im Bild) und decken
+  die Gegensätze ab, die ein leerer Bestand verbirgt: beide Formate, volles gegen kargstes
+  Feldset, voller Tag gegen Jahr+Monat. Sie dürfen jederzeit raus: zwei Einträge aus
+  `data/shows.json` und die zwei Dateien unter `images/shows/`.
+- **Kein Tier-2-SEO für Shows.** `scripts/build_seiten.py` erzeugt bewusst nichts unter
+  `shows/`. Statische Zwillinge müssten nach **jeder** Änderung neu gebaut werden, und
+  `--check` liefe in der CI rot, sobald jemand eine Show über die Weboberfläche ergänzt —
+  genau der Pflegeweg, für den die Seite gebaut ist. Der Preis ist, dass die Shows für
+  Suchmaschinen hinter `#` verschwinden; das ist hier der günstigere Tausch.
+- **SW:** `data/shows.json` gehört in `SHELL`, die **Bilder ausdrücklich nicht** (Gewicht,
   wie `images/bg/`). `validate.py` prüft beides — die Datei als Fehler, ein Bild in `SHELL`
   als Warnung.
 

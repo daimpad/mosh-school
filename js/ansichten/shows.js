@@ -1,15 +1,15 @@
-// Flyer-Archiv (#/flyer, #/flyer/<id>): Plakate und Flyer vergangener Abende
-// des Kollektivs. Referenzbereich wie Stimmungen/Zerrtypen/Songs — NICHT im
+// Shows (#/shows, #/shows/<id>): vergangene Abende des Kollektivs, dokumentiert
+// über ihre Flyer. Referenzbereich wie Stimmungen/Zerrtypen/Songs — NICHT im
 // Baustein-Pool, kein Fortschritt, keine Voraussetzungen.
 //
-// Das ganze „Mikro-CMS" sind ZWEI Orte: data/flyer.json (Texte) und
-// images/flyer/ (Bilder). Beides über die GitHub-Weboberfläche pflegbar, ohne
-// Build-Schritt und ohne Generator dazwischen — die Pflege-Anleitung steht in
-// images/flyer/README.md und in `_meta` der JSON, also dort, wo jemand beim
+// Das ganze „Mikro-CMS" sind ZWEI Orte: data/shows.json (Texte) und
+// images/shows/ (Flyer-Bilder). Beides über die GitHub-Weboberfläche pflegbar,
+// ohne Build-Schritt und ohne Generator dazwischen — die Pflege-Anleitung steht
+// in images/shows/README.md und in `_meta` der JSON, also dort, wo jemand beim
 // Editieren im Browser sie auch offen hat.
 //
 // Anders als bei den Bausteinen stehen die sichtbaren Texte (Titel, Ort, Bands,
-// Fließtext) IN der Datei und nicht in labels/de.json: Ein Flyertitel ist der
+// Fließtext) IN der Datei und nicht in labels/de.json: Der Titel ist der
 // Eigenname eines Abends, kein übersetzbares Beschriftungs-Element. Genau so
 // halten es zerrtypen.json und genres.json auch. Die Rahmen-Beschriftungen
 // dieser Ansicht laufen dagegen wie überall durch t().
@@ -18,10 +18,10 @@ import { label, t } from '../i18n.js';
 import { esc, nichtGefundenHtml } from '../oberflaeche.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
-const ORDNER = 'images/flyer/';
+const ORDNER = 'images/shows/';
 
 function liste(daten) {
-  return daten.flyer?.flyer || [];
+  return daten.shows?.shows || [];
 }
 
 // Absteigend nach Datum. `datum` darf JJJJ, JJJJ-MM oder JJJJ-MM-TT sein —
@@ -76,11 +76,11 @@ function kachel(f, index) {
   // 60 Einträgen beim Öffnen mehrere Megabyte.
   const frueh = index < 6;
   return `
-    <a class="karte karte-link flyerkachel" href="#/flyer/${encodeURIComponent(f.id)}">
-      <img class="flyer-bild" src="${esc(ORDNER + f.bild)}" alt=""
+    <a class="karte karte-link shows-kachel" href="#/shows/${encodeURIComponent(f.id)}">
+      <img class="shows-bild" src="${esc(ORDNER + f.bild)}" alt=""
            ${frueh ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">
-      <h3 class="flyerkachel-titel">${esc(f.titel || f.id)}</h3>
-      ${metaZeile(f) ? `<p class="flyerkachel-meta leise">${esc(metaZeile(f))}</p>` : ''}
+      <h3 class="shows-kachel-titel">${esc(f.titel || f.id)}</h3>
+      ${metaZeile(f) ? `<p class="shows-kachel-meta leise">${esc(metaZeile(f))}</p>` : ''}
     </a>`;
 }
 
@@ -97,7 +97,7 @@ function bindeBildausfall(el) {
     (ereignis) => {
       const bild = ereignis.target;
       if (!(bild instanceof HTMLImageElement)) return;
-      bild.closest('.flyerkachel, .flyer-blatt')?.classList.add('bild-fehlt');
+      bild.closest('.shows-kachel, .shows-blatt')?.classList.add('bild-fehlt');
       bild.remove();
     },
     true,
@@ -105,16 +105,16 @@ function bindeBildausfall(el) {
 }
 
 function uebersicht(el, daten) {
-  const f = daten.flyer || {};
+  const bereich = daten.shows || {};
   const eintraege = sortiert(liste(daten));
   const gitter = eintraege.length
-    ? `<div class="flyer-gitter">${eintraege.map(kachel).join('')}</div>`
-    : `<p class="leise">${esc(t('flyer_leer'))}</p>`;
+    ? `<div class="shows-gitter">${eintraege.map(kachel).join('')}</div>`
+    : `<p class="leise">${esc(t('shows_leer'))}</p>`;
   el.innerHTML = `
-    <article class="flyer-seite">
-      ${landingHeroHtml('fa-photo', f.titel || t('flyer_titel'), t('flyer_untertitel'), 'pf-magenta', 'flyer')}
+    <article class="shows-seite">
+      ${landingHeroHtml('fa-photo', bereich.titel || t('shows_titel'), t('shows_untertitel'), 'pf-magenta', 'shows')}
       ${gitter}
-      ${f.hinweis ? `<p class="flyer-rechte leise">${esc(f.hinweis)}</p>` : ''}
+      ${bereich.hinweis ? `<p class="shows-rechte leise">${esc(bereich.hinweis)}</p>` : ''}
     </article>`;
   bindeBildausfall(el);
 }
@@ -129,44 +129,44 @@ function detail(el, daten, f) {
   // `quelle`) stehen bewusst gleichrangig neben Ort und Veranstalter: Sie sind
   // der Grund, warum das Archiv zeigbar bleibt, kein Kleingedrucktes.
   const angaben = [
-    ['flyer_feld_ort', f.ort],
-    ['flyer_feld_veranstalter', f.veranstalter],
-    ['flyer_feld_gestaltung', f.gestaltung],
-    ['flyer_feld_quelle', f.quelle],
+    ['shows_feld_ort', f.ort],
+    ['shows_feld_veranstalter', f.veranstalter],
+    ['shows_feld_gestaltung', f.gestaltung],
+    ['shows_feld_quelle', f.quelle],
   ]
     .filter(([, wert]) => typeof wert === 'string' && wert.trim())
     .map(
       ([schluessel, wert]) => `
-        <div class="flyer-angabe">
+        <div class="shows-angabe">
           <dt class="leise">${esc(t(schluessel))}</dt>
           <dd>${esc(wert)}</dd>
         </div>`,
     )
     .join('');
   el.innerHTML = `
-    <article class="flyer-detail">
+    <article class="shows-detail">
       ${landingHeroHtml(
-        '', f.titel || f.id, '', 'pf-magenta', f.id, t('flyer_titel'), '',
-        { augenbraueHref: '#/flyer', untertitelHtml },
+        '', f.titel || f.id, '', 'pf-magenta', f.id, t('shows_titel'), '',
+        { augenbraueHref: '#/shows', untertitelHtml },
       )}
 
-      <figure class="flyer-blatt">
+      <figure class="shows-blatt">
         <img src="${esc(ORDNER + f.bild)}" alt="${esc(altText(f))}" decoding="async">
-        <figcaption class="flyer-blatt-text">${esc(t('flyer_blatt_hinweis'))}</figcaption>
+        <figcaption class="shows-blatt-text">${esc(t('shows_blatt_hinweis'))}</figcaption>
       </figure>
 
-      ${f.text ? `<p class="flyer-text">${esc(f.text)}</p>` : ''}
+      ${f.text ? `<p class="shows-text">${esc(f.text)}</p>` : ''}
 
       ${
         bands.length
           ? `<section class="abschnitt">
-               <h2 class="abschnitt-titel">${esc(t('flyer_lineup'))}</h2>
-               <ul class="flyer-bands">${bands.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
+               <h2 class="abschnitt-titel">${esc(t('shows_lineup'))}</h2>
+               <ul class="shows-bands">${bands.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
              </section>`
           : ''
       }
 
-      ${angaben ? `<dl class="flyer-angaben">${angaben}</dl>` : ''}
+      ${angaben ? `<dl class="shows-angaben">${angaben}</dl>` : ''}
 
       ${
         stile.length
@@ -176,22 +176,22 @@ function detail(el, daten, f) {
           : ''
       }
 
-      <p><a class="chip" href="#/flyer"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('flyer_zurueck'))}</a></p>
+      <p><a class="chip" href="#/shows"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> ${esc(t('shows_zurueck'))}</a></p>
     </article>`;
   bindeBildausfall(el);
 }
 
-export function renderFlyer(el, daten, id) {
+export function renderShows(el, daten, id) {
   if (!id) {
     uebersicht(el, daten);
     return;
   }
   // Unbekannte ID: ausdrücklich „nicht gefunden" statt stiller Rückfall aufs
-  // Gitter. Ein veraltetes Lesezeichen soll sagen, dass der Flyer weg ist —
+  // Gitter. Ein veraltetes Lesezeichen soll sagen, dass die Show weg ist —
   // nicht so tun, als hätte man nie einen verlinkt.
   const f = liste(daten).find((e) => e.id === id);
   if (!f) {
-    el.innerHTML = nichtGefundenHtml('#/flyer', t('flyer_titel'));
+    el.innerHTML = nichtGefundenHtml('#/shows', t('shows_titel'));
     return;
   }
   detail(el, daten, f);

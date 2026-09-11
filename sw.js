@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v204';
+const CACHE = 'zerrer-v205';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -94,7 +94,7 @@ const SHELL = [
   'js/ansichten/werkzeug-zerrlabor.js',
   'js/ansichten/werkzeug-tab.js',
   'js/ansichten/songs.js',
-  'js/ansichten/flyer.js',
+  'js/ansichten/shows.js',
   'js/ansichten/intern.js',
   'js/ansichten/brand-alert.js',
   'js/ansichten/glossar.js',
@@ -188,11 +188,11 @@ const SHELL = [
   'data/experimente.json',
   'data/brand-alert.json',
   'data/glossar.json',
-  // Texte des Flyer-Archivs. Die BILDER (images/flyer/) stehen bewusst NICHT
-  // in der Huelle — ein wachsendes Archiv zoege sonst jede Installation beim
-  // ersten Start mit. Sie landen ueber stale-while-revalidate beim Ansehen im
-  // Cache; offline zeigt das Gitter stattdessen seine Textkacheln.
-  'data/flyer.json',
+  // Texte der Shows-Seite. Die FLYER-BILDER (images/shows/) stehen bewusst
+  // NICHT in der Huelle — ein wachsender Bestand zoege sonst jede Installation
+  // beim ersten Start mit. Sie landen ueber stale-while-revalidate beim Ansehen
+  // im Cache; offline zeigt das Gitter stattdessen seine Textkacheln.
+  'data/shows.json',
   // Verzeichnis der Hero-/Kachel-Hintergrundbilder. Winzig und beim ersten
   // Anstrich gebraucht — deshalb in der Huelle. Die BILDER selbst sind bewusst
   // NICHT vorgeladen (rund 1,9 MB): Sie sind reine Zutat, ohne sie rendern
