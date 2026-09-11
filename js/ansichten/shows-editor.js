@@ -68,7 +68,7 @@ function leererEntwurf() {
   return {
     originalId: null,      // gesetzt = vorhandene Show, ID ist dann unveränderlich
     datum: '', genauigkeit: 'tag', titel: '', kurzname: '',
-    ort: '', veranstalter: '', gestaltung: '', quelle: '',
+    ort: '',
     bands: '', stil: [], text: '', alt: '',
     bildName: '',          // Dateiname der bereits vorhandenen Show
   };
@@ -124,15 +124,12 @@ function entwurfZuEintrag(e, gemessenesFormat) {
   const bands = e.bands.split('\n').map((z) => z.trim()).filter(Boolean);
   const eintrag = { id, datum, titel: e.titel.trim() };
   if (e.ort.trim()) eintrag.ort = e.ort.trim();
-  if (e.veranstalter.trim()) eintrag.veranstalter = e.veranstalter.trim();
   if (bands.length) eintrag.bands = bands;
   if (e.stil.length) eintrag.stil = [...e.stil];
   eintrag.bild = bild ? `${id}.webp` : e.bildName;
   eintrag.format = gemessenesFormat || 'hoch';
   if (e.alt.trim()) eintrag.alt = e.alt.trim();
   if (e.text.trim()) eintrag.text = e.text.trim();
-  if (e.gestaltung.trim()) eintrag.gestaltung = e.gestaltung.trim();
-  if (e.quelle.trim()) eintrag.quelle = e.quelle.trim();
   return eintrag;
 }
 
@@ -311,10 +308,7 @@ function formularHtml(voka) {
           <p class="editor-feld-hinweis leise">${esc(t(e.originalId ? 'editor_feld_id_fest' : 'editor_feld_id_hinweis'))}</p>
         </div>
       </div>
-      <div class="editor-gitter">
-        ${feld('editor-ort', 'editor_feld_ort', { wert: e.ort })}
-        ${feld('editor-veranstalter', 'editor_feld_veranstalter', { wert: e.veranstalter })}
-      </div>
+      ${feld('editor-ort', 'editor_feld_ort', { wert: e.ort })}
       ${feld('editor-bands', 'editor_feld_bands', { mehrzeilig: true, wert: e.bands, hinweis: 'editor_feld_bands_hinweis', zeilen: 3 })}
       <div class="editor-feld">
         <span class="editor-feld-titel">${esc(t('editor_feld_stil'))}</span>
@@ -322,10 +316,6 @@ function formularHtml(voka) {
       </div>
       ${feld('editor-text', 'editor_feld_text', { mehrzeilig: true, wert: e.text, hinweis: 'editor_feld_text_hinweis', zeilen: 6 })}
       ${feld('editor-alt', 'editor_feld_alt', { mehrzeilig: true, wert: e.alt, hinweis: 'editor_feld_alt_hinweis', zeilen: 3 })}
-      <div class="editor-gitter">
-        ${feld('editor-gestaltung', 'editor_feld_gestaltung', { wert: e.gestaltung })}
-        ${feld('editor-quelle', 'editor_feld_quelle', { wert: e.quelle })}
-      </div>
     </section>
 
     <section class="abschnitt">
@@ -382,7 +372,6 @@ export function renderShowsEditor(el, daten) {
   el.innerHTML = `
     <article class="editor-seite">
       ${landingHeroHtml('fa-pen-nib', t('editor_titel'), t('editor_untertitel'), 'pf-schiefer', 'editor')}
-      <p class="editor-warnung leise">${esc(t('editor_hinweis'))}</p>
       <div class="editor-inhalt"></div>
     </article>`;
   // Bei JEDEM Rendern registrieren, nicht beim Import: Der Router leert die
@@ -425,12 +414,9 @@ function leseFormular(bereich) {
   entwurf.titel = v('#editor-titel');
   entwurf.kurzname = v('#editor-kurzname');
   entwurf.ort = v('#editor-ort');
-  entwurf.veranstalter = v('#editor-veranstalter');
   entwurf.bands = v('#editor-bands');
   entwurf.text = v('#editor-text');
   entwurf.alt = v('#editor-alt');
-  entwurf.gestaltung = v('#editor-gestaltung');
-  entwurf.quelle = v('#editor-quelle');
   entwurf.stil = [...bereich.querySelectorAll('[data-stil]')]
     .filter((k) => k.checked).map((k) => k.dataset.stil);
 }
@@ -523,9 +509,6 @@ function bindeEreignisse(el, bereich, daten) {
       entwurf.datum = [teile[0], teile[1] || '01', teile[2] || '01'].join('-');
       entwurf.titel = s.titel || '';
       entwurf.ort = s.ort || '';
-      entwurf.veranstalter = s.veranstalter || '';
-      entwurf.gestaltung = s.gestaltung || '';
-      entwurf.quelle = s.quelle || '';
       entwurf.bands = (s.bands || []).join('\n');
       entwurf.stil = [...(s.stil || [])];
       entwurf.text = s.text || '';

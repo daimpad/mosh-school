@@ -113,9 +113,8 @@ function uebersicht(el, daten) {
     : `<p class="leise">${esc(t('shows_leer'))}</p>`;
   el.innerHTML = `
     <article class="shows-seite">
-      ${landingHeroHtml('fa-photo', bereich.titel || t('shows_titel'), t('shows_untertitel'), 'pf-magenta', 'shows')}
+      ${landingHeroHtml('fa-photo', bereich.titel || t('shows_titel'), '', 'pf-magenta', 'shows')}
       ${gitter}
-      ${bereich.hinweis ? `<p class="shows-rechte leise">${esc(bereich.hinweis)}</p>` : ''}
     </article>`;
   bindeBildausfall(el);
 }
@@ -126,14 +125,11 @@ export function detailHtml(f) {
   const untertitelHtml = metaZeile(f) ? esc(metaZeile(f)) : '';
   const bands = (Array.isArray(f.bands) ? f.bands : []).filter((b) => typeof b === 'string' && b.trim());
   const stile = (Array.isArray(f.stil) ? f.stil : []).filter(Boolean);
-  // Eine Zeile je gepflegter Angabe. Die Urheber-Angaben (`gestaltung`,
-  // `quelle`) stehen bewusst gleichrangig neben Ort und Veranstalter: Sie sind
-  // der Grund, warum das Archiv zeigbar bleibt, kein Kleingedrucktes.
+  // Eine Zeile je gepflegter Angabe. Derzeit ist das nur der Ort — Datum steht
+  // schon im Hero, alles andere ist bewusst raus. Die Liste bleibt trotzdem
+  // eine Liste, damit eine zweite Angabe eine Zeile ist und kein Umbau.
   const angaben = [
     ['shows_feld_ort', f.ort],
-    ['shows_feld_veranstalter', f.veranstalter],
-    ['shows_feld_gestaltung', f.gestaltung],
-    ['shows_feld_quelle', f.quelle],
   ]
     .filter(([, wert]) => typeof wert === 'string' && wert.trim())
     .map(

@@ -310,8 +310,11 @@ nur noch dort, wo das Blatt selbst gemeint ist (`bild`, `alt`, Bildunterschrift)
   `bezeichnung`, `genres.json`: `kurz`). Der Titel ist der Eigenname eines Abends. Die
   **Rahmen**-Beschriftungen der Ansicht laufen dagegen wie überall durch `t()`.
 - **Pflichtfelder** `id`, `datum`, `titel`, `bild`; optional `format`, `alt`, `ort`, `bands`,
-  `stil`, `veranstalter`, `gestaltung`, `quelle`, `text`. Die Feldliste steht in `_meta` der
-  JSON selbst — also dort, wo jemand beim Editieren im Browser sie offen hat, statt nur hier.
+  `stil`, `text`. Die Feldliste steht in `_meta` der JSON selbst — also dort, wo jemand beim
+  Editieren im Browser sie offen hat, statt nur hier. Die Detailseite zeigt **Datum und Ort**
+  (im Hero) und den Fließtext; die früheren Angaben `veranstalter`/`gestaltung`/`quelle` sind
+  entfernt, ebenso der Untertitel der Übersicht und der Rechte-Hinweis darunter. Eine
+  Urheberangabe gehört jetzt in `text`.
 - **IDs sind Adressen und werden NIE umbenannt.** Form `<jahr>-<monat>-<tag>-<kurzname>`,
   ASCII-klein mit Bindestrich; die ID **muss** mit dem Jahr aus `datum` beginnen (Fehler,
   nicht Warnung). Der häufigste Pflegefehler ist „Eintrag kopiert, Datum geändert, ID
@@ -347,8 +350,8 @@ nur noch dort, wo das Blatt selbst gemeint ist (`bild`, `alt`, Bildunterschrift)
   Container ohne drittes Argument sieht davon nichts, und zwar lautlos. Einfangphase (`true`).
 - **Zwei Beispieleinträge** stehen im Bestand (`…-beispiel-hoch`, `…-beispiel-quer`) — sie
   sind als Testfixture gekennzeichnet (Titel „Testflyer", roter Stempel im Bild) und decken
-  die Gegensätze ab, die ein leerer Bestand verbirgt: beide Formate, volles gegen kargstes
-  Feldset, voller Tag gegen Jahr+Monat. Sie dürfen jederzeit raus: zwei Einträge aus
+  die Gegensätze ab, die ein leerer Bestand verbirgt: beide Formate, voller Tag gegen
+  Jahr+Monat. Sie dürfen jederzeit raus: zwei Einträge aus
   `data/shows.json` und die zwei Dateien unter `images/shows/`.
 - **Kein Tier-2-SEO für Shows.** `scripts/build_seiten.py` erzeugt bewusst nichts unter
   `shows/`. Statische Zwillinge müssten nach **jeder** Änderung neu gebaut werden, und
@@ -370,7 +373,8 @@ Ansicht `js/ansichten/shows-editor.js`, GitHub-Zugriff DOM-frei in `js/github.js
   granulierter GitHub-Token im Browser liegt (nur dieses Repo, „Contents: read and
   write"), gespeichert im Werkzeug-Namespace (`moshschool.werkzeuge.v1`) — also
   **nicht** im Fortschritts-Schema, dessen Export der Nutzer weitergibt. Die Seite
-  sagt das selbst (`editor_hinweis`).
+  sagte das bis v207 selbst (`editor_hinweis`); der Absatz ist auf Wunsch raus —
+  die Tatsache bleibt, sie steht jetzt nur noch hier und in `js/github.js`.
 - **Zweig statt `main`.** Der Editor committet nach `shows/editor`, nie direkt auf
   `main`. So läuft die CI, BEVOR netcup zieht. Der Preis ist ein Merge-Klick je
   Stapel; dafür kann ein Tippfehler die Seite nicht umwerfen.

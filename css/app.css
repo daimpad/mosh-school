@@ -3957,7 +3957,6 @@ a.karte-link.shows-kachel {
   border: 1px dashed var(--trennlinie);
 }
 .shows-blatt.bild-fehlt::before { aspect-ratio: 4 / 3; max-height: 40vh; }
-.shows-rechte { margin: 1.2rem 0 0; }
 
 /* Das Blatt auf der Detailseite: gross, ganz, ohne Beschnitt. <figure> wie bei
    der Lehrgrafik in der Baustein-Ansicht — Bild und Unterschrift sind ein
@@ -4032,7 +4031,6 @@ a.karte-link.shows-kachel {
    keine Klick-Zusage (--karten-kante), sondern nur Eingabe-Optik. Alles andere
    — Knoepfe, Chips, .abschnitt, die Vorschau-Kacheln — kommt aus dem
    vorhandenen Satz, damit die Vorschau AUSSIEHT wie die echte Seite. */
-.editor-warnung { margin: 0 0 1rem; }
 .editor-feld { display: flex; flex-direction: column; gap: 0.3rem; margin: 0 0 0.9rem; }
 .editor-feld label, .editor-feld-titel { font-weight: 600; font-size: 0.9rem; }
 .editor-feld-hinweis { margin: 0; font-size: 0.82rem; }
