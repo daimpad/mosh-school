@@ -348,11 +348,10 @@ nur noch dort, wo das Blatt selbst gemeint ist (`bild`, `alt`, Bildunterschrift)
 - **Fällt ein Bild aus, bleibt der Eintrag stehen** (Klasse `.bild-fehlt`, Titel/Datum/Ort
   als Textkachel). **Fallstrick:** `error` von `<img>` steigt NICHT auf — ein Horcher am
   Container ohne drittes Argument sieht davon nichts, und zwar lautlos. Einfangphase (`true`).
-- **Zwei Beispieleinträge** stehen im Bestand (`…-beispiel-hoch`, `…-beispiel-quer`) — sie
-  sind als Testfixture gekennzeichnet (Titel „Testflyer", roter Stempel im Bild) und decken
-  die Gegensätze ab, die ein leerer Bestand verbirgt: beide Formate, voller Tag gegen
-  Jahr+Monat. Sie dürfen jederzeit raus: zwei Einträge aus
-  `data/shows.json` und die zwei Dateien unter `images/shows/`.
+- **Der Bestand ist leer** (`shows: []`, `images/shows/` nur mit README). Die beiden
+  Testflyer, die die Gegensätze abdeckten (beide Formate, voller Tag gegen Jahr+Monat),
+  sind auf Wunsch raus. Die Ansicht fängt das ab und zeigt `shows_leer`; wer die Kacheln
+  wieder sehen will, legt eine echte Show an — über `#/shows/login` oder von Hand.
 - **Kein Tier-2-SEO für Shows.** `scripts/build_seiten.py` erzeugt bewusst nichts unter
   `shows/`. Statische Zwillinge müssten nach **jeder** Änderung neu gebaut werden, und
   `--check` liefe in der CI rot, sobald jemand eine Show über die Weboberfläche ergänzt —
