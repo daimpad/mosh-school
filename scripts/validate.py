@@ -92,8 +92,8 @@ REFERENZ_IGNORIERT = frozenset({
 # `bild` und `datum` in shows.json sind Dateiname bzw. Zahl, nie Anzeigetext:
 # Ein Dateiname wie "2019-03-08-koeln-sonic.webp" laese der generische Detektor
 # sonst als Ersatzschreibung — und eine Pruefung, die staendig falsch meldet,
-# wird bald ignoriert. `bands`/`gestaltung` bleiben bewusst IM Scan: Ein
-# Bandname mit echtem ae gehoert in ERSATZ_ERLAUBT, nicht an der Pruefung vorbei.
+# wird bald ignoriert. `bands` bleibt bewusst IM Scan: Ein Bandname mit echtem
+# ae gehoert in ERSATZ_ERLAUBT, nicht an der Pruefung vorbei.
 REFERENZ_IGNORIERT_EXTRA = {
     'data/koennenscheck.json': frozenset({'kategorie'}),
     'data/shows.json': frozenset({'bild', 'datum'}),
@@ -450,7 +450,7 @@ def pruefe_shows(fehler, warnung, voka):
             wert = f.get(schluessel)
             if not isinstance(wert, str) or not wert.strip():
                 fehler.append(f'show {fid}: Pflichtfeld "{schluessel}" fehlt oder ist leer')
-        for schluessel in ('alt', 'ort', 'veranstalter', 'gestaltung', 'quelle', 'text'):
+        for schluessel in ('alt', 'ort', 'text'):
             if schluessel in f and not isinstance(f[schluessel], str):
                 fehler.append(f'show {fid}: "{schluessel}" muss ein Text sein')
         for schluessel in ('bands', 'stil'):

@@ -72,10 +72,10 @@ die Originale auf den netcup-Speicher legen und im Repo nur Miniaturen halten.
 
 ## Rechte
 
-Flyer sind gestaltete Werke von Dritten. `gestaltung` und `quelle` im Eintrag
-sind deshalb keine Deko, sondern der Grund, warum die Seite zeigbar bleibt.
-Wer eine Arbeit hier nicht sehen möchte, schreibt an kollektiv@zerrer.org —
-dann kommt sie raus.
+Flyer sind gestaltete Werke von Dritten. Die Felder `gestaltung` und `quelle`,
+die früher die Urheberangabe trugen, gibt es nicht mehr — wer eine Gestaltung
+nennen will, schreibt sie in den Fließtext (`text`). Wer eine Arbeit hier nicht
+sehen möchte, schreibt an kollektiv@zerrer.org — dann kommt sie raus.
 
 ## Nicht im Service Worker
 

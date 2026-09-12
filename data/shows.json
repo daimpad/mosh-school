@@ -20,36 +20,20 @@
       "ort": "Optional. Freitext, z. B. 'Sonic Ballroom, Köln'.",
       "bands": "Optional. Liste von Strings — NICHT ein String mit Kommas.",
       "stil": "Optional. Liste von Werten aus vokabulare.stil (data/bausteine.einsteiger-gitarre.json).",
-      "veranstalter": "Optional. Wer den Abend gemacht hat.",
-      "gestaltung": "Optional. Wer den Flyer gestaltet hat — Urheberangabe, keine Deko.",
-      "quelle": "Optional. Woher der Scan stammt.",
       "text": "Optional. Fließtext der Detailseite."
     }
   },
   "titel": "Shows",
-  "hinweis": "Plakate und Flyer vergangener Abende. Die Gestaltungen gehören denen, die sie gemacht haben — sie stehen hier zur Dokumentation der Szene, nicht zur Weiterverwendung. Wer eine Arbeit hier nicht sehen möchte, schreibt an kollektiv@zerrer.org; dann kommt sie raus.",
   "shows": [
     {
       "id": "2026-03-14-beispiel-hoch",
       "datum": "2026-03-14",
       "titel": "Testflyer — Hochformat",
       "ort": "Musterkeller, Beispielstadt",
-      "veranstalter": "Zerrer Kollektiv",
-      "bands": [
-        "Band Eins",
-        "Band Zwei",
-        "Band Drei"
-      ],
-      "stil": [
-        "hardcore",
-        "crust"
-      ],
       "bild": "2026-03-14-beispiel-hoch.webp",
       "format": "hoch",
       "alt": "Kopierter Flyer im Hochformat: schwarze Flächen mit weißen Versatzstreifen, der Titel „TESTFLYER“ als ausgeschnittene Schnipsel, eine Silbe davon rot. Darunter drei Bandnamen, Ort, Datum und ein roter Stempel „Testeintrag“.",
-      "text": "Beispieleintrag, damit die Seite nicht leer dasteht — hier sind alle Felder gefüllt, damit man sieht, wie eine vollständige Detailseite aussieht. Zum Löschen: diesen Eintrag aus data/shows.json entfernen und images/shows/2026-03-14-beispiel-hoch.webp dazu.",
-      "gestaltung": "Testfixture, im Browser gesetzt aus den Schriften der App",
-      "quelle": "kein Scan — erzeugtes Beispielbild"
+      "text": ""
     },
     {
       "id": "2025-09-beispiel-quer",
@@ -58,7 +42,8 @@
       "ort": "Musterkeller",
       "bild": "2025-09-beispiel-quer.webp",
       "format": "quer",
-      "alt": "Kopierter Flyer im Querformat: weißes Blatt mit schwarzem Rand, Titel „TESTFLYER II“ in einem schwarzen Balken, darunter ein Bandname in gebrochener Schrift und ein roter Stempel „Testeintrag“."
+      "alt": "Kopierter Flyer im Querformat: weißes Blatt mit schwarzem Rand, Titel „TESTFLYER II“ in einem schwarzen Balken, darunter ein Bandname in gebrochener Schrift und ein roter Stempel „Testeintrag“.",
+      "text": ""
     }
   ]
 }
