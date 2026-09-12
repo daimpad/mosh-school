@@ -24,26 +24,5 @@
     }
   },
   "titel": "Shows",
-  "shows": [
-    {
-      "id": "2026-03-14-beispiel-hoch",
-      "datum": "2026-03-14",
-      "titel": "Testflyer — Hochformat",
-      "ort": "Musterkeller, Beispielstadt",
-      "bild": "2026-03-14-beispiel-hoch.webp",
-      "format": "hoch",
-      "alt": "Kopierter Flyer im Hochformat: schwarze Flächen mit weißen Versatzstreifen, der Titel „TESTFLYER“ als ausgeschnittene Schnipsel, eine Silbe davon rot. Darunter drei Bandnamen, Ort, Datum und ein roter Stempel „Testeintrag“.",
-      "text": ""
-    },
-    {
-      "id": "2025-09-beispiel-quer",
-      "datum": "2025-09",
-      "titel": "Testflyer II — Querformat",
-      "ort": "Musterkeller",
-      "bild": "2025-09-beispiel-quer.webp",
-      "format": "quer",
-      "alt": "Kopierter Flyer im Querformat: weißes Blatt mit schwarzem Rand, Titel „TESTFLYER II“ in einem schwarzen Balken, darunter ein Bandname in gebrochener Schrift und ein roter Stempel „Testeintrag“.",
-      "text": ""
-    }
-  ]
+  "shows": []
 }

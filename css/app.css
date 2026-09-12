@@ -3806,10 +3806,10 @@ a.karte-link.bildkachel {
 .bildkachel-augenbraue svg { width: 1.05em; height: 1.05em; }
 .bildkachel-augenbraue .fa-solid { color: inherit; }
 .bildkachel-titel {
-  margin: 0;
+  margin: 20px 0 0;
   line-height: 1.05;
   color: var(--tinte);
-  font-size: 1.3rem;
+  font-size: 2.5rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
