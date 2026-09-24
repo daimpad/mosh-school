@@ -460,6 +460,13 @@ Bettet ein Pad (CryptPad/Etherpad) per iframe ein, hinter einer Passwortabfrage
   Ohne das kann die eingebettete Seite ZERRER nicht wegnavigieren. Enger gesetzt bricht das
   Pad, statt sicherer zu werden. Dazu `title` (WCAG), `referrerpolicy="no-referrer"`,
   `allow=""` und `loading="lazy"`.
+- **„CryptPad needs localStorage to work" im Rahmen ist eine Browser-Einstellung,
+  kein Fehler hier.** Blockiert der Browser Drittanbieter-Cookies (Chrome-Einstellung
+  bzw. Inkognito, Brave standardmäßig), sperrt er auch den Speicher eingebetteter
+  fremder Seiten. Nachgestellt mit einer Attrappe: Standardeinstellung → Speicher geht;
+  Drittanbieter-Cookies blockiert → `SecurityError`, **mit und ohne** unsere `sandbox`.
+  Von der einbettenden Seite aus ist das weder abstellbar noch zuverlässig erkennbar.
+  Abhilfe beim Nutzer: Ausnahme für `zerrer.org` erlauben, oder der Ausweich-Link.
 - **Eingegebene Adressen werden geprüft** (`https:` und parsebar). Ohne das nähme das Feld
   auch `javascript:`/`data:` entgegen.
 - **Datenschutz mitziehen:** `data/app-info.json` → `rechtliches.datenschutz` trägt den
@@ -1014,6 +1021,17 @@ Tokens**, nie harte Farben.
   (inklusive neuer, noch nicht gestagter Dateien — sonst wachte die Prüfung erst nach dem
   `git add` auf, also genau dann nicht, wenn man sie braucht). Der `CACHE`-Name und alles
   andere in `SHELL` bleiben Handarbeit.
+- **Der `CACHE`-Name ist zugleich die sichtbare Versionsnummer.** Die Fußzeile zeigt
+  „Version 211" für `zerrer-v211` (`zeigeVersion()` in `js/app.js`, Label
+  `footer_version`) — so sieht man, ob ein Merge schon angekommen ist. Deshalb
+  **jeder** PR, der etwas Ausgeliefertes ändert, erhöht `CACHE`, auch wenn die Regel
+  oben es streng genommen nicht verlangt. Gelesen wird die Nummer aus `caches.keys()`,
+  **nicht** per `fetch('sw.js')`: Der Worker bedient stale-while-revalidate, ein Abruf
+  bekäme die Fassung vom vorigen Besuch und zeigte die alte Nummer genau dann, wenn
+  man die neue sucht. Nur ohne Cache (erster Besuch, kein SW) wird `sw.js` gelesen.
+  **Lücke:** Der Shows-Editor erhöht `CACHE` nicht — eine neue Show ändert die Nummer
+  nicht. Die statischen Tier-2-Seiten zeigen keine Nummer (sonst müssten bei jedem
+  Release alle ~550 Seiten neu gebaut werden).
 - **Genau eines von `uebungsteil`/`reflexionsaufgabe`** je Baustein. Bewegungs-Bausteine tragen
   den Übungsteil; Wissens-/Reflexions-Bausteine (Mentales, Gesundheit, Ausrüstung) die
   Reflexionsaufgabe. `validate.py` prüft das.
