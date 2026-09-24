@@ -1,5 +1,7 @@
-// Interner Bereich (#/intern): bettet das Pad des Kollektivs (CryptPad) in die
-// App ein, hinter einem Passwort.
+// Interner Bereich (#/intern): bettet das Arbeitsdokument des Kollektivs (seit
+// v220 ein Google Doc, vorher CryptPad) in die App ein, hinter einem Passwort.
+// cryptpad.fr sperrt das Einbetten seiner Dokumente in jedem Rahmen („Einbettung
+// ist für diese CryptPad-Anwendung deaktiviert") — darum der Wechsel.
 //
 // DAS PASSWORT IST DER SCHLÜSSEL, NICHT EIN VERGLEICHSWERT. Die Pad-Adresse
 // steht verschlüsselt in js/intern-schluessel.js; das eingegebene Passwort
@@ -91,8 +93,10 @@ function haengeRahmenEin(buehne, url) {
   rahmen.title = t('intern_rahmen_titel');
   // Die eigene Adresse geht den fremden Dienst nichts an.
   rahmen.referrerPolicy = 'no-referrer';
-  // Leere Permissions-Policy: Kamera, Mikrofon, Standort ausdrücklich nein.
-  rahmen.allow = '';
+  // Nur die Zwischenablage — ein Texteditor ohne Einfügen über das Menü ist
+  // kaputt (Google Docs fragt die Clipboard-API). Kamera, Mikrofon, Standort
+  // bleiben ausdrücklich zu.
+  rahmen.allow = 'clipboard-read; clipboard-write';
   // Ehrlich bleiben: CryptPad braucht Skripte UND seine eigene Origin (Krypto,
   // Speicher) — zusammen hebt das den Schutzwert der Sandbox für diese Origin
   // weitgehend auf. Was sie hier wirklich leistet, ist das FEHLENDE
@@ -103,7 +107,10 @@ function haengeRahmenEin(buehne, url) {
   // sandbox; nachgestellt, s. CLAUDE.md.)
   rahmen.setAttribute(
     'sandbox',
-    'allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-downloads allow-modals',
+    // allow-storage-access-by-user-activation: Firefox und Safari sperren den
+    // Speicher eingebetteter fremder Seiten; damit darf das Dokument nach einem
+    // Klick darum bitten (Storage Access API) — sonst sähe man dort nur „Anmelden".
+    'allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-downloads allow-modals allow-storage-access-by-user-activation',
   );
   buehne.appendChild(rahmen);
   // Beim Verlassen der Route abräumen, damit die Verbindung zum fremden Dienst

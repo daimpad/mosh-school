@@ -15,7 +15,7 @@ Gitarre · Bass · Schlagzeug · Gesang — für Hardcore, Metalcore, Thrash, De
 ![Vanilla JS](https://img.shields.io/badge/Vanilla-JS%20ESM-f7df1e?style=flat-square&logo=javascript&logoColor=black)
 ![Sprache](https://img.shields.io/badge/Sprache-Deutsch-cc2418?style=flat-square)
 
-`No Ads` · `No Cookies` · `No Influencer-BS` · `No NSBM` · 🏳️‍🌈 *Queer willkommen*
+`No Ads` · `No Cookies` · `No Influencer-BS` · `Kein Platz für Faschos` · 🏳️‍🌈 *Queer willkommen*
 
 </div>
 

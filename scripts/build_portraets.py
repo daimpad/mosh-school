@@ -13,8 +13,10 @@ Aufbau eines Bildes, von unten nach oben:
   2. ein dunkler, weicher Kern (ein paar halbtransparente Ellipsen) — gibt der
      Silhouette Masse, sonst wirkt das Gewirr wie eine Drahtfigur
   3. das Gewirr: Zufallswege, die innerhalb der Silhouette bleiben
-  4. Filter: Turbulenz-Verschiebung (verzerrt) + waagerecht betonte Unschärfe
-     (verwackelt), dazu eine versetzte, blasse Zweitbelichtung — per <use>
+  4. Filter: Turbulenz-Verschiebung (verzerrt) + leichte waagerechte Unschärfe
+     (verwackelt) + harte Kontrastkurve auf den Alphakanal: Der blasse Hof der
+     Unschärfe fällt weg, Mittelgrau wird Schwarz. Dazu eine versetzte, blasse
+     Zweitbelichtung — per <use>
      auf dieselbe Gruppe, nicht doppelt gezeichnet (halbiert die Datei)
 
 Deterministisch: gleiche Namen → byte-gleiche Dateien. `--check` baut nur im
@@ -87,9 +89,11 @@ def gewirr(rnd, kopf, schulter, anzahl):
         x, y = zufallspunkt(rnd, kopf, schulter)
         winkel = rnd.uniform(0, 2 * math.pi)
         punkte = [(x, y)]
-        for _ in range(rnd.randint(18, 34)):
-            winkel += rnd.gauss(0, 0.7)
-            schritt = rnd.uniform(5, 13)
+        for _ in range(rnd.randint(16, 30)):
+            # Harte Knicke statt Bogen: breite Winkelstreuung, und jeder vierte
+            # Schritt schlägt fast um — das gibt das Gekritzel, nicht die Welle.
+            winkel += rnd.gauss(0, 1.25) + (rnd.choice((-2.4, 2.4)) if rnd.random() < 0.25 else 0)
+            schritt = rnd.uniform(4, 17)
             nx, ny = x + math.cos(winkel) * schritt, y + math.sin(winkel) * schritt
             if not innen(nx, ny, kopf, schulter):
                 winkel += math.pi * rnd.uniform(0.6, 1.4)   # am Rand abprallen
@@ -97,28 +101,39 @@ def gewirr(rnd, kopf, schulter, anzahl):
             x, y = nx, ny
             punkte.append((x, y))
         if len(punkte) > 3:
-            wege.append((punkte, rnd.uniform(0.7, 2.4), rnd.uniform(0.45, 0.95)))
+            wege.append((punkte, rnd.uniform(0.9, 2.6), rnd.uniform(0.7, 1.0)))
     return wege
 
 
 def pfad(punkte):
-    # Weiche Kurve durch die Punkte (Mittelpunkte als Stützstellen) — eine
-    # Zickzack-Linie sähe unter der Unschärfe nach Rauschen aus, nicht nach Strich.
-    # Ganze Pixel reichen: Unter der Unschärfe ist kein Zehntel zu sehen, und
-    # die Dateien werden ein gutes Drittel kleiner.
-    teile = [f'M{punkte[0][0]:.0f} {punkte[0][1]:.0f}']
-    for (x1, y1), (x2, y2) in zip(punkte[1:], punkte[2:]):
-        teile.append(f'Q{x1:.0f} {y1:.0f} {(x1 + x2) / 2:.0f} {(y1 + y2) / 2:.0f}')
-    return ''.join(teile)
+    # Gerade Stücke mit harten Ecken — gewollt zackig. (Die erste Fassung zog
+    # weiche Kurven; das wirkte unter der Unschärfe wie Nebel, nicht wie Kratzer.)
+    # Ganze Pixel reichen und halten die Dateien klein.
+    return 'M' + 'L'.join(f'{x:.0f} {y:.0f}' for x, y in punkte)
+
+
+def kratzer(rnd, kopf, schulter, anzahl):
+    """Lange Risse quer durch die Figur, bis über ihren Rand hinaus."""
+    risse = []
+    for _ in range(anzahl):
+        y = rnd.uniform(kopf['cy'] - kopf['ry'] * 0.8, schulter['cy'] - 20)
+        x = rnd.uniform(20, 60)
+        punkte = [(x, y)]
+        while x < B - 20:
+            x += rnd.uniform(6, 18)
+            y += rnd.uniform(-9, 9)
+            punkte.append((x, y))
+        risse.append((punkte, rnd.uniform(0.6, 1.4), rnd.uniform(0.55, 0.85)))
+    return risse
 
 
 def portraet(name):
     rnd = random.Random(zlib.crc32(name.encode()))
     kopf, schulter = silhouette(rnd)
-    wege = gewirr(rnd, kopf, schulter, rnd.randint(60, 75))
+    wege = gewirr(rnd, kopf, schulter, rnd.randint(52, 62)) + kratzer(rnd, kopf, schulter, rnd.randint(3, 5))
     saat = rnd.randint(1, 999)
-    wackel_x = rnd.uniform(4.5, 7.5)
-    zweit_dx = rnd.uniform(6, 12) * rnd.choice((-1, 1))
+    wackel_x = rnd.uniform(2.2, 3.2)
+    zweit_dx = rnd.uniform(7, 13) * rnd.choice((-1, 1))
     zweit_dy = rnd.uniform(-3, 3)
 
     kern = []
@@ -126,10 +141,10 @@ def portraet(name):
         kern.append(
             f'<ellipse cx="{kopf["cx"] + rnd.uniform(-14, 14):.1f}" cy="{kopf["cy"] + rnd.uniform(-10, 18):.1f}" '
             f'rx="{kopf["rx"] * rnd.uniform(0.55, 0.85):.1f}" ry="{kopf["ry"] * rnd.uniform(0.55, 0.85):.1f}" '
-            f'opacity="{rnd.uniform(0.18, 0.32):.2f}"/>')
+            f'opacity="{rnd.uniform(0.08, 0.14):.2f}"/>')
     kern.append(
         f'<ellipse cx="{B / 2 + schulter["versatz"]:.1f}" cy="{schulter["cy"] + 10:.1f}" '
-        f'rx="{schulter["rx"] * 0.85:.1f}" ry="{schulter["ry"] * 0.8:.1f}" opacity="0.28"/>')
+        f'rx="{schulter["rx"] * 0.85:.1f}" ry="{schulter["ry"] * 0.8:.1f}" opacity="0.12"/>')
 
     striche = ''.join(
         f'<path d="{pfad(p)}" stroke-width="{w:.2f}" opacity="{o:.2f}"/>' for p, w, o in wege)
@@ -138,14 +153,15 @@ def portraet(name):
 <defs>
 <filter id="z" x="-10%" y="-10%" width="120%" height="120%">
 <feTurbulence type="fractalNoise" baseFrequency="0.011 0.03" numOctaves="2" seed="{saat}"/>
-<feDisplacementMap in="SourceGraphic" scale="22" xChannelSelector="R" yChannelSelector="G"/>
-<feGaussianBlur stdDeviation="{wackel_x:.1f} 1.6"/>
+<feDisplacementMap in="SourceGraphic" scale="28" xChannelSelector="R" yChannelSelector="G"/>
+<feGaussianBlur stdDeviation="{wackel_x:.1f} 0.7"/>
+<feComponentTransfer><feFuncA type="linear" slope="1.7" intercept="-0.2"/></feComponentTransfer>
 </filter>
 <g id="p" fill="#000" stroke="#000" stroke-linecap="round">{''.join(kern)}<g fill="none">{striche}</g></g>
 </defs>
 <rect width="{B}" height="{H}" fill="#fff"/>
 <g filter="url(#z)">
-<use href="#p" transform="translate({zweit_dx:.1f} {zweit_dy:.1f})" opacity="0.35"/>
+<use href="#p" transform="translate({zweit_dx:.1f} {zweit_dy:.1f})" opacity="0.4"/>
 <use href="#p"/>
 </g>
 </svg>
