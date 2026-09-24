@@ -71,7 +71,7 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   `data/app-info.json` → `rechtliches.datenschutz` (Abschnitt „Cookies und Tracking").
   **Eine zweite Ausnahme, aber anderer Bauart:** das eingebettete Pad unter `#/intern`.
   Es lädt **nur nach einem ausdrücklichen Klick**, nie beim Aufrufen der Seite — ohne
-  Klick entsteht gar kein Drittkontakt, und die Adresse steht nicht im Quelltext (s.
+  Klick entsteht gar kein Drittkontakt, und die Adresse steht nur verschlüsselt im Quelltext (s.
   „Interner Bereich" unten). Deshalb bleibt GoatCounter die einzige Ausnahme *beim
   normalen Besuch*; genau so steht es jetzt auch im Datenschutztext, der sonst zur
   Falschaussage geworden wäre. **Eine dritte Verbindung geht nach draußen, aber nie
@@ -367,8 +367,8 @@ Formular für eine Show: Angaben, Markdown-Text, Flyer-Bild. Schreibt Bild und
 `data/shows.json` als **einen** Commit auf den Zweig `shows/editor`.
 Ansicht `js/ansichten/shows-editor.js`, GitHub-Zugriff DOM-frei in `js/github.js`.
 
-- **Das Passwort schützt nichts, der Token tut es.** Wie bei `#/intern` steht das
-  Passwort im ausgelieferten Quelltext. Geschrieben wird, weil ein fein
+- **Das Passwort schützt nichts, der Token tut es.** Das Passwort steht im
+  ausgelieferten Quelltext (anders als bei `#/intern`, wo es seit v212 ein Schlüssel ist). Geschrieben wird, weil ein fein
   granulierter GitHub-Token im Browser liegt (nur dieses Repo, „Contents: read and
   write"), gespeichert im Werkzeug-Namespace (`moshschool.werkzeuge.v1`) — also
   **nicht** im Fortschritts-Schema, dessen Export der Nutzer weitergibt. Die Seite
@@ -420,32 +420,42 @@ Ansicht `js/ansichten/shows-editor.js`, GitHub-Zugriff DOM-frei in `js/github.js
 - `#/shows/login` wird wie `#/intern` **nicht von GoatCounter gezählt** und steht
   in keiner Navigation.
 
-## Interner Bereich (`#/intern`) — Vorhang, kein Schloss
+## Interner Bereich (`#/intern`) — das Passwort ist der Schlüssel
 
-Bettet ein Pad (CryptPad/Etherpad) per iframe ein, hinter einer Passwortabfrage
-(`js/ansichten/intern.js`).
+Bettet das Pad des Kollektivs (CryptPad) per iframe ein (`js/ansichten/intern.js`).
+Passwort eingeben → das Pad erscheint. Niemand muss eine Adresse eintragen.
 
-- **Das ist ein Sichtschutz, kein Zugangsschutz.** Die Seite sagte das bis v208 selbst
-  (`intern_hinweis`); der Absatz ist auf Wunsch raus, die Tatsache bleibt: Die App ist
-  rein clientseitig, das Passwort liegt im ausgelieferten Quelltext. Echter Schutz gehört
-  auf den Server (Basic Auth bei netcup). Folge: Das Passwort darf **nie** eines sein, das
-  anderswo benutzt wird.
-- **Die Pad-Adresse wird NICHT eingecheckt.** Bei CryptPad steckt der Entschlüsselungs-
-  Schlüssel im URL-**Fragment** — die Adresse IST der Schlüssel. Eine committete Pad-URL
-  veröffentlicht das Pad unwiderruflich: Die Historie ist öffentlich und geklont, und der
-  Service Worker verteilte die Adresse zusätzlich in den Offline-Cache jedes Nutzers. Sie
-  wird deshalb einmal im Browser hinterlegt und liegt nur dort (`js/werkzeug-speicher.js`,
-  Namespace `intern`). Bei Etherpad steht der Pad-Name im **Pfad**, geht also an Server- und
-  Proxy-Logs — dort hilft nur ein langer Zufallsname, und auch der ersetzt nur Rateschutz.
+- **Die Adresse steht VERSCHLÜSSELT im Repo, nie im Klartext.** Bei CryptPad steckt der
+  Schlüssel zum Pad im URL-**Fragment** — die Adresse IST der Schlüssel; im Klartext
+  committet wäre das Pad unwiderruflich öffentlich (Historie, Klone, Pages-Spiegel, SW-
+  Cache). Deshalb liegt sie in `js/intern-schluessel.js` als PBKDF2(600 000 Runden)+AES-GCM-
+  Chiffrat (`js/tresor.js`, WebCrypto, keine Bibliothek). Das eingegebene Passwort
+  **entschlüsselt** — es gibt keinen Vergleichswert und keinen Hash im Quelltext; ein
+  falsches Passwort scheitert am Auth-Tag von AES-GCM.
+- **`validate.py` schlägt bei jeder Klartext-CryptPad-Adresse an** (`PAD_ADRESSE`, über
+  eingecheckte **und** noch nicht gestagte Dateien). Das ist der Riegel vor genau dem
+  Fehler, der sich nicht zurücknehmen lässt.
+- **Neue Adresse oder neues Passwort:** `scripts/verschluessele_pad.mjs` (Werte über
+  Umgebungsvariablen `PAD_EINBETTEN`/`PAD_OEFFNEN`/`PAD_PASSWORT`, mindestens 16 Zeichen,
+  Gegenprobe vor dem Schreiben), danach `CACHE` erhöhen. Zwei Adressen: `einbetten` (die
+  `/embed/`-Variante fürs iframe) und `oeffnen` (für den Ausweich-Link im neuen Tab).
+- **Die Stärke hängt allein am Passwort.** Das Chiffrat ist öffentlich, raten geht offline;
+  die PBKDF2-Runden bremsen, ein kurzes Wörterbuchwort rettet das nicht. **Nie ein Passwort,
+  das schon einmal im Quelltext stand** — `verzerrer` (bis v211 hier im Klartext, und
+  weiterhin der Vorhang vor dem Shows-Editor) ist verbrannt. Das Passwort wird nur mündlich
+  bzw. direkt weitergegeben, nie in Repo, Issue oder PR.
+- **Getrimmt und klein geschrieben** (`normalisiere()` in `tresor.js`): Telefon-Tastaturen
+  setzen den ersten Buchstaben groß. Gilt beim Verschlüsseln wie beim Entschlüsseln — an
+  einer Stelle geändert, passt kein Passwort mehr.
 - **Weder Passwort noch Adresse dürfen in die URL.** `js/app.js` zählt die volle Hash-Route
   samt Query an GoatCounter; ein `#/intern?pw=…` schriebe das dauerhaft in ein fremdes
   Analytics-Log. Aus demselben Grund zählt der Router `#/intern` **gar nicht** mit.
-- **Das Passwort liegt nirgends.** Nur flüchtiger Modul-State — nicht in `zustand.js`
-  (dessen `exportiereZustand()` landet in der herunterladbaren Backup-JSON, die Nutzer
-  weitergeben), nicht in `localStorage`, nicht in der URL. Ein Reload fragt erneut; auf einer
-  selten besuchten Seite kostet das nichts. Ein gespeicherter Hash brächte übrigens nichts —
-  der Vergleichswert steht ohnehin im öffentlichen Quelltext.
-- **Klick zum Laden.** Das iframe entsteht erst im Klick-Handler, nie im gerenderten Markup.
+- **Passwort und entschlüsselte Adresse liegen nirgends.** Nur flüchtiger Modul-State —
+  nicht in `zustand.js` (dessen `exportiereZustand()` landet in der herunterladbaren
+  Backup-JSON, die Nutzer weitergeben), nicht in `localStorage`, nicht in der URL. Ein
+  Reload fragt erneut.
+- **Erst nach dem Passwort.** Das iframe entsteht erst, wenn die Entschlüsselung geklappt
+  hat — also nach dem Klick auf „Öffnen", nie im gerenderten Markup.
   Ohne Klick gibt es keinen Verbindungsaufbau, keine IP-Übermittlung und keine Cookies auf
   der fremden Origin — das ist der ganze Grund, warum der Datenschutzabschnitt kurz bleiben
   kann. Beim Routenwechsel räumt ein `registriereAufraeumen`-Haken es ab.
