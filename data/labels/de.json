@@ -890,7 +890,6 @@
     "monat_12": "Dezember",
     "intern_titel": "Intern",
     "intern_untertitel": "Arbeitsfläche des Kollektivs.",
-    "intern_hinweis": "Kein echter Zugangsschutz: ZERRER läuft vollständig im Browser, das Passwort steht im Quelltext der Seite. Der Vorhang hält Zufallsbesucher ab, nicht jemanden, der nachsieht — nichts Vertrauliches hinter diese Tür.",
     "intern_schloss_titel": "Passwort",
     "intern_pw_label": "Passwort",
     "intern_pw_falsch": "Passt nicht. Nochmal.",

@@ -425,11 +425,11 @@ Ansicht `js/ansichten/shows-editor.js`, GitHub-Zugriff DOM-frei in `js/github.js
 Bettet ein Pad (CryptPad/Etherpad) per iframe ein, hinter einer Passwortabfrage
 (`js/ansichten/intern.js`).
 
-- **Das ist ein Sichtschutz, kein Zugangsschutz**, und die Seite sagt das selbst
-  (`intern_hinweis`). Die App ist rein clientseitig; das Passwort liegt im ausgelieferten
-  Quelltext. Eine Seite, die „geschützt" verspricht und es nicht ist, wäre schlimmer als
-  eine, die offen sagt, was sie kann. Echter Schutz gehört auf den Server (Basic Auth bei
-  netcup). Folge: Das Passwort darf **nie** eines sein, das anderswo benutzt wird.
+- **Das ist ein Sichtschutz, kein Zugangsschutz.** Die Seite sagte das bis v208 selbst
+  (`intern_hinweis`); der Absatz ist auf Wunsch raus, die Tatsache bleibt: Die App ist
+  rein clientseitig, das Passwort liegt im ausgelieferten Quelltext. Echter Schutz gehört
+  auf den Server (Basic Auth bei netcup). Folge: Das Passwort darf **nie** eines sein, das
+  anderswo benutzt wird.
 - **Die Pad-Adresse wird NICHT eingecheckt.** Bei CryptPad steckt der Entschlüsselungs-
   Schlüssel im URL-**Fragment** — die Adresse IST der Schlüssel. Eine committete Pad-URL
   veröffentlicht das Pad unwiderruflich: Die Historie ist öffentlich und geklont, und der
