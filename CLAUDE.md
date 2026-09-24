@@ -430,26 +430,33 @@ Ansicht `js/ansichten/shows-editor.js`, GitHub-Zugriff DOM-frei in `js/github.js
 
 ## Interner Bereich (`#/intern`) — das Passwort ist der Schlüssel
 
-Bettet das Pad des Kollektivs (CryptPad) per iframe ein (`js/ansichten/intern.js`).
-Passwort eingeben → das Pad erscheint. Niemand muss eine Adresse eintragen.
+Bettet das Arbeitsdokument des Kollektivs per iframe ein (`js/ansichten/intern.js`) —
+**seit v220 ein Google Doc**, vorher CryptPad. Passwort eingeben → das Dokument
+erscheint. Niemand muss eine Adresse eintragen. **Warum nicht mehr CryptPad:** cryptpad.fr
+sperrt das Einbetten seiner Dokumente in **jedem** Rahmen („Einbettung ist für diese
+CryptPad-Anwendung deaktiviert" — erst mit `/embed/`, dann auch mit der normalen
+Adresse, in Chrome wie Firefox). Das ist eine Server-Einstellung dort, von hier nicht
+zu umgehen. Der Preis des Wechsels: Google Docs ist **nicht** Ende-zu-Ende-verschlüsselt,
+und Bearbeiten im Rahmen klappt nur für bei Google Angemeldete in Browsern, die
+Drittanbieter-Cookies zulassen — der Ausweich-Link in den neuen Tab bleibt deshalb.
 
-- **Die Adresse steht VERSCHLÜSSELT im Repo, nie im Klartext.** Bei CryptPad steckt der
-  Schlüssel zum Pad im URL-**Fragment** — die Adresse IST der Schlüssel; im Klartext
+- **Die Adresse steht VERSCHLÜSSELT im Repo, nie im Klartext.** Bei CryptPad steckte der
+  Schlüssel im URL-**Fragment**, bei einem Google Doc mit „Jeder mit dem Link" ist die
+  Dokument-ID dasselbe — die Adresse IST der Schlüssel; im Klartext
   committet wäre das Pad unwiderruflich öffentlich (Historie, Klone, Pages-Spiegel, SW-
   Cache). Deshalb liegt sie in `js/intern-schluessel.js` als PBKDF2(600 000 Runden)+AES-GCM-
   Chiffrat (`js/tresor.js`, WebCrypto, keine Bibliothek). Das eingegebene Passwort
   **entschlüsselt** — es gibt keinen Vergleichswert und keinen Hash im Quelltext; ein
   falsches Passwort scheitert am Auth-Tag von AES-GCM.
-- **`validate.py` schlägt bei jeder Klartext-CryptPad-Adresse an** (`PAD_ADRESSE`, über
+- **`validate.py` schlägt bei jeder Klartext-Dokumentadresse an** — CryptPad und
+  `docs.google.com/{document,spreadsheets,presentation,forms}/d/…` (`PAD_ADRESSE`, über
   eingecheckte **und** noch nicht gestagte Dateien). Das ist der Riegel vor genau dem
   Fehler, der sich nicht zurücknehmen lässt.
 - **Neue Adresse oder neues Passwort:** `scripts/verschluessele_pad.mjs` (Werte über
   Umgebungsvariablen `PAD_EINBETTEN`/`PAD_OEFFNEN`/`PAD_PASSWORT`, mindestens 16 Zeichen,
   Gegenprobe vor dem Schreiben), danach `CACHE` erhöhen. Zwei Adressen: `einbetten` (fürs
-  iframe) und `oeffnen` (für den Ausweich-Link im neuen Tab). **Derzeit sind beide die
-  normale Pad-Adresse, NICHT die `/embed/`-Variante:** cryptpad.fr meldet für Dokumente
-  („doc") im Rahmen „Einbettung ist für diese CryptPad-Anwendung deaktiviert". Die normale
-  Adresse im iframe ist davon nicht betroffen — der Rahmen selbst wird ja geladen.
+  iframe) und `oeffnen` (für den Ausweich-Link im neuen Tab); derzeit beide die
+  `…/edit`-Adresse des Google Docs. (Die Variablennamen heißen historisch `PAD_*`.)
 - **Die Stärke hängt allein am Passwort.** Das Chiffrat ist öffentlich, raten geht offline;
   die PBKDF2-Runden bremsen, ein kurzes Wörterbuchwort rettet das nicht. **Nie ein Passwort,
   das schon einmal im Quelltext stand** — `verzerrer` (bis v211 hier im Klartext, und
@@ -479,8 +486,11 @@ Passwort eingeben → das Pad erscheint. Niemand muss eine Adresse eintragen.
   (eigene Krypto, eigener Speicher) — zusammen hebt das den Schutzwert für diese Origin
   weitgehend auf. Was sie hier wirklich leistet, ist das **fehlende** `allow-top-navigation`:
   Ohne das kann die eingebettete Seite ZERRER nicht wegnavigieren. Enger gesetzt bricht das
-  Pad, statt sicherer zu werden. Dazu `title` (WCAG), `referrerpolicy="no-referrer"`,
-  `allow=""` und `loading="lazy"`.
+  Pad, statt sicherer zu werden. Dazu `allow-storage-access-by-user-activation` (damit
+  das Dokument in Firefox/Safari nach einem Klick um seinen Speicher bitten kann),
+  `title` (WCAG), `referrerpolicy="no-referrer"`, `loading="lazy"` und
+  `allow="clipboard-read; clipboard-write"` — ein Editor ohne Einfügen über das Menü ist
+  kaputt; Kamera, Mikrofon, Standort bleiben zu.
 - **„CryptPad needs localStorage to work" im Rahmen ist eine Browser-Einstellung,
   kein Fehler hier.** Blockiert der Browser Drittanbieter-Cookies (Chrome-Einstellung
   bzw. Inkognito, Brave standardmäßig), sperrt er auch den Speicher eingebetteter
@@ -491,7 +501,8 @@ Passwort eingeben → das Pad erscheint. Niemand muss eine Adresse eintragen.
 - **Eingegebene Adressen werden geprüft** (`https:` und parsebar). Ohne das nähme das Feld
   auch `javascript:`/`data:` entgegen.
 - **Datenschutz mitziehen:** `data/app-info.json` → `rechtliches.datenschutz` trägt den
-  eigenen Abschnitt „Eingebettetes Pad (interner Bereich)"; die Aussage „GoatCounter ist die
+  eigenen Abschnitt „Eingebettetes Dokument (interner Bereich)" — Anbieter Google, keine
+  Ende-zu-Ende-Verschlüsselung, Drittland USA; die Aussage „GoatCounter ist die
   einzige Ausnahme" steht dort jetzt mit dem Zusatz „beim normalen Besuch".
 
 ## Trainings-Loop (Unterbau)

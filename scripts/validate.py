@@ -285,7 +285,12 @@ def pruefe_groessen(fehler):
 #
 # Geprueft werden eingecheckte UND neue, noch nicht gestagte Dateien: Genau vor
 # dem `git add` soll sie anschlagen, nicht erst danach.
-PAD_ADRESSE = re.compile(r'cryptpad[^\s"\'<>]*#/\d+/', re.IGNORECASE)
+# Seit v220 ist das eingebettete Dokument ein Google Doc. Dessen Adresse ist ein
+# Schlüssel, sobald es auf „Jeder mit dem Link" steht — gleiche Regel.
+PAD_ADRESSE = re.compile(
+    r'cryptpad[^\s"\'<>]*#/\d+/'
+    r'|docs\.google\.com/(?:document|spreadsheets|presentation|forms)/d/[A-Za-z0-9_-]{20,}',
+    re.IGNORECASE)
 
 
 def pruefe_pad_adressen(fehler):
@@ -302,8 +307,8 @@ def pruefe_pad_adressen(fehler):
             continue                     # Binaerdatei (Bild, Ton, Schrift)
         if PAD_ADRESSE.search(text):
             fehler.append(
-                f'{pfad}: enthaelt eine CryptPad-Adresse im Klartext — die Adresse IST der '
-                f'Schluessel zum Pad. Verschluesselt ablegen: scripts/verschluessele_pad.mjs')
+                f'{pfad}: enthaelt eine Dokument-Adresse (CryptPad/Google) im Klartext — die '
+                f'Adresse IST der Schluessel. Verschluesselt ablegen: scripts/verschluessele_pad.mjs')
 
 
 # --- Shows (data/shows.json + images/shows/) ---------------------------------

@@ -400,26 +400,26 @@
         },
         {
           "titel": {
-            "de": "Eingebettetes Pad (interner Bereich)"
+            "de": "Eingebettetes Dokument (interner Bereich)"
           },
           "absaetze": [
             {
-              "de": "Unter „Intern\" ist ein extern gehostetes Pad (CryptPad) in die Seite eingebettet. Diese Seite ist eine Arbeitsfläche des Kollektivs und für die normale Nutzung von ZERRER ohne Bedeutung."
+              "de": "Unter „Intern\" ist ein Dokument bei Google Docs in die Seite eingebettet. Diese Seite ist eine Arbeitsfläche des Kollektivs und für die normale Nutzung von ZERRER ohne Bedeutung."
             },
             {
-              "de": "Das Pad wird erst nach Eingabe des Passworts und einem ausdrücklichen Klick geladen, nie schon beim Aufrufen der Seite — vorher entsteht keinerlei Verbindung zum Pad-Dienst. Mit dem Klick baut dein Browser eine direkte Verbindung zu dessen Server auf; dabei werden IP-Adresse, Browserkennung (User-Agent) und Zeitpunkt an diesen Anbieter übertragen, und der Anbieter kann auf seiner eigenen Adresse Cookies bzw. lokalen Speicher setzen. Eingebunden ist ein Pad bei CryptPad (cryptpad.fr); dessen Datenschutzerklärung gilt zusätzlich. Liegt der Server außerhalb der EU, ist das eine Übermittlung in ein Drittland (Art. 44 ff. DSGVO)."
+              "de": "Das Dokument wird erst nach Eingabe des Passworts und einem ausdrücklichen Klick geladen, nie schon beim Aufrufen der Seite — vorher entsteht keinerlei Verbindung zu Google. Mit dem Klick baut dein Browser eine direkte Verbindung zu Googles Servern auf; dabei werden IP-Adresse, Browserkennung (User-Agent) und Zeitpunkt an Google übertragen, und Google kann auf seiner eigenen Adresse Cookies bzw. lokalen Speicher setzen. Bist du bei Google angemeldet, kann Google den Aufruf deinem Konto zuordnen. Es gilt zusätzlich die Datenschutzerklärung von Google. Google verarbeitet Daten auch außerhalb der EU, insbesondere in den USA; das ist eine Übermittlung in ein Drittland (Art. 44 ff. DSGVO)."
             },
             {
               "de": "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer gemeinsamen Arbeitsfläche); für den Zugriff auf Informationen im Endgerät beim Laden ist es § 25 Abs. 1 TDDDG auf Grundlage deiner Einwilligung — die du mit dem Klick gibst und schlicht dadurch verweigerst, dass du nicht klickst."
             },
             {
-              "de": "Die Inhalte des Pads liegen auf dem Server des jeweiligen Anbieters, nicht bei ZERRER. Bei CryptPad sind sie Ende-zu-Ende-verschlüsselt, bei Etherpad liegen sie dort im Klartext. Die Pad-Adresse selbst wird ausschließlich lokal im Browser des jeweiligen Geräts gespeichert, nicht übertragen und nicht im Quelltext der Seite veröffentlicht. Die Route „Intern\" wird außerdem bewusst nicht von der Reichweitenmessung erfasst."
+              "de": "Die Inhalte des Dokuments liegen bei Google, nicht bei ZERRER, und sind dort nicht Ende-zu-Ende-verschlüsselt. Die Adresse des Dokuments steht nur verschlüsselt im Quelltext der Seite; entschlüsselt wird sie erst mit dem Passwort in deinem Browser und dabei an niemanden übertragen. Die Route „Intern\" wird außerdem bewusst nicht von der Reichweitenmessung erfasst."
             },
             {
-              "de": "Die Passwortabfrage vor dieser Seite ist ein Sichtschutz, kein Zugangsschutz: ZERRER läuft vollständig im Browser, das Passwort steht im ausgelieferten Quelltext. Sie hält zufällige Besucher ab und ersetzt keinen serverseitigen Schutz — hinter diese Tür gehören deshalb keine vertraulichen Daten."
+              "de": "Das Passwort vor dieser Seite steht nicht im Quelltext; es ist der Schlüssel, mit dem die Adresse des Dokuments entschlüsselt wird. Wer das Dokument sehen oder bearbeiten darf, regelt zusätzlich dessen Freigabe-Einstellung bei Google."
             },
             {
-              "de": "Dasselbe gilt für den Pflege-Editor der Shows-Seite: Auch dort ist das Passwort nur ein Sichtschutz. Er lädt nichts von außen nach, sondern sendet ausschließlich dann Daten an GitHub, wenn eine pflegende Person mit hinterlegtem Zugangs-token ausdrücklich speichert. Für Besucherinnen und Besucher entsteht dabei keine Verbindung zu Dritten."
+              "de": "Der Pflege-Editor der Shows-Seite hat ebenfalls eine Passwortabfrage; dort ist sie nur ein Sichtschutz. Er lädt nichts von außen nach, sondern sendet ausschließlich dann Daten an GitHub, wenn eine pflegende Person mit hinterlegtem Zugangs-token ausdrücklich speichert. Für Besucherinnen und Besucher entsteht dabei keine Verbindung zu Dritten."
             }
           ]
         },
