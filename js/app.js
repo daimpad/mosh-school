@@ -303,6 +303,9 @@ function beschrifteRahmen() {
   }
   // Haltungs-Zeile im Footer: dieselben Labels wie die Über-Seite, damit die
   // Aussage nur an einer Stelle gepflegt wird (Icons stehen im Markup).
+  for (const flagge of document.querySelectorAll('[data-haltung-aria]')) {
+    flagge.setAttribute('aria-label', t('haltung_' + flagge.dataset.haltungAria));
+  }
   for (const eintrag of document.querySelectorAll('[data-haltung]')) {
     eintrag.textContent = t('haltung_' + eintrag.dataset.haltung);
   }

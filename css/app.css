@@ -4150,6 +4150,21 @@ textarea.editor-eingabe { resize: vertical; line-height: 1.5; }
 .footer-haltung-eintrag { display: inline-flex; align-items: center; gap: 0.4rem; }
 .footer-haltung-eintrag .fa-solid,
 .footer-haltung-eintrag .fa-brands { color: var(--primaer); }
+/* Regenbogenflagge in der Haltungszeile: ein CSS-Verlauf mit harten Stufen
+   statt Emoji oder Icon. Das Emoji zeichnet jedes System anders (unter älterem
+   Windows als weiße Fahne plus Regenbogen), und ein Masken-Icon wie die übrigen
+   Einträge wäre einfarbig — die Farben SIND hier die Aussage. Dieselben sechs
+   Farben wie PRIDE_SVG auf der Über-Seite (js/ansichten/info.js). Sie kippen
+   nicht mit dem Thema, aus demselben Grund wie --marke-rot. */
+.regenbogen {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 1.15em;
+  height: 0.77em;
+  background: linear-gradient(
+    #e40303 0 16.67%, #ff8c00 0 33.33%, #ffed00 0 50%,
+    #008026 0 66.67%, #004dff 0 83.33%, #750787 0);
+}
 a.footer-quelltext { color: var(--tinte); text-decoration: none; }
 /* Versionsnummer: ganz unten rechts, klein und blass. Sie ist ein Werkzeug
    zum Nachsehen, keine Aussage — deshalb unter der Haltungszeile statt darin,
@@ -4165,6 +4180,37 @@ a.footer-quelltext { color: var(--tinte); text-decoration: none; }
   opacity: 0.7;
 }
 .footer-version:empty { display: none; }
+
+/* Kollektiv-Porträts: vier Kacheln, mobil zwei. Die Bilder sind ein weißes
+   Blatt mit schwarzem Gewirr (scripts/build_portraets.py) und kippen NICHT mit
+   dem Thema — wie ein Flyer ist das ein Blatt, keine Oberfläche. Im hellen
+   Thema trennt sie deshalb eine Haarlinie (--trennlinie) vom weißen Grund;
+   --karten-kante wäre falsch, die verspricht einen Klick. */
+.kollektiv-gitter {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 0 0 1.4rem;
+}
+@media (max-width: 40rem) {
+  .kollektiv-gitter { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.kollektiv-person { margin: 0; }
+.kollektiv-person img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  background: #fff;
+  border: 1px solid var(--trennlinie);
+}
+.kollektiv-name {
+  margin: 0.45rem 0 0;
+  font-family: var(--schrift-display);
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
 a.footer-quelltext:hover, a.footer-quelltext:focus-visible { color: var(--primaer-tief); text-decoration: underline; }
 
 

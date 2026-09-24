@@ -28,6 +28,11 @@ jobs:
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
+        with:
+          # Bei pull_request ist HEAD der Merge-Commit; sein erster Elter ist
+          # die Basis. Die Versionspruefung braucht genau diesen einen Schritt
+          # zurueck, sonst reicht der uebliche flache Checkout.
+          fetch-depth: 2
 
       - name: Python bereitstellen
         uses: actions/setup-python@v5
@@ -51,6 +56,20 @@ jobs:
       # auf, wenn die Marke im Browser halb fehlt.
       - name: Marken-Masken gegen die Quellen pruefen
         run: python3 scripts/build_marken.py --check
+
+      # Die Kollektiv-Portraets sind generiert (keine Fotos). Von Hand
+      # veraendert oder ohne Neubau ersetzt, faellt das hier auf.
+      - name: Kollektiv-Portraets gegen die Quelle pruefen
+        run: python3 scripts/build_portraets.py --check
+
+      # Die Versionsnummer in der Fusszeile ist der CACHE-Name aus sw.js und
+      # soll die Nummer des PRs sein, mit dem ein Stand ausgeliefert wird.
+      # Aendert der PR etwas Ausgeliefertes (SHELL), muss CACHE auf
+      # zerrer-v<PR-Nummer> stehen. Neue Shows (data/shows.json) sind
+      # ausgenommen — der Shows-Editor kennt seine PR-Nummer nicht.
+      - name: Versionsnummer ist die PR-Nummer
+        if: github.event_name == 'pull_request'
+        run: python3 scripts/pruefe_version.py ${{ github.event.pull_request.number }}
 
       # Die statischen Tier-2-SEO-Seiten (baustein/**, pfad/**, sitemap.xml)
       # muessen aus dem Baustein-Pool reproduzierbar sein, sonst driftet die
