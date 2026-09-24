@@ -653,6 +653,43 @@ async function boot() {
   initFeedbackWennGewuenscht();
 
   registriereServiceWorker();
+  zeigeVersion();
+}
+
+// Versionsnummer in der Fußzeile: damit sichtbar ist, ob ein Merge schon bei
+// einem angekommen ist. Die Nummer ist der CACHE-Name aus sw.js („zerrer-v211"
+// → „211") — der wird ohnehin mit jeder Änderung an der App erhöht, eine zweite
+// Nummer liefe nur auseinander.
+//
+// GELESEN WIRD AUS DEN CACHES, NICHT AUS sw.js. Der Service Worker bedient
+// Dateien stale-while-revalidate: Ein fetch('sw.js') bekäme die Fassung vom
+// VORIGEN Aufruf und zeigte genau dann die alte Nummer, wenn man wissen will,
+// ob die neue da ist. Die Caches dagegen legt der Worker beim Installieren an
+// und räumt die alten beim Aktivieren weg (skipWaiting + claim) — der Name im
+// Browser ist also stets der zuletzt vom Server geholte Stand. Nur solange es
+// noch keinen Cache gibt (allererster Besuch, kein SW-Support), wird sw.js
+// direkt gelesen; dann steuert noch kein Worker die Seite, und die Anfrage
+// geht ungebremst ans Netz.
+async function zeigeVersion() {
+  const ziel = document.querySelector('.footer-version');
+  if (!ziel) return;
+  let nummer = 0;
+  try {
+    if ('caches' in window) {
+      for (const name of await caches.keys()) {
+        const treffer = /-v(\d+)$/.exec(name);
+        if (treffer) nummer = Math.max(nummer, Number(treffer[1]));
+      }
+    }
+    if (!nummer && !navigator.serviceWorker?.controller) {
+      const text = await (await fetch('sw.js', { cache: 'no-store' })).text();
+      nummer = Number(/const CACHE = '[^']*-v(\d+)'/.exec(text)?.[1]) || 0;
+    }
+  } catch {
+    // Offline, kein Cache-Zugriff (privates Fenster): Die Zeile bleibt leer.
+    // Eine falsche Nummer wäre schlimmer als keine.
+  }
+  ziel.textContent = nummer ? t('footer_version', { v: nummer }) : '';
 }
 
 // Offline-Fähigkeit: den Service Worker beiläufig registrieren. Jeder Fehler
@@ -664,6 +701,8 @@ async function boot() {
 function registriereServiceWorker() {
   if (!('serviceWorker' in navigator)) return;
   const registriere = () => navigator.serviceWorker.register('sw.js').catch(() => {});
+  // Übernimmt ein neuer Worker (Update), stimmt die angezeigte Nummer nicht mehr.
+  navigator.serviceWorker.addEventListener('controllerchange', zeigeVersion);
   if (document.readyState === 'complete') registriere();
   else window.addEventListener('load', registriere, { once: true });
 }
