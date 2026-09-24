@@ -1,6 +1,6 @@
 // Verschlüsselt die Pad-Adressen für #/intern und schreibt js/intern-schluessel.js.
 //
-//   PAD_EINBETTEN='https://cryptpad.fr/…/embed/' \
+//   PAD_EINBETTEN='https://cryptpad.fr/…/' \
 //   PAD_OEFFNEN='https://cryptpad.fr/…/' \
 //   PAD_PASSWORT='…' node scripts/verschluessele_pad.mjs
 //
@@ -8,6 +8,11 @@
 // Prozessliste und landen leichter in einer Shell-Historie. Nötig ist das Skript
 // nur, wenn sich Adresse oder Passwort ändern — danach CACHE in sw.js erhöhen,
 // sonst behalten Offline-Nutzer die alte Datei (und das alte Passwort).
+//
+// PAD_EINBETTEN ist die Adresse fürs iframe. NICHT die /embed/-Variante nehmen:
+// cryptpad.fr hat das Einbetten für Dokumente („doc") abgeschaltet und zeigt im
+// Rahmen dann nur „Einbettung ist für diese CryptPad-Anwendung deaktiviert". Die
+// normale Adresse lädt im iframe. Beide Variablen dürfen also gleich sein.
 //
 // Nutzt js/tresor.js — dasselbe Modul, mit dem die Seite entschlüsselt.
 

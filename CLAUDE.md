@@ -437,8 +437,11 @@ Passwort eingeben → das Pad erscheint. Niemand muss eine Adresse eintragen.
   Fehler, der sich nicht zurücknehmen lässt.
 - **Neue Adresse oder neues Passwort:** `scripts/verschluessele_pad.mjs` (Werte über
   Umgebungsvariablen `PAD_EINBETTEN`/`PAD_OEFFNEN`/`PAD_PASSWORT`, mindestens 16 Zeichen,
-  Gegenprobe vor dem Schreiben), danach `CACHE` erhöhen. Zwei Adressen: `einbetten` (die
-  `/embed/`-Variante fürs iframe) und `oeffnen` (für den Ausweich-Link im neuen Tab).
+  Gegenprobe vor dem Schreiben), danach `CACHE` erhöhen. Zwei Adressen: `einbetten` (fürs
+  iframe) und `oeffnen` (für den Ausweich-Link im neuen Tab). **Derzeit sind beide die
+  normale Pad-Adresse, NICHT die `/embed/`-Variante:** cryptpad.fr meldet für Dokumente
+  („doc") im Rahmen „Einbettung ist für diese CryptPad-Anwendung deaktiviert". Die normale
+  Adresse im iframe ist davon nicht betroffen — der Rahmen selbst wird ja geladen.
 - **Die Stärke hängt allein am Passwort.** Das Chiffrat ist öffentlich, raten geht offline;
   die PBKDF2-Runden bremsen, ein kurzes Wörterbuchwort rettet das nicht. **Nie ein Passwort,
   das schon einmal im Quelltext stand** — `verzerrer` (bis v211 hier im Klartext, und
