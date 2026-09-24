@@ -199,9 +199,36 @@ export function renderRechtstext(el, daten, schluessel) {
 
 // ZERRA-Kollektiv: Konzerte im Raum Köln/Bonn und Kontakt. Referenzbereich —
 // NICHT im Baustein-Pool, kein Fortschritt.
+//
+// Die Porträts sind KEINE Fotos: gewürfeltes Gewirr aus
+// scripts/build_portraets.py, verzerrt und verwackelt, niemand ist darauf zu
+// erkennen. alt="" mit Absicht — das Bild sagt nichts, was der Name darunter
+// nicht schon sagt, und ein Screenreader soll nicht viermal „abstraktes Bild"
+// vorlesen. Die Namen stehen in data/app-info.json (Eigennamen, keine Labels).
+function mitgliederHtml(mitglieder) {
+  if (!Array.isArray(mitglieder) || !mitglieder.length) return '';
+  const kacheln = mitglieder
+    .map(
+      (m) => `
+      <figure class="kollektiv-person">
+        <img src="assets/images/kollektiv/${esc(m.bild)}" alt="" width="300" height="375" loading="lazy" decoding="async">
+        <figcaption class="kollektiv-name">${esc(m.name)}</figcaption>
+      </figure>`,
+    )
+    .join('');
+  return `<div class="kollektiv-gitter">${kacheln}</div>`;
+}
+
 export function renderKollektiv(el, daten) {
   const block = daten.appInfo?.kollektiv;
-  el.innerHTML = block ? infoSeiteHtml(block, 'kollektiv') : nichtGefundenHtml();
+  if (!block) {
+    el.innerHTML = nichtGefundenHtml();
+    return;
+  }
+  // Direkt unter der Wortbildmarke, vor dem Text: erst die Leute, dann was sie tun.
+  const seite = infoSeiteHtml(block, 'kollektiv');
+  const trenner = seite.indexOf('<section class="karte">');
+  el.innerHTML = seite.slice(0, trenner) + mitgliederHtml(block.mitglieder) + seite.slice(trenner);
 }
 
 export function renderMitmachen(el, daten) {

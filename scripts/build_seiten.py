@@ -463,6 +463,11 @@ def seiten_fuss(tiefe, app_href):
         f'<span>{esc(uitext("haltung_" + key))}</span></span>'
         for key, icon in (('no_ads', 'fa-ban'), ('no_tracking', 'fa-eye-slash'),
                           ('no_influencer', 'fa-thumbs-down'), ('no_nsbm', 'fa-shield'))
+    ) + (
+        # Regenbogenflagge als CSS-Verlauf (.regenbogen), wie in index.html.
+        f'<span class="footer-haltung-eintrag"><span class="regenbogen" role="img" '
+        f'aria-label="{esc(uitext("haltung_lgbtq_aria"))}"></span>'
+        f'<span>{esc(uitext("haltung_lgbtq_fuss"))}</span></span>'
     )
     return f'''
 <p class="knopf-zeile"><a class="knopf knopf-primaer" href="{w}{app_href}">In ZERRER üben <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>

@@ -49,6 +49,14 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   Spalten daneben ohnehin verlinkt. In `index.html` steht dafür ein leeres
   `<span class="footer-marke-claim">`, das `beschrifteRahmen()` füllt (nie hart
   schreiben); `scripts/build_seiten.py` setzt denselben Labelwert statisch ein.
+- **Die Kollektiv-Seite (`#/kollektiv`) zeigt vier Porträts** (Damian, Patrick,
+  Christian, Björn — Namen in `data/app-info.json` → `kollektiv.mitglieder`). Das sind
+  **keine Fotos und keine Nachzeichnungen**: `scripts/build_portraets.py` würfelt je
+  Vorname ein Gewirr schwarzer Striche in eine Kopf-und-Schultern-Silhouette auf weißem
+  Grund und legt Turbulenz-Verzerrung plus waagerechte Unschärfe darüber — niemand soll
+  darauf erkennbar sein. Wie Flyer kippen sie nicht mit dem Thema. `alt=""` mit Absicht,
+  der Name steht darunter. Neue Person: Dateiname in `PORTRAETS`, Eintrag in
+  `mitglieder`, Generator laufen lassen.
 - **Die Fußzeile trägt keine Rechtstext-Links mehr.** Impressum und Datenschutz
   stehen im Menü (`index.html`, `.menue-mini`), der GoatCounter-Hinweis als
   Fußnote am Ende der „Über"-Seite (`goatHinweisHtml()` in
@@ -528,6 +536,8 @@ python3 scripts/validate.py              # Cross-File-Konsistenz über den gemis
 python3 scripts/lift.py                  # idempotent — Titel nach labels/de.json geliftet
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
 python3 scripts/build_marken.py --check   # Marken-Masken aus den Logo-Quellen reproduzierbar
+python3 scripts/build_portraets.py --check # Kollektiv-Porträts aus der Quelle reproduzierbar
+python3 scripts/pruefe_version.py <PR> origin/main  # CACHE = zerrer-v<PR-Nummer> (CI bei jedem PR)
 python3 scripts/build_seiten.py --check   # Tier-2-SEO-Seiten + Sitemap aus den Quellen reproduzierbar
 python3 scripts/pruefe_zerrlabor.py      # Zerr-Kennlinien treffen ihre Sollwerte
 python3 scripts/pruefe_zerrlabor_mutation.py  # …und die Pruefung schlaegt bei Fehlern auch an
@@ -1034,16 +1044,20 @@ Tokens**, nie harte Farben.
   (inklusive neuer, noch nicht gestagter Dateien — sonst wachte die Prüfung erst nach dem
   `git add` auf, also genau dann nicht, wenn man sie braucht). Der `CACHE`-Name und alles
   andere in `SHELL` bleiben Handarbeit.
-- **Der `CACHE`-Name ist zugleich die sichtbare Versionsnummer.** Die Fußzeile zeigt
-  „Version 211" für `zerrer-v211` (`zeigeVersion()` in `js/app.js`, Label
-  `footer_version`) — so sieht man, ob ein Merge schon angekommen ist. Deshalb
-  **jeder** PR, der etwas Ausgeliefertes ändert, erhöht `CACHE`, auch wenn die Regel
-  oben es streng genommen nicht verlangt. Gelesen wird die Nummer aus `caches.keys()`,
+- **Der `CACHE`-Name ist zugleich die sichtbare Versionsnummer — und die ist die
+  PR-Nummer.** Die Fußzeile zeigt „Version 219" für `zerrer-v219` (`zeigeVersion()` in
+  `js/app.js`, Label `footer_version`); PR #219 hat diesen Stand ausgeliefert. So liest
+  man an der Seite ab, ob ein bestimmter Merge schon angekommen ist. **Regel:** Ändert
+  ein PR etwas Ausgeliefertes (eine Datei aus `SHELL`), steht `CACHE` auf
+  `zerrer-v<PR-Nummer>`. Die PR-Nummer kennt man erst nach dem Öffnen — also PR
+  öffnen, dann `CACHE` im selben Zweig nachziehen. `scripts/pruefe_version.py` prüft
+  das in `verify.yml` bei jedem PR und fällt sonst rot aus. Einzige Ausnahme:
+  `data/shows.json` (der Shows-Editor kann seine PR-Nummer nicht kennen). Gelesen wird die Nummer aus `caches.keys()`,
   **nicht** per `fetch('sw.js')`: Der Worker bedient stale-while-revalidate, ein Abruf
   bekäme die Fassung vom vorigen Besuch und zeigte die alte Nummer genau dann, wenn
   man die neue sucht. Nur ohne Cache (erster Besuch, kein SW) wird `sw.js` gelesen.
   **Lücke:** Der Shows-Editor erhöht `CACHE` nicht — eine neue Show ändert die Nummer
-  nicht. Die statischen Tier-2-Seiten zeigen keine Nummer (sonst müssten bei jedem
+  nicht (s. Ausnahme oben). Die statischen Tier-2-Seiten zeigen keine Nummer (sonst müssten bei jedem
   Release alle ~550 Seiten neu gebaut werden).
 - **Genau eines von `uebungsteil`/`reflexionsaufgabe`** je Baustein. Bewegungs-Bausteine tragen
   den Übungsteil; Wissens-/Reflexions-Bausteine (Mentales, Gesundheit, Ausrüstung) die
