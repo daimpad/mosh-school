@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v211';
+const CACHE = 'zerrer-v212';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -99,6 +99,8 @@ const SHELL = [
   'js/ansichten/shows.js',
   'js/ansichten/shows-editor.js',
   'js/ansichten/intern.js',
+  'js/tresor.js',
+  'js/intern-schluessel.js',
   'js/ansichten/brand-alert.js',
   'js/ansichten/glossar.js',
   'js/ansichten/werkzeuge.js',

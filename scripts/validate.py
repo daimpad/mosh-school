@@ -275,6 +275,37 @@ def pruefe_groessen(fehler):
     return gesamt
 
 
+# --- Pad-Adressen nie im Klartext ---------------------------------------------
+# Bei CryptPad steckt der Schluessel zum Pad im URL-Fragment (#/2/…/<schluessel>/)
+# — die Adresse IST der Schluessel. Im oeffentlichen Repository macht eine
+# einzige solche Zeile das Pad unwiderruflich offen: Die Historie ist geklont,
+# und ein spaeteres Loeschen erreicht keinen Klon mehr. Die Adresse fuer #/intern
+# steht deshalb nur VERSCHLUESSELT in js/intern-schluessel.js
+# (scripts/verschluessele_pad.mjs). Diese Pruefung faengt den Klartext ab.
+#
+# Geprueft werden eingecheckte UND neue, noch nicht gestagte Dateien: Genau vor
+# dem `git add` soll sie anschlagen, nicht erst danach.
+PAD_ADRESSE = re.compile(r'cryptpad[^\s"\'<>]*#/\d+/', re.IGNORECASE)
+
+
+def pruefe_pad_adressen(fehler):
+    roh = subprocess.run(['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard'],
+                         cwd=ROOT, check=True, capture_output=True).stdout
+    for pfad in sorted(set(roh.decode('utf-8').split('\0'))):
+        voll = os.path.join(ROOT, pfad)
+        if not pfad or not os.path.isfile(voll):
+            continue
+        try:
+            with open(voll, encoding='utf-8') as f:
+                text = f.read()
+        except (UnicodeDecodeError, OSError):
+            continue                     # Binaerdatei (Bild, Ton, Schrift)
+        if PAD_ADRESSE.search(text):
+            fehler.append(
+                f'{pfad}: enthaelt eine CryptPad-Adresse im Klartext — die Adresse IST der '
+                f'Schluessel zum Pad. Verschluesselt ablegen: scripts/verschluessele_pad.mjs')
+
+
 # --- Shows (data/shows.json + images/shows/) ---------------------------------
 # Der Flyer-Bestand hat ein EIGENES Budget neben der globalen Gesamtgrenze. Zwei
 # Grenzen, weil eine nicht reicht: Ohne die zweite frisst ein wachsendes
@@ -956,6 +987,7 @@ def main():
             fehler.append(f'Klangprobe "{pfad}": erwartet Mono/16 bit/44100 Hz, ist {ist}')
 
     gesamt = pruefe_groessen(fehler)
+    pruefe_pad_adressen(fehler)
 
     # Bericht
     print(f'Pool: {len(bausteine)} Bausteine ueber {len(dateien)} Dateien')

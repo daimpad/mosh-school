@@ -3984,7 +3984,7 @@ a.karte-link.shows-kachel {
 .shows-angabe dd { margin: 0; }
 
 /* ---------- Interner Bereich: Passwort-Vorhang + eingebettetes Pad ---------- */
-.intern-form, .intern-pad-form {
+.intern-form {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
