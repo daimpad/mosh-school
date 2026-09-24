@@ -3984,7 +3984,6 @@ a.karte-link.shows-kachel {
 .shows-angabe dd { margin: 0; }
 
 /* ---------- Interner Bereich: Passwort-Vorhang + eingebettetes Pad ---------- */
-.intern-warnung { margin: 0 0 1rem; }
 .intern-form, .intern-pad-form {
   display: flex;
   flex-wrap: wrap;
@@ -4103,7 +4102,7 @@ textarea.editor-eingabe { resize: vertical; line-height: 1.5; }
 
 @media (max-width: 30rem) {
   .bildkachel { min-height: 138px; padding: 0.75rem 0.8rem; }
-  .bildkachel-titel { font-size: 1.12rem; }
+  .bildkachel-titel { font-size: 1.6rem; }
   .bild-gitter { gap: 0.6rem; }
 }
 

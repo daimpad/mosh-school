@@ -4,10 +4,10 @@
 // WAS DAS IST UND WAS NICHT: Die App ist rein clientseitig; ein Passwort in
 // JavaScript liegt im ausgelieferten Quelltext und ist damit für jeden lesbar.
 // Diese Seite ist ein SICHTSCHUTZ, kein Zugangsschutz — sie hält Zufallsbesucher
-// ab, nicht jemanden, der nachsieht. Genau so ist sie auch beschriftet
-// (`intern_hinweis`), denn eine Seite, die „geschützt" verspricht und es nicht
-// ist, ist schlimmer als eine, die offen sagt, was sie kann. Echter Schutz
-// gehört auf den Server (Basic Auth bei netcup, vor das eingebettete Ziel).
+// ab, nicht jemanden, der nachsieht. Die Seite sagte das bis v208 selbst
+// (`intern_hinweis`); der Absatz ist auf Wunsch raus — die Tatsache bleibt.
+// Echter Schutz gehört auf den Server (Basic Auth bei netcup, vor das
+// eingebettete Ziel).
 //
 // DIE PAD-ADRESSE WIRD BEWUSST NICHT EINGECHECKT. Bei CryptPad steckt der
 // Entschlüsselungs-Schlüssel IM URL-Fragment — die Adresse IST der Schlüssel.
@@ -209,7 +209,6 @@ export function renderIntern(el) {
   el.innerHTML = `
     <article class="intern-seite">
       ${landingHeroHtml('fa-lock', t('intern_titel'), t('intern_untertitel'), 'pf-schiefer', 'intern')}
-      <p class="intern-warnung leise">${esc(t('intern_hinweis'))}</p>
       <div class="intern-inhalt"></div>
     </article>`;
   zeichneInhalt(el);
