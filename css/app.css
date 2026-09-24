@@ -4010,20 +4010,27 @@ a.karte-link.shows-kachel {
 .intern-buehne:empty { display: none; }
 .intern-rahmen {
   display: block;
-  width: 100%;
-  margin-top: 0.8rem;
-  /* Hoehe ueber das Verhaeltnis statt fester Pixel: Der eingebettete Inhalt ist
-     eine eigene Seite und scrollt selbst; eine feste Hoehe waere mobil zu hoch
-     und auf dem Desktop zu niedrig. */
-  aspect-ratio: 3 / 4;
-  min-height: 24rem;
-  /* --trennlinie, nicht --karten-kante (die versprach einen Klick) und nicht
-     --widget-kante (im hellen Thema transparent — die fremde Seite liefe dann
-     randlos ins weisse Blatt). */
-  border: 1px solid var(--trennlinie);
+  /* Volle Fensterbreite, wie die Heros: Ein Dokument-Editor braucht die Breite
+     mehr als jede andere Ansicht, und in der 44rem-Spalte blieb von der
+     CryptPad-Oberflaeche (Werkzeugleiste + Seitenrand) kaum Schreibflaeche.
+     Dieselbe Rechnung wie bei .genre-landing-hero, deshalb auch derselbe
+     Schutz: overflow-x am body schluckt die Scrollleisten-Breite. */
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0.8rem calc(50% - 50vw) 0;
+  /* Hoehe am Fenster statt am Seitenverhaeltnis: Bei voller Breite ergaebe
+     16:10 auf einem breiten Schirm einen Rahmen, der hoeher ist als das
+     Fenster — man scrollte dann die Seite UND den Editor. 85vh laesst oben die
+     Knoepfe sichtbar; min-height haelt ihn auf niedrigen Fenstern benutzbar. */
+  height: 85vh;
+  min-height: 28rem;
+  /* Nur oben und unten eine Linie: Seitlich laeuft der Rahmen an den
+     Fensterrand, eine Kante dort waere ein Strich am Bildschirmrand.
+     --trennlinie, nicht --karten-kante (die versprach einen Klick). */
+  border: 0;
+  border-block: 1px solid var(--trennlinie);
   background: var(--flaeche-2);
 }
-@media (min-width: 48rem) { .intern-rahmen { aspect-ratio: 16 / 10; } }
 
 /* ---------- Shows-Editor (#/shows/login) ----------
    Ein Formular, kein Inhalt: Die Klassen tragen hier bewusst keine Kachel- und
