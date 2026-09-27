@@ -812,7 +812,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Perkussive Chugs auf sehr tiefer Saite (Drop C), betont in Fünfer- und Dreier-Paketen (5+5+3+3) über 16 Achteln — die Betonung wandert über den geraden Puls. Djent-Polymetrik."
+        "de": "Perkussive Chugs auf sehr tiefer Saite (Drop C), betont in Fünfer- und Dreier-Paketen (5+5+3+3) über 16 Achteln — die Betonung wandert über den geraden Puls. Djent-typische Gruppierung — die Vorstufe zur Polymetrik."
       }
     },
     {
@@ -1037,7 +1037,7 @@
         ]
       },
       "hinweis": {
-        "de": "Jeder Gitarren-Chug des Breakdowns mit Kick und China-Akzent exakt mitgetroffen, die Stille dazwischen bleibt leer. Wucht durch Präzision, nicht durch Füllen."
+        "de": "Jeder Gitarren-Chug des Breakdowns mit Kick und Becken-Akzent (live oft eine China) exakt mitgetroffen, die Stille dazwischen bleibt leer. Wucht durch Präzision, nicht durch Füllen."
       }
     },
     {
@@ -2147,49 +2147,49 @@
       "schritte": [
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ],
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ],
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ],
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ],
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ],
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ],
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ],
         [
           {
-            "saite": 0,
+            "saite": 1,
             "bund": 2
           }
         ]
@@ -3586,7 +3586,7 @@
         [
           {
             "saite": 1,
-            "bund": 7
+            "bund": 5
           }
         ],
         []

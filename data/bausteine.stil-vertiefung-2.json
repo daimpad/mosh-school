@@ -83,10 +83,10 @@
       "uebungsteil": {
         "de": {
           "titel": "Extreme kontrolliert ansetzen",
-          "ziel": "Tiefe Gutturals und Pig Squeals aus Kontrolle statt Druck erzeugen.",
+          "ziel": "Tiefe Gutturals aus Kontrolle statt Druck erzeugen — Pig Squeals nur mit Anleitung.",
           "schritte": [
             "Wärm gründlich auf und finde den Ansatz leise, aus Luftfluss und Resonanz, nicht aus Halsdruck.",
-            "Taste dich in sehr kurzen Versuchen an die tiefe bzw. hohe Extrem-Textur heran, mit Pausen dazwischen.",
+            "Taste dich in sehr kurzen Versuchen an die tiefe Extrem-Textur heran, mit Pausen dazwischen. Pig Squeals übst du nur mit einer Lehrperson für Extreme Vocals — bis dahin weglassen.",
             "Nimm es auf und prüfe, ob der Effekt kontrolliert klingt — bei Kratzen oder Schmerz sofort stoppen."
           ],
           "steigerung": "Setze die Extreme gezielt als Akzent in eine Phrase, ohne die ganze Zeit im Extrem zu bleiben.",
@@ -370,8 +370,9 @@
         "djent"
       ],
       "voraussetzungen": [
-        "gitarre_tapping_legato",
-        "lead_phrasierung"
+        "djent_gitarre_pocket",
+        "pentatonik_leads",
+        "vibrato"
       ],
       "erklaerteil": {
         "de": "Über dem rhythmisch-komplexen Djent-Fundament tragen viele Prog-Metalcore-Songs ein melodisches Lead: ein Solo oder eine Lead-Linie, die über den Grooves singt und einen Kontrast zur perkussiven Härte bildet. Anders als reine Shred-Soli zählt hier Gesanglichkeit und das Passen zur oft ungeraden Metrik.\n\nDie Herausforderung ist doppelt: die Lead-Linie muss melodisch tragen und sich zugleich in die polymetrische Umgebung einfügen, ohne die Orientierung zu verlieren. Legato, Tapping und weite Bendings sind typische Mittel; entscheidend ist aber die Phrasierung — Pausen und Zielnoten statt Dauerbeschuss.\n\nGut gesetzt gibt das Lead dem komplexen Song einen melodischen Anker, an dem sich das Ohr festhält."
@@ -568,14 +569,13 @@
         "djent"
       ],
       "voraussetzungen": [
-        "djent_sound_gear",
-        "recording_tightness"
+        "djent_sound_gear"
       ],
       "erklaerteil": {
         "de": "Kaum ein Genre ist so eng mit seiner Produktion verwoben wie Djent. Der typische Sound entsteht nicht nur an Amp und Gitarre, sondern im Rechner: extrem tighte, oft doppelt oder vierfach eingespielte Rhythmusgitarren, präzises Editing, ein kontrolliertes Low-End und ein perkussiver, definierter Attack.\n\nDas verlangt, die Produktion als Teil des Songs zu denken: Doubletracking für Breite, sauberes Gate und EQ für Definition, und eine Tightness, die live vom Spiel und im Studio zusätzlich von der Bearbeitung kommt. Über den Grad an Editing (Quantisierung) gibt es Debatten — wichtig ist, dass das Fundament aus tightem Spiel kommt und die Produktion es schärft, nicht ersetzt.\n\nWer Djent aufnimmt, sollte diese Werkzeuge kennen und bewusst einsetzen, statt sich zu wundern, warum der Rohmix nicht nach dem Vorbild klingt."
       },
       "reflexionsaufgabe": {
-        "de": "Denkst du die Produktion (Doubletracking, Editing, Gate, Low-End-Kontrolle, Attack) als Teil des Djent-Songs, nicht als Nachgedanken? Kommt die Tightness zuerst aus dem Spiel und wird von der Bearbeitung geschärft statt ersetzt? Und kennst du die Werkzeuge, die den definierten, perkussiven Djent-Sound ausmachen?"
+        "de": "Denkst du die Produktion (Doubletracking, Editing, Gate, Low-End-Kontrolle, Attack) als Teil des Djent-Songs, nicht als nachträglichen Schritt? Kommt die Tightness zuerst aus dem Spiel und wird von der Bearbeitung geschärft statt ersetzt? Und kennst du die Werkzeuge, die den definierten, perkussiven Djent-Sound ausmachen?"
       }
     },
     {
@@ -595,7 +595,7 @@
       ],
       "voraussetzungen": [
         "grundbeat",
-        "drums_dynamik_architektur"
+        "drums_ghostnotes"
       ],
       "erklaerteil": {
         "de": "Anders als die schwere Starre mancher Doom-Beats lebt Stoner Rock von einem rollenden, groovenden Feel — oft mit einem leichten Swing oder Shuffle, der die Musik trotz Tiefe und Fuzz nach vorne wippen lässt. Der Groove ist entspannt, aber treibend, eher wippend als marschierend.\n\nDer Schlüssel ist ein lockeres, leicht hinter dem Beat liegendes Zeitgefühl, das dem Riff Raum zum Atmen gibt, ohne zu schleppen. Ghost Notes und ein swingender Hi-Hat- oder Ride-Puls geben dem Ganzen den rollenden Charakter; die Bassdrum sitzt satt mit dem Fuzz-Bass.\n\nDieser Groove ist das Gegenstück zur Tempo-Härte anderer Genres: die Wirkung kommt aus dem Feel, nicht aus Geschwindigkeit."
@@ -731,8 +731,7 @@
         "stoner_post"
       ],
       "voraussetzungen": [
-        "stoner_riff_fuzz",
-        "gitarre_improvisation"
+        "stoner_riff_fuzz"
       ],
       "erklaerteil": {
         "de": "Stoner Rock ist tief in der Jam-Kultur verwurzelt: Viele Songs und Ideen entstehen nicht am Reißbrett, sondern aus dem gemeinsamen Improvisieren über einen Groove. Ein fettes Fuzz-Riff wird zur Ausgangsbasis, über der die Band sich einspielt, Variationen findet und einen Aufbau entstehen lässt.\n\nDas verlangt eine andere Haltung als das präzise Durcharrangieren: zuhören, aufeinander reagieren, einen Groove tragen und ihn gemeinsam atmen lassen, statt sofort zum nächsten Part zu hetzen. Aus solchen Jams kristallisieren sich die besten Parts oft von allein heraus.\n\nDie Kunst ist, die Balance zu halten: genug Struktur, dass es nicht zerfasert, genug Freiheit, dass Neues entsteht. Ein Jam ist Werkzeug zum Schreiben und ein Wert an sich."

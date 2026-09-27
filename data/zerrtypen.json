@@ -17,14 +17,14 @@
       "bezeichnung": "Clean-Booster",
       "prinzip": "Verstärkerstufe ohne eigene Klippung, meist mit hohem Headroom.",
       "klang": "Kein eigener Klang, nur mehr Pegel; treibt die nachfolgende Stufe härter an.",
-      "anwendung": "Vor High-Gain zum Straffen; als Solo-Anhebung im Einschleifweg.",
+      "anwendung": "Vor High-Gain zum stärkeren Antreiben der Vorstufe; als Solo-Anhebung im Einschleifweg.",
       "achtung": "Hebt auch das Rauschen der Vorstufe an; nicht als Klangregler missverstehen."
     },
     {
       "id": "zt_002",
       "gruppe": "Booster",
       "bezeichnung": "Mittenbuckel-Booster",
-      "prinzip": "Bandpass vor einer schwach klippenden Stufe; Bass beschnitten, Mitten angehoben.",
+      "prinzip": "Frequenzabhängige Gegenkopplung in einer schwach klippenden Stufe; Bass beschnitten, Mitten angehoben.",
       "klang": "Straff und mittig; wirkt vor allem über das, was er dem Signal wegnimmt.",
       "anwendung": "Der Standardweg zu tighten tief gestimmten Riffs.",
       "achtung": "Gain fast zu, Pegel hoch — sonst addiert er Matsch statt ihn zu verhindern."
@@ -135,7 +135,7 @@
       "prinzip": "Nachbildung gemessener Verstärker; meist mit Impulsantwort für die Box.",
       "klang": "Sehr nah an der Vorlage, sofern eine passende Impulsantwort verwendet wird.",
       "anwendung": "Leise Bühne, Aufnahme, reproduzierbare Klangbilder.",
-      "achtung": "Ohne Impulsantwort klingt es unbrauchbar hart — die Box ist kein Zubehör, sondern Teil des Klangs."
+      "achtung": "Direkt ins Pult oder in Kopfhörer klingt es ohne Impulsantwort unbrauchbar hart — die Box ist kein Zubehör, sondern Teil des Klangs. Vor einer echten Box bleibt die Impulsantwort dagegen aus."
     },
     {
       "id": "zt_015",

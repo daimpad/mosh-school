@@ -15,7 +15,7 @@
         "delta_git_palm_muting_bass"
       ],
       "erklaerteil": {
-        "de": "Als Gitarrist bringst du die Plektrum-Grundlagen komplett mit: Haltung, Anschlagswinkel, Wechselschlag — alles gilt am Bass weiter. Was sich ändert, ist die Physik: Die Saiten sind dicker, schwingen weiter aus und brauchen mehr Anschlagsmasse. Ein Gitarren-Anschlag klingt am Bass dünn; der Ton entsteht aus einer etwas größeren Bewegung mit mehr Arm-Beteiligung und einem festeren Plektrum.\n\nZweite Umstellung: das Zeitgefühl. Der Bass-Ton spricht träger an als eine Gitarrensaite — bei schnellen Linien musst du minimal früher „denken“, damit der Ton auf dem Schlag SITZT statt auf ihm zu beginnen. Genau das übt der Baustein: gleichmäßige Achtel, bis Anschlag und Klick verschmelzen.\n\nDein Vorteil: Wechselschlag und Plektrumskontrolle musst du nicht neu lernen, nur neu dosieren. Nimm dir bewusst Zeit für den satten Einzelton — der Rest deiner Technik zieht nach."
+        "de": "Als Gitarrist bringst du die Plektrum-Grundlagen komplett mit: Haltung, Anschlagswinkel, Wechselschlag — alles gilt am Bass weiter. Was sich ändert, ist die Physik: Die Saiten sind dicker, schwingen weiter aus und brauchen mehr Anschlagsmasse. Ein Gitarren-Anschlag klingt am Bass dünn; der Ton entsteht aus einer etwas größeren Bewegung mit mehr Arm-Beteiligung und einem festeren Plektrum.\n\nZweite Umstellung: das Zeitgefühl. Die dickeren Saiten brauchen einen etwas längeren Anschlagweg — bei schnellen Linien bereitest du den Anschlag deshalb gedanklich etwas früher vor, damit der Ansatz des Tons genau auf den Schlag fällt statt hinterherzuhinken. Genau das übt der Baustein: gleichmäßige Achtel, bis Anschlag und Klick verschmelzen.\n\nDein Vorteil: Wechselschlag und Plektrumskontrolle musst du nicht neu lernen, nur neu dosieren. Nimm dir bewusst Zeit für den satten Einzelton — der Rest deiner Technik zieht nach."
       }
     },
     {
@@ -258,7 +258,7 @@
         "riff_praezision"
       ],
       "erklaerteil": {
-        "de": "Verzerrter Metal-Bass verzeiht keine Nebengeräusche: mitschwingende Saiten und ungewollte Töne verwaschen den tighten Sound. Die Greifhand ist dein wichtigstes Werkzeug gegen dieses Rauschen.\n\nGespielte Töne dämpfst du, indem du den Druck löst, ohne den Finger ganz abzuheben. Ungespielte Saiten legst du mit den flach liegenden Fingern oder der Handfläche ruhig — besonders die Saiten oberhalb der gerade gespielten. So bleibt nur klingend, was klingen soll.\n\nAuch beim Wechsel über die Saiten hilft die Greifhand, benachbarte Saiten stumm zu halten. Sauberkeit hier ist die Grundlage für definierte, tighte Basslinien."
+        "de": "Verzerrter Metal-Bass verzeiht keine Nebengeräusche: mitschwingende Saiten und ungewollte Töne verwaschen den tighten Sound. Die Greifhand ist dein wichtigstes Werkzeug gegen dieses Rauschen.\n\nGespielte Töne dämpfst du, indem du den Druck löst, ohne den Finger ganz abzuheben. Ungespielte Saiten legst du mit den flach liegenden Fingern oder der Handfläche ruhig — besonders die höher gestimmten Saiten, die beim Spielen unter der gegriffenen liegen und über die sich die Finger ohnehin legen. So bleibt nur klingend, was klingen soll.\n\nAuch beim Wechsel über die Saiten hilft die Greifhand, benachbarte Saiten stumm zu halten. Sauberkeit hier ist die Grundlage für definierte, tighte Basslinien."
       },
       "uebungsteil": {
         "de": {
@@ -458,11 +458,11 @@
         "downpicking_ausdauer"
       ],
       "erklaerteil": {
-        "de": "Viele Extreme-Metal-Bassist:innen greifen zum Plektrum: Es erzeugt einen härteren, definierten Anschlag mit mehr Attack, der sich unter verzerrten Gitarren besser durchsetzt. Im Thrash und Hardcore ist das oft der prägende Bass-Sound.\n\nDu hältst das Plektrum wie auf der Gitarre, mit kleiner überstehender Spitze, und schlägst aus dem Handgelenk. Reine Abschläge (Downpicking) klingen besonders tight und gleichmäßig, kosten aber Ausdauer; Wechselschlag erlaubt höheres Tempo.\n\nBaust du Downpicking-Ausdauer auf, dann schrittweise und nur so weit, wie die Hand locker bleibt — Verkrampfung ist ein Signal zur Pause, nicht zum Durchhalten."
+        "de": "Viele Extreme-Metal-Bassisten greifen zum Plektrum: Es erzeugt einen härteren, definierten Anschlag mit mehr Attack, der sich unter verzerrten Gitarren besser durchsetzt. Im Thrash und Hardcore ist das oft der prägende Bass-Sound.\n\nDu hältst das Plektrum wie auf der Gitarre, mit kleiner überstehender Spitze, und schlägst aus dem Handgelenk. Reine Abschläge (Downpicking) klingen besonders tight und gleichmäßig, kosten aber Ausdauer; Wechselschlag erlaubt höheres Tempo.\n\nBaust du Downpicking-Ausdauer auf, dann schrittweise und nur so weit, wie die Hand locker bleibt — Verkrampfung ist ein Signal zur Pause, nicht zum Durchhalten."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Down- und Wechselschlag mit Pick",
+          "titel": "Down- und Wechselschlag mit Plektrum",
           "ziel": "Definierter, gleichmäßiger Anschlag mit dem Plektrum.",
           "schritte": [
             "Spiel gleichmäßige Achtel auf einer Saite, zunächst nur mit Abschlägen.",
@@ -654,7 +654,7 @@
           "titel": "Gedämpfte Achtel am Steg",
           "ziel": "Kurzer, kontrollierter Ton bei gleichmäßigem Anschlag.",
           "schritte": [
-            "Leg den Handballen nahe am Steg auf und spiel die tiefe Saite in Achteln (Pick oder Finger).",
+            "Leg den Handballen nahe am Steg auf und spiel die tiefe Saite in Achteln (Plektrum oder Finger).",
             "Verschieb die Handposition minimal, bis der Ton kurz und definiert ist, aber noch Tonhöhe hat.",
             "Spiel mehrere Takte gleichmäßig durch, ohne dass Dämpfung oder Lautstärke schwanken."
           ],
@@ -839,7 +839,7 @@
             "Halte die Finger locker und die Bewegung klein.",
             "Steigere das Tempo erst, wenn der Anschlag über mehrere Takte gleichmäßig bleibt."
           ],
-          "steigerung": "Erhöhe das Tempo in kleinen Schritten und zieh die Figur später über Saitenwechsel.",
+          "steigerung": "Erhöhe das Tempo in kleinen Schritten, geh erst dann zu Sechzehnteln über und zieh die Figur später über Saitenwechsel.",
           "selbstkontrolle": "Der Ton fließt gleichmäßig; bei Verkrampfung oder Brennen stoppst du und lockerst die Hand."
         }
       },
@@ -850,7 +850,7 @@
         "saiten_reihenfolge": "4_ist_tiefste",
         "taktart": "4/4",
         "bpm": 120,
-        "aufloesung": 16,
+        "aufloesung": 8,
         "takte": 2,
         "loop": true,
         "events": [
@@ -949,105 +949,9 @@
             "saite": 4,
             "bund": 0,
             "technik": "normal"
-          },
-          {
-            "schritt": 16,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 17,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 18,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 19,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 20,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 21,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 22,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 23,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 24,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 25,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 26,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 27,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 28,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 29,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 30,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
-          },
-          {
-            "schritt": 31,
-            "saite": 4,
-            "bund": 0,
-            "technik": "normal"
           }
         ],
-        "hinweis": "Sechzehntel bei 120 — das sind acht Anschläge pro Sekunde. Wechsle die Finger strikt, auch wenn es anfangs mühsam wirkt."
+        "hinweis": "Achtel bei 120 BPM — vier Anschläge pro Sekunde auf der leeren E-Saite. Wechsle die Finger strikt, auch wenn es anfangs mühsam wirkt; Sechzehntel kommen erst in der Steigerung."
       }
     },
     {
@@ -1092,14 +996,14 @@
         "typ": "tab",
         "instrument": "bass",
         "tuning": [
-          "C1",
-          "G1",
-          "C2",
-          "F2"
+          "E1",
+          "A1",
+          "D2",
+          "G2"
         ],
         "saiten_reihenfolge": "4_ist_tiefste",
         "taktart": "4/4",
-        "bpm": 180,
+        "bpm": 120,
         "aufloesung": 16,
         "takte": 1,
         "loop": true,
@@ -1177,13 +1081,13 @@
             "technik": "palm_mute"
           }
         ],
-        "hinweis": "Galopp auf dem Bass, parallel zur Gitarre gedacht."
+        "hinweis": "Galopp auf der leeren E-Saite in Standardstimmung, 120 BPM: eine Achtel, dann zwei Sechzehntel, gedämpft gespielt. Parallel zur Gitarre gedacht — erst wenn die zwei schnellen Töne exakt sitzen, geht das Tempo hoch."
       }
     },
     {
       "id": "lock_zur_bassdrum",
       "anzeigetitel": {
-        "de": "Zur Bassdrum locken"
+        "de": "Mit der Bassdrum verzahnen"
       },
       "domaene": [
         "bass"
@@ -1205,11 +1109,11 @@
         "riff_praezision"
       ],
       "erklaerteil": {
-        "de": "Im Metal bilden Bass und Bassdrum eine Einheit: Wenn deine Töne mit den Fußtritten des Schlagzeugs zusammenfallen, entsteht der wuchtige, tighte Low-End-Punch, der den Stil ausmacht.\n\nDas heißt, du orientierst dich nicht nur an den Gitarren, sondern vor allem an der Bassdrum. Bei schnellen Double-Bass- oder Blast-Passagen bedeutet das, präzise auf die Kicks zu spielen — hier zeigt sich, ob dein Timing wirklich sitzt.\n\nWeil du oft allein übst, ersetzt das Metronom die Bassdrum: Der Klick ist dein Referenzpunkt, an dem du dieselbe Präzision trainierst."
+        "de": "Im Metal bilden Bass und Bassdrum eine Einheit: Wenn deine Töne mit den Fußtritten des Schlagzeugs zusammenfallen, entsteht der wuchtige, tighte Low-End-Punch, der den Stil ausmacht.\n\nDas heißt, du orientierst dich nicht nur an den Gitarren, sondern vor allem an der Bassdrum. Bei schnellen Double-Bass- oder Blast-Passagen heißt das nicht, jeden einzelnen Kick mitzuspielen, sondern die Akzente der Bassdrum präzise mitzunehmen — hier zeigt sich, ob dein Timing wirklich sitzt.\n\nWeil du oft allein übst, ersetzt das Metronom die Bassdrum: Der Klick ist dein Referenzpunkt, an dem du dieselbe Präzision trainierst."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Auf den Klick locken",
+          "titel": "Auf den Klick einrasten",
           "ziel": "Töne exakt auf einen festen Puls setzen, wie auf die Bassdrum.",
           "schritte": [
             "Stell das Metronom auf ein moderates Tempo und behandle jeden Klick wie einen Kick.",
@@ -1222,54 +1126,58 @@
       },
       "demonstration": {
         "typ": "tab",
-        "bpm": 120,
-        "taktart": "4/4",
-        "aufloesung": 16,
-        "takte": 1,
+        "instrument": "bass",
         "tuning": [
           "E1",
           "A1",
           "D2",
           "G2"
         ],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 1,
+        "loop": true,
         "events": [
           {
             "schritt": 0,
-            "saite": 1,
+            "saite": 4,
             "bund": 0,
             "technik": "palm_mute"
           },
           {
             "schritt": 3,
-            "saite": 1,
+            "saite": 4,
             "bund": 0,
             "technik": "palm_mute"
           },
           {
             "schritt": 6,
-            "saite": 1,
+            "saite": 4,
             "bund": 0,
             "technik": "palm_mute"
           },
           {
             "schritt": 8,
-            "saite": 1,
+            "saite": 4,
             "bund": 0,
             "technik": "palm_mute"
           },
           {
             "schritt": 10,
-            "saite": 1,
+            "saite": 4,
             "bund": 0,
             "technik": "palm_mute"
           },
           {
             "schritt": 14,
-            "saite": 1,
+            "saite": 4,
             "bund": 0,
             "technik": "palm_mute"
           }
-        ]
+        ],
+        "hinweis": "Ein typisches Bassdrum-Muster, als Grundton auf der leeren E-Saite mitgespielt: Jeder Ton fällt genau auf einen Kick. Stell dir die Bassdrum dazu vor — Ton und Kick sollen wie ein einziger Schlag klingen."
       }
     },
     {

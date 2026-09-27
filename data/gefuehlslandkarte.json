@@ -125,7 +125,7 @@
     },
     {
       "genre": "crust",
-      "x": 8,
+      "x": 7,
       "y": 3,
       "tags": [
         "Zorn",
@@ -142,7 +142,7 @@
         "Ausbruch",
         "Frust",
         "Schock",
-        "Dynamikwechsel"
+        "Unberechenbarkeit"
       ]
     },
     {
@@ -170,7 +170,7 @@
     {
       "genre": "mathcore",
       "x": 9,
-      "y": 3,
+      "y": 4,
       "tags": [
         "Anspannung",
         "Chaos",

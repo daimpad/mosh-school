@@ -134,25 +134,25 @@
     },
     {
       "id": "gitarre_kunstharmonics",
-      "anzeigetitel": { "de": "Gitarre: Pinch- & Kunstharmonics" },
+      "anzeigetitel": { "de": "Gitarre: Pinch Harmonics & künstliche Harmonics" },
       "domaene": ["gitarre"],
       "kompetenzstufe": ["experte"],
       "typ": "micro",
       "voraussetzungen": ["lead_phrasierung", "slides_bends"],
       "erklaerteil": {
-        "de": "Pinch-Harmonics (das kreischende „Squeal“, wenn der Daumen der Anschlagshand die Saite direkt nach dem Plektrum berührt) sind eine der ausdrucksstärksten Gitarren-Gesten des Metal — richtig gesetzt geben sie einem einzelnen Ton Schärfe und Stimme. Falsch gesetzt kommen sie gar nicht oder als Zufall. Der Unterschied ist Kontrolle über den Berührungspunkt.\n\nZwei Dinge machen sie zuverlässig. Erstens der Punkt: Über welchem Bereich zwischen Steg und Hals der Daumen die Saite streift, bestimmt, welcher Oberton anspricht — und der wandert mit dem gegriffenen Ton. Man lernt die „Sweet Spots“ für die häufigsten Töne, statt zu hoffen. Zweitens die Kombination mit Ausdruck: Ein Pinch-Harmonic lebt vom Bending und Vibrato danach — erst die Kombination macht aus dem Quietschen eine Geste. Viel Gain und ein betonter Mittenbereich helfen, aber ersetzen die Technik nicht.\n\nKünstliche Harmonics (getappt oder mit dem Anschlag erzwungen) erweitern das auf ganze melodische Linien. Für den Anfang reicht ein zuverlässiger Pinch-Harmonic auf ein, zwei Lieblingstönen — reproduzierbar, mit Bending und Vibrato veredelt."
+        "de": "Pinch Harmonics (das kreischende „Squeal“, wenn der Daumen der Anschlagshand die Saite direkt nach dem Plektrum berührt) sind eine der ausdrucksstärksten Gitarren-Gesten des Metal — richtig gesetzt geben sie einem einzelnen Ton Schärfe und Stimme. Falsch gesetzt kommen sie gar nicht oder als Zufall. Der Unterschied ist Kontrolle über den Berührungspunkt.\n\nZwei Dinge machen sie zuverlässig. Erstens der Punkt: Über welchem Bereich zwischen Steg und Hals der Daumen die Saite streift, bestimmt, welcher Oberton anspricht — und der wandert mit dem gegriffenen Ton. Man lernt die „Sweet Spots“ für die häufigsten Töne, statt zu hoffen. Zweitens die Kombination mit Ausdruck: Ein Pinch Harmonic lebt vom Bending und Vibrato danach — erst die Kombination macht aus dem Quietschen eine Geste. Viel Gain und ein betonter Mittenbereich helfen, aber ersetzen die Technik nicht.\n\nKünstliche Harmonics (getappt oder mit dem Anschlag erzwungen) erweitern das auf ganze melodische Linien. Für den Anfang reicht ein zuverlässiger Pinch Harmonic auf ein, zwei Lieblingstönen — reproduzierbar, mit Bending und Vibrato veredelt."
       },
       "uebungsteil": {
         "de": {
           "titel": "Der Squeal auf Kommando",
-          "ziel": "Einen Pinch-Harmonic zuverlässig ansprechen lassen und mit Bending/Vibrato zur Geste machen.",
+          "ziel": "Einen Pinch Harmonic zuverlässig ansprechen lassen und mit Bending/Vibrato zur Geste machen.",
           "schritte": [
             "Greif einen Ton in mittlerer Lage (viel Gain). Schlag ihn an und lass unmittelbar den Daumen der Anschlagshand die Saite streifen — variier den Punkt zwischen Steg und Halsende in kleinen Schritten, bis ein klarer Oberton kreischt.",
-            "Merk dir den Sweet Spot für diesen Ton und triff ihn zehnmal hintereinander bewusst — Reproduzierbarkeit ist das Ziel, nicht Zufall.",
+            "Merk dir den Sweet Spot für diesen Ton und spiel ihn zehnmal hintereinander bewusst an und zähl, wie oft er anspricht — Reproduzierbarkeit ist das Ziel, nicht Zufall.",
             "Veredel den Harmonic: Nach dem Ansprechen ein Bending nach oben plus Vibrato. Jetzt wird aus dem Quietschen eine Geste.",
             "Wechsel den gegriffenen Ton: Der Sweet Spot wandert. Such ihn für einen zweiten Ton und übe den Wechsel zwischen beiden."
           ],
-          "steigerung": "Setz den Pinch-Harmonic gezielt ans Ende einer Riff-Phrase (Akzent) statt beliebig. Oder taste dich an einen getappten künstlichen Harmonic auf einer gegriffenen Melodie heran.",
+          "steigerung": "Setz den Pinch Harmonic gezielt ans Ende einer Riff-Phrase (Akzent) statt beliebig. Oder taste dich an einen getappten künstlichen Harmonic auf einer gegriffenen Melodie heran.",
           "selbstkontrolle": "Spricht der Harmonic auf Kommando an (acht von zehn) oder ist er Glückssache? Klingt er als Geste (mit Bending/Vibrato) oder als isoliertes Quietschen? Wenn er unzuverlässig ist, sitzt der Berührungspunkt noch nicht — langsamer, bewusster, Punkt für Punkt."
         }
       }
@@ -373,6 +373,40 @@
               0,
               1,
               0
+            ],
+            "betonung": [
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0
             ]
           },
           {
@@ -413,7 +447,7 @@
             ]
           }
         ],
-        "hinweis": "Linear heißt: nie zwei Schläge gleichzeitig. Jede Spalte trägt genau eine Stimme — prüf das im Raster nach, das ist die ganze Regel."
+        "hinweis": "Linear heißt: nie zwei Schläge gleichzeitig. Jede Spalte trägt genau eine Stimme — prüf das im Raster nach. Die Snare betont nur die Zwei, alle übrigen Snare-Schläge sind leise Ghost Notes: Sie machen aus der Linie einen Groove."
       }
     },
     {

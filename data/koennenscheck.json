@@ -190,7 +190,7 @@
         "einsteiger": {
           "stufe": "empfehlung",
           "text": {
-            "de": "Dein Grundklang trägt, ohne zu matschen — Gain und Verzerrung bewusst dosiert."
+            "de": "Dein Grundklang trägt, ohne zu matschen — ob Gain am Amp, Anschlag am Kit oder Verzerrung in der Stimme: bewusst dosiert."
           }
         },
         "fortgeschritten": {
@@ -292,7 +292,7 @@
         "einsteiger": {
           "stufe": "pflicht",
           "text": {
-            "de": "Bei Schmerz, Kratzen oder Taubheit stoppst du sofort."
+            "de": "Bei Schmerz, Kratzen oder Taubheit stoppst du sofort — halten die Beschwerden an, fragst du deine Lehrkraft oder gehst zum Arzt bzw. zur HNO-Praxis."
           }
         },
         "fortgeschritten": {
@@ -304,7 +304,7 @@
         "experte": {
           "stufe": "pflicht",
           "text": {
-            "de": "Bei anhaltenden Beschwerden holst du eine Lehrperson, Ärztin oder HNO-Praxis dazu."
+            "de": "Du kennst deine Belastungsgrenzen, planst Pausen und Aufwärmen fest ein und holst bei anhaltenden Beschwerden früh ärztlichen Rat ein."
           }
         }
       }

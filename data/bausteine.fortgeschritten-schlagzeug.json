@@ -32,31 +32,47 @@
         "gliedmassen_unabhaengigkeit"
       ],
       "erklaerteil": {
-        "de": "Der Blastbeat ist eine Familie, keine einzelne Figur. Beim Traditional Blast wechseln sich Snare und Bassdrum ab — das kennst du. Beim Bomb Blast (auch Hammer Blast) schlagen Snare und Bassdrum gleichzeitig zu, was massiver und schwerer klingt. Und je nachdem, ob die Hand mit der Hi-Hat oder dem Ride unisono oder versetzt läuft, ändert sich der Charakter erneut.\n\nJede Variante hat ihren Platz: Der Traditional Blast flirrt und rast, der Bomb Blast walzt. Black Metal setzt oft auf das Flirren, Death Metal gern auf die Walze. Wer beide sauber trennen kann, wählt nach Wirkung statt nach Gewohnheit.\n\nÜbe die Varianten getrennt und langsam, bevor du sie mischst — gerade der Wechsel von versetzt auf unisono verführt die Gliedmaßen zum Verschmieren. Sauber heißt: Jeder Schlag ist einer Variante eindeutig zuzuordnen."
+        "de": "Der Blastbeat ist eine Familie, keine einzelne Figur. Beim Traditional Blast wechseln sich Snare und Bassdrum ab — das kennst du. Beim Hammer Blast schlagen Snare und Bassdrum gleichzeitig zu, was massiver und schwerer klingt. Der Bomb Blast wiederum legt Snare und Becken über durchgehende Double-Bass-Sechzehntel. Und je nachdem, ob die Hand mit der Hi-Hat oder dem Ride unisono oder versetzt läuft, ändert sich der Charakter erneut.\n\nJede Variante hat ihren Platz: Der Traditional Blast flirrt und rast, der Hammer Blast walzt. Black Metal setzt oft auf das Flirren, Death Metal gern auf die Walze. Wer beide sauber trennen kann, wählt nach Wirkung statt nach Gewohnheit.\n\nÜbe die Varianten getrennt und langsam, bevor du sie mischst — gerade der Wechsel von versetzt auf unisono verführt die Gliedmaßen zum Verschmieren. Sauber heißt: Jeder Schlag ist einer Variante eindeutig zuzuordnen."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Traditional und Bomb trennen",
+          "titel": "Traditional und Hammer trennen",
           "ziel": "Beide Blast-Grundformen sauber unterscheiden und wechseln.",
           "schritte": [
             "Spiel den Traditional Blast (Snare und Bassdrum im Wechsel) langsam und gleichmäßig über mehrere Takte.",
-            "Wechsle zum Bomb Blast: Snare und Bassdrum schlagen exakt gleichzeitig, die Hand läuft weiter mit.",
+            "Wechsle zum Hammer Blast: Snare und Bassdrum schlagen exakt gleichzeitig, die Hand läuft weiter mit.",
             "Wechsle taktweise zwischen beiden Formen, ohne dass Übergangsschläge verschmieren."
           ],
           "steigerung": "Das Tempo in kleinen Schritten anheben und die Ride-Hand versetzt statt unisono führen.",
-          "selbstkontrolle": "Jeder Takt ist eindeutig als Traditional oder Bomb erkennbar; gleichzeitige Schläge klingen als einer."
+          "selbstkontrolle": "Jeder Takt ist eindeutig als Traditional oder Hammer erkennbar; gleichzeitige Schläge klingen als einer."
         }
       },
       "demonstration": {
         "typ": "pattern",
-        "bpm": 200,
+        "bpm": 120,
         "taktart": "4/4",
         "aufloesung": 16,
-        "takte": 1,
+        "takte": 2,
         "spuren": [
           {
             "instrument": "hihat_closed",
             "schritte": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
               1,
               0,
               1,
@@ -93,7 +109,23 @@
               0,
               1,
               0,
-              1
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
             ]
           },
           {
@@ -114,10 +146,28 @@
               1,
               0,
               1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
               0
             ]
           }
-        ]
+        ],
+        "loop": true,
+        "hinweis": "Takt 1 Traditional Blast (Snare und Bassdrum im Wechsel), Takt 2 Hammer Blast (Snare, Bassdrum und Becken gleichzeitig). Bewusst im Übungstempo."
       }
     },
     {
@@ -538,7 +588,7 @@
         "definierter_anschlag"
       ],
       "erklaerteil": {
-        "de": "Ghost Notes — sehr leise Snare-Schläge zwischen den Hauptschlägen — sind das Geheimnis von Grooves, die „rollen“ statt stampfen. Im Metal tauchen sie in Halftime-Passagen, Midtempo-Grooves und überall dort auf, wo ein Beat menschlich atmen soll, ohne an Härte zu verlieren.\n\nDie Technik ist reine Dynamikkontrolle: Der Stick fällt aus wenigen Zentimetern für die Ghost Note, holt für den Backbeat aber voll aus. Beide Bewegungen müssen in derselben Hand nahtlos wechseln — das ist die eigentliche Übung, nicht das Muster.\n\nWirksam sind Ghost Notes durch Kontrast. Sind sie zu laut, wird der Beat wuselig; richtig dosiert spürt man sie mehr, als man sie hört. Nimm dich auf: Auf der Aufnahme zeigt sich sofort, ob die Abstufung stimmt."
+        "de": "Ghost Notes — sehr leise Snare-Schläge zwischen den Hauptschlägen — sind das Geheimnis von Grooves, die „rollen“ statt stampfen. Im Metal tauchen sie in Half-Time-Passagen, Midtempo-Grooves und überall dort auf, wo ein Beat menschlich atmen soll, ohne an Härte zu verlieren.\n\nDie Technik ist reine Dynamikkontrolle: Der Stick fällt aus wenigen Zentimetern für die Ghost Note, holt für den Backbeat aber voll aus. Beide Bewegungen müssen in derselben Hand nahtlos wechseln — das ist die eigentliche Übung, nicht das Muster.\n\nWirksam sind Ghost Notes durch Kontrast. Sind sie zu laut, wird der Beat wuselig; richtig dosiert spürt man sie mehr, als man sie hört. Nimm dich auf: Auf der Aufnahme zeigt sich sofort, ob die Abstufung stimmt."
       },
       "uebungsteil": {
         "de": {
@@ -549,7 +599,7 @@
             "Halte den Backbeat auf 2 und 4 voll und unverändert laut.",
             "Nimm dich auf und prüf den Kontrast: Die Ghost Notes sollen fühlbar, aber kaum hörbar sein."
           ],
-          "steigerung": "Ghost-Note-Positionen variieren und das Muster in einen Halftime-Groove übertragen.",
+          "steigerung": "Ghost-Note-Positionen variieren und das Muster in einen Half-Time-Groove übertragen.",
           "selbstkontrolle": "Backbeat und Ghost Notes sind klar getrennt; der Groove rollt, ohne unruhig zu werden."
         }
       },
@@ -730,16 +780,16 @@
         "lockere_haende"
       ],
       "erklaerteil": {
-        "de": "Die Herta ist ein kleines Rudiment mit großer Wirkung: zwei sehr schnelle Schläge, gefolgt von zwei normalen — ein „Stolperer“, der Fills und Blast-Übergängen ihren rollenden Charakter gibt. Zusammen mit Flams (zwei fast gleichzeitige Schläge) und Drags erweitert sie dein Vokabular über Singles und Doubles hinaus.\n\nDiese Verzierungen leben von der exakten Platzierung: Die schnellen Schläge der Herta sind Zweiunddreißigstel vor einem stabilen Puls, kein undefiniertes Gewusel. Übe sie deshalb zuerst isoliert aufs Pad, mit Metronom, bis das Muster wie ein einziges Wort klingt.\n\nIm Kit verteilt entfalten Hertas ihren Reiz: die schnellen Schläge auf der Snare, die normalen auf den Toms — schon rollt ein Fill, das mit reinen Singles unmöglich wäre."
+        "de": "Die Herta ist ein kleines Rudiment mit großer Wirkung: zwei sehr schnelle Schläge, gefolgt von einem normalen — ein „Stolperer“, der Fills und Blast-Übergängen ihren rollenden Charakter gibt. Zusammen mit Flams (zwei fast gleichzeitige Schläge) und Drags erweitert sie dein Vokabular über Singles und Doubles hinaus.\n\nDiese Verzierungen leben von der exakten Platzierung: Die schnellen Schläge der Herta sind Zweiunddreißigstel vor einem stabilen Puls, kein undefiniertes Gewusel. Übe sie deshalb zuerst isoliert aufs Pad, mit Metronom, bis das Muster wie ein einziges Wort klingt.\n\nIm Kit verteilt entfalten Hertas ihren Reiz: die schnellen Schläge auf der Snare, der normale auf einer Tom — über mehrere Toms verkettet, rollt schon ein Fill, das mit reinen Singles unmöglich wäre."
       },
       "uebungsteil": {
         "de": {
           "titel": "Herta als ein Wort",
           "ziel": "Die Herta-Figur präzise und entspannt in den Puls setzen.",
           "schritte": [
-            "Übe die Figur (zwei schnelle, zwei normale Schläge) langsam auf dem Pad, mit Metronom und laut gezählt.",
-            "Wiederhole sie, bis sie wie ein zusammenhängendes Wort klingt, nicht wie vier Einzelschläge.",
-            "Verteil die Figur im Kit: schnelle Schläge auf der Snare, normale auf den Toms."
+            "Übe die Figur (zwei schnelle Schläge, ein normaler) langsam auf dem Pad, mit Metronom und laut gezählt.",
+            "Wiederhole sie, bis sie wie ein zusammenhängendes Wort klingt, nicht wie drei Einzelschläge.",
+            "Verteil die Figur im Kit: die schnellen Schläge auf der Snare, den normalen auf einer Tom — verkettet über mehrere Toms."
           ],
           "steigerung": "Hertas in ein Ein-Takt-Fill einbauen und mit Flams am Fill-Anfang kombinieren.",
           "selbstkontrolle": "Die Figur sitzt exakt im Puls und klingt rund; die Hände bleiben dabei locker."
@@ -748,8 +798,8 @@
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
-        "bpm": 110,
-        "aufloesung": 16,
+        "bpm": 80,
+        "aufloesung": 32,
         "takte": 2,
         "loop": true,
         "spuren": [
@@ -760,11 +810,7 @@
               0,
               0,
               0,
-              1,
               0,
-              0,
-              0,
-              1,
               0,
               0,
               0,
@@ -772,11 +818,7 @@
               0,
               0,
               0,
-              1,
               0,
-              0,
-              0,
-              1,
               0,
               0,
               0,
@@ -784,7 +826,47 @@
               0,
               0,
               0,
+              0,
+              0,
+              0,
+              0,
               1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
               0,
               0,
               0
@@ -793,6 +875,34 @@
           {
             "instrument": "snare",
             "schritte": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
               1,
               1,
               1,
@@ -813,13 +923,17 @@
               1,
               1,
               0,
-              1,
-              1,
-              1,
+              0,
+              0,
+              0,
               0,
               1,
               1,
               1,
+              0,
+              0,
+              0,
+              0,
               0,
               1,
               1,
@@ -834,18 +948,6 @@
               0,
               0,
               0,
-              1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0,
               0,
               0,
               0,
@@ -858,14 +960,58 @@
               0,
               0,
               0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
               1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
               0,
               0,
               0
             ]
           }
         ],
-        "hinweis": "Die Herta ist eine Dreiergruppe vor der Zählzeit. Takt 1 zeigt sie einzeln, Takt 2 verkettet — dort wird deutlich, ob die Gruppen wirklich gleich lang sind."
+        "hinweis": "Die Herta ist eine Dreiergruppe vor der Zählzeit: zwei Zweiunddreißigstel und eine Sechzehntel. Takt 1 zeigt sie einzeln vor der 3 und vor der nächsten 1, Takt 2 verkettet vor jeder Zählzeit — dort wird deutlich, ob die Gruppen wirklich gleich lang sind."
       }
     },
     {
@@ -1277,7 +1423,7 @@
             ]
           }
         ],
-        "hinweis": "Zwei Takte treibendes Feel, dann zwei Takte Halftime — dieselbe BPM, halbe gefühlte Geschwindigkeit. Der Wechsel muss auf den Schlag sitzen, nicht sich einschleichen."
+        "hinweis": "Zwei Takte treibendes Feel, dann zwei Takte Half-Time — dieselbe BPM, halbe gefühlte Geschwindigkeit. Der Wechsel muss auf den Schlag sitzen, nicht sich einschleichen."
       }
     },
     {
@@ -1398,7 +1544,7 @@
         "fuss_ausdauer"
       ],
       "erklaerteil": {
-        "de": "Extreme-Metal-Drumming ist Hochleistungssport: Blasts, Double-Bass-Teppiche und lange Sets fordern Herz-Kreislauf, Rumpf und alle vier Gliedmaßen gleichzeitig. Auf fortgeschrittenem Niveau entscheidet der Körper mit, wie weit die Technik trägt.\n\nDrei Stellschrauben zahlen direkt aufs Spielen ein: Grundlagenausdauer (alles, was den Puls über längere Zeit moderat fordert), ein stabiler Rumpf, der die Sitzposition über Stunden hält, und bewusste Erholung — Schlaf, Pausen zwischen intensiven Sessions, Flüssigkeit. Das Prinzip lautet allmähliche Steigerung, nicht Härte: Der Körper passt sich in Wochen an, nicht in Sessions.\n\nWarnsignale bleiben Warnsignale, egal wie fortgeschritten du bist: Schmerz in Gelenken oder Rücken, Taubheit, Kribbeln oder Erschöpfung, die nicht abklingt, heißen unterbrechen, Belastung prüfen — und bei anhaltenden Beschwerden fachkundigen Rat holen. Trainingslehre gehört zum Drumming wie das Metronom."
+        "de": "Extreme-Metal-Drumming ist Hochleistungssport: Blasts, Double-Bass-Teppiche und lange Sets fordern Herz-Kreislauf, Rumpf und alle vier Gliedmaßen gleichzeitig. Auf fortgeschrittenem Niveau entscheidet der Körper mit, wie weit die Technik trägt.\n\nDrei Stellschrauben zahlen direkt aufs Spielen ein: Grundlagenausdauer (alles, was den Puls über längere Zeit moderat fordert), ein stabiler Rumpf, der die Sitzposition über Stunden hält, und bewusste Erholung — Schlaf, Pausen zwischen intensiven Sessions, Flüssigkeit. Das Prinzip lautet allmähliche Steigerung, nicht Härte: Der Körper passt sich in Wochen an, nicht in Sessions.\n\nWarnsignale bleiben Warnsignale, egal wie fortgeschritten du bist: Schmerz in Gelenken oder Rücken, Taubheit, Kribbeln oder Erschöpfung, die nicht abklingt, heißen unterbrechen, Belastung prüfen — und bei anhaltenden Beschwerden ärztlichen oder physiotherapeutischen Rat holen. Trainingslehre gehört zum Drumming wie das Metronom."
       },
       "reflexionsaufgabe": {
         "de": "Sieh dir dein Spielpensum einer typischen Woche an: Wo liegen die intensiven Sessions, wo die Erholung, und was tust du außerhalb des Kits für Ausdauer und Rumpf? Leg zwei konkrete, kleine Änderungen fest — etwa eine Ausdauer-Einheit pro Woche und eine feste Pausenregel für lange Sessions."

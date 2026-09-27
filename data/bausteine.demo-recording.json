@@ -116,7 +116,7 @@
       },
       "voraussetzungen": [
         "tracking_reihenfolge",
-        "drums_recording"
+        "signal_aufnehmen"
       ]
     },
     {
@@ -140,8 +140,7 @@
       },
       "voraussetzungen": [
         "signal_aufnehmen",
-        "produktionswissen_frequenz",
-        "klangregie_arrangement"
+        "tracking_reihenfolge"
       ]
     },
     {
@@ -158,10 +157,10 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Ist die Demo fertig, geht es ums Teilen — und auch das ist in der DIY-Community selbst gemacht. Plattformen wie Bandcamp oder die üblichen Streaming-Dienste (über einfache Digital-Vertriebe) bringen eure Musik online; ein Titelbild und ein paar Zeilen zur Band gehören dazu.\n\nDer wirksamste Weg zu Auftritten führt über direkte Kontakte: Schickt die Demo an Veranstalter, andere Bands und lokale Kollektive, freundlich und konkret. In einer kleinen Community zählen Verlässlichkeit und echtes Interesse mehr als Hochglanz. Eine Demo, die bei den richtigen Leuten landet, öffnet mehr Türen als eine, die nur online steht.\n\nTeilt sie auch dort, wo eure Community ohnehin ist — nicht als Werbung, sondern als das, was sie ist: eure erste Aufnahme, mit der ihr Teil des Ganzen werdet."
+        "de": "Ist die Demo fertig, geht es ums Teilen — und auch das ist in der DIY-Community selbst gemacht. Plattformen für den Direktverkauf an Fans oder die üblichen Streaming-Dienste (über einfache Digital-Vertriebe) bringen eure Musik online; ein Titelbild und ein paar Zeilen zur Band gehören dazu.\n\nDer wirksamste Weg zu Auftritten führt über direkte Kontakte: Schickt die Demo an Veranstalter, andere Bands und lokale Kollektive, freundlich und konkret. In einer kleinen Community zählen Verlässlichkeit und echtes Interesse mehr als Hochglanz. Eine Demo, die bei den richtigen Leuten landet, öffnet mehr Türen als eine, die nur online steht.\n\nTeilt sie auch dort, wo eure Community ohnehin ist — nicht als Werbung, sondern als das, was sie ist: eure erste Aufnahme, mit der ihr Teil des Ganzen werdet."
       },
       "reflexionsaufgabe": {
-        "de": "Wo veröffentlicht ihr eure Demo (Bandcamp, Streaming über einen Digital-Vertrieb), und habt ihr ein Titelbild und ein paar Zeilen zur Band? An welche Veranstalter, Bands und Kollektive schickt ihr sie direkt und persönlich? Und wie werdet ihr damit Teil eurer Community, statt nur online zu stehen?"
+        "de": "Wo veröffentlicht ihr eure Demo (Plattform für den Direktverkauf an Fans, Streaming über einen Digital-Vertrieb), und habt ihr ein Titelbild und ein paar Zeilen zur Band? An welche Veranstalter, Bands und Kollektive schickt ihr sie direkt und persönlich? Und wie werdet ihr damit Teil eurer Community, statt nur online zu stehen?"
       },
       "voraussetzungen": [
         "demo_warum_wozu"

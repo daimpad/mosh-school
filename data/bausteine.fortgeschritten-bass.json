@@ -938,7 +938,7 @@
             "Spiel die Figur dann auf einem Ton und benenne für jeden Akzent seine Unterteilung.",
             "Sorg für echte Stille zwischen den Schlägen, indem du sofort wieder abdämpfst."
           ],
-          "steigerung": "Die Figur mit einer aufgenommenen Bassdrum-Spur oder einem programmierten Beat locken.",
+          "steigerung": "Die Figur mit einer aufgenommenen Bassdrum-Spur oder einem programmierten Beat verzahnen.",
           "selbstkontrolle": "Jeder Akzent sitzt exakt auf seiner Unterteilung; zwischen den Schlägen ist es still."
         }
       },
@@ -1028,7 +1028,12 @@
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
-        "tuning": ["E1", "A1", "D2", "G2"],
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
         "saiten_reihenfolge": "4_ist_tiefste",
         "taktart": "4/4",
         "bpm": 90,
@@ -1038,30 +1043,30 @@
         "events": [
           {
             "schritt": 0,
-            "saite": 4,
-            "bund": 0,
+            "saite": 3,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 0,
-            "saite": 3,
-            "bund": 2,
-            "technik": "normal"
-          },
-          {
-            "schritt": 4,
-            "saite": 4,
-            "bund": 3,
+            "saite": 2,
+            "bund": 7,
             "technik": "normal"
           },
           {
             "schritt": 4,
             "saite": 3,
-            "bund": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 2,
+            "bund": 9,
             "technik": "normal"
           }
         ],
-        "hinweis": "Grundton plus Quinte auf zwei Saiten gleichzeitig. Beide Töne sollen gleich laut stehen — am Bass trägt der Doppelgriff schnell zu."
+        "hinweis": "Grundton plus Quinte in mittlerer Lage auf A- und D-Saite (D5, dann E5), beide Saiten gleichzeitig. Beide Töne sollen gleich laut stehen — tiefer gegriffen trägt der Doppelgriff am Bass schnell zu."
       }
     },
     {

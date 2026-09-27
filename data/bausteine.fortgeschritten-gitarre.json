@@ -519,7 +519,7 @@
           "titel": "Tremolo über zwei Powerchords",
           "ziel": "Das Tremolo beim Akkordwechsel ohne Unterbrechung durchziehen.",
           "schritte": [
-            "Halte ein gleichmäßiges Tremolo auf dem Grundton eines Powerchords.",
+            "Halte ein gleichmäßiges Tremolo auf einem Powerchord (oder zunächst nur auf seinem Grundton).",
             "Wechsle nach einer festen Zahl von Anschlägen zum nächsten Powerchord, ohne die Anschlaghand zu stoppen.",
             "Zähle die Anschläge pro Akkord mit, damit die Wechsel im Timing sitzen."
           ],
@@ -529,10 +529,7 @@
       },
       "demonstration": {
         "typ": "tab",
-        "bpm": 160,
-        "taktart": "4/4",
-        "aufloesung": 16,
-        "takte": 1,
+        "instrument": "gitarre",
         "tuning": [
           "E2",
           "A2",
@@ -541,104 +538,399 @@
           "B3",
           "E4"
         ],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 160,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
         "events": [
           {
             "schritt": 0,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 1,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 2,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 3,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 4,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 5,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 6,
-            "saite": 2,
-            "bund": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 7,
-            "saite": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
             "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 8,
-            "saite": 2,
+            "saite": 5,
             "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 9,
-            "saite": 2,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 5,
             "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 10,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 11,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 12,
-            "saite": 2,
-            "bund": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 13,
-            "saite": 2,
-            "bund": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 14,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 15,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           }
-        ]
+        ],
+        "hinweis": "Tremolo in Sechzehnteln über zwei Powerchords (E5 und G5), je acht Anschläge pro Akkord. Die Anschlaghand läuft durch, nur die Greifhand wechselt — genau auf dem Anschlag, der den neuen Akkord beginnt."
       }
     },
     {
@@ -1327,10 +1619,11 @@
       ],
       "voraussetzungen": [
         "legato",
-        "wechselschlag"
+        "wechselschlag",
+        "slides_bends"
       ],
       "erklaerteil": {
-        "de": "Die Moll-Pentatonik ist die meistgenutzte Tonleiter für Metal-Leads. Sie besteht aus fünf Tönen, die sich als bequem greifbare „Box“ über die Saiten anordnen — einmal gelernt, ist die Form über das ganze Griffbrett verschiebbar.\n\nWeil in der Box keine unpassenden Nachbartöne liegen, kannst du früh anfangen, kurze Melodien und Licks zu bilden, ohne dich zu verspielen. Der Grundton auf der tiefen Saite legt die Tonart fest — dieselbe Form passt so zu jedem Riff, wenn du sie an den richtigen Bund schiebst.\n\nEin Lead wird erst durch Ausdruck lebendig. Verbinde die Töne mit dem, was du schon kannst: Hammer-ons und Pull-offs für fließende Läufe, Bends und Slides für Spannung. So wird aus einer Tonleiter Musik statt nur einer Fingerübung."
+        "de": "Die Moll-Pentatonik ist die meistgenutzte Tonleiter für Metal-Leads. Sie besteht aus fünf Tönen, die sich als bequem greifbare „Box“ über die Saiten anordnen — einmal gelernt, ist die Form über das ganze Griffbrett verschiebbar.\n\nWeil in der Box keine unpassenden Nachbartöne liegen, kannst du früh anfangen, kurze Melodien und Licks zu bilden, ohne dich zu verspielen. Der Grundton auf der tiefen Saite legt die Tonart fest — dieselbe Form passt so zu jedem Moll-Riff, wenn du sie an den richtigen Bund schiebst.\n\nEin Lead wird erst durch Ausdruck lebendig. Verbinde die Töne mit dem, was du schon kannst: Hammer-ons und Pull-offs für fließende Läufe, Bends und Slides für Spannung. So wird aus einer Tonleiter Musik statt nur einer Fingerübung."
       },
       "uebungsteil": {
         "de": {
@@ -1870,6 +2163,9 @@
         "fortgeschritten"
       ],
       "typ": "micro",
+      "voraussetzungen": [
+        "metronom_prinzip"
+      ],
       "erklaerteil": {
         "de": "Schneller werden ist im Metal weniger eine Frage von Talent als von Methode. Wer wahllos am Tempo dreht, spielt Fehler ein und stagniert; wer systematisch arbeitet, kommt verlässlich voran. Das Metronom bleibt dabei dein ehrlichster Maßstab — es zeigt, ob ein Tempo wirklich sitzt oder nur ungefähr.\n\nFortschritt verläuft nicht gleichmäßig, sondern in Stufen mit Plateaus dazwischen. Wochen ohne sichtbaren Sprung sind normal und kein Zeichen von Versagen — oft festigt sich in dieser Zeit gerade das, was du schon kannst. Der Schlüssel ist, sauber und in kleinen Schritten zu üben und ein Tempo erst zu verlassen, wenn es mehrfach fehlerfrei gelingt.\n\nGeduld ist hier eine Technik wie jede andere. Zehn langsame, fehlerfreie Wiederholungen bringen dich weiter als eine hektische schnelle, weil sich dein Körper einprägt, was du wiederholst — Sauberkeit ebenso wie Fehler."
       },

@@ -41,7 +41,7 @@
       "id": "ba_004",
       "kategorie": "Verstärker",
       "bezeichnung": "Sunn Model T",
-      "warum": "Namensgebend für Drone- und Doom-Ästhetik.",
+      "warum": "Namensgeber der Drone-Band Sunn O))) und prägend für die Drone- und Doom-Ästhetik.",
       "einordnung": "Sehr lauter, cleaner bis grob übersteuernder Röhrenverstärker mit enormem Tiefbass.",
       "alternative": "Jeder laute Vollröhren-Verstärker mit viel Headroom und wenig Zerre erzeugt ein ähnliches Verhalten."
     },
@@ -227,7 +227,7 @@
       "bezeichnung": "Fender Jazzmaster / Jaguar",
       "warum": "Klangbild von Shoegaze und Noise Rock.",
       "einordnung": "Offset-Korpus, kurze (Jaguar) oder lange Mensur (Jazzmaster), schwebendes Vibrato mit flachem Saitenwinkel.",
-      "alternative": "Günstige Nachbauten dieser Bauart sind verbreitet; die lose Saitenlage ist Teil des Reizes."
+      "alternative": "Günstige Nachbauten dieser Bauart sind verbreitet; das lockere Spielgefühl durch den flachen Saitenwinkel und das Mitklingen der Saiten hinter dem Steg sind Teil des Reizes."
     },
     {
       "id": "ba_028",
@@ -449,8 +449,8 @@
       "id": "ba_055",
       "kategorie": "Pedale & Effekte",
       "bezeichnung": "Cleaner Booster (MXR Micro Amp / EP-Booster)",
-      "warum": "Vor den Amp geschaltet macht er den High-Gain-Ton tighter und lauter, ohne ihn umzufärben.",
-      "einordnung": "Ein transparenter Pegel-Boost — anders als der Tube Screamer ohne betonte Mitten, eher zum Antreiben der Endstufe und für Soli.",
+      "warum": "Vor den Amp geschaltet treibt er dessen Vorstufe stärker in die Sättigung, ohne den Ton umzufärben.",
+      "einordnung": "Ein transparenter Pegel-Boost — anders als der Tube Screamer ohne betonte Mitten; vor dem Amp treibt er die Vorstufe an, im Einschleifweg dient er als Lautstärke-Boost für Soli.",
       "alternative": "Zahlreiche günstige Clean-Boost- und Buffer-Pedale erfüllen denselben Zweck."
     },
     {
@@ -480,10 +480,10 @@
     {
       "id": "ba_059",
       "kategorie": "Pedale & Effekte",
-      "bezeichnung": "Pitchshifter fürs Drop-Tuning (DigiTech Drop)",
+      "bezeichnung": "Pitchshifter zum Tieferstimmen (DigiTech Drop)",
       "warum": "Live tiefer stimmen ohne Instrumentenwechsel — verbreitet im modernen Metal und Deathcore.",
       "einordnung": "Ein Pitchshifter, der die ganze Gitarre um ein festes Intervall nach unten rechnet, damit ein Instrument mehrere Tunings abdeckt.",
-      "alternative": "Ehrliche Einschränkung: günstige Pitch-Pedale tracken meist nur Einzeltöne sauber, nicht volle Akkorde — für echtes Drop-Tuning ist eine zweite, tiefer gestimmte oder eine Baritone-Gitarre oft der bessere und kaum teurere Weg."
+      "alternative": "Ehrliche Einschränkung: günstige Pitch-Pedale tracken meist nur Einzeltöne sauber, nicht volle Akkorde — für dauerhaft tiefe Stimmungen ist eine zweite, tiefer gestimmte oder eine Baritone-Gitarre oft der bessere und kaum teurere Weg."
     },
     {
       "id": "ba_060",

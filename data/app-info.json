@@ -114,7 +114,7 @@
             "de": "Fortgeschrittene mit Lücken. Das ist die größte Ebene, gedacht für alle, die spielen können, aber merken, dass Theorie, Sound oder Körperarbeit fehlt."
           },
           {
-            "de": "Sänger:innen und alle, die schreien wollen. Grundsatz überall: Verzerrung kommt aus Luft und Resonanz, nicht aus Pressen — und bei Beschwerden geht es zum HNO-Arzt, nicht ins nächste Video."
+            "de": "Sänger und alle, die schreien wollen. Grundsatz überall: Verzerrung kommt aus Luft und Resonanz, nicht aus Pressen — und bei Beschwerden geht es zum HNO-Arzt, nicht ins nächste Video."
           },
           {
             "de": "Bands und Proberaum-Gruppen. Songwriting-Werkzeuge und die Kontext-Bausteine zu Ensemble und Proberaum zielen auf die Gruppe, nicht auf die Einzelperson."
@@ -126,7 +126,7 @@
             "de": "Alle mit Gear-Fragen. Wer nicht weiß, warum der Bass im Mix verschwindet oder was ein Zerrer eigentlich tut, findet hier Physik statt Forenmeinung."
           },
           {
-            "de": "Beitragende und Entwickler:innen. Buildfrei, Inhalte als JSON, Engine sauber vom Inhalt getrennt — die Hürde für inhaltliche Beiträge ist bewusst niedrig."
+            "de": "Beitragende und Entwickler. Buildfrei, Inhalte als JSON, Engine sauber vom Inhalt getrennt — die Hürde für inhaltliche Beiträge ist bewusst niedrig."
           }
         ]
       },
@@ -382,6 +382,9 @@
             },
             {
               "de": "Diese Verarbeitung dient ausschließlich der technischen Bereitstellung der Seite, der Systemsicherheit und der Fehleranalyse. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren, funktionsfähigen Betrieb). Es findet keine Zusammenführung mit anderen Datenquellen und kein Tracking oder Profiling statt; die Logfiles werden nach kurzer Zeit automatisch gelöscht bzw. anonymisiert."
+            },
+            {
+              "de": "Maßgebliche Adresse von ZERRER ist zerrer.org, gehostet bei der netcup GmbH. Denselben Inhalt liefert zusätzlich ein Spiegel unter daimpad.github.io/mosh-school/ aus, gehostet bei GitHub Pages. Rufst du diese Adresse auf, verarbeitet GitHub (GitHub Inc., USA) als Hoster die oben genannten Zugriffsdaten, insbesondere deine IP-Adresse; es gilt zusätzlich die Datenschutzerklärung von GitHub, und das ist eine Übermittlung in ein Drittland (Art. 44 ff. DSGVO). Rechtsgrundlage ist auch hier Art. 6 Abs. 1 lit. f DSGVO."
             }
           ]
         },
@@ -391,10 +394,10 @@
           },
           "absaetze": [
             {
-              "de": "ZERRER setzt keine Cookies und keine Werbenetzwerke ein. Für eine anonyme Reichweitenmessung wird der Dienst GoatCounter eingebunden (Skript von gc.zgo.at, Auswertung unter zerrer.goatcounter.com, betrieben von Damian Paderta/Nozilla). Schriften und Icons bleiben lokal eingebettet; beim normalen Besuch der Seite ist GoatCounter die einzige Ausnahme vom Grundsatz, keine Ressourcen von externen Anbietern nachzuladen. Die zweite, ausdrücklich angestoßene Ausnahme ist das eingebettete Dokument im internen Bereich — siehe den eigenen Abschnitt darunter."
+              "de": "ZERRER setzt keine Cookies und keine Werbenetzwerke ein. Für eine anonyme Reichweitenmessung wird der Dienst GoatCounter eingebunden (Skript von gc.zgo.at, Auswertung im Konto zerrer.goatcounter.com). Anbieter des Dienstes ist GoatCounter; das Konto betreibt der oben genannte Verantwortliche, GoatCounter verarbeitet die Zähldaten in dessen Auftrag als Auftragsverarbeiter (Art. 28 DSGVO). Bei jedem Zählaufruf geht deine Anfrage samt IP-Adresse an die Server von GoatCounter. Schriften und Icons bleiben lokal eingebettet; beim normalen Besuch der Seite ist GoatCounter die einzige Ausnahme vom Grundsatz, keine Ressourcen von externen Anbietern nachzuladen. Ausdrücklich angestoßene Ausnahmen sind das eingebettete Dokument im internen Bereich und der Shows-Editor — siehe die eigenen Abschnitte darunter."
             },
             {
-              "de": "GoatCounter setzt keinen Cookie und keinen wiedererkennbaren Identifier, erstellt kein Nutzungsprofil und speichert keine IP-Adressen im Klartext. Erfasst werden je Seitenaufruf: aufgerufener Pfad (inklusive der Route innerhalb der App), Seitentitel, Referrer, Bildschirmgröße, grobe Browser-/Betriebssystem-Angaben sowie ein aus der IP-Adresse abgeleitetes Land — die IP-Adresse selbst wird dabei nicht gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer datensparsamen Reichweitenmessung, ohne die eigenen Nutzer:innen zu identifizieren). Details zur Verarbeitung durch GoatCounter selbst: gc.zgo.at/privacy. Da kein Identifier gesetzt wird, gibt es keinen technischen Opt-out-Schalter — mit einem Werbe-/Tracking-Blocker lässt sich das Skript wie jede externe Ressource blockieren, ohne dass ZERRER dadurch eingeschränkt ist."
+              "de": "GoatCounter setzt keinen Cookie und keinen wiedererkennbaren Identifier, erstellt kein Nutzungsprofil und speichert keine IP-Adressen im Klartext. Erfasst werden je Seitenaufruf: aufgerufener Pfad (inklusive der Route innerhalb der App), Seitentitel, Referrer, Bildschirmgröße, grobe Browser-/Betriebssystem-Angaben sowie ein aus der IP-Adresse abgeleitetes Land — die IP-Adresse selbst wird dabei nicht gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer datensparsamen Reichweitenmessung, ohne die eigenen Nutzer zu identifizieren). Details zur Verarbeitung durch GoatCounter selbst: www.goatcounter.com/help/privacy. Da kein Identifier gesetzt wird, gibt es keinen technischen Opt-out-Schalter — mit einem Werbe-/Tracking-Blocker lässt sich das Skript wie jede externe Ressource blockieren, ohne dass ZERRER dadurch eingeschränkt ist."
             }
           ]
         },
@@ -410,16 +413,29 @@
               "de": "Das Dokument wird erst nach Eingabe des Passworts und einem ausdrücklichen Klick geladen, nie schon beim Aufrufen der Seite — vorher entsteht keinerlei Verbindung zu Google. Mit dem Klick baut dein Browser eine direkte Verbindung zu Googles Servern auf; dabei werden IP-Adresse, Browserkennung (User-Agent) und Zeitpunkt an Google übertragen, und Google kann auf seiner eigenen Adresse Cookies bzw. lokalen Speicher setzen. Bist du bei Google angemeldet, kann Google den Aufruf deinem Konto zuordnen. Es gilt zusätzlich die Datenschutzerklärung von Google. Google verarbeitet Daten auch außerhalb der EU, insbesondere in den USA; das ist eine Übermittlung in ein Drittland (Art. 44 ff. DSGVO)."
             },
             {
-              "de": "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer gemeinsamen Arbeitsfläche); für den Zugriff auf Informationen im Endgerät beim Laden ist es § 25 Abs. 1 TDDDG auf Grundlage deiner Einwilligung — die du mit dem Klick gibst und schlicht dadurch verweigerst, dass du nicht klickst."
+              "de": "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer gemeinsamen Arbeitsfläche); für den Zugriff auf Informationen im Endgerät beim Laden ist es § 25 Abs. 1 TDDDG auf Grundlage deiner Einwilligung — die du mit dem Klick gibst und schlicht dadurch verweigerst, dass du nicht klickst. Deine Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO): Verlässt du die Seite „Intern“ oder lädst du sie neu, wird das Dokument entfernt, und es entsteht keine weitere Verbindung zu Google, bis du erneut klickst. Cookies und gespeicherte Daten, die Google bereits gesetzt hat, löschst du in den Einstellungen deines Browsers."
             },
             {
               "de": "Die Inhalte des Dokuments liegen bei Google, nicht bei ZERRER, und sind dort nicht Ende-zu-Ende-verschlüsselt. Die Adresse des Dokuments steht nur verschlüsselt im Quelltext der Seite; entschlüsselt wird sie erst mit dem Passwort in deinem Browser und dabei an niemanden übertragen. Die Route „Intern“ wird außerdem bewusst nicht von der Reichweitenmessung erfasst."
             },
             {
               "de": "Das Passwort vor dieser Seite steht nicht im Quelltext; es ist der Schlüssel, mit dem die Adresse des Dokuments entschlüsselt wird. Wer das Dokument sehen oder bearbeiten darf, regelt zusätzlich dessen Freigabe-Einstellung bei Google."
+            }
+          ]
+        },
+        {
+          "titel": {
+            "de": "Shows-Editor (GitHub)"
+          },
+          "absaetze": [
+            {
+              "de": "Unter „Shows“ gibt es einen Pflege-Editor, mit dem Mitglieder des Kollektivs Abende eintragen. Er steht in keiner Navigation, und seine Passwortabfrage ist nur ein Sichtschutz. Für Besucher der Seite passiert dort nichts: Der Editor lädt nichts von außen nach, und sein Aufruf wird nicht von der Reichweitenmessung erfasst."
             },
             {
-              "de": "Der Pflege-Editor der Shows-Seite hat ebenfalls eine Passwortabfrage; dort ist sie nur ein Sichtschutz. Er lädt nichts von außen nach, sondern sendet ausschließlich dann Daten an GitHub, wenn eine pflegende Person mit hinterlegtem Zugangstoken ausdrücklich speichert. Für Besucherinnen und Besucher entsteht dabei keine Verbindung zu Dritten."
+              "de": "Zum Speichern braucht der Editor einen persönlichen Zugangstoken für GitHub, den die pflegende Person selbst einträgt. Er wird ausschließlich lokal im Browser dieses Geräts gespeichert (localStorage), steht in keinem Backup des Lernfortschritts und lässt sich im Editor jederzeit wieder entfernen."
+            },
+            {
+              "de": "Nur wenn jemand mit hinterlegtem Token ausdrücklich speichert oder eine Show entfernt, baut der Browser eine Verbindung zu api.github.com auf (GitHub Inc., USA): Er liest den aktuellen Stand der Show-Liste und schreibt die Angaben zur Show samt Flyer-Bild als Änderung in das öffentliche Repository des Projekts. Dabei gehen der Token, die IP-Adresse und die Browserkennung an GitHub; die Änderung ist danach dem GitHub-Konto zugeordnet, zu dem der Token gehört. Es gilt zusätzlich die Datenschutzerklärung von GitHub; auch das ist eine Übermittlung in ein Drittland (Art. 44 ff. DSGVO). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Pflege der Inhalte)."
             }
           ]
         },
@@ -439,7 +455,7 @@
           },
           "absaetze": [
             {
-              "de": "Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten sowie ein Widerspruchsrecht gegen die Verarbeitung (Art. 15 bis 18 und 21 DSGVO). Da praktisch alle App-Daten ohnehin nur lokal bei dir liegen, genügt dafür in der Regel das Löschen im Browser."
+              "de": "Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten sowie ein Widerspruchsrecht gegen die Verarbeitung (Art. 15 bis 18 und 21 DSGVO). Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO). Da praktisch alle App-Daten ohnehin nur lokal bei dir liegen, genügt dafür in der Regel das Löschen im Browser."
             },
             {
               "de": "Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO) — zuständig für Bonn/Nordrhein-Westfalen ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)."

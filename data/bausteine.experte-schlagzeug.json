@@ -33,7 +33,7 @@
         "timing_zum_klick"
       ],
       "erklaerteil": {
-        "de": "Jenseits von Traditional und Bomb existiert ein Zoo von Spezialformen: der Gravity Blast (die Hand nutzt den Spannreifen als Hebel für zwei Schläge pro Bewegung), One-Handed-Techniken über Rebound-Kontrolle und Freehand, und Hyperblasts jenseits der 280 BPM. Sie alle kaufen Geschwindigkeit mit Technik statt mit Kraft.\n\nBevor du eine Spezialform aufbaust, lohnt die ehrliche Frage nach dem Zweck: Ein sauberer Traditional Blast bei 240 schlägt musikalisch fast immer einen wackligen Gravity bei 300. Spezialformen sind Werkzeuge für konkrete Parts — nicht Trophäen. Wer sie lernt, lernt sie wie neue Rudiments: isoliert, in Zeitlupe, am Pad.\n\nGesundheit hat Vorrang: Gerade Gravity- und One-Hand-Techniken laden bei falscher Ausführung Handgelenk und Daumensattel massiv. Ohne saubere Rebound-Grundlage und schrittweisen Aufbau sind sie ein Verletzungsrisiko — Schmerz im Handgelenk beendet das Experiment sofort, und für die Feinform ist Video-Selbstkontrolle oder ein Coach dringend zu empfehlen."
+        "de": "Jenseits von Traditional, Hammer und Bomb existiert ein Zoo von Spezialformen: der Gravity Blast (die Hand nutzt den Spannreifen als Hebel für zwei Schläge pro Bewegung), One-Handed-Techniken über Rebound-Kontrolle und Freehand, und Hyperblasts jenseits der 280 BPM. Sie alle kaufen Geschwindigkeit mit Technik statt mit Kraft.\n\nBevor du eine Spezialform aufbaust, lohnt die ehrliche Frage nach dem Zweck: Ein sauberer Traditional Blast bei 240 schlägt musikalisch fast immer einen wackligen Gravity bei 300. Spezialformen sind Werkzeuge für konkrete Parts — nicht Trophäen. Wer sie lernt, lernt sie wie neue Rudiments: isoliert, in Zeitlupe, am Pad.\n\nGesundheit hat Vorrang: Gerade Gravity- und One-Hand-Techniken laden bei falscher Ausführung Handgelenk und Daumensattel massiv. Ohne saubere Rebound-Grundlage und schrittweisen Aufbau sind sie ein Verletzungsrisiko — Schmerz im Handgelenk beendet das Experiment sofort, und für die Feinform ist Video-Selbstkontrolle oder ein Coach dringend zu empfehlen."
       },
       "uebungsteil": {
         "de": {
@@ -58,7 +58,7 @@
         "spuren": [
           {
             "instrument": "hihat_closed",
-            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
           },
           {
             "instrument": "snare",
@@ -66,7 +66,7 @@
           },
           {
             "instrument": "kick",
-            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
           }
         ],
         "hinweis": "Takt 1 traditioneller Blast (Hände im Wechsel), Takt 2 die doppelte Snare-Dichte der Gravity-Bewegung. Bewusst langsam notiert — Tempo kommt zuletzt."
@@ -283,6 +283,7 @@
       ],
       "typ": "micro",
       "stil": [
+        "djent",
         "metalcore"
       ],
       "voraussetzungen": [
@@ -567,17 +568,15 @@
       },
       "demonstration": {
         "typ": "pattern",
-        "bpm": 120,
-        "taktart": "5/4",
-        "aufloesung": 10,
+        "bpm": 200,
+        "taktart": "7/8",
+        "aufloesung": 7,
         "takte": 1,
+        "loop": true,
         "spuren": [
           {
             "instrument": "hihat_closed",
             "schritte": [
-              1,
-              1,
-              1,
               1,
               1,
               1,
@@ -592,12 +591,9 @@
             "schritte": [
               0,
               0,
-              1,
-              0,
               0,
               0,
               1,
-              0,
               0,
               0
             ]
@@ -607,17 +603,20 @@
             "schritte": [
               1,
               0,
-              0,
+              1,
               0,
               1,
               0,
-              0,
-              0,
-              1,
               0
             ]
           }
-        ]
+        ],
+        "gruppierung": [
+          2,
+          2,
+          3
+        ],
+        "hinweis": "7/8 als 2+2+3 („kurz-kurz-lang“): Kick auf den drei Gruppenanfängen, Snare auf dem Anfang der Dreiergruppe, Hi-Hat-Achtel laufen durch. Das Tempo zählt hier Achtel."
       }
     },
     {

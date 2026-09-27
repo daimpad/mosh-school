@@ -3,7 +3,7 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "gemischt",
     "domaene": "gear-schlagzeug-gesang",
-    "hinweis": "Gear-Bausteine für Schlagzeug und Gesang: Komponenten und Technik für den Gear-Explorer (#/werkzeug/explorer). Reflexion, physik-/faktenbasiert, keine Marken. Kein Vokabular-Block. becken_typen und trigger_edrums existieren bereits (drums-gear) und werden nur verlinkt."
+    "hinweis": "Gear-Bausteine für Schlagzeug und Gesang: Komponenten und Technik für den Gear-Explorer (#/werkzeug/explorer). Reflexion, physik-/faktenbasiert, keine Marken. Kein Vokabular-Block. becken_typen und trigger_edrums existieren bereits (drums-gear) und werden nur verlinkt. Dazu plektren_saitenpflege: Plektren und Saitenpflege für die Saiteninstrumente."
   },
   "delta_bausteine": [],
   "bausteine": [
@@ -64,7 +64,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Die Bassdrum-Fußmaschine ist die wichtigste Hardware des Metal-Drummers. Eine Einzelmaschine spielt einen Beater; ein Double-Pedal ergänzt einen zweiten Beater an derselben Bassdrum, sodass sich Double-Bass-Muster ohne zwei Bassdrums spielen lassen.\n\nDie Physik des Spielgefühls: Der Antrieb (Kette = haltbar, Direktantrieb = unmittelbare, schnelle Ansprache, Riemen = leicht) und die Federspannung verändern den Rückschlag — lockerer fühlt sich schneller und leichter an, straffer gibt mehr Kontrolle und Kraft. Das Beater-Material verschiebt den Klang: Filz ist weicher, ein Plastik- oder Hartbeater bringt Attack und Klick, der schnelle Kicks durchsetzen lässt.\n\nEmpfehlung für Metal: ein solides Double-Pedal, Antrieb und Federspannung auf die eigene Fußtechnik abgestimmt, und ein härterer Beater für Definition bei Double Bass und Blasts. Wie bei allem Tempotraining gilt: Fuß-Ausdauer über Wochen aufbauen — Verkrampfung ist ein Signal zum Pausieren, nicht zum Weitermachen; bei Schmerzen in Fuß, Schienbein oder Knie sofort stoppen und ärztlich abklären lassen."
+        "de": "Die Bassdrum-Fußmaschine ist die wichtigste Hardware des Metal-Drummers. Eine Einzelmaschine spielt einen Beater; ein Double-Pedal ergänzt einen zweiten Beater an derselben Bassdrum, sodass sich Double-Bass-Muster ohne zwei Bassdrums spielen lassen.\n\nDie Physik des Spielgefühls: Der Antrieb (Kette = haltbar, Direktantrieb = unmittelbare, schnelle Ansprache, Riemen = leicht) und die Federspannung verändern den Rückschlag — lockerer fühlt sich leichter an, reagiert aber träger; straffer bringt den Beater schneller zurück, kostet aber mehr Kraft. Das Beater-Material verschiebt den Klang: Filz ist weicher, ein Plastik- oder Hartbeater bringt Attack und Klick, der schnelle Kicks durchsetzen lässt.\n\nEmpfehlung für Metal: ein solides Double-Pedal, Antrieb und Federspannung auf die eigene Fußtechnik abgestimmt, und ein härterer Beater für Definition bei Double Bass und Blasts. Wie bei allem Tempotraining gilt: Fuß-Ausdauer über Wochen aufbauen — Verkrampfung ist ein Signal zum Pausieren, nicht zum Weitermachen; bei Schmerzen in Fuß, Schienbein oder Knie sofort stoppen und ärztlich abklären lassen."
       },
       "reflexionsaufgabe": {
         "de": "Passt deine Fußmaschine zu deiner Technik — Antrieb und Federspannung so eingestellt, dass Rückschlag und Kontrolle stimmen? Hilft dir ein härterer Beater, schnelle Kicks definierter zu machen? Und baust du Fuß-Ausdauer schrittweise auf, statt bei Verkrampfung weiterzudrücken?"
