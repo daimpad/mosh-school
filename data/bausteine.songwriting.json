@@ -47,7 +47,7 @@
         "powerchords"
       ],
       "erklaerteil": {
-        "de": "Ein einzelnes Riff ist noch kein Part. Damit daraus ein Songabschnitt wird — Vers, Refrain, Breakdown — braucht das Riff Wiederholung, Variation und eine klare Länge. Genau das ist Handwerk: ein Riff so oft wiederholen, dass es sich setzt, und es dann variieren (ein rhythmischer Akzent, ein anderer Abschluss, eine Antwortphrase), damit es nicht langweilig wird.\n\nEin Part umfasst meist eine feste Anzahl Takte (4 oder 8), damit die Band sich orientieren kann. Die Frage bei der Entwicklung lautet: Was will dieses Riff werden — ein treibender Vers oder ein schwerer Refrain? Dieselbe Grundidee kann beides tragen, je nach Tempo, Dichte und Wiederholung.\n\nEntwickeln heißt auch weglassen: Nicht jede Variante muss in den Part. Ein klarer, geschlossener Abschnitt wirkt stärker als ein überladener."
+        "de": "Ein einzelnes Riff ist noch kein Part. Damit daraus ein Songabschnitt wird — Strophe, Refrain, Breakdown — braucht das Riff Wiederholung, Variation und eine klare Länge. Genau das ist Handwerk: ein Riff so oft wiederholen, dass es sich setzt, und es dann variieren (ein rhythmischer Akzent, ein anderer Abschluss, eine Antwortphrase), damit es nicht langweilig wird.\n\nEin Part umfasst meist eine feste Anzahl Takte (4 oder 8), damit die Band sich orientieren kann. Die Frage bei der Entwicklung lautet: Was will dieses Riff werden — eine treibende Strophe oder ein schwerer Refrain? Dieselbe Grundidee kann beides tragen, je nach Tempo, Dichte und Wiederholung.\n\nEntwickeln heißt auch weglassen: Nicht jede Variante muss in den Part. Ein klarer, geschlossener Abschnitt wirkt stärker als ein überladener."
       },
       "uebungsteil": {
         "de": {
@@ -298,7 +298,7 @@
           "schritte": [
             "Nehmt zwei fertige Parts und legt fest, wie ihr von A nach B kommt — harter Schnitt, Fill, Break oder Aufbau.",
             "Übt nur die zwei Takte um den Übergang in der Schleife.",
-            "Spielt A – Übergang – B am Stück und prüft, ob der Wechsel gemeinsam sitzt und trägt."
+            "Spielt A → Übergang → B am Stück und prüft, ob der Wechsel gemeinsam sitzt und trägt."
           ],
           "steigerung": "Baut denselben Übergang einmal als harten Schnitt und einmal als Aufbau und vergleicht die Wirkung.",
           "selbstkontrolle": "Der Übergang sitzt bei allen gemeinsam; der Wechsel wirkt gewollt, nicht zufällig."
@@ -747,7 +747,7 @@
         "uebergaenge_arrangieren"
       ],
       "erklaerteil": {
-        "de": "Ein ganzer Song ist mehr als eine Kette guter Parts — er ist eine Dramaturgie. Arrangieren heißt, die Parts in eine Reihenfolge zu bringen, die Spannung aufbaut und hält: Intro, Vers, Refrain, Breakdown, und wo der Höhepunkt sitzt. Nicht jedes gute Riff gehört in jeden Song; manchmal ist Streichen das eigentliche Handwerk.\n\nEin häufiger Anfängerfehler ist, Riffs ohne roten Faden aneinanderzureihen. Ein Song braucht eine tragende Idee und einen Verlauf: Wo ist er am leersten, wo am dichtesten, und kommt der Höhepunkt an der richtigen Stelle? Wiederholung schafft Wiedererkennung — ein Refrain, der zweimal kommt, bleibt hängen.\n\nArrangement ist auch Ökonomie: Ein straffer Song mit klarem Bogen wirkt stärker als ein langer, der alles zeigen will. Fragt euch bei jedem Part, ob er dem Ganzen dient."
+        "de": "Ein ganzer Song ist mehr als eine Kette guter Parts — er ist eine Dramaturgie. Arrangieren heißt, die Parts in eine Reihenfolge zu bringen, die Spannung aufbaut und hält: Intro, Strophe, Refrain, Breakdown, und wo der Höhepunkt sitzt. Nicht jedes gute Riff gehört in jeden Song; manchmal ist Streichen das eigentliche Handwerk.\n\nEin häufiger Anfängerfehler ist, Riffs ohne roten Faden aneinanderzureihen. Ein Song braucht eine tragende Idee und einen Verlauf: Wo ist er am leersten, wo am dichtesten, und kommt der Höhepunkt an der richtigen Stelle? Wiederholung schafft Wiedererkennung — ein Refrain, der zweimal kommt, bleibt hängen.\n\nArrangement ist auch Ökonomie: Ein straffer Song mit klarem Bogen wirkt stärker als ein langer, der alles zeigen will. Fragt euch bei jedem Part, ob er dem Ganzen dient."
       },
       "reflexionsaufgabe": {
         "de": "Wie ordnet ihr eure Parts zu einem Bogen mit Aufbau und Höhepunkt? Welche Idee trägt den Song — und welchen guten Part streicht ihr, weil er hier nicht hingehört? Wo ist der Song am leersten, wo am dichtesten, und wie endet er, damit er in Erinnerung bleibt?"
@@ -819,10 +819,10 @@
         "metronom_prinzip"
       ],
       "erklaerteil": {
-        "de": "Bevor der erste Ton aufgenommen wird, entscheidet die Pre-Production, wie reibungslos und gut eine Aufnahme wird. Pre-Production heißt: Die Songs sind fertig arrangiert, die Tempos stehen fest (zum Klick), die Parts sind so verinnerlicht, dass sie unter Aufnahmebedingungen sitzen, und jeder kennt den Ablauf.\n\nDie Tempos vorher festzulegen ist fast Pflicht, weil zum Klick aufgenommen wird und sich die Spuren sonst nicht sauber übereinanderlegen lassen. Schwächen, die hier auffallen — ein wackliger Übergang, ein unklarer Part — sind jetzt billig zu beheben und später teuer. Deshalb ist Pre-Production Hausaufgabe, nicht Glamour, und sie entscheidet über die Demo mehr als teures Equipment.\n\nGeht die Songs bewusst durch: Steht jeder Part, ist jedes Tempo gesetzt, und weiß jeder, was in welcher Reihenfolge passiert? Was hier sitzt, spart im Studio Zeit, Geld und Nerven."
+        "de": "Bevor der erste Ton aufgenommen wird, entscheidet die Pre-Production, wie reibungslos und gut eine Aufnahme wird. Pre-Production heißt: Die Songs sind fertig arrangiert, die Tempi stehen fest (zum Klick), die Parts sind so verinnerlicht, dass sie unter Aufnahmebedingungen sitzen, und jeder kennt den Ablauf.\n\nDie Tempi vorher festzulegen ist fast Pflicht, weil zum Klick aufgenommen wird und sich die Spuren sonst nicht sauber übereinanderlegen lassen. Schwächen, die hier auffallen — ein wackliger Übergang, ein unklarer Part — sind jetzt billig zu beheben und später teuer. Deshalb ist Pre-Production Hausaufgabe, nicht Glamour, und sie entscheidet über die Demo mehr als teures Equipment.\n\nGeht die Songs bewusst durch: Steht jeder Part, ist jedes Tempo gesetzt, und weiß jeder, was in welcher Reihenfolge passiert? Was hier sitzt, spart im Studio Zeit, Geld und Nerven."
       },
       "reflexionsaufgabe": {
-        "de": "Stehen eure Songs, Tempos (zum Klick) und Parts so fest, dass sie unter Aufnahmebedingungen sitzen? Welche Schwächen — wackliger Übergang, unklarer Part — räumt ihr jetzt aus, statt sie in die Aufnahme zu tragen? Und kennt jeder den Ablauf, bevor die Aufnahme beginnt?"
+        "de": "Stehen eure Songs, Tempi (zum Klick) und Parts so fest, dass sie unter Aufnahmebedingungen sitzen? Welche Schwächen — wackliger Übergang, unklarer Part — räumt ihr jetzt aus, statt sie in die Aufnahme zu tragen? Und kennt jeder den Ablauf, bevor die Aufnahme beginnt?"
       }
     }
   ]

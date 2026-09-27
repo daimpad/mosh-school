@@ -21,7 +21,8 @@
       "typ": "micro",
       "stil": [
         "black_metal",
-        "metalcore"
+        "metalcore",
+        "deathcore"
       ],
       "voraussetzungen": [
         "verzerrung_prinzip",
@@ -222,7 +223,7 @@
           "ziel": "Text unter Verzerrung verständlich halten, ohne den Ansatz zu verändern.",
           "schritte": [
             "Sprich eine kurze Zeile überdeutlich und beobachte die Bewegungen von Lippen, Zunge und Kiefer.",
-            "Leg dieselbe Zeile leise über deinen rauen Ansatz und behalte exakt dieselben Mundbewegungen bei.",
+            "Wärm die Stimme auf, leg dann dieselbe Zeile leise über deinen rauen Ansatz und behalte exakt dieselben Mundbewegungen bei — bei Kratzen oder Enge sofort stoppen.",
             "Nimm dich auf und prüf: Ist der Text verständlich, ohne dass der Klang enger wird?"
           ],
           "steigerung": "Längere Zeilen und schnellere Passagen artikulieren; Konsonanten bewusst als rhythmische Akzente setzen.",
@@ -260,7 +261,7 @@
           "schritte": [
             "Nimm eine Textpassage von vier Zeilen und markiere, wo geatmet werden soll — vorzugsweise in Riff-Pausen.",
             "Sprich die Passage rhythmisch zum Klick und atme exakt an den Markierungen.",
-            "Trag sie dann in deinem (leisen) harschen Ansatz vor und prüf, ob die Luft bis zu jeder Markierung reicht."
+            "Wärm die Stimme auf, trag die Passage dann in deinem (leisen) harschen Ansatz vor und prüf, ob die Luft bis zu jeder Markierung reicht — bei Kratzen sofort stoppen."
           ],
           "steigerung": "Markierungen reduzieren und Phrasen verlängern — nur soweit die Stütze stabil bleibt.",
           "selbstkontrolle": "Kein hektisches Schnappen; jede Phrase endet mit Restluft, und die Betonungen sitzen wie geplant."
@@ -301,12 +302,12 @@
           "titel": "Register-Reset üben",
           "ziel": "Zwischen harschem und klarem Ansatz wechseln, ohne dass einer den anderen verschleppt.",
           "schritte": [
-            "Sing zwei Takte einer einfachen Clean-Melodie, dann zwei Takte Pause, dann zwei Takte leisen Harsh — im Loop.",
+            "Wärm die Stimme auf, dann sing zwei Takte einer einfachen Clean-Melodie, dann zwei Takte Pause, dann zwei Takte leisen Harsh — im Loop.",
             "Nutze die Pause bewusst: Nachatmen, Kiefer lockern, den neuen Ansatz gezielt abrufen.",
             "Verkürze die Pause schrittweise auf einen Schlag und prüf, ob beide Klänge unverändert frei bleiben."
           ],
           "steigerung": "Die Wechsel in eine echte Songpassage übertragen und dynamische Unterschiede gestalten.",
-          "selbstkontrolle": "Der Clean bleibt nach dem Harsh frei und klar; kein Klang wird vom vorherigen enger oder rauer."
+          "selbstkontrolle": "Der Clean bleibt nach dem Harsh frei und klar; kein Klang wird vom vorherigen enger oder rauer. Kratzt es oder wird es eng, brich sofort ab."
         }
       }
     },
