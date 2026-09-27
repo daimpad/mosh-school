@@ -214,7 +214,7 @@
           "schritte": [
             "Lass eine tiefe Saite offen klingen oder halte einen tiefen Ton als Fundament.",
             "Spiele darüber einen zweiten Ton eine kleine Sekunde entfernt und höre die Reibung gegen das Fundament.",
-            "Bewege den zweiten Ton schrittweise weiter weg und höre, wie die Spannung nachlässt.",
+            "Bewege den zweiten Ton schrittweise weiter weg bis zur Quinte und höre, wie die Spannung nachlässt — nur am Tritonus kurz davor zieht sie noch einmal an.",
             "Halte auf einer stark reibenden Stelle an und entscheide bewusst, ob du auflöst.",
             "Nimm eine kurze Figur auf, in der die Reibung einmal gehalten und einmal aufgelöst wird."
           ],
@@ -245,8 +245,8 @@
           },
           {
             "schritt": 2,
-            "saite": 5,
-            "bund": 1,
+            "saite": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
@@ -257,8 +257,8 @@
           },
           {
             "schritt": 6,
-            "saite": 5,
-            "bund": 1,
+            "saite": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
@@ -269,8 +269,8 @@
           },
           {
             "schritt": 10,
-            "saite": 5,
-            "bund": 3,
+            "saite": 4,
+            "bund": 5,
             "technik": "normal"
           },
           {
@@ -281,8 +281,8 @@
           },
           {
             "schritt": 14,
-            "saite": 5,
-            "bund": 3,
+            "saite": 4,
+            "bund": 5,
             "technik": "normal"
           },
           {
@@ -293,8 +293,8 @@
           },
           {
             "schritt": 18,
-            "saite": 5,
-            "bund": 5,
+            "saite": 4,
+            "bund": 7,
             "technik": "normal"
           },
           {
@@ -305,8 +305,8 @@
           },
           {
             "schritt": 22,
-            "saite": 5,
-            "bund": 5,
+            "saite": 4,
+            "bund": 7,
             "technik": "normal"
           },
           {
@@ -317,8 +317,8 @@
           },
           {
             "schritt": 26,
-            "saite": 5,
-            "bund": 7,
+            "saite": 4,
+            "bund": 9,
             "technik": "normal"
           },
           {
@@ -329,12 +329,12 @@
           },
           {
             "schritt": 30,
-            "saite": 5,
-            "bund": 7,
+            "saite": 4,
+            "bund": 9,
             "technik": "normal"
           }
         ],
-        "hinweis": "Die leere tiefe Saite bleibt als Fundament stehen, der zweite Ton wandert schrittweise weg: kleine Sekunde, kleine Terz, Quarte, Quinte. Die Spannung lässt hörbar nach — deshalb ist Reibung eine Entscheidung und kein Zufall."
+        "hinweis": "Die leere tiefe Saite bleibt als Fundament stehen, der zweite Ton wandert schrittweise weg: kleine Sekunde, kleine Terz, Quarte, Quinte — jeweils eine Oktave höher. Die Spannung lässt hörbar nach — deshalb ist Reibung eine Entscheidung und kein Zufall."
       }
     },
     {

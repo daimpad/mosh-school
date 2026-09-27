@@ -80,7 +80,7 @@
             "Betone anschließend nur die Zwischenschläge und höre den Zug, der entsteht.",
             "Nimm zwei Fassungen auf und beschreibe den Unterschied in eigenen Worten."
           ],
-          "steigerung": "Lege die Akzentfolge über zwei Takte, sodass sie sich erst nach acht Schlägen wiederholt.",
+          "steigerung": "Lege die Akzentfolge über zwei Takte, sodass sie sich erst nach sechzehn Achteln wiederholt.",
           "selbstkontrolle": "Bleibt der Puls beim Verschieben stabil? Kannst du benennen, wie sich der Charakter ändert?"
         }
       },
@@ -303,13 +303,13 @@
             ]
           }
         ],
-        "hinweis": "Dieselben sechzehn Schläge, viermal — nur der Akzent wandert um je eine Zählzeit. Hör hin, wie sich das Metrum verschiebt, obwohl sich nichts an der Figur ändert."
+        "hinweis": "Dieselben sechzehn Schläge, viermal — nur der Akzent wandert um je eine Zählzeit. Hör hin, wie sich der Schwerpunkt verschiebt, obwohl sich nichts an der Figur ändert."
       }
     },
     {
       "id": "ungerade_metren",
       "anzeigetitel": {
-        "de": "Ungerade Metren verstehen"
+        "de": "Ungerade Metren üben: Gruppen statt Zählen"
       },
       "domaene": [
         "theorie"
@@ -319,13 +319,14 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Ungerade Metren wie Fünf oder Sieben wirken kompliziert, sind es aber nicht — sie sind Kombinationen aus Zweier- und Dreiergruppen. Sieben Achtel sind je nach Aufteilung zwei plus zwei plus drei, zwei plus drei plus zwei oder drei plus zwei plus zwei; fünf sind zwei plus drei oder drei plus zwei. Die Gruppierung entscheidet über das Gefühl, nicht die Zahl.\n\nDeshalb ist Zählen der schlechteste Zugang. Zählen ist eine bewusste Tätigkeit und bricht bei Tempo zusammen; Gruppen dagegen erkennt man als rhythmische Gestalten wieder, so wie man Wörter erkennt, ohne Buchstaben zu zählen. Wer eine Siebenergruppe als kurz-kurz-lang fühlt, kann sie schnell spielen; wer bis sieben zählt, kann es nicht.\n\nDaraus ergibt sich der praktische Weg: die Gruppen laut mitsprechen, zunächst nur einen Schlag pro Gruppenanfang spielen und den Klick auf die Gruppenanfänge legen statt auf jede Zählzeit. Erst wenn die Kette von selbst läuft, kommt das Riff darüber. Ungerade Metren sind kein Rechenproblem, sondern ein Wiedererkennungsproblem."
+        "de": "Dass ungerade Metren wie Fünf oder Sieben nur Kombinationen aus Zweier- und Dreiergruppen sind, ist schnell verstanden — hier geht es darum, wie du sie übst, ohne zu zählen. Sieben Achtel sind je nach Aufteilung zwei plus zwei plus drei, zwei plus drei plus zwei oder drei plus zwei plus zwei; fünf sind zwei plus drei oder drei plus zwei. Die Gruppierung entscheidet über das Gefühl, nicht die Zahl.\n\nDeshalb ist Zählen der schlechteste Zugang. Zählen ist eine bewusste Tätigkeit und bricht bei Tempo zusammen; Gruppen dagegen erkennt man als rhythmische Gestalten wieder, so wie man Wörter erkennt, ohne Buchstaben zu zählen. Wer eine Siebenergruppe als kurz-kurz-lang fühlt, kann sie schnell spielen; wer bis sieben zählt, kann es nicht.\n\nDaraus ergibt sich der praktische Weg: die Gruppen laut mitsprechen, zunächst nur einen Schlag pro Gruppenanfang spielen und den Klick auf die Gruppenanfänge legen statt auf jede Zählzeit. Erst wenn die Kette von selbst läuft, kommt das Riff darüber. Ungerade Metren sind kein Rechenproblem, sondern ein Wiedererkennungsproblem."
       },
       "reflexionsaufgabe": {
         "de": "Fühlst du ungerade Metren als Gruppen oder zählst du mit? Sprichst du die Gruppen mit, bevor du spielst? Und legst du den Klick auf die Gruppenanfänge, statt gegen jede Zählzeit anzukämpfen?"
       },
       "voraussetzungen": [
-        "puls_und_metrum"
+        "puls_und_metrum",
+        "ungerade_takte_theorie"
       ]
     },
     {

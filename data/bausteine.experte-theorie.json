@@ -118,15 +118,15 @@
         "ungerade_takte_theorie"
       ],
       "erklaerteil": {
-        "de": "Die metrische Modulation ist der raffinierteste Tempo-Trick der Musik: Eine Unterteilung des alten Tempos wird zur Zählzeit des neuen. Das klassische Beispiel — die Triole wird zur neuen Viertel: Was eben noch „drei auf einen Schlag“ war, ist plötzlich der Puls selbst, und der Song läuft im Verhältnis 3:2 schneller, ohne dass irgendwo ein Bruch zu hören wäre.\n\nProgressive-Metal-Bands nutzen das für Übergänge, die sich wie Verwandlungen anfühlen: Das Tempo kippt organisch, weil das Ohr die Brücke — die gemeinsame Unterteilung — schon kennt, bevor sie zum neuen Puls wird. Der Effekt ist das Gegenteil des harten Schnitts: nicht Schock, sondern Morphing.\n\nPraktisch entsteht die Modulation in drei Schritten: die Brücken-Unterteilung im alten Tempo etablieren (hörbar machen!), sie einen Moment lang als Hauptereignis behandeln, dann den neuen Puls darauf aufbauen. Wer das als Zählübung beherrscht, erkennt metrische Modulationen beim Hören — und kann sie im Songwriting als Geheimwaffe einsetzen."
+        "de": "Die metrische Modulation ist der raffinierteste Tempo-Trick der Musik: Eine Unterteilung des alten Tempos wird zur Zählzeit des neuen. Das klassische Beispiel — die Vierteltriole wird zur neuen Viertel: Was eben noch „drei auf zwei Schläge“ war, ist plötzlich der Puls selbst, und der Song läuft im Verhältnis 3:2 schneller, ohne dass irgendwo ein Bruch zu hören wäre.\n\nProgressive-Metal-Bands nutzen das für Übergänge, die sich wie Verwandlungen anfühlen: Das Tempo kippt organisch, weil das Ohr die Brücke — die gemeinsame Unterteilung — schon kennt, bevor sie zum neuen Puls wird. Der Effekt ist das Gegenteil des harten Schnitts: nicht Schock, sondern Morphing.\n\nPraktisch entsteht die Modulation in drei Schritten: die Brücken-Unterteilung im alten Tempo etablieren (hörbar machen!), sie einen Moment lang als Hauptereignis behandeln, dann den neuen Puls darauf aufbauen. Wer das als Zählübung beherrscht, erkennt metrische Modulationen beim Hören — und kann sie im Songwriting als Geheimwaffe einsetzen."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Die Triole wird zur Viertel",
+          "titel": "Die Vierteltriole wird zur Viertel",
           "ziel": "Eine metrische Modulation klatschen und den Tempokipp bewusst vollziehen.",
           "schritte": [
-            "Klatsch Viertel zu einem Klick und sprich Triolen darüber („1-o-le“), bis beide stabil nebeneinander stehen.",
-            "Verlagere den Fokus: Klatsch jetzt die Triolen als Hauptschläge, während der alte Klick weiterläuft — spür, wie sich ein neues, schnelleres Tempo etabliert.",
+            "Klatsch Viertel zu einem Klick und sprich Vierteltriolen darüber — drei gleichmäßige Silben über je zwei Klicks („1-o-le“) —, bis beide stabil nebeneinander stehen.",
+            "Verlagere den Fokus: Klatsch jetzt die Vierteltriolen als Hauptschläge, während der alte Klick weiterläuft — spür, wie sich ein neues, schnelleres Tempo etabliert.",
             "Lass den alten Klick los (Metronom stoppen oder ignorieren) und zähl im neuen Tempo weiter — die Modulation ist vollzogen."
           ],
           "steigerung": "Den umgekehrten Weg üben (neues Tempo zurück ins alte) und das Verhältnis benennen (3:2).",
@@ -162,10 +162,10 @@
           "ziel": "Gegenbewegung, Parallelen und Unisono bewusst als Gestaltungszustände einsetzen.",
           "schritte": [
             "Schreibe (oder singe) eine einfache Acht-Ton-Linie als erste Stimme — sie muss allein funktionieren.",
-            "Setz eine zweite Stimme dagegen: erst vier Töne in Gegenbewegung, dann vier in parallelen Terzen.",
-            "Spiel oder singe beide zusammen (Aufnahme/Loop) und markiere, wo Weite, wo Glanz entsteht."
+            "Setz eine zweite Stimme dagegen: erst drei Töne in Gegenbewegung, dann drei in parallelen Terzen, zum Schluss zwei im Unisono.",
+            "Spiel oder singe beide zusammen (Aufnahme/Loop) und markiere, wo Weite, wo Glanz und wo Kraft entsteht."
           ],
-          "steigerung": "Einen Unisono-Moment als Kraftpunkt einbauen und die Wirkung des Auseinandergehens danach beschreiben.",
+          "steigerung": "Eine Passage in parallelen Quinten als archaische Farbe einbauen und ihre Wirkung mit den parallelen Terzen vergleichen.",
           "selbstkontrolle": "Beide Stimmen sind einzeln singbar, und die Zustandswechsel (gegen/parallel/unisono) sind hörbar gestaltet."
         }
       }
@@ -206,7 +206,8 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "arrangement_dichte"
+        "arrangement_dichte",
+        "mischen_grundlagen"
       ],
       "erklaerteil": {
         "de": "Warum klingen manche Metal-Mixe erdrückend klar und andere wie eine Wand aus Brei? Die Antwort heißt fast immer Maskierung: Zwei Klänge, die dieselben Frequenzen besetzen, löschen sich gegenseitig die Konturen. Bassdrum und Bass streiten um die Tiefe, Gitarrenwände und Vocals um die Mitten, Becken und Verzerrungs-Fizz um die Höhen — und wer den Streit nicht schlichtet, bekommt Matsch, egal wie gut gespielt wurde.\n\nDie Grundwerkzeuge der Schlichtung: jedem Element einen Frequenz-Schwerpunkt zuweisen (der Bass bekommt den Tiefbass, die Bassdrum den Klick-Attack darüber — oder umgekehrt, aber entschieden); Platz schaffen durch Wegnehmen statt Aufdrehen (die Gitarren im Tiefbass beschneiden macht den Bass groß); und verstehen, dass Lautheit im Mix aus Frequenz-Platz entsteht, nicht aus dem Fader.\n\nDieses Wissen zahlt direkt in dein Spielen und Schreiben ein: Ein Riff, das live matscht, ist oft ein Arrangement-Problem (alle im selben Register), das kein Mischpult retten kann. Wer Frequenzen denkt, schreibt Parts, die sich von selbst mischen — die halbe Produktion passiert im Proberaum."

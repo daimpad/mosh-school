@@ -10,7 +10,7 @@
     {
       "id": "warum_powerchords",
       "anzeigetitel": {
-        "de": "Warum Powerchords funktionieren"
+        "de": "Powerchords: offen statt festgelegt"
       },
       "domaene": [
         "theorie",
@@ -21,14 +21,15 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Der Powerchord besteht nur aus zwei verschiedenen Tönen: einem Grundton und seiner Quinte, meist ergänzt durch die Oktave. Er lässt genau den Ton weg, der in einem vollen Akkord über Dur oder Moll entscheidet — die Terz. Deshalb ist er weder fröhlich noch traurig, sondern klanglich neutral und offen.\n\nDas ist kein Mangel, sondern der Grund für seine Eignung in verzerrter Musik. Verzerrung erzeugt zusätzliche Töne, die nicht im Originalsignal stecken; je mehr verschiedene Töne gleichzeitig anliegen, desto mehr Zwischenprodukte entstehen und desto matschiger wird der Klang. Ein Akkord aus drei oder vier verschiedenen Tönen wird bei hoher Verzerrung unsauber, ein Powerchord bleibt stabil — weil Grundton und Quinte in einem sehr einfachen Schwingungsverhältnis stehen und ihre Zwischenprodukte zum Klang passen.\n\nDaraus folgt zweierlei. Erstens: Wer bei hoher Zerre volle Akkorde spielt und Matsch hört, hat kein Ausrüstungsproblem, sondern ein Harmonik-Problem. Zweitens: Die klangliche Neutralität ist eine Freiheit — dieselbe Powerchord-Folge kann bedrohlich oder erhaben wirken, je nachdem, was Tempo, Register und Melodie darüber tun. Der Powerchord legt sich nicht fest."
+        "de": "Der Powerchord legt sich nicht fest — und genau das ist seine Stärke. Er besteht nur aus zwei verschiedenen Tönen: einem Grundton und seiner Quinte, meist ergänzt durch die Oktave. Er lässt genau den Ton weg, der in einem vollen Akkord über Dur oder Moll entscheidet — die Terz. Deshalb ist er weder fröhlich noch traurig, sondern klanglich neutral und offen.\n\nDas ist kein Mangel, sondern der Grund für seine Eignung in verzerrter Musik. Verzerrung erzeugt zusätzliche Töne, die nicht im Originalsignal stecken; je mehr verschiedene Töne gleichzeitig anliegen, desto mehr Zwischenprodukte entstehen und desto matschiger wird der Klang. Ein Akkord aus drei oder vier verschiedenen Tönen wird bei hoher Verzerrung unsauber, ein Powerchord bleibt stabil — weil Grundton und Quinte in einem sehr einfachen Schwingungsverhältnis stehen und ihre Zwischenprodukte zum Klang passen.\n\nDaraus folgt zweierlei. Erstens: Wer bei hoher Zerre volle Akkorde spielt und Matsch hört, hat kein Ausrüstungsproblem, sondern ein Harmonik-Problem. Zweitens: Die klangliche Neutralität ist eine Freiheit — dieselbe Powerchord-Folge kann bedrohlich oder erhaben wirken, je nachdem, was Tempo, Register und Melodie darüber tun. Der Powerchord legt sich nicht fest."
       },
       "reflexionsaufgabe": {
         "de": "Ist dir klar, dass der Powerchord bewusst offen bleibt, weil die entscheidende Terz fehlt? Hast du schon einmal Matsch bei hoher Zerre gehört und die Ursache in der Ausrüstung gesucht statt in der Harmonik? Und nutzt du die Neutralität bewusst, indem du die Wirkung anderswo festlegst?"
       },
       "voraussetzungen": [
         "intervalle_hoeren",
-        "powerchords"
+        "powerchords",
+        "powerchord_theorie"
       ]
     },
     {
@@ -68,7 +69,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Die wirksamste Art, modale Färbung zu begreifen, ist nicht Lesen, sondern Verschieben. Man nimmt eine bestehende Figur und bewegt genau einen Ton um einen Bund — nach oben oder unten — und hört, was mit dem Charakter passiert. Der Rest bleibt unverändert, damit der Unterschied eindeutig zuzuordnen ist.\n\nBesonders aufschlussreich sind zwei Stellen: der zweite Ton über dem Grundton und der Ton, der eine Terz über dem Grundton liegt. Am zweiten Ton entscheidet sich, ob es eng und bedrohlich oder offen klingt; an der Terzstelle entscheidet sich, ob eine Figur dunkel oder hell wirkt. Ein einziger Bund Unterschied kippt die Stimmung vollständig.\n\nDiese Übung ist bewusst ergebnisoffen. Es geht nicht darum, die richtige Skala zu finden, sondern darum, den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung selbst zu hören. Wer das einmal am eigenen Riff erlebt hat, braucht dafür nie wieder eine Tabelle."
+        "de": "Die wirksamste Art, modale Färbung zu begreifen, ist nicht Lesen, sondern Verschieben. Man nimmt eine bestehende Figur und bewegt genau einen Ton um einen Bund — nach oben oder unten — und hört, was mit dem Charakter passiert. Der Rest bleibt unverändert, damit der Unterschied eindeutig zuzuordnen ist.\n\nBesonders aufschlussreich sind zwei Stellen: die zweite Stufe (ein Ganzton über dem Grundton) und der Ton, der eine Terz über dem Grundton liegt. An der zweiten Stufe entscheidet sich, ob es eng und bedrohlich oder offen klingt; an der Terzstelle entscheidet sich, ob eine Figur dunkel oder hell wirkt. Ein einziger Bund Unterschied kippt die Stimmung vollständig.\n\nDiese Übung ist bewusst ergebnisoffen. Es geht nicht darum, die richtige Skala zu finden, sondern darum, den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung selbst zu hören. Wer das einmal am eigenen Riff erlebt hat, braucht dafür nie wieder eine Tabelle."
       },
       "uebungsteil": {
         "de": {
@@ -76,7 +77,7 @@
           "ziel": "Den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung erfahren.",
           "schritte": [
             "Spiele eine kurze eigene Figur über einer gehaltenen tiefen Saite und merke dir ihren Charakter.",
-            "Verschiebe den zweiten Ton der Figur um einen Bund nach unten und spiele sie erneut.",
+            "Verschiebe den Ton einen Ganzton über dem Grundton um einen Bund nach unten und spiele sie erneut.",
             "Höre, wie sich die Wirkung ändert, und benenne sie mit eigenen Worten.",
             "Setze den Ton zurück und verschiebe stattdessen den Ton eine Terz über dem Grundton um einen Bund.",
             "Nimm alle Fassungen auf und vergleiche sie nacheinander."
@@ -108,12 +109,12 @@
           {
             "schritt": 1,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 2,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -126,13 +127,13 @@
           {
             "schritt": 5,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 6,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           },
           {
@@ -144,12 +145,12 @@
           {
             "schritt": 9,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 10,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -162,13 +163,13 @@
           {
             "schritt": 13,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 14,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           },
           {
@@ -180,12 +181,12 @@
           {
             "schritt": 17,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 18,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -198,13 +199,13 @@
           {
             "schritt": 21,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 22,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           },
           {
@@ -216,12 +217,12 @@
           {
             "schritt": 25,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 26,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -234,17 +235,17 @@
           {
             "schritt": 29,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 30,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           }
         ],
-        "hinweis": "Zweimal dieselbe Figur über derselben tiefen Saite — im zweiten Durchgang steht genau EIN Ton einen Bund tiefer. Mehr Unterschied gibt es nicht, und der Charakter kippt trotzdem."
+        "hinweis": "Zweimal dieselbe Figur über derselben tiefen Saite — im zweiten Durchgang steht genau EIN Ton einen Bund tiefer: der Ton einen Ganzton über dem Grundton (F# wird zu F). Mehr Unterschied gibt es nicht, und der Charakter kippt trotzdem."
       }
     },
     {

@@ -322,7 +322,7 @@
         "pv_start_stopp"
       ],
       "erklaerteil": {
-        "de": "Powerviolence lebt von kurzen, maximal explosiven Ausbrüchen mit abrupten Stopps. Das ist eher Sprint als Dauerlauf: volle Intensität für wenige Sekunden, dann Bruch. Diese Belastung ist körperlich extrem und verlangt Explosivität und schnelle Erholung statt reiner Ausdauer.\n\nDer Schlüssel ist, die Kraft in den Bursts aus Lockerheit zu holen und in den Pausen bewusst zu entspannen, statt durchgehend verspannt zu sein. Wer zwischen den Ausbrüchen nicht lockerlässt, verkrampft und verletzt sich.\n\nGesundheitsrahmen: gründlich aufwärmen, die Explosivität über Wochen aufbauen, in kurzen Einheiten mit echten Pausen üben. Bei Schmerz in Gelenken, Sehnen oder Rücken sofort stoppen — solche extremen Bursts fordern Handgelenke und Nacken besonders. Bei anhaltenden Beschwerden lass das ärztlich oder physiotherapeutisch abklären."
+        "de": "Powerviolence lebt von kurzen, maximal explosiven Ausbrüchen mit abrupten Stopps. Das ist eher Sprint als Dauerlauf: volle Intensität für wenige Sekunden, dann Bruch. Diese Belastung ist körperlich extrem und verlangt Explosivität und schnelle Erholung statt reiner Ausdauer.\n\nDer Schlüssel ist, die Kraft in den Bursts aus Lockerheit zu holen und in den Pausen bewusst zu entspannen, statt durchgehend verspannt zu sein. Wer zwischen den Ausbrüchen nicht lockerlässt, verkrampft und riskiert Verletzungen.\n\nGesundheitsrahmen: gründlich aufwärmen, die Explosivität über Wochen aufbauen, in kurzen Einheiten mit echten Pausen üben. Bei Schmerz in Gelenken, Sehnen oder Rücken sofort stoppen — solche extremen Bursts fordern Handgelenke und Nacken besonders. Bei anhaltenden Beschwerden lass das ärztlich oder physiotherapeutisch abklären."
       },
       "reflexionsaufgabe": {
         "de": "Holst du die Kraft in den kurzen Ausbrüchen aus Lockerheit und entspannst in den Pausen bewusst, statt durchgehend verspannt zu spielen? Wie wärmst du dich für diese explosive Belastung auf und baust sie über Wochen auf? Und bei welchen Warnzeichen (Gelenke, Sehnen, Nacken) stoppst du sofort?"
@@ -473,7 +473,7 @@
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
-        "tuning": ["E1", "A1", "D2", "G2"],
+        "tuning": ["C1", "F1", "Bb1", "Eb2"],
         "saiten_reihenfolge": "4_ist_tiefste",
         "taktart": "4/4",
         "bpm": 58,
@@ -506,7 +506,7 @@
             "technik": "normal"
           }
         ],
-        "hinweis": "Vier lange, tiefe Töne über zwei Takte. Mit Fuzz wird jeder Ton größer — deshalb so wenige. Die Wand entsteht aus gemeinsamem Anschlag UND gemeinsamer Länge mit der Gitarre, nicht aus mehr Noten."
+        "hinweis": "Vier lange, tiefe Töne über zwei Takte, in C-Standard gestimmt. Mit Fuzz wird jeder Ton größer — deshalb so wenige. Die Wand entsteht aus gemeinsamem Anschlag UND gemeinsamer Länge mit der Gitarre, nicht aus mehr Noten."
       }
     },
     {

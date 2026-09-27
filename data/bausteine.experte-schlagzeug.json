@@ -1623,7 +1623,8 @@
       ],
       "typ": "micro",
       "voraussetzungen": [
-        "timing_klick"
+        "timing_klick",
+        "drums_aufnehmen_diy"
       ],
       "spielziele": [
         "timing_zum_klick"
