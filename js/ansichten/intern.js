@@ -63,7 +63,7 @@ function schlossHtml() {
         </div>
         <button type="submit" class="knopf knopf-primaer">${esc(t('intern_oeffnen'))}</button>
       </form>
-      <p id="intern-pw-fehler" class="intern-fehler" role="alert" aria-live="polite"></p>
+      <p id="intern-pw-fehler" class="intern-fehler" role="alert"></p>
     </section>`;
 }
 
@@ -139,6 +139,9 @@ function zeichneInhalt(el) {
   const knopf = form?.querySelector('button[type=submit]');
   const fehler = bereich.querySelector('#intern-pw-fehler');
   feld?.focus();
+  // Nach einem Fehlversuch markiert aria-invalid das Feld; sobald wieder getippt
+  // wird, gilt die Eingabe als neu und die Markierung fällt weg.
+  feld?.addEventListener('input', () => feld.removeAttribute('aria-invalid'));
   form?.addEventListener('submit', async (ereignis) => {
     ereignis.preventDefault();
     // Die Schlüsselableitung dauert auf einem älteren Telefon rund eine
@@ -156,6 +159,7 @@ function zeichneInhalt(el) {
         knopf.textContent = t('intern_oeffnen');
       }
       if (fehler) fehler.textContent = t('intern_pw_falsch');
+      feld?.setAttribute('aria-invalid', 'true');
       feld?.select();
       return;
     }

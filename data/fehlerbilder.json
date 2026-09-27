@@ -329,7 +329,7 @@
         "de": {
           "symptom": "Der Klang ist gepresst und flach, schnelle Passagen ermüden sofort, und der Stick prallt kaum zurück — jeder Schlag muss aktiv herausgehoben werden.",
           "ursache": "Der Stick wird umklammert: Alle Finger pressen, das Fulcrum ist verspannt, und der natürliche Rückprall wird abgewürgt, sodass jede Bewegung doppelt kostet.",
-          "korrektur": "Zurück zum freien Fall: Den Stick aus geringer Höhe auf das Fell fallen lassen und den Rückprall beobachten — die Finger führen nur, sie halten nicht fest. Das lockere Fulcrum (Daumen–Zeigefinger) isoliert spüren lassen, dann langsame gleichmäßige Schläge, bei denen der Stick sichtbar zurückspringt."
+          "korrektur": "Zurück zum freien Fall: Den Stick aus geringer Höhe auf das Fell fallen lassen und den Rückprall beobachten — die Finger führen nur, sie halten nicht fest. Das lockere Fulcrum (Daumen-Zeigefinger) isoliert spüren lassen, dann langsame gleichmäßige Schläge, bei denen der Stick sichtbar zurückspringt."
         }
       }
     },
@@ -479,7 +479,7 @@
         "de": {
           "symptom": "Das Vibrato ist ein schnelles, flaches Zittern; Weite und Geschwindigkeit wechseln unkontrolliert, jeder lange Ton klingt anders.",
           "ursache": "Die Bewegung kommt aus den Fingern statt aus einer geführten Handgelenksrotation, und es gibt kein bewusstes Ziel für Auslenkung und Tempo — das Vibrato passiert, statt gestaltet zu werden.",
-          "korrektur": "Koppel das Vibrato ans Metronom: eine definierte Zahl gleichmäßiger Auslenkungen pro Schlag in langsamem Tempo üben lassen, aus der Rotation des Handgelenks. Danach Weite und Geschwindigkeit als getrennte Parameter variieren lassen (schmal/breit, langsam/schnell). Erst freigeben, wenn die übende Person ein angesagtes Vibrato reproduzieren kann."
+          "korrektur": "Kopple das Vibrato ans Metronom: eine definierte Zahl gleichmäßiger Auslenkungen pro Schlag in langsamem Tempo üben lassen, aus der Rotation des Handgelenks. Danach Weite und Geschwindigkeit als getrennte Parameter variieren lassen (schmal/breit, langsam/schnell). Erst freigeben, wenn die übende Person ein angesagtes Vibrato reproduzieren kann."
         }
       }
     },
@@ -494,7 +494,7 @@
         "de": {
           "symptom": "Beim Überspringen klingt die ausgelassene Saite mit oder wird versehentlich gestreift; auf Aufnahmen liegt ein leises Klingeln unter der Linie.",
           "ursache": "Die Anschlagbewegung ist zu groß und trifft die Zwischensaite, und für die übersprungene Saite existiert keine Dämpfungsstrategie — weder Handballen noch freie Greiffinger legen sie still.",
-          "korrektur": "Verlangsame die Figur stark und lass die Dämpfung explizit mitplanen: Handballen führt über den tiefen, flach aufliegende Greiffinger über den hohen Saiten mit. Per Aufnahme mit Verzerrung kontrollieren lassen — dort ist jedes Mitklingen hörbar. Tempo in kleinen Schritten, die Stille der Zwischensaite bleibt das Kriterium."
+          "korrektur": "Verlangsame die Figur stark und lass die Dämpfung explizit mitplanen: Der Handballen dämpft die tiefen Saiten, flach aufliegende Greiffinger dämpfen die hohen. Per Aufnahme mit Verzerrung kontrollieren lassen — dort ist jedes Mitklingen hörbar. Tempo in kleinen Schritten, die Stille der Zwischensaite bleibt das Kriterium."
         }
       }
     },
@@ -643,7 +643,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Das Oberton-Quietschen kommt nur gelegentlich und nie auf Ansage; meist klingt statt des Harmonics ein normaler oder abgedämpfter Ton.",
-          "ursache": "Der Daumen berührt die Saite nach dem Plektrumanschlag nicht, zu lang oder an einer Stelle ohne nutzbaren Obertonknoten — und die Anschlagposition wird nicht als Variable begriffen: Die ergiebigen Zonen liegen je nach gegriffenem Ton an unterschiedlichen Stellen zwischen Steg und Hals.",
+          "ursache": "Der Daumen berührt die Saite nach dem Plektrumanschlag gar nicht, zu lang oder an einer Stelle ohne nutzbaren Obertonknoten — und die Anschlagposition wird nicht als Variable begriffen: Die ergiebigen Zonen liegen je nach gegriffenem Ton an unterschiedlichen Stellen zwischen Steg und Hals.",
           "korrektur": "Lass in Zeitlupe den Bewegungsablauf isolieren: Anschlag und sofortiger, kurzer Daumenkontakt als eine Bewegung. Dann bei gehaltenem Ton die Anschlagzone systematisch in kleinen Schritten Richtung Hals abwandern lassen und die Treffpunkte markieren. Trefferquote messbar machen (z. B. zehn Versuche pro Zone) und erst bei verlässlicher Quote ins Riff einbauen — Steg-Tonabnehmer und ausreichend Verzerrung als Rahmenbedingung prüfen."
         }
       }
@@ -852,7 +852,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Polyrhythmus und Polymetrik werden durcheinander erklärt: Eine verschobene Dreier-Figur über 4/4 wird „drei gegen vier“ genannt, oder ein echtes drei-gegen-vier wird als wandernde Figur beschrieben. In der Probe redet man aneinander vorbei.",
+          "symptom": "Polyrhythmus und Polymetrik werden durcheinander erklärt: Eine verschobene Dreier-Figur über 4/4 wird „drei gegen vier“ genannt, oder ein echtes Drei-gegen-vier wird als wandernde Figur beschrieben. In der Probe redet man aneinander vorbei.",
           "ursache": "Beide Konzepte sind unter demselben Etikett „poly“ abgelegt, ohne die Kernfrage zu trennen: Beim Polyrhythmus teilen zwei Unterteilungen denselben Zeitraum und treffen sich auf jeder Eins — bei der Polymetrik wandert eine ungerade Figur über den Puls und trifft die Eins erst nach mehreren Takten wieder.",
           "korrektur": "Je Begriff ein klatschbares Minimalbeispiel verankern: drei gegen vier mit beiden Händen (gemeinsame Eins jede Runde) gegen eine Dreiergruppe aus Achteln über 4/4 (die Eins wandert). Dann als Testfrage etablieren: „Treffen sich die Einsen jedes Mal?“ — Ja heißt Polyrhythmus, Nein heißt Polymetrik. Erst wenn die Unterscheidung am Körper sitzt, die Fachwörter benutzen."
         }
@@ -1062,7 +1062,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Die Schwere kommt nicht: Zwischen die langsamen Schläge rutschen Fills, Ghost-Notes und Beckenschläge, die Crashes werden früh abgestoppt — der Groove klingt beschäftigt statt erdrückend.",
+          "symptom": "Die Schwere kommt nicht: Zwischen die langsamen Schläge rutschen Fills, Ghost Notes und Beckenschläge, die Crashes werden früh abgestoppt — der Groove klingt beschäftigt statt erdrückend.",
           "ursache": "Die Stille wird als Unsicherheit erlebt und gefüllt: Ohne stabiles inneres Netz fühlt sich der leere Raum zwischen den Backbeats bedrohlich an, und die Hände beruhigen die Nerven mit zusätzlichen Schlägen. Dazu die Midtempo-Gewohnheit, jedes Taktende mit einem Fill zu markieren.",
           "korrektur": "Das Netz vor dem Weglassen trainieren: laut mitgezählte Unterteilung, dann still, dann Klick ausdünnen — erst wenn die Zeit ohne Füllung trägt, verschwindet der Drang. Dann die Radikalkur: vier Takte nur Kick, Snare und ein voll ausklingendes Crash, jeder Impuls zum Füllen wird registriert, aber nicht gespielt. Fills auf maximal drei schwere Schläge rationieren und ihre Wirkung auf der Aufnahme vergleichen."
         }
@@ -1319,7 +1319,7 @@
         "de": {
           "symptom": "Der Grind-Song dauert zwei Minuten: Intro, jedes Riff viermal wiederholt, ein Übergangstakt vor jedem Wechsel — die Verdichtung, die das Genre ausmacht, findet nicht statt.",
           "ursache": "Song-Gewohnheiten aus dem klassischen Metal überleben im falschen Genre: Wiederholung zur Gewöhnung, Aufbau vor dem Höhepunkt, Vorbereitung vor jedem Wechsel. Die Grind-Logik — der Song beginnt auf dem Höhepunkt und jedes Element trägt mehrere Funktionen gleichzeitig — wurde gehört, aber nie aufs eigene Schreiben angewendet.",
-          "korrektur": "Die Sekunden-Analyse zur Pflicht machen: drei Klassiker unter einer Minute protokollieren (wie viele Ereignisse pro dreißig Sekunden?) und den eigenen Song daneben legen. Dann radikal kürzen als Experiment: den Zwei-Minuten-Song auf dreißig Sekunden eindampfen — was bleibt, ist fast immer die bessere Fassung. Prüffrage je Takt: Was leistet er, das kein anderer schon leistet? Keine Antwort, kein Takt."
+          "korrektur": "Die Sekunden-Analyse zur Pflicht machen: drei Klassiker unter einer Minute protokollieren (wie viele Ereignisse pro dreißig Sekunden?) und den eigenen Song danebenlegen. Dann radikal kürzen als Experiment: den Zwei-Minuten-Song auf dreißig Sekunden eindampfen — was bleibt, ist fast immer die bessere Fassung. Prüffrage je Takt: Was leistet er, das kein anderer schon leistet? Keine Antwort, kein Takt."
         }
       }
     },
@@ -1467,9 +1467,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Der fuzzige Riff klingt korrekt, aber tot — er zwingt nicht zum Mitwippen, die Wiederholung langweilt.",
+          "symptom": "Das fuzzige Riff klingt korrekt, aber tot — es zwingt nicht zum Mitwippen, die Wiederholung langweilt.",
           "ursache": "Der Anschlag sitzt zu weit vorn im Puls (gehetzt), die bewusste Lücke im Riff fehlt oder wird zugespielt, und jede Runde klingt exakt gleich.",
-          "korrektur": "Den Riff leicht hinter dem Klick spielen, entspannt statt getrieben, und die Lücke wirklich stehen lassen. Jede Runde minimal variieren (Anschlagshärte, eine Betonung, ein Ghost-Ton); auf der Aufnahme prüfen: Nickt der Kopf?"
+          "korrektur": "Das Riff leicht hinter dem Klick spielen, entspannt statt getrieben, und die Lücke wirklich stehen lassen. Jede Runde minimal variieren (Anschlagshärte, eine Betonung, ein Ghost-Ton); auf der Aufnahme prüfen: Nickt der Kopf?"
         }
       }
     },
@@ -1497,7 +1497,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Der Aufbau kommt oben an, aber es ist keine Luft mehr da — der Crescendo springt in Stufen statt zu wachsen, die Wand wirkt nicht.",
+          "symptom": "Der Aufbau kommt oben an, aber es ist keine Luft mehr da — das Crescendo springt in Stufen statt zu wachsen, die Wand wirkt nicht.",
           "ursache": "Der leise Teil war nicht wirklich leise, deshalb fehlt der Raum nach oben; die Steigerung ist ungleichmäßig, und aus Ungeduld wird zu früh alles gegeben.",
           "korrektur": "Die Grundebene wirklich leise und trotzdem tight spielen (Sticks nah am Fell) — das ist die schwerste und wichtigste Stufe. Dann über viele Takte gleichmäßig wachsen und den Höhepunkt bewusst hinauszögern; Geduld ist die eigentliche Übung."
         }
@@ -1527,9 +1527,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Derselbe Riff soll in mehreren Genre-Farben klingen, aber zwei oder mehr Behandlungen klingen praktisch identisch.",
+          "symptom": "Dasselbe Riff soll in mehreren Genre-Farben klingen, aber zwei oder mehr Behandlungen klingen praktisch identisch.",
           "ursache": "Ein klangbestimmender Parameter wurde nicht umgeschaltet — meist Dämpfung, Ausklang oder Feel; die Töne ändern sich, die Behandlung nicht.",
-          "korrektur": "Pro Genre den entscheidenden Parameter benennen (Tempo, Palm-Mute/offen, Ausklang, Feel) und bewusst umstellen. Die Farben nacheinander aufnehmen und blind zuordnen lassen: Erkennt man die Genres an der Behandlung, obwohl die Töne gleich sind?"
+          "korrektur": "Pro Genre den entscheidenden Parameter benennen (Tempo, Palm Mute/offen, Ausklang, Feel) und bewusst umstellen. Die Farben nacheinander aufnehmen und blind zuordnen lassen: Erkennt man die Genres an der Behandlung, obwohl die Töne gleich sind?"
         }
       }
     },
@@ -1662,7 +1662,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Das Tempo ist nicht stabil — die Rhythmusgruppe zieht an oder wird langsamer. Zum Klick gehört fällt auf, dass beide gemeinsam wegdriften; der Rest der Band folgt notgedrungen.",
+          "symptom": "Das Tempo ist nicht stabil — die Rhythmusgruppe zieht an oder wird langsamer. Gegen den Klick gehört, fällt auf, dass beide gemeinsam wegdriften; der Rest der Band folgt notgedrungen.",
           "ursache": "Einer führt, der andere jagt nach: Statt beide an derselben Referenz auszurichten, hört jeder auf den anderen und reagiert verspätet — ein sich aufschaukelndes Nachziehen.",
           "korrektur": "Lass beide gleichberechtigt auf den Klick spielen, nicht aufeinander. Reduziere das Metronom testweise auf jeden zweiten Schlag, dann auf die Eins, um zu prüfen, ob das gemeinsame Zeitgefühl trägt. Bestimmt über eine Aufnahme gemeinsam, ob sie vor, auf oder hinter dem Klick liegen."
         }
@@ -1768,7 +1768,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Die betonten Riff-Anschläge fallen nicht mit den Bassdrum-Schlägen zusammen — statt eines wuchtigen Impulses hört man zwei dicht aufeinanderfolgende Ereignisse. Bei schnelleren Kick-Figuren zerfasert die Kopplung sichtbar.",
-          "ursache": "Es ist nicht geklärt, welche Riff-Akzente auf welche Kicks fallen; die Gitarre hört auf die Snare oder das eigene Zählen statt auf den Fuß. Bei Double-Bass versucht sie oft, jeden Anschlag zu treffen, statt die Akzente zu setzen.",
+          "ursache": "Es ist nicht geklärt, welche Riff-Akzente auf welche Kicks fallen; die Gitarre hört auf die Snare oder das eigene Zählen statt auf den Fuß. Bei Double Bass versucht sie oft, jeden Anschlag zu treffen, statt die Akzente zu setzen.",
           "korrektur": "Lass Drummer und Gitarrist die gemeinsamen Akzente ausdrücklich benennen. Isoliere die Achse — nur Kick und betonte Anschläge, langsam zum Klick — bis Akzent und Kick als ein Impuls verschmelzen. Steigere das Tempo erst, wenn die Kopplung an den Akzenten sicher sitzt."
         }
       }
@@ -2008,7 +2008,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Powerchords oder Doppelgriffe am Bass klingen matschig; eine der beiden Saiten kommt nicht sauber oder schnarrt.",
-          "ursache": "Ungleicher Fingerdruck und ein zu grober Anschlag lassen die Saiten nicht gleichzeitig und gleich stark klingen; oft dämpft eine Nachbarsaite mit.",
+          "ursache": "Ungleicher Fingerdruck und ein zu grober Anschlag lassen die Saiten nicht gleichzeitig und gleich stark klingen; oft klingt eine Nachbarsaite mit.",
           "korrektur": "Beide Töne einzeln prüfen, dann langsam zusammen — auf gleichzeitigen Anschlag und gleichmäßigen Druck achten. Nebensaiten bewusst abdämpfen und das Tempo erst steigern, wenn beide Töne klar zusammen ansprechen."
         }
       }
@@ -2067,7 +2067,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Der Galopp-Rhythmus verwaschen — die kurzen Noten sind nicht gleichmäßig, das charakteristische Muster verliert seinen Antrieb.",
+          "symptom": "Der Galopp-Rhythmus klingt verwaschen — die kurzen Noten sind nicht gleichmäßig, das charakteristische Muster verliert seinen Antrieb.",
           "ursache": "Die Unterteilung ist nicht sauber verinnerlicht; die Anschlagstärke der schnellen Noten schwankt, und die Hand eilt oder schleppt in den Zwischenschlägen.",
           "korrektur": "Langsam mit Klick, die Unterteilung laut mitzählen und auf gleichmäßige Länge und Stärke der kurzen Noten achten. Erst bei stabilem Muster das Tempo anheben."
         }
@@ -2129,7 +2129,7 @@
         "de": {
           "symptom": "Der melodische Lead-Bass liegt intonatorisch daneben oder verschwindet im Mix, sodass die Melodie nicht trägt.",
           "ursache": "In der hohen Lage stimmt die Intonation nicht sicher, und der Ton hat zu wenig Definition/Mitten, um sich durchzusetzen.",
-          "korrektur": "Ziele auf die sichere Intonation in der hohen Lage (langsam, mit Referenzton) und formt den Ton mit Anschlag und Mitten. Im Bandkontext prüfen, ob die Lead-Linie hörbar bleibt."
+          "korrektur": "Ziele auf die sichere Intonation in der hohen Lage (langsam, mit Referenzton) und forme den Ton mit Anschlag und Mitten. Im Bandkontext prüfen, ob die Lead-Linie hörbar bleibt."
         }
       }
     },
@@ -2472,7 +2472,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Bomb-Blast, Gravity oder andere Spezialform verwaschen — Hände und Füße sind nicht klar zugeordnet.",
+          "symptom": "Bomb Blast, Gravity Blast oder eine andere Spezialform klingt verwaschen — Hände und Füße sind nicht klar zugeordnet.",
           "ursache": "Die Grundform ist noch nicht sicher, und die Zuordnung der Schläge zu Händen und Füßen ist unklar.",
           "korrektur": "Erst den Grundblast stabilisieren, dann eine Spezialform langsam isolieren und die Zuordnung laut ansagen, bevor das Tempo steigt."
         }
@@ -2502,9 +2502,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "An der Tempogrenze wird die Double Bass ungleichmäßig, die Füße verkrampfen und ein Fuß ist deutlich schwächer.",
+          "symptom": "An der Tempogrenze wird der Double Bass ungleichmäßig, die Füße verkrampfen und ein Fuß ist deutlich schwächer.",
           "ursache": "Unökonomische Technik und Dauerspannung statt kleiner, entspannter Impulse; die Füße sind nicht gleich trainiert.",
-          "korrektur": "Eine saubere Technik (Heel-up oder Slide) sauber halten, beide Füße gleich stark, knapp unter der Grenze. Kurze Intervalle mit Pausen; bei Verkrampfung stoppen."
+          "korrektur": "Eine Technik (Heel-up oder Slide) sauber halten, beide Füße gleich stark, knapp unter der Grenze. Kurze Intervalle mit Pausen; bei Verkrampfung stoppen."
         }
       }
     },
@@ -2758,7 +2758,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Das bewusst laid-back gespielte Feel kippt in unkontrolliertes Schleppen und wird instabil.",
-          "ursache": "Bewusst hinter dem Beat liegen wird mit langsamer werden verwechselt; der Klick wird nicht als Anker genutzt.",
+          "ursache": "Bewusst hinter dem Beat zu liegen, wird mit Langsamerwerden verwechselt; der Klick wird nicht als Anker genutzt.",
           "korrektur": "Den Klick als festen Anker halten und bewusst leicht hinter ihm bleiben, ohne das Tempo zu verlieren. Per Aufnahme prüfen, ob es stabil bleibt."
         }
       }
@@ -2863,7 +2863,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Die Synkopen sitzen nicht im Raster, und die tiefe Saite matscht statt tight zu treffen.",
-          "ursache": "Das Timing der Synkopen ist unklar, und das Palm-Muting auf der tiefen Saite ist inkonsistent.",
+          "ursache": "Das Timing der Synkopen ist unklar, und das Palm Muting auf der tiefen Saite ist inkonsistent.",
           "korrektur": "Langsam zum Klick, die Synkopen laut zählen und mit tighter, konstanter Dämpfung spielen. Erst bei sauberem Sitz beschleunigen."
         }
       }
@@ -3027,7 +3027,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Die Palm-Mutes sind inkonsistent — mal offen, mal ganz tot — und nicht tight zum Beat.",
+          "symptom": "Die Palm Mutes sind inkonsistent — mal offen, mal ganz tot — und nicht tight zum Beat.",
           "ursache": "Die Handballen-Position wandert, und der Anschlag ist ungleich stark.",
           "korrektur": "Die Handballen-Position konstant halten und tight zum Klick spielen. Per Aufnahme prüfen, ob alle gedämpften Anschläge gleich klingen."
         }
@@ -3072,9 +3072,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Beim Doubletracking liegen die Spuren nicht übereinander — der Rhythmus verwaschen im Mix.",
+          "symptom": "Beim Doubletracking liegen die Spuren nicht übereinander — der Rhythmus klingt im Mix verwaschen.",
           "ursache": "Das Spiel ist nicht tight genug zum Klick; das Timing schwankt zwischen den Takes.",
-          "korrektur": "Tight zum Klick und langsam sauber spielen, bis das Timing konstant sitzt, dann doppeln. Per Aufnahme prüfen, ob die Spuren decken."
+          "korrektur": "Tight zum Klick und langsam sauber spielen, bis das Timing konstant sitzt, dann doppeln. Per Aufnahme prüfen, ob die Spuren sich decken."
         }
       }
     },
@@ -3147,7 +3147,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Das langsam-giftige Riffing kippt in leblos und schleppend statt drückend.",
+          "symptom": "Das langsam-giftige Riffing kippt ins Leblose und Schleppende, statt zu drücken.",
           "ursache": "Langsam wird ohne Intensität und Ton gespielt; das Gewicht wird nicht gehalten.",
           "korrektur": "Gewicht und Ton über die langsamen Noten halten und bewusst leicht hinter dem Beat, aber stabil bleiben."
         }
@@ -3432,7 +3432,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Die Downtempo-Schläge fallen nicht gemeinsam mit der Kick oder klingen zu leicht.",
+          "symptom": "Die Downtempo-Schläge fallen nicht mit der Kick zusammen oder klingen zu leicht.",
           "ursache": "Zu viele Noten und ungenaues Timing nehmen dem einzelnen Schlag die Wucht.",
           "korrektur": "Auf ganz wenige Schläge reduzieren, jeden exakt mit der Bassdrum setzen und die Pausen still aushalten; Länge und Dreck des Tons maximieren, gemeinsam mit Klick oder Drummer üben."
         }
@@ -3509,7 +3509,7 @@
         "de": {
           "symptom": "Der Groove schleppt oder wird starr, statt entspannt zu rollen.",
           "ursache": "Das Liegen hinter dem Beat wird zu instabil (schleppt) oder gar nicht umgesetzt (marschiert).",
-          "korrektur": "Bewusst minimal hinter den Klick legen, ohne langsamer zu werden; Swing im Hi-Hat und Ghost Notes hinzufügen und am Klick prüfen, dass es treibt und wippt, ohne wegzudriften."
+          "korrektur": "Bewusst minimal hinter den Klick legen, ohne langsamer zu werden; Swing in der Hi-Hat und Ghost Notes hinzufügen und am Klick prüfen, dass es treibt und wippt, ohne wegzudriften."
         }
       }
     },
@@ -3583,7 +3583,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Harmonisch Moll und Phrygisch-Dominant werden nicht sicher unterschieden.",
-          "ursache": "Der übermäßige Sekundschritt als Signal wird nicht gehört.",
+          "ursache": "Beide Skalen enthalten den übermäßigen Sekundschritt; nicht gehört wird, wo er relativ zum Grundton liegt.",
           "korrektur": "Gezielt auf den übermäßigen Sekundschritt hören, beide Skalen direkt vergleichen und den Unterschied am Grundton-Bezug festmachen."
         }
       }
@@ -3628,7 +3628,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Der Ausbruch wirkt kraftlos, obwohl die laute Stelle mit voller Kraft gespielt wird. Auf der Aufnahme ist der Unterschied zwischen beiden Teilen kleiner, als er sich beim Spielen angefühlt hat.",
-          "ursache": "Ist fast immer die leise Passage, nicht die laute: Sie wird aus Unsicherheit zu fest angeschlagen, oft mit stehender Verzerrung. Damit schrumpft die Spannweite, und der Umschlag hat nichts mehr, wovon er sich abheben könnte.",
+          "ursache": "Es liegt fast immer an der leisen Passage, nicht an der lauten: Sie wird aus Unsicherheit zu fest angeschlagen, oft mit stehender Verzerrung. Damit schrumpft die Spannweite, und der Umschlag hat nichts mehr, wovon er sich abheben könnte.",
           "korrektur": "Zerrgrad im leisen Teil deutlich zurücknehmen, den Anschlag bewusst schwächer setzen und beides getrennt aufnehmen — der Vergleich in der Aufnahme überzeugt schneller als jede Ansage."
         }
       }
@@ -3672,9 +3672,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Die Folge bricht regelmäßig an derselben Stelle zusammen, meist beim Übergang zwischen zwei Taktarten. Bei langsamem Tempo funktioniert es, bei Tempo nicht mehr.",
+          "symptom": "Die Folge bricht regelmäßig an derselben Stelle zusammen, meist beim Übergang zwischen zwei Taktarten. Bei langsamem Tempo funktioniert es, im Stücktempo nicht mehr.",
           "ursache": "Es wird in Zahlen gezählt statt in Gruppen gefühlt. Zählen ist eine bewusste Tätigkeit und bricht unter Tempo zusammen; Gruppen werden als Rhythmusfiguren wiedererkannt und tragen auch schnell.",
-          "korrektur": "Die Kette laut mitsprechen, zunächst nur einen Ton pro Gruppenanfang spielen, und den Klick auf die Gruppenanfänge statt auf jede Zählzeit legen. Erst wenn die Kette ohne Zählen sitzt, kommt das Riff darüber."
+          "korrektur": "Die Kette laut mitsprechen, zunächst nur einen Ton pro Gruppenanfang spielen und den Klick auf die Gruppenanfänge statt auf jede Zählzeit legen. Erst wenn die Kette ohne Zählen sitzt, kommt das Riff darüber."
         }
       }
     },
@@ -3703,7 +3703,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Die Bassfigur soll das Stück tragen, verschwindet aber, sobald die Gitarrenfläche einsetzt. Der Bass ist spürbar, aber nicht mehr als Melodie erkennbar.",
-          "ursache": "Ist meist der Ton, nicht die Linie: Volle Verzerrung ohne Clean-Anteil nimmt den Grundton, und ein Klangbild ohne obere Mitten setzt sich gegen Gitarren nicht durch.",
+          "ursache": "Es liegt meist am Ton, nicht an der Linie: Volle Verzerrung ohne Clean-Anteil nimmt den Grundton, und ein Klangbild ohne obere Mitten setzt sich gegen Gitarren nicht durch.",
           "korrektur": "Clean-Blend oder Frequenzweiche einsetzen, damit unten Fundament bleibt, und in den oberen Mitten anheben statt im Bass. Ein Anschlagpunkt näher am Steg hilft zusätzlich. Wenn die Linie allein gut trägt und nur im Bandkontext verschwindet, ist es kein musikalisches, sondern ein klangliches Problem."
         }
       }
@@ -3733,8 +3733,8 @@
       "erklaerteil": {
         "de": {
           "symptom": "Palm Mutes in tiefer Stimmung klingen unpräzise und schwammig; der Ton flattert und der Anschlag ist nicht sauber definiert. Die übliche Reaktion ist, mehr Verzerrung einzustellen — wodurch es schlechter wird.",
-          "ursache": "Ist fehlende Saitenspannung: Mensur, Saitenstärke und Zielstimmung passen nicht zusammen.",
-          "korrektur": "dickere Saiten wählen, die Stimmung höher legen oder auf eine längere Mensur wechseln; anschließend Sattelkerben und Setup anpassen. Vor dem Griff zum Gain-Regler prüfen, ob überhaupt genug Spannung vorhanden ist — Verzerrung verstärkt das Flattern, statt es zu beheben."
+          "ursache": "Es fehlt an Saitenspannung: Mensur, Saitenstärke und Zielstimmung passen nicht zusammen.",
+          "korrektur": "Dickere Saiten wählen, die Stimmung höher legen oder auf eine längere Mensur wechseln; anschließend Sattelkerben und Setup anpassen. Vor dem Griff zum Gain-Regler prüfen, ob überhaupt genug Spannung vorhanden ist — Verzerrung verstärkt das Flattern, statt es zu beheben."
         }
       }
     },
@@ -3779,7 +3779,7 @@
         "de": {
           "symptom": "Nach dem Einstellen stimmt nichts mehr zusammen — die Intonation wandert, es schnarrt an neuen Stellen, und die Arbeit beginnt von vorn.",
           "ursache": "Die drei Größen hängen voneinander ab. Wer die Intonation einstellt, bevor Halskrümmung und Saitenlage stehen, arbeitet auf einer Grundlage, die sich anschließend verändert.",
-          "korrektur": "feste Reihenfolge einhalten — erst Saiten aufziehen und einspielen, dann Halskrümmung, dann Saitenlage, dann Intonation, zuletzt Tonabnehmerhöhe. Am Halsstab nur in kleinen Schritten und mit Wartezeit arbeiten; bei Widerstand in die Fachwerkstatt."
+          "korrektur": "Feste Reihenfolge einhalten — erst Saiten aufziehen und einspielen, dann Halskrümmung, dann Saitenlage, dann Intonation, zuletzt Tonabnehmerhöhe. Am Halsstab nur in kleinen Schritten und mit Wartezeit arbeiten; bei Widerstand in die Fachwerkstatt."
         }
       }
     },
@@ -3809,7 +3809,7 @@
         "de": {
           "symptom": "Die Becken sind im Bandkontext kaum hörbar. Als Reaktion wird immer härter geschlagen — mit der Zeit entstehen Risse an den Becken und Beschwerden in Handgelenk und Schulter.",
           "ursache": "Zu leichte oder zu kleine Becken für die Lautstärke der Band. Gewicht bestimmt Durchsetzung; ein dünnes Crash ist im dichten Mix schnell verschwunden, egal wie hart man zuschlägt.",
-          "korrektur": "schwerere oder größere Becken einsetzen und den Anschlag wieder auf ein normales Maß zurückführen. Wichtig für die Aufsicht: Härter schlagen ist keine Lösung, sondern der Weg zu Materialschäden und Überlastung. Wenn jemand anfängt, gegen sein Material anzuspielen, ist das Material das Problem."
+          "korrektur": "Schwerere oder größere Becken einsetzen und den Anschlag wieder auf ein normales Maß zurückführen. Wichtig für die Aufsicht: Härter schlagen ist keine Lösung, sondern der Weg zu Materialschäden und Überlastung. Wenn jemand anfängt, gegen sein Material anzuspielen, ist das Material das Problem."
         }
       }
     },
@@ -3853,8 +3853,8 @@
       "erklaerteil": {
         "de": {
           "symptom": "Schülerinnen und Schüler gehen ohne Gehörschutz auf Konzerte und in laute Proben, oft mit dem Argument, es klinge damit dumpf oder man wirke übervorsichtig.",
-          "ursache": "Ist meist Fehlinformation, nicht Leichtsinn: Bekannt sind einfache Schaumstoffstöpsel, die vor allem Höhen wegnehmen und den Klang tatsächlich verschlechtern. Gefilterte Ohrstöpsel dämpfen dagegen gleichmäßig und erhalten das Klangbild.",
-          "korrektur": "gefilterten Gehörschutz zeigen und ausprobieren lassen, die Größenordnung benennen und deutlich machen, dass Hörschäden dauerhaft sind. Vorbildwirkung zählt hier mehr als jede Ansage — wer selbst konsequent Schutz trägt, überzeugt am zuverlässigsten."
+          "ursache": "Dahinter steckt meist Fehlinformation, nicht Leichtsinn: Bekannt sind einfache Schaumstoffstöpsel, die vor allem Höhen wegnehmen und den Klang tatsächlich verschlechtern. Gefilterte Ohrstöpsel dämpfen dagegen gleichmäßig und erhalten das Klangbild.",
+          "korrektur": "Gefilterten Gehörschutz zeigen und ausprobieren lassen, die Größenordnung benennen und deutlich machen, dass Hörschäden dauerhaft sind. Vorbildwirkung zählt hier mehr als jede Ansage — wer selbst konsequent Schutz trägt, überzeugt am zuverlässigsten."
         }
       }
     },
@@ -3974,7 +3974,7 @@
         "de": {
           "symptom": "Die Figur wandert lang über das Griffbrett, ohne wiederzukehren. Bittet man die Person, das Riff ohne Instrument zu klopfen oder zu summen, gelingt es ihr selbst nicht.",
           "ursache": "Es wurde eine Abfolge von Tönen gebaut, keine Gestalt. Was ein Riff zum Riff macht — ein auffälliger Anfang, eine gerichtete Bewegung, ein erkennbarer Schluss und Kürze — ist nicht gesetzt worden.",
-          "korrektur": "Der Nachklopf-Test als Regel einführen: Was du nicht ohne Instrument wiedergeben kannst, ist noch kein Riff. Die Figur auf einen Takt kürzen und diesen zweimal spielen lassen. Meist entsteht die Gestalt genau in dem Moment, in dem gekürzt und wiederholt wird."
+          "korrektur": "Den Nachklopf-Test als Regel einführen: Was du nicht ohne Instrument wiedergeben kannst, ist noch kein Riff. Die Figur auf einen Takt kürzen und diesen zweimal spielen lassen. Meist entsteht die Gestalt genau in dem Moment, in dem gekürzt und wiederholt wird."
         }
       }
     },

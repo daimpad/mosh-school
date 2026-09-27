@@ -14,6 +14,12 @@
      (#cc2418 hell, #ff3b2e dunkel); das Rot IM Logo ist eine Marken-Konstante
      und darf das nicht mitmachen. */
   --marke-rot: #fa100d;
+  /* Gemessene Hoehen der fixierten Leisten (mobil, 390 px breit: untere Leiste
+     ~59 px, Kopfzeile ~63 px, jeweils ohne Safe-Area). Genutzt fuer das
+     scroll-padding im Mobil-Breakpoint — sonst schiebt der Browser fokussierte
+     Elemente hinter die Leisten. */
+  --fussnav-hoehe: 3.7rem;
+  --kopf-hoehe: 4rem;
   --primaer: #cc2418;
   --primaer-dunkel: #a81a10;
   --primaer-tief: #a81a10;
@@ -195,8 +201,10 @@ body {
   background-attachment: var(--backdrop-attachment);
   background-blend-mode: var(--backdrop-blend);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
+/* clip statt hidden: hidden macht html/body zum Scroll-Container und bricht damit
+   position: sticky der .kopf; clip schneidet nur ab, ohne Scroll-Container. */
+html, body { overflow-x: clip; }
 
 h1, h2, h3, h4, p, ul, ol, dl, figure {
   margin: 0 0 0.6rem;
@@ -412,6 +420,14 @@ main {
 .fussnav-mehr.aktiv .fa-solid { transform: translateY(-1px); color: var(--primaer-tief); }
 
 body.im-onboarding .fussnav { display: none; }
+/* Fokus per Tastatur scrollt sonst Elemente unter die fixierte untere Leiste bzw.
+   die sticky Kopfzeile. Nur mobil — ab 768 px gibt es die untere Leiste nicht. */
+@media (max-width: 767.98px) {
+  html {
+    scroll-padding-bottom: calc(var(--fussnav-hoehe) + env(safe-area-inset-bottom) + 0.5rem);
+    scroll-padding-top: calc(var(--kopf-hoehe) + env(safe-area-inset-top) + 0.5rem);
+  }
+}
 
 /* ---------- Seiten-Footer (auf ALLEN Breiten) ---------- */
 /* Frueher nur ab 768px sichtbar — auf Mobil trug die fixierte Bottom-Bar die
@@ -2718,7 +2734,9 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .such-facette-chip { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 24px; }
 .such-facette-chip:hover { border-color: var(--primaer); color: var(--tinte); }
 .such-facette-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; }
-.such-facette-zahl { font-size: 0.66rem; opacity: 0.7; font-variant-numeric: tabular-nums; }
+/* Ohne opacity: erbt die Chip-Farbe (auch im Aktiv-Zustand) — abgeblendet lag
+   die kleine Zahl unter dem Mindestkontrast. */
+.such-facette-zahl { font-size: 0.66rem; font-variant-numeric: tabular-nums; }
 .such-filter-reset { align-self: flex-start; }
 
 /* Mastery-Status-Pill in der Trefferkarte. Signal doppelt kodiert: Form/Zeichen
@@ -3608,7 +3626,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .klang-gitter .klang-genres { max-width: none; }
 
 /* Heros über die volle Breite: Hintergrund randlos, Inhalt auf der Spalte des
-   Fliesstexts (kein horizontaler Overflow dank overflow-x am body).
+   Fliesstexts (kein horizontaler Overflow dank overflow-x: clip an html/body).
    Die Zahlen spiegeln main GENAU: max-width 44rem (also 22rem je Seite ab der
    Mitte) PLUS dessen Innenmass von 1rem — daher 21rem. Vorher stand hier
    1.35rem/22rem, und der Hero-Text sass mobil 23 px weiter rechts, auf dem
@@ -4014,7 +4032,7 @@ a.karte-link.shows-kachel {
      mehr als jede andere Ansicht, und in der 44rem-Spalte blieb von der
      CryptPad-Oberflaeche (Werkzeugleiste + Seitenrand) kaum Schreibflaeche.
      Dieselbe Rechnung wie bei .genre-landing-hero, deshalb auch derselbe
-     Schutz: overflow-x am body schluckt die Scrollleisten-Breite. */
+     Schutz: overflow-x: clip an html/body schluckt die Scrollleisten-Breite. */
   width: 100vw;
   max-width: 100vw;
   margin: 0.8rem calc(50% - 50vw) 0;
@@ -4176,8 +4194,9 @@ a.footer-quelltext { color: var(--tinte); text-decoration: none; }
   text-align: right;
   font-size: 0.7rem;
   letter-spacing: 0.04em;
+  /* Leise ueber --tinte-2 wie .leise, ohne zusaetzliche opacity: die drueckte
+     den Kontrast unter 4,5:1. */
   color: var(--tinte-2);
-  opacity: 0.7;
 }
 .footer-version:empty { display: none; }
 

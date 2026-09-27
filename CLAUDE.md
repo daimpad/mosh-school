@@ -94,7 +94,7 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   trägt den `vokabulare`-Block** (kanonisch) — weitere Dateien tragen keins und dürfen nur
   bestehende Vokabelwerte nutzen.
 - **Identität getrennt von Beschriftung.** Sprachneutrale IDs in der Inhalts-JSON, sichtbare
-  Titel geliftet nach `labels/de.json` (`bausteine`-Abschnitt). Der Laufzeit-Titelpfad ist
+  Titel geliftet nach `data/labels/de.json` (`bausteine`-Abschnitt). Der Laufzeit-Titelpfad ist
   einheitlich das Label-File (`label('baustein', id)`).
 - **Fortschritt ist baustein-gebunden** (nie pfad-gebunden), Zustand in `js/zustand.js`
   (ein `localStorage`-Schlüssel `moshschool.zustand.v1`, versioniertes Schema).
@@ -106,7 +106,7 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
 
 - **Domänen** (`vokabulare.domaene`): die vier Instrumente `gitarre`/`bass`/`schlagzeug`/`gesang`
   plus die Querschnitts-Domänen `koerper` (Gesundheit/Aufwärmen), `mentales`, `theorie`,
-  `ausruestung`. Die Domäne klassifiziert einen Baustein fachlich.
+  `ausruestung`, `kontext`. Die Domäne klassifiziert einen Baustein fachlich.
 - **Könnensstufen** (`vokabulare.kompetenzstufe`): `einsteiger` → `fortgeschritten` → `experte`,
   dazu orthogonal `trainer`. Der Kompetenzpfad ist **stufen-kumulativ** (ein Fortgeschrittener
   sieht Einsteiger + Fortgeschritten).
@@ -116,7 +116,7 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
   `js/pfade.js` `stile()`/`stilpfad()`, analog zur alten Spielform-Achse.)
 - **Pfade:** Kompetenz (`#/pfad/kompetenz/<stufe>`), Themen (`#/pfad/themen`, Domänen-Facetten),
   Individual (`#/pfad/individual`, nach Spielziel), Training (`#/training`). Die aus dem Fork
-  geerbten Achsen **Spielform/Umgebung** sind derzeit inhaltlich unbespielt (dormant) — die
+  geerbten Achsen sind ungleich belegt: **Spielform** ist derzeit inhaltlich unbespielt (dormant), **Umgebung** trägt als Kontext-Achse (`#/pfad/umgebung`, Menüpunkt „Kontext") die Bausteine mit `typ: "umgebungs_baustein"` — die
   Home-Kacheln blenden sich bei 0 Treffern aus.
 
 ## Informationsarchitektur (Navigation)
@@ -133,7 +133,7 @@ in mehreren Hubs auftauchen:
 
 **Untere Leiste (mobil):** Home · Tools (`#/werkzeuge`) · Profil · Mehr (öffnet das Menü).
 **Menü:** die vier Hubs als Hauptpunkte (`.menue-haupt`), abgesetzt die Referenzbereiche
-(Genres, Kontext, Geräte, Stimmungen, Patterns, Shows), abgesetzt Über/Impressum/Datenschutz. Der
+(Genres, Kontext, Geräte, Stimmungen, Patterns, Shows), abgesetzt Profil/Über/Impressum/Datenschutz. Der
 **Themen-Umschalter steht in der Kopfzeile und im Profil** (nicht im Menü): in der
 Kopfzeile als Icon-Knopf neben der Lupe, der nur zwischen hell und dunkel wechselt —
 die dritte Stellung `auto` bleibt dem Profil-Auswahlfeld vorbehalten, weil ein Knopf
@@ -165,7 +165,7 @@ Falle innerhalb der Ansicht: Eine unbekannte ID muss die View **selbst** abfange
 | Ansichten | `js/ansichten/*.js` | rendern HTML-Strings + binden Events; lesen die Engine, mutieren nie direkt |
 | Audio-Kern | `js/audio/*.js` | **themenneutral, DOM-frei**: ein `AudioContext`, ein Scheduler, Stimmen, WAV — trägt alle Werkzeuge |
 | Shell | `js/app.js` | Boot, Hash-Router, Navigation |
-| Oberfläche | `js/oberflaeche.js` | Icons (`BAUSTEIN_ICONS`, Instrument-SVGs, `domaeneIcon`), Theme, Hero |
+| Oberfläche | `js/oberflaeche.js` | Icons (Baustein-Grafiken über `bausteinIcon()`, Instrument-SVGs, `domaeneIcon`), Theme, Hero |
 
 **Faustregel:** Logik gehört in die Engine (testbar, DOM-frei), nicht in die Ansichten.
 
@@ -236,20 +236,20 @@ Für jede neue `data/bausteine.<stufe>-<instrument>.json`:
    selbstkontrolle}`) oder `reflexionsaufgabe` (Text).
 2. **Pfad in `INHALTSDATEIEN`** (`js/daten.js`) ergänzen. Reihenfolge = Erzählreihenfolge.
 3. **Titel liften:** `python3 scripts/lift.py` (hebt alle `anzeigetitel.de` nach
-   `labels/de.json`). **Nur `de.json`** — die leeren `en/fr/pl`-Skelette sind entfernt,
+   `data/labels/de.json`). **Nur `de.json`** — die leeren `en/fr/pl`-Skelette sind entfernt,
    `--skelette` erzeugt sie bei Bedarf wieder.
 3b. **Such-Index neu bauen:** `python3 scripts/build_index.py` (regeneriert
    `data/index.json` aus dem Pool + gelifteten Titeln — generiertes Artefakt, eingecheckt).
 3c. **Statische SEO-Seiten neu bauen:** `python3 scripts/build_seiten.py` (regeneriert
    `baustein/**`, `pfad/**` und `sitemap.xml` — s. „Tier-2-SEO" unten).
 4. **Service Worker:** die neue Datei in `SHELL` (`sw.js`) aufnehmen **und** `CACHE` erhöhen
-   (`mosh-vN` → `mosh-vN+1`). Sonst bekommen Offline-Nutzer die Datei nie.
+   (auf `zerrer-v<PR-Nummer>`, s. „Fallstricke"). Sonst bekommen Offline-Nutzer die Datei nie.
 5. **Validieren:** `python3 scripts/validate.py` (muss „OK — strukturell sauber" zeigen).
 6. **Verifizieren:** `python3 -m http.server 8000` + Playwright durchklicken (s. u.).
 
 **Neuer Vokabelwert** (neuer `stil`, neue `domaene`, neuer `spielziele`-Faktor) ist eine
 *koordinierte* Erweiterung: Wert in `vokabulare` der **kanonischen Gitarren-Datei** ergänzen
-**und** Label unter `vokabeln.*` bzw. `spielziele` in `labels/de.json`. Erst dann nutzbar.
+**und** Label unter `vokabeln.*` bzw. `spielziele` in `data/labels/de.json`. Erst dann nutzbar.
 
 ## Tier-2-SEO (statische Seiten)
 
@@ -292,7 +292,7 @@ zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artef
   sie nicht parsen können (Umbenennung, geändertes Literal-Format): ein Leser, der im Zweifel
   leer liefert, wäre schlimmer als die Kopie — aus „läuft auseinander" würde „ist lautlos
   leer". Einzige verbleibende Ausnahme ist `INSTR_STIMMUNG`: das steckt in der App in einer
-  Bedingung, nicht in einem Literal, es gibt dort nichts zu lesen.
+  Bedingung, nicht in einem Literal. Das gilt nicht mehr: `js/ansichten/pfad.js` definiert es inzwischen als Literal (`const INSTR_STIMMUNG = ['gitarre', 'bass']`) — lesbar wäre es jetzt über `js_liste()`, `build_seiten.py` führt aber noch die Kopie.
 - **Die Mengen-Logik lässt sich nicht lesen** (`instrument_mengen` ist ein Nachbau von
   `instrumentpfad` in `js/pfade.js` — Code, kein Literal). Dagegen wacht
   `pruefe_mengen_invarianten()` vor jedem Bau: Theorie/Praxis/Equipment müssen **paarweise
@@ -313,7 +313,7 @@ GitHub-Weboberfläche pflegbar. Ansicht: `js/ansichten/shows.js` (Gitter + Detai
 Show der Gegenstand — deshalb `shows_*` bei Labels, Klassen und Konstanten, und „Flyer"
 nur noch dort, wo das Blatt selbst gemeint ist (`bild`, `alt`, Bildunterschrift).
 
-- **Sichtbare Texte stehen IN der Datei, nicht in `labels/de.json`.** Die Lift-Regel gilt
+- **Sichtbare Texte stehen IN der Datei, nicht in `data/labels/de.json`.** Die Lift-Regel gilt
   dem Baustein-Pool; die Referenzdateien halten ihren Text bei sich (`zerrtypen.json`:
   `bezeichnung`, `genres.json`: `kurz`). Der Titel ist der Eigenname eines Abends. Die
   **Rahmen**-Beschriftungen der Ansicht laufen dagegen wie überall durch `t()`.
@@ -488,7 +488,7 @@ Drittanbieter-Cookies zulassen — der Ausweich-Link in den neuen Tab bleibt des
   Ohne das kann die eingebettete Seite ZERRER nicht wegnavigieren. Enger gesetzt bricht das
   Pad, statt sicherer zu werden. Dazu `allow-storage-access-by-user-activation` (damit
   das Dokument in Firefox/Safari nach einem Klick um seinen Speicher bitten kann),
-  `title` (WCAG), `referrerpolicy="no-referrer"`, `loading="lazy"` und
+  `title` (WCAG), `referrerpolicy="no-referrer"` und
   `allow="clipboard-read; clipboard-write"` — ein Editor ohne Einfügen über das Menü ist
   kaputt; Kamera, Mikrofon, Standort bleiben zu.
 - **„CryptPad needs localStorage to work" im Rahmen ist eine Browser-Einstellung,
@@ -498,7 +498,7 @@ Drittanbieter-Cookies zulassen — der Ausweich-Link in den neuen Tab bleibt des
   Drittanbieter-Cookies blockiert → `SecurityError`, **mit und ohne** unsere `sandbox`.
   Von der einbettenden Seite aus ist das weder abstellbar noch zuverlässig erkennbar.
   Abhilfe beim Nutzer: Ausnahme für `zerrer.org` erlauben, oder der Ausweich-Link.
-- **Eingegebene Adressen werden geprüft** (`https:` und parsebar). Ohne das nähme das Feld
+- **Entschlüsselte Adressen werden geprüft** (`https:` und parsebar, `istBrauchbar()`). Ohne das nähme das iframe
   auch `javascript:`/`data:` entgegen.
 - **Datenschutz mitziehen:** `data/app-info.json` → `rechtliches.datenschutz` trägt den
   eigenen Abschnitt „Eingebettetes Dokument (interner Bereich)" — Anbieter Google, keine
@@ -544,7 +544,7 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
 
 ```sh
 python3 scripts/validate.py              # Cross-File-Konsistenz über den gemischten Pool
-python3 scripts/lift.py                  # idempotent — Titel nach labels/de.json geliftet
+python3 scripts/lift.py                  # idempotent — Titel nach data/labels/de.json geliftet
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
 python3 scripts/build_marken.py --check   # Marken-Masken aus den Logo-Quellen reproduzierbar
 python3 scripts/build_portraets.py --check # Kollektiv-Porträts aus der Quelle reproduzierbar
@@ -594,6 +594,10 @@ Aufgabenteil je Baustein, gültige Vokabelwerte, echte Umlaute, gelieftete Titel
 `addInitScript` *vor* `goto` seeden mit Schlüssel `moshschool.zustand.v1`): prüfe Dunkel-Default,
 Themen-/Kompetenz-/Genre-Achse und Deep-Links der neuen Bausteine — **ohne Konsolen- oder
 404-Fehler**. Beide Themes (dunkel/hell/auto) rendern.
+**Fallstrick Offline-Test:** `context.setOffline(true)` schaltet nur den Seitenkontext
+offline — der Service Worker holt weiter übers Netz. Ein so „offline" geprüfter Abruf
+prüft also den Netzpfad, nicht den Cache. Für eine echte Offline-Prüfung den lokalen
+Server stoppen.
 
 ## CI / Design (grungy, düster, hart — hardcorig)
 
@@ -748,7 +752,7 @@ Tokens**, nie harte Farben.
   Das Motiv ist ein abgerundetes Quadrat, kein randlos gefülltes Bild.
 - **Marken-Schrift New Rocker** (lokal als `assets/fonts/new-rocker-latin-400-normal.woff2`,
   nur Gewicht 400 — SIL OFL, `assets/fonts/LICENSE-new-rocker.txt`): trägt
-  **ausschließlich das Wort „ZERRER" als Logo**, an genau drei Stellen — Kopfzeile
+  **ausschließlich das Wort „ZERRER" als Logo**, ursprünglich an drei Stellen — Kopfzeile
   (`.marke-text`), Startseiten-Hero (`.startseite-hero-marke`, inkl. Glitch-Effekt) und
   Footer). **Der Footer ist inzwischen raus** — dort steht die gezeichnete
   Vollmarke; es bleiben Kopfzeile und Hero. Jede Stelle setzt `font-family`/`font-weight`
@@ -767,7 +771,7 @@ Tokens**, nie harte Farben.
   gefüllt. **Neues Icon einbinden:** in `css/schriften.css` eine `.fa-<name> { --ti: url("data:…") }`-
   Zeile mit dem Tabler-SVG als Data-URI ergänzen (Quelle: `@tabler/icons` via npm, `icons/outline/`).
   Instrument-Symbole bleiben eigenständige **Inline-SVG** (`INSTRUMENT_SVG` + `domaeneIcon()` in
-  `js/oberflaeche.js`); Baustein-Icons in `BAUSTEIN_ICONS`.
+  `js/oberflaeche.js`); Baustein-Icons über `bausteinIcon()` aus `data/grafiken.json`.
 - **Baustein-Grafiken:** Jeder Baustein hat eine abstrakte, monochrome SVG-Grafik
   (`data/grafiken.json`, `{id: "<svg…>"}`). Quelle der Wahrheit sind die deterministischen
   Generatoren `scripts/build_svg.py`/`build_svg2.py`/`build_svg3.py`/`build_svg4.py` sowie
@@ -831,14 +835,14 @@ Tokens**, nie harte Farben.
   breite Erklär-Schemata (viewBox 240×120 — Beat-Raster, Griffbilder, Anschlagsmuster),
   die die Baustein-Ansicht als `<figure>` nach dem Erklärteil rendert (Registry
   `setzeLehrgrafiken()` → `lehrgrafik()`), optional je Baustein-ID. Textfrei/i18n-neutral —
-  die Legende liefert `label('lehrgrafik', id)` aus `labels/de.json` (Abschnitt
+  die Legende liefert `label('lehrgrafik', id)` aus `data/labels/de.json` (Abschnitt
   `lehrgrafiken`, von Hand gepflegt wie Einheiten-Titel). Beat-Raster-Konvention:
   oben Hi-Hat (x), Mitte Snare (Hohlkreis), unten Kick (Punkt); Viertel = hohe,
   Achtel = kurze Rasterstriche.
 - **Werkzeuge:** Das Stimmungs-Werkzeug (`#/stimmungen`, `js/ansichten/stimmungen.js`)
   ist eine interaktive Referenz mit WebAudio-Tönen; seine Daten (kuratierte Tunings mit
   Genre-Zuordnung aus dem `stil`-Vokabular) liegen in `data/tunings.json`, die sichtbaren
-  Namen unter `vokabeln.stimmung` in `labels/de.json`. Referenzbereich wie Regeln —
+  Namen unter `vokabeln.stimmung` in `data/labels/de.json`. Referenzbereich wie Regeln —
   NICHT im Baustein-Pool, kein Fortschritt. **`data/tunings.json` ist die einzige
   Tuning-Quelle** — das Stimmgerät (`#/werkzeug/stimmgeraet`) liest denselben Pool
   und beschriftet über `label('stimmung', id)`. Es hielt bis v179 eine zweite,
@@ -946,7 +950,7 @@ Tokens**, nie harte Farben.
   fünf). Ein neuer Clip ist ein Eintrag in `CLIPS` plus zwei Labels
   (`zerrlabor_clip_<id>` und `…_text`) — braucht er einen neuen Ton, kommt der
   in `PROBEN` **im Generator** dazu, nie von Hand ins `assets/`-Verzeichnis.
-  Vier Punkte hängen daran:
+  Fünf Punkte hängen daran:
   - **Direktsignal, kein Verstärkerton.** Das Werkzeug hängt seine eigene Zerre
     und Box dahinter; ein bereits verzerrtes Sample wäre doppelt verzerrt und die
     Kennlinien nicht mehr auseinanderzuhalten.
@@ -965,7 +969,7 @@ Tokens**, nie harte Farben.
     daneben.
   Der Generator braucht Chromium (FLAC lässt sich weder mit Node- noch mit
   Python-Bordmitteln dekodieren) und läuft deshalb **nicht** in `verify.yml`;
-  dort prüft `validate.py` nur, dass die zwei WAVs existieren und Mono/16 bit/
+  dort prüft `validate.py` nur, dass alle in `werkzeug-zerrlabor.js` genannten WAVs (derzeit fünf) existieren und Mono/16 bit/
   44,1 kHz sind. Fällt der Ladeversuch aus (offline — die WAVs stehen bewusst
   nicht in der SW-`SHELL`), schaltet das Werkzeug selbst auf das synthetische
   Riff zurück und sagt es in der Statuszeile. Ein neues Sample gehört in
@@ -1044,7 +1048,7 @@ Tokens**, nie harte Farben.
 
 - **`file://` funktioniert nicht** — `fetch()` der JSON braucht HTTP. Immer über einen
   lokalen Server testen.
-- **UI-Texte gehören unter `ui`** in `labels/de.json`: `t('schluessel')` schlägt unter
+- **UI-Texte gehören unter `ui`** in `data/labels/de.json`: `t('schluessel')` schlägt unter
   `['ui', schluessel]` nach (nicht am Root). Ein am Root eingefügter Schlüssel wird nie
   gefunden und rendert als roher Key. Beim Verifizieren auch auf **sichtbaren** Text prüfen
   (nicht nur „keine Konsolenfehler") — ein fehlgeleitetes Label wirft keinen Fehler.
@@ -1054,7 +1058,16 @@ Tokens**, nie harte Farben.
   vorgeladen. **Für `js/**/*.js` prüft `validate.py` die SHELL-Liste inzwischen selbst**
   (inklusive neuer, noch nicht gestagter Dateien — sonst wachte die Prüfung erst nach dem
   `git add` auf, also genau dann nicht, wenn man sie braucht). Der `CACHE`-Name und alles
-  andere in `SHELL` bleiben Handarbeit.
+  andere in `SHELL` bleiben Handarbeit. Die vier **Kollektiv-Porträts**
+  (`assets/images/kollektiv/*.svg`) stehen in `SHELL` — klein und fester Bestand, anders als
+  die Flyer oder Hero-Fotos; eine neue Person gehört dort mit dazu. Die Installation lädt
+  `SHELL` mit `cache: 'reload'` (sonst kann der HTTP-Cache des Browsers eine alte Fassung in
+  den neuen Cache legen). **Aufgeräumt werden nur eigene Caches** (`/^(zerrer|mosh)-v\d+$/`):
+  Die Cache-API ist origin-weit, und unter `daimpad.github.io` teilen sich alle
+  Pages-Projekte die Origin — ein pauschales Löschen träfe fremde Caches. Aus demselben
+  Grund liest `zeigeVersion()` nur Namen der Form `zerrer-v<Zahl>`. Offline leitet der
+  Worker eine Tier-2-Adresse (`/baustein/<id>/`, `/pfad/…`, `/instrument/…`) auf die
+  entsprechende Hash-Route der App um, statt auf die Startseite.
 - **Der `CACHE`-Name ist zugleich die sichtbare Versionsnummer — und die ist die
   PR-Nummer.** Die Fußzeile zeigt „Version 219" für `zerrer-v219` (`zeigeVersion()` in
   `js/app.js`, Label `footer_version`); PR #219 hat diesen Stand ausgeliefert. So liest

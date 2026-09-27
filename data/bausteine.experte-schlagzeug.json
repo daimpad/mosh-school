@@ -41,7 +41,7 @@
           "ziel": "Die Hebel-Mechanik gefahrlos in Zeitlupe verstehen und anbahnen.",
           "schritte": [
             "Übe am Pad zuerst kontrollierte Doppelschläge aus reinem Rebound — die Grundlage jeder Spezialform.",
-            "Leg die Hand an den Snare-Spannreifen und vollziehe die Gravity-Wippbewegung in Zeitlupe nach, ohne Tempoanspruch.",
+            "Leg den Stock auf den Snare-Spannreifen und vollziehe die Gravity-Wippbewegung in Zeitlupe nach, ohne Tempoanspruch.",
             "Spiel kurze Zyklen (vier Bewegungen), prüf das Handgelenk auf Lockerheit und pausiere großzügig."
           ],
           "steigerung": "Erst wenn die Wippe mühelos ist, Zyklen verlängern — Tempo kommt Wochen später, nie am ersten Tag.",
@@ -95,7 +95,7 @@
         "fuss_ausdauer"
       ],
       "erklaerteil": {
-        "de": "Jenseits von 220 BPM stoßen die Grundtechniken an Grenzen, und die Extremtempo-Techniken übernehmen: Swivel (die Ferse pendelt seitlich und nutzt die Beinrotation), Heel-Toe (zwei Schläge pro Fußbewegung — Ballen, dann Spitze) und fein austarierte Federspannungen, die den Schlägel arbeiten lassen. Alle folgen demselben Prinzip wie schnelle Hände: Hebel und Rückprall statt Muskelkraft.\n\nWelche Technik trägt, ist individuell — Fußgröße, Pedal, Sitzhöhe spielen hinein. Deshalb gilt: eine Technik wählen, isoliert in Zeitlupe aufbauen und erst ins Kit integrieren, wenn sie ohne Nachdenken läuft. Der häufigste Fehler ist das Mischen halbfertiger Techniken unter Zeitdruck.\n\nGesundheit hat Vorrang: Extremtempi der Füße belasten Achillessehne, Schienbein und Hüfte. Aufwärmen ist Pflicht, Steigerungen bleiben klein, und ziehende Schmerzen — besonders im Schienbein — sind ein Stoppsignal, das ernst genommen wird. Ausdauer an der Grenze wächst über Monate."
+        "de": "Jenseits von 220 BPM stoßen die Grundtechniken an Grenzen, und die Extremtempo-Techniken übernehmen: Swivel (die Ferse pendelt seitlich und nutzt die Beinrotation), Heel-Toe (zwei Schläge pro Fußbewegung — Ferse, dann Zehen) und fein austarierte Federspannungen, die den Schlägel arbeiten lassen. Alle folgen demselben Prinzip wie schnelle Hände: Hebel und Rückprall statt Muskelkraft.\n\nWelche Technik trägt, ist individuell — Fußgröße, Pedal, Sitzhöhe spielen hinein. Deshalb gilt: eine Technik wählen, isoliert in Zeitlupe aufbauen und erst ins Kit integrieren, wenn sie ohne Nachdenken läuft. Der häufigste Fehler ist das Mischen halbfertiger Techniken unter Zeitdruck.\n\nGesundheit hat Vorrang: Extremtempi der Füße belasten Achillessehne, Schienbein und Hüfte. Aufwärmen ist Pflicht, Steigerungen bleiben klein, und ziehende Schmerzen — besonders im Schienbein — sind ein Stoppsignal, das ernst genommen wird. Ausdauer an der Grenze wächst über Monate. Halten Beschwerden an, lass Technik und Setup von einem Coach prüfen und die Beschwerden ärztlich abklären."
       },
       "uebungsteil": {
         "de": {
@@ -524,7 +524,7 @@
             ]
           }
         ],
-        "hinweis": "Hi-Hat und Snare bleiben stur im Vierer, die Kick läuft in Siebenergruppen. Nach vier Takten treffen sich beide wieder — die Zelle wandert genau einmal durch."
+        "hinweis": "Hi-Hat und Snare bleiben stur im Vierer, die Kick läuft in Siebenergruppen. Der Loop setzt nach vier Takten neu an — gemeinsam auf der Eins landen Zelle und Takt erst nach sieben Takten (7 × 16 = 112 Sechzehntel)."
       }
     },
     {
@@ -550,7 +550,7 @@
         "timing_zum_klick"
       ],
       "erklaerteil": {
-        "de": "5/4, 7/8, 9/8 — ungerade Taktarten klingen kompliziert, funktionieren aber über einen einfachen Trick: Sie zerfallen in Gruppen aus Zweiern und Dreiern. Ein 7/8 ist fast immer 2+2+3 (oder 3+2+2), ein 5/4 ist 3+2 oder 2+3. Wer die Gruppierung kennt, zählt nicht mehr sieben Schläge, sondern fühlt „kurz-kurz-lang“ — und plötzlich groovt der krumme Takt.\n\nDer Beat baut sich entlang der Gruppen: Kick auf die Gruppenanfänge, Snare als Backbeat-Ersatz an die markanteste Stelle, Hi-Hat läuft durch. So bekommt der ungerade Takt ein wiedererkennbares Gesicht statt ein gezähltes Rätsel — Tool, Meshuggah und unzählige Prog-Death-Bands bauen genau darauf.\n\nÜbergänge sind die Königsdisziplin: der Wechsel von 4/4 in 7/8 und zurück, ohne dass die Band stolpert. Hier hilft ein durchlaufender gemeinsamer Nenner (die Achtel bleibt konstant!) und ein markantes Signal am Wechselpunkt."
+        "de": "5/4, 7/8, 9/8 — ungerade Taktarten klingen kompliziert, funktionieren aber über einen einfachen Trick: Sie zerfallen in Gruppen aus Zweiern und Dreiern. Ein 7/8 ist fast immer 2+2+3 (oder 3+2+2), ein 5/4 ist 3+2 oder 2+3. Wer die Gruppierung kennt, zählt nicht mehr sieben Schläge, sondern fühlt „kurz-kurz-lang“ — und plötzlich groovt der krumme Takt.\n\nDer Beat baut sich entlang der Gruppen: Kick auf die Gruppenanfänge, Snare als Backbeat-Ersatz an die markanteste Stelle, Hi-Hat läuft durch. So bekommt der ungerade Takt ein wiedererkennbares Gesicht statt ein gezähltes Rätsel — Tool und unzählige Prog-Death-Bands bauen genau darauf.\n\nÜbergänge sind die Königsdisziplin: der Wechsel von 4/4 in 7/8 und zurück, ohne dass die Band stolpert. Hier hilft ein durchlaufender gemeinsamer Nenner (die Achtel bleibt konstant!) und ein markantes Signal am Wechselpunkt."
       },
       "uebungsteil": {
         "de": {
@@ -645,14 +645,14 @@
         "definierter_anschlag"
       ],
       "erklaerteil": {
-        "de": "Auch der brutalste Song lebt von Dynamik — nur ist sie im Metal oft strukturell statt leise: Ein Blast wirkt doppelt, wenn davor ein reduzierter Teil stand; ein Doom-Riff erdrückt mehr, wenn die Becken vorher schwiegen. Als Schlagzeuger:in bist du der Dynamik-Architekt des Songs, denn nichts steuert wahrgenommene Intensität so stark wie das Drumming.\n\nDie Werkzeuge: Beckenwahl (Hi-Hat geschlossen vs. offenes Crash-Ride ist ein Intensitätssprung ohne Tempoänderung), Schlagstärke-Ebenen, Dichte (Achtel vs. Sechzehntel), und das mächtigste — Weglassen. Ein Part ohne Bassdrum, ein Break in völlige Stille, ein einzelner Takt nur Snare: Verweigerung erzeugt Fallhöhe.\n\nDenk in einer Intensitätskurve über den ganzen Song: Wo ist der niedrigste Punkt, wo der höchste, und steigt es dazwischen wirklich — oder läuft alles auf 90 %? Die ehrlichste Prüfung ist eine Aufnahme des ganzen Songs, gehört mit der einen Frage: Langweilt sich mein Ohr, weil alles gleich intensiv ist?"
+        "de": "Auch der brutalste Song lebt von Dynamik — nur ist sie im Metal oft strukturell statt leise: Ein Blast wirkt doppelt, wenn davor ein reduzierter Teil stand; ein Doom-Riff erdrückt mehr, wenn die Becken vorher schwiegen. Als Schlagzeuger:in baust du die Dynamik-Architektur des Songs, denn nichts steuert wahrgenommene Intensität so stark wie das Drumming.\n\nDie Werkzeuge: Beckenwahl (Hi-Hat geschlossen vs. offenes Crash-Ride ist ein Intensitätssprung ohne Tempoänderung), Schlagstärke-Ebenen, Dichte (Achtel vs. Sechzehntel) und das mächtigste — Weglassen. Ein Part ohne Bassdrum, ein Break in völlige Stille, ein einzelner Takt nur Snare: Verweigerung erzeugt Fallhöhe.\n\nDenk in einer Intensitätskurve über den ganzen Song: Wo ist der niedrigste Punkt, wo der höchste, und steigt es dazwischen wirklich — oder läuft alles auf 90 %? Die ehrlichste Prüfung ist eine Aufnahme des ganzen Songs, gehört mit der einen Frage: Langweilt sich mein Ohr, weil alles gleich intensiv ist?"
       },
       "uebungsteil": {
         "de": {
           "titel": "Intensitätskurve bauen",
           "ziel": "Einen Song-Ablauf mit bewussten Dynamik-Ebenen gestalten.",
           "schritte": [
-            "Nimm einen Song (eigenen oder Playalong) und zeichne seine Teile als Intensitätskurve von 1 bis 10.",
+            "Nimm einen Song (eigenen oder Play-along) und zeichne seine Teile als Intensitätskurve von 1 bis 10.",
             "Ordne jeder Ebene konkrete Mittel zu: Beckenwahl, Dichte, Schlagstärke, Weglass-Elemente.",
             "Spiel den Ablauf und nimm ihn auf — prüfe, ob die Kurve hörbar ist, nicht nur gedacht."
           ],
@@ -1655,7 +1655,7 @@
         "schmerzfrei_spielen"
       ],
       "erklaerteil": {
-        "de": "Wer Extreme Metal über Jahre trommeln will, trainiert wie ein Athlet in einer Langzeit-Karriere: mit Belastungsplanung statt Dauervollgas. Das heißt Phasen — intensive Wochen vor Aufnahmen oder Touren, bewusst reduzierte danach — und eine Grundfitness (Ausdauer, Rumpf, Beweglichkeit), die unabhängig vom Kit gepflegt wird. Der Körper ist das Instrument, das du nicht nachkaufen kannst.\n\nDas gilt doppelt fürs Gehör: Schlagzeug erreicht Pegel, die ungeschützt in Jahren zu bleibendem Tinnitus und Hörverlust führen — bei Trommlern eher die Regel als die Ausnahme. Angepasster Gehörschutz mit linearer Dämpfung (oder gut sitzende In-Ears) ist keine Option, sondern Berufsausstattung; er gehört zu jeder Probe, jedem Gig, jeder Session.\n\nUnd wie immer: Warnsignale ernst nehmen. Anhaltende Gelenkschmerzen, Rückenprobleme, Piepen im Ohr nach der Probe — das sind keine Begleiterscheinungen des Genres, sondern Aufträge, etwas zu ändern, und bei Bestehen der Weg zu Fachleuten (Orthopädie, HNO/Audiologie)."
+        "de": "Wer Extreme Metal über Jahre trommeln will, trainiert wie ein Athlet in einer Langzeit-Karriere: mit Belastungsplanung statt Dauervollgas. Das heißt Phasen — intensive Wochen vor Aufnahmen oder Touren, bewusst reduzierte danach — und eine Grundfitness (Ausdauer, Rumpf, Beweglichkeit), die unabhängig vom Kit gepflegt wird. Der Körper ist das Instrument, das du nicht nachkaufen kannst.\n\nDas gilt doppelt fürs Gehör: Schlagzeug erreicht Pegel, die ungeschützt in Jahren zu bleibendem Tinnitus und Hörverlust führen — bei Trommlern eher die Regel als die Ausnahme. Angepasster Gehörschutz mit linearer Dämpfung (oder gut sitzende In-Ears) ist keine Option, sondern Berufsausstattung; er gehört zu jeder Probe, jedem Gig, jeder Session.\n\nUnd wie immer: Warnsignale ernst nehmen. Anhaltende Gelenkschmerzen, Rückenprobleme, Piepen im Ohr nach der Probe — das sind keine Begleiterscheinungen des Genres, sondern Aufträge, etwas zu ändern und, wenn sie anhalten, Fachleute aufzusuchen (Orthopädie, HNO/Audiologie)."
       },
       "reflexionsaufgabe": {
         "de": "Ehrliche Bestandsaufnahme: Trägst du bei jeder Probe und jedem Gig Gehörschutz — und wenn nein, was hält dich ab? Skizziere außerdem deine Belastung der letzten drei Monate (intensive und ruhige Phasen) und plane die nächsten drei mit bewussten Erholungsfenstern. Welche eine Anschaffung oder Gewohnheit würde deine Langzeit-Karriere am meisten schützen?"

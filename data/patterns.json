@@ -376,7 +376,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Ein gebrochener Moll-Akkord, kalt und repetitiv über die mittleren Saiten getremolt — die „frostige\", melodische Seite des Black Metal jenseits des reinen Tremolo-Riffs."
+        "de": "Ein gebrochener Moll-Akkord, kalt und repetitiv über die mittleren Saiten getremolt — die „frostige“, melodische Seite des Black Metal jenseits des reinen Tremolo-Riffs."
       }
     },
     {
@@ -1146,7 +1146,7 @@
         []
       ],
       "hinweis": {
-        "de": "Ein groovender Riff mit Lücke und bluesiger Bewegung, fuzzig und mittig — der Riff regiert. Leicht hinter dem Puls gespielt, lustvoll wiederholt."
+        "de": "Ein groovendes Riff mit Lücke und bluesiger Bewegung, fuzzig und mittig — das Riff regiert. Leicht hinter dem Puls gespielt, lustvoll wiederholt."
       }
     },
     {
@@ -1568,7 +1568,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Lockt die betonten Chugs der Fünfer-Gruppierung (5+5+3+3) exakt mit Kick und Gitarre; der gerade Puls bleibt im Fuß (Drop C)."
+        "de": "Verzahnt die betonten Chugs der Fünfer-Gruppierung (5+5+3+3) exakt mit Kick und Gitarre; der gerade Puls bleibt im Fuß (Drop C)."
       }
     },
     {
@@ -1747,7 +1747,7 @@
         []
       ],
       "hinweis": {
-        "de": "Der Mosh-Part: wenige, wuchtige Akkordstöße mit Luft dazwischen — vom rasenden Galopp in den halben Takt. Hier wird gestampft, nicht gerast."
+        "de": "Der Mosh-Part: wenige, wuchtige Akkordstöße mit Luft dazwischen — vom rasenden Galopp ins halbe Tempo. Hier wird gestampft, nicht gerast."
       }
     },
     {
@@ -1756,7 +1756,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Thrash-Beat: Doublebass-Schub"
+        "de": "Thrash-Beat: Double-Bass-Schub"
       },
       "bpm": 190,
       "spuren": {
@@ -1792,7 +1792,7 @@
         ]
       },
       "hinweis": {
-        "de": "Der Skank mit durchlaufender Double Bass: gerader Backbeat oben, treibender Fußteppich unten. Locker aus dem Fußgelenk, sonst verkrampft es bei Tempo."
+        "de": "Der Thrash-Beat mit durchlaufender Double Bass: gerader Backbeat oben, treibender Fußteppich unten. Locker aus dem Fußgelenk, sonst verkrampft es bei Tempo."
       }
     },
     {
@@ -1931,7 +1931,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Death-Beat: Bombblast"
+        "de": "Death-Beat: Bomb Blast"
       },
       "bpm": 200,
       "spuren": {
@@ -1967,7 +1967,7 @@
         ]
       },
       "hinweis": {
-        "de": "Der Bombblast (Hammerblast): Kick und Snare schlagen gleichzeitig auf jeder Achtel — eine dichte, wuchtige Wand statt der abwechselnden Schläge des traditionellen Blasts. Locker bleiben, sonst verkrampft der Unterarm."
+        "de": "Der Bomb Blast (Hammer Blast): Kick und Snare schlagen gleichzeitig auf jeder Achtel — eine dichte, wuchtige Wand statt der abwechselnden Schläge des traditionellen Blasts. Locker bleiben, sonst verkrampft der Unterarm."
       }
     },
     {
@@ -2493,7 +2493,7 @@
         ]
       },
       "hinweis": {
-        "de": "Der Two-Step: Snare als Backbeat auf 2 und 4, die Kick tänzelt drumherum („boom-boom-CHK\") — das Fundament fürs Two-Stepping im Pit. Rauer und bouncender als der gerade Skank."
+        "de": "Der Two-Step: Snare als Backbeat auf 2 und 4, die Kick tänzelt drumherum („boom-boom-CHK“) — das Fundament fürs Two-Stepping im Pit. Rauer und bouncender als der gerade Skank."
       }
     },
     {
@@ -2666,7 +2666,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Eine melodische, getremolote Linie auf den hohen Saiten über den Chugs — der melodische Kontrast zum harten Breakdown. Sauber und singend, nicht gehetzt."
+        "de": "Eine melodische, getremolte Linie auf den hohen Saiten über den Chugs — der melodische Kontrast zum harten Breakdown. Sauber und singend, nicht gehetzt."
       }
     },
     {
@@ -2675,7 +2675,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Metalcore-Beat: Verse-Drive"
+        "de": "Metalcore-Beat: Vers-Drive"
       },
       "bpm": 140,
       "spuren": {
@@ -2830,7 +2830,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Djent-Beat: Ghostnote-Groove"
+        "de": "Djent-Beat: Ghost-Note-Groove"
       },
       "bpm": 120,
       "spuren": {
@@ -2866,7 +2866,7 @@
         ]
       },
       "hinweis": {
-        "de": "Backbeat auf 2 und 4 plus ein Zwischenschlag vor der Vier: Den spielst du als leise Ghost-Note, nicht als vollen Schlag — die Dynamik zwischen laut und leise macht den Bounce. (Das Raster zeigt nur die Position, nicht die Lautstärke.)"
+        "de": "Backbeat auf 2 und 4 plus ein Zwischenschlag vor der Vier: Den spielst du als leise Ghost Note, nicht als vollen Schlag — die Dynamik zwischen laut und leise macht den Bounce. (Das Raster zeigt nur die Position, nicht die Lautstärke.)"
       }
     },
     {
@@ -2986,7 +2986,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Getremoltes Pedal auf der sehr tiefen Saite mit Tritonus-Stößen (b5) vor dem Breakdown — dicht und bedrohlich. Gleichmäßig picken, sauber dämpfen (Drop-Stimmung)."
+        "de": "Getremoltes Pedal auf der sehr tiefen Saite mit Tritonus-Stößen (b5) vor dem Breakdown — dicht und bedrohlich. Gleichmäßig picken, sauber dämpfen (Drop C)."
       }
     },
     {
@@ -3370,7 +3370,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Grind-Beat: Gravity-Blast"
+        "de": "Grind-Beat: Gravity Blast"
       },
       "bpm": 240,
       "spuren": {
@@ -3430,7 +3430,7 @@
         ]
       },
       "hinweis": {
-        "de": "Der Gravity-Blast: die Snare rollt in Sechzehnteln über den Handgelenk-Rebound (ein Schlag hin, einer zurück), die Kick hält die Viertel — die extremste Grind-Geschwindigkeit. Nur mit lockerer Technik machbar."
+        "de": "Der Gravity Blast: die Snare rollt in Sechzehnteln mit dem Spannreifen als Drehpunkt (ein Schlag hin, einer zurück), die Kick hält die Viertel — die extremste Grind-Geschwindigkeit. Nur mit lockerer Technik machbar."
       },
       "aufloesung": 16
     },
@@ -3476,7 +3476,7 @@
         ]
       },
       "hinweis": {
-        "de": "Ein lässiger Groove leicht hinter dem Puls: Backbeat auf 2 und 4, die Kick tänzelt lose davor — der Beat atmet, statt zu treiben. Raum lassen, den Riff regieren lassen, nicht drängen."
+        "de": "Ein lässiger Groove leicht hinter dem Puls: Backbeat auf 2 und 4, die Kick tänzelt lose davor — der Beat atmet, statt zu treiben. Raum lassen, das Riff regieren lassen, nicht drängen."
       }
     },
     {

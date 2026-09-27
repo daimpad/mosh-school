@@ -257,8 +257,10 @@ function beschrifteRahmen() {
   // daneben verlinkt. Steht leer im HTML, damit der Text nur an EINER Stelle
   // gepflegt wird.
   // Die Fuss-Wortmarke ist eine Grafik; ihren zugaenglichen Namen traegt das
-  // aria-label, damit Vorlesesoftware weiter „ZERRER" hoert.
-  for (const marke of document.querySelectorAll('.footer-marke-wort, .menue-marke')) {
+  // aria-label, damit Vorlesesoftware weiter „ZERRER" hoert. Dasselbe am
+  // Kopfzeilen-Link: Der gespiegelte Schriftzug besteht aus zwei Teilen und
+  // wuerde sonst „ZER RER" vorgelesen.
+  for (const marke of document.querySelectorAll('.footer-marke-wort, .menue-marke, .kopf a.marke')) {
     marke.setAttribute('aria-label', t('app_titel'));
   }
   const fussClaim = document.querySelector('.footer-marke-claim');
@@ -680,7 +682,9 @@ async function zeigeVersion() {
   try {
     if ('caches' in window) {
       for (const name of await caches.keys()) {
-        const treffer = /-v(\d+)$/.exec(name);
+        // Nur eigene Caches: Die Cache-API ist origin-weit, unter
+        // daimpad.github.io teilen sich alle Pages-Projekte die Origin.
+        const treffer = /^zerrer-v(\d+)$/.exec(name);
         if (treffer) nummer = Math.max(nummer, Number(treffer[1]));
       }
     }

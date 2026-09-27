@@ -290,7 +290,7 @@
             ]
           }
         ],
-        "hinweis": "Schlag und Rückprall im Wechsel: Der hohe Balken kommt aus der Hand, der flache aus dem Stock. Klingen beide gleich laut, drückst du den zweiten Schlag — dann arbeitest du gegen den Rebound statt mit ihm."
+        "hinweis": "Schlag und Rückprall im Wechsel: Der hohe Balken kommt aus der Hand, der flache aus dem Stock. Klingen beide gleich laut, drückst du den zweiten Schlag — dann arbeitest du gegen den Rückprall statt mit ihm."
       }
     },
     {
@@ -409,7 +409,7 @@
           "ziel": "Den Puls und seine Unterteilungen sicher fühlen.",
           "schritte": [
             "Stell das Metronom auf ein ruhiges Tempo und zähl die Viertel laut mit (1-2-3-4).",
-            "Füge die Achtel hinzu (1-und-2-und ...) und schlag sie auf der Snare mit.",
+            "Füge die Achtel hinzu (1-und-2-und …) und schlag sie auf der Snare mit.",
             "Wechsle zwischen Vierteln und Achteln, ohne den Puls zu verlieren."
           ],
           "steigerung": "Nimm Sechzehntel dazu und wechsle zwischen den Unterteilungen, während der Klick gleich bleibt.",
@@ -459,11 +459,11 @@
         "riff_praezision"
       ],
       "erklaerteil": {
-        "de": "Rudiments sind die Bewegungsbausteine des Schlagzeugs — kleine, festgelegte Schlagmuster, aus denen sich Fills, schnelle Hände und Blastbeats aufbauen. Die zwei wichtigsten Grundlagen sind der Einzelschlag (abwechselnd rechts–links) und der Doppelschlag (je zwei Schläge pro Hand).\n\nBeim Einzelschlag zählt Gleichmäßigkeit: Beide Hände sollen gleich laut und gleich getimt sein. Der Doppelschlag nutzt den Rückprall des Sticks, damit der zweite Schlag mit wenig Aufwand kommt — das spart Kraft und ermöglicht Tempo.\n\nÜbe diese Muster langsam und sauber auf der Snare oder einem Übungspad. Sie sind die Grundlage für fast alles Schnelle, das im Metal folgt."
+        "de": "Rudiments sind die Bewegungsbausteine des Schlagzeugs — kleine, festgelegte Schlagmuster, aus denen sich Fills, schnelle Hände und Blastbeats aufbauen. Die zwei wichtigsten Grundlagen sind der Einzelschlag (abwechselnd rechts-links) und der Doppelschlag (je zwei Schläge pro Hand).\n\nBeim Einzelschlag zählt Gleichmäßigkeit: Beide Hände sollen gleich laut und gleich getimt sein. Der Doppelschlag nutzt den Rückprall des Sticks, damit der zweite Schlag mit wenig Aufwand kommt — das spart Kraft und ermöglicht Tempo.\n\nÜbe diese Muster langsam und sauber auf der Snare oder einem Übungspad. Sie sind die Grundlage für fast alles Schnelle, das im Metal folgt."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Single- und Double-Strokes",
+          "titel": "Einzel- und Doppelschläge",
           "ziel": "Gleichmäßige Einzel- und Doppelschläge mit beiden Händen.",
           "schritte": [
             "Spiel Einzelschläge im Wechsel (R-L-R-L) gleichmäßig und langsam.",

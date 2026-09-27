@@ -488,7 +488,7 @@
             "technik": "normal"
           }
         ],
-        "hinweis": "Tremolo mit wandernder Tonhöhe: alle vier Sechzehntel ein neuer Griff. Der Strom darf am Lagenwechsel nicht stocken — das ist der Unterschied zum Tremolo auf einem Ton."
+        "hinweis": "Tremolo mit wandernder Tonhöhe: alle vier Sechzehntel ein neuer Griff. Der Strom darf am Tonwechsel nicht stocken — das ist der Unterschied zum Tremolo auf einem Ton."
       }
     },
     {
@@ -523,7 +523,7 @@
             "Wechsle nach einer festen Zahl von Anschlägen zum nächsten Powerchord, ohne die Anschlaghand zu stoppen.",
             "Zähle die Anschläge pro Akkord mit, damit die Wechsel im Timing sitzen."
           ],
-          "steigerung": "Mehr Akkorde in die Folge aufnehmen und die Zahl der Anschläge pro Akkord verkürzen.",
+          "steigerung": "Mehr Akkorde in die Folge aufnehmen und die Zahl der Anschläge pro Akkord verringern.",
           "selbstkontrolle": "Das Tremolo läuft beim Wechsel gleichmäßig weiter, und die Akkordwechsel sitzen genau auf dem Schlag."
         }
       },
@@ -665,11 +665,11 @@
       },
       "uebungsteil": {
         "de": {
-          "titel": "Galopp und Gegen-Galopp",
+          "titel": "Galopp und umgekehrter Galopp",
           "ziel": "Standard- und umgekehrten Galopp sicher unterscheiden und verbinden.",
           "schritte": [
             "Spiel palm-gemutet zuerst den Standard-Galopp (unten-unten-oben) über mehrere Takte.",
-            "Wechsle dann zum umgekehrten Galopp: die zwei schnellen Töne zuerst, dann der betonte Achtel.",
+            "Wechsle dann zum umgekehrten Galopp: die zwei schnellen Töne zuerst, dann die betonte Achtel.",
             "Verbinde beide, indem du taktweise zwischen ihnen wechselst, ohne das Tempo zu verlieren."
           ],
           "steigerung": "Die Galopp-Figuren zwischen zwei Tonhöhen bewegen und das Tempo in kleinen Schritten anheben.",
@@ -1220,7 +1220,7 @@
         "greifhand_grundlagen"
       ],
       "erklaerteil": {
-        "de": "Slides und Bends bringen Ausdruck ins Spiel. Beim Slide gleitest du mit dem greifenden Finger über die Bünde von einem Ton zum nächsten, ohne abzusetzen; beim Bending drückst du die Saite quer über das Griffbrett und hebst so die Tonhöhe an.\n\nBeim Bending zählt die Intonation: Der Zielton muss stimmen, sonst klingt es schief. Hör dir den Zielton vorher an und zieh die Saite genau auf diese Höhe — meist einen Ganz- oder Halbton. Mehrere Finger schieben gemeinsam, das gibt Kraft und Kontrolle und schont den einzelnen Finger.\n\nSlides leben von der Zielgenauigkeit: Du landest sauber auf dem Zielbund, statt daneben. Beide Techniken sind die Basis für ausdrucksstarke Leads — und sie arbeiten mit Bewegung statt mit reiner Kraft. Bei Ziehen im Handgelenk gilt auch hier: Pause statt durchbeißen."
+        "de": "Slides und Bends bringen Ausdruck ins Spiel. Beim Slide gleitest du mit dem greifenden Finger über die Bünde von einem Ton zum nächsten, ohne abzusetzen; beim Bending drückst du die Saite quer über das Griffbrett und hebst so die Tonhöhe an.\n\nBeim Bending zählt die Intonation: Der Zielton muss stimmen, sonst klingt es schief. Hör dir den Zielton vorher an und zieh die Saite genau auf diese Höhe — meist einen Ganz- oder Halbton. Mehrere Finger schieben gemeinsam, das gibt Kraft und Kontrolle und schont den einzelnen Finger.\n\nSlides leben von der Zielgenauigkeit: Du landest sauber auf dem Zielbund, statt daneben. Beide Techniken sind die Basis für ausdrucksstarke Leads — und sie arbeiten mit Bewegung statt mit reiner Kraft. Bei Ziehen im Handgelenk gilt auch hier: Pause statt Durchbeißen."
       },
       "uebungsteil": {
         "de": {
@@ -1293,7 +1293,7 @@
         "slides_bends"
       ],
       "erklaerteil": {
-        "de": "Vibrato macht aus einem stehenden Ton einen lebendigen. Du lässt die Tonhöhe gleichmäßig ein wenig schwanken, indem du die Saite rhythmisch leicht ziehst und wieder loslässt — verwandt mit dem Bending, nur klein und wiederholt.\n\nEntscheidend ist Kontrolle: gleichmäßige Geschwindigkeit und gleichmäßige Breite. Ein bewusst gesteuertes Vibrato klingt kräftig, ein nervöses Zittern dagegen unruhig. Die Bewegung kommt aus Handgelenk und Unterarm, nicht aus einem einzelnen zappelnden Finger.\n\nDie Breite ist ein Ausdrucksmittel: ein enges, schnelles Vibrato wirkt angespannt, ein weites, langsames — wie im Doom — schwer und drohend. Übe zuerst das enge, kontrollierte Vibrato, bevor du es weiter aufziehst; die Kontrolle bleibt in beiden Fällen die Grundlage."
+        "de": "Vibrato macht aus einem stehenden Ton einen lebendigen. Du lässt die Tonhöhe gleichmäßig ein wenig schwanken, indem du die Saite rhythmisch leicht ziehst und wieder loslässt — verwandt mit dem Bending, nur klein und wiederholt.\n\nEntscheidend ist Kontrolle: gleichmäßige Geschwindigkeit und gleichmäßige Breite. Ein bewusst gesteuertes Vibrato klingt kräftig, ein nervöses Zittern dagegen unruhig. Die Bewegung kommt aus Handgelenk und Unterarm, nicht aus einem einzelnen zappelnden Finger.\n\nDie Breite ist ein Ausdrucksmittel: Ein enges, schnelles Vibrato wirkt angespannt, ein weites, langsames — wie im Doom — schwer und drohend. Übe zuerst das enge, kontrollierte Vibrato, bevor du es weiter aufziehst; die Kontrolle bleibt in beiden Fällen die Grundlage."
       },
       "uebungsteil": {
         "de": {
@@ -1852,10 +1852,10 @@
         "tremolo_ausbau"
       ],
       "erklaerteil": {
-        "de": "Je höher das Tempo, desto mehr Wiederholungen laufen durch deine Sehnen und Handgelenke — und desto wichtiger wird der Schutz davor. Schnelles Tremolo, Downpicking und dichte Riffs sind Ausdauerbelastungen, die sich über eine Session aufsummieren, auch wenn im Moment nichts wehtut.\n\nDrei Prinzipien tragen dich langfristig: Wärm die Hände vor schnellem Spiel immer mit ein paar Minuten langsamem, lockerem Spielen auf. Bau Tempo und Dauer schrittweise über Wochen auf, nicht in einer einzelnen Session. Und behandle jedes Ziehen, Brennen oder Stechen im Handgelenk als Stoppsignal — dann Pause machen, nicht durchbeißen.\n\nSauberkeit und Lockerheit schützen zugleich: Wer verspannt und mit zu viel Kraft spielt, belastet die Sehnen unnötig und wird obendrein langsamer. Gute Technik ist auch Gesundheitsvorsorge."
+        "de": "Je höher das Tempo, desto mehr Wiederholungen laufen durch deine Sehnen und Handgelenke — und desto wichtiger wird der Schutz davor. Schnelles Tremolo, Downpicking und dichte Riffs sind Ausdauerbelastungen, die sich über eine Session aufsummieren, auch wenn im Moment nichts wehtut.\n\nDrei Prinzipien tragen dich langfristig: Wärm die Hände vor schnellem Spiel immer mit ein paar Minuten langsamem, lockerem Spielen auf. Bau Tempo und Dauer schrittweise über Wochen auf, nicht in einer einzelnen Session. Und behandle jedes Ziehen, Brennen oder Stechen im Handgelenk als Stoppsignal — dann Pause machen, nicht durchbeißen. Hält ein Schmerz über Tage an oder kommen Taubheit oder Kribbeln dazu, lass das ärztlich oder physiotherapeutisch abklären.\n\nSauberkeit und Lockerheit schützen zugleich: Wer verspannt und mit zu viel Kraft spielt, belastet die Sehnen unnötig und wird obendrein langsamer. Gute Technik ist auch Gesundheitsvorsorge."
       },
       "reflexionsaufgabe": {
-        "de": "Beobachte in deinen nächsten schnellen Übe-Einheiten bewusst, wann sich deine Anschlaghand oder dein Handgelenk zu verspannen beginnt. An welcher Stelle einer Session taucht das erste Brennen auf? Plane feste kurze Pausen ein, bevor dieser Punkt kommt, und überlege, wie du Tempo und Dauer über die nächsten Wochen langsam steigerst, statt es an einem Tag zu erzwingen. Was ist dein persönliches Frühwarnzeichen, bei dem du sofort stoppst?"
+        "de": "Beobachte in deinen nächsten schnellen Übe-Einheiten bewusst, wann sich deine Anschlaghand oder dein Handgelenk zu verspannen beginnt. An welcher Stelle einer Session tauchen die ersten Anzeichen von Ermüdung oder Verspannung auf? Plane feste kurze Pausen ein, bevor dieser Punkt kommt, und überlege, wie du Tempo und Dauer über die nächsten Wochen langsam steigerst, statt es an einem Tag zu erzwingen. Was ist dein persönliches Frühwarnzeichen, bei dem du sofort stoppst?"
       }
     },
     {
@@ -1871,7 +1871,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Schneller werden ist im Metal weniger eine Frage von Talent als von Methode. Wer wahllos am Tempo dreht, spielt Fehler ein und stagniert; wer systematisch arbeitet, kommt verlässlich voran. Das Metronom bleibt dabei dein ehrlichster Maßstab — es zeigt, ob ein Tempo wirklich sitzt oder nur ungefähr.\n\nFortschritt verläuft nicht gleichmäßig, sondern in Stufen mit Plateaus dazwischen. Wochen ohne sichtbaren Sprung sind normal und kein Zeichen von Versagen — oft festigt sich in dieser Zeit gerade das, was du schon kannst. Der Schlüssel ist, sauber und in kleinen Schritten zu üben und ein Tempo erst zu verlassen, wenn es mehrfach fehlerfrei gelingt.\n\nGeduld ist hier eine Technik wie jede andere. Zehn langsame, fehlerfreie Wiederholungen bringen dich weiter als eine hektische schnelle, weil dein Körper einprägt, was du wiederholst — Sauberkeit ebenso wie Fehler."
+        "de": "Schneller werden ist im Metal weniger eine Frage von Talent als von Methode. Wer wahllos am Tempo dreht, spielt Fehler ein und stagniert; wer systematisch arbeitet, kommt verlässlich voran. Das Metronom bleibt dabei dein ehrlichster Maßstab — es zeigt, ob ein Tempo wirklich sitzt oder nur ungefähr.\n\nFortschritt verläuft nicht gleichmäßig, sondern in Stufen mit Plateaus dazwischen. Wochen ohne sichtbaren Sprung sind normal und kein Zeichen von Versagen — oft festigt sich in dieser Zeit gerade das, was du schon kannst. Der Schlüssel ist, sauber und in kleinen Schritten zu üben und ein Tempo erst zu verlassen, wenn es mehrfach fehlerfrei gelingt.\n\nGeduld ist hier eine Technik wie jede andere. Zehn langsame, fehlerfreie Wiederholungen bringen dich weiter als eine hektische schnelle, weil sich dein Körper einprägt, was du wiederholst — Sauberkeit ebenso wie Fehler."
       },
       "reflexionsaufgabe": {
         "de": "Nimm dir eine Übung vor, an der du gerade am Tempo arbeitest, und lege ehrlich fest, bei welchem Metronom-Tempo sie wirklich fehlerfrei sitzt. Wie klein ist der nächste Schritt, den du dir zutraust, ohne dass sich Fehler einschleichen? Notiere dir dieses Tempo, damit du beim nächsten Mal nicht zu hoch startest, und überlege, wie du mit einem Plateau umgehst, wenn tagelang kein Fortschritt sichtbar ist."

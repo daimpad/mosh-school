@@ -44,7 +44,7 @@
         "band_gruendung_ziele"
       ],
       "reflexionsaufgabe": {
-        "de": "Listet, was eure Band vom Raum braucht (Budget pro Person, Zugangszeiten, Entfernung, ob ihr Equipment lagern könnt). Welche Option — eigener Komplex, geteilter Raum, privater Raum — passt, und welchen Haupt-Kompromiss würdet ihr dafür in Kauf nehmen?"
+        "de": "Listet, was eure Band vom Raum braucht (Budget pro Person, Zugangszeiten, Entfernung, ob ihr Equipment lagern könnt). Welche Option — Raum im Proberaumkomplex, geteilter Raum, privater Raum — passt, und welchen Haupt-Kompromiss würdet ihr dafür in Kauf nehmen?"
       }
     },
     {
@@ -60,7 +60,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Einen Raum auszustatten heißt: Backline (Verstärker und Boxen für Gitarre und Bass, ein Schlagzeug) und eine PA für den Gesang. Vocals müssen verstärkt werden — gegen ein Schlagzeug und zwei Verstärker kommt keine Stimme unverstärkt an, und das ist zugleich eine Frage der Stimmgesundheit: Wer sich gegen die Band anschreien muss, überlastet die Stimme.\n\nAls Minimum: Gitarrenverstärker, Bassverstärker, Schlagzeug (oft im Raum belassen und geteilt) und eine kleine PA mit mindestens zwei Gesangsmikrofonen und Monitoren, damit die singende Person sich selbst hört. Klärt, was im Raum bleibt und was jede:r mitbringt.\n\nEine günstige, aber ausreichende PA schlägt keine PA — dass die Stimme sich selbst hört, verhindert Drücken und Überlastung von Anfang an."
+        "de": "Einen Raum auszustatten heißt: Backline (Verstärker und Boxen für Gitarre und Bass, ein Schlagzeug) und eine PA für den Gesang. Vocals müssen verstärkt werden — gegen ein Schlagzeug und zwei Verstärker kommt keine Stimme unverstärkt an, und das ist zugleich eine Frage der Stimmgesundheit: Wer sich gegen die Band anschreien muss, überlastet die Stimme.\n\nAls Minimum: Gitarrenverstärker, Bassverstärker, Schlagzeug (oft im Raum belassen und geteilt) und eine kleine PA mit mindestens zwei Gesangsmikrofonen und Monitoren, damit die singende Person sich selbst hört. Klärt, was im Raum bleibt und was jede:r mitbringt.\n\nEine günstige, aber ausreichende PA ist besser als gar keine PA — dass die singende Person sich selbst hört, verhindert Drücken und Überlastung von Anfang an."
       },
       "voraussetzungen": [
         "band_proberaum_finden"
@@ -104,7 +104,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Ein Proberaum mit einer kompletten Metal-Band erreicht mühelos Lautstärken, die das Gehör dauerhaft schädigen — und Gehörschäden, Tinnitus eingeschlossen, heilen nicht wieder. Das ist der wichtigste Gesundheitspunkt des Bandspielens überhaupt, und er wird routinemäßig ignoriert, bis es zu spät ist.\n\nMusiker-Ohrstöpsel mit einem linearen Filter senken die Lautstärke gleichmäßig, ohne den Klang dumpf zu machen — du hörst weiter Tonhöhe und Details, anders als bei Schaumstoffstöpseln, die alles ersticken. Trag sie bei jeder Probe, von der ersten Minute an, nicht erst, „wenn es laut wird“.\n\nEin Pfeifen oder Klingeln in den Ohren nach dem Spielen ist bereits ein Warnsignal, kein Nebeneffekt, an den man sich gewöhnt."
+        "de": "Ein Proberaum mit einer kompletten Metal-Band erreicht mühelos Lautstärken, die das Gehör dauerhaft schädigen — und bleibende Gehörschäden, chronischer Tinnitus eingeschlossen, heilen nicht wieder. Das ist der wichtigste Gesundheitspunkt des Bandspielens überhaupt, und er wird routinemäßig ignoriert, bis es zu spät ist.\n\nMusiker-Ohrstöpsel mit einem linearen Filter senken die Lautstärke gleichmäßig, ohne den Klang dumpf zu machen — du hörst weiter Tonhöhe und Details, anders als bei Schaumstoffstöpseln, die alles ersticken. Trag sie bei jeder Probe, von der ersten Minute an, nicht erst, „wenn es laut wird“.\n\nEin Pfeifen oder Klingeln in den Ohren nach dem Spielen ist bereits ein Warnsignal, kein Nebeneffekt, an den man sich gewöhnt."
       },
       "reflexionsaufgabe": {
         "de": "Wie laut wird euer Raum wirklich, und trägt jede:r von der ersten Minute an Gehörschutz? Wenn du nach der Probe ein Klingeln oder ein dumpfes Gefühl bemerkst, ist das ein Warnzeichen — was würdest du ändern (Ohrstöpsel für alle, weniger Lautstärke, Pausen), um dein Gehör zu schützen, das sich nach einer Schädigung nicht mehr erholt?"
@@ -123,7 +123,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Die ersten Proben prägen die Kultur der Band. Eine Struktur hilft: gemeinsam stimmen und aufwärmen, sich auf ein bis zwei Stücke einigen (ein Cover ist ein guter gemeinsamer Startpunkt), in fokussierten Blöcken arbeiten, die Probe aufnehmen (das Gedächtnis an eine Probe trügt) und am Ende festlegen, was jede:r bis zum nächsten Mal vorbereitet.\n\nEin ganzes Set schlecht durchzuspielen bringt weniger, als einen Part gemeinsam sauber hinzubekommen. Die Aufnahme ist der ehrliche Spiegel — sie zeigt, wo die Band tight ist und wo sie driftet.\n\nSo wird aus losem Zusammenspielen echtes gemeinsames Arbeiten: mit einem Fokus, einem Spiegel und einer Verabredung für das nächste Mal."
+        "de": "Die ersten Proben prägen die Kultur der Band. Eine Struktur hilft: gemeinsam stimmen und aufwärmen, sich auf ein bis zwei Stücke einigen (ein Cover ist ein guter gemeinsamer Startpunkt), in fokussierten Blöcken arbeiten, die Probe aufnehmen (die Erinnerung an eine Probe trügt) und am Ende festlegen, was jede:r bis zum nächsten Mal vorbereitet.\n\nEin ganzes Set schlecht durchzuspielen bringt weniger, als einen Part gemeinsam sauber hinzubekommen. Die Aufnahme ist der ehrliche Spiegel — sie zeigt, wo die Band tight ist und wo sie driftet.\n\nSo wird aus losem Zusammenspielen echtes gemeinsames Arbeiten: mit einem Fokus, einem Spiegel und einer Verabredung für das nächste Mal."
       },
       "voraussetzungen": [
         "band_gruendung_ziele"

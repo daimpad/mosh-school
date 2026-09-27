@@ -103,7 +103,7 @@
         "delta_bas_downpicking"
       ],
       "erklaerteil": {
-        "de": "Vom Bass kommend kennst du das halbe Terrain schon: Grundtöne greifen, Lagen wechseln, die tiefen Saiten kontrollieren. Der Powerchord ist der nächste Schritt — statt eines Einzeltons greifst du Grundton und Quinte gleichzeitig, meist auf zwei benachbarten Saiten. Dein Lagengefühl vom Bass überträgt sich direkt: Das Powerchord-Muster ist verschiebbar wie deine Grundton-Positionen, nur mit einem Finger mehr.\n\nZwei Dinge sind wirklich neu. Erstens die Dämpfung nach oben: Am Bass klingt meist nur die gegriffene Saite — an der Gitarre musst du die vier ungenutzten Saiten aktiv stumm halten (Zeigefinger legt sich flach an, die Anschlagshand hilft), sonst klingt jeder Akkord verwaschen. Zweitens die geringere Saitenspannung: Du brauchst deutlich weniger Kraft als am Bass — wer mit Bass-Kraft greift, drückt die Saiten scharf und verstimmt den Akkord.\n\nDein Vorteil: Dein Timing und dein Tiefton-Gehör sind schon trainiert. Konzentrier dich auf die saubere Zwei-Saiten-Form — der Rest ist für dich Wiederholung."
+        "de": "Vom Bass kommend kennst du das halbe Terrain schon: Grundtöne greifen, Lagen wechseln, die tiefen Saiten kontrollieren. Der Powerchord ist der nächste Schritt — statt eines Einzeltons greifst du Grundton und Quinte gleichzeitig, meist auf zwei benachbarten Saiten. Dein Lagengefühl vom Bass überträgt sich direkt: Das Powerchord-Muster ist verschiebbar wie deine Grundton-Positionen, nur mit einem Finger mehr.\n\nZwei Dinge sind wirklich neu. Erstens die Dämpfung nach oben: Am Bass klingt meist nur die gegriffene Saite — an der Gitarre musst du die vier ungenutzten Saiten aktiv stumm halten (Zeigefinger legt sich flach an, die Anschlagshand hilft), sonst klingt jeder Akkord verwaschen. Zweitens die geringere Saitenspannung: Du brauchst deutlich weniger Kraft als am Bass — wer mit Bass-Kraft greift, drückt die Töne zu hoch und verstimmt den Akkord.\n\nDein Vorteil: Dein Timing und dein Tiefton-Gehör sind schon trainiert. Konzentrier dich auf die saubere Zwei-Saiten-Form — der Rest ist für dich Wiederholung."
       }
     },
     {
@@ -578,7 +578,7 @@
       },
       "uebungsteil": {
         "de": {
-          "titel": "Strenger D-U-Wechsel",
+          "titel": "Strenger Ab-Auf-Wechsel",
           "ziel": "Gleichwertige Ab- und Aufschläge bei kleiner Bewegung.",
           "schritte": [
             "Stell das Metronom auf ein langsames Tempo und spiel Achtel auf einer leeren Saite.",
@@ -735,9 +735,9 @@
           "titel": "Chug-Kontrolle am tiefen E",
           "ziel": "Gleichmäßige, enge Dämpfung bei konstantem Anschlag.",
           "schritte": [
-            "Handballen am Steg auflegen, tiefe Saite im Achtel-Puls anschlagen.",
-            "Handposition minimal vor/zurück schieben, bis der Ton kurz und definiert ist.",
-            "Vier Takte durchgehend spielen, ohne dass Lautstärke oder Dämpfung schwanken."
+            "Leg den Handballen am Steg auf und schlag die tiefe Saite im Achtel-Puls an.",
+            "Schieb die Hand minimal vor und zurück, bis der Ton kurz und definiert ist.",
+            "Spiel vier Takte durch, ohne dass Lautstärke oder Dämpfung schwanken."
           ],
           "steigerung": "Tempo in 5-BPM-Schritten anheben; danach zwischen gedämpft und offen wechseln.",
           "selbstkontrolle": "Jeder Chug klingt gleich laut und gleich kurz; keine schnarrenden oder offen klingenden Töne."
@@ -830,7 +830,7 @@
         "schwererer_ton"
       ],
       "erklaerteil": {
-        "de": "Powerchords sind das harmonische Rückgrat des Metal. Sie bestehen nur aus Grundton und Quinte (oft plus Oktave) und lassen die Terz weg — dadurch bleiben sie unter starker Verzerrung klar und wuchtig, wo volle Akkorde matschen würden.\n\nDie Form ist beweglich: Ein gegriffenes Muster kannst du unverändert über den ganzen Hals schieben und so schnell die Tonhöhe wechseln. Als Zwei-Finger-Version (Grundton + Quinte) oder Drei-Finger-Version (plus Oktave) klingt der Akkord voller.\n\nSauberkeit heißt hier: Nur die gewollten Saiten klingen, benachbarte bleiben still. Das gelingt über den Fingerdruck und leichtes Abdämpfen mit den Handkanten."
+        "de": "Powerchords sind das harmonische Rückgrat des Metal. Sie bestehen nur aus Grundton und Quinte (oft plus Oktave) und lassen die Terz weg — dadurch bleiben sie unter starker Verzerrung klar und wuchtig, wo volle Akkorde matschen würden.\n\nDie Form ist beweglich: Ein gegriffenes Muster kannst du unverändert über den ganzen Hals schieben und so schnell die Tonhöhe wechseln. Du kannst den Powerchord als Zwei-Finger-Version (Grundton + Quinte) oder als Drei-Finger-Version (plus Oktave) greifen — die zweite klingt voller.\n\nSauberkeit heißt hier: Nur die gewollten Saiten klingen, benachbarte bleiben still. Das gelingt über den Fingerdruck und leichtes Abdämpfen mit den Handkanten."
       },
       "uebungsteil": {
         "de": {
@@ -1216,7 +1216,7 @@
         "schwererer_ton"
       ],
       "erklaerteil": {
-        "de": "Bei Drop-Tunings stimmst du die tiefste Saite tiefer — bei Drop D von E auf D, bei tieferen Stimmungen wie Drop C entsprechend weiter. Das senkt den Grundton und erlaubt Powerchords über die drei tiefsten Saiten mit nur einem Finger, ideal für schnelle, schwere Riffs.\n\nTieferes Stimmen macht den Ton wuchtiger, verringert aber die Saitenspannung. Damit die Saiten nicht zu schlaff werden und sauber klingen, brauchen tiefe Stimmungen oft dickere Saiten und eine angepasste Einstellung der Gitarre — ein Punkt, an dem Ausrüstung und Spielgefühl zusammenhängen.\n\nStimm immer mit einem Stimmgerät und prüf die Stimmung erneut, nachdem sich die Saiten gesetzt haben."
+        "de": "Bei Drop-Tunings stimmst du die tiefste Saite tiefer — bei Drop D von E auf D, bei Drop C wandert die ganze Drop-D-Stimmung einen Ganzton tiefer (C, G, C, F, A, D). Das senkt den Grundton und erlaubt Powerchords über die drei tiefsten Saiten mit nur einem Finger, ideal für schnelle, schwere Riffs.\n\nTieferes Stimmen macht den Ton wuchtiger, verringert aber die Saitenspannung. Damit die Saiten nicht zu schlaff werden und sauber klingen, brauchen tiefe Stimmungen oft dickere Saiten und eine angepasste Einstellung der Gitarre — ein Punkt, an dem Ausrüstung und Spielgefühl zusammenhängen.\n\nStimm immer mit einem Stimmgerät und prüf die Stimmung erneut, nachdem sich die Saiten gesetzt haben."
       },
       "uebungsteil": {
         "de": {

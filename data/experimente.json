@@ -48,7 +48,7 @@
       "id": "exp_005",
       "kategorie": "Klang & Ton",
       "titel": "Halstonabnehmer für Rhythmus",
-      "impuls": "Spiel ein Rhythmus-Riff nur auf dem Hals-Tonabnehmer.",
+      "impuls": "Spiel ein Rhythmus-Riff nur auf dem Halstonabnehmer.",
       "aufwand": "kurz",
       "bezug": "tonabnehmer_typen"
     },
@@ -78,7 +78,7 @@
       "id": "exp_009",
       "kategorie": "Technik verfremden",
       "titel": "Blast unter Langsamkeit",
-      "impuls": "Drums: Blast-Beat unter einem schleppenden Riff.",
+      "impuls": "Drums: Blastbeat unter einem schleppenden Riff.",
       "aufwand": "mittel",
       "werkzeug": "play_along"
     },
@@ -131,7 +131,7 @@
       "id": "exp_016",
       "kategorie": "Struktur & Form",
       "titel": "Takt klauen",
-      "impuls": "Lass in einem Riff eine Zählzeit weg, sodass 4/4 zu 7/8 wird.",
+      "impuls": "Lass in einem Riff eine Achtel weg, sodass 4/4 zu 7/8 wird.",
       "aufwand": "mittel",
       "bezug": "mathcore_taktwechsel"
     },
@@ -215,7 +215,7 @@
       "id": "exp_027",
       "kategorie": "Beschränkung",
       "titel": "Eine Hand",
-      "impuls": "Nur Legato oder Tapping — die Anschlaghand bleibt weg.",
+      "impuls": "Nur Legato oder Tapping mit der Greifhand — die Anschlaghand bleibt weg.",
       "aufwand": "mittel"
     },
     {
@@ -260,7 +260,7 @@
       "id": "exp_033",
       "kategorie": "Aufnahme",
       "titel": "Ein Take, kein Schnitt",
-      "impuls": "Eine Spur, ein Durchgang, keine Korrektur — auch wenn es patzt.",
+      "impuls": "Eine Spur, ein Durchgang, keine Korrektur — auch wenn du patzt.",
       "aufwand": "kurz",
       "werkzeug": "riff_recorder"
     },
@@ -414,7 +414,7 @@
       "id": "exp_054",
       "kategorie": "Technik verfremden",
       "titel": "Dämpfung verkehrt",
-      "impuls": "Dämpfe genau die Töne ab, die sonst klingeln, und lass die klingen, die du sonst abstoppst. Der vertauschte Akzent macht ein neues Riff.",
+      "impuls": "Dämpfe genau die Töne ab, die sonst ausklingen, und lass die klingen, die du sonst abstoppst. Der vertauschte Akzent macht ein neues Riff.",
       "aufwand": "kurz"
     },
     {
@@ -504,7 +504,7 @@
       "id": "exp_066",
       "kategorie": "Aufnahme",
       "titel": "Doppelt mit Fehler",
-      "impuls": "Nimm dasselbe Riff zweimal ein und lass die kleinen Ungenauigkeiten stehen. Die Breite kommt oft genau aus dem Fehler.",
+      "impuls": "Nimm dasselbe Riff zweimal auf und lass die kleinen Ungenauigkeiten stehen. Die Breite kommt oft genau aus dem Fehler.",
       "aufwand": "mittel",
       "werkzeug": "skizzen_recorder"
     },

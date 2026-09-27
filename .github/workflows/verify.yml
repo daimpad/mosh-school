@@ -164,8 +164,14 @@ jobs:
             node --check --input-type=module < "$datei" \
               || { echo "::error file=$datei::Syntaxfehler"; fehler=1; }
           done
+          # Die Node-Skripte unter scripts/ sind ebenfalls Module (.mjs) —
+          # dieselbe Falle, derselbe Weg ueber stdin.
+          for datei in $(find scripts -name '*.mjs' | sort); do
+            node --check --input-type=module < "$datei" \
+              || { echo "::error file=$datei::Syntaxfehler"; fehler=1; }
+          done
           # sw.js ist bewusst ein klassisches Skript (kein Modul) — so pruefen,
           # wie der Browser es laedt.
           node --check sw.js || { echo "::error file=sw.js::Syntaxfehler"; fehler=1; }
-          echo "$(find js -name '*.js' | wc -l) Module + sw.js geprueft"
+          echo "$(find js -name '*.js' | wc -l) Module + $(find scripts -name '*.mjs' | wc -l) Skripte + sw.js geprueft"
           exit $fehler

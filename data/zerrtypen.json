@@ -90,7 +90,7 @@
       "prinzip": "Zwei bis drei Transistorstufen mit Germaniumbauteilen; sehr hohe Verstärkung.",
       "klang": "Körnig, komprimiert, weich einsetzend; reagiert stark auf das Volumenpoti.",
       "anwendung": "Schwere, langsame Musik; historische Klangbilder.",
-      "achtung": "Temperaturabhängig und exemplarstreuend; mag hohe Eingangsimpedanz — Pufferpedale davor verändern den Klang deutlich."
+      "achtung": "Temperaturabhängig und exemplarstreuend; hat selbst eine niedrige Eingangsimpedanz und will direkt an der Gitarre hängen — Pufferpedale davor verändern den Klang deutlich."
     },
     {
       "id": "zt_010",
@@ -105,7 +105,7 @@
       "id": "zt_011",
       "gruppe": "Fuzz",
       "bezeichnung": "Vierstufiger Fuzz mit Mittenabsenkung",
-      "prinzip": "Vier Klippungsstufen mit ausgeprägtem Bandsperrfilter in den Mitten.",
+      "prinzip": "Vier Transistorstufen, davon zwei kaskadiert klippend; dahinter ein Klangnetzwerk mit ausgeprägter Mittenabsenkung.",
       "klang": "Sehr dick, langes Sustain, ausgehöhlte Mitten.",
       "anwendung": "Doom, Stoner, Shoegaze-Flächen.",
       "achtung": "Die Mittenabsenkung lässt die Gitarre im Bandmix verschwinden — im Ensemble nachjustieren."

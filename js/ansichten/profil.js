@@ -22,12 +22,14 @@ function zielLabel(ziel) {
   return beschriftungen.length > 0 ? beschriftungen.join(' · ') : t('ziel_keins');
 }
 
+// Der Knopf trägt den Begriff unsichtbar mit: Vier gleichlautende „Ändern" wären
+// in der Liste der Bedienelemente nicht auseinanderzuhalten.
 function zeile(schluessel, begriff, wert) {
   const aktiv = offen === schluessel;
   return `
     <div class="profil-zeile">
       <div><p class="leise">${esc(begriff)}</p><p>${esc(wert)}</p></div>
-      <button class="knopf knopf-leise" data-bearbeite="${schluessel}">${esc(aktiv ? t('schliessen') : t('aendern'))}</button>
+      <button class="knopf knopf-leise" data-bearbeite="${schluessel}" aria-expanded="${aktiv}">${esc(aktiv ? t('schliessen') : t('aendern'))}<span class="nur-sr"> ${esc(begriff)}</span></button>
     </div>`;
 }
 
@@ -380,8 +382,11 @@ export function renderProfil(el, daten) {
 
   for (const knopf of el.querySelectorAll('[data-bearbeite]')) {
     knopf.addEventListener('click', () => {
-      offen = offen === knopf.dataset.bearbeite ? null : knopf.dataset.bearbeite;
+      const schluessel = knopf.dataset.bearbeite;
+      offen = offen === schluessel ? null : schluessel;
       renderProfil(el, daten);
+      // Fokus zurück auf den Knopf, damit aria-expanded dort auch angesagt wird.
+      el.querySelector(`[data-bearbeite="${schluessel}"]`)?.focus();
     });
   }
 

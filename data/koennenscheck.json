@@ -46,7 +46,7 @@
     {
       "id": "gesundheit",
       "titel": {
-        "de": "Gesundheit & Warm-up"
+        "de": "Gesundheit & Aufwärmen"
       }
     }
   ],
@@ -190,7 +190,7 @@
         "einsteiger": {
           "stufe": "empfehlung",
           "text": {
-            "de": "Dein Grundton trägt, ohne zu matschen — Gain und Verzerrung bewusst dosiert."
+            "de": "Dein Grundklang trägt, ohne zu matschen — Gain und Verzerrung bewusst dosiert."
           }
         },
         "fortgeschritten": {

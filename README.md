@@ -28,12 +28,12 @@ vom ersten Powerchord bis zum Blastbeat. Sie läuft **komplett auf deinem Gerät
 kein Konto, keine Server-Komponente. Der Fortschritt lebt im `localStorage`, offline
 funktioniert alles.
 
-> Rein statisch, **buildfrei**: HTML/CSS/JS als ES-Module, keine Bundler, keine Laufzeit-
-> Abhängigkeiten. Inhalte kommen aus JSON, sichtbare Texte laufen durch eine kleine i18n-Schicht.
+> Rein statisch, **buildfrei**: HTML/CSS/JS als ES-Module, keine Bundler, keine
+> Laufzeit-Abhängigkeiten. Inhalte kommen aus JSON, sichtbare Texte laufen durch eine kleine i18n-Schicht.
 
 **Zum Datenschutz, genau:** ZERRER setzt keine Cookies, bindet keine Werbenetzwerke ein und legt
 kein Nutzerprofil an. Für eine anonyme Reichweitenmessung ist
-[GoatCounter](https://www.goatcounter.com/) eingebunden — die **einzige** Ausnahme vom Grundsatz,
+[GoatCounter](https://www.goatcounter.com/) eingebunden — beim normalen Besuch die **einzige** Ausnahme vom Grundsatz,
 keine Ressourcen von externen Anbietern zu laden. Schriften, Icons und Bibliotheken liegen alle
 lokal im Repo. Nachzulesen in der [Datenschutzerklärung](https://zerrer.org/#/datenschutz).
 
@@ -48,7 +48,7 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 | **288** Fehlerbilder | Trainer-Layer: typische Fehler als Diagnose |
 | **41** Trainingseinheiten | kuratierte Sitzungen (Erwärmung → Hauptteil → Ausklang) |
 | **16** Genres | von Hardcore bis Noise Rock |
-| **823** SVG-Grafiken | 797 Baustein-Motive + 26 Lehrgrafiken, alle deterministisch erzeugt |
+| **823** SVG-Grafiken | 797 Motive (509 Bausteine + 288 Fehlerbilder) + 26 Lehrgrafiken, alle deterministisch erzeugt |
 | **13** Werkzeuge | die klingenden auf einem gemeinsamen, DOM-freien Audio-Kern |
 
 ## Features
@@ -115,6 +115,8 @@ Vor jedem Commit (dieselben Prüfungen laufen in der CI):
 ```sh
 python3 scripts/validate.py                # Cross-File-Konsistenz über den Pool
 python3 scripts/lift.py                    # Titel nach labels/de.json geliftet
+python3 scripts/build_marken.py --check    # Marken-Masken reproduzierbar
+python3 scripts/build_portraets.py --check # Kollektiv-Porträts reproduzierbar
 python3 scripts/build_grafiken.py --check  # Grafik-Bundles reproduzierbar
 python3 scripts/build_seiten.py --check    # statische Seiten + Sitemap reproduzierbar
 python3 scripts/pruefe_zerrlabor.py        # Zerr-Kennlinien treffen ihre Sollwerte

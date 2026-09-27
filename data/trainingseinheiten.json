@@ -970,7 +970,7 @@
         "de": "Crust: der unerbittliche Lauf"
       },
       "beschreibung": {
-        "de": "Die Genre-Werkstatt für Ausdauer mit Haltung: Der D-Beat läuft sich warm, dann bauen Schlagzeug, Bass und Stimme den räudigen Dauerdruck — und der Ausklang gehört den Händen, die den Lauf bezahlt haben."
+        "de": "Die Genre-Werkstatt für Ausdauer mit Haltung: Der D-Beat läuft sich warm, dann bauen Schlagzeug, Bass und Gitarre den räudigen Dauerdruck — und der Ausklang gehört der Stimme."
       },
       "phasen": {
         "erwaermung": [
@@ -1108,7 +1108,7 @@
         "de": "Breakdown-Gitarre"
       },
       "beschreibung": {
-        "de": "Chugs und Powerchord als Waffe: Du wärmst die Greifhand auf, festigst die Dämpfung und baust daraus einen wuchtigen, synkopierten Breakdown mit echter Stille."
+        "de": "Chugs und Powerchords als Waffe: Du wärmst die Greifhand auf, festigst die Dämpfung und baust daraus einen wuchtigen, synkopierten Breakdown mit echter Stille."
       },
       "phasen": {
         "erwaermung": [
@@ -1198,7 +1198,7 @@
         "de": "fuzziger Groove (Gitarre)"
       },
       "beschreibung": {
-        "de": "Der Riff regiert: Aufwärmen, Downpicking-Kondition, dann ein fuzziger Groove mit bewusster Lücke, leicht hinter dem Puls und lustvoll wiederholt."
+        "de": "Das Riff regiert: Aufwärmen, Downpicking-Kondition, dann ein fuzziger Groove mit bewusster Lücke, leicht hinter dem Puls und lustvoll wiederholt."
       },
       "phasen": {
         "erwaermung": [
@@ -1441,7 +1441,7 @@
           {
             "baustein": "deathcore_gutturals_squeals",
             "hinweis": {
-              "de": "Register einzeln und leise; Pig-Squeals nur mit Lehrperson. Bei Engegefühl sofort stoppen."
+              "de": "Register einzeln und leise; Pig Squeals nur mit Lehrperson. Bei Engegefühl sofort stoppen."
             }
           }
         ],
@@ -1449,7 +1449,7 @@
           {
             "baustein": "tonhoehe_clean",
             "hinweis": {
-              "de": "Ruhiger Ausklang auf einer sauberen Clean-Linie; danach Sprechtest, bei Heiserkeit HNO."
+              "de": "Ruhiger Ausklang auf einer sauberen Clean-Linie; danach Sprechtest, bei anhaltender Heiserkeit in die HNO-Praxis."
             }
           }
         ]
@@ -1519,10 +1519,10 @@
       "id": "band_zusammen_session",
       "kompetenzstufe": "fortgeschritten",
       "schwerpunkt": {
-        "de": "Als ganze Band zusammenfinden — Trio-Lock, gemeinsamer Breakdown, Stops und ein gemeinsamer Dynamik-Aufbau."
+        "de": "Als ganze Band zusammenfinden — Trio-Lock, gemeinsamer Breakdown, Stopps und ein gemeinsamer Dynamik-Aufbau."
       },
       "beschreibung": {
-        "de": "Eine Session für die ganze Band, aufgebaut von der Rhythmus-Maschine nach außen. Jeder wärmt sich für sich auf; dann fügt ihr Gitarre, Bass und Drums zum Trio-Lock, setzt gemeinsam einen Breakdown mit den Vocals und übt zuletzt Stops und Einsätze, an denen alle vier zusammen treffen. Zum Ausklang tragt ihr gemeinsam einen Dynamik-Aufbau. Ziel ist nicht Repertoire, sondern das Gefühl, als ein Körper zu spielen."
+        "de": "Eine Session für die ganze Band, aufgebaut von der Rhythmus-Maschine nach außen. Jeder wärmt sich für sich auf; dann fügt ihr Gitarre, Bass und Drums zum Trio-Lock, setzt gemeinsam einen Breakdown mit den Vocals und übt zuletzt Stopps und Einsätze, an denen alle vier zusammen treffen. Zum Ausklang tragt ihr gemeinsam einen Dynamik-Aufbau. Ziel ist nicht Repertoire, sondern das Gefühl, als ein Körper zu spielen."
       },
       "phasen": {
         "erwaermung": [
@@ -1595,13 +1595,13 @@
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
-              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wachwerden lassen, bevor es laut wird."
+              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wach werden lassen, bevor es laut wird."
             }
           },
           {
             "baustein": "anschlaghand_grundlagen",
             "hinweis": {
-              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wachwerden lassen, bevor es laut wird."
+              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wach werden lassen, bevor es laut wird."
             }
           }
         ],
@@ -1690,7 +1690,7 @@
         "de": "Klang als Material: veränderte Stimmung, Rückkopplung, treibender Bass"
       },
       "beschreibung": {
-        "de": "Eine Einheit, in der nicht Technik im Vordergrund steht, sondern Klang: veränderte Stimmungen, kontrollierte Rückkopplung und der Bass als führende Stimme. Ergebnisoffen — festhalten ist wichtiger als sauber spielen. Diese Einheit arbeitet zwangsläufig laut. Gehörschutz ist Pflicht, die Rückkopplungsphase bleibt kurz, und Hörschäden bilden sich nicht zurück. Halte alles auf, was entsteht — der Ertrag dieser Session sind Ideen, keine sauberen Durchgänge."
+        "de": "Eine Einheit, in der nicht Technik im Vordergrund steht, sondern Klang: veränderte Stimmungen, kontrollierte Rückkopplung und der Bass als führende Stimme. Ergebnisoffen — festhalten ist wichtiger als sauber spielen. Diese Einheit arbeitet zwangsläufig laut. Gehörschutz ist Pflicht, die Rückkopplungsphase bleibt kurz, und Hörschäden bilden sich nicht zurück. Halte alles fest, was entsteht — der Ertrag dieser Session sind Ideen, keine sauberen Durchgänge."
       },
       "phasen": {
         "erwaermung": [
@@ -1771,7 +1771,7 @@
         "de": "D-Beat, Tempo und Ausdauer am Set"
       },
       "beschreibung": {
-        "de": "Treibender Hardcore-Puls: Nach dem Rudiment-Warm-up vom stabilen Grundbeat zum D-Beat, geschärft über Akzente — Ausklang im langsamen, schweren Kontrast."
+        "de": "Treibender Hardcore-Puls: Nach dem Aufwärmen mit Rudiments vom stabilen Grundbeat zum D-Beat, geschärft über Akzente — Ausklang im langsamen, schweren Kontrast."
       },
       "phasen": {
         "erwaermung": [
@@ -1804,7 +1804,7 @@
         "de": "Anschlag, Tightness und tiefes Fundament"
       },
       "beschreibung": {
-        "de": "Tempo mit Fundament: Fingerstyle-Warm-up, dann Dreifinger-Technik, Tremolo und Blast-Begleitung — Ausklang über ruhige Dämpfungskontrolle für einen sauberen Ton."
+        "de": "Tempo mit Fundament: Fingerstyle-Aufwärmen, dann Drei-Finger-Technik, Tremolo und Blast-Begleitung — Ausklang über ruhige Dämpfungskontrolle für einen sauberen Ton."
       },
       "phasen": {
         "erwaermung": [

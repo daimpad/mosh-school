@@ -1,6 +1,6 @@
 {
   "titel": "Griffe",
-  "hinweis": "Die wichtigsten Gitarrengriffe fürs harte Spiel als Griffbild — von den beweglichen Powerchords über Barré-Formen und Oktaven bis zu offenen Akkorden für cleane Passagen. Powerchords und Barré-Formen sind verschiebbar: dieselbe Form klingt auf jedem Bund, nur der Grundton (R) wandert. Die × markieren stumm gehaltene Saiten — im Metal fast immer palm-muted und in tiefer Stimmung, die Griffe bleiben trotzdem gleich.",
+  "hinweis": "Die wichtigsten Gitarrengriffe fürs harte Spiel als Griffbild — von den beweglichen Powerchords über Barré-Formen und Oktaven bis zu offenen Akkorden für cleane Passagen. Powerchords und Barré-Formen sind verschiebbar: dieselbe Form klingt auf jedem Bund, nur der Grundton (R) wandert. Die × markieren stumm gehaltene Saiten. Im Metal werden diese Griffe oft palm-muted und in tiefer Stimmung gespielt — die Formen bleiben trotzdem gleich.",
   "griffe": [
     {
       "id": "pc_e_2",
@@ -254,7 +254,7 @@
         { "status": "stumm" },
         { "status": "offen" },
         { "status": "quinte", "bund": 2, "finger": 2 },
-        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "oktave", "bund": 3, "finger": 3 },
         { "status": "terz", "bund": 1, "finger": 1 }
       ]
     }

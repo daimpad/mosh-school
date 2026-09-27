@@ -3,7 +3,7 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "gemischt",
     "domaene": "uebe-methodik",
-    "hinweis": "Übe-Methodik (Wie übe ich?): bewusstes/effektives Üben, eine Übe-Einheit strukturieren, Übe-Tagebuch, Fehler früh an der Ursache beheben, den Lernweg planen, eine Übung ans eigene Level anpassen. Sechs Reflexions-Bausteine (Domäne mentales). Bewusst OHNE Dubletten zu bestehenden Themen (Plateaus, Motivation, Ergonomie, Überlastung sind schon abgedeckt). Gesundheitsrahmen (Aufwärmen, Pausen, Stopp bei Schmerz). Kein Vokabular-Block."
+    "hinweis": "Übe-Methodik (Wie übe ich?): bewusstes/effektives Üben, eine Übe-Einheit strukturieren, Übe-Tagebuch, Fehler früh an der Ursache beheben, den Lernweg planen, eine Übung ans eigene Level anpassen. Zehn Reflexions-Bausteine (Domänen mentales und koerper), darunter die hierher verschobenen Themen Plateaus, Motivation, Ergonomie und Überlastung. Gesundheitsrahmen (Aufwärmen, Pausen, Stopp bei Schmerz). Kein Vokabular-Block."
   },
   "delta_bausteine": [],
   "bausteine": [
@@ -42,7 +42,7 @@
         "effektiv_ueben"
       ],
       "erklaerteil": {
-        "de": "Eine gute Übe-Einheit hat einen Aufbau, statt einfach loszuspielen. Ein bewährtes Muster: kurz aufwärmen, dann konzentriert an einer schwierigen Sache arbeiten, das Geübte in einen größeren Zusammenhang einbauen und locker ausklingen. So verpufft die Zeit nicht im ziellosen Jammen.\n\nDer Kern ist der fokussierte Block: eine konkrete Stelle oder Technik, langsam und gezielt, mit klarem Ziel für heute. Danach das Geübte in einen Part oder Song einbauen, damit es nicht isoliert bleibt. Zum Schluss etwas spielen, das Spaß macht — das hält die Motivation.\n\nZeitkästen helfen: Wer sich pro Block ein paar Minuten setzt, bleibt fokussiert und übt nicht eine Sache tot. Plane die Einheit vorher grob, statt im Spielen zu entscheiden — und baue Pausen ein, gerade bei körperlicher Belastung."
+        "de": "Eine gute Übe-Einheit hat einen Aufbau, statt einfach loszuspielen. Ein bewährtes Muster: kurz aufwärmen, dann konzentriert an einer schwierigen Sache arbeiten, das Geübte in einen größeren Zusammenhang einbauen und locker ausklingen. So verpufft die Zeit nicht im ziellosen Jammen.\n\nDer Kern ist der fokussierte Block: eine konkrete Stelle oder Technik, langsam und gezielt, mit klarem Ziel für heute. Danach das Geübte in einen Part oder Song einbauen, damit es nicht isoliert bleibt. Zum Schluss etwas spielen, das Spaß macht — das hält die Motivation.\n\nZeitkästen helfen: Wer sich pro Block ein Zeitlimit von ein paar Minuten setzt, bleibt fokussiert und übt nicht eine Sache tot. Plane die Einheit vorher grob, statt im Spielen zu entscheiden — und baue Pausen ein, gerade bei körperlicher Belastung."
       },
       "reflexionsaufgabe": {
         "de": "Hat deine Übe-Zeit einen Aufbau (Aufwärmen, fokussierter Block, Einbauen, Ausklang), oder spielst du einfach los? Was ist dein konkretes Ziel für den heutigen fokussierten Block? Und wie stellst du sicher, dass du das Geübte in einen Song einbaust und Pausen einhältst, statt eine Sache totzuüben?"
@@ -64,7 +64,7 @@
         "effektiv_ueben"
       ],
       "erklaerteil": {
-        "de": "Fortschritt am Instrument ist oft so langsam, dass man ihn im Alltag nicht spürt — und genau das frustriert. Ein einfaches Übe-Tagebuch macht ihn sichtbar: notiere kurz, was du geübt hast, bei welchem Tempo, was schon sitzt und wo es hakt.\n\nDas hat zwei Wirkungen. Erstens siehst du beim Zurückblättern schwarz auf weiß, dass du in Wochen tatsächlich schneller oder sauberer geworden bist — das trägt über Durststrecken. Zweitens wird ein Plateau diagnostizierbar: Wenn dasselbe Tempo seit Wochen steht, weißt du, wo du ansetzen musst.\n\nEs muss nichts Aufwendiges sein — ein paar Zeilen pro Einheit oder eine Tempo-Zahl reichen. Wichtiger als die Form ist die Regelmäßigkeit: Das Tagebuch wirkt nur, wenn es mitläuft."
+        "de": "Fortschritt am Instrument ist oft so langsam, dass man ihn im Alltag nicht spürt — und genau das frustriert. Ein einfaches Übe-Tagebuch macht ihn sichtbar: notiere kurz, was du geübt hast, bei welchem Tempo, was schon sitzt und wo es hakt.\n\nDas hat zwei Wirkungen. Erstens siehst du beim Zurückblättern schwarz auf weiß, dass du über die Wochen tatsächlich schneller oder sauberer geworden bist — das trägt über Durststrecken. Zweitens wird ein Plateau diagnostizierbar: Wenn dasselbe Tempo seit Wochen steht, weißt du, wo du ansetzen musst.\n\nEs muss nichts Aufwendiges sein — ein paar Zeilen pro Einheit oder eine Tempo-Zahl reichen. Wichtiger als die Form ist die Regelmäßigkeit: Das Tagebuch wirkt nur, wenn es mitläuft."
       },
       "reflexionsaufgabe": {
         "de": "Wie hältst du fest, was du übst — Tempo, was sitzt, wo es hakt? Woran würdest du beim Zurückblättern erkennen, dass du in den letzten Wochen wirklich vorangekommen bist? Und wie einfach muss dein Tagebuch sein, damit du es tatsächlich regelmäßig führst?"
@@ -108,7 +108,7 @@
         "ueben_strukturieren"
       ],
       "erklaerteil": {
-        "de": "Ohne Ziel übt man, was gerade Spaß macht — und tritt oft auf der Stelle. Einen Lernweg zu planen heißt, sich realistische Ziele über Wochen und Monate zu setzen und sie in erreichbare Schritte zu zerlegen. Ein großes Ziel wie einen Song sicher spielen zerfällt in Technik, Tempo, Ausdauer und Zusammenspiel.\n\nGute Ziele sind konkret und überprüfbar: nicht schneller werden, sondern dieses Riff bei diesem Tempo sauber. So weißt du, woran du bist, und kannst deine begrenzte Übe-Zeit auf das Wichtigste lenken, statt dich zu verzetteln.\n\nEin Plan ist kein Korsett: Er darf sich ändern, wenn du merkst, dass etwas fehlt oder eine Baustelle drängt. Aber ohne Richtung verpufft Fleiß. Frag dich regelmäßig, wo du in ein paar Monaten stehen willst und welcher nächste Schritt dich dorthin bringt."
+        "de": "Ohne Ziel übt man, was gerade Spaß macht — und tritt oft auf der Stelle. Einen Lernweg zu planen heißt, sich realistische Ziele über Wochen und Monate zu setzen und sie in erreichbare Schritte zu zerlegen. Ein großes Ziel wie „einen Song sicher spielen“ zerfällt in Technik, Tempo, Ausdauer und Zusammenspiel.\n\nGute Ziele sind konkret und überprüfbar: nicht „schneller werden“, sondern „dieses Riff bei diesem Tempo sauber“. So weißt du, woran du bist, und kannst deine begrenzte Übe-Zeit auf das Wichtigste lenken, statt dich zu verzetteln.\n\nEin Plan ist kein Korsett: Er darf sich ändern, wenn du merkst, dass etwas fehlt oder eine Baustelle drängt. Aber ohne Richtung verpufft Fleiß. Frag dich regelmäßig, wo du in ein paar Monaten stehen willst und welcher nächste Schritt dich dorthin bringt."
       },
       "reflexionsaufgabe": {
         "de": "Wo willst du in ein paar Monaten stehen — und in welche konkreten, überprüfbaren Schritte zerlegst du dieses Ziel? Worauf lenkst du deine begrenzte Übe-Zeit, statt dich zu verzetteln? Und wie oft prüfst du deinen Plan und passt ihn an, ohne die Richtung zu verlieren?"
@@ -152,7 +152,7 @@
         "de": "Fortschritt verläuft nicht gleichmäßig. Nach schnellen Anfangserfolgen kommt fast immer ein Plateau — eine Phase, in der es sich anfühlt, als ginge nichts voran. Das ist normal und kein Zeichen mangelnden Talents.\n\nPlateaus überwindet man selten mit mehr vom Gleichen, sondern mit einem veränderten Zugang: die Übung anders angehen, sich selbst aufnehmen und nüchtern anhören, eine Schwäche isolieren, die man umgangen hat — oder bewusst pausieren, denn Können festigt sich auch in der Ruhe. Oft zeigt eine Aufnahme, dass der Fortschritt größer ist als das Gefühl.\n\nGeduld gehört zum Handwerk. Wer über das Plateau hinweg dranbleibt, macht danach oft einen spürbaren Sprung."
       },
       "reflexionsaufgabe": {
-        "de": "Steckst du gerade auf einem Plateau — und erkennst du es als normale Phase statt als Scheitern? Was könntest du ändern, statt mehr vom Gleichen zu tun: den Zugang wechseln, dich aufnehmen, eine umgangene Schwäche isolieren, bewusst pausieren? Und zeigt eine Aufnahme vielleicht mehr Fortschritt, als sich anfühlt?"
+        "de": "Steckst du gerade auf einem Plateau — und erkennst du es als normale Phase statt als Scheitern? Was könntest du ändern, statt mehr vom Gleichen zu tun: den Zugang wechseln, dich aufnehmen, eine umgangene Schwäche isolieren, bewusst pausieren? Und zeigt eine Aufnahme vielleicht mehr Fortschritt, als es sich anfühlt?"
       },
       "voraussetzungen": [
         "effektiv_ueben"
@@ -171,7 +171,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Langfristig gewinnt nicht, wer die härteste Willenskraft hat, sondern wer eine tragfähige Gewohnheit aufbaut. Motivation schwankt; eine feste Routine — ein gleicher Zeitpunkt, ein niedrigschwelliger Einstieg — trägt auch durch die Tage, an denen die Lust fehlt.\n\nHilfreich ist, die Hürde klein zu halten: Sich vorzunehmen, nur kurz anzufangen, führt oft in eine längere Session. Frustration gehört dazu, wenn etwas nicht klappt — sie ist ein Zeichen, dass du an deiner Grenze arbeitest, nicht ein Grund aufzuhören. Und Fortschritt braucht Zeit; der Vergleich mit anderen schadet meist mehr, als er nützt.\n\nMusik machen soll tragen, nicht zermürben. Wer die Freude am Spielen nicht aus dem Blick verliert, bleibt am längsten dabei."
+        "de": "Langfristig gewinnt nicht, wer die härteste Willenskraft hat, sondern wer eine tragfähige Gewohnheit aufbaut. Motivation schwankt; eine feste Routine — ein immer gleicher Zeitpunkt, ein niedrigschwelliger Einstieg — trägt auch durch die Tage, an denen die Lust fehlt.\n\nHilfreich ist, die Hürde klein zu halten: Sich vorzunehmen, nur kurz anzufangen, führt oft in eine längere Session. Frustration gehört dazu, wenn etwas nicht klappt — sie ist ein Zeichen, dass du an deiner Grenze arbeitest, nicht ein Grund aufzuhören. Und Fortschritt braucht Zeit; der Vergleich mit anderen schadet meist mehr, als er nützt.\n\nMusik machen soll tragen, nicht zermürben. Wer die Freude am Spielen nicht aus dem Blick verliert, bleibt am längsten dabei."
       },
       "reflexionsaufgabe": {
         "de": "Hast du eine feste Routine, die dich auch durch lustlose Tage trägt — oder verlässt du dich auf schwankende Motivation? Hältst du die Einstiegshürde klein, sodass Anfangen leichtfällt? Und behältst du die Freude am Spielen im Blick, statt dich in Vergleichen und Frust zu verlieren?"
@@ -212,7 +212,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Überlastungsbeschwerden wie Sehnenreizungen entstehen schleichend, wenn zu viel zu schnell oder mit schlechter Technik gespielt wird — besonders beim Tempo- und Ausdauertraining, das der Metal verlangt. Sie sind ernst zu nehmen, weil sie hartnäckig werden können.\n\nVorbeugung heißt: das Pensum schrittweise steigern (nicht von null auf lange, schnelle Sessions), aufwärmen, Pausen machen und Ruhetage einplanen — Erholung ist Teil des Trainings, nicht dessen Gegenteil. Warnzeichen sind anhaltendes Ziehen, Schmerz, Taubheit oder Kraftverlust in Händen oder Armen. Dann gilt: pausieren, nicht durchspielen.\n\nWenn Beschwerden trotz Pause anhalten oder wiederkehren, ist ärztlicher Rat angebracht — etwa bei einer Ärztin oder in der Physiotherapie. Früh gehandelt, ist das meiste gut in den Griff zu bekommen; ignoriert, wird es zäh."
+        "de": "Überlastungsbeschwerden wie Sehnenreizungen entstehen schleichend, wenn zu viel zu schnell oder mit schlechter Technik gespielt wird — besonders beim Tempo- und Ausdauertraining, das der Metal verlangt. Sie sind ernst zu nehmen, weil sie hartnäckig werden können.\n\nVorbeugung heißt: das Pensum schrittweise steigern (nicht von null auf lange, schnelle Sessions), aufwärmen, Pausen machen und Ruhetage einplanen — Erholung ist Teil des Trainings, nicht dessen Gegenteil. Warnzeichen sind anhaltendes Ziehen, Schmerz, Taubheit oder Kraftverlust in Händen oder Armen. Dann gilt: pausieren, nicht durchspielen.\n\nWenn Beschwerden trotz Pause anhalten oder wiederkehren, ist fachlicher Rat angebracht — etwa bei einer Ärztin oder in der Physiotherapie. Früh gehandelt, ist das meiste gut in den Griff zu bekommen; ignoriert, wird es zäh."
       },
       "reflexionsaufgabe": {
         "de": "Steigerst du dein Pensum schrittweise, statt von null auf lange, schnelle Sessions zu springen? Planst du Pausen und Ruhetage als Teil des Trainings ein? Und nimmst du Warnzeichen — anhaltendes Ziehen, Schmerz, Taubheit — ernst genug, um zu pausieren und bei Bedarf ärztlichen Rat zu suchen?"

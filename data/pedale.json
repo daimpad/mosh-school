@@ -6,7 +6,7 @@
     {
       "id": "tuner", "instrument": "beide", "position": 1,
       "name": { "de": "Stimmgerät" },
-      "erklaerung": { "de": "Stimmt das Signal und schaltet oft stumm. Gehört ganz an den Anfang der Kette." },
+      "erklaerung": { "de": "Zeigt die Tonhöhe an und schaltet beim Stimmen oft stumm. Gehört ganz an den Anfang der Kette." },
       "tipp": { "de": "Das erste, was man braucht — auch ohne alles andere." }
     },
     {
@@ -37,7 +37,7 @@
       "id": "distortion", "instrument": "gitarre", "position": 6,
       "name": { "de": "Distortion" },
       "erklaerung": { "de": "Kräftige, konstante Verzerrung — der klassische Metal-Zerrer. Kern der Kette." },
-      "tipp": { "de": "Ein guter Distortion kann einen cleanen Amp in Metal-Terrain bringen." }
+      "tipp": { "de": "Ein gutes Distortion-Pedal kann einen cleanen Amp in Metal-Terrain bringen." }
     },
     {
       "id": "fuzz", "instrument": "beide", "position": 6,

@@ -53,7 +53,7 @@
         var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
         var dunkel;
         // ZERRER ist düster per Default (Flyer-Collage-Hintergrund): ohne
-        // gespeicherte Wahl -> dunkel. 'hell' (creme) bleibt Option, 'auto' folgt OS.
+        // gespeicherte Wahl -> dunkel. 'hell' (weißes Blatt) bleibt Option, 'auto' folgt OS.
         if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; dunkel = false; }
         else if (thema === 'auto') { dunkel = osDunkel; }
         else { document.documentElement.dataset.theme = 'dunkel'; dunkel = true; }
@@ -194,9 +194,8 @@
                beschrifteRahmen() (js/app.js), nie hart geschrieben. -->
           <span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img"></span>
         </div>
-        <!-- Wird von beschrifteRahmen() (js/app.js) aus markenZeilenHtml() gefüllt —
-             dieselbe Quelle wie der Startseiten-Hero, damit die beiden Zweige nicht
-             auseinanderlaufen. Deshalb hier bewusst kein hart geschriebener Text. -->
+        <!-- Wird von beschrifteRahmen() (js/app.js) mit t('marke_footer_claim') gefüllt —
+             so wird der Text nur an einer Stelle gepflegt. Deshalb hier bewusst kein hart geschriebener Text. -->
         <span class="footer-marke-claim"></span>
       </div>
     </div>
