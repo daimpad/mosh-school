@@ -35,7 +35,7 @@
           "ziel": "Tight gedämpfte Chugs in ungeraden Gruppen über einen geraden 4/4-Klick spielen, ohne den Puls zu verlieren.",
           "schritte": [
             "Stell das Metronom auf einen bequemen 4/4-Puls (um 100 BPM, Klick auf die Viertel). Spiel zuerst nur gleichmäßige gedämpfte Achtel auf der tiefen Saite — jeder Anschlag knallt und ist sofort tot. Prüf auf einer Aufnahme: Ist zwischen den Anschlägen wirklich Stille?",
-            "Gruppier die Achtel in Fünfer-Pakete: fünf Chugs, dann eine Achtel Pause, wieder fünf — betone jeweils den ersten Chug jeder Gruppe. Der Klick läuft stur weiter; deine Betonung wandert über den Takt und trifft die Eins erst nach mehreren Takten wieder.",
+            "Gruppier die Achtel in Fünfer-Pakete: vier Chugs, dann eine Achtel Pause, wieder vier — betone jeweils den ersten Chug jeder Gruppe. Der Klick läuft stur weiter; deine Betonung wandert über den Takt und trifft die Eins erst nach mehreren Takten wieder.",
             "Halt den Puls im Körper: Tipp den Viertel-Puls mit dem Fuß mit, während die Hand die Fünfer spielt. Solange der Fuß gerade bleibt, sitzt der Groove — driftet der Fuß, bist du im Muster verloren.",
             "Wechsel die Gruppengröße: vier Takte Fünfer, vier Takte Siebener, zurück zu geraden Achteln. Jeder Wechsel sitzt auf dem Schlag, der Grundpuls bleibt konstant."
           ],
@@ -49,49 +49,26 @@
         "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
         "saiten_reihenfolge": "6_ist_tiefste",
         "taktart": "4/4",
-        "bpm": 120,
-        "aufloesung": 16,
-        "takte": 2,
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 5,
         "loop": true,
         "events": [
           {
             "schritt": 0,
             "saite": 6,
             "bund": 0,
-            "technik": "palm_mute"
+            "technik": "palm_mute",
+            "betonung": 1
           },
           {
-            "schritt": 5,
+            "schritt": 1,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
           },
           {
-            "schritt": 10,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 15,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 20,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 25,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 30,
+            "schritt": 2,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
@@ -103,7 +80,95 @@
             "technik": "palm_mute"
           },
           {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
             "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
@@ -113,9 +178,84 @@
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 32,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 33,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 35,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 36,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 37,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 38,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
           }
         ],
-        "hinweis": "Die Chugs laufen in Fünfergruppen, der Puls bleibt gerade. Erst nach mehreren Takten treffen sich beide wieder auf der Eins — bis dahin wandert das Muster."
+        "hinweis": "Achtel in Fünfer-Paketen — vier gedämpfte Chugs und eine Achtel Pause, der erste Chug jeder Gruppe betont —, der Puls bleibt gerade. Erst nach fünf Takten treffen sich beide wieder auf der Eins; genau dann beginnt die Demo von vorn."
       }
     },
     {
@@ -250,7 +390,7 @@
             "Streu Ghost Notes ein: leise Snare-Schläge zwischen den Hauptschlägen, gerade so laut, dass sie den Groove füllen, ohne den Backbeat zu überdecken. Nimm auf und prüf, ob es atmet oder verstopft.",
             "Schalte auf Kommando: vier Takte Groove mit verschobener Kick, harter Schnitt in vier Takte gerade (alles auf dem Raster), zurück. Der gerade Puls bleibt über alle Wechsel identisch."
           ],
-          "steigerung": "Wechsel die Gruppengröße der Kick (Fünfer → Siebener), ohne den Hi-Hat-Puls zu ändern. Oder verschieb die Ride auf eine ungerade Gruppierung und lass die Kick gerade — die umgekehrte Polymetrik.",
+          "steigerung": "Wechsel die Gruppengröße der Kick (Fünfer → Siebener), ohne den Hi-Hat-Puls zu ändern. Oder verschieb das Ride auf eine ungerade Gruppierung und lass die Kick gerade — die umgekehrte Polymetrik.",
           "selbstkontrolle": "Nimm auf: Bleibt die Hi-Hat wirklich stur gerade, während die Kick wandert — oder zieht der Fuß die Hände mit? Klingen die Ghost Notes wie Atmen oder wie Fehler? Und der Pocket-Test: Groovt es, oder klingt es gerechnet? Gerechnet heißt, der gerade Boden wackelt noch — zurück zu Schritt 1."
         }
       },
@@ -259,23 +399,266 @@
         "taktart": "4/4",
         "bpm": 120,
         "aufloesung": 16,
-        "takte": 2,
+        "takte": 5,
         "loop": true,
         "spuren": [
           {
             "instrument": "hihat_closed",
-            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+            "schritte": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
           },
           {
             "instrument": "snare",
-            "schritte": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
           },
           {
             "instrument": "kick",
-            "schritte": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
           }
         ],
-        "hinweis": "Hi-Hat und Snare bleiben gerade, die Kick läuft in Fünfergruppen. Durchgehend gespielt treffen sich beide erst nach fünf Takten wieder auf der Eins; die Demo springt nach zwei Takten an den Anfang zurück."
+        "hinweis": "Hi-Hat und Snare bleiben gerade, die Kick läuft in Fünfergruppen. Erst nach fünf Takten treffen sich beide wieder auf der Eins; genau dann beginnt die Demo von vorn."
       }
     },
     {
