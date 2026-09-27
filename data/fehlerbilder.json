@@ -419,7 +419,7 @@
         "de": {
           "symptom": "Der Text wird nur verständlich, wenn die Person „härter singt“: Die Verständlichkeit wird über Druck und Lautstärke erzwungen, und der Hals ermüdet dabei hörbar.",
           "ursache": "Lippen, Zunge und Kiefer arbeiten zu wenig — die Artikulation ist statisch, und der Hals kompensiert die fehlende Deutlichkeit mit mehr Intensität.",
-          "korrektur": "Die Zuständigkeit zurückverlagern: Den Text übertrieben deutlich und leise sprechen lassen (Kiefer fällt, Lippen formen aktiv), dann dieselbe Mundarbeit unverändert in den Gesang übernehmen — bei gleicher, moderater Lautstärke. Regel etablieren: Wird Text unverständlich, arbeitet der Mund mehr, nie der Hals."
+          "korrektur": "Die Zuständigkeit zurückverlagern: Den Text übertrieben deutlich und leise sprechen lassen (Kiefer fällt, Lippen formen aktiv), dann dieselbe Mundarbeit unverändert in den Gesang übernehmen — bei gleicher, moderater Lautstärke. Regel etablieren: Wird Text unverständlich, arbeitet der Mund mehr, nie der Hals. Ermüdet der Hals trotzdem, Einheit beenden; bei anhaltenden Beschwerden HNO-ärztlich abklären lassen."
         }
       }
     },
@@ -614,7 +614,7 @@
         "de": {
           "symptom": "Phrasenenden brechen ab oder kippen in Druck; mitten in der Zeile ist hörbares, hastiges Nachschnappen zu beobachten.",
           "ursache": "Die Atmung ist nicht in die Phrasierung eingeplant — Einatmungen sind zu knapp oder zu hoch, und die Verzerrung verbraucht spürbar mehr Luft als cleaner Gesang, was die Planung zusätzlich verschärft.",
-          "korrektur": "Lass Atemstellen ausdrücklich in den Text eintragen und die Phrasen zunächst gesprochen mit genau diesen Atmungen durchgehen. Danach leise und kurz in die verzerrte Fassung übertragen, mit tiefer, ruhiger Einatmung an den geplanten Stellen. Kriterium: Das Phrasenende trägt noch auf Stütze, ohne dass Druck nachgeschoben wird."
+          "korrektur": "Lass Atemstellen ausdrücklich in den Text eintragen und die Phrasen zunächst gesprochen mit genau diesen Atmungen durchgehen. Danach leise und kurz in die verzerrte Fassung übertragen, mit tiefer, ruhiger Einatmung an den geplanten Stellen. Kriterium: Das Phrasenende trägt noch auf Stütze, ohne dass Druck nachgeschoben wird. Bei Kratzen oder Enge gilt die Stoppregel; bei wiederkehrenden Beschwerden HNO-ärztlich abklären lassen."
         }
       }
     },
@@ -717,7 +717,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "An den Übergängen — etwa von Halftime in den Blast oder zurück — entsteht ein Loch oder ein Temposprung: Der erste Takt des neuen Teils eiert, die Band stolpert hinterher.",
+          "symptom": "An den Übergängen — etwa von Half-Time in den Blast oder zurück — entsteht ein Loch oder ein Temposprung: Der erste Takt des neuen Teils eiert, die Band stolpert hinterher.",
           "ursache": "Der Wechsel wird als Bruch behandelt statt als Übergang: Das neue Feel wird nicht innerlich vorgehört, der letzte Takt vor dem Wechsel ist ungeplant, und oft fehlt ein gemeinsamer Puls, der beide Teile verbindet.",
           "korrektur": "Lass die Übergänge isoliert üben, nicht die Teile: jeweils zwei Takte vor und nach dem Wechsel als eigene Übung in Schleife, mit durchlaufendem Klick als verbindendem Puls. Den letzten Takt vor dem Wechsel als Anker gestalten (definierte Figur, die den neuen Teil ankündigt) und das neue Feel während des alten innerlich mitzählen lassen. Kriterium: Der erste Schlag des neuen Teils sitzt so sicher wie jeder andere."
         }
@@ -1378,8 +1378,8 @@
       "erklaerteil": {
         "de": {
           "symptom": "Der Gravity Blast klingt ungleichmäßig — die zwei Schläge aus einer Handbewegung sind unterschiedlich laut, das Tempo eiert.",
-          "ursache": "Es wird zu früh beschleunigt, bevor die schaukelnde Stock-Bewegung (Spitze/Kante am Fell) sauber und gleichmäßig sitzt. Kraft ersetzt die Technik, die Bewegung verkrampft.",
-          "korrektur": "Die Schaukelbewegung getrennt und sehr langsam üben: ein Schlag mit der Spitze, einer mit der Kante — erst wenn beide gleich laut und gleichmäßig sind, minimal beschleunigen. Lockerheit vor Tempo; bei Verkrampfung sofort zurück ins langsame Tempo."
+          "ursache": "Es wird zu früh beschleunigt, bevor die schaukelnde Stock-Bewegung (Spannreifen als Drehpunkt) sauber und gleichmäßig sitzt. Kraft ersetzt die Technik, die Bewegung verkrampft.",
+          "korrektur": "Die Schaukelbewegung getrennt und sehr langsam üben: den Stock auf dem Spannreifen als Drehpunkt schaukeln lassen — ein Schlag in der Abwärts-, einer in der Aufwärtsbewegung der Hand. Erst wenn beide gleich laut und gleichmäßig sind, minimal beschleunigen. Lockerheit vor Tempo; bei Verkrampfung sofort zurück ins langsame Tempo."
         }
       }
     },
@@ -1422,9 +1422,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Bass und Gitarre driften in den verschobenen Gruppen auseinander; die Betonungen fransen, der Lock fehlt.",
+          "symptom": "Bass und Gitarre driften in den verschobenen Gruppen auseinander; die Betonungen fransen, nichts greift ineinander.",
           "ursache": "Der Bass spielt blind gleichmäßige Achtel, statt die betonten Chugs mitzudenken — die Verzahnung mit Kick und Gitarre ist nicht exakt.",
-          "korrektur": "Nur die Akzente spielen (nicht jede Achtel), langsam mit Kick und Gitarre, bis Bass und Gitarre auf den Betonungen EIN Schlag sind. Synkopen genau dort setzen, wo die Gitarre sie setzt; Tempo erst steigern, wenn der Lock sitzt."
+          "korrektur": "Nur die Akzente spielen (nicht jede Achtel), langsam mit Kick und Gitarre, bis Bass und Gitarre auf den Betonungen EIN Schlag sind. Synkopen genau dort setzen, wo die Gitarre sie setzt; Tempo erst steigern, wenn die Verzahnung sitzt."
         }
       }
     },
@@ -1604,7 +1604,7 @@
         "de": {
           "symptom": "Der Zusammenklang dröhnt, einzelne Instrumente sind nicht mehr heraushörbar; je tiefer die Stimmung, desto breiiger. Der Bass scheint zu „verschwinden“, obwohl er laut ist.",
           "ursache": "Beide besetzen denselben Tiefenbereich: Die Gitarre ist zu bassig eingestellt, der Bass hat zu wenig Mitten oder Anzerrung. Niemand hat bewusst Rollen verteilt — Fundament gegen Mitten.",
-          "korrektur": "Lass sie eine tiefe Passage gemeinsam spielen und je einen Parameter isoliert verändern (Anschlagpunkt, Anzerrung, Tiefen- oder Mittenanteil). Vereinbart, wer die Tiefen trägt und wer die Mitten. Kontrolliere über eine Aufnahme, ob beide getrennt hörbar bleiben."
+          "korrektur": "Lass sie eine tiefe Passage gemeinsam spielen und je einen Parameter isoliert verändern (Anschlagpunkt, Anzerrung, Tiefen- oder Mittenanteil). Lass sie vereinbaren, wer die Tiefen trägt und wer die Mitten. Kontrolliere über eine Aufnahme, ob beide getrennt hörbar bleiben."
         }
       }
     },
@@ -1634,7 +1634,7 @@
         "de": {
           "symptom": "Der Bass wechselt unmotiviert zwischen Verdopplung und eigener Linie — mal Klotz, mal Gegenstimme, ohne dass es dem Part dient. Der Zusammenklang wirkt unentschlossen, Parts gewinnen keine klare Kontur.",
           "ursache": "Die Rolle wird nicht pro Part bewusst entschieden, sondern ergibt sich zufällig aus Gewohnheit oder Bequemlichkeit. Niemand fragt, was der jeweilige Part braucht.",
-          "korrektur": "Lass beide denselben Part einmal komplett verdoppelt und einmal mit eigener Basslinie spielen und den Unterschied beschreiben. Vereinbart die Rolle pro Part bewusst und baut Übergänge, an denen der Wechsel an einer festen Stelle passiert, statt zu schwimmen."
+          "korrektur": "Lass beide denselben Part einmal komplett verdoppelt und einmal mit eigener Basslinie spielen und den Unterschied beschreiben. Lass sie die Rolle pro Part bewusst vereinbaren und Übergänge bauen, an denen der Wechsel an einer festen Stelle passiert, statt zu schwimmen."
         }
       }
     },
@@ -1664,7 +1664,7 @@
         "de": {
           "symptom": "Das Tempo ist nicht stabil — die Rhythmusgruppe zieht an oder wird langsamer. Gegen den Klick gehört, fällt auf, dass beide gemeinsam wegdriften; der Rest der Band folgt notgedrungen.",
           "ursache": "Einer führt, der andere jagt nach: Statt beide an derselben Referenz auszurichten, hört jeder auf den anderen und reagiert verspätet — ein sich aufschaukelndes Nachziehen.",
-          "korrektur": "Lass beide gleichberechtigt auf den Klick spielen, nicht aufeinander. Reduziere das Metronom testweise auf jeden zweiten Schlag, dann auf die Eins, um zu prüfen, ob das gemeinsame Zeitgefühl trägt. Bestimmt über eine Aufnahme gemeinsam, ob sie vor, auf oder hinter dem Klick liegen."
+          "korrektur": "Lass beide gleichberechtigt auf den Klick spielen, nicht aufeinander. Reduziere das Metronom testweise auf jeden zweiten Schlag, dann auf die Eins, um zu prüfen, ob das gemeinsame Zeitgefühl trägt. Bestimme über eine Aufnahme gemeinsam mit ihnen, ob sie vor, auf oder hinter dem Klick liegen."
         }
       }
     },
@@ -1709,7 +1709,7 @@
         "de": {
           "symptom": "Riff und Gesang laufen dauerhaft gleichzeitig; beide Ebenen verlieren an Kontur, der Text ist schwer verständlich, das Riff tritt in den Hintergrund. Der Part klingt voll, aber undeutlich.",
           "ursache": "Es gibt keine Absprache, wer wann im Vordergrund steht. Gesangsphrasen liegen nicht in den Lücken des Riffs, sondern über dessen dichten Stellen.",
-          "korrektur": "Geht den Part gemeinsam durch und markiert die Lücken im Riff. Lass die Gesangsphrasen bewusst dorthin legen, sodass ein Wechsel aus Riff und Stimme entsteht. Ein bewusst gleichzeitiger Moment darf als Kontrast bleiben — aber als Entscheidung, nicht als Dauerzustand."
+          "korrektur": "Geh den Part mit beiden durch und markiere die Lücken im Riff. Lass die Gesangsphrasen bewusst dorthin legen, sodass ein Wechsel aus Riff und Stimme entsteht. Ein bewusst gleichzeitiger Moment darf als Kontrast bleiben — aber als Entscheidung, nicht als Dauerzustand."
         }
       }
     },
@@ -1739,7 +1739,7 @@
         "de": {
           "symptom": "Die clean gesungene Melodie klingt über dem Riff „schief“ — einzelne Zieltöne liegen hörbar neben der Harmonik. Besonders am Phrasenende wirkt es unsauber, obwohl der Gesang sicher intoniert ist.",
           "ursache": "Sänger und Gitarre teilen kein gemeinsames Fundament: Der Grundton oder die Tonart des Parts ist nicht benannt, und die Melodie nutzt Töne außerhalb der zugrunde liegenden Skala.",
-          "korrektur": "Lass die Gitarre den Grundton nennen und eine einfache, langsame Powerchord-Folge spielen; die Stimme tastet sich vom Grundton zu sicheren Zieltönen vor. Haltet die stimmige Melodie fest und erweitert Tonart oder Folge erst, wenn sie sicher sitzt. Für das Skalenverständnis hilft ein Blick auf die Grundlagen der Moll-/Phrygisch-Färbung."
+          "korrektur": "Lass die Gitarre den Grundton nennen und eine einfache, langsame Powerchord-Folge spielen; die Stimme tastet sich vom Grundton zu sicheren Zieltönen vor. Lass sie die stimmige Melodie festhalten und Tonart oder Folge erst erweitern, wenn sie sicher sitzt. Für das Skalenverständnis hilft ein Blick auf die Grundlagen der Moll-/Phrygisch-Färbung."
         }
       }
     },
@@ -1754,7 +1754,7 @@
         "de": {
           "symptom": "Ein geplanter Spannungsaufbau (leiser Vers, intensiver Refrain) verpufft, weil nur einer ihn trägt: Die Gitarre zündet den Refrain, während der Gesang gleich bleibt — oder umgekehrt. Der Umschlag wirkt halbgar.",
           "ursache": "Der Umschlagpunkt ist nicht als gemeinsame Entscheidung vereinbart; Dynamik wird als individuelle Angelegenheit behandelt statt als geteilter Verlauf.",
-          "korrektur": "Legt gemeinsam fest, wo die Intensität steigt. Lass den Vers bewusst zurückgenommen und den Refrain am selben Punkt von beiden zünden. Prüft per Aufnahme, ob der Umschlag als eine Bewegung wirkt, und baut den Verlauf bei Bedarf mehrstufig auf."
+          "korrektur": "Lass beide gemeinsam festlegen, wo die Intensität steigt: Der Vers bleibt bewusst zurückgenommen, der Refrain zündet bei beiden am selben Punkt. Prüfe per Aufnahme, ob der Umschlag als eine Bewegung wirkt, und lass den Verlauf bei Bedarf mehrstufig aufbauen."
         }
       }
     },
@@ -1784,7 +1784,7 @@
         "de": {
           "symptom": "Bei gemeinsamen Stops und Akzenten kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Stop ist unsauber, einer setzt zu früh oder zu spät wieder ein. Genau an der exponierten Stelle stolpert der Part.",
           "ursache": "Der Puls wird während der Stille nicht gehalten, sondern geschätzt. Länge des Stops und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
-          "korrektur": "Übt nur die zwei Takte um den Break in der Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins einsteigen. Per Aufnahme prüfen, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+          "korrektur": "Übe nur die zwei Takte um den Break in Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins einsteigen. Per Aufnahme prüfen, ob Stop und Wiedereinstieg wie ein Schlag klingen."
         }
       }
     },
@@ -1799,7 +1799,7 @@
         "de": {
           "symptom": "Das Tempo ist nicht stabil — bei treibenden Riffs zieht es an. Meist drängt die Gitarre und das Schlagzeug wird mitgezogen; über den Part hinweg wird alles schneller.",
           "ursache": "Statt beide an derselben Referenz auszurichten, führt die Gitarre aus Aufregung und die Drums folgen. Der Klick wird nicht als neutrale Instanz genutzt.",
-          "korrektur": "Lass beide gleichberechtigt auf den Klick spielen; die Gitarre achtet bewusst darauf, nicht zu drängen. Reduziere das Metronom auf jeden zweiten Schlag und prüfe, ob das Tempo hält. Über eine Aufnahme hören, ob ihr über den Part konstant bleibt."
+          "korrektur": "Lass beide gleichberechtigt auf den Klick spielen; die Gitarre achtet bewusst darauf, nicht zu drängen. Reduziere das Metronom auf jeden zweiten Schlag und prüfe, ob das Tempo hält. Über eine Aufnahme hören, ob beide über den Part konstant bleiben."
         }
       }
     },
@@ -1814,7 +1814,7 @@
         "de": {
           "symptom": "Wenn die Gitarre zurücktritt und Bass und Gesang allein tragen, wirkt das Gerüst wacklig — die Stimme sitzt nicht im Groove des Basses, das Timing driftet auseinander.",
           "ursache": "Die Stimme orientiert sich an einem inneren Metronom statt am hörbaren Groove des Basses; der Bass hält seine Linie nicht stabil genug, als dass die Stimme sich darauf verlassen könnte.",
-          "korrektur": "Lass den Bass eine einfache, sehr stabile Linie zum Klick spielen und die Stimme ihr Timing bewusst am Bass ausrichten, nicht an eigenen Zählzeiten. Nehmt einen Part ohne Gitarre auf und prüft, ob Bass und Stimme zusammen tragfähig klingen."
+          "korrektur": "Lass den Bass eine einfache, sehr stabile Linie zum Klick spielen und die Stimme ihr Timing bewusst am Bass ausrichten, nicht an eigenen Zählzeiten. Nimm einen Part ohne Gitarre auf und prüfe, ob Bass und Stimme zusammen tragfähig klingen."
         }
       }
     },
@@ -1844,7 +1844,7 @@
         "de": {
           "symptom": "Tiefer Bass und tiefe, raue Vocals mischen sich im unteren Mittenbereich zu Brei; beide sind im Zusammenklang nicht mehr getrennt herauszuhören, obwohl beide laut sind.",
           "ursache": "Beide besetzen denselben Frequenzbereich, ohne die Register bewusst zu trennen — der Bass ohne Anschlag/Mitten, die Stimme über reine Tiefe statt Resonanz und Projektion.",
-          "korrektur": "Lass beide einen Part ohne Gitarre tragen und je einen Parameter verändern: Anschlag und Mitten des Basses, Resonanz und Projektion der Stimme. Vereinbart, wer wo Platz besetzt, und kontrolliert über eine Aufnahme, ob beide klar bleiben."
+          "korrektur": "Lass beide einen Part ohne Gitarre tragen und je einen Parameter verändern: Anschlag und Mitten des Basses, Resonanz und Projektion der Stimme. Lass sie vereinbaren, wer wo Platz besetzt, und kontrolliere über eine Aufnahme, ob beide klar bleiben."
         }
       }
     },
@@ -1874,7 +1874,7 @@
         "de": {
           "symptom": "Ohne Harmonieinstrument verlieren rhythmisch gesprochene oder geschriene Phrasen die Form — die Stimme hält sich nicht am Puls des Schlagzeugs fest und eiert.",
           "ursache": "Die Stimme hört nicht bewusst auf Kick und Snare als Raster; der Drummer hält den Puls nicht stabil genug, als dass die Stimme sich verlassen könnte.",
-          "korrektur": "Der Drummer spielt eine einfache, stabile Figur zum Klick; die Stimme platziert ihre Phrasen bewusst auf Kick und Snare. Reduziert den Klick schrittweise und prüft, ob die Form am Drum-Puls stabil bleibt."
+          "korrektur": "Der Drummer spielt eine einfache, stabile Figur zum Klick; die Stimme platziert ihre Phrasen bewusst auf Kick und Snare. Reduziere den Klick schrittweise und prüfe, ob die Form am Drum-Puls stabil bleibt."
         }
       }
     },
@@ -1904,7 +1904,7 @@
         "de": {
           "symptom": "Beim Zusammenfügen von Bass, Bassdrum und Gitarre verwischt der gemeinsame Attack — statt eines Impulses hört man ein Flattern aus drei dicht beieinanderliegenden Anschlägen, besonders bei höherem Tempo.",
           "ursache": "Die Gitarre kommt hinzu, ohne sich exakt auf die schon gekoppelte Achse aus Bass und Bassdrum zu legen; nicht alle drei zielen auf denselben Klick-Impuls.",
-          "korrektur": "Schichtweise aufbauen: erst Bass und Bassdrum allein locken, dann die Gitarre auf denselben Impuls legen, ohne den Attack zu verwischen. Langsam zum Klick, per Aufnahme prüfen, ob alle drei als ein Schlag klingen, dann erst steigern."
+          "korrektur": "Schichtweise aufbauen: erst Bass und Bassdrum allein verzahnen, dann die Gitarre auf denselben Impuls legen, ohne den Attack zu verwischen. Langsam zum Klick, per Aufnahme prüfen, ob alle drei als ein Schlag klingen, dann erst steigern."
         }
       }
     },
@@ -1917,9 +1917,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Im gemeinsamen Breakdown sind die Pausen nicht schwarz — ein Instrument klingt nach oder kommt zu spät. Der Part verliert den Druck, den vier gemeinsam gesetzte Akzente erzeugen würden.",
+          "symptom": "Im gemeinsamen Breakdown sind die Pausen nicht schwarz — ein Instrument klingt nach oder kommt zu spät. Der Part verliert den Druck, den gemeinsam gesetzte Akzente von Gitarre, Bass, Schlagzeug und Stimme erzeugen würden.",
           "ursache": "Der Breakdown wird nicht von der Rhythmus-Maschine aus gebaut; die Vocals oder ein Instrument zielen nicht auf denselben Anker (Bassdrum). Einer dämpft später ab als die anderen.",
-          "korrektur": "Baut von innen: erst der Trio-Lock, dann legen die Vocals ihre stärksten Silben auf dieselben Akzente. Alle zielen auf die Bassdrum. Langsam üben, bis alle vier zusammen treffen und die Pausen wirklich still sind."
+          "korrektur": "Lass den Part von innen aufbauen: erst verzahnen sich Gitarre, Bass und Schlagzeug, dann legen die Vocals ihre stärksten Silben auf dieselben Akzente. Alle zielen auf die Bassdrum. Langsam üben, bis alle vier zusammentreffen und die Pausen wirklich still sind."
         }
       }
     },
@@ -1934,7 +1934,7 @@
         "de": {
           "symptom": "Ein geplanter Spannungsaufbau verpufft, weil ihn nicht die ganze Band gemeinsam trägt: Einer zündet den intensiven Part, während andere noch halten — oder umgekehrt. Der Umschlag wirkt halbgar.",
           "ursache": "Der Umschlagpunkt ist nicht als Bandentscheidung vereinbart; Dynamik wird als individuelle Sache behandelt statt als geteilter Verlauf über Dichte, Härte und Register.",
-          "korrektur": "Legt gemeinsam fest, wo die Intensität steigt. Spielt den ruhigen Part bewusst zurückgenommen und zündet den intensiven am selben Punkt von allen. Per Aufnahme prüfen, ob der Umschlag als eine Bewegung wirkt; bei Bedarf mehrstufig aufbauen."
+          "korrektur": "Lass die Band gemeinsam festlegen, wo die Intensität steigt: Der ruhige Part wird bewusst zurückgenommen gespielt, der intensive zündet bei allen am selben Punkt. Per Aufnahme prüfen, ob der Umschlag als eine Bewegung wirkt; bei Bedarf mehrstufig aufbauen."
         }
       }
     },
@@ -1949,7 +1949,7 @@
         "de": {
           "symptom": "Beim gemeinsamen Stop und Wiedereinsatz verpasst einer die Eins — die ganze Band wirkt an der sichtbarsten Stelle unpräzise, obwohl jeder für sich den Part beherrscht.",
           "ursache": "Während der Stille hält nicht jeder den Puls innerlich; der Wiedereinstieg ist nicht als gemeinsame Bewegung mit klarem Signal vereinbart, sondern wird geschätzt.",
-          "korrektur": "Übt die Stelle isoliert. Alle zählen innerlich weiter; ein klares Signal (Nicken des Drummers oder hörbares Zählen) markiert den Wiedereinstieg. Exakt gemeinsam auf der Eins einsteigen und per Aufnahme prüfen, ob es bei allen vier zusammenfällt."
+          "korrektur": "Übe die Stelle isoliert. Alle zählen innerlich weiter; ein klares Signal (Nicken des Drummers oder hörbares Zählen) markiert den Wiedereinstieg. Exakt gemeinsam auf der Eins einsteigen und per Aufnahme prüfen, ob es bei allen vier zusammenfällt."
         }
       }
     },
@@ -2952,7 +2952,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Pinch- und Kunstharmonics kommen unzuverlässig — mal quietschen sie, mal nicht.",
+          "symptom": "Pinch Harmonics und künstliche Harmonics kommen unzuverlässig — mal quietschen sie, mal nicht.",
           "ursache": "Der Anschlagpunkt und der Daumenkontakt werden nicht sicher getroffen.",
           "korrektur": "Den passenden Anschlagpunkt über der Saite suchen und den Daumen gezielt streifen lassen. An wenigen sicheren Punkten üben, dann übertragen."
         }
@@ -3254,7 +3254,7 @@
         "de": {
           "symptom": "Um lauter zu werden, spannt sich der Hals an und der Ton wird gepresst statt tragfähiger.",
           "ursache": "Die Lautstärke kommt aus Halsdruck statt aus Stütze und Resonanz.",
-          "korrektur": "Die Lautstärke bewusst aus der Atemstütze und offenem Resonanzraum aufbauen, nicht aus dem Hals; leiser üben, bis der Ton frei trägt, dann behutsam steigern."
+          "korrektur": "Die Lautstärke bewusst aus der Atemstütze und offenem Resonanzraum aufbauen, nicht aus dem Hals; leiser üben, bis der Ton frei trägt, dann behutsam steigern; bei Kratzen oder Schmerz sofort stoppen."
         }
       }
     },
@@ -3299,7 +3299,7 @@
         "de": {
           "symptom": "Bei lauteren Stellen verspannt der Hals; die Dynamik entsteht durch Pressen statt durch Gestaltung.",
           "ursache": "Intensität wird über Halsdruck geregelt statt über Atem und Resonanz.",
-          "korrektur": "Laut und leise beide aus der Stütze denken; die Steigerung über mehr Luftfluss und Resonanz gestalten und den Hals dabei locker halten."
+          "korrektur": "Laut und leise beide aus der Stütze denken; die Steigerung über mehr Luftfluss und Resonanz gestalten und den Hals dabei locker halten; bei Kratzen oder Druckgefühl sofort stoppen."
         }
       }
     },
@@ -3344,7 +3344,7 @@
         "de": {
           "symptom": "Bei schlechtem Monitoring wird die Intonation unsicher, die Töne werden gegen die Lautstärke angepresst.",
           "ursache": "Fehlende Rückmeldung verleitet dazu, über Kraft statt über inneres Tonvorstellen zu treffen.",
-          "korrektur": "Den Zielton innerlich vorhören und aus Stütze setzen statt gegen die Lautstärke zu drücken; mit reduziertem Monitor üben und die Treffsicherheit per Aufnahme prüfen."
+          "korrektur": "Den Zielton innerlich vorhören und aus Stütze setzen statt gegen die Lautstärke zu drücken; mit reduziertem Monitor üben und die Treffsicherheit per Aufnahme prüfen. Bei Kratzen oder Druckgefühl sofort stoppen."
         }
       }
     },
@@ -3374,7 +3374,7 @@
         "de": {
           "symptom": "Der Refrain trägt nicht — die Intonation wackelt oder die Höhe klingt gedrückt.",
           "ursache": "Melodie und Höhe sind nicht sicher verankert, es wird gegen die Lautstärke gearbeitet.",
-          "korrektur": "Die Melodie erst ohne Band sicher und intonationsrein machen, die Höhe aus Stütze tragen; dann mit Playback und Ausdruck, ohne zu pressen."
+          "korrektur": "Die Melodie erst ohne Band sicher und intonationsrein machen, die Höhe aus Stütze tragen; dann mit Playback und Ausdruck, ohne zu pressen. Bei Kratzen oder Druckgefühl sofort stoppen."
         }
       }
     },
@@ -3583,8 +3583,8 @@
       "erklaerteil": {
         "de": {
           "symptom": "Harmonisch Moll und Phrygisch-Dominant werden nicht sicher unterschieden.",
-          "ursache": "Beide Skalen enthalten den übermäßigen Sekundschritt; nicht gehört wird, wo er relativ zum Grundton liegt.",
-          "korrektur": "Gezielt auf den übermäßigen Sekundschritt hören, beide Skalen direkt vergleichen und den Unterschied am Grundton-Bezug festmachen."
+          "ursache": "Beide Skalen enthalten denselben übermäßigen Sekundschritt, er allein unterscheidet sie also nicht. Überhört wird, wo er relativ zum Grundton liegt: bei Harmonisch Moll zwischen sechster und siebter Stufe, bei Phrygisch-Dominant zwischen kleiner Sekunde und großer Terz direkt über dem Grundton.",
+          "korrektur": "Beide Skalen über demselben Grundton direkt vergleichen und hören, wo der übermäßige Sekundschritt liegt: oben vor dem Leitton oder gleich über dem Grundton. Den Unterschied am Grundton-Bezug festmachen, nicht am Schritt selbst."
         }
       }
     },
@@ -3644,7 +3644,7 @@
         "de": {
           "symptom": "Die überlappenden Töne verschmelzen zu einem undeutlichen Klangbrei; einzelne Töne sind nicht mehr unterscheidbar.",
           "ursache": "Zwei Ursachen treten meist gemeinsam auf. Erstens ein zu hoher Zerrgrad, der die gleichzeitig klingenden Töne komprimiert und ihre Trennung aufhebt. Zweitens ein zu voller Bassbereich, der die Reibung zwischen gegriffener und leerer Saite zudeckt.",
-          "korrektur": "Zerre deutlich zurücknehmen oder ganz weglassen und die Tiefen absenken. Wenn die Figur clean klar klingt, aber verzerrt nicht, liegt es nie an der Greifhand."
+          "korrektur": "Zerre deutlich zurücknehmen oder ganz weglassen und die Tiefen absenken. Wenn die Figur clean klar klingt, aber verzerrt nicht, liegt es meist am Klang, selten an der Greifhand. Bleibt der Brei auch mit weniger Zerre, das Abdämpfen der Nachbarsaiten prüfen — Zerre macht Nebengeräusche hörbar, die clean untergehen."
         }
       }
     },
@@ -3674,7 +3674,7 @@
         "de": {
           "symptom": "Die Folge bricht regelmäßig an derselben Stelle zusammen, meist beim Übergang zwischen zwei Taktarten. Bei langsamem Tempo funktioniert es, im Stücktempo nicht mehr.",
           "ursache": "Es wird in Zahlen gezählt statt in Gruppen gefühlt. Zählen ist eine bewusste Tätigkeit und bricht unter Tempo zusammen; Gruppen werden als Rhythmusfiguren wiedererkannt und tragen auch schnell.",
-          "korrektur": "Die Kette laut mitsprechen, zunächst nur einen Ton pro Gruppenanfang spielen und den Klick auf die Gruppenanfänge statt auf jede Zählzeit legen. Erst wenn die Kette ohne Zählen sitzt, kommt das Riff darüber."
+          "korrektur": "Die Nahtstelle isolieren: den letzten Takt der einen und den ersten der nächsten Taktart als Zweitaktschleife üben und die Gruppenkette über die Naht hinweg laut mitsprechen (etwa „zwei-zwei-drei | zwei-zwei“). Zunächst nur die Gruppenanfänge spielen. Erst wenn der Übergang ohne Zählen hält, die ganze Folge durchspielen und dann das Riff darüber legen."
         }
       }
     },
@@ -3809,7 +3809,7 @@
         "de": {
           "symptom": "Die Becken sind im Bandkontext kaum hörbar. Als Reaktion wird immer härter geschlagen — mit der Zeit entstehen Risse an den Becken und Beschwerden in Handgelenk und Schulter.",
           "ursache": "Zu leichte oder zu kleine Becken für die Lautstärke der Band. Gewicht bestimmt Durchsetzung; ein dünnes Crash ist im dichten Mix schnell verschwunden, egal wie hart man zuschlägt.",
-          "korrektur": "Schwerere oder größere Becken einsetzen und den Anschlag wieder auf ein normales Maß zurückführen. Wichtig für die Aufsicht: Härter schlagen ist keine Lösung, sondern der Weg zu Materialschäden und Überlastung. Wenn jemand anfängt, gegen sein Material anzuspielen, ist das Material das Problem."
+          "korrektur": "Schwerere oder größere Becken einsetzen und den Anschlag wieder auf ein normales Maß zurückführen. Wichtig für die Aufsicht: Härter schlagen ist keine Lösung, sondern der Weg zu Materialschäden und Überlastung. Wenn jemand anfängt, gegen sein Material anzuspielen, ist das Material das Problem. Bleiben Handgelenk- oder Schulterbeschwerden nach der Umstellung, ärztlich oder physiotherapeutisch abklären lassen."
         }
       }
     },
@@ -3824,7 +3824,7 @@
         "de": {
           "symptom": "Bei schnellen Fußpassagen ermüden die Beine früh, das Tempo bricht ein, und nach dem Spielen schmerzen Knie oder unterer Rücken.",
           "ursache": "Ein zu tief eingestellter Hocker schließt den Kniewinkel zu stark. Der Oberschenkel muss dann Arbeit übernehmen, die eigentlich aus dem Fußgelenk kommt, und die Hüfte kippt ungünstig.",
-          "korrektur": "Den Hocker so einstellen, dass der Kniewinkel etwas offener als ein rechter Winkel ist, und die Fußmaschine neu ausrichten. Danach Schlegelabstand und Federspannung prüfen — beides beeinflusst den Kraftaufwand deutlich. Schmerz nach dem Spielen ist ein Einstellungssignal, kein Trainingszustand."
+          "korrektur": "Den Hocker so einstellen, dass der Kniewinkel etwas offener als ein rechter Winkel ist, und die Fußmaschine neu ausrichten. Danach Schlegelabstand und Federspannung prüfen — beides beeinflusst den Kraftaufwand deutlich. Schmerz nach dem Spielen ist ein Einstellungssignal, kein Trainingszustand; bleibt er trotz neuer Einstellung, ärztlich abklären lassen."
         }
       }
     },
@@ -3852,9 +3852,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Schülerinnen und Schüler gehen ohne Gehörschutz auf Konzerte und in laute Proben, oft mit dem Argument, es klinge damit dumpf oder man wirke übervorsichtig.",
+          "symptom": "Schüler gehen ohne Gehörschutz auf Konzerte und in laute Proben, oft mit dem Argument, es klinge damit dumpf oder man wirke übervorsichtig.",
           "ursache": "Dahinter steckt meist Fehlinformation, nicht Leichtsinn: Bekannt sind einfache Schaumstoffstöpsel, die vor allem Höhen wegnehmen und den Klang tatsächlich verschlechtern. Gefilterte Ohrstöpsel dämpfen dagegen gleichmäßig und erhalten das Klangbild.",
-          "korrektur": "Gefilterten Gehörschutz zeigen und ausprobieren lassen, die Größenordnung benennen und deutlich machen, dass Hörschäden dauerhaft sind. Vorbildwirkung zählt hier mehr als jede Ansage — wer selbst konsequent Schutz trägt, überzeugt am zuverlässigsten."
+          "korrektur": "Gefilterten Gehörschutz zeigen und ausprobieren lassen, die typischen Pegel benennen (Konzerte und Proben liegen oft bei 100 dB und darüber — ungeschützt ist das schon nach etwa einer Viertelstunde zu viel) und deutlich machen, dass Hörschäden dauerhaft sind. Vorbildwirkung zählt hier mehr als jede Ansage — wer selbst konsequent Schutz trägt, überzeugt am zuverlässigsten."
         }
       }
     },
@@ -4229,7 +4229,7 @@
         "de": {
           "symptom": "Soll ein Teil rasender wirken, wird das Metronom hochgedreht. Die Band kommt an ihre Grenze, der Teil verliert an Präzision — und wirkt trotzdem nicht schneller.",
           "ursache": "Gefühlte Geschwindigkeit wird mit der Tempozahl gleichgesetzt. Sie hängt aber stärker davon ab, wie dicht innerhalb des Pulses gespielt wird.",
-          "korrektur": "Die Tempozahl sperren und nur die Unterteilung wechseln lassen: Viertel, Achtel, Sechzehntel bei identischem Metronomwert. Die Person soll benennen, ab wann es „schnell“ wirkt. Danach der praktische Schluss: Ein Stück kann durchgehend im selben Tempo laufen und trotzdem zwischen schleppend und rasend wechseln."
+          "korrektur": "Die Tempozahl sperren und die Unterteilung in beide Richtungen wechseln lassen: hin zu Sechzehnteln, wenn es rasend wirken soll, zurück zu Vierteln oder Half-Time, wenn es schleppen soll — alles bei identischem Metronomwert. Die Person soll benennen, ab wann es „schnell“ wirkt, und eine Figur bauen, die alle acht Takte die Unterteilung wechselt. Danach der praktische Schluss: Ein Stück kann durchgehend im selben Tempo laufen und trotzdem zwischen schleppend und rasend wechseln."
         }
       }
     },

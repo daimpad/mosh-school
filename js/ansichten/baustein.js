@@ -200,7 +200,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
 
   // Glossar-Auto-Verlinkung: erste Fundstelle je Begriff baustein-weit (das
   // `gesehen`-Set wird über Erklär- und Reflexionsteil geteilt, Erklärteil zuerst).
-  const glossarVerlinker = baueGlossarVerlinker(daten.glossar);
+  const glossarVerlinker = baueGlossarVerlinker(daten.glossar, b.id);
   const glossarGesehen = new Set();
 
 

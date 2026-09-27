@@ -1,7 +1,7 @@
 {
   "genre": "Powerviolence",
   "anzahl": 30,
-  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder verwendet haben, auch als Provokation. Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, sonstiges Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind Suchlinks (Künstler und Titel) bei Bandcamp bzw. YouTube, keine Direktlinks; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Infest",
@@ -54,9 +54,9 @@
     },
     {
       "kuenstler": "Lack of Interest",
-      "titel": "Compilation Discography",
+      "titel": "Behind Bars",
       "substil_vermerk": "West-Coast-PV (US)",
-      "url": "https://www.youtube.com/results?search_query=Lack+of+Interest+Compilation+Discography",
+      "url": "https://www.youtube.com/results?search_query=Lack+of+Interest+Behind+Bars",
       "quelle": "youtube"
     },
     {
@@ -97,7 +97,7 @@
     {
       "kuenstler": "Iron Lung",
       "titel": "Cerebral Cavity Search",
-      "substil_vermerk": "sicko-PV (US)",
+      "substil_vermerk": "Sicko-PV (US)",
       "url": "https://bandcamp.com/search?q=Iron+Lung+Cerebral+Cavity+Search&item_type=t",
       "quelle": "bandcamp"
     },
@@ -153,7 +153,7 @@
     {
       "kuenstler": "P.L.F.",
       "titel": "Extermination Process",
-      "substil_vermerk": "grind/PV (US)",
+      "substil_vermerk": "Grind/PV (US)",
       "url": "https://bandcamp.com/search?q=P.L.F.+Extermination+Process&item_type=t",
       "quelle": "bandcamp"
     },
@@ -167,7 +167,7 @@
     {
       "kuenstler": "The Endless Blockade",
       "titel": "Primitive",
-      "substil_vermerk": "PV/noise (Kanada)",
+      "substil_vermerk": "PV/Noise (Kanada)",
       "url": "https://bandcamp.com/search?q=The+Endless+Blockade+Primitive&item_type=t",
       "quelle": "bandcamp"
     },
@@ -187,9 +187,9 @@
     },
     {
       "kuenstler": "Godstomper",
-      "titel": "Assault with Battery",
-      "substil_vermerk": "Cyber-/PV (US)",
-      "url": "https://bandcamp.com/search?q=Godstomper+Assault+with+Battery&item_type=t",
+      "titel": "Thunderlips",
+      "substil_vermerk": "PV als Bass-Schlagzeug-Duo (US)",
+      "url": "https://bandcamp.com/search?q=Godstomper+Thunderlips&item_type=t",
       "quelle": "bandcamp"
     },
     {
