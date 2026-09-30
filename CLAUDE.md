@@ -158,8 +158,9 @@ sofort auf: Wer eine neue Route baut und den Zweig in `rendern()` vergisst, sieh
 gefunden“ und die Warnung in der Konsole. Dieselbe Regel gilt innerhalb der Ansicht: Eine
 unbekannte ID (Baustein, Show, Stufe, Genre) fängt die View **selbst** ab und rendert
 `nichtGefundenHtml()` — der Router kennt die IDs nicht. **Nicht abgefangen** sind bewusst
-`#/werkzeug/<unbekannt>`, `#/instrument/<unbekannt>` und `#/patterns?genre=<unbekannt>`: Sie
-fallen auf ihre Übersichtsseite zurück, was dort eine plausible Antwort ist.
+`#/werkzeug/<unbekannt>` (Hub), `#/instrument/<unbekannt>` (Instrument-Auswahl) und
+`#/patterns/<unbekannt>` (das Genre ist dort nur eine Vorauswahl): Sie fallen auf ihre
+Übersichtsseite zurück, was dort eine plausible Antwort ist.
 
 ## Wo was liegt
 
