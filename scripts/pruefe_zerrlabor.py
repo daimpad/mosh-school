@@ -264,7 +264,7 @@ def pruefe_kapitelaussagen(daten, fehler):
     nach_id = {kl['id']: kl for kl in daten['kennlinien']}
 
     # (1) Kaskade: Der Hochpass ZWISCHEN den Stufen strafft den Bass vor der
-    # naechsten Klippung — das ist der ganze Grund, warum sie keine einzelne
+    # naechsten Übersteuerung — das ist der ganze Grund, warum sie keine einzelne
     # Kurve sein kann. Zweiton-Signal (80 Hz + 1 kHz), einmal mit und einmal
     # ohne den Zwischen-Hochpass.
     kaskade = nach_id.get('kl_highgain_kaskade')

@@ -15,7 +15,7 @@
       "id": "zt_001",
       "gruppe": "Booster",
       "bezeichnung": "Clean-Booster",
-      "prinzip": "Verstärkerstufe ohne eigene Klippung, meist mit hohem Headroom.",
+      "prinzip": "Verstärkerstufe ohne eigene Übersteuerung, meist mit hohem Headroom.",
       "klang": "Kein eigener Klang, nur mehr Pegel; treibt die nachfolgende Stufe härter an.",
       "anwendung": "Vor High-Gain zum stärkeren Antreiben der Vorstufe; als Solo-Anhebung im Einschleifweg.",
       "achtung": "Hebt auch das Rauschen der Vorstufe an; nicht als Klangregler missverstehen."
@@ -51,7 +51,7 @@
       "id": "zt_005",
       "gruppe": "Overdrive",
       "bezeichnung": "Transparenter Overdrive",
-      "prinzip": "Hohe Betriebsspannung oder Leuchtdioden als Klippungselement; viel Headroom.",
+      "prinzip": "Hohe Betriebsspannung oder Leuchtdioden als Übersteuerungselement; viel Headroom.",
       "klang": "Wenig Eigenklang, Grundcharakter des Instruments bleibt hörbar.",
       "anwendung": "Anzerren ohne Klangfärbung; Pegelanhebung mit leichter Sättigung.",
       "achtung": "Wirkt bei niedrigem Gain fast wie ein Booster — das ist Absicht, kein Defekt."
@@ -60,7 +60,7 @@
       "id": "zt_006",
       "gruppe": "Distortion",
       "bezeichnung": "Dioden-gegen-Masse-Distortion",
-      "prinzip": "Klippung durch Dioden nach Masse; alles oberhalb der Schwelle wird gekappt.",
+      "prinzip": "Übersteuerung durch Dioden nach Masse; alles oberhalb der Schwelle wird gekappt.",
       "klang": "Harte, gleichbleibende Verzerrung; wenig abhängig von der Anschlagstärke.",
       "anwendung": "Planbarer Rhythmusklang, wenn Dynamik nicht gebraucht wird.",
       "achtung": "Dynamikverlust ist Bauart, kein Einstellungsfehler."

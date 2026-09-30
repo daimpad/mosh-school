@@ -129,7 +129,7 @@ export function baueKette(ctx, kennlinie, { gainFaktor = 1, filterFaktor = 1 } =
   }
 
   if (kennlinie.funktion === 'multiband') {
-    // Zwei Zweige mit eigener Klippung, danach summiert: tiefe Frequenzen bleiben
+    // Zwei Zweige mit eigener Übersteuerung, danach summiert: tiefe Frequenzen bleiben
     // straff, die Mitten/Höhen zerren stark. Genau das trennt Multiband-Zerre von
     // einer einzelnen Kurve, die den Bass mitmatschen lässt.
     const trenn = (p.trennfrequenz_hz ?? 250) * filterFaktor;
@@ -145,7 +145,7 @@ export function baueKette(ctx, kennlinie, { gainFaktor = 1, filterFaktor = 1 } =
     knoten.push(tief, hoch, sTief, sHoch, summe);
   } else if (kennlinie.funktion === 'tanh_kaskade') {
     // Stufen einzeln, mit echtem Hochpass dazwischen — er strafft den Bass VOR
-    // der nächsten Klippung, was eine gedächtnislose Kurve nicht leisten kann.
+    // der nächsten Übersteuerung, was eine gedächtnislose Kurve nicht leisten kann.
     const stufen = Math.max(1, p.stufen ?? 3);
     const zwischenHp = (p.zwischen_hochpass_hz || 0) * filterFaktor;
     const eine = { funktion: 'tanh', parameter: { gain: p.gain ?? 1 } };

@@ -23,7 +23,7 @@
 //
 // Einstellungen sind flüchtiger, gerätelokaler Modul-State (wie patterns.js).
 //
-// PEGEL: Klippung hebt den Pegel drastisch (LED-Kennlinie kommt auf RMS 1.35 heraus,
+// PEGEL: Übersteuerung hebt den Pegel drastisch (LED-Kennlinie kommt auf RMS 1.35 heraus,
 // fast das Dreifache von clean). Vor dem Ausgang sitzt deshalb ein fester
 // DynamicsCompressor als Begrenzer plus ein Ausgangs-Gain — beides nicht abschaltbar.
 // Die Übergabe nennt Pegelbegrenzung und Lautstärkehinweis ausdrücklich als Pflicht.
@@ -159,7 +159,7 @@ function taktSchleife(ctx, planeTakt, laenge) {
 // wie die Pattern-Demos. Fällt ein, wenn die Klangproben nicht geladen werden
 // können (offline) — deshalb bleibt es erhalten.
 function starteRiff(ctx, ziel) {
-  const grund = 82.41 / 2; // E1, tief genug, damit die Klippung deutlich wird
+  const grund = 82.41 / 2; // E1, tief genug, damit die Übersteuerung deutlich wird
   return taktSchleife(ctx, (t0) => {
     for (let i = 0; i < 8; i++) {
       const zeit = t0 + i * RIFF_SCHRITT;
