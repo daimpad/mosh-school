@@ -728,7 +728,12 @@ Tokens**, nie harte Farben.
   `assets/fonts/special-elite-latin-400-normal.woff2`) für H1/H2/H3 und
   `.abschnitt-titel` — gesetzt in `css/app.css` (`font-weight: 900`, Versalien).
   **Fließtext Roboto** (`assets/fonts/roboto-latin-*.woff2`, 400/500/700). Hart-kantige
-  Container, versetzte Schatten, Grain-Overlay.
+  Container, versetzte Schatten, Grain-Overlay. **Lizenzen der Schriften:** Special Elite
+  Apache 2.0, Roboto und New Rocker SIL OFL 1.1 — je eine `assets/fonts/LICENSE-*.txt`
+  neben den Dateien. Die Dateien sind die unveränderten Subsets aus `@fontsource/*` 5.3.0
+  (Byte-Vergleich); wer eine Schrift aktualisiert oder ersetzt, tauscht die Lizenzdatei
+  mit aus. Roboto stand hier lange als „Apache 2.0“ im CSS-Kommentar — die neuere Roboto
+  (Version 3) ist OFL, und die Lizenzdatei war immer die richtige.
 - **Marken-Grafik (Logo):** Vier Marken — Bildmarke (quadratisch), Wortmarke und
   je eine WortBildmarke für „Mosh Skool“ und „Kollektiv“. Sie sind **zweifarbig**:
   lila Zerre-Zeichen (`--marke-farbe: #9146ff`, BEWUSST nicht `--primaer` — der

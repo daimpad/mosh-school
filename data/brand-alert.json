@@ -386,7 +386,7 @@
       "kategorie": "Software (Open Source)",
       "bezeichnung": "DrumGizmo",
       "warum": "Quelloffenes Sample-Schlagzeug mit Mehrkanalausgabe.",
-      "einordnung": "Spielt gesampelte Kits mit getrennten Mikrofonkanälen. GPL.",
+      "einordnung": "Spielt gesampelte Kits mit getrennten Mikrofonkanälen. LGPL.",
       "alternative": "Gute Wahl für DIY-Aufnahmen ohne akustisches Kit."
     },
     {

@@ -1,5 +1,5 @@
 /* Lokal gehostete Schriften — kein CDN, offline-tauglich.
-   Roboto (Apache 2.0, s. assets/fonts/LICENSE-roboto.txt) in 400/500/700,
+   Roboto (SIL OFL 1.1, s. assets/fonts/LICENSE-roboto.txt) in 400/500/700,
    Latin + Latin-Ext (deckt de/en/fr und pl ab).
    Icons: Tabler Icons (MIT, s. assets/LICENSE-tabler-icons.txt) als lokal
    eingebettete Inline-SVG-Masken statt einer Icon-Schrift — s. Icon-Block unten. */
@@ -170,8 +170,9 @@
 .fa-xmark { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M18%206l-12%2012%22%20%2F%3E%20%3Cpath%20d%3D%22M6%206l12%2012%22%20%2F%3E%3C%2Fsvg%3E"); }
 .fa-world { --ti: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23000%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%22M3%2012a9%209%200%201%200%2018%200a9%209%200%200%200%20-18%200%22%20%2F%3E%20%3Cpath%20d%3D%22M3.6%209h16.8%22%20%2F%3E%20%3Cpath%20d%3D%22M3.6%2015h16.8%22%20%2F%3E%20%3Cpath%20d%3D%22M11.5%203a17%2017%200%200%200%200%2018%22%20%2F%3E%20%3Cpath%20d%3D%22M12.5%203a17%2017%200%200%201%200%2018%22%20%2F%3E%3C%2Fsvg%3E"); }
 
-/* ZERRER — Special Elite (Apache 2.0): Schreibmaschinen-/Grunge-Schrift für
-   die Überschriften h1–h3. Lokales Subset (latin + latin-ext, deckt de/en/fr/pl). */
+/* ZERRER — Special Elite (Apache 2.0, s. assets/fonts/LICENSE-special-elite.txt):
+   Schreibmaschinen-/Grunge-Schrift für die Überschriften h1–h3. Lokales Subset
+   (latin + latin-ext, deckt de/en/fr/pl). */
 @font-face {
   font-family: 'Special Elite';
   font-style: normal;
