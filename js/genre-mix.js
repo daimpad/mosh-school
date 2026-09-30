@@ -39,13 +39,18 @@ export const GEWICHT_HAEUFIG = 0.4;
 // Gefühls-Cluster: zwei Tags gelten als „benachbart", wenn sie einen Cluster
 // teilen — so entsteht eine Brücke auch ohne wortgleiche Tags. Rein heuristisch;
 // die Landkarte selbst bleibt die Quelle der Wahrheit.
+// Jeder Tag steht in GENAU EINEM Cluster: clusterVon() nimmt den ersten Treffer, ein
+// zweiter Eintrag bliebe stumm (so stand „Empowerment“ zweimal da, und der Eintrag
+// bei „gemeinschaft“ war nie erreichbar). Die Tag-Namen müssen wortgleich zu
+// data/gefuehlslandkarte.json sein — „Dynamikwechsel“ hieß dort, bis der Tag zu
+// „Unberechenbarkeit“ wurde, und der Powerviolence-Tag fiel aus der Brücke.
 const GEFUEHL_CLUSTER = {
   aggression: ['Wut', 'Zorn', 'Aggression', 'Frust', 'Bitterkeit', 'Aufbegehren', 'Aufbäumen', 'Trotz'],
   wucht: ['Wucht', 'Kraft', 'Bedrohung', 'Schwere', 'Überwältigung', 'Entladung', 'Ausbruch'],
-  katharsis: ['Katharsis', 'Erlösung', 'Erhabenheit', 'Transzendenz', 'Entrückung', 'Empowerment', 'Sehnsucht'],
+  katharsis: ['Katharsis', 'Erlösung', 'Erhabenheit', 'Transzendenz', 'Entrückung', 'Sehnsucht'],
   finsternis: ['Kälte', 'Isolation', 'Düsternis', 'Morbidität', 'Weltschmerz', 'Trauer', 'Unbehagen', 'Verzweiflung', 'Zerbrechlichkeit'],
   trance: ['Trance', 'Groove', 'Wärme', 'Lässigkeit', 'Kontemplation', 'Weite', 'Hypnose'],
-  chaos: ['Chaos', 'Absurdität', 'Schock', 'Dynamikwechsel', 'Adrenalin', 'Unmittelbarkeit', 'Anspannung', 'Kontrolle', 'Desorientierung'],
+  chaos: ['Chaos', 'Absurdität', 'Schock', 'Unberechenbarkeit', 'Adrenalin', 'Unmittelbarkeit', 'Anspannung', 'Kontrolle', 'Desorientierung'],
   gemeinschaft: ['Gemeinschaft', 'Empowerment', 'Erschöpfung', 'Dreck'],
 };
 

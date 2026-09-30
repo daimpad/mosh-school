@@ -10,10 +10,12 @@
 // v211 schützt das Passwort damit wirklich etwas: Früher stand es im Klartext im
 // Quelltext und zog nur einen Vorhang.
 //
-// DIE ADRESSE NIE IM KLARTEXT INS REPO. Bei CryptPad steckt der Schlüssel zum
-// Pad im URL-Fragment — die Adresse IST der Schlüssel. Im Klartext committet,
-// wäre das Pad unwiderruflich öffentlich (Historie, Klone, Pages-Spiegel).
-// validate.py schlägt deshalb an, sobald irgendwo eine CryptPad-Adresse steht.
+// DIE ADRESSE NIE IM KLARTEXT INS REPO. Bei CryptPad steckte der Schlüssel zum
+// Pad im URL-Fragment, bei einem Google Doc mit „Jeder mit dem Link“ ist es die
+// Dokument-ID — in beiden Fällen IST die Adresse der Schlüssel. Im Klartext
+// committet, wäre das Dokument unwiderruflich öffentlich (Historie, Klone,
+// Pages-Spiegel). validate.py schlägt deshalb an, sobald irgendwo eine
+// CryptPad- oder Google-Dokument-Adresse im Klartext steht.
 // Neue Adresse oder neues Passwort: scripts/verschluessele_pad.mjs.
 //
 // AUCH NICHT IN DIE URL: js/app.js zählt bei jedem Routenwechsel die volle
@@ -70,7 +72,8 @@ function schlossHtml() {
 // Nach dem Entsperren: der Ausweich-Link und die Bühne fürs iframe. Der Link
 // steht IMMER da, nicht erst bei einem Fehler: Eine blockierte Einbettung ist
 // aus dieser Seite nicht zuverlässig zu erkennen (s. u.), und Browser, die
-// Drittanbieter-Speicher sperren, zeigen im Rahmen nur CryptPads Fehlermeldung.
+// Drittanbieter-Speicher sperren, zeigen im Rahmen nur eine Anmelde- oder
+// Fehlerseite des Dienstes.
 function bereichHtml() {
   return `
     <div class="knopf-zeile intern-aktionen">
@@ -97,14 +100,15 @@ function haengeRahmenEin(buehne, url) {
   // kaputt (Google Docs fragt die Clipboard-API). Kamera, Mikrofon, Standort
   // bleiben ausdrücklich zu.
   rahmen.allow = 'clipboard-read; clipboard-write';
-  // Ehrlich bleiben: CryptPad braucht Skripte UND seine eigene Origin (Krypto,
-  // Speicher) — zusammen hebt das den Schutzwert der Sandbox für diese Origin
-  // weitgehend auf. Was sie hier wirklich leistet, ist das FEHLENDE
-  // allow-top-navigation: Ohne das kann die eingebettete Seite ZERRER nicht
-  // wegnavigieren. Enger gesetzt bricht das Pad, statt sicherer zu werden.
-  // (Die Meldung „CryptPad needs localStorage" kommt NICHT von hier — sie
-  // entsteht, wenn der Browser Drittanbieter-Speicher sperrt, mit und ohne
-  // sandbox; nachgestellt, s. CLAUDE.md.)
+  // Ehrlich bleiben: Ein Editor wie Google Docs (früher CryptPad) braucht Skripte
+  // UND seine eigene Origin (Sitzung, Speicher) — zusammen hebt das den Schutzwert
+  // der Sandbox für diese Origin weitgehend auf. Was sie hier wirklich leistet, ist
+  // das FEHLENDE allow-top-navigation: Ohne das kann die eingebettete Seite ZERRER
+  // nicht wegnavigieren. Enger gesetzt bricht das Dokument, statt sicherer zu werden.
+  // (Die frühere CryptPad-Meldung „needs localStorage" kam NICHT von hier — sie
+  // entstand, wenn der Browser Drittanbieter-Speicher sperrt, mit und ohne
+  // sandbox; nachgestellt, s. CLAUDE.md. Bei Google Docs äußert sich dieselbe
+  // Browser-Einstellung als Anmeldeaufforderung im Rahmen.)
   rahmen.setAttribute(
     'sandbox',
     // allow-storage-access-by-user-activation: Firefox und Safari sperren den

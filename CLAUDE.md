@@ -6,8 +6,9 @@ was der Code schon sagt; hier steht nur, was man **wissen muss, bevor** man etwa
 ## Was das ist
 
 **ZERRER** — eine clientseitige Lernapp fürs Spielen von Extreme-Metal-Instrumenten
-(Gitarre, Bass, Schlagzeug, Gesang) in den Genres Hardcore, Metalcore, Thrash, Death,
-Black und Doom. Rein statisch: HTML/CSS/JS als ES-Module, **kein Build-Schritt, keine
+(Gitarre, Bass, Schlagzeug, Gesang) in den Kerngenres Hardcore, Metalcore, Thrash, Death,
+Black und Doom — dazu zehn verwandte Stile (die vollständige, verbindliche Liste steht in
+`vokabulare.stil`, derzeit 16). Rein statisch: HTML/CSS/JS als ES-Module, **kein Build-Schritt, keine
 Server-Komponente, keine npm-Laufzeitabhängigkeiten**. Inhalte kommen aus JSON in `data/`,
 Fortschritt lebt in `localStorage`. Quellsprache Deutsch, du-Form. (Die App ist aus einer
 Crossminton-Lern-Engine geforkt — die Engine ist themenneutral, der Inhalt ist Metal.)
@@ -148,11 +149,17 @@ betonen will. Erreichbar nur über die getippte Adresse. Aus demselben Grund ste
 nichts davon in `robots.txt`: Hash-Routen haben für Suchmaschinen keine eigene URL, ein
 `Disallow` wäre nur ein öffentlicher Hinweis ohne Wirkung.
 
-**STILLER DURCHFALL bei neuen Routen:** Der letzte `else`-Zweig in `rendern()` (`js/app.js`)
-ruft `renderHeim()`. Es gibt **keine** Not-Found-Route. Wird ein Dispatch-Zweig vergessen,
-zeigt die neue Adresse kommentarlos die Startseite — keine Konsolenmeldung, kein 404. Dieselbe
-Falle innerhalb der Ansicht: Eine unbekannte ID muss die View **selbst** abfangen und
-`nichtGefundenHtml()` rendern.
+**Unbekannte Adressen zeigen „Nicht gefunden“, nicht die Startseite.** Der letzte
+`else`-Zweig in `rendern()` (`js/app.js`) rendert `nichtGefundenHtml()` und schreibt
+`console.warn('Unbekannte Route: …')`; `renderHeim()` läuft nur noch bei leerer Route
+(`#/`). Früher fiel dieser Zweig kommentarlos auf die Startseite zurück — man las das als
+„die Seite existiert“, und ein **vergessener Dispatch-Zweig fiel nie auf**. Heute fällt er
+sofort auf: Wer eine neue Route baut und den Zweig in `rendern()` vergisst, sieht „Nicht
+gefunden“ und die Warnung in der Konsole. Dieselbe Regel gilt innerhalb der Ansicht: Eine
+unbekannte ID (Baustein, Show, Stufe, Genre) fängt die View **selbst** ab und rendert
+`nichtGefundenHtml()` — der Router kennt die IDs nicht. **Nicht abgefangen** sind bewusst
+`#/werkzeug/<unbekannt>`, `#/instrument/<unbekannt>` und `#/patterns?genre=<unbekannt>`: Sie
+fallen auf ihre Übersichtsseite zurück, was dort eine plausible Antwort ist.
 
 ## Wo was liegt
 
@@ -482,22 +489,27 @@ Drittanbieter-Cookies zulassen — der Ausweich-Link in den neuen Tab bleibt des
   zuverlässig erkennbar: `onerror` feuert nicht, `load` verhält sich je nach Browser anders,
   `contentDocument` ist cross-origin unlesbar. Ein leeres iframe ist dann ärgerlich statt
   kaputt.
-- **Zur `sandbox` ehrlich bleiben:** CryptPad braucht `allow-scripts` UND `allow-same-origin`
-  (eigene Krypto, eigener Speicher) — zusammen hebt das den Schutzwert für diese Origin
-  weitgehend auf. Was sie hier wirklich leistet, ist das **fehlende** `allow-top-navigation`:
-  Ohne das kann die eingebettete Seite ZERRER nicht wegnavigieren. Enger gesetzt bricht das
-  Pad, statt sicherer zu werden. Dazu `allow-storage-access-by-user-activation` (damit
-  das Dokument in Firefox/Safari nach einem Klick um seinen Speicher bitten kann),
-  `title` (WCAG), `referrerpolicy="no-referrer"` und
-  `allow="clipboard-read; clipboard-write"` — ein Editor ohne Einfügen über das Menü ist
-  kaputt; Kamera, Mikrofon, Standort bleiben zu.
-- **„CryptPad needs localStorage to work" im Rahmen ist eine Browser-Einstellung,
-  kein Fehler hier.** Blockiert der Browser Drittanbieter-Cookies (Chrome-Einstellung
-  bzw. Inkognito, Brave standardmäßig), sperrt er auch den Speicher eingebetteter
-  fremder Seiten. Nachgestellt mit einer Attrappe: Standardeinstellung → Speicher geht;
-  Drittanbieter-Cookies blockiert → `SecurityError`, **mit und ohne** unsere `sandbox`.
-  Von der einbettenden Seite aus ist das weder abstellbar noch zuverlässig erkennbar.
-  Abhilfe beim Nutzer: Ausnahme für `zerrer.org` erlauben, oder der Ausweich-Link.
+- **Zur `sandbox` ehrlich bleiben:** Ein Editor wie Google Docs (früher CryptPad) braucht
+  `allow-scripts` UND `allow-same-origin` (Sitzung, eigener Speicher) — zusammen hebt das
+  den Schutzwert für diese Origin weitgehend auf. Was sie hier wirklich leistet, ist das
+  **fehlende** `allow-top-navigation`: Ohne das kann die eingebettete Seite ZERRER nicht
+  wegnavigieren. Enger gesetzt bricht das Dokument, statt sicherer zu werden. Die
+  vollständige Liste steht in `haengeRahmenEin()` (`js/ansichten/intern.js`):
+  `allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms
+  allow-downloads allow-modals allow-storage-access-by-user-activation`. Letzteres, damit
+  das Dokument in Firefox/Safari nach einem Klick um seinen Speicher bitten kann. Dazu
+  `title` (WCAG), `referrerpolicy="no-referrer"` und `allow="clipboard-read;
+  clipboard-write"` — ein Editor ohne Einfügen über das Menü ist kaputt; Kamera, Mikrofon,
+  Standort bleiben zu.
+- **Gesperrter Drittanbieter-Speicher im Rahmen ist eine Browser-Einstellung, kein Fehler
+  hier.** Das war der Befund bei CryptPad („CryptPad needs localStorage to work“) und
+  äußert sich bei Google Docs als Anmeldeaufforderung im Rahmen. Blockiert der Browser
+  Drittanbieter-Cookies (Chrome-Einstellung bzw. Inkognito, Brave standardmäßig), sperrt er
+  auch den Speicher eingebetteter fremder Seiten. Nachgestellt mit einer Attrappe:
+  Standardeinstellung → Speicher geht; Drittanbieter-Cookies blockiert → `SecurityError`,
+  **mit und ohne** unsere `sandbox`. Von der einbettenden Seite aus ist das weder
+  abstellbar noch zuverlässig erkennbar. Abhilfe beim Nutzer: Ausnahme für `zerrer.org`
+  erlauben, oder der Ausweich-Link.
 - **Entschlüsselte Adressen werden geprüft** (`https:` und parsebar, `istBrauchbar()`). Ohne das nähme das iframe
   auch `javascript:`/`data:` entgegen.
 - **Datenschutz mitziehen:** `data/app-info.json` → `rechtliches.datenschutz` trägt den
@@ -544,6 +556,7 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
 
 ```sh
 python3 scripts/validate.py              # Cross-File-Konsistenz über den gemischten Pool
+python3 scripts/pruefe_labels.py         # t()-Aufrufe ↔ ui-Labels: fehlende Schlüssel, Platzhalter
 python3 scripts/lift.py                  # idempotent — Titel nach data/labels/de.json geliftet
 python3 scripts/build_grafiken.py --check # Grafik-Bundles aus den Quellen reproduzierbar
 python3 scripts/build_marken.py --check   # Marken-Masken aus den Logo-Quellen reproduzierbar
@@ -556,7 +569,9 @@ python3 scripts/pruefe_boxen.py          # Box-Impulsantworten treffen ihre Besc
 python3 scripts/pruefe_boxen_mutation.py # …und die Pruefung schlaegt bei Fehlern auch an
 node scripts/pruefe_tonhoehe.mjs         # Stimmgeraet deckt den ganzen Stimmungs-Pool ab
 node scripts/build_gitarrenprobe.mjs --check  # Klangproben aus dem Rohbestand reproduzierbar
-                                         # (braucht Chromium + Server auf :8123, daher nicht in der CI)
+node scripts/build_appicons.mjs --check  # App-Icons, favicon-96.png und favicon.ico aus favicon.svg
+node scripts/build_share.mjs --check     # Vorschaubild (og:image) aus Labels, Token und Schriften
+                                         # (alle drei brauchen Chromium + Server auf :8123, daher nicht in der CI)
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
 
@@ -756,7 +771,14 @@ Tokens**, nie harte Farben.
   mitgeändert werden müssen; beide Kommentare sagen es. „RER" ist ein Palindrom, eine Spiegelung dreht
   deshalb nur die Glyphen, nicht ihre Reihenfolge. **`js/hero-glitch.js` klont
   `innerHTML`, nicht `textContent`:** Sonst trüge die Basis das gespiegelte Wort,
-  jede Glitch-Ebene darüber aber das ungespiegelte.
+  jede Glitch-Ebene darüber aber das ungespiegelte. **Der Glitch läuft nur 4,5 s
+  sichtbarer Zeit** (`LAUFZEIT_MS`), danach steht der Schriftzug ruhig (`beruhige()`):
+  WCAG 2.2.2 verlangt für Bewegung, die von selbst beginnt und länger als fünf Sekunden
+  dauert, eine Möglichkeit zum Anhalten — ein Ende braucht kein Bedienelement mitten im
+  Hero. Gezählt wird die Zeit, in der Frames laufen, nicht die Wanduhr: Scrollt der Hero
+  weg oder ruht der Tab, steht der Schriftzug sonst still, ohne dass jemand je etwas
+  gesehen hätte. `prefers-reduced-motion` schaltet den Effekt ganz ab. Das Lila der
+  Farbauszüge liest der Effekt aus `--marke-farbe`, es steht nicht im Skript.
 - **Favicons/App-Icons** liegen in `assets/images/favicon/` (plus `favicon.ico`
   im Wurzelverzeichnis). Die gelieferten Apple-Touch- und PWA-Grössen hatten
   einen transparenten Hintergrund mit weisser unterer Marken-Hälfte — auf hellem
@@ -767,7 +789,18 @@ Tokens**, nie harte Farben.
   stehen, weil es früher kein Skript erzeugte. Die Farbe des Zeichens steht als
   `#9146ff` in `favicon.svg` — eine der wenigen Stellen, an der sie fest verdrahtet sein
   muss (eine SVG-Datei kennt `--marke-farbe` nicht). Im Manifest stehen sie **ohne** `purpose: maskable`:
-  Das Motiv ist ein abgerundetes Quadrat, kein randlos gefülltes Bild.
+  Das Motiv ist ein abgerundetes Quadrat, kein randlos gefülltes Bild. Die App läuft
+  auch quer (`orientation: any`), sonst sperrte die installierte Fassung Tablets auf
+  Hochformat.
+- **Vorschaubild (`og:image`)**: `assets/images/marke/share.png`, 1200 × 630, erzeugt von
+  `node scripts/build_share.mjs` (Chromium, nicht in der CI). Alles darin kommt aus
+  bestehenden Quellen — Schriftzug und Subline aus den Labels (`app_titel`,
+  `hero_untertitel`), das Lila aus `--marke-farbe`, Schrift und Zeichen aus denselben
+  Dateien wie die App. Es kippt nicht mit dem Thema (wie ein Flyer). Es steht
+  **bewusst nicht in der SW-`SHELL`** — nur fremde Server holen es —, und `validate.py`
+  meldet es als Fehler, wenn es doch dort steht, wenn die Datei fehlt oder nicht
+  1200 × 630 misst. `index.html` und `build_seiten.py` tragen `og:image` und
+  `twitter:card=summary_large_image`.
 - **Marken-Schrift New Rocker** (lokal als `assets/fonts/new-rocker-latin-400-normal.woff2`,
   nur Gewicht 400 — SIL OFL, `assets/fonts/LICENSE-new-rocker.txt`): trägt
   **ausschließlich das Wort „ZERRER" als Logo**, ursprünglich an drei Stellen — Kopfzeile
@@ -895,6 +928,10 @@ Tokens**, nie harte Farben.
   weil genau dort Autokorrelation eine Oktave danebengreift. Ein Test mit Sinus
   wäre ein Freibrief. Der geprüfte Bereich wird **aus `tunings.json` gelesen**: Eine
   neue, tiefere Stimmung lässt die Prüfung von selbst umfallen.
+  **Tonnamen in Stimmungsnamen sind englisch** (B, Eb, C♯ — „B-Standard“, „Eb-Standard“),
+  wie im Stimmgerät und in der Szene; die deutsche Form (H, Es, Cis) verwirrt dort mehr,
+  als sie hilft. Der Hinweistext in `tunings.json` schreibt dieselbe Form („wie beim
+  Eb-Standard“).
   Saitenstärken (`staerke`) sind **Praxis-Empfehlungen in handelsüblichen Sätzen**,
   keine gerechneten Werte: Sie müssen die Stimmungs-Leiter hinab monoton schwerer
   werden, aber Drop-Stimmungen stimmen nur die tiefste Saite um und der 6-Saiter-Bass
@@ -1076,6 +1113,23 @@ Tokens**, nie harte Farben.
   `['ui', schluessel]` nach (nicht am Root). Ein am Root eingefügter Schlüssel wird nie
   gefunden und rendert als roher Key. Beim Verifizieren auch auf **sichtbaren** Text prüfen
   (nicht nur „keine Konsolenfehler") — ein fehlgeleitetes Label wirft keinen Fehler.
+  `python3 scripts/pruefe_labels.py` (auch in `verify.yml`) fängt genau das ab: Es liest
+  alle `t()`- und `uitext()`-Aufrufe und meldet fehlende Schlüssel, leere Werte,
+  Platzhalter, die nicht zusammenpassen, und dynamische Muster (`t(`box_${id}`)`), die
+  keinen Schlüssel mehr treffen. **Tote Schlüssel sind nur eine Warnung** — ein Label kann
+  absichtlich vorgehalten sein; vor dem Löschen mit `grep` prüfen. Bewusst **nicht**
+  geprüft: welche Werte `${id}` annimmt. Das ginge nur mit einem Resolver je Aufrufstelle,
+  der bei jeder Umbenennung bricht, und eine Prüfung, die im Normalbetrieb rot ist, wird
+  weggeklickt.
+- **Glossar-Verlinkung** (`js/glossar-links.js`): Begriffe im Fließtext der Bausteine
+  verlinken auf das Glossar, je Eintrag nur die erste Fundstelle. Begriffe mit
+  Alternativen („Load-in / Get-in“) werden in Einzelformen zerlegt; `ZUSATZFORMEN`
+  ergänzt je Glossar-ID Schreibweisen, die sich nicht ableiten lassen (Plural,
+  Bindestrich). **Doppelbedeutungen** gehören in `AUSNAHMEN` — je Baustein-ID die
+  Begriffe, die dort NICHT verlinken sollen („Feedback“ als Rückmeldung statt
+  Rückkopplung, „Tape“ als Klebeband statt Kassette). So bleibt der Bausteintext, wie er
+  ist; ihn zu ändern, nur damit ein Verlinker ihn nicht falsch liest, wäre der falsche
+  Weg. `baueGlossarVerlinker(glossar, bausteinId)` bekommt die ID von `baustein.js`.
 - **SW-Wartung:** wird eine Kern-Datei neu hinzugefügt/umbenannt (neues `js/`-Modul, neue
   `data/…json` in `INHALTSDATEIEN`, CSS, Schrift), muss sie in `SHELL` **und** der `CACHE`-Name
   erhöht werden. Baustein-Grafiken (`images/*.png`, falls später ergänzt) werden bewusst NICHT

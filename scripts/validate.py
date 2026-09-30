@@ -311,6 +311,39 @@ def pruefe_pad_adressen(fehler):
                 f'Adresse IST der Schluessel. Verschluesselt ablegen: scripts/verschluessele_pad.mjs')
 
 
+SHARE_BILD = 'assets/images/marke/share.png'
+SHARE_MASSE = (1200, 630)          # 1,91:1 — das Format, das Messenger und Social erwarten
+
+
+def pruefe_share_bild(fehler):
+    """og:image: index.html verweist auf ein Bild, das es gibt und 1200x630 misst.
+
+    Ein og:image, das ins Leere zeigt, faellt nirgends auf — der Link-Vorschau
+    fehlt dann still das Bild. Umgekehrt: Ein Bild in falschem Format wird von
+    manchen Diensten beschnitten oder ganz verworfen.
+    """
+    with open(os.path.join(ROOT, 'index.html'), encoding='utf-8') as f:
+        html = f.read()
+    treffer = re.search(r'<meta property="og:image" content="https://zerrer\.org/([^"]+)"', html)
+    if not treffer:
+        fehler.append('index.html: og:image fehlt (Link-Vorschau ohne Bild)')
+        return
+    if treffer.group(1) != SHARE_BILD:
+        fehler.append(f'index.html: og:image zeigt auf "{treffer.group(1)}", erwartet {SHARE_BILD}')
+    voll = os.path.join(ROOT, treffer.group(1))
+    if not os.path.isfile(voll):
+        fehler.append(f'og:image "{treffer.group(1)}" fehlt (node scripts/build_share.mjs)')
+        return
+    masse = bildmasse(voll)
+    if masse != SHARE_MASSE:
+        fehler.append(f'og:image "{treffer.group(1)}": erwartet {SHARE_MASSE[0]}x{SHARE_MASSE[1]}, ist {masse}')
+    # Bewusst NICHT in der SW-SHELL (wird nur von fremden Servern geholt): Steht es
+    # doch dort, laedt jede Installation es mit.
+    with open(os.path.join(ROOT, 'sw.js'), encoding='utf-8') as f:
+        if 'share.png' in f.read():
+            fehler.append('sw.js: share.png steht in SHELL — das Vorschaubild gehoert nicht in den Offline-Cache')
+
+
 # --- Shows (data/shows.json + images/shows/) ---------------------------------
 # Der Flyer-Bestand hat ein EIGENES Budget neben der globalen Gesamtgrenze. Zwei
 # Grenzen, weil eine nicht reicht: Ohne die zweite frisst ein wachsendes
@@ -993,6 +1026,7 @@ def main():
 
     gesamt = pruefe_groessen(fehler)
     pruefe_pad_adressen(fehler)
+    pruefe_share_bild(fehler)
 
     # Bericht
     print(f'Pool: {len(bausteine)} Bausteine ueber {len(dateien)} Dateien')

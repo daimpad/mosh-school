@@ -26,6 +26,13 @@ const UNSCHAERFE = 0;
 const BAENDER = 2;
 const FARBVERSATZ = 0.99;
 const FARBSTAERKE = 1;
+// Wie lange der Effekt laeuft (aktive, SICHTBARE Zeit), danach steht der Schriftzug
+// ruhig. WCAG 2.2.2 (Pause, Stop, Hide): Bewegung, die von selbst beginnt und
+// laenger als fuenf Sekunden dauert, braucht eine Moeglichkeit zum Anhalten — ein
+// Knopf dafuer waere ein weiteres Bedienelement mitten im Hero, ein Ende nach
+// 4,5 s (plus ein zu Ende laufender Ausbruch, hoechstens ~0,6 s) braucht keins.
+// Wer die Bewegung gar nicht will, bekommt sie ohnehin nicht (prefers-reduced-motion).
+const LAUFZEIT_MS = 4500;
 // Palette "marke" aus dem Mockup: Stahlblau + Marken-Lila statt des klassischen
 // Cyan/Rot-Kamera-Splits — bleibt im Marken-Farbraum. Das Lila steht NICHT hier,
 // sondern als Token --marke-farbe in css/app.css und wird beim Start gelesen;
@@ -155,6 +162,33 @@ export function initHeroGlitch(wort) {
   let laeuft = true;
   let sichtbar = true;
   let frameHandle = null;
+  // Aktive Laufzeit, in Frames aufsummiert. Die Wanduhr taugt nicht: Scrollt der
+  // Hero weg oder ruht der Tab, laeuft sie weiter, und zurueck stuende der
+  // Schriftzug sofort still, ohne dass jemand je etwas gesehen haette. Ein einzelner
+  // Frame zaehlt hoechstens 100 ms, damit eine Pause die Summe nicht sprengt.
+  let gelaufen = 0;
+  let letzter = null;
+
+  // Ruhezustand nach Ablauf der Laufzeit: alle Versaetze zurueck auf null, der
+  // Farbauszug bleibt als feiner, fester Saum stehen (der Mittelwert dessen, was
+  // vorher atmete). Danach keine Frames mehr — auch der IntersectionObserver
+  // startet die Schleife nicht wieder (laeuft = false).
+  function beruhige() {
+    laeuft = false;
+    frameHandle = null;
+    wort.style.setProperty('--zerr-x', '0px');
+    wort.style.setProperty('--zerr-y', '0px');
+    wort.style.setProperty('--zerr-neigung', '0deg');
+    wort.style.setProperty('--zerr-stauchung', '1');
+    wort.style.setProperty('--zerr-blur', '0px');
+    wort.style.setProperty('--zerr-deckkraft', '1');
+    wort.style.setProperty('--zerr-split', ((1 + 0.5 * 1.6) * FARBVERSATZ * INTENSITAET * 3).toFixed(2) + 'px');
+    for (const el of scheiben) {
+      el.style.setProperty('--dx', '0%');
+      el.style.setProperty('--dy', '0px');
+      el.style.setProperty('--sop', '1');
+    }
+  }
 
   function planeNaechsten(jetzt) {
     // Tempo 0 -> ~8s Pause, Tempo 1 -> ~0.12s, exponentiell (siehe Mockup).
@@ -173,6 +207,14 @@ export function initHeroGlitch(wort) {
   function frame(jetzt) {
     if (!laeuft || !sichtbar) {
       frameHandle = null;
+      return;
+    }
+    if (letzter !== null) gelaufen += Math.min(jetzt - letzter, 100);
+    letzter = jetzt;
+    // Laufzeit um: einen gerade laufenden Ausbruch noch zu Ende spielen (er dauert
+    // hoechstens ~0,6 s), dann Ruhe. Kein neuer Ausbruch mehr.
+    if (!ausbruch && gelaufen >= LAUFZEIT_MS) {
+      beruhige();
       return;
     }
     const I = INTENSITAET;
@@ -270,6 +312,7 @@ export function initHeroGlitch(wort) {
     beobachter = new IntersectionObserver(
       (eintraege) => {
         sichtbar = eintraege[0].isIntersecting;
+        letzter = null; // Zwischen zwei Sichtphasen keine Pause mitzaehlen
         if (sichtbar && laeuft && frameHandle === null) frameHandle = requestAnimationFrame(frame);
       },
       { threshold: 0 },

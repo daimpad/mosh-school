@@ -1,13 +1,13 @@
 {
   "name": "ZERRER — Mosh School",
   "short_name": "ZERRER",
-  "description": "Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom. Kostenlos, werbefrei, im Browser.",
+  "description": "Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Thrash, Death, Black und Doom. Kostenlos, werbefrei, im Browser.",
   "lang": "de",
   "dir": "ltr",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "background_color": "#0b0b0c",
   "theme_color": "#0b0b0c",
   "categories": [

@@ -259,8 +259,8 @@ S["songstruktur_breakdown"] = (
 
 # ---------- Drum-Technik ----------
 # Double-Bass-Sechzehntel: durchgehende Kick auf allen 16 Sechzehnteln, Snare
-# auf 2 und 4, Hi-Hat auf den Vierteln.
-S["double_bass_sechzehntel"] = beat_schema(hh=[0, 4, 8, 12], sn=[4, 12], bd=list(range(16)), n=16)
+# auf 2 und 4, Hi-Hat in Achteln (wie im Übungsteil: „Achtel auf der Hi-Hat“).
+S["double_bass_sechzehntel"] = beat_schema(hh=list(range(0, 16, 2)), sn=[4, 12], bd=list(range(16)), n=16)
 # Blastbeat-Varianten: oben Traditional (Kick/Snare im Wechsel), unten Hammer
 # (Kick und Snare gleichzeitig) — dieselbe Dichte, andere Verteilung.
 S["blast_varianten"] = (

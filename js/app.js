@@ -43,7 +43,7 @@ import { ladeDaten, ladeSuchindex } from './daten.js';
 import { setzeHintergrundbilder } from './hintergrundbilder.js';
 import { initFeedbackWennGewuenscht } from './feedback.js';
 import { initI18n, t } from './i18n.js';
-import { esc, fuehreAufraeumenAus, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
+import { esc, fuehreAufraeumenAus, nichtGefundenHtml, setzeGrafiken, setzeLehrgrafiken, wendeThemaAn } from './oberflaeche.js';
 import { wortmarkeSchriftzug } from './genre-inszenierung.js';
 import { einstellungen, istOnboardingAbgeschlossen, ladeZustand, schliesseOnboardingAb, setzeEinstellung, uebernehmeFremdenStand } from './zustand.js';
 
@@ -526,8 +526,16 @@ function rendern() {
     renderMerkliste(el, daten);
   } else if (segmente[0] === 'profil') {
     renderProfil(el, daten);
-  } else {
+  } else if (segmente.length === 0) {
     renderHeim(el, daten);
+  } else {
+    // Unbekannte Adresse (Tippfehler, gelöschte Seite, veraltetes Lesezeichen):
+    // ausdrücklich „nicht gefunden“. Früher fiel dieser Zweig kommentarlos auf die
+    // Startseite zurück — man las das als „die Seite existiert“, und ein vergessener
+    // Dispatch-Zweig fiel nie auf. Die Konsolenwarnung gilt genau diesem zweiten Fall:
+    // Wer eine neue Route baut und sie hier vergisst, sieht sie sofort.
+    el.innerHTML = nichtGefundenHtml('#/', t('nav_home'));
+    console.warn(`Unbekannte Route: ${roh}`);
   }
 
   aktualisiereNavigation(segmente);

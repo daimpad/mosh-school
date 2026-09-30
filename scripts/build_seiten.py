@@ -30,6 +30,9 @@ from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://zerrer.org'
+# Vorschaubild fuer Messenger/Social (og:image), von scripts/build_share.mjs
+# erzeugt. Eines fuer alle Seiten: Es traegt die Marke, nicht den Einzelinhalt.
+SHARE_BILD = 'assets/images/marke/share.png'
 
 def lade(pfad):
     with open(os.path.join(ROOT, pfad), encoding='utf-8') as f:
@@ -408,9 +411,14 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 <meta property="og:title" content="{esc(titel)}">
 <meta property="og:description" content="{esc(beschreibung)}">
 <meta property="og:url" content="{esc(canonical)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{SITE}/{SHARE_BILD}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(titel)}">
 <meta name="twitter:description" content="{esc(beschreibung)}">
+<meta name="twitter:image" content="{SITE}/{SHARE_BILD}">
 <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False, sort_keys=True)}</script>
 <link rel="stylesheet" href="{w}css/schriften.css">
 <link rel="stylesheet" href="{w}css/app.css">

@@ -46,6 +46,15 @@ jobs:
       - name: Struktur validieren
         run: python3 scripts/validate.py
 
+      # t('schluessel') mit einem Schluessel, den es nicht gibt, wirft keinen
+      # Fehler — die App zeigt den rohen Schluessel als Beschriftung. Diese
+      # Pruefung liest alle t()/uitext()-Aufrufe und vergleicht sie mit
+      # data/labels/de.json: fehlende Schluessel, leere Werte, nicht passende
+      # Platzhalter und dynamische Muster ohne Treffer sind Fehler; tote Labels
+      # nur eine Warnung.
+      - name: UI-Labels gegen ihre Verwendung pruefen
+        run: python3 scripts/pruefe_labels.py
+
       # Die Bundles muessen aus ihren Quellen reproduzierbar sein. Schlaegt fehl,
       # wenn ein Motiv ohne Quell-SVG im Bundle landet.
       - name: Grafik-Bundles gegen die Quellen pruefen
