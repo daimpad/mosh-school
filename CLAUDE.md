@@ -350,7 +350,7 @@ nur noch dort, wo das Blatt selbst gemeint ist (`bild`, `alt`, Bildunterschrift)
   dreimal falsch: beschnittener Rand (dort steht auf einem Flyer das Datum), ausgewaschene
   Farbe, und ein Dokument, das je nach Themenschalter anders aussieht. **Die Farbe eines
   Flyers ist Information** — sie kippt nicht mit dem Thema, aus demselben Grund wie
-  `--marke-rot`. Das ist das erste echte Raster-`<img>` der App; getrennt statt
+  `--marke-farbe`. Das ist das erste echte Raster-`<img>` der App; getrennt statt
   `.karte`-Fläche über `--flaeche-2` als Passepartout und `--trennlinie` als Haarlinie
   (nicht `--karten-kante`: die verspricht einen Klick).
 - **Fällt ein Bild aus, bleibt der Eintrag stehen** (Klasse `.bild-fehlt`, Titel/Datum/Ort
@@ -652,7 +652,7 @@ Tokens**, nie harte Farben.
 - **Hero-Aufbau** (`landingHeroHtml`): Augenbraue → H1 → Unterzeile, alle drei in
   `var(--tinte)` und mit `--hero-textschatten` (dunkel schwarz, hell weiß) — die
   Buchstabenkante muss über jedem Bildausschnitt halten. Die Augenbraue trägt
-  **kein Symbol und keine Fläche**: Das kleine rote Icon stand im Foto und war je
+  **kein Symbol und keine Fläche**: Das kleine Akzent-Icon stand im Foto und war je
   nach Bildstelle nicht zu erkennen, ein weißer Chip war ein zweites Kästchen über
   dem Titel. Mit `augenbraueHref` wird sie zum Link auf ihren Bereich. Für HTML
   statt Text in der Unterzeile gibt es `untertitelHtml` (so sitzt der Stufen-Chip
@@ -663,28 +663,37 @@ Tokens**, nie harte Farben.
   — 22rem für die halbe `max-width` **minus** dessen eigenes Innenmass. Heros tragen
   deshalb auch **keine** (auch keine transparente) Kante: ihre 2 px schöben den Text
   um genau diese 2 px aus der Spalte.
-- **Blutrot ist Akzent** (Links, Aktion, Aktiv-Zustand, Icons), keine Flächenfarbe;
+- **Lila ist Akzent** (Links, Aktion, Aktiv-Zustand, Icons), keine Flächenfarbe;
   Ampellogik für Status (offen/teilweise/erledigt). Hell & Dunkel über denselben Token-Satz.
-  **Primär-CTA:** hell rot mit **weißer** Schrift (5,48:1 — Tinte auf Rot wären nur
-  3,59:1), dunkel umgekehrt weiße Fläche mit Tinte und erst im Hover rot gefüllt.
+  Bis v220 war der Akzent Blutrot; seit dem Farbwechsel ist es Lila, **zwei Töne, einer je
+  Thema**: `--primaer` `#5b16a8` hell (9,9:1 auf Weiß), `#b57bff` dunkel (6,8:1 auf dem
+  Schwarz). Ein einziger Ton kann für Text auf Weiß und auf Schwarz nicht beides Mal 4,5:1
+  halten — das ist rechnerisch ausgeschlossen, deshalb hat die App auch schon beim Rot zwei
+  Töne gehabt. **Warn- und Fehlerzustände bleiben ROT** (`--signal-rot*`: `.zerr-warnung`,
+  `.intern-fehler`, `.editor-fehler`, `.chip-rot`, `.knopf-gefahr`): Rot heißt dort
+  „Achtung“, nicht „Marke“. Nie `--primaer` für eine Fehlermeldung nehmen — ein lila Fehler
+  wird nicht als solcher gelesen.
+  **Primär-CTA:** hell lila mit **weißer** Schrift (9,9:1 — Tinte auf `#5b16a8` wären nur
+  1,9:1), dunkel umgekehrt weiße Fläche mit Tinte und erst im Hover lila gefüllt (Tinte auf
+  `#b57bff`: 6,8:1).
   Quittier-CTAs (`[data-quittiere]`) sind davon ausgenommen und behalten ihren
   Ghost-Look, der Zustand zeigt statt Wichtigkeit — **mit eigener Schriftfarbe**
   (`var(--tinte)`), sonst erben sie das Weiß des gefüllten Knopfes und stehen
-  hell auf hell. **Jeder** Knopf fällt im Hover rot (Sekundär wie Primär); der
+  hell auf hell. **Jeder** Knopf fällt im Hover lila (Sekundär wie Primär); der
   Hover ändert nur die Farbe, nie den Schatten — ein mitwachsender Schatten
   lässt den Knopf beim Überfahren zappeln.
 - **Kopfzeilen-Knöpfe** (Hamburger, Lupe): weißes Zeichen auf schwarzem Grund, im
-  Hover rot gefüllt. Sie sind Navigation, kein Inhalt — Schwarz setzt sie in beiden
-  Themen gleich ab, ohne Rot zu verbrauchen (das gehört der Aktion).
+  Hover lila gefüllt. Sie sind Navigation, kein Inhalt — Schwarz setzt sie in beiden
+  Themen gleich ab, ohne Lila zu verbrauchen (das gehört der Aktion).
 - **Icons in aktiven Chips erben die Schriftfarbe** (`.chip-akzent .fa-solid`,
-  `.chip.aktiv .fa-solid`). Ohne das behalten sie ihr globales Rot und stehen im
-  gefüllten Zustand rot auf rot — unsichtbar genau dann, wenn der Filter greift.
-  Im Ruhezustand bleibt das rote Icon der Akzent auf neutraler Fläche.
+  `.chip.aktiv .fa-solid`). Ohne das behalten sie ihr globales Lila und stehen im
+  gefüllten Zustand lila auf lila — unsichtbar genau dann, wenn der Filter greift.
+  Im Ruhezustand bleibt das lila Icon der Akzent auf neutraler Fläche.
 - **Eine Größe für alle Knopf-Varianten** (`min-height: 40px`, `0.82rem`) und
   **ein Radius für alles** (`--radius`, 2px). Beides ist schon zweimal
   auseinandergelaufen: einmal, als nur der Primärknopf verkleinert wurde, und
   einmal über die Pillen-Radien der Mastery-Knöpfe aus dem Fork.
-- **Hover an Containern** ist **gestrichelte Tinte**, nicht Rot: Rot ist die
+- **Hover an Containern** ist **gestrichelte Tinte**, nicht Lila: Lila ist die
   Aktionsfarbe und nutzt sich als Rahmen um jede Kachel ab. Die Strichelung wirkt
   nicht-farblich und in beiden Themen; nur der Stil wechselt, die Breite bleibt.
 - **Schreibmaschinen-Display-Schrift** (**Special Elite**, lokal als
@@ -694,14 +703,19 @@ Tokens**, nie harte Farben.
   Container, versetzte Schatten, Grain-Overlay.
 - **Marken-Grafik (Logo):** Vier Marken — Bildmarke (quadratisch), Wortmarke und
   je eine WortBildmarke für „Mosh Skool" und „Kollektiv". Sie sind **zweifarbig**:
-  rotes Zerre-Zeichen (`--marke-rot: #fa100d`, BEWUSST nicht `--primaer` — der
-  Akzent kippt mit dem Thema, ein Logo-Rot darf das nicht) plus eine Fläche, die
+  lila Zerre-Zeichen (`--marke-farbe: #9146ff`, BEWUSST nicht `--primaer` — der
+  Akzent kippt mit dem Thema, ein Logo-Lila darf das nicht; 4,6:1 auf Weiß, 4,2:1 auf dem
+  Schwarz der Kopfzeile, für ein Logo genügen 3:1) plus eine Fläche, die
   mit dem Thema kippen muss. Deshalb **keine `<img>`, sondern CSS-Masken**: Ein
   `<img>` trägt seine Farben in sich, und ein Wechsel per `prefers-color-scheme`
   hinge am Betriebssystem statt am Themen-Umschalter (der drei Stellungen hat).
   `scripts/build_marken.py` zerlegt die Quellen in `scripts/marken_quelle/` in je
-  eine Rot- und eine Tinten-Ebene nach `assets/images/marke/`; `.marke-zeichen`
-  legt sie als `::before`/`::after` übereinander (`--check` meldet Drift).
+  eine Farb- und eine Tinten-Ebene nach `assets/images/marke/`; `.marke-zeichen`
+  legt sie als `::before`/`::after` übereinander (`--check` meldet Drift). **Die Dateien
+  `*-rot.svg` heißen nach der Farbe der QUELLE** (`scripts/marken_quelle/*.svg` tragen das
+  ursprüngliche `#fa100d` und sind der Selektor der Zerlegung), nicht nach der gerenderten
+  Farbe: Es sind reine Masken, gefärbt wird allein über `--marke-farbe`. Umbenennen würde
+  `build_marken.py`, CSS, `SHELL` und `validate.py` anfassen und nichts verbessern.
   **Fallstrick:** Einfarbige Marken brauchen `.marke-einfarbig` — ohne das
   `content: none` legte `::after` eine volle Fläche darüber, denn
   `mask-image: none` maskiert nichts weg, es zeigt alles. Die `url()` stehen
@@ -746,9 +760,13 @@ Tokens**, nie harte Farben.
 - **Favicons/App-Icons** liegen in `assets/images/favicon/` (plus `favicon.ico`
   im Wurzelverzeichnis). Die gelieferten Apple-Touch- und PWA-Grössen hatten
   einen transparenten Hintergrund mit weisser unterer Marken-Hälfte — auf hellem
-  Grund blieb davon nur die rote Spitze übrig. Sie werden deshalb von
+  Grund blieb davon nur die Spitze übrig. Sie werden deshalb von
   `node scripts/build_appicons.mjs` aus `favicon.svg` gerastert (braucht Chromium,
-  läuft nicht in der CI). Im Manifest stehen sie **ohne** `purpose: maskable`:
+  läuft nicht in der CI) — **alle**, auch `favicon-96.png` und `favicon.ico` (drei
+  Größen als PNG im ICO-Rahmen). Beim Wechsel von Rot auf Lila blieb sonst genau das ICO
+  stehen, weil es früher kein Skript erzeugte. Die Farbe des Zeichens steht als
+  `#9146ff` in `favicon.svg` — eine der wenigen Stellen, an der sie fest verdrahtet sein
+  muss (eine SVG-Datei kennt `--marke-farbe` nicht). Im Manifest stehen sie **ohne** `purpose: maskable`:
   Das Motiv ist ein abgerundetes Quadrat, kein randlos gefülltes Bild.
 - **Marken-Schrift New Rocker** (lokal als `assets/fonts/new-rocker-latin-400-normal.woff2`,
   nur Gewicht 400 — SIL OFL, `assets/fonts/LICENSE-new-rocker.txt`): trägt
@@ -797,7 +815,13 @@ Tokens**, nie harte Farben.
   hinter dem Motiv-SVG eine Foto-Ebene (`js/hintergrundbilder.js` → `bildEbene()`,
   CSS `.genre-landing-bg`). Stärke über **Tokens an einer Stelle** im
   `:root`-Block direkt über der Regel: `--bild-weich` (0px = scharf),
-  `--bild-deckkraft` (.8), `--bild-saettigung` (1), `--bild-zoom` (1.02). Der
+  `--bild-deckkraft` (.8), `--bild-saettigung` (1), `--bild-zoom` (1.02),
+  `--bild-farbdrehung` (-80deg). Die **Farbdrehung** ist der Grund, warum die Fotos zum
+  Lila passen: Sie tragen ihr Rot und Orange selbst (Bühnenlicht) und stünden sonst bunt
+  neben dem Akzent; `hue-rotate(-80deg)` macht daraus Violett und Magenta, ohne die Helligkeit
+  anzufassen. Im hellen Thema sind die Fotos Graustufen — dort wirkt die Drehung nicht.
+  Sie gilt nur für diese Bildebene: **Flyer laufen nie darüber** und behalten ihre Farbe
+  (s. Shows). Der
   Überzoom existiert nur wegen der Weichzeichnung — wer `--bild-weich` hochdreht,
   muss `--bild-zoom` auf ~1.18 mitziehen, sonst zieht der Blur helle Bildränder in
   die Kante. **Wo ein Foto liegt, tritt das Motiv-SVG zurück**

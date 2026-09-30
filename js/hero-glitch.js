@@ -26,10 +26,16 @@ const UNSCHAERFE = 0;
 const BAENDER = 2;
 const FARBVERSATZ = 0.99;
 const FARBSTAERKE = 1;
-// Palette "marke" aus dem Mockup: Stahlblau + Blutrot statt des klassischen
-// Cyan/Rot-Kamera-Splits — bleibt im Marken-Farbraum.
+// Palette "marke" aus dem Mockup: Stahlblau + Marken-Lila statt des klassischen
+// Cyan/Rot-Kamera-Splits — bleibt im Marken-Farbraum. Das Lila steht NICHT hier,
+// sondern als Token --marke-farbe in css/app.css und wird beim Start gelesen;
+// FARBE_B_FALLBACK greift nur, falls das Token fehlt (derselbe Wert).
 const FARBE_A = '#7ea8c4';
-const FARBE_B = '#cc2418';
+const FARBE_B_FALLBACK = '#9146ff';
+function farbeB() {
+  const wert = getComputedStyle(document.documentElement).getPropertyValue('--marke-farbe').trim();
+  return wert || FARBE_B_FALLBACK;
+}
 
 const SORTEN = ['riss', 'versatz', 'aussetzer', 'zittern'];
 const zufall = (a, b) => a + Math.random() * (b - a);
@@ -133,7 +139,7 @@ export function initHeroGlitch(wort) {
   const chromaA = mach('zerr-chroma zerr-chroma-a');
   const chromaB = mach('zerr-chroma zerr-chroma-b');
   chromaA.style.setProperty('--zerr-farbe-a', FARBE_A);
-  chromaB.style.setProperty('--zerr-farbe-b', FARBE_B);
+  chromaB.style.setProperty('--zerr-farbe-b', farbeB());
   wort.style.setProperty('--zerr-farbstaerke', String(FARBSTAERKE));
 
   const scheiben = [];

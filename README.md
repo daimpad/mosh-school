@@ -6,14 +6,14 @@
 
 Gitarre · Bass · Schlagzeug · Gesang — für Hardcore, Metalcore, Thrash, Death, Black & Doom.
 
-[![Live Demo](https://img.shields.io/badge/live-zerrer.org-cc2418?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://zerrer.org/)
+[![Live Demo](https://img.shields.io/badge/live-zerrer.org-5b16a8?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://zerrer.org/)
 
 ![Code: MIT](https://img.shields.io/badge/Code-MIT-24bd47?style=flat-square)
 ![Inhalte: CC BY-NC 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--NC%204.0-1568ad?style=flat-square)
 ![PWA](https://img.shields.io/badge/PWA-offline--f%C3%A4hig-750787?style=flat-square)
 ![Buildfrei](https://img.shields.io/badge/Build-none-333?style=flat-square)
 ![Vanilla JS](https://img.shields.io/badge/Vanilla-JS%20ESM-f7df1e?style=flat-square&logo=javascript&logoColor=black)
-![Sprache](https://img.shields.io/badge/Sprache-Deutsch-cc2418?style=flat-square)
+![Sprache](https://img.shields.io/badge/Sprache-Deutsch-5b16a8?style=flat-square)
 
 `No Ads` · `No Cookies` · `No Influencer-BS` · `Kein Platz für Faschos` · 🏳️‍🌈 *Queer willkommen*
 

@@ -387,6 +387,7 @@
   --bild-deckkraft: .8;     /* wie deutlich das Foto durchkommt */
   --bild-saettigung: 1;     /* 1 = Originalfarben, 0 = Graustufen */
   --bild-zoom: 1.02;        /* Überzoom braucht es nur bei Weichzeichnung */
+  --bild-farbdrehung: -80deg; /* dreht das Rot/Orange der Fotos nach Violett/Magenta; 0deg = Originalfarben */
 }
 
 /* Die Sättigung ist themenabhängig: Das helle Thema zeigt die Fotos in
@@ -397,7 +398,7 @@
 .genre-landing-bg {
   position: absolute; inset: 0; pointer-events: none;
   background-position: center; background-size: cover; background-repeat: no-repeat;
-  filter: blur(calc(var(--bild-weich) * var(--blur-faktor, 1))) saturate(var(--bild-saettigung));
+  filter: blur(calc(var(--bild-weich) * var(--blur-faktor, 1))) saturate(var(--bild-saettigung)) hue-rotate(var(--bild-farbdrehung));
   opacity: var(--bild-deckkraft);
   transform: scale(var(--bild-zoom));
 }
