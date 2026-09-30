@@ -842,7 +842,7 @@
     {
       "id": "trio_engine_lock",
       "anzeigetitel": {
-        "de": "Rhythmusgruppe + Gitarre: als Trio locken"
+        "de": "Rhythmusgruppe + Gitarre: als Trio verzahnen"
       },
       "domaene": [
         "gitarre",
@@ -858,14 +858,14 @@
         "duo_gb_lock"
       ],
       "erklaerteil": {
-        "de": "Bass, Schlagzeug und Rhythmusgitarre bilden zusammen die Riff-Maschine. Nachdem Bass und Bassdrum gekoppelt sind (Rhythmusgruppe) und Gitarre und Bass gelockt (Riff), fügt dieses Trio beide Achsen zu einem Motor: Alle drei Anschläge fallen auf denselben Impuls.\n\nÜbt schichtweise: erst Bass und Bassdrum, dann die Gitarre dazu, ohne dass sich der gemeinsame Attack verwischt. Der Klick bleibt die neutrale Referenz für alle drei."
+        "de": "Bass, Schlagzeug und Rhythmusgitarre bilden zusammen die Riff-Maschine. Nachdem Bass und Bassdrum gekoppelt sind (Rhythmusgruppe) und Gitarre und Bass verzahnt (Riff), fügt dieses Trio beide Achsen zu einem Motor: Alle drei Anschläge fallen auf denselben Impuls.\n\nÜbt schichtweise: erst Bass und Bassdrum, dann die Gitarre dazu, ohne dass sich der gemeinsame Attack verwischt. Der Klick bleibt die neutrale Referenz für alle drei."
       },
       "uebungsteil": {
         "de": {
           "titel": "Drei auf einen Impuls",
           "ziel": "Gitarre, Bass und Bassdrum zu einem gemeinsamen Attack verbinden.",
           "schritte": [
-            "Bass und Bassdrum locken zunächst allein zum Klick.",
+            "Bass und Bassdrum rasten zunächst allein auf den Klick ein.",
             "Die Gitarre kommt dazu und legt ihre Anschläge auf denselben Impuls.",
             "Nehmt es auf und prüft, ob alle drei als ein Schlag klingen."
           ],
@@ -1031,7 +1031,7 @@
             ]
           }
         ],
-        "hinweis": "Die betonten Kick-Schläge sind der gemeinsame Impuls: Bass und Bassdrum locken zuerst allein darauf, dann legt die Gitarre ihre Anschläge auf denselben Punkt. Erst wenn alle drei wie EIN Schlag klingen, trägt die Maschine."
+        "hinweis": "Die betonten Kick-Schläge sind der gemeinsame Impuls: Bass und Bassdrum rasten zuerst allein darauf ein, dann legt die Gitarre ihre Anschläge auf denselben Punkt. Erst wenn alle drei wie EIN Schlag klingen, trägt die Maschine."
       }
     },
     {

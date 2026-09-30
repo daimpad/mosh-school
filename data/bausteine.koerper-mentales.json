@@ -37,7 +37,7 @@
     },
     {
       "id": "ueberlastung_praevention",
-      "anzeigetitel": { "de": "Überlastung erkennen & vermeiden" },
+      "anzeigetitel": { "de": "Überlastung erkennen & vermeiden: Vertiefung" },
       "domaene": ["koerper"],
       "kompetenzstufe": ["fortgeschritten"],
       "typ": "micro",
@@ -107,7 +107,7 @@
     },
     {
       "id": "plateau_ueberwinden",
-      "anzeigetitel": { "de": "Plateaus & Stillstand überwinden" },
+      "anzeigetitel": { "de": "Plateaus & Stillstand überwinden: Vertiefung" },
       "domaene": ["mentales"],
       "kompetenzstufe": ["experte"],
       "typ": "micro",
