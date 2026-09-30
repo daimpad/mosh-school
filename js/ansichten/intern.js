@@ -120,9 +120,16 @@ function haengeRahmenEin(buehne, url) {
   // Beim Verlassen der Route abräumen, damit die Verbindung zum fremden Dienst
   // nicht weiterläuft. Das Ansichts-DOM wird zwar ohnehin ersetzt; das src zu
   // leeren macht das Ende explizit und unabhängig vom Zeitpunkt.
+  // Zugleich sperrt sich der Bereich wieder (`pad = null`): Wer zurückkommt, gibt
+  // das Passwort erneut ein und klickt erneut auf „Öffnen“. Sonst lüde der Rahmen
+  // beim zweiten Besuch derselben Sitzung sofort — ohne den ausdrücklichen Klick,
+  // auf den sich der Datenschutzabschnitt stützt („erst nach dem Klick“). Eine
+  // Neuzeichnung DERSELBEN Route (z. B. Themenwechsel) läuft nicht durch diesen
+  // Haken und lässt den Bereich offen.
   registriereAufraeumen(() => {
     rahmen.src = 'about:blank';
     rahmen.remove();
+    pad = null;
   });
 }
 
@@ -148,6 +155,14 @@ function zeichneInhalt(el) {
   feld?.addEventListener('input', () => feld.removeAttribute('aria-invalid'));
   form?.addEventListener('submit', async (ereignis) => {
     ereignis.preventDefault();
+    // WebCrypto gibt es nur in sicheren Kontexten (https, localhost). Über eine
+    // LAN-Adresse per http (etwa der lokale Testserver auf dem Handy) wäre
+    // `crypto.subtle` undefined, entschluessele() lieferte null — und die Seite
+    // meldete bei RICHTIGEM Passwort „Passt nicht“. Die Fehlersuche liefe ins Leere.
+    if (!globalThis.crypto?.subtle) {
+      if (fehler) fehler.textContent = t('intern_kein_krypto');
+      return;
+    }
     // Die Schlüsselableitung dauert auf einem älteren Telefon rund eine
     // Sekunde (absichtlich — genau das bremst das Raten). Solange: Knopf
     // gesperrt und beschriftet, sonst tippt man ein zweites Mal.
@@ -157,6 +172,10 @@ function zeichneInhalt(el) {
     }
     if (fehler) fehler.textContent = '';
     const inhalt = await entschluessele(PAD_SCHLOSS, feld?.value || '');
+    // Wer während der Ableitung weg navigiert ist, hat das Formular nicht mehr im
+    // Dokument. Dann NICHTS entsperren: Der Zustand überdauerte sonst die Route,
+    // und der nächste Besuch lüde den Rahmen ohne Passwortabfrage.
+    if (!form.isConnected) return;
     if (!inhalt || !istBrauchbar(inhalt.einbetten) || !istBrauchbar(inhalt.oeffnen)) {
       if (knopf) {
         knopf.disabled = false;

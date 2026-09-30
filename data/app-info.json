@@ -59,7 +59,7 @@
             "de": "Der Voraussetzungsgraph sortiert, er sperrt nicht: Fehlendes erscheint als Hinweis, nie als Schloss. Niemand wird von Inhalten ausgesperrt, für die er sich interessiert."
           },
           {
-            "de": "Interaktive Audio-Werkzeuge auf einem gemeinsamen Kern, fast fast alles synthetisiert statt aus Klangdateien (nur das Zerr-Labor spielt echte Gitarren-Einzeltöne): Metronom mit Tempo-Rampen, Play-along-Loops, Stimmgerät mit Live-Tuner übers Mikro, Zerr-Labor, Pedalboard- und Amp-Baukasten, Song-Struktur, Riff- und Mehrspur-Recorder, Gefühlslandkarte und Genre-Mix."
+            "de": "Interaktive Audio-Werkzeuge auf einem gemeinsamen Kern, fast alles synthetisiert statt aus Klangdateien (nur das Zerr-Labor spielt echte Gitarren-Einzeltöne): Metronom mit Tempo-Rampen, Play-along-Loops, Stimmgerät mit Live-Tuner übers Mikro, Zerr-Labor, Pedalboard- und Amp-Baukasten, Song-Struktur, Riff- und Mehrspur-Recorder, Gefühlslandkarte und Genre-Mix."
           },
           {
             "de": "Referenzbereiche zum Nachschlagen, ohne Fortschrittslogik: {stimmungen} Stimmungen mit Saitenstärke und Genre-Zuordnung, {patterns} Rhythmus-Patterns, {glossar} Glossarbegriffe, {experimente} Experimentier-Methoden und {songs} Beispielsongs in Genre-Pools."
@@ -157,7 +157,7 @@
             "de": "Keine Tabs oder Noten fremder Songs. Die Beispielsongs sind Hörempfehlungen mit Quellenverweis, kein Notenmaterial."
           },
           {
-            "de": "Die Songlisten sind nach einem einzigen, offengelegten Maßstab kuratiert: Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren, stehen nicht drin. Andere Kontroversen führen ausdrücklich nicht zum Ausschluss — darüber urteilen diese Listen nicht."
+            "de": "Die Songlisten sind nach einem einzigen, offengelegten Maßstab kuratiert: Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache und -Ikonografie verwenden, auch als Provokation, stehen nicht drin. Andere Kontroversen führen ausdrücklich nicht zum Ausschluss — darüber urteilen diese Listen nicht."
           }
         ]
       }

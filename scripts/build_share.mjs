@@ -9,6 +9,8 @@
 // WOHER DIE WERTE KOMMEN (nichts wird ein zweites Mal gepflegt):
 //   - Schriftzug und Subline: data/labels/de.json (app_titel, hero_untertitel)
 //   - Lila: --marke-farbe aus css/app.css (die Marken-Konstante, nicht --primaer)
+//   - Tinte und Grund: --tinte und --hintergrund aus dem dunklen Themenblock von
+//     css/app.css (das Bild kippt nicht mit dem Thema, es steht immer auf Schwarz)
 //   - Schrift: dieselben lokalen Dateien wie die App (New Rocker, Roboto)
 //   - Zeichen: dieselben Masken wie die App (assets/images/marke/bild-*.svg)
 //   - Spiegelung der letzten drei Buchstaben: dieselbe Regel wie
@@ -44,9 +46,6 @@ const ZIEL = 'assets/images/marke/share.png';
 const PRUEFEN = process.argv.includes('--check');
 const BREITE = 1200;
 const HOEHE = 630;
-// Werte des dunklen Themas (css/app.css): Tinte und Flaeche. Das Bild kippt nicht.
-const TINTE = '#ece9e1';
-const GRUND = '#0b0b0c';
 // Der Schriftzug fuellt diese Breite (Rand links und rechts je 90 px).
 const WORT_BREITE = 1020;
 const SPIEGEL_ENDE = 'RER';
@@ -57,6 +56,19 @@ if (!marke) {
   console.error('--marke-farbe nicht in css/app.css gefunden (umbenannt?)');
   process.exit(2);
 }
+// Token aus dem dunklen Themenblock. Es gibt mehrere Bloecke dieser Art (die
+// spaeteren ueberschreiben die frueheren), der LETZTE gewinnt.
+function tokenDunkel(name) {
+  const bloecke = [...css.matchAll(/:root\[data-theme='dunkel'\]\s*\{([^}]*)\}/g)].reverse();
+  for (const block of bloecke) {
+    const treffer = new RegExp(`${name}:\\s*(#[0-9a-fA-F]{6})`).exec(block[1]);
+    if (treffer) return treffer[1];
+  }
+  console.error(`${name} nicht im dunklen Themenblock von css/app.css gefunden (umbenannt?)`);
+  process.exit(2);
+}
+const TINTE = tokenDunkel('--tinte');
+const GRUND = tokenDunkel('--hintergrund');
 const ui = JSON.parse(readFileSync('data/labels/de.json', 'utf8')).ui;
 const titel = ui.app_titel;
 const subline = ui.hero_untertitel;
@@ -98,7 +110,20 @@ const seite = await browser.newPage({ viewport: { width: BREITE, height: HOEHE }
 // Adressen oben loesen gegen den lokalen Server auf.
 await seite.goto('http://127.0.0.1:8123/index.html');
 await seite.setContent(html);
-await seite.evaluate(async () => { await document.fonts.ready; });
+await seite.evaluate(async () => {
+  await document.fonts.ready;
+  // CSS-mask-image laedt erst beim ersten Malen — ein Screenshot nach festem
+  // Timeout kaeme auf einer langsamen Maschine ohne Zerre-Zeichen zustande, und
+  // --check verglich dann das PNG mit einem anderen Lauf. Die Masken werden hier
+  // ausdruecklich vorgeladen; ein Fehler bricht das Skript ab, statt ein Bild ohne
+  // Zeichen zu liefern.
+  await Promise.all(['bild-tinte', 'bild-rot'].map((n) => new Promise((ok, fehl) => {
+    const bild = new Image();
+    bild.onload = ok;
+    bild.onerror = () => fehl(new Error(`Maske ${n}.svg nicht ladbar`));
+    bild.src = `/assets/images/marke/${n}.svg`;
+  })));
+});
 // Schriftzug auf die Zielbreite bringen: bei 200 px messen und linear skalieren —
 // dieselbe Technik wie passeMarkeGroesseAn() im Hero. Ein fester Wert traefe die
 // Breite nur ungefaehr.
@@ -107,7 +132,8 @@ await seite.evaluate((ziel) => {
   const natur = w.getBoundingClientRect().width;
   w.style.fontSize = (200 * ziel / natur).toFixed(2) + 'px';
 }, WORT_BREITE);
-await seite.waitForTimeout(200);
+// Zwei Frames abwarten: erst dann sind Masken und die angepasste Schriftgroesse gemalt.
+await seite.evaluate(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
 const daten = await seite.screenshot();
 await browser.close();
 

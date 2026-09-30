@@ -69,7 +69,13 @@ for (const { datei, kante } of [...ZIELE, ...ICO_KANTEN.map((k) => ({ datei: nul
     + `img{display:block;width:${kante}px;height:${kante}px}</style>`
     + `<img src="/${QUELLE}">`,
   );
-  await seite.waitForTimeout(150);
+  // Auf das Dekodieren des Bildes warten statt auf einen festen Timeout: Auf einer
+  // langsamen Maschine kaeme das Icon sonst leer oder halb gemalt ins PNG, und
+  // --check meldete Drift, wo keine ist. decode() schlaegt fehl, wenn die Quelle fehlt.
+  await seite.evaluate(async () => {
+    await document.querySelector('img').decode();
+    await new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)));
+  });
   // omitBackground: Die Marke ist ein abgerundetes Quadrat — seine Ecken
   // muessen transparent bleiben. Mit dem weissen Seitenhintergrund darunter
   // saesse das Icon in einem weissen Kasten, und auf dem Startbildschirm

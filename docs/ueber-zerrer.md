@@ -25,7 +25,7 @@ Shows — das Kollektiv stellt sich unter `#/kollektiv` vor).
 Das Lernangebot ist eine App für Extreme-Metal- und Hardcore-Instrumente —
 Gitarre, Bass, Schlagzeug, Gesang — über die Genres Hardcore, Metalcore, Thrash,
 Death, Black, Doom, Crust, Grindcore, Powerviolence, Screamo, Mathcore, Noise
-Rock, Sludge, Deathcore und weitere.
+Rock, Sludge, Deathcore und weitere. Kostenlos, werbefrei, direkt im Browser.
 
 Technisch ist sie das Gegenteil einer üblichen Lernplattform: **rein
 clientseitig, ohne Build-Schritt, ohne Server-Komponente, ohne Konto.** 77
@@ -51,15 +51,27 @@ Selbstkontrolle) für Bewegungsthemen oder eine **Reflexionsaufgabe** für
 Wissens- und Haltungsthemen. Aktuell 247 Übungsteile und 262
 Reflexionsaufgaben.
 
-| Domäne | Bausteine |     | Könnensstufe | Bausteine |
-| --- | ---: | --- | --- | ---: |
-| Gitarre | 116 | | Einsteiger | 154 |
-| Theorie | 92 | | Fortgeschritten | 282 |
-| Mentales | 86 | | Experte | 67 |
-| Schlagzeug | 83 | | Trainer (quer) | 6 |
-| Bass | 79 | | | |
-| Gesang | 64 | | **Ausrüstung** (quer) | **116** |
-| Körper/Gesundheit | 44 | | **Kontext/Szene** | **16** |
+| Domäne | Bausteine |
+| --- | ---: |
+| Gitarre | 116 |
+| **Ausrüstung** (quer) | **116** |
+| Theorie | 92 |
+| Mentales | 86 |
+| Schlagzeug | 83 |
+| Bass | 79 |
+| Gesang | 64 |
+| Körper/Gesundheit | 44 |
+| **Kontext/Szene** | **16** |
+
+| Könnensstufe | Bausteine |
+| --- | ---: |
+| Einsteiger | 154 |
+| Fortgeschritten | 282 |
+| Experte | 67 |
+| Trainer (quer) | 6 |
+
+Domänen überschneiden sich (157 Bausteine tragen mehrere), Stufen nicht:
+509 = 154 + 282 + 67 + 6.
 
 Die Querschnitts-Domänen sind der eigentliche Unterschied zu einem
 Riff-Tutorial-Kanal: **Gesundheit, Mentales, Ausrüstung und Musiktheorie** stehen
@@ -90,8 +102,8 @@ Dazu **41 Trainingseinheiten** als fertig geschnürte Sessions.
 ### 13 interaktive Werkzeuge
 
 Die klingenden laufen auf einem gemeinsamen, synthese-basierten Audio-Kern (ein
-`AudioContext`, ein Lookahead-Scheduler, synthetisierte Stimmen, kein CDN). Einzige
-Ausnahme von „Synthese statt Samples“: Das Zerr-Labor spielt echte
+`AudioContext`, ein Lookahead-Scheduler, synthetisierte Stimmen, kein CDN).
+Einzige Ausnahme von „Synthese statt Samples“: Das Zerr-Labor spielt echte
 Gitarren-Einzeltöne, weil seine Aussage am echten Instrumentensignal hängt.
 
 | Werkzeug | Was es tut |
@@ -173,8 +185,8 @@ Aufnahmen.
 
 **Einsteigende in extreme Genres.** Die 154 Einsteiger-Bausteine setzen keine
 Vorbildung voraus, und der Gesundheitsrahmen ist gerade hier wichtig: Extreme
-Vocals und harte Anschlagstechnik verletzen Menschen regelmäßig, weil sie sie
-sich falsch selbst beibringen.
+Vocals und harte Anschlagstechnik verletzen regelmäßig Menschen, die sie sich
+falsch selbst beibringen.
 
 **Fortgeschrittene mit Lücken.** Mit 282 Bausteinen ist das die größte Stufe —
 gedacht für Leute, die spielen können, aber merken, dass Theorie, Sound oder

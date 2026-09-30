@@ -6,7 +6,7 @@ ganze Mikro-CMS.
 
 Bewusst **zwei getrennte Orte**: `images/bg/bilder.json` daneben ist ein
 *generiertes* Verzeichnis (ein Workflow schreibt es), `data/shows.json` dagegen
-gepflegter Inhalt. Beides in einer Datei hiesse, dass ein Generator in das
+gepflegter Inhalt. Beides in einer Datei hieße, dass ein Generator in das
 schreibt, was ein Mensch über die GitHub-Weboberfläche editiert.
 
 ## Eine Show einpflegen — der bequeme Weg
@@ -16,7 +16,7 @@ Formular ausfüllen, Bild wählen — es wird im Browser auf Zielmaß gerechnet 
 speichern. Das legt Bild und Eintrag als **einen** Commit auf den Zweig
 `shows/editor`; auf github.com bleibt der Merge. Dafür braucht es einmal einen
 fein granulierten GitHub-Token (nur dieses Repository, „Contents: read and
-write"), den der Editor lokal im Browser behält.
+write“), den der Editor lokal im Browser behält.
 
 Ohne Token kann derselbe Editor Bild und fertige `shows.json` zum Herunterladen
 anbieten — dann bleibt der Weg von Hand, aber ohne Tippen und ohne
@@ -49,8 +49,8 @@ kaputt, und dieser Zustand ist zu keinem Zeitpunkt richtig.
 | Dateiname | klein geschrieben, Endung klein (`.webp`, nicht `.WEBP`) |
 
 Die kleingeschriebene Endung ist kein Pedantismus: netcup und GitHub Pages
-liefern case-sensitiv aus, eine lokale macOS-Platte nicht. `Flyer.JPG`
-funktioniert dann lokal und ist online ein 404.
+unterscheiden beim Ausliefern Groß- und Kleinschreibung, eine lokale macOS-Platte
+nicht. `Flyer.JPG` funktioniert dann lokal und ist online ein 404.
 
 **Ein Handyfoto direkt aus der Kamera ist rund zehnmal zu groß.** Verkleinern
 geht in jedem Bildprogramm, unter GNOME/macOS auch in der Vorschau; auf der

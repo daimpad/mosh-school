@@ -287,9 +287,18 @@ def pruefe_groessen(fehler):
 # dem `git add` soll sie anschlagen, nicht erst danach.
 # Seit v220 ist das eingebettete Dokument ein Google Doc. Dessen Adresse ist ein
 # Schlüssel, sobald es auf „Jeder mit dem Link" steht — gleiche Regel.
+# Mehrere Schreibweisen derselben Adresse, alle mit dem Schluessel darin:
+#   docs.google.com/document/d/<id>/edit           kanonisch
+#   docs.google.com/document/u/1/d/<id>/edit       Konto-Index (mehrere angemeldete Konten —
+#                                                  so sieht die Adresse aus der Browserleiste aus)
+#   docs.google.com/document/d/e/2PACX-<id>/pub    veroeffentlichte Fassung
+#   drive.google.com/file/d/<id>/view, /open?id=<id>, /drive/folders/<id>
+# Eine Pruefung, die nur die erste kennt, laesst genau den Fehler durch, den sie
+# abfangen soll — und er laesst sich nicht zuruecknehmen.
 PAD_ADRESSE = re.compile(
     r'cryptpad[^\s"\'<>]*#/\d+/'
-    r'|docs\.google\.com/(?:document|spreadsheets|presentation|forms)/d/[A-Za-z0-9_-]{20,}',
+    r'|docs\.google\.com/(?:document|spreadsheets|presentation|forms)/(?:u/\d+/)?d/(?:e/)?[A-Za-z0-9_-]{20,}'
+    r'|drive\.google\.com/(?:file/(?:u/\d+/)?d/|drive/(?:u/\d+/)?folders/|open\?id=|drive/folders/)[A-Za-z0-9_-]{20,}',
     re.IGNORECASE)
 
 

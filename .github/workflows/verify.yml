@@ -86,6 +86,13 @@ jobs:
       - name: Statische SEO-Seiten gegen die Quellen pruefen
         run: python3 scripts/build_seiten.py --check
 
+      # Offline leitet sw.js eine statische Adresse auf ihre Hash-Route um. Die
+      # Abbildung ist eine handgepflegte zweite Kopie der Pfadstruktur — sie wird
+      # gegen jede Adresse der sitemap.xml nachgerechnet, damit eine neue
+      # Seitenart nicht still auf der Startseite landet.
+      - name: Offline-Rueckfall des Service Workers deckt alle statischen Seiten ab
+        run: node scripts/pruefe_sw_routen.mjs
+
       # Die Zerr-Kennlinien tragen numerisch geprueffte Sollwerte (RMS, THD). Das
       # Skript rechnet die Kurven aus js/audio/zerre.js nach und faengt genau die
       # Fehlerklasse ab, die beim Bau schon zweimal zuschlug: eine faelschlich

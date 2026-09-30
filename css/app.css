@@ -208,8 +208,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 /* clip statt hidden: hidden macht html/body zum Scroll-Container und bricht damit
-   position: sticky der .kopf; clip schneidet nur ab, ohne Scroll-Container. */
-html, body { overflow-x: clip; }
+   position: sticky der .kopf; clip schneidet nur ab, ohne Scroll-Container.
+   Die hidden-Zeile davor ist der Rueckfall fuer Browser ohne `overflow: clip`
+   (Safari bis iOS 15.x, aeltere Chromium): Sie ignorieren die zweite Zeile als
+   ungueltig und behalten hidden — ohne den Rueckfall fehlte dort jeder
+   Schutz gegen die 100vw-Heros und der Seitenkopf wackelte seitlich. */
+html, body { overflow-x: hidden; overflow-x: clip; }
 
 h1, h2, h3, h4, p, ul, ol, dl, figure {
   margin: 0 0 0.6rem;
@@ -3736,7 +3740,9 @@ body { background-image: none; }
      (Buehnenlicht) und stuenden neben dem lila Akzent bunt im Bild. -80deg dreht
      Rot nach Violett und Orange nach Magenta, ohne die Helligkeit anzufassen.
      Im hellen Thema sind die Fotos Graustufen (--bild-saettigung: 0) — dort
-     bewirkt die Drehung nichts. 0deg = Originalfarben. Gilt NUR fuer die
+     bewirkt die Drehung nichts und steht deshalb im Themenblock am Dateiende
+     auf 0deg (der Browser spart sich den Farbmatrix-Schritt je Kachel).
+     0deg = Originalfarben. Gilt NUR fuer die
      Bildebene; Flyer (Shows) laufen nie darueber und behalten ihre Farbe. */
   --bild-farbdrehung: -80deg;
 }
@@ -4398,6 +4404,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
 
   /* Hero-Fotos in Graustufen. */
   --bild-saettigung: 0;
+  --bild-farbdrehung: 0deg;
 
   /* Tinte neutral statt warm: Ohne Creme-Papier wirkt ein braunstichiges Grau
      auf reinem Weiss schmutzig. */
@@ -4488,6 +4495,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
 
     /* Hero-Fotos in Graustufen. */
     --bild-saettigung: 0;
+    --bild-farbdrehung: 0deg;
 
     /* Tinte neutral statt warm: Ohne Creme-Papier wirkt ein braunstichiges Grau
        auf reinem Weiss schmutzig. */

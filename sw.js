@@ -309,8 +309,14 @@ function hashRouteFuer(relativ) {
   if (teile[0] === 'pfad' && ['stil', 'kompetenz', 'themen'].includes(teile[1]) && teile.length <= 3) {
     return `#/${teile.join('/')}`;
   }
+  if (teile[0] === 'kollektiv' && teile.length === 1) return '#/kollektiv';
   return '';
 }
+// ACHTUNG: Diese Abbildung ist eine zweite, handgepflegte Kopie der Pfadstruktur
+// aus scripts/build_seiten.py. Kommt eine neue statische Seitenart dazu, muss sie
+// hier stehen — sonst landen Offline-Nutzer auf der Startseite statt am Ziel, und
+// niemand merkt es. `node scripts/pruefe_sw_routen.mjs` (auch in verify.yml) rechnet
+// sie gegen jede Adresse der sitemap.xml nach.
 
 function bedieneNavigation(anfrage) {
   return fetch(anfrage).catch(() => {

@@ -26,7 +26,8 @@ Gitarre · Bass · Schlagzeug · Gesang — für Hardcore, Metalcore, Thrash, De
 **ZERRER** ist eine clientseitige Lern-App fürs Spielen von Extreme-Metal-Instrumenten —
 vom ersten Powerchord bis zum Blastbeat. Sie läuft **komplett auf deinem Gerät**: kein Login,
 kein Konto, keine Server-Komponente. Der Fortschritt lebt im `localStorage`, offline
-funktioniert alles.
+funktioniert alles. Hinter dem Namen steht außerdem ein **Kollektiv**, das Shows im Raum
+Köln/Bonn organisiert und durchführt (`#/kollektiv`, `#/shows`).
 
 > Rein statisch, **buildfrei**: HTML/CSS/JS als ES-Module, keine Bundler, keine
 > Laufzeit-Abhängigkeiten. Inhalte kommen aus JSON, sichtbare Texte laufen durch eine kleine i18n-Schicht.
@@ -56,13 +57,13 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 | | |
 | --- | --- |
 | 🎸 **Vier Instrumente** | Gitarre, Bass, Schlagzeug, Gesang — je nach Könnensstufe (Einsteiger → Fortgeschritten → Experte). |
-| 🔥 **Genre-Achse** | Hardcore, Metalcore, Thrash, Death, Black, Doom, Crust, Grind, Powerviolence, Sludge, Deathcore, Djent, Stoner/Post, Screamo, Mathcore, Noise Rock. |
+| 🔥 **Genre-Achse** | Hardcore, Metalcore, Thrash, Death, Black, Doom, Crust, Grindcore, Powerviolence, Sludge, Deathcore, Djent, Stoner/Post-Metal, Screamo, Mathcore, Noise Rock. |
 | 🧭 **Nach Tätigkeit geordnet** | Lernen · Üben · Songwriting · Experimentieren — Werkzeuge tauchen dort auf, wo man sie braucht. |
 | 🛠️ **Werkzeuge** | Metronom mit Tempo-Ramp, Stimmgerät (deckt den ganzen Tuning-Pool ab, bis hinunter zu 27,5 Hz), Play-along-Loops, Pattern-Bibliothek, ASCII-Tabulatur, Gear-Explorer, Pedalboard- & Amp/Box-Baukasten, Song-Struktur, Riff- & Mehrspur-Recorder. |
-| 🎛️ **Zerr-Labor** | Zehn Zerrkennlinien und fünf synthetisierte Boxen-Impulsantworten — hörbar **und** sichtbar als Übertragungskurve. Als Signal fünf Clips aus echten, unverstärkten Gitarrenaufnahmen: Chugs, Anschlagsdynamik, Powerchord, stehender Ton, hohe Lage. |
+| 🎛️ **Zerr-Labor** | Zehn Zerrkennlinien und fünf synthetisierte Boxen-Impulsantworten — hörbar **und** sichtbar als Übertragungskurve. Als Signal fünf Clips aus echten Gitarren-Einzeltönen im Direktsignal (ohne Verstärker, ohne Zerre): Chugs, Anschlagsdynamik, Powerchord, stehender Ton, hohe Lage. |
 | 🩺 **Trainer-Layer** | Typische Fehlerbilder als Diagnose — mit abstrakten, monochromen SVG-Grafiken. |
-| 🖼️ **Shows** | Vergangene Abende des Kollektivs (`#/shows`), dokumentiert über ihre Flyer — ein Mikro-CMS aus zwei Dateien: `data/shows.json` und `images/shows/`, beides über die GitHub-Weboberfläche pflegbar, ohne Build-Schritt. |
-| ✍️ **Editor im Browser** | Unter `#/shows/login` ein Formular für eine Show: Markdown-Text, Flyer-Bild wird im Browser auf Zielmaß gerechnet, Live-Vorschau aus denselben Bauern wie die echte Seite. Speichert Bild und JSON als **einen** Commit auf einen Zweig — ohne Server, ohne Backend, über die GitHub-API. |
+| 🖼️ **Shows** | Vergangene Abende des Kollektivs (`#/shows`), dokumentiert über ihre Flyer — ein Mikro-CMS aus zwei Orten: `data/shows.json` und `images/shows/`, beides über die GitHub-Weboberfläche pflegbar, ohne Build-Schritt. |
+| ✍️ **Editor im Browser** | Unter `#/shows/login` ein Formular für eine Show: Markdown-Text, Flyer-Bild wird im Browser auf Zielmaß gerechnet, Live-Vorschau mit demselben Code, der auch die echte Seite rendert. Speichert Bild und JSON als **einen** Commit auf einen Zweig — ohne Server, ohne Backend, über die GitHub-API. |
 | 🎲 **Experimentieren** | Impuls-Karten, Gefühlslandkarte (Gefühl → Genre) und Genre-Mix-Generator. |
 | 📴 **Offline-first PWA** | Service Worker cacht die ganze Hülle; einmal geladen, läuft alles ohne Netz. Nur Fotos und Klangproben bleiben bewusst draußen — sie kommen beim ersten Gebrauch und werden dann mitgecacht. |
 | 🔎 **Crawlbare Zwillingsseiten** | 546 statische Seiten unter echten Pfad-URLs — für Suchmaschinen, die hinter `#/` nicht schauen. |
@@ -71,12 +72,12 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 
 👉 **[zerrer.org](https://zerrer.org/)**
 
-
 ## Architektur in einem Absatz
 
-Die **Engine** (`js/`) ist themenneutral und DOM-frei testbar; der **Inhalt** liegt getrennt in
-`data/` als JSON. Bausteine tragen sprachneutrale IDs, sichtbare Titel und Texte kommen aus
-`data/labels/<sprache>.json`. Der Voraussetzungsgraph *sortiert* nur, er *sperrt nie*. Ein
+Die **Engine** (die Logik unter `js/`, getrennt von den Ansichten in `js/ansichten/`) ist
+themenneutral und DOM-frei testbar; der **Inhalt** liegt getrennt in `data/` als JSON. Bausteine
+tragen sprachneutrale IDs, sichtbare Titel und Oberflächentexte kommen aus
+`data/labels/<sprache>.json` (derzeit nur `de.json`). Der Voraussetzungsgraph *sortiert* nur, er *sperrt nie*. Ein
 gemeinsamer, DOM-freier **Audio-Kern** (`js/audio/`) trägt alle Werkzeuge — ein `AudioContext`,
 ein Lookahead-Scheduler, synthetische Stimmen, WAV-Export. Klang entsteht durchweg aus Synthese
 statt aus Samples; die eine Ausnahme ist das Zerr-Labor, dessen Aussage am echten
@@ -92,10 +93,10 @@ Artefakt, kein Build-Schritt beim Deploy.
 js/            Engine + Ansichten (ES-Module, buildfrei)
 js/audio/      themenneutraler Audio-Kern (Kontext, Scheduler, Stimmen, Zerre, Box, WAV)
 data/          Inhalte als JSON (Bausteine, Labels, Grafiken, Songs, Tunings …)
-assets/        lokal eingecheckte Schriften, Icons und Klangproben
-css/           ein Stylesheet, alles über Tokens (dunkel ist Default)
+assets/        lokal eingecheckte Schriften, Bilder (Marke, Favicons, Porträts) und Klangproben
+css/           Stylesheets (app.css trägt fast alles), alles über Tokens (dunkel ist Default)
 scripts/       Helfer: validate · lift · Index-, Grafik- & Seiten-Build · Physik-Prüfungen
-baustein/ pfad/ instrument/   generierte statische Seiten (Artefakt, eingecheckt)
+baustein/ pfad/ instrument/ kollektiv/   generierte statische Seiten (Artefakt, eingecheckt)
 sw.js          Service Worker (Offline-Hülle)
 ```
 
@@ -114,7 +115,9 @@ Vor jedem Commit (dieselben Prüfungen laufen in der CI):
 
 ```sh
 python3 scripts/validate.py                # Cross-File-Konsistenz über den Pool
+python3 scripts/pruefe_labels.py           # t()-Schlüssel gegen labels/de.json
 python3 scripts/lift.py                    # Titel nach labels/de.json geliftet
+python3 scripts/build_index.py             # Such-Index neu erzeugt (nach Pool-Änderungen)
 python3 scripts/build_marken.py --check    # Marken-Masken reproduzierbar
 python3 scripts/build_portraets.py --check # Kollektiv-Porträts reproduzierbar
 python3 scripts/build_grafiken.py --check  # Grafik-Bundles reproduzierbar
@@ -148,8 +151,3 @@ als Waise (Warnung, kein Fehler), genau damit dieser Weg nicht bei jedem Mal rot
 
 - **Code:** [MIT](LICENSE) — nutze, verändere und teile ihn frei.
 - **Inhalte:** [Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.de) — Namensnennung, nicht kommerziell.
-
-<div align="center">
-
-
-</div>

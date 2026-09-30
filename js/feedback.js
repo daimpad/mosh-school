@@ -1,5 +1,5 @@
 // Feedback-Modus: bindet den Kommentator (daimpad/kommentator, lokal in
-// vendor/kommentator/) ein, damit Rezensent:innen die aktuelle Ansicht
+// vendor/kommentator/) ein, damit Rezensenten die aktuelle Ansicht
 // markieren, kommentieren und als JSON oder E-Mail zurückschicken können.
 //
 // Zwei Wege ihn zu starten, beide über dieselbe Aktivierung:
