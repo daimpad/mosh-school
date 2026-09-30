@@ -56,7 +56,7 @@ ausdrücklich **nicht** ist: [`docs/ueber-zerrer.md`](docs/ueber-zerrer.md).
 
 | | |
 | --- | --- |
-| 🎸 **Vier Instrumente** | Gitarre, Bass, Schlagzeug, Gesang — je nach Könnensstufe (Einsteiger → Fortgeschritten → Experte). |
+| 🎸 **Vier Instrumente** | Gitarre, Bass, Schlagzeug, Gesang — je nach Könnensstufe (Einsteiger → Fortgeschritten → Profi). |
 | 🔥 **Genre-Achse** | Hardcore, Metalcore, Thrash, Death, Black, Doom, Crust, Grindcore, Powerviolence, Sludge, Deathcore, Djent, Stoner/Post-Metal, Screamo, Mathcore, Noise Rock. |
 | 🧭 **Nach Tätigkeit geordnet** | Lernen · Üben · Songwriting · Experimentieren — Werkzeuge tauchen dort auf, wo man sie braucht. |
 | 🛠️ **Werkzeuge** | Metronom mit Tempo-Ramp, Stimmgerät (deckt den ganzen Tuning-Pool ab, bis hinunter zu 27,5 Hz), Play-along-Loops, Pattern-Bibliothek, ASCII-Tabulatur, Gear-Explorer, Pedalboard- & Amp/Box-Baukasten, Song-Struktur, Riff- & Mehrspur-Recorder. |

@@ -13,7 +13,7 @@
     {
       "kuenstler": "Unsane",
       "titel": "Scrape",
-      "substil_vermerk": "brutaler NYC-Noise-Rock",
+      "substil_vermerk": "brutaler Noise-Rock (US, New York)",
       "url": "https://bandcamp.com/search?q=Unsane+Scrape&item_type=t",
       "quelle": "bandcamp"
     },
@@ -27,7 +27,7 @@
     {
       "kuenstler": "Scratch Acid",
       "titel": "Owner's Lament",
-      "substil_vermerk": "texanischer Proto-Noise-Rock",
+      "substil_vermerk": "Proto-Noise-Rock (US, Texas)",
       "url": "https://bandcamp.com/search?q=Scratch+Acid+Owner%27s+Lament&item_type=t",
       "quelle": "bandcamp"
     },
@@ -97,14 +97,14 @@
     {
       "kuenstler": "Melt-Banana",
       "titel": "Candy Gun",
-      "substil_vermerk": "japanischer Hyper-Noise",
+      "substil_vermerk": "Hyper-Noise (Japan)",
       "url": "https://bandcamp.com/search?q=Melt-Banana+Candy+Gun&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Boredoms",
       "titel": "Acid Police",
-      "substil_vermerk": "japanischer Noise/Avantgarde",
+      "substil_vermerk": "Noise/Avantgarde (Japan)",
       "url": "https://www.youtube.com/results?search_query=Boredoms+Acid+Police",
       "quelle": "youtube"
     },
@@ -132,7 +132,7 @@
     {
       "kuenstler": "Gilla Band",
       "titel": "Paul",
-      "substil_vermerk": "irischer Noise/Post-Punk",
+      "substil_vermerk": "Noise/Post-Punk (Irland)",
       "url": "https://bandcamp.com/search?q=Gilla+Band+Paul&item_type=t",
       "quelle": "bandcamp"
     },
@@ -181,7 +181,7 @@
     {
       "kuenstler": "Cherubs",
       "titel": "Stag Party",
-      "substil_vermerk": "texanischer Noise-Rock",
+      "substil_vermerk": "Noise-Rock (US, Texas)",
       "url": "https://bandcamp.com/search?q=Cherubs+Stag+Party&item_type=t",
       "quelle": "bandcamp"
     },

@@ -1,3 +1,0 @@
-Trigger deploy: user requested immediate run
-
-This file was added by GitHub Copilot Chat to trigger the GitHub Actions workflow (immediate trigger).

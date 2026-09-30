@@ -1016,8 +1016,10 @@ def build_all():
         manifest[f'pfad/kompetenz/{stufe}/index.html'] = landing_html('kompetenz', stufe, titel, '', mitglieder)
         sitemap_eintraege.append((f'pfad/kompetenz/{stufe}/', '0.7'))
         hub_eintraege.append((stufe, titel, len(mitglieder)))
+    # Die Stufennamen kommen aus den Labels: getippt stand hier „Experte“, die App sagt „Profi“.
+    stufen_namen = ', '.join(label_vok('kompetenzstufe', s) for s in KOENNENS_ORDNUNG)
     manifest['pfad/kompetenz/index.html'] = hub_html(
-        'kompetenz', 'Könnensstufen', 'Der ZERRER-Lernweg nach Könnensstufe: Einsteiger, Fortgeschritten, Experte.', hub_eintraege,
+        'kompetenz', 'Könnensstufen', f'Der ZERRER-Lernweg nach Könnensstufe: {stufen_namen}.', hub_eintraege,
     )
     sitemap_eintraege.append(('pfad/kompetenz/', '0.8'))
 

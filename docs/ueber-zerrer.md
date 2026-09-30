@@ -67,7 +67,7 @@ Reflexionsaufgaben.
 | --- | ---: |
 | Einsteiger | 154 |
 | Fortgeschritten | 282 |
-| Experte | 67 |
+| Profi | 67 |
 | Trainer (quer) | 6 |
 
 Domänen überschneiden sich (157 Bausteine tragen mehrere), Stufen nicht:
@@ -92,7 +92,7 @@ du.“*
 Hinweis, nie als Schloss. Niemand wird von Inhalten ausgesperrt, für die er sich
 interessiert.
 
-- **Kompetenzpfad** — stufen-kumulativ, Einsteiger → Fortgeschritten → Experte
+- **Kompetenzpfad** — stufen-kumulativ, Einsteiger → Fortgeschritten → Profi
 - **Genre-Achse** — 16 Genres mit 311 Zuordnungen, quer über Instrumente und Stufen
 - **Themen/Domänen** — nach Instrument oder Querschnittsthema
 - **Individualpfad** — nach dem eigenen Spielziel
