@@ -443,7 +443,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Doom-Beat: zäher Halftime"
+        "de": "Doom-Beat: zäher Half-Time"
       },
       "bpm": 62,
       "spuren": {
@@ -479,7 +479,7 @@
         ]
       },
       "hinweis": {
-        "de": "Ganz weit ausgelegter Halftime: Kick auf die Eins, Snare erst auf die Drei, viel Raum dazwischen. Der Beat muss die Schwere tragen, nicht füllen."
+        "de": "Ganz weit ausgelegter Half-Time: Kick auf die Eins, Snare erst auf die Drei, viel Raum dazwischen. Der Beat muss die Schwere tragen, nicht füllen."
       }
     },
     {
@@ -2675,7 +2675,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Metalcore-Beat: Vers-Drive"
+        "de": "Metalcore-Beat: Strophen-Drive"
       },
       "bpm": 140,
       "spuren": {
@@ -2711,7 +2711,7 @@
         ]
       },
       "hinweis": {
-        "de": "Der treibende Vers-Beat mit synkopierten Kick-Akzenten unter klarem Backbeat — Schub ohne Breakdown-Bremse. Locker, aber tight an der Gitarre."
+        "de": "Der treibende Strophen-Beat mit synkopierten Kick-Akzenten unter klarem Backbeat — Schub ohne Breakdown-Bremse. Locker, aber tight an der Gitarre."
       }
     },
     {
@@ -2720,7 +2720,7 @@
       "domaene": "bass",
       "typ": "tab",
       "titel": {
-        "de": "Metalcore-Bass: Vers-Puls"
+        "de": "Metalcore-Bass: Strophen-Puls"
       },
       "stimmung": [
         "D1",
@@ -2780,7 +2780,7 @@
         ]
       ],
       "hinweis": {
-        "de": "Satter Achtelpuls im Vers, der mit kleinen Bewegungen zum Breakdown führt — Motor unter dem Groove, immer verzahnt mit der Kick (Drop D)."
+        "de": "Satter Achtelpuls, der in der Strophe mit kleinen Bewegungen zum Breakdown führt — Motor unter dem Groove, immer verzahnt mit der Kick (Drop D)."
       }
     },
     {
@@ -3485,7 +3485,7 @@
       "domaene": "schlagzeug",
       "typ": "drums",
       "titel": {
-        "de": "Stoner-Beat: weiter Halftime"
+        "de": "Stoner-Beat: weiter Half-Time"
       },
       "bpm": 95,
       "spuren": {
@@ -3531,7 +3531,7 @@
         ]
       },
       "hinweis": {
-        "de": "Halftime mit viel Raum: die Snare erst auf der 3, die Kick tänzelt lose davor, ein Crash öffnet den Takt — der groovende, verrauchte Puls von Stoner und Post-Metal. Bewusst hinter dem Beat."
+        "de": "Half-Time mit viel Raum: die Snare erst auf der 3, die Kick tänzelt lose davor, ein Crash öffnet den Takt — der groovende, verrauchte Puls von Stoner und Post-Metal. Bewusst hinter dem Beat."
       }
     },
     {

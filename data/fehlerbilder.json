@@ -28,8 +28,8 @@
       "erklaerteil": {
         "de": {
           "symptom": "Ab- und Aufschlag klingen unterschiedlich: Der Aufschlag ist leiser, unsauberer oder verhakt sich — besonders beim Saitenwechsel entsteht ein Stolpern.",
-          "ursache": "Der Aufschlag wird als bloßer Rückweg gedacht statt als vollwertiger Anschlag. Dazu kommen oft eine zu große Bewegung und zu viel überstehende Pickspitze, die beim Aufschlag verkantet.",
-          "korrektur": "Tempo deutlich reduzieren und die Aufschläge isoliert betonen lassen (nur Aufschläge, dann wieder im Wechsel). Auf kleine Handgelenksbewegung und knappe Pickspitze achten. Hörkontrolle: Erst wenn Ab- und Aufschlag nicht mehr unterscheidbar sind, das Tempo anheben."
+          "ursache": "Der Aufschlag wird als bloßer Rückweg gedacht statt als vollwertiger Anschlag. Dazu kommen oft eine zu große Bewegung und zu viel überstehende Plektrumspitze, die beim Aufschlag verkantet.",
+          "korrektur": "Tempo deutlich reduzieren und die Aufschläge isoliert betonen lassen (nur Aufschläge, dann wieder im Wechsel). Auf kleine Handgelenksbewegung und knappe Plektrumspitze achten. Hörkontrolle: Erst wenn Ab- und Aufschlag nicht mehr unterscheidbar sind, das Tempo anheben."
         }
       }
     },
@@ -43,7 +43,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Das Tempo bricht nach wenigen Takten ein, der Unterarm brennt oder verhärtet, die Anschläge werden ungleichmäßig — die Person versucht, mit Anspannung dagegenzuhalten.",
-          "ursache": "Die Bewegung kommt aus dem ganzen Arm statt aus dem Handgelenk, das Einstiegstempo liegt über der lockeren Kontrollgrenze, und das Pick wird verkrampft festgehalten.",
+          "ursache": "Die Bewegung kommt aus dem ganzen Arm statt aus dem Handgelenk, das Einstiegstempo liegt über der lockeren Kontrollgrenze, und das Plektrum wird verkrampft festgehalten.",
           "korrektur": "Sofort unterbrechen — Brennen ist ein Stoppsignal, kein Trainingsreiz. Tempo weit genug senken, dass die Bewegung klein und locker bleibt, und Dauer vor Tempo steigern (erst länger locker, dann schneller). Feste Pausenregeln vereinbaren; bei wiederkehrenden Beschwerden ärztlichen Rat empfehlen."
         }
       }
@@ -194,7 +194,7 @@
         "de": {
           "symptom": "Der Tremolo-Strom flattert: Die Dichte schwankt, einzelne Anschläge fallen heraus, und nach kurzer Zeit wird die Bewegung sichtbar größer und härter.",
           "ursache": "Das Tempo liegt über der lockeren Kontrollgrenze — die Hand kompensiert mit Kraft und Ausholbewegung, was den Strom erst recht ungleichmäßig macht.",
-          "korrektur": "Deutlich unter das Grenztempo zurückgehen, bis der Strom über vier Takte völlig gleichmäßig läuft. Die Bewegung bewusst verkleinern (Pickspitze knapp, Handgelenk locker) und Dauer vor Tempo steigern. Als Kontrolle Aufnahmen nutzen — Flattern hört man dort sofort."
+          "korrektur": "Deutlich unter das Grenztempo zurückgehen, bis der Strom über vier Takte völlig gleichmäßig läuft. Die Bewegung bewusst verkleinern (Plektrumspitze knapp, Handgelenk locker) und Dauer vor Tempo steigern. Als Kontrolle Aufnahmen nutzen — Flattern hört man dort sofort."
         }
       }
     },
@@ -268,8 +268,8 @@
       "erklaerteil": {
         "de": {
           "symptom": "Das Plektrum verhakt sich in den dicken Saiten: Der Anschlag stolpert, einzelne Töne knallen lauter heraus, und bei Tempo reißt die Kette ab.",
-          "ursache": "Zu viel überstehende Pickspitze, ein verkrampfter Griff und ein zu steiler Eintauchwinkel — das Pick taucht zu tief in die Saite ein, statt über sie zu streichen.",
-          "korrektur": "Griff und Spitze neu einstellen: nur wenige Millimeter Spitze, lockerer Daumen-Zeigefinger-Griff, und das Pick leicht angewinkelt über die Saite führen. In langsamen Achteln das Gefühl von „Durchstreichen statt Einhaken“ etablieren, erst dann Tempo aufbauen."
+          "ursache": "Zu viel überstehende Plektrumspitze, ein verkrampfter Griff und ein zu steiler Eintauchwinkel — das Plektrum taucht zu tief in die Saite ein, statt über sie zu streichen.",
+          "korrektur": "Griff und Spitze neu einstellen: nur wenige Millimeter Spitze, lockerer Daumen-Zeigefinger-Griff, und das Plektrum leicht angewinkelt über die Saite führen. In langsamen Achteln das Gefühl von „Durchstreichen statt Einhaken“ etablieren, erst dann Tempo aufbauen."
         }
       }
     },
@@ -298,7 +298,7 @@
       "erklaerteil": {
         "de": {
           "symptom": "Die Galopp-Figur treibt nicht: Die zwei schnellen Töne sind mal zu kurz, mal zu lang, und der Puls wirkt zäh statt vorwärtsdrängend.",
-          "ursache": "Die schnellen Töne werden als unkontrollierter „Doppelwischer“ gespielt statt als zwei exakt platzierte Anschläge, und die Anschlagfolge (Finger oder Pick) wechselt unbemerkt.",
+          "ursache": "Die schnellen Töne werden als unkontrollierter „Doppelwischer“ gespielt statt als zwei exakt platzierte Anschläge, und die Anschlagfolge (Finger oder Plektrum) wechselt unbemerkt.",
           "korrektur": "Die Figur in Zeitlupe zerlegen: betonter Ton — Pause im Kopf — zwei bewusst einzelne schnelle Töne. Laut mitzählen und eine feste Fingerfolge (z. B. Mittel–Zeige–Mittel) verabreden. Erst wenn zehn Wiederholungen identisch klingen, das Tempo in kleinen Schritten anheben."
         }
       }
@@ -1677,9 +1677,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Bei Stops und Breaks kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Break ist unsauber, einer setzt zu früh oder zu spät wieder ein. Der Part stolpert genau an der auffälligsten Stelle.",
-          "ursache": "Der Puls wird während der Stille nicht gehalten — statt innerlich weiterzuzählen, wird geschätzt. Länge des Stops und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
-          "korrektur": "Übe nur die zwei Takte um den Break in Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins wieder einsteigen. Nimm es auf und prüfe, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+          "symptom": "Bei Stopps und Breaks kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Break ist unsauber, einer setzt zu früh oder zu spät wieder ein. Der Part stolpert genau an der auffälligsten Stelle.",
+          "ursache": "Der Puls wird während der Stille nicht gehalten — statt innerlich weiterzuzählen, wird geschätzt. Länge des Stopps und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
+          "korrektur": "Übe nur die zwei Takte um den Break in Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins wieder einsteigen. Nimm es auf und prüfe, ob Stopp und Wiedereinstieg wie ein Schlag klingen."
         }
       }
     },
@@ -1752,9 +1752,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Ein geplanter Spannungsaufbau (leiser Vers, intensiver Refrain) verpufft, weil nur einer ihn trägt: Die Gitarre zündet den Refrain, während der Gesang gleich bleibt — oder umgekehrt. Der Umschlag wirkt halbgar.",
+          "symptom": "Ein geplanter Spannungsaufbau (leise Strophe, intensiver Refrain) verpufft, weil nur einer ihn trägt: Die Gitarre zündet den Refrain, während der Gesang gleich bleibt — oder umgekehrt. Der Umschlag wirkt halbgar.",
           "ursache": "Der Umschlagpunkt ist nicht als gemeinsame Entscheidung vereinbart; Dynamik wird als individuelle Angelegenheit behandelt statt als geteilter Verlauf.",
-          "korrektur": "Lass beide gemeinsam festlegen, wo die Intensität steigt: Der Vers bleibt bewusst zurückgenommen, der Refrain zündet bei beiden am selben Punkt. Prüfe per Aufnahme, ob der Umschlag als eine Bewegung wirkt, und lass den Verlauf bei Bedarf mehrstufig aufbauen."
+          "korrektur": "Lass beide gemeinsam festlegen, wo die Intensität steigt: Die Strophe bleibt bewusst zurückgenommen, der Refrain zündet bei beiden am selben Punkt. Prüfe per Aufnahme, ob der Umschlag als eine Bewegung wirkt, und lass den Verlauf bei Bedarf mehrstufig aufbauen."
         }
       }
     },
@@ -1782,9 +1782,9 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Bei gemeinsamen Stops und Akzenten kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Stop ist unsauber, einer setzt zu früh oder zu spät wieder ein. Genau an der exponierten Stelle stolpert der Part.",
-          "ursache": "Der Puls wird während der Stille nicht gehalten, sondern geschätzt. Länge des Stops und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
-          "korrektur": "Übe nur die zwei Takte um den Break in Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins einsteigen. Per Aufnahme prüfen, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+          "symptom": "Bei gemeinsamen Stopps und Akzenten kommt der Wiedereinstieg nicht zusammen; die Eins nach dem Stopp ist unsauber, einer setzt zu früh oder zu spät wieder ein. Genau an der exponierten Stelle stolpert der Part.",
+          "ursache": "Der Puls wird während der Stille nicht gehalten, sondern geschätzt. Länge des Stopps und Zeitpunkt des Wiedereinstiegs sind nicht als gemeinsame Bewegung vereinbart.",
+          "korrektur": "Übe nur die zwei Takte um den Break in Schleife. Lass beide während der Stille hörbar (zunächst laut) mitzählen und exakt gemeinsam auf der Eins einsteigen. Per Aufnahme prüfen, ob Stopp und Wiedereinstieg wie ein Schlag klingen."
         }
       }
     },
@@ -1947,7 +1947,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Beim gemeinsamen Stop und Wiedereinsatz verpasst einer die Eins — die ganze Band wirkt an der sichtbarsten Stelle unpräzise, obwohl jeder für sich den Part beherrscht.",
+          "symptom": "Beim gemeinsamen Stopp und Wiedereinsatz verpasst einer die Eins — die ganze Band wirkt an der sichtbarsten Stelle unpräzise, obwohl jeder für sich den Part beherrscht.",
           "ursache": "Während der Stille hält nicht jeder den Puls innerlich; der Wiedereinstieg ist nicht als gemeinsame Bewegung mit klarem Signal vereinbart, sondern wird geschätzt.",
           "korrektur": "Übe die Stelle isoliert. Alle zählen innerlich weiter; ein klares Signal (Nicken des Drummers oder hörbares Zählen) markiert den Wiedereinstieg. Exakt gemeinsam auf der Eins einsteigen und per Aufnahme prüfen, ob es bei allen vier zusammenfällt."
         }
@@ -2727,7 +2727,7 @@
       ],
       "erklaerteil": {
         "de": {
-          "symptom": "Die abrupten Stops sind nicht gemeinsam/schlagartig, und der Wiedereinstieg wackelt.",
+          "symptom": "Die abrupten Stopps sind nicht gemeinsam/schlagartig, und der Wiedereinstieg wackelt.",
           "ursache": "Der Puls wird während der Stille nicht innerlich gehalten; der Wiedereinstieg ist nicht als gemeinsame Bewegung vereinbart.",
           "korrektur": "Die Stelle isoliert üben, innerlich weiterzählen und mit einem klaren Signal exakt gemeinsam wieder einsteigen."
         }
@@ -3208,8 +3208,8 @@
       "erklaerteil": {
         "de": {
           "symptom": "An den Abrisskanten stoppt der Bass nicht gemeinsam mit der Band — die Stille franst aus.",
-          "ursache": "Der Bass reagiert auf die Stops, statt sie mitzuzählen; die Greif-/Anschlaghand dämpft zu spät ab.",
-          "korrektur": "Die Stopp-Stellen isoliert und langsam mit der Band zählen, das Abdämpfen als eigenen aktiven Impuls üben, dann das Tempo steigern."
+          "ursache": "Der Bass reagiert auf die Stopps, statt sie mitzuzählen; die Greif-/Anschlaghand dämpft zu spät ab.",
+          "korrektur": "Die Stoppstellen isoliert und langsam mit der Band zählen, das Abdämpfen als eigenen aktiven Impuls üben, dann das Tempo steigern."
         }
       }
     },
