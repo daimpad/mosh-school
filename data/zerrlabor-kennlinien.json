@@ -18,7 +18,7 @@
       },
       "pre_hochpass_hz": 0,
       "post_tiefpass_hz": 18000,
-      "beschreibung": "Ausgangspunkt ohne Klippung — dient dem Vergleich.",
+      "beschreibung": "Ausgangspunkt ohne Übersteuerung — dient dem Vergleich.",
       "kennwerte": {
         "thd_1khz": 0.0,
         "anteil_geradzahlig": null,
@@ -90,7 +90,7 @@
       },
       "pre_hochpass_hz": 120,
       "post_tiefpass_hz": 6500,
-      "beschreibung": "Härtere Kante, mehr Pegel, klarer definierte Klippung.",
+      "beschreibung": "Härtere Kante, mehr Pegel, klarer definierte Übersteuerung.",
       "kennwerte": {
         "thd_1khz": 0.356,
         "anteil_geradzahlig": 0.0,
@@ -117,16 +117,16 @@
     },
     {
       "id": "kl_asymmetrisch",
-      "name": "Asymmetrische Klippung",
+      "name": "Asymmetrische Übersteuerung",
       "funktion": "asym_soft",
-      "formel": "y = tanh(a*x) fuer x>=0, y = tanh(b*x) fuer x<0, mit a != b",
+      "formel": "y = tanh(a*x) für x>=0, y = tanh(b*x) für x<0, mit a != b",
       "parameter": {
         "gain_positiv": 5.0,
         "gain_negativ": 1.6
       },
       "pre_hochpass_hz": 90,
       "post_tiefpass_hz": 7000,
-      "beschreibung": "Halbwellen werden unterschiedlich stark gesaettigt. Das erzeugt geradzahlige Obertoene, die als voller empfunden werden — im Gegensatz zu beidseitig harter Klippung, die nur einen Gleichspannungsversatz und ungeradzahlige Obertoene ergibt.",
+      "beschreibung": "Halbwellen werden unterschiedlich stark gesättigt. Das erzeugt geradzahlige Obertöne, die als voller empfunden werden — im Gegensatz zu beidseitig harter Übersteuerung, die nur ungeradzahlige Obertöne ergibt.",
       "kennwerte": {
         "thd_1khz": 0.219,
         "anteil_geradzahlig": 0.103,
@@ -177,7 +177,7 @@
       "id": "kl_multiband",
       "name": "Multiband-Verzerrung",
       "funktion": "multiband",
-      "formel": "Aufteilung bei der Trennfrequenz, getrennte Klippung, Summierung",
+      "formel": "Aufteilung bei der Trennfrequenz, getrennte Übersteuerung, Summierung",
       "parameter": {
         "trennfrequenz_hz": 250,
         "gain_tief": 2.0,

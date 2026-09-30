@@ -2,34 +2,40 @@
 
 Ausführliche Selbstbeschreibung des Projekts. Gedacht für alle, die ZERRER
 einordnen müssen, ohne es benutzt zu haben — Beitragende, Presse, Förderstellen,
-Lehrende, oder schlicht Neugierige.
+Lehrende oder schlicht Neugierige.
 
 > **Zahlen in diesem Dokument sind ein Stand, kein Versprechen.** Der Bestand
-> wächst. Eine gekürzte Fassung derselben Beschreibung steht im „Über"-Reiter der
+> wächst. Eine gekürzte Fassung derselben Beschreibung steht im „Über“-Reiter der
 > App (`data/app-info.json` → `ueber.steckbrief`) und zieht ihre Zahlen zur
 > Laufzeit aus den geladenen Daten — die ist immer aktuell, diese hier nicht.
-> Nachrechnen lässt sich alles mit `python3 scripts/validate.py`.
+> Die Kernzahlen (Bausteine, Domänen, Stufen, Stimmungen) zeigt
+> `python3 scripts/validate.py`; alles Weitere lässt sich in den Dateien unter
+> `data/` nachzählen.
 
 ---
 
 ## 1. Was ZERRER ist
 
-ZERRER (**zerrer.org**) ist eine Lern-App für Extreme-Metal- und
-Hardcore-Instrumente — Gitarre, Bass, Schlagzeug, Gesang — über die Genres
-Hardcore, Metalcore, Thrash, Death, Black, Doom, Crust, Grindcore, Powerviolence,
-Screamo, Mathcore, Noise Rock, Sludge, Deathcore und weitere.
+ZERRER (**zerrer.org**) ist zweierlei: eine **Lernressource** für extrem
+handgemachten Sound und ein **Kollektiv**, das Shows im Raum Köln/Bonn
+organisiert und durchführt. Die Marke trägt dafür zwei Zweige: **Zerrer Mosh
+Skool** (das Lernangebot, um das es hier geht) und **Zerrer Kollektiv** (die
+Shows — das Kollektiv stellt sich unter `#/kollektiv` vor).
 
-Technisch ist es das Gegenteil einer üblichen Lernplattform: **rein
-clientseitig, ohne Build-Schritt, ohne Server-Komponente, ohne Konto.** 66
-JavaScript-Module (~14.500 Zeilen) und 4.100 Zeilen CSS werden als statische
+Das Lernangebot ist eine App für Extreme-Metal- und Hardcore-Instrumente —
+Gitarre, Bass, Schlagzeug, Gesang — über die Genres Hardcore, Metalcore, Thrash,
+Death, Black, Doom, Crust, Grindcore, Powerviolence, Screamo, Mathcore, Noise
+Rock, Sludge, Deathcore und weitere. Kostenlos, werbefrei, direkt im Browser.
+
+Technisch ist sie das Gegenteil einer üblichen Lernplattform: **rein
+clientseitig, ohne Build-Schritt, ohne Server-Komponente, ohne Konto.** 77
+JavaScript-Module (~17.400 Zeilen) und ~4.900 Zeilen CSS werden als statische
 Dateien ausgeliefert; alle Inhalte liegen als JSON daneben. Es gibt keine
 Registrierung, keine Datenbank, kein Tracking mit Cookies. Der Fortschritt lebt
 im `localStorage` des Geräts, Aufnahmen in dessen IndexedDB. Ein Service Worker
 macht die App offline benutzbar — im Proberaum ohne Empfang funktioniert sie
-vollständig.
-
-Die Marke trägt zwei Zweige: **Zerrer Mosh Skool** (das Lernangebot, um das es
-hier geht) und **Zerrer Kollektiv** (Shows im Raum Köln/Bonn).
+weiter (Fotos und die Klangproben des Zerr-Labors werden beim ersten Gebrauch
+nachgeladen und danach zwischengespeichert).
 
 Sprache ist durchgehend Deutsch, du-Form, sachlich statt werblich.
 
@@ -45,46 +51,60 @@ Selbstkontrolle) für Bewegungsthemen oder eine **Reflexionsaufgabe** für
 Wissens- und Haltungsthemen. Aktuell 247 Übungsteile und 262
 Reflexionsaufgaben.
 
-| Domäne | Bausteine |     | Könnensstufe | Bausteine |
-| --- | ---: | --- | --- | ---: |
-| Gitarre | 116 | | Einsteiger | 154 |
-| Theorie | 93 | | Fortgeschritten | 282 |
-| Mentales | 85 | | Experte | 67 |
-| Schlagzeug | 83 | | Trainer (quer) | 6 |
-| Bass | 79 | | | |
-| Gesang | 64 | | **Ausrüstung** (quer) | **116** |
-| Körper/Gesundheit | 44 | | **Kontext/Szene** | **16** |
+| Domäne | Bausteine |
+| --- | ---: |
+| Gitarre | 116 |
+| **Ausrüstung** (quer) | **116** |
+| Theorie | 92 |
+| Mentales | 86 |
+| Schlagzeug | 83 |
+| Bass | 79 |
+| Gesang | 64 |
+| Körper/Gesundheit | 44 |
+| **Kontext/Szene** | **16** |
+
+| Könnensstufe | Bausteine |
+| --- | ---: |
+| Einsteiger | 154 |
+| Fortgeschritten | 282 |
+| Experte | 67 |
+| Trainer (quer) | 6 |
+
+Domänen überschneiden sich (157 Bausteine tragen mehrere), Stufen nicht:
+509 = 154 + 282 + 67 + 6.
 
 Die Querschnitts-Domänen sind der eigentliche Unterschied zu einem
 Riff-Tutorial-Kanal: **Gesundheit, Mentales, Ausrüstung und Musiktheorie** stehen
 gleichberechtigt neben der Instrumentaltechnik. 44 Bausteine allein zu Körper und
-Aufwärmen, 85 zu mentalen Themen.
+Aufwärmen, 86 zu mentalen Themen.
 
 ### Der Trainer-Layer: 288 Fehlerbilder
 
 Zu den Bausteinen kommen 288 **Fehlerbilder** — jedes mit Symptom, Ursache und
 Korrektur, verankert an seinem Basis-Baustein. Das ist die Ebene, die sonst nur
 eine anwesende Lehrperson liefert: *„Das klingt so — woran liegt es — was änderst
-du."*
+du.“*
 
 ### Vier Wege durch denselben Stoff
 
-707 Voraussetzungskanten verbinden die Bausteine zu einem Graphen. Entscheidend:
+716 Voraussetzungskanten verbinden die Bausteine zu einem Graphen. Entscheidend:
 **der Graph sortiert, er sperrt nicht.** Fehlende Voraussetzungen erscheinen als
 Hinweis, nie als Schloss. Niemand wird von Inhalten ausgesperrt, für die er sich
 interessiert.
 
 - **Kompetenzpfad** — stufen-kumulativ, Einsteiger → Fortgeschritten → Experte
-- **Genre-Achse** — 16 Genres mit 309 Zuordnungen, quer über Instrumente und Stufen
+- **Genre-Achse** — 16 Genres mit 311 Zuordnungen, quer über Instrumente und Stufen
 - **Themen/Domänen** — nach Instrument oder Querschnittsthema
 - **Individualpfad** — nach dem eigenen Spielziel
 
 Dazu **41 Trainingseinheiten** als fertig geschnürte Sessions.
 
-### 12 interaktive Audio-Werkzeuge
+### 13 interaktive Werkzeuge
 
-Alle auf einem gemeinsamen, synthese-basierten Audio-Kern (ein `AudioContext`,
-ein Lookahead-Scheduler, keine Samples, kein CDN):
+Die klingenden laufen auf einem gemeinsamen, synthese-basierten Audio-Kern (ein
+`AudioContext`, ein Lookahead-Scheduler, synthetisierte Stimmen, kein CDN).
+Einzige Ausnahme von „Synthese statt Samples“: Das Zerr-Labor spielt echte
+Gitarren-Einzeltöne, weil seine Aussage am echten Instrumentensignal hängt.
 
 | Werkzeug | Was es tut |
 | --- | --- |
@@ -92,6 +112,7 @@ ein Lookahead-Scheduler, keine Samples, kein CDN):
 | Play-along-Loops | Genre-typische Beats zum Mitspielen |
 | Stimmgerät | Live-Tuner über Mikro (Autokorrelation) + 35 Stimmungen als Zielton |
 | Zerr-Labor | Verzerrer-Kennlinien hörbar und messbar gegenübergestellt |
+| Tabulatur-Werkzeug | ASCII-Tab einfügen, im Raster sehen, in der eigenen Stimmung hören |
 | Pedalboard-Baukasten | Signalketten aus 14 Pedaltypen bauen und speichern |
 | Amp-/Box-Baukasten | Verstärker- und Lautsprecher-Physik durchspielen |
 | Geräte-Explorer | Equipment-Landkarte je Instrument |
@@ -120,8 +141,10 @@ generiert) und 26 Lehrgrafiken (Beat-Raster, Griffbilder, Anschlagsmuster).
   importieren; ohne Konto ist das die einzige Brücke zwischen zwei Geräten
 - **546 statische Seiten** parallel zur App, damit die Inhalte für Suchmaschinen
   überhaupt einzeln auffindbar sind (eine Hash-Routing-App ist es sonst nicht)
-- **Brand-Alert** — 61 Einträge in 8 Kategorien zu problematischen Marken und
-  Modellen
+- **Brand-Alert** — die Ausnahmeliste für Marken und Modelle: 61 Einträge in
+  8 Kategorien, nur Geräte, deren Name zum Verständnis eines Genre-Klangs nötig
+  ist, dazu bewährte Klassiker. Jeder Eintrag führt eine bezahlbare Alternative
+  mit; keine Kaufempfehlung, keine bezahlte Nennung.
 
 ---
 
@@ -162,14 +185,14 @@ Aufnahmen.
 
 **Einsteigende in extreme Genres.** Die 154 Einsteiger-Bausteine setzen keine
 Vorbildung voraus, und der Gesundheitsrahmen ist gerade hier wichtig: Extreme
-Vocals und harte Anschlagstechnik verletzen Menschen regelmäßig, weil sie sie
-sich falsch selbst beibringen.
+Vocals und harte Anschlagstechnik verletzen regelmäßig Menschen, die sie sich
+falsch selbst beibringen.
 
 **Fortgeschrittene mit Lücken.** Mit 282 Bausteinen ist das die größte Stufe —
 gedacht für Leute, die spielen können, aber merken, dass Theorie, Sound oder
 Körperarbeit fehlt.
 
-**Sänger:innen und alle, die schreien wollen.** 64 Gesangs-Bausteine mit dem
+**Sänger und alle, die schreien wollen.** 64 Gesangs-Bausteine mit dem
 Grundsatz, dass Verzerrung aus Luft und Resonanz kommt, nicht aus Pressen — plus
 konsequentem Hinweis auf HNO-Arzt bei Beschwerden.
 
@@ -183,7 +206,7 @@ gebaut.
 **Menschen mit Gear-Fragen.** Wer nicht weiß, warum sein Bass im Mix verschwindet
 oder was ein Zerrer eigentlich tut, findet hier Physik statt Forenmeinung.
 
-**Beitragende und Entwickler:innen.** Buildfrei, ES-Module, Inhalte als JSON,
+**Beitragende und Entwickler.** Buildfrei, ES-Module, Inhalte als JSON,
 Engine themenneutral vom Inhalt getrennt — die Einstiegshürde für inhaltliche
 Beiträge ist bewusst niedrig gehalten. Die Engine stammt aus einem Fork einer
 Crossminton-Lernanwendung und ist deshalb nicht metal-spezifisch. Einstieg:
@@ -199,16 +222,19 @@ Ehrlichkeitshalber, weil es die Einordnung bestimmt:
   Beschwerden lautet die Anweisung überall: sofort stoppen, Coach bzw. Arzt.
 - **Kein Konto, keine Synchronisation.** Fortschritt hängt am Gerät. Wer
   wechselt, muss exportieren.
-- **Nur Deutsch.** Label-Gerüste für EN/FR/PL existieren, sind aber leer.
+- **Nur Deutsch.** Weitere Sprachen sind technisch vorgesehen, aber derzeit nicht
+  übersetzt.
 - **Keine Community-Funktionen** — kein Forum, keine Kommentare, keine
   Nutzerprofile.
 - **Keine Tabs oder Noten fremder Songs.** Die 606 Beispielsongs sind
   Hörempfehlungen mit Quellenverweis, kein Notenmaterial.
 - **Die Songlisten sind kuratiert nach einem einzigen, offengelegten Maßstab:**
-  Bands, die rassistisch oder antisemitisch aufgetreten sind oder den
-  Nationalsozialismus verherrlichen, relativieren oder normalisieren, stehen
-  nicht drin. Andere Kontroversen führen ausdrücklich nicht zum Ausschluss;
-  darüber urteilen die Listen nicht.
+  Bands, die rassistisch oder antisemitisch aufgetreten sind, den
+  Nationalsozialismus verherrlichen, relativieren oder normalisieren
+  (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder
+  verwendet haben — auch als Provokation —, stehen nicht drin. Andere
+  Kontroversen führen ausdrücklich nicht zum Ausschluss; darüber urteilen die
+  Listen nicht.
 
 ---
 

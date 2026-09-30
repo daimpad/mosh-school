@@ -35,7 +35,7 @@
           "ziel": "Tight gedämpfte Chugs in ungeraden Gruppen über einen geraden 4/4-Klick spielen, ohne den Puls zu verlieren.",
           "schritte": [
             "Stell das Metronom auf einen bequemen 4/4-Puls (um 100 BPM, Klick auf die Viertel). Spiel zuerst nur gleichmäßige gedämpfte Achtel auf der tiefen Saite — jeder Anschlag knallt und ist sofort tot. Prüf auf einer Aufnahme: Ist zwischen den Anschlägen wirklich Stille?",
-            "Gruppier die Achtel in Fünfer-Pakete: fünf Chugs, dann eine Achtel Pause, wieder fünf — betone jeweils den ersten Chug jeder Gruppe. Der Klick läuft stur weiter; deine Betonung wandert über den Takt und trifft die Eins erst nach mehreren Takten wieder.",
+            "Gruppier die Achtel in Fünfer-Pakete: vier Chugs, dann eine Achtel Pause, wieder vier — betone jeweils den ersten Chug jeder Gruppe. Der Klick läuft stur weiter; deine Betonung wandert über den Takt und trifft die Eins erst nach mehreren Takten wieder.",
             "Halt den Puls im Körper: Tipp den Viertel-Puls mit dem Fuß mit, während die Hand die Fünfer spielt. Solange der Fuß gerade bleibt, sitzt der Groove — driftet der Fuß, bist du im Muster verloren.",
             "Wechsel die Gruppengröße: vier Takte Fünfer, vier Takte Siebener, zurück zu geraden Achteln. Jeder Wechsel sitzt auf dem Schlag, der Grundpuls bleibt konstant."
           ],
@@ -49,49 +49,26 @@
         "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
         "saiten_reihenfolge": "6_ist_tiefste",
         "taktart": "4/4",
-        "bpm": 120,
-        "aufloesung": 16,
-        "takte": 2,
+        "bpm": 100,
+        "aufloesung": 8,
+        "takte": 5,
         "loop": true,
         "events": [
           {
             "schritt": 0,
             "saite": 6,
             "bund": 0,
-            "technik": "palm_mute"
+            "technik": "palm_mute",
+            "betonung": 1
           },
           {
-            "schritt": 5,
+            "schritt": 1,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
           },
           {
-            "schritt": 10,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 15,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 20,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 25,
-            "saite": 6,
-            "bund": 0,
-            "technik": "palm_mute"
-          },
-          {
-            "schritt": 30,
+            "schritt": 2,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
@@ -103,7 +80,95 @@
             "technik": "palm_mute"
           },
           {
+            "schritt": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 11,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
             "schritt": 13,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
@@ -113,9 +178,84 @@
             "saite": 6,
             "bund": 0,
             "technik": "palm_mute"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 32,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 33,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 35,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute",
+            "betonung": 1
+          },
+          {
+            "schritt": 36,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 37,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 38,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
           }
         ],
-        "hinweis": "Die Chugs laufen in Fünfergruppen, der Puls bleibt gerade. Erst nach mehreren Takten treffen sich beide wieder auf der Eins — bis dahin wandert das Muster."
+        "hinweis": "Achtel in Fünfer-Paketen — vier gedämpfte Chugs und eine Achtel Pause, der erste Chug jeder Gruppe betont —, der Puls bleibt gerade. Erst nach fünf Takten treffen sich beide wieder auf der Eins; genau dann beginnt die Demo von vorn."
       }
     },
     {
@@ -151,7 +291,7 @@
             "Reduzier bewusst: Lass in einem Takt Raum (nur ein tiefer, langer Ton auf der Eins), dann wieder das verzahnte Muster. Der Kontrast aus Dichte und Raum ist Djent-Groove."
           ],
           "steigerung": "Spiel dieselbe Linie einmal mit Plektrum (perkussiver Attack) und einmal mit Fingern (runder) und hör, was sich mit der Gitarre besser verzahnt. Oder misch einen cleanen Tief-Anteil unter die Zerre und vergleich die Definition.",
-          "selbstkontrolle": "Hör die Aufnahme mit Kick und Gitarre: Fallen Bass-Akzente und Gitarren-Chugs als EIN Schlag zusammen, oder franst es? Bleibt der tiefe Ton als eigene Tonhöhe hörbar, oder wird er zu Wummern? Wummern heißt Attack oder Saitenstärke fehlt — nicht Lautstärke."
+          "selbstkontrolle": "Hör die Aufnahme mit Kick und Gitarre: Fallen Bass-Akzente und Gitarren-Chugs als EIN Schlag zusammen, oder franst es? Bleibt der tiefe Ton als eigene Tonhöhe hörbar, oder wird er zu Wummern? Wummern heißt, Attack oder Saitenstärke fehlt — nicht Lautstärke."
         }
       },
       "demonstration": {
@@ -238,7 +378,7 @@
         "double_bass_sechzehntel"
       ],
       "erklaerteil": {
-        "de": "Djent-Drumming hat eine Doppelrolle: den geraden Puls halten, den alle brauchen — und zugleich die verschobenen Gitarren-Akzente mitspielen, damit der Groove Kontur bekommt. Der Trick ist, beides gleichzeitig zu tun: Die Hi-Hat (oder Ride) markiert oft stur den geraden Viertel- oder Achtelpuls, während Kick und Snare die ungeraden Gruppierungen der Gitarre nachzeichnen. So bleibt der Boden gerade, während darüber das Muster wandert — genau das macht Djent groovy statt verrechnet.\n\nDie Kick ist dabei das Werkzeug für die Verzahnung: Sie sitzt exakt auf den Gitarren-Chugs, auch wenn die auf ungerade Und-Zeiten fallen. Das verlangt einen präzisen, kontrollierten Fuß (das Sechzehntel-Fundament) und die Fähigkeit, die Kick-Schläge frei über den Takt zu platzieren, statt sturer Muster. Dazu kommen Ghost Notes auf der Snare — leise Zwischenschläge, die den Groove atmen lassen und den Pocket-Charakter erzeugen, für den das Genre lebt.\n\nDie eigentliche Kunst ist der Pocket: locker und tight zugleich, nie gehetzt. Bei allem, was nach Tempo und Kraft aussieht, gilt auch hier: Lockerheit vor Kraft, kurze intensive Blöcke mit echten Pausen, Gehörschutz — und bei anhaltendem Zwicken in Hand- oder Fußgelenken ärztlich abklären."
+        "de": "Djent-Drumming hat eine Doppelrolle: den geraden Puls halten, den alle brauchen — und zugleich die verschobenen Gitarren-Akzente mitspielen, damit der Groove Kontur bekommt. Der Trick ist, beides gleichzeitig zu tun: Die Hi-Hat (oder Ride) markiert oft stur den geraden Viertel- oder Achtelpuls, während Kick und Snare die ungeraden Gruppierungen der Gitarre nachzeichnen. So bleibt der Boden gerade, während darüber das Muster wandert — genau das macht Djent groovy statt verrechnet.\n\nDie Kick ist dabei das Werkzeug für die Verzahnung: Sie sitzt exakt auf den Gitarren-Chugs, auch wenn die auf ungerade Und-Zeiten fallen. Das verlangt einen präzisen, kontrollierten Fuß (das Sechzehntel-Fundament) und die Fähigkeit, die Kick-Schläge frei über den Takt zu platzieren, statt sturer Muster. Dazu kommen Ghost Notes auf der Snare — leise Zwischenschläge, die den Groove atmen lassen und den Pocket-Charakter erzeugen, von dem das Genre lebt.\n\nDie eigentliche Kunst ist der Pocket: locker und tight zugleich, nie gehetzt. Bei allem, was nach Tempo und Kraft aussieht, gilt auch hier: Lockerheit vor Kraft, kurze intensive Blöcke mit echten Pausen, Gehörschutz — und bei anhaltendem Zwicken in Hand- oder Fußgelenken ärztlich abklären."
       },
       "uebungsteil": {
         "de": {
@@ -250,7 +390,7 @@
             "Streu Ghost Notes ein: leise Snare-Schläge zwischen den Hauptschlägen, gerade so laut, dass sie den Groove füllen, ohne den Backbeat zu überdecken. Nimm auf und prüf, ob es atmet oder verstopft.",
             "Schalte auf Kommando: vier Takte Groove mit verschobener Kick, harter Schnitt in vier Takte gerade (alles auf dem Raster), zurück. Der gerade Puls bleibt über alle Wechsel identisch."
           ],
-          "steigerung": "Wechsel die Gruppengröße der Kick (Fünfer → Siebener) ohne den Hi-Hat-Puls zu ändern. Oder verschieb die Ride auf eine ungerade Gruppierung und lass die Kick gerade — die umgekehrte Polymetrik.",
+          "steigerung": "Wechsel die Gruppengröße der Kick (Fünfer → Siebener), ohne den Hi-Hat-Puls zu ändern. Oder verschieb das Ride auf eine ungerade Gruppierung und lass die Kick gerade — die umgekehrte Polymetrik.",
           "selbstkontrolle": "Nimm auf: Bleibt die Hi-Hat wirklich stur gerade, während die Kick wandert — oder zieht der Fuß die Hände mit? Klingen die Ghost Notes wie Atmen oder wie Fehler? Und der Pocket-Test: Groovt es, oder klingt es gerechnet? Gerechnet heißt, der gerade Boden wackelt noch — zurück zu Schritt 1."
         }
       },
@@ -259,29 +399,272 @@
         "taktart": "4/4",
         "bpm": 120,
         "aufloesung": 16,
-        "takte": 2,
+        "takte": 5,
         "loop": true,
         "spuren": [
           {
             "instrument": "hihat_closed",
-            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+            "schritte": [
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
           },
           {
             "instrument": "snare",
-            "schritte": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
           },
           {
             "instrument": "kick",
-            "schritte": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
           }
         ],
-        "hinweis": "Hi-Hat und Snare bleiben gerade, die Kick läuft in Fünfergruppen. Erst nach zwei Takten treffen sich beide wieder auf der Eins — daher wandert das Muster."
+        "hinweis": "Hi-Hat und Snare bleiben gerade, die Kick läuft in Fünfergruppen. Erst nach fünf Takten treffen sich beide wieder auf der Eins; genau dann beginnt die Demo von vorn."
       }
     },
     {
       "id": "djent_vocals_dynamik",
       "anzeigetitel": {
-        "de": "Prog-Metalcore-Vocals: Clean, Harsh & Phrasierung"
+        "de": "Djent-Vocals: Clean, Harsh & Phrasierung"
       },
       "domaene": [
         "gesang"
@@ -335,7 +718,7 @@
         "ungerade_takte_theorie"
       ],
       "erklaerteil": {
-        "de": "Djent klingt kompliziert, folgt aber einer einfachen Idee: Ein gerader Grundpuls (meist 4/4) bleibt konstant, und darüber werden die Schläge in Paketen gruppiert, deren Länge nicht in den Takt aufgeht. Spielst du Achtel in Fünfer-Gruppen über einen 4/4-Takt, wandert die Betonung jedes Mal um eine Achtel weiter und trifft die Eins erst nach fünf Takten wieder. Das ist Polymetrik — ein Muster gegen den Puls verschoben —, und sie ist der theoretische Kern des Genres.\n\nDer entscheidende Begriff ist Gruppierung: Man ändert nicht die Taktart, sondern nur, wie die Noten innerhalb des geraden Takts betont werden. Ein Muster aus 5+5+3+3 Achteln füllt genau einen Takt aus 16 Achteln (also zwei 4/4-Takte zu 8), fühlt sich aber völlig ungerade an, obwohl der Puls stur gerade bleibt. Genau diese Spannung — ungerade Betonung über geradem Boden — ist der Effekt. Wichtig ist, dass die Summe wieder aufgeht: Nur dann kehrt das Muster zur Eins zurück und groovt, statt sich zu verlaufen.\n\nWer Djent schreiben will, denkt in zwei Ebenen zugleich: unten der Puls, der nie wackelt, oben die Gruppierung, die wandert. Die Kunst ist nicht, möglichst kompliziert zu sein, sondern die Verschiebung so zu bauen, dass sie sich auflöst und der Hörer den Groove spürt, ohne mitzählen zu müssen."
+        "de": "Djent klingt kompliziert, folgt aber einer einfachen Idee: Ein gerader Grundpuls (meist 4/4) bleibt konstant, und darüber werden die Schläge in Paketen gruppiert, deren Länge nicht in den Takt aufgeht. Spielst du Achtel in Fünfer-Gruppen über einen 4/4-Takt, wandert die Betonung gegenüber geraden Vierergruppen jedes Mal um eine Achtel weiter und trifft die Eins erst nach fünf Takten wieder. Das ist Polymetrik — ein Muster gegen den Puls verschoben —, und sie ist der theoretische Kern des Genres.\n\nDer entscheidende Begriff ist Gruppierung: Man ändert nicht die Taktart, sondern nur, wie die Noten innerhalb des geraden Takts betont werden. Ein Muster aus 5+5+3+3 Achteln füllt genau 16 Achtel (also zwei 4/4-Takte zu je 8), fühlt sich aber völlig ungerade an, obwohl der Puls stur gerade bleibt. Genau diese Spannung — ungerade Betonung über geradem Boden — ist der Effekt. Wichtig ist, dass die Summe wieder aufgeht: Nur dann kehrt das Muster zur Eins zurück und groovt, statt sich zu verlaufen.\n\nWer Djent schreiben will, denkt in zwei Ebenen zugleich: unten der Puls, der nie wackelt, oben die Gruppierung, die wandert. Die Kunst ist nicht, möglichst kompliziert zu sein, sondern die Verschiebung so zu bauen, dass sie sich auflöst und der Hörer den Groove spürt, ohne mitzählen zu müssen."
       },
       "reflexionsaufgabe": {
         "de": "Nimm dir zwei Djent- oder Prog-Metalcore-Songs vor und versuch, die Gruppierung zu hören: Bleibt der Grundpuls (Hi-Hat, dein Nicken) gerade, während die Gitarren-Betonung wandert? Kannst du die Paketlänge schätzen — sind es Fünfer, Siebener, oder ein Wechsel?\n\nBau dann selbst eine Gruppierung auf Papier oder am Instrument: Schreib 16 Achtel (zwei 4/4-Takte) und teil sie in ein ungerades Muster, das aufgeht — etwa 5+5+3+3 oder 7+5+4. Klopf den geraden Viertel-Puls mit dem Fuß und die Gruppierung mit der Hand. Prüf die Kernfrage: Kehrt deine Betonung sauber zur Eins zurück (geht die Summe auf)? Und fühlt es sich ungerade an, obwohl der Fuß stur gerade bleibt? Wenn die Summe nicht aufgeht, verläuft sich das Muster — genau daran arbeitet die Djent-Theorie."
@@ -386,7 +769,7 @@
         "saiten_tunings_standards"
       ],
       "erklaerteil": {
-        "de": "Der Djent-Sound ist zu einem großen Teil ein Ton der Ansprache: Das perkussive „dj-ent“ entsteht nicht nur aus der Hand, sondern aus einer Kette, die den Anschlag-Transienten betont und die tiefe Saite zugleich definiert hält. Ohne den richtigen Ton verpufft selbst das sauberste verschobene Riff zu Matsch.\n\nVier Bausteine formen ihn. Erstens die Basis: erweiterte Tonumfänge (Sieben-/Achtsaiter) oder sehr tiefe Drop-Stimmungen — und dazu zwingend passend dicke Saiten, damit die tiefste Saite Spannung und Kontur behält statt zu schlackern. Zweitens die Zerre: eher moderat und tight als maximal. Djent lebt von Definition; zu viel Gain verschmiert die Kante, die den Chug perkussiv macht. Drittens der Attack: ein betonter oberer Mittenbereich (oft ein Tubescreamer-artiger Boost vor dem Amp) lässt den Pick-Transienten durchstechen — das ist der eigentliche „Klick“ des Djent. Viertens die Tightness: ein sauber eingestelltes Noise Gate hält die Staccato-Chugs kurz und trocken, und ein definierter, präziser Kick am Schlagzeug verzahnt sich mit den Akzenten, statt in der Tiefe zu verschwimmen.\n\nDer rote Faden: Djent ist ein Ton der Kontrolle, nicht der Masse. Alles zielt darauf, den einzelnen perkussiven Anschlag hörbar und tight zu machen — und wie immer gilt: Der Sound verstärkt eine saubere Hand, er ersetzt sie nicht."
+        "de": "Der Djent-Sound ist zu einem großen Teil ein Ton der Ansprache: Das perkussive „dj-ent“ entsteht nicht nur aus der Hand, sondern aus einer Kette, die den Anschlag-Transienten betont und die tiefe Saite zugleich definiert hält. Ohne den richtigen Ton verpufft selbst das sauberste verschobene Riff zu Matsch.\n\nVier Bausteine formen ihn. Erstens die Basis: erweiterte Tonumfänge (Sieben-/Achtsaiter) oder sehr tiefe Drop-Stimmungen — und dazu zwingend passend dicke Saiten, damit die tiefste Saite Spannung und Kontur behält statt zu schlackern. Zweitens die Zerre: eher moderat und tight als maximal. Djent lebt von Definition; zu viel Gain verschmiert die Kante, die den Chug perkussiv macht. Drittens der Attack: ein betonter oberer Mittenbereich (oft ein Mittenbuckel-Booster vor dem Amp) lässt den Pick-Transienten durchstechen — das ist der eigentliche „Klick“ des Djent. Viertens die Tightness: ein sauber eingestelltes Noise Gate hält die Staccato-Chugs kurz und trocken, und ein definierter, präziser Kick am Schlagzeug verzahnt sich mit den Akzenten, statt in der Tiefe zu verschwimmen.\n\nDer rote Faden: Djent ist ein Ton der Kontrolle, nicht der Masse. Alles zielt darauf, den einzelnen perkussiven Anschlag hörbar und tight zu machen — und wie immer gilt: Der Sound verstärkt eine saubere Hand, er ersetzt sie nicht."
       },
       "reflexionsaufgabe": {
         "de": "Hör drei Djent-/Prog-Metalcore-Produktionen gezielt auf die Ansprache: Wie stark sticht der Pick-Attack durch (der „Klick“)? Wie definiert bleibt die tiefste Saite trotz der Tiefe? Wie tight und trocken sind die Staccato-Chugs?\n\nGeh dann deine eigene Kette durch (oder plane sie): Passt die Saitenstärke zur Stimmung, oder schlackert die Tiefe? Ist dein Gain wirklich tight, oder wollig-zu-viel? Betont deine Kette den Attack (Boost/obere Mitten), sodass der Chug perkussiv wird? Und der ehrliche Test: Klingt ein einzelner Chug trocken und definiert — oder brauchst du das Gate, um unsaubere Dämpfung zu kaschieren? Notier die eine Stellschraube (Saiten, Gain, Attack-Boost, Gate), die deinen Djent-Ton am meisten schärfen würde."
@@ -415,7 +798,7 @@
         "de": "Djent ist körperlich eine Falle: Weil alles so präzise und tight sein muss, verführt es zum Verkrampfen — und Verkrampfung ist genau das, was die Präzision zerstört und die Sehnen belastet. Die eigentliche Fähigkeit des Djent-Spielers ist paradox: locker bleiben, um tight zu sein.\n\nDrei Zusammenhänge. Erstens die Hand-Ökonomie: Die dichten, perkussiven Anschläge und das ständige Dämpfen belasten Handgelenk und Unterarm. Der Schlüssel ist eine minimale, effiziente Bewegung — kleine, lockere Anschläge statt kraftvoller großer. Wer mit Kraft gegen das Tempo ankämpft, verkrampft und verliert beides: Groove und Gesundheit. Zweitens der mentale Druck: Das Mitzählen der verschobenen Gruppierungen erzeugt Anspannung, die sich in Schultern, Nacken und Greifhand fortsetzt. Die verschobene Metrik muss ins Körpergefühl wandern (der gerade Puls im Fuß), damit der Kopf loslässt und der Körper locker bleibt. Drittens die Grundlagen: Aufwärmen vor jeder Session, Lockerheit vor Kraft, Gehörschutz bei Bandlautstärke — und bei Ziehen, Taubheit oder Kribbeln in Hand oder Unterarm sofort stoppen.\n\nDer Grundsatz: Tightness kommt aus Entspannung, nicht aus Anspannung. Kurze, konzentrierte Blöcke, in denen du bewusst locker bleibst, bringen mehr als langes verbissenes Üben — und bei anhaltenden Beschwerden gehört das ärztlich oder physiotherapeutisch abgeklärt, bevor aus Verspannung eine chronische Überlastung wird."
       },
       "reflexionsaufgabe": {
-        "de": "Beobachte dich beim Üben eines verschobenen Djent-Riffs ehrlich: Wo verkrampfst du, sobald es tight werden soll — in der Anschlagshand, der Greifhand, den Schultern, dem Kiefer? Wird dein Anschlag mit steigendem Tempo größer und kraftvoller (falsch) oder kleiner und lockerer (richtig)?\n\nProbier den Gegentest: Spiel dasselbe Muster bewusst so locker und leise wie möglich, mit minimaler Bewegung, und halte den geraden Puls im Fuß statt im Kopf. Wird es dadurch tighter? Benenne dann deine zwei größten Anspannungs-Stellen und je eine konkrete Gegenmaßnahme (kleinere Bewegung, Schultern senken, Puls in den Fuß, Pause). Und die Sicherheitsfrage: Hast du ein klares Stopp-Signal bei Ziehen oder Kribbeln in Hand/Unterarm — und hältst du dich daran? Schreib es dir auf. Bei anhaltenden Beschwerden ärztlich abklären."
+        "de": "Beobachte dich beim Üben eines verschobenen Djent-Riffs ehrlich: Wo verkrampfst du, sobald es tight werden soll — in der Anschlagshand, der Greifhand, den Schultern, dem Kiefer? Wird dein Anschlag mit steigendem Tempo größer und kraftvoller (falsch) oder kleiner und lockerer (richtig)?\n\nProbier den Gegentest: Spiel dasselbe Muster bewusst so locker und leise wie möglich, mit minimaler Bewegung, und halte den geraden Puls im Fuß statt im Kopf. Wird es dadurch tighter? Benenne dann deine zwei größten Anspannungs-Stellen und je eine konkrete Gegenmaßnahme (kleinere Bewegung, Schultern senken, Puls in den Fuß, Pause). Und die Sicherheitsfrage: Hast du ein klares Stoppsignal bei Ziehen oder Kribbeln in Hand/Unterarm — und hältst du dich daran? Schreib es dir auf. Bei anhaltenden Beschwerden ärztlich abklären."
       }
     }
   ]

@@ -319,7 +319,7 @@
       ],
       "staerke": "10–59 bis 10–62 (7-Saiter)",
       "hinweis": {
-        "de": "Die 7-Saiter-Antwort auf die Tiefe: die B-Saite kommt dazu, der Rest bleibt Standard — volle Tiefe ohne Verlust der hohen Lagen."
+        "de": "Die 7-Saiter-Antwort auf die Tiefe: die tiefe H-Saite kommt dazu, der Rest bleibt Standard — volle Tiefe ohne Verlust der hohen Lagen."
       }
     },
     {
@@ -365,7 +365,7 @@
       ],
       "staerke": "10–62 bis 11–64 (7-Saiter)",
       "hinweis": {
-        "de": "Der Siebensaiter zwei Halbtöne tiefer. Beliebt, weil die tiefe Saite dann dieselbe Lage hat wie Drop A auf sechs Saiten — nur mit der hohen E-Saite obendrauf."
+        "de": "Der Siebensaiter zwei Halbtöne tiefer. Beliebt, weil die tiefe Saite dann dieselbe Lage hat wie Drop A auf sechs Saiten — nur mit einer Saite mehr und ohne Drop-Quinte."
       }
     },
     {
@@ -385,7 +385,7 @@
         "deathcore",
         "djent"
       ],
-      "staerke": "11–64 (7-Saiter)",
+      "staerke": "11–68 bis 11–70 (7-Saiter)",
       "hinweis": {
         "de": "A-Standard mit gedroppter tiefster Saite: Ein-Finger-Powerchords ganz unten, volle Skalenlage darüber."
       }
@@ -410,7 +410,7 @@
       ],
       "staerke": "09–74 bis 10–80 (8-Saiter)",
       "hinweis": {
-        "de": "Achtsaiter-Standard mit tiefem F♯ — die Prog-/Djent-Basis (Meshuggah-Terrain): erweiterte Range für tiefe Grooves, ohne die hohen Lagen aufzugeben."
+        "de": "Achtsaiter-Standard mit tiefem F♯ — die Prog-/Djent-Basis: erweiterte Range für tiefe Grooves, ohne die hohen Lagen aufzugeben."
       }
     },
     {
@@ -545,7 +545,7 @@
       ],
       "staerke": "45–105 bis 50–110",
       "hinweis": {
-        "de": "Einen Halbton runter, wie beim Es-Standard der Gitarre — der klassische Weg, zur Gitarre zu passen, ohne die Saitenstärke zu ändern."
+        "de": "Einen Halbton runter, wie beim Eb-Standard der Gitarre — der klassische Weg, zur Gitarre zu passen, ohne die Saitenstärke zu ändern."
       }
     },
     {
@@ -757,7 +757,7 @@
       ],
       "staerke": "09–46 bis 10–46",
       "hinweis": {
-        "de": "E-Dur ohne Umstimmen nach unten: gleiche Lage wie E-Standard, aber offen klingend. Erhöht die Saitenspannung leicht — Halskrümmung im Auge behalten."
+        "de": "E-Dur ohne Umstimmen nach unten: gleiche Lage wie E-Standard, aber offen klingend. Erhöht die Saitenspannung deutlich — Halskrümmung im Auge behalten."
       }
     },
     {
@@ -779,7 +779,7 @@
       ],
       "staerke": "10–48 bis 11–52",
       "hinweis": {
-        "de": "Kein Dur, kein Moll: D-sus4 lässt offen, wohin es geht. Schwebend statt entschieden — beliebt für weite, ungeklärte Flächen."
+        "de": "Kein Dur, kein Moll: Dsus4 lässt offen, wohin es geht. Schwebend statt entschieden — beliebt für weite, ungeklärte Flächen."
       }
     }
   ],
@@ -1114,7 +1114,7 @@
         9
       ],
       "hinweis": {
-        "de": "Vier gestapelte kleine Terzen — maximal instabil und unheimlich. Das neoklassische/Death-Metal-Spannungswerkzeug."
+        "de": "Drei gestapelte kleine Terzen — maximal instabil und unheimlich. Das neoklassische/Death-Metal-Spannungswerkzeug."
       },
       "genres": [
         "death_metal",

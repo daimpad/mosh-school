@@ -290,7 +290,7 @@
             ]
           }
         ],
-        "hinweis": "Schlag und Rückprall im Wechsel: Der hohe Balken kommt aus der Hand, der flache aus dem Stock. Klingen beide gleich laut, drückst du den zweiten Schlag — dann arbeitest du gegen den Rebound statt mit ihm."
+        "hinweis": "Schlag und Rückprall im Wechsel: Der hohe Balken kommt aus der Hand, der flache aus dem Stock. Klingen beide gleich laut, drückst du den zweiten Schlag — dann arbeitest du gegen den Rückprall statt mit ihm."
       }
     },
     {
@@ -401,7 +401,7 @@
         "timing_zum_klick"
       ],
       "erklaerteil": {
-        "de": "Als Schlagzeuger:in bist du das Rückgrat des Timings — dafür musst du den Puls sicher fühlen und die Unterteilungen kennen. Ein Takt im 4/4 hat vier Zählzeiten; dazwischen liegen Achtel („und“) und Sechzehntel, die du zählst, um schnelle Figuren zu ordnen.\n\nÜbe von Anfang an mit einem Metronom. Der Klick macht hörbar, ob du wirklich im Puls bist, und trainiert dein inneres Zeitgefühl. Gerade im Metal, wo Tempo und Präzision zählen, ist ein stabiler Puls wichtiger als schnelle Hände.\n\nZähl beim Spielen laut oder innerlich mit. Das verbindet Bewegung und Zeitgefühl und hilft dir, komplexe Figuren später sauber einzuordnen."
+        "de": "Als Schlagzeuger bist du das Rückgrat des Timings — dafür musst du den Puls sicher fühlen und die Unterteilungen kennen. Ein Takt im 4/4 hat vier Zählzeiten; dazwischen liegen Achtel („und“) und Sechzehntel, die du zählst, um schnelle Figuren zu ordnen.\n\nÜbe von Anfang an mit einem Metronom. Der Klick macht hörbar, ob du wirklich im Puls bist, und trainiert dein inneres Zeitgefühl. Gerade im Metal, wo Tempo und Präzision zählen, ist ein stabiler Puls wichtiger als schnelle Hände.\n\nZähl beim Spielen laut oder innerlich mit. Das verbindet Bewegung und Zeitgefühl und hilft dir, komplexe Figuren später sauber einzuordnen."
       },
       "uebungsteil": {
         "de": {
@@ -409,7 +409,7 @@
           "ziel": "Den Puls und seine Unterteilungen sicher fühlen.",
           "schritte": [
             "Stell das Metronom auf ein ruhiges Tempo und zähl die Viertel laut mit (1-2-3-4).",
-            "Füge die Achtel hinzu (1-und-2-und ...) und schlag sie auf der Snare mit.",
+            "Füge die Achtel hinzu (1-und-2-und …) und schlag sie auf der Snare mit.",
             "Wechsle zwischen Vierteln und Achteln, ohne den Puls zu verlieren."
           ],
           "steigerung": "Nimm Sechzehntel dazu und wechsle zwischen den Unterteilungen, während der Klick gleich bleibt.",
@@ -459,11 +459,11 @@
         "riff_praezision"
       ],
       "erklaerteil": {
-        "de": "Rudiments sind die Bewegungsbausteine des Schlagzeugs — kleine, festgelegte Schlagmuster, aus denen sich Fills, schnelle Hände und Blastbeats aufbauen. Die zwei wichtigsten Grundlagen sind der Einzelschlag (abwechselnd rechts–links) und der Doppelschlag (je zwei Schläge pro Hand).\n\nBeim Einzelschlag zählt Gleichmäßigkeit: Beide Hände sollen gleich laut und gleich getimt sein. Der Doppelschlag nutzt den Rückprall des Sticks, damit der zweite Schlag mit wenig Aufwand kommt — das spart Kraft und ermöglicht Tempo.\n\nÜbe diese Muster langsam und sauber auf der Snare oder einem Übungspad. Sie sind die Grundlage für fast alles Schnelle, das im Metal folgt."
+        "de": "Rudiments sind die Bewegungsbausteine des Schlagzeugs — kleine, festgelegte Schlagmuster, aus denen sich Fills, schnelle Hände und Blastbeats aufbauen. Die zwei wichtigsten Grundlagen sind der Einzelschlag (abwechselnd rechts-links) und der Doppelschlag (je zwei Schläge pro Hand).\n\nBeim Einzelschlag zählt Gleichmäßigkeit: Beide Hände sollen gleich laut und gleich getimt sein. Der Doppelschlag nutzt den Rückprall des Sticks, damit der zweite Schlag mit wenig Aufwand kommt — das spart Kraft und ermöglicht Tempo.\n\nÜbe diese Muster langsam und sauber auf der Snare oder einem Übungspad. Sie sind die Grundlage für fast alles Schnelle, das im Metal folgt."
       },
       "uebungsteil": {
         "de": {
-          "titel": "Single- und Double-Strokes",
+          "titel": "Einzel- und Doppelschläge",
           "ziel": "Gleichmäßige Einzel- und Doppelschläge mit beiden Händen.",
           "schritte": [
             "Spiel Einzelschläge im Wechsel (R-L-R-L) gleichmäßig und langsam.",
@@ -867,23 +867,15 @@
       },
       "demonstration": {
         "typ": "pattern",
-        "bpm": 160,
+        "bpm": 90,
         "taktart": "4/4",
-        "aufloesung": 16,
+        "aufloesung": 8,
         "takte": 1,
         "loop": true,
         "spuren": [
           {
             "instrument": "ride",
             "schritte": [
-              1,
-              0,
-              1,
-              0,
-              1,
-              0,
-              1,
-              0,
               1,
               0,
               1,
@@ -899,19 +891,11 @@
             "schritte": [
               0,
               0,
-              0,
-              0,
               1,
               0,
               0,
               0,
-              0,
-              0,
-              0,
-              0,
               1,
-              0,
-              0,
               0
             ]
           },
@@ -925,19 +909,11 @@
               1,
               1,
               1,
-              1,
-              1,
-              1,
-              1,
-              1,
-              1,
-              1,
-              1,
               1
             ]
           }
         ],
-        "hinweis": "Durchgehende Sechzehntel im Fuß, Snare auf 2 und 4."
+        "hinweis": "Gleichmäßige Achtel im Fußwechsel (R-L-R-L), Snare auf 2 und 4 — erst wenn beide Füße gleich klingen, wird es schneller."
       }
     },
     {
@@ -1075,7 +1051,7 @@
       },
       "demonstration": {
         "typ": "pattern",
-        "bpm": 200,
+        "bpm": 100,
         "taktart": "4/4",
         "aufloesung": 16,
         "takte": 1,
@@ -1145,7 +1121,7 @@
             ]
           }
         ],
-        "hinweis": "Traditioneller Blast: Kick und Snare wechseln sich auf Sechzehnteln ab."
+        "hinweis": "Traditioneller Blast im Übungstempo: Kick und Snare wechseln sich auf Sechzehnteln ab, das Becken läuft mit der Kick mit."
       }
     },
     {
@@ -1254,35 +1230,35 @@
         "taktart": "4/4",
         "bpm": 110,
         "aufloesung": 8,
-        "takte": 2,
+        "takte": 4,
         "loop": true,
         "spuren": [
           {
             "instrument": "crash",
-            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
           },
           {
             "instrument": "hihat_closed",
-            "schritte": [0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+            "schritte": [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
           },
           {
             "instrument": "snare",
-            "schritte": [0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0]
+            "schritte": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0]
           },
           {
             "instrument": "tom_hi",
-            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
           },
           {
             "instrument": "tom_lo",
-            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
           },
           {
             "instrument": "kick",
-            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+            "schritte": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
           }
         ],
-        "hinweis": "Takt 1 Grundbeat, Takt 2 Fill über Snare und Toms. Wichtig ist die Landung: der Crash auf der Eins danach — hier der Anfang der Schleife."
+        "hinweis": "Drei Takte Grundbeat, im vierten Takt ein kurzes Fill auf den Zählzeiten 3 und 4 über Snare und Toms. Wichtig ist die Landung: der Crash auf der Eins danach — hier der Anfang der Schleife."
       }
     },
     {
@@ -1331,8 +1307,29 @@
         "bpm": 130,
         "taktart": "4/4",
         "aufloesung": 8,
-        "takte": 1,
+        "takte": 2,
         "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
           {
             "instrument": "hihat_closed",
             "schritte": [
@@ -1343,12 +1340,28 @@
               1,
               1,
               1,
-              1
+              1,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
             ]
           },
           {
             "instrument": "snare",
             "schritte": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
               0,
               0,
               0,
@@ -1363,6 +1376,14 @@
             "instrument": "kick",
             "schritte": [
               1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
               0,
               0,
               1,
@@ -1372,7 +1393,9 @@
               0
             ]
           }
-        ]
+        ],
+        "loop": true,
+        "hinweis": "Takt 1 Groove: Double-Bass-Achtel unter dem Backbeat. Takt 2 Breakdown im Half-Time-Gefühl: Snare nur auf der 3, die Bassdrum setzt synkopiert dazwischen — so fällt sie mit den Gitarren-Chugs zusammen."
       }
     },
     {
@@ -1420,7 +1443,7 @@
         "lockere_haende"
       ],
       "erklaerteil": {
-        "de": "Schnelles, kraftvolles Metal-Schlagzeug belastet Hände, Handgelenke, Beine, Fußgelenke und den Rücken zugleich — mehr als bei den meisten Instrumenten sind mehrere Körperregionen gefordert. Ein bewusster Umgang mit dieser Belastung gehört zum Handwerk.\n\nAls Prinzip gilt: mit leichten, langsamen Bewegungen beginnen, die Belastung allmählich steigern, Pausen einbauen und auf die Signale des Körpers hören. Normale Muskelermüdung klingt nach kurzer Pause ab; Schmerz, Taubheit, Kribbeln oder anhaltende Verspannung — ob in Händen, Beinen oder Rücken — sind Warnsignale, bei denen du unterbrichst und bei bleibenden Beschwerden fachkundigen Rat suchst."
+        "de": "Schnelles, kraftvolles Metal-Schlagzeug belastet Hände, Handgelenke, Beine, Fußgelenke und den Rücken zugleich — mehr als bei den meisten Instrumenten sind mehrere Körperregionen gefordert. Ein bewusster Umgang mit dieser Belastung gehört zum Handwerk.\n\nAls Prinzip gilt: mit leichten, langsamen Bewegungen beginnen, die Belastung allmählich steigern, Pausen einbauen und auf die Signale des Körpers hören. Normale Muskelermüdung klingt nach kurzer Pause ab; Schmerz, Taubheit, Kribbeln oder anhaltende Verspannung — ob in Händen, Beinen oder Rücken — sind Warnsignale, bei denen du unterbrichst und bei bleibenden Beschwerden ärztlichen oder physiotherapeutischen Rat suchst."
       },
       "reflexionsaufgabe": {
         "de": "Beim Schlagzeug sind gleich mehrere Körperregionen gefordert. Welche Signale willst du bei Händen, Beinen und Rücken als Warnung ernst nehmen, und was ist konkret dein Plan, wenn während des Spielens Schmerz auftritt?"

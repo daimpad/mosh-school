@@ -10,7 +10,7 @@
     {
       "id": "warum_powerchords",
       "anzeigetitel": {
-        "de": "Warum Powerchords funktionieren"
+        "de": "Powerchords: offen statt festgelegt"
       },
       "domaene": [
         "theorie",
@@ -21,14 +21,15 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Der Powerchord besteht nur aus zwei verschiedenen Tönen: einem Grundton und seiner Quinte, meist ergänzt durch die Oktave. Er lässt genau den Ton weg, der in einem vollen Akkord über Dur oder Moll entscheidet — die Terz. Deshalb ist er weder fröhlich noch traurig, sondern klanglich neutral und offen.\n\nDas ist kein Mangel, sondern der Grund für seine Eignung in verzerrter Musik. Verzerrung erzeugt zusätzliche Töne, die nicht im Originalsignal stecken; je mehr verschiedene Töne gleichzeitig anliegen, desto mehr Zwischenprodukte entstehen und desto matschiger wird der Klang. Ein Akkord aus drei oder vier verschiedenen Tönen wird bei hoher Verzerrung unsauber, ein Powerchord bleibt stabil — weil Grundton und Quinte in einem sehr einfachen Schwingungsverhältnis stehen und ihre Zwischenprodukte zum Klang passen.\n\nDaraus folgt zweierlei. Erstens: Wer bei hoher Zerre volle Akkorde spielt und Matsch hört, hat kein Ausrüstungsproblem, sondern ein Harmonik-Problem. Zweitens: Die klangliche Neutralität ist eine Freiheit — dieselbe Powerchord-Folge kann bedrohlich oder erhaben wirken, je nachdem, was Tempo, Register und Melodie darüber tun. Der Powerchord legt sich nicht fest."
+        "de": "Der Powerchord legt sich nicht fest — und genau das ist seine Stärke. Er besteht nur aus zwei verschiedenen Tönen: einem Grundton und seiner Quinte, meist ergänzt durch die Oktave. Er lässt genau den Ton weg, der in einem vollen Akkord über Dur oder Moll entscheidet — die Terz. Deshalb ist er weder fröhlich noch traurig, sondern klanglich neutral und offen.\n\nDas ist kein Mangel, sondern der Grund für seine Eignung in verzerrter Musik. Verzerrung erzeugt zusätzliche Töne, die nicht im Originalsignal stecken; je mehr verschiedene Töne gleichzeitig anliegen, desto mehr Zwischenprodukte entstehen und desto matschiger wird der Klang. Ein Akkord aus drei oder vier verschiedenen Tönen wird bei hoher Verzerrung unsauber, ein Powerchord bleibt stabil — weil Grundton und Quinte in einem sehr einfachen Schwingungsverhältnis stehen und ihre Zwischenprodukte zum Klang passen.\n\nDaraus folgt zweierlei. Erstens: Wer bei hoher Zerre volle Akkorde spielt und Matsch hört, hat kein Ausrüstungsproblem, sondern ein Harmonik-Problem. Zweitens: Die klangliche Neutralität ist eine Freiheit — dieselbe Powerchord-Folge kann bedrohlich oder erhaben wirken, je nachdem, was Tempo, Register und Melodie darüber tun. Der Powerchord legt sich nicht fest."
       },
       "reflexionsaufgabe": {
         "de": "Ist dir klar, dass der Powerchord bewusst offen bleibt, weil die entscheidende Terz fehlt? Hast du schon einmal Matsch bei hoher Zerre gehört und die Ursache in der Ausrüstung gesucht statt in der Harmonik? Und nutzt du die Neutralität bewusst, indem du die Wirkung anderswo festlegst?"
       },
       "voraussetzungen": [
         "intervalle_hoeren",
-        "powerchords"
+        "powerchords",
+        "powerchord_theorie"
       ]
     },
     {
@@ -44,7 +45,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Eine Tonleiter ist eine Auswahl von Tönen, aus der eine Melodie schöpft. Zwischen den verbreiteten Auswahlen gibt es oft nur ein oder zwei Töne Unterschied — und trotzdem klingen sie völlig verschieden, weil genau diese Töne die charakteristischen Reibungen bestimmen. Man muss dafür keine Skalen auswendig lernen: Es reicht zu wissen, welcher einzelne Ton die Färbung trägt.\n\nDrei Beispiele aus dieser Musik. Wird die zweite Stufe um einen Halbton gesenkt, entsteht die enge Reibung direkt über dem Grundton — dieser Klang wird oft als orientalisch oder unheilvoll beschrieben und ist im Death Metal und in düsterem Doom verbreitet. Wird stattdessen die sechste Stufe angehoben, klingt eine Molltonleiter plötzlich weniger schwer und eher schwebend — eine Färbung, die in melodischem Metal und Post-Metal auftaucht. Und die sogenannte Phrygisch-Dominante Färbung, bei der über dem gesenkten zweiten Ton eine große Terz steht, ergibt den scharfen, exotischen Klang vieler klassischer Metal-Soli.\n\nEntscheidend ist das Prinzip, nicht die Namen: Ein einziger veränderter Ton verändert den Charakter eines ganzen Abschnitts. Wer wissen will, warum eine Band anders klingt als eine andere, sucht deshalb nicht nach der Skala, sondern nach dem einen auffälligen Ton — dem, der reibt oder überrascht."
+        "de": "Eine Tonleiter ist eine Auswahl von Tönen, aus der eine Melodie schöpft. Zwischen den verbreiteten Auswahlen gibt es oft nur ein oder zwei Töne Unterschied — und trotzdem klingen sie völlig verschieden, weil genau diese Töne die charakteristischen Reibungen bestimmen. Man muss dafür keine Skalen auswendig lernen: Es reicht zu wissen, welcher einzelne Ton die Färbung trägt.\n\nDrei Beispiele aus dieser Musik. Wird die zweite Stufe um einen Halbton gesenkt, entsteht die enge Reibung direkt über dem Grundton — dieser Klang wird oft als orientalisch oder unheilvoll beschrieben und ist im Death Metal und in düsterem Doom verbreitet. Wird stattdessen die sechste Stufe angehoben, klingt eine Molltonleiter plötzlich weniger schwer und eher schwebend — eine Färbung, die in melodischem Metal und Post-Metal auftaucht. Und die sogenannte phrygisch-dominante Färbung, bei der über dem gesenkten zweiten Ton eine große Terz steht, ergibt den scharfen, exotischen Klang vieler klassischer Metal-Soli.\n\nEntscheidend ist das Prinzip, nicht die Namen: Ein einziger veränderter Ton verändert den Charakter eines ganzen Abschnitts. Wer wissen will, warum eine Band anders klingt als eine andere, sucht deshalb nicht nach der Skala, sondern nach dem einen auffälligen Ton — dem, der reibt oder überrascht."
       },
       "reflexionsaufgabe": {
         "de": "Kannst du in einem Riff den einen Ton finden, der die Färbung trägt? Suchst du bei einem fremden Klang nach dem auffälligen Ton statt nach dem Skalennamen? Und hast du ausprobiert, in einer eigenen Figur nur einen Ton um einen Halbton zu verschieben?"
@@ -68,7 +69,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Die wirksamste Art, modale Färbung zu begreifen, ist nicht Lesen, sondern Verschieben. Man nimmt eine bestehende Figur und bewegt genau einen Ton um einen Bund — nach oben oder unten — und hört, was mit dem Charakter passiert. Der Rest bleibt unverändert, damit der Unterschied eindeutig zuzuordnen ist.\n\nBesonders aufschlussreich sind zwei Stellen: der zweite Ton über dem Grundton und der Ton, der eine Terz über dem Grundton liegt. Am zweiten Ton entscheidet sich, ob es eng und bedrohlich oder offen klingt; an der Terzstelle entscheidet sich, ob eine Figur dunkel oder hell wirkt. Ein einziger Bund Unterschied kippt die Stimmung vollständig.\n\nDiese Übung ist bewusst ergebnisoffen. Es geht nicht darum, die richtige Skala zu finden, sondern darum, den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung selbst zu hören. Wer das einmal am eigenen Riff erlebt hat, braucht dafür nie wieder eine Tabelle."
+        "de": "Die wirksamste Art, modale Färbung zu begreifen, ist nicht Lesen, sondern Verschieben. Man nimmt eine bestehende Figur und bewegt genau einen Ton um einen Bund — nach oben oder unten — und hört, was mit dem Charakter passiert. Der Rest bleibt unverändert, damit der Unterschied eindeutig zuzuordnen ist.\n\nBesonders aufschlussreich sind zwei Stellen: die zweite Stufe (ein Ganzton über dem Grundton) und der Ton, der eine Terz über dem Grundton liegt. An der zweiten Stufe entscheidet sich, ob es eng und bedrohlich oder offen klingt; an der Terzstelle entscheidet sich, ob eine Figur dunkel oder hell wirkt. Ein einziger Bund Unterschied kippt die Stimmung vollständig.\n\nDiese Übung ist bewusst ergebnisoffen. Es geht nicht darum, die richtige Skala zu finden, sondern darum, den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung selbst zu hören. Wer das einmal am eigenen Riff erlebt hat, braucht dafür nie wieder eine Tabelle."
       },
       "uebungsteil": {
         "de": {
@@ -76,7 +77,7 @@
           "ziel": "Den Zusammenhang zwischen einem einzelnen Ton und der Gesamtwirkung erfahren.",
           "schritte": [
             "Spiele eine kurze eigene Figur über einer gehaltenen tiefen Saite und merke dir ihren Charakter.",
-            "Verschiebe den zweiten Ton der Figur um einen Bund nach unten und spiele sie erneut.",
+            "Verschiebe den Ton einen Ganzton über dem Grundton um einen Bund nach unten und spiele sie erneut.",
             "Höre, wie sich die Wirkung ändert, und benenne sie mit eigenen Worten.",
             "Setze den Ton zurück und verschiebe stattdessen den Ton eine Terz über dem Grundton um einen Bund.",
             "Nimm alle Fassungen auf und vergleiche sie nacheinander."
@@ -108,12 +109,12 @@
           {
             "schritt": 1,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 2,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -126,13 +127,13 @@
           {
             "schritt": 5,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 6,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           },
           {
@@ -144,12 +145,12 @@
           {
             "schritt": 9,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 10,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -162,13 +163,13 @@
           {
             "schritt": 13,
             "saite": 4,
-            "bund": 5,
+            "bund": 4,
             "technik": "normal"
           },
           {
             "schritt": 14,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           },
           {
@@ -180,12 +181,12 @@
           {
             "schritt": 17,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 18,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -198,13 +199,13 @@
           {
             "schritt": 21,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 22,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           },
           {
@@ -216,12 +217,12 @@
           {
             "schritt": 25,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 26,
-            "saite": 3,
+            "saite": 4,
             "bund": 5,
             "technik": "normal"
           },
@@ -234,17 +235,17 @@
           {
             "schritt": 29,
             "saite": 4,
-            "bund": 4,
+            "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 30,
             "saite": 3,
-            "bund": 7,
+            "bund": 2,
             "technik": "normal"
           }
         ],
-        "hinweis": "Zweimal dieselbe Figur über derselben tiefen Saite — im zweiten Durchgang steht genau EIN Ton einen Bund tiefer. Mehr Unterschied gibt es nicht, und der Charakter kippt trotzdem."
+        "hinweis": "Zweimal dieselbe Figur über derselben tiefen Saite — im zweiten Durchgang steht genau EIN Ton einen Bund tiefer: der Ton einen Ganzton über dem Grundton (F# wird zu F). Mehr Unterschied gibt es nicht, und der Charakter kippt trotzdem."
       }
     },
     {
@@ -285,7 +286,7 @@
         "de": "Ein Bordun ist ein durchgehend klingender Ton, über dem sich alles andere bewegt. Auf der Gitarre ist das meist die tiefe leere Saite, die zwischen den Anschlägen weiterklingt oder immer wieder mit angeschlagen wird. Diese Technik ist uralt und in vielen Musikkulturen zu Hause — und sie ist einer der Gründe, warum tief gestimmte Gitarrenmusik so gut funktioniert.\n\nDer Bordun leistet zweierlei. Erstens gibt er dem Ohr einen festen Bezugspunkt, gegen den jede Bewegung hörbar wird: Dieselbe Tonfolge wirkt über einem liegenden Ton spannungsreicher als allein, weil jeder Schritt ein Verhältnis zu diesem Anker bildet. Zweitens erzeugt er Dichte ohne zusätzliche Stimmen — ein einzelnes Instrument klingt voller, weil ständig zwei Ebenen laufen.\n\nIn tiefen Stimmungen ist das besonders wirksam, weil die leere tiefe Saite jederzeit greifbar ist, ohne die Greifhand zu binden. Viele Riffs im Doom, Black Metal und Sludge bestehen im Kern aus genau dieser Konstruktion: unten ein bleibender Ton, darüber eine Bewegung. Wer den Effekt sucht, braucht keine zweite Gitarre — nur die Entscheidung, den tiefen Ton stehen zu lassen."
       },
       "reflexionsaufgabe": {
-        "de": "Nutzt du die leere tiefe Saite als bleibenden Bezugspunkt, oder nur als Grundton einzelner Akkorde? Hörst du, wie eine Figur über einem liegenden Ton an Spannung gewinnt? Und wo in deinen Riffs könntest du Dichte erzeugen, ohne etwas hinzuzufügen?"
+        "de": "Nutzt du die leere tiefe Saite als bleibenden Bezugspunkt oder nur als Grundton einzelner Akkorde? Hörst du, wie eine Figur über einem liegenden Ton an Spannung gewinnt? Und wo in deinen Riffs könntest du Dichte erzeugen, ohne etwas hinzuzufügen?"
       },
       "voraussetzungen": [
         "dissonanz_gezielt",

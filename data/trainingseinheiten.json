@@ -586,7 +586,7 @@
         "de": "Blast-Tempo, Sweeps und Studio-Präzision"
       },
       "beschreibung": {
-        "de": "Die Experten-Session: kontrollierte Ausflüge über die Tempogrenze, Sweep-Feinbau und Reproduzierbarkeit auf Studio-Niveau. Lockerheit bleibt das Abbruchkriterium."
+        "de": "Die Profi-Session: kontrollierte Ausflüge über die Tempogrenze, Sweep-Feinbau und Reproduzierbarkeit auf Studio-Niveau. Lockerheit bleibt das Abbruchkriterium."
       },
       "phasen": {
         "erwaermung": [
@@ -634,7 +634,7 @@
         "de": "Tapping, Extremtempo und Kontrapunkt"
       },
       "beschreibung": {
-        "de": "Die Experten-Session am Bass: Zweihand-Technik, Effizienz an der Tempogrenze und kompositorisches Denken. Video- und Audio-Selbstkontrolle gehören dazu."
+        "de": "Die Profi-Session am Bass: Zweihand-Technik, Effizienz an der Tempogrenze und kompositorisches Denken. Video- und Audio-Selbstkontrolle gehören dazu."
       },
       "phasen": {
         "erwaermung": [
@@ -682,7 +682,7 @@
         "de": "Extremtempo-Füße, Polymetrik, ungerade Takte"
       },
       "beschreibung": {
-        "de": "Die Experten-Session am Kit: eine Fußtechnik isoliert anbahnen, wandernde Zellen über stabilem Puls und krumme Takte, die grooven. Federnd statt gestampft — Schmerz beendet den Durchgang."
+        "de": "Die Profi-Session am Kit: eine Fußtechnik isoliert anbahnen, wandernde Zellen über stabilem Puls und krumme Takte, die grooven. Federnd statt gestampft — Schmerz beendet den Durchgang."
       },
       "phasen": {
         "erwaermung": [
@@ -730,7 +730,7 @@
         "de": "Range, Texturen und rhythmische Präzision — leise und sicher"
       },
       "beschreibung": {
-        "de": "Die Experten-Session für Extreme Vocals mit striktem Sicherheitsrahmen: alles leise, kurz und mühelos; Auf- und Abwärmen sind Pflicht, und die Range-Arbeit gehört langfristig in Begleitung einer Lehrperson."
+        "de": "Die Profi-Session für Extreme Vocals mit striktem Sicherheitsrahmen: alles leise, kurz und mühelos; Auf- und Abwärmen sind Pflicht, und die Range-Arbeit gehört langfristig in Begleitung einer Lehrperson."
       },
       "phasen": {
         "erwaermung": [
@@ -970,7 +970,7 @@
         "de": "Crust: der unerbittliche Lauf"
       },
       "beschreibung": {
-        "de": "Die Genre-Werkstatt für Ausdauer mit Haltung: Der D-Beat läuft sich warm, dann bauen Schlagzeug, Bass und Stimme den räudigen Dauerdruck — und der Ausklang gehört den Händen, die den Lauf bezahlt haben."
+        "de": "Die Genre-Werkstatt für Ausdauer mit Haltung: Der D-Beat läuft sich warm, dann bauen Schlagzeug, Bass und Gitarre den räudigen Dauerdruck — und der Ausklang gehört der Stimme."
       },
       "phasen": {
         "erwaermung": [
@@ -1057,10 +1057,10 @@
       "id": "genre_schnupper",
       "kompetenzstufe": "einsteiger",
       "schwerpunkt": {
-        "de": "Vier Genres in einer Session: D-Beat, Sludge, Stopps, Doom"
+        "de": "Vier Genres in einer Session: D-Beat, Sludge, Powerviolence, Doom"
       },
       "beschreibung": {
-        "de": "Die Schnupper-Werkstatt für die Genre-Familie: Nach dem Einlaufen probierst du drei sehr unterschiedliche Spielgefühle — den treibenden D-Beat, das schwere Sludge-Riff und das präzise Stopp-Spiel — und lässt die Session im Doom-Tempo ausklingen. Instrumente lassen sich stationsweise tauschen; nimm, was da ist."
+        "de": "Die Schnupper-Werkstatt für die Genre-Familie: Nach dem Einlaufen probierst du drei sehr unterschiedliche Spielgefühle — den treibenden D-Beat, das schwere Sludge-Riff und das präzise Stopp-Spiel des Powerviolence — und lässt die Session im Doom-Tempo ausklingen. Instrumente lassen sich stationsweise tauschen; nimm, was da ist."
       },
       "phasen": {
         "erwaermung": [
@@ -1108,7 +1108,7 @@
         "de": "Breakdown-Gitarre"
       },
       "beschreibung": {
-        "de": "Chugs und Powerchord als Waffe: Du wärmst die Greifhand auf, festigst die Dämpfung und baust daraus einen wuchtigen, synkopierten Breakdown mit echter Stille."
+        "de": "Chugs und Powerchords als Waffe: Du wärmst die Greifhand auf, festigst die Dämpfung und baust daraus einen wuchtigen, synkopierten Breakdown mit echter Stille."
       },
       "phasen": {
         "erwaermung": [
@@ -1198,7 +1198,7 @@
         "de": "fuzziger Groove (Gitarre)"
       },
       "beschreibung": {
-        "de": "Der Riff regiert: Aufwärmen, Downpicking-Kondition, dann ein fuzziger Groove mit bewusster Lücke, leicht hinter dem Puls und lustvoll wiederholt."
+        "de": "Das Riff regiert: Aufwärmen, Downpicking-Kondition, dann ein fuzziger Groove mit bewusster Lücke, leicht hinter dem Puls und lustvoll wiederholt."
       },
       "phasen": {
         "erwaermung": [
@@ -1372,7 +1372,7 @@
         "de": "Lead-Gitarre (Tapping & Harmonics)"
       },
       "beschreibung": {
-        "de": "Ausdruck und Sauberkeit: Aufwärmen und Phrasierung, dann fließendes Legato/Tapping und Pinch-Harmonics als Geste — gleichmäßig vor schnell."
+        "de": "Ausdruck und Sauberkeit: Aufwärmen und Phrasierung, dann fließendes Legato/Tapping und Pinch Harmonics als Geste — gleichmäßig vor schnell."
       },
       "phasen": {
         "erwaermung": [
@@ -1441,7 +1441,7 @@
           {
             "baustein": "deathcore_gutturals_squeals",
             "hinweis": {
-              "de": "Register einzeln und leise; Pig-Squeals nur mit Lehrperson. Bei Engegefühl sofort stoppen."
+              "de": "Register einzeln und leise; Pig Squeals nur mit Lehrperson. Bei Engegefühl sofort stoppen."
             }
           }
         ],
@@ -1449,7 +1449,7 @@
           {
             "baustein": "tonhoehe_clean",
             "hinweis": {
-              "de": "Ruhiger Ausklang auf einer sauberen Clean-Linie; danach Sprechtest, bei Heiserkeit HNO."
+              "de": "Ruhiger Ausklang auf einer sauberen Clean-Linie; danach Sprechtest, bei anhaltender Heiserkeit in die HNO-Praxis."
             }
           }
         ]
@@ -1519,10 +1519,10 @@
       "id": "band_zusammen_session",
       "kompetenzstufe": "fortgeschritten",
       "schwerpunkt": {
-        "de": "Als ganze Band zusammenfinden — Trio-Lock, gemeinsamer Breakdown, Stops und ein gemeinsamer Dynamik-Aufbau."
+        "de": "Als ganze Band zusammenfinden — Trio-Lock, gemeinsamer Breakdown, Stopps und ein gemeinsamer Dynamik-Aufbau."
       },
       "beschreibung": {
-        "de": "Eine Session für die ganze Band, aufgebaut von der Rhythmus-Maschine nach außen. Jeder wärmt sich für sich auf; dann fügt ihr Gitarre, Bass und Drums zum Trio-Lock, setzt gemeinsam einen Breakdown mit den Vocals und übt zuletzt Stops und Einsätze, an denen alle vier zusammen treffen. Zum Ausklang tragt ihr gemeinsam einen Dynamik-Aufbau. Ziel ist nicht Repertoire, sondern das Gefühl, als ein Körper zu spielen."
+        "de": "Eine Session für die ganze Band, aufgebaut von der Rhythmus-Maschine nach außen. Jeder wärmt sich für sich auf; dann fügt ihr Gitarre, Bass und Drums zum Trio-Lock, setzt gemeinsam einen Breakdown mit den Vocals und übt zuletzt Stopps und Einsätze, an denen alle vier zusammentreffen. Zum Ausklang tragt ihr gemeinsam einen Dynamik-Aufbau. Ziel ist nicht Repertoire, sondern das Gefühl, als ein Körper zu spielen."
       },
       "phasen": {
         "erwaermung": [
@@ -1588,20 +1588,20 @@
         "de": "Bruch zwischen Flüstern und Ausbruch — Dynamik als Stilmittel"
       },
       "beschreibung": {
-        "de": "Eine Einheit rund um den Bruch zwischen sehr leise und Ausbruch. Der klare Arpeggio-Klang und der harte Umschlag werden getrennt geübt und am Ende zusammengeführt. Es geht nicht um Tempo, sondern um die Spannweite und darum, dass der Umschlag exakt sitzt. Der Baustein zu den Screamo-Vocals ist bewusst eine Reflexion und kein Teil dieser Einheit — die hohe, gepresste Stimmfarbe gehört an eine Gesangslehrkraft und nicht in eine Übungsroutine. Lies ihn vor der Session, wenn du in diese Richtung singst."
+        "de": "Eine Einheit rund um den Bruch zwischen sehr leise und Ausbruch. Der klare Arpeggio-Klang und der harte Umschlag werden getrennt geübt und am Ende des Hauptteils zusammengeführt; der Ausklang bleibt leise. Es geht nicht um Tempo, sondern um die Spannweite und darum, dass der Umschlag exakt sitzt. Der Baustein zu den Screamo-Vocals ist bewusst eine Reflexion und kein Teil dieser Einheit — die hohe, gepresste Stimmfarbe gehört an eine Gesangslehrkraft und nicht in eine Übungsroutine. Lies ihn vor der Session, wenn du in diese Richtung singst."
       },
       "phasen": {
         "erwaermung": [
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
-              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wachwerden lassen, bevor es laut wird."
+              "de": "Locker und leise beginnen, ohne Verzerrung: erst die Greifhand, die Finger dicht über den Saiten."
             }
           },
           {
             "baustein": "anschlaghand_grundlagen",
             "hinweis": {
-              "de": "Locker und leise beginnen, ohne Verzerrung. Beide Hände wachwerden lassen, bevor es laut wird."
+              "de": "Dann die Anschlaghand: gleichmäßige Anschläge aus dem Handgelenk, noch leise, bevor es laut wird."
             }
           }
         ],
@@ -1615,7 +1615,7 @@
           {
             "baustein": "screamo_dynamik",
             "hinweis": {
-              "de": "Den Wechsel zwischen leise und Ausbruch auf den Schlag setzen. Erst hart auf Schlag eins, dann anwachsend über zwei Takte."
+              "de": "Den Wechsel zwischen leise und Ausbruch auf den Schlag setzen. Erst hart auf Schlag eins, dann anwachsend über zwei Takte. Zum Schluss beides zusammenführen: vier Takte Klangbett, dann Umschlag, dann zurück — aufnehmen und prüfen, ob der leise Teil wirklich leise war. Für den Ausbruch Gehörschutz tragen."
             }
           }
         ],
@@ -1623,13 +1623,7 @@
           {
             "baustein": "twinkly_arpeggien",
             "hinweis": {
-              "de": "Vier Takte Klangbett, dann Umschlag, dann zurück. Aufnehmen und prüfen, ob der leise Teil wirklich leise war."
-            }
-          },
-          {
-            "baustein": "screamo_dynamik",
-            "hinweis": {
-              "de": "Vier Takte Klangbett, dann Umschlag, dann zurück. Aufnehmen und prüfen, ob der leise Teil wirklich leise war."
+              "de": "Zum Runterkommen nur leise und clean, ohne Umschlag: ruhige Arpeggien, bis Hände und Ohren entspannt sind."
             }
           }
         ]
@@ -1649,13 +1643,13 @@
           {
             "baustein": "wechselschlag",
             "hinweis": {
-              "de": "Langsam und gleichmäßig zum Klick. Erst wenn das sitzt, wird es interessant."
+              "de": "Gitarre: Ab- und Aufschlag langsam und gleich laut zum Klick. Erst wenn das sitzt, wird es interessant."
             }
           },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
-              "de": "Langsam und gleichmäßig zum Klick. Erst wenn das sitzt, wird es interessant."
+              "de": "Schlagzeug: Einzel- und Doppelschläge langsam und gleichmäßig zum Klick — die Grundlage für exakte Stopps."
             }
           }
         ],
@@ -1690,20 +1684,20 @@
         "de": "Klang als Material: veränderte Stimmung, Rückkopplung, treibender Bass"
       },
       "beschreibung": {
-        "de": "Eine Einheit, in der nicht Technik im Vordergrund steht, sondern Klang: veränderte Stimmungen, kontrollierte Rückkopplung und der Bass als führende Stimme. Ergebnisoffen — festhalten ist wichtiger als sauber spielen. Diese Einheit arbeitet zwangsläufig laut. Gehörschutz ist Pflicht, die Rückkopplungsphase bleibt kurz, und Hörschäden bilden sich nicht zurück. Halte alles auf, was entsteht — der Ertrag dieser Session sind Ideen, keine sauberen Durchgänge."
+        "de": "Eine Einheit, in der nicht Technik im Vordergrund steht, sondern Klang: veränderte Stimmungen, kontrollierte Rückkopplung und der Bass als führende Stimme. Ergebnisoffen — festhalten ist wichtiger als sauber spielen. Diese Einheit arbeitet zwangsläufig laut. Gehörschutz ist Pflicht, die Rückkopplungsphase bleibt kurz, und Hörschäden bilden sich nicht zurück. Halte alles fest, was entsteht — der Ertrag dieser Session sind Ideen, keine sauberen Durchgänge."
       },
       "phasen": {
         "erwaermung": [
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
-              "de": "Kurz und unaufgeregt. Danach wird ohnehin alles anders klingen."
+              "de": "Gitarre: Kurz und unaufgeregt die Finger wach machen. Danach wird ohnehin alles anders klingen."
             }
           },
           {
             "baustein": "bass_greifhand",
             "hinweis": {
-              "de": "Kurz und unaufgeregt. Danach wird ohnehin alles anders klingen."
+              "de": "Bass: Kurz einspielen und die Hand locker mitwandern lassen, statt zu überdehnen."
             }
           }
         ],
@@ -1743,23 +1737,38 @@
       "phasen": {
         "erwaermung": [
           {
-            "baustein": "greifhand_grundlagen"
+            "baustein": "greifhand_grundlagen",
+            "hinweis": {
+              "de": "Langsam und leise — die Finger bleiben dicht über den Saiten. Aufwärmen, kein Tempotest."
+            }
           }
         ],
         "hauptteil": [
           {
-            "baustein": "powerchords"
+            "baustein": "powerchords",
+            "hinweis": {
+              "de": "Prüf jeden Akkord einzeln: Klingen Grundton und Quinte gleichzeitig — und nur die?"
+            }
           },
           {
-            "baustein": "drop_tuning"
+            "baustein": "drop_tuning",
+            "hinweis": {
+              "de": "Mit dem Stimmgerät auf Drop D stimmen und den Ein-Finger-Powerchord an mehreren Bünden auf Sauberkeit prüfen."
+            }
           },
           {
-            "baustein": "doom_riffing"
+            "baustein": "doom_riffing",
+            "hinweis": {
+              "de": "Jeden Akkord voll ausklingen lassen und den nächsten genau auf die Zählzeit setzen. Über den Verstärker nur mit Gehörschutz, über Kopfhörer bei gehörschonendem Pegel."
+            }
           }
         ],
         "ausklang": [
           {
-            "baustein": "fingerdruck_oekonomie"
+            "baustein": "fingerdruck_oekonomie",
+            "hinweis": {
+              "de": "Zum Abschluss bewusst mit Minimaldruck spielen — die Greifhand entspannt aufhören lassen, nicht ausgepowert."
+            }
           }
         ]
       }
@@ -1771,28 +1780,43 @@
         "de": "D-Beat, Tempo und Ausdauer am Set"
       },
       "beschreibung": {
-        "de": "Treibender Hardcore-Puls: Nach dem Rudiment-Warm-up vom stabilen Grundbeat zum D-Beat, geschärft über Akzente — Ausklang im langsamen, schweren Kontrast."
+        "de": "Treibender Hardcore-Puls: Nach dem Aufwärmen mit Rudiments vom stabilen Grundbeat zum D-Beat, geschärft über Akzente — Ausklang im langsamen, schweren Kontrast."
       },
       "phasen": {
         "erwaermung": [
           {
-            "baustein": "rudiments_grundlage"
+            "baustein": "rudiments_grundlage",
+            "hinweis": {
+              "de": "Einzel- und Doppelschläge langsam und gleichmäßig, beide Hände gleich laut — so werden Handgelenke und Unterarme warm."
+            }
           }
         ],
         "hauptteil": [
           {
-            "baustein": "grundbeat"
+            "baustein": "grundbeat",
+            "hinweis": {
+              "de": "Gehörschutz auf, dann erst stabil, dann schnell: Hi-Hat, Snare und Bassdrum im ruhigen Tempo zusammenbringen."
+            }
           },
           {
-            "baustein": "d_beat"
+            "baustein": "d_beat",
+            "hinweis": {
+              "de": "Bassdrum und Snare exakt ineinandergreifen lassen und das Tempo nur so weit anheben, dass es drängt, ohne zu eiern. Bei Schmerz in Handgelenk oder Bein sofort abbrechen."
+            }
           },
           {
-            "baustein": "dynamik_akzente"
+            "baustein": "dynamik_akzente",
+            "hinweis": {
+              "de": "Die leisen Schläge wirklich leise halten — der Akzent lebt vom Kontrast, nicht vom härteren Schlag."
+            }
           }
         ],
         "ausklang": [
           {
-            "baustein": "doom_feel"
+            "baustein": "doom_feel",
+            "hinweis": {
+              "de": "Im langsamen Kontrast ausklingen: volle Schläge ausklingen lassen und die langen Abstände exakt halten."
+            }
           }
         ]
       }
@@ -1804,28 +1828,43 @@
         "de": "Anschlag, Tightness und tiefes Fundament"
       },
       "beschreibung": {
-        "de": "Tempo mit Fundament: Fingerstyle-Warm-up, dann Dreifinger-Technik, Tremolo und Blast-Begleitung — Ausklang über ruhige Dämpfungskontrolle für einen sauberen Ton."
+        "de": "Tempo mit Fundament: Fingerstyle-Aufwärmen, dann Drei-Finger-Technik, Tremolo und Blast-Begleitung — Ausklang über ruhige Dämpfungskontrolle für einen sauberen Ton."
       },
       "phasen": {
         "erwaermung": [
           {
-            "baustein": "fingerstyle"
+            "baustein": "fingerstyle",
+            "hinweis": {
+              "de": "Zeige- und Mittelfinger strikt im Wechsel und gleich laut — locker einspielen, nicht auf Tempo."
+            }
           }
         ],
         "hauptteil": [
           {
-            "baustein": "bass_dreifinger"
+            "baustein": "bass_dreifinger",
+            "hinweis": {
+              "de": "Den leisesten Finger angleichen, statt die anderen lauter zu machen; laut mitzählen, damit die Zählzeit nicht mit dem Fingerwechsel verrutscht."
+            }
           },
           {
-            "baustein": "bass_tremolo"
+            "baustein": "bass_tremolo",
+            "hinweis": {
+              "de": "Knapp unter dem Grenztempo bleiben, jeder Anschlag gleich laut. Verkrampft die Hand, stoppen und ausschütteln; bei Schmerz die Einheit beenden."
+            }
           },
           {
-            "baustein": "bass_blast_begleitung"
+            "baustein": "bass_blast_begleitung",
+            "hinweis": {
+              "de": "Die Strategien nacheinander vergleichen und die nehmen, die bei diesem Tempo stabil bleibt — Druck vor Notenmenge."
+            }
           }
         ],
         "ausklang": [
           {
-            "baustein": "greifhand_daempfen"
+            "baustein": "greifhand_daempfen",
+            "hinweis": {
+              "de": "Ruhig ausklingen: kurze Figuren, deren Pausen wirklich still sind."
+            }
           }
         ]
       }
@@ -1842,23 +1881,38 @@
       "phasen": {
         "erwaermung": [
           {
-            "baustein": "stimmuebungen_sanft"
+            "baustein": "stimmuebungen_sanft",
+            "hinweis": {
+              "de": "Sanft aufwärmen: Lippenflattern und Sirene leise und mühelos. Bei Kratzen oder Schmerz sofort stoppen."
+            }
           }
         ],
         "hauptteil": [
           {
-            "baustein": "tonhoehe_clean"
+            "baustein": "tonhoehe_clean",
+            "hinweis": {
+              "de": "Leise nachsummen und sanft zur richtigen Höhe gleiten — treffen geht vor laut."
+            }
           },
           {
-            "baustein": "clean_im_metal"
+            "baustein": "clean_im_metal",
+            "hinweis": {
+              "de": "Aus der Stütze singen, nicht aus dem Hals: Ziel ist ein ruhiger, getragener Ton ohne Druck."
+            }
           },
           {
-            "baustein": "dynamik_ausdruck"
+            "baustein": "dynamik_ausdruck",
+            "hinweis": {
+              "de": "Intensität über Stütze und Resonanz steigern, nie über Halsdruck. Kratzt es, sofort stoppen; hält Heiserkeit länger als ein paar Tage an, HNO-ärztlich abklären lassen."
+            }
           }
         ],
         "ausklang": [
           {
-            "baustein": "gesang_haltung_atmung"
+            "baustein": "gesang_haltung_atmung",
+            "hinweis": {
+              "de": "Zum Abschluss ruhig atmen: Bauch und Flanken weiten sich, die Ausatmung wird länger, ohne zu pressen."
+            }
           }
         ]
       }
@@ -1875,23 +1929,38 @@
       "phasen": {
         "erwaermung": [
           {
-            "baustein": "erweiterte_harmonik"
+            "baustein": "erweiterte_harmonik",
+            "hinweis": {
+              "de": "Hörend einsteigen: jede Farbe erst clean, dann verzerrt vergleichen und in einem Wort benennen."
+            }
           }
         ],
         "hauptteil": [
           {
-            "baustein": "kontrapunkt_stimmfuehrung"
+            "baustein": "kontrapunkt_stimmfuehrung",
+            "hinweis": {
+              "de": "Die erste Stimme muss allein tragen, bevor die zweite dazukommt; Gegenbewegung, Terzen und Unisono bewusst markieren."
+            }
           },
           {
-            "baustein": "modulation_vertieft"
+            "baustein": "modulation_vertieft",
+            "hinweis": {
+              "de": "Denselben Tonartwechsel dreimal bauen — Schnitt, Pivot, chromatischer Sog — und die Wirkung vergleichen."
+            }
           },
           {
-            "baustein": "dissonanz_gezielt"
+            "baustein": "dissonanz_gezielt",
+            "hinweis": {
+              "de": "Die Reibung an eine feste Stelle im Takt setzen und bewusst entscheiden, ob sie sich auflöst."
+            }
           }
         ],
         "ausklang": [
           {
-            "baustein": "form_skizzieren"
+            "baustein": "form_skizzieren",
+            "hinweis": {
+              "de": "Erst die Form, dann das Material: Abschnitte, Energieverlauf und Übergänge für ein eigenes Stück skizzieren."
+            }
           }
         ]
       }

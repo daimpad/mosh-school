@@ -26,7 +26,7 @@
         "double_bass"
       ],
       "erklaerteil": {
-        "de": "Auch ohne Bass koppeln sich Gitarre und Schlagzeug über die Bassdrum: Die Akzente des Riffs — betonte Chugs, Wechsel, Stops — fallen mit bestimmten Kicks zusammen. Diese Kopplung gibt tempoorientierten Parts ihre Wucht und hält Gitarre und Drums als rhythmische Einheit zusammen.\n\nEntscheidend ist Klarheit, welche Riff-Akzente auf welche Kicks fallen. Der Drummer gibt mit dem Fuß die Referenz, die Gitarre legt ihre betonten Anschläge genau darauf. Bei schnellen Double-Bass-Parts trifft nicht jeder Anschlag eine Kick — aber die Akzente müssen sitzen."
+        "de": "Auch ohne Bass koppeln sich Gitarre und Schlagzeug über die Bassdrum: Die Akzente des Riffs — betonte Chugs, Wechsel, Stopps — fallen mit bestimmten Kicks zusammen. Diese Kopplung gibt tempoorientierten Parts ihre Wucht und hält Gitarre und Drums als rhythmische Einheit zusammen.\n\nEntscheidend ist Klarheit, welche Riff-Akzente auf welche Kicks fallen. Der Drummer gibt mit dem Fuß die Referenz, die Gitarre legt ihre betonten Anschläge genau darauf. Bei schnellen Double-Bass-Parts trifft nicht jeder Anschlag eine Kick — aber die Akzente müssen sitzen."
       },
       "uebungsteil": {
         "de": {
@@ -169,13 +169,13 @@
             ]
           }
         ],
-        "hinweis": "Die Kick liegt exakt auf den betonten Riff-Anschlägen (hier: 1, 1-e-und, 3). Spiel das Muster einer Gitarre vor — hört man die Kopplung nicht, liegt es fast immer am Fuß."
+        "hinweis": "Die Kick liegt exakt auf den betonten Riff-Anschlägen (hier: 1-e-und-e und 3-e-und-e, jeweils ohne das „und“). Spiel das Muster einer Gitarre vor — hört man die Kopplung nicht, liegt es fast immer am Fuß."
       }
     },
     {
       "id": "duo_gd_breaks",
       "anzeigetitel": {
-        "de": "Gitarre & Drums: gemeinsame Stops & Akzente"
+        "de": "Gitarre & Drums: gemeinsame Stopps & Akzente"
       },
       "domaene": [
         "gitarre",
@@ -191,19 +191,19 @@
         "fills"
       ],
       "erklaerteil": {
-        "de": "Stops und gesetzte Akzente wirken nur, wenn Gitarre und Schlagzeug sie als eine Bewegung treffen: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg. Gerade an diesen exponierten Stellen fällt jede Ungenauigkeit auf.\n\nDer kritische Punkt ist wie immer die Eins nach dem Stop. Wer den Puls während der Stille innerlich hält, steigt gemeinsam wieder ein; wer schätzt, stolpert. Übt die zwei Takte um den Break isoliert, nicht ganze Parts."
+        "de": "Stopps und gesetzte Akzente wirken nur, wenn Gitarre und Schlagzeug sie als eine Bewegung treffen: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg. Gerade an diesen exponierten Stellen fällt jede Ungenauigkeit auf.\n\nDer kritische Punkt ist wie immer die Eins nach dem Stopp. Wer den Puls während der Stille innerlich hält, steigt gemeinsam wieder ein; wer schätzt, stolpert. Übt die zwei Takte um den Break isoliert, nicht ganze Parts."
       },
       "uebungsteil": {
         "de": {
           "titel": "Zusammen stoppen",
-          "ziel": "Stops und Akzente von Gitarre und Drums deckungsgleich setzen.",
+          "ziel": "Stopps und Akzente von Gitarre und Drums deckungsgleich setzen.",
           "schritte": [
-            "Spielt einen einfachen Part und baut an fester Stelle einen gemeinsamen Stop von einer Zählzeit ein.",
+            "Spielt einen einfachen Part und baut an fester Stelle einen gemeinsamen Stopp von einer Zählzeit ein.",
             "Zählt beide innerlich weiter und steigt exakt gemeinsam auf der Eins wieder ein.",
-            "Prüft per Aufnahme, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+            "Prüft per Aufnahme, ob Stopp und Wiedereinstieg wie ein Schlag klingen."
           ],
           "steigerung": "Setzt einen gemeinsamen Akzent mitten in die Pause, den beide exakt gleich platzieren.",
-          "selbstkontrolle": "Stop und Wiedereinstieg fallen zusammen; die Eins danach sitzt bei beiden."
+          "selbstkontrolle": "Stopp und Wiedereinstieg fallen zusammen; die Eins danach sitzt bei beiden."
         }
       },
       "spielziele": [
@@ -257,9 +257,9 @@
               0,
               1,
               0,
+              1,
               0,
-              0,
-              0,
+              1,
               0,
               0,
               0,
@@ -395,11 +395,11 @@
               0,
               0,
               0,
+              1,
               0,
               0,
               0,
-              0,
-              0,
+              1,
               0,
               0,
               0,
@@ -462,13 +462,13 @@
               0,
               1,
               0,
+              1,
               0,
               0,
               0,
+              1,
               0,
-              0,
-              0,
-              0,
+              1,
               0,
               0,
               0,
@@ -526,15 +526,15 @@
               0,
               0,
               0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
               1,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
               0,
               0,
               0,
@@ -561,7 +561,7 @@
             ]
           }
         ],
-        "hinweis": "Derselbe Stop, aus der Sicht von Gitarre und Drums: eine Zählzeit Stille, dann gemeinsam auf die Eins. Prüft per Aufnahme, ob Stop UND Wiedereinstieg wie ein Schlag klingen — meistens sitzt der Stop und der Einstieg franst aus."
+        "hinweis": "Derselbe Stopp, aus der Sicht von Gitarre und Drums: ein gemeinsamer Schlag auf der Drei, eine Zählzeit Stille, dann gemeinsam auf die Eins. Prüft per Aufnahme, ob Stopp UND Wiedereinstieg wie ein Schlag klingen — meistens sitzt der Stopp und der Einstieg franst aus."
       }
     },
     {
@@ -785,11 +785,11 @@
           "ziel": "Vocal-Phrasen ohne Harmonieinstrument am Drum-Puls verankern.",
           "schritte": [
             "Der Drummer spielt eine einfache, stabile Figur zum Klick.",
-            "Die Stimme platziert rhythmische Phrasen bewusst auf Kick und Snare.",
+            "Die Stimme platziert rhythmische Phrasen (zunächst gesprochen, dann leise verzerrt) bewusst auf Kick und Snare.",
             "Reduziert den Klick und prüft, ob die Stimme am Drum-Puls stabil bleibt."
           ],
           "steigerung": "Nehmt eine komplexere Drum-Figur und haltet die Phrasen sauber im Raster.",
-          "selbstkontrolle": "Die Vocal-Phrasen sitzen stabil im Puls; ohne Klick bleibt die Form erhalten."
+          "selbstkontrolle": "Die Vocal-Phrasen sitzen stabil im Puls; ohne Klick bleibt die Form erhalten. Die Stimme bleibt mühelos; bei Kratzen stoppen."
         }
       },
       "spielziele": [
@@ -842,7 +842,7 @@
     {
       "id": "trio_engine_lock",
       "anzeigetitel": {
-        "de": "Rhythmusgruppe + Gitarre: als Trio locken"
+        "de": "Rhythmusgruppe + Gitarre: als Trio verzahnen"
       },
       "domaene": [
         "gitarre",
@@ -858,14 +858,14 @@
         "duo_gb_lock"
       ],
       "erklaerteil": {
-        "de": "Bass, Schlagzeug und Rhythmusgitarre bilden zusammen die Riff-Maschine. Nachdem Bass und Bassdrum gekoppelt sind (Rhythmusgruppe) und Gitarre und Bass gelockt (Riff), fügt dieses Trio beide Achsen zu einem Motor: Alle drei Anschläge fallen auf denselben Impuls.\n\nÜbt schichtweise: erst Bass und Bassdrum, dann die Gitarre dazu, ohne dass sich der gemeinsame Attack verwischt. Der Klick bleibt die neutrale Referenz für alle drei."
+        "de": "Bass, Schlagzeug und Rhythmusgitarre bilden zusammen die Riff-Maschine. Nachdem Bass und Bassdrum gekoppelt sind (Rhythmusgruppe) und Gitarre und Bass verzahnt (Riff), fügt dieses Trio beide Achsen zu einem Motor: Alle drei Anschläge fallen auf denselben Impuls.\n\nÜbt schichtweise: erst Bass und Bassdrum, dann die Gitarre dazu, ohne dass sich der gemeinsame Attack verwischt. Der Klick bleibt die neutrale Referenz für alle drei."
       },
       "uebungsteil": {
         "de": {
           "titel": "Drei auf einen Impuls",
           "ziel": "Gitarre, Bass und Bassdrum zu einem gemeinsamen Attack verbinden.",
           "schritte": [
-            "Bass und Bassdrum locken zunächst allein zum Klick.",
+            "Bass und Bassdrum rasten zunächst allein auf den Klick ein.",
             "Die Gitarre kommt dazu und legt ihre Anschläge auf denselben Impuls.",
             "Nehmt es auf und prüft, ob alle drei als ein Schlag klingen."
           ],
@@ -1031,7 +1031,7 @@
             ]
           }
         ],
-        "hinweis": "Die betonten Kick-Schläge sind der gemeinsame Impuls: Bass und Bassdrum locken zuerst allein darauf, dann legt die Gitarre ihre Anschläge auf denselben Punkt. Erst wenn alle drei wie EIN Schlag klingen, trägt die Maschine."
+        "hinweis": "Die betonten Kick-Schläge sind der gemeinsame Impuls: Bass und Bassdrum rasten zuerst allein darauf ein, dann legt die Gitarre ihre Anschläge auf denselben Punkt. Erst wenn alle drei wie EIN Schlag klingen, trägt die Maschine."
       }
     },
     {
@@ -1063,7 +1063,7 @@
           "ziel": "Vier Stimmen zu gemeinsamen Breakdown-Akzenten mit schwarzen Pausen verbinden.",
           "schritte": [
             "Das Trio aus Gitarre, Bass und Drums setzt ein einfaches Breakdown-Muster mit klaren Akzenten.",
-            "Die Vocals legen ihre stärksten Silben genau auf diese Akzente.",
+            "Die Vocals legen ihre stärksten Silben genau auf diese Akzente — Härte aus Stütze, nicht aus Pressen; bei Kratzen oder Schmerz sofort stoppen.",
             "Nehmt es auf und prüft, ob alle vier zusammen treffen und die Pausen schwarz sind."
           ],
           "steigerung": "Verschiebt Akzente auf Synkopen und haltet die gemeinsame Platzierung über alle vier.",
@@ -1199,7 +1199,7 @@
             ]
           }
         ],
-        "hinweis": "Vier Einschläge im Takt, dazwischen nichts. Genau dieses Nichts ist der schwerste Teil: Wer die Lücke füllt, nimmt dem Breakdown das Gewicht."
+        "hinweis": "Drei Einschläge im Takt, dazwischen nichts. Genau dieses Nichts ist der schwerste Teil: Wer die Lücke füllt, nimmt dem Breakdown das Gewicht."
       }
     },
     {
@@ -1244,7 +1244,7 @@
     {
       "id": "band_stops_einsaetze",
       "anzeigetitel": {
-        "de": "Ganze Band: Stops & Einsätze"
+        "de": "Ganze Band: Stopps & Einsätze"
       },
       "domaene": [
         "gitarre",
@@ -1261,19 +1261,19 @@
         "band_gemeinsamer_breakdown"
       ],
       "erklaerteil": {
-        "de": "Der gemeinsame Stop und der gemeinsame Einsatz sind die sichtbarste Ensemble-Leistung — und die schwerste. Wenn die ganze Band abrupt stoppt und exakt zusammen wieder einsteigt, wirkt sie wie ein Körper; verpasst einer die Eins, fällt es sofort auf.\n\nWährend der Stille hält jeder den Puls innerlich; der Wiedereinstieg ist als gemeinsame Bewegung vereinbart, nicht geschätzt. Blickkontakt und ein klarer Anker — oft ein Nicken des Drummers oder ein Zählen — helfen. Übt die Stelle isoliert, nicht ganze Songs."
+        "de": "Der gemeinsame Stopp und der gemeinsame Einsatz sind die sichtbarste Ensemble-Leistung — und die schwerste. Wenn die ganze Band abrupt stoppt und exakt zusammen wieder einsteigt, wirkt sie wie ein Körper; verpasst einer die Eins, fällt es sofort auf.\n\nWährend der Stille hält jeder den Puls innerlich; der Wiedereinstieg ist als gemeinsame Bewegung vereinbart, nicht geschätzt. Blickkontakt und ein klarer Anker — oft ein Nicken des Drummers oder ein Zählen — helfen. Übt die Stelle isoliert, nicht ganze Songs."
       },
       "uebungsteil": {
         "de": {
           "titel": "Alle stoppen, alle ein",
-          "ziel": "Gemeinsamen Stop und Wiedereinsatz der ganzen Band deckungsgleich setzen.",
+          "ziel": "Gemeinsamen Stopp und Wiedereinsatz der ganzen Band deckungsgleich setzen.",
           "schritte": [
-            "Spielt einen einfachen Part und baut einen gemeinsamen Stop von ein bis zwei Zählzeiten ein.",
+            "Spielt einen einfachen Part und baut einen gemeinsamen Stopp von ein bis zwei Zählzeiten ein.",
             "Alle zählen innerlich weiter; ein klares Signal (Nicken oder Zählen) markiert den Wiedereinstieg.",
             "Steigt exakt gemeinsam auf der Eins wieder ein und prüft es per Aufnahme."
           ],
-          "steigerung": "Verlängert die Pause oder setzt mehrere Stops hintereinander, die alle gemeinsam sitzen.",
-          "selbstkontrolle": "Stop und Wiedereinstieg fallen bei allen vier zusammen; die Eins danach sitzt."
+          "steigerung": "Verlängert die Pause oder setzt mehrere Stopps hintereinander, die alle gemeinsam sitzen.",
+          "selbstkontrolle": "Stopp und Wiedereinstieg fallen bei allen vier zusammen; die Eins danach sitzt."
         }
       },
       "spielziele": [

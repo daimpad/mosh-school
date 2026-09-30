@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>ZERRER — Mosh School</title>
-  <meta name="description" content="Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom. Kostenlos, werbefrei, direkt im Browser.">
+  <meta name="description" content="Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Thrash, Death, Black und Doom. Kostenlos, werbefrei, direkt im Browser.">
   <meta name="author" content="Damian Paderta">
   <meta name="theme-color" content="#0f151c">
   <link rel="canonical" href="https://zerrer.org/">
@@ -19,11 +19,20 @@
   <meta property="og:site_name" content="ZERRER">
   <meta property="og:locale" content="de_DE">
   <meta property="og:title" content="ZERRER — Mosh School">
-  <meta property="og:description" content="Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom — kostenlos, werbefrei, direkt im Browser.">
+  <meta property="og:description" content="Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Thrash, Death, Black und Doom — kostenlos, werbefrei, direkt im Browser.">
   <meta property="og:url" content="https://zerrer.org/">
-  <meta name="twitter:card" content="summary">
+  <!-- Vorschaubild 1200×630 (Messenger, Social): erzeugt von scripts/build_share.mjs,
+       liegt bewusst NICHT in der SW-SHELL — es wird nur von fremden Servern geholt,
+       nie von der App selbst. -->
+  <meta property="og:image" content="https://zerrer.org/assets/images/marke/share.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ZERRER — Mosh School: der Schriftzug mit dem lila Zerre-Zeichen auf Schwarz">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ZERRER — Mosh School">
   <meta name="twitter:description" content="Gitarre, Bass, Drums und Vocals für Extreme Metal — im Browser, ohne Anmeldung.">
+  <meta name="twitter:image" content="https://zerrer.org/assets/images/marke/share.png">
 
   <!-- Strukturierte Daten (schema.org) -->
   <script type="application/ld+json">
@@ -33,9 +42,9 @@
     "name": "ZERRER",
     "url": "https://zerrer.org/",
     "inLanguage": "de",
-    "description": "Extreme Metal spielen lernen: Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom.",
+    "description": "Extreme Metal spielen lernen: Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Thrash, Death, Black und Doom.",
     "isAccessibleForFree": true,
-    "keywords": "Metal, Extreme Metal, Hardcore, Metalcore, Death Metal, Black Metal, Doom, Gitarre, Bass, Schlagzeug, Growls, Screaming, lernen",
+    "keywords": "Metal, Extreme Metal, Hardcore, Metalcore, Thrash Metal, Death Metal, Black Metal, Doom, Gitarre, Bass, Schlagzeug, Growls, Screaming, lernen",
     "author": { "@type": "Person", "name": "Damian Paderta" }
   }
   </script>
@@ -53,7 +62,7 @@
         var osDunkel = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
         var dunkel;
         // ZERRER ist düster per Default (Flyer-Collage-Hintergrund): ohne
-        // gespeicherte Wahl -> dunkel. 'hell' (creme) bleibt Option, 'auto' folgt OS.
+        // gespeicherte Wahl -> dunkel. 'hell' (weißes Blatt) bleibt Option, 'auto' folgt OS.
         if (thema === 'hell') { document.documentElement.dataset.theme = 'hell'; dunkel = false; }
         else if (thema === 'auto') { dunkel = osDunkel; }
         else { document.documentElement.dataset.theme = 'dunkel'; dunkel = true; }
@@ -194,9 +203,8 @@
                beschrifteRahmen() (js/app.js), nie hart geschrieben. -->
           <span class="footer-marke-wort marke-zeichen marke-einfarbig marke-wort" role="img"></span>
         </div>
-        <!-- Wird von beschrifteRahmen() (js/app.js) aus markenZeilenHtml() gefüllt —
-             dieselbe Quelle wie der Startseiten-Hero, damit die beiden Zweige nicht
-             auseinanderlaufen. Deshalb hier bewusst kein hart geschriebener Text. -->
+        <!-- Wird von beschrifteRahmen() (js/app.js) mit t('marke_footer_claim') gefüllt —
+             so wird der Text nur an einer Stelle gepflegt. Deshalb hier bewusst kein hart geschriebener Text. -->
         <span class="footer-marke-claim"></span>
       </div>
     </div>
@@ -298,7 +306,7 @@
   <noscript>
     <div style="max-width:44rem;margin:2rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.6;color:#ece9e1;background:#0b0b0c">
       <h1>ZERRER</h1>
-      <p>Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Death, Black und Doom. Kleine Lern-Bausteine mit Übe-Routinen, Genre-Achse und Trainingsplan.</p>
+      <p>Extreme Metal spielen lernen — Gitarre, Bass, Drums und Vocals für Hardcore, Metalcore, Thrash, Death, Black und Doom. Kleine Lern-Bausteine mit Übe-Routinen, Genre-Achse und Trainingsplan.</p>
       <p>Die App läuft vollständig im Browser und speichert deinen Fortschritt lokal. Bitte aktiviere JavaScript.</p>
     </div>
   </noscript>

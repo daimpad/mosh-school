@@ -30,6 +30,9 @@ from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://zerrer.org'
+# Vorschaubild fuer Messenger/Social (og:image), von scripts/build_share.mjs
+# erzeugt. Eines fuer alle Seiten: Es traegt die Marke, nicht den Einzelinhalt.
+SHARE_BILD = 'assets/images/marke/share.png'
 
 def lade(pfad):
     with open(os.path.join(ROOT, pfad), encoding='utf-8') as f:
@@ -408,9 +411,14 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 <meta property="og:title" content="{esc(titel)}">
 <meta property="og:description" content="{esc(beschreibung)}">
 <meta property="og:url" content="{esc(canonical)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{SITE}/{SHARE_BILD}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(titel)}">
 <meta name="twitter:description" content="{esc(beschreibung)}">
+<meta name="twitter:image" content="{SITE}/{SHARE_BILD}">
 <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False, sort_keys=True)}</script>
 <link rel="stylesheet" href="{w}css/schriften.css">
 <link rel="stylesheet" href="{w}css/app.css">
@@ -435,9 +443,10 @@ def seiten_kopf(tiefe, titel, beschreibung, pfad, jsonld):
 </script>
 </head>
 <body>
+<a class="zum-inhalt" href="#ansicht">{esc(uitext("skip_link"))}</a>
 <header class="kopf">
 <div class="kopf-innen">
-<a class="marke" href="{w}">
+<a class="marke" href="{w}" aria-label="{esc(uitext("app_titel"))}">
 <span class="marke-logo marke-zeichen marke-bild" aria-hidden="true"></span>
 <span class="marke-text">{wortmarke_schriftzug(uitext("app_titel"))}</span>
 </a>
@@ -897,9 +906,24 @@ def themen_mitglieder(domaene):
 AUGENBRAUE = {'stil': 'Genre', 'kompetenz': 'Könnensstufe', 'themen': 'Thema'}
 
 
+# Ausformulierte Meta-Description fuer Landings ohne eigenen Text (Kompetenz,
+# Themen). Nur die description — die sichtbare Seite bleibt, wie sie ist.
+SEO_BESCHREIBUNG = {'kompetenz': 'seo_beschreibung_kompetenz', 'themen': 'seo_beschreibung_themen'}
+
+
 def landing_html(art, schluessel, titel, blurb, mitglieder):
     tiefe = 3  # pfad/<art>/<schluessel>/index.html
-    beschreibung = kurzfassung(blurb) if blurb else f'{titel} bei ZERRER: {len(mitglieder)} Lern-Bausteine.'
+    if blurb:
+        beschreibung = kurzfassung(blurb)
+    elif art in SEO_BESCHREIBUNG:
+        beschreibung = kurzfassung(
+            uitext(SEO_BESCHREIBUNG[art]).replace('{titel}', titel).replace('{n}', str(len(mitglieder))))
+    else:
+        beschreibung = f'{titel} bei ZERRER: {len(mitglieder)} Lern-Bausteine.'
+    # Themen-Landings tragen dieselben Namen wie die Instrument-Landings
+    # („Gitarre") — ohne Zusatz haetten beide denselben <title>. Die h1 bleibt
+    # beim schlichten Namen, nur Kopftitel und JSON-LD bekommen den Zusatz.
+    kopftitel = uitext('seo_themen_titel').replace('{titel}', titel) if art == 'themen' else titel
     hue = domaene_hue(schluessel) if art == 'themen' else 'pf-blau'
     body = (
         landing_hero(tiefe, f'{art}:{schluessel}', AUGENBRAUE.get(art, ''), titel, blurb, hue)
@@ -909,13 +933,13 @@ def landing_html(art, schluessel, titel, blurb, mitglieder):
     jsonld = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        'name': titel,
+        'name': kopftitel,
         'description': beschreibung,
         'url': f'{SITE}/pfad/{art}/{schluessel}/',
         'inLanguage': 'de',
         'isAccessibleForFree': True,
     }
-    return seite(tiefe, titel, beschreibung, f'pfad/{art}/{schluessel}/', jsonld, body, f'#/pfad/{art}/{schluessel}')
+    return seite(tiefe, kopftitel, beschreibung, f'pfad/{art}/{schluessel}/', jsonld, body, f'#/pfad/{art}/{schluessel}')
 
 
 def hub_html(art, titel, beschreibung, eintraege):

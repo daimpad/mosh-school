@@ -66,6 +66,12 @@ function bindeSkip(el, daten, kontext, stationen) {
 }
 
 export function renderKompetenzpfad(el, daten, stufe) {
+  // Unbekannte Stufe aus der Adresse: Die View fängt sie selbst ab (es gibt keine
+  // Not-Found-Route) — sonst stünde der rohe Slug als Stufen-Chip im Hero.
+  if (stufe && !(daten.vokabulare.kompetenzstufe || []).includes(stufe)) {
+    el.innerHTML = nichtGefundenHtml('#/pfad/kompetenz', t('pfad_kompetenz'));
+    return;
+  }
   const pfad = kompetenzpfad(daten, stufe || undefined);
   const kontext = stufe ? `kompetenz:${stufe}` : 'kompetenz';
   if (!pfad.stufe) {
@@ -199,7 +205,7 @@ export function renderStil(el, daten, stil) {
         ${genreMotivSvg(stil)}
         <div class="genre-landing-scrim" aria-hidden="true"></div>
         <div class="genre-landing-inhalt">
-          <p class="genre-landing-augenbraue">${esc(t('genre_augenbraue'))} · ${esc(t('n_bausteine', { n: pfad.stationen.length }))}</p>
+          <p class="genre-landing-augenbraue"><span class="genre-landing-augenbraue-marke">${esc(t('genre_augenbraue'))} · ${esc(t('n_bausteine', { n: pfad.stationen.length }))}</span></p>
           <h1>${esc(label('stil', stil))}</h1>
           ${kurz ? `<p class="genre-landing-kurz">${esc(kurz)}</p>` : ''}
         </div>

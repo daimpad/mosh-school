@@ -27,7 +27,7 @@
         "tremolo_picking"
       ],
       "erklaerteil": {
-        "de": "Tremolo-Picking ist nichts anderes als sehr schneller Wechselschlag auf einem einzelnen Ton oder einer Saite. Es erzeugt den treibenden, gleichmäßigen Klangteppich, der Death- und Black-Metal-Riffs ihr rasendes Tempo gibt.\n\nDer Schlüssel liegt in der Bewegungsökonomie, die du vom Wechselschlag schon kennst: Die Bewegung kommt aus dem Handgelenk, der Bewegungsradius bleibt winzig, die Pickspitze steht nur wenig über. Je kürzer der Weg, den das Pick zurücklegt, desto höher das Tempo bei gleicher Anstrengung.\n\nWichtiger als reine Geschwindigkeit ist die Gleichmäßigkeit: Alle Anschläge sollen gleich laut und gleich lang sein, sodass kein Puls entsteht, den du nicht willst. Ein sauberes langsames Tremolo ist mehr wert als ein schnelles, das flattert."
+        "de": "Tremolo-Picking ist nichts anderes als sehr schneller Wechselschlag auf einem einzelnen Ton oder einer Saite. Es erzeugt den treibenden, gleichmäßigen Klangteppich, der Death- und Black-Metal-Riffs ihr rasendes Tempo gibt.\n\nDer Schlüssel liegt in der Bewegungsökonomie, die du vom Wechselschlag schon kennst: Die Bewegung kommt aus dem Handgelenk, der Bewegungsradius bleibt winzig, die Plektrumspitze steht nur wenig über. Je kürzer der Weg, den das Plektrum zurücklegt, desto höher das Tempo bei gleicher Anstrengung.\n\nWichtiger als reine Geschwindigkeit ist die Gleichmäßigkeit: Alle Anschläge sollen gleich laut und gleich lang sein, sodass kein Puls entsteht, den du nicht willst. Ein sauberes langsames Tremolo ist mehr wert als ein schnelles, das flattert."
       },
       "uebungsteil": {
         "de": {
@@ -488,7 +488,7 @@
             "technik": "normal"
           }
         ],
-        "hinweis": "Tremolo mit wandernder Tonhöhe: alle vier Sechzehntel ein neuer Griff. Der Strom darf am Lagenwechsel nicht stocken — das ist der Unterschied zum Tremolo auf einem Ton."
+        "hinweis": "Tremolo mit wandernder Tonhöhe: alle vier Sechzehntel ein neuer Griff. Der Strom darf am Tonwechsel nicht stocken — das ist der Unterschied zum Tremolo auf einem Ton."
       }
     },
     {
@@ -519,20 +519,17 @@
           "titel": "Tremolo über zwei Powerchords",
           "ziel": "Das Tremolo beim Akkordwechsel ohne Unterbrechung durchziehen.",
           "schritte": [
-            "Halte ein gleichmäßiges Tremolo auf dem Grundton eines Powerchords.",
+            "Halte ein gleichmäßiges Tremolo auf einem Powerchord (oder zunächst nur auf seinem Grundton).",
             "Wechsle nach einer festen Zahl von Anschlägen zum nächsten Powerchord, ohne die Anschlaghand zu stoppen.",
             "Zähle die Anschläge pro Akkord mit, damit die Wechsel im Timing sitzen."
           ],
-          "steigerung": "Mehr Akkorde in die Folge aufnehmen und die Zahl der Anschläge pro Akkord verkürzen.",
+          "steigerung": "Mehr Akkorde in die Folge aufnehmen und die Zahl der Anschläge pro Akkord verringern.",
           "selbstkontrolle": "Das Tremolo läuft beim Wechsel gleichmäßig weiter, und die Akkordwechsel sitzen genau auf dem Schlag."
         }
       },
       "demonstration": {
         "typ": "tab",
-        "bpm": 160,
-        "taktart": "4/4",
-        "aufloesung": 16,
-        "takte": 1,
+        "instrument": "gitarre",
         "tuning": [
           "E2",
           "A2",
@@ -541,104 +538,399 @@
           "B3",
           "E4"
         ],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 160,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
         "events": [
           {
             "schritt": 0,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 1,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 2,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 3,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 4,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 5,
-            "saite": 2,
-            "bund": 5,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 6,
-            "saite": 2,
-            "bund": 3,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 2,
             "technik": "normal"
           },
           {
             "schritt": 7,
-            "saite": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
             "bund": 3,
             "technik": "normal"
           },
           {
             "schritt": 8,
-            "saite": 2,
+            "saite": 5,
             "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 9,
-            "saite": 2,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 5,
             "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 10,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 11,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 12,
-            "saite": 2,
-            "bund": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 13,
-            "saite": 2,
-            "bund": 8,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 14,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           },
           {
             "schritt": 15,
-            "saite": 2,
-            "bund": 7,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 6,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 6,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 5,
+            "bund": 5,
             "technik": "normal"
           }
-        ]
+        ],
+        "hinweis": "Tremolo in Sechzehnteln über zwei Powerchords (E5 und G5), je acht Anschläge pro Akkord. Die Anschlaghand läuft durch, nur die Greifhand wechselt — genau auf dem Anschlag, der den neuen Akkord beginnt."
       }
     },
     {
@@ -665,11 +957,11 @@
       },
       "uebungsteil": {
         "de": {
-          "titel": "Galopp und Gegen-Galopp",
+          "titel": "Galopp und umgekehrter Galopp",
           "ziel": "Standard- und umgekehrten Galopp sicher unterscheiden und verbinden.",
           "schritte": [
             "Spiel palm-gemutet zuerst den Standard-Galopp (unten-unten-oben) über mehrere Takte.",
-            "Wechsle dann zum umgekehrten Galopp: die zwei schnellen Töne zuerst, dann der betonte Achtel.",
+            "Wechsle dann zum umgekehrten Galopp: die zwei schnellen Töne zuerst, dann die betonte Achtel.",
             "Verbinde beide, indem du taktweise zwischen ihnen wechselst, ohne das Tempo zu verlieren."
           ],
           "steigerung": "Die Galopp-Figuren zwischen zwei Tonhöhen bewegen und das Tempo in kleinen Schritten anheben.",
@@ -996,7 +1288,7 @@
         "wechselschlag"
       ],
       "erklaerteil": {
-        "de": "String Skipping heißt, beim Anschlag eine oder mehrere Saiten zu überspringen, statt nur zu benachbarten Saiten zu wechseln. So entstehen weite Intervallsprünge, die Riffs und Leads interessanter klingen lassen als reine Nachbarschaftsbewegungen.\n\nDie Schwierigkeit liegt in der Zielgenauigkeit der Anschlaghand: Das Pick muss die übersprungene Saite sauber überfliegen und die richtige treffen, ohne die dazwischenliegende anzustoßen. Kleine, kontrollierte Bewegungen und ein klarer Blick auf das Ziel helfen mehr als Kraft.\n\nGenauso wichtig ist das Abdämpfen: Die übersprungene Saite muss stumm bleiben. Greifhand und Handballen arbeiten mit, damit der Sprung sauber klingt und nicht die überflogene Saite mitrauscht."
+        "de": "String Skipping heißt, beim Anschlag eine oder mehrere Saiten zu überspringen, statt nur zu benachbarten Saiten zu wechseln. So entstehen weite Intervallsprünge, die Riffs und Leads interessanter klingen lassen als reine Nachbarschaftsbewegungen.\n\nDie Schwierigkeit liegt in der Zielgenauigkeit der Anschlaghand: Das Plektrum muss die übersprungene Saite sauber überfliegen und die richtige treffen, ohne die dazwischenliegende anzustoßen. Kleine, kontrollierte Bewegungen und ein klarer Blick auf das Ziel helfen mehr als Kraft.\n\nGenauso wichtig ist das Abdämpfen: Die übersprungene Saite muss stumm bleiben. Greifhand und Handballen arbeiten mit, damit der Sprung sauber klingt und nicht die überflogene Saite mitrauscht."
       },
       "uebungsteil": {
         "de": {
@@ -1094,7 +1386,7 @@
         "palm_muting"
       ],
       "erklaerteil": {
-        "de": "Pinch Harmonics — die kreischenden „Squeals“ — entstehen, wenn der Daumen der Anschlaghand die Saite unmittelbar nach dem Pick ganz kurz berührt. Diese Berührung unterdrückt den Grundton und bringt einen hohen Oberton zum Klingen.\n\nDrei Dinge müssen zusammenkommen: ein verzerrter Sound, der die Obertöne trägt, der richtige Berührungspunkt entlang der Saite und ein knapp überstehendes Pick, damit der Daumen sofort nach dem Anschlag trifft. Verschiedene Punkte über den Pickups liefern verschiedene Obertöne — das findest du durch Ausprobieren.\n\nErwarte nicht, dass es sofort bei jedem Anschlag klappt. Such zuerst einen einzigen Punkt, an dem der Squeal zuverlässig kommt, und merk dir das Gefühl. Ein leichtes Vibrato danach lässt den Oberton singen."
+        "de": "Pinch Harmonics — die kreischenden „Squeals“ — entstehen, wenn der Daumen der Anschlaghand die Saite unmittelbar nach dem Plektrum ganz kurz berührt. Diese Berührung unterdrückt den Grundton und bringt einen hohen Oberton zum Klingen.\n\nDrei Dinge müssen zusammenkommen: ein verzerrter Sound, der die Obertöne trägt, der richtige Berührungspunkt entlang der Saite und ein knapp überstehendes Plektrum, damit der Daumen sofort nach dem Anschlag trifft. Verschiedene Punkte über den Pickups liefern verschiedene Obertöne — das findest du durch Ausprobieren.\n\nErwarte nicht, dass es sofort bei jedem Anschlag klappt. Such zuerst einen einzigen Punkt, an dem der Squeal zuverlässig kommt, und merk dir das Gefühl. Ein leichtes Vibrato danach lässt den Oberton singen."
       },
       "uebungsteil": {
         "de": {
@@ -1102,7 +1394,7 @@
           "ziel": "An einer festen Stelle zuverlässig einen Pinch Harmonic auslösen.",
           "schritte": [
             "Stell einen verzerrten Sound ein und greife einen Ton auf der G- oder D-Saite.",
-            "Schlag mit knapp überstehendem Pick an und lass den Daumen die Saite direkt danach streifen.",
+            "Schlag mit knapp überstehendem Plektrum an und lass den Daumen die Saite direkt danach streifen.",
             "Verschiebe die Anschlaghand in kleinen Schritten, bis ein hoher Oberton anspricht, und merk dir die Stelle."
           ],
           "steigerung": "Ein leichtes Vibrato mit der Greifhand hinzufügen und den Squeal auf weiteren Tönen suchen.",
@@ -1220,7 +1512,7 @@
         "greifhand_grundlagen"
       ],
       "erklaerteil": {
-        "de": "Slides und Bends bringen Ausdruck ins Spiel. Beim Slide gleitest du mit dem greifenden Finger über die Bünde von einem Ton zum nächsten, ohne abzusetzen; beim Bending drückst du die Saite quer über das Griffbrett und hebst so die Tonhöhe an.\n\nBeim Bending zählt die Intonation: Der Zielton muss stimmen, sonst klingt es schief. Hör dir den Zielton vorher an und zieh die Saite genau auf diese Höhe — meist einen Ganz- oder Halbton. Mehrere Finger schieben gemeinsam, das gibt Kraft und Kontrolle und schont den einzelnen Finger.\n\nSlides leben von der Zielgenauigkeit: Du landest sauber auf dem Zielbund, statt daneben. Beide Techniken sind die Basis für ausdrucksstarke Leads — und sie arbeiten mit Bewegung statt mit reiner Kraft. Bei Ziehen im Handgelenk gilt auch hier: Pause statt durchbeißen."
+        "de": "Slides und Bends bringen Ausdruck ins Spiel. Beim Slide gleitest du mit dem greifenden Finger über die Bünde von einem Ton zum nächsten, ohne abzusetzen; beim Bending drückst du die Saite quer über das Griffbrett und hebst so die Tonhöhe an.\n\nBeim Bending zählt die Intonation: Der Zielton muss stimmen, sonst klingt es schief. Hör dir den Zielton vorher an und zieh die Saite genau auf diese Höhe — meist einen Ganz- oder Halbton. Mehrere Finger schieben gemeinsam, das gibt Kraft und Kontrolle und schont den einzelnen Finger.\n\nSlides leben von der Zielgenauigkeit: Du landest sauber auf dem Zielbund, statt daneben. Beide Techniken sind die Basis für ausdrucksstarke Leads — und sie arbeiten mit Bewegung statt mit reiner Kraft. Bei Ziehen im Handgelenk gilt auch hier: Pause statt Durchbeißen."
       },
       "uebungsteil": {
         "de": {
@@ -1293,7 +1585,7 @@
         "slides_bends"
       ],
       "erklaerteil": {
-        "de": "Vibrato macht aus einem stehenden Ton einen lebendigen. Du lässt die Tonhöhe gleichmäßig ein wenig schwanken, indem du die Saite rhythmisch leicht ziehst und wieder loslässt — verwandt mit dem Bending, nur klein und wiederholt.\n\nEntscheidend ist Kontrolle: gleichmäßige Geschwindigkeit und gleichmäßige Breite. Ein bewusst gesteuertes Vibrato klingt kräftig, ein nervöses Zittern dagegen unruhig. Die Bewegung kommt aus Handgelenk und Unterarm, nicht aus einem einzelnen zappelnden Finger.\n\nDie Breite ist ein Ausdrucksmittel: ein enges, schnelles Vibrato wirkt angespannt, ein weites, langsames — wie im Doom — schwer und drohend. Übe zuerst das enge, kontrollierte Vibrato, bevor du es weiter aufziehst; die Kontrolle bleibt in beiden Fällen die Grundlage."
+        "de": "Vibrato macht aus einem stehenden Ton einen lebendigen. Du lässt die Tonhöhe gleichmäßig ein wenig schwanken, indem du die Saite rhythmisch leicht ziehst und wieder loslässt — verwandt mit dem Bending, nur klein und wiederholt.\n\nEntscheidend ist Kontrolle: gleichmäßige Geschwindigkeit und gleichmäßige Breite. Ein bewusst gesteuertes Vibrato klingt kräftig, ein nervöses Zittern dagegen unruhig. Die Bewegung kommt aus Handgelenk und Unterarm, nicht aus einem einzelnen zappelnden Finger.\n\nDie Breite ist ein Ausdrucksmittel: Ein enges, schnelles Vibrato wirkt angespannt, ein weites, langsames — wie im Doom — schwer und drohend. Übe zuerst das enge, kontrollierte Vibrato, bevor du es weiter aufziehst; die Kontrolle bleibt in beiden Fällen die Grundlage."
       },
       "uebungsteil": {
         "de": {
@@ -1327,10 +1619,11 @@
       ],
       "voraussetzungen": [
         "legato",
-        "wechselschlag"
+        "wechselschlag",
+        "slides_bends"
       ],
       "erklaerteil": {
-        "de": "Die Moll-Pentatonik ist die meistgenutzte Tonleiter für Metal-Leads. Sie besteht aus fünf Tönen, die sich als bequem greifbare „Box“ über die Saiten anordnen — einmal gelernt, ist die Form über das ganze Griffbrett verschiebbar.\n\nWeil in der Box keine unpassenden Nachbartöne liegen, kannst du früh anfangen, kurze Melodien und Licks zu bilden, ohne dich zu verspielen. Der Grundton auf der tiefen Saite legt die Tonart fest — dieselbe Form passt so zu jedem Riff, wenn du sie an den richtigen Bund schiebst.\n\nEin Lead wird erst durch Ausdruck lebendig. Verbinde die Töne mit dem, was du schon kannst: Hammer-ons und Pull-offs für fließende Läufe, Bends und Slides für Spannung. So wird aus einer Tonleiter Musik statt nur einer Fingerübung."
+        "de": "Die Moll-Pentatonik ist die meistgenutzte Tonleiter für Metal-Leads. Sie besteht aus fünf Tönen, die sich als bequem greifbare „Box“ über die Saiten anordnen — einmal gelernt, ist die Form über das ganze Griffbrett verschiebbar.\n\nWeil in der Box keine unpassenden Nachbartöne liegen, kannst du früh anfangen, kurze Melodien und Licks zu bilden, ohne dich zu verspielen. Der Grundton auf der tiefen Saite legt die Tonart fest — dieselbe Form passt so zu jedem Moll-Riff, wenn du sie an den richtigen Bund schiebst.\n\nEin Lead wird erst durch Ausdruck lebendig. Verbinde die Töne mit dem, was du schon kannst: Hammer-ons und Pull-offs für fließende Läufe, Bends und Slides für Spannung. So wird aus einer Tonleiter Musik statt nur einer Fingerübung."
       },
       "uebungsteil": {
         "de": {
@@ -1575,7 +1868,7 @@
         "pentatonik_leads"
       ],
       "erklaerteil": {
-        "de": "Sweep Picking ist eine Technik für Arpeggien: Statt jede Saite einzeln anzuschlagen, führst du das Pick in einer einzigen, durchgehenden Bewegung über mehrere Saiten — wie ein langsamer, kontrollierter Rechen. Pro Saite klingt genau ein Ton.\n\nDer Trick liegt in der Greifhand. Sie „rollt“ über die Saiten: Jeder Finger drückt seinen Ton und hebt sofort wieder ab, sobald der nächste kommt, damit nie zwei Töne zugleich klingen und ein sauberer Arpeggio-Lauf statt eines Akkords entsteht. Anschlag- und Greifhand müssen dafür exakt zusammenarbeiten.\n\nSweep Picking ist eine anspruchsvolle Technik — erwarte nicht, sie schnell zu beherrschen. Beginne extrem langsam, achte darauf, dass jeder einzelne Ton klar und getrennt klingt, und erhöhe das Tempo erst, wenn die Bewegung wirklich sauber sitzt. Sauberkeit steht hier kompromisslos vor Geschwindigkeit."
+        "de": "Sweep-Picking ist eine Technik für Arpeggien: Statt jede Saite einzeln anzuschlagen, führst du das Plektrum in einer einzigen, durchgehenden Bewegung über mehrere Saiten — wie ein langsamer, kontrollierter Rechen. Pro Saite klingt genau ein Ton.\n\nDer Trick liegt in der Greifhand. Sie „rollt“ über die Saiten: Jeder Finger drückt seinen Ton und hebt sofort wieder ab, sobald der nächste kommt, damit nie zwei Töne zugleich klingen und ein sauberer Arpeggio-Lauf statt eines Akkords entsteht. Anschlag- und Greifhand müssen dafür exakt zusammenarbeiten.\n\nSweep-Picking ist eine anspruchsvolle Technik — erwarte nicht, sie schnell zu beherrschen. Beginne extrem langsam, achte darauf, dass jeder einzelne Ton klar und getrennt klingt, und erhöhe das Tempo erst, wenn die Bewegung wirklich sauber sitzt. Sauberkeit steht hier kompromisslos vor Geschwindigkeit."
       },
       "uebungsteil": {
         "de": {
@@ -1583,7 +1876,7 @@
           "ziel": "Ein kleines Arpeggio in einer durchgehenden Anschlagbewegung sauber trennen.",
           "schritte": [
             "Wähle ein Arpeggio über drei Saiten mit einem Ton pro Saite.",
-            "Führe das Pick in einer einzigen Abwärtsbewegung über die drei Saiten.",
+            "Führe das Plektrum in einer einzigen Abwärtsbewegung über die drei Saiten.",
             "Lass die Greifhand jeden Ton sofort abdämpfen, sobald der nächste klingt, und spiel extrem langsam."
           ],
           "steigerung": "Die Aufwärtsbewegung zurück ergänzen und erst dann das Tempo in kleinen Schritten anheben.",
@@ -1638,7 +1931,7 @@
             "technik": "normal"
           }
         ],
-        "hinweis": "Drei Saiten, ein Ton je Saite — hinauf in EINER durchgehenden Abwärtsbewegung des Picks, herunter in einer Aufwärtsbewegung. Die Greifhand dämpft jeden Ton, sobald der nächste klingt: Ein Sweep ist kein Akkord."
+        "hinweis": "Drei Saiten, ein Ton je Saite — hinauf in EINER durchgehenden Abwärtsbewegung des Plektrums, herunter in einer Aufwärtsbewegung. Die Greifhand dämpft jeden Ton, sobald der nächste klingt: Ein Sweep ist kein Akkord."
       }
     },
     {
@@ -1852,10 +2145,10 @@
         "tremolo_ausbau"
       ],
       "erklaerteil": {
-        "de": "Je höher das Tempo, desto mehr Wiederholungen laufen durch deine Sehnen und Handgelenke — und desto wichtiger wird der Schutz davor. Schnelles Tremolo, Downpicking und dichte Riffs sind Ausdauerbelastungen, die sich über eine Session aufsummieren, auch wenn im Moment nichts wehtut.\n\nDrei Prinzipien tragen dich langfristig: Wärm die Hände vor schnellem Spiel immer mit ein paar Minuten langsamem, lockerem Spielen auf. Bau Tempo und Dauer schrittweise über Wochen auf, nicht in einer einzelnen Session. Und behandle jedes Ziehen, Brennen oder Stechen im Handgelenk als Stoppsignal — dann Pause machen, nicht durchbeißen.\n\nSauberkeit und Lockerheit schützen zugleich: Wer verspannt und mit zu viel Kraft spielt, belastet die Sehnen unnötig und wird obendrein langsamer. Gute Technik ist auch Gesundheitsvorsorge."
+        "de": "Je höher das Tempo, desto mehr Wiederholungen laufen durch deine Sehnen und Handgelenke — und desto wichtiger wird der Schutz davor. Schnelles Tremolo, Downpicking und dichte Riffs sind Ausdauerbelastungen, die sich über eine Session aufsummieren, auch wenn im Moment nichts wehtut.\n\nDrei Prinzipien tragen dich langfristig: Wärm die Hände vor schnellem Spiel immer mit ein paar Minuten langsamem, lockerem Spielen auf. Bau Tempo und Dauer schrittweise über Wochen auf, nicht in einer einzelnen Session. Und behandle jedes Ziehen, Brennen oder Stechen im Handgelenk als Stoppsignal — dann Pause machen, nicht durchbeißen. Hält ein Schmerz über Tage an oder kommen Taubheit oder Kribbeln dazu, lass das ärztlich oder physiotherapeutisch abklären.\n\nSauberkeit und Lockerheit schützen zugleich: Wer verspannt und mit zu viel Kraft spielt, belastet die Sehnen unnötig und wird obendrein langsamer. Gute Technik ist auch Gesundheitsvorsorge."
       },
       "reflexionsaufgabe": {
-        "de": "Beobachte in deinen nächsten schnellen Übe-Einheiten bewusst, wann sich deine Anschlaghand oder dein Handgelenk zu verspannen beginnt. An welcher Stelle einer Session taucht das erste Brennen auf? Plane feste kurze Pausen ein, bevor dieser Punkt kommt, und überlege, wie du Tempo und Dauer über die nächsten Wochen langsam steigerst, statt es an einem Tag zu erzwingen. Was ist dein persönliches Frühwarnzeichen, bei dem du sofort stoppst?"
+        "de": "Beobachte in deinen nächsten schnellen Übe-Einheiten bewusst, wann sich deine Anschlaghand oder dein Handgelenk zu verspannen beginnt. An welcher Stelle einer Session tauchen die ersten Anzeichen von Ermüdung oder Verspannung auf? Plane feste kurze Pausen ein, bevor dieser Punkt kommt, und überlege, wie du Tempo und Dauer über die nächsten Wochen langsam steigerst, statt es an einem Tag zu erzwingen. Was ist dein persönliches Frühwarnzeichen, bei dem du sofort stoppst?"
       }
     },
     {
@@ -1870,8 +2163,11 @@
         "fortgeschritten"
       ],
       "typ": "micro",
+      "voraussetzungen": [
+        "metronom_prinzip"
+      ],
       "erklaerteil": {
-        "de": "Schneller werden ist im Metal weniger eine Frage von Talent als von Methode. Wer wahllos am Tempo dreht, spielt Fehler ein und stagniert; wer systematisch arbeitet, kommt verlässlich voran. Das Metronom bleibt dabei dein ehrlichster Maßstab — es zeigt, ob ein Tempo wirklich sitzt oder nur ungefähr.\n\nFortschritt verläuft nicht gleichmäßig, sondern in Stufen mit Plateaus dazwischen. Wochen ohne sichtbaren Sprung sind normal und kein Zeichen von Versagen — oft festigt sich in dieser Zeit gerade das, was du schon kannst. Der Schlüssel ist, sauber und in kleinen Schritten zu üben und ein Tempo erst zu verlassen, wenn es mehrfach fehlerfrei gelingt.\n\nGeduld ist hier eine Technik wie jede andere. Zehn langsame, fehlerfreie Wiederholungen bringen dich weiter als eine hektische schnelle, weil dein Körper einprägt, was du wiederholst — Sauberkeit ebenso wie Fehler."
+        "de": "Schneller werden ist im Metal weniger eine Frage von Talent als von Methode. Wer wahllos am Tempo dreht, spielt Fehler ein und stagniert; wer systematisch arbeitet, kommt verlässlich voran. Das Metronom bleibt dabei dein ehrlichster Maßstab — es zeigt, ob ein Tempo wirklich sitzt oder nur ungefähr.\n\nFortschritt verläuft nicht gleichmäßig, sondern in Stufen mit Plateaus dazwischen. Wochen ohne sichtbaren Sprung sind normal und kein Zeichen von Versagen — oft festigt sich in dieser Zeit gerade das, was du schon kannst. Der Schlüssel ist, sauber und in kleinen Schritten zu üben und ein Tempo erst zu verlassen, wenn es mehrfach fehlerfrei gelingt.\n\nGeduld ist hier eine Technik wie jede andere. Zehn langsame, fehlerfreie Wiederholungen bringen dich weiter als eine hektische schnelle, weil sich dein Körper einprägt, was du wiederholst — Sauberkeit ebenso wie Fehler."
       },
       "reflexionsaufgabe": {
         "de": "Nimm dir eine Übung vor, an der du gerade am Tempo arbeitest, und lege ehrlich fest, bei welchem Metronom-Tempo sie wirklich fehlerfrei sitzt. Wie klein ist der nächste Schritt, den du dir zutraust, ohne dass sich Fehler einschleichen? Notiere dir dieses Tempo, damit du beim nächsten Mal nicht zu hoch startest, und überlege, wie du mit einem Plateau umgehst, wenn tagelang kein Fortschritt sichtbar ist."

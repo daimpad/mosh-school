@@ -40,7 +40,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Heim-Recording braucht heute erstaunlich wenig: einen Rechner mit einer Aufnahme-Software (DAW), von denen es kostenlose und günstige gibt; ein Audio-Interface, das Mikrofon und Instrument in den Rechner bringt; ein Mikrofon; einen Kopfhörer zum Abhören; und Kabel. Damit ist eine Demo machbar.\n\nEin robustes dynamisches Mikrofon ist der vielseitigste Einstieg — der Klassiker für Gitarrenboxen und Gesang ist seit Jahrzehnten das SM57 und seine Verwandten, günstig und praktisch unkaputtbar. Vollständigkeit schlägt Hochwertigkeit: lieber mit einfachem Gerät aufnehmen als auf teures warten.\n\nVieles lässt sich teilen oder gebraucht beschaffen. Überlegt als Band, was ihr gemeinsam anschafft und in welcher Reihenfolge — Interface und ein Mikrofon zuerst, der Rest nach Bedarf."
+        "de": "Heim-Recording braucht heute erstaunlich wenig: einen Rechner mit einer Aufnahme-Software (DAW), die es auch kostenlos oder günstig gibt; ein Audio-Interface, das Mikrofon und Instrument in den Rechner bringt; ein Mikrofon; einen Kopfhörer zum Abhören; und Kabel. Damit ist eine Demo machbar.\n\nEin robustes dynamisches Mikrofon ist der vielseitigste Einstieg — seit Jahrzehnten der Klassiker für Gitarrenboxen und Gesang, günstig und praktisch unkaputtbar. Vollständigkeit schlägt Hochwertigkeit: lieber mit einfachem Gerät aufnehmen als auf teures warten.\n\nVieles lässt sich teilen oder gebraucht beschaffen. Überlegt als Band, was ihr gemeinsam anschafft und in welcher Reihenfolge — Interface und ein Mikrofon zuerst, der Rest nach Bedarf."
       },
       "reflexionsaufgabe": {
         "de": "Was habt ihr schon, was fehlt für eine erste Aufnahme (Rechner mit DAW, Interface, Mikrofon, Kopfhörer, Kabel)? Was schafft ihr gemeinsam an, was lässt sich teilen oder gebraucht beschaffen? Und in welcher Reihenfolge investiert ihr, statt alles auf einmal zu wollen?"
@@ -112,11 +112,11 @@
         "de": "Das Schlagzeug ist der schwierigste Teil einer Heimaufnahme, weil es viele laute Schallquellen auf engem Raum vereint. Mit begrenzten Mitteln gibt es pragmatische Wege: Eine minimale Mikrofonierung aus einem Bassdrum-Mikro und ein bis zwei Overheads liefert oft schon ein brauchbares, ehrliches Bild des ganzen Kits.\n\nWo kein gutes Raum- oder Equipment-Setup möglich ist, sind Alternativen legitim: Programmierte Drums oder das Ersetzen einzelner Spuren durch Samples sind in vielen Metal-Produktionen üblich und kein Makel. Wichtiger als die Methode ist ein sauberes, tightes Spiel zum Klick — das entscheidet über die Aufnahme mehr als die Mikrofonzahl.\n\nWählt den Weg, der zu euren Mitteln passt, statt an einem Ideal zu scheitern, das ihr nicht umsetzen könnt."
       },
       "reflexionsaufgabe": {
-        "de": "Welcher Weg passt zu euren Mitteln — eine minimale Mikrofonierung (Bassdrum plus Overheads), programmierte Drums oder eine Mischung? Ist euer Raum und Equipment für echte Drum-Aufnahmen geeignet, oder ist eine Alternative ehrlicher? Und ist das Drum-Spiel tight genug zum Klick, damit die Aufnahme trägt?"
+        "de": "Welcher Weg passt zu euren Mitteln — eine minimale Mikrofonierung (Bassdrum plus Overheads), programmierte Drums oder eine Mischung? Sind euer Raum und Equipment für echte Drum-Aufnahmen geeignet, oder ist eine Alternative ehrlicher? Und ist das Drum-Spiel tight genug zum Klick, damit die Aufnahme trägt?"
       },
       "voraussetzungen": [
         "tracking_reihenfolge",
-        "drums_recording"
+        "signal_aufnehmen"
       ]
     },
     {
@@ -140,8 +140,7 @@
       },
       "voraussetzungen": [
         "signal_aufnehmen",
-        "produktionswissen_frequenz",
-        "klangregie_arrangement"
+        "tracking_reihenfolge"
       ]
     },
     {
@@ -158,10 +157,10 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Ist die Demo fertig, geht es ums Teilen — und auch das ist in der DIY-Community selbst gemacht. Plattformen wie Bandcamp oder die üblichen Streaming-Dienste (über einfache Digital-Vertriebe) bringen eure Musik online; ein Titelbild und ein paar Zeilen zur Band gehören dazu.\n\nDer wirksamste Weg zu Auftritten führt über direkte Kontakte: Schickt die Demo an Veranstalter, andere Bands und lokale Kollektive, freundlich und konkret. In einer kleinen Community zählen Verlässlichkeit und echtes Interesse mehr als Hochglanz. Eine Demo, die bei den richtigen Leuten landet, öffnet mehr Türen als eine, die nur online steht.\n\nTeilt sie auch dort, wo eure Community ohnehin ist — nicht als Werbung, sondern als das, was sie ist: eure erste Aufnahme, mit der ihr Teil des Ganzen werdet."
+        "de": "Ist die Demo fertig, geht es ums Teilen — und auch das ist in der DIY-Community selbst gemacht. Plattformen für den Direktverkauf an Fans oder die üblichen Streaming-Dienste (über einfache Digital-Vertriebe) bringen eure Musik online; ein Titelbild und ein paar Zeilen zur Band gehören dazu.\n\nDer wirksamste Weg zu Auftritten führt über direkte Kontakte: Schickt die Demo an Veranstalter, andere Bands und lokale Kollektive, freundlich und konkret. In einer kleinen Community zählen Verlässlichkeit und echtes Interesse mehr als Hochglanz. Eine Demo, die bei den richtigen Leuten landet, öffnet mehr Türen als eine, die nur online steht.\n\nTeilt sie auch dort, wo eure Community ohnehin ist — nicht als Werbung, sondern als das, was sie ist: eure erste Aufnahme, mit der ihr Teil des Ganzen werdet."
       },
       "reflexionsaufgabe": {
-        "de": "Wo veröffentlicht ihr eure Demo (Bandcamp, Streaming über einen Digital-Vertrieb), und habt ihr ein Titelbild und ein paar Zeilen zur Band? An welche Veranstalter, Bands und Kollektive schickt ihr sie direkt und persönlich? Und wie werdet ihr damit Teil eurer Community, statt nur online zu stehen?"
+        "de": "Wo veröffentlicht ihr eure Demo (Plattform für den Direktverkauf an Fans, Streaming über einen Digital-Vertrieb), und habt ihr ein Titelbild und ein paar Zeilen zur Band? An welche Veranstalter, Bands und Kollektive schickt ihr sie direkt und persönlich? Und wie werdet ihr damit Teil eurer Community, statt nur online zu stehen?"
       },
       "voraussetzungen": [
         "demo_warum_wozu"

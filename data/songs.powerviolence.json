@@ -1,7 +1,7 @@
 {
   "genre": "Powerviolence",
   "anzahl": 30,
-  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder verwendet haben, auch als Provokation. Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, sonstiges Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind Suchlinks (Künstler und Titel) bei Bandcamp bzw. YouTube, keine Direktlinks; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Infest",
@@ -34,7 +34,7 @@
     {
       "kuenstler": "Spazz",
       "titel": "Rev. Fuzz",
-      "substil_vermerk": "Skate-/PV (US)",
+      "substil_vermerk": "Skate-Thrash/PV (US)",
       "url": "https://bandcamp.com/search?q=Spazz+Rev.+Fuzz&item_type=t",
       "quelle": "bandcamp"
     },
@@ -54,15 +54,15 @@
     },
     {
       "kuenstler": "Lack of Interest",
-      "titel": "Compilation Discography",
+      "titel": "Behind Bars",
       "substil_vermerk": "West-Coast-PV (US)",
-      "url": "https://www.youtube.com/results?search_query=Lack+of+Interest+Compilation+Discography",
+      "url": "https://www.youtube.com/results?search_query=Lack+of+Interest+Behind+Bars",
       "quelle": "youtube"
     },
     {
       "kuenstler": "Capitalist Casualties",
       "titel": "Subdivisions of Life",
-      "substil_vermerk": "fast PV (US)",
+      "substil_vermerk": "schneller PV (US)",
       "url": "https://www.youtube.com/results?search_query=Capitalist+Casualties+Subdivisions+of+Life",
       "quelle": "youtube"
     },
@@ -90,14 +90,14 @@
     {
       "kuenstler": "Benümb",
       "titel": "Wesley Willis Is Alive and Well",
-      "substil_vermerk": "PV/grind (US)",
+      "substil_vermerk": "PV/Grind (US)",
       "url": "https://bandcamp.com/search?q=Ben%C3%BCmb+Wesley+Willis+Is+Alive+and+Well&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Iron Lung",
       "titel": "Cerebral Cavity Search",
-      "substil_vermerk": "sicko-PV (US)",
+      "substil_vermerk": "Sicko-PV (US)",
       "url": "https://bandcamp.com/search?q=Iron+Lung+Cerebral+Cavity+Search&item_type=t",
       "quelle": "bandcamp"
     },
@@ -111,28 +111,28 @@
     {
       "kuenstler": "Sex Prisoner",
       "titel": "Ruin",
-      "substil_vermerk": "moderner sludgy PV (US)",
+      "substil_vermerk": "moderner Sludge-PV (US)",
       "url": "https://bandcamp.com/search?q=Sex+Prisoner+Ruin&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "ACxDC",
       "titel": "The Second Coming",
-      "substil_vermerk": "moderner PV/grind (US)",
+      "substil_vermerk": "moderner PV/Grind (US)",
       "url": "https://bandcamp.com/search?q=ACxDC+The+Second+Coming&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Dropdead",
       "titel": "Poverty",
-      "substil_vermerk": "PV/grind (US)",
+      "substil_vermerk": "PV/Grind (US)",
       "url": "https://bandcamp.com/search?q=Dropdead+Poverty&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Left for Dead",
       "titel": "Devoid of Everything",
-      "substil_vermerk": "PV/grind (Kanada)",
+      "substil_vermerk": "PV/Grind (Kanada)",
       "url": "https://bandcamp.com/search?q=Left+for+Dead+Devoid+of+Everything&item_type=t",
       "quelle": "bandcamp"
     },
@@ -153,7 +153,7 @@
     {
       "kuenstler": "P.L.F.",
       "titel": "Extermination Process",
-      "substil_vermerk": "grind/PV (US)",
+      "substil_vermerk": "Grind/PV (US)",
       "url": "https://bandcamp.com/search?q=P.L.F.+Extermination+Process&item_type=t",
       "quelle": "bandcamp"
     },
@@ -167,7 +167,7 @@
     {
       "kuenstler": "The Endless Blockade",
       "titel": "Primitive",
-      "substil_vermerk": "PV/noise (Kanada)",
+      "substil_vermerk": "PV/Noise (Kanada)",
       "url": "https://bandcamp.com/search?q=The+Endless+Blockade+Primitive&item_type=t",
       "quelle": "bandcamp"
     },
@@ -187,15 +187,15 @@
     },
     {
       "kuenstler": "Godstomper",
-      "titel": "Assault with Battery",
-      "substil_vermerk": "Cyber-/PV (US)",
-      "url": "https://bandcamp.com/search?q=Godstomper+Assault+with+Battery&item_type=t",
+      "titel": "Thunderlips",
+      "substil_vermerk": "PV als Bass-Schlagzeug-Duo (US)",
+      "url": "https://bandcamp.com/search?q=Godstomper+Thunderlips&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Gride",
       "titel": "Poselství",
-      "substil_vermerk": "tschechischer PV/grind",
+      "substil_vermerk": "tschechischer PV/Grind",
       "url": "https://bandcamp.com/search?q=Gride+Poselstv%C3%AD&item_type=t",
       "quelle": "bandcamp"
     },

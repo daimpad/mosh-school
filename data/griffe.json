@@ -1,6 +1,6 @@
 {
   "titel": "Griffe",
-  "hinweis": "Die wichtigsten Gitarrengriffe fürs harte Spiel als Griffbild — von den beweglichen Powerchords über Barré-Formen und Oktaven bis zu offenen Akkorden für cleane Passagen. Powerchords und Barré-Formen sind verschiebbar: dieselbe Form klingt auf jedem Bund, nur der Grundton (R) wandert. Die × markieren stumm gehaltene Saiten — im Metal fast immer palm-muted und in tiefer Stimmung, die Griffe bleiben trotzdem gleich.",
+  "hinweis": "Die wichtigsten Gitarrengriffe fürs harte Spiel als Griffbild — von den beweglichen Powerchords über Barré-Formen und Oktaven bis zu offenen Akkorden für cleane Passagen. Powerchords und Barré-Formen sind verschiebbar: dieselbe Form klingt auf jedem Bund, nur der Grundton (R) wandert. Die × markieren stumm gehaltene Saiten. Im Metal werden diese Griffe oft palm-muted und in tiefer Stimmung gespielt — die Formen bleiben trotzdem gleich.",
   "griffe": [
     {
       "id": "pc_e_2",
@@ -24,7 +24,7 @@
       "kategorie": "powerchord",
       "name": { "de": "E-Form mit Oktave" },
       "toene": { "de": "Grundton + Quinte + Oktave" },
-      "kurz": { "de": "Wie die E-Form, dazu die Oktave auf der D-Saite (kleiner Finger). Voller und dicker — der Standard für die meisten Riffs." },
+      "kurz": { "de": "Wie die E-Form, dazu die Oktave auf der D-Saite (kleiner Finger). Voller und dicker — beliebt für breite, stehende Riffs; bei schnellen High-Gain-Chugs bleibt oft die Zwei-Ton-Form tighter." },
       "beweglich": true,
       "baende": 4,
       "saiten": [
@@ -73,7 +73,7 @@
     {
       "id": "pc_drop",
       "kategorie": "powerchord",
-      "name": { "de": "Drop-Tuning: Ein-Finger-Powerchord" },
+      "name": { "de": "Drop-Stimmung: Ein-Finger-Powerchord" },
       "toene": { "de": "Grundton + Quinte + Oktave" },
       "stimmung": { "de": "Drop-Stimmung" },
       "kurz": { "de": "In Drop-Stimmung (z. B. Drop D oder Drop C) liegen Grundton, Quinte und Oktave auf einem Bund über den drei tiefsten Saiten — ein Finger legt sich flach darüber. Die schnellste Form für tiefe, treibende Riffs." },
@@ -254,7 +254,7 @@
         { "status": "stumm" },
         { "status": "offen" },
         { "status": "quinte", "bund": 2, "finger": 2 },
-        { "status": "oktave", "bund": 3, "finger": 4 },
+        { "status": "oktave", "bund": 3, "finger": 3 },
         { "status": "terz", "bund": 1, "finger": 1 }
       ]
     }

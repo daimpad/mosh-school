@@ -8,8 +8,11 @@
 // Bild — sonst flackerte die Startseite bei jedem Anstrich durch. Dieselbe
 // Technik wie bei den Genre-Motiven (FNV-1a-Hash über den Schlüssel), nur dass
 // hier in eine Bilderliste statt in Formparameter abgebildet wird. Welches Foto
-// wo landet, ist bewusst keine inhaltliche Aussage: Bei 18 px Weichzeichnung und
-// 35 % Deckkraft bleibt von einem Motiv nur noch Farbe und Textur übrig.
+// wo landet, ist bewusst keine inhaltliche Aussage: Die Zuordnung ist Zufall, kein
+// Thema — ein Foto auf der Gitarren-Seite zeigt nicht zwingend eine Gitarre. Früher
+// machte die starke Weichzeichnung das ohnehin unsichtbar; heute stehen die Fotos
+// scharf (Deckkraft 80 %) und ins Violette getönt im Hintergrund, die
+// Zufälligkeit gilt trotzdem.
 //
 // Die Liste kommt aus images/bg/bilder.json (erzeugt von
 // scripts/build_bg_index.py, gepflegt vom Workflow bg-index.yml). Fehlt sie oder
@@ -24,8 +27,8 @@ let BILDER = [];
 const ORDNER = 'images/bg/';
 
 // Obergrenze je Bild. Die Startseite lädt rund zehn Hintergründe — ein einzelnes
-// Bild von mehreren hundert Kilobyte schlägt dort voll durch, obwohl von ihm nach
-// 18 px Weichzeichnung nichts als Farbe übrig bleibt. Die Vorgabe für den Ordner
+// Bild von mehreren hundert Kilobyte schlägt dort voll durch, obwohl es nur als
+// Hintergrundton hinter dem Text steht. Die Vorgabe für den Ordner
 // sind 150–250 KB (siehe images/bg/README.md); diese Grenze liegt bewusst
 // deutlich darüber und greift damit nur bei echten Ausreißern.
 //

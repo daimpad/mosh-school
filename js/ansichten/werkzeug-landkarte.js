@@ -15,7 +15,7 @@
 
 import { t } from '../i18n.js';
 import { esc, halteFokus, registriereAufraeumen } from '../oberflaeche.js';
-import { landkarteName } from '../genre-namen.js';
+import { landkarteName, landkarteStil } from '../genre-namen.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 // Modus überlebt ein Neu-Rendern (Modul-State wie in Suche/Stimmungen).
@@ -23,6 +23,9 @@ let modus = 'gefuehl';
 // Laufende Canvas-Animation, damit ein Moduswechsel (In-Place-Neuzeichnung) die
 // alte Schleife stoppt, bevor eine neue startet — sonst stapeln sich rAF-Loops.
 let laufendeFelder = null;
+// Stil-Vokabular (daten.vokabulare.stil) für die Genre-Links im Ergebnis-Panel;
+// beim Rendern gesetzt, weil ergebnisPanel() ohne `daten` aufgerufen wird.
+let stilVokabel = [];
 
 // ---------------------------------------------------------------------------
 // Achsen-Helfer (Objekt {titel,von,bis}; alte String-Form fällt weich zurück).
@@ -330,7 +333,11 @@ function ergebnisPanel(kind) {
       .map(([i, n]) => {
         const g = kind.genres[i];
         const marke = mehr && n > 1 ? ` <span class="gf-zahl" aria-hidden="true">${n}</span>` : '';
-        return `<a class="chip chip-akzent gf-genre-link" href="#/pfad/stil/${esc(g.genre)}">${esc(landkarteName(g.genre))}${marke}</a>`;
+        // Ohne passenden Stilpfad kein Link, sondern ein schlichter Chip.
+        const stil = landkarteStil(g.genre, stilVokabel);
+        return stil
+          ? `<a class="chip chip-akzent gf-genre-link" href="#/pfad/stil/${esc(stil)}">${esc(landkarteName(g.genre))}${marke}</a>`
+          : `<span class="chip chip-akzent">${esc(landkarteName(g.genre))}${marke}</span>`;
       })
       .join(' ');
     const titel = mehr ? t('wz_lk_gefuehl_mehr', { n: tags.length }) : tags[0];
@@ -438,6 +445,7 @@ function verdrahteFelder(el, genres, index) {
 
 // ---------------------------------------------------------------------------
 export function renderWerkzeugLandkarte(el, daten) {
+  stilVokabel = daten.vokabulare?.stil || [];
   // Alte Canvas-Schleife stoppen (In-Place-Neuzeichnung bei Moduswechsel).
   if (laufendeFelder) {
     laufendeFelder.stop();

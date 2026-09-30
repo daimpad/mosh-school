@@ -1,7 +1,7 @@
 {
   "genre": "Industrial",
   "anzahl": 30,
-  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder verwendet haben, auch als Provokation. Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, sonstiges Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind Suchlinks (Künstler und Titel) bei Bandcamp bzw. YouTube, keine Direktlinks; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Cabaret Voltaire",
@@ -69,14 +69,14 @@
     {
       "kuenstler": "Skinny Puppy",
       "titel": "Worlock",
-      "substil_vermerk": "electro-industrial (Kanada)",
+      "substil_vermerk": "Electro-Industrial (Kanada)",
       "url": "https://www.youtube.com/results?search_query=Skinny+Puppy+Worlock",
       "quelle": "youtube"
     },
     {
       "kuenstler": "Front Line Assembly",
       "titel": "Mindphaser",
-      "substil_vermerk": "cyber-industrial (Kanada)",
+      "substil_vermerk": "Cyber-Industrial (Kanada)",
       "url": "https://bandcamp.com/search?q=Front+Line+Assembly+Mindphaser&item_type=t",
       "quelle": "bandcamp"
     },
@@ -111,7 +111,7 @@
     {
       "kuenstler": "Fear Factory",
       "titel": "Demanufacture",
-      "substil_vermerk": "cyber/industrial death (US)",
+      "substil_vermerk": "Cyber-/Industrial-Death (US)",
       "url": "https://www.youtube.com/results?search_query=Fear+Factory+Demanufacture",
       "quelle": "youtube"
     },
@@ -125,7 +125,7 @@
     {
       "kuenstler": "Scorn",
       "titel": "Silver Rain Fell",
-      "substil_vermerk": "dub-lastiges Industrial (UK)",
+      "substil_vermerk": "Dub-lastiges Industrial (UK)",
       "url": "https://bandcamp.com/search?q=Scorn+Silver+Rain+Fell&item_type=t",
       "quelle": "bandcamp"
     },
@@ -193,10 +193,10 @@
       "quelle": "bandcamp"
     },
     {
-      "kuenstler": "Throbbing Gristle",
-      "titel": "Hamburger Lady",
-      "substil_vermerk": "Ur-Industrial (UK)",
-      "url": "https://www.youtube.com/results?search_query=Throbbing+Gristle+Hamburger+Lady",
+      "kuenstler": "23 Skidoo",
+      "titel": "Coup",
+      "substil_vermerk": "früher Industrial-Funk (UK)",
+      "url": "https://www.youtube.com/results?search_query=23+Skidoo+Coup",
       "quelle": "youtube"
     },
     {
@@ -208,7 +208,7 @@
     },
     {
       "kuenstler": "Rammstein",
-      "titel": "Du Hast",
+      "titel": "Du hast",
       "substil_vermerk": "Neue Deutsche Härte (Deutschland)",
       "url": "https://www.youtube.com/results?search_query=Rammstein+Du+Hast",
       "quelle": "youtube"

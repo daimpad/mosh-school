@@ -134,25 +134,25 @@
     },
     {
       "id": "gitarre_kunstharmonics",
-      "anzeigetitel": { "de": "Gitarre: Pinch- & Kunstharmonics" },
+      "anzeigetitel": { "de": "Gitarre: Pinch Harmonics & künstliche Harmonics" },
       "domaene": ["gitarre"],
       "kompetenzstufe": ["experte"],
       "typ": "micro",
       "voraussetzungen": ["lead_phrasierung", "slides_bends"],
       "erklaerteil": {
-        "de": "Pinch-Harmonics (das kreischende „Squeal“, wenn der Daumen der Anschlagshand die Saite direkt nach dem Plektrum berührt) sind eine der ausdrucksstärksten Gitarren-Gesten des Metal — richtig gesetzt geben sie einem einzelnen Ton Schärfe und Stimme. Falsch gesetzt kommen sie gar nicht oder als Zufall. Der Unterschied ist Kontrolle über den Berührungspunkt.\n\nZwei Dinge machen sie zuverlässig. Erstens der Punkt: Über welchem Bereich zwischen Steg und Hals der Daumen die Saite streift, bestimmt, welcher Oberton anspricht — und der wandert mit dem gegriffenen Ton. Man lernt die „Sweet Spots“ für die häufigsten Töne, statt zu hoffen. Zweitens die Kombination mit Ausdruck: Ein Pinch-Harmonic lebt vom Bending und Vibrato danach — erst die Kombination macht aus dem Quietschen eine Geste. Viel Gain und ein betonter Mittenbereich helfen, aber ersetzen die Technik nicht.\n\nKünstliche Harmonics (getappt oder mit dem Anschlag erzwungen) erweitern das auf ganze melodische Linien. Für den Anfang reicht ein zuverlässiger Pinch-Harmonic auf ein, zwei Lieblingstönen — reproduzierbar, mit Bending und Vibrato veredelt."
+        "de": "Pinch Harmonics (das kreischende „Squeal“, wenn der Daumen der Anschlagshand die Saite direkt nach dem Plektrum berührt) sind eine der ausdrucksstärksten Gitarren-Gesten des Metal — richtig gesetzt geben sie einem einzelnen Ton Schärfe und Stimme. Falsch gesetzt kommen sie gar nicht oder als Zufall. Der Unterschied ist Kontrolle über den Berührungspunkt.\n\nZwei Dinge machen sie zuverlässig. Erstens der Punkt: Über welchem Bereich zwischen Steg und Hals der Daumen die Saite streift, bestimmt, welcher Oberton anspricht — und der wandert mit dem gegriffenen Ton. Man lernt die „Sweet Spots“ für die häufigsten Töne, statt zu hoffen. Zweitens die Kombination mit Ausdruck: Ein Pinch Harmonic lebt vom Bending und Vibrato danach — erst die Kombination macht aus dem Quietschen eine Geste. Viel Gain und ein betonter Mittenbereich helfen, aber ersetzen die Technik nicht.\n\nKünstliche Harmonics (getappt oder mit dem Anschlag erzwungen) erweitern das auf ganze melodische Linien. Für den Anfang reicht ein zuverlässiger Pinch Harmonic auf ein, zwei Lieblingstönen — reproduzierbar, mit Bending und Vibrato veredelt."
       },
       "uebungsteil": {
         "de": {
           "titel": "Der Squeal auf Kommando",
-          "ziel": "Einen Pinch-Harmonic zuverlässig ansprechen lassen und mit Bending/Vibrato zur Geste machen.",
+          "ziel": "Einen Pinch Harmonic zuverlässig ansprechen lassen und mit Bending/Vibrato zur Geste machen.",
           "schritte": [
             "Greif einen Ton in mittlerer Lage (viel Gain). Schlag ihn an und lass unmittelbar den Daumen der Anschlagshand die Saite streifen — variier den Punkt zwischen Steg und Halsende in kleinen Schritten, bis ein klarer Oberton kreischt.",
-            "Merk dir den Sweet Spot für diesen Ton und triff ihn zehnmal hintereinander bewusst — Reproduzierbarkeit ist das Ziel, nicht Zufall.",
+            "Merk dir den Sweet Spot für diesen Ton und spiel ihn zehnmal hintereinander bewusst an und zähl, wie oft er anspricht — Reproduzierbarkeit ist das Ziel, nicht Zufall.",
             "Veredel den Harmonic: Nach dem Ansprechen ein Bending nach oben plus Vibrato. Jetzt wird aus dem Quietschen eine Geste.",
             "Wechsel den gegriffenen Ton: Der Sweet Spot wandert. Such ihn für einen zweiten Ton und übe den Wechsel zwischen beiden."
           ],
-          "steigerung": "Setz den Pinch-Harmonic gezielt ans Ende einer Riff-Phrase (Akzent) statt beliebig. Oder taste dich an einen getappten künstlichen Harmonic auf einer gegriffenen Melodie heran.",
+          "steigerung": "Setz den Pinch Harmonic gezielt ans Ende einer Riff-Phrase (Akzent) statt beliebig. Oder taste dich an einen getappten künstlichen Harmonic auf einer gegriffenen Melodie heran.",
           "selbstkontrolle": "Spricht der Harmonic auf Kommando an (acht von zehn) oder ist er Glückssache? Klingt er als Geste (mit Bending/Vibrato) oder als isoliertes Quietschen? Wenn er unzuverlässig ist, sitzt der Berührungspunkt noch nicht — langsamer, bewusster, Punkt für Punkt."
         }
       }
@@ -277,7 +277,7 @@
       "typ": "micro",
       "voraussetzungen": ["drums_fill_sprache", "drums_ghostnotes"],
       "erklaerteil": {
-        "de": "Lineares Spiel heißt: keine zwei Gliedmaßen schlagen gleichzeitig — jeder Ton ist ein eigener, und Hände und Füße bilden zusammen eine durchgehende, verzahnte Linie. Das erzeugt Grooves und Fills mit einer Dichte und einem fließenden Charakter, die mit gleichzeitigen Schlägen nicht möglich sind, und ist ein Kernwerkzeug für moderne, technische Metal-Drummer.\n\nZwei Dinge sind der Schlüssel. Erstens die Verzahnung: Kick, Snare, Hi-Hat/Toms wechseln sich lückenlos ab, sodass eine einzige Sechzehntel- oder Zweiunddreißigstel-Linie entsteht, die zwischen Händen und Füßen hin- und herspringt. Das verlangt Unabhängigkeit UND präzises Timing, damit die Linie gleichmäßig klingt und nicht stolpert. Zweitens die Dynamik: Ghost Notes auf der Snare zwischen den Hauptschlägen geben der linearen Linie ihren typischen fließenden Pocket — ohne sie klingt es mechanisch.\n\nDer Weg ist wie immer langsam: kurze lineare Muster (etwa Kick–Snare–Hi-Hat im Wechsel) sehr langsam absolut gleichmäßig, dann als Groove oder Fill einbauen. Bei allem Tempo gilt Lockerheit vor Kraft, Gehörschutz, und bei Zwicken in Hand- oder Fußgelenken abklären."
+        "de": "Lineares Spiel heißt: keine zwei Gliedmaßen schlagen gleichzeitig — jeder Ton ist ein eigener, und Hände und Füße bilden zusammen eine durchgehende, verzahnte Linie. Das erzeugt Grooves und Fills mit einer Dichte und einem fließenden Charakter, die mit gleichzeitigen Schlägen nicht möglich sind, und ist ein Kernwerkzeug für moderne, technische Metal-Drummer.\n\nZwei Dinge sind der Schlüssel. Erstens die Verzahnung: Kick, Snare, Hi-Hat/Toms wechseln sich lückenlos ab, sodass eine einzige Sechzehntel- oder Zweiunddreißigstel-Linie entsteht, die zwischen Händen und Füßen hin- und herspringt. Das verlangt Unabhängigkeit UND präzises Timing, damit die Linie gleichmäßig klingt und nicht stolpert. Zweitens die Dynamik: Ghost Notes auf der Snare zwischen den Hauptschlägen geben der linearen Linie ihren typischen fließenden Pocket — ohne sie klingt es mechanisch.\n\nDer Weg ist wie immer langsam: kurze lineare Muster (etwa Kick–Snare–Hi-Hat im Wechsel) sehr langsam absolut gleichmäßig, dann als Groove oder Fill einbauen. Bei allem Tempo gilt Lockerheit vor Kraft, Gehörschutz, und bei Schmerz oder Zwicken in Hand- oder Fußgelenken sofort stoppen und ärztlich abklären lassen."
       },
       "uebungsteil": {
         "de": {
@@ -373,6 +373,40 @@
               0,
               1,
               0
+            ],
+            "betonung": [
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0
             ]
           },
           {
@@ -413,7 +447,7 @@
             ]
           }
         ],
-        "hinweis": "Linear heißt: nie zwei Schläge gleichzeitig. Jede Spalte trägt genau eine Stimme — prüf das im Raster nach, das ist die ganze Regel."
+        "hinweis": "Linear heißt: nie zwei Schläge gleichzeitig. Jede Spalte trägt genau eine Stimme — prüf das im Raster nach. Die Snare betont nur die Zwei, alle übrigen Snare-Schläge sind leise Ghost Notes: Sie machen aus der Linie einen Groove."
       }
     },
     {
@@ -431,12 +465,12 @@
           "titel": "Ohne Bruch, ohne Druck",
           "ziel": "Zwischen Registern mitten in der Phrase gleiten — nahtlos, aus Kontinuität der Stütze, gesund.",
           "schritte": [
-            "Wärm gründlich auf. Arbeite nur mit Registern, die einzeln und mühelos sitzen. Sichere zuerst einen sauberen Clean und einen leisen, mühelosen Harsh-Ton auf demselben Ton.",
+            "Wärm gründlich auf. Arbeite nur mit Registern, die einzeln und mühelos sitzen. Sichere zuerst einen sauberen Clean und einen leisen, mühelosen Harsh-Ton auf derselben Tonhöhe.",
             "Übe das Auf- und Abblenden der Verzerrung auf EINEM gehaltenen Ton: clean beginnen, die Verzerrung ganz allmählich dazunehmen, wieder zurück — die Stütze bleibt konstant, nur der Anteil ändert sich. Leise.",
             "Verbinde zwei Register mit gemeinsamer Basis: tiefer Guttural, dann ohne abzusetzen in einen höheren Ton gleiten — der Übergang läuft über die Stütze, nicht über einen Neuansatz. Erst sehr langsam.",
             "Bau einen nahtlosen Übergang in eine kurze Phrase, an einer festen Stelle, leise. Timing und Gesundheit vor Lautstärke."
           ],
-          "steigerung": "Erst wenn die Übergänge über Wochen beschwerdefrei sitzen, sie Richtung Songintensität bringen — immer nur so laut, wie der Übergang bruchlos UND frei bleibt. Neue Register nimmst du NICHT hier dazu.",
+          "steigerung": "Erst wenn die Übergänge über Wochen beschwerdefrei sitzen, sie Richtung Songintensität bringen — immer nur so laut, wie der Übergang bruchlos UND frei bleibt. Neue Register nimmst du hier NICHT dazu.",
           "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt die Alltagsstimme frei? Ist der Übergang wirklich nahtlos, oder hörst du einen Bruch/Neuansatz? Und das Wichtigste: Bleibt die Stütze konstant, oder drückst du im Übergang? Jedes Enger-Werden ist die Warnlampe — sofort leiser, im Zweifel stoppen und mit der Lehrperson arbeiten."
         }
       }
@@ -463,7 +497,7 @@
       "typ": "micro",
       "voraussetzungen": ["klangregie_arrangement", "werkanalyse_repertoire"],
       "erklaerteil": {
-        "de": "Ein starkes Riff ist ein Baustein — ein starker Song ist eine Architektur. Auf Experten-Niveau geht es darum, über die einzelne Idee hinaus zu denken: wie Teile zueinander stehen, wie Spannung über Minuten geführt wird, und wie aus Motiven ein zusammenhängendes Ganzes wird statt einer Aneinanderreihung guter Einfälle. Gerade im progressiven, Doom- und Post-Metal ist die Langform selbst das Instrument.\n\nDrei Werkzeuge tragen das. Erstens die motivische Arbeit: Ein wiederkehrendes Motiv (ein Intervall, eine Rhythmusfigur, eine Melodie), das variiert wiederkehrt, gibt einem langen Stück Zusammenhalt — der Hörer erkennt es, ohne es zu benennen. Zweitens die Spannungskurve über die Form: bewusst gesetzte Ruhezonen, Aufbauten, Höhepunkte und Abfälle, sodass der eine große Moment vorbereitet ist. Drittens die Kontrast-Dramaturgie: Dichte gegen Raum, hart gegen offen, schnell gegen langsam — nicht zufällig, sondern als Erzählung.\n\nDie Kunst ist das Weglassen und Verbinden: nicht jeder gute Einfall gehört in denselben Song, und die Übergänge zwischen den Teilen entscheiden, ob die Form trägt oder zerfällt. Wer in Bögen statt in Riffs denkt, schreibt Stücke, die auch beim zehnten Hören noch wachsen."
+        "de": "Ein starkes Riff ist ein Baustein — ein starker Song ist eine Architektur. Auf Experten-Niveau geht es darum, über die einzelne Idee hinaus zu denken: wie Teile zueinander stehen, wie Spannung über Minuten geführt wird, und wie aus Motiven ein zusammenhängendes Ganzes wird statt einer Aneinanderreihung guter Einfälle. Gerade im Prog-, Doom- und Post-Metal ist die Langform selbst das Instrument.\n\nDrei Werkzeuge tragen das. Erstens die motivische Arbeit: Ein Motiv (ein Intervall, eine Rhythmusfigur, eine Melodie), das variiert wiederkehrt, gibt einem langen Stück Zusammenhalt — der Hörer erkennt es, ohne es zu benennen. Zweitens die Spannungskurve über die Form: bewusst gesetzte Ruhezonen, Aufbauten, Höhepunkte und Abfälle, sodass der eine große Moment vorbereitet ist. Drittens die Kontrast-Dramaturgie: Dichte gegen Raum, hart gegen offen, schnell gegen langsam — nicht zufällig, sondern als Erzählung.\n\nDie Kunst ist das Weglassen und Verbinden: nicht jeder gute Einfall gehört in denselben Song, und die Übergänge zwischen den Teilen entscheiden, ob die Form trägt oder zerfällt. Wer in Bögen statt in Riffs denkt, schreibt Stücke, die auch beim zehnten Hören noch wachsen."
       },
       "reflexionsaufgabe": {
         "de": "Analysiere ein langes, mehrteiliges Stück, das du stark findest (Prog/Doom/Post-Metal), als Architektur: Skizziere die Form über die Zeit (Teile, Längen), markiere die Spannungskurve (Ruhe, Aufbau, Höhepunkt, Abfall) und such nach einem wiederkehrenden Motiv — kommt eine Idee variiert zurück und hält das Ganze zusammen?\n\nEntwirf dann selbst die Architektur eines langen Stücks (auf Papier, ohne alles auszukomponieren): ein zentrales Motiv, das mindestens zweimal variiert wiederkehrt; eine Spannungskurve mit einem klar vorbereiteten Höhepunkt; und für jeden Übergang eine Idee, wie ein Teil in den nächsten führt. Prüf die Kernfragen: Trägt das Motiv den Zusammenhalt, oder ist es eine bloße Aneinanderreihung? Ist der Höhepunkt vorbereitet? Und welchen guten Einfall musst du weglassen, damit die Form trägt? Zum Schluss: Welcher Übergang ist der schwierigste, und wie löst du ihn?"
@@ -477,14 +511,14 @@
       "typ": "micro",
       "voraussetzungen": ["lead_phrasierung", "erweiterte_harmonik"],
       "erklaerteil": {
-        "de": "Improvisation ist im Metal seltener das freie Jazz-Solo und öfter das spontane Gestalten über bekanntem Material: über ein Riff, eine Akkordfolge oder einen Bordunton frei phrasieren, Ideen entwickeln und variieren, statt einen auswendig gelernten Lauf abzuspulen. Diese Fähigkeit macht das Spiel lebendig — live, beim Jammen und beim Schreiben, wo die besten Ideen oft aus dem Ausprobieren kommen.\n\nDrei Dinge tragen sie. Erstens das Material im Ohr und in den Fingern: Wer die passende Tonleiter/Modus (aus der erweiterten Harmonik) über dem Grundton kennt und die Lagen beherrscht, muss nicht suchen, sondern kann gestalten. Zweitens die Phrasierung: Improvisation ist nicht möglichst viele Töne, sondern Motive bilden, sie wiederholen und variieren, Pausen setzen — eine musikalische Aussage in Echtzeit. Drittens das Zuhören: Über ein Riff zu improvisieren heißt, auf dessen Rhythmik und Betonung zu reagieren, nicht darüber hinwegzuspielen.\n\nDer Weg ist, die Angst vor dem falschen Ton zu verlieren: Mit wenig Material (drei, vier Tönen) anfangen, daraus Motive bauen, und die Freiheit langsam erweitern. Ein falscher Ton, bewusst aufgelöst, wird zur Absicht."
+        "de": "Improvisation ist im Metal seltener das freie Jazz-Solo und öfter das spontane Gestalten über bekanntem Material: über ein Riff, eine Akkordfolge oder einen Bordunton frei phrasieren, Ideen entwickeln und variieren, statt einen auswendig gelernten Lauf abzuspulen. Diese Fähigkeit macht das Spiel lebendig — live, beim Jammen und beim Schreiben, wo die besten Ideen oft aus dem Ausprobieren kommen.\n\nDrei Dinge tragen sie. Erstens das Material im Ohr und in den Fingern: Wer die passende Tonleiter bzw. den passenden Modus (aus der erweiterten Harmonik) über dem Grundton kennt und die Lagen beherrscht, muss nicht suchen, sondern kann gestalten. Zweitens die Phrasierung: Improvisation ist nicht möglichst viele Töne, sondern Motive bilden, sie wiederholen und variieren, Pausen setzen — eine musikalische Aussage in Echtzeit. Drittens das Zuhören: Über ein Riff zu improvisieren heißt, auf dessen Rhythmik und Betonung zu reagieren, nicht darüber hinwegzuspielen.\n\nDer Weg ist, die Angst vor dem falschen Ton zu verlieren: Mit wenig Material (drei, vier Tönen) anfangen, daraus Motive bauen, und die Freiheit langsam erweitern. Ein falscher Ton, bewusst aufgelöst, wird zur Absicht."
       },
       "uebungsteil": {
         "de": {
           "titel": "Aus wenig Material gestalten",
           "ziel": "Über ein Riff frei phrasieren: Motive bilden, variieren, auf die Rhythmik reagieren.",
           "schritte": [
-            "Nimm ein einfaches Riff oder einen Bordunton auf (Loop) und wähl die passende Tonleiter/Modus darüber. Beschränk dich zuerst auf drei, vier Töne und bilde daraus ein kurzes Motiv.",
+            "Nimm ein einfaches Riff oder einen Bordunton auf (Loop) und wähl die passende Tonleiter bzw. den passenden Modus darüber. Beschränk dich zuerst auf drei, vier Töne und bilde daraus ein kurzes Motiv.",
             "Wiederhol das Motiv und variier es minimal (ein Ton anders, ein Rhythmus verschoben, eine Betonung) — so entsteht eine Aussage statt zufälliger Läufe.",
             "Setz bewusst Pausen: Lass das Riff zwischen deinen Phrasen sprechen. Reagier auf seine Betonungen, statt darüber hinwegzuspielen.",
             "Erweitere das Material langsam (mehr Töne, Lagenwechsel, ein Bending als Höhepunkt) — aber halte die Phrasierung: Motiv, Variation, Pause."

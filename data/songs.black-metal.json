@@ -1,19 +1,19 @@
 {
   "genre": "Black Metal",
   "anzahl": 40,
-  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder verwendet haben, auch als Provokation. Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, sonstiges Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind Suchlinks (Künstler und Titel) bei Bandcamp bzw. YouTube, keine Direktlinks; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Celtic Frost",
       "titel": "Circle of the Tyrants",
-      "substil_vermerk": "proto-Black/Extreme (Schweiz)",
+      "substil_vermerk": "Proto-Black/Extreme (Schweiz)",
       "url": "https://www.youtube.com/results?search_query=Celtic+Frost+Circle+of+the+Tyrants",
       "quelle": "youtube"
     },
     {
       "kuenstler": "Venom",
       "titel": "Black Metal",
-      "substil_vermerk": "proto-Black, Namensgeber (UK)",
+      "substil_vermerk": "Proto-Black, Namensgeber (UK)",
       "url": "https://www.youtube.com/results?search_query=Venom+Black+Metal",
       "quelle": "youtube"
     },
@@ -40,9 +40,9 @@
     },
     {
       "kuenstler": "Naglfar",
-      "titel": "Sunless",
+      "titel": "Sunless Dawn",
       "substil_vermerk": "schwedischer melodischer Black",
-      "url": "https://bandcamp.com/search?q=Naglfar+Sunless&item_type=t",
+      "url": "https://bandcamp.com/search?q=Naglfar+Sunless+Dawn&item_type=t",
       "quelle": "bandcamp"
     },
     {
@@ -76,14 +76,14 @@
     {
       "kuenstler": "Agalloch",
       "titel": "Falling Snow",
-      "substil_vermerk": "atmosphärischer Black/Metal (US)",
+      "substil_vermerk": "atmosphärischer Black/Folk (US)",
       "url": "https://bandcamp.com/search?q=Agalloch+Falling+Snow&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Ulver",
       "titel": "Wolf and Passion",
-      "substil_vermerk": "früher Folk-Black (Norwegen)",
+      "substil_vermerk": "früher Roh-Black (Norwegen)",
       "url": "https://bandcamp.com/search?q=Ulver+Wolf+and+Passion&item_type=t",
       "quelle": "bandcamp"
     },
@@ -110,13 +110,13 @@
     },
     {
       "kuenstler": "Mork",
-      "titel": "Det Siste Lyset",
+      "titel": "Det Siste Gode I Meg",
       "substil_vermerk": "moderner Roh-Black (Norwegen)",
-      "url": "https://bandcamp.com/search?q=Mork+Det+Siste+Lyset&item_type=t",
+      "url": "https://bandcamp.com/search?q=Mork+Det+Siste+Gode+I+Meg&item_type=t",
       "quelle": "bandcamp"
     },
     {
-      "kuenstler": "Dawn Ray’d",
+      "kuenstler": "Dawn Ray'd",
       "titel": "Fire Sermon",
       "substil_vermerk": "anarchistischer Black Metal (UK)",
       "url": "https://bandcamp.com/search?q=Dawn+Rayd+Fire+Sermon&item_type=t",
@@ -215,16 +215,16 @@
     },
     {
       "kuenstler": "Bathory",
-      "titel": "A Fine Day to Die",
-      "substil_vermerk": "proto-/Viking-Black (Schweden)",
-      "url": "https://www.youtube.com/results?search_query=Bathory+A+Fine+Day+to+Die",
+      "titel": "Enter the Eternal Fire",
+      "substil_vermerk": "Proto-/Viking-Black (Schweden)",
+      "url": "https://www.youtube.com/results?search_query=Bathory+Enter+the+Eternal+Fire",
       "quelle": "youtube"
     },
     {
-      "kuenstler": "Mayhem",
-      "titel": "Freezing Moon",
-      "substil_vermerk": "norwegische zweite Welle",
-      "url": "https://www.youtube.com/results?search_query=Mayhem+Freezing+Moon",
+      "kuenstler": "Ved Buens Ende",
+      "titel": "I Sang for the Swans",
+      "substil_vermerk": "avantgardistische zweite Welle (Norwegen)",
+      "url": "https://www.youtube.com/results?search_query=Ved+Buens+Ende+I+Sang+for+the+Swans",
       "quelle": "youtube"
     },
     {
@@ -256,10 +256,10 @@
       "quelle": "youtube"
     },
     {
-      "kuenstler": "Dissection",
-      "titel": "Where Dead Angels Lie",
+      "kuenstler": "Sacramentum",
+      "titel": "Far Away from the Sun",
       "substil_vermerk": "melodischer Black/Death (Schweden)",
-      "url": "https://www.youtube.com/results?search_query=Dissection+Where+Dead+Angels+Lie",
+      "url": "https://www.youtube.com/results?search_query=Sacramentum+Far+Away+from+the+Sun",
       "quelle": "youtube"
     },
     {
@@ -271,9 +271,9 @@
     },
     {
       "kuenstler": "Kampfar",
-      "titel": "Ravens",
-      "substil_vermerk": "pagan-Black (Norwegen)",
-      "url": "https://bandcamp.com/search?q=Kampfar+Ravens&item_type=t",
+      "titel": "Ravenheart",
+      "substil_vermerk": "Pagan-Black (Norwegen)",
+      "url": "https://bandcamp.com/search?q=Kampfar+Ravenheart&item_type=t",
       "quelle": "bandcamp"
     },
     {

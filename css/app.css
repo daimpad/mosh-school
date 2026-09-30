@@ -1,4 +1,4 @@
-/* ZERRER — Blutrot als Akzent, Rubik (lokal).
+/* ZERRER — Lila als Akzent, Rubik (lokal).
    Hell & Dunkel über umgeschaltete Tokens (System oder Profil-Umschalter);
    Container-Radius 14px, weiche mehrlagige Elevation, moderne Übergänge.
    Untere Leiste nur mobil; ab 768px Hamburger-Menü oben rechts. */
@@ -7,17 +7,28 @@
    Ampellogik: Rot = offen, Gelb = teilweise/Hinweis, Grün = erledigt. */
 :root {
   color-scheme: light;
-  /* Marke (CI): Blutrot als Akzent + Ampel-Signalfarben. Die „grungy hardcore
+  /* Marke (CI): Lila als Akzent + Ampel-Signalfarben. Die „grungy hardcore
      skin" weiter unten überschreibt diese Basistokens pro Theme; sie sind hier
-     nur der rote Fallback. */
-  /* Logo-Rot: BEWUSST kein --primaer. Der Akzent der App kippt mit dem Thema
-     (#cc2418 hell, #ff3b2e dunkel); das Rot IM Logo ist eine Marken-Konstante
-     und darf das nicht mitmachen. */
-  --marke-rot: #fa100d;
-  --primaer: #cc2418;
-  --primaer-dunkel: #a81a10;
-  --primaer-tief: #a81a10;
-  --primaer-weich: #f3ded9;
+     nur der lila Fallback. */
+  /* Logo-Lila: BEWUSST kein --primaer. Der Akzent der App kippt mit dem Thema
+     (#5b16a8 hell, #b57bff dunkel); das Lila IM Logo ist eine Marken-Konstante
+     und darf das nicht mitmachen. Ein Einzelton kann für TEXT auf Weiß und auf
+     Schwarz nicht beides Mal 4,5:1 halten (das ist rechnerisch ausgeschlossen —
+     deshalb hat der Akzent zwei Töne); ein Logo braucht nur 3:1, und #9146ff
+     liefert 4,6:1 auf Weiß und 4,2:1 auf dem Schwarz der Kopfzeile. Die Ebenen
+     unter assets/images/marke/*-rot.svg heißen nach der Farbe der QUELLE, nicht
+     nach der gerenderten: Gefärbt wird allein über dieses Token. */
+  --marke-farbe: #9146ff;
+  /* Gemessene Hoehen der fixierten Leisten (mobil, 390 px breit: untere Leiste
+     ~59 px, Kopfzeile ~63 px, jeweils ohne Safe-Area). Genutzt fuer das
+     scroll-padding im Mobil-Breakpoint — sonst schiebt der Browser fokussierte
+     Elemente hinter die Leisten. */
+  --fussnav-hoehe: 3.7rem;
+  --kopf-hoehe: 4rem;
+  --primaer: #5b16a8;
+  --primaer-dunkel: #47108a;
+  --primaer-tief: #47108a;
+  --primaer-weich: #efe6fa;
   /* Kompetenzstufen-Rampe (Blau-Intensität, Einsteiger→Experte). KEINE Ampelfarben —
      Rot/Gelb/Grün bleiben dem Status vorbehalten; die Stufe kodiert nur Intensität. */
   --stufe-1-flaeche: #e4e0d6; --stufe-1-text: #6b655b;
@@ -102,10 +113,10 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) {
     color-scheme: dark;
-    --primaer: #ff3b2e;
-    --primaer-dunkel: #ff5b50;
-    --primaer-tief: #ff3b2e;
-    --primaer-weich: #2c1310;
+    --primaer: #b57bff;
+    --primaer-dunkel: #c9a0ff;
+    --primaer-tief: #b57bff;
+    --primaer-weich: #231433;
     --stufe-1-flaeche: #23231f; --stufe-1-text: #a4a099;
     --stufe-2-flaeche: #3a3a34; --stufe-2-text: #cbc7bd;
     --stufe-3-flaeche: #86827a; --stufe-3-text: #0b0b0c;
@@ -137,10 +148,10 @@
 }
 :root[data-theme='dunkel'] {
   color-scheme: dark;
-  --primaer: #ff3b2e;
-  --primaer-dunkel: #ff5b50;
-  --primaer-tief: #ff3b2e;
-  --primaer-weich: #2c1310;
+  --primaer: #b57bff;
+  --primaer-dunkel: #c9a0ff;
+  --primaer-tief: #b57bff;
+  --primaer-weich: #231433;
   --stufe-1-flaeche: #23231f; --stufe-1-text: #a4a099;
   --stufe-2-flaeche: #3a3a34; --stufe-2-text: #cbc7bd;
   --stufe-3-flaeche: #86827a; --stufe-3-text: #0b0b0c;
@@ -195,8 +206,14 @@ body {
   background-attachment: var(--backdrop-attachment);
   background-blend-mode: var(--backdrop-blend);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
+/* clip statt hidden: hidden macht html/body zum Scroll-Container und bricht damit
+   position: sticky der .kopf; clip schneidet nur ab, ohne Scroll-Container.
+   Die hidden-Zeile davor ist der Rueckfall fuer Browser ohne `overflow: clip`
+   (Safari bis iOS 15.x, aeltere Chromium): Sie ignorieren die zweite Zeile als
+   ungueltig und behalten hidden — ohne den Rueckfall fehlte dort jeder
+   Schutz gegen die 100vw-Heros und der Seitenkopf wackelte seitlich. */
+html, body { overflow-x: hidden; overflow-x: clip; }
 
 h1, h2, h3, h4, p, ul, ol, dl, figure {
   margin: 0 0 0.6rem;
@@ -212,9 +229,9 @@ h4 { font-size: 0.78rem; font-weight: 600; color: var(--tinte-2); text-transform
 .knopf .fa-solid, .hero .fa-solid, .menue-schliessen .fa-solid,
 .hamburger .fa-solid, .kopf-suche .fa-solid, .kopf-thema .fa-solid { color: inherit; }
 /* Icons in AKTIVEN Chips erben die Schriftfarbe. Ohne das behielten sie ihr
-   globales Rot und standen im gefuellten Zustand rot auf rot — das Icon war
+   globales Lila und standen im gefuellten Zustand lila auf lila — das Icon war
    genau dann unsichtbar, wenn der Filter greift. Im Ruhezustand bleibt das
-   rote Icon: dort ist es der Akzent auf neutraler Flaeche. */
+   lila Icon: dort ist es der Akzent auf neutraler Flaeche. */
 .chip-akzent .fa-solid, .chip.aktiv .fa-solid, .mastery-knopf.aktiv .fa-solid { color: inherit; }
 
 a { color: var(--primaer-tief); }
@@ -243,12 +260,12 @@ code { font-size: 0.85em; word-break: break-all; }
   gap: 0.8rem;
 }
 
-/* Wortmarke in Tinte, nicht in Rot: Das rote Plektrum daneben ist der Akzent —
-   traegt der Schriftzug dieselbe Farbe, konkurrieren zwei rote Flaechen in der
+/* Wortmarke in Tinte, nicht in Lila: Das lila Plektrum daneben ist der Akzent —
+   traegt der Schriftzug dieselbe Farbe, konkurrieren zwei lila Flaechen in der
    Kopfzeile miteinander und keine der beiden fuehrt. Schwarz auf Weiss bzw.
    Weiss auf Schwarz laesst dem Logo den Auftritt. */
 /* --- MARKE: zweifarbige Masken-Ebenen ------------------------------------
-   Die Marken sind zweifarbig: ein rotes Zerre-Zeichen plus eine Flaeche, die
+   Die Marken sind zweifarbig: ein lila Zerre-Zeichen plus eine Flaeche, die
    mit dem Thema kippen muss. Ein <img> kann das nicht — es traegt seine Farben
    in sich, und ein Wechsel per prefers-color-scheme haenge am Betriebssystem
    statt am Themen-Umschalter der App (der drei Stellungen hat, nicht zwei).
@@ -275,17 +292,17 @@ code { font-size: 0.85em; word-break: break-all; }
   -webkit-mask-image: var(--marke-tinte); mask-image: var(--marke-tinte);
 }
 .marke-zeichen::after {
-  background: var(--marke-rot);
-  -webkit-mask-image: var(--marke-rot-ebene); mask-image: var(--marke-rot-ebene);
+  background: var(--marke-farbe);
+  -webkit-mask-image: var(--marke-farbebene); mask-image: var(--marke-farbebene);
 }
-/* Einfarbige Marken haben keine rote Ebene. Ohne dieses `content: none` legte
+/* Einfarbige Marken haben keine Farbebene. Ohne dieses `content: none` legte
    ::after eine volle Flaeche ueber die Marke — `mask-image: none` maskiert
    nichts weg, es zeigt alles. */
 .marke-einfarbig::after { content: none; }
 
 .marke-bild {
   --marke-tinte: url(../assets/images/marke/bild-tinte.svg);
-  --marke-rot-ebene: url(../assets/images/marke/bild-rot.svg);
+  --marke-farbebene: url(../assets/images/marke/bild-rot.svg);
 }
 .marke-wort {
   --marke-tinte: url(../assets/images/marke/wort.svg);
@@ -293,12 +310,12 @@ code { font-size: 0.85em; word-break: break-all; }
 }
 .marke-wortbild-moshskool {
   --marke-tinte: url(../assets/images/marke/wortbild-moshskool-tinte.svg);
-  --marke-rot-ebene: url(../assets/images/marke/wortbild-moshskool-rot.svg);
+  --marke-farbebene: url(../assets/images/marke/wortbild-moshskool-rot.svg);
   aspect-ratio: 561.56 / 142.78;
 }
 .marke-wortbild-kollektiv {
   --marke-tinte: url(../assets/images/marke/wortbild-kollektiv-tinte.svg);
-  --marke-rot-ebene: url(../assets/images/marke/wortbild-kollektiv-rot.svg);
+  --marke-farbebene: url(../assets/images/marke/wortbild-kollektiv-rot.svg);
   aspect-ratio: 561.56 / 142.78;
 }
 /* Vollmarke ueber einer Bereichs-Ueberschrift (Kollektiv, Lernen). Gedeckelt,
@@ -412,6 +429,14 @@ main {
 .fussnav-mehr.aktiv .fa-solid { transform: translateY(-1px); color: var(--primaer-tief); }
 
 body.im-onboarding .fussnav { display: none; }
+/* Fokus per Tastatur scrollt sonst Elemente unter die fixierte untere Leiste bzw.
+   die sticky Kopfzeile. Nur mobil — ab 768 px gibt es die untere Leiste nicht. */
+@media (max-width: 767.98px) {
+  html {
+    scroll-padding-bottom: calc(var(--fussnav-hoehe) + env(safe-area-inset-bottom) + 0.5rem);
+    scroll-padding-top: calc(var(--kopf-hoehe) + env(safe-area-inset-top) + 0.5rem);
+  }
+}
 
 /* ---------- Seiten-Footer (auf ALLEN Breiten) ---------- */
 /* Frueher nur ab 768px sichtbar — auf Mobil trug die fixierte Bottom-Bar die
@@ -491,7 +516,7 @@ body.im-onboarding main { padding-bottom: 2rem; }
 
 /* Kopfzeilen-Knoepfe (Menue und Suche): weisses Zeichen auf schwarzem Grund.
    Sie sind Navigation, kein Inhalt — der schwarze Block setzt sie in beiden
-   Themen gleich vom Blatt ab, ohne Rot zu verbrauchen (das gehoert der Aktion).
+   Themen gleich vom Blatt ab, ohne Lila zu verbrauchen (das gehoert der Aktion).
    Vorher war der Hamburger ein roter Block und damit die groesste rote Flaeche
    der Seite, danach eine weisse Marke, die im hellen Thema in der Kopfzeile
    verlief. */
@@ -923,7 +948,7 @@ a.karte-link {
 .chip[hidden] { display: none; }
 
 /* Aktiver/ausgewählter Chip: satte Akzentfläche mit VOLLWEISSER Schrift (nicht
-   das rote --primaer-tief) — klar erkennbarer Ausgewählt-Zustand, lesbar in
+   das lila --primaer-tief) — klar erkennbarer Ausgewählt-Zustand, lesbar in
    beiden Themes. */
 .chip-akzent { background: var(--primaer); color: var(--auf-primaer); border-color: var(--primaer); }
 
@@ -1184,7 +1209,7 @@ input[type='radio'], input[type='checkbox'] {
 .balken-fuellung {
   height: 100%;
   border-radius: 999px;
-  /* Blutrot-Rampe. Das zweite Stopp war #7cc6f7 — ein Hellblau aus der
+  /* Lila-Rampe. Das zweite Stopp war #7cc6f7 — ein Hellblau aus der
      Crossminton-Palette des Forks, das in keinem ZERRER-Token mehr vorkommt. */
   background: linear-gradient(90deg, var(--primaer-tief), var(--primaer));
   transition: width 500ms cubic-bezier(0.22, 0.9, 0.35, 1);
@@ -1416,7 +1441,7 @@ details[open] summary { margin-bottom: 0.5rem; }
     border-style: dashed;
   }
   /* Knoepfe aendern im Hover NUR die Farbe — kein zusaetzlicher oder wachsender
-     Schatten. Der Farbwechsel (rote Fuellung) ist Signal genug; ein mitwachsender
+     Schatten. Der Farbwechsel (lila Fuellung) ist Signal genug; ein mitwachsender
      Schatten laesst den Knopf beim Ueberfahren zappeln. */
   .knopf-primaer:hover:not([disabled]) { background: var(--primaer-dunkel); }
   .knopf-leise:hover { color: var(--primaer-tief); box-shadow: none; }
@@ -1852,27 +1877,27 @@ details[open] summary { margin-bottom: 0.5rem; }
 /* ============================================================================
    ZERRER — GRUNGY HARDCORE SKIN
    Überschreibt die Basistokens (Kaskade: später gewinnt). Düster, hart,
-   zerkratzt: Concrete-Schwarz, Knochen-Weiss, Blutrot als Spot; harte Kanten,
+   zerkratzt: Concrete-Schwarz, Knochen-Weiss, Lila als Spot; harte Kanten,
    harte Versatz-Schatten (Siebdruck), Filmkorn-Overlay, fette Versalien.
    ============================================================================ */
 
 /* Hell = Xerox-Flyer auf weissem Blatt.
-   Hier stehen nur noch die Werte, die das helle Thema allein traegt: Rot-Rampe
+   Hier stehen nur noch die Werte, die das helle Thema allein traegt: Lila-Rampe
    und die Ampel-Signalfarben. Flaechen, Tinte, Kanten, Schatten und die weichen
    Fuellungen setzt der Block „HELLES THEMA — weisses Blatt" am Dateiende — er
    muss spaeter stehen als die Bildebenen-Tokens weiter unten. Werte fuer Hell
    also NICHT hier ergaenzen, sonst gibt es zwei Wahrheiten. */
 :root {
-  --primaer: #cc2418;
-  --primaer-dunkel: #a81a10;
-  --primaer-tief: #a81a10;
+  --primaer: #5b16a8;
+  --primaer-dunkel: #47108a;
+  --primaer-tief: #47108a;
   --signal-rot: #b23a26; --signal-rot-text: #9a2c19;
   --signal-gelb: #c79a12; --signal-gelb-text: #7d5f04;
   --signal-gruen: #4f7a1f; --signal-gruen-text: #3c5f15;
   /* Tinte AUF einer gefuellten Signalflaeche. Die Fuellung wechselt mit dem
      Thema, die Schrift darauf muss mitwechseln — vorher stand ueberall ein
      hartes #fff bzw. #0b0b0c, das jeweils in EINEM Thema durchfiel (weisser
-     Chip-Text auf dem dunklen Rot: 3,55:1). Hell dunkelt die Fuellung, also
+     Chip-Text auf dem hellen Lila: 2,9:1). Hell dunkelt die Fuellung, also
      traegt sie Weiss; dunkel leuchtet sie, also traegt sie Schwarz. */
   --auf-primaer: #ffffff;
   --auf-gruen: #ffffff;
@@ -1881,10 +1906,10 @@ details[open] summary { margin-bottom: 0.5rem; }
 /* Dunkel = die Haupt-Identität: Concrete-Schwarz */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) {
-    --primaer: #ff3b2e;
-    --primaer-dunkel: #ff5b50;
-    --primaer-tief: #ff3b2e;
-    --primaer-weich: #2c1310;
+    --primaer: #b57bff;
+    --primaer-dunkel: #c9a0ff;
+    --primaer-tief: #b57bff;
+    --primaer-weich: #231433;
     --hintergrund: #0b0b0c;
     --hintergrund-2: #111112;
     --flaeche: #161617;
@@ -1908,10 +1933,10 @@ details[open] summary { margin-bottom: 0.5rem; }
   }
 }
 :root[data-theme='dunkel'] {
-  --primaer: #ff3b2e;
-  --primaer-dunkel: #ff5b50;
-  --primaer-tief: #ff3b2e;
-  --primaer-weich: #2c1310;
+  --primaer: #b57bff;
+  --primaer-dunkel: #c9a0ff;
+  --primaer-tief: #b57bff;
+  --primaer-weich: #231433;
   --hintergrund: #0b0b0c;
   --hintergrund-2: #111112;
   --flaeche: #161617;
@@ -1992,8 +2017,8 @@ h1, .marke-hero-text h1 { letter-spacing: -0.01em; }
    ihre Struktur ueber Ueberschrift und Abstand. Die Breite liegt oben schon
    (transparent) an, hier kommt nur die Farbe dazu: kein Layout-Sprung. */
 a.karte-link, button.karte, .station { border-color: var(--karten-kante); }
-/* Hover markiert dieselbe Kante gestrichelt in Tinte statt durchgezogen in Rot:
-   Rot ist in dieser App die Aktionsfarbe (Knoepfe, Links, Aktiv-Zustand) — als
+/* Hover markiert dieselbe Kante gestrichelt in Tinte statt durchgezogen in Lila:
+   Lila ist in dieser App die Aktionsfarbe (Knoepfe, Links, Aktiv-Zustand) — als
    Hover-Rahmen um jede Kachel nutzte es sich ab. Die Strichelung ist ein eigenes,
    nicht-farbliches Signal und funktioniert in beiden Themen; die Breite bleibt,
    nur der Stil wechselt, also gibt es keinen Layout-Sprung. */
@@ -2012,7 +2037,7 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   .karte:nth-child(even), .station:nth-child(even), .pfad-kachel:nth-child(even) { transform: none; }
 }
 
-/* Knöpfe: hart, blockig, Versalien; Primär = Blutrot mit Tinten-Schrift (bold, AA) */
+/* Knöpfe: hart, blockig, Versalien; Primär = Lila (hell weiße, dunkel dunkle Schrift; AA) */
 /* EINE Groesse fuer alle Knopf-Varianten. Nur der Primaerknopf war zuletzt auf
    40 px/0.82rem geschrumpft, Sekundaer/Leise/Gefahr blieben bei 44 px/1rem — der
    wichtigste Knopf der Seite war damit der kleinste. */
@@ -2033,19 +2058,19 @@ a.karte-link:hover, button.karte:hover, .station:hover {
    weiter unten und bleiben davon unberuehrt. */
 .knopf-primaer {
   background: var(--primaer);
-  /* Weiss statt Tinte auf dem Blutrot: Schwarz auf #cc2418 sind 3.59:1 und damit
-     unter AA — der Kommentar „bold, AA" stimmte nie, und mit der kleineren
-     Schrift ist der Knopf erst recht kein Grosstext mehr. Weiss liegt bei 5.48:1. */
+  /* Weiss statt Tinte auf dem tiefen Lila: Tinte auf #5b16a8 waeren nur 1.9:1,
+     Weiss liegt bei 9.9:1 — AA auch fuer die kleine Schrift des Knopfes, der
+     kein Grosstext ist. */
   color: #ffffff;
   border: 1.5px solid var(--primaer);
   box-shadow: var(--schatten-weich);
 }
 .knopf-sekundaer { border: 1.5px solid var(--linie-stark); background: transparent; }
 /* Der Sekundaerknopf ist im Ruhezustand nur Kante und Tinte — im Hover faellt er
-   rot, genau wie der weisse Primaerknopf im dunklen Thema. Damit hat jeder Knopf
+   lila, genau wie der weisse Primaerknopf im dunklen Thema. Damit hat jeder Knopf
    denselben Hover-Zustand, egal in welchem Thema er gerade wie aussieht.
-   Schriftfarbe je Thema: hell Weiss auf #cc2418 (5.48:1), dunkel Tinte auf dem
-   helleren #ff3b2e (5.54:1) — umgekehrt waeren es 3.59:1 bzw. 3.55:1. */
+   Schriftfarbe je Thema: hell Weiss auf #5b16a8 (9.9:1), dunkel Tinte auf dem
+   helleren #b57bff (6.8:1) — umgekehrt waeren es 1.9:1 bzw. 2.9:1. */
 @media (hover: hover) {
   .knopf-sekundaer:not([disabled]):hover,
   .knopf-sekundaer:not([disabled]):focus-visible {
@@ -2066,12 +2091,12 @@ a.karte-link:hover, button.karte:hover, .station:hover {
 }
 
 /* Dunkles Thema: Der Primaer-CTA kehrt sich um — weisse Flaeche, schwarze
-   Schrift, die rote Fuellung erst im Hover. Auf schwarzem Grund ist Weiss das
-   staerkere Signal; Rot bleibt damit fuer den Moment reserviert, in dem der
+   Schrift, die lila Fuellung erst im Hover. Auf schwarzem Grund ist Weiss das
+   staerkere Signal; Lila bleibt damit fuer den Moment reserviert, in dem der
    Zeiger tatsaechlich auf dem Knopf steht. Quittier-CTAs sind ausgenommen —
    die tragen weiter unten ihren eigenen Ghost-Look, der den Zustand
    offen/erledigt zeigt und nicht die Wichtigkeit.
-   Im hellen Thema bleibt der Knopf rot: Weiss auf Weiss waere kein Knopf. */
+   Im hellen Thema bleibt der Knopf lila: Weiss auf Weiss waere kein Knopf. */
 :root[data-theme='dunkel'] .knopf-primaer:not([data-quittiere]) {
   background: #ffffff;
   color: #0b0b0c;
@@ -2089,7 +2114,7 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   :root[data-theme='dunkel'] .knopf-primaer:not([data-quittiere]):focus-visible {
     background: var(--primaer);
     border-color: var(--primaer);
-    /* Tinte, nicht Weiss: --primaer ist im Dunkeln das hellere #ff3b2e, dort
+    /* Tinte, nicht Weiss: --primaer ist im Dunkeln das hellere #b57bff, dort
        kaeme Weiss nur auf 3.55:1 — Schwarz auf 5.54:1. Auf dem Hover aendert
        sich damit nur die Flaeche, die Schrift bleibt wie im Ruhezustand. */
     color: #0b0b0c;
@@ -2100,7 +2125,7 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   :root:not([data-theme='hell']) .knopf-primaer:not([data-quittiere]):focus-visible {
     background: var(--primaer);
     border-color: var(--primaer);
-    /* Tinte, nicht Weiss: --primaer ist im Dunkeln das hellere #ff3b2e, dort
+    /* Tinte, nicht Weiss: --primaer ist im Dunkeln das hellere #b57bff, dort
        kaeme Weiss nur auf 3.55:1 — Schwarz auf 5.54:1. Auf dem Hover aendert
        sich damit nur die Flaeche, die Schrift bleibt wie im Ruhezustand. */
     color: #0b0b0c;
@@ -2151,7 +2176,7 @@ a.karte-link:hover, button.karte:hover, .station:hover {
 .kopf { border-bottom: 0; }
 
 /* Willkommens-Hero im Dunkel: Concrete-Schwarz,
-   Blutrot nur als harte Kante — nicht als Fläche. Der weiße Hero-Text bleibt lesbar. */
+   Lila nur als harte Kante — nicht als Fläche. Der weiße Hero-Text bleibt lesbar. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='hell']) .hero {
     background: linear-gradient(135deg, #1e1e20 0%, #0b0b0c 100%);
@@ -2165,7 +2190,7 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   box-shadow: var(--schatten-karte);
 }
 
-/* Aktive Navigation: roter Marker */
+/* Aktive Navigation: lila Marker */
 .fussnav a.aktiv, .fussnav-mehr.aktiv, .menue-punkt.aktiv { color: var(--primaer); }
 .fussnav a.aktiv { box-shadow: inset 0 3px 0 var(--primaer); }
 
@@ -2175,13 +2200,13 @@ a.karte-link:hover, button.karte:hover, .station:hover {
 /* Medaillen/Icons hart einrahmen (Stempel-Look) */
 .pfad-medaille, .marke-hero-icon, .such-medaille { border-radius: 2px; border: 1.5px solid currentColor; }
 
-/* ZERRER — Medaillen-Hues (hardcore, warm) */
+/* ZERRER — Medaillen-Hues (hardcore: warme Neutraltöne, Gold, Grün — und die Lila-Familie für die Marken-Bereiche) */
 :root {
-  --pf-blau: #a81a10; --pf-blau-weich: #f0dcd7;
+  --pf-blau: #4a1290; --pf-blau-weich: #ebe3f6;
   --pf-teal: #5f6a72; --pf-teal-weich: #e2e0d8;
-  --pf-violett: #9a3a22; --pf-violett-weich: #f0ddd5;
+  --pf-violett: #7a2a9f; --pf-violett-weich: #f3e5f8;
   --pf-indigo: #8a6a10; --pf-indigo-weich: #efe6cd;
-  --pf-magenta: #cc2418; --pf-magenta-weich: #f3ded9;
+  --pf-magenta: #5b16a8; --pf-magenta-weich: #ece2f8;
   --pf-sky: #5a7a1f; --pf-sky-weich: #e4ecd6;
   --pf-schiefer: #55525a; --pf-schiefer-weich: #e3e0d8;
 }
@@ -2189,9 +2214,9 @@ a.karte-link:hover, button.karte:hover, .station:hover {
   :root:not([data-theme='hell']) {
     --pf-blau: #cbc6ba; --pf-blau-weich: #201f1f;
     --pf-teal: #9aa0a8; --pf-teal-weich: #1b1e22;
-    --pf-violett: #e8836c; --pf-violett-weich: #251310;
+    --pf-violett: #cdb0ff; --pf-violett-weich: #1c1430;
     --pf-indigo: #e6c568; --pf-indigo-weich: #241f0c;
-    --pf-magenta: #ff3b2e; --pf-magenta-weich: #261110;
+    --pf-magenta: #b57bff; --pf-magenta-weich: #1f1230;
     --pf-sky: #a7dd6a; --pf-sky-weich: #17240f;
     --pf-schiefer: #b3afa5; --pf-schiefer-weich: #201f22;
   }
@@ -2199,9 +2224,9 @@ a.karte-link:hover, button.karte:hover, .station:hover {
 :root[data-theme='dunkel'] {
   --pf-blau: #cbc6ba; --pf-blau-weich: #201f1f;
   --pf-teal: #9aa0a8; --pf-teal-weich: #1b1e22;
-  --pf-violett: #e8836c; --pf-violett-weich: #251310;
+  --pf-violett: #cdb0ff; --pf-violett-weich: #1c1430;
   --pf-indigo: #e6c568; --pf-indigo-weich: #241f0c;
-  --pf-magenta: #ff3b2e; --pf-magenta-weich: #261110;
+  --pf-magenta: #b57bff; --pf-magenta-weich: #1f1230;
   --pf-sky: #a7dd6a; --pf-sky-weich: #17240f;
   --pf-schiefer: #b3afa5; --pf-schiefer-weich: #201f22;
 }
@@ -2352,7 +2377,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .drum-an.drum-snare .drum-mark::before { content: "\25CB"; }
 .drum-an.drum-kick .drum-mark::before { content: "\25CF"; }
 .drum-an.drum-crash .drum-mark::before { content: "\25C6"; }
-/* Laufende Spalte: neutrale Fläche + Akzentrahmen statt Rot-auf-Rot (Kontrast). */
+/* Laufende Spalte: neutrale Fläche + Akzentrahmen statt Lila-auf-Lila (Kontrast). */
 .tab-zelle.schritt-aktiv, .drum-zelle.schritt-aktiv { background: var(--flaeche-2); box-shadow: inset 0 0 0 2px var(--primaer); }
 
 /* Pattern-Werkzeug: Steuerzeile (Tempo-Regler + Loop) */
@@ -2718,7 +2743,9 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .such-facette-chip { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 24px; }
 .such-facette-chip:hover { border-color: var(--primaer); color: var(--tinte); }
 .such-facette-chip.aktiv { background: var(--primaer-weich); color: var(--primaer-tief); border-color: transparent; }
-.such-facette-zahl { font-size: 0.66rem; opacity: 0.7; font-variant-numeric: tabular-nums; }
+/* Ohne opacity: erbt die Chip-Farbe (auch im Aktiv-Zustand) — abgeblendet lag
+   die kleine Zahl unter dem Mindestkontrast. */
+.such-facette-zahl { font-size: 0.66rem; font-variant-numeric: tabular-nums; }
 .such-filter-reset { align-self: flex-start; }
 
 /* Mastery-Status-Pill in der Trefferkarte. Signal doppelt kodiert: Form/Zeichen
@@ -3220,7 +3247,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 /* Augenbraue als eigenstaendiger Chip statt als Text im Bild: Sie ist die
    kleinste Schrift im Hero und sass direkt auf dem Foto — die weisse Flaeche
    macht sie unabhaengig davon lesbar, welche Bildstelle gerade darunter liegt.
-   Rot statt Hue, damit sie ueber allen Hero-Farben gleich aussieht. */
+   Lila statt Hue, damit sie ueber allen Hero-Farben gleich aussieht. */
 .genre-landing-augenbraue {
   /* Mehr Luft nach unten: Augenbraue und Titel klebten aneinander und lasen sich
      als eine zweizeilige Ueberschrift statt als Einordnung plus Titel. */
@@ -3231,7 +3258,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
   letter-spacing: 0.14em;
   line-height: 1;
 }
-/* Nur Schrift, keine Flaeche: Der weisse Chip mit roter Kante war ein zweites
+/* Nur Schrift, keine Flaeche: Der weisse Chip mit lila Kante war ein zweites
    Kaestchen ueber dem Titel und stahl ihm die Aufmerksamkeit. Die Lesbarkeit
    ueber dem Foto traegt jetzt derselbe Textschatten wie Titel und Unterzeile. */
 .genre-landing-augenbraue-link,
@@ -3418,7 +3445,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 /* Marken-Chip: etwas kräftiger als ein Filter-Chip — er benennt einen Bereich,
    er schaltet nichts. Das Icon erbt die Schriftfarbe (sonst stünde es im Hover
-   rot auf rot, wie schon bei den aktiven Filter-Chips). */
+   lila auf lila, wie schon bei den aktiven Filter-Chips). */
 .chip-marke {
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -3470,7 +3497,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 }
 
 /* „Reinboxen" (etwas kräftig): der Hero fährt leicht überskaliert über eine
-   clip-path-Blende herein, setzt sich mit kurzem Rücksprung und rotem
+   clip-path-Blende herein, setzt sich mit kurzem Rücksprung und lila
    Rahmen-Blitz. Inhalt zieht mit leichter Verzögerung nach. */
 @keyframes genre-boxin {
   0%   { opacity: 0; transform: scale(1.09); clip-path: inset(15% 17% 15% 17%); }
@@ -3608,7 +3635,7 @@ svg.grafik-icon.baustein-icon { width: 2.1rem; height: 2.1rem; vertical-align: -
 .klang-gitter .klang-genres { max-width: none; }
 
 /* Heros über die volle Breite: Hintergrund randlos, Inhalt auf der Spalte des
-   Fliesstexts (kein horizontaler Overflow dank overflow-x am body).
+   Fliesstexts (kein horizontaler Overflow dank overflow-x: clip an html/body).
    Die Zahlen spiegeln main GENAU: max-width 44rem (also 22rem je Seite ab der
    Mitte) PLUS dessen Innenmass von 1rem — daher 21rem. Vorher stand hier
    1.35rem/22rem, und der Hero-Text sass mobil 23 px weiter rechts, auf dem
@@ -3695,6 +3722,7 @@ body { background-image: none; }
      --bild-weich       Weichzeichnung im Hero; Kacheln bekommen davon --blur-faktor
      --bild-deckkraft   wie deutlich das Foto durchkommt
      --bild-saettigung  1 = Originalfarben, 0 = Graustufen
+     --bild-farbdrehung Farbton-Drehung der Fotos (Grad), 0deg = Originalfarben
    Weg dahin, zur Erinnerung: „Nebel" (18px/.35/.4) war als reine Textur hinter
    EINEM grossen Hero gedacht und ueber zehn Kacheln verteilt nicht mehr zu sehen.
    Danach 5px/.62/.95 — sichtbar, aber immer noch weichgezeichnet. Jetzt scharf:
@@ -3708,6 +3736,15 @@ body { background-image: none; }
      damit an den Kanten keine Subpixel-Blitzer stehen. Wer --bild-weich wieder
      hochdreht, sollte auch hier auf etwa 1.18 zurueck. */
   --bild-zoom: 1.02;
+  /* Farbdrehung der Fotos. Die Hero-Fotos tragen ihr Rot und Orange selbst
+     (Buehnenlicht) und stuenden neben dem lila Akzent bunt im Bild. -80deg dreht
+     Rot nach Violett und Orange nach Magenta, ohne die Helligkeit anzufassen.
+     Im hellen Thema sind die Fotos Graustufen (--bild-saettigung: 0) — dort
+     bewirkt die Drehung nichts und steht deshalb im Themenblock am Dateiende
+     auf 0deg (der Browser spart sich den Farbmatrix-Schritt je Kachel).
+     0deg = Originalfarben. Gilt NUR fuer die
+     Bildebene; Flyer (Shows) laufen nie darueber und behalten ihre Farbe. */
+  --bild-farbdrehung: -80deg;
 }
 
 /* Bildebene": stark weichgezeichnet, entsättigt, heruntergeregelt. Es
@@ -3725,7 +3762,7 @@ body { background-image: none; }
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(calc(var(--bild-weich) * var(--blur-faktor, 1))) saturate(var(--bild-saettigung));
+  filter: blur(calc(var(--bild-weich) * var(--blur-faktor, 1))) saturate(var(--bild-saettigung)) hue-rotate(var(--bild-farbdrehung));
   opacity: var(--bild-deckkraft);
   transform: scale(var(--bild-zoom));
 }
@@ -4002,7 +4039,7 @@ a.karte-link.shows-kachel {
   color: var(--tinte);
   font: inherit;
 }
-.intern-fehler { margin: 0; min-height: 1.2em; color: var(--primaer); font-size: 0.9rem; }
+.intern-fehler { margin: 0; min-height: 1.2em; color: var(--signal-rot-text); font-size: 0.9rem; }
 /* .knopf-zeile richtet global rechtsbuendig aus (Dialog-Konvention). Hier
    gehoeren die Knoepfe an den linken Rand: Sie folgen unmittelbar auf das
    Eingabefeld darueber und lesen sich sonst als abgesetzte Dialog-Aktionen. */
@@ -4014,7 +4051,7 @@ a.karte-link.shows-kachel {
      mehr als jede andere Ansicht, und in der 44rem-Spalte blieb von der
      CryptPad-Oberflaeche (Werkzeugleiste + Seitenrand) kaum Schreibflaeche.
      Dieselbe Rechnung wie bei .genre-landing-hero, deshalb auch derselbe
-     Schutz: overflow-x am body schluckt die Scrollleisten-Breite. */
+     Schutz: overflow-x: clip an html/body schluckt die Scrollleisten-Breite. */
   width: 100vw;
   max-width: 100vw;
   margin: 0.8rem calc(50% - 50vw) 0;
@@ -4063,7 +4100,7 @@ textarea.editor-eingabe { resize: vertical; line-height: 1.5; }
 }
 .editor-pw-form .editor-feld, .editor-token-form .editor-feld { flex: 1 1 18rem; min-width: 0; margin: 0; }
 .editor-token-hinweis { margin: 0 0 0.4rem; }
-.editor-fehler { margin: 0; min-height: 1.2em; color: var(--primaer); font-size: 0.9rem; }
+.editor-fehler { margin: 0; min-height: 1.2em; color: var(--signal-rot-text); font-size: 0.9rem; }
 
 /* Genre-Auswahl: Der Chip IST das Label, die Checkbox sitzt darin und bleibt
    bedienbar — kein eigener Klick-Handler auf einem <div>, damit Tastatur und
@@ -4078,7 +4115,7 @@ textarea.editor-eingabe { resize: vertical; line-height: 1.5; }
    Dieselbe Regel wie bei Stimmgeraet und Klick — ein Zustand, den man nur an
    der Farbe erkennt, ist fuer einen Teil der Leute gar kein Zustand. */
 .editor-p-marke { font-weight: 700; min-width: 1em; }
-.editor-p-fehler { color: var(--primaer); }
+.editor-p-fehler { color: var(--signal-rot-text); }
 .editor-p-warnung { color: var(--tinte-2); }
 .editor-p-ok { color: var(--tinte-2); }
 
@@ -4099,7 +4136,7 @@ textarea.editor-eingabe { resize: vertical; line-height: 1.5; }
 .editor-vorschau-detail .marke-hero { width: auto; margin-left: 0; margin-right: 0; }
 .editor-aktionen { justify-content: flex-start; margin: 0 0 0.6rem; }
 .editor-meldung { margin: 0.4rem 0 0; min-height: 1.2em; font-size: 0.9rem; }
-.editor-meldung-fehler { color: var(--primaer); }
+.editor-meldung-fehler { color: var(--signal-rot-text); }
 
 /* Fliesstext der Shows-Detailseite: Die Markdown-Teilmenge erzeugt hier
    mehrere Absaetze und Aufzaehlungen statt eines einzelnen <p>. */
@@ -4155,7 +4192,7 @@ textarea.editor-eingabe { resize: vertical; line-height: 1.5; }
    Windows als weiße Fahne plus Regenbogen), und ein Masken-Icon wie die übrigen
    Einträge wäre einfarbig — die Farben SIND hier die Aussage. Dieselben sechs
    Farben wie PRIDE_SVG auf der Über-Seite (js/ansichten/info.js). Sie kippen
-   nicht mit dem Thema, aus demselben Grund wie --marke-rot. */
+   nicht mit dem Thema, aus demselben Grund wie --marke-farbe. */
 .regenbogen {
   display: inline-block;
   flex: 0 0 auto;
@@ -4176,8 +4213,9 @@ a.footer-quelltext { color: var(--tinte); text-decoration: none; }
   text-align: right;
   font-size: 0.7rem;
   letter-spacing: 0.04em;
+  /* Leise ueber --tinte-2 wie .leise, ohne zusaetzliche opacity: die drueckte
+     den Kontrast unter 4,5:1. */
   color: var(--tinte-2);
-  opacity: 0.7;
 }
 .footer-version:empty { display: none; }
 
@@ -4366,6 +4404,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
 
   /* Hero-Fotos in Graustufen. */
   --bild-saettigung: 0;
+  --bild-farbdrehung: 0deg;
 
   /* Tinte neutral statt warm: Ohne Creme-Papier wirkt ein braunstichiges Grau
      auf reinem Weiss schmutzig. */
@@ -4380,7 +4419,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
   /* Die weichen Akzentfuellungen (Chips, Medaillen, Ampel-Zustaende) trugen
      denselben Creme-Stich. Sie bleiben — sie sind Zustandsanzeige, keine
      Flaeche —, hellen aber von Weiss aus auf statt von Knochenpapier. */
-  --primaer-weich: #fdeceb;
+  --primaer-weich: #efe6fa;
   --signal-rot-weich: #fdeceb;
   --signal-gelb-weich: #fdf3d6;
   --signal-gruen-weich: #e8f4dc;
@@ -4392,11 +4431,11 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
   --stufe-3-flaeche: #3d3d3d; --stufe-3-text: #f5f5f5;
 
   /* Medaillen-Hues: gleiche Farbwerte, nur die weiche Fuellung von Weiss aus. */
-  --pf-blau-weich: #fbe7e4;
+  --pf-blau-weich: #ece6f8;
   --pf-teal-weich: #ececef;
-  --pf-violett-weich: #fbe8e1;
+  --pf-violett-weich: #f5e8fa;
   --pf-indigo-weich: #fbf1d8;
-  --pf-magenta-weich: #fdeceb;
+  --pf-magenta-weich: #efe6fa;
   --pf-sky-weich: #eaf3dc;
   --pf-schiefer-weich: #ededef;
 }
@@ -4456,6 +4495,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
 
     /* Hero-Fotos in Graustufen. */
     --bild-saettigung: 0;
+    --bild-farbdrehung: 0deg;
 
     /* Tinte neutral statt warm: Ohne Creme-Papier wirkt ein braunstichiges Grau
        auf reinem Weiss schmutzig. */
@@ -4470,7 +4510,7 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
     /* Die weichen Akzentfuellungen (Chips, Medaillen, Ampel-Zustaende) trugen
        denselben Creme-Stich. Sie bleiben — sie sind Zustandsanzeige, keine
        Flaeche —, hellen aber von Weiss aus auf statt von Knochenpapier. */
-    --primaer-weich: #fdeceb;
+    --primaer-weich: #efe6fa;
     --signal-rot-weich: #fdeceb;
     --signal-gelb-weich: #fdf3d6;
     --signal-gruen-weich: #e8f4dc;
@@ -4482,21 +4522,23 @@ a.stufen-anker:hover, a.stufen-anker:focus-visible { border-color: var(--primaer
     --stufe-3-flaeche: #3d3d3d; --stufe-3-text: #f5f5f5;
 
     /* Medaillen-Hues: gleiche Farbwerte, nur die weiche Fuellung von Weiss aus. */
-    --pf-blau-weich: #fbe7e4;
+    --pf-blau-weich: #ece6f8;
     --pf-teal-weich: #ececef;
-    --pf-violett-weich: #fbe8e1;
+    --pf-violett-weich: #f5e8fa;
     --pf-indigo-weich: #fbf1d8;
-    --pf-magenta-weich: #fdeceb;
+    --pf-magenta-weich: #efe6fa;
     --pf-sky-weich: #eaf3dc;
     --pf-schiefer-weich: #ededef;
   }
 }
 
 /* --- Zerr-Labor -------------------------------------------------------- */
-/* Warnfeld für den Pegelhinweis: rote Kante links statt Farbfläche — Rot ist
-   Akzent, keine Flächenfarbe (CI-Regel). Wirkt in beiden Themen über Tokens. */
+/* Warnfeld für den Pegelhinweis: rote Kante links statt Farbfläche — Signalfarben
+   sind keine Flächenfarben (CI-Regel). Warnung bleibt ROT, obwohl der Akzent der
+   App lila ist: Rot heißt hier „Achtung“, nicht „Marke“. Wirkt in beiden Themen
+   über Tokens. */
 .zerr-warnung {
-  border-left: 3px solid var(--primaer);
+  border-left: 3px solid var(--signal-rot);
   padding: 0.6rem 0.85rem;
   margin: 1rem 0;
   background: var(--flaeche-2);

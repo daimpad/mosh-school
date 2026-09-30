@@ -10,10 +10,12 @@
 // v211 schützt das Passwort damit wirklich etwas: Früher stand es im Klartext im
 // Quelltext und zog nur einen Vorhang.
 //
-// DIE ADRESSE NIE IM KLARTEXT INS REPO. Bei CryptPad steckt der Schlüssel zum
-// Pad im URL-Fragment — die Adresse IST der Schlüssel. Im Klartext committet,
-// wäre das Pad unwiderruflich öffentlich (Historie, Klone, Pages-Spiegel).
-// validate.py schlägt deshalb an, sobald irgendwo eine CryptPad-Adresse steht.
+// DIE ADRESSE NIE IM KLARTEXT INS REPO. Bei CryptPad steckte der Schlüssel zum
+// Pad im URL-Fragment, bei einem Google Doc mit „Jeder mit dem Link“ ist es die
+// Dokument-ID — in beiden Fällen IST die Adresse der Schlüssel. Im Klartext
+// committet, wäre das Dokument unwiderruflich öffentlich (Historie, Klone,
+// Pages-Spiegel). validate.py schlägt deshalb an, sobald irgendwo eine
+// CryptPad- oder Google-Dokument-Adresse im Klartext steht.
 // Neue Adresse oder neues Passwort: scripts/verschluessele_pad.mjs.
 //
 // AUCH NICHT IN DIE URL: js/app.js zählt bei jedem Routenwechsel die volle
@@ -63,14 +65,15 @@ function schlossHtml() {
         </div>
         <button type="submit" class="knopf knopf-primaer">${esc(t('intern_oeffnen'))}</button>
       </form>
-      <p id="intern-pw-fehler" class="intern-fehler" role="alert" aria-live="polite"></p>
+      <p id="intern-pw-fehler" class="intern-fehler" role="alert"></p>
     </section>`;
 }
 
 // Nach dem Entsperren: der Ausweich-Link und die Bühne fürs iframe. Der Link
 // steht IMMER da, nicht erst bei einem Fehler: Eine blockierte Einbettung ist
 // aus dieser Seite nicht zuverlässig zu erkennen (s. u.), und Browser, die
-// Drittanbieter-Speicher sperren, zeigen im Rahmen nur CryptPads Fehlermeldung.
+// Drittanbieter-Speicher sperren, zeigen im Rahmen nur eine Anmelde- oder
+// Fehlerseite des Dienstes.
 function bereichHtml() {
   return `
     <div class="knopf-zeile intern-aktionen">
@@ -97,14 +100,15 @@ function haengeRahmenEin(buehne, url) {
   // kaputt (Google Docs fragt die Clipboard-API). Kamera, Mikrofon, Standort
   // bleiben ausdrücklich zu.
   rahmen.allow = 'clipboard-read; clipboard-write';
-  // Ehrlich bleiben: CryptPad braucht Skripte UND seine eigene Origin (Krypto,
-  // Speicher) — zusammen hebt das den Schutzwert der Sandbox für diese Origin
-  // weitgehend auf. Was sie hier wirklich leistet, ist das FEHLENDE
-  // allow-top-navigation: Ohne das kann die eingebettete Seite ZERRER nicht
-  // wegnavigieren. Enger gesetzt bricht das Pad, statt sicherer zu werden.
-  // (Die Meldung „CryptPad needs localStorage" kommt NICHT von hier — sie
-  // entsteht, wenn der Browser Drittanbieter-Speicher sperrt, mit und ohne
-  // sandbox; nachgestellt, s. CLAUDE.md.)
+  // Ehrlich bleiben: Ein Editor wie Google Docs (früher CryptPad) braucht Skripte
+  // UND seine eigene Origin (Sitzung, Speicher) — zusammen hebt das den Schutzwert
+  // der Sandbox für diese Origin weitgehend auf. Was sie hier wirklich leistet, ist
+  // das FEHLENDE allow-top-navigation: Ohne das kann die eingebettete Seite ZERRER
+  // nicht wegnavigieren. Enger gesetzt bricht das Dokument, statt sicherer zu werden.
+  // (Die frühere CryptPad-Meldung „needs localStorage" kam NICHT von hier — sie
+  // entstand, wenn der Browser Drittanbieter-Speicher sperrt, mit und ohne
+  // sandbox; nachgestellt, s. CLAUDE.md. Bei Google Docs äußert sich dieselbe
+  // Browser-Einstellung als Anmeldeaufforderung im Rahmen.)
   rahmen.setAttribute(
     'sandbox',
     // allow-storage-access-by-user-activation: Firefox und Safari sperren den
@@ -116,9 +120,16 @@ function haengeRahmenEin(buehne, url) {
   // Beim Verlassen der Route abräumen, damit die Verbindung zum fremden Dienst
   // nicht weiterläuft. Das Ansichts-DOM wird zwar ohnehin ersetzt; das src zu
   // leeren macht das Ende explizit und unabhängig vom Zeitpunkt.
+  // Zugleich sperrt sich der Bereich wieder (`pad = null`): Wer zurückkommt, gibt
+  // das Passwort erneut ein und klickt erneut auf „Öffnen“. Sonst lüde der Rahmen
+  // beim zweiten Besuch derselben Sitzung sofort — ohne den ausdrücklichen Klick,
+  // auf den sich der Datenschutzabschnitt stützt („erst nach dem Klick“). Eine
+  // Neuzeichnung DERSELBEN Route (z. B. Themenwechsel) läuft nicht durch diesen
+  // Haken und lässt den Bereich offen.
   registriereAufraeumen(() => {
     rahmen.src = 'about:blank';
     rahmen.remove();
+    pad = null;
   });
 }
 
@@ -139,8 +150,19 @@ function zeichneInhalt(el) {
   const knopf = form?.querySelector('button[type=submit]');
   const fehler = bereich.querySelector('#intern-pw-fehler');
   feld?.focus();
+  // Nach einem Fehlversuch markiert aria-invalid das Feld; sobald wieder getippt
+  // wird, gilt die Eingabe als neu und die Markierung fällt weg.
+  feld?.addEventListener('input', () => feld.removeAttribute('aria-invalid'));
   form?.addEventListener('submit', async (ereignis) => {
     ereignis.preventDefault();
+    // WebCrypto gibt es nur in sicheren Kontexten (https, localhost). Über eine
+    // LAN-Adresse per http (etwa der lokale Testserver auf dem Handy) wäre
+    // `crypto.subtle` undefined, entschluessele() lieferte null — und die Seite
+    // meldete bei RICHTIGEM Passwort „Passt nicht“. Die Fehlersuche liefe ins Leere.
+    if (!globalThis.crypto?.subtle) {
+      if (fehler) fehler.textContent = t('intern_kein_krypto');
+      return;
+    }
     // Die Schlüsselableitung dauert auf einem älteren Telefon rund eine
     // Sekunde (absichtlich — genau das bremst das Raten). Solange: Knopf
     // gesperrt und beschriftet, sonst tippt man ein zweites Mal.
@@ -150,12 +172,17 @@ function zeichneInhalt(el) {
     }
     if (fehler) fehler.textContent = '';
     const inhalt = await entschluessele(PAD_SCHLOSS, feld?.value || '');
+    // Wer während der Ableitung weg navigiert ist, hat das Formular nicht mehr im
+    // Dokument. Dann NICHTS entsperren: Der Zustand überdauerte sonst die Route,
+    // und der nächste Besuch lüde den Rahmen ohne Passwortabfrage.
+    if (!form.isConnected) return;
     if (!inhalt || !istBrauchbar(inhalt.einbetten) || !istBrauchbar(inhalt.oeffnen)) {
       if (knopf) {
         knopf.disabled = false;
         knopf.textContent = t('intern_oeffnen');
       }
       if (fehler) fehler.textContent = t('intern_pw_falsch');
+      feld?.setAttribute('aria-invalid', 'true');
       feld?.select();
       return;
     }

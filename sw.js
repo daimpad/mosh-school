@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v220';
+const CACHE = 'zerrer-v221';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -42,6 +42,14 @@ const SHELL = [
   'assets/images/marke/wortbild-moshskool-rot.svg',
   'assets/images/marke/wortbild-kollektiv-tinte.svg',
   'assets/images/marke/wortbild-kollektiv-rot.svg',
+  // Kollektiv-Portraets: vier kleine SVGs, fester Bestand (je Person eine Datei,
+  // von scripts/build_portraets.py erzeugt) — anders als die Flyer waechst hier
+  // nichts still mit. Ohne sie stuende die Kollektiv-Seite offline mit leeren
+  // Kacheln da.
+  'assets/images/kollektiv/damian.svg',
+  'assets/images/kollektiv/patrick.svg',
+  'assets/images/kollektiv/christian.svg',
+  'assets/images/kollektiv/bjoern.svg',
   'css/app.css',
   'css/feedback.css',
   'css/schriften.css',
@@ -254,7 +262,13 @@ const SHELL = [
 // die Installation fehl und der alte SW bleibt aktiv (die App bleibt nutzbar).
 self.addEventListener('install', (ereignis) => {
   ereignis.waitUntil(
-    caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()),
+    // cache: 'reload' umgeht den HTTP-Cache des Browsers: Sonst kann addAll eine
+    // dort noch liegende ALTE Fassung einer Datei in den NEUEN Cache legen — und
+    // die bliebe dann bis zur naechsten Version stehen.
+    caches
+      .open(CACHE)
+      .then((cache) => cache.addAll(SHELL.map((p) => new Request(p, { cache: 'reload' }))))
+      .then(() => self.skipWaiting()),
   );
 });
 
@@ -264,7 +278,15 @@ self.addEventListener('activate', (ereignis) => {
   ereignis.waitUntil(
     caches
       .keys()
-      .then((namen) => Promise.all(namen.filter((n) => n !== CACHE).map((n) => caches.delete(n))))
+      // Nur EIGENE Caches loeschen: Die Cache-API ist origin-weit, und unter
+      // daimpad.github.io teilen sich alle Pages-Projekte dieselbe Origin — ein
+      // pauschales Aufraeumen loeschte deren Caches mit. „mosh-v…" sind die
+      // Namen aus der Zeit vor der Umbenennung.
+      .then((namen) =>
+        Promise.all(
+          namen.filter((n) => /^(zerrer|mosh)-v\d+$/.test(n) && n !== CACHE).map((n) => caches.delete(n)),
+        ),
+      )
       .then(() => self.clients.claim()),
   );
 });
@@ -276,12 +298,33 @@ self.addEventListener('activate', (ereignis) => {
 // offline etwa unter `/baustein/<id>/`, einer der generierten Tier-2-Seiten —,
 // löst der Browser diese Pfade gegen das tiefe Verzeichnis auf und findet nichts:
 // eine ungestylte, tote Seite. Für solche Tiefen offline lieber an die Wurzel
-// verweisen, wo die App vollständig funktioniert.
+// verweisen, wo die App vollständig funktioniert — und zwar auf die Hash-Route,
+// die die Tier-2-Seite spiegelt (/baustein/<id>/ → ./#/baustein/<id>), damit man
+// dort landet, wo man hinwollte, statt auf der Startseite.
+function hashRouteFuer(relativ) {
+  const teile = relativ.split('/').filter((t) => t && t !== 'index.html');
+  if ((teile[0] === 'baustein' && teile.length === 2) || (teile[0] === 'instrument' && teile.length <= 2)) {
+    return `#/${teile.join('/')}`;
+  }
+  if (teile[0] === 'pfad' && ['stil', 'kompetenz', 'themen'].includes(teile[1]) && teile.length <= 3) {
+    return `#/${teile.join('/')}`;
+  }
+  if (teile[0] === 'kollektiv' && teile.length === 1) return '#/kollektiv';
+  return '';
+}
+// ACHTUNG: Diese Abbildung ist eine zweite, handgepflegte Kopie der Pfadstruktur
+// aus scripts/build_seiten.py. Kommt eine neue statische Seitenart dazu, muss sie
+// hier stehen — sonst landen Offline-Nutzer auf der Startseite statt am Ziel, und
+// niemand merkt es. `node scripts/pruefe_sw_routen.mjs` (auch in verify.yml) rechnet
+// sie gegen jede Adresse der sitemap.xml nach.
+
 function bedieneNavigation(anfrage) {
   return fetch(anfrage).catch(() => {
     const wurzel = new URL('./', self.registration.scope);
-    if (new URL(anfrage.url).pathname !== wurzel.pathname) {
-      return Response.redirect(wurzel.href, 302);
+    const pfad = new URL(anfrage.url).pathname;
+    if (pfad !== wurzel.pathname) {
+      const relativ = pfad.startsWith(wurzel.pathname) ? pfad.slice(wurzel.pathname.length) : '';
+      return Response.redirect(wurzel.href + hashRouteFuer(relativ), 302);
     }
     return caches.match('index.html').then((treffer) => treffer || caches.match('./'));
   });

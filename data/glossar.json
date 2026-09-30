@@ -26,7 +26,7 @@
     {
       "id": "gl_003",
       "kategorie": "Konzert & Bühne",
-      "begriff": "Line Check",
+      "begriff": "Line-Check",
       "erklaerung": "Kurze Prüfung, ob jedes Signal am Pult ankommt — schneller als ein voller Soundcheck.",
       "bezug": "soundcheck_ablauf"
     },
@@ -179,7 +179,7 @@
     {
       "id": "gl_026",
       "kategorie": "Publikum & Pit",
-      "begriff": "Stagedive",
+      "begriff": "Stagediving",
       "erklaerung": "Sprung von der Bühne in die Menge.",
       "bezug": "stagediving_crowdsurfing"
     },
@@ -233,7 +233,7 @@
     {
       "id": "gl_034",
       "kategorie": "Veröffentlichen",
-      "begriff": "Split",
+      "begriff": "Split-Veröffentlichung",
       "erklaerung": "Gemeinsame Veröffentlichung zweier oder mehrerer Bands auf einem Tonträger."
     },
     {
@@ -272,7 +272,7 @@
     {
       "id": "gl_040",
       "kategorie": "Veröffentlichen",
-      "begriff": "Master",
+      "begriff": "Mastering",
       "erklaerung": "Letzter Arbeitsschritt für Lautheit und Klangbild über alle Stücke hinweg."
     },
     {
@@ -395,7 +395,7 @@
     {
       "id": "gl_059",
       "kategorie": "Musik & Spielweise",
-      "begriff": "Blast Beat",
+      "begriff": "Blastbeat",
       "erklaerung": "Sehr schnelles Schlagzeugmuster mit abwechselnden oder gleichzeitigen Schlägen."
     },
     {
@@ -413,13 +413,13 @@
     {
       "id": "gl_062",
       "kategorie": "Musik & Spielweise",
-      "begriff": "Gang Vocals",
+      "begriff": "Gang-Vocals",
       "erklaerung": "Von mehreren Stimmen gemeinsam gerufene Passage."
     },
     {
       "id": "gl_063",
       "kategorie": "Musik & Spielweise",
-      "begriff": "Drop Tuning",
+      "begriff": "Drop-Tuning",
       "erklaerung": "Herunterstimmen der tiefsten Saite für tiefere Powerchords mit einem Finger.",
       "bezug": "drop_tuning"
     },

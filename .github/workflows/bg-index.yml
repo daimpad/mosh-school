@@ -46,9 +46,10 @@ jobs:
       - name: Verzeichnis neu erzeugen
         run: python3 scripts/build_bg_index.py
 
-      # Push mit Rebase und Wiederholung: Auf denselben Push hin laeuft auch
-      # sync-root-to-docs.yml und schiebt seinerseits einen Commit nach main.
-      # Wer zweiter ist, wird abgelehnt ("fetch first"). Ohne Rebase gibt der
+      # Push mit Rebase und Wiederholung: Zwischen Checkout und Push kann ein
+      # anderer Commit auf main landen (frueher schob sync-root-to-docs.yml, das es
+      # nicht mehr gibt, auf denselben Push hin einen Commit nach; heute genuegt ein
+      # Merge). Wer zweiter ist, wird abgelehnt ("fetch first"). Ohne Rebase gibt der
       # Lauf dann auf — genau daran ist der erste Einsatz gescheitert, und das
       # Verzeichnis blieb still veraltet.
       - name: Bei Aenderung committen und pushen

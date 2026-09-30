@@ -362,7 +362,7 @@
             "technik": "palm_mute"
           }
         ],
-        "hinweis": "Genau das Chug-Muster der Djent-Gitarre, auf dem Bass. Entscheidend ist nicht der Einsatz, sondern das Ende: Beide müssen gleich lang dämpfen, sonst ragt einer heraus."
+        "hinweis": "Das Chug-Muster, das Gitarre und Bass gemeinsam spielen — hier auf dem Bass. Entscheidend ist nicht der Einsatz, sondern das Ende: Beide müssen gleich lang dämpfen, sonst ragt einer heraus."
       }
     },
     {
@@ -384,7 +384,7 @@
         "bass_akkordspiel"
       ],
       "erklaerteil": {
-        "de": "Der Bass hat zwei Grundrollen: Er kann das Gitarrenriff verdoppeln — maximale Wucht, ein Klotz — oder eine eigene Linie spielen, die den Grundton hält oder gegen das Riff läuft — mehr Breite und Bewegung. Beides ist richtig; die Frage ist, was der Song braucht.\n\nVerdopplung passt, wenn ein Riff mit voller Härte stehen soll. Eine Gegenstimme oder ein gehaltener Grundton öffnet Raum, wenn die Gitarre viele Noten spielt oder ein Part atmen soll. Viele starke Songs wechseln bewusst zwischen beidem — im Vers eigenständig, im Refrain verdoppelt.\n\nDie Entscheidung trefft ihr gemeinsam und pro Part. Sie ist ein Arrangement-Werkzeug, kein Automatismus."
+        "de": "Der Bass hat zwei Grundrollen: Er kann das Gitarrenriff verdoppeln — maximale Wucht, ein Klotz — oder eine eigene Linie spielen, die den Grundton hält oder gegen das Riff läuft — mehr Breite und Bewegung. Beides ist richtig; die Frage ist, was der Song braucht.\n\nVerdopplung passt, wenn ein Riff mit voller Härte stehen soll. Eine Gegenstimme oder ein gehaltener Grundton öffnet Raum, wenn die Gitarre viele Noten spielt oder ein Part atmen soll. Viele starke Songs wechseln bewusst zwischen beidem — in der Strophe eigenständig, im Refrain verdoppelt.\n\nDie Entscheidung trefft ihr gemeinsam und pro Part. Sie ist ein Arrangement-Werkzeug, kein Automatismus."
       },
       "uebungsteil": {
         "de": {
@@ -476,7 +476,7 @@
             "betonung": 1
           }
         ],
-        "hinweis": "Takt 1 und 2 verdoppelt der Bass die Gitarre Ton für Ton. Takt 3 und 4 hält er nur die Grundtöne. Dieselbe Stelle, zwei Rollen — hör, was die Verdopplung dem Part gibt und was sie ihm nimmt."
+        "hinweis": "Takt 1 und 2 verdoppelt der Bass die Gitarre Ton für Ton. Takt 3 und 4 hält er nur die Grundtöne. Dieselbe Stelle, zwei Rollen — hört, was die Verdopplung dem Part gibt und was sie ihm nimmt."
       }
     },
     {
@@ -671,7 +671,7 @@
             ]
           }
         ],
-        "hinweis": "Die Bassdrum-Figur allein, alle Schläge betont: Genau auf diese vier Punkte legt der Bass seine Töne. Lasst zuerst alles andere weg und hört, ob es wie EIN Impuls klingt oder wie zwei dicht aufeinanderfolgende."
+        "hinweis": "Die Bassdrum-Figur unter Hi-Hat und Snare, alle Kicks betont: Genau auf diese vier Punkte legt der Bass seine Töne. Lasst zuerst alles andere weg und hört, ob es wie EIN Impuls klingt oder wie zwei dicht aufeinanderfolgende."
       }
     },
     {
@@ -731,19 +731,19 @@
         "fills"
       ],
       "erklaerteil": {
-        "de": "Nichts entlarvt eine wacklige Rhythmusgruppe so wie ein Break — der Moment, in dem alle gemeinsam stoppen, einen Akzent setzen oder wieder einsteigen. Sitzt er, wirkt die Band wie ein Körper; sitzt er nicht, stolpert alles.\n\nGemeinsame Akzente und Stops müssen als eine Bewegung gedacht werden: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg. Der kritischste Punkt ist die Eins nach dem Break — dort treffen sich beide wieder, und dort zeigt sich, ob der Puls während der Stille gehalten wurde.\n\nÜbt Breaks isoliert, nicht die ganzen Parts: die zwei Takte um den Break herum in Schleife, mit durchlaufendem inneren Zählen."
+        "de": "Nichts entlarvt eine wacklige Rhythmusgruppe so wie ein Break — der Moment, in dem alle gemeinsam stoppen, einen Akzent setzen oder wieder einsteigen. Sitzt er, wirkt die Band wie ein Körper; sitzt er nicht, stolpert alles.\n\nGemeinsame Akzente und Stopps müssen als eine Bewegung gedacht werden: derselbe Schlag, dieselbe Länge, derselbe Wiedereinstieg. Der kritischste Punkt ist die Eins nach dem Break — dort treffen sich beide wieder, und dort zeigt sich, ob der Puls während der Stille gehalten wurde.\n\nÜbt Breaks isoliert, nicht die ganzen Parts: die zwei Takte um den Break herum in Schleife, mit durchlaufendem inneren Zählen."
       },
       "uebungsteil": {
         "de": {
           "titel": "Gemeinsam stoppen und einsteigen",
           "ziel": "Akzente und Breaks als eine Bewegung setzen.",
           "schritte": [
-            "Spielt einen einfachen Groove und baut an einer festen Stelle einen gemeinsamen Stop von einer Zählzeit ein.",
+            "Spielt einen einfachen Groove und baut an einer festen Stelle einen gemeinsamen Stopp von einer Zählzeit ein.",
             "Zählt beide während der Stille innerlich weiter und steigt exakt gemeinsam auf der nächsten Eins wieder ein.",
-            "Nehmt es auf und prüft, ob Stop und Wiedereinstieg wie ein Schlag klingen."
+            "Nehmt es auf und prüft, ob Stopp und Wiedereinstieg wie ein Schlag klingen."
           ],
           "steigerung": "Verlängert die Pause oder setzt einen gemeinsamen Akzent mitten hinein, den beide exakt gleich platzieren.",
-          "selbstkontrolle": "Stop und Wiedereinstieg fallen zusammen; die Eins nach dem Break sitzt bei beiden."
+          "selbstkontrolle": "Stopp und Wiedereinstieg fallen zusammen; die Eins nach dem Break sitzt bei beiden."
         }
       },
       "spielziele": [
@@ -1032,7 +1032,7 @@
             ]
           }
         ],
-        "hinweis": "Zwei Takte Groove, dann ein gemeinsamer Stop von einer Zählzeit, dann exakt gemeinsam wieder auf der Eins. Zählt während der Stille innerlich weiter — die Lücke ist kein Warten, sondern gespielte Zeit."
+        "hinweis": "Zweieinhalb Takte Groove, dann ein gemeinsamer Stopp von zwei Zählzeiten, dann exakt gemeinsam wieder auf der Eins. Zählt während der Stille innerlich weiter — die Lücke ist kein Warten, sondern gespielte Zeit."
       }
     },
     {
@@ -1290,15 +1290,15 @@
         "chugs_breakdown"
       ],
       "erklaerteil": {
-        "de": "Ein Song lebt von Spannungsverläufen — und Gitarre und Gesang bauen sie am wirkungsvollsten gemeinsam auf. Kippt ein zurückgenommener Vers in einen intensiven Refrain, müssen beide denselben Verlauf tragen, sonst zieht einer, während der andere hält.\n\nDynamik ist dabei mehr als laut und leise: ein cleaner, offener Gitarrenpart unter ruhigem Gesang, der in dichte, verzerrte Wände unter harschen Vocals umschlägt. Der Umschlagpunkt ist eine gemeinsame Entscheidung — beide zünden im selben Moment. Ein Aufbau, den nur einer spielt, verpufft.\n\nPlant die Verläufe bewusst pro Song: Wo ist es am leersten, wo am dichtesten, und kommen beide dort zusammen an?"
+        "de": "Ein Song lebt von Spannungsverläufen — und Gitarre und Gesang bauen sie am wirkungsvollsten gemeinsam auf. Kippt eine zurückgenommene Strophe in einen intensiven Refrain, müssen beide denselben Verlauf tragen, sonst zieht einer, während der andere hält.\n\nDynamik ist dabei mehr als laut und leise: ein cleaner, offener Gitarrenpart unter ruhigem Gesang, der in dichte, verzerrte Wände unter harschen Vocals umschlägt. Der Umschlagpunkt ist eine gemeinsame Entscheidung — beide zünden im selben Moment. Ein Aufbau, den nur einer spielt, verpufft.\n\nPlant die Verläufe bewusst pro Song: Wo ist es am leersten, wo am dichtesten, und kommen beide dort zusammen an?\n\nFür die Stimme gilt dabei: Intensität entsteht aus Stütze und Technik, nicht aus Pressen — vorher aufwärmen, und bei Kratzen oder Schmerz sofort stoppen."
       },
       "uebungsteil": {
         "de": {
           "titel": "Gemeinsam aufbauen",
           "ziel": "Einen Spannungsverlauf von Gitarre und Gesang zusammen tragen.",
           "schritte": [
-            "Nehmt einen Vers-Refrain-Übergang und legt gemeinsam fest, wo die Intensität steigt.",
-            "Spielt den Vers bewusst zurückgenommen (offener Gitarrenpart, ruhiger Gesang) und zündet den Refrain am selben Punkt.",
+            "Nehmt einen Strophe-Refrain-Übergang und legt gemeinsam fest, wo die Intensität steigt.",
+            "Spielt die Strophe bewusst zurückgenommen (offener Gitarrenpart, ruhiger Gesang) und zündet den Refrain am selben Punkt.",
             "Prüft, ob der Umschlag als eine Bewegung wirkt oder ob einer zu früh oder zu spät kommt."
           ],
           "steigerung": "Baut einen mehrstufigen Aufbau über mehrere Parts, den beide gemeinsam steigern.",

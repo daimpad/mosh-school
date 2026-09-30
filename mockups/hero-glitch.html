@@ -7,19 +7,22 @@
 <link rel="icon" href="../assets/images/favicon/favicon.svg">
 
 <!-- Bewusst die echten Stylesheets der App: Das Mockup soll zeigen, wie es
-     WIRKLICH aussieht. Display-Schrift (Special Elite), Blutrot, Tinte und
+     WIRKLICH aussieht. Display-Schrift (Special Elite), Lila, Tinte und
      Flaeche kommen aus denselben Tokens wie die App. -->
 <link rel="stylesheet" href="../css/schriften.css">
 <link rel="stylesheet" href="../css/app.css">
 
 <!-- NUR fuer dieses Vergleichs-Mockup: ein paar zusaetzliche Metal-/Horror-
-     Display-Schriften von Google Fonts, um den Schriftzug probeweise in
-     einer anderen Schrift als Special Elite zu sehen (Schriftart-Regler
-     unten). Kein Widerspruch zum "kein CDN"-Grundsatz der App (CLAUDE.md) —
-     dieses Mockup wird nie ausgeliefert, nur zum Entscheiden benutzt. -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Metal+Mania&family=Nosifer&family=Eater&family=Butcherman&family=Pirata+One&display=swap" rel="stylesheet">
+     Display-Schriften, um den Schriftzug probeweise in einer anderen Schrift als
+     Special Elite zu sehen (Schriftart-Regler unten). Die Entscheidung ist gefallen
+     (New Rocker, lokal eingebunden), die Zusatzschriften kamen von Google Fonts.
+     Diese Zeilen sind ENTFERNT: Das Mockup liegt im Repo-Wurzelverzeichnis und wird
+     deshalb mit ausgeliefert (pages.yml, netcup) — es ist nirgends verlinkt, aber
+     unter /mockups/ erreichbar, und ein CDN-Aufruf dort meldete die IP an Google, wie
+     es die App sonst nirgends tut. Metal Mania, Nosifer, Eater, Butcherman und Pirata
+     One fallen jetzt auf Special Elite zurück. Wer sie noch einmal sehen will, bindet
+     sie lokal ein oder fügt die Google-Fonts-Zeile NUR für den Probelauf ein — nicht
+     einchecken. -->
 
 <style>
   /* ==========================================================================
@@ -324,7 +327,7 @@
       <label class="mock-feld"><span>Farbspiel</span>
         <select id="palette">
           <option value="klassisch">Klassisch (Cyan / Rot)</option>
-          <option value="marke">Marke (Blutrot / Stahl)</option>
+          <option value="marke">Marke (Lila / Stahl)</option>
           <option value="gift">Gift (Magenta / Gr&uuml;n)</option>
           <option value="vhs">VHS (Blau / Orange)</option>
           <option value="mono">Monochrom (nur Wei&szlig;)</option>
@@ -368,7 +371,7 @@
 
     <div class="gh-unten">
       <p class="gh-sub">Mosh School</p>
-      <p class="gh-themen">Gitarre &middot; Bass &middot; Drums &middot; Vocals — Hardcore, Metalcore, Death, Black &amp; Doom</p>
+      <p class="gh-themen">Gitarre &middot; Bass &middot; Drums &middot; Vocals — Hardcore, Metalcore, Thrash, Death, Black &amp; Doom</p>
       <div class="gh-cta">
         <a class="knopf knopf-primaer" href="#">Kapitel entdecken</a>
         <a class="knopf knopf-sekundaer" href="#">Onboarding</a>
@@ -455,7 +458,7 @@ const S = {
 
 const PALETTEN = {
   klassisch: ['#00e5ff', '#ff0033'],
-  marke:     ['#7ea8c4', '#cc2418'],
+  marke:     ['#7ea8c4', '#9146ff'],
   gift:      ['#ff00c8', '#00ff85'],
   vhs:       ['#2b6cff', '#ff8a00'],
   mono:      ['#ffffff', '#ffffff'],

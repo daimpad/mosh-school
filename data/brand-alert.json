@@ -41,7 +41,7 @@
       "id": "ba_004",
       "kategorie": "Verstärker",
       "bezeichnung": "Sunn Model T",
-      "warum": "Namensgebend für Drone- und Doom-Ästhetik.",
+      "warum": "Namensgeber der Drone-Band Sunn O))) und prägend für die Drone- und Doom-Ästhetik.",
       "einordnung": "Sehr lauter, cleaner bis grob übersteuernder Röhrenverstärker mit enormem Tiefbass.",
       "alternative": "Jeder laute Vollröhren-Verstärker mit viel Headroom und wenig Zerre erzeugt ein ähnliches Verhalten."
     },
@@ -114,7 +114,7 @@
       "kategorie": "Pedale & Effekte",
       "bezeichnung": "ProCo RAT",
       "warum": "Fest verbunden mit Noise Rock, Sludge und frühem Alternative.",
-      "einordnung": "Verzerrer mit harter Klippung und einem Filter statt einer klassischen Klangregelung.",
+      "einordnung": "Verzerrer mit harter Übersteuerung und einem Filter statt einer klassischen Klangregelung.",
       "alternative": "Der Schaltungstyp ist mehrfach nachgebaut und in vielen günstigen Pedalen enthalten."
     },
     {
@@ -144,7 +144,7 @@
     {
       "id": "ba_017",
       "kategorie": "Pedale & Effekte",
-      "bezeichnung": "Digitech Whammy",
+      "bezeichnung": "DigiTech Whammy",
       "warum": "Charakteristische Oktavsprünge in Nu Metal und modernem Metal.",
       "einordnung": "Digitaler Pitchshifter mit Pedalsteuerung.",
       "alternative": "Mehrere Hersteller bieten vergleichbare Pitchshifter, teils in kleinerem Format."
@@ -176,7 +176,7 @@
     {
       "id": "ba_021",
       "kategorie": "Pedale & Effekte",
-      "bezeichnung": "Sansamp Bass Driver DI",
+      "bezeichnung": "SansAmp Bass Driver DI",
       "warum": "Standard für angezerrten Bass direkt ins Pult.",
       "einordnung": "Vorverstärker mit Verzerrung, Klangregelung und DI-Ausgang.",
       "alternative": "Viele Bass-Preamp-Pedale bieten dieselbe Funktion, oft mit Clean-Blend."
@@ -186,7 +186,7 @@
       "kategorie": "Pedale & Effekte",
       "bezeichnung": "Darkglass B7K",
       "warum": "Moderner Standard für Metal-Bass mit Biss.",
-      "einordnung": "Bass-Overdrive mit getrenntem Clean-Anteil und parametrischer Klangregelung.",
+      "einordnung": "Bass-Overdrive mit getrenntem Clean-Anteil und mehrbandiger Klangregelung.",
       "alternative": "Andere Bass-Preamps mit Blend-Regler erreichen ein sehr ähnliches Ergebnis."
     },
     {
@@ -226,14 +226,14 @@
       "kategorie": "Gitarren",
       "bezeichnung": "Fender Jazzmaster / Jaguar",
       "warum": "Klangbild von Shoegaze und Noise Rock.",
-      "einordnung": "Offset-Korpus, kurze bis mittlere Mensur, schwebendes Vibrato mit flachem Saitenwinkel.",
-      "alternative": "Günstige Nachbauten dieser Bauart sind verbreitet; die lose Saitenlage ist Teil des Reizes."
+      "einordnung": "Offset-Korpus, kurze (Jaguar) oder lange Mensur (Jazzmaster), schwebendes Vibrato mit flachem Saitenwinkel.",
+      "alternative": "Günstige Nachbauten dieser Bauart sind verbreitet; das lockere Spielgefühl durch den flachen Saitenwinkel und das Mitklingen der Saiten hinter dem Steg sind Teil des Reizes."
     },
     {
       "id": "ba_028",
       "kategorie": "Gitarren",
       "bezeichnung": "Ibanez Universe (7-Saiter)",
-      "warum": "Erste breit verfügbare Siebensaiter, Grundlage für Nu Metal und Djent.",
+      "warum": "Erster breit verfügbarer Siebensaiter, Grundlage für Nu Metal und Djent.",
       "einordnung": "Erweiterter Tonumfang nach unten ohne Umstimmen.",
       "alternative": "Sieben- und Achtsaiter sind heute in allen Preisklassen erhältlich."
     },
@@ -328,7 +328,7 @@
     {
       "id": "ba_040",
       "kategorie": "Mikrofone",
-      "bezeichnung": "AKG D112 / Beta 52 (Bassdrum)",
+      "bezeichnung": "AKG D112 / Shure Beta 52 (Bassdrum)",
       "warum": "Standard für Bassdrum-Aufnahmen.",
       "einordnung": "Dynamische Mikrofone mit angehobenem Tiefbass und Attack-Bereich.",
       "alternative": "Preiswerte Bassdrum-Mikrofone bilden dieselbe Frequenzkurve ab."
@@ -449,8 +449,8 @@
       "id": "ba_055",
       "kategorie": "Pedale & Effekte",
       "bezeichnung": "Cleaner Booster (MXR Micro Amp / EP-Booster)",
-      "warum": "Vor den Amp geschaltet macht er den High-Gain-Ton tighter und lauter, ohne ihn umzufärben.",
-      "einordnung": "Ein transparenter Pegel-Boost — anders als der Tube Screamer ohne betonte Mitten, eher zum Antreiben der Endstufe und für Soli.",
+      "warum": "Vor den Amp geschaltet treibt er dessen Vorstufe stärker in die Sättigung, ohne den Ton umzufärben.",
+      "einordnung": "Ein transparenter Pegel-Boost — anders als der Tube Screamer ohne betonte Mitten; vor dem Amp treibt er die Vorstufe an, im Einschleifweg dient er als Lautstärke-Boost für Soli.",
       "alternative": "Zahlreiche günstige Clean-Boost- und Buffer-Pedale erfüllen denselben Zweck."
     },
     {
@@ -458,14 +458,14 @@
       "kategorie": "Pedale & Effekte",
       "bezeichnung": "Tight-Metal-Overdrive (Precision-Drive-Klasse)",
       "warum": "Der moderne, extrem tighte Rhythmus-Ton von Djent und Deathcore — oft mit eingebautem Gate.",
-      "einordnung": "Ein Overdrive fürs Anblasen von High-Gain-Amps mit straffem Bass und integriertem Noise-Gate gegen das Rauschen bei tiefen Tunings.",
+      "einordnung": "Ein Overdrive fürs Anblasen von High-Gain-Amps mit straffem Bass und integriertem Noise Gate gegen das Rauschen bei tiefen Tunings.",
       "alternative": "Günstige Tight-OD-Klone (u. a. Joyo, Mooer) kommen nah; ein Tube-Screamer-Typ plus separates Gate deckt dasselbe Terrain ab."
     },
     {
       "id": "ba_057",
       "kategorie": "Pedale & Effekte",
       "bezeichnung": "Reverb-Pedal (EHX Holy Grail / Strymon-Klasse)",
-      "warum": "Die atmosphärischen Wände von Post-Metal, atmosphärischem Black Metal und Shoegaze.",
+      "warum": "Die Klangwände von Post-Metal, atmosphärischem Black Metal und Shoegaze.",
       "einordnung": "Ein Hall-Pedal (Hall, Plate, Shimmer) legt Raum und Fahnen um den Ton — trocken für Riffs, weit aufgedreht als Klangfläche.",
       "alternative": "Günstige Digital-Reverbs (u. a. Boss RV-6, TC Hall of Fame, Mooer) klingen sehr brauchbar; teure Geräte bieten vor allem mehr Programme."
     },
@@ -480,10 +480,10 @@
     {
       "id": "ba_059",
       "kategorie": "Pedale & Effekte",
-      "bezeichnung": "Pitch-Shifter fürs Drop-Tuning (Digitech Drop)",
+      "bezeichnung": "Pitchshifter zum Tieferstimmen (DigiTech Drop)",
       "warum": "Live tiefer stimmen ohne Instrumentenwechsel — verbreitet im modernen Metal und Deathcore.",
-      "einordnung": "Ein Pitch-Shifter, der die ganze Gitarre um ein festes Intervall nach unten rechnet, damit ein Instrument mehrere Tunings abdeckt.",
-      "alternative": "Ehrliche Einschränkung: günstige Pitch-Pedale tracken meist nur Einzeltöne sauber, nicht volle Akkorde — für echtes Drop-Tuning ist eine zweite, tiefer gestimmte oder eine Baritone-Gitarre oft der bessere und kaum teurere Weg."
+      "einordnung": "Ein Pitchshifter, der die ganze Gitarre um ein festes Intervall nach unten rechnet, damit ein Instrument mehrere Tunings abdeckt.",
+      "alternative": "Ehrliche Einschränkung: günstige Pitch-Pedale tracken meist nur Einzeltöne sauber, nicht volle Akkorde — für dauerhaft tiefe Stimmungen ist eine zweite, tiefer gestimmte oder eine Baritone-Gitarre oft der bessere und kaum teurere Weg."
     },
     {
       "id": "ba_060",
@@ -491,7 +491,7 @@
       "bezeichnung": "Bass-Oktaver (EHX / Boss OC)",
       "warum": "Die Sub-Oktave unter Doom- und Sludge-Bässen — Gewicht, das aus dem Verstärker allein nicht kommt.",
       "einordnung": "Ein Oktaver legt einen Ton eine Oktave tiefer unter das Original; monophon gespielt (ein Ton nach dem anderen) bleibt das Tracking sauber.",
-      "alternative": "Günstige Oktaver (u. a. Mooer, Joyo) tracken einstimmig sauber genug; polyfones Spiel bleibt auch teuren Geräten schwer."
+      "alternative": "Günstige Oktaver (u. a. Mooer, Joyo) tracken einstimmig sauber genug; polyphones Spiel bleibt auch teuren Geräten schwer."
     },
     {
       "id": "ba_061",

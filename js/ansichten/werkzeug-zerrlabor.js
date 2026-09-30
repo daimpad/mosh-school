@@ -23,7 +23,7 @@
 //
 // Einstellungen sind flüchtiger, gerätelokaler Modul-State (wie patterns.js).
 //
-// PEGEL: Klippung hebt den Pegel drastisch (LED-Kennlinie kommt auf RMS 1.35 heraus,
+// PEGEL: Übersteuerung hebt den Pegel drastisch (LED-Kennlinie kommt auf RMS 1.35 heraus,
 // fast das Dreifache von clean). Vor dem Ausgang sitzt deshalb ein fester
 // DynamicsCompressor als Begrenzer plus ein Ausgangs-Gain — beides nicht abschaltbar.
 // Die Übergabe nennt Pegelbegrenzung und Lautstärkehinweis ausdrücklich als Pflicht.
@@ -159,7 +159,7 @@ function taktSchleife(ctx, planeTakt, laenge) {
 // wie die Pattern-Demos. Fällt ein, wenn die Klangproben nicht geladen werden
 // können (offline) — deshalb bleibt es erhalten.
 function starteRiff(ctx, ziel) {
-  const grund = 82.41 / 2; // E1, tief genug, damit die Klippung deutlich wird
+  const grund = 82.41 / 2; // E1, tief genug, damit die Übersteuerung deutlich wird
   return taktSchleife(ctx, (t0) => {
     for (let i = 0; i < 8; i++) {
       const zeit = t0 + i * RIFF_SCHRITT;
@@ -390,8 +390,8 @@ export function renderWerkzeugZerrlabor(el, daten) {
   const auswahl = liste
     .map((k) => {
       const aktiv = k.id === zustand.kennlinie && !zustand.vergleich;
-      return `<button type="button" class="chip${aktiv ? ' chip-akzent' : ''}"
-        data-kennlinie="${esc(k.id)}"${aktiv ? ' aria-current="true"' : ''}>${esc(k.name)}</button>`;
+      return `<button type="button" class="chip chip-waehlbar${aktiv ? ' chip-akzent' : ''}"
+        data-kennlinie="${esc(k.id)}" aria-pressed="${aktiv}">${esc(k.name)}</button>`;
     })
     .join(' ');
 
@@ -415,8 +415,8 @@ export function renderWerkzeugZerrlabor(el, daten) {
       ${bereit ? '' : `<p><button type="button" class="knopf knopf-primaer" data-audio-an>${esc(t('wz_audio_aktivieren'))}</button></p>`}
 
       <section class="abschnitt">
-        <h2 class="abschnitt-titel">${esc(t('zerrlabor_kennlinie'))}</h2>
-        <p class="chip-zeile">${auswahl}</p>
+        <h2 class="abschnitt-titel" id="zl-kennlinie-titel">${esc(t('zerrlabor_kennlinie'))}</h2>
+        <p class="chip-zeile" role="group" aria-labelledby="zl-kennlinie-titel">${auswahl}</p>
         <div class="zerr-bild-zeile">
           ${kurvenBild(kl, zustand.gain)}
           <div class="zerr-beschreibung">
@@ -433,11 +433,11 @@ export function renderWerkzeugZerrlabor(el, daten) {
       </section>
 
       <section class="abschnitt">
-        <h2 class="abschnitt-titel">${esc(t('zerrlabor_box'))}</h2>
-        <p class="chip-zeile">
-          <button type="button" class="chip${zustand.box ? '' : ' chip-akzent'}" data-box="">${esc(t('zerrlabor_box_ohne'))}</button>
+        <h2 class="abschnitt-titel" id="zl-box-titel">${esc(t('zerrlabor_box'))}</h2>
+        <p class="chip-zeile" role="group" aria-labelledby="zl-box-titel">
+          <button type="button" class="chip chip-waehlbar${zustand.box ? '' : ' chip-akzent'}" data-box="" aria-pressed="${!zustand.box}">${esc(t('zerrlabor_box_ohne'))}</button>
           ${boxen(daten)
-            .map((b) => `<button type="button" class="chip${zustand.box === b.id ? ' chip-akzent' : ''}" data-box="${esc(b.id)}">${esc(t('box_' + b.id))}</button>`)
+            .map((b) => `<button type="button" class="chip chip-waehlbar${zustand.box === b.id ? ' chip-akzent' : ''}" data-box="${esc(b.id)}" aria-pressed="${zustand.box === b.id}">${esc(t('box_' + b.id))}</button>`)
             .join(' ')}
         </p>
         <p class="leise">${esc(gewaehlteBox(daten)?.hinweis?.de || t('zerrlabor_box_hinweis'))}</p>
@@ -445,7 +445,7 @@ export function renderWerkzeugZerrlabor(el, daten) {
       </section>
 
       <section class="abschnitt">
-        <h2 class="abschnitt-titel">${esc(t('zerrlabor_regler'))}</h2>
+        <h2 class="abschnitt-titel" id="zl-regler-titel">${esc(t('zerrlabor_regler'))}</h2>
         <p class="wz-feld">
           <label for="zl-gain">${esc(t('zerrlabor_gain'))}: <output id="zl-gain-wert">${zustand.gain.toFixed(2)}×</output></label>
           <input id="zl-gain" type="range" min="0.2" max="3" step="0.05" value="${zustand.gain}">
@@ -454,15 +454,19 @@ export function renderWerkzeugZerrlabor(el, daten) {
           <label for="zl-filter">${esc(t('zerrlabor_filter'))}: <output id="zl-filter-wert">${zustand.filter.toFixed(2)}×</output></label>
           <input id="zl-filter" type="range" min="0.4" max="2.5" step="0.05" value="${zustand.filter}">
         </p>
-        <p class="chip-zeile">
-          <button type="button" class="chip${zustand.quelle === 'gitarre' ? ' chip-akzent' : ''}" data-quelle="gitarre">${esc(t('zerrlabor_quelle_gitarre'))}</button>
-          <button type="button" class="chip${zustand.quelle === 'riff' ? ' chip-akzent' : ''}" data-quelle="riff">${esc(t('zerrlabor_quelle_riff'))}</button>
-          <button type="button" class="chip${zustand.quelle === 'mikro' ? ' chip-akzent' : ''}" data-quelle="mikro">${esc(t('zerrlabor_quelle_mikro'))}</button>
+        <!-- Quelle und Clip liegen beide unter „Regler“: Die Gruppe nennt die
+             Überschrift UND ihren eigenen Namen, sonst hießen beide nur „Regler“. -->
+        <p class="chip-zeile" role="group" aria-labelledby="zl-regler-titel zl-quelle-name">
+          <span class="nur-sr" id="zl-quelle-name">${esc(t('zerrlabor_quelle_gruppe'))}</span>
+          <button type="button" class="chip chip-waehlbar${zustand.quelle === 'gitarre' ? ' chip-akzent' : ''}" data-quelle="gitarre" aria-pressed="${zustand.quelle === 'gitarre'}">${esc(t('zerrlabor_quelle_gitarre'))}</button>
+          <button type="button" class="chip chip-waehlbar${zustand.quelle === 'riff' ? ' chip-akzent' : ''}" data-quelle="riff" aria-pressed="${zustand.quelle === 'riff'}">${esc(t('zerrlabor_quelle_riff'))}</button>
+          <button type="button" class="chip chip-waehlbar${zustand.quelle === 'mikro' ? ' chip-akzent' : ''}" data-quelle="mikro" aria-pressed="${zustand.quelle === 'mikro'}">${esc(t('zerrlabor_quelle_mikro'))}</button>
         </p>
         ${zustand.quelle === 'gitarre' ? `
-        <p class="chip-zeile">
-          ${CLIPS.map((c) => `<button type="button" class="chip${c.id === zustand.clip ? ' chip-akzent' : ''}"
-            data-clip="${esc(c.id)}"${c.id === zustand.clip ? ' aria-current="true"' : ''}>${esc(t(`zerrlabor_clip_${c.id}`))}</button>`).join(' ')}
+        <p class="chip-zeile" role="group" aria-labelledby="zl-regler-titel zl-clip-name">
+          <span class="nur-sr" id="zl-clip-name">${esc(t('zerrlabor_clip_gruppe'))}</span>
+          ${CLIPS.map((c) => `<button type="button" class="chip chip-waehlbar${c.id === zustand.clip ? ' chip-akzent' : ''}"
+            data-clip="${esc(c.id)}" aria-pressed="${c.id === zustand.clip}">${esc(t(`zerrlabor_clip_${c.id}`))}</button>`).join(' ')}
         </p>
         <p class="leise">${esc(t(`zerrlabor_clip_${gewaehlterClip().id}_text`))}</p>
         <p class="leise">${esc(t('zerrlabor_quelle_hinweis'))}</p>` : ''}

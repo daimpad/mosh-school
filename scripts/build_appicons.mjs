@@ -37,7 +37,14 @@ const ZIELE = [
   { datei: 'assets/images/favicon/apple-touch-icon.png', kante: 180 },
   { datei: 'assets/images/favicon/app-192.png', kante: 192 },
   { datei: 'assets/images/favicon/app-512.png', kante: 512 },
+  { datei: 'assets/images/favicon/favicon-96.png', kante: 96 },
 ];
+// favicon.ico im Wurzelverzeichnis: drei Groessen, jeweils als PNG im ICO-Rahmen
+// (seit Windows Vista und in jedem Browser lesbar). Frueher stand hier der
+// gelieferte Satz mit dem alten Marken-Rot — beim Farbwechsel blieb er als
+// Einziger stehen, weil ihn kein Skript erzeugte. Jetzt kommt er aus derselben SVG.
+const ICO_DATEI = 'favicon.ico';
+const ICO_KANTEN = [48, 32, 16];
 
 const PRUEFEN = process.argv.includes('--check');
 
@@ -48,7 +55,8 @@ if (!existsSync(QUELLE)) {
 
 const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const gebaut = [];
-for (const { datei, kante } of ZIELE) {
+const icoBilder = [];
+for (const { datei, kante } of [...ZIELE, ...ICO_KANTEN.map((k) => ({ datei: null, kante: k }))]) {
   // deviceScaleFactor 1 und exakte Viewport-Kante: So entspricht ein CSS-Pixel
   // genau einem Bildpunkt, ohne Zwischenskalierung.
   const seite = await browser.newPage({ viewport: { width: kante, height: kante }, deviceScaleFactor: 1 });
@@ -61,15 +69,45 @@ for (const { datei, kante } of ZIELE) {
     + `img{display:block;width:${kante}px;height:${kante}px}</style>`
     + `<img src="/${QUELLE}">`,
   );
-  await seite.waitForTimeout(150);
+  // Auf das Dekodieren des Bildes warten statt auf einen festen Timeout: Auf einer
+  // langsamen Maschine kaeme das Icon sonst leer oder halb gemalt ins PNG, und
+  // --check meldete Drift, wo keine ist. decode() schlaegt fehl, wenn die Quelle fehlt.
+  await seite.evaluate(async () => {
+    await document.querySelector('img').decode();
+    await new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)));
+  });
   // omitBackground: Die Marke ist ein abgerundetes Quadrat — seine Ecken
   // muessen transparent bleiben. Mit dem weissen Seitenhintergrund darunter
   // saesse das Icon in einem weissen Kasten, und auf dem Startbildschirm
   // stuende eine Rundung in einer zweiten, eckigen Flaeche.
-  gebaut.push({ datei, daten: await seite.screenshot({ omitBackground: true }) });
+  const daten = await seite.screenshot({ omitBackground: true });
+  if (datei) gebaut.push({ datei, daten });
+  else icoBilder.push({ kante, daten });
   await seite.close();
 }
 await browser.close();
+
+// ICO-Rahmen: ICONDIR (6 Byte) + je Bild ein Eintrag (16 Byte) + die PNG-Daten.
+{
+  const kopf = Buffer.alloc(6 + 16 * icoBilder.length);
+  kopf.writeUInt16LE(0, 0); // reserviert
+  kopf.writeUInt16LE(1, 2); // Typ 1 = Icon
+  kopf.writeUInt16LE(icoBilder.length, 4);
+  let versatz = kopf.length;
+  icoBilder.forEach(({ kante, daten }, i) => {
+    const e = 6 + 16 * i;
+    kopf.writeUInt8(kante >= 256 ? 0 : kante, e);
+    kopf.writeUInt8(kante >= 256 ? 0 : kante, e + 1);
+    kopf.writeUInt8(0, e + 2); // keine Palette
+    kopf.writeUInt8(0, e + 3);
+    kopf.writeUInt16LE(1, e + 4); // Ebenen
+    kopf.writeUInt16LE(32, e + 6); // Bit je Punkt
+    kopf.writeUInt32LE(daten.length, e + 8);
+    kopf.writeUInt32LE(versatz, e + 12);
+    versatz += daten.length;
+  });
+  gebaut.push({ datei: ICO_DATEI, daten: Buffer.concat([kopf, ...icoBilder.map((b) => b.daten)]) });
+}
 
 const hash = (b) => createHash('sha256').update(b).digest('hex').slice(0, 16);
 let drift = 0;

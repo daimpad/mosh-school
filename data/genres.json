@@ -7,15 +7,15 @@
     "hardcore": {
       "kurz": "Kurz, laut, direkt — Hardcore ist Punk mit zusammengebissenen Zähnen. Keine Soli, kein Firlefanz: ein Riff, ein Break, eine Botschaft, dann ist der Song vorbei. Es geht um Energie im Raum, um Circle Pits und das Gefühl, dass die Bühne dir genauso gehört wie der Band.",
       "einordnung": {
-        "tempo": "Mittel bis schnell, treibender Achtel-Puls; das Herzstück ist der Breakdown — ein halbtempo-schwerer Part zum Mitstampfen.",
-        "sound": "Anzerrte, mittige Gitarren ohne Hochglanz-Produktion; Standard- oder leicht tiefere Stimmung. Ton vor Perfektion.",
+        "tempo": "Mittel bis schnell, treibender Achtel-Puls; das Herzstück ist der Breakdown — ein Halbtempo-schwerer Part zum Mitstampfen.",
+        "sound": "Angezerrte, mittige Gitarren ohne Hochglanz-Produktion; Standard- oder leicht tiefere Stimmung. Ton vor Perfektion.",
         "vocals": "Geschrien, aber verständlich — Parolen zum Mitbrüllen (Gang Shouts), oft im Kollektiv.",
         "struktur": "Sehr kompakt (oft unter zwei Minuten): Intro-Riff, Strophe, Break, Schluss. Wiederholung schlägt Komplexität.",
-        "herkunft": "Anfang der 1980er aus dem US-Punk (Black Flag, Minor Threat, Bad Brains); die NYHC-Community brachte den metallischen Härtegrad."
+        "herkunft": "Ende der 1970er/Anfang der 1980er aus dem US-Punk (Black Flag, Minor Threat, Bad Brains); die NYHC-Community brachte den metallischen Härtegrad."
       },
       "klischees": [
-        "Der obligatorische „mosh!\"-Ruf direkt vor dem Two-Step-Breakdown.",
-        "Reim-Baukasten aus Loyalität, Verrat und „my crew\".",
+        "Der obligatorische „mosh!“-Ruf direkt vor dem Two-Step-Breakdown.",
+        "Reim-Baukasten aus Loyalität, Verrat und „my crew“.",
         "Palm-Mute-Chugs auf der leeren Saite als einziges Riff-Rezept.",
         "Der Mic-Grab-Mitsing-Part an exakt derselben Stelle jedes Songs."
       ],
@@ -28,7 +28,7 @@
     "metalcore": {
       "kurz": "Metalcore ist der Ort, wo Hardcore-Wucht auf Metal-Melodie trifft: brutale Breakdowns neben eingängigen Leads, geschriene Strophen neben gesungenen Refrains. Die Formel, die eine ganze Generation in die Hallen gezogen hat.",
       "einordnung": {
-        "tempo": "Wechselhaft — schnelle melodische Parts kippen in halbtempo-Breakdowns; dynamische Kontraste sind das Prinzip.",
+        "tempo": "Wechselhaft — schnelle melodische Parts kippen in Halbtempo-Breakdowns; dynamische Kontraste sind das Prinzip.",
         "sound": "Tief gestimmte, tighte High-Gain-Gitarren, oft in Drop-Tunings; klar produziert für Wucht und Definition.",
         "vocals": "Zweistimmig im Prinzip: harsches Screaming/Growling in den harten Parts, cleaner Gesang im Refrain.",
         "struktur": "Strophe-Refrain-Logik mit eingebautem Breakdown als Höhepunkt; Melodie und Härte im Wechsel.",
@@ -37,8 +37,8 @@
       "klischees": [
         "Geschrien in der Strophe, clean im Refrain — immer nach demselben Bauplan.",
         "Der eine Melodic-Death-Lick in Moll, den halb Göteborg verliehen hat.",
-        "Der „blegh\"-Einwurf als Startpistole für den Breakdown.",
-        "Aufbau-Lyrics mit „rise\", „ashes\" und „stronger\" von der Stange."
+        "Der „blegh“-Einwurf als Startpistole für den Breakdown.",
+        "Aufbau-Lyrics mit „rise“, „ashes“ und „stronger“ von der Stange."
       ],
       "verwandt": [
         "hardcore",
@@ -58,7 +58,7 @@
       "klischees": [
         "Das Galopp-Riff auf der leeren E-Saite als Pflichtprogramm.",
         "Cover mit Totenkopf, Atompilz und Bandlogo in Blutschrift.",
-        "„Thrash till death\" — Bier-und-Denim-Selbstbespiegelung als Text.",
+        "„Thrash till death“ — Bier-und-Denim-Selbstbespiegelung als Text.",
         "Das Speed-Solo, das mit dem Song nichts zu tun hat."
       ],
       "verwandt": [
@@ -71,9 +71,9 @@
       "kurz": "Death Metal ist Extremität als Handwerk: tiefer, dunkler, brutaler — und oft erstaunlich technisch. Growls aus dem Bauch, Blastbeats wie ein Presslufthammer, Riffs, die sich winden statt zu rocken. Die Schwerkraft des Genres zieht nach unten.",
       "einordnung": {
         "tempo": "Von schleppend bis Blastbeat-schnell; abrupte Tempowechsel und Double-Bass-Gewitter sind Standard.",
-        "sound": "Sehr tief gestimmt, dicht und sattelt viel Gain; Palm Muting und Tremolo-Picking formen die wummernde Wand.",
+        "sound": "Sehr tief gestimmt, dicht und satt, mit viel Gain; Palm Muting und Tremolo-Picking formen die wummernde Wand.",
         "vocals": "Tiefe, kehlige Growls (Death Growls) — Klangfarbe aus Verzerrung, nicht aus Pressen; Text tritt hinter den Klang zurück.",
-        "struktur": "Riff-Collagen ohne klassisches Strophe-Refrain; viele Parts, oft technisch verschachtelt.",
+        "struktur": "Riff-Collagen ohne klassisches Strophe-Refrain-Schema; viele Parts, oft technisch verschachtelt.",
         "herkunft": "Mitte der 1980er aus dem Thrash heraus (Death, Possessed); Florida und die schwedische Community (Entombed) prägten zwei Schulen."
       },
       "klischees": [
@@ -95,7 +95,7 @@
         "sound": "Hohe, dünne, verhallte Gitarren mit viel Tremolo-Picking; bewusst rohe (lo-fi) Produktion für Kälte und Distanz.",
         "vocals": "Hohes, keifendes Kreischen (Shrieks) — schneidend und entmenschlicht statt tief.",
         "struktur": "Lange, repetitive Passagen, die einen Sog aufbauen; Atmosphäre schlägt Hook.",
-        "herkunft": "Erste Welle Mitte 1980er (Bathory, Venom, Celtic Frost), zweite Welle Anfang 1990er in Norwegen (Mayhem, Darkthrone, Emperor)."
+        "herkunft": "Erste Welle Anfang bis Mitte der 1980er (Bathory, Venom, Celtic Frost), zweite Welle Anfang der 1990er in Norwegen (Mayhem, Darkthrone, Emperor)."
       },
       "klischees": [
         "Absichtlich matschige Lo-Fi-Produktion als Echtheits-Beweis.",
@@ -110,7 +110,7 @@
       ]
     },
     "doom": {
-      "kurz": "Doom ist Schwere in Zeitlupe — der Riff bekommt Raum zum Atmen, jede Note wiegt eine Tonne. Wo andere Genres rasen, lässt Doom die Spannung tragen. Melancholie, Verstärker-Feedback und die Kunst, langsam zu spielen, ohne zu langweilen.",
+      "kurz": "Doom ist Schwere in Zeitlupe — das Riff bekommt Raum zum Atmen, jede Note wiegt eine Tonne. Wo andere Genres rasen, lässt Doom die Spannung tragen. Melancholie, Verstärker-Feedback und die Kunst, langsam zu spielen, ohne zu langweilen.",
       "einordnung": {
         "tempo": "Langsam bis sehr langsam; der Groove zerdehnt sich, einzelne Schläge werden zum Ereignis.",
         "sound": "Tief, warm, sehr viel Sustain und Fuzz; die Gitarre klingt wie ein einstürzendes Gebäude in Superzeitlupe.",
@@ -131,16 +131,16 @@
       ]
     },
     "crust": {
-      "kurz": "Crust ist der dreckige Schnittpunkt von Punk und Metal — d-beat-Getrommel, Verzerrung bis zur Schmerzgrenze und eine politische Wut, die man hört. Roh, komprimiert, kompromisslos. Kein Studio-Glanz, nur Substanz.",
+      "kurz": "Crust ist der dreckige Schnittpunkt von Punk und Metal — D-Beat-Getrommel, Verzerrung bis zur Schmerzgrenze und eine politische Wut, die man hört. Roh, komprimiert, kompromisslos. Kein Studio-Glanz, nur Substanz.",
       "einordnung": {
-        "tempo": "Schnell und treibend über dem d-beat (Discharge-Rhythmus); dazwischen schwere, kriechende Parts.",
+        "tempo": "Schnell und treibend über dem D-Beat (Discharge-Rhythmus); dazwischen schwere, kriechende Parts.",
         "sound": "Extrem verzerrte, bassige Gitarren; absichtlich rau und übersteuert für maximalen Dreck.",
         "vocals": "Bellend-geschrien, oft im Wechsel hoch/tief, mit Parolen zu Krieg, System und Widerstand.",
-        "struktur": "Kurz und wuchtig wie Hardcore, aber mit Metal-Riffs unterfüttert; d-beat als roter Faden.",
-        "herkunft": "Mitte der 1980er aus dem UK-Anarcho-Punk (Discharge, Amebix); Stenchcore und schwedischer Käng führten es weiter."
+        "struktur": "Kurz und wuchtig wie Hardcore, aber mit Metal-Riffs unterfüttert; D-Beat als roter Faden.",
+        "herkunft": "Mitte der 1980er aus dem UK-Anarcho-Punk (Amebix, Antisect), auf dem D-Beat von Discharge aufbauend; Stenchcore und schwedischer Käng führten es weiter."
       },
       "klischees": [
-        "Der d-beat auf Dauerschleife als einziger Rhythmus.",
+        "Der D-Beat auf Dauerschleife als einziger Rhythmus.",
         "Anti-System-Parolen als Reim-Automat ohne konkrete Aussage.",
         "Unhörbare Produktion als Authentizitäts-Ausweis.",
         "Nietenjacke und Backpatch als Ersatz für Haltung."
@@ -183,7 +183,7 @@
       },
       "klischees": [
         "Der Fast-Slow-Wechsel an immer derselben, vorhersehbaren Stelle.",
-        "Der „ironische\" Zwischenton-Sample zwischen den Songs.",
+        "Das „ironische“ Zwischenton-Sample zwischen den Songs.",
         "Absichtlich kaputte Aufnahme als Statement statt als Sound.",
         "Angepisst sein als einziger Inhalt — Wut ohne Ziel."
       ],
@@ -197,7 +197,7 @@
       "kurz": "Sludge ist Doom durch den Fleischwolf von Hardcore gedreht — zäh, giftig, verzerrt bis zum Anschlag. Langsame Schwere trifft auf angepisste Aggression. Der Sumpf, aus dem der schwerste Sound kriecht.",
       "einordnung": {
         "tempo": "Überwiegend langsam und schleppend, mit gelegentlichen Hardcore-Ausbrüchen zum Kontrast.",
-        "sound": "Extrem verzerrt, dreckig und bass-schwer; Feedback und Rückkopplung gehören dazu.",
+        "sound": "Extrem verzerrt, dreckig und bass-schwer; Feedback gehört dazu.",
         "vocals": "Geschrien, gequält, oft rau und hasserfüllt — mehr Verzweiflung als Melodie.",
         "struktur": "Riff-lastig und zäh, mit dynamischen Brüchen zwischen Kriechen und Explosion.",
         "herkunft": "Frühe 1990er, v. a. aus New Orleans (NOLA-Sludge: Eyehategod, Crowbar) — Doom-Schwere plus Hardcore-Dreck."
@@ -215,16 +215,16 @@
       ]
     },
     "deathcore": {
-      "kurz": "Deathcore fusioniert die Brutalität des Death Metal mit der Wucht des Metalcore-Breakdowns — tief, technisch, auf maximale Härte getrimmt. Blastbeats treffen auf halbtempo-Vernichtung. Die junge, brutale Speerspitze.",
+      "kurz": "Deathcore fusioniert die Brutalität des Death Metal mit der Wucht des Metalcore-Breakdowns — tief, technisch, auf maximale Härte getrimmt. Blastbeats treffen auf Halbtempo-Vernichtung. Die junge, brutale Speerspitze.",
       "einordnung": {
         "tempo": "Voller Kontrast: Death-Metal-Blasts und rasende Parts neben ultra-langsamen, vernichtenden Breakdowns (Downtempo).",
         "sound": "Sehr tief gestimmt (7-/8-Saiter verbreitet), extrem tight produziert für chirurgische Härte.",
-        "vocals": "Ganze Palette — tiefe Gutturals, hohe Screams, oft mit extrem tiefen Downs im Breakdown.",
+        "vocals": "Ganze Palette — tiefe Gutturals, hohe Screams, oft mit extrem tiefen Lows im Breakdown.",
         "struktur": "Death-Metal-Riffing als Rahmen, der Breakdown als dramaturgischer Höhepunkt; teils symphonisch überhöht.",
         "herkunft": "Mitte der 2000er aus Metalcore und Death Metal (Suicide Silence, Whitechapel, Job for a Cowboy)."
       },
       "klischees": [
-        "Der Breakdown mit dem maximal-tiefen Down (das „brr\").",
+        "Der Breakdown mit dem maximal-tiefen Low (das „brr“).",
         "Symphonische Intros, die nur Größe simulieren.",
         "Slam-Gutturals als Härte-Wettbewerb ohne musikalischen Sinn.",
         "Djent-Chug plus Blastbeat als komplettes Song-Rezept."
@@ -242,13 +242,13 @@
         "sound": "Sehr tief (7-/8-Saiter, erweiterte Mensur), extrem tight und mittenbetont — der namensgebende Chug.",
         "vocals": "Wechsel aus Screaming und cleanem, oft atmosphärischem Gesang; die Stimme trägt die Melodie über dem Rhythmus.",
         "struktur": "Groove- und rhythmusgetrieben mit Ambient-Flächen; Spannung aus Metrik statt aus Tempo.",
-        "herkunft": "2000er, ausgehend von Meshuggah und popularisiert durch Periphery, Animals as Leaders — ein moderner Ableger des Prog-Metalcore."
+        "herkunft": "2000er, ausgehend von Meshuggah und popularisiert durch Periphery, Animals as Leaders — ein moderner Ableger des Progressive Metal, später stark mit Metalcore verwoben."
       },
       "klischees": [
         "Der 0-0-0-Chug auf der tiefsten Saite als ganze Riff-Idee.",
         "Polyrhythmus als Selbstzweck — kompliziert ist nicht automatisch interessant.",
         "Die Ambient-Clean-Bridge an exakt derselben Stelle jedes Songs.",
-        "Der namensgebende „djent\"-Ton als Ersatz für ein Riff."
+        "Der namensgebende „djent“-Ton als Ersatz für ein Riff."
       ],
       "verwandt": [
         "metalcore",
@@ -262,12 +262,12 @@
         "tempo": "Mittel bis langsam, groovend und wiegend; Post-Metal baut über lange Strecken Spannung auf und entlädt sie.",
         "sound": "Warm, fuzz- und effektreich; Stoner rockt erdig, Post-Metal schichtet Hall und Delay zu Weite.",
         "vocals": "Sparsam eingesetzt — klarer, oft entrückter Gesang; Post-Metal nutzt auch Screams als Klangfarbe, viele Passagen bleiben instrumental.",
-        "struktur": "Riff-Trance (Stoner) bzw. lange Crescendo-Bögen mit leise-laut-Dynamik (Post-Metal); Geduld als Prinzip.",
+        "struktur": "Riff-Trance (Stoner) bzw. lange Crescendo-Bögen mit Leise-laut-Dynamik (Post-Metal); Geduld als Prinzip.",
         "herkunft": "Stoner aus dem Desert Rock der 1990er (Kyuss); Post-Metal aus der Neurosis/Isis-Linie derselben Ära."
       },
       "klischees": [
         "Wüsten-, Weltraum- und Kiffer-Ästhetik als Themen-Pflicht.",
-        "Der leise-laut-leise-Crescendo-Aufbau nach immer demselben Schema.",
+        "Der Leise-laut-leise-Crescendo-Aufbau nach immer demselben Schema.",
         "Fuzz-Pedal an, Kyuss-Groove aus dem Regal.",
         "Zehn Minuten Länge als Ersatz für zehn Minuten Inhalt."
       ],
@@ -302,7 +302,7 @@
       "einordnung": {
         "herkunft": "Ende der 1990er aus Hardcore/Metalcore mit Jazz- und Noise-Einschlag; prägend u. a. Converge, Botch und The Dillinger Escape Plan.",
         "sound": "Scharfe, dissonante High-Gain-Gitarren mit sperrigen Voicings; trocken und definiert produziert, damit die Brüche sitzen.",
-        "struktur": "Kollagenhaft: abrupte Wechsel, Stopps und Neustarts statt Strophe/Refrain; wechselnde Taktarten als tragendes Element.",
+        "struktur": "Collagenhaft: abrupte Wechsel, Stopps und Neustarts statt Strophe/Refrain; wechselnde Taktarten als tragendes Element.",
         "tempo": "Extrem wechselhaft — Blast-nahe Raserei neben zähen Halbtempo-Brocken, häufig im selben Stück.",
         "vocals": "Meist harsches, aggressives Screaming, rhythmisch eng an die Brüche gekoppelt."
       },
@@ -310,7 +310,7 @@
         "Ungerade Taktart als Selbstzweck — zählbar, aber nicht hörbar.",
         "Der Stopp-Start-Bruch als einziger Struktur-Trick.",
         "Dissonanz als Attitüde statt als Mittel.",
-        "Kompliziertheit als Ausweis dafür, „ernst\" zu sein."
+        "Kompliziertheit als Ausweis dafür, „ernst“ zu sein."
       ],
       "verwandt": [
         "metalcore",

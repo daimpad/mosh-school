@@ -24,7 +24,7 @@ ROHBESTAND (nicht im Repo)
 Erzeugt wurden sie aus einer CC0-Sammlung einzeln angeschlagener Töne einer
 E-Gitarre: sauberes Direktsignal ohne Verstärker und ohne Zerre, FLAC
 24 bit / 48 kHz / stereo, 122 Dateien, rund 124 MB. Dateiname = Ton + Saite +
-Nimm, z. B. E2_s1_01 (Ton E2, Saite 1 = tiefe E-Saite, Nimm 01); Dateien mit
+Take, z. B. E2_s1_01 (Ton E2, Saite 1 = tiefe E-Saite, Take 01); Dateien mit
 _soft_ sind derselbe Ton weicher angeschlagen. Saitenzählung von tief nach
 hoch, Standardstimmung.
 

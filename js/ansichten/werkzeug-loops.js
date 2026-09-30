@@ -39,7 +39,7 @@ const BEATS = [
     hihat: setze([0, 2, 4, 6, 8, 10, 12, 14]), kick: setze([0, 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15]), snare: setze([4, 12]) } },
   { id: 'doom_feel', stil: 'doom', bpm: 70, spuren: {
     crash: setze([0]), hihat: setze([0, 4, 8, 12]), kick: setze([0, 10]), snare: setze([8]) } },
-  // Mathcore: kantig, mit Stop-Start-Lücken (Grid bleibt 16stel, aber gebrochen).
+  // Mathcore: kantig, mit Stopp-Start-Lücken (Grid bleibt 16stel, aber gebrochen).
   { id: 'mathcore_jagged', stil: 'mathcore', bpm: 150, spuren: {
     crash: setze([0]), hihat: setze([0, 3, 6, 10, 13]), kick: setze([0, 3, 6, 7, 11]), snare: setze([4, 9, 14]) } },
   // Screamo: treibend mit hartem Umschlag (Crash-Akzent auf 1 und Mitte).

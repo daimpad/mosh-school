@@ -10,7 +10,7 @@
     {
       "id": "djent_technik",
       "anzeigetitel": {
-        "de": "Djent: Syncopen & tiefe Saiten"
+        "de": "Djent: Synkopen & tiefe Saiten"
       },
       "domaene": [
         "gitarre"
@@ -43,7 +43,7 @@
             "Spiel es palm-gemutet auf der tiefsten Saite — jede Pause wird aktiv mit beiden Händen gedämpft.",
             "Nimm dich zum Klick auf und prüf, ob das Muster wie „gequantelt“ klingt: exakte Kanten, echte Stille."
           ],
-          "steigerung": "Das Muster über die Taktgrenze verlängern (z. B. 3,5 Schläge lang) und gegen den Klick loopen.",
+          "steigerung": "Das Muster auf eine Länge bringen, die nicht im Takt aufgeht (z. B. 3,5 Schläge), und gegen den Klick loopen — so wandert es über die Taktgrenze.",
           "selbstkontrolle": "Auf der Aufnahme sind Anschläge und Pausen messerscharf getrennt; nichts klingt nach."
         }
       },
@@ -190,7 +190,7 @@
         "praezises_tremolo"
       ],
       "erklaerteil": {
-        "de": "Jenseits von 200 BPM ändert sich das Spielgefühl grundlegend: Einzelne Anschläge sind nicht mehr bewusst steuerbar, du steuerst Bewegungszyklen. Die Hand wird zum Oszillator, den du startest, führst und stoppst — und jede überflüssige Bewegung, die bei 160 BPM noch verzeiht, kostet hier den Anschluss.\n\nEffizienz wird messbar: kleinste Pickspitze, minimale Auslenkung, Anschlag aus der Rotation des Handgelenks statt aus dem Auf-Ab. Viele Profis wechseln bei diesen Tempi bewusst die Mechanik (etwa mehr Unterarm-Rotation) — was zählt, ist der gleichmäßige Strom, nicht die reine Lehre.\n\nÜbe an der Grenze nur in kurzen, geplanten Dosen: wenige Takte im Zieltempo, dann zurück ins Kontrolltempo. Der Körper lernt die schnelle Bewegung aus kurzen, sauberen Ausflügen — nicht aus langem Kampf über der Grenze, der nur Verkrampfung einschleift."
+        "de": "Jenseits von 200 BPM ändert sich das Spielgefühl grundlegend: Einzelne Anschläge sind nicht mehr bewusst steuerbar, du steuerst Bewegungszyklen. Die Hand wird zum Oszillator, den du startest, führst und stoppst — und jede überflüssige Bewegung, die bei 160 BPM noch verziehen wird, kostet hier den Anschluss.\n\nEffizienz wird messbar: kleinste Plektrumspitze, minimale Auslenkung, Anschlag aus der Rotation des Handgelenks statt aus dem Auf-Ab. Viele Profis wechseln bei diesen Tempi bewusst die Mechanik (etwa mehr Unterarm-Rotation) — was zählt, ist der gleichmäßige Strom, nicht die reine Lehre.\n\nÜbe an der Grenze nur in kurzen, geplanten Dosen: wenige Takte im Zieltempo, dann zurück ins Kontrolltempo. Der Körper lernt die schnelle Bewegung aus kurzen, sauberen Ausflügen — nicht aus langem Kampf über der Grenze, der nur Verkrampfung einschleift."
       },
       "uebungsteil": {
         "de": {
@@ -531,7 +531,7 @@
         "saubere_uebergaenge"
       ],
       "erklaerteil": {
-        "de": "Vom Drei-Saiten-Sweep zum vollen Fünf-Saiten-Arpeggio ist es ein weiter Weg — nicht wegen der Anschlaghand, sondern wegen der Choreografie der Greifhand: Jeder Finger betritt die Bühne exakt dann, wenn sein Ton dran ist, und verlässt sie sofort wieder. Klingen zwei Töne gleichzeitig, ist es kein Arpeggio mehr, sondern ein Akkord-Matsch.\n\nDas Rolling ist die Schlüsseltechnik: Ein Finger barré-t über mehrere Saiten und rollt den Druckpunkt von Saite zu Saite, sodass immer nur eine klingt. Kombiniert mit einem Hammer-on oder Pull-off am Umkehrpunkt entsteht die fließende Auf-Ab-Welle, die Neoclassical-Death-Leads prägt.\n\nGeschwindigkeit ist beim Sweepen fast ein Nebenprodukt: Die Bewegung ist von Natur aus schnell, sobald sie stimmt. Deshalb wird ausschließlich in Zeitlupe gebaut — jede Unsauberkeit, die du langsam einbaust, wird schnell unhörbar zementiert."
+        "de": "Vom Drei-Saiten-Sweep zum vollen Fünf-Saiten-Arpeggio ist es ein weiter Weg — nicht wegen der Anschlaghand, sondern wegen der Choreografie der Greifhand: Jeder Finger betritt die Bühne exakt dann, wenn sein Ton dran ist, und verlässt sie sofort wieder. Klingen zwei Töne gleichzeitig, ist es kein Arpeggio mehr, sondern ein Akkord-Matsch.\n\nDas Rolling ist die Schlüsseltechnik: Ein Finger liegt als Barré über mehreren Saiten und rollt den Druckpunkt von Saite zu Saite, sodass immer nur eine klingt. Kombiniert mit einem Hammer-on oder Pull-off am Umkehrpunkt entsteht die fließende Auf-Ab-Welle, die Neoclassical-Death-Leads prägt.\n\nGeschwindigkeit ist beim Sweepen fast ein Nebenprodukt: Die Bewegung ist von Natur aus schnell, sobald sie stimmt. Deshalb wird ausschließlich in Zeitlupe gebaut — jede Unsauberkeit, die du langsam einbaust, wird schnell unhörbar zementiert."
       },
       "uebungsteil": {
         "de": {
@@ -543,7 +543,7 @@
             "Setz die Auf- und Abwärtsbewegung zusammen und lass am Umkehrpunkt einen Pull-off die Richtung wenden."
           ],
           "steigerung": "Zwei Arpeggio-Formen verbinden (z. B. Moll und Dur derselben Lage) und erst dann das Tempo anheben.",
-          "selbstkontrolle": "In jeder Geschwindigkeit klingt exakt ein Ton zur Zeit; die Welle läuft ohne Knick durch den Umkehrpunkt."
+          "selbstkontrolle": "In jeder Geschwindigkeit klingt immer nur ein Ton; die Welle läuft ohne Knick durch den Umkehrpunkt."
         }
       },
       "demonstration": {
@@ -638,7 +638,7 @@
         "schwererer_ton"
       ],
       "erklaerteil": {
-        "de": "Moderner Black Metal und dissonanter Death Metal haben eine eigene Akkordsprache entwickelt: kleine Sekunden im Akkord, große Septimen, Tritonus-Schichtungen und Cluster, die bewusst „falsch“ klingen — kontrolliertes Unbehagen als Stilmittel. Bands wie Deathspell Omega oder Gorguts haben daraus ganze Klangwelten gebaut.\n\nDas Handwerk dahinter: Du kennst die Reibung jedes Intervalls und setzt sie dosiert ein. Ein Powerchord mit zusätzlicher kleiner Sekunde kippt ins Bedrohliche; eine große Septime über dem Grundton schwebt unheilvoll. Wichtig ist die Balance — reine Dissonanz nutzt sich ab, erst der Wechsel mit stabilen Klängen erzeugt die Sogwirkung.\n\nUnter Verzerrung braucht jedes dissonante Voicing eine Klangprobe: Was clean interessant reibt, kann verzerrt zu Brei werden. Weniger Töne, weiter auseinander liegend, überleben die Zerre besser als enge Cluster."
+        "de": "Moderner Black Metal und dissonanter Death Metal haben eine eigene Akkordsprache entwickelt: kleine Sekunden im Akkord, große Septimen, Tritonus-Schichtungen und Cluster, die bewusst „falsch“ klingen — kontrolliertes Unbehagen als Stilmittel. Bands wie Deathspell Omega oder Gorguts haben daraus ganze Klangwelten gebaut.\n\nDas Handwerk dahinter: Du kennst die Reibung jedes Intervalls und setzt sie dosiert ein. Ein Powerchord mit zusätzlicher kleiner Sekunde kippt ins Bedrohliche; eine große Septime über dem Grundton schwebt unheilvoll. Wichtig ist die Balance — reine Dissonanz nutzt sich ab, erst der Wechsel mit stabilen Klängen erzeugt die Sogwirkung.\n\nUnter Verzerrung braucht jedes dissonante Voicing eine Klangprobe: Was clean interessant reibt, kann verzerrt zu Brei werden. Weniger Töne, weiter auseinanderliegend, überleben die Zerre besser als enge Cluster."
       },
       "uebungsteil": {
         "de": {
@@ -898,7 +898,7 @@
         "riff_praezision"
       ],
       "erklaerteil": {
-        "de": "Das Studio ist der gnadenloseste Lehrer: Beim Doubletracking — dieselbe Rhythmusspur zweimal eingespielt, links und rechts gelegt — hörst du jede Abweichung zwischen den Takes als Flattern. Der fette Metal-Gitarrensound moderner Produktionen ist zu großen Teilen diese Disziplin: zwei (oder vier) Spuren, die wie eine klingen.\n\nStudio-Tightness heißt nicht steril spielen, sondern reproduzierbar: gleiche Palm-Mute-Härte, gleiche Akzente, gleiche Notenlängen — Take für Take. Wer sein Riff nur „ungefähr gleich“ spielt, verliert beim Doubling die Kante; wer es exakt reproduziert, bekommt die Breitwand.\n\nDu brauchst dafür kein Studio: Zwei Handy- oder DAW-Aufnahmen desselben Riffs übereinandergelegt zeigen dir sofort, wo deine Reproduzierbarkeit endet. Genau diese Stellen — meist Übergänge und Notenenden — sind deine Übe-Liste."
+        "de": "Das Studio ist der gnadenloseste Lehrer: Beim Doubletracking — dieselbe Rhythmusspur zweimal eingespielt, links und rechts gelegt — hörst du jede Abweichung zwischen den Takes als Flattern. Der fette Metal-Gitarrensound moderner Produktionen ist zu großen Teilen diese Disziplin: zwei (oder vier) Spuren, die wie eine klingen.\n\nStudio-Tightness heißt nicht steril spielen, sondern reproduzierbar: gleiche Palm-Mute-Härte, gleiche Akzente, gleiche Notenlängen — Take für Take. Wer sein Riff nur „ungefähr gleich“ spielt, verliert beim Doubletracking die Kante; wer es exakt reproduziert, bekommt die Breitwand.\n\nDu brauchst dafür kein Studio: Zwei Handy- oder DAW-Aufnahmen desselben Riffs übereinandergelegt zeigen dir sofort, wo deine Reproduzierbarkeit endet. Genau diese Stellen — meist Übergänge und Notenenden — sind deine Übe-Liste."
       },
       "uebungsteil": {
         "de": {
@@ -1117,7 +1117,7 @@
             "technik": "normal"
           }
         ],
-        "hinweis": "Die Vorlage für beide Takes — ein Riff, dessen Töne klar ENDEN: gedämpfte Chugs mit echten Lücken und am Taktende ein offener Akkord, dessen Länge du selbst bestimmst. Genau dort läuft Doubletracking auseinander, nicht am Anschlag: am Notenende und am Wechsel. Zweimal geloopt sind es die acht Takte der Übung."
+        "hinweis": "Die Vorlage für beide Takes — ein Riff, dessen Töne klar ENDEN: gedämpfte Chugs mit echten Lücken und am Ende jedes zweiten Takts ein offener Akkord, dessen Länge du selbst bestimmst. Genau dort läuft Doubletracking auseinander, nicht am Anschlag: am Notenende und am Wechsel. Zweimal geloopt sind es die acht Takte der Übung."
       }
     },
     {
@@ -1140,7 +1140,7 @@
         "schwererer_ton"
       ],
       "erklaerteil": {
-        "de": "Der größte Anfängerfehler beim Metal-Sound ist zu viel Gain: Ab einem Punkt macht mehr Zerre den Ton nicht härter, sondern kleiner — Attack und Definition ersaufen im Kompressionsbrei, und im Bandkontext verschwindet die Gitarre. Die härtesten Produktionen fahren oft überraschend moderate Zerrstufen und holen die Aggression aus dem Anschlag.\n\nDie zweite Säule ist der Frequenzplatz: Tiefmitten teilen sich Gitarre und Bass, Präsenz um die oberen Mitten entscheidet über Durchsetzung, und ein beherztes Absenken des Mulm-Bereichs schafft Platz für die Bassdrum. Ein Ton, der solo dünn wirkt, kann im Mix genau richtig sein — beurteilt wird immer im Kontext.\n\nDritte Säule: Weniger schichten. Zwei präzise Spuren schlagen sechs verwaschene. Sound-Architektur heißt, jede Komponente — Spielweise, Gain, EQ, Anzahl der Spuren — als Entscheidung zu treffen statt als Gewohnheit."
+        "de": "Der größte Anfängerfehler beim Metal-Sound ist zu viel Gain: Ab einem Punkt macht mehr Zerre den Ton nicht härter, sondern kleiner — Attack und Definition ersaufen im Kompressionsbrei, und im Bandkontext verschwindet die Gitarre. Die härtesten Produktionen fahren oft überraschend moderate Zerrstufen und holen die Aggression aus dem Anschlag.\n\nDie zweite Säule ist der Frequenzplatz: Tiefmitten teilen sich Gitarre und Bass, Präsenz um die oberen Mitten entscheidet über Durchsetzung, und ein beherztes Beschneiden des Tiefbass- und Mulm-Bereichs schafft Platz für Bassdrum und Bass. Ein Ton, der solo dünn wirkt, kann im Mix genau richtig sein — beurteilt wird immer im Kontext.\n\nDritte Säule: Weniger schichten. Zwei präzise Spuren schlagen sechs verwaschene. Sound-Architektur heißt, jede Komponente — Spielweise, Gain, EQ, Anzahl der Spuren — als Entscheidung zu treffen statt als Gewohnheit."
       },
       "reflexionsaufgabe": {
         "de": "Nimm dein Standard-Riff einmal mit deinem gewohnten Gain auf und einmal mit deutlich reduziertem — spiel beim zweiten Take bewusst härter an. Vergleich beide im Kontext (zu Drums/Bass oder einem Backing): Welcher setzt sich durch, welcher klingt solo nur größer? Was sagt dir das über deine aktuelle Sound-Architektur?"
@@ -1165,7 +1165,7 @@
         "timing_zum_klick"
       ],
       "erklaerteil": {
-        "de": "Auf Experten-Niveau kommt der Fortschritt nicht mehr von allein — die leichten Gewinne sind eingesammelt, und wer einfach „mehr übt“, tritt auf der Stelle. Jetzt zählt Übe-Architektur: gezielte Diagnose (was genau limitiert mich?), fokussierte Blöcke an genau dieser Schwäche und ehrliche Messung, ob sich etwas bewegt.\n\nPlateaus sind dabei normal und meist ein Zeichen, dass der Reiz sich abgenutzt hat. Die Auswege sind bekannt: die Anforderung variieren (anderes Tempo, anderer Kontext, anderes Material), die Schwäche aus einer neuen Richtung angehen — oder bewusst eine Woche etwas völlig anderes üben und mit frischem System zurückkommen.\n\nDie unbequemste Wahrheit: Auf diesem Niveau limitiert selten die Hand, sondern die Aufmerksamkeit. Zehn Minuten mit voller Diagnose-Schärfe schlagen zwei Stunden Autopilot — und Aufnahmen sind der Lügendetektor, der Autopilot von Arbeit unterscheidet."
+        "de": "Auf Experten-Niveau kommt der Fortschritt nicht mehr von allein — die leichten Gewinne sind eingesammelt, und wer einfach „mehr übt“, tritt auf der Stelle. Jetzt zählt Übe-Architektur: gezielte Diagnose (was genau limitiert mich?), fokussierte Blöcke an genau dieser Schwäche und ehrliche Messung, ob sich etwas bewegt.\n\nPlateaus sind dabei normal und meist ein Zeichen, dass der Reiz sich abgenutzt hat. Die Auswege sind bekannt: die Anforderung variieren (anderes Tempo, anderer Kontext, anderes Material), die Schwäche aus einer neuen Richtung angehen — oder bewusst eine Woche etwas völlig anderes üben und mit frischem Kopf zurückkommen.\n\nDie unbequemste Wahrheit: Auf diesem Niveau limitiert selten die Hand, sondern die Aufmerksamkeit. Zehn Minuten mit voller Diagnose-Schärfe schlagen zwei Stunden Autopilot — und Aufnahmen sind der Lügendetektor, der Autopilot von Arbeit unterscheidet."
       },
       "reflexionsaufgabe": {
         "de": "Benenne dein aktuelles Plateau so präzise wie möglich — nicht „schneller werden“, sondern etwa „Wechselschlag verliert Sauberkeit beim Saitenwechsel ab Tempo X“. Entwirf dann einen Zwei-Wochen-Block: Welche eine Schwäche greifst du an, mit welcher Übung, und woran misst du am Ende, ob sich etwas bewegt hat?"

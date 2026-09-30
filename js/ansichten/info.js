@@ -177,7 +177,7 @@ export function renderUeber(el, daten) {
 // zur Grafik, und der zugaengliche Name kommt ueber aria-label aus demselben
 // Titel wie vorher. Die Rechtstexte (Impressum/Datenschutz) teilen sich diese
 // Funktion und bekommen deshalb weiter ihre schlichte Ueberschrift.
-function infoSeiteHtml(block, marke = null) {
+function infoSeiteHtml(block, marke = null, vorText = '') {
   const absaetzeHtml = (liste) => (liste || []).map((a) => `<p>${esc(text(a) ?? '')}</p>`).join('');
   const einleitung = absaetzeHtml(block.absaetze);
   const abschnitte = (block.abschnitte || [])
@@ -189,6 +189,7 @@ function infoSeiteHtml(block, marke = null) {
     : `<h1>${esc(titel)}</h1>`;
   return `
     ${kopf}
+    ${vorText}
     <section class="karte">${einleitung}${abschnitte}</section>`;
 }
 
@@ -226,9 +227,10 @@ export function renderKollektiv(el, daten) {
     return;
   }
   // Direkt unter der Wortbildmarke, vor dem Text: erst die Leute, dann was sie tun.
-  const seite = infoSeiteHtml(block, 'kollektiv');
-  const trenner = seite.indexOf('<section class="karte">');
-  el.innerHTML = seite.slice(0, trenner) + mitgliederHtml(block.mitglieder) + seite.slice(trenner);
+  // Als Parameter statt per String-Schnitt im fertigen HTML: Ein indexOf() auf das
+  // Markup lieferte bei jeder Änderung an infoSeiteHtml -1, und slice(0, -1) setzte
+  // die Porträts lautlos an die falsche Stelle.
+  el.innerHTML = infoSeiteHtml(block, 'kollektiv', mitgliederHtml(block.mitglieder));
 }
 
 export function renderMitmachen(el, daten) {

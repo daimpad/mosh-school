@@ -1,7 +1,7 @@
 {
   "genre": "Noise Rock",
   "anzahl": 30,
-  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder verwendet haben, auch als Provokation. Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, sonstiges Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind Suchlinks (Künstler und Titel) bei Bandcamp bzw. YouTube, keine Direktlinks; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "The Jesus Lizard",
@@ -83,7 +83,7 @@
     {
       "kuenstler": "Girls Against Boys",
       "titel": "Super-Fire",
-      "substil_vermerk": "zwei-Bässe-Noise-Rock (US)",
+      "substil_vermerk": "Zwei-Bässe-Noise-Rock (US)",
       "url": "https://bandcamp.com/search?q=Girls+Against+Boys+Super-Fire&item_type=t",
       "quelle": "bandcamp"
     },

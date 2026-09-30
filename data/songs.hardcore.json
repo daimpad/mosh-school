@@ -1,7 +1,7 @@
 {
   "genre": "Hardcore",
   "anzahl": 29,
-  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder verwendet haben, auch als Provokation. Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, sonstiges Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind Suchlinks (Künstler und Titel) bei Bandcamp bzw. YouTube, keine Direktlinks; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Black Flag",
@@ -103,23 +103,23 @@
     },
     {
       "kuenstler": "Modern Life Is War",
-      "titel": "First & Ellen",
+      "titel": "First and Ellen",
       "substil_vermerk": "melodischer Hardcore (US)",
       "url": "https://bandcamp.com/search?q=Modern+Life+Is+War+First+%26+Ellen&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Defeater",
-      "titel": "Empty Days & Sleepless Nights",
+      "titel": "Empty Glass",
       "substil_vermerk": "emotionaler Hardcore (US)",
       "url": "https://bandcamp.com/search?q=Defeater+Empty+Days+%26+Sleepless+Nights&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Verse",
-      "titel": "Bitter Clarity",
+      "titel": "The Silver Spoon and the Empty Plate",
       "substil_vermerk": "melodischer Hardcore (US)",
-      "url": "https://bandcamp.com/search?q=Verse+Bitter+Clarity&item_type=t",
+      "url": "https://bandcamp.com/search?q=Verse+The+Silver+Spoon+and+the+Empty+Plate&item_type=t",
       "quelle": "bandcamp"
     },
     {
@@ -138,9 +138,9 @@
     },
     {
       "kuenstler": "Backtrack",
-      "titel": "Deal With It",
+      "titel": "Deal With the Devil",
       "substil_vermerk": "moderner Hardcore (US)",
-      "url": "https://bandcamp.com/search?q=Backtrack+Deal+With+It&item_type=t",
+      "url": "https://bandcamp.com/search?q=Backtrack+Deal+With+the+Devil&item_type=t",
       "quelle": "bandcamp"
     },
     {

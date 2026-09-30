@@ -1,7 +1,7 @@
 {
   "genre": "Deathcore",
   "anzahl": 29,
-  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind oder den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe). Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind offizielle Bandcamp-/YouTube-Suchlinks: immer erreichbar, landen beim richtigen Künstler; das Feld quelle nennt die Zielplattform.",
+  "hinweis": "Kuratiert ohne Bands, die rassistisch oder antisemitisch aufgetreten sind, den Nationalsozialismus verherrlichen, relativieren oder normalisieren (einschließlich NSBM-Nähe) oder NS-Bildsprache bzw. -Ikonografie verwenden oder verwendet haben, auch als Provokation. Das ist der einzige Maßstab. Andere Kontroversen — Gewalt- und Missbrauchsfälle, Homofeindlichkeit, Bandname, sonstiges Artwork, Textthemen — führen ausdrücklich NICHT zum Ausschluss; darüber urteilt diese Liste nicht. URLs sind Suchlinks (Künstler und Titel) bei Bandcamp bzw. YouTube, keine Direktlinks; das Feld quelle nennt die Zielplattform.",
   "songs": [
     {
       "kuenstler": "Suicide Silence",
@@ -40,9 +40,9 @@
     },
     {
       "kuenstler": "Carnifex",
-      "titel": "Hell Chose Me",
+      "titel": "Slow Death",
       "substil_vermerk": "blackened/melodischer Deathcore (US)",
-      "url": "https://bandcamp.com/search?q=Carnifex+Hell+Chose+Me&item_type=t",
+      "url": "https://bandcamp.com/search?q=Carnifex+Slow+Death&item_type=t",
       "quelle": "bandcamp"
     },
     {
@@ -62,7 +62,7 @@
     {
       "kuenstler": "Oceano",
       "titel": "District of Misery",
-      "substil_vermerk": "downtempo/heavy Deathcore (US)",
+      "substil_vermerk": "Downtempo/heavy Deathcore (US)",
       "url": "https://www.youtube.com/results?search_query=Oceano+District+of+Misery",
       "quelle": "youtube"
     },
@@ -104,14 +104,14 @@
     {
       "kuenstler": "Signs of the Swarm",
       "titel": "Vital Rot",
-      "substil_vermerk": "downtempo Deathcore (US)",
+      "substil_vermerk": "Downtempo Deathcore (US)",
       "url": "https://bandcamp.com/search?q=Signs+of+the+Swarm+Vital+Rot&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Ingested",
       "titel": "Where No Life Lingers",
-      "substil_vermerk": "slam/Deathcore (UK)",
+      "substil_vermerk": "Slam/Deathcore (UK)",
       "url": "https://bandcamp.com/search?q=Ingested+Where+No+Life+Lingers&item_type=t",
       "quelle": "bandcamp"
     },
@@ -132,14 +132,14 @@
     {
       "kuenstler": "Bodysnatcher",
       "titel": "Death of Me",
-      "substil_vermerk": "downtempo/beatdown Deathcore (US)",
+      "substil_vermerk": "Downtempo/Beatdown Deathcore (US)",
       "url": "https://bandcamp.com/search?q=Bodysnatcher+Death+of+Me&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Distant",
       "titel": "Dusk",
-      "substil_vermerk": "slam/downtempo Deathcore (NL)",
+      "substil_vermerk": "Slam/Downtempo Deathcore (NL)",
       "url": "https://bandcamp.com/search?q=Distant+Dusk&item_type=t",
       "quelle": "bandcamp"
     },
@@ -153,14 +153,14 @@
     {
       "kuenstler": "Humanity's Last Breath",
       "titel": "Bâsk",
-      "substil_vermerk": "Thall/downtempo Deathcore (Schweden)",
+      "substil_vermerk": "Thall/Downtempo Deathcore (Schweden)",
       "url": "https://bandcamp.com/search?q=Humanity%27s+Last+Breath+B%C3%A2sk&item_type=t",
       "quelle": "bandcamp"
     },
     {
       "kuenstler": "Acrania",
       "titel": "The Beginning of the End of Humanity",
-      "substil_vermerk": "brutaler/slam Deathcore (UK)",
+      "substil_vermerk": "brutaler/Slam Deathcore (UK)",
       "url": "https://bandcamp.com/search?q=Acrania+The+Beginning+of+the+End+of+Humanity&item_type=t",
       "quelle": "bandcamp"
     },
@@ -181,7 +181,7 @@
     {
       "kuenstler": "I Declare War",
       "titel": "Malevolence",
-      "substil_vermerk": "Deathcore/beatdown (US)",
+      "substil_vermerk": "Deathcore/Beatdown (US)",
       "url": "https://www.youtube.com/results?search_query=I+Declare+War+Malevolence",
       "quelle": "youtube"
     },
@@ -202,7 +202,7 @@
     {
       "kuenstler": "Emmure",
       "titel": "Nemesis",
-      "substil_vermerk": "nu-/beatdown-Deathcore (US)",
+      "substil_vermerk": "Nu-/Beatdown-Deathcore (US)",
       "url": "https://www.youtube.com/results?search_query=Emmure+Nemesis",
       "quelle": "youtube"
     }

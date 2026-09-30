@@ -42,7 +42,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Groove entsteht aus dem Verhältnis zwischen dem, was das Ohr erwartet, und dem, was tatsächlich passiert. Liegt jeder Anschlag genau auf der erwarteten Stelle, klingt es korrekt, aber leblos. Verschiebt man Betonungen gezielt auf unerwartete Punkte — meist auf die Zwischenschläge — entsteht Zug: Das Ohr wird ein Stück weit vorwärtsgezogen, weil es die Auflösung auf dem nächsten schweren Schlag erwartet.\n\nGenau das ist eine Synkope: eine Betonung dort, wo eigentlich keine hingehört. Sie funktioniert aber nur, solange der Puls klar bleibt. Ohne diesen Bezugspunkt hört man keine Verschiebung, sondern nur Unordnung — dasselbe Prinzip wie bei Dissonanz und Chromatik: Die Abweichung braucht etwas, wovon sie abweicht.\n\nIn harter Musik ist das ein zentrales Mittel. Viele Breakdowns bestehen aus verschobenen Akzenten über einem stur durchlaufenden Puls im Schlagzeug; die Wucht entsteht nicht aus Tempo, sondern aus dieser Reibung zwischen Erwartung und Ereignis. Wer will, dass ein Riff zieht statt nur schnell zu sein, arbeitet hier — nicht am Metronom."
+        "de": "Groove entsteht aus dem Verhältnis zwischen dem, was das Ohr erwartet, und dem, was tatsächlich passiert. Liegt jeder Anschlag genau auf der erwarteten Stelle, klingt es korrekt, aber leblos. Verschiebt man Betonungen gezielt auf unerwartete Punkte — meist auf die Zwischenschläge — entsteht Zug: Das Ohr wird ein Stück weit vorwärtsgezogen, weil es die Auflösung auf dem nächsten schweren Schlag erwartet.\n\nGenau das ist eine Synkope: eine Betonung dort, wo eigentlich keine hingehört. Sie funktioniert aber nur, solange der Puls klar bleibt. Ohne diesen Bezugspunkt hört man keine Verschiebung, sondern nur Unordnung — dasselbe Prinzip wie bei Dissonanz und Chromatik: Die Abweichung braucht etwas, wovon sie abweicht.\n\nIn harter Musik ist das ein zentrales Mittel. Viele Breakdowns bestehen aus verschobenen Akzenten über einem stur durchlaufenden Puls im Schlagzeug; die Wucht entsteht nicht aus Tempo, sondern aus dieser Reibung zwischen Erwartung und Ereignis. Wer will, dass ein Riff zieht, statt nur schnell zu sein, arbeitet hier — nicht am Metronom."
       },
       "reflexionsaufgabe": {
         "de": "Liegen deine Betonungen alle auf den erwarteten Stellen? Bleibt bei deinen Verschiebungen der Puls für Zuhörende erkennbar? Und suchst du Zug über Akzente oder nur über mehr Tempo?"
@@ -67,7 +67,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Diese Übung macht den Unterschied zwischen korrekt und lebendig unmittelbar hörbar. Man spielt ein gleichbleibendes Muster — etwa durchgehende Achtel — und ändert nichts als die Betonung. Die Töne bleiben, das Tempo bleibt, nur der Schwerpunkt wandert.\n\nDer Effekt ist größer, als man erwartet: Dieselbe Tonfolge kann treibend, stolpernd oder schwer wirken, je nachdem, wo die Akzente sitzen. Das ist die günstigste Art, ein Riff zu verändern — sie kostet keine neuen Töne und keine neue Technik.\n\nWichtig ist, den Klick durchlaufen zu lassen. Er ist der Bezugspunkt, gegen den die Verschiebung überhaupt erst hörbar wird. Wer den Klick abschaltet, weil die Akzente nicht dazu passen, hat den Sinn der Übung verloren."
+        "de": "Diese Übung macht den Unterschied zwischen korrekt und lebendig unmittelbar hörbar. Man spielt ein gleichbleibendes Muster — etwa durchgehende Achtel — und ändert nichts als die Betonung. Die Töne bleiben, das Tempo bleibt, nur der Schwerpunkt wandert.\n\nDer Effekt ist größer, als man erwartet: Dieselbe Tonfolge kann treibend, stolpernd oder schwer wirken, je nachdem, wo die Akzente sitzen. Das ist die günstigste Art, ein Riff zu verändern — sie kostet keine neuen Töne und keine neue Technik.\n\nWichtig ist, den Klick durchlaufen zu lassen. Er ist der Bezugspunkt, gegen den die Verschiebung überhaupt erst hörbar wird. Wer den Klick abschaltet, weil die Akzente nicht dazu passen, hat den Sinn der Übung verfehlt."
       },
       "uebungsteil": {
         "de": {
@@ -80,7 +80,7 @@
             "Betone anschließend nur die Zwischenschläge und höre den Zug, der entsteht.",
             "Nimm zwei Fassungen auf und beschreibe den Unterschied in eigenen Worten."
           ],
-          "steigerung": "Lege die Akzentfolge über zwei Takte, sodass sie sich erst nach acht Schlägen wiederholt.",
+          "steigerung": "Lege die Akzentfolge über zwei Takte, sodass sie sich erst nach sechzehn Achteln wiederholt.",
           "selbstkontrolle": "Bleibt der Puls beim Verschieben stabil? Kannst du benennen, wie sich der Charakter ändert?"
         }
       },
@@ -303,13 +303,13 @@
             ]
           }
         ],
-        "hinweis": "Dieselben sechzehn Schläge, viermal — nur der Akzent wandert um je eine Zählzeit. Hör hin, wie sich das Metrum verschiebt, obwohl sich nichts an der Figur ändert."
+        "hinweis": "Dieselben sechzehn Schläge, viermal — nur der Akzent wandert um je eine Zählzeit. Hör hin, wie sich der Schwerpunkt verschiebt, obwohl sich nichts an der Figur ändert."
       }
     },
     {
       "id": "ungerade_metren",
       "anzeigetitel": {
-        "de": "Ungerade Metren verstehen"
+        "de": "Ungerade Metren üben: Gruppen statt Zählen"
       },
       "domaene": [
         "theorie"
@@ -319,13 +319,14 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "Ungerade Metren wie Fünf oder Sieben wirken kompliziert, sind es aber nicht — sie sind Kombinationen aus Zweier- und Dreiergruppen. Sieben Achtel sind je nach Aufteilung zwei plus zwei plus drei oder drei plus zwei plus zwei; fünf sind zwei plus drei oder drei plus zwei. Die Gruppierung entscheidet über das Gefühl, nicht die Zahl.\n\nDeshalb ist Zählen der schlechteste Zugang. Zählen ist eine bewusste Tätigkeit und bricht bei Tempo zusammen; Gruppen dagegen erkennt man als rhythmische Gestalten wieder, so wie man Wörter erkennt, ohne Buchstaben zu zählen. Wer eine Siebenergruppe als kurz-kurz-lang fühlt, kann sie schnell spielen; wer bis sieben zählt, kann es nicht.\n\nDaraus ergibt sich der praktische Weg: die Gruppen laut mitsprechen, zunächst nur einen Schlag pro Gruppenanfang spielen und den Klick auf die Gruppenanfänge legen statt auf jede Zählzeit. Erst wenn die Kette von selbst läuft, kommt das Riff darüber. Ungerade Metren sind kein Rechenproblem, sondern ein Wiedererkennungsproblem."
+        "de": "Dass ungerade Metren wie Fünf oder Sieben nur Kombinationen aus Zweier- und Dreiergruppen sind, ist schnell verstanden — hier geht es darum, wie du sie übst, ohne zu zählen. Sieben Achtel sind je nach Aufteilung zwei plus zwei plus drei, zwei plus drei plus zwei oder drei plus zwei plus zwei; fünf sind zwei plus drei oder drei plus zwei. Die Gruppierung entscheidet über das Gefühl, nicht die Zahl.\n\nDeshalb ist Zählen der schlechteste Zugang. Zählen ist eine bewusste Tätigkeit und bricht bei Tempo zusammen; Gruppen dagegen erkennt man als rhythmische Gestalten wieder, so wie man Wörter erkennt, ohne Buchstaben zu zählen. Wer eine Siebenergruppe als kurz-kurz-lang fühlt, kann sie schnell spielen; wer bis sieben zählt, kann es nicht.\n\nDaraus ergibt sich der praktische Weg: die Gruppen laut mitsprechen, zunächst nur einen Schlag pro Gruppenanfang spielen und den Klick auf die Gruppenanfänge legen statt auf jede Zählzeit. Erst wenn die Kette von selbst läuft, kommt das Riff darüber. Ungerade Metren sind kein Rechenproblem, sondern ein Wiedererkennungsproblem."
       },
       "reflexionsaufgabe": {
         "de": "Fühlst du ungerade Metren als Gruppen oder zählst du mit? Sprichst du die Gruppen mit, bevor du spielst? Und legst du den Klick auf die Gruppenanfänge, statt gegen jede Zählzeit anzukämpfen?"
       },
       "voraussetzungen": [
-        "puls_und_metrum"
+        "puls_und_metrum",
+        "ungerade_takte_theorie"
       ]
     },
     {
@@ -341,7 +342,7 @@
       ],
       "typ": "micro",
       "erklaerteil": {
-        "de": "In dieser Musik entsteht Wucht selten aus einem Instrument allein, sondern aus dem Verhältnis zweier Ebenen. Die Bassdrum und die abgedämpften tiefen Anschläge der Gitarre treffen dieselbe Frequenzregion und denselben rhythmischen Raum — liegen sie exakt aufeinander, verschmelzen sie zu einem Schlag von großer Wucht; liegen sie leicht versetzt, entsteht Unschärfe, die als schlampig gehört wird.\n\nDeshalb gilt für schwere Parts eine einfache Regel: Die tiefen Gitarrenanschläge und die Bassdrum sollten dieselben Stellen treffen. Genau das macht einen Breakdown wuchtig — nicht die Tiefe der Stimmung. Umgekehrt kann man mit bewusstem Versatz arbeiten, etwa wenn die Gitarre synkopiert und die Bassdrum stur den Puls hält; dann darf der Versatz aber nicht zufällig sein, sondern muss gesetzt und beidseitig bekannt sein.\n\nDie Snare hat eine andere Rolle: Sie markiert das Metrum und gibt dem Ohr Halt. Wenn Gitarre und Bassdrum sich zusammen bewegen und die Snare den Rahmen hält, entsteht der typische Zug harter Musik. Wer im Proberaum das Gefühl hat, es klinge matschig, obwohl alle richtig spielen, sollte zuerst diese Verzahnung prüfen — meist liegt es dort und nicht an der Ausrüstung."
+        "de": "In dieser Musik entsteht Wucht selten aus einem Instrument allein, sondern aus dem Verhältnis zweier Ebenen. Die Bassdrum und die abgedämpften tiefen Anschläge der Gitarre teilen sich dieselbe Frequenzregion und denselben rhythmischen Raum — liegen sie exakt aufeinander, verschmelzen sie zu einem Schlag von großer Wucht; liegen sie leicht versetzt, entsteht Unschärfe, die als schlampig gehört wird.\n\nDeshalb gilt für schwere Parts eine einfache Regel: Die tiefen Gitarrenanschläge und die Bassdrum sollten dieselben Stellen treffen. Genau das macht einen Breakdown wuchtig — nicht die Tiefe der Stimmung. Umgekehrt kann man mit bewusstem Versatz arbeiten, etwa wenn die Gitarre synkopiert und die Bassdrum stur den Puls hält; dann darf der Versatz aber nicht zufällig sein, sondern muss gesetzt und beiden bekannt sein.\n\nDie Snare hat eine andere Rolle: Sie markiert das Metrum und gibt dem Ohr Halt. Wenn Gitarre und Bassdrum sich zusammen bewegen und die Snare den Rahmen hält, entsteht der typische Zug harter Musik. Wer im Proberaum das Gefühl hat, es klinge matschig, obwohl alle richtig spielen, sollte zuerst diese Verzahnung prüfen — meist liegt es dort und nicht an der Ausrüstung."
       },
       "reflexionsaufgabe": {
         "de": "Treffen deine tiefen Anschläge dieselben Stellen wie die Bassdrum? Ist ein Versatz bei euch gesetzt und beiden bekannt, oder passiert er zufällig? Und prüft ihr bei Matsch zuerst die Verzahnung, bevor ihr an den Verstärkern dreht?"
@@ -590,7 +591,7 @@
             "technik": "palm_mute"
           }
         ],
-        "hinweis": "Ein Tempo, vier Takte: Viertel, Achtel, Sechzehntel, wieder Viertel. Der Klick ändert sich nie — die gefühlte Geschwindigkeit schon. Genau darüber steuerst du Tempo, nicht über die Zahl."
+        "hinweis": "Ein Tempo, vier Takte: Viertel, Achtel, Sechzehntel, wieder Viertel. Der Klick ändert sich nie — die gefühlte Geschwindigkeit schon. Genau darüber steuerst du das gefühlte Tempo, nicht über die Zahl."
       }
     }
   ]

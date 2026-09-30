@@ -233,7 +233,7 @@ export function bildKachelHtml({ href, hue = 'pf-schiefer', schluessel, icon = '
 
 // Inszenierter Startseiten-Hero: gleiche Motiv-Backdrop- + Reinbox-Inszenierung
 // wie die Landingpages, aber mit Marken-Logo, Titel, Untertitel, Themenzeile und
-// den Einstiegs-CTAs (extra). Blutrote Marken-Hue. Ersetzt den flachen
+// den Einstiegs-CTAs (extra). Lila Marken-Hue. Ersetzt den flachen
 // Der Schriftzug im Hero folgt der gezeichneten Wortmarke: Dort stehen die
 // letzten drei Buchstaben gespiegelt („ZER" + verkehrtes „RER"). „RER" ist ein
 // Palindrom — eine Spiegelung des ganzen Stücks dreht deshalb nur die Glyphen
