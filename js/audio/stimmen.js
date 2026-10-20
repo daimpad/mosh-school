@@ -13,7 +13,7 @@
 // die Synthese gespielt hat.
 
 import { holeRauschen } from './kontext.js';
-import { spieleSample, waehleTon } from './samples.js';
+import { hatSample, spieleSample, waehleTon } from './samples.js';
 
 // Spielt die Probe `name`, sonst die Synthese. Liefert die Quellen als Liste.
 function mitRueckfall(ctx, ziel, zeit, name, synth) {
@@ -135,7 +135,14 @@ function tom(ctx, ziel, zeit, start, ende) {
 }
 
 export const kick = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'kick', kickSynth);
-export const snare = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'snare', snareSynth);
+// Snare mit Betonung: -1 spielt die Ghost Note, +1 den Rimshot — die
+// Klangfarbe eines leisen oder harten Schlags ist eine andere, nicht nur der
+// Pegel (den regelt weiterhin der Aufrufer). Fehlt die Probe, die normale.
+export function snare(ctx, ziel, zeit, { betonung = 0 } = {}) {
+  const art = betonung < 0 ? 'snare_ghost' : betonung > 0 ? 'snare_rand' : null;
+  if (art && hatSample(art)) return [spieleSample(ctx, ziel, zeit, art)];
+  return mitRueckfall(ctx, ziel, zeit, 'snare', snareSynth);
+}
 export const hihat = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'hihat', hihatSynth);
 export const hihatOffen = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'hihat_offen', hihatOffenSynth);
 export const crash = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'crash', crashSynth);
@@ -143,6 +150,13 @@ export const china = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'china',
 export const ride = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'ride', rideSynth);
 export const tomHoch = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'tom_hoch', (c, z, t) => tom(c, z, t, 240, 150));
 export const tomTief = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'tom_tief', (c, z, t) => tom(c, z, t, 160, 95));
+// Seit dem Ausbau der Bank: Klänge, die es vorher gar nicht gab. Ihr Rückfall
+// ist die nächstverwandte Synthese, nicht Stille.
+export const tomMitte = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'tom_mitte', (c, z, t) => tom(c, z, t, 200, 120));
+export const rideGlocke = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'ride_glocke', rideSynth);
+export const splash = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'splash', crashSynth);
+export const stack = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'stack', chinaSynth);
+export const hihatPedal = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'hihat_pedal', hihatSynth);
 
 // Weiche Sättigungskurve (tanh) für etwas Charakter/„Zerre" an der Saite.
 const SAETTIGUNG = (() => {
@@ -196,26 +210,33 @@ const GEDAEMPFT = { dauer: 0.16, tiefpass: { gitarre: 1800, bass: 900, gitarre_c
 // Abspielrate), sonst die Synthese.
 //   instrument: 'gitarre' (Standard) oder 'bass'
 //   klang:      'zerre' (Standard) oder 'clean' — nur Gitarre
-//   gedaempft:  Palm Mute / Dead Note
+//   gedaempft:  Palm Mute
+//   tot:        Dead Note (Anschlag ohne Ton; Bass: kurzer gedämpfter Ton)
 //   dauer:      Tonlänge in Sekunden (Standard: OFFEN_DAUER bzw. kurz bei gedaempft)
 //   pegel:      Faktor, z. B. damit ein Akkord nicht lauter ist als ein Einzelton
-export function saite(ctx, ziel, zeit, { frequenz, gedaempft = false, instrument = 'gitarre', klang = 'zerre', dauer = null, pegel = 1 } = {}) {
+export function saite(ctx, ziel, zeit, { frequenz, gedaempft = false, tot = false, instrument = 'gitarre', klang = 'zerre', dauer = null, pegel = 1 } = {}) {
   if (!frequenz || !Number.isFinite(frequenz)) return [];
   const gruppe = instrument === 'bass' ? 'bass' : klang === 'clean' ? 'gitarre_clean' : 'gitarre';
-  // Abgedämpft auf der verzerrten Gitarre: eigene Chug-Proben, wenn geladen —
-  // ein abgeschnittener offener Ton klingt nach Gate, nicht nach Handballen.
-  const chug = gedaempft && gruppe === 'gitarre' ? waehleTon('gitarre_chug', frequenz) : null;
+  // Dead Note: ein Anschlag ohne Ton. Die Probe hat keine Tonhöhe, die
+  // umgestimmt werden müsste — sie klingt immer gleich.
+  if (tot && gruppe === 'gitarre' && hatSample('gitarre_tot')) {
+    return [spieleSample(ctx, ziel, zeit, 'gitarre_tot', { pegel })];
+  }
+  // Abgedämpft: eigene Proben (Chug, gedämpfter Bass), wenn geladen — ein
+  // abgeschnittener offener Ton klingt nach Gate, nicht nach Handballen.
+  const gedaempftGruppe = { gitarre: 'gitarre_chug', bass: 'bass_gedaempft' }[gruppe];
+  const chug = (gedaempft || tot) && gedaempftGruppe ? waehleTon(gedaempftGruppe, frequenz) : null;
   const ton = chug || waehleTon(gruppe, frequenz);
   if (ton) {
     const quelle = spieleSample(ctx, ziel, zeit, ton.name, {
       pegel,
       rate: ton.rate,
-      dauer: gedaempft ? Math.min(dauer ?? Infinity, GEDAEMPFT.dauer) : (dauer ?? OFFEN_DAUER),
-      tiefpass: gedaempft && !chug ? GEDAEMPFT.tiefpass[gruppe] : null,
+      dauer: gedaempft || tot ? Math.min(dauer ?? Infinity, tot ? GEDAEMPFT.dauer / 2 : GEDAEMPFT.dauer) : (dauer ?? OFFEN_DAUER),
+      tiefpass: (gedaempft || tot) && !chug ? GEDAEMPFT.tiefpass[gruppe] : null,
     });
     if (quelle) return [quelle];
   }
-  return saiteSynth(ctx, ziel, zeit, { frequenz, gedaempft, pegel, dauer });
+  return saiteSynth(ctx, ziel, zeit, { frequenz, gedaempft: gedaempft || tot, pegel, dauer });
 }
 
 // Gehaltener Referenzton (Drone): weicher Sägezahn mit sanfter Ein-/Ausblende.

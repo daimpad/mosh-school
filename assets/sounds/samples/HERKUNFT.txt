@@ -3,26 +3,34 @@ Sample-Bank der Stimmen — Herkunft und Verwendung
 
 WAS DAS IST
 -----------
-Zwanzig One-Shots, die der Audio-Kern (js/audio/stimmen.js über
+58 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
 js/audio/samples.js) statt der früheren Synthese spielt: im Pattern-Werkzeug,
 in den Play-along-Loops, in den Hörbeispielen der Bausteine und im
 Tabulatur-Werkzeug.
 
-  Schlagzeug   kick, snare, hihat, hihat-offen, crash, china, ride,
-               tom-hoch, tom-tief
-  Gitarre      gitarre-zerre-{e2,b2,fis3,f4,a4}  verzerrt, offener Ton
-               gitarre-chug-{e2,b2}              verzerrt, abgedämpft (Palm Mute)
-               gitarre-clean-a3                  unverzerrt
-  Bass         bass-{e1,b1,e2}
+  Schlagzeug   kick (+2 Varianten), snare (+2), hihat (+3), hihat-offen,
+               hihat-pedal, snare-ghost, snare-rand (Rimshot), crash, splash,
+               china, stack, ride, ride-glocke, tom-hoch, tom-mitte, tom-tief
+  Gitarre      gitarre-zerre-*  13 Grundtöne A1 … D♯5, verzerrt
+               gitarre-chug-*   3 Grundtöne E2, A2, B2 (Palm Mute)
+               gitarre-tot      Dead Note (Anschlag ohne Ton)
+               gitarre-clean-*  8 Grundtöne A2 … E5, unverzerrt
+  Bass         bass-*           8 Grundtöne E1 … G3
+               bass-gedaempft-* 2 Grundtöne G1, C♯2
+
+Varianten (kick-2, snare-3 …) spielen reihum (Round-Robin), damit schnelle
+Folgen nicht nach Maschinengewehr klingen. Ghost Note und Rimshot spielen die
+Hörbeispiele bei Betonung −1 bzw. +1 statt der normalen Snare.
 
 Alle: WAV, 16 bit / 44,1 kHz / mono, auf denselben Spitzenwert (0,9) normiert,
-zusammen rund 1,7 MB. Sie stehen in der SW-SHELL, damit die Werkzeuge offline
-nicht auf die Synthese zurückfallen.
+zusammen gut 4 MB. Sie stehen NICHT in der SW-SHELL (die lädt bei jeder neuen
+Version komplett neu), sondern werden beim ersten Werkzeug mit Ton geladen und
+zur Laufzeit gecacht; bis dahin spielt die Synthese.
 
-Gitarre und Bass liegen nur in wenigen Grundtönen vor. Jeder andere Ton wird
-vom nächstgelegenen aus über die Abspielrate erreicht; die Grundtöne in
-samples.js sind GEMESSEN, nicht angenommen, und build_samples.mjs prüft sie
-bei jedem Lauf auf ±10 Cent nach.
+Gitarre und Bass liegen nur in wenigen Grundtönen vor (höchstens 5 Halbtöne
+Abstand). Jeder andere Ton wird vom nächstgelegenen aus über die Abspielrate
+erreicht; die Grundtöne in samples.js sind GEMESSEN, nicht angenommen, und
+build_samples.mjs prüft sie bei jedem Lauf auf ±10 Cent nach.
 
 Klick (Metronom) und Referenzton (Stimmgerät) bleiben bewusst synthetisch:
 Beim Klick zählt die Flanke, beim Referenzton jeder Cent.
@@ -34,7 +42,9 @@ Quelle der Wahrheit ist scripts/build_samples.mjs.
 ERZEUGUNG
 ---------
 Erzeugt mit ElevenLabs, Sound Effects (Modell eleven_text_to_sound_v2), im
-Oktober 2026. Je Klang wurden vier Varianten erzeugt und eine ausgewählt —
+Oktober 2026, in zwei Runden (20 Klänge, dann 38 weitere aus rund 220
+Varianten). Je Klang wurden mindestens vier Varianten erzeugt und eine
+ausgewählt —
 nach Messung (Einsatz, Zahl der Anschläge, Ausklingzeit, Tonhöhe) und
 Spektrogramm. Verworfen wurden u. a. ein „Chug“ mit drei Anschlägen, eine
 Hi-Hat mit spätem Einsatz, „Einzeltöne“, die Akkorde waren, und Bässe, die
@@ -72,12 +82,22 @@ prüft scripts/validate.py nur, dass jede Datei aus SAMPLES existiert, das
 richtige Format hat, in der SHELL steht und eine Rohquelle mit Herkunft hat.
 
 
+RESERVE
+-------
+scripts/samples_quelle/reserve.json führt Klänge, die erzeugt und ausgewählt,
+aber noch nicht eingebaut sind: Gesangstechniken (Growl, Fry, False Cord …),
+Live-Geräusche (Publikum, Raumton, Brummen, Rückkopplung), gesprochenes
+Einzählen und Soundcheck, Gitarren-Effekte (Pinch Harmonic, Pick Scrape),
+verzerrter Bass. Die Dateien liegen nur im ElevenLabs-Konto (Flows mit
+flow_id/session_id), nicht im Repo. Vor dem Einbau anhören.
+
+
 NEUER KLANG
 -----------
 Rohdatei nach scripts/samples_quelle/<name>.mp3, Eintrag in quellen.json,
 Zeile in PROBEN (build_samples.mjs) und in SAMPLES (samples.js), bei
-Gitarre/Bass mit gruppe und gemessenem grundton (--messen), Datei in die
-SHELL von sw.js, CACHE erhöhen.
+Gitarre/Bass mit gruppe und gemessenem grundton (--messen), weitere Treffer
+derselben Stimme mit wechsel: '<name>'. Pegel gegen die Gruppe einmessen.
 
 
 NUTZUNGSRECHTE

@@ -43,6 +43,20 @@ export const SAMPLES = {
   ride: { datei: 'ride.wav', pegel: 0.26 },
   tom_hoch: { datei: 'tom-hoch.wav', pegel: 0.49 },
   tom_tief: { datei: 'tom-tief.wav', pegel: 0.79 },
+  kick_2: { datei: 'kick-2.wav', pegel: 1.18, wechsel: 'kick' },
+  kick_3: { datei: 'kick-3.wav', pegel: 0.57, wechsel: 'kick' },
+  snare_2: { datei: 'snare-2.wav', pegel: 0.69, wechsel: 'snare' },
+  snare_3: { datei: 'snare-3.wav', pegel: 0.69, wechsel: 'snare' },
+  hihat_2: { datei: 'hihat-2.wav', pegel: 0.14, wechsel: 'hihat' },
+  hihat_3: { datei: 'hihat-3.wav', pegel: 0.12, wechsel: 'hihat' },
+  hihat_4: { datei: 'hihat-4.wav', pegel: 0.16, wechsel: 'hihat' },
+  snare_ghost: { datei: 'snare-ghost.wav', pegel: 0.74 },
+  snare_rand: { datei: 'snare-rand.wav', pegel: 0.73 },
+  ride_glocke: { datei: 'ride-glocke.wav', pegel: 0.21 },
+  splash: { datei: 'splash.wav', pegel: 0.43 },
+  tom_mitte: { datei: 'tom-mitte.wav', pegel: 0.66 },
+  hihat_pedal: { datei: 'hihat-pedal.wav', pegel: 0.12 },
+  stack: { datei: 'stack.wav', pegel: 0.53 },
   gitarre_zerre_e2: { datei: 'gitarre-zerre-e2.wav', pegel: 0.78, gruppe: 'gitarre', grundton: 82.5 },
   gitarre_zerre_b2: { datei: 'gitarre-zerre-b2.wav', pegel: 0.59, gruppe: 'gitarre', grundton: 123.8 },
   gitarre_zerre_fis3: { datei: 'gitarre-zerre-fis3.wav', pegel: 0.72, gruppe: 'gitarre', grundton: 186.2 },
@@ -54,6 +68,30 @@ export const SAMPLES = {
   bass_e1: { datei: 'bass-e1.wav', pegel: 0.75, gruppe: 'bass', grundton: 41.3 },
   bass_b1: { datei: 'bass-b1.wav', pegel: 0.77, gruppe: 'bass', grundton: 62.0 },
   bass_e2: { datei: 'bass-e2.wav', pegel: 0.84, gruppe: 'bass', grundton: 82.3 },
+  gitarre_zerre_a1: { datei: 'gitarre-zerre-a1.wav', pegel: 0.6, gruppe: 'gitarre', grundton: 55.4 },
+  gitarre_zerre_b1: { datei: 'gitarre-zerre-b1.wav', pegel: 0.66, gruppe: 'gitarre', grundton: 60.9 },
+  gitarre_zerre_a2: { datei: 'gitarre-zerre-a2.wav', pegel: 0.89, gruppe: 'gitarre', grundton: 111.0 },
+  gitarre_zerre_d3: { datei: 'gitarre-zerre-d3.wav', pegel: 0.56, gruppe: 'gitarre', grundton: 147.0 },
+  gitarre_zerre_b3: { datei: 'gitarre-zerre-b3.wav', pegel: 0.67, gruppe: 'gitarre', grundton: 246.3 },
+  gitarre_zerre_d4: { datei: 'gitarre-zerre-d4.wav', pegel: 0.77, gruppe: 'gitarre', grundton: 297.2 },
+  gitarre_zerre_b4: { datei: 'gitarre-zerre-b4.wav', pegel: 0.73, gruppe: 'gitarre', grundton: 493.3 },
+  gitarre_zerre_dis5: { datei: 'gitarre-zerre-dis5.wav', pegel: 0.92, gruppe: 'gitarre', grundton: 625.9 },
+  gitarre_chug_a2: { datei: 'gitarre-chug-a2.wav', pegel: 0.51, gruppe: 'gitarre_chug', grundton: 109.3 },
+  gitarre_tot: { datei: 'gitarre-tot.wav', pegel: 0.55 },
+  gitarre_clean_a2: { datei: 'gitarre-clean-a2.wav', pegel: 0.74, gruppe: 'gitarre_clean', grundton: 111.9 },
+  gitarre_clean_d3: { datei: 'gitarre-clean-d3.wav', pegel: 0.85, gruppe: 'gitarre_clean', grundton: 147.3 },
+  gitarre_clean_g3: { datei: 'gitarre-clean-g3.wav', pegel: 0.7, gruppe: 'gitarre_clean', grundton: 196.5 },
+  gitarre_clean_d4: { datei: 'gitarre-clean-d4.wav', pegel: 0.91, gruppe: 'gitarre_clean', grundton: 293.6 },
+  gitarre_clean_fis4: { datei: 'gitarre-clean-fis4.wav', pegel: 0.83, gruppe: 'gitarre_clean', grundton: 371.0 },
+  gitarre_clean_b4: { datei: 'gitarre-clean-b4.wav', pegel: 1.0, gruppe: 'gitarre_clean', grundton: 494.9 },
+  gitarre_clean_e5: { datei: 'gitarre-clean-e5.wav', pegel: 0.97, gruppe: 'gitarre_clean', grundton: 661.5 },
+  bass_a1: { datei: 'bass-a1.wav', pegel: 0.71, gruppe: 'bass', grundton: 54.8 },
+  bass_d2: { datei: 'bass-d2.wav', pegel: 0.78, gruppe: 'bass', grundton: 73.5 },
+  bass_gis2: { datei: 'bass-gis2.wav', pegel: 0.78, gruppe: 'bass', grundton: 103.8 },
+  bass_d3: { datei: 'bass-d3.wav', pegel: 0.91, gruppe: 'bass', grundton: 146.9 },
+  bass_g3: { datei: 'bass-g3.wav', pegel: 0.78, gruppe: 'bass', grundton: 196.6 },
+  bass_gedaempft_g1: { datei: 'bass-gedaempft-g1.wav', pegel: 0.58, gruppe: 'bass_gedaempft', grundton: 49.0 },
+  bass_gedaempft_cis2: { datei: 'bass-gedaempft-cis2.wav', pegel: 0.62, gruppe: 'bass_gedaempft', grundton: 69.6 },
 };
 
 const puffer = new Map();   // name → AudioBuffer
@@ -81,6 +119,21 @@ export function hatSample(name) {
   return puffer.has(name);
 }
 
+// Round-Robin: Einträge mit `wechsel: '<name>'` sind weitere Treffer derselben
+// Stimme. Gespielt wird reihum — bei Blastbeat und Double Bass klänge derselbe
+// Treffer sechzehnmal hintereinander nach Maschinengewehr.
+const WECHSEL = {};
+for (const [name, s] of Object.entries(SAMPLES)) {
+  if (s.wechsel) (WECHSEL[s.wechsel] ||= [s.wechsel]).push(name);
+}
+const zaehler = {};
+function naechsterTreffer(name) {
+  const reihe = (WECHSEL[name] || [name]).filter((n) => puffer.has(n));
+  if (reihe.length < 2) return name;
+  zaehler[name] = ((zaehler[name] ?? -1) + 1) % reihe.length;
+  return reihe[zaehler[name]];
+}
+
 // Spielt eine Probe zum Zeitpunkt `zeit` an `ziel`. Gibt die Quelle zurück
 // (zum Abbrechen) — oder null, wenn die Probe nicht geladen ist; dann spielt
 // der Aufrufer seine Synthese.
@@ -89,7 +142,8 @@ export function hatSample(name) {
 //   dauer: Ton nach dieser Zeit kurz ausblenden (abgestoppter Ton); ohne Angabe
 //          klingt die Probe natürlich aus
 //   tiefpass: Eckfrequenz eines Tiefpasses (abgedämpfter Ton)
-export function spieleSample(ctx, ziel, zeit, name, { pegel = 1, rate = 1, dauer = null, tiefpass = null } = {}) {
+export function spieleSample(ctx, ziel, zeit, gewuenscht, { pegel = 1, rate = 1, dauer = null, tiefpass = null } = {}) {
+  const name = naechsterTreffer(gewuenscht);
   const b = puffer.get(name);
   if (!b) return null;
   const quelle = ctx.createBufferSource();

@@ -147,6 +147,8 @@ def ersatzschreibungen(knoten, pfad='', ignoriert=REFERENZ_IGNORIERT):
 DEMO_INSTRUMENTE = {
     'kick', 'snare', 'hihat_closed', 'hihat_open',
     'tom_hi', 'tom_lo', 'crash', 'ride', 'china',
+    # seit der Sample-Bank-Erweiterung (eigene Proben, Synthese als Rückfall)
+    'tom_mid', 'ride_bell', 'splash', 'stack', 'hihat_pedal',
 }
 DEMO_TECHNIKEN = {'normal', 'palm_mute', 'chug', 'slide', 'bend', 'dead_note'}
 
@@ -368,8 +370,8 @@ def pruefe_samples(fehler, warnung, sw_shell):
     """Sample-Bank der Stimmen (js/audio/samples.js, erzeugt von
     scripts/build_samples.mjs). Der Generator braucht Chromium und laeuft nicht
     in der CI; hier steht die billige Haelfte: Jede Datei aus SAMPLES existiert,
-    hat das Format, das der Generator schreibt, steht in der SW-SHELL und hat
-    ihre Rohquelle samt Herkunftsangabe. Fehlt eine Datei, faellt das sonst
+    hat das Format, das der Generator schreibt, und hat ihre Rohquelle samt
+    Herkunftsangabe. In der SW-SHELL steht sie bewusst NICHT (s. sw.js). Fehlt eine Datei, faellt das sonst
     nirgends auf — die Stimme spielt still ihre Synthese."""
     samples_js = os.path.join(ROOT, 'js', 'audio', 'samples.js')
     with open(samples_js, encoding='utf-8') as f:
@@ -393,8 +395,9 @@ def pruefe_samples(fehler, warnung, sw_shell):
             ist = (w.getnchannels(), w.getsampwidth(), w.getframerate())
         if ist != (1, 2, 44100):
             fehler.append(f'Sample "{pfad}": erwartet Mono/16 bit/44100 Hz, ist {ist}')
-        if pfad not in sw_shell:
-            fehler.append(f'sw.js: Sample "{pfad}" fehlt in SHELL — offline bliebe nur die Synthese')
+        if pfad in sw_shell:
+            warnung.append(f'sw.js: Sample "{pfad}" steht in SHELL — die Bank wird zur Laufzeit '
+                           f'gecacht; in der Hülle lüde jede neue Version sie komplett neu')
         stamm = datei[:-4]
         if not os.path.isfile(os.path.join(ROOT, 'scripts', 'samples_quelle', stamm + '.mp3')):
             fehler.append(f'Sample "{pfad}": Rohquelle scripts/samples_quelle/{stamm}.mp3 fehlt')
