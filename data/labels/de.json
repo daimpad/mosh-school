@@ -1845,7 +1845,8 @@
       "pinch_harmonic": "Pinch Harmonic",
       "dive_bomb": "Dive Bomb",
       "gitarre_feedback": "Gehaltener Ton kippt in Feedback",
-      "slide_ab": "Slide abwärts"
+      "slide_ab": "Slide abwärts",
+      "gitarre_vibrato": "Gehaltener Ton mit Vibrato"
     },
     "domaene": {
       "gitarre": "Gitarre",

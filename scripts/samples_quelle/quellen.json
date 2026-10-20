@@ -94,6 +94,11 @@
   "generation_id": "Bz9LaVpyBb7WB1GpgLp9",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/gitarre-vibrato": {
+  "prompt": "Blues-rock style distorted electric guitar string bend, a single picked note, the note bends up a whole tone and is held at the higher pitch with slight vibrato, solo guitar, no drums, dry",
+  "generation_id": "uSzvcxNA2alWzqs1HNa2",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/growl-rau": {
   "prompt": "Solo male death metal vocalist, one very deep, very rough, noisy cavernous growl on \"uhh\", pitchless and grainy like gravel and rumbling air from the chest, no clear note, sustained about 2 seconds, starts immediately, dry close-mic studio recording, human voice only, no music, no instruments, no reverb, no words",
   "generation_id": "8k1dKE0y5KKvC0KsfeBF",
