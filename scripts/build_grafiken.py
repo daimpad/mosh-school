@@ -28,6 +28,9 @@ er ab, bricht der Lauf ab. Das ist der Riegel gegen die Drift, die einmal 183
 Motive ohne Quell-SVG im Bundle hinterlassen hatte: Wer das Bundle ändert, ohne
 die Quelle mitzuliefern, fällt hier auf.
 
+Strichstärken: Jedes Motiv läuft beim Bündeln durch scripts/strichraster.py
+(feste Stufen, Hauptlinie je Motiv auf „normal“ — Begründung dort).
+
 Ergebnis: data/grafiken.json als {baustein_id: "<svg …>"} (sortierte Keys).
 Die Grafiken nutzen ausschließlich currentColor und wirken daher nur bei
 INLINE-Einbettung (js/oberflaeche.js -> bausteinIcon) — nie als <img src>.
@@ -41,6 +44,8 @@ import runpy
 import shutil
 import sys
 import xml.etree.ElementTree as ET
+
+from strichraster import auf_raster, raster
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -104,12 +109,29 @@ def main(nur_pruefen=False):
                 continue
             svg = open(os.path.join(static_dir, name), encoding='utf-8').read()
             ET.fromstring(svg)  # muss XML-wohlgeformt sein
+            # Statische Motive liegen selbst schon auf dem Strichraster (Quelle =
+            # Bündel); sonst zeigte die Datei im Repo andere Stärken als die App.
+            if not auf_raster(svg):
+                raise SystemExit(f'svg_static/{name} liegt nicht auf dem Strichraster'
+                                 ' -> python3 scripts/strichraster.py --statisch')
             with open(os.path.join(OUT, name), 'w', encoding='utf-8') as f:
                 f.write(svg)
             static_n += 1
 
     runpy.run_path(os.path.join(HERE, 'build_svg.py'))
     runpy.run_path(os.path.join(HERE, 'build_svg2.py'))
+    # Strichraster (scripts/strichraster.py) VOR Tranche 3: deren Fehlerbilder
+    # komponieren aus diesen Motiven und sollen die gerasterte Fassung zeigen.
+    # Tranche 3 rastert ihre eigenen Motive selbst.
+    for name in sorted(os.listdir(OUT)):
+        if name.endswith('.svg'):
+            pfad = os.path.join(OUT, name)
+            with open(pfad, encoding='utf-8') as f:
+                svg = f.read()
+            neu = raster(svg)
+            if neu != svg:
+                with open(pfad, 'w', encoding='utf-8') as f:
+                    f.write(neu)
     runpy.run_path(os.path.join(HERE, 'build_svg3.py'))
     runpy.run_path(os.path.join(HERE, 'build_svg4.py'))
 

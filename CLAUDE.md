@@ -862,7 +862,20 @@ Tokens**, nie harte Farben.
   `js/oberflaeche.js`) — nie als `<img src>` einbinden. Formvokabular: Punkte = Puls ·
   Striche = gedämpft · Wellen = klingend · Bögen = Resonanz/Atem/Rebound · Ticks = Zeit ·
   Strichstärke = Gewicht · Rauigkeit (seeded Jitter) = Verzerrung/Harsh · Hohlkreise =
-  Ghost Notes · Grid-Dichtewechsel = Tempo-/Metrik-Wechsel. **Gleiche Technik, eigenes Bild:** Bass-
+  Ghost Notes · Grid-Dichtewechsel = Tempo-/Metrik-Wechsel. **Strichraster:** Die Motive
+  waren mit rund 40 Strichstärken zwischen 1 und 14 gezeichnet, die Hauptlinie lag je nach
+  Motiv bei 1,5 oder bei 6 — nebeneinander sah das aus wie zwei Icon-Sätze.
+  `scripts/strichraster.py` legt deshalb beim Bündeln jedes Motiv auf eine feste Skala:
+  **Linien** auf 2 / 3 / 4,5 / 6,5 (fein/normal/kräftig/schwer), wobei die Hauptlinie
+  eines Motivs (gewichteter Median nach Strichlänge) immer auf 3 landet und die übrigen
+  ihr Verhältnis dazu behalten — „Strichstärke = Gewicht“ gilt also **innerhalb** eines
+  Motivs, nicht mehr zwischen Motiven. **Marken** (breite, kurze Striche: Punkte,
+  Schläge, Balken — dort IST die Breite die Form) rasten nur ein, auf 4,5 / 6,5 / 9 / 13,
+  ohne Skalierung. Die Umformung ist idempotent; die Dateien in `svg_static/` liegen
+  selbst schon auf dem Raster (`build_grafiken.py` bricht sonst ab, Abhilfe
+  `python3 scripts/strichraster.py --statisch`). Fehlerbilder rastern ihr Basis-Motiv mit,
+  der Riss hat die Stufe „kräftig“. Wer ein neues Motiv zeichnet, muss die Stufen also
+  nicht treffen — nur die Verhältnisse. **Gleiche Technik, eigenes Bild:** Bass-
   Gegenstücke von Gitarren-Bausteinen (Grundhaltung, Greifhand, Galopp, Palm Muting …) waren
   lange Kopien mit etwas dickerem Strich. Sie zeigen jetzt, was am Bass anders ist (Hals
   quer vor dem Körper, ein Finger pro Bund, Lock mit der Bassdrum). Ein Rasterabgleich aller
