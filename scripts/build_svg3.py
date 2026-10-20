@@ -9,6 +9,8 @@ Der Riss-Jitter ist per crc32(fehlerbild_id) geseedet und damit reproduzierbar."
 import json, math, os, random, re, zlib
 import xml.etree.ElementTree as ET
 
+from strichraster import KRAEFTIG, raster  # läuft per runpy aus build_grafiken.py (scripts/ im Pfad)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 OUT = os.path.join(HERE, "_svg_out")
@@ -1241,7 +1243,7 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
-    svg = make(S[bid])
+    svg = raster(make(S[bid]))
     ET.fromstring(svg)
     with open(os.path.join(OUT, f"{bid}.svg"), "w", encoding="utf-8") as f:
         f.write(svg)
@@ -1258,7 +1260,7 @@ def fb_svg(basis_svg, fb_id):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" '
             f'stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" '
             f'aria-hidden="true"><g opacity="0.35">{inner}</g>'
-            f'<path d="{riss}" stroke-width="5"/></svg>')
+            f'<path d="{riss}" stroke-width="{KRAEFTIG}"/></svg>')
 
 with open(os.path.join(ROOT, "data/fehlerbilder.json"), encoding="utf-8") as f:
     FEHLERBILDER = json.load(f)["fehlerbild_bausteine"]
@@ -1268,7 +1270,7 @@ for fb in FEHLERBILDER:
     basis_datei = os.path.join(OUT, f'{fb["basis_baustein"]}.svg')
     assert os.path.exists(basis_datei), f'Basis-Grafik fehlt: {fb["basis_baustein"]} (fuer {fb["id"]})'
     with open(basis_datei, encoding="utf-8") as f:
-        basis_svg = f.read()
+        basis_svg = raster(f.read())  # Basis liegt schon auf dem Raster; idempotent
     svg = fb_svg(basis_svg, fb["id"])
     ET.fromstring(svg)
     with open(os.path.join(OUT, f'{fb["id"]}.svg'), "w", encoding="utf-8") as f:
