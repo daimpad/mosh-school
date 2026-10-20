@@ -86,6 +86,7 @@ REFERENZ_IGNORIERT = frozenset({
     'id', 'url', 'quelle', 'instrument', 'domaene', 'kompetenzstufe', 'stil', 'typ',
     'werkzeug', 'baustein', 'basis_baustein', 'verweis_genre', 'spielziele',
     'voraussetzungen', 'genres', 'cta_ziel', 'saiten', 'halbtoene', '_meta',
+    'bezug',  # Glossar: Baustein-ID des Vertiefen-Links
 })
 # `kategorie` traegt je nach Datei ID (koennenscheck) oder Anzeigetext
 # (brand-alert) — deshalb datei-genau statt global ignoriert.

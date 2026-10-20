@@ -6,9 +6,11 @@
     "Publikum & Pit",
     "Veröffentlichen",
     "Szene & Strukturen",
-    "Musik & Spielweise"
+    "Musik & Spielweise",
+    "Stimme",
+    "Sound & Ausrüstung"
   ],
-  "anzahl": 66,
+  "anzahl": 111,
   "begriffe": [
     {
       "id": "gl_001",
@@ -442,6 +444,321 @@
       "begriff": "Klick",
       "erklaerung": "Metronom im Kopfhörer, meist bei Aufnahmen.",
       "bezug": "timing_klick"
+    },
+    {
+      "id": "gl_067",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Groove",
+      "erklaerung": "Das Zusammenspiel von Rhythmus, Betonung und Timing, das einen Teil zum Mitnicken bringt — mehr als nur „im Takt“.",
+      "bezug": "groove_und_synkope"
+    },
+    {
+      "id": "gl_068",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Powerchord",
+      "erklaerung": "Zweiklang aus Grundton und Quinte (oft mit Oktave) — unter Zerre klarer als ein voller Akkord und das Grundmaterial der meisten Riffs.",
+      "bezug": "powerchords"
+    },
+    {
+      "id": "gl_069",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Fill",
+      "erklaerung": "Kurze Schlagzeug-Figur, die einen Abschnitt abschließt oder in den nächsten überleitet.",
+      "bezug": "fills"
+    },
+    {
+      "id": "gl_070",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Tremolo-Picking / Tremolo",
+      "erklaerung": "Sehr schneller, gleichmäßiger Wechselschlag auf einem Ton oder Akkord — die Klangfläche von Black und Death Metal.",
+      "bezug": "tremolo_picking"
+    },
+    {
+      "id": "gl_071",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Galopp",
+      "erklaerung": "Rhythmusfigur aus einer Achtel und zwei Sechzehnteln („da-da-dam“), typisch für Thrash und klassischen Metal.",
+      "bezug": "galopp_rhythmus"
+    },
+    {
+      "id": "gl_072",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Downpicking",
+      "erklaerung": "Jeder Anschlag von oben nach unten — härter und gleichmäßiger als Wechselschlag, aber ausdauernder zu üben.",
+      "bezug": "downpicking"
+    },
+    {
+      "id": "gl_073",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Wechselschlag",
+      "erklaerung": "Anschlag abwechselnd ab und auf; die Grundlage für schnelles Spiel und Tremolo-Picking.",
+      "bezug": "wechselschlag"
+    },
+    {
+      "id": "gl_074",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Palm Muting / Palm Mute",
+      "erklaerung": "Dämpfen der Saiten mit dem Handballen nahe am Steg — der kurze, perkussive „Chug“-Ton.",
+      "bezug": "palm_muting"
+    },
+    {
+      "id": "gl_075",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Ghost Note",
+      "erklaerung": "Sehr leiser, angedeuteter Schlag oder Ton, der den Groove füllt, ohne aufzufallen.",
+      "bezug": "drums_ghostnotes"
+    },
+    {
+      "id": "gl_076",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Double Bass",
+      "erklaerung": "Schnelle Bassdrum-Figuren mit zwei Fußmaschinen oder einer Doppelfußmaschine.",
+      "bezug": "double_bass"
+    },
+    {
+      "id": "gl_077",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Skank-Beat / Skank",
+      "erklaerung": "Schneller Punk- und Thrash-Beat mit Snare auf den Zwischenschlägen — vorwärtstreibend, aber leichter als ein Blast.",
+      "bezug": "skank_beat"
+    },
+    {
+      "id": "gl_078",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Synkope",
+      "erklaerung": "Betonung auf einer Zählzeit, die eigentlich unbetont ist; erzeugt Spannung gegen den Puls.",
+      "bezug": "groove_und_synkope"
+    },
+    {
+      "id": "gl_079",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Tritonus",
+      "erklaerung": "Intervall aus drei Ganztönen, maximal unaufgelöst — der dunkle Klassiker im Metal-Riff.",
+      "bezug": "tritonus_dissonanz"
+    },
+    {
+      "id": "gl_080",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Chromatik",
+      "erklaerung": "Bewegung in Halbtonschritten, oft über mehrere Bünde nebeneinander; klingt unruhig und bedrohlich.",
+      "bezug": "chromatik_und_bewegung"
+    },
+    {
+      "id": "gl_081",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Bordun",
+      "erklaerung": "Ein liegender oder immer wieder angeschlagener Ton, über dem sich die Akkorde bewegen.",
+      "bezug": "black_tremolo_bordun"
+    },
+    {
+      "id": "gl_082",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Polyrhythmik / Polymetrik",
+      "erklaerung": "Mehrere Rhythmen oder Taktlängen gleichzeitig, die sich erst nach einer Weile wieder treffen.",
+      "bezug": "polyrhythmik_theorie"
+    },
+    {
+      "id": "gl_083",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Vibrato",
+      "erklaerung": "Leichtes, regelmäßiges Schwanken der Tonhöhe, das einen gehaltenen Ton lebendig macht.",
+      "bezug": "vibrato"
+    },
+    {
+      "id": "gl_084",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Bending / Bend",
+      "erklaerung": "Ziehen der Saite quer zum Griffbrett, um den Ton stufenlos zu erhöhen.",
+      "bezug": "slides_bends"
+    },
+    {
+      "id": "gl_085",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Legato",
+      "erklaerung": "Gebundenes Spiel über Hammer-ons und Pull-offs, mit wenigen Anschlägen.",
+      "bezug": "legato"
+    },
+    {
+      "id": "gl_086",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Pinch Harmonic",
+      "erklaerung": "Schriller Oberton („Squeal“), der entsteht, wenn der Daumen beim Anschlag die Saite kurz streift.",
+      "bezug": "pinch_harmonics"
+    },
+    {
+      "id": "gl_087",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Pocket",
+      "erklaerung": "Das Gefühl, genau im Groove zu sitzen — nicht nur pünktlich, sondern mit der richtigen Lage zum Puls.",
+      "bezug": "duo_bd_pocket_klick"
+    },
+    {
+      "id": "gl_088",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "Mensur",
+      "erklaerung": "Schwingende Saitenlänge vom Sattel bis zum Steg; längere Mensuren halten tiefe Stimmungen straffer.",
+      "bezug": "saiten_mensur"
+    },
+    {
+      "id": "gl_089",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "China",
+      "erklaerung": "Becken mit aufgebogenem Rand und trashigem, kurzem Klang — oft für Akzente in Breakdowns.",
+      "bezug": "halftime_china"
+    },
+    {
+      "id": "gl_090",
+      "kategorie": "Musik & Spielweise",
+      "begriff": "BPM",
+      "erklaerung": "Beats per Minute: die Tempoangabe in Schlägen pro Minute, wie am Metronom eingestellt.",
+      "bezug": "metronom_prinzip"
+    },
+    {
+      "id": "gl_091",
+      "kategorie": "Stimme",
+      "begriff": "Growl",
+      "erklaerung": "Tiefe, verzerrte Gesangstechnik mit dunkler Resonanz — erzeugt aus Luft und Raum, nicht durch Pressen.",
+      "bezug": "growl_resonanz"
+    },
+    {
+      "id": "gl_092",
+      "kategorie": "Stimme",
+      "begriff": "Scream",
+      "erklaerung": "Oberbegriff für hohe bis mittlere verzerrte Gesangstechniken.",
+      "bezug": "harsh_stile_ueberblick"
+    },
+    {
+      "id": "gl_093",
+      "kategorie": "Stimme",
+      "begriff": "Shout",
+      "erklaerung": "Gerufener, rauer Gesang zwischen Sprechen und Schreien, typisch für Hardcore.",
+      "bezug": "harsh_stile_ueberblick"
+    },
+    {
+      "id": "gl_094",
+      "kategorie": "Stimme",
+      "begriff": "Fry",
+      "erklaerung": "Knarrender, leiser Stimmklang am unteren Ende der Stimme; Ausgangspunkt vieler Verzerrungs-Techniken.",
+      "bezug": "fry_verzerrung"
+    },
+    {
+      "id": "gl_095",
+      "kategorie": "Stimme",
+      "begriff": "False Cord / Taschenfalten",
+      "erklaerung": "Verzerrung über die Taschenfalten oberhalb der Stimmlippen — rau, ohne die Stimmlippen selbst zu belasten.",
+      "bezug": "false_cord_ansatz"
+    },
+    {
+      "id": "gl_096",
+      "kategorie": "Stimme",
+      "begriff": "Atemstütze / Stütze",
+      "erklaerung": "Kontrolliertes, gleichmäßiges Abgeben der Atemluft aus der Körpermitte; trägt jeden Ton, ob klar oder verzerrt.",
+      "bezug": "atemstuetze"
+    },
+    {
+      "id": "gl_097",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Gain",
+      "erklaerung": "Wie stark ein Signal vor der Zerre angehoben wird — mehr Gain heißt mehr Verzerrung, aber auch mehr Rauschen und Matsch.",
+      "bezug": "gain_struktur_einstellen"
+    },
+    {
+      "id": "gl_098",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Fuzz",
+      "erklaerung": "Zerrtyp mit fast rechteckig abgeschnittener Welle — dick, wollig, mit viel Sustain; Kernklang von Doom, Sludge und Stoner.",
+      "bezug": "verzerrer_typen"
+    },
+    {
+      "id": "gl_099",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Overdrive",
+      "erklaerung": "Milde Zerrung, die den Verstärker oder die Vorstufe nur leicht übersteuert; oft als Booster vor einem Amp.",
+      "bezug": "verzerrer_typen"
+    },
+    {
+      "id": "gl_100",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Distortion",
+      "erklaerung": "Kräftige Zerrung mit hartem Abschneiden der Welle — mehr Kompression und Obertöne als ein Overdrive.",
+      "bezug": "verzerrer_typen"
+    },
+    {
+      "id": "gl_101",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Booster",
+      "erklaerung": "Pedal, das den Pegel oder bestimmte Frequenzen anhebt, um die Zerre danach zu straffen oder lauter zu machen.",
+      "bezug": "verzerrer_typen"
+    },
+    {
+      "id": "gl_102",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Noise Gate",
+      "erklaerung": "Schaltet das Signal unter einer Schwelle stumm — hält Pausen bei viel Gain still und Riffs tight.",
+      "bezug": "sound_core_tight"
+    },
+    {
+      "id": "gl_103",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Attack",
+      "erklaerung": "Der Anfang eines Tons: wie hart und schnell er einsetzt. Im Metal oft das, was ein Riff durchsetzungsfähig macht.",
+      "bezug": "sound_thrash_attack"
+    },
+    {
+      "id": "gl_104",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Sustain",
+      "erklaerung": "Wie lange ein Ton nachklingt, bevor er verklingt.",
+      "bezug": "doom_sustain_feedback"
+    },
+    {
+      "id": "gl_105",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Kompression / Kompressor",
+      "erklaerung": "Verringert den Abstand zwischen leisen und lauten Stellen; Zerre komprimiert immer mit.",
+      "bezug": "grind_kompression"
+    },
+    {
+      "id": "gl_106",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Vorstufe",
+      "erklaerung": "Der erste Teil eines Verstärkers, der das Signal anhebt und formt — hier entsteht der meiste Zerrklang moderner Amps.",
+      "bezug": "amp_vorstufe_zerre"
+    },
+    {
+      "id": "gl_107",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Endstufe",
+      "erklaerung": "Der letzte Teil eines Verstärkers, der den Lautsprecher antreibt; übersteuert klingt er weicher und wärmer als die Vorstufe.",
+      "bezug": "amp_endstufe_saettigung"
+    },
+    {
+      "id": "gl_108",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Headroom",
+      "erklaerung": "Reserve, bis ein Gerät übersteuert — viel Headroom heißt sauberer Klang auch bei hoher Lautstärke.",
+      "bezug": "amp_endstufe_saettigung"
+    },
+    {
+      "id": "gl_109",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Scooping / scooped",
+      "erklaerung": "Absenken der Mitten im Klangbild — klingt allein fett, geht im Bandmix aber oft unter.",
+      "bezug": "thrash_sound_mitten"
+    },
+    {
+      "id": "gl_110",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Signalkette",
+      "erklaerung": "Die Reihenfolge, in der das Signal vom Instrument durch Pedale und Verstärker bis zum Lautsprecher läuft.",
+      "bezug": "signalkette_grundlagen"
+    },
+    {
+      "id": "gl_111",
+      "kategorie": "Sound & Ausrüstung",
+      "begriff": "Pedalboard",
+      "erklaerung": "Brett mit fest verkabelten Effektpedalen und Stromversorgung — die eigene Signalkette zum Mitnehmen.",
+      "bezug": "pedalboard_grundlagen"
     }
   ]
 }

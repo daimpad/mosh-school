@@ -1189,9 +1189,14 @@ Tokens**, nie harte Farben.
   ergänzt je Glossar-ID Schreibweisen, die sich nicht ableiten lassen (Plural,
   Bindestrich). **Doppelbedeutungen** gehören in `AUSNAHMEN` — je Baustein-ID die
   Begriffe, die dort NICHT verlinken sollen („Feedback“ als Rückmeldung statt
-  Rückkopplung, „Tape“ als Klebeband statt Kassette). So bleibt der Bausteintext, wie er
+  Rückkopplung, „Tape“ als Klebeband statt Kassette, „Tremolo“ als Hebel am Steg statt
+  Tremolo-Picking). So bleibt der Bausteintext, wie er
   ist; ihn zu ändern, nur damit ein Verlinker ihn nicht falsch liest, wäre der falsche
   Weg. `baueGlossarVerlinker(glossar, bausteinId)` bekommt die ID von `baustein.js`.
+  Das Glossar (`data/glossar.json`, 111 Einträge in sieben Kategorien) trägt neben der
+  Szene-Sprache auch das Spiel-, Stimm- und Sound-Vokabular (Powerchord, Growl, Gain …) —
+  sonst bliebe genau der Wortschatz unverlinkt, der im Fließtext am häufigsten steht.
+  `bezug` ist eine Baustein-ID (Vertiefen-Link) und deshalb vom Umlaut-Scan ausgenommen.
 - **SW-Wartung:** wird eine Kern-Datei neu hinzugefügt/umbenannt (neues `js/`-Modul, neue
   `data/…json` in `INHALTSDATEIEN`, CSS, Schrift), muss sie in `SHELL` **und** der `CACHE`-Name
   erhöht werden. Baustein-Grafiken (`images/*.png`, falls später ergänzt) werden bewusst NICHT

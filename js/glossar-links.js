@@ -24,7 +24,25 @@ const ZUSATZFORMEN = {
   gl_034: ['Split-Veröffentlichungen'],
   gl_038: ['Re-Amping'],
   gl_062: ['Gang Vocals'],
-  gl_063: ['Drop Tuning'],
+  gl_059: ['Blast', 'Blasts', 'Blastbeats'],
+  gl_061: ['Chugs'],
+  gl_063: ['Drop Tuning', 'Drop-Tunings'],
+  gl_067: ['Grooves'],
+  gl_068: ['Powerchords'],
+  gl_069: ['Fills'],
+  gl_070: ['Tremolos'],
+  gl_074: ['Palm-Mute'],
+  gl_075: ['Ghost Notes'],
+  gl_076: ['Double-Bass'],
+  gl_078: ['Synkopen'],
+  gl_084: ['Bendings', 'Bends'],
+  gl_086: ['Pinch Harmonics'],
+  gl_088: ['Mensuren'],
+  gl_091: ['Growls'],
+  gl_092: ['Screams'],
+  gl_093: ['Shouts'],
+  gl_099: ['Overdrives'],
+  gl_110: ['Signalketten'],
 };
 
 // Begriffe, die in einem bestimmten Baustein etwas ANDERES meinen als im Glossar
@@ -41,6 +59,9 @@ const AUSNAHMEN = {
   feedback_geben: ['Feedback'],
   // Tape = Klebeband, nicht Kassette
   daempfung_definition: ['Tape'],
+  // Tremolo = Vibratohebel am Steg, nicht Tremolo-Picking
+  steg_typen: ['Tremolo', 'Tremolos'],
+  sattel_typen: ['Tremolo', 'Tremolos'],
 };
 
 function regexEscape(s) {
