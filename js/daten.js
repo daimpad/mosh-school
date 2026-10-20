@@ -206,7 +206,7 @@ export async function ladeDaten() {
   // Bauteilen/Physik, hier historische Einordnung statt Kaufempfehlung. Jeder Eintrag
   // trägt ein gleichwertiges `alternative`-Feld. Referenzbereich, kein Fortschritt.
   daten.brandAlert = brandAlert || { titel: '', hinweis: '', kategorien: [], eintraege: [] };
-  // Szene-Glossar (Kontext-Praxis): Kurzsprache aus der Praxis, nach Kategorie
+  // Glossar (Kontext-Praxis): Kurzsprache aus der Praxis, nach Kategorie
   // sortierbar/durchsuchbar. Jeder Begriff verweist optional auf einen vertiefenden
   // Baustein. Referenzbereich, kein Fortschritt.
   daten.glossar = glossar || { titel: '', hinweis: '', kategorien: [], begriffe: [] };

@@ -1,4 +1,4 @@
-// Szene-Glossar (Kontext-Praxis): Kurzsprache aus der Praxis als durchsuchbare,
+// Glossar (Kontext-Praxis): Kurzsprache aus der Praxis als durchsuchbare,
 // nach Kategorie filterbare Referenz. Jeder Begriff verweist optional auf einen
 // vertiefenden Baustein. Referenzbereich wie Songs/Patterns — NICHT im
 // Baustein-Pool, kein Fortschritt.
