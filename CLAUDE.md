@@ -862,7 +862,12 @@ Tokens**, nie harte Farben.
   `js/oberflaeche.js`) — nie als `<img src>` einbinden. Formvokabular: Punkte = Puls ·
   Striche = gedämpft · Wellen = klingend · Bögen = Resonanz/Atem/Rebound · Ticks = Zeit ·
   Strichstärke = Gewicht · Rauigkeit (seeded Jitter) = Verzerrung/Harsh · Hohlkreise =
-  Ghost Notes · Grid-Dichtewechsel = Tempo-/Metrik-Wechsel. Neue Bausteine ohne Grafik
+  Ghost Notes · Grid-Dichtewechsel = Tempo-/Metrik-Wechsel. **Gleiche Technik, eigenes Bild:** Bass-
+  Gegenstücke von Gitarren-Bausteinen (Grundhaltung, Greifhand, Galopp, Palm Muting …) waren
+  lange Kopien mit etwas dickerem Strich. Sie zeigen jetzt, was am Bass anders ist (Hals
+  quer vor dem Körper, ein Finger pro Bund, Lock mit der Bassdrum). Ein Rasterabgleich aller
+  Motive (48 px, Überdeckung > 0,6) fand 22 Fast-Dubletten; übrig sind vier, die es nur im
+  Raster sind. Neue Bausteine ohne Grafik
   meldet `scripts/validate.py` als Warnung; vorproduzierte IDs (künftige Sets) sind okay.
 - **Hintergrundbilder + Kachel-Muster:** Heros und die Startseiten-Kacheln tragen
   hinter dem Motiv-SVG eine Foto-Ebene (`js/hintergrundbilder.js` → `bildEbene()`,
@@ -916,6 +921,13 @@ Tokens**, nie harte Farben.
   `lehrgrafiken`, von Hand gepflegt wie Einheiten-Titel). Beat-Raster-Konvention:
   oben Hi-Hat (x), Mitte Snare (Hohlkreis), unten Kick (Punkt); Viertel = hohe,
   Achtel = kurze Rasterstriche.
+  **Beat-Schemata müssen zum Hörbeispiel passen.** Bis v222 zeigten drei (D-Beat, Blast,
+  Skank) ein anderes Muster, als ihr Baustein abspielt — Bild und Ton stehen auf derselben
+  Seite, verglichen hat sie niemand. Wer ein Schema über `beat(bid, …)` baut, trägt seine
+  Snare-/Kick-Spalten ein; `build_svg4.py` gleicht sie beim Bauen gegen die `demonstration`
+  des Bausteins ab und bricht bei Abweichung ab (auch in `build_grafiken.py --check`).
+  Tonfolgen anderer Lehrgrafiken (Galopp, Legato, Sweep …) folgen ebenfalls dem
+  Hörbeispiel, sind aber nicht automatisch geprüft.
 - **Werkzeuge:** Das Stimmungs-Werkzeug (`#/stimmungen`, `js/ansichten/stimmungen.js`)
   ist eine interaktive Referenz mit WebAudio-Tönen; seine Daten (kuratierte Tunings mit
   Genre-Zuordnung aus dem `stil`-Vokabular) liegen in `data/tunings.json`, die sichtbaren
