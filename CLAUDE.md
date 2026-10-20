@@ -201,16 +201,35 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
     Ramp, aus Tabelle = Tempo-Map; `null` beendet). **Naives `setInterval`/
     `setTimeout`-Timing für Klang ist unzulässig** (hörbare Drift) — die Audio-Uhr
     trägt das Timing, der Timer weckt nur zum Nachplanen.
-  - `stimmen.js` — **synthetisierte** Stimmen (`klick`, `kick`, `snare`, …); jede
+  - `stimmen.js` — die Stimmen (`klick`, `kick`, `snare`, …, `saite`); jede
     nimmt `ctx`+`ziel` entgegen, damit sie live **und** im `OfflineAudioContext`
-    (WAV-Export) identisch klingt. **Synthese statt Samples** (offline, leicht) —
-    Samples nur, wenn nötig, dann vendored + im SW gecacht.
-  - `klangprobe.js` — die eine gezogene Ausnahme von „Synthese statt Samples“:
-    lädt und dekodiert eine Datei zu einem `AudioBuffer`, mit Cache je URL.
-    Bewusst schmal — **kein Sampler**, keine Tonhöhen-Zuordnung, keine
-    Velocity-Schichten; was mit dem Puffer passiert, entscheidet das Werkzeug.
-    Genutzt bisher nur vom Zerr-Labor, wo die Aussage des Werkzeugs am echten
-    Instrumentensignal hängt (s. u.). Fehler werden **nicht** geschluckt, damit
+    (WAV-Export) identisch klingt, und gibt die Liste ihrer Klangquellen zurück
+    (zum Abbrechen). **Schlagzeug, Gitarre und Bass spielen Samples, die Synthese
+    darunter bleibt der Rückfall** — bis die Bank geladen ist, offline ohne Cache,
+    bei einer fehlenden Datei. Kein Werkzeug darf stumm bleiben, weil ein Sample
+    fehlt. **Klick und Referenzton sind bewusst reine Synthese:** beim Klick zählt
+    die Flanke, beim Stimmgerät jeder Cent.
+  - `samples.js` — die Sample-Bank: 20 One-Shots aus ElevenLabs (Sound Effects),
+    aufbereitet von `scripts/build_samples.mjs` nach `assets/sounds/samples/`
+    (Herkunft, Prompts, Auswahl: `HERKUNFT.txt` dort, Rohdateien + Generierungs-IDs
+    in `scripts/samples_quelle/`). Gitarre/Bass liegen in wenigen **gemessenen**
+    Grundtönen vor (`grundton`, ±10 Cent nachgeprüft — ElevenLabs trifft eine
+    verlangte Tonhöhe nicht verlässlich); `waehleTon()` nimmt den nächsten und
+    stimmt über die Abspielrate um. `saite()` kennt `instrument` (`gitarre`/`bass`),
+    `klang` (`zerre`/`clean`), `gedaempft` (eigene Chug-Proben), `dauer`, `pegel`.
+    Die Mischpegel sind **gegen die Synthese eingemessen** (lautestes
+    50-ms-Fenster gleich laut), damit der Wechsel Sample ↔ Rückfall nicht springt.
+    Geladen wird beim Erzeugen des Kontexts (braucht keine Geste); `aktiviere()`
+    wartet höchstens 1,5 s darauf. **Fallstrick Grundton-Messung:** HPS über den
+    ganzen Bereich greift bei verzerrten Tönen eine Oktave tiefer (beim Powerchord
+    ist die Unteroktave tatsächlich die gemeinsame Periode) — gemessen wird
+    deshalb nur im Fenster einer Quarte um den Sollwert. Pattern-Werkzeug,
+    Loops, Hörbeispiele und Tab-Werkzeug laufen alle über diese Stimmen;
+    `patterns.js` hatte bis dahin eine eigene, zweite Synthese.
+  - `klangprobe.js` — lädt und dekodiert eine Datei zu einem `AudioBuffer`, mit
+    Cache je URL. Bewusst schmal — **kein Sampler**, keine Tonhöhen-Zuordnung, keine
+    Velocity-Schichten; was mit dem Puffer passiert, entscheidet der Aufrufer
+    (Zerr-Labor, `samples.js`). Fehler werden **nicht** geschluckt, damit
     der Aufrufer offline auf Synthese zurückfallen kann.
   - `wav.js` — rendert eine geplante Klangfolge über `OfflineAudioContext` in einen
     WAV-Blob (DAW-tauglicher als `MediaRecorder`-WebM/Opus).
@@ -231,7 +250,11 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
   Skizzen in `js/audio/spuren-db.js` (DB `moshschool-mehrspur`) — nicht in
   localStorage (Größe) und nicht im Zustand-Schema.
 - **SW-Pflege:** neue `js/audio/*`- und `js/ansichten/werkzeug*`-Module gehören in
-  `SHELL` + `CACHE`-Bump (wie jedes Kern-Modul). Zugänglichkeit: tastaturbedienbar,
+  `SHELL` + `CACHE`-Bump (wie jedes Kern-Modul). **Die Sample-Bank
+  (`assets/sounds/samples/*.wav`, ~1,7 MB) steht in `SHELL`**, die Zerr-Labor-Proben
+  nicht: Die Bank trägt jedes Werkzeug mit Ton, die Zerr-Labor-Proben nur eines.
+  `validate.py` (`pruefe_samples()`) prüft je Eintrag in `SAMPLES` Datei, Format,
+  SHELL-Eintrag, Rohquelle und Herkunft. Zugänglichkeit: tastaturbedienbar,
   ARIA; Tuner/Klick brauchen **nicht-farbliche** Signale (Zahl/Form, nicht nur Farbe).
 
 ## Neuen Inhalt einbinden (Content-Pipeline)
@@ -567,7 +590,7 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
 - **Optionales Baustein-Feld `demonstration`** (rückwärtskompatibel): `pattern`
   (Rhythmus-Raster, `spuren[].instrument/schritte`), `tab` (Saite × Zeit,
   `events[].saite/bund/technik`) oder `hoerbeispiel` (`verweis_genre`). Abgespielt
-  über den **Audio-Kern der Werkzeuge** (Synthese, kein Asset). `validate.py`
+  über den **Audio-Kern der Werkzeuge** (Sample-Bank, Synthese als Rückfall). `validate.py`
   akzeptiert Abwesenheit und prüft bei Anwesenheit die Struktur (erlaubte
   Instrumente/Techniken, Rasterlänge = `aufloesung*takte`, `saite` 1..6).
   **Betonung** (optional, additiv): `-1` leise (Ghost Note) / `0` normal / `+1`
@@ -598,9 +621,10 @@ python3 scripts/pruefe_boxen.py          # Box-Impulsantworten treffen ihre Besc
 python3 scripts/pruefe_boxen_mutation.py # …und die Pruefung schlaegt bei Fehlern auch an
 node scripts/pruefe_tonhoehe.mjs         # Stimmgeraet deckt den ganzen Stimmungs-Pool ab
 node scripts/build_gitarrenprobe.mjs --check  # Klangproben aus dem Rohbestand reproduzierbar
+node scripts/build_samples.mjs --check   # Sample-Bank aus den ElevenLabs-Rohdateien, Grundtöne ±10 Cent
 node scripts/build_appicons.mjs --check  # App-Icons, favicon-96.png und favicon.ico aus favicon.svg
 node scripts/build_share.mjs --check     # Vorschaubild (og:image) aus Labels, Token und Schriften
-                                         # (alle drei brauchen Chromium + Server auf :8123, daher nicht in der CI)
+                                         # (alle vier brauchen Chromium + Server auf :8123, daher nicht in der CI)
 python3 -m http.server 8000              # dann im Browser / per Playwright durchklicken
 ```
 

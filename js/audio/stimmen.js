@@ -1,10 +1,26 @@
-// Synthetisierte Klang-Stimmen (themenneutral, DOM-frei). Kein Sample-Gewicht,
-// voll offline. Jede Stimme plant sich zu einem Zeitpunkt `zeit` (Audio-Uhr) an
-// ein übergebenes Ziel (Master-Gain online, oder destination beim WAV-Export via
-// OfflineAudioContext) — darum bekommt jede Stimme `ctx` UND `ziel` herein und
-// hängt nichts fest verdrahtet an `destination`.
+// Klang-Stimmen (themenneutral, DOM-frei). Jede Stimme plant sich zu einem
+// Zeitpunkt `zeit` (Audio-Uhr) an ein übergebenes Ziel (Master-Gain online, oder
+// destination beim WAV-Export via OfflineAudioContext) — darum bekommt jede
+// Stimme `ctx` UND `ziel` herein und hängt nichts fest verdrahtet an
+// `destination`.
+//
+// Schlagzeug und Saiten spielen seit v236 die Sample-Bank (samples.js); die
+// synthetische Fassung darunter bleibt der Rückfall, solange die Bank nicht
+// geladen ist. Klick und Referenzton sind bewusst reine Synthese (s. samples.js).
+//
+// Jede Stimme gibt die Liste ihrer Klangquellen zurück — wer abbrechen muss
+// (Pattern-Werkzeug), ruft darauf stop() auf, ohne zu wissen, ob ein Sample oder
+// die Synthese gespielt hat.
 
 import { holeRauschen } from './kontext.js';
+import { spieleSample, waehleTon } from './samples.js';
+
+// Spielt die Probe `name`, sonst die Synthese. Liefert die Quellen als Liste.
+function mitRueckfall(ctx, ziel, zeit, name, synth) {
+  const quelle = spieleSample(ctx, ziel, zeit, name);
+  if (quelle) return [quelle];
+  return [].concat(synth(ctx, ziel, zeit) || []);
+}
 
 // Klick fürs Metronom: kurzer Sinus-Ping. Akzent (die Eins) höher + lauter,
 // damit die Betonung auch nicht-farblich (hörbar) klar ist.
@@ -20,11 +36,11 @@ export function klick(ctx, ziel, zeit, { akzent = false, leise = false } = {}) {
   osc.connect(huelle).connect(ziel);
   osc.start(zeit);
   osc.stop(zeit + 0.05);
-  return osc;
+  return [osc];
 }
 
-// Kick: fallender Sinus (Ton → Bauch). Für Play-along-Loops (PR 2).
-export function kick(ctx, ziel, zeit) {
+// Kick: fallender Sinus (Ton → Bauch).
+function kickSynth(ctx, ziel, zeit) {
   const osc = ctx.createOscillator();
   const huelle = ctx.createGain();
   osc.type = 'sine';
@@ -55,8 +71,8 @@ function rauschStimme(ctx, ziel, zeit, { typ, frequenz, guete, dauer, pegel }) {
   return quelle;
 }
 
-export function snare(ctx, ziel, zeit) {
-  rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 1400, dauer: 0.19, pegel: 0.5 });
+function snareSynth(ctx, ziel, zeit) {
+  const rauschen = rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 1400, dauer: 0.19, pegel: 0.5 });
   const osc = ctx.createOscillator();
   const huelle = ctx.createGain();
   osc.type = 'triangle';
@@ -66,29 +82,30 @@ export function snare(ctx, ziel, zeit) {
   osc.connect(huelle).connect(ziel);
   osc.start(zeit);
   osc.stop(zeit + 0.14);
+  return [rauschen, osc];
 }
 
-export function hihat(ctx, ziel, zeit) {
-  rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 8000, dauer: 0.05, pegel: 0.22 });
+function hihatSynth(ctx, ziel, zeit) {
+  return rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 8000, dauer: 0.05, pegel: 0.22 });
 }
 
 // Offene Hi-Hat: gleiche Rausch-Basis, deutlich längere Abklingzeit.
-export function hihatOffen(ctx, ziel, zeit) {
-  rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 7000, dauer: 0.34, pegel: 0.18 });
+function hihatOffenSynth(ctx, ziel, zeit) {
+  return rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 7000, dauer: 0.34, pegel: 0.18 });
 }
 
-export function crash(ctx, ziel, zeit) {
-  rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 5200, dauer: 0.45, pegel: 0.3 });
+function crashSynth(ctx, ziel, zeit) {
+  return rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 5200, dauer: 0.45, pegel: 0.3 });
 }
 
 // China: trashiger, härter/länger als das Crash — der Metal-Akzent.
-export function china(ctx, ziel, zeit) {
-  rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 4200, dauer: 0.52, pegel: 0.32 });
+function chinaSynth(ctx, ziel, zeit) {
+  return rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 4200, dauer: 0.52, pegel: 0.32 });
 }
 
 // Ride: Rausch-Wolke plus kurzer Glocken-Ping (Ping-Charakter statt Wash).
-export function ride(ctx, ziel, zeit) {
-  rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 9000, dauer: 0.3, pegel: 0.11 });
+function rideSynth(ctx, ziel, zeit) {
+  const rauschen = rauschStimme(ctx, ziel, zeit, { typ: 'highpass', frequenz: 9000, dauer: 0.3, pegel: 0.11 });
   const osc = ctx.createOscillator();
   const huelle = ctx.createGain();
   osc.type = 'square';
@@ -98,6 +115,7 @@ export function ride(ctx, ziel, zeit) {
   osc.connect(huelle).connect(ziel);
   osc.start(zeit);
   osc.stop(zeit + 0.28);
+  return [rauschen, osc];
 }
 
 // Tom: fallender Sinus (wie Kick, aber höher gestimmt und kürzer). hoch/tief über
@@ -113,9 +131,18 @@ function tom(ctx, ziel, zeit, start, ende) {
   osc.connect(huelle).connect(ziel);
   osc.start(zeit);
   osc.stop(zeit + 0.26);
+  return osc;
 }
-export function tomHoch(ctx, ziel, zeit) { tom(ctx, ziel, zeit, 240, 150); }
-export function tomTief(ctx, ziel, zeit) { tom(ctx, ziel, zeit, 160, 95); }
+
+export const kick = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'kick', kickSynth);
+export const snare = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'snare', snareSynth);
+export const hihat = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'hihat', hihatSynth);
+export const hihatOffen = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'hihat_offen', hihatOffenSynth);
+export const crash = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'crash', crashSynth);
+export const china = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'china', chinaSynth);
+export const ride = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'ride', rideSynth);
+export const tomHoch = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'tom_hoch', (c, z, t) => tom(c, z, t, 240, 150));
+export const tomTief = (ctx, ziel, zeit) => mitRueckfall(ctx, ziel, zeit, 'tom_tief', (c, z, t) => tom(c, z, t, 160, 95));
 
 // Weiche Sättigungskurve (tanh) für etwas Charakter/„Zerre" an der Saite.
 const SAETTIGUNG = (() => {
@@ -128,12 +155,11 @@ const SAETTIGUNG = (() => {
   return kurve;
 })();
 
-// Gezupfte Saite (Gitarre/Bass): zwei leicht verstimmte Sägezähne durch ein sich
-// schließendes Tiefpassfilter mit schneller Zupf-Hüllkurve, leicht gesättigt.
-// `gedaempft` (palm mute / dead note) macht Ton kürzer und dunkler.
-export function saite(ctx, ziel, zeit, { frequenz, gedaempft = false } = {}) {
-  if (!frequenz || !Number.isFinite(frequenz)) return;
-  const dauer = gedaempft ? 0.14 : 0.55;
+// Gezupfte Saite (Gitarre/Bass) — synthetischer Rückfall: zwei leicht
+// verstimmte Sägezähne durch ein sich schließendes Tiefpassfilter mit schneller
+// Zupf-Hüllkurve, leicht gesättigt. `gedaempft` macht den Ton kürzer und dunkler.
+function saiteSynth(ctx, ziel, zeit, { frequenz, gedaempft, pegel, dauer: soll }) {
+  const dauer = Math.min(soll ?? Infinity, gedaempft ? 0.14 : 0.55);
   const filter = ctx.createBiquadFilter();
   filter.type = 'lowpass';
   filter.frequency.setValueAtTime(gedaempft ? 1500 : 3200, zeit);
@@ -142,9 +168,10 @@ export function saite(ctx, ziel, zeit, { frequenz, gedaempft = false } = {}) {
   shaper.curve = SAETTIGUNG;
   const huelle = ctx.createGain();
   huelle.gain.setValueAtTime(0.0001, zeit);
-  huelle.gain.exponentialRampToValueAtTime(gedaempft ? 0.5 : 0.58, zeit + 0.004);
+  huelle.gain.exponentialRampToValueAtTime((gedaempft ? 0.5 : 0.58) * pegel, zeit + 0.004);
   huelle.gain.exponentialRampToValueAtTime(0.0001, zeit + dauer);
   filter.connect(shaper).connect(huelle).connect(ziel);
+  const quellen = [];
   for (const detune of [-4, 4]) {
     const osc = ctx.createOscillator();
     osc.type = 'sawtooth';
@@ -153,7 +180,42 @@ export function saite(ctx, ziel, zeit, { frequenz, gedaempft = false } = {}) {
     osc.connect(filter);
     osc.start(zeit);
     osc.stop(zeit + dauer + 0.05);
+    quellen.push(osc);
   }
+  return quellen;
+}
+
+// Wie lange ein offener Ton klingt, wenn der Aufrufer nichts sagt — so lang
+// wie die Synthese vorher. Die Proben selbst klingen länger aus; in einem Riff
+// liefen die Töne sonst ineinander.
+const OFFEN_DAUER = 0.6;
+// Abgedämpfter Ton (Palm Mute, Dead Note): kurz und dunkel.
+const GEDAEMPFT = { dauer: 0.16, tiefpass: { gitarre: 1800, bass: 900, gitarre_clean: 1400 } };
+
+// Gezupfte Saite. Spielt die Sample-Bank (nächster Grundton, umgestimmt über die
+// Abspielrate), sonst die Synthese.
+//   instrument: 'gitarre' (Standard) oder 'bass'
+//   klang:      'zerre' (Standard) oder 'clean' — nur Gitarre
+//   gedaempft:  Palm Mute / Dead Note
+//   dauer:      Tonlänge in Sekunden (Standard: OFFEN_DAUER bzw. kurz bei gedaempft)
+//   pegel:      Faktor, z. B. damit ein Akkord nicht lauter ist als ein Einzelton
+export function saite(ctx, ziel, zeit, { frequenz, gedaempft = false, instrument = 'gitarre', klang = 'zerre', dauer = null, pegel = 1 } = {}) {
+  if (!frequenz || !Number.isFinite(frequenz)) return [];
+  const gruppe = instrument === 'bass' ? 'bass' : klang === 'clean' ? 'gitarre_clean' : 'gitarre';
+  // Abgedämpft auf der verzerrten Gitarre: eigene Chug-Proben, wenn geladen —
+  // ein abgeschnittener offener Ton klingt nach Gate, nicht nach Handballen.
+  const chug = gedaempft && gruppe === 'gitarre' ? waehleTon('gitarre_chug', frequenz) : null;
+  const ton = chug || waehleTon(gruppe, frequenz);
+  if (ton) {
+    const quelle = spieleSample(ctx, ziel, zeit, ton.name, {
+      pegel,
+      rate: ton.rate,
+      dauer: gedaempft ? Math.min(dauer ?? Infinity, GEDAEMPFT.dauer) : (dauer ?? OFFEN_DAUER),
+      tiefpass: gedaempft && !chug ? GEDAEMPFT.tiefpass[gruppe] : null,
+    });
+    if (quelle) return [quelle];
+  }
+  return saiteSynth(ctx, ziel, zeit, { frequenz, gedaempft, pegel, dauer });
 }
 
 // Gehaltener Referenzton (Drone): weicher Sägezahn mit sanfter Ein-/Ausblende.

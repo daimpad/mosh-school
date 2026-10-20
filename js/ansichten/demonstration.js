@@ -1,7 +1,8 @@
 // Demonstrations-Ebene (Trainings-Loop §1): rendert das optionale Baustein-Feld
 // `demonstration` als monochromes Raster/Tab und spielt es über den GEMEINSAMEN
-// Audio-Kern der Werkzeuge (ein AudioContext, Lookahead-Scheduler — keine Drift,
-// Synthese statt Samples). Play/Stop, Tempo, „langsam üben", Loop, Count-in.
+// Audio-Kern der Werkzeuge (ein AudioContext, Lookahead-Scheduler — keine Drift;
+// Schlagzeug und Saiten aus der Sample-Bank, Synthese als Rückfall). Play/Stop,
+// Tempo, „langsam üben", Loop, Count-in.
 // Ein Laufbalken (Playhead) über dem Raster ist das nicht-auditive Signal.
 //
 // Zustand ist flüchtiger Modul-State: es läuft höchstens EINE Demo (die der
@@ -246,7 +247,12 @@ function spieleStep(ctx, ziel, zeit, demo, step, pegelZiele) {
       if (ev.schritt !== step) continue;
       const frequenz = frequenzFuerEvent(demo, ev);
       const ziel2 = pegelZiele?.[betonungEv(ev)] || ziel;
-      saite(ctx, ziel2, zeit, { frequenz, gedaempft: GEDAEMPFT.has(ev.technik) });
+      saite(ctx, ziel2, zeit, {
+        frequenz,
+        gedaempft: GEDAEMPFT.has(ev.technik),
+        instrument: demo.instrument === 'bass' ? 'bass' : 'gitarre',
+        klang: demo.klang === 'clean' ? 'clean' : 'zerre',
+      });
     }
   }
 }

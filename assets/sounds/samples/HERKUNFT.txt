@@ -1,0 +1,89 @@
+Sample-Bank der Stimmen — Herkunft und Verwendung
+=================================================
+
+WAS DAS IST
+-----------
+Zwanzig One-Shots, die der Audio-Kern (js/audio/stimmen.js über
+js/audio/samples.js) statt der früheren Synthese spielt: im Pattern-Werkzeug,
+in den Play-along-Loops, in den Hörbeispielen der Bausteine und im
+Tabulatur-Werkzeug.
+
+  Schlagzeug   kick, snare, hihat, hihat-offen, crash, china, ride,
+               tom-hoch, tom-tief
+  Gitarre      gitarre-zerre-{e2,b2,fis3,f4,a4}  verzerrt, offener Ton
+               gitarre-chug-{e2,b2}              verzerrt, abgedämpft (Palm Mute)
+               gitarre-clean-a3                  unverzerrt
+  Bass         bass-{e1,b1,e2}
+
+Alle: WAV, 16 bit / 44,1 kHz / mono, auf denselben Spitzenwert (0,9) normiert,
+zusammen rund 1,7 MB. Sie stehen in der SW-SHELL, damit die Werkzeuge offline
+nicht auf die Synthese zurückfallen.
+
+Gitarre und Bass liegen nur in wenigen Grundtönen vor. Jeder andere Ton wird
+vom nächstgelegenen aus über die Abspielrate erreicht; die Grundtöne in
+samples.js sind GEMESSEN, nicht angenommen, und build_samples.mjs prüft sie
+bei jedem Lauf auf ±10 Cent nach.
+
+Klick (Metronom) und Referenzton (Stimmgerät) bleiben bewusst synthetisch:
+Beim Klick zählt die Flanke, beim Referenzton jeder Cent.
+
+Nicht von Hand bearbeiten — generiertes Artefakt wie data/grafiken.json.
+Quelle der Wahrheit ist scripts/build_samples.mjs.
+
+
+ERZEUGUNG
+---------
+Erzeugt mit ElevenLabs, Sound Effects (Modell eleven_text_to_sound_v2), im
+Oktober 2026. Je Klang wurden vier Varianten erzeugt und eine ausgewählt —
+nach Messung (Einsatz, Zahl der Anschläge, Ausklingzeit, Tonhöhe) und
+Spektrogramm. Verworfen wurden u. a. ein „Chug“ mit drei Anschlägen, eine
+Hi-Hat mit spätem Einsatz, „Einzeltöne“, die Akkorde waren, und Bässe, die
+eine Oktave zu hoch lagen.
+
+Die ausgewählten Rohdateien (MP3, wie ElevenLabs sie liefert) liegen in
+scripts/samples_quelle/, Prompt und Generierungs-ID je Datei in
+scripts/samples_quelle/quellen.json. Sie sind klein (zusammen unter 1 MB) und
+deshalb eingecheckt — anders als der Rohbestand der Zerr-Labor-Proben.
+
+
+AUFBEREITUNG (scripts/build_samples.mjs)
+----------------------------------------
+1. Kanal 0, nicht die Summe (die Stereo-Spuren sind nicht phasengleich).
+2. Stille vor dem Einsatz abschneiden.
+3. Hochpass gegen Rumpeln unterhalb des Instruments.
+4. Auf feste Länge kürzen, kurz ein- und ausblenden.
+5. Auf Spitze 0,9 normieren.
+6. Grundton spektral messen (Harmonic Product Spectrum im Fenster einer
+   Quarte um den Sollwert — ohne Fenster greift die Messung bei verzerrten
+   Tönen gern eine Oktave tiefer).
+
+Die Mischpegel in samples.js sind gegen die synthetische Fassung derselben
+Stimme eingemessen (lautestes 50-ms-Fenster gleich laut), damit Kick, Becken
+und Saiten untereinander so stehen wie vorher.
+
+Neu bauen:
+  python3 -m http.server 8123 &
+  node scripts/build_samples.mjs          # schreibt die WAVs
+  node scripts/build_samples.mjs --check  # meldet Drift, schreibt nichts
+  node scripts/build_samples.mjs --messen # gibt nur die Grundtöne aus
+
+Braucht Chromium (MP3-Dekodierung) und läuft deshalb nicht in der CI; dort
+prüft scripts/validate.py nur, dass jede Datei aus SAMPLES existiert, das
+richtige Format hat, in der SHELL steht und eine Rohquelle mit Herkunft hat.
+
+
+NEUER KLANG
+-----------
+Rohdatei nach scripts/samples_quelle/<name>.mp3, Eintrag in quellen.json,
+Zeile in PROBEN (build_samples.mjs) und in SAMPLES (samples.js), bei
+Gitarre/Bass mit gruppe und gemessenem grundton (--messen), Datei in die
+SHELL von sw.js, CACHE erhöhen.
+
+
+NUTZUNGSRECHTE
+--------------
+Die Nutzung der Ausgaben richtet sich nach den Bedingungen von ElevenLabs für
+das Konto, mit dem sie erzeugt wurden. Kommerzielle Nutzung und Nutzung ohne
+Namensnennung setzen dort einen bezahlten Tarif voraus; im kostenlosen Tarif
+ist eine Namensnennung von ElevenLabs verlangt. Beim Wechsel des Tarifs oder
+vor einer Weitergabe der Dateien außerhalb dieser App dort nachsehen.

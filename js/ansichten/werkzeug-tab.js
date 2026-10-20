@@ -104,7 +104,9 @@ function stoppe(el) {
 function spiele(el, daten) {
   const tab = parseTabulatur(aktuellerText());
   if (tab.leer || !tab.events.length) return;
-  const noten = saitenNoten(tab, gewaehlteStimmung(daten)?.saiten);
+  const stimmung = gewaehlteStimmung(daten);
+  const noten = saitenNoten(tab, stimmung?.saiten);
+  const instrument = stimmung?.instrument === 'bass' ? 'bass' : 'gitarre';
   const ctx = holeKontext();
   const ziel = holeAusgang();
   const proSpalte = 60 / zustand.bpm / Math.max(1, zustand.proSchlag);
@@ -129,6 +131,7 @@ function spiele(el, daten) {
         saitenStimme(ctx, ziel, zeit, {
           frequenz: basis * 2 ** (ev.bund / 12),
           gedaempft: ev.technik === 'dead_note',
+          instrument,
         });
       }
       // Laufmarke: nicht-auditives Signal, welche Spalte gerade klingt.

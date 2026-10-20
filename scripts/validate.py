@@ -364,6 +364,48 @@ SHARE_BILD = 'assets/images/marke/share.png'
 SHARE_MASSE = (1200, 630)          # 1,91:1 — das Format, das Messenger und Social erwarten
 
 
+def pruefe_samples(fehler, warnung, sw_shell):
+    """Sample-Bank der Stimmen (js/audio/samples.js, erzeugt von
+    scripts/build_samples.mjs). Der Generator braucht Chromium und laeuft nicht
+    in der CI; hier steht die billige Haelfte: Jede Datei aus SAMPLES existiert,
+    hat das Format, das der Generator schreibt, steht in der SW-SHELL und hat
+    ihre Rohquelle samt Herkunftsangabe. Fehlt eine Datei, faellt das sonst
+    nirgends auf — die Stimme spielt still ihre Synthese."""
+    samples_js = os.path.join(ROOT, 'js', 'audio', 'samples.js')
+    with open(samples_js, encoding='utf-8') as f:
+        eintraege = re.findall(r"^  (\w+): \{ datei: '([^']+\.wav)'(.*)\},?$", f.read(), re.M)
+    if not eintraege:
+        fehler.append('js/audio/samples.js: keine SAMPLES-Eintraege gefunden (Literal umgebaut?)')
+        return
+    with open(os.path.join(ROOT, 'scripts', 'samples_quelle', 'quellen.json'), encoding='utf-8') as f:
+        quellen = json.load(f)
+    ordner = os.path.join(ROOT, 'assets', 'sounds', 'samples')
+    genannt = set()
+    for name, datei, rest in eintraege:
+        pfad = f'assets/sounds/samples/{datei}'
+        genannt.add(datei)
+        if ('gruppe:' in rest) != ('grundton:' in rest):
+            fehler.append(f'samples.js {name}: gruppe und grundton gehoeren zusammen')
+        if not os.path.isfile(os.path.join(ROOT, pfad)):
+            fehler.append(f'Sample "{pfad}" fehlt (node scripts/build_samples.mjs)')
+            continue
+        with wave.open(os.path.join(ROOT, pfad)) as w:
+            ist = (w.getnchannels(), w.getsampwidth(), w.getframerate())
+        if ist != (1, 2, 44100):
+            fehler.append(f'Sample "{pfad}": erwartet Mono/16 bit/44100 Hz, ist {ist}')
+        if pfad not in sw_shell:
+            fehler.append(f'sw.js: Sample "{pfad}" fehlt in SHELL — offline bliebe nur die Synthese')
+        stamm = datei[:-4]
+        if not os.path.isfile(os.path.join(ROOT, 'scripts', 'samples_quelle', stamm + '.mp3')):
+            fehler.append(f'Sample "{pfad}": Rohquelle scripts/samples_quelle/{stamm}.mp3 fehlt')
+        if not (quellen.get(stamm) or {}).get('generation_id'):
+            fehler.append(f'Sample "{pfad}": keine Herkunft in scripts/samples_quelle/quellen.json')
+    if os.path.isdir(ordner):
+        for datei in sorted(os.listdir(ordner)):
+            if datei.endswith('.wav') and datei not in genannt:
+                warnung.append(f'assets/sounds/samples/{datei}: von keiner Stimme genutzt (Waise)')
+
+
 def pruefe_share_bild(fehler):
     """og:image: index.html verweist auf ein Bild, das es gibt und 1200x630 misst.
 
@@ -514,6 +556,8 @@ def pruefe_patterns(fehler, warnung, voka):
         je_genre[p.get('genre')] += 1
         if p.get('domaene') not in ('gitarre', 'bass', 'schlagzeug'):
             fehler.append(f'pattern {pid}: domaene "{p.get("domaene")}" ungültig')
+        if 'klang' in p and (p['klang'] != 'clean' or p.get('domaene') != 'gitarre' or p.get('typ') != 'tab'):
+            fehler.append(f'pattern {pid}: klang "{p["klang"]}" — erlaubt nur "clean" an einem Gitarren-TAB')
         if not (p.get('titel') or {}).get('de') or not (p.get('hinweis') or {}).get('de'):
             fehler.append(f'pattern {pid}: titel.de oder hinweis.de fehlt')
         if not isinstance(p.get('bpm'), int) or not 40 <= p['bpm'] <= 300:
@@ -1134,6 +1178,8 @@ def main():
             ist = (w.getnchannels(), w.getsampwidth(), w.getframerate())
         if ist != (1, 2, 44100):
             fehler.append(f'Klangprobe "{pfad}": erwartet Mono/16 bit/44100 Hz, ist {ist}')
+
+    pruefe_samples(fehler, warnung, sw_shell)
 
     gesamt = pruefe_groessen(fehler)
     pruefe_pad_adressen(fehler)

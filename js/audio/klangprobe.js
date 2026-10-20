@@ -1,16 +1,15 @@
 // Audio-Kern (themenneutral, DOM-frei): lädt eine Klangprobe von einer URL und
 // dekodiert sie zu einem AudioBuffer.
 //
-// Der Kern ist ansonsten synthese-only, und das bleibt die Regel — eine Stimme,
-// die live und im OfflineAudioContext identisch klingen soll, baut man nicht aus
-// einer Datei. Für ein Werkzeug, dessen ganze Aussage am Ausgangssignal hängt
-// (Zerr-Labor: wie formt eine Kennlinie ein ECHTES Instrument?), reicht Synthese
-// aber nicht: Ein Sägezahn hat keine Saitenresonanz und kein Plektrum-Geräusch,
-// also klingt jede Kennlinie darauf gleich plausibel.
+// Genutzt von zwei Stellen: dem Zerr-Labor, dessen ganze Aussage am
+// Ausgangssignal hängt (wie formt eine Kennlinie ein ECHTES Instrument? Ein
+// Sägezahn hat keine Saitenresonanz und kein Plektrum-Geräusch), und der
+// Sample-Bank der Stimmen (samples.js). AudioBuffer sind nicht an einen Kontext
+// gebunden — eine geladene Probe klingt live und im OfflineAudioContext gleich.
 //
-// Deshalb dieses eine Modul — bewusst schmal:
+// Dieses Modul bleibt bewusst schmal:
 // - Kein Sampler, keine Tonhöhen-Zuordnung, keine Velocity-Schichten. Das
-//   aufrufende Werkzeug entscheidet, was es mit dem Puffer anstellt.
+//   entscheidet der Aufrufer (die Tonhöhen-Zuordnung steht in samples.js).
 // - Ein Cache je URL, damit ein Neustart der Kette nicht neu lädt.
 // - Fehler werden NICHT geschluckt: Wer offline ist, soll das Werkzeug auf die
 //   synthetische Quelle zurückfallen lassen können, statt stumm dazustehen.

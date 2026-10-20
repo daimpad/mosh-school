@@ -2,7 +2,7 @@
   "_meta": {
     "app": "Metal-Lernhandbuch",
     "domaene": "werkzeug-patterns",
-    "hinweis": "Pattern-Werkzeug: typische Riffs (TAB) und Drumpattern pro Genre, interaktiv über WebAudio anspielbar. Referenzbereich wie das Stimmungs-Werkzeug — NICHT im Baustein-Pool, kein Fortschritt. TAB-Schritte: Liste je Achtel; jeder Schritt ist eine Liste von {saite,bund} (leere Liste = Pause). saite 0 = tiefste Saite. Drum-Spuren: 0/1 je Schritt, Reihenfolge crash/hihat/snare/kick. Titel/Hinweis inline (wie hinweis in tunings.json), Genre-Namen aus labels stil."
+    "hinweis": "Pattern-Werkzeug: typische Riffs (TAB) und Drumpattern pro Genre, interaktiv über WebAudio anspielbar. Referenzbereich wie das Stimmungs-Werkzeug — NICHT im Baustein-Pool, kein Fortschritt. TAB-Schritte: Liste je Achtel; jeder Schritt ist eine Liste von {saite,bund} (leere Liste = Pause). saite 0 = tiefste Saite. Drum-Spuren: 0/1 je Schritt, Reihenfolge crash/hihat/snare/kick. Optional klang: \"clean\" (nur Gitarre, TAB) spielt die unverzerrte Gitarre statt der verzerrten. Titel/Hinweis inline (wie hinweis in tunings.json), Genre-Namen aus labels stil."
   },
   "patterns": [
     {
@@ -4950,6 +4950,7 @@
       "genre": "screamo",
       "domaene": "gitarre",
       "typ": "tab",
+      "klang": "clean",
       "titel": {
         "de": "Screamo-Riff: Twinkle-Arpeggio"
       },
