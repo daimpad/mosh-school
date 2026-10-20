@@ -95,8 +95,8 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/flageolett": {
-  "prompt": "Natural harmonic on the 12th fret of a clean electric guitar, one single pluck, bell-like chime tone, pure and glassy, ringing out, no chord, no distortion, no drums, dry",
-  "generation_id": "L8he7Ed6IHEXW9Mzb0YP",
+  "prompt": "Natural harmonic on the 12th fret of a steel-string acoustic guitar, G string, finger lightly touching the string, chiming guitar overtone with string noise, ringing out, one pluck, no piano, no bell, no keyboard, dry",
+  "generation_id": "mMMT2DisbWnWu6DJ5TdK",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/fry-scream": {
@@ -267,13 +267,13 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-chug-e2": {
-  "prompt": "Single palm-muted chug on a distorted electric guitar, low E string, tight short metal chug, one hit, dry",
-  "generation_id": "BX9nxJfrHfxsxOK5GXAJ",
+  "prompt": "Single palm-muted chug on a high-gain distorted electric guitar, heavy metal, tight and percussive, open low E string, note E2, one short hit, no chord, no drums, dry amp",
+  "generation_id": "1aSoK2SoqhCsiMsUilTW",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-a2": {
-  "prompt": "Single clean electric guitar note, lowest open string in standard tuning, deep low register, thick wound string, plucked, warm sustained tone, one note only, no chord, dry",
-  "generation_id": "WebbvZxAfcHW2q6WnGNx",
+  "prompt": "Single note A2 plucked on a steel-string acoustic guitar, open A string (5th string), picked with a plectrum, bright woody guitar tone with audible string attack and fret buzz, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry close-mic",
+  "generation_id": "IXTokaYjRJOmwNMAl29p",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-a3": {
@@ -281,44 +281,49 @@
   "generation_id": "OUyow9r7OYJnopFIswJT",
   "modell": "eleven_text_to_sound_v2"
  },
+ "gitarre-clean-b3": {
+  "prompt": "Single note B3 plucked on a steel-string acoustic guitar, open B string (2nd string), picked with a plectrum, bright woody guitar tone with audible string attack and fret buzz, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry close-mic",
+  "generation_id": "E0HlWRq5REvPMr5vqpNL",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "gitarre-clean-b4": {
-  "prompt": "Single clean electric guitar note, A note on the B string at the 10th fret, upper register, plucked, clear sustained tone ringing out, one note only, no chord, dry",
-  "generation_id": "6c8xXHWPmcAgoL4TeKhV",
+  "prompt": "Single note B4 on a clean electric guitar, neck pickup, high E string 7th fret, picked with a plectrum, warm round guitar tone with pick attack and string noise, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry DI",
+  "generation_id": "jRabeDcMU0PmfrFFirP8",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-d3": {
-  "prompt": "Single clean electric guitar note, open D string, plucked, warm clear sustained tone, one note only, no chord, dry",
-  "generation_id": "SBQ8jRl5iRyYcISx7UXj",
+  "prompt": "Single note D3 plucked on a steel-string acoustic guitar, open D string (4th string), picked with a plectrum, bright woody guitar tone with audible string attack and fret buzz, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry close-mic",
+  "generation_id": "WnfrsXqTx1navdaB4Npm",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-d4": {
-  "prompt": "Single clean electric guitar note, A note on the high E string at the 5th fret, plucked, clear sustained tone ringing out, one note only, no chord, dry",
-  "generation_id": "K6qnbyEZKlGtx0hrduLc",
+  "prompt": "Single note D4 on a clean electric guitar, neck pickup, B string 3rd fret, picked with a plectrum, warm round guitar tone with pick attack and string noise, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry DI",
+  "generation_id": "26FXi1oIfmR6dabDBWCR",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-e2": {
-  "prompt": "Single clean electric guitar note, deep low E2, the thickest sixth string played open, booming low register close to bass range, plucked once with a pick, warm clean amp tone, no distortion, one note only, no chord, no drums, dry",
-  "generation_id": "6wIa87NHYpBd4mQ5inyi",
+  "prompt": "Single note E2 plucked on a steel-string acoustic guitar, open low E string (6th string), picked with a plectrum, bright woody guitar tone with audible string attack and fret buzz, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry close-mic",
+  "generation_id": "jdqJ0DqG7gl1GbAy0WYB",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-e5": {
-  "prompt": "Single clean electric guitar note, A note on the high E string at the 5th fret, plucked, clear sustained tone ringing out, one note only, no chord, dry",
-  "generation_id": "qyN7MZQLX5D2xVSde2Fw",
+  "prompt": "Single note E5 on a clean electric guitar, neck pickup, high E string 12th fret, picked with a plectrum, warm round guitar tone with pick attack and string noise, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry DI",
+  "generation_id": "83UcdSBCsFoWhHIUGFbG",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-fis4": {
-  "prompt": "Single clean electric guitar note at concert pitch A 440 Hz, high register, plucked, clear sustained tone ringing out, one note only, no chord, no octave, dry",
-  "generation_id": "CfLxyfiXgcXNFmPuU3Nm",
+  "prompt": "Single note F#4 on a clean electric guitar, neck pickup, high E string 2nd fret, picked with a plectrum, warm round guitar tone with pick attack and string noise, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry DI",
+  "generation_id": "uIIIdTjzIV5shjzc3JAZ",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-g3": {
-  "prompt": "Single clean electric guitar note, open G string, plucked with a pick, clear sustained tone ringing out, one note only, no chord, dry",
-  "generation_id": "rTUhyfTIrDJdYjhNh9ER",
+  "prompt": "Single note G3 plucked on a steel-string acoustic guitar, open G string, picked with a plectrum, bright woody guitar tone with audible string attack and fret buzz, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry close-mic",
+  "generation_id": "jqpZdxVj4X2BPtq16Qk2",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-tot": {
-  "prompt": "Muted string scratch on a distorted electric guitar, strings fully deadened by the fretting hand, unpitched percussive chk click, very short single hit, no note, no ringing, dry",
-  "generation_id": "8XVNUXfiCLyQOuxHhu2q",
+  "prompt": "Dead note on a high-gain distorted metal guitar: all strings muted by the fretting hand, picked hard, short percussive 'chk' scratch with no pitch, one hit, no drums, dry amp",
+  "generation_id": "bf8TU3NXJAkA3SM1v5CQ",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-a1": {
@@ -477,18 +482,18 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "tom-hoch": {
-  "prompt": "Single high rack tom drum hit, punchy round tone, close-mic, dry studio, no reverb",
-  "generation_id": "MHMALpYY054FPDIzUd9r",
+  "prompt": "Single hit on a 12 inch rack tom, metal drum kit, low tuned, big boomy body and punchy attack, deep resonant tone, not tinny, close-mic, dry, no reverb",
+  "generation_id": "pAiWnj9XPuPWsC9RXXPl",
   "modell": "eleven_text_to_sound_v2"
  },
  "tom-mitte": {
-  "prompt": "Single mid tom drum hit, punchy medium-pitched round tone, between rack tom and floor tom, close-mic, dry studio, no reverb",
-  "generation_id": "xkJ7BNQY62ty2tm0ML19",
+  "prompt": "Single hit on a 16 inch floor tom, metal drum kit, low tuned, big boomy body and punchy attack, deep resonant tone, not tinny, close-mic, dry, no reverb",
+  "generation_id": "r6mTaoOEitUjTAx1vAVi",
   "modell": "eleven_text_to_sound_v2"
  },
  "tom-tief": {
-  "prompt": "Single floor tom drum hit, deep boomy tone, close-mic, dry studio, no reverb",
-  "generation_id": "2xuE3tL9HWLyHpzhGD1i",
+  "prompt": "Single hit on a huge 18 inch floor tom, metal drum kit, tuned very low, deep fat thunderous boom around 70 Hz, punchy attack and long low resonant decay, heavy low end, not tinny, not a kick drum, close-mic, dry, no reverb",
+  "generation_id": "fbrNDLjUeWJ98lrbSaPc",
   "modell": "eleven_text_to_sound_v2"
  }
 }

@@ -45,8 +45,8 @@ export const SAMPLES = {
   crash: { datei: 'crash.wav', pegel: 0.56 },
   china: { datei: 'china.wav', pegel: 0.44 },
   ride: { datei: 'ride.wav', pegel: 0.26 },
-  tom_hoch: { datei: 'tom-hoch.wav', pegel: 0.49 },
-  tom_tief: { datei: 'tom-tief.wav', pegel: 0.79 },
+  tom_hoch: { datei: 'tom-hoch.wav', pegel: 0.62 },
+  tom_tief: { datei: 'tom-tief.wav', pegel: 0.67, rate: 0.84 },
   kick_2: { datei: 'kick-2.wav', pegel: 1.18, wechsel: 'kick' },
   kick_3: { datei: 'kick-3.wav', pegel: 0.57, wechsel: 'kick' },
   snare_2: { datei: 'snare-2.wav', pegel: 0.69, wechsel: 'snare' },
@@ -58,7 +58,7 @@ export const SAMPLES = {
   snare_rand: { datei: 'snare-rand.wav', pegel: 0.73 },
   ride_glocke: { datei: 'ride-glocke.wav', pegel: 0.21 },
   splash: { datei: 'splash.wav', pegel: 0.43 },
-  tom_mitte: { datei: 'tom-mitte.wav', pegel: 0.66 },
+  tom_mitte: { datei: 'tom-mitte.wav', pegel: 0.73 },
   hihat_pedal: { datei: 'hihat-pedal.wav', pegel: 0.12 },
   stack: { datei: 'stack.wav', pegel: 0.53 },
   gitarre_zerre_e2: { datei: 'gitarre-zerre-e2.wav', pegel: 0.78, gruppe: 'gitarre', grundton: 82.5 },
@@ -76,7 +76,18 @@ export const SAMPLES = {
   gitarre_zerre_d4: { datei: 'gitarre-zerre-d4.wav', pegel: 0.77, gruppe: 'gitarre', grundton: 293.8 },
   gitarre_zerre_b4: { datei: 'gitarre-zerre-b4.wav', pegel: 0.82, gruppe: 'gitarre', grundton: 494.2 },
   gitarre_zerre_dis5: { datei: 'gitarre-zerre-dis5.wav', pegel: 0.9, gruppe: 'gitarre', grundton: 624.1 },
+  gitarre_chug_e2: { datei: 'gitarre-chug-e2.wav', pegel: 0.46, gruppe: 'gitarre_chug', grundton: 83.6 },
   gitarre_chug_a2: { datei: 'gitarre-chug-a2.wav', pegel: 0.51, gruppe: 'gitarre_chug', grundton: 109.3 },
+  gitarre_tot: { datei: 'gitarre-tot.wav', pegel: 0.5 },
+  gitarre_clean_e2: { datei: 'gitarre-clean-e2.wav', pegel: 0.85, gruppe: 'gitarre_clean', grundton: 82.6 },
+  gitarre_clean_a2: { datei: 'gitarre-clean-a2.wav', pegel: 0.65, gruppe: 'gitarre_clean', grundton: 109.9 },
+  gitarre_clean_d3: { datei: 'gitarre-clean-d3.wav', pegel: 0.87, gruppe: 'gitarre_clean', grundton: 146.9 },
+  gitarre_clean_g3: { datei: 'gitarre-clean-g3.wav', pegel: 0.78, gruppe: 'gitarre_clean', grundton: 196.0 },
+  gitarre_clean_b3: { datei: 'gitarre-clean-b3.wav', pegel: 0.62, gruppe: 'gitarre_clean', grundton: 247.4 },
+  gitarre_clean_d4: { datei: 'gitarre-clean-d4.wav', pegel: 1.0, gruppe: 'gitarre_clean', grundton: 293.3 },
+  gitarre_clean_fis4: { datei: 'gitarre-clean-fis4.wav', pegel: 0.74, gruppe: 'gitarre_clean', grundton: 372.0 },
+  gitarre_clean_b4: { datei: 'gitarre-clean-b4.wav', pegel: 0.97, gruppe: 'gitarre_clean', grundton: 495.3 },
+  gitarre_clean_e5: { datei: 'gitarre-clean-e5.wav', pegel: 0.79, gruppe: 'gitarre_clean', grundton: 661.7 },
   bass_d2: { datei: 'bass-d2.wav', pegel: 0.72, gruppe: 'bass', grundton: 73.7 },
   bass_ais2: { datei: 'bass-ais2.wav', pegel: 0.59, gruppe: 'bass', grundton: 117.6 },
   bass_d3: { datei: 'bass-d3.wav', pegel: 0.72, gruppe: 'bass', grundton: 146.9 },
@@ -141,7 +152,10 @@ export function spieleSample(ctx, ziel, zeit, gewuenscht, { pegel = 1, rate = 1,
   if (!b) return null;
   const quelle = ctx.createBufferSource();
   quelle.buffer = b;
-  quelle.playbackRate.value = rate;
+  // Eine Probe kann eine eigene Abspielrate tragen (`rate` in SAMPLES), etwa
+  // ein Tom, der tiefer klingen soll, als das Modell ihn geliefert hat.
+  const r = rate * (SAMPLES[name]?.rate ?? 1);
+  quelle.playbackRate.value = r;
   const huelle = ctx.createGain();
   const p = (SAMPLES[name]?.pegel ?? 1) * pegel;
   huelle.gain.setValueAtTime(p, zeit);
@@ -155,7 +169,7 @@ export function spieleSample(ctx, ziel, zeit, gewuenscht, { pegel = 1, rate = 1,
   kette.connect(huelle).connect(ziel);
   quelle.start(zeit);
   // stop() erst nach start() — umgekehrt wirft die Web-Audio-API.
-  if (dauer != null && dauer < b.duration / rate) {
+  if (dauer != null && dauer < b.duration / r) {
     huelle.gain.setValueAtTime(p, zeit + dauer);
     huelle.gain.exponentialRampToValueAtTime(0.0001, zeit + dauer + 0.06);
     quelle.stop(zeit + dauer + 0.08);

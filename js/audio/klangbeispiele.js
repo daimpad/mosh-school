@@ -49,7 +49,7 @@ export const BEISPIELE = {
   gitarre_vibrato: { datei: 'gitarre-vibrato.mp3', ab: 1.5, dauer: 1.0, pegel: 0.5 },
   bend_auf: { datei: 'bend-auf.mp3', ab: 0.97, dauer: 1.15, pegel: 0.52 },
   slide_auf: { datei: 'slide-auf.mp3', ab: 0, dauer: 1.38, pegel: 0.34 },
-  flageolett: { datei: 'flageolett.mp3', ab: 0, dauer: 1.8, pegel: 2.12 },
+  flageolett: { datei: 'flageolett.mp3', ab: 0, dauer: 2, pegel: 5.81 },
   einatmen: { datei: 'einatmen.mp3', ab: 0, dauer: 2.7, pegel: 5.26 },
   amp_brummen: { datei: 'amp-brummen.mp3', ab: 0, dauer: 4.0, pegel: 0.7 },
   pig_squeal: { datei: 'pig-squeal.mp3', ab: 0, dauer: 1.2, pegel: 1.85 },
