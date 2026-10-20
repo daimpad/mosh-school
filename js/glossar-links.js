@@ -1,5 +1,5 @@
 // Glossar-Auto-Verlinkung: verlinkt die ERSTE Fundstelle jedes Glossar-Begriffs
-// im Baustein-Fließtext auf das Szene-Glossar (#/glossar?q=<begriff>). Rein
+// im Baustein-Fließtext auf das Glossar (#/glossar?q=<begriff>). Rein
 // textuell und DOM-frei — die Ansicht ruft `absaetzeMitGlossar()` statt
 // `absaetze()` auf. Referenzbereich Glossar wie Songs/Patterns — kein Fortschritt.
 //
