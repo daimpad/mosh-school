@@ -9,7 +9,7 @@ Der Riss-Jitter ist per crc32(fehlerbild_id) geseedet und damit reproduzierbar."
 import json, math, os, random, re, zlib
 import xml.etree.ElementTree as ET
 
-from strichraster import KRAEFTIG, raster  # läuft per runpy aus build_grafiken.py (scripts/ im Pfad)
+from strichraster import KRAEFTIG, raster_fuer  # läuft per runpy aus build_grafiken.py (scripts/ im Pfad)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -1243,7 +1243,7 @@ TRANCHE3_IDS = ["doom_sustain_feedback", "doom_bass_fuzz", "doom_drums_zeitdehnu
 assert sorted(TRANCHE3_IDS) == sorted(S), sorted(set(TRANCHE3_IDS) ^ set(S))
 
 for bid in TRANCHE3_IDS:
-    svg = raster(make(S[bid]))
+    svg = raster_fuer(bid, make(S[bid]))
     ET.fromstring(svg)
     with open(os.path.join(OUT, f"{bid}.svg"), "w", encoding="utf-8") as f:
         f.write(svg)
@@ -1270,7 +1270,7 @@ for fb in FEHLERBILDER:
     basis_datei = os.path.join(OUT, f'{fb["basis_baustein"]}.svg')
     assert os.path.exists(basis_datei), f'Basis-Grafik fehlt: {fb["basis_baustein"]} (fuer {fb["id"]})'
     with open(basis_datei, encoding="utf-8") as f:
-        basis_svg = raster(f.read())  # Basis liegt schon auf dem Raster; idempotent
+        basis_svg = raster_fuer(fb["basis_baustein"], f.read())  # Basis liegt schon auf dem Raster; idempotent
     svg = fb_svg(basis_svg, fb["id"])
     ET.fromstring(svg)
     with open(os.path.join(OUT, f'{fb["id"]}.svg'), "w", encoding="utf-8") as f:
