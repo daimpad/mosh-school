@@ -433,6 +433,7 @@
     },
     {
       "id": "sludge_bass_wand",
+      "klangbeispiele": ["bass_verzerrt_e1", "bass_verzerrt_a1"],
       "anzeigetitel": {
         "de": "Sludge-Bass: die zähe Fuzz-Wand"
       },

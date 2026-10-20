@@ -66,9 +66,6 @@ export const SAMPLES = {
   gitarre_zerre_fis3: { datei: 'gitarre-zerre-fis3.wav', pegel: 0.87, gruppe: 'gitarre', grundton: 185.7 },
   gitarre_zerre_f4: { datei: 'gitarre-zerre-f4.wav', pegel: 0.78, gruppe: 'gitarre', grundton: 349.1 },
   gitarre_zerre_a4: { datei: 'gitarre-zerre-a4.wav', pegel: 0.98, gruppe: 'gitarre', grundton: 440.0 },
-  gitarre_chug_e2: { datei: 'gitarre-chug-e2.wav', pegel: 0.35, gruppe: 'gitarre_chug', grundton: 83.0 },
-  gitarre_chug_b2: { datei: 'gitarre-chug-b2.wav', pegel: 0.34, gruppe: 'gitarre_chug', grundton: 123.7 },
-  gitarre_clean_a3: { datei: 'gitarre-clean-a3.wav', pegel: 0.75, gruppe: 'gitarre_clean', grundton: 220.1 },
   bass_e1: { datei: 'bass-e1.wav', pegel: 0.7, gruppe: 'bass', grundton: 41.2 },
   bass_e2: { datei: 'bass-e2.wav', pegel: 0.67, gruppe: 'bass', grundton: 82.4 },
   gitarre_zerre_a1: { datei: 'gitarre-zerre-a1.wav', pegel: 0.6, gruppe: 'gitarre', grundton: 55.4 },
@@ -80,19 +77,9 @@ export const SAMPLES = {
   gitarre_zerre_b4: { datei: 'gitarre-zerre-b4.wav', pegel: 0.82, gruppe: 'gitarre', grundton: 494.2 },
   gitarre_zerre_dis5: { datei: 'gitarre-zerre-dis5.wav', pegel: 0.9, gruppe: 'gitarre', grundton: 624.1 },
   gitarre_chug_a2: { datei: 'gitarre-chug-a2.wav', pegel: 0.51, gruppe: 'gitarre_chug', grundton: 109.3 },
-  gitarre_tot: { datei: 'gitarre-tot.wav', pegel: 0.55 },
-  gitarre_clean_e2: { datei: 'gitarre-clean-e2.wav', pegel: 0.75, gruppe: 'gitarre_clean', grundton: 82.4 },
-  gitarre_clean_a2: { datei: 'gitarre-clean-a2.wav', pegel: 0.74, gruppe: 'gitarre_clean', grundton: 111.9 },
-  gitarre_clean_d3: { datei: 'gitarre-clean-d3.wav', pegel: 0.85, gruppe: 'gitarre_clean', grundton: 147.3 },
-  gitarre_clean_g3: { datei: 'gitarre-clean-g3.wav', pegel: 0.7, gruppe: 'gitarre_clean', grundton: 196.5 },
-  gitarre_clean_d4: { datei: 'gitarre-clean-d4.wav', pegel: 0.91, gruppe: 'gitarre_clean', grundton: 293.6 },
-  gitarre_clean_fis4: { datei: 'gitarre-clean-fis4.wav', pegel: 0.83, gruppe: 'gitarre_clean', grundton: 371.0 },
-  gitarre_clean_b4: { datei: 'gitarre-clean-b4.wav', pegel: 1.0, gruppe: 'gitarre_clean', grundton: 494.9 },
-  gitarre_clean_e5: { datei: 'gitarre-clean-e5.wav', pegel: 0.97, gruppe: 'gitarre_clean', grundton: 661.5 },
   bass_d2: { datei: 'bass-d2.wav', pegel: 0.72, gruppe: 'bass', grundton: 73.7 },
   bass_ais2: { datei: 'bass-ais2.wav', pegel: 0.59, gruppe: 'bass', grundton: 117.6 },
   bass_d3: { datei: 'bass-d3.wav', pegel: 0.72, gruppe: 'bass', grundton: 146.9 },
-  bass_gedaempft_g1: { datei: 'bass-gedaempft-g1.wav', pegel: 0.58, gruppe: 'bass_gedaempft', grundton: 49.0 },
   zaehl_1: { datei: 'zaehl-1.wav', pegel: 0.77, quelle: 'einzaehlen-de', vorlauf: 0.01 },
   zaehl_2: { datei: 'zaehl-2.wav', pegel: 0.49, quelle: 'einzaehlen-de', vorlauf: 0.08 },
   zaehl_3: { datei: 'zaehl-3.wav', pegel: 0.53, quelle: 'einzaehlen-de', vorlauf: 0.05 },
@@ -186,13 +173,15 @@ for (const liste of Object.values(GRUPPEN)) liste.sort((a, b) => a.grundton - b.
 
 // Wählt in einer Gruppe die Probe, deren Grundton der gewünschten Frequenz am
 // nächsten liegt (im Tonabstand, nicht in Hz), und liefert Name + Abspielrate.
-// Nur geladene Proben zählen. null, wenn die Gruppe nichts geladen hat.
-export function waehleTon(gruppe, frequenz) {
+// Nur geladene Proben zählen. null, wenn die Gruppe nichts geladen hat oder
+// keine Probe näher als `hoechstens` Halbtöne liegt — weiter umgestimmt klingt
+// ein Ton nach Bandgeschwindigkeit, dann ist der Rückfall des Aufrufers besser.
+export function waehleTon(gruppe, frequenz, hoechstens = Infinity) {
   let bestes = null;
   for (const k of GRUPPEN[gruppe] || []) {
     if (!puffer.has(k.name)) continue;
     const abstand = Math.abs(Math.log2(frequenz / k.grundton));
     if (!bestes || abstand < bestes.abstand) bestes = { name: k.name, rate: frequenz / k.grundton, abstand };
   }
-  return bestes;
+  return bestes && bestes.abstand * 12 <= hoechstens ? bestes : null;
 }

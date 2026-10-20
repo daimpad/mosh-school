@@ -1851,7 +1851,15 @@
       "slide_auf": "Slide aufwärts",
       "flageolett": "Flageolett",
       "einatmen": "Ruhiges Einatmen",
-      "amp_brummen": "Netzbrummen (50 Hz)"
+      "amp_brummen": "Netzbrummen (50 Hz)",
+      "pig_squeal": "Pig Squeal",
+      "pig_squeal_mensch": "Pig Squeal, zweite Stimme",
+      "publikum_chant": "Publikum skandiert",
+      "proberaum_tuer": "Proberaum-Tür",
+      "einzaehlen_kurz": "Einzählen „Eins, zwei“",
+      "pick_scrape": "Pick Scrape",
+      "bass_verzerrt_e1": "Fuzz-Bass, tiefes E",
+      "bass_verzerrt_a1": "Fuzz-Bass, A"
     },
     "domaene": {
       "gitarre": "Gitarre",

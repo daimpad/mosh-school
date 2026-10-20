@@ -79,6 +79,7 @@
     },
     {
       "id": "doom_bass_fuzz",
+      "klangbeispiele": ["bass_verzerrt_e1"],
       "anzeigetitel": {
         "de": "Doom-Bass: Fuzz & Fundament"
       },

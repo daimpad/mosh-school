@@ -238,9 +238,11 @@ export function saite(ctx, ziel, zeit, { frequenz, gedaempft = false, tot = fals
     return [spieleSample(ctx, ziel, zeit, 'gitarre_tot', { pegel })];
   }
   // Abgedämpft: eigene Proben (Chug, gedämpfter Bass), wenn geladen — ein
-  // abgeschnittener offener Ton klingt nach Gate, nicht nach Handballen.
+  // abgeschnittener offener Ton klingt nach Gate, nicht nach Handballen. Davon
+  // gibt es je nur eine Probe; liegt sie mehr als 5 Halbtöne weg, spielt der
+  // offene Ton mit Tiefpass (die Bank deckt jeden Ton innerhalb von 5 ab).
   const gedaempftGruppe = { gitarre: 'gitarre_chug', bass: 'bass_gedaempft' }[gruppe];
-  const chug = (gedaempft || tot) && gedaempftGruppe ? waehleTon(gedaempftGruppe, frequenz) : null;
+  const chug = (gedaempft || tot) && gedaempftGruppe ? waehleTon(gedaempftGruppe, frequenz, 5) : null;
   const ton = chug || waehleTon(gruppe, frequenz);
   if (ton) {
     const quelle = spieleSample(ctx, ziel, zeit, ton.name, {

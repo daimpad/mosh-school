@@ -49,9 +49,17 @@ export const BEISPIELE = {
   gitarre_vibrato: { datei: 'gitarre-vibrato.mp3', ab: 1.5, dauer: 1.0, pegel: 0.5 },
   bend_auf: { datei: 'bend-auf.mp3', ab: 0.97, dauer: 1.15, pegel: 0.52 },
   slide_auf: { datei: 'slide-auf.mp3', ab: 0, dauer: 1.38, pegel: 0.34 },
-  flageolett: { datei: 'flageolett.mp3', ab: 0, dauer: 1.7, pegel: 2.76 },
+  flageolett: { datei: 'flageolett.mp3', ab: 0, dauer: 1.8, pegel: 2.12 },
   einatmen: { datei: 'einatmen.mp3', ab: 0, dauer: 2.7, pegel: 5.26 },
   amp_brummen: { datei: 'amp-brummen.mp3', ab: 0, dauer: 4.0, pegel: 0.7 },
+  pig_squeal: { datei: 'pig-squeal.mp3', ab: 0, dauer: 1.2, pegel: 1.85 },
+  pig_squeal_mensch: { datei: 'pig-squeal-2.mp3', ab: 0.13, dauer: 1.6, pegel: 0.84 },
+  publikum_chant: { datei: 'publikum-chant.mp3', ab: 0, dauer: 5.5, pegel: 0.42 },
+  proberaum_tuer: { datei: 'proberaum-tuer.mp3', ab: 0, dauer: 3.4, pegel: 0.24 },
+  einzaehlen_kurz: { datei: 'einzaehlen-kurz.mp3', ab: 0, dauer: 1.3, pegel: 1.74 },
+  pick_scrape: { datei: 'pick-scrape.mp3', ab: 0, dauer: 1.0, pegel: 1 },
+  bass_verzerrt_e1: { datei: 'bass-fuzz-e1.mp3', ab: 0, dauer: 2.0, pegel: 0.32 },
+  bass_verzerrt_a1: { datei: 'bass-fuzz-a1.mp3', ab: 0, dauer: 2.3, pegel: 0.41 },
   slide_ab: { datei: 'slide-ab.mp3', ab: 0, dauer: 2, pegel: 0.41 },
 };
 
