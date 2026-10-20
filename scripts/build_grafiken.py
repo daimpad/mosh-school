@@ -103,7 +103,7 @@ def main(nur_pruefen=False):
     # so kann die Fehlerbild-Komposition in build_svg3 auch statische Basis-Motive nutzen.
     static_dir = os.path.join(HERE, 'svg_static')
     static_n = 0
-    neben_raster = set()  # svg_static-Dateien, die --check schon als „nicht gerastert“ meldet
+    static_ids = set()  # für die Prüfung „genau eine Quelle“ unten
     if os.path.isdir(static_dir):
         for name in sorted(os.listdir(static_dir)):
             if not name.endswith('.svg'):
@@ -117,17 +117,19 @@ def main(nur_pruefen=False):
             if gerastert != svg:
                 if nur_pruefen:
                     abweichungen.append(f'scripts/svg_static/{name} (Strichraster)')
-                    neben_raster.add(name)
                 else:
                     with open(os.path.join(static_dir, name), 'w', encoding='utf-8') as f:
                         f.write(gerastert)
                 svg = gerastert
+            static_ids.add(name[:-4])
             with open(os.path.join(OUT, name), 'w', encoding='utf-8') as f:
                 f.write(svg)
             static_n += 1
 
-    runpy.run_path(os.path.join(HERE, 'build_svg.py'))
-    runpy.run_path(os.path.join(HERE, 'build_svg2.py'))
+    # Jeder Generator führt seine Motive in S (ID -> Elemente); die Mengen
+    # werden unten gegen svg_static/ geprüft.
+    generiert = set(runpy.run_path(os.path.join(HERE, 'build_svg.py'))['S'])
+    generiert |= set(runpy.run_path(os.path.join(HERE, 'build_svg2.py'))['S'])
     # Strichraster (scripts/strichraster.py) VOR Tranche 3: deren Fehlerbilder
     # komponieren aus diesen Motiven und sollen die gerasterte Fassung zeigen.
     # Tranche 3 rastert ihre eigenen Motive selbst.
@@ -140,30 +142,18 @@ def main(nur_pruefen=False):
             if neu != svg:
                 with open(pfad, 'w', encoding='utf-8') as f:
                     f.write(neu)
-    runpy.run_path(os.path.join(HERE, 'build_svg3.py'))
+    generiert |= set(runpy.run_path(os.path.join(HERE, 'build_svg3.py'))['S'])
     runpy.run_path(os.path.join(HERE, 'build_svg4.py'))
 
-    # Sicherstellen, dass kein Generator ein statisches Motiv überschrieben hat.
-    # Tranche 3 schreibt ihre Motive auch, und svg_static/ hält davon eine Kopie;
-    # die muss gleich sein. Unterscheiden sich beide NUR in den Strichstärken,
-    # ist das keine fremde Zeichnung, sondern das Strichraster: Die Kopie war aus
-    # dem schon gerasterten Stand gerechnet, der Generator aus der Rohfassung, und
-    # an der Grenze zwischen Linie und Marke führen beide Wege nicht immer zum
-    # selben Ergebnis. Dann gilt die Generatorfassung und die Kopie zieht nach.
-    breiten = re.compile(r'stroke-width="[^"]*"')
-    for name in sorted(os.listdir(static_dir)) if os.path.isdir(static_dir) else []:
-        if name.endswith('.svg'):
-            gen = open(os.path.join(static_dir, name), encoding='utf-8').read()
-            cur = open(os.path.join(OUT, name), encoding='utf-8').read()
-            if cur == gen or name in neben_raster:
-                continue
-            assert breiten.sub('', cur) == breiten.sub('', gen), \
-                f'statisches Motiv {name} von einem Generator überschrieben'
-            if nur_pruefen:
-                abweichungen.append(f'scripts/svg_static/{name} (Kopie weicht vom Generator ab)')
-            else:
-                with open(os.path.join(static_dir, name), 'w', encoding='utf-8') as f:
-                    f.write(cur)
+    # Jedes Motiv hat genau EINE Quelle: ein Generator ODER svg_static/. Geprüft
+    # über die ID-Mengen, nicht über den Inhalt — eine inhaltsgleiche Kopie ist
+    # trotzdem eine zweite Quelle, die beim nächsten Umbau auseinanderläuft. (Bis
+    # v225 lagen alle Tranche-3-Motive zusätzlich in svg_static/; das Strichraster
+    # hat die beiden Fassungen prompt auseinandergebracht.)
+    doppelt = sorted(static_ids & generiert)
+    if doppelt:
+        raise SystemExit('Motive mit zwei Quellen (Generator UND svg_static/): '
+                         + ', '.join(doppelt))
 
     grafiken = {}
     for name in sorted(os.listdir(OUT)):
