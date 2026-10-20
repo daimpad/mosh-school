@@ -88,9 +88,9 @@ richtige Format hat und eine Rohquelle mit Herkunft hat.
 
 KLANGBEISPIELE (assets/sounds/beispiele/)
 -----------------------------------------
-22 kurze Aufnahmen zum Anhören neben Bausteinen: Gesangstechniken (Growl,
-Guttural, Fry, False Cord, hoher Scream, Shout, Clean, Vocal Fry, Atem- und
-Einsingübungen), Bühne und Proberaum (Publikum, Moshpit, Raumton, PA-
+27 kurze Aufnahmen zum Anhören neben Bausteinen: Gesangstechniken (Growl,
+Guttural, Fry, False Cord, hoher Scream, Shout, Gang-Shout, Clean, Kopfstimme,
+Belting, Vibrato, Doom-Clean, Vocal Fry, Atem- und Einsingübungen), Bühne und Proberaum (Publikum, Moshpit, Raumton, PA-
 Rückkopplung, Kabelknacken, Soundcheck-Ansage) und Gitarrentechniken (Pinch
 Harmonic, Dive Bomb, Feedback, Slide). Ausgeliefert wird die MP3-Rohdatei
 selbst; Ausschnitt (ab/dauer) und Pegel stehen in js/audio/klangbeispiele.js,

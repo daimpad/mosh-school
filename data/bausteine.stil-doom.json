@@ -224,7 +224,7 @@
     },
     {
       "id": "doom_vocals_getragen",
-      "klangbeispiele": ["clean_ton_tief", "growl_tief"],
+      "klangbeispiele": ["doom_clean", "growl_tief"],
       "anzeigetitel": {
         "de": "Doom-Vocals: getragen & schwer"
       },

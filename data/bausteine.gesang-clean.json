@@ -9,6 +9,7 @@
   "bausteine": [
     {
       "id": "clean_kopfstimme",
+      "klangbeispiele": ["kopfstimme"],
       "anzeigetitel": {
         "de": "Kopfstimme & sichere Höhe"
       },
@@ -81,6 +82,7 @@
     },
     {
       "id": "clean_vibrato",
+      "klangbeispiele": ["vibrato_ton"],
       "anzeigetitel": {
         "de": "Vibrato & gehaltene Töne gestalten"
       },
@@ -153,6 +155,7 @@
     },
     {
       "id": "clean_belting",
+      "klangbeispiele": ["belting"],
       "anzeigetitel": {
         "de": "Belting: kraftvolle Höhe ohne Schaden"
       },

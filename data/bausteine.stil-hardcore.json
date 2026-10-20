@@ -354,7 +354,7 @@
     },
     {
       "id": "hardcore_gangshouts",
-      "klangbeispiele": ["hardcore_shout"],
+      "klangbeispiele": ["gang_shout", "hardcore_shout"],
       "anzeigetitel": { "de": "Gang-Shouts & Mitgröl-Parts" },
       "domaene": ["gesang"],
       "kompetenzstufe": ["fortgeschritten"],
