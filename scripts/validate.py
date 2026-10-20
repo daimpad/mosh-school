@@ -489,6 +489,65 @@ def formatWort(breite, hoehe):
     return 'quadrat'
 
 
+def pruefe_patterns(fehler, warnung, voka):
+    """Pattern-Werkzeug (data/patterns.json): Struktur und Genre-Abdeckung.
+
+    Bis v235 prüfte hier nichts — sechs der sechzehn Genres hatten gar keine
+    Patterns, und niemandem fiel es auf, weil die Ansicht ihre Genre-Chips aus
+    den vorhandenen Einträgen baut: Ein fehlendes Genre fehlt dort einfach.
+    """
+    try:
+        patterns = lade('data/patterns.json').get('patterns') or []
+    except FileNotFoundError:
+        fehler.append('data/patterns.json fehlt')
+        return
+    note = re.compile(r'^[A-G][#b]?-?\d$')
+    stile = (voka or {}).get('stil') or []
+    gesehen, je_genre = set(), Counter()
+    for p in patterns:
+        pid = p.get('id')
+        if pid in gesehen:
+            fehler.append(f'pattern {pid}: doppelte id')
+        gesehen.add(pid)
+        if p.get('genre') not in stile:
+            fehler.append(f'pattern {pid}: unbekanntes Genre "{p.get("genre")}"')
+        je_genre[p.get('genre')] += 1
+        if p.get('domaene') not in ('gitarre', 'bass', 'schlagzeug'):
+            fehler.append(f'pattern {pid}: domaene "{p.get("domaene")}" ungültig')
+        if not (p.get('titel') or {}).get('de') or not (p.get('hinweis') or {}).get('de'):
+            fehler.append(f'pattern {pid}: titel.de oder hinweis.de fehlt')
+        if not isinstance(p.get('bpm'), int) or not 40 <= p['bpm'] <= 300:
+            fehler.append(f'pattern {pid}: bpm fehlt oder ausserhalb 40..300')
+        if p.get('typ') == 'tab':
+            stimmung = p.get('stimmung') or []
+            for n in stimmung:
+                if not note.match(str(n)):
+                    fehler.append(f'pattern {pid}: Note "{n}" nicht lesbar')
+            schritte = p.get('schritte') or []
+            if not schritte:
+                fehler.append(f'pattern {pid}: keine schritte')
+            for schritt in schritte:
+                for t in schritt:
+                    if not 0 <= t.get('saite', -1) < len(stimmung):
+                        fehler.append(f'pattern {pid}: saite {t.get("saite")} ausserhalb der Stimmung')
+                    if not isinstance(t.get('bund'), int) or not 0 <= t['bund'] <= 24:
+                        fehler.append(f'pattern {pid}: bund {t.get("bund")} ungültig')
+        elif p.get('typ') == 'drums':
+            spuren = p.get('spuren') or {}
+            unbekannt = set(spuren) - {'crash', 'hihat', 'snare', 'kick'}
+            if unbekannt:
+                fehler.append(f'pattern {pid}: unbekannte Spuren {sorted(unbekannt)}')
+            laengen = {len(v) for v in spuren.values()}
+            if len(laengen) != 1:
+                fehler.append(f'pattern {pid}: Spuren unterschiedlich lang {sorted(laengen)}')
+        else:
+            fehler.append(f'pattern {pid}: typ "{p.get("typ")}" ungültig (tab|drums)')
+    for stil in stile:
+        if not je_genre.get(stil):
+            warnung.append(f'Genre {stil}: keine Patterns in data/patterns.json')
+    print(f'  Patterns: {len(patterns)} in {len(je_genre)} Genres')
+
+
 def pruefe_shows(fehler, warnung, voka):
     """Shows: Datei, Eintraege, Flyer-Bilder, Ordner-Budget.
 
@@ -931,6 +990,7 @@ def main():
         arten = Counter(s.get('art') for s in stimmungen)
         print(f'  Stimmungen: {len(stimmungen)} ({dict(arten)})')
 
+    pruefe_patterns(fehler, warnung, voka)
     pruefe_shows(fehler, warnung, voka)
 
     # UI-Label-Schluessel: jeder literale t('…')-Aufruf in js/ muss unter `ui` in
