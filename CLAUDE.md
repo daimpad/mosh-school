@@ -971,7 +971,15 @@ Tokens**, nie harte Farben.
   Snare-/Kick-Spalten ein; `build_svg4.py` gleicht sie beim Bauen gegen die `demonstration`
   des Bausteins ab und bricht bei Abweichung ab (auch in `build_grafiken.py --check`).
   Tonfolgen anderer Lehrgrafiken (Galopp, Legato, Sweep …) folgen ebenfalls dem
-  Hörbeispiel, sind aber nicht automatisch geprüft.
+  Hörbeispiel, sind aber nicht automatisch geprüft — mit zwei Ausnahmen: die
+  Bass-Rhythmen `lock_zur_bassdrum` und `bass_synkopen` gleicht
+  `_pruefe_tab_rhythmen()` gegen die Schritte ihres Tab-Hörbeispiels ab.
+  **Bass und Gesang** (seit v234, je 15 Schemata; vorher drei bzw. eine): Bass mit
+  eigener Saitenstärke (`bass_saiten()`, G oben, E unten wie in `demonstration`),
+  Gesang als Luftstrom, Tonhöhe oder Klangfarbe über der Zeit plus zwei
+  Querschnitte (Rachenweite, Taschenfalten). Verzerrte Stimme ist eine Welle mit
+  deterministischer Rauheit (`hz()`, sin-Hash statt Zufall — `--check` muss
+  reproduzierbar bleiben).
 - **Werkzeuge:** Das Stimmungs-Werkzeug (`#/stimmungen`, `js/ansichten/stimmungen.js`)
   ist eine interaktive Referenz mit WebAudio-Tönen; seine Daten (kuratierte Tunings mit
   Genre-Zuordnung aus dem `stil`-Vokabular) liegen in `data/tunings.json`, die sichtbaren
