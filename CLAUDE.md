@@ -61,10 +61,12 @@ Dinge tragen den alten Namen weiter, und zwar mit Absicht:
 - **Die Fußzeile trägt keine Rechtstext-Links mehr.** Impressum und Datenschutz
   stehen im Menü (`index.html`, `.menue-mini`), der GoatCounter-Hinweis als
   Fußnote am Ende der „Über“-Seite (`goatHinweisHtml()` in
-  `js/ansichten/info.js`). **Achtung Erreichbarkeit:** Die statischen
-  Tier-2-Seiten haben kein Menü — von dort führt seit dieser Änderung kein
-  direkter Weg mehr zum Impressum. Wer die Fußzeile dort wieder anfasst, sollte
-  das mitbedenken.
+  `js/ansichten/info.js`). **Ausnahme: die statischen Tier-2-Seiten.** Sie
+  haben kein Menü, deshalb tragen sie Impressum und Datenschutz in der
+  Fußzeilen-Spalte „Info“ (`seiten_fuss()` in `scripts/build_seiten.py`, Labels
+  `footer_impressum`/`footer_datenschutz`). Ohne diese Links führte von dort kein
+  Weg zum Impressum, das nach § 5 DDG von jeder Seite aus unmittelbar erreichbar
+  sein muss — und gerade über diese Seiten kommen Besucher aus Suchmaschinen.
 
 ## Nicht verhandelbare Architektur
 
