@@ -3633,6 +3633,2587 @@
       "hinweis": {
         "de": "Sehr wenige, lang gehaltene Grundtöne, die aufschwellen und tragen — der Bass baut Spannung über Zeit, nicht über Noten. Voll ausklingen lassen (Drop D)."
       }
+    },
+    {
+      "id": "crust_saege_riff",
+      "genre": "crust",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Crust-Riff: Zwei-Akkord-Säge"
+      },
+      "stimmung": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 170,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Ein-Finger-Powerchords in Drop D, durchgehend heruntergepickt. Die Säge lebt davon, dass der letzte Anschlag so hart ist wie der erste. Kleine Bewegung, lockerer Daumen."
+      }
+    },
+    {
+      "id": "crust_dbeat",
+      "genre": "crust",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Crust-Beat: D-Beat mit Becken-Wash"
+      },
+      "bpm": 170,
+      "spuren": {
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Der D-Beat als Motor des Crust: Kick auf der Eins, dem Und der Zwei und der Drei, Snare auf 2 und 4. Darüber rauscht offenes Becken statt einer geschlossenen Hi-Hat. Über Minuten gleich laut halten, Schultern unten."
+      }
+    },
+    {
+      "id": "crust_bass_wand",
+      "genre": "crust",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Crust-Bass: die zweite Säge"
+      },
+      "stimmung": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 170,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Der Bass sägt mit: dieselben Grundtöne wie die Gitarre in durchgehenden Achteln, angezerrt, aber mit hörbarem Attack. Zwei Sägen, eine Wand, kein Brei (Drop D)."
+      }
+    },
+    {
+      "id": "crust_abwaerts_riff",
+      "genre": "crust",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Crust-Riff: abwärts sägen"
+      },
+      "stimmung": [
+        "D2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 170,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          },
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          },
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Je zwei Anschläge pro Akkord, Schritt für Schritt nach unten bis zur leeren Saite. Der Halbton vor dem Grundton macht es düster. Zwischen den Wechseln nicht nachklingen lassen."
+      }
+    },
+    {
+      "id": "crust_skank",
+      "genre": "crust",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Crust-Beat: Punk-Skank"
+      },
+      "bpm": 180,
+      "spuren": {
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "kick": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Kick auf den Zählzeiten, Snare auf jedem Und: der schnelle Punk-Skank, in den Crust-Songs gern für ein paar Takte ausweichen. Die Snare kommt aus dem Handgelenk, sonst wird sie nach einer Minute leiser."
+      }
+    },
+    {
+      "id": "crust_bass_kick",
+      "genre": "crust",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Crust-Bass: auf der Kick"
+      },
+      "stimmung": [
+        "D1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 170,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        []
+      ],
+      "hinweis": {
+        "de": "Statt durchgehender Achtel nur die Schläge, auf denen auch die Kick des D-Beats liegt. Bass und Bassdrum klingen dann wie ein einziger Schlag. Die Lücken bleiben still."
+      }
+    },
+    {
+      "id": "pv_burst_stopp",
+      "genre": "powerviolence",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Powerviolence-Riff: Burst und Stopp"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 220,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 2
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "hinweis": {
+        "de": "Ein Takt chromatisches Geschrammel zwischen E und F, dann ein einzelner Powerchord und sofort abgedämpft. Die Stille nach dem Stopp gehört zum Riff. Lass sie nicht nachklingen."
+      }
+    },
+    {
+      "id": "pv_blast_abriss",
+      "genre": "powerviolence",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Powerviolence-Beat: Blast mit Abriss"
+      },
+      "bpm": 220,
+      "spuren": {
+        "crash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "snare": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Ein Takt Blast, dann ein einziger Schlag mit Crash und Kick, danach Stille. Die Kante ist das Stück: Der letzte Schlag sitzt genau auf der Eins, die Stille wird mitgezählt. Kurze Blöcke, Gehörschutz."
+      }
+    },
+    {
+      "id": "pv_bass_stopp",
+      "genre": "powerviolence",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Powerviolence-Bass: Stopp auf den Schlag"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 220,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "hinweis": {
+        "de": "Durchgehende Achtel, dann ein letzter Ton auf der Eins und Stille. Am Bass hört man jede Unschärfe am Ende sofort, weil die tiefe Saite gern weiterklingt. Mit beiden Händen abdämpfen."
+      }
+    },
+    {
+      "id": "pv_rasen_block",
+      "genre": "powerviolence",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Powerviolence-Riff: vom Rasen in den Block"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 200,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 2
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        [],
+        [],
+        []
+      ],
+      "hinweis": {
+        "de": "Ein Takt rasende Achtel auf G5, dann zwei schwere Akkorde mit viel Raum: der Sludge-Block. Beim Schnitt nicht abbremsen, sondern hart abbrechen und mit vollem Gewicht neu ansetzen."
+      }
+    },
+    {
+      "id": "pv_blast_zeitlupe",
+      "genre": "powerviolence",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Powerviolence-Beat: vom Blast in die Zeitlupe"
+      },
+      "bpm": 200,
+      "spuren": {
+        "crash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "snare": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Ein Takt Blast, dann ohne Übergang ein schleppender Half-Time-Takt: Kick und Crash auf der Eins, Snare erst auf der Drei. Gleiches Tempo, halbes Gefühl. Der erste schwere Schlag kommt ohne Anlauf."
+      }
+    },
+    {
+      "id": "pv_bass_block",
+      "genre": "powerviolence",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Powerviolence-Bass: schwerer Block"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 200,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        [],
+        [],
+        []
+      ],
+      "hinweis": {
+        "de": "Erst mitrasen, dann im Block nur noch zwei lange, schwere Töne mit der Gitarre. Weniger Noten, mehr Gewicht. Der Wechsel sitzt auf dem Schlag, ohne Übergangston."
+      }
+    },
+    {
+      "id": "sludge_schlepp_riff",
+      "genre": "sludge",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Sludge-Riff: zäher Schlepp"
+      },
+      "stimmung": [
+        "C2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "bpm": 62,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          },
+          {
+            "saite": 2,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          },
+          {
+            "saite": 2,
+            "bund": 3
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 6
+          },
+          {
+            "saite": 1,
+            "bund": 6
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Ein voller Drop-C-Akkord, der lange steht, ein gedämpfter Nachschlag, dann zwei schwere Wechsel bis zum Tritonus. Langsam heißt nicht ungenau: Jeder Anschlag sitzt exakt, der Dreck kommt aus Klang und Feedback."
+      }
+    },
+    {
+      "id": "sludge_halftime",
+      "genre": "sludge",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Sludge-Beat: hinter dem Schlag"
+      },
+      "bpm": 62,
+      "spuren": {
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hihat": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Half-Time mit der Snare auf der Drei und einem Kick, der in die nächste Eins schiebt. Spiel die Snare bewusst minimal spät, aber jedes Mal gleich spät. Dann klingt es zäh, ohne zu wackeln."
+      }
+    },
+    {
+      "id": "sludge_bass_fuzz",
+      "genre": "sludge",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Sludge-Bass: Fuzz-Fundament"
+      },
+      "stimmung": [
+        "C1",
+        "G1",
+        "C2",
+        "F2"
+      ],
+      "bpm": 62,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 6
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Dieselbe Bewegung wie das Gitarren-Riff, mit dickem, angezerrtem Ton. Jeder Ton steht bis kurz vor den nächsten und wird dann bewusst abgestoppt, damit die Wand nicht verschwimmt (Drop C)."
+      }
+    },
+    {
+      "id": "sludge_zeitlupe_riff",
+      "genre": "sludge",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Sludge-Riff: Hardcore in Zeitlupe"
+      },
+      "stimmung": [
+        "C2",
+        "G2",
+        "C3",
+        "F3",
+        "A3",
+        "D4"
+      ],
+      "bpm": 62,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 3
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Ein synkopiertes Hardcore-Riff, auf das halbe Tempo gezogen: gleiche Akzente, gleiche Pausen, nur gedehnt. Die Synkope muss auch in Zeitlupe als Akzent hörbar bleiben."
+      }
+    },
+    {
+      "id": "sludge_walze",
+      "genre": "sludge",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Sludge-Beat: Becken-Walze"
+      },
+      "bpm": 62,
+      "spuren": {
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Crash oder China auf den beiden schweren Schlägen, darunter eine Kick, die rollt statt marschiert. Die Becken klingen voll aus, nichts füllt die Lücken. Schwer fallen lassen statt schlagen."
+      }
+    },
+    {
+      "id": "sludge_bass_abwaerts",
+      "genre": "sludge",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Sludge-Bass: chromatisch abwärts"
+      },
+      "stimmung": [
+        "C1",
+        "G1",
+        "C2",
+        "F2"
+      ],
+      "bpm": 62,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 7
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 6
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Ein Sprung nach oben und dann chromatisch zurück nach unten: zäh, hörbar rutschend, aber jeder Ton auf seinem Platz. Leicht hinter dem Schlag spielen, ohne zu schleppen."
+      }
+    },
+    {
+      "id": "screamo_twinkle",
+      "genre": "screamo",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Screamo-Riff: Twinkle-Arpeggio"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 150,
+      "schritte": [
+        [
+          {
+            "saite": 4,
+            "bund": 7
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 9
+          }
+        ],
+        [
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 9
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 7
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 7
+          }
+        ],
+        [
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 7
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Gegriffene Töne in der siebten bis neunten Lage gegen die leere hohe E-Saite, alles klingt ineinander. Lass die Finger stehen, statt abzudämpfen. Clean oder kaum verzerrt."
+      }
+    },
+    {
+      "id": "screamo_drive",
+      "genre": "screamo",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Screamo-Beat: treibender Drive"
+      },
+      "bpm": 165,
+      "spuren": {
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "hinweis": {
+        "de": "Gerader Achtel-Drive mit Crash auf der Eins und der Drei und einer Kick, die in die nächste Eins schiebt. Treibend, aber nicht gehetzt: Der Puls bleibt stabil, auch wenn alles drängt."
+      }
+    },
+    {
+      "id": "screamo_bass_melodie",
+      "genre": "screamo",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Screamo-Bass: melodische Linie"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 150,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 1,
+            "bund": 2
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 2,
+            "bund": 2
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 1,
+            "bund": 4
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Statt nur Grundtöne eine eigene, singende Linie unter dem Arpeggio. Jeder Ton darf klingen, bis der nächste kommt. Der Bass trägt hier Melodie, nicht nur Fundament."
+      }
+    },
+    {
+      "id": "screamo_ausbruch",
+      "genre": "screamo",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Screamo-Riff: leise, dann der Ausbruch"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 165,
+      "schritte": [
+        [
+          {
+            "saite": 4,
+            "bund": 7
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 4,
+            "bund": 5
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 2
+          },
+          {
+            "saite": 2,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 2
+          },
+          {
+            "saite": 2,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 2
+          },
+          {
+            "saite": 2,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 2
+          },
+          {
+            "saite": 2,
+            "bund": 2
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          },
+          {
+            "saite": 2,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 5
+          },
+          {
+            "saite": 2,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          },
+          {
+            "saite": 1,
+            "bund": 7
+          },
+          {
+            "saite": 2,
+            "bund": 7
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          },
+          {
+            "saite": 1,
+            "bund": 7
+          },
+          {
+            "saite": 2,
+            "bund": 7
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Ein Takt einzelne, leise Töne, dann auf der Eins volle Akkorde mit aller Kraft. Der Kontrast ist die Aussage: Der leise Teil muss wirklich leise sein, der Umschlag sitzt exakt auf dem Schlag."
+      }
+    },
+    {
+      "id": "screamo_umschlag",
+      "genre": "screamo",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Screamo-Beat: vom Flüstern zum Ausbruch"
+      },
+      "bpm": 165,
+      "spuren": {
+        "crash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Ein Takt fast nichts, nur Hi-Hat-Viertel und eine Kick, dann Crash und Skank mit voller Wucht. Beide Teile im selben Tempo. Der leise Takt neigt zum Hetzen, der laute zum Schleppen."
+      }
+    },
+    {
+      "id": "screamo_bass_ausbruch",
+      "genre": "screamo",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Screamo-Bass: lange Note, dann Achtel"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 165,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Im leisen Teil ein einziger langer Ton, im Ausbruch durchgehende Achtel mit der Gitarre. Den Umschlag triffst du gemeinsam mit Kick und Crash auf der Eins."
+      }
+    },
+    {
+      "id": "mathcore_sieben_riff",
+      "genre": "mathcore",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Mathcore-Riff: 7/8 mit Stopp"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 170,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 6
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Sieben Achtel, gefühlt als 2+2+3, mit einer echten Pause mitten im Muster. Die Pause zählt mit, und der Ton danach sitzt exakt. Zuerst die Gruppen laut sprechen, dann spielen."
+      }
+    },
+    {
+      "id": "mathcore_kantig",
+      "genre": "mathcore",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Mathcore-Beat: kantig gebrochen"
+      },
+      "bpm": 150,
+      "spuren": {
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hihat": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Ein Sechzehntel-Raster, das immer wieder bricht: Kick und Hi-Hat in ungeraden Abständen, die Snare an wechselnden Stellen. Klingt chaotisch, ist aber jedes Mal exakt gleich."
+      },
+      "aufloesung": 16
+    },
+    {
+      "id": "mathcore_bass_sieben",
+      "genre": "mathcore",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Mathcore-Bass: 7/8 doppeln"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 170,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 6
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Der Bass doppelt das 7/8-Riff Ton für Ton, mit derselben Pause. In ungeraden Takten ist exaktes Zusammenspiel mit der Gitarre wichtiger als jede eigene Idee."
+      }
+    },
+    {
+      "id": "mathcore_reibung_riff",
+      "genre": "mathcore",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Mathcore-Riff: Reibung mit Anker"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 150,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 4
+          },
+          {
+            "saite": 4,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 4
+          },
+          {
+            "saite": 4,
+            "bund": 1
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Die leere tiefe E-Saite kommt immer wieder als Anker, dazwischen ein Halbton-Doppelgriff auf den hohen Saiten und am Ende der Tritonus. Die Reibung wirkt, weil der Anker sie einordnet."
+      }
+    },
+    {
+      "id": "mathcore_sieben_beat",
+      "genre": "mathcore",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Mathcore-Beat: 7/8 als 2+2+3"
+      },
+      "bpm": 170,
+      "spuren": {
+        "hihat": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "snare": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Kick auf die Anfänge der Gruppen, Snare ans Ende der Zweier- und der Dreiergruppe. Die Hi-Hat läuft in geraden Achteln weiter. So pulsiert der ungerade Takt, statt zu stolpern."
+      }
+    },
+    {
+      "id": "mathcore_bass_stopp",
+      "genre": "mathcore",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Mathcore-Bass: Abbruch und Wiedereinsatz"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 160,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [],
+        []
+      ],
+      "hinweis": {
+        "de": "Drei Töne, dann aktiv abgedämpfte Stille, Wiedereinsatz auf dem Und der Drei. Zähl die Pause innerlich weiter. Der Wiedereinsatz kommt genau auf dem gezählten Schlag, nicht ungefähr."
+      }
+    },
+    {
+      "id": "noise_tritonus_riff",
+      "genre": "noise_rock",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Noise-Rock-Riff: Tritonus-Schneise"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 120,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          },
+          {
+            "saite": 1,
+            "bund": 4
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          },
+          {
+            "saite": 1,
+            "bund": 1
+          }
+        ],
+        [
+          {
+            "saite": 3,
+            "bund": 0
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "E und B♭ als Doppelgriff, dazu ein verschobener Griff und die leere G-Saite. Das klingt bewusst schief und unbequem. Mittleres Tempo, harter Anschlag, die Pausen sauber abdämpfen."
+      }
+    },
+    {
+      "id": "noise_drive",
+      "genre": "noise_rock",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Noise-Rock-Beat: stampfender Drive"
+      },
+      "bpm": 120,
+      "spuren": {
+        "hihat": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Mittleres Tempo, Backbeat auf 2 und 4, eine Kick, die zur Zwei hin doppelt. Stampfend und bass-betont statt verspielt. Das Feel kommt aus Gleichmaß, nicht aus Fills."
+      },
+      "aufloesung": 16
+    },
+    {
+      "id": "noise_bass_linie",
+      "genre": "noise_rock",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Noise-Rock-Bass: die führende Linie"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 120,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 1,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 5
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 3
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Im Noise Rock trägt oft der Bass das Stück: eine kurze Figur mit eigener Kontur, mittig und bissig im Ton. Die Gitarre darf darüber Lärm machen, die Linie bleibt erkennbar."
+      }
+    },
+    {
+      "id": "noise_reibung_riff",
+      "genre": "noise_rock",
+      "domaene": "gitarre",
+      "typ": "tab",
+      "titel": {
+        "de": "Noise-Rock-Riff: Reibung gegen die leere Saite"
+      },
+      "stimmung": [
+        "E2",
+        "A2",
+        "D3",
+        "G3",
+        "B3",
+        "E4"
+      ],
+      "bpm": 120,
+      "schritte": [
+        [
+          {
+            "saite": 4,
+            "bund": 4
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 4
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 3
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 3
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 1
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 1
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 0
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 4,
+            "bund": 0
+          },
+          {
+            "saite": 5,
+            "bund": 0
+          }
+        ]
+      ],
+      "hinweis": {
+        "de": "Die leere hohe E-Saite klingt durch, auf der H-Saite beginnt ein Ton einen Halbton darunter und wandert schrittweise nach unten. Die wechselnde Reibung ist das Riff. Laut, mit Zerre, die Saiten ruhig nachklingen lassen."
+      }
+    },
+    {
+      "id": "noise_stampf_beat",
+      "genre": "noise_rock",
+      "domaene": "schlagzeug",
+      "typ": "drums",
+      "titel": {
+        "de": "Noise-Rock-Beat: Viertel mit Snare-Doppelung"
+      },
+      "bpm": 120,
+      "spuren": {
+        "crash": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "snare": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "kick": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "hinweis": {
+        "de": "Kick auf jeder Viertel, die Snare schlägt auf 2 und 4 zusätzlich mit. Keine Hi-Hat, nur der monotone Puls. Er wirkt durch Wiederholung, über die die Gitarren ihre Flächen legen."
+      }
+    },
+    {
+      "id": "noise_bass_stampf",
+      "genre": "noise_rock",
+      "domaene": "bass",
+      "typ": "tab",
+      "titel": {
+        "de": "Noise-Rock-Bass: Stampfen mit Halbton"
+      },
+      "stimmung": [
+        "E1",
+        "A1",
+        "D2",
+        "G2"
+      ],
+      "bpm": 120,
+      "schritte": [
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [],
+        [
+          {
+            "saite": 0,
+            "bund": 0
+          }
+        ],
+        [
+          {
+            "saite": 0,
+            "bund": 1
+          }
+        ],
+        []
+      ],
+      "hinweis": {
+        "de": "Ein stampfender Grundton mit Pausen und einem Halbton nach oben, der reibt. Nah am Steg anschlagen, damit der Ton sich gegen die verzerrte Gitarre durchsetzt."
+      }
     }
   ]
 }

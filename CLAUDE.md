@@ -1044,6 +1044,15 @@ Tokens**, nie harte Farben.
   und zwar nur in den Zeilen mit hohen Bünden. (3) Zeilen mit abweichender Länge
   im selben Block sind keine Saiten (Trennlinie über dem Tab); die häufigste
   Zeilenlänge gewinnt.
+  **Klassennamen geteilt mit der Pattern-Seite:** `.tab-raster`/`.tab-zelle`/`.tab-saite`
+  gibt es dort als `<table>`, hier als `div`-Grid. Ungescoped machte das Flex-Layout des
+  Werkzeugs aus jeder Pattern-Tabelle eine senkrechte Spalte — in allen Genres, ohne
+  Fehlermeldung. Die Regeln in `css/app.css` sind deshalb auf `div.tab-raster`/
+  `.tab-zellen .tab-zelle` bzw. `table.tab-raster`/`td.tab-zelle` eingegrenzt.
+  **Patterns** (`data/patterns.json`, 96 Einträge, je Genre 2 Riffs, 2 Beats, 2 Basslinien):
+  `pruefe_patterns()` in `validate.py` prüft Struktur und warnt, wenn ein Genre aus
+  `vokabulare.stil` keine Patterns hat — die Ansicht baut ihre Genre-Chips aus den
+  vorhandenen Einträgen, ein fehlendes Genre fiel dort nie auf.
 - **Zerr-Labor** (`#/werkzeug/zerrlabor`, `js/ansichten/werkzeug-zerrlabor.js`):
   Werkzeug auf dem gemeinsamen Audio-Kern. Die Kennlinien liegen DOM-frei in
   `js/audio/zerre.js` (Kette Hochpass → WaveShaper → Tiefpass), die Daten in
