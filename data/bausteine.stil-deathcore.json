@@ -482,6 +482,7 @@
     },
     {
       "id": "deathcore_gutturals_squeals",
+      "klangbeispiele": ["guttural", "high_scream"],
       "anzeigetitel": { "de": "Deathcore-Vocals: Gutturals, Highs & Squeals" },
       "domaene": ["gesang"],
       "kompetenzstufe": ["fortgeschritten"],

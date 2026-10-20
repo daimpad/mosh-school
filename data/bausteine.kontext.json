@@ -51,6 +51,7 @@
     },
     {
       "id": "kontext_buehne_ablauf",
+      "klangbeispiele": ["soundcheck"],
       "anzeigetitel": { "de": "Bühne: Soundcheck & Ablauf" },
       "domaene": ["ausruestung"],
       "kompetenzstufe": ["fortgeschritten"],

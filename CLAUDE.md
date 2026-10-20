@@ -209,7 +209,7 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
     bei einer fehlenden Datei. Kein Werkzeug darf stumm bleiben, weil ein Sample
     fehlt. **Klick und Referenzton sind bewusst reine Synthese:** beim Klick zählt
     die Flanke, beim Stimmgerät jeder Cent.
-  - `samples.js` — die Sample-Bank: 58 One-Shots aus ElevenLabs (Sound Effects),
+  - `samples.js` — die Sample-Bank: 62 One-Shots aus ElevenLabs (Sound Effects),
     aufbereitet von `scripts/build_samples.mjs` nach `assets/sounds/samples/`
     (Herkunft, Prompts, Auswahl: `HERKUNFT.txt` dort, Rohdateien + Generierungs-IDs
     in `scripts/samples_quelle/`). Gitarre/Bass liegen in **gemessenen**
@@ -239,6 +239,28 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
     ausgewählte, aber nicht eingebaute Klänge (Gesangstechniken, Live-Geräusche,
     gesprochenes Einzählen, Gitarren-Effekte) mit `flow_id`/`session_id` — die
     Dateien liegen im ElevenLabs-Konto, nicht im Repo; vor dem Einbau anhören.
+  - **Gesprochenes Einzählen:** `zaehlwort()` spielt „Eins“ bis „Vier“ (vier
+    Proben `zaehl_*`, aus EINER Aufnahme geschnitten, damit sie nach demselben
+    Sprecher am selben Tag klingen) auf die Schläge des Einzähltakts — in
+    Metronom, Loops und Hörbeispielen, jeweils über einem **leisen Klick**: das
+    Wort sagt, wo man ist, der Klick bleibt die Flanke. `vorlauf` je Probe legt
+    den Vokal statt des „Zw“ auf den Schlag; über vier hinaus und ohne Bank zählt
+    der Klick.
+  - `klangbeispiele.js` — **Klangbeispiele:** kurze Aufnahmen neben Bausteinen
+    (Gesangstechniken, Bühne/Proberaum, Gitarrentechniken), optionales
+    Baustein-Feld `klangbeispiele: [<id>…]`, Ansicht `js/ansichten/klangbeispiele.js`
+    (Knöpfe, eins spielt zugleich, Routenwechsel stoppt). Anders als die Bank:
+    ausgeliefert wird die **MP3-Rohdatei** (`assets/sounds/beispiele/`, kein
+    Groove, also stört der MP3-Vorlauf nicht, und als WAV wäre es dreimal so
+    schwer), Ausschnitt `ab`/`dauer` und `pegel` stehen im Modul, geladen wird
+    **erst beim Klick**. Pegel gemessen mit `node scripts/build_samples.mjs
+    --beispiele` (`--check` dazu: Abweichung > 1 dB bricht ab). Bei Gesangs-
+    Bausteinen steht der Gesundheitshinweis über den Knöpfen
+    (`klangbeispiele_hinweis_gesang`), unter allen „Erzeugt mit ElevenLabs.“
+    `validate.py` (`pruefe_klangbeispiele()`) prüft Baustein-IDs, Dateien,
+    Labels (`vokabeln.klangbeispiel`) und Herkunft. Die **Stimmungen-Seite**
+    spielt Saiten jetzt über `saite()` (verzerrte Gitarre bzw. Bass), Intervalle
+    und Skalen clean — das Stimmgerät bleibt beim synthetischen Referenzton.
   - `klangprobe.js` — lädt und dekodiert eine Datei zu einem `AudioBuffer`, mit
     Cache je URL. Bewusst schmal — **kein Sampler**, keine Tonhöhen-Zuordnung, keine
     Velocity-Schichten; was mit dem Puffer passiert, entscheidet der Aufrufer
@@ -638,6 +660,7 @@ python3 scripts/pruefe_boxen_mutation.py # …und die Pruefung schlaegt bei Fehl
 node scripts/pruefe_tonhoehe.mjs         # Stimmgeraet deckt den ganzen Stimmungs-Pool ab
 node scripts/build_gitarrenprobe.mjs --check  # Klangproben aus dem Rohbestand reproduzierbar
 node scripts/build_samples.mjs --check   # Sample-Bank aus den ElevenLabs-Rohdateien, Grundtöne ±10 Cent
+node scripts/build_samples.mjs --beispiele --check  # Pegel der Klangbeispiele ±1 dB
 node scripts/build_appicons.mjs --check  # App-Icons, favicon-96.png und favicon.ico aus favicon.svg
 node scripts/build_share.mjs --check     # Vorschaubild (og:image) aus Labels, Token und Schriften
                                          # (alle vier brauchen Chromium + Server auf :8123, daher nicht in der CI)

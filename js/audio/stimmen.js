@@ -13,7 +13,7 @@
 // die Synthese gespielt hat.
 
 import { holeRauschen } from './kontext.js';
-import { hatSample, spieleSample, waehleTon } from './samples.js';
+import { SAMPLES, hatSample, spieleSample, waehleTon } from './samples.js';
 
 // Spielt die Probe `name`, sonst die Synthese. Liefert die Quellen als Liste.
 function mitRueckfall(ctx, ziel, zeit, name, synth) {
@@ -37,6 +37,21 @@ export function klick(ctx, ziel, zeit, { akzent = false, leise = false } = {}) {
   osc.start(zeit);
   osc.stop(zeit + 0.05);
   return [osc];
+}
+
+// Gesprochenes Einzählen: „Eins“ bis „Vier“ auf die Zählzeiten des
+// Einzähltakts. Der Vokal soll auf dem Schlag liegen, deshalb startet die
+// Probe um ihren `vorlauf` früher. Über vier hinaus (ungerade Takte) und ohne
+// geladene Bank zählt der Klick — gezählt wird immer, nur nicht immer gesprochen.
+// `dauer` kappt das Wort vor dem nächsten Schlag (bei schnellem Tempo).
+export function zaehlwort(ctx, ziel, zeit, zahl, { dauer = null } = {}) {
+  const name = `zaehl_${zahl}`;
+  if (zahl >= 1 && zahl <= 4 && hatSample(name)) {
+    const vorlauf = SAMPLES[name].vorlauf || 0;
+    const start = Math.max(ctx.currentTime, zeit - vorlauf);
+    return [spieleSample(ctx, ziel, start, name, { dauer: dauer ? dauer + (zeit - start) : null })];
+  }
+  return klick(ctx, ziel, zeit, { akzent: zahl === 1 });
 }
 
 // Kick: fallender Sinus (Ton → Bauch).

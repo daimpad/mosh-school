@@ -22,6 +22,10 @@
 //   node scripts/build_samples.mjs          # schreibt assets/sounds/samples/*.wav
 //   node scripts/build_samples.mjs --check  # baut nur im Speicher, meldet Drift
 //   node scripts/build_samples.mjs --messen # gibt nur die gemessenen Grundtöne aus
+//   node scripts/build_samples.mjs --beispiele  # misst die Klangbeispiele
+//        (js/audio/klangbeispiele.js) und gibt je Eintrag den Pegel aus, der
+//        ihn auf seine Ziel-Lautheit bringt; mit --check bricht es bei mehr
+//        als 1 dB Abweichung zum eingetragenen Wert ab.
 
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -109,6 +113,13 @@ const PROBEN = [
   { name: 'bass_g3', dauer: 1.2, hochpass: 60 },
   { name: 'bass_gedaempft_g1', dauer: 0.5, hochpass: 25 },
   { name: 'bass_gedaempft_cis2', dauer: 0.5, hochpass: 30 },
+  // Zählwörter fürs Einzählen: aus EINER Aufnahme („Eins, zwei, drei, vier“,
+  // gleichmäßig gesprochen) geschnitten — einzeln erzeugte Wörter klängen nach
+  // vier verschiedenen Tagen. `ab` = Sekunde, ab der der Anschlag gesucht wird.
+  { name: 'zaehl_1', ab: 0, dauer: 0.55, hochpass: 80 },
+  { name: 'zaehl_2', ab: 0.745, dauer: 0.55, hochpass: 80 },
+  { name: 'zaehl_3', ab: 1.505, dauer: 0.55, hochpass: 80 },
+  { name: 'zaehl_4', ab: 2.245, dauer: 0.55, hochpass: 80 },
 ];
 
 const quelleVon = (name) => `scripts/samples_quelle/${name.replace(/_/g, '-')}.mp3`;
@@ -122,14 +133,14 @@ async function baue() {
   for (const probe of PROBEN) {
     const eintrag = SAMPLES[probe.name];
     if (!eintrag) throw new Error(`${probe.name}: fehlt in SAMPLES (js/audio/samples.js)`);
-    const quelle = quelleVon(probe.name);
+    const quelle = quelleVon(eintrag.quelle || probe.name);
     if (!existsSync(quelle)) throw new Error(`${probe.name}: Rohdatei ${quelle} fehlt`);
-    const { b64, f0 } = await seite.evaluate(async ([pfad, rate, dauer, hochpass, spitze, tonal, soll]) => {
+    const { b64, f0 } = await seite.evaluate(async ([pfad, rate, dauer, hochpass, spitze, tonal, soll, abSek]) => {
       const roh = await (await fetch(`/${pfad}`)).arrayBuffer();
       const dek = await new OfflineAudioContext(1, rate, rate).decodeAudioData(roh);
       // Kanal 0 statt Summe: Die Stereo-Spuren der Rohdateien sind nicht
       // phasengleich, summiert entstünde ein Kammfilter.
-      const d = dek.getChannelData(0);
+      const d = dek.getChannelData(0).subarray(Math.round(abSek * rate));
       let spitzeRoh = 0;
       for (let i = 0; i < d.length; i++) spitzeRoh = Math.max(spitzeRoh, Math.abs(d[i]));
       // Anschlag: erster Wert über 2 % der Spitze, 2 ms davor beginnen.
@@ -210,7 +221,7 @@ async function baue() {
       const bytes = new Uint8Array(i16.buffer);
       for (let i = 0; i < bytes.length; i += 8192) bin += String.fromCharCode(...bytes.subarray(i, i + 8192));
       return { b64: btoa(bin), f0 };
-    }, [quelle, ABTASTRATE, probe.dauer, probe.hochpass, SPITZE, !!eintrag.grundton, eintrag.grundton || 0]);
+    }, [quelle, ABTASTRATE, probe.dauer, probe.hochpass, SPITZE, !!eintrag.grundton, eintrag.grundton || 0, probe.ab || 0]);
     if (MESSEN) {
       if (eintrag.grundton) console.log(`  ${probe.name}: ${f0?.toFixed(2)} Hz`);
       continue;
@@ -251,6 +262,44 @@ function wavKopf(pcm) {
 }
 
 const hash = (b) => createHash('sha256').update(b).digest('hex').slice(0, 16);
+
+// Ziel-Lautheit der Klangbeispiele (lautestes 50-ms-Fenster nach Pegel).
+// Flächen (Raumton, Publikum) leiser als eine Stimme, Rückkopplungen leiser
+// als alles andere — die sind schon bei gleichem Messwert unangenehm.
+const BEISPIEL_LAUTHEIT = { raumton_club: 0.07, publikum_club: 0.16, moshpit: 0.16, pa_feedback: 0.12, gitarre_feedback: 0.14 };
+const BEISPIEL_STANDARD = 0.22;
+
+async function messeBeispiele() {
+  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+  const seite = await browser.newPage();
+  await seite.goto(`${BASIS}/index.html`);
+  const werte = await seite.evaluate(async () => {
+    const { BEISPIELE } = await import('/js/audio/klangbeispiele.js');
+    const aus = {};
+    for (const [name, b] of Object.entries(BEISPIELE)) {
+      const roh = await (await fetch('/assets/sounds/beispiele/' + b.datei)).arrayBuffer();
+      const dek = await new OfflineAudioContext(1, 44100, 44100).decodeAudioData(roh);
+      const d = dek.getChannelData(0).subarray(Math.round(b.ab * 44100), Math.round((b.ab + b.dauer) * 44100));
+      let spitze = 0, laut = 0;
+      for (const v of d) spitze = Math.max(spitze, Math.abs(v));
+      for (let i = 0; i + 2205 <= d.length; i += 441) { let q = 0; for (let j = i; j < i + 2205; j++) q += d[j] * d[j]; laut = Math.max(laut, Math.sqrt(q / 2205)); }
+      aus[name] = { spitze, laut, pegel: b.pegel, ende: dek.duration };
+    }
+    return aus;
+  });
+  await browser.close();
+  let fehler = 0;
+  for (const [name, w] of Object.entries(werte)) {
+    const ziel = BEISPIEL_LAUTHEIT[name] ?? BEISPIEL_STANDARD;
+    const soll = +Math.min(0.9 / w.spitze, ziel / w.laut).toFixed(2);
+    const db = 20 * Math.log10(w.pegel / soll);
+    console.log(`  ${name}: pegel ${soll}${Math.abs(db) > 1 ? `  (eingetragen ${w.pegel}, ${db.toFixed(1)} dB daneben)` : ''}`);
+    if (PRUEFEN && Math.abs(db) > 1) fehler++;
+  }
+  if (fehler) { console.error(`${fehler} Klangbeispiel(e) mit falschem Pegel`); process.exit(1); }
+  process.exit(0);
+}
+if (process.argv.includes('--beispiele')) await messeBeispiele();
 
 const gebaut = await baue();
 if (MESSEN) process.exit(0);

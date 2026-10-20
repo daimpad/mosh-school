@@ -7,6 +7,7 @@
   "bausteine": [
     {
       "id": "erstes_konzert_besuchen",
+      "klangbeispiele": ["publikum_club"],
       "anzeigetitel": {
         "de": "Das erste Konzert besuchen"
       },
@@ -26,6 +27,7 @@
     },
     {
       "id": "pit_grundlagen",
+      "klangbeispiele": ["moshpit"],
       "anzeigetitel": {
         "de": "Wie ein Pit funktioniert"
       },
@@ -49,6 +51,7 @@
     },
     {
       "id": "pit_sicherheit",
+      "klangbeispiele": ["moshpit"],
       "anzeigetitel": {
         "de": "Sicherheit und Verantwortung im Pit"
       },

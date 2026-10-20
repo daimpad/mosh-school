@@ -60,6 +60,7 @@
     },
     {
       "id": "grind_vocals_extrem",
+      "klangbeispiele": ["guttural"],
       "anzeigetitel": {
         "de": "Grind-Vocals: tiefste Gutturals & Pig Squeals"
       },

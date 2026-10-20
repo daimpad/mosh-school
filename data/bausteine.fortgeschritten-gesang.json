@@ -9,6 +9,7 @@
   "bausteine": [
     {
       "id": "fry_verzerrung",
+      "klangbeispiele": ["vocal_fry", "fry_scream"],
       "anzeigetitel": {
         "de": "Fry-Ansatz: Verzerrung aus dem Knarren"
       },
@@ -56,6 +57,7 @@
     },
     {
       "id": "false_cord_ansatz",
+      "klangbeispiele": ["false_cord"],
       "anzeigetitel": {
         "de": "Taschenfalten-Ansatz (False Cord)"
       },
@@ -102,6 +104,7 @@
     },
     {
       "id": "growl_resonanz",
+      "klangbeispiele": ["growl_tief", "growl_rau"],
       "anzeigetitel": {
         "de": "Growls formen: Resonanz & Vokale"
       },
@@ -146,6 +149,7 @@
     },
     {
       "id": "scream_hoehe",
+      "klangbeispiele": ["high_scream"],
       "anzeigetitel": {
         "de": "Höhere Screams: der helle Ansatz"
       },
@@ -270,6 +274,7 @@
     },
     {
       "id": "clean_harsh_wechsel",
+      "klangbeispiele": ["clean_ton_tief", "false_cord"],
       "anzeigetitel": {
         "de": "Wechsel zwischen Clean & Harsh"
       },

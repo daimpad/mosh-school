@@ -12,7 +12,7 @@ import { t } from '../i18n.js';
 import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
-import { klick } from '../audio/stimmen.js';
+import { klick, zaehlwort } from '../audio/stimmen.js';
 import { rendereWav } from '../audio/wav.js';
 import { holeWerkzeugDaten } from '../werkzeug-speicher.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
@@ -91,8 +91,12 @@ function planeKlick(ctx, ziel, zeit, i, countinTakte) {
   const { takt, istSchlag, istEins } = schrittInfo(i);
   const imCountin = i < countinTakte * zustand.takt * zustand.unterteilung;
   if (imCountin) {
-    // Count-in: nur die Schläge, jeder betont — deutliches „vorzählen".
-    if (istSchlag) klick(ctx, ziel, zeit, { akzent: true });
+    // Count-in: nur die Schläge, gesprochen gezählt („Eins, zwei …“) über einem
+    // leisen Klick — das Wort sagt, wo man ist, der Klick bleibt die Flanke.
+    if (istSchlag) {
+      zaehlwort(ctx, ziel, zeit, schrittInfo(i).schlag + 1, { dauer: 54 / zustand.bpm });
+      klick(ctx, ziel, zeit, { leise: true });
+    }
     return;
   }
   // „Nur Gruppenanfang": alles außer der Eins unterdrücken — man hört nur die

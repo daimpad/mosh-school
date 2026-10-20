@@ -11,7 +11,7 @@ import { label, t } from '../i18n.js';
 import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeKontext, holeAusgang, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
-import { klick, kick, snare, hihat, crash } from '../audio/stimmen.js';
+import { klick, kick, snare, hihat, crash, zaehlwort } from '../audio/stimmen.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 const STIMME = { kick, snare, hihat, crash };
@@ -99,7 +99,11 @@ function starte(el) {
     schrittDauer: () => 60 / zustand.bpm / 4, // Sechzehntel
     beiSchritt: (zeit, i) => {
       if (i < countinSteps) {
-        if (i % 4 === 0) klick(ctx, ziel, zeit, { akzent: i === 0 });
+        // Gesprochen eingezählt, darunter ein leiser Klick als Flanke.
+        if (i % 4 === 0) {
+          zaehlwort(ctx, ziel, zeit, i / 4 + 1, { dauer: 54 / zustand.bpm });
+          klick(ctx, ziel, zeit, { leise: true });
+        }
         return;
       }
       const schritt = (i - countinSteps) % SCHRITTE;

@@ -246,6 +246,7 @@
     },
     {
       "id": "gitarren_elektronik",
+      "klangbeispiele": ["kabel_knacken"],
       "anzeigetitel": {
         "de": "Potis, Kondensator und Kabel"
       },

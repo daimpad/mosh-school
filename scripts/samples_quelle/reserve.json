@@ -1,84 +1,25 @@
 {
  "_meta": {
   "zweck": "Reserve: mit ElevenLabs erzeugte, ausgewählte, aber (noch) nicht eingebaute Klänge. Die Dateien liegen in den genannten Flows im ElevenLabs-Konto, nicht im Repo; creative_get_flow_run_status mit flow_id und session_id liefert frische Download-Adressen. Vor dem Einbau anhören.",
-  "erzeugt": "2026-10-20"
+  "erzeugt": "2026-10-20",
+  "stand": "Eingebaut sind inzwischen die Klangbeispiele (js/audio/klangbeispiele.js) und die Zählwörter; hier steht nur noch, was nicht eingebaut ist."
  },
  "flows": {
   "ZERRER Reserve Gesang": {
    "flow_id": "EHtgJ96GzdiEoYiM5EBr",
    "url": "https://elevenlabs.io/app/flows/EHtgJ96GzdiEoYiM5EBr",
    "klaenge": {
-    "growl_tief": {
-     "generation_id": "yqf1TMMts2adqUgnocYg",
-     "session_id": "j0PasvRT1gBhat1RVx9u",
-     "prompt": "Solo male death metal vocalist, one deep sustained growl on the vowel \"oh\", about 2 seconds, raw distorted throat, dry close-mic studio recording, no music, no instruments, no reverb, no words",
-     "notiz": "etwa 107 Hz, eher tonal; rauere Alternative growl_tief_1 (4,5 s, kürzen)"
-    },
-    "guttural": {
-     "generation_id": "Wg1RenYcOBOhvmgfrY7C",
-     "session_id": "5SjL2KhslL4mFYPzdSu5",
-     "prompt": "Solo human vocalist, extremely low gurgling guttural vocal, brutal death metal slam style, one sustained guttural on \"uh\", about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
-     "notiz": "etwa 93 Hz, gurgelnde Pegelschwankung"
-    },
-    "fry_scream": {
-     "generation_id": "LKeJsKfDREO67uriGg5Y",
-     "session_id": "6yOtqXrCMTsDziMVCfKN",
-     "prompt": "Solo human vocalist, one vocal fry scream on the vowel \"eh\", mid register, raspy crackling metalcore scream, about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
-     "notiz": "mittlere Lage, breitbandig"
-    },
-    "false_cord": {
-     "generation_id": "QtFbZpnpYnNUmhvVyupe",
-     "session_id": "bdF97wakQhFfpdK7N3dY",
-     "prompt": "Solo human vocalist, one false cord scream on the vowel \"ah\", rough gritty mid-high metal scream, sustained about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
-     "notiz": "mittel-hoch, rau; ob wirklich Taschenfalten, nur per Gehör"
-    },
-    "high_scream": {
-     "generation_id": "fiBxyboMAvh0OFZXMCrr",
-     "session_id": "BDesQsBKtXI3CLkxkMdM",
-     "prompt": "Solo human vocalist, one high-pitched black metal shriek on \"ee\", harsh raspy screeching scream, sustained about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
-     "notiz": "etwa 660 Hz"
-    },
-    "hardcore_shout": {
-     "generation_id": "qjXHnYA10EXyyBs9bbqW",
-     "session_id": "1HyIt6nbV9BisW5qpl2W",
-     "prompt": "Solo male hardcore punk vocalist, one short barked hardcore shout on \"hey\", gritty yelled, under 1 second, dry close-mic studio, single voice, no crowd, no music, no instruments, no reverb",
-     "notiz": "0,7 s, 110 ms Stille vorn"
-    },
     "pig_squeal": {
      "generation_id": "PSaIPgESz3mvmFTQcLXB",
      "session_id": "tILXmbM6tzVTMfZGMY8w",
      "prompt": "Solo human deathcore vocalist performing a pig squeal vocal technique, one high inhaled squealing \"eee\" vocal, about 1.5 seconds, dry close-mic studio, human voice only, not an animal, no music, no instruments, no reverb",
      "notiz": "unsicher: könnte ein echtes Schwein sein — anhören"
     },
-    "clean_ton_m": {
-     "generation_id": "a1JzRGDyywrVQy4fRXuz",
-     "session_id": "ozDooBOtOhuHBtTrPR2d",
-     "prompt": "Solo male singer, one clean sustained sung note on the vowel \"ah\", chest voice, steady pitch, about 2.5 seconds, dry close-mic studio, a cappella, no music, no instruments, no reverb, no words",
-     "notiz": "D3, stabil"
-    },
-    "clean_ton_w": {
-     "generation_id": "oCKi2Z35Ts3cLTY7ZfbK",
-     "session_id": "Hj1TmUA3BUMOOXEhrApw",
-     "prompt": "Solo female singer, one clean sustained sung note on the vowel \"ah\", chest voice, steady pitch, about 2.5 seconds, dry close-mic studio, a cappella, no music, no instruments, no reverb, no words",
-     "notiz": "E4, leichtes Vibrato"
-    },
-    "vocal_fry_rein": {
-     "generation_id": "Y2AVw4dVvBPnEPWe5ahq",
-     "session_id": "JJm9tllMr0VORHts0tX5",
-     "prompt": "Close-mic recording of one man making a quiet relaxed vocal fry sound: very low slow crackling glottal pulses, the creaky voice at the end of a lazy tired \"aah\" when the breath runs out, no growl, no scream, no singing, about 2 seconds, dry, no music, no reverb",
-     "notiz": "leise, bei 1,85 s schneiden"
-    },
-    "zischen": {
-     "generation_id": "axCwuxr2DpwXxHiomxo5",
-     "session_id": "OZi8JOflHzseGb0BHBXT",
-     "prompt": "A person exhaling a long steady even hiss \"ssss\" through the teeth, breath support exercise, constant level, about 3 seconds, dry close-mic, single voice, no music, no reverb",
-     "notiz": "nur 11,35–15,55 s verwenden"
-    },
-    "lippenflattern": {
-     "generation_id": "A0x6Vyp0PKgzqeLrm1tS",
-     "session_id": "grUqCEa1Xabd2o4wwnpN",
-     "prompt": "Singer vocal warm-up, lip trill (lips buzzing \"brrr\") while gliding pitch from low to high and back, one siren, about 3 seconds, single voice, dry close-mic, no music, no reverb",
-     "notiz": "flacher Bogen, keine echte Sirene"
+    "pig_squeal_mensch": {
+     "generation_id": "4XxbEnIwuAkrPhnUlaw9",
+     "session_id": "aL3OFLJZNxxbb2hkyAre",
+     "prompt": "A young man, a human deathcore singer, performs a pig squeal … (zweiter Wortlaut, ausdrücklich Mensch)",
+     "notiz": "unsicher, ob menschlich — anhören; 0,13 s Stille vorn"
     }
    }
   },
@@ -86,23 +27,11 @@
    "flow_id": "N9b37btKVl8EJTi3vefW",
    "url": "https://elevenlabs.io/app/flows/N9b37btKVl8EJTi3vefW",
    "klaenge": {
-    "publikum_club": {
-     "generation_id": "ZE35XD1fWBQ0XVg5wkOg",
-     "session_id": "sNhcrCP6TdErGakfC2bI",
-     "prompt": "Small sweaty club crowd applauding and cheering loudly after a band finishes a song, whoops, whistles and claps that slowly die down, live recording from the stage, no music [duration_seconds 4, prompt_influence 0.5]",
-     "notiz": "4 s, klingt ab"
-    },
     "publikum_chant": {
      "generation_id": "SlPxdHWeAxWQemsD8Sv2",
      "session_id": "gVssCmAmTvHIQgL5kL7I",
      "prompt": "Concert crowd chanting rhythmically in unison \"hey! hey! hey! hey!\" with steady beat, wordless shouts, club venue, no music, 4 seconds",
      "notiz": "rhythmisch; längere Alternative publikum_chant_4 (16 s)"
-    },
-    "raumton_club": {
-     "generation_id": "RlAOXxilTBt1YlXeFBHY",
-     "session_id": "jGq5Yx7d4lWPN1lSJkFP",
-     "prompt": "Room tone of an empty concrete concert hall before doors open, constant low rumble of ventilation fans, soft electrical hum, quiet and steady, no voices, no music, no footsteps [duration_seconds 5, prompt_influence 0.5]",
-     "notiz": "sehr leise, normalisieren"
     },
     "amp_brummen": {
      "generation_id": "9znV9LgNy7AQc1okmaAh",
@@ -110,47 +39,17 @@
      "prompt": "Idle high-gain guitar amplifier humming, 50 Hz mains hum and buzz with faint hiss, nobody playing, steady, close mic, 3 seconds",
      "notiz": "60-Hz-Brummen (US-Netz), nicht 50 Hz"
     },
-    "pa_feedback": {
-     "generation_id": "7QCZpXQ9ZMCkugwpEIju",
-     "session_id": "bWakOHvuVoPJirPFE8kD",
-     "prompt": "Short low-to-mid pitched microphone feedback ringing through a PA system, swelling briefly then quickly cut off by the sound engineer, soft and moderate volume, not shrill, not piercing, 1.5 seconds",
-     "notiz": "778 Hz, kurz — leise einpegeln"
-    },
-    "kabel_knacken": {
-     "generation_id": "azRpksAUTgdYJK5i44y8",
-     "session_id": "4z6nj9Ipw4XrtgNgk4ZM",
-     "prompt": "Quarter-inch instrument cable being plugged into an electric guitar jack while the amp is on, loud crackle and pop through the amp followed by a short ground hum buzz [duration_seconds 1.5, prompt_influence 0.5]",
-     "notiz": "Knacken + Brummen"
-    },
-    "moshpit": {
-     "generation_id": "isiHfKKINX0SutYKBqKj",
-     "session_id": "JuPXmMSIoi7As7HmZV9Q",
-     "prompt": "Inside a moshpit at a hardcore show, bodies bumping and colliding, stomping feet, shouts and yells from the crowd, loud distorted live music muffled in the background [duration_seconds 4, prompt_influence 0.4]",
-     "notiz": "evtl. geclippt"
-    },
     "proberaum_tuer": {
      "generation_id": "jSxMoq8wFojb8cQAS6j4",
      "session_id": "AyHTlVccjQiB8GkvF51C",
      "prompt": "Heavy soundproof rehearsal room door opens in a basement corridor, a loud metal band playing inside becomes clearly audible, then the heavy door is pulled shut with a thud and the music is muffled again [duration_seconds 4, prompt_influence 0.5]",
      "notiz": "unsicher — anhören"
     },
-    "einzaehlen_de": {
-     "generation_id": "6mfq48soYJTSdXjAMrxW",
-     "session_id": "2PZTTe0Z7x8EhkpZFrWF",
-     "prompt": "Eins! <break time=\"0.3s\" /> Zwei! <break time=\"0.3s\" /> Drei! <break time=\"0.3s\" /> Vier! [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
-     "notiz": "„Eins, zwei, drei, vier“, 747 ms Abstand (≈ 80 BPM), Stimme Michael A2eYGaZmwykOiEVBlQ7h, eleven_multilingual_v2"
-    },
     "einzaehlen_kurz": {
      "generation_id": "4Ci5YPP5IXBSg3pfbPHG",
      "session_id": "SxiJr9gfJhMOxdIXPpqb",
      "prompt": "Eins! <break time=\"0.3s\" /> Zwei! [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
      "notiz": "„Eins, zwei“, gleiches Tempo"
-    },
-    "soundcheck_de": {
-     "generation_id": "iTwv1VDQvIhaae9LkWbV",
-     "session_id": "Mx5GN8y659CeUOlfPiaG",
-     "prompt": "Check, <break time=\"0.2s\" /> eins, zwei. <break time=\"0.5s\" /> Check. [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
-     "notiz": "„Check, eins, zwei. Check.“"
     }
    }
   },
@@ -158,17 +57,17 @@
    "flow_id": "ylq74IDqYdXP3Y94SCPO",
    "url": "https://elevenlabs.io/app/flows/ylq74IDqYdXP3Y94SCPO",
    "klaenge": {
-    "pinch_harmonic": {
-     "generation_id": "PFyQREo3XBVjUFhLSd8X",
-     "session_id": "gfoHoUidnPzCROHUyasr",
-     "prompt": "Single pinch harmonic squeal on a high-gain distorted electric guitar, one squealing artificial harmonic note with slight vibrato, metal, dry",
-     "notiz": "Quietschen um 2,2 kHz"
-    },
     "pick_scrape": {
      "generation_id": "fXvoClBycMp9zHZLYPWC",
      "session_id": "sZzE8dFVSxjCtDopzGoK",
      "prompt": "Pick scrape on a high-gain distorted electric guitar, pick edge dragged down the wound low strings, harsh descending scratchy whoosh, one gesture, dry",
      "notiz": "breitbandiges Kratzen, 1 s"
+    },
+    "slide_auf": {
+     "generation_id": "Hq3ws0UIEUx4P9vqeuFX",
+     "session_id": "yAeOdcwkza3vPc92vzpB",
+     "prompt": "Distorted electric guitar slide up … (duration 2 s, prompt_influence 0.6)",
+     "notiz": "steigt nur bis 0,65 s, danach fällt der Ton wieder"
     }
    }
   },

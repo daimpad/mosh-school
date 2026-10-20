@@ -515,6 +515,7 @@
     },
     {
       "id": "sludge_sound_gear",
+      "klangbeispiele": ["gitarre_feedback"],
       "anzeigetitel": {
         "de": "Sludge-Sound: Fuzz, Tiefe & Feedback"
       },

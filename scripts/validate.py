@@ -366,6 +366,43 @@ SHARE_BILD = 'assets/images/marke/share.png'
 SHARE_MASSE = (1200, 630)          # 1,91:1 — das Format, das Messenger und Social erwarten
 
 
+def pruefe_klangbeispiele(fehler, warnung, bausteine, labels):
+    """Klangbeispiele (js/audio/klangbeispiele.js): kurze Aufnahmen neben
+    Bausteinen. Jede Baustein-Angabe muss einen Eintrag in BEISPIELE treffen,
+    jeder Eintrag eine Datei unter assets/sounds/beispiele/, ein Label unter
+    vokabeln.klangbeispiel und eine Herkunft in quellen.json. Ein Tippfehler in
+    der Baustein-Liste fiele sonst nur dadurch auf, dass ein Knopf fehlt."""
+    with open(os.path.join(ROOT, 'js', 'audio', 'klangbeispiele.js'), encoding='utf-8') as f:
+        eintraege = dict(re.findall(r"^  (\w+): \{ datei: '([^']+\.mp3)'", f.read(), re.M))
+    if not eintraege:
+        fehler.append('js/audio/klangbeispiele.js: keine BEISPIELE gefunden (Literal umgebaut?)')
+        return
+    with open(os.path.join(ROOT, 'scripts', 'samples_quelle', 'quellen.json'), encoding='utf-8') as f:
+        quellen = json.load(f)
+    namen = (labels.get('vokabeln') or {}).get('klangbeispiel') or {}
+    benutzt = set()
+    for b in bausteine:
+        liste = b.get('klangbeispiele')
+        if liste is None:
+            continue
+        if not isinstance(liste, list) or not liste:
+            fehler.append(f'{b.get("id")}: klangbeispiele muss eine nicht leere Liste sein')
+            continue
+        for kb in liste:
+            if kb not in eintraege:
+                fehler.append(f'{b.get("id")}: Klangbeispiel "{kb}" gibt es nicht (js/audio/klangbeispiele.js)')
+            benutzt.add(kb)
+    for name, datei in eintraege.items():
+        if not os.path.isfile(os.path.join(ROOT, 'assets', 'sounds', 'beispiele', datei)):
+            fehler.append(f'Klangbeispiel {name}: Datei assets/sounds/beispiele/{datei} fehlt')
+        if not (quellen.get('beispiele/' + datei[:-4]) or {}).get('generation_id'):
+            fehler.append(f'Klangbeispiel {name}: keine Herkunft in quellen.json (beispiele/{datei[:-4]})')
+        if not namen.get(name):
+            fehler.append(f'Klangbeispiel {name}: Label vokabeln.klangbeispiel.{name} fehlt')
+        if name not in benutzt:
+            warnung.append(f'Klangbeispiel {name}: von keinem Baustein genutzt')
+
+
 def pruefe_samples(fehler, warnung, sw_shell):
     """Sample-Bank der Stimmen (js/audio/samples.js, erzeugt von
     scripts/build_samples.mjs). Der Generator braucht Chromium und laeuft nicht
@@ -398,7 +435,8 @@ def pruefe_samples(fehler, warnung, sw_shell):
         if pfad in sw_shell:
             warnung.append(f'sw.js: Sample "{pfad}" steht in SHELL — die Bank wird zur Laufzeit '
                            f'gecacht; in der Hülle lüde jede neue Version sie komplett neu')
-        stamm = datei[:-4]
+        quelle = re.search(r"quelle: '([^']+)'", rest)
+        stamm = quelle.group(1) if quelle else datei[:-4]
         if not os.path.isfile(os.path.join(ROOT, 'scripts', 'samples_quelle', stamm + '.mp3')):
             fehler.append(f'Sample "{pfad}": Rohquelle scripts/samples_quelle/{stamm}.mp3 fehlt')
         if not (quellen.get(stamm) or {}).get('generation_id'):
@@ -1183,6 +1221,7 @@ def main():
             fehler.append(f'Klangprobe "{pfad}": erwartet Mono/16 bit/44100 Hz, ist {ist}')
 
     pruefe_samples(fehler, warnung, sw_shell)
+    pruefe_klangbeispiele(fehler, warnung, bausteine, lade('data/labels/de.json'))
 
     gesamt = pruefe_groessen(fehler)
     pruefe_pad_adressen(fehler)

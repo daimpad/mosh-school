@@ -3034,6 +3034,10 @@ td.tab-zelle.schritt-aktiv, .drum-zelle.schritt-aktiv { background: var(--flaech
 .demo-presets-titel { font-size: 0.78rem; }
 .demo-toggle { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer; }
 .demo-hoerbeispiel h2 { margin-top: 0; }
+/* Klangbeispiele (js/ansichten/klangbeispiele.js): dieselbe Fläche wie ein Hörbeispiel. */
+.klangbeispiele h2 { margin-top: 0; }
+.klangbeispiele-status:empty { display: none; }
+.klangbeispiele-herkunft { font-size: 0.78rem; margin-bottom: 0; }
 
 /* --- Grenzgänger-Werkzeuge: Gefühlslandkarte + Genre-Mix-Generator --- */
 /* Beide monochrom über die Tinten-/Akzent-Tokens; die SVGs tragen keine harten

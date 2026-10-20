@@ -3,7 +3,7 @@ Sample-Bank der Stimmen — Herkunft und Verwendung
 
 WAS DAS IST
 -----------
-58 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
+62 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
 js/audio/samples.js) statt der früheren Synthese spielt: im Pattern-Werkzeug,
 in den Play-along-Loops, in den Hörbeispielen der Bausteine und im
 Tabulatur-Werkzeug.
@@ -17,6 +17,10 @@ Tabulatur-Werkzeug.
                gitarre-clean-*  8 Grundtöne A2 … E5, unverzerrt
   Bass         bass-*           8 Grundtöne E1 … G3
                bass-gedaempft-* 2 Grundtöne G1, C♯2
+  Sprache      zaehl-1 … zaehl-4  „Eins“ bis „Vier“ fürs Einzählen (Metronom,
+               Loops, Hörbeispiele), aus EINER Aufnahme geschnitten (Sprach-
+               synthese, Stimme „Michael“, eleven_multilingual_v2); `vorlauf`
+               legt den Vokal auf den Schlag, ein leiser Klick bleibt die Flanke
 
 Varianten (kick-2, snare-3 …) spielen reihum (Round-Robin), damit schnelle
 Folgen nicht nach Maschinengewehr klingen. Ghost Note und Rimshot spielen die
@@ -79,7 +83,20 @@ Neu bauen:
 
 Braucht Chromium (MP3-Dekodierung) und läuft deshalb nicht in der CI; dort
 prüft scripts/validate.py nur, dass jede Datei aus SAMPLES existiert, das
-richtige Format hat, in der SHELL steht und eine Rohquelle mit Herkunft hat.
+richtige Format hat und eine Rohquelle mit Herkunft hat.
+
+
+KLANGBEISPIELE (assets/sounds/beispiele/)
+-----------------------------------------
+22 kurze Aufnahmen zum Anhören neben Bausteinen: Gesangstechniken (Growl,
+Guttural, Fry, False Cord, hoher Scream, Shout, Clean, Vocal Fry, Atem- und
+Einsingübungen), Bühne und Proberaum (Publikum, Moshpit, Raumton, PA-
+Rückkopplung, Kabelknacken, Soundcheck-Ansage) und Gitarrentechniken (Pinch
+Harmonic, Dive Bomb, Feedback, Slide). Ausgeliefert wird die MP3-Rohdatei
+selbst; Ausschnitt (ab/dauer) und Pegel stehen in js/audio/klangbeispiele.js,
+der Pegel ist gemessen (node scripts/build_samples.mjs --beispiele). Welche
+Übung welches Beispiel zeigt, steht am Baustein im Feld `klangbeispiele`.
+Herkunft je Datei in quellen.json unter `beispiele/<name>`.
 
 
 RESERVE

@@ -49,6 +49,116 @@
   "generation_id": "ZpFeclaOm2HPRhp1uT2C",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/clean-ton-m": {
+  "prompt": "Solo male singer, one clean sustained sung note on the vowel \"ah\", chest voice, steady pitch, about 2.5 seconds, dry close-mic studio, a cappella, no music, no instruments, no reverb, no words",
+  "generation_id": "a1JzRGDyywrVQy4fRXuz",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/clean-ton-w": {
+  "prompt": "Solo female singer, one clean sustained sung note on the vowel \"ah\", chest voice, steady pitch, about 2.5 seconds, dry close-mic studio, a cappella, no music, no instruments, no reverb, no words",
+  "generation_id": "oCKi2Z35Ts3cLTY7ZfbK",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/dive-bomb": {
+  "prompt": "Whammy bar dive bomb on a distorted electric guitar: one sustained note whose pitch glides smoothly downward by two octaves until the slack string growls, solo guitar, no drums, dry [duration_seconds 2.5, prompt_influence 0.6]",
+  "generation_id": "QUjQrppU4XuaIMfUrPdo",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/false-cord": {
+  "prompt": "Solo human vocalist, one false cord scream on the vowel \"ah\", rough gritty mid-high metal scream, sustained about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
+  "generation_id": "QtFbZpnpYnNUmhvVyupe",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/fry-scream": {
+  "prompt": "Solo human vocalist, one vocal fry scream on the vowel \"eh\", mid register, raspy crackling metalcore scream, about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
+  "generation_id": "LKeJsKfDREO67uriGg5Y",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/gitarre-feedback": {
+  "prompt": "Controlled guitar feedback: a distorted electric guitar holds one sustained low note that slowly blooms into smooth, singing harmonic feedback, warm and musical, not shrill, solo guitar, no drums, dry [duration_seconds 3, prompt_influence 0.5]",
+  "generation_id": "Bz9LaVpyBb7WB1GpgLp9",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/growl-rau": {
+  "prompt": "Solo male death metal vocalist, one very deep, very rough, noisy cavernous growl on \"uhh\", pitchless and grainy like gravel and rumbling air from the chest, no clear note, sustained about 2 seconds, starts immediately, dry close-mic studio recording, human voice only, no music, no instruments, no reverb, no words",
+  "generation_id": "8k1dKE0y5KKvC0KsfeBF",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/growl-tief": {
+  "prompt": "Solo male death metal vocalist, one deep sustained growl on the vowel \"oh\", about 2 seconds, raw distorted throat, dry close-mic studio recording, no music, no instruments, no reverb, no words",
+  "generation_id": "yqf1TMMts2adqUgnocYg",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/guttural": {
+  "prompt": "Solo human vocalist, extremely low gurgling guttural vocal, brutal death metal slam style, one sustained guttural on \"uh\", about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
+  "generation_id": "Wg1RenYcOBOhvmgfrY7C",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/hardcore-shout": {
+  "prompt": "Solo male hardcore punk vocalist, one loud yelled hardcore shout on \"yeah\", hoarse gritty barked scream, starts instantly with no breath before it, lasts about 1.2 seconds then stops, dry close-mic studio recording, single voice, no crowd, no music, no instruments, no reverb",
+  "generation_id": "WnCmApKPEJ6n3qaVJsxw",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/high-scream": {
+  "prompt": "Solo human vocalist, one high-pitched black metal shriek on \"ee\", harsh raspy screeching scream, sustained about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
+  "generation_id": "fiBxyboMAvh0OFZXMCrr",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/kabel-knacken": {
+  "prompt": "Quarter-inch instrument cable being plugged into an electric guitar jack while the amp is on, loud crackle and pop through the amp followed by a short ground hum buzz [duration_seconds 1.5, prompt_influence 0.5]",
+  "generation_id": "azRpksAUTgdYJK5i44y8",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/lippenflattern": {
+  "prompt": "Singer vocal warm-up, lip trill (lips buzzing \"brrr\") while gliding pitch from low to high and back, one siren, about 3 seconds, single voice, dry close-mic, no music, no reverb",
+  "generation_id": "A0x6Vyp0PKgzqeLrm1tS",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/moshpit": {
+  "prompt": "Inside a moshpit at a hardcore show, bodies bumping and colliding, stomping feet, shouts and yells from the crowd, loud distorted live music muffled in the background [duration_seconds 4, prompt_influence 0.4]",
+  "generation_id": "isiHfKKINX0SutYKBqKj",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/pa-feedback": {
+  "prompt": "Short low-to-mid pitched microphone feedback ringing through a PA system, swelling briefly then quickly cut off by the sound engineer, soft and moderate volume, not shrill, not piercing, 1.5 seconds",
+  "generation_id": "7QCZpXQ9ZMCkugwpEIju",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/pinch-harmonic": {
+  "prompt": "Single pinch harmonic squeal on a high-gain distorted electric guitar, one squealing artificial harmonic note with slight vibrato, metal, dry",
+  "generation_id": "PFyQREo3XBVjUFhLSd8X",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/publikum-club": {
+  "prompt": "Small sweaty club crowd applauding and cheering loudly after a band finishes a song, whoops, whistles and claps that slowly die down, live recording from the stage, no music [duration_seconds 4, prompt_influence 0.5]",
+  "generation_id": "ZE35XD1fWBQ0XVg5wkOg",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/raumton-club": {
+  "prompt": "Room tone of an empty concrete concert hall before doors open, constant low rumble of ventilation fans, soft electrical hum, quiet and steady, no voices, no music, no footsteps [duration_seconds 5, prompt_influence 0.5]",
+  "generation_id": "RlAOXxilTBt1YlXeFBHY",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/slide-ab": {
+  "prompt": "Distorted electric guitar slide down: one picked note on a single string, the fretting finger slides smoothly from the 12th fret down to the 1st fret, pitch falling continuously, solo guitar, no drums, dry [duration_seconds 2, prompt_influence 0.6]",
+  "generation_id": "rP5B0kNhe1j5xpfFip2R",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/soundcheck": {
+  "prompt": "Check, <break time=\"0.2s\" /> eins, zwei. <break time=\"0.5s\" /> Check. [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
+  "generation_id": "iTwv1VDQvIhaae9LkWbV",
+  "modell": "eleven_multilingual_v2"
+ },
+ "beispiele/vocal-fry": {
+  "prompt": "Close-mic recording of one man making a quiet relaxed vocal fry sound: very low slow crackling glottal pulses, the creaky voice at the end of a lazy tired \"aah\" when the breath runs out, no growl, no scream, no singing, about 2 seconds, dry, no music, no reverb",
+  "generation_id": "Y2AVw4dVvBPnEPWe5ahq",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/zischen": {
+  "prompt": "A person exhaling a long steady even hiss \"ssss\" through the teeth, breath support exercise, constant level, about 3 seconds, dry close-mic, single voice, no music, no reverb",
+  "generation_id": "axCwuxr2DpwXxHiomxo5",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "china": {
   "prompt": "Single china cymbal hit, trashy harsh aggressive crash, close-mic, dry studio, no reverb",
   "generation_id": "znNKNQjE1z4apdF3pDEQ",
@@ -58,6 +168,12 @@
   "prompt": "Single crash cymbal hit, bright explosive wash ringing out, close-mic, dry studio, no reverb",
   "generation_id": "p97V8KvQABD5K8LZ0ESU",
   "modell": "eleven_text_to_sound_v2"
+ },
+ "einzaehlen-de": {
+  "prompt": "Eins! <break time=\"0.3s\" /> Zwei! <break time=\"0.3s\" /> Drei! <break time=\"0.3s\" /> Vier! [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
+  "generation_id": "6mfq48soYJTSdXjAMrxW",
+  "modell": "eleven_multilingual_v2",
+  "stimme": "A2eYGaZmwykOiEVBlQ7h (Michael)"
  },
  "gitarre-chug-a2": {
   "prompt": "Single palm-muted chug on a distorted electric guitar, low A string, tight short metal chug, one hit, dry",

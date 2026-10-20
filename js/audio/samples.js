@@ -33,6 +33,10 @@ const ORDNER = 'assets/sounds/samples/';
 // gleicht aus, was die Normierung nicht kann (ein Becken ist bei gleicher
 // Spitze viel lauter als eine Kick).
 // grundton: gemessene Tonhöhe in Hz (nur Gitarre/Bass).
+// vorlauf: so viele Sekunden vor der Zählzeit starten (Zählwörter: der Vokal
+// soll auf den Schlag fallen, nicht das „Zw“ davor).
+// quelle: Rohdatei, wenn mehrere Proben aus EINER Aufnahme geschnitten sind
+// (Zählwörter); sonst heißt die Rohdatei wie die Probe.
 export const SAMPLES = {
   kick: { datei: 'kick.wav', pegel: 0.93 },
   snare: { datei: 'snare.wav', pegel: 0.73 },
@@ -91,6 +95,10 @@ export const SAMPLES = {
   bass_d3: { datei: 'bass-d3.wav', pegel: 0.91, gruppe: 'bass', grundton: 146.9 },
   bass_g3: { datei: 'bass-g3.wav', pegel: 0.78, gruppe: 'bass', grundton: 196.6 },
   bass_gedaempft_g1: { datei: 'bass-gedaempft-g1.wav', pegel: 0.58, gruppe: 'bass_gedaempft', grundton: 49.0 },
+  zaehl_1: { datei: 'zaehl-1.wav', pegel: 0.77, quelle: 'einzaehlen-de', vorlauf: 0.01 },
+  zaehl_2: { datei: 'zaehl-2.wav', pegel: 0.49, quelle: 'einzaehlen-de', vorlauf: 0.08 },
+  zaehl_3: { datei: 'zaehl-3.wav', pegel: 0.53, quelle: 'einzaehlen-de', vorlauf: 0.05 },
+  zaehl_4: { datei: 'zaehl-4.wav', pegel: 0.46, quelle: 'einzaehlen-de', vorlauf: 0.04 },
   bass_gedaempft_cis2: { datei: 'bass-gedaempft-cis2.wav', pegel: 0.62, gruppe: 'bass_gedaempft', grundton: 69.6 },
 };
 

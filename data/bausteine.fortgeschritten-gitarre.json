@@ -1392,6 +1392,7 @@
     },
     {
       "id": "pinch_harmonics",
+      "klangbeispiele": ["pinch_harmonic"],
       "anzeigetitel": {
         "de": "Pinch Harmonics (Squeals)"
       },
@@ -1526,6 +1527,7 @@
     },
     {
       "id": "slides_bends",
+      "klangbeispiele": ["slide_ab"],
       "anzeigetitel": {
         "de": "Slides & Bends im Metal"
       },

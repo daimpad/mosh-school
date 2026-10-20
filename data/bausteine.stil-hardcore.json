@@ -354,6 +354,7 @@
     },
     {
       "id": "hardcore_gangshouts",
+      "klangbeispiele": ["hardcore_shout"],
       "anzeigetitel": { "de": "Gang-Shouts & Mitgröl-Parts" },
       "domaene": ["gesang"],
       "kompetenzstufe": ["fortgeschritten"],
@@ -400,6 +401,7 @@
     },
     {
       "id": "hardcore_buehne_community",
+      "klangbeispiele": ["publikum_club"],
       "anzeigetitel": { "de": "Bühne & Community: Hardcore live" },
       "domaene": ["mentales"],
       "kompetenzstufe": ["fortgeschritten"],
