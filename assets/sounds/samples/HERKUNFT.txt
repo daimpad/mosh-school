@@ -3,7 +3,7 @@ Sample-Bank der Stimmen — Herkunft und Verwendung
 
 WAS DAS IST
 -----------
-60 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
+47 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
 js/audio/samples.js) statt der früheren Synthese spielt: im Pattern-Werkzeug,
 in den Play-along-Loops, in den Hörbeispielen der Bausteine und im
 Tabulatur-Werkzeug.
@@ -12,16 +12,21 @@ Tabulatur-Werkzeug.
                hihat-pedal, snare-ghost, snare-rand (Rimshot), crash, splash,
                china, stack, ride, ride-glocke, tom-hoch, tom-mitte, tom-tief
   Gitarre      gitarre-zerre-*  13 Grundtöne A1 … D♯5, verzerrt
-               gitarre-chug-*   3 Grundtöne E2, A2, B2 (Palm Mute)
-               gitarre-tot      Dead Note (Anschlag ohne Ton)
-               gitarre-clean-*  9 Grundtöne E2 … E5, unverzerrt
+               gitarre-chug-a2  Palm Mute (A2), für Töne bis 5 Halbtöne weg
   Bass         bass-*           5 Grundtöne E1, D2, E2, A♯2, D3, gepickt und
                                 angezerrt (Metal-Bass)
-               bass-gedaempft-* 2 Grundtöne G1, C♯2
+               bass-gedaempft-cis2  gedämpfter Bass (C♯2)
   Sprache      zaehl-1 … zaehl-4  „Eins“ bis „Vier“ fürs Einzählen (Metronom,
                Loops, Hörbeispiele), aus EINER Aufnahme geschnitten (Sprach-
                synthese, Stimme „Michael“, eleven_multilingual_v2); `vorlauf`
                legt den Vokal auf den Schlag, ein leiser Klick bleibt die Flanke
+
+Clean-Gitarre, Dead Note und weiter entfernte Palm Mutes spielen die Synthese
+bzw. den offenen Zerr-Ton mit Tiefpass: Diese Proben sind nach dem Anhören
+rausgeflogen (Hörprobe, 20. Oktober 2026). Die Clean-Töne klangen nach Klavier
+statt nach Gitarre, die Chugs E2/B2, der gedämpfte Bass G1 und die Dead Note
+passten nicht. Ihre Dateien liegen noch im Ordner, werden aber von keiner Stimme
+mehr geladen (validate.py meldet sie als Waisen) und können weg.
 
 Varianten (kick-2, snare-3 …) spielen reihum (Round-Robin), damit schnelle
 Folgen nicht nach Maschinengewehr klingen. Ghost Note und Rimshot spielen die
@@ -96,12 +101,14 @@ richtige Format hat und eine Rohquelle mit Herkunft hat.
 
 KLANGBEISPIELE (assets/sounds/beispiele/)
 -----------------------------------------
-33 kurze Aufnahmen zum Anhören neben Bausteinen: Gesangstechniken (Growl,
+41 kurze Aufnahmen zum Anhören neben Bausteinen: Gesangstechniken (Growl,
 Guttural, Fry, False Cord, hoher Scream, Shout, Gang-Shout, Clean, Kopfstimme,
 Belting, Vibrato, Doom-Clean, Vocal Fry, Atem- und Einsingübungen), Bühne und Proberaum (Publikum, Moshpit, Raumton, PA-
 Rückkopplung, Kabelknacken, Soundcheck-Ansage) und Gitarrentechniken (Pinch
 Harmonic, Dive Bomb, Feedback, Vibrato, Bend, Slide auf und ab,
-Flageolett), dazu Atem (Einatmen) und Netzbrummen (50 Hz). Ausgeliefert wird die MP3-Rohdatei
+Flageolett, Pick Scrape), Pig Squeals, Fuzz-Bass, dazu Atem (Einatmen),
+Netzbrummen (50 Hz), skandierendes Publikum, Proberaum-Tür und kurzes
+Einzählen. Ausgeliefert wird die MP3-Rohdatei
 selbst; Ausschnitt (ab/dauer) und Pegel stehen in js/audio/klangbeispiele.js,
 der Pegel ist gemessen (node scripts/build_samples.mjs --beispiele). Welche
 Übung welches Beispiel zeigt, steht am Baustein im Feld `klangbeispiele`.
@@ -111,10 +118,12 @@ Herkunft je Datei in quellen.json unter `beispiele/<name>`.
 RESERVE
 -------
 scripts/samples_quelle/reserve.json führt Klänge, die erzeugt und ausgewählt,
-aber noch nicht eingebaut sind: Gesangstechniken (Growl, Fry, False Cord …),
-Live-Geräusche (Publikum, Raumton, Brummen, Rückkopplung), gesprochenes
-Einzählen und Soundcheck, Gitarren-Effekte (Pinch Harmonic, Pick Scrape),
-verzerrter Bass. Die Dateien liegen nur im ElevenLabs-Konto (Flows mit
+aber noch nicht eingebaut sind; nach der Hörprobe vom 20. Oktober 2026 nur
+noch zwei überholte Fassungen (60-Hz-Brummen, ein Slide). Was dort freigegeben
+wurde, ist eingebaut, was abgelehnt wurde (metallischere Toms, D3-Chug,
+Clean-E3), ist gestrichen. Die Toms der Bank klingen laut Hörprobe zu schwach
+und zu hoch, eher nach Dose — ein neuer Anlauf braucht tiefere, fettere
+Prompts. Die Dateien liegen nur im ElevenLabs-Konto (Flows mit
 flow_id/session_id), nicht im Repo. Vor dem Einbau anhören.
 
 

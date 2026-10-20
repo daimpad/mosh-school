@@ -826,7 +826,7 @@
     },
     {
       "id": "feedback_als_instrument",
-      "klangbeispiele": ["gitarre_feedback"],
+      "klangbeispiele": ["gitarre_feedback", "pick_scrape"],
       "anzeigetitel": {
         "de": "Feedback kontrolliert einsetzen"
       },

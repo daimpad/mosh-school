@@ -50,6 +50,7 @@
     },
     {
       "id": "proberaum_einrichten",
+      "klangbeispiele": ["proberaum_tuer"],
       "anzeigetitel": {
         "de": "Proberaum einrichten: Raum, Akustik, Aufstellung"
       },

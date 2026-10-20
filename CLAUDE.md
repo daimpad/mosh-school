@@ -209,7 +209,11 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
     bei einer fehlenden Datei. Kein Werkzeug darf stumm bleiben, weil ein Sample
     fehlt. **Klick und Referenzton sind bewusst reine Synthese:** beim Klick zählt
     die Flanke, beim Stimmgerät jeder Cent.
-  - `samples.js` — die Sample-Bank: 60 One-Shots aus ElevenLabs (Sound Effects),
+    **Clean-Gitarre ist derzeit ebenfalls Synthese:** Die neun Clean-Proben
+    flogen beim Anhören raus („das ist keine Gitarre“, sie klangen nach Klavier),
+    ebenso Dead Note, zwei Chugs und ein gedämpfter Bass. Entschieden wird über
+    die Hörprobe (Artefakt mit Urteilen je Klang), nicht über Messwerte allein.
+  - `samples.js` — die Sample-Bank: 47 One-Shots aus ElevenLabs (Sound Effects),
     aufbereitet von `scripts/build_samples.mjs` nach `assets/sounds/samples/`
     (Herkunft, Prompts, Auswahl: `HERKUNFT.txt` dort, Rohdateien + Generierungs-IDs
     in `scripts/samples_quelle/`). Gitarre/Bass liegen in **gemessenen**

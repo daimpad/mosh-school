@@ -5,51 +5,15 @@
   "stand": "Eingebaut sind inzwischen die Klangbeispiele (js/audio/klangbeispiele.js) und die Zählwörter; hier steht nur noch, was nicht eingebaut ist."
  },
  "flows": {
-  "ZERRER Reserve Gesang": {
-   "flow_id": "EHtgJ96GzdiEoYiM5EBr",
-   "url": "https://elevenlabs.io/app/flows/EHtgJ96GzdiEoYiM5EBr",
-   "klaenge": {
-    "pig_squeal": {
-     "generation_id": "PSaIPgESz3mvmFTQcLXB",
-     "session_id": "tILXmbM6tzVTMfZGMY8w",
-     "prompt": "Solo human deathcore vocalist performing a pig squeal vocal technique, one high inhaled squealing \"eee\" vocal, about 1.5 seconds, dry close-mic studio, human voice only, not an animal, no music, no instruments, no reverb",
-     "notiz": "unsicher: könnte ein echtes Schwein sein — anhören"
-    },
-    "pig_squeal_mensch": {
-     "generation_id": "4XxbEnIwuAkrPhnUlaw9",
-     "session_id": "aL3OFLJZNxxbb2hkyAre",
-     "prompt": "A young man, a human deathcore singer, performs a pig squeal … (zweiter Wortlaut, ausdrücklich Mensch)",
-     "notiz": "unsicher, ob menschlich — anhören; 0,13 s Stille vorn"
-    }
-   }
-  },
   "ZERRER Reserve Live und FX": {
    "flow_id": "N9b37btKVl8EJTi3vefW",
    "url": "https://elevenlabs.io/app/flows/N9b37btKVl8EJTi3vefW",
    "klaenge": {
-    "publikum_chant": {
-     "generation_id": "SlPxdHWeAxWQemsD8Sv2",
-     "session_id": "gVssCmAmTvHIQgL5kL7I",
-     "prompt": "Concert crowd chanting rhythmically in unison \"hey! hey! hey! hey!\" with steady beat, wordless shouts, club venue, no music, 4 seconds",
-     "notiz": "rhythmisch; längere Alternative publikum_chant_4 (16 s)"
-    },
     "amp_brummen": {
      "generation_id": "9znV9LgNy7AQc1okmaAh",
      "session_id": "DzVUxfXCY3wdNb4unKLN",
      "prompt": "Idle high-gain guitar amplifier humming, 50 Hz mains hum and buzz with faint hiss, nobody playing, steady, close mic, 3 seconds",
      "notiz": "60-Hz-Brummen (US-Netz), nicht 50 Hz"
-    },
-    "proberaum_tuer": {
-     "generation_id": "jSxMoq8wFojb8cQAS6j4",
-     "session_id": "AyHTlVccjQiB8GkvF51C",
-     "prompt": "Heavy soundproof rehearsal room door opens in a basement corridor, a loud metal band playing inside becomes clearly audible, then the heavy door is pulled shut with a thud and the music is muffled again [duration_seconds 4, prompt_influence 0.5]",
-     "notiz": "unsicher — anhören"
-    },
-    "einzaehlen_kurz": {
-     "generation_id": "4Ci5YPP5IXBSg3pfbPHG",
-     "session_id": "SxiJr9gfJhMOxdIXPpqb",
-     "prompt": "Eins! <break time=\"0.3s\" /> Zwei! [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
-     "notiz": "„Eins, zwei“, gleiches Tempo"
     }
    }
   },
@@ -57,71 +21,11 @@
    "flow_id": "ylq74IDqYdXP3Y94SCPO",
    "url": "https://elevenlabs.io/app/flows/ylq74IDqYdXP3Y94SCPO",
    "klaenge": {
-    "pick_scrape": {
-     "generation_id": "fXvoClBycMp9zHZLYPWC",
-     "session_id": "sZzE8dFVSxjCtDopzGoK",
-     "prompt": "Pick scrape on a high-gain distorted electric guitar, pick edge dragged down the wound low strings, harsh descending scratchy whoosh, one gesture, dry",
-     "notiz": "breitbandiges Kratzen, 1 s"
-    },
     "slide_auf": {
      "generation_id": "Hq3ws0UIEUx4P9vqeuFX",
      "session_id": "yAeOdcwkza3vPc92vzpB",
      "prompt": "Distorted electric guitar slide up … (duration 2 s, prompt_influence 0.6)",
      "notiz": "steigt nur bis 0,65 s, danach fällt der Ton wieder"
-    }
-   }
-  },
-  "ZERRER Clean-Gitarre und Bass": {
-   "flow_id": "icybGZGXFc7cEJvaLLBW",
-   "url": "https://elevenlabs.io/app/flows/icybGZGXFc7cEJvaLLBW",
-   "klaenge": {
-    "bass_verzerrt_e1": {
-     "generation_id": "U6eC9yo1SAikeAFAMJDc",
-     "session_id": "XfUxG3tfHpts53q5gPZD",
-     "prompt": "One long held low note on a fuzz-distorted electric bass guitar, thick saturated doom tone, single string, sustaining for three seconds then fading, no chord, no drums, dry",
-     "notiz": "E1, Sludge-Zerre, ausblenden"
-    },
-    "bass_verzerrt_a1": {
-     "generation_id": "8AD2Ygcn8C4OwxNPI7lW",
-     "session_id": "k5UdmWazyC1nbp4vijND",
-     "prompt": "One long held note on a fuzz-distorted electric bass guitar, open A string, thick saturated sludge tone, single string, sustaining for three seconds then fading, no chord, no drums, dry",
-     "notiz": "A1, Sludge-Zerre"
-    }
-   }
-  },
-  "ZERRER Reserve Metal-Runde": {
-   "flow_id": "icybGZGXFc7cEJvaLLBW",
-   "url": "https://elevenlabs.io/app/flows/icybGZGXFc7cEJvaLLBW",
-   "klaenge": {
-    "chug_d3_2": {
-     "generation_id": "2WPXEWls3FcuAEVc7sc4",
-     "session_id": "7KbTjXIYpvt1x1rQpf3u",
-     "prompt": "Single palm-muted chug on a high-gain distorted electric guitar, heavy metal, tight and percussive, A string 5th fret, note D3 around 147 Hz, one short hit, no chord, no drums, dry amp",
-     "notiz": "D3-Chug, 146 Hz (−12 Cent); klingt laut Messung glatt, wenig Biss gegen gitarre-chug-e2 — anhören"
-    },
-    "tom_hoch_1": {
-     "generation_id": "rXGg7v6Ks0efyKcPAQjM",
-     "session_id": "THhfKuS14C7Sqd6PX2Nl",
-     "prompt": "Single high rack tom hit, small 10 inch tom, metal drum kit, punchy attack, tight, close-mic, dry, no reverb, one hit only",
-     "notiz": "Kandidat für metallischeren hohen Tom (140 Hz, Schwerpunkt 2016 Hz gegen 399 Hz alt) — anhören, nicht still tauschen"
-    },
-    "tom_mitte_3": {
-     "generation_id": "2K8xDr1vJFtzSkrlCq2D",
-     "session_id": "Rp7R3PX0WuhODUmy3ue9",
-     "prompt": "Single mid rack tom hit, 12 inch tom, metal drum kit, punchy attack, tight, close-mic, dry, no reverb, one hit only",
-     "notiz": "Kandidat für metallischeren mittleren Tom (121 Hz) — anhören"
-    },
-    "tom_tief_1": {
-     "generation_id": "RutUOUY8SJGjrzyWceF8",
-     "session_id": "6SLjzLsdyl9CiiaeErGK",
-     "prompt": "Single low floor tom hit, 16 inch floor tom, metal drum kit, punchy attack, deep and tight, close-mic, dry, no reverb, one hit only",
-     "notiz": "Kandidat für metallischeren tiefen Tom (93 Hz gegen 79 Hz alt) — anhören"
-    },
-    "clean_e2_3": {
-     "generation_id": "BR5AmOoqmuuQOnJEmC83",
-     "session_id": "ZlgK9hX92iyT6wXxpKIp",
-     "prompt": "Single clean electric guitar note, open low E string in standard tuning, note E2 around 82 Hz, plucked once with a pick, warm clean amp tone, no distortion, one note only, no chord, no drums, dry",
-     "notiz": "Clean-E3 (+6,5 Cent), Beifang"
     }
    }
   }

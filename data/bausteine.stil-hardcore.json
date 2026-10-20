@@ -401,7 +401,7 @@
     },
     {
       "id": "hardcore_buehne_community",
-      "klangbeispiele": ["publikum_club"],
+      "klangbeispiele": ["publikum_club", "publikum_chant"],
       "anzeigetitel": { "de": "Bühne & Community: Hardcore live" },
       "domaene": ["mentales"],
       "kompetenzstufe": ["fortgeschritten"],

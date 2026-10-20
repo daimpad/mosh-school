@@ -23,6 +23,7 @@
     },
     {
       "id": "kontext_proberaum_zusammenspiel",
+      "klangbeispiele": ["einzaehlen_kurz"],
       "anzeigetitel": { "de": "Proberaum: aufeinander hören" },
       "domaene": ["mentales"],
       "kompetenzstufe": ["fortgeschritten"],

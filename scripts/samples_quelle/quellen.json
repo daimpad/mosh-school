@@ -39,6 +39,16 @@
   "generation_id": "JH2pW2VbJog3JhKfEmmk",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/bass-fuzz-a1": {
+  "prompt": "One long held note on a fuzz-distorted electric bass guitar, open A string, thick saturated sludge tone, single string, sustaining for three seconds then fading, no chord, no drums, dry",
+  "generation_id": "8AD2Ygcn8C4OwxNPI7lW",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/bass-fuzz-e1": {
+  "prompt": "One long held low note on a fuzz-distorted electric bass guitar, thick saturated doom tone, single string, sustaining for three seconds then fading, no chord, no drums, dry",
+  "generation_id": "U6eC9yo1SAikeAFAMJDc",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/belting": {
   "prompt": "Solo human rock singer belting one powerful, loud, bright high sustained note in full chest voice on an open \"ah\" vowel, strong and ringing, steady pitch, a cappella, dry close-mic studio recording, no music, no words, no reverb",
   "generation_id": "6589roq8QJuX3P15iv5l",
@@ -74,6 +84,11 @@
   "generation_id": "jvIRzvBX02oXt57NY8UR",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/einzaehlen-kurz": {
+  "prompt": "Eins! <break time=\"0.3s\" /> Zwei! [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
+  "generation_id": "4Ci5YPP5IXBSg3pfbPHG",
+  "modell": "eleven_multilingual_v2"
+ },
  "beispiele/false-cord": {
   "prompt": "Solo human vocalist, one false cord scream on the vowel \"ah\", rough gritty mid-high metal scream, sustained about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
   "generation_id": "QtFbZpnpYnNUmhvVyupe",
@@ -81,7 +96,7 @@
  },
  "beispiele/flageolett": {
   "prompt": "Natural harmonic on the 12th fret of a clean electric guitar, one single pluck, bell-like chime tone, pure and glassy, ringing out, no chord, no distortion, no drums, dry",
-  "generation_id": "lmCXjSiSKZzo5nzh1Uag",
+  "generation_id": "L8he7Ed6IHEXW9Mzb0YP",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/fry-scream": {
@@ -155,9 +170,34 @@
   "generation_id": "7QCZpXQ9ZMCkugwpEIju",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/pick-scrape": {
+  "prompt": "Pick scrape on a high-gain distorted electric guitar, pick edge dragged down the wound low strings, harsh descending scratchy whoosh, one gesture, dry",
+  "generation_id": "fXvoClBycMp9zHZLYPWC",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/pig-squeal": {
+  "prompt": "Solo human deathcore vocalist performing a pig squeal vocal technique, one high inhaled squealing \"eee\" vocal, about 1.5 seconds, dry close-mic studio, human voice only, not an animal, no music, no instruments, no reverb",
+  "generation_id": "PSaIPgESz3mvmFTQcLXB",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/pig-squeal-2": {
+  "prompt": "A young man, a human deathcore singer, performs a pig squeal … (zweiter Wortlaut, ausdrücklich Mensch)",
+  "generation_id": "4XxbEnIwuAkrPhnUlaw9",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/pinch-harmonic": {
   "prompt": "Single pinch harmonic squeal on a high-gain distorted electric guitar, one squealing artificial harmonic note with slight vibrato, metal, dry",
   "generation_id": "PFyQREo3XBVjUFhLSd8X",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/proberaum-tuer": {
+  "prompt": "Heavy soundproof rehearsal room door opens in a basement corridor, a loud metal band playing inside becomes clearly audible, then the heavy door is pulled shut with a thud and the music is muffled again [duration_seconds 4, prompt_influence 0.5]",
+  "generation_id": "jSxMoq8wFojb8cQAS6j4",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/publikum-chant": {
+  "prompt": "Concert crowd chanting rhythmically in unison \"hey! hey! hey! hey!\" with steady beat, wordless shouts, club venue, no music, 4 seconds",
+  "generation_id": "SlPxdHWeAxWQemsD8Sv2",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/publikum-club": {
