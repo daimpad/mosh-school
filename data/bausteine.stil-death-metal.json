@@ -1,0 +1,288 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-death-metal",
+    "hinweis": "Genre-Achse Death Metal: acht Bausteine quer durch die Domänen, alle stil:[death_metal] — chromatisches Tremolo-Riffing, Bass-Doppelung, Blast-Wechsel, Growls, Riff-Logik und Riff-Collage, Riff-Gedächtnis, Stimmung/Saiten/Zerre (funktional, ohne Modelle) und Ausdauer. Zwei davon auf Experten-Stufe (Drums, Theorie). Kein Breakdown-Fokus — das trägt der Deathcore-Strang. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "death_tremolo_chromatik",
+      "anzeigetitel": { "de": "Death-Metal-Gitarre: chromatisches Tremolo-Riffing" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["tremolo_riffing", "dissonante_intervalle"],
+      "spielziele": ["praezises_tremolo", "riff_praezision"],
+      "erklaerteil": {
+        "de": "Das klassische Death-Metal-Riff ist kein Akkordwechsel über einem Puls, sondern eine Linie: einzelne Töne oder Powerchords, im Tremolo durchgehämmert, die sich in Halbtonschritten winden. Chromatik ist dabei das Grundmaterial, nicht die Würze — ein Riff kriecht etwa vom Grundton einen Halbton hoch, fällt zurück, springt auf den Tritonus und rutscht von dort chromatisch wieder abwärts. Das Ohr findet keine Tonart, an der es sich festhalten kann, und genau dieses Unbehagen ist der Klang des Genres.\n\nTechnisch entscheidet die Entkopplung der Hände. Die Anschlaghand läuft in gleichmäßigen Sechzehnteln weiter, egal was links passiert; die Greifhand wechselt Ton, Saite und Lage exakt auf einem Anschlag. Die typischen Stolperstellen sind Lagenwechsel (ein Sprung vom ersten in den sechsten Bund) und Saitenwechsel mitten im Tremolo: Dort verliert die Anschlaghand gern einen Schlag oder wird lauter. Hilfreich ist ein fester Fingersatz pro Riff — ein Finger pro Bund im Halbtonbereich, Lagenwechsel nur an festen Stellen, mit dem Zeigefinger als Anker.\n\nDazu kommt die Death-Metal-Eigenheit, Riffs ohne Übergang aneinanderzuschneiden: Das eine Riff endet, das nächste beginnt auf dem nächsten Schlag, oft in anderer Lage und mit anderem Rhythmus. Wer nur die Riffs einzeln übt, aber nie die Nahtstelle, fällt genau dort aus dem Tempo."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die kriechende Linie",
+          "ziel": "Ein chromatisches Tremolo-Riff mit Lagen- und Saitenwechsel gleichmäßig durchspielen und ohne Übergang in ein zweites Riff schneiden.",
+          "schritte": [
+            "Bau dir eine Zelle auf der tiefsten Saite: Grundton, einen Halbton höher, zurück auf den Grundton, dann der Tritonus im sechsten Bund. Jeder Ton bekommt vier Tremolo-Anschläge (Sechzehntel). Start bei 90–100 BPM, ohne oder mit nur leichtem Palm Muting — die Töne sollen ineinanderlaufen, aber getrennt hörbar bleiben.",
+            "Zweite Hälfte: Wechsel auf die nächsthöhere Saite (erster Bund — wieder der Tritonus zum Grundton), dann zurück auf die tiefe Saite und chromatisch abwärts (fünfter, vierter Bund). Leg den Fingersatz vorher fest und spiel jeden Lagen- und Saitenwechsel isoliert zehnmal: letzter Ton davor, erster Ton danach.",
+            "Übe die Nahtstelle zu einem zweiten Riff, etwa Downpicking-Achtel oder einem Galopp in anderer Lage: zwei Takte Riff A, dann ohne Pause und ohne Überleitung Riff B auf der nächsten Eins. Die Anschlaghand darf an der Kante weder stocken noch hetzen.",
+            "Steigere in Schritten von 4 BPM erst, wenn drei Durchläufe am Stück sauber sind. Zielbereich 150–180 BPM in Sechzehnteln. Wird der Unterarm fest, geh zurück auf das letzte saubere Tempo und mach eine Pause, statt weiterzudrücken."
+          ],
+          "steigerung": "Übertrag die Zelle auf Powerchords (Grundton plus Quinte) und danach auf einen Tritonus-Doppelgriff, ohne dass die Gleichmäßigkeit leidet. Oder verkette drei verschiedene Riffs mit zwei harten Schnitten zu einer kleinen Riff-Collage.",
+          "selbstkontrolle": "Nimm dich mit Klick auf und hör nur auf die Anschläge: Sind alle Sechzehntel gleich laut, auch beim Lagen- und Saitenwechsel? Fehlt an der Nahtstelle zwischen den Riffs ein Schlag, oder kommt einer zu früh? Und klingen die Halbtöne getrennt, oder verschmiert die Greifhand sie?"
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["D2", "G2", "C3", "F3", "A3", "D4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          { "schritt": 0, "saite": 6, "bund": 0, "technik": "normal", "betonung": 1 },
+          { "schritt": 1, "saite": 6, "bund": 0, "technik": "normal" },
+          { "schritt": 2, "saite": 6, "bund": 0, "technik": "normal" },
+          { "schritt": 3, "saite": 6, "bund": 0, "technik": "normal" },
+          { "schritt": 4, "saite": 6, "bund": 1, "technik": "normal", "betonung": 1 },
+          { "schritt": 5, "saite": 6, "bund": 1, "technik": "normal" },
+          { "schritt": 6, "saite": 6, "bund": 1, "technik": "normal" },
+          { "schritt": 7, "saite": 6, "bund": 1, "technik": "normal" },
+          { "schritt": 8, "saite": 6, "bund": 0, "technik": "normal", "betonung": 1 },
+          { "schritt": 9, "saite": 6, "bund": 0, "technik": "normal" },
+          { "schritt": 10, "saite": 6, "bund": 0, "technik": "normal" },
+          { "schritt": 11, "saite": 6, "bund": 0, "technik": "normal" },
+          { "schritt": 12, "saite": 6, "bund": 6, "technik": "normal", "betonung": 1 },
+          { "schritt": 13, "saite": 6, "bund": 6, "technik": "normal" },
+          { "schritt": 14, "saite": 6, "bund": 6, "technik": "normal" },
+          { "schritt": 15, "saite": 6, "bund": 6, "technik": "normal" },
+          { "schritt": 16, "saite": 5, "bund": 1, "technik": "normal", "betonung": 1 },
+          { "schritt": 17, "saite": 5, "bund": 1, "technik": "normal" },
+          { "schritt": 18, "saite": 5, "bund": 1, "technik": "normal" },
+          { "schritt": 19, "saite": 5, "bund": 1, "technik": "normal" },
+          { "schritt": 20, "saite": 5, "bund": 0, "technik": "normal", "betonung": 1 },
+          { "schritt": 21, "saite": 5, "bund": 0, "technik": "normal" },
+          { "schritt": 22, "saite": 5, "bund": 0, "technik": "normal" },
+          { "schritt": 23, "saite": 5, "bund": 0, "technik": "normal" },
+          { "schritt": 24, "saite": 6, "bund": 5, "technik": "normal", "betonung": 1 },
+          { "schritt": 25, "saite": 6, "bund": 5, "technik": "normal" },
+          { "schritt": 26, "saite": 6, "bund": 5, "technik": "normal" },
+          { "schritt": 27, "saite": 6, "bund": 5, "technik": "normal" },
+          { "schritt": 28, "saite": 6, "bund": 4, "technik": "normal", "betonung": 1 },
+          { "schritt": 29, "saite": 6, "bund": 4, "technik": "normal" },
+          { "schritt": 30, "saite": 6, "bund": 4, "technik": "normal" },
+          { "schritt": 31, "saite": 6, "bund": 4, "technik": "normal" }
+        ],
+        "hinweis": "Chromatische Zelle in D-Standard: Grundton, Halbton, Grundton, Tritonus — dann der Saitenwechsel und chromatisch abwärts zurück. Jeder Ton bekommt vier Tremolo-Anschläge, der erste ist betont."
+      }
+    },
+    {
+      "id": "death_bass_doppelung",
+      "anzeigetitel": { "de": "Death-Metal-Bass: Riff-Doppelung mit Kontur" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["bass_dreifinger", "duo_gb_lock", "bass_blast_begleitung"],
+      "spielziele": ["definierter_anschlag", "riff_praezision"],
+      "erklaerteil": {
+        "de": "Im Death Metal ist der Bass selten eine eigene Melodiestimme — meist doppelt er das Gitarrenriff Ton für Ton, oft eine Oktave tiefer. Das klingt nach einer einfachen Aufgabe und ist doch eine der schwersten im Genre: Die Gitarren sind tief gestimmt, stark verzerrt und dicht, das Schlagzeug liefert Double-Bass-Teppiche im selben Frequenzbereich. Ein Bass, der hier nur mitläuft, verschwindet im Matsch; ein Bass, der definiert anschlägt, macht die Riffs erst lesbar und gibt der Wand ihr Gewicht.\n\nZwei Spielweisen sind verbreitet, und beide sind legitim. Mit Fingern (Zwei- oder Drei-Finger-Wechselschlag) klingt der Ton runder und tiefer, braucht für Kontur aber einen festen, gleich starken Anschlag nah am Steg. Mit Plektrum kommt der Attack von selbst und schnelle Sechzehntel fallen leichter, der Ton wird heller und härter. Entscheidend ist nicht die Wahl, sondern die Gleichmäßigkeit: Jeder Anschlag muss gleich laut sein, sonst hört man den Fingerwechsel als Stolpern.\n\nBei Tremolo-Riffs der Gitarre spielt der Bass oft nicht jede Sechzehntel mit, sondern doppelt die Tonwechsel in Achteln: Das hält die Tonhöhe lesbar und spart Kraft für die Teile, in denen er mit der Bassdrum verzahnt Sechzehntel durchhält. Die Greifhand dämpft dabei konsequent ab — jeder nachklingende tiefe Ton legt sich über den nächsten Halbton und macht aus der Chromatik Brei."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Riff, zwei Instrumente, ein Ton",
+          "ziel": "Ein chromatisches Gitarrenriff am Bass doppeln — Ton für Ton exakt und mit hörbarer Kontur im dichten Mix.",
+          "schritte": [
+            "Nimm ein chromatisches Riff (etwa das aus dem Gitarren-Baustein dieses Strangs) und spiel nur die Tonwechsel in Achteln mit, bei 100–120 BPM. Die Greifhand stoppt jeden Ton ab, bevor der nächste kommt — besonders bei Halbtonschritten.",
+            "Spiel dieselbe Linie einmal mit Fingern (fester Anschlag nah am Steg, Finger strikt im Wechsel) und einmal mit Plektrum. Nimm beides auf und vergleich: Welche Variante bleibt bei den tiefsten Tönen besser erkennbar?",
+            "Verdichte auf Sechzehntel über vier Takte, verzahnt mit einer Double-Bass-Aufnahme oder einem Loop. Start bei 100 BPM, Zielbereich 140–160 BPM; steigere erst, wenn alle Anschläge gleich laut sind.",
+            "Übe den Wechsel ohne Übergang: zwei Takte Achtel-Doppelung, dann harter Schnitt in zwei Takte Sechzehntel auf demselben Riff. Der erste Ton nach dem Schnitt sitzt exakt auf der Eins."
+          ],
+          "steigerung": "Spiel die Doppelung zu einer Gitarrenaufnahme und schalte zwischendurch die Gitarre stumm: Bleibt das Riff allein am Bass erkennbar? Probier an den Stellen, an denen die tiefe Lage im Mix untergeht, die Doppelung eine Oktave höher.",
+          "selbstkontrolle": "Hör die Aufnahme zusammen mit Gitarre und Kick auf kleinen Lautsprechern: Ist jeder Halbton des Basses erkennbar, oder verschwimmt die Chromatik? Liegen deine Tonwechsel exakt auf denen der Gitarre? Hörst du den Fingerwechsel als Lautstärkeunterschied?"
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["D1", "G1", "C2", "F2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          { "schritt": 0, "saite": 4, "bund": 0, "technik": "palm_mute" },
+          { "schritt": 2, "saite": 4, "bund": 0, "technik": "palm_mute" },
+          { "schritt": 4, "saite": 4, "bund": 1, "technik": "palm_mute" },
+          { "schritt": 6, "saite": 4, "bund": 1, "technik": "palm_mute" },
+          { "schritt": 8, "saite": 4, "bund": 0, "technik": "palm_mute" },
+          { "schritt": 10, "saite": 4, "bund": 0, "technik": "palm_mute" },
+          { "schritt": 12, "saite": 4, "bund": 6, "technik": "palm_mute" },
+          { "schritt": 14, "saite": 4, "bund": 6, "technik": "palm_mute" },
+          { "schritt": 16, "saite": 3, "bund": 1, "technik": "palm_mute" },
+          { "schritt": 18, "saite": 3, "bund": 1, "technik": "palm_mute" },
+          { "schritt": 20, "saite": 3, "bund": 0, "technik": "palm_mute" },
+          { "schritt": 22, "saite": 3, "bund": 0, "technik": "palm_mute" },
+          { "schritt": 24, "saite": 4, "bund": 5, "technik": "palm_mute" },
+          { "schritt": 26, "saite": 4, "bund": 5, "technik": "palm_mute" },
+          { "schritt": 28, "saite": 4, "bund": 4, "technik": "palm_mute" },
+          { "schritt": 30, "saite": 4, "bund": 4, "technik": "palm_mute" }
+        ],
+        "hinweis": "Dasselbe chromatische Riff wie an der Gitarre, in Achteln gedoppelt: nur die Tonwechsel, jeder Ton abgestoppt. So bleibt die Tonhöhe im dichten Mix lesbar."
+      }
+    },
+    {
+      "id": "death_blast_wechsel",
+      "anzeigetitel": { "de": "Death-Metal-Drums: Blast, Bomb Blast & harte Schnitte" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["blast_varianten", "double_bass_sechzehntel", "blast_ausdauer"],
+      "spielziele": ["double_bass_tempo", "saubere_uebergaenge", "timing_zum_klick"],
+      "erklaerteil": {
+        "de": "Death-Metal-Drumming lebt von Wechseln: Ein Song springt vom traditionellen Blast in den Bomb Blast, von dort in einen Double-Bass-Teil mit halbem Snare-Puls und zurück — meist ohne Fill und auf den Schlag genau, weil die Gitarre ihr Riff ohne Übergang wechselt. Das Schlagzeug ist dabei nicht Begleitung, sondern der Motor, der jeden Schnitt hart macht. Ein Fill an der falschen Stelle verwässert genau den Bruch, von dem das Riff lebt.\n\nDie drei Grundformen unterscheiden sich in der Verteilung der Gliedmaßen. Beim traditionellen Blast wechseln Kick und Snare in Sechzehnteln ab, das Becken geht mit der Kick. Beim Bomb Blast laufen die Füße durchgehende Sechzehntel, die Snare spielt Achtel darüber — mehr Dichte unten, ruhigere Hände. Der Double-Bass-Teil mit Snare auf der Drei klingt halb so schnell, obwohl die Füße weiterlaufen: Das ist der Tempowechsel, den das Genre so liebt, ohne dass sich das Grundtempo ändert.\n\nDie Schwierigkeit liegt an der Kante zwischen den Formen. Dort wechselt, welche Gliedmaße führt, und genau dort driftet das Timing; wer jede Form nur für sich übt, verliert an der Nahtstelle Zeit. Wie bei allem Extremtempo gilt: Lockerheit vor Kraft, Rebound statt Drücken, kurze intensive Blöcke mit echten Pausen, Gehörschutz — und bei anhaltendem Ziehen in Handgelenken, Schienbeinen oder Knöcheln sofort stoppen und ärztlich oder physiotherapeutisch abklären lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Drei Formen, harte Kanten",
+          "ziel": "Traditionellen Blast, Bomb Blast und Double-Bass-Halftime ohne Fill auf den Schlag wechseln — bei konstantem Grundtempo.",
+          "schritte": [
+            "Wärm Hände, Unterarme und Füße auf. Spiel jede der drei Formen einzeln vier Takte zum Klick, Start bei 100–120 BPM in Sechzehnteln. Erst wenn alle drei gleichmäßig und locker laufen, kombinierst du sie.",
+            "Übe die Kanten paarweise: zwei Takte Blast, Schnitt in zwei Takte Bomb Blast und zurück — ohne Fill, der erste Schlag nach dem Schnitt ist ein Crash auf der Eins. Danach dasselbe für Bomb Blast und Double-Bass-Halftime.",
+            "Kette alle drei zu einer Schleife: Blast, Bomb Blast, Halftime, je zwei Takte. Nimm auf und prüf am Klick, ob das Grundtempo über alle Kanten konstant bleibt.",
+            "Steigere in kleinen Schritten von 2–4 BPM, und nur, wenn drei Schleifen am Stück sauber sind. Zielbereich 160–190 BPM; was darüber liegt, braucht Monate. Spiel Blöcke von wenigen Minuten mit echten Pausen dazwischen."
+          ],
+          "steigerung": "Lass die Gitarre (Aufnahme oder Mitspieler) die Wechsel bestimmen statt eines festen Schemas: Du hörst den Riffwechsel und schneidest mit. Oder spiel den Blast als Hammer-Blast (Kick und Snare gleichzeitig) und vergleich, welche Form an welcher Riffstelle stärker trägt.",
+          "selbstkontrolle": "Liegt der erste Schlag nach jedem Schnitt exakt auf dem Klick, oder kommt er zu früh? Sind beim Bomb Blast beide Füße gleich laut? Ziehen sich Schultern oder Unterarme an den Kanten zusammen? Dann ist das Tempo zu hoch — zurück und lockerer."
+        }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "ride",
+            "schritte": [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+          }
+        ],
+        "hinweis": "Zwei Takte traditioneller Blast, ein Takt Bomb Blast, ein Takt Double Bass mit Snare auf der Drei — jeder Wechsel ohne Fill, markiert nur durch den Crash auf der Eins. Das Grundtempo bleibt gleich, nur das Gefühl springt."
+      }
+    },
+    {
+      "id": "death_growl_tiefe",
+      "anzeigetitel": { "de": "Death-Metal-Vocals: tiefe Growls über schnelle Riffs" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["growl_resonanz", "false_cord_ansatz", "harsh_phrasierung_atmung"],
+      "spielziele": ["verzerrungskontrolle", "atemstuetze", "stimmgesundheit"],
+      "erklaerteil": {
+        "de": "Der Death-Metal-Growl ist tief, rund und getragen — eher ein Grollen aus einem weiten Rachenraum als ein Schrei. Seine Tiefe kommt aus Resonanz: ein entspannt tiefer Kehlkopf, ein weiter Rachen, dunkle Vokale wie „u“ und „o“ und eine Verzerrung, die aus Luftführung und dem Mitschwingen der Taschenfalten entsteht. Wer versucht, tiefer zu klingen, indem er drückt oder den Hals eng macht, bekommt das Gegenteil: einen dünnen, gepressten Ton und eine Stimme, die nach zehn Minuten kratzt.\n\nDie genre-typische Herausforderung sind Dauer und Tempo darunter. Die Instrumente laufen in Blasts und Tremolo-Sechzehnteln, die Vocals müssen darüber nicht mithetzen: Meist sitzen die Silben in halbem oder Viertel-Tempo an festen Punkten des Riffs, und die Atempausen sind Teil der Phrase. Ein Song mit langen Riff-Folgen bietet oft wenig Raum zum Durchatmen — deshalb gehört die Atemplanung in die Vorbereitung, nicht ins Improvisieren auf der Bühne.\n\nDer Gesundheitsrahmen gilt ohne Abstriche: gründlich aufwärmen, leise beginnen, nie in Heiserkeit hinein üben. Bei Kratzen, Brennen oder Engegefühl sofort stoppen. Begleite den Aufbau möglichst mit einer erfahrenen Lehrperson für Extreme Vocals, und lass anhaltende Heiserkeit oder Schmerzen in der HNO-Praxis abklären."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Grollen mit Plan",
+          "ziel": "Einen tiefen, resonanten Growl rhythmisch über ein schnelles Riff legen und über eine ganze Passage halten, ohne zu pressen.",
+          "schritte": [
+            "Wärm die Stimme auf (Summen, Lippenflattern, Sirenen) und setz den Growl leise an: dunkler Vokal, weiter Rachen, die Luft trägt den Ton. Prüf mit der Hand am Hals: Bleibt die Muskulatur weich, oder spannt sie an?",
+            "Lass ein schnelles Riff oder einen Blast-Loop laufen (150–180 BPM) und sprich zuerst nur den Rhythmus deiner Silben im Viertel- oder halben Tempo mit — ohne Verzerrung. Markier, wo du atmest.",
+            "Growl dieselbe Phrase leise über den Loop, Silbe für Silbe an den markierten Punkten. Lautstärke kommt später; Timing und eine freie Kehle zuerst.",
+            "Verlängere die Passage schrittweise von einer Phrase auf mehrere, mit den geplanten Atempausen. Bei Kratzen, Brennen oder Enge sofort stoppen, Pause machen und am nächsten Tag kürzer und leiser weiterüben."
+          ],
+          "steigerung": "Wechsle zwischen zwei Platzierungen über demselben Riff — einmal auf den Schlägen, einmal synkopiert gegen das Tremolo — und prüf, welche das Riff stärker treibt. Verlängere die Passagen erst, wenn beides über Wochen beschwerdefrei klappt.",
+          "selbstkontrolle": "Nimm dich auf und mach nach jeder Einheit den Sprechtest: Klingt deine Alltagsstimme frei? Klingt der Growl rund und tief oder dünn und gepresst? Sitzen die Silben an den geplanten Stellen, oder hetzt du dem Blast hinterher? Heiserkeit am nächsten Tag heißt: Umfang und Lautstärke reduzieren."
+        }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "death_metal",
+        "hinweis": "Ein Growl lässt sich nicht synthetisieren — hör in Death-Metal-Aufnahmen, wie die Silben im halben Tempo über dem Blast liegen, statt ihm hinterherzuhetzen."
+      }
+    },
+    {
+      "id": "death_riff_collage",
+      "anzeigetitel": { "de": "Death-Metal-Theorie: Zellen, Tritonus & Riff-Collage" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["chromatik_atonalitaet", "tritonus_dissonanz", "riff_zu_part_entwickeln"],
+      "erklaerteil": {
+        "de": "Death-Metal-Riffs folgen selten einer Tonart, aber sie folgen einer Logik. Statt in Tonleitern denkt das Genre in Zellen: kleine Intervallgruppen aus zwei bis vier Tönen — etwa Grundton, kleine Sekunde, Tritonus —, die das Riff wiederholt, verschiebt und spiegelt. Eine Zelle, chromatisch einen Halbton höher gesetzt, klingt wie dieselbe Idee unter mehr Druck; auf den Tritonus versetzt, klingt sie wie ihr verzerrtes Spiegelbild. Weil die Intervalle gleich bleiben, erkennt das Ohr die Idee wieder, obwohl es keine Tonart findet.\n\nDer Tritonus spielt dabei eine Sonderrolle: Er teilt die Oktave genau in der Mitte und hat deshalb keine Richtung, in die er sich auflösen will. Viele Riffs nutzen ihn als zweiten Pol neben dem Grundton — das Riff pendelt zwischen beiden, statt auf eine Dominante zu zielen. Kleine Sekunden reiben, chromatische Läufe verbinden die Pole. Das ist atonale Riff-Logik: Ordnung über Intervalle und Wiederholung, nicht über Harmonik.\n\nAuch die Songform folgt dieser Denkweise. Statt Strophe und Refrain reiht ein Death-Metal-Song oft Riff an Riff — A, B, C, D, manchmal kehrt A am Ende zurück, oft nicht. Diese Riff-Collage hält zusammen, wenn die Riffs Zellen teilen, wenn die Tempowechsel eine Dramaturgie bilden und wenn die harten Schnitte bewusst gesetzt sind. Ohne diese Klammern zerfällt sie in eine Liste von Ideen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir einen Death-Metal-Song vor und schreib seine Form als Riff-Liste auf: einen Buchstaben für jedes neue Riff, dazu das Tempo-Gefühl (Blast, Double Bass, Groove, schleppend). Wie viele Riffs gibt es, wie viele kehren wieder, und an welcher Stelle kommt das erste zurück? Hör dann zwei der Riffs genau an: Teilen sie eine Zelle — dieselbe Intervallfolge auf anderer Tonhöhe, vielleicht mit dem Tritonus als zweitem Pol?\n\nBau danach selbst eine Miniatur: eine Zelle aus drei Tönen (mit mindestens einer kleinen Sekunde oder einem Tritonus), daraus drei Riffs durch Verschieben, Spiegeln und rhythmisches Umdeuten, und ordne sie zu einer Collage mit zwei harten Schnitten und einem Tempowechsel. Prüf die Kernfrage: Klingt die Folge wie EIN Song, obwohl kein Riff dem anderen gleicht — oder wie drei Ideen nebeneinander? Wenn Letzteres: Welche Klammer fehlt — die gemeinsame Zelle, die Tempo-Dramaturgie oder die Rückkehr eines Riffs?"
+      }
+    },
+    {
+      "id": "death_riff_gedaechtnis",
+      "anzeigetitel": { "de": "Death-Metal-Kopf: Riff-Gedächtnis & Komplexität" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["mentale_temposteigerung", "gehoer_transkription"],
+      "erklaerteil": {
+        "de": "Ein Death-Metal-Song kann zehn, fünfzehn oder mehr verschiedene Riffs enthalten, die ohne Übergang aufeinanderfolgen, dazu Tempowechsel, ungerade Wiederholungszahlen und Riffs, die sich nur im letzten Ton unterscheiden. Das ist weniger ein Problem der Finger als des Kopfes: Wer auf der Bühne überlegen muss, was als Nächstes kommt, ist schon zu spät. Komplexität zu beherrschen heißt, sie so zu ordnen, dass im Moment des Spielens nichts mehr gedacht werden muss.\n\nDas wichtigste Werkzeug ist das Bündeln. Statt fünfzehn Riffs merkst du dir vier Teile mit je drei bis vier Riffs, jedes mit einem Namen, der etwas über das Riff sagt („Kriecher“, „Galopp hoch“, „Tritonus-Wand“). Dazu kommen die Wiederholungszahlen — wie oft läuft ein Riff, bevor geschnitten wird? — und die Ankerpunkte: das Signal, an dem die Band den Wechsel erkennt, etwa ein Crash, eine Pause oder ein bestimmter Ton. Eine Riff-Landkarte auf einem Blatt ist mehr wert als zehn Durchläufe ohne Plan.\n\nGeübt wird von den Nahtstellen her, nicht von vorn. Wer jedes Mal am Anfang beginnt, kann die ersten Riffs perfekt und die letzten schwach. Besser: die Wechsel einzeln, rückwärts verkettet (das letzte Riff zuerst, dann das vorletzte plus das letzte), langsam und mit Klick. Und das mentale Durchgehen ohne Instrument — die Landkarte im Kopf abspielen — festigt die Reihenfolge, wenn die Hände Pause brauchen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm einen Song, den du spielst oder lernen willst, und zeichne seine Riff-Landkarte: jedes Riff mit einem sprechenden Namen, der Wiederholungszahl und dem Ankerpunkt, an dem gewechselt wird. Bündle die Riffs zu höchstens vier oder fünf Teilen. Wo sind die Stellen, an denen du heute stolperst oder nachdenken musst — und liegen sie eher in einem Riff oder an einer Nahtstelle?\n\nPlan dann eine Woche Üben von hinten: jeden Tag eine Nahtstelle mehr, rückwärts verkettet, und zum Abschluss einmal die Landkarte ohne Instrument im Kopf durchgehen, mit dem Klick im Ohr. Prüf am Ende ehrlich: Kannst du an jeder beliebigen Stelle des Songs einsteigen, wenn jemand den Namen des Riffs ruft? Wenn nicht, ist die Landkarte noch nicht im Kopf — nur in den Fingern."
+      }
+    },
+    {
+      "id": "death_gear_stimmung",
+      "anzeigetitel": { "de": "Death-Metal-Gear: Stimmung, Saiten & Zerre" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["sound_death_wall", "saiten_mensur", "tuning_landkarte"],
+      "erklaerteil": {
+        "de": "Death Metal wird meist in Standardstimmungen gespielt, die als Ganzes tiefer gelegt sind — Eb-Standard, D-Standard, C-Standard, bei Siebensaitern oder langer Mensur auch B-Standard. Drop-Stimmungen kommen vor, aber der Grund für die Standard-Logik ist musikalisch: Chromatische Einzeltonriffs wandern über alle Saiten, und gleiche Abstände zwischen den Saiten machen Fingersätze und Lagenwechsel überall gleich. Je tiefer die Stimmung, desto dicker müssen die Saiten sein, damit die Spannung reicht: Als Richtwert gelten für D-Standard Sätze um 11–50 bis 12–54, für C-Standard 12–56 bis 13–60, für B-Standard 13–62 bis 14–68; eine längere Mensur hilft zusätzlich. Zu dünne Saiten schlackern im Tremolo, schlagen auf den Bünden auf und klingen beim harten Anschlag erst zu hoch.\n\nBei der Zerre gilt die Faustregel des Genres: weniger Gain, als man denkt. Schnelle chromatische Riffs brauchen Kontur, sonst verschwimmen die Halbtöne. Bewährt ist eine Vorstufenzerre oder eine mehrstufige High-Gain-Distortion mit einem Mittenbuckel-Booster davor — am Booster Gain fast zu und Pegel hoch, damit er die Tiefen strafft, statt Verzerrung zu addieren. Wer den sägenden Retro-Klang will, nimmt eine Dioden-gegen-Masse-Distortion mit kräftig angehobenen Höhen und Tiefen; eine Multiband-Distortion hält auch bei extremer Verzerrung die Bässe sauber. Ein Noise Gate hinter der Zerre lässt die Pausen an den harten Riffschnitten sauber stehen.\n\nDas alles ist Werkzeug, kein Ersatz für die Hand: Saubere Dämpfung und ein gleichmäßiger Anschlag tragen mehr zur Definition bei als jedes Gerät."
+      },
+      "reflexionsaufgabe": {
+        "de": "Geh deine eigene Kette Stück für Stück durch: Welche Stimmung spielst du, mit welcher Saitenstärke und welcher Mensur? Passt der Satz zu den Richtwerten für deine Stimmung, oder schlackert die tiefste Saite im Tremolo? Prüf mit dem Stimmgerät einen harten Anschlag: Springt der Ton erst nach oben und sinkt dann? Das ist ein Zeichen für zu wenig Spannung.\n\nNimm dann dasselbe chromatische Riff dreimal auf: mit deinem üblichen Gain, mit deutlich weniger Gain und mit einem Booster davor (Gain zu, Pegel hoch). In welcher Fassung hörst du jeden Halbton am klarsten — und welche klingt trotzdem noch nach Wand? Prüf zuletzt das Noise Gate an einem harten Riffschnitt: Kommt die Pause sauber, ohne dass leise Anschläge verschluckt werden? Notier die eine Stellschraube, die deine Definition am meisten verbessert."
+      }
+    },
+    {
+      "id": "death_koerper_ausdauer",
+      "anzeigetitel": { "de": "Death-Metal-Körper: Ausdauer für Blast & Tremolo" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["death_metal"],
+      "voraussetzungen": ["handgesundheit_tempo", "drums_koerper_ausdauer", "aufwaermen_handgesundheit"],
+      "spielziele": ["schmerzfrei_spielen", "lockere_haende"],
+      "erklaerteil": {
+        "de": "Death Metal fordert vor allem eine Art von Ausdauer: hohe Bewegungsfrequenz über lange Strecken. Ein Tremolo-Riff, das acht Takte läuft, ein Blast-Teil über eine halbe Minute, Double-Bass-Sechzehntel durch einen ganzen Songteil — das sind kleine, schnelle Bewegungen, die sich tausendfach wiederholen. Belastet werden Sehnen und Sehnenscheiden in Unterarm und Handgelenk, beim Schlagzeug zusätzlich Schienbeine, Waden und Knöchel, und bei allen Nacken und Schultern, die unter Anspannung gern mitziehen.\n\nAusdauer entsteht hier nicht durch Durchbeißen, sondern durch Ökonomie. Je kleiner und lockerer die Bewegung, desto länger hält sie: beim Tremolo aus dem Handgelenk mit kleinem Ausschlag, beim Blast mit Rebound statt Drücken, bei der Double Bass aus dem Sprunggelenk statt aus dem ganzen Bein. Verkrampfung ist das Warnzeichen — sie kommt meist vor dem Schmerz und macht die Bewegung langsamer und ungenauer, also genau das Gegenteil dessen, was du willst.\n\nDaraus folgt das Prinzip fürs Üben: Aufwärmen vor jeder Einheit, kurze intensive Blöcke statt langem Durchhalten, echte Pausen dazwischen, in denen die Muskulatur locker wird, und das Tempo nur dann steigern, wenn die Bewegung auf der letzten Stufe locker blieb. Bei ziehendem Schmerz, Taubheit, Kribbeln oder Schwellung sofort stoppen. Halten Beschwerden über Tage an, lass sie ärztlich oder physiotherapeutisch abklären — eine überlastete Sehnenscheide braucht Wochen, eine rechtzeitige Pause nur Minuten."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beobachte dich in deiner nächsten Übe-Einheit mit Blast-, Tremolo- oder Double-Bass-Anteil genau: Nach wie vielen Sekunden oder Takten beginnt die Verkrampfung — in Unterarm, Handgelenk, Schulter, Nacken oder Wade? Kommt sie vor oder nach dem Punkt, an dem das Timing nachlässt? Notier diesen Punkt als deine aktuelle Blocklänge.\n\nPlan deine Einheiten danach: Aufwärmen, Blöcke knapp unter dieser Länge, Pausen, in denen du bewusst ausschüttelst und lockerst, und zum Schluss ein paar Minuten in ruhigem Tempo. Leg dein Stoppsignal fest — Ziehen, Taubheit, Kribbeln, Schmerz — und schreib auf, was du dann tust: aufhören, nicht „noch einen Durchlauf“. Frag dich zuletzt ehrlich: Gibt es Beschwerden, die du seit Wochen wegspielst? Dann gehört das ärztlich oder physiotherapeutisch abgeklärt, bevor du weiter steigerst."
+      }
+    }
+  ]
+}

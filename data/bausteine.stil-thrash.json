@@ -1,0 +1,912 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "gemischt",
+    "domaene": "stil-thrash",
+    "hinweis": "Genre-Achse Thrash: acht Bausteine quer durch die Domänen, alle stil:[thrash] — Gitarre, Bass, Schlagzeug und Gesang mit Übungsteil, dazu Theorie, Mentales, Ausrüstung und Körper mit Reflexionsaufgabe; drei davon auf Experten-Stufe. Zusammen mit den bestehenden Thrash-Bausteinen (downpicking, galopp_rhythmus, doppel_galopp, skank_beat, bass_downpicking, sound_thrash_attack) trägt sie den Pfad. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "thrash_downpicking_riff",
+      "anzeigetitel": {
+        "de": "Thrash-Gitarre: Downpicking-Ausdauer im Palm-Mute-Riff"
+      },
+      "domaene": [
+        "gitarre"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "downpicking",
+        "palm_muting",
+        "galopp_rhythmus"
+      ],
+      "erklaerteil": {
+        "de": "Das Rückgrat des Thrash ist die Anschlaghand: durchgehend heruntergepickte Achtel auf der gedämpften tiefen E-Saite, je nach Song zwischen 160 und 220 BPM, oft minutenlang ohne Pause. Der Abschlag ist dabei keine Stilfrage, sondern eine Klangentscheidung — jeder Ton bekommt denselben harten Attack, das Riff läuft gleichmäßig wie eine Maschine statt wellig wie im Wechselschlag. Genau dieser gleiche Attack auf jeder Achtel ist der Unterschied zwischen „schnell“ und „Thrash“.\n\nDie Mechanik entscheidet über die Ausdauer. Die Bewegung kommt aus dem Handgelenk, mit etwas Unterarmdrehung, klein und knapp über den Saiten; der Weg zurück nach oben ist ein entspannter Leerweg, kein zweiter Kraftakt. Der Handballen liegt als Palm Mute am Steg — so nah, dass der Ton kurz und perkussiv bleibt, so weit vorn, dass die Tonhöhe noch erkennbar ist. Für die offenen Powerchord-Akzente zwischen den Chugs hebt der Ballen nur kurz ab und liegt sofort wieder: Der Wechsel gedämpft–offen ist neben dem Tempo das zweite Ausdrucksmittel des Riffs.\n\nDie Falle ist Verkrampfung. Ab einem bestimmten Tempo zieht der Unterarm zu, die Achtel werden ungleich, und man drückt noch fester — das macht es langsamer, nicht schneller. Ausdauer entsteht über Wochen in Intervallen knapp unter der eigenen Grenze, nicht durch Durchhalten in der Verkrampfung. Bei Brennen oder Ziehen im Unterarm sofort stoppen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die Achtel-Maschine",
+          "ziel": "Ein Palm-Mute-Riff mit offenen Akzenten eine Minute lang gleichmäßig heruntergepickt spielen — Start bei 160 BPM, Ziel 200 bis 220 BPM.",
+          "schritte": [
+            "Wärm Hände und Unterarme auf. Stell den Klick auf 160 BPM und spiel 16 heruntergepickte Achtel auf der gedämpften E-Saite: kleine Bewegung, lockerer Daumen, jeder Anschlag gleich hart.",
+            "Spiel das Demo-Riff: gedämpfte Achtel mit einem chromatischen Rutscher (Bund 0–1–2) im ersten Takt, zwei offene Powerchord-Akzente im zweiten. Der Ballen hebt nur für die Akzente ab und liegt sofort wieder auf.",
+            "Intervalle statt Dauerlauf: 45 Sekunden Riff, 45 Sekunden Pause, viermal hintereinander. Erhöhe erst um 4 bis 6 BPM, wenn alle vier Durchgänge gleichmäßig und ohne Ziehen im Unterarm bleiben.",
+            "Bau ab etwa 180 BPM einen Galopp-Takt ein (Achtel plus zwei Sechzehntel) und kehr ohne Lücke in die Achtel zurück. Leg vorher fest, ob die Sechzehntel im Abschlag oder als Ab-Auf laufen, und bleib dabei."
+          ],
+          "steigerung": "Zielbereich 200 bis 220 BPM über eine volle Minute. Bricht der Abschlag dort ein, ist Wechselschlag für einzelne Sechzehntel-Passagen keine Niederlage — das Achtel-Riff selbst bleibt im Abschlag, weil es so klingen soll.",
+          "selbstkontrolle": "Nimm die letzte Wiederholung auf: Klingen die Achtel in Sekunde 50 noch so hart und gleich wie in Sekunde 5? Sind die offenen Akzente laut und sofort wieder gedämpft? Spürst du Brennen oder Ziehen im Unterarm, hör sofort auf, nimm das Tempo zurück und mach Pause — anhaltende Beschwerden lässt du ärztlich abklären."
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": [
+          "E2",
+          "A2",
+          "D3",
+          "G3",
+          "B3",
+          "E4"
+        ],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 180,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 1,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 2,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 6,
+            "bund": 5,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 20,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 22,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 26,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 28,
+            "saite": 6,
+            "bund": 6,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 8,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 30,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Durchgehend Achtel im Abschlag: gedämpft auf E mit dem Rutscher 0–1–2, im zweiten Takt zwei offene Akzente (A5 und Bb5 — der Tritonus zum E). Danach liegt der Ballen sofort wieder auf."
+      }
+    },
+    {
+      "id": "thrash_bass_attack",
+      "anzeigetitel": {
+        "de": "Thrash-Bass: das Riff verdoppeln, mit Plektrum-Attack"
+      },
+      "domaene": [
+        "bass"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "bass_downpicking",
+        "plektrum_technik",
+        "bass_galopp_varianten"
+      ],
+      "erklaerteil": {
+        "de": "Im Thrash spielt der Bass meist das Gitarrenriff mit — Ton für Ton, eine Oktave tiefer, im selben Anschlag. Das klingt nach der undankbarsten Rolle und ist doch eine der anspruchsvollsten: Eine Verdopplung wirkt nur, wenn sie exakt ist. Schon ein paar Millisekunden Versatz bei 200 BPM verschmieren die Achtel-Wand, und der Bass klingt nicht mehr wie Fundament, sondern wie ein Echo der Gitarre.\n\nDeshalb greifen viele Thrash-Bassisten zum Plektrum und picken wie die Gitarre im Abschlag: gleicher Attack, gleiches Einschwingen, gleiche Tonlänge. Wer mit Fingern spielt, muss diesen Attack bewusst erzeugen, mit festem Anschlag nah am Steg. Ebenso wichtig ist die Länge der Töne: Spielt die Gitarre Palm Mute, dämpft der Bass mit dem Handballen oder der Greifhand mit. Läuft der Bass offen weiter, während die Gitarre chuggt, verschwimmen genau die Kanten, von denen das Riff lebt.\n\nDer Klang folgt der Rolle. Attack und obere Mitten — der Bereich, in dem das Plektrum klickt — machen den Bass in der dichten Wand hörbar, ein leicht angezerrter Anteil kann helfen. Ein reiner Tiefbass-Ton wird unter zwei verzerrten Gitarren unsichtbar. Freiheiten nimmst du dir gezielt — ein gehaltener Grundton im Break, eine kleine Gegenbewegung vor dem Wiedereinstieg —, nicht mitten im Hauptriff."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Eine Hand, zwei Instrumente",
+          "ziel": "Ein Thrash-Riff mit Galopp deckungsgleich mit der Gitarre spielen — gleicher Attack, gleiche Tonlänge, von 150 bis Richtung 200 BPM.",
+          "schritte": [
+            "Wärm die Hände auf. Spiel das Demo-Riff bei 150 BPM mit Plektrum im Abschlag: Galopp auf der gedämpften E-Saite, dann derselbe Galopp einen Halbton höher und ein offener Akzent. Jeder Ton gleich laut und gleich kurz.",
+            "Spiel zu einer Gitarrenaufnahme (eigene oder aus der Band). Hör nicht auf dich, sondern auf die Summe: Klingt jeder Anschlag wie ein Ton oder wie zwei kurz nacheinander?",
+            "Gleiche die Tonlänge an: Wo die Gitarre dämpft, dämpfst du mit dem Handballen; wo sie einen Akzent offen klingen lässt, lässt du ihn auch klingen und stoppst ihn an derselben Stelle.",
+            "Erhöhe in 5-BPM-Schritten Richtung 180, aber erst, wenn die Aufnahme auf der aktuellen Stufe deckungsgleich klingt. Übe in Blöcken mit Pausen und hör bei Ziehen im Unterarm sofort auf."
+          ],
+          "steigerung": "Zielbereich 190 bis 210 BPM. Wechsle dann für einen Takt bewusst in eine eigene Figur (Grundton halten, Gegenbewegung) und kehr auf den Schlag genau in die Verdopplung zurück.",
+          "selbstkontrolle": "Nimm Bass und Gitarre zusammen auf und hör bei halbem Tempo nach: Flammen die Anschläge (doppelter Attack), oder verschmelzen sie? Ist der Bass in der Wand noch als eigene Kante hörbar? Wenn nicht, fehlt meist Attack, nicht Lautstärke."
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 150,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 18,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 19,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 1,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 22,
+            "saite": 4,
+            "bund": 1,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 23,
+            "saite": 4,
+            "bund": 1,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 24,
+            "saite": 4,
+            "bund": 6,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 28,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 31,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          }
+        ],
+        "hinweis": "Takt 1 Galopp auf gedämpftem E, Takt 2 derselbe Galopp einen Halbton höher und ein offener Akzent auf Bb — dem Tritonus zum E. Die Gitarre spielt dasselbe eine Oktave höher; beide Anschläge müssen zu einem verschmelzen."
+      }
+    },
+    {
+      "id": "thrash_skank_double",
+      "anzeigetitel": {
+        "de": "Thrash-Drums: Skank, Double Bass & der Umschalter"
+      },
+      "domaene": [
+        "schlagzeug"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "skank_beat",
+        "double_bass",
+        "double_bass_patterns"
+      ],
+      "erklaerteil": {
+        "de": "Thrash-Drumming steht auf zwei Säulen: dem Skank-Beat (Kick und Snare im schnellen Achtel-Wechsel, Becken auf jeder Achtel) als Motor der schnellen Teile und der Double Bass als Teppich unter Galopp- und Sechzehntel-Riffs. Für sich ist beides Handwerk. Die eigentliche Aufgabe ist der Umschalter dazwischen: Thrash-Songs springen alle vier oder acht Takte zwischen Skank, Double-Bass-Teil, halbem Tempo und Stopps — und jeder Wechsel muss auf dem Schlag sitzen, ohne dass das Grundtempo wandert.\n\nDie Bruchstellen sind körperlich. Beim Wechsel vom Skank in die Double Bass übernimmt der zweite Fuß plötzlich die Hälfte der Arbeit, das Gewicht verlagert sich, und viele eilen in den ersten Sechzehnteln. Auf dem Rückweg verschleppt die Snare-Hand, weil sie aus dem Backbeat (Snare auf 2 und 4) wieder auf die Achtel-Offbeats finden muss. Dazu kommt der Bezug zum Riff: Im Thrash folgt die Bassdrum oft den Gitarrenakzenten statt einem festen Muster — die Double Bass spielt dann die Galopp-Figuren der Gitarre mit.\n\nSkank-Tempi liegen meist zwischen 180 und 240 BPM. Das verlangt Lockerheit statt Kraft: die Snare aus dem Handgelenk, die Fußtechnik passend zum Tempo (Ferse oben für Kraft, Ferse unten für Kontrolle), kurze Blöcke mit echten Pausen, Gehörschutz. Bei Ziehen in Schienbein, Wade oder Handgelenk sofort aufhören — anhaltende Beschwerden gehören ärztlich oder physiotherapeutisch abgeklärt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der Umschalter",
+          "ziel": "Zwischen Skank-Beat und Double-Bass-Teil auf den Schlag wechseln, ohne dass das Tempo wandert — Start bei 160 BPM, Ziel 200 bis 220 BPM.",
+          "schritte": [
+            "Wärm Hände und Füße auf. Spiel das Demo-Pattern bei 160 BPM: zwei Takte Skank (Kick auf den Zählzeiten, Snare auf den „und“s, Hi-Hat auf jeder Achtel), dann zwei Takte Double-Bass-Sechzehntel mit Snare auf 2 und 4, Ride auf den Vierteln und Crash auf der Eins.",
+            "Isolier die Naht: nur der letzte Skank-Takt und der erste Double-Bass-Takt, zehnmal im Wechsel. Achte darauf, dass die ersten vier Sechzehntel nicht eilen.",
+            "Dann die Rücknaht: letzter Double-Bass-Takt, erster Skank-Takt. Die Snare muss sofort wieder auf den Offbeats sitzen — zähl laut mit, wenn sie verschleppt.",
+            "Nimm mit Klick auf und vergleich die Wechsel. Erhöhe in 4-BPM-Schritten erst, wenn drei Durchläufe hintereinander ohne Tempoabweichung gelingen, und spiel in Blöcken von zwei bis drei Minuten mit Pausen dazwischen."
+          ],
+          "steigerung": "Zielbereich 200 bis 220 BPM. Ersetz dann die durchgehenden Sechzehntel durch Galopp-Figuren auf der Double Bass (Achtel plus zwei Sechzehntel) und setz vor dem Rückweg in den Skank einen Stopp mit abgestopptem Becken.",
+          "selbstkontrolle": "Leg die Aufnahme über den Klick: Zieht das Tempo an oder fällt es ab — auf dem Hinweg oder auf dem Rückweg? Sind die Sechzehntel beider Füße gleich laut? Bei Ziehen in Schienbein, Wade oder Handgelenk sofort Pause und Tempo zurück."
+        }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 180,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "hihat_closed",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "ride",
+            "schritte": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "hinweis": "Zwei Takte Skank, harter Wechsel in zwei Takte Double-Bass-Sechzehntel mit Backbeat — und wieder zurück. Beide Nähte sitzen auf der Eins, das Tempo bleibt dasselbe."
+      }
+    },
+    {
+      "id": "thrash_vocals_bellen",
+      "anzeigetitel": {
+        "de": "Thrash-Vocals: gebellt, rhythmisch, verständlich"
+      },
+      "domaene": [
+        "gesang"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "rhythmus_phrasierung",
+        "harsh_artikulation",
+        "false_cord_ansatz"
+      ],
+      "erklaerteil": {
+        "de": "Thrash-Vocals stehen der Rhythmusgitarre näher als der Melodie: kurze, gebellte Silben, die genau auf den Riff-Akzenten sitzen, dazwischen Pausen, in denen das Riff atmet. Das Spektrum reicht vom rauen, halb gesungenen Shout über den gebellten Ton mit wenig Tonhöhe bis zu einzelnen hohen Schreien als Akzent. Anders als im Death Metal soll der Text meist verstanden werden — eine Zeile, die das Publikum mitbrüllen kann, ist live mehr wert als die tiefste Verzerrung.\n\nDas Handwerk liegt in drei Punkten. Erstens die Artikulation: Konsonanten hart und früh, Vokale kurz und offen — die Konsonanten tragen den Rhythmus, die Vokale die Verzerrung. Zweitens das Timing: Bei 200 BPM bleibt für eine Silbe oft nur eine Achtel, und eine zu spät gesetzte Silbe zieht das ganze Riff nach hinten. Drittens die Ökonomie: Gebellte Silben verführen dazu, jede einzelne aus dem Hals zu stoßen. Die Kraft kommt aus der Atemstütze und einem kurzen Impuls aus der Körpermitte, die Verzerrung aus Luft und Resonanz (Taschenfalten-Ansatz) — nie aus Pressen am Kehlkopf.\n\nGesundheitsrahmen: vor jeder Einheit aufwärmen, leise beginnen und die Intensität erst steigern, wenn der Ton mühelos kommt. Bei Kratzen, Brennen oder Heiserkeit sofort stoppen. Verzerrte Techniken gehören an die Seite einer erfahrenen Lehrperson für Extreme Vocals, anhaltende Heiserkeit in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Silbe auf den Akzent",
+          "ziel": "Eine Thrash-Zeile rhythmisch exakt und verständlich über ein schnelles Riff setzen — mit Kraft aus der Stütze statt aus dem Hals, von 140 bis Richtung 200 BPM.",
+          "schritte": [
+            "Wärm die Stimme auf. Sprich eine selbst geschriebene Zeile rhythmisch zum Klick bei 140 BPM, eine Silbe pro Achtel, die Konsonanten übertrieben deutlich — noch ohne Verzerrung.",
+            "Markier die Silben, die auf Riff-Akzente fallen, und setz dort einen kurzen Impuls aus der Körpermitte, ohne Druck am Hals. Die übrigen Silben bleiben leichter.",
+            "Füg leise eine Verzerrung aus Luft und Resonanz hinzu, ohne lauter zu werden. Kommt sie nur mit Druck, geh zurück zu Schritt 2.",
+            "Leg die Zeile über ein Riff oder einen Loop und steigere in kleinen Schritten Richtung 180 bis 200 BPM — nur so weit, wie Timing und Verständlichkeit halten. Kurze Blöcke, Wasser, Pausen."
+          ],
+          "steigerung": "Setz Pausen als Gestaltungsmittel: eine Zeile, die zwei Takte schweigt und dann mit einem einzigen gebellten Wort auf der Eins einschlägt. Ein kurzer hoher Schrei als Akzent am Zeilenende kommt erst dazu, wenn die Höhe einzeln schon beschwerdefrei sitzt.",
+          "selbstkontrolle": "Nimm auf und lass jemanden zuhören, der den Text nicht kennt: Versteht er die Zeile? Sitzen die Silben auf den Akzenten oder knapp dahinter? Nach jeder Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Bei Kratzen sofort stoppen; anhaltende Heiserkeit gehört in die HNO-Praxis."
+        }
+      }
+    },
+    {
+      "id": "thrash_riffbau_kaskade",
+      "anzeigetitel": {
+        "de": "Thrash-Riffbau: Chromatik, Tritonus & Riff-Kaskaden"
+      },
+      "domaene": [
+        "theorie"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "chromatik_und_bewegung",
+        "tritonus_dissonanz",
+        "riff_zu_part_entwickeln"
+      ],
+      "erklaerteil": {
+        "de": "Thrash-Riffs stehen auf einem einfachen Fundament: Der Grundton liegt auf der offenen, gedämpften tiefen Saite (meist E oder D), dazwischen schieben sich bewegliche Töne und Powerchords. Das Material ist schmal und scharf — chromatische Rutscher (Bund 0–1–2), die kleine Sekunde über dem Grundton als phrygische Reibung, der Tritonus (E gegen Bb) als Signal für Bedrohung. Funktionsharmonik spielt kaum eine Rolle; das Riff lebt von der Spannung zwischen dem stehenden Grundton und dem, was sich darüber bewegt.\n\nWas einen Thrash-Song zum Thrash macht, ist aber die Verkettung. Typisch ist die Riff-Kaskade: Ein Song reiht fünf, acht oder mehr Riffs hintereinander, statt zwei Teile zu wiederholen, und jedes neue Riff verschiebt etwas — das Tempo (Skank, halbes Tempo, zurück), die Dichte (Achtel, Galopp, Sechzehntel) oder die Lage (offene Saite, Powerchords am Hals). Tempowechsel sind dabei Werkzeuge, keine Brüche: Ein Riff im halben Tempo vor dem Wiedereinstieg lässt das schnelle Tempo danach schneller wirken, als es ist.\n\nFür das Schreiben heißt das: in Zellen denken. Eine Zelle (zwei Takte, ein Motiv) wird variiert — transponiert, rhythmisch verdichtet, um einen Tritonus verschoben —, und daraus entsteht der nächste Teil. So bleibt die Kaskade zusammenhängend, obwohl sich ständig etwas ändert. Die Falle ist die Aneinanderreihung ohne Beziehung: Acht Riffs ohne gemeinsames Motiv klingen nicht komplex, sondern beliebig."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir einen Thrash-Song vor, den du gut kennst, und schreib seine Riff-Kaskade als Liste auf: Wie viele verschiedene Riffs gibt es, in welcher Reihenfolge, und was ändert sich von einem zum nächsten — Tempo, Dichte, Lage oder Harmonik? Wo sitzt ein Tempowechsel, und was bewirkt er für den Teil danach?\n\nBau dann selbst eine Kaskade aus einer einzigen Zelle: zwei Takte gedämpfte Achtel auf E mit einem chromatischen Rutscher. Leite daraus drei weitere Riffs ab — eines um einen Tritonus verschoben, eines rhythmisch zum Galopp verdichtet, eines im halben Tempo mit offenen Powerchords. Prüf die Kernfrage: Hört man, dass alle vier aus derselben Zelle stammen? Wenn nicht, fehlt die Beziehung — und genau sie trennt eine Kaskade von einer Aneinanderreihung."
+      }
+    },
+    {
+      "id": "thrash_tightness_ethos",
+      "anzeigetitel": {
+        "de": "Thrash-Tightness: Präzision als Band-Ethos"
+      },
+      "domaene": [
+        "mentales"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "duo_gd_riff_kick",
+        "duo_gb_lock",
+        "kontext_proberaum_zusammenspiel"
+      ],
+      "erklaerteil": {
+        "de": "Im Thrash ist Tightness keine Tugend unter vielen, sondern das Versprechen des Genres: Gitarren, Bass und Bassdrum spielen dieselben Achtel so deckungsgleich, dass sie wie ein einziges Instrument klingen, und Stopps sitzen wie abgeschnitten. Eine Thrash-Band, die nicht tight ist, klingt nicht rau oder roh — sie klingt einfach schlechter. Das macht Tightness zu einer Haltung der ganzen Band, nicht zur Aufgabe des Schlagzeugs allein.\n\nTight wird eine Band über drei Gewohnheiten. Erstens Klarheit über das Material: Alle spielen dieselbe Anschlagfolge, dieselbe Tonlänge und denselben Akzent, und wo jemand bewusst abweicht, ist das abgesprochen. Zweitens langsames Proben schneller Teile: Bei halbem Tempo hört man, wer vor oder hinter dem Schlag liegt; bei vollem Tempo verdeckt die Lautstärke alles. Drittens ehrliches Hören: Aufnahmen aus dem Proberaum, ohne Rechtfertigung angehört, zeigen schneller als jede Diskussion, welcher Übergang wackelt.\n\nMental heißt das, Kritik am Timing nicht persönlich zu nehmen. Wer „du warst zu früh“ als Angriff hört, verteidigt sich, statt die Stelle noch einmal zu spielen. Hilfreich ist eine Bandregel: Gesprochen wird über die Stelle, nicht über die Person — und jede Stelle bekommt so viele langsame Wiederholungen, bis sie sitzt."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm eure nächste Probe mit einem einfachen Mikrofon auf und hör sie allein an, bevor ihr darüber sprecht. Notier drei Stellen: den Übergang, der am wackligsten sitzt, den Stopp, der am wenigsten wie abgeschnitten klingt, und das Riff, in dem Gitarre und Bass am deutlichsten auseinanderliegen.\n\nFrag dich dann ehrlich: Weißt du bei diesen Stellen, welche Anschlagfolge, Tonlänge und welchen Akzent die anderen spielen — oder gehst du nur davon aus? Probt ihr schnelle Teile auch langsam oder nur im Songtempo? Und wie reagierst du, wenn jemand dein Timing anspricht? Schlag deiner Band eine Regel für Timing-Kritik vor (über die Stelle reden, nicht über die Person) und plan für die nächste Probe zehn Minuten nur für die wackligste Stelle — langsam, mit Klick, bis sie sitzt."
+      }
+    },
+    {
+      "id": "thrash_sound_mitten",
+      "anzeigetitel": {
+        "de": "Thrash-Sound in der Band: gescoopt oder mittig?"
+      },
+      "domaene": [
+        "ausruestung"
+      ],
+      "kompetenzstufe": [
+        "experte"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "sound_thrash_attack",
+        "gitarren_sound_architektur",
+        "zerre_stapeln"
+      ],
+      "erklaerteil": {
+        "de": "Der Thrash-Grundbaustein gibt die Faustregel: dezent scoopen, den Biss über Anschlag und Boost holen. Hier geht es darum, warum das so ist und wie du den Ton für eine konkrete Band baust. Ein stark gescoopter Ton — Bässe und Höhen hoch, Mitten zwischen etwa 400 Hz und 1 kHz deutlich abgesenkt — klingt allein vor der Box breit und aggressiv, weil das Ohr die Extreme betont. In der Band liegen genau in diesen Mitten aber Gitarre, Snare und Stimme. Die Gitarre gibt den Bereich ab, in dem sie sich behaupten könnte, und wird hinter dem Schlagzeug zum Rauschen.\n\nDer Gegenentwurf setzt auf die Mitten: ein Mittenbuckel-Booster mit wenig Gain und viel Pegel vor einer mehrstufigen High-Gain-Distortion oder der Vorstufenzerre des Verstärkers. Der Booster beschneidet den Tiefbass vor der Verzerrung — die Achtel bleiben straff statt wummernd — und hebt die Mitten an, in denen das Plektrum klickt. Das Gain darf dann niedriger sein, als man allein einstellen würde: Weniger Gain heißt mehr Attack und mehr Trennung zwischen den Anschlägen. Bei zwei Gitarren hilft Arbeitsteilung — eine etwas mittiger, eine etwas offener, beide mit demselben straffen Tiefbass.\n\nEntschieden wird nicht allein, sondern im Proberaum bei Bandlautstärke und auf Aufnahmen. Der Bass übernimmt den Bereich unter etwa 100 Hz, die Gitarre wird dort mit einem Hochpass entlastet, und jeder Regler muss sich an einer Frage messen lassen: Bleiben die Achtel im Mix einzeln hörbar?"
+      },
+      "reflexionsaufgabe": {
+        "de": "Stell zwei Sounds nebeneinander ein: einen deutlich gescoopten (Mitten weit runter, Bässe und Höhen hoch) und einen mittigen (Mitten neutral bis leicht angehoben, ein Booster mit wenig Gain und viel Pegel vor der Zerre, das Gain einen Tick zurück). Spiel mit beiden dasselbe heruntergepickte Achtel-Riff — erst allein, dann bei Bandlautstärke mit Schlagzeug und Bass, am besten mit Aufnahme. Gehörschutz nicht vergessen.\n\nHalte fest: Welcher Sound gewinnt allein, welcher in der Band? Bleiben die Achtel im Bandkontext einzeln lesbar? Wo überlagern sich Gitarre und Bass im Tiefbass, und was passiert, wenn du die Gitarre unter etwa 100 Hz entlastest? Bei zwei Gitarren: Probiert die Arbeitsteilung aus (eine mittiger, eine offener) und hört, ob die Wand breiter wird, ohne zu verschwimmen. Notier die eine Einstellung, die euren Bandsound am meisten verbessert hat."
+      }
+    },
+    {
+      "id": "thrash_koerper_unterarm",
+      "anzeigetitel": {
+        "de": "Thrash-Körper: Unterarm, Ausdauer & Pausen"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "fortgeschritten"
+      ],
+      "typ": "micro",
+      "stil": [
+        "thrash"
+      ],
+      "voraussetzungen": [
+        "handgesundheit_tempo",
+        "aufwaermen_handgesundheit",
+        "crust_koerper_ausdauer"
+      ],
+      "erklaerteil": {
+        "de": "Thrash fordert den Körper auf eigene Art: nicht über rohe Kraft, sondern über Wiederholung im hohen Tempo. Ein Set aus zehn Songs bedeutet für die Anschlaghand zehntausende Abschläge bei 180 bis 220 BPM, für die Füße am Schlagzeug lange Double-Bass-Passagen, für den Nacken Headbangen im Achtelpuls. Die typische Überlastung entsteht deshalb schleichend — in der Unterarm-Muskulatur, die die Hand nach jedem Abschlag zurückholt, an den Sehnen am Handgelenk und am Ellenbogen.\n\nDrei Prinzipien schützen. Erstens Ökonomie statt Kraft: Der Abschlag ist klein, kommt aus dem Handgelenk, und zwischen den Anschlägen lässt die Hand los. Wer das Plektrum klemmt oder den Unterarm durchgehend anspannt, ermüdet in Minuten. Zweitens dosierte Belastung: Ausdauer wächst über Wochen in Intervallen mit echten Pausen, nicht in einer Session, in der man spielt, bis der Arm brennt. Drittens Regeneration: Ein Ruhetag nach einer harten Probe gehört zum Training, und lockeres Abwärmen nach dem Spielen hilft mehr als Dehnen bis zum Schmerz. Vor jeder Einheit steht das Aufwärmen.\n\nWarnsignale nimmst du ernst: Brennen im Unterarm, das nach der Pause nicht vergeht, Kribbeln oder Taubheit in den Fingern, Schmerz am Ellenbogen beim Greifen. Dann sofort aufhören, nicht durchspielen — und bei anhaltenden Beschwerden ärztlich oder physiotherapeutisch abklären lassen. Eine gereizte Sehne braucht Wochen, ein Abend Pause kostet nichts."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beobachte deine nächsten drei Übe-Einheiten mit schnellem Downpicking (oder Double Bass) genau: Wärmst du vorher auf? Nach wie vielen Minuten spürst du den Unterarm, und wo genau — Oberseite, Handgelenk, Ellenbogen? Klemmst du Plektrum oder Sticks fester, wenn es anstrengend wird?\n\nPlan daraus eine Woche: Übe-Blöcke mit festen Pausen statt Durchhalten, ein Ruhetag nach der Probe, ein kurzes Abwärmen nach jeder Einheit. Leg ein klares Stoppsignal fest — etwa Brennen, das nach zwei Minuten Pause nicht weg ist, oder Kribbeln in den Fingern — und schreib es auf. Und überleg ehrlich: Gibt es Beschwerden, die du schon länger wegspielst? Dann ist der nächste Schritt kein Training mehr, sondern ein Termin in der ärztlichen oder physiotherapeutischen Praxis."
+      }
+    }
+  ]
+}
