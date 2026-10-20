@@ -45,7 +45,7 @@ import shutil
 import sys
 import xml.etree.ElementTree as ET
 
-from strichraster import auf_raster, raster
+from strichraster import raster_fuer
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -103,17 +103,25 @@ def main(nur_pruefen=False):
     # so kann die Fehlerbild-Komposition in build_svg3 auch statische Basis-Motive nutzen.
     static_dir = os.path.join(HERE, 'svg_static')
     static_n = 0
+    neben_raster = set()  # svg_static-Dateien, die --check schon als „nicht gerastert“ meldet
     if os.path.isdir(static_dir):
         for name in sorted(os.listdir(static_dir)):
             if not name.endswith('.svg'):
                 continue
             svg = open(os.path.join(static_dir, name), encoding='utf-8').read()
             ET.fromstring(svg)  # muss XML-wohlgeformt sein
-            # Statische Motive liegen selbst schon auf dem Strichraster (Quelle =
-            # Bündel); sonst zeigte die Datei im Repo andere Stärken als die App.
-            if not auf_raster(svg):
-                raise SystemExit(f'svg_static/{name} liegt nicht auf dem Strichraster'
-                                 ' -> python3 scripts/strichraster.py --statisch')
+            # Statische Motive liegen selbst auf dem Strichraster (Quelle = Bündel);
+            # sonst zeigte die Datei im Repo andere Stärken als die App. Der
+            # Normallauf legt sie darauf, --check meldet die Abweichung.
+            gerastert = raster_fuer(name[:-4], svg)
+            if gerastert != svg:
+                if nur_pruefen:
+                    abweichungen.append(f'scripts/svg_static/{name} (Strichraster)')
+                    neben_raster.add(name)
+                else:
+                    with open(os.path.join(static_dir, name), 'w', encoding='utf-8') as f:
+                        f.write(gerastert)
+                svg = gerastert
             with open(os.path.join(OUT, name), 'w', encoding='utf-8') as f:
                 f.write(svg)
             static_n += 1
@@ -128,7 +136,7 @@ def main(nur_pruefen=False):
             pfad = os.path.join(OUT, name)
             with open(pfad, encoding='utf-8') as f:
                 svg = f.read()
-            neu = raster(svg)
+            neu = raster_fuer(name[:-4], svg)
             if neu != svg:
                 with open(pfad, 'w', encoding='utf-8') as f:
                     f.write(neu)
@@ -136,11 +144,26 @@ def main(nur_pruefen=False):
     runpy.run_path(os.path.join(HERE, 'build_svg4.py'))
 
     # Sicherstellen, dass kein Generator ein statisches Motiv überschrieben hat.
+    # Tranche 3 schreibt ihre Motive auch, und svg_static/ hält davon eine Kopie;
+    # die muss gleich sein. Unterscheiden sich beide NUR in den Strichstärken,
+    # ist das keine fremde Zeichnung, sondern das Strichraster: Die Kopie war aus
+    # dem schon gerasterten Stand gerechnet, der Generator aus der Rohfassung, und
+    # an der Grenze zwischen Linie und Marke führen beide Wege nicht immer zum
+    # selben Ergebnis. Dann gilt die Generatorfassung und die Kopie zieht nach.
+    breiten = re.compile(r'stroke-width="[^"]*"')
     for name in sorted(os.listdir(static_dir)) if os.path.isdir(static_dir) else []:
         if name.endswith('.svg'):
             gen = open(os.path.join(static_dir, name), encoding='utf-8').read()
             cur = open(os.path.join(OUT, name), encoding='utf-8').read()
-            assert cur == gen, f'statisches Motiv {name} von einem Generator überschrieben'
+            if cur == gen or name in neben_raster:
+                continue
+            assert breiten.sub('', cur) == breiten.sub('', gen), \
+                f'statisches Motiv {name} von einem Generator überschrieben'
+            if nur_pruefen:
+                abweichungen.append(f'scripts/svg_static/{name} (Kopie weicht vom Generator ab)')
+            else:
+                with open(os.path.join(static_dir, name), 'w', encoding='utf-8') as f:
+                    f.write(cur)
 
     grafiken = {}
     for name in sorted(os.listdir(OUT)):

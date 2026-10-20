@@ -871,11 +871,24 @@ Tokens**, nie harte Farben.
   ihr Verhältnis dazu behalten — „Strichstärke = Gewicht“ gilt also **innerhalb** eines
   Motivs, nicht mehr zwischen Motiven. **Marken** (breite, kurze Striche: Punkte,
   Schläge, Balken — dort IST die Breite die Form) rasten nur ein, auf 4,5 / 6,5 / 9 / 13,
-  ohne Skalierung. Die Umformung ist idempotent; die Dateien in `svg_static/` liegen
-  selbst schon auf dem Raster (`build_grafiken.py` bricht sonst ab, Abhilfe
-  `python3 scripts/strichraster.py --statisch`). Fehlerbilder rastern ihr Basis-Motiv mit,
-  der Riss hat die Stufe „kräftig“. Wer ein neues Motiv zeichnet, muss die Stufen also
-  nicht treffen — nur die Verhältnisse. **Gleiche Technik, eigenes Bild:** Bass-
+  ohne Skalierung. **Doom und Sludge sind die Ausnahme mit Absicht:** Dort ist das
+  Gewicht der Inhalt, auf der normalen Hauptlinie sah „Doom-Bass“ aus wie jede Welle.
+  Motive, deren Baustein nur zu dieser Familie gehört (`stil` ⊆ doom/sludge/stoner_post,
+  mit doom oder sludge darunter — derzeit 20), tragen doppeltes Gewicht: Hauptlinie 6,
+  Stufen 4 / 6 / 9 (bei 9 gedeckelt — eine Akzentlinie von 13 war ein Klotz). Die Klasse
+  kommt aus den Inhaltsdaten (`schwere_ids()`), ein neuer Doom-Baustein wird von selbst
+  schwer; gemischte wie Powerchords bleiben normal. **Hohlkreise bleiben hohl:** Ein
+  gestrichener Kreis ist eine Ghost Note, sein Strich bleibt höchstens 0,8 × Radius —
+  ohne diese Regel liefen nach dem ersten Raster die Kreise in `drums_ghostnotes` &
+  Co. zu. Die Umformung ist idempotent. Die Dateien in `svg_static/` liegen selbst auf
+  dem Raster: Der Normallauf von `build_grafiken.py` rastert sie in place, `--check`
+  meldet Abweichungen. **Fallstrick:** Alle Tranche-3-Motive stehen zusätzlich als Kopie
+  in `svg_static/`, und die Kopie muss gleich der Generatorausgabe sein. Aus dem schon
+  gerasterten Stand gerechnet, kommt an der Grenze Linie/Marke nicht immer dasselbe heraus
+  wie aus der Rohfassung — weichen beide nur in `stroke-width` ab, übernimmt der Normallauf
+  die Generatorfassung in die Kopie (jede andere Abweichung bricht weiter ab). Fehlerbilder
+  rastern ihr Basis-Motiv in dessen Klasse mit, der Riss hat die Stufe „kräftig“. Wer ein
+  neues Motiv zeichnet, muss die Stufen also nicht treffen — nur die Verhältnisse. **Gleiche Technik, eigenes Bild:** Bass-
   Gegenstücke von Gitarren-Bausteinen (Grundhaltung, Greifhand, Galopp, Palm Muting …) waren
   lange Kopien mit etwas dickerem Strich. Sie zeigen jetzt, was am Bass anders ist (Hals
   quer vor dem Körper, ein Finger pro Bund, Lock mit der Bassdrum). Ein Rasterabgleich aller

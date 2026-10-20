@@ -23,6 +23,20 @@ Zwei Arten von Strich, weil ein Strich hier zwei Aufgaben hat:
   Linie mitzuskalieren, änderte die Komposition. Marken rasten deshalb nur auf die
   nächste Stufe aus MARKEN ein, ohne Skalierung.
 
+**Doom und Sludge tragen eine schwerere Hauptlinie.** Bei ihnen ist das Gewicht
+der Inhalt: zähes Tempo, Fuzz-Wand, Ton, der stehen bleibt. Auf der normalen
+Hauptlinie sah die Welle von „Doom-Bass“ aus wie jede andere Welle. Motive, deren
+Baustein nur zu dieser Familie gehört (stil ⊆ SCHWERE_STILE, mit doom oder
+sludge darunter), bekommen deshalb das doppelte Gewicht: Hauptlinie 6 statt 3,
+Linienstufen LINIEN_SCHWER (4/6/9). Marken bleiben, wie sie sind. Gemischte
+Bausteine (Powerchords: hardcore, doom, metalcore) bleiben normal; Fehlerbilder
+folgen ihrem Basis-Motiv. Die Klasse kommt aus den Inhaltsdaten, nicht aus einer
+Liste hier: Ein neuer Doom-Baustein wird von selbst schwer.
+
+**Hohlkreise bleiben hohl.** Ein gestrichener Kreis ist im Formvokabular eine
+Ghost Note; das Loch ist die Aussage. Sein Strich bleibt deshalb höchstens
+HOHL × Radius breit — sonst wuchs er mit der Hauptlinie, bis der Kreis voll war.
+
 Gefüllte Flächen (stroke="none") und Striche der Breite 0 berührt das Raster nicht.
 
 Die Umformung ist idempotent: Ein bereits gerastertes Motiv hat seine Hauptlinie
@@ -30,8 +44,9 @@ auf NORMAL und alle Stärken auf Stufen, ein zweiter Lauf ändert nichts. Das is
 die Voraussetzung dafür, dass die eingecheckten statischen Motive selbst schon
 gerastert sein können (Quelle = Bündel) und dass --check stabil bleibt.
 
-    python3 scripts/strichraster.py --statisch   # svg_static/ auf das Raster legen
     python3 scripts/strichraster.py --bericht    # Verteilung im Bündel ausgeben
+
+svg_static/ legt der Normallauf von build_grafiken.py selbst auf das Raster.
 """
 import json
 import math
@@ -46,6 +61,13 @@ ROOT = os.path.dirname(HERE)
 # Einsatzgröße (Listen-Icon, 2.1rem ≈ 34 px) ist NORMAL knapp ein Pixel.
 FEIN, NORMAL, KRAEFTIG, SCHWER = 2, 3, 4.5, 6.5
 LINIEN = (FEIN, NORMAL, KRAEFTIG, SCHWER)
+# Doom/Sludge: doppeltes Gewicht, Hauptlinie 6. Die Stufen sind die normalen mal
+# zwei, aber gedeckelt bei 9 — eine Akzentlinie von 13 war kein Strich mehr,
+# sondern ein Klotz.
+GEWICHT_SCHWER = 2
+LINIEN_SCHWER = (4, 6, 9)
+HOHL = 0.8  # Hohlkreis: Strich höchstens 0,8 × Radius, sonst läuft das Loch zu
+SCHWERE_STILE = {'doom', 'sludge', 'stoner_post'}
 MARKEN = (4.5, 6.5, 9, 13)
 MARKE_MIN_BREITE = 4  # dünner ist immer Linie (Tick, Hilfsstrich)
 MARKE_SEITEN = 6      # sichtbare Länge (mit Kappen) / Breite darunter → Marke
@@ -225,16 +247,24 @@ def hauptlinie(liste):
     return linien[-1][0]
 
 
-def _ein_lauf(svg):
+def _ein_lauf(svg, schwer):
     liste = striche(svg)
     haupt = hauptlinie(liste)
-    faktor = NORMAL / haupt if haupt else 1.0
+    ziel, stufen = (GEWICHT_SCHWER * NORMAL, LINIEN_SCHWER) if schwer else (NORMAL, LINIEN)
+    faktor = ziel / haupt if haupt else 1.0
     teile, pos = [], 0
-    for m, _, breite, laenge in liste:
+    for m, tag, breite, laenge in liste:
         if ist_marke(breite, laenge):
             neu = raste(breite, MARKEN)
         else:
-            neu = raste(breite * faktor, LINIEN)
+            neu = raste(breite * faktor, stufen)
+            if tag == 'circle':
+                # Hohlkreis = Ghost Note: Das Loch ist die Aussage. Skaliert die
+                # Hauptlinie hoch, darf der Kreis nicht mitwachsen, bis er voll ist.
+                r = float(dict(_ATTR.findall(m.group(0)))['r'])
+                passend = [s for s in stufen if s <= HOHL * r]
+                if neu > HOHL * r:
+                    neu = max(passend) if passend else min(stufen)
         alt = m.group(0)
         ersetzt = re.sub(r'stroke-width="[^"]*"', f'stroke-width="{_zahl(neu)}"', alt, count=1)
         teile.append(svg[pos:m.start()])
@@ -244,7 +274,7 @@ def _ein_lauf(svg):
     return ''.join(teile)
 
 
-def raster(svg):
+def raster(svg, schwer=False):
     """Gibt das Motiv mit gerasterten Strichstärken zurück.
 
     Läuft bis zum Fixpunkt: Ändert sich eine Breite, kann ein Strich nahe der
@@ -252,32 +282,43 @@ def raster(svg):
     die Umformung idempotent.
     """
     for _ in range(6):
-        neu = _ein_lauf(svg)
+        neu = _ein_lauf(svg, schwer)
         if neu == svg:
             return svg
         svg = neu
     raise ValueError('Strichraster findet keinen Fixpunkt')
 
 
-def auf_raster(svg):
-    return raster(svg) == svg
+def auf_raster(svg, schwer=False):
+    return raster(svg, schwer) == svg
 
 
-def _statisch():
-    ordner = os.path.join(HERE, 'svg_static')
-    n = 0
-    for name in sorted(os.listdir(ordner)):
-        if not name.endswith('.svg'):
-            continue
-        pfad = os.path.join(ordner, name)
-        with open(pfad, encoding='utf-8') as f:
-            alt = f.read()
-        neu = raster(alt)
-        if neu != alt:
-            with open(pfad, 'w', encoding='utf-8') as f:
-                f.write(neu)
-            n += 1
-    print(f'svg_static: {n} Motive auf das Raster gelegt')
+_SCHWERE_IDS = None
+
+
+def schwere_ids():
+    """Baustein-IDs der Doom-/Sludge-Familie (siehe Docstring), aus dem Pool gelesen."""
+    global _SCHWERE_IDS
+    if _SCHWERE_IDS is None:
+        with open(os.path.join(ROOT, 'js/daten.js'), encoding='utf-8') as f:
+            src = f.read()
+        m = re.search(r'const INHALTSDATEIEN\s*=\s*\[(.*?)\]', src, re.S)
+        if not m:
+            raise SystemExit('strichraster: INHALTSDATEIEN in js/daten.js nicht gefunden')
+        ids = set()
+        for fn in re.findall(r"'([^']+\.json)'", m.group(1)):
+            with open(os.path.join(ROOT, fn), encoding='utf-8') as f:
+                for b in json.load(f).get('bausteine', []):
+                    stil = set(b.get('stil', []))
+                    if stil and stil <= SCHWERE_STILE and stil & {'doom', 'sludge'}:
+                        ids.add(b['id'])
+        _SCHWERE_IDS = frozenset(ids)
+    return _SCHWERE_IDS
+
+
+def raster_fuer(motiv_id, svg):
+    """Rastert ein Motiv in der Gewichtsklasse seines Bausteins."""
+    return raster(svg, motiv_id in schwere_ids())
 
 
 def _bericht():
@@ -293,9 +334,7 @@ def _bericht():
 
 
 if __name__ == '__main__':
-    if '--statisch' in sys.argv[1:]:
-        _statisch()
-    elif '--bericht' in sys.argv[1:]:
+    if '--bericht' in sys.argv[1:]:
         _bericht()
     else:
         print(__doc__)
