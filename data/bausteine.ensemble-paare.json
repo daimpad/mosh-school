@@ -41,6 +41,10 @@
           "selbstkontrolle": "In der Aufnahme klingt das Riff wie ein Instrument; Anschläge und Pausen fallen zusammen."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 140
+      },
       "stil": [
         "thrash",
         "death_metal"
@@ -231,6 +235,10 @@
           "steigerung": "Verschiebt einzelne Chugs auf Synkopen und haltet die Synchronität; richtet euch dabei an der Bassdrum aus.",
           "selbstkontrolle": "Die Pausen sind bei beiden gleich schwarz; das Muster klingt wie ein Instrument."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 140
       },
       "stil": [
         "metalcore",
@@ -513,6 +521,10 @@
           "selbstkontrolle": "Basston und Kick verschmelzen zu einem Impuls; kein Flattern zwischen beiden."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 130
+      },
       "spielziele": [
         "timing_zum_klick",
         "riff_praezision"
@@ -708,6 +720,10 @@
           "selbstkontrolle": "Beide liegen zusammen auf dem Klick; auch bei reduziertem Metronom bleibt der Groove stabil."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 100
+      },
       "spielziele": [
         "timing_zum_klick"
       ]
@@ -745,6 +761,10 @@
           "steigerung": "Verlängert die Pause oder setzt einen gemeinsamen Akzent mitten hinein, den beide exakt gleich platzieren.",
           "selbstkontrolle": "Stopp und Wiedereinstieg fallen zusammen; die Eins nach dem Break sitzt bei beiden."
         }
+      },
+      "tempo": {
+        "start": 110,
+        "ziel": 140
       },
       "spielziele": [
         "saubere_uebergaenge",
@@ -1069,6 +1089,10 @@
           "selbstkontrolle": "Die Akzente fallen exakt zusammen; Hände und Füße bleiben locker — sonst wird pausiert."
         }
       },
+      "tempo": {
+        "start": 120,
+        "ziel": 170
+      },
       "stil": [
         "death_metal",
         "black_metal"
@@ -1382,6 +1406,10 @@
           "steigerung": "Verschiebt Akzente auf Synkopen und haltet die gemeinsame Platzierung; richtet euch an der Bassdrum aus.",
           "selbstkontrolle": "Betonte Silben und Riff-Akzente fallen zusammen; die Stimme bleibt mühelos, ohne Druck."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 120
       },
       "stil": [
         "metalcore",

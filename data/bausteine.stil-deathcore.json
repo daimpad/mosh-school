@@ -32,6 +32,10 @@
           "selbstkontrolle": "Nimm die Kante auf: Ist zwischen den Breakdown-Schlägen wirklich Stille, oder rauscht es? Sitzt der erste schwere Schlag exakt, oder franst er? Und ehrlich: Nickt dein Kopf beim Anhören — oder ist es nur laut?"
         }
       },
+      "tempo": {
+        "start": 120,
+        "ziel": 150
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",

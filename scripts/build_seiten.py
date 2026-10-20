@@ -357,10 +357,32 @@ def werkzeug_route(werkzeug, params):
     return f'{basis}?{query}'
 
 
+def metronom_params(tempo):
+    """Vorbelegung des Metronoms aus dem Tempo-Anker — wie in js/werkzeug-links.js."""
+    params = {'bpm': str(tempo['start'])}
+    if tempo['ziel'] != tempo['start']:
+        params['ziel'] = str(tempo['ziel'])
+    return params
+
+
+def tempo_text(tempo):
+    """Tempo-Zeile wie tempoHtml() in js/ansichten/baustein.js."""
+    if tempo['start'] == tempo['ziel']:
+        wert = uitext('ue_tempo_fest').replace('{bpm}', str(tempo['start']))
+    else:
+        wert = uitext('ue_tempo_bereich').replace('{start}', str(tempo['start'])).replace('{ziel}', str(tempo['ziel']))
+    if tempo.get('puls') == 'achtel':
+        wert += ' ' + uitext('ue_tempo_achtel')
+    return wert
+
+
 def generische_werkzeug_regeln(b):
     treffer = []
+    tempo = b.get('tempo')
+    if tempo:
+        treffer.append(('metronom', metronom_params(tempo)))
     if 'timing_zum_klick' in (b.get('spielziele') or []):
-        treffer.append(('metronom', {'bpm': '160'}))
+        treffer.append(('metronom', {}))
     stil = next((s for s in (b.get('stil') or []) if s in LOOP_STILE), None)
     if stil:
         treffer.append(('loops', {'stil': stil}))
@@ -656,6 +678,8 @@ def baustein_html(b):
         teile.append(f'<h2>{esc(kopf)}</h2>')
         if u.get('ziel'):
             teile.append(f'<p><strong>{esc(uitext("ue_ziel"))}:</strong> {esc(u["ziel"])}</p>')
+        if b.get('tempo'):
+            teile.append(f'<p><strong>{esc(uitext("ue_tempo"))}:</strong> {esc(tempo_text(b["tempo"]))}</p>')
         schritte = u.get('schritte')
         if isinstance(schritte, list) and schritte:
             teile.append(f'<p>{esc(uitext("ue_schritte"))}:</p><ol>' + ''.join(f'<li>{esc(s)}</li>' for s in schritte) + '</ol>')

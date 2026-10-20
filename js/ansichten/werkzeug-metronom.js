@@ -298,6 +298,10 @@ function wendePresetAn(query) {
   if (bpm) zustand.bpm = Math.round(bpm);
   const takt = zahl('takt', 1, 12);
   if (takt) zustand.takt = Math.round(takt);
+  // Rampenziel aus dem Tempo-Anker einer Übung. Schaltet die Rampe NICHT ein —
+  // sie steht bereit, wenn man sie braucht; vorgegeben ist nur das Starttempo.
+  const ziel = zahl('ziel', 40, 260);
+  if (ziel) zustand.rampeZiel = Math.round(ziel);
   if (query.get('rampe') === '1' || query.get('rampe') === 'true') zustand.rampeAn = true;
   // Tempo-Map aus dem Song-Struktur-Baukasten laden (oder abschalten).
   if (query.get('tempomap') === '1') ladeTempoMap();

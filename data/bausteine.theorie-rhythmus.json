@@ -84,6 +84,10 @@
           "selbstkontrolle": "Bleibt der Puls beim Verschieben stabil? Kannst du benennen, wie sich der Charakter ändert?"
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 100
+      },
       "voraussetzungen": [
         "groove_und_synkope"
       ],
@@ -382,6 +386,10 @@
           "steigerung": "Kombiniere den Unterteilungswechsel mit einem Registerwechsel, um den Effekt zu verstärken.",
           "selbstkontrolle": "Bleibt der Puls bei allen Unterteilungen stabil? Klingen die Abschnitte unterschiedlich schnell, obwohl das Tempo gleich ist?"
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 100
       },
       "voraussetzungen": [
         "puls_und_metrum",

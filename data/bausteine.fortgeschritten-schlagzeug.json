@@ -47,6 +47,10 @@
           "selbstkontrolle": "Jeder Takt ist eindeutig als Traditional oder Hammer erkennbar; gleichzeitige Schläge klingen als einer."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 160
+      },
       "demonstration": {
         "typ": "pattern",
         "bpm": 120,
@@ -210,6 +214,10 @@
           "selbstkontrolle": "Der letzte Blast-Takt klingt wie der erste; du atmest durchgehend und bleibst locker."
         }
       },
+      "tempo": {
+        "start": 140,
+        "ziel": 200
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -272,6 +280,10 @@
           "steigerung": "Tempo in kleinen Schritten anheben; Passagen bewusst mit dem schwachen Fuß beginnen. Brennen oder Ziehen in Handgelenk, Unterarm oder Schienbein heißt Pause — nicht durchbeißen; kommt es wieder, lass es ärztlich abklären.",
           "selbstkontrolle": "Der Teppich klingt maschinengleich; der Hand-Beat bleibt davon unbeeindruckt im Timing."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 180
       },
       "demonstration": {
         "typ": "pattern",
@@ -406,6 +418,10 @@
           "selbstkontrolle": "Jede Gruppe beginnt und endet exakt auf ihrer Unterteilung; der Hand-Beat bleibt stabil."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 160
+      },
       "demonstration": {
         "typ": "pattern",
         "bpm": 170,
@@ -518,6 +534,10 @@
           "selbstkontrolle": "Der Beat treibt gleichmäßig ohne Tempodrift; Hände und Schultern bleiben locker."
         }
       },
+      "tempo": {
+        "start": 140,
+        "ziel": 200
+      },
       "demonstration": {
         "typ": "pattern",
         "bpm": 200,
@@ -602,6 +622,10 @@
           "steigerung": "Ghost-Note-Positionen variieren und das Muster in einen Half-Time-Groove übertragen.",
           "selbstkontrolle": "Backbeat und Ghost Notes sind klar getrennt; der Groove rollt, ohne unruhig zu werden."
         }
+      },
+      "tempo": {
+        "start": 70,
+        "ziel": 100
       },
       "demonstration": {
         "typ": "pattern",
@@ -794,6 +818,10 @@
           "steigerung": "Hertas in ein Ein-Takt-Fill einbauen und mit Flams am Fill-Anfang kombinieren.",
           "selbstkontrolle": "Die Figur sitzt exakt im Puls und klingt rund; die Hände bleiben dabei locker."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
       },
       "demonstration": {
         "typ": "pattern",
@@ -1049,6 +1077,10 @@
           "selbstkontrolle": "Das Fill rollt hörbar in Dreiergruppen, und die Landung auf der Eins sitzt punktgenau."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 110
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -1116,6 +1148,10 @@
           "steigerung": "Im Half-Time-Teil das China (oder Crash) statt der Hi-Hat führen und Akzente aufs Riff setzen.",
           "selbstkontrolle": "Der Wechsel fühlt sich nach halbem Tempo an, obwohl der Klick unverändert weiterläuft."
         }
+      },
+      "tempo": {
+        "start": 110,
+        "ziel": 150
       },
       "demonstration": {
         "typ": "pattern",
@@ -1203,6 +1239,10 @@
           "steigerung": "Unregelmäßige Wechselpunkte üben (nach drei oder sechs Takten) und die Feels stärker kontrastieren. Brennen oder Ziehen in Handgelenk, Unterarm oder Schienbein heißt Pause — nicht durchbeißen; kommt es wieder, lass es ärztlich abklären.",
           "selbstkontrolle": "Jeder Wechsel sitzt auf der Eins; vor und nach der Naht ist das Timing unverändert stabil."
         }
+      },
+      "tempo": {
+        "start": 120,
+        "ziel": 160
       },
       "stil": [
         "powerviolence"
@@ -1462,6 +1502,10 @@
           "steigerung": "Die Dreier-Stimme in den Fuß legen oder die Figur über zwei Takte zum Klick strecken.",
           "selbstkontrolle": "Das Muster läuft stabil, und du kannst benennen, welche Stimme gerade auf welcher Zählzeit liegt."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
       },
       "demonstration": {
         "typ": "pattern",

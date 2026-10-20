@@ -42,6 +42,10 @@
           "selbstkontrolle": "Alle Töne sind gleich laut und klar; zwischen den Zyklen herrscht Stille statt Dröhnen."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -620,6 +624,10 @@
           "selbstkontrolle": "Kein Dröhnen der ungespielten Saiten; die tiefen Töne kommen als definierte Töne an, nicht als Rumpeln."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -788,6 +796,10 @@
           "steigerung": "Dasselbe mit einem Breakdown-Riff zu programmierten Drums; die späte Variante mit der exakten vergleichen.",
           "selbstkontrolle": "Die Abweichung ist konstant statt zufällig; du kannst auf Ansage zwischen den drei Platzierungen wechseln."
         }
+      },
+      "tempo": {
+        "start": 90,
+        "ziel": 90
       }
     },
     {

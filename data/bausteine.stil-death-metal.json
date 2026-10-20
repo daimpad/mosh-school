@@ -33,6 +33,10 @@
           "selbstkontrolle": "Nimm dich mit Klick auf und hör nur auf die Anschläge: Sind alle Sechzehntel gleich laut, auch beim Lagen- und Saitenwechsel? Fehlt an der Nahtstelle zwischen den Riffs ein Schlag, oder kommt einer zu früh? Und klingen die Halbtöne getrennt, oder verschmiert die Greifhand sie?"
         }
       },
+      "tempo": {
+        "start": 90,
+        "ziel": 180
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -106,6 +110,10 @@
           "selbstkontrolle": "Hör die Aufnahme zusammen mit Gitarre und Kick auf kleinen Lautsprechern: Ist jeder Halbton des Basses erkennbar, oder verschwimmt die Chromatik? Liegen deine Tonwechsel exakt auf denen der Gitarre? Hörst du den Fingerwechsel als Lautstärkeunterschied?"
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 160
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -163,6 +171,10 @@
           "selbstkontrolle": "Liegt der erste Schlag nach jedem Schnitt exakt auf dem Klick, oder kommt er zu früh? Sind beim Bomb Blast beide Füße gleich laut? Ziehen sich Schultern oder Unterarme an den Kanten zusammen? Dann ist das Tempo zu hoch — zurück und lockerer."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 190
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -216,6 +228,10 @@
           "steigerung": "Wechsle zwischen zwei Platzierungen über demselben Riff — einmal auf den Schlägen, einmal synkopiert gegen das Tremolo — und prüf, welche das Riff stärker treibt. Verlängere die Passagen erst, wenn beides über Wochen beschwerdefrei klappt.",
           "selbstkontrolle": "Nimm dich auf und mach nach jeder Einheit den Sprechtest: Klingt deine Alltagsstimme frei? Klingt der Growl rund und tief oder dünn und gepresst? Sitzen die Silben an den geplanten Stellen, oder hetzt du dem Blast hinterher? Heiserkeit am nächsten Tag heißt: Umfang und Lautstärke reduzieren."
         }
+      },
+      "tempo": {
+        "start": 150,
+        "ziel": 180
       },
       "demonstration": {
         "typ": "hoerbeispiel",

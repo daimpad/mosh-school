@@ -172,6 +172,10 @@
           "selbstkontrolle": "Jeder Ton klingt sauber; keine Überdehnung, keine Verspannung in der Hand."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
+      },
       "transfer_herkunft": [
         "GIT"
       ],
@@ -273,6 +277,10 @@
           "selbstkontrolle": "Nur die gespielte Saite klingt; keine mitschwingenden Nachbarsaiten, saubere Pausen."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -369,6 +377,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und übe Saitenwechsel bei durchlaufendem Wechsel.",
           "selbstkontrolle": "Zeige- und Mittelfinger sind im Klang nicht zu unterscheiden; kein Stolpern beim Saitenwechsel."
         }
+      },
+      "tempo": {
+        "start": 70,
+        "ziel": 130
       },
       "demonstration": {
         "typ": "tab",
@@ -472,6 +484,10 @@
           "steigerung": "Steigere Tempo und Dauer in kleinen Schritten; bei Downpicking nur so lange, wie die Hand locker bleibt.",
           "selbstkontrolle": "Der Anschlag klingt gleichmäßig und definiert; die Hand verkrampft nicht."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 150
       },
       "transfer_herkunft": [
         "GIT"
@@ -662,6 +678,10 @@
           "selbstkontrolle": "Jeder Ton klingt gleich kurz und gleich laut; die Dämpfung bleibt konstant."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 140
+      },
       "transfer_herkunft": [
         "GIT"
       ],
@@ -766,6 +786,10 @@
           "selbstkontrolle": "Deine Töne passen harmonisch zum Riff und sitzen rhythmisch; nichts eiert."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -842,6 +866,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten, geh erst dann zu Sechzehnteln über und zieh die Figur später über Saitenwechsel.",
           "selbstkontrolle": "Der Ton fließt gleichmäßig; bei Verkrampfung oder Brennen stoppst du und lockerst die Hand."
         }
+      },
+      "tempo": {
+        "start": 90,
+        "ziel": 160
       },
       "demonstration": {
         "typ": "tab",
@@ -992,6 +1020,10 @@
           "selbstkontrolle": "Der Galopp klingt gleichmäßig und treibt; die schnellen Töne verschleppen nicht."
         }
       },
+      "tempo": {
+        "start": 90,
+        "ziel": 160
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -1124,6 +1156,10 @@
           "selbstkontrolle": "Deine Töne und der Klick verschmelzen; du hörst kein Flattern zwischen beiden."
         }
       },
+      "tempo": {
+        "start": 90,
+        "ziel": 140
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -1219,6 +1255,10 @@
           "selbstkontrolle": "Trotz langsamem Tempo sitzt das Timing; die Töne klingen voll und satt."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -1286,6 +1326,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und setz einzelne Akzente oder Durchgangstöne.",
           "selbstkontrolle": "Die Linie sitzt tight zum Riff; saubere Übergänge, keine Nebengeräusche, stabiles Timing."
         }
+      },
+      "tempo": {
+        "start": 90,
+        "ziel": 140
       },
       "demonstration": {
         "typ": "tab",

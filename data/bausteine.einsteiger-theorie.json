@@ -179,6 +179,10 @@
           "selbstkontrolle": "Du wechselst zwischen den Unterteilungen, ohne aus dem Puls zu fallen."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
+      },
       "transfer_herkunft": [
         "KLV",
         "DRM"

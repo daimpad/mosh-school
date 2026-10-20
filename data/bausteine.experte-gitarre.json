@@ -47,6 +47,10 @@
           "selbstkontrolle": "Auf der Aufnahme sind Anschläge und Pausen messerscharf getrennt; nichts klingt nach."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -546,6 +550,10 @@
           "selbstkontrolle": "In jeder Geschwindigkeit klingt immer nur ein Ton; die Welle läuft ohne Knick durch den Umkehrpunkt."
         }
       },
+      "tempo": {
+        "start": 50,
+        "ziel": 100
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -912,6 +920,10 @@
           "steigerung": "Die markierten Stellen isoliert üben und den Doppel-Test wiederholen, bis die Breitwand steht.",
           "selbstkontrolle": "Die Summe beider Takes klingt fett statt phasig; kein hörbares Echo zwischen links und rechts."
         }
+      },
+      "tempo": {
+        "start": 120,
+        "ziel": 120
       },
       "demonstration": {
         "typ": "tab",

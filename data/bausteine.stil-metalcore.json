@@ -35,6 +35,10 @@
           "selbstkontrolle": "Nimm beide Stimmen auf und hör sie zusammen: Schwimmt die Harmonie an den Tonenden oder im Vibrato? Klingt ein Zusammenklang schief (dann ist die Terz nicht diatonisch)? Und bleibt im Chug-Takt die Stille zwischen den Schlägen sauber, oder klingt die tiefe Saite in die Melodie hinein?"
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 160
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -245,6 +249,10 @@
           "selbstkontrolle": "Nimm dich mit Klick oder Drums auf: Hörst du im Breakdown Bass und Kick als EINEN Schlag, oder kommt der Bass nach? Ist die Stille zwischen den Einschlägen wirklich still? Und im melodischen Teil: Erkennt man ohne Gitarre, welcher Akkord gerade gilt?"
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 150
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -406,6 +414,10 @@
           "steigerung": "Spiel im Refrain-Block Ride oder Crash auf den Vierteln statt der Hi-Hat und hör, wie der Teil breiter wird, ohne schneller zu werden. Oder verschieb einen Breakdown-Einschlag auf eine Sechzehntel-Offbeat-Position und halt ihn trotzdem exakt.",
           "selbstkontrolle": "Nimm einen Durchlauf zum Klick auf und hör ihn gegen das Metronom: Wirst du im Half-Time langsamer oder im Fill schneller? Sitzt das erste Becken nach dem Fill exakt? Und sind die Breakdown-Lücken wirklich leer, oder schwingt ein Becken hinein, das du nicht abgestoppt hast?"
         }
+      },
+      "tempo": {
+        "start": 110,
+        "ziel": 160
       },
       "demonstration": {
         "typ": "pattern",

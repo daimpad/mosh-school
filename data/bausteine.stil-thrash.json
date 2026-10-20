@@ -44,6 +44,10 @@
           "selbstkontrolle": "Nimm die letzte Wiederholung auf: Klingen die Achtel in Sekunde 50 noch so hart und gleich wie in Sekunde 5? Sind die offenen Akzente laut und sofort wieder gedämpft? Spürst du Brennen oder Ziehen im Unterarm, hör sofort auf, nimm das Tempo zurück und mach Pause — anhaltende Beschwerden lässt du ärztlich abklären."
         }
       },
+      "tempo": {
+        "start": 160,
+        "ziel": 220
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -214,6 +218,10 @@
           "steigerung": "Zielbereich 190 bis 210 BPM. Wechsle dann für einen Takt bewusst in eine eigene Figur (Grundton halten, Gegenbewegung) und kehr auf den Schlag genau in die Verdopplung zurück.",
           "selbstkontrolle": "Nimm Bass und Gitarre zusammen auf und hör bei halbem Tempo nach: Flammen die Anschläge (doppelter Attack), oder verschmelzen sie? Ist der Bass in der Wand noch als eigene Kante hörbar? Wenn nicht, fehlt meist Attack, nicht Lautstärke."
         }
+      },
+      "tempo": {
+        "start": 150,
+        "ziel": 210
       },
       "demonstration": {
         "typ": "tab",
@@ -404,6 +412,10 @@
           "steigerung": "Zielbereich 200 bis 220 BPM. Ersetz dann die durchgehenden Sechzehntel durch Galopp-Figuren auf der Double Bass (Achtel plus zwei Sechzehntel) und setz vor dem Rückweg in den Skank einen Stopp mit abgestopptem Becken.",
           "selbstkontrolle": "Leg die Aufnahme über den Klick: Zieht das Tempo an oder fällt es ab — auf dem Hinweg oder auf dem Rückweg? Sind die Sechzehntel beider Füße gleich laut? Bei Ziehen in Schienbein, Wade oder Handgelenk sofort Pause und Tempo zurück."
         }
+      },
+      "tempo": {
+        "start": 160,
+        "ziel": 220
       },
       "demonstration": {
         "typ": "pattern",
@@ -798,6 +810,10 @@
           "steigerung": "Setz Pausen als Gestaltungsmittel: eine Zeile, die zwei Takte schweigt und dann mit einem einzigen gebellten Wort auf der Eins einschlägt. Ein kurzer hoher Schrei als Akzent am Zeilenende kommt erst dazu, wenn die Höhe einzeln schon beschwerdefrei sitzt.",
           "selbstkontrolle": "Nimm auf und lass jemanden zuhören, der den Text nicht kennt: Versteht er die Zeile? Sitzen die Silben auf den Akzenten oder knapp dahinter? Nach jeder Einheit der Sprechtest: Klingt deine Alltagsstimme frei? Bei Kratzen sofort stoppen; anhaltende Heiserkeit gehört in die HNO-Praxis."
         }
+      },
+      "tempo": {
+        "start": 140,
+        "ziel": 200
       }
     },
     {

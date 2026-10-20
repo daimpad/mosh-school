@@ -92,8 +92,19 @@ const GEAR_REGION = {
 // Generische Regeln: liefern für einen Baustein passende Werkzeug-Links.
 // Jede Regel bekommt den Baustein und gibt ein Link-Objekt oder null zurück.
 const GENERISCHE_REGELN = [
-  // Jede Übung mit dem Spielziel „timing_zum_klick" kann das Metronom öffnen.
-  (b) => ((b.spielziele || []).includes('timing_zum_klick') ? { werkzeug: 'metronom', params: { bpm: '160' } } : null),
+  // Übungen mit Tempo-Anker öffnen das Metronom auf ihrem Starttempo, das Ziel
+  // als Rampenziel. Steht vor der Spielziel-Regel: Bis v232 öffnete JEDE
+  // Timing-Übung pauschal mit 160 BPM — auch Einsteiger-Übungen, die bei 60
+  // beginnen, und Doom-Grooves bei 55.
+  (b) => {
+    const tempo = b.tempo;
+    if (!tempo) return null;
+    const params = { bpm: String(tempo.start) };
+    if (tempo.ziel !== tempo.start) params.ziel = String(tempo.ziel);
+    return { werkzeug: 'metronom', params };
+  },
+  // Timing-Übungen ohne eigenes Tempo öffnen das Metronom ohne Vorbelegung.
+  (b) => ((b.spielziele || []).includes('timing_zum_klick') ? { werkzeug: 'metronom' } : null),
   // Bausteine mit einem Genre, für das es einen Loop gibt, öffnen ihn vorbelegt.
   (b) => {
     const stil = (b.stil || []).find((s) => LOOP_STILE.has(s));

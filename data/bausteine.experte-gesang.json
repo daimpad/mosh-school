@@ -125,6 +125,10 @@
           "steigerung": "Eine Phrase über die Taktgrenze ziehen und bewusst erst auf der übernächsten Eins landen lassen.",
           "selbstkontrolle": "Gesprochene und verzerrte Version sitzen identisch im Raster; die Verzerrung kostet hörbar keine Präzision. Verzerrte Techniken erarbeitest du am sichersten mit einer Lehrperson für Extreme Vocals; halten Beschwerden länger als ein paar Tage an, lass das in einer HNO-Praxis abklären."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 110
       }
     },
     {

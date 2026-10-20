@@ -42,6 +42,10 @@
           "selbstkontrolle": "Der Tonstrom klingt gleichmäßig und dicht; es ist kein unbeabsichtigter Puls und kein Aussetzer zu hören."
         }
       },
+      "tempo": {
+        "start": 90,
+        "ziel": 170
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -283,6 +287,10 @@
           "steigerung": "Die Melodie um weitere Töne verlängern und das Tempo nur anheben, solange die Hand locker bleibt.",
           "selbstkontrolle": "Der Tremolo-Strom reißt beim Tonwechsel nicht ab, der Unterarm bleibt locker, und die Melodie ist klar herauszuhören."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 180
       },
       "demonstration": {
         "typ": "tab",
@@ -526,6 +534,10 @@
           "steigerung": "Mehr Akkorde in die Folge aufnehmen und die Zahl der Anschläge pro Akkord verringern.",
           "selbstkontrolle": "Das Tremolo läuft beim Wechsel gleichmäßig weiter, und die Akkordwechsel sitzen genau auf dem Schlag."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 170
       },
       "demonstration": {
         "typ": "tab",
@@ -968,6 +980,10 @@
           "selbstkontrolle": "Beide Varianten sind klar zu unterscheiden, die Sechzehntel bleiben gleich lang, und der Wechsel eilt nicht."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 170
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1163,6 +1179,10 @@
           "selbstkontrolle": "Gedämpfte und offene Töne sind klar getrennt, die Akzente sitzen im Timing, und die Dämpfung schwankt nicht unbeabsichtigt."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 150
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1303,6 +1323,10 @@
           "selbstkontrolle": "Nur die beiden gewollten Töne klingen, die übersprungene Saite bleibt stumm, und du triffst sicher."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1432,6 +1456,10 @@
           "steigerung": "Längere Legato-Ketten über mehrere Finger bilden und erst dann das Tempo erhöhen.",
           "selbstkontrolle": "Der gehämmerte und der gezogene Ton klingen klar und ähnlich laut wie der angeschlagene, ohne zu verstummen."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 120
       },
       "demonstration": {
         "typ": "tab",
@@ -1638,6 +1666,10 @@
           "selbstkontrolle": "Du greifst die Form ohne Suchen, dein Lick klingt musikalisch, und die Verzierung sitzt sauber."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 110
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1785,6 +1817,10 @@
           "selbstkontrolle": "Die Dissonanz klingt gewollt und rhythmisch fest, und der Kontrast zum stabilen Akkord ist deutlich hörbar."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1883,6 +1919,10 @@
           "selbstkontrolle": "Jeder Ton des Arpeggios ist einzeln zu hören; es klingt kein zusammenhängender Akkord und kein Matsch."
         }
       },
+      "tempo": {
+        "start": 50,
+        "ziel": 90
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1969,6 +2009,10 @@
           "steigerung": "Auch den Rückweg üben (vom Lead zurück in die Chugs) und das Tempo erhöhen.",
           "selbstkontrolle": "Der Übergang sitzt ohne Lücke, die Chugs sind gedämpft, und die Lead-Töne klingen offen und ausdrucksvoll."
         }
+      },
+      "tempo": {
+        "start": 90,
+        "ziel": 140
       },
       "demonstration": {
         "typ": "tab",

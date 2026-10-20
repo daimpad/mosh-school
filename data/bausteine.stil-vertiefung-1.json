@@ -466,6 +466,10 @@
           "selbstkontrolle": "Die Fuzz-Wand ist schwer und zäh, der Bass bleibt als eigene Schicht hörbar, nichts schleppt."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
+      },
       "spielziele": [
         "schwererer_ton",
         "definierter_anschlag"
