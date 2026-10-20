@@ -278,7 +278,7 @@
     "such_filter_zuruecksetzen": "Filter zurücksetzen",
     "suche_feld_label": "Suchbegriff eingeben",
     "suche_platzhalter": "Palm Muting, Blastbeat, Growl, Doom …",
-    "suche_start": "Tippe einen Begriff ein — oder stöbere direkt nach Thema:",
+    "suche_start": "Tippe einen Begriff ein — oder grenz oben über die Filter ein: Domäne, Stufe, Genre, Spielziel, Typ.",
     "suche_treffer": "{n} Treffer",
     "suche_keine_treffer": "Nichts gefunden für „{q}“. Versuch einen anderen Begriff oder stöbere nach Thema.",
     "suche_index_fehlt": "Der Suchindex konnte nicht geladen werden — die Suche findet gerade nichts. Lade die Seite neu; wenn du offline bist, geh kurz online.",
