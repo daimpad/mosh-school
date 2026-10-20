@@ -151,6 +151,45 @@ DEMO_INSTRUMENTE = {
 DEMO_TECHNIKEN = {'normal', 'palm_mute', 'chug', 'slide', 'bend', 'dead_note'}
 
 
+# Tempo-Anker einer Übung (optional): Start und Ziel in BPM, wie das Metronom
+# sie einstellt. Dieselben Grenzen wie dessen Regler (40..260) — ein Wert
+# ausserhalb liesse sich über den Link gar nicht vorbelegen. `ziel` darf unter
+# `start` liegen (Doom/Sludge: langsamer ist dort die Steigerung).
+TEMPO_GRENZEN = (40, 260)
+TEMPO_PULSE = {'viertel', 'achtel'}
+# Nennt der Übungstext ein Tempo, muss es zur Angabe passen — beide stehen auf
+# derselben Seite. Kleinere Zahlen sind Schrittweiten („in 5-BPM-Schritten“).
+TEXT_BPM = re.compile(r'(\d+)(?:\s*(?:–|-|bis)\s*(\d+))?\s*BPM')
+TEXT_BPM_TOLERANZ = 5
+
+
+def pruefe_tempo(bid, b, fehler):
+    """Validiert ein vorhandenes `tempo`. Abwesenheit ist zulässig."""
+    tempo = b['tempo']
+    if not isinstance(tempo, dict):
+        fehler.append(f'{bid}: tempo ist kein Objekt')
+        return
+    if b.get('uebungsteil') is None:
+        fehler.append(f'{bid}: tempo ohne uebungsteil')
+    unbekannt = set(tempo) - {'start', 'ziel', 'puls'}
+    if unbekannt:
+        fehler.append(f'{bid}: tempo mit unbekannten Feldern {sorted(unbekannt)}')
+    lo, hi = TEMPO_GRENZEN
+    for feld in ('start', 'ziel'):
+        wert = tempo.get(feld)
+        if not isinstance(wert, int) or isinstance(wert, bool) or not lo <= wert <= hi:
+            fehler.append(f'{bid}: tempo.{feld} muss eine Ganzzahl {lo}..{hi} sein')
+            return
+    if 'puls' in tempo and tempo['puls'] not in TEMPO_PULSE:
+        fehler.append(f'{bid}: tempo.puls "{tempo["puls"]}" ungültig ({"|".join(sorted(TEMPO_PULSE))})')
+    unten, oben = sorted((tempo['start'], tempo['ziel']))
+    text = json.dumps((b.get('uebungsteil') or {}).get('de') or {}, ensure_ascii=False)
+    for m in TEXT_BPM.finditer(text):
+        for zahl in (int(z) for z in m.groups() if z):
+            if zahl >= 30 and not unten - TEXT_BPM_TOLERANZ <= zahl <= oben + TEXT_BPM_TOLERANZ:
+                fehler.append(f'{bid}: Übungstext nennt {zahl} BPM, tempo sagt {tempo["start"]}–{tempo["ziel"]}')
+
+
 def pruefe_demonstration(bid, demo, fehler):
     """Validiert eine vorhandene `demonstration`. Abwesenheit ist zulässig."""
     if not isinstance(demo, dict):
@@ -712,6 +751,8 @@ def main():
             fehler.append(f'{bid}: erklaerteil.de fehlt')
         if b.get('demonstration') is not None:
             pruefe_demonstration(bid, b['demonstration'], fehler)
+        if b.get('tempo') is not None:
+            pruefe_tempo(bid, b, fehler)
         if bid not in titel:
             warnung.append(f'{bid}: Titel nicht nach labels/de.json geliftet (scripts/lift.py laufen lassen)')
         for txt in sichtbare_texte(b):

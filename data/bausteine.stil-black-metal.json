@@ -32,6 +32,10 @@
           "selbstkontrolle": "Nimm einen Durchgang auf und hör die Wechselstellen einzeln ab: Läuft der Strom durch, oder gibt es ein kurzes Loch oder ein Verschmieren zweier Griffe? Klingt der Bordun gleichmäßig mit, oder dämpfst du ihn stellenweise versehentlich ab? Und: Ist der achte Durchgang so gleichmäßig wie der erste?"
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 190
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1224,6 +1228,10 @@
           "selbstkontrolle": "Nimm Bass und Gitarre zusammen auf: Erkennst du deine Linie auch auf kleinen Lautsprechern? Treffen deine Anker exakt den Akkordwechsel? Und ehrlich: Dient die Linie dem Riff, oder lenkt sie davon ab?"
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 170
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -1364,6 +1372,10 @@
           "selbstkontrolle": "Hör die Aufnahme mit geschlossenen Augen: Klingt der Blast wie ein gleichmäßiges Rauschen oder wie eine Folge einzelner Schläge? Sitzt der Klick nach jedem Wechsel noch exakt? Und nach dem längsten Block: Bist du müde, aber locker — oder spürst du Ziehen oder Taubheit? Dann sofort Schluss und beim nächsten Mal kürzer."
         }
       },
+      "tempo": {
+        "start": 120,
+        "ziel": 200
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -1420,6 +1432,10 @@
           "steigerung": "Verlängere die Phrasen über Wochen, nicht in einer Session, und erhöh die Lautstärke erst, wenn der leise Klang mühelos bleibt. Nimm dann Silben mit Konsonanten dazu — ein Text soll verständlich bleiben, ohne dass der Klang kippt.",
           "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei und klar? Kratzt es, brennt es oder wird es eng, hörst du sofort auf. Hält eine Heiserkeit länger als ein paar Tage an, lass sie in einer HNO-Praxis abklären, statt weiterzuüben."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 100
       },
       "demonstration": {
         "typ": "hoerbeispiel",

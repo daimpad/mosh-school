@@ -32,6 +32,10 @@
           "selbstkontrolle": "Nimm das Riff auf und hör auf die Pausen: Sind sie wirklich still? Nickt dein Kopf beim Anhören von allein mit? Wenn nicht, sind die Akzente noch nicht klar genug gesetzt."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 150
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -180,6 +184,10 @@
           "selbstkontrolle": "Leg die Aufnahme über den Klick: Bleiben die Achtel über zwei Minuten stabil? Hörst du jede Note als eigenen Anschlag, auch bei Zerre? Wenn es matscht, ist es der Anschlag, nicht der Amp."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 160
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -315,6 +323,10 @@
           "steigerung": "Bau eine Drei-Stufen-Dramaturgie: acht Takte schnell, vier Takte Stomp, zwei Takte Breakdown-Feel mit China oder Crash-Ride — jede Stufe schwerer, alle im selben Grundtempo. Brennen oder Ziehen in Handgelenk, Unterarm oder Schienbein heißt Pause — nicht durchbeißen; kommt es wieder, lass es ärztlich abklären.",
           "selbstkontrolle": "Nimm die Übung auf und miss die Übergänge: Liegt die erste Eins nach jedem Wechsel exakt auf dem Klick? Wird der schnelle Teil nach dem Stomp schneller als davor? Das ist die häufigste Leckstelle."
         }
+      },
+      "tempo": {
+        "start": 180,
+        "ziel": 180
       },
       "demonstration": {
         "typ": "pattern",

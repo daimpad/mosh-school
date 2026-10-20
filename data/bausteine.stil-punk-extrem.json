@@ -43,6 +43,10 @@
           "selbstkontrolle": "Nach der Übung: Fühlen sich Unterarme und Handgelenke belastet, aber neutral an — oder verkrampft? Auf der Aufnahme: Bleibt der Backbeat über die volle Dauer auf dem Klick, oder schleicht sich Eile ein?"
         }
       },
+      "tempo": {
+        "start": 160,
+        "ziel": 180
+      },
       "demonstration": {
         "typ": "pattern",
         "bpm": 180,
@@ -195,6 +199,10 @@
           "steigerung": "Ersetz in Riff A einen Ton durch einen dissonanteren Nachbarn (kleine Sekunde, Tritonus) und prüf, ob die Zelle dadurch mehr Biss bekommt — Grind-Riffs vertragen mehr Reibung, als man denkt.",
           "selbstkontrolle": "Nimm die Miniatur auf: Sind die Schnitte wirklich abrupt (kein Nachklingen, kein Zögern)? Bleibt das Tremolo bis zum Schnitt gleichmäßig dicht? Und ehrlich: Ist irgendein Takt drin, der nichts sagt?"
         }
+      },
+      "tempo": {
+        "start": 160,
+        "ziel": 220
       },
       "demonstration": {
         "typ": "tab",
@@ -826,6 +834,10 @@
           "selbstkontrolle": "Zähl auf der Aufnahme die Nähte, die ein Loch oder einen leisen ersten Schlag haben. Ziel: null. Und ehrlich prüfen: Bleibt das Grundtempo über die ganze Kette konstant, oder schiebt jede Naht ein paar BPM nach?"
         }
       },
+      "tempo": {
+        "start": 140,
+        "ziel": 200
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -885,6 +897,10 @@
           "steigerung": "Verkürze im Blast-Teil das Raster schrittweise Richtung Sechzehntel — aber nur so weit, wie die Wand stabil bleibt. Sobald es flattert, zurück: Ein sauberes Achtel-Fundament schlägt jedes unsaubere Sechzehntel-Gedoppel.",
           "selbstkontrolle": "Hör die Aufnahme einmal nur auf Bass und Kick ab: eine Textur oder zwei konkurrierende? Und im Half-Time-Teil: Übernimmt der Bass hörbar die Führung, oder bleibt er Textur? Beides muss unterscheidbar sein."
         }
+      },
+      "tempo": {
+        "start": 160,
+        "ziel": 200
       },
       "demonstration": {
         "typ": "tab",
@@ -1399,6 +1415,10 @@
           "selbstkontrolle": "Auf der Aufnahme: Bleiben alle Anschläge über die volle Dauer gleich laut? Ist zwischen den Riffs echte Stille statt Rauschteppich? Brennende Unterarme heißen: Bewegung zu groß oder zu verkrampft — kürzer üben, lockerer spielen."
         }
       },
+      "tempo": {
+        "start": 160,
+        "ziel": 180
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1545,6 +1565,10 @@
           "steigerung": "Wechsle innerhalb der Linie zwischen exakter Gitarren-Doppelung und einer eigenen Figur (Oktave, ein Durchgang zum nächsten Grundton) — die Wand darf sich bewegen, solange die Verzahnung mit der Kick steht.",
           "selbstkontrolle": "Auf der Aufnahme mit allen Instrumenten: Kannst du den Bass als eigene Kante hören UND das Riff der Gitarre noch mitsingen? Im Alleinträger-Teil: Bleibt das Tempo exakt, oder sackt es, sobald die Gitarre fehlt?"
         }
+      },
+      "tempo": {
+        "start": 160,
+        "ziel": 180
       },
       "demonstration": {
         "typ": "tab",

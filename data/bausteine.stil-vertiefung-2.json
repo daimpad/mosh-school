@@ -132,6 +132,10 @@
           "selbstkontrolle": "Die Schläge fallen gemeinsam mit der Kick, sind maximal schwer, und die Pausen dazwischen sind still."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
+      },
       "spielziele": [
         "schwererer_ton",
         "timing_zum_klick"
@@ -612,6 +616,10 @@
           "steigerung": "Koppele den Groove satt an einen Fuzz-Bass und halte das rollende Feel über einen ganzen Part.",
           "selbstkontrolle": "Der Groove rollt entspannt und treibt zugleich; er liegt bewusst hinten, ohne instabil zu werden."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 100
       },
       "spielziele": [
         "timing_zum_klick"

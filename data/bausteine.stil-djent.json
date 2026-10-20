@@ -43,6 +43,10 @@
           "selbstkontrolle": "Nimm dich mit Klick auf: Bleibt der Grundpuls hörbar gerade, während deine Betonung wandert? Knallt jeder Chug und ist tot, oder rauscht die tiefe Saite nach? Und der Ehrlichkeits-Test: Nickt dein Kopf zum Groove — oder zählst du krampfhaft mit? Wenn du zählen musst, ist das Muster noch nicht im Körper — zurück zu Schritt 3."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 100
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -294,6 +298,10 @@
           "selbstkontrolle": "Hör die Aufnahme mit Kick und Gitarre: Fallen Bass-Akzente und Gitarren-Chugs als EIN Schlag zusammen, oder franst es? Bleibt der tiefe Ton als eigene Tonhöhe hörbar, oder wird er zu Wummern? Wummern heißt, Attack oder Saitenstärke fehlt — nicht Lautstärke."
         }
       },
+      "tempo": {
+        "start": 90,
+        "ziel": 110
+      },
       "demonstration": {
         "typ": "tab",
         "bpm": 110,
@@ -393,6 +401,10 @@
           "steigerung": "Wechsel die Gruppengröße der Kick (Fünfer → Siebener), ohne den Hi-Hat-Puls zu ändern. Oder verschieb das Ride auf eine ungerade Gruppierung und lass die Kick gerade — die umgekehrte Polymetrik.",
           "selbstkontrolle": "Nimm auf: Bleibt die Hi-Hat wirklich stur gerade, während die Kick wandert — oder zieht der Fuß die Hände mit? Klingen die Ghost Notes wie Atmen oder wie Fehler? Und der Pocket-Test: Groovt es, oder klingt es gerechnet? Gerechnet heißt, der gerade Boden wackelt noch — zurück zu Schritt 1."
         }
+      },
+      "tempo": {
+        "start": 90,
+        "ziel": 120
       },
       "demonstration": {
         "typ": "pattern",

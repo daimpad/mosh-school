@@ -140,7 +140,7 @@ function oeffneMerklistePdf(daten) {
       const meta = [kat, stufen].filter(Boolean).join(' — ');
       const erklaer = absaetzePdf(text(b.erklaerteil));
       let aufgabe = '';
-      if (b.uebungsteil) aufgabe = uebungsteilHtml(text(b.uebungsteil));
+      if (b.uebungsteil) aufgabe = uebungsteilHtml(text(b.uebungsteil), b.tempo);
       else if (b.reflexionsaufgabe) aufgabe = `<h3>${esc(t('reflexionsaufgabe'))}</h3>${absaetzePdf(text(b.reflexionsaufgabe))}`;
       return `<article class="pdf-baustein">
         ${meta ? `<p class="pdf-kat">${meta}</p>` : ''}

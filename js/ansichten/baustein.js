@@ -11,7 +11,7 @@ import { pruefeMeilensteine } from '../mastery.js';
 import { absaetzeMitGlossar, baueGlossarVerlinker } from '../glossar-links.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
 import { INSTRUMENTE, stationImKontext } from '../pfade.js';
-import { werkzeugeFuer } from '../werkzeug-links.js';
+import { werkzeugeFuer, werkzeugRoute } from '../werkzeug-links.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 import { bausteinStatus, diagnose, einstellungen, istGemerkt, merkeZuletzt, schalteGemerkt, setzeBausteinStatus } from '../zustand.js';
 
@@ -49,10 +49,25 @@ function quittierKnopf(id, teil, status, beschriftungOffen, beschriftungErledigt
     </button>`;
 }
 
+// Tempo-Anker (`tempo` am Baustein, sprachneutral neben dem Übungsteil): Start
+// und Ziel in BPM, dazu der Link ins Metronom — vorbelegt mit dem Start, das Ziel
+// als Rampenziel. Gleiche Werte heißen „festes Tempo“ (Doom, Pocket, Stopps).
+function tempoHtml(tempo) {
+  if (!tempo) return '';
+  const wert = tempo.start === tempo.ziel
+    ? t('ue_tempo_fest', { bpm: tempo.start })
+    : t('ue_tempo_bereich', { start: tempo.start, ziel: tempo.ziel });
+  const puls = tempo.puls === 'achtel' ? ` ${t('ue_tempo_achtel')}` : '';
+  const params = tempo.start === tempo.ziel ? { bpm: tempo.start } : { bpm: tempo.start, ziel: tempo.ziel };
+  return `<div class="ue-block ue-tempo"><h4>${esc(t('ue_tempo'))}</h4>
+    <p>${esc(wert + puls)} <a class="chip chip-waehlbar" href="${esc(werkzeugRoute('metronom', params))}"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> ${esc(t('ue_tempo_metronom'))}</a></p></div>`;
+}
+
 // Übungsteile sind heterogen (schritte vs. schritte_teil1/2, optionale Felder).
 // Der Renderer folgt der Feldreihenfolge der Daten, kennt die bekannten Felder
-// und bleibt für künftige tolerant. Auch vom Trainingspfad genutzt.
-export function uebungsteilHtml(uebungsteil) {
+// und bleibt für künftige tolerant. Auch vom Trainingspfad genutzt. Das Tempo
+// steht direkt hinter dem Ziel — vor den Schritten, die es meist voraussetzen.
+export function uebungsteilHtml(uebungsteil, tempo = null) {
   if (!uebungsteil) return '';
   const block = (ueberschrift, inhalt) =>
     `<div class="ue-block"><h4>${esc(ueberschrift)}</h4><p>${esc(inhalt)}</p></div>`;
@@ -71,14 +86,15 @@ export function uebungsteilHtml(uebungsteil) {
     abschluss: (wert) => block(t('ue_abschluss'), wert),
     naechste_stufe: (wert) => block(t('ue_naechste_stufe'), wert),
   };
-  return Object.entries(uebungsteil)
-    .map(([feld, wert]) => {
-      if (bekannt[feld]) return bekannt[feld](wert);
-      if (Array.isArray(wert)) return schrittliste(feld, wert);
-      if (typeof wert === 'string') return block(feld, wert);
-      return '';
-    })
-    .join('');
+  const tempoBlock = tempoHtml(tempo);
+  const teile = Object.entries(uebungsteil).map(([feld, wert]) => {
+    if (feld === 'ziel' && bekannt.ziel) return bekannt.ziel(wert) + tempoBlock;
+    if (bekannt[feld]) return bekannt[feld](wert);
+    if (Array.isArray(wert)) return schrittliste(feld, wert);
+    if (typeof wert === 'string') return block(feld, wert);
+    return '';
+  });
+  return ('ziel' in uebungsteil ? '' : tempoBlock) + teile.join('');
 }
 
 // Trainer-Layer (Spez. 5): in-situ am Basisbaustein, nur in der Trainer-
@@ -335,7 +351,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       <section class="abschnitt">
         <div class="abschnitt-kopf"><h2>${esc(t('uebungsteil'))}</h2>${statusChip(station.status.uebungsteil)}</div>
         ${delta ? `<p class="leise">${esc(t('delta_uebungsteil_gilt'))}</p>` : ''}
-        ${uebungsteilHtml(text(b.uebungsteil))}
+        ${uebungsteilHtml(text(b.uebungsteil), b.tempo)}
         <div class="knopf-zeile">${quittierKnopf(b.id, 'uebungsteil', station.status.uebungsteil, t('als_erledigt'), t('abgehakt'))}</div>
         ${masteryToggle}
       </section>`;

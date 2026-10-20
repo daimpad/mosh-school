@@ -45,6 +45,10 @@
           "selbstkontrolle": "Nimm die Phrase auf: Trägt jeder lange Ton bis zum nächsten Anschlag, oder entstehen tote Lücken? Kippt das Feedback dort, wo du es willst — und endet es, wenn du es beendest?"
         }
       },
+      "tempo": {
+        "start": 55,
+        "ziel": 55
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -109,6 +113,10 @@
           "steigerung": "Falls du eine Möglichkeit für zwei Signalwege hast (Zerrpedal mit Clean-Blend, zwei Spuren beim Aufnehmen): Misch einen cleanen Tief-Anteil unter die Zerre und vergleich, wie viel stabiler das Fundament steht.",
           "selbstkontrolle": "Hör die Aufnahme auf kleinen Lautsprechern ab: Erkennst du jede Tonhöhe und jeden Anschlag? Wenn die Linie nur noch Fläche ist, war es zu viel Zerre — nicht zu wenig Lautstärke."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
       },
       "demonstration": {
         "typ": "tab",
@@ -185,6 +193,10 @@
           "selbstkontrolle": "Nimm vier Takte mit Klick nur auf der Eins auf und miss nach: Sitzen deine Backbeats, oder wanderst du? Klingt das Crash aus, oder erstickst du es aus Gewohnheit?"
         }
       },
+      "tempo": {
+        "start": 55,
+        "ziel": 55
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -244,6 +256,10 @@
           "steigerung": "Sing die Passage über eine Aufnahme oder ein gelooptes Riff und gestalte die Dynamik über die Phrase: leiser Beginn, Schwerpunkt in der Mitte, ruhiges Ende.",
           "selbstkontrolle": "Nimm dich auf: Klingen die Phrasenenden frei oder gequetscht? Fühlt sich der Hals nach der Übung neutral an? Wenn nicht, war die Phrase zu lang oder zu laut — kürzen und leiser werden, nicht durchbeißen."
         }
+      },
+      "tempo": {
+        "start": 55,
+        "ziel": 55
       },
       "demonstration": {
         "typ": "hoerbeispiel",
@@ -376,6 +392,10 @@
           "steigerung": "Spielt denselben Teil einmal bewusst OHNE verabredete Führung und hört euch die Aufnahme an — meist wird sofort klar, warum die Führungsabsprache den Unterschied macht.",
           "selbstkontrolle": "Nehmt die Übung auf: Liegen die gemeinsamen Schläge wirklich übereinander, oder franst jede Eins aus? Wird das Tempo über vier Takte ohne Klick schneller? Wenn ja, ist das Raster noch nicht geteilt — zurück zu Schritt 1."
         }
+      },
+      "tempo": {
+        "start": 55,
+        "ziel": 55
       }
     }
   ]

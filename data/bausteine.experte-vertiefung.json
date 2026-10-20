@@ -31,6 +31,10 @@
           "selbstkontrolle": "Auf der Aufnahme: Hört man, welche Töne getappt/gezogen sind (Naht) oder klingt alles wie eine Linie? Bleiben die ungenutzten Saiten still? Und hat der Lauf ein Ziel — oder ist er nur schnell? Wenn es verwaschen klingt, fehlt Dämpfung; wenn es holpert, fehlt Gleichmäßigkeit — beides vor dem Tempo lösen."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -292,6 +296,10 @@
           "steigerung": "Verteil die Linie über die Toms (fließendes lineares Fill) oder erhöh das Tempo nur so weit, wie die Gleichmäßigkeit hält. Wechsel die Gliedmaßen-Reihenfolge für neue Muster.",
           "selbstkontrolle": "Auf der Aufnahme: Ist die Linie wirklich gleichmäßig, oder hört man, wo der Fuß gegenüber den Händen abfällt? Überlappt nirgends etwas (echt linear)? Und groovt es durch die Ghost Notes, oder klingt es mechanisch? Ungleichmäßigkeit vor dem Tempo lösen."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 110
       },
       "demonstration": {
         "typ": "pattern",

@@ -284,6 +284,10 @@
           "steigerung": "Verschieb einzelne Silben auf Synkopen und pass die Phrasierung an ein konkretes Riff an.",
           "selbstkontrolle": "Die Silben liegen präzise im Timing; betonte Silben fallen mit den Akzenten zusammen."
         }
+      },
+      "tempo": {
+        "start": 90,
+        "ziel": 120
       }
     },
     {

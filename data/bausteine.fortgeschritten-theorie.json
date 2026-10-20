@@ -143,6 +143,11 @@
           "steigerung": "Hör einen Prog- oder Metal-Song mit ungeradem Takt und bestimme Taktart und Gruppierung nach Gehör.",
           "selbstkontrolle": "Du sprichst die Gruppen flüssig, die Betonungen sitzen, und du erkennst Gruppierungen beim Hören."
         }
+      },
+      "tempo": {
+        "start": 120,
+        "ziel": 180,
+        "puls": "achtel"
       }
     },
     {
@@ -182,6 +187,10 @@
           "steigerung": "Hör eine Meshuggah-artige Passage und bestimme: Polyrhythmus oder Polymetrik — und wie lang ist die Zelle?",
           "selbstkontrolle": "Du kannst beide Phänomene erzeugen, benennen und beim Hören sicher auseinanderhalten."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 90
       }
     },
     {

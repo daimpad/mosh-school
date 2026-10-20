@@ -41,6 +41,10 @@
           "selbstkontrolle": "Die betonten Anschläge sitzen exakt auf den Kicks; der Part wirkt als eine rhythmische Einheit."
         }
       },
+      "tempo": {
+        "start": 110,
+        "ziel": 145
+      },
       "stil": [
         "death_metal",
         "thrash"
@@ -205,6 +209,10 @@
           "steigerung": "Setzt einen gemeinsamen Akzent mitten in die Pause, den beide exakt gleich platzieren.",
           "selbstkontrolle": "Stopp und Wiedereinstieg fallen zusammen; die Eins danach sitzt bei beiden."
         }
+      },
+      "tempo": {
+        "start": 120,
+        "ziel": 150
       },
       "spielziele": [
         "saubere_uebergaenge",
@@ -598,6 +606,10 @@
           "selbstkontrolle": "Das Tempo bleibt konstant; die Gitarre drängt nicht, beide liegen auf dem Klick."
         }
       },
+      "tempo": {
+        "start": 160,
+        "ziel": 160
+      },
       "spielziele": [
         "timing_zum_klick"
       ]
@@ -873,6 +885,10 @@
           "selbstkontrolle": "Gitarre, Bass und Kick fallen zu einem Impuls zusammen; kein Flattern."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 140
+      },
       "spielziele": [
         "riff_praezision",
         "timing_zum_klick"
@@ -1069,6 +1085,10 @@
           "steigerung": "Verschiebt Akzente auf Synkopen und haltet die gemeinsame Platzierung über alle vier.",
           "selbstkontrolle": "Alle vier fallen als ein Schlag zusammen; die Pausen sind still; der Part drückt."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 100
       },
       "stil": [
         "metalcore",

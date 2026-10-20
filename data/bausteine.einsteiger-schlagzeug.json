@@ -210,6 +210,10 @@
           "selbstkontrolle": "Die Schläge klingen gleichmäßig, die Hände bleiben locker; bei Verkrampfung machst du Pause."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -328,6 +332,10 @@
           "selbstkontrolle": "Die Schläge klingen gleichmäßig; Bein und Fußgelenk bleiben entspannt, kein Schmerz."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -416,6 +424,10 @@
           "selbstkontrolle": "Deine Schläge liegen exakt auf dem Klick; die Unterteilungen bleiben gleichmäßig."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -473,6 +485,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und wechsle zwischen Einzel- und Doppelschlägen.",
           "selbstkontrolle": "Rechte und linke Hand klingen gleich; die Muster bleiben gleichmäßig und im Timing."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 120
       },
       "demonstration": {
         "typ": "pattern",
@@ -595,6 +611,10 @@
           "selbstkontrolle": "Alle drei Stimmen liegen sauber im Timing; gleichzeitige Schläge klingen als einer."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "pattern",
         "bpm": 120,
@@ -681,6 +701,10 @@
           "selbstkontrolle": "Die veränderte Stimme sitzt sauber, ohne dass die anderen aus dem Timing geraten."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 110
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -739,6 +763,10 @@
           "steigerung": "Verschieb die Akzente auf andere Positionen und probier einen Rimshot auf dem Backbeat.",
           "selbstkontrolle": "Akzente und leise Schläge sind klar unterscheidbar; das Muster bleibt gleichmäßig."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
       },
       "demonstration": {
         "typ": "pattern",
@@ -865,6 +893,10 @@
           "selbstkontrolle": "Beide Füße klingen gleich und liegen auf dem Klick; Beine und Fußgelenke bleiben locker."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "pattern",
         "bpm": 90,
@@ -953,6 +985,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten, bis der Beat drängt, ohne zu eiern.",
           "selbstkontrolle": "Das Muster treibt gleichmäßig; Bassdrum und Snare liegen sauber im Timing."
         }
+      },
+      "tempo": {
+        "start": 120,
+        "ziel": 180
       },
       "demonstration": {
         "typ": "pattern",
@@ -1048,6 +1084,10 @@
           "steigerung": "Erhöhe das Tempo erst in kleinen Schritten, wenn das Muster über mehrere Takte sauber läuft.",
           "selbstkontrolle": "Bassdrum und Snare wechseln gleichmäßig und im Timing; Hände und Füße bleiben locker."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 140
       },
       "demonstration": {
         "typ": "pattern",
@@ -1161,6 +1201,10 @@
           "selbstkontrolle": "Trotz langsamem Tempo sitzt jeder Schlag; der Beat wirkt schwer und stabil."
         }
       },
+      "tempo": {
+        "start": 55,
+        "ziel": 55
+      },
       "demonstration": {
         "typ": "pattern",
         "taktart": "4/4",
@@ -1224,6 +1268,10 @@
           "steigerung": "Verlängere das Fill oder verteile es über mehr Trommeln, ohne das Timing zu verlieren.",
           "selbstkontrolle": "Das Fill sitzt im Timing, und du kommst sauber auf der Eins zurück in den Beat."
         }
+      },
+      "tempo": {
+        "start": 70,
+        "ziel": 120
       },
       "demonstration": {
         "typ": "pattern",
@@ -1301,6 +1349,10 @@
           "steigerung": "Setz die betonten Schläge auf synkopierte Positionen, wie sie mit Gitarren-Chugs zusammenfallen würden.",
           "selbstkontrolle": "Der Wechsel sitzt im Timing; die betonten Schläge sind klar und druckvoll."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 140
       },
       "demonstration": {
         "typ": "pattern",

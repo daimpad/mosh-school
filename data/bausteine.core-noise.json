@@ -365,6 +365,10 @@
           "selbstkontrolle": "Ist die Stille wirklich still, oder klingt etwas nach? Sitzt der Wiedereinsatz exakt auf dem Klick?"
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 160
+      },
       "voraussetzungen": [
         "metronom_prinzip",
         "taktarten_unterteilungen"
@@ -455,6 +459,11 @@
           "steigerung": "Hänge eine dritte Taktart an oder verschiebe die Gruppierung innerhalb derselben Taktart.",
           "selbstkontrolle": "Trägst du die Gruppen innerlich, oder zählst du noch mit? Bleibt die Kette auch ohne Klick stabil?"
         }
+      },
+      "tempo": {
+        "start": 120,
+        "ziel": 180,
+        "puls": "achtel"
       },
       "voraussetzungen": [
         "ungerade_takte_theorie",

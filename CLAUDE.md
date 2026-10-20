@@ -550,6 +550,20 @@ Struktur, statt neue Inhalte zu verlangen. Der Unterbau (§0 der Übergabe):
   verlustfrei. Neu: `exportiereZustand()`/`importiereZustand()` (portables
   JSON-Backup, kein Konto). Jeder Mutator persistiert über `schreibe()`; Sichten
   rendern nach einer Änderung über das `app:rendern`-Ereignis (`neuRendern`) neu.
+- **Optionales Baustein-Feld `tempo`** (`{start, ziel, puls?}`, BPM, neben dem
+  Übungsteil, weil sprachneutral): der Tempo-Anker einer Übung, derzeit an 145
+  Übungen. Die Ansicht zeigt ihn direkt hinter dem Ziel, samt Link ins Metronom
+  (`bpm` = Start, `ziel` = Rampenziel; die Rampe schaltet der Link **nicht** ein).
+  Dieselbe Vorbelegung trägt der „Passendes Werkzeug“-Chip — vorher öffnete jede
+  Timing-Übung pauschal mit 160 BPM, auch Einsteiger-Übungen und Doom-Grooves.
+  `start == ziel` heißt festes Tempo (Doom, Pocket, Stopps); `ziel < start` ist
+  erlaubt, bei Doom/Sludge ist langsamer die Steigerung. `puls: "achtel"` für
+  ungerade Takte, in denen der Klick die Achtel zählt. Bewusst **ohne** Tempo
+  bleiben Übungen ohne festen Wert: mehrere Tempi in einer Übung (Powerviolence-
+  Kanten), Tempo relativ zum eigenen Maximum, reine Klang-/Stimmübungen.
+  `validate.py` prüft Grenzen (40..260 wie die Metronom-Regler) **und dass jede
+  BPM-Zahl im Übungstext in die Spanne passt** (±5) — Text und Tempo-Zeile stehen
+  auf derselben Seite, wie Lehrgrafik und Hörbeispiel.
 - **Optionales Baustein-Feld `demonstration`** (rückwärtskompatibel): `pattern`
   (Rhythmus-Raster, `spuren[].instrument/schritte`), `tab` (Saite × Zeit,
   `events[].saite/bund/technik`) oder `hoerbeispiel` (`verweis_genre`). Abgespielt

@@ -247,6 +247,10 @@
           "selbstkontrolle": "Kein Schnarren, kein Abwürgen; die Finger bewegen sich knapp und ruhig."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 100
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -439,6 +443,10 @@
           "selbstkontrolle": "Jeder Anschlag klingt gleich laut; der Arm bleibt entspannt, die Bewegung klein."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -588,6 +596,10 @@
           "steigerung": "Erhöhe das Tempo in 5-BPM-Schritten und wechsle später zu Sechzehnteln.",
           "selbstkontrolle": "Ab- und Aufschlag sind nicht zu unterscheiden; kein Stolpern beim Wechsel."
         }
+      },
+      "tempo": {
+        "start": 70,
+        "ziel": 140
       },
       "demonstration": {
         "typ": "tab",
@@ -743,6 +755,10 @@
           "selbstkontrolle": "Jeder Chug klingt gleich laut und gleich kurz; keine schnarrenden oder offen klingenden Töne."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 140
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -844,6 +860,10 @@
           "steigerung": "Wechsle zügig zwischen zwei Powerchords und kombiniere sie später mit Palm Muting.",
           "selbstkontrolle": "Alle Töne des Akkords klingen zusammen; keine Nebengeräusche von ungewollten Saiten."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 120
       },
       "transfer_herkunft": [
         "BAS"
@@ -960,6 +980,10 @@
           "selbstkontrolle": "Jeder Abschlag klingt gleich; spürst du Brennen oder Verkrampfung, legst du eine Pause ein."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 180
+      },
       "transfer_herkunft": [
         "BAS"
       ],
@@ -1071,6 +1095,10 @@
           "steigerung": "Zieh das Tremolo über einen Saitenwechsel oder eine kurze Melodie; erhöhe das Tempo in kleinen Schritten.",
           "selbstkontrolle": "Der Ton fließt gleichmäßig ohne Aussetzer; bei Verspannung stoppst du und lockerst die Hand."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 150
       },
       "demonstration": {
         "typ": "tab",
@@ -1389,6 +1417,10 @@
           "selbstkontrolle": "Der Galopp klingt gleichmäßig, die schnellen Töne verschleppen nicht."
         }
       },
+      "tempo": {
+        "start": 90,
+        "ziel": 170
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1525,6 +1557,10 @@
           "selbstkontrolle": "Die Pausen sind still, die Chugs klingen gleich; das Muster groovt, statt zu hetzen."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 130
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1635,6 +1671,10 @@
           "selbstkontrolle": "Trotz langsamem Tempo sitzt das Timing; die Akkorde klingen voll und platziert."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -1720,6 +1760,10 @@
           "steigerung": "Erhöhe das Tempo in kleinen Schritten und variiere Reihenfolge oder Töne.",
           "selbstkontrolle": "Das Riff läuft flüssig; die Wechsel zwischen gedämpft und offen sind sauber und im Takt."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 130
       },
       "demonstration": {
         "typ": "tab",

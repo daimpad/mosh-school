@@ -132,6 +132,10 @@
           "steigerung": "Den umgekehrten Weg üben (neues Tempo zurück ins alte) und das Verhältnis benennen (3:2).",
           "selbstkontrolle": "Der Übergang fühlt sich wie ein organisches Kippen an, und du kannst jederzeit sagen, in welchem Tempo du gerade bist."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
       }
     },
     {

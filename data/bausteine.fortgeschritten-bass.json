@@ -44,6 +44,10 @@
           "selbstkontrolle": "Kein hörbares Galoppieren; alle drei Finger klingen gleich, und der Puls bleibt stabil."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 150
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -251,6 +255,10 @@
           "selbstkontrolle": "Alle Anschläge klingen identisch; der Unterarm bleibt locker, und du hörst rechtzeitig auf."
         }
       },
+      "tempo": {
+        "start": 100,
+        "ziel": 180
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -399,6 +407,10 @@
           "steigerung": "Die Ketten zwischen zwei Tonhöhen bewegen und das Tempo schrittweise anheben.",
           "selbstkontrolle": "Beide Varianten sind klar unterscheidbar, und die Übergänge sitzen ohne Stolpern im Puls."
         }
+      },
+      "tempo": {
+        "start": 100,
+        "ziel": 170
       },
       "demonstration": {
         "typ": "tab",
@@ -596,6 +608,10 @@
           "steigerung": "Eine kurze Zwei- oder Dreiton-Linie im Tremolo spielen und die Dauer verlängern.",
           "selbstkontrolle": "Der Strom klingt dicht und gleichmäßig; Hand und Unterarm bleiben spürbar locker."
         }
+      },
+      "tempo": {
+        "start": 90,
+        "ziel": 160
       },
       "demonstration": {
         "typ": "tab",
@@ -840,6 +856,10 @@
           "selbstkontrolle": "Die Ghost Notes sind tonlos und leiser; die Linie groovt, ohne zu verwaschen."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 110
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -942,6 +962,10 @@
           "selbstkontrolle": "Jeder Akzent sitzt exakt auf seiner Unterteilung; zwischen den Schlägen ist es still."
         }
       },
+      "tempo": {
+        "start": 80,
+        "ziel": 120
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -1025,6 +1049,10 @@
           "selbstkontrolle": "Der Akkord klingt breit und klar; die restliche Linie bleibt davon unberührt."
         }
       },
+      "tempo": {
+        "start": 70,
+        "ziel": 110
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -1103,6 +1131,10 @@
           "selbstkontrolle": "Gehämmerte und gezogene Töne sind klar hörbar; Slides landen treffsicher auf dem Zielton."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 110
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "bass",
@@ -1177,6 +1209,10 @@
           "steigerung": "Chromatische Annäherung und Slides in den Übergang einbauen; das Fill rhythmisch variieren.",
           "selbstkontrolle": "Die Linie bleibt stabil, das Fill kündigt den Wechsel an, und die Eins sitzt punktgenau."
         }
+      },
+      "tempo": {
+        "start": 80,
+        "ziel": 130
       },
       "demonstration": {
         "typ": "tab",
@@ -1293,6 +1329,10 @@
           "steigerung": "Innerhalb einer Passage kontrolliert zwischen zwei Strategien wechseln, ohne das Timing zu verlieren. Brennen oder Ziehen in Handgelenk, Unterarm oder Schienbein heißt Pause — nicht durchbeißen; kommt es wieder, lass es ärztlich abklären.",
           "selbstkontrolle": "Jede Variante läuft stabil im Timing; der Wechsel zwischen ihnen ist eine bewusste, saubere Entscheidung."
         }
+      },
+      "tempo": {
+        "start": 160,
+        "ziel": 200
       },
       "demonstration": {
         "typ": "tab",
@@ -1451,6 +1491,10 @@
           "steigerung": "Die Figur über Saitenwechsel und Lagenwechsel ausdehnen; Aufnahmen machen und kritisch anhören.",
           "selbstkontrolle": "Kein Ton klingt stumpf oder halb; auch bei Tempo bleibt jeder Anschlag voll und definiert."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 140
       },
       "demonstration": {
         "typ": "tab",

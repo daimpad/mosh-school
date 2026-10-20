@@ -117,7 +117,7 @@ function renderDurchlauf(el, daten, einheit, referenzen) {
       <h1>${bausteinIcon(baustein.id, 'baustein-icon')} ${esc(label('baustein', baustein.id))}</h1>
       ${hinweis ? `<p class="einheit-hinweis">${esc(hinweis)}</p>` : ''}
       <p><a class="leise" href="#/baustein/${esc(baustein.id)}?kontext=kompetenz">${esc(t('zum_baustein'))} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
-      ${uebungsteilHtml(text(baustein.uebungsteil))}
+      ${uebungsteilHtml(text(baustein.uebungsteil), baustein.tempo)}
       <div class="knopf-zeile">
         <a class="knopf knopf-leise" href="#/training">${esc(t('abbrechen'))}</a>
         <button class="knopf knopf-primaer" id="uebung-weiter">${esc(istLetzte ? t('einheit_abschliessen') : t('uebung_erledigt_weiter'))}</button>

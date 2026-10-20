@@ -32,6 +32,10 @@
           "selbstkontrolle": "Hör die Dreck-Version gegen den Klick ab: Sitzen alle Akzente noch exakt? Wenn der Dreck das Timing aufweicht, war es zu viel auf einmal — zurück zu einem Element."
         }
       },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
+      },
       "demonstration": {
         "typ": "tab",
         "instrument": "gitarre",
@@ -173,6 +177,10 @@
           "steigerung": "Übe das Umschalten: vier Takte exakt auf dem Punkt, vier Takte geschleppt, ohne dass sich das Grundtempo ändert — wer beides gezielt setzen kann, besitzt das Stilmittel wirklich.",
           "selbstkontrolle": "Leg die geschleppte Aufnahme übers Raster einer DAW oder hör sie gegen den Klick: Ist die Kick auf dem Punkt und die Snare konstant dahinter? Driftet das Gesamttempo, schleppt nicht die Snare — du wirst langsamer."
         }
+      },
+      "tempo": {
+        "start": 65,
+        "ziel": 65
       }
     },
     {
@@ -199,6 +207,10 @@
           "steigerung": "Arbeite die Verzweiflungs-Dynamik heraus: dieselbe Phrase einmal als erschöpftes, leises Raunen und einmal als voller Klageschrei — beide Male aus derselben freien Grundlage, nur mit mehr Luft und Raum, nie mit mehr Hals.",
           "selbstkontrolle": "Auf der Aufnahme: Klingt der Schrei gequält, während sich das Singen frei anfühlt? Genau diese Lücke ist das Ziel. Fühlt sich auch die Kehle gequält an, sitzt die Qual nicht mehr im Klang, sondern im Hals — zurück zu Schritt 1, leiser."
         }
+      },
+      "tempo": {
+        "start": 60,
+        "ziel": 60
       },
       "demonstration": {
         "typ": "hoerbeispiel",
