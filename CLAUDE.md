@@ -1154,7 +1154,8 @@ Tokens**, nie harte Farben.
   gibt, sagt nichts. Ausgeliefert werden **fünf Einzeltöne**
   (`assets/sounds/gitarre-{e2-hart,e2-weich,a2-hart,e3-hart,g3-hart}.wav`,
   je 129–155 KB, 16 bit/44,1 kHz/mono), erzeugt von
-  `node scripts/build_gitarrenprobe.mjs` aus einem CC0-Rohbestand (122 FLACs,
+  `node scripts/build_gitarrenprobe.mjs` aus einem eigenen, unter CC0
+  freigegebenen Rohbestand (122 FLACs,
   124 MB), der **bewusst nicht eingecheckt** ist — er wäre Ballast in jedem Klon
   und jedem Deploy für einen Generator, der selten läuft. Fehlt er, bricht das
   Skript mit Meldung ab; Details und Neubau-Anleitung in
