@@ -3,7 +3,7 @@
     "app": "Metal-Lernhandbuch",
     "stufe": "gemischt",
     "domaene": "koerper-athletik",
-    "hinweis": "Körper/Athletik-Vertiefung: acht Gesundheits-/Athletik-Bausteine, die reale Lücken der Körper-Domäne schließen (Schlaf, Ernährung/Hydration, Rumpfkraft, Mobilität, Headbangen/Nacken, Verletzungs-Reha, Deload/Periodisierung, Abwärmen). Reine Reflexions-Bausteine wie die gesamte Körper-Domäne. Durchgehend Gesundheitsrahmen (Prinzip statt Dosierung, kein Training in den Schmerz, bei Warnzeichen ärztliche/physiotherapeutische Abklärung). Kein Vokabular-Block."
+    "hinweis": "Körper/Athletik-Vertiefung: acht Gesundheits-/Athletik-Bausteine, die reale Lücken der Körper-Domäne schließen (Schlaf, Ernährung/Hydration, Rumpfkraft, Mobilität, Headbangen/Nacken, Verletzungs-Reha, Deload/Periodisierung, Abwärmen). Reine Reflexions-Bausteine; die Aufwärm- und Abwärm-Routinen zum Mitmachen stehen in bausteine.koerper-aufwaermen.json. Durchgehend Gesundheitsrahmen (Prinzip statt Dosierung, kein Training in den Schmerz, bei Warnzeichen ärztliche/physiotherapeutische Abklärung). Kein Vokabular-Block."
   },
   "delta_bausteine": [],
   "bausteine": [

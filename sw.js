@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v229';
+const CACHE = 'zerrer-v230';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -178,6 +178,7 @@ const SHELL = [
   'data/bausteine.stil-vertiefung-1.json',
   'data/bausteine.stil-vertiefung-2.json',
   'data/bausteine.koerper-athletik.json',
+  'data/bausteine.koerper-aufwaermen.json',
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
   'data/bausteine.zerre-detail.json',

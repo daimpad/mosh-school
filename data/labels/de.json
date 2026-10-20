@@ -1506,7 +1506,12 @@
     "metalcore_songform_harmonik": "Metalcore-Songform: Refrain, Breakdown & Dur-Farbe",
     "metalcore_studio_live": "Metalcore-Kopf: Studio-Präzision gegen Live-Energie",
     "metalcore_sound_staffelung": "Metalcore-Sound: Gate, Tightness & Tiefenstaffelung",
-    "metalcore_koerper_buehne": "Metalcore-Körper: Bewegung, Ausdauer & Stimme"
+    "metalcore_koerper_buehne": "Metalcore-Körper: Bewegung, Ausdauer & Stimme",
+    "aufwaermen_routine_haende": "Aufwärm-Routine: Hände & Unterarme",
+    "aufwaermen_routine_kit": "Aufwärm-Routine am Kit: Schultern, Hände, Füße",
+    "aufwaermen_routine_stimme": "Aufwärm-Routine: Stimme von leise zu verzerrt",
+    "aufwaermen_routine_band": "Aufwärm-Routine vor Probe und Show: der ganze Körper",
+    "abwaermen_routine": "Abwärm-Routine: nach der Session runterfahren"
   },
   "fehlerbilder": {
     "fb_palm_muting_position": "Palm Muting: Position verrutscht",
