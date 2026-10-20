@@ -1846,7 +1846,12 @@
       "dive_bomb": "Dive Bomb",
       "gitarre_feedback": "Gehaltener Ton kippt in Feedback",
       "slide_ab": "Slide abwärts",
-      "gitarre_vibrato": "Gehaltener Ton mit Vibrato"
+      "gitarre_vibrato": "Gehaltener Ton mit Vibrato",
+      "bend_auf": "Bend nach oben",
+      "slide_auf": "Slide aufwärts",
+      "flageolett": "Flageolett",
+      "einatmen": "Ruhiges Einatmen",
+      "amp_brummen": "Netzbrummen (50 Hz)"
     },
     "domaene": {
       "gitarre": "Gitarre",

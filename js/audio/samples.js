@@ -81,6 +81,7 @@ export const SAMPLES = {
   gitarre_zerre_dis5: { datei: 'gitarre-zerre-dis5.wav', pegel: 0.9, gruppe: 'gitarre', grundton: 624.1 },
   gitarre_chug_a2: { datei: 'gitarre-chug-a2.wav', pegel: 0.51, gruppe: 'gitarre_chug', grundton: 109.3 },
   gitarre_tot: { datei: 'gitarre-tot.wav', pegel: 0.55 },
+  gitarre_clean_e2: { datei: 'gitarre-clean-e2.wav', pegel: 0.75, gruppe: 'gitarre_clean', grundton: 82.4 },
   gitarre_clean_a2: { datei: 'gitarre-clean-a2.wav', pegel: 0.74, gruppe: 'gitarre_clean', grundton: 111.9 },
   gitarre_clean_d3: { datei: 'gitarre-clean-d3.wav', pegel: 0.85, gruppe: 'gitarre_clean', grundton: 147.3 },
   gitarre_clean_g3: { datei: 'gitarre-clean-g3.wav', pegel: 0.7, gruppe: 'gitarre_clean', grundton: 196.5 },
