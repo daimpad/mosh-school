@@ -1,7 +1,22 @@
 {
+ "bass-a1": {
+  "prompt": "Single low note on an electric bass guitar, deep sub-bass register, fingerstyle, warm round sustained tone, one note only, dry DI",
+  "generation_id": "N8DNwtC3FXTLuOkfbVS7",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "bass-b1": {
   "prompt": "Single very deep low note on an electric bass guitar, lowest open string, sub-bass rumble, fingerstyle, one note, dry DI",
   "generation_id": "HqcHxg2Ahg8IFYrQ2HsF",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "bass-d2": {
+  "prompt": "Single low note on an electric bass guitar, deep sub-bass register, fingerstyle, warm round sustained tone, one note only, dry DI",
+  "generation_id": "O9PjTuvpXRCQZ8HdBjLw",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "bass-d3": {
+  "prompt": "Single note on an electric bass guitar, D string at the 12th fret, upper-middle register, fingerstyle, clear round sustained tone ringing out, one note only, dry DI",
+  "generation_id": "msjn5aME21wsJighuYfZ",
   "modell": "eleven_text_to_sound_v2"
  },
  "bass-e1": {
@@ -14,6 +29,26 @@
   "generation_id": "6dqj4V3loVRev94XCosK",
   "modell": "eleven_text_to_sound_v2"
  },
+ "bass-g3": {
+  "prompt": "Single high-register note on an electric bass guitar, G string at the 12th fret, fingerstyle, clear round sustained tone, one note only, dry DI",
+  "generation_id": "5scPB97eGwGwnbKPH6uZ",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "bass-gedaempft-cis2": {
+  "prompt": "Single short staccato note on an electric bass guitar, picked with a plectrum, palm muted at the bridge, deep low note, quick dead decay, one hit only, dry DI",
+  "generation_id": "z7TswRu0dKgZPxB5uHyp",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "bass-gedaempft-g1": {
+  "prompt": "Single short staccato note on an electric bass guitar, picked with a plectrum, palm muted at the bridge, deep low note, quick dead decay, one hit only, dry DI",
+  "generation_id": "WVfG4yxgugZifoWeH4ve",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "bass-gis2": {
+  "prompt": "Single deep note on an electric bass guitar, open A string, fingerstyle, round sustained tone, one note only, dry DI",
+  "generation_id": "ZpFeclaOm2HPRhp1uT2C",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "china": {
   "prompt": "Single china cymbal hit, trashy harsh aggressive crash, close-mic, dry studio, no reverb",
   "generation_id": "znNKNQjE1z4apdF3pDEQ",
@@ -22,6 +57,11 @@
  "crash": {
   "prompt": "Single crash cymbal hit, bright explosive wash ringing out, close-mic, dry studio, no reverb",
   "generation_id": "p97V8KvQABD5K8LZ0ESU",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-chug-a2": {
+  "prompt": "Single palm-muted chug on a distorted electric guitar, low A string, tight short metal chug, one hit, dry",
+  "generation_id": "qUtKfi40DQP3d3sCse72",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-chug-b2": {
@@ -34,9 +74,59 @@
   "generation_id": "BX9nxJfrHfxsxOK5GXAJ",
   "modell": "eleven_text_to_sound_v2"
  },
+ "gitarre-clean-a2": {
+  "prompt": "Single clean electric guitar note, lowest open string in standard tuning, deep low register, thick wound string, plucked, warm sustained tone, one note only, no chord, dry",
+  "generation_id": "WebbvZxAfcHW2q6WnGNx",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "gitarre-clean-a3": {
   "prompt": "Single clean electric guitar note, plucked, clear sustained tone, one note only, no chord, dry",
   "generation_id": "OUyow9r7OYJnopFIswJT",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-clean-b4": {
+  "prompt": "Single clean electric guitar note, A note on the B string at the 10th fret, upper register, plucked, clear sustained tone ringing out, one note only, no chord, dry",
+  "generation_id": "6c8xXHWPmcAgoL4TeKhV",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-clean-d3": {
+  "prompt": "Single clean electric guitar note, open D string, plucked, warm clear sustained tone, one note only, no chord, dry",
+  "generation_id": "SBQ8jRl5iRyYcISx7UXj",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-clean-d4": {
+  "prompt": "Single clean electric guitar note, A note on the high E string at the 5th fret, plucked, clear sustained tone ringing out, one note only, no chord, dry",
+  "generation_id": "K6qnbyEZKlGtx0hrduLc",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-clean-e5": {
+  "prompt": "Single clean electric guitar note, A note on the high E string at the 5th fret, plucked, clear sustained tone ringing out, one note only, no chord, dry",
+  "generation_id": "qyN7MZQLX5D2xVSde2Fw",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-clean-fis4": {
+  "prompt": "Single clean electric guitar note at concert pitch A 440 Hz, high register, plucked, clear sustained tone ringing out, one note only, no chord, no octave, dry",
+  "generation_id": "CfLxyfiXgcXNFmPuU3Nm",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-clean-g3": {
+  "prompt": "Single clean electric guitar note, open G string, plucked with a pick, clear sustained tone ringing out, one note only, no chord, dry",
+  "generation_id": "rTUhyfTIrDJdYjhNh9ER",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-tot": {
+  "prompt": "Muted string scratch on a distorted electric guitar, strings fully deadened by the fretting hand, unpitched percussive chk click, very short single hit, no note, no ringing, dry",
+  "generation_id": "8XVNUXfiCLyQOuxHhu2q",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-zerre-a1": {
+  "prompt": "Single sustained note on a distorted electric guitar, open low B string of a seven-string guitar, very deep heavy metal amp tone, one note only, no chord, dry",
+  "generation_id": "crhDjo6rbVJbG95s6jZV",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-zerre-a2": {
+  "prompt": "One picked note on the open fourth string (D string) of a high-gain distorted electric guitar, heavy metal amp tone, single string only, sustained ringing, no chord, no bass, dry amp",
+  "generation_id": "qlSY0pwrtFVknr2UMsbF",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-a4": {
@@ -44,9 +134,39 @@
   "generation_id": "gt7yh4DYSQobX3hlCdbX",
   "modell": "eleven_text_to_sound_v2"
  },
+ "gitarre-zerre-b1": {
+  "prompt": "Single sustained note on a distorted electric guitar, low A string, crunchy high-gain heavy metal amp tone, ringing out, one note only, no chord, dry",
+  "generation_id": "ZHAVdjqToyncW2Z5ldRU",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "gitarre-zerre-b2": {
   "prompt": "Single sustained note on a distorted electric guitar, low E string, heavy metal amp tone, one note only, no chord, dry",
   "generation_id": "U4wrnCkcrVbG4CykUaNk",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-zerre-b3": {
+  "prompt": "Single dead note on a distorted electric guitar, fretting hand muting all strings, percussive pick scratch with no pitch, one short hit, dry",
+  "generation_id": "wUGLic3rmfG7RomqsXzB",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-zerre-b4": {
+  "prompt": "Single sustained lead note on a distorted electric guitar, B string at the 3rd fret, middle register, warm singing lead tone, one single note, no chord, dry",
+  "generation_id": "IR8vnQGbz0EtdLcxegVW",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-zerre-d3": {
+  "prompt": "One picked note on the open fourth string (D string) of a high-gain distorted electric guitar, heavy metal amp tone, single string only, sustained ringing, no chord, no bass, dry amp",
+  "generation_id": "lONpSUy2zhDGBMcLVHDC",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-zerre-d4": {
+  "prompt": "Single sustained lead note on a distorted electric guitar, B string at the 3rd fret, middle register, warm singing lead tone, one single note, no chord, dry",
+  "generation_id": "pVs6KchgpKQQpdPetN6I",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-zerre-dis5": {
+  "prompt": "Single sustained high note on a distorted electric guitar, lead tone, high register around the 14th fret of the high E string, one single note, no chord, dry",
+  "generation_id": "8usQm03NndElyBpsPptD",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-e2": {
@@ -69,9 +189,29 @@
   "generation_id": "fxUmzPkPX3YNcXu612Tn",
   "modell": "eleven_text_to_sound_v2"
  },
+ "hihat-2": {
+  "prompt": "Single closed hi-hat hit, short tight metallic tick, close-mic, dry, no reverb",
+  "generation_id": "HtFsi6FtGqyWhWcMMm54",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "hihat-3": {
+  "prompt": "Single closed hi-hat hit, short tight metallic tick, close-mic, dry, no reverb",
+  "generation_id": "RFVhb8sAtXPfpFEFxbZY",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "hihat-4": {
+  "prompt": "Single closed hi-hat hit, short tight metallic tick, close-mic, dry, no reverb",
+  "generation_id": "45njggeQBAZzLGorowws",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "hihat-offen": {
   "prompt": "Single open hi-hat hit, sizzling metallic wash decaying, close-mic, dry, no reverb",
   "generation_id": "yeavBx9BFe5hnFzVrC91",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "hihat-pedal": {
+  "prompt": "Single foot pedal hi-hat chick, hi-hat cymbals closed by the foot pedal, short soft chick, close-mic, dry studio, no reverb",
+  "generation_id": "us3DEufHdjR1JS52Sj1q",
   "modell": "eleven_text_to_sound_v2"
  },
  "kick": {
@@ -79,9 +219,24 @@
   "generation_id": "1gimuA1XO6gNKcJ9qDhJ",
   "modell": "eleven_text_to_sound_v2"
  },
+ "kick-2": {
+  "prompt": "Single metal kick drum hit, tight punchy beater click, short low thud, close-mic, dry studio, no reverb",
+  "generation_id": "oLU0Yj4iWWGQn9yuGq49",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "kick-3": {
+  "prompt": "Single metal kick drum hit, tight punchy beater click, short low thud, close-mic, dry studio, no reverb",
+  "generation_id": "nFRIIzqbOGDqL5C6QdkO",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "ride": {
   "prompt": "Single ride cymbal hit with clear bell ping and light metallic wash, close-mic, dry, no reverb",
   "generation_id": "KVbU0lLu2lLLx8UNKAhu",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "ride-glocke": {
+  "prompt": "Single ride cymbal bell hit, struck on the bell, clear bright bell ping, close-mic, dry studio, no reverb",
+  "generation_id": "a6QfDkC1OYsmMjr0NbS4",
   "modell": "eleven_text_to_sound_v2"
  },
  "snare": {
@@ -89,9 +244,44 @@
   "generation_id": "GsIX9jfjjkhlmm6OKY8S",
   "modell": "eleven_text_to_sound_v2"
  },
+ "snare-2": {
+  "prompt": "Single snare drum hit, crisp sharp crack, tight metal snare, close-mic, dry studio, no reverb",
+  "generation_id": "irRpXtpdnPdgW7puOosP",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "snare-3": {
+  "prompt": "Single snare drum hit, crisp sharp crack, tight metal snare, close-mic, dry studio, no reverb",
+  "generation_id": "3KXt6md3Scek3TUn4TLF",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "snare-ghost": {
+  "prompt": "Single very soft ghost note on a snare drum, gentle quiet tap with the stick tip, tight metal snare, close-mic, dry studio, no reverb",
+  "generation_id": "tA5Qza0N2HutDMXTqZ9n",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "snare-rand": {
+  "prompt": "Single rimshot snare drum hit, stick strikes head and rim at once, loud sharp cracking accent, tight metal snare, close-mic, dry studio, no reverb",
+  "generation_id": "IvMAMgKTRT65JzdPuH0m",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "splash": {
+  "prompt": "Single splash cymbal hit, small thin cymbal, short bright quick splash, close-mic, dry studio, no reverb",
+  "generation_id": "dlODNiVfmLbhgGq3rHRm",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "stack": {
+  "prompt": "Single stacked cymbal hit, trash stack, short harsh trashy choked crash, close-mic, dry studio, no reverb",
+  "generation_id": "3wLB94rgdk0JqgMlcuSZ",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "tom-hoch": {
   "prompt": "Single high rack tom drum hit, punchy round tone, close-mic, dry studio, no reverb",
   "generation_id": "MHMALpYY054FPDIzUd9r",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "tom-mitte": {
+  "prompt": "Single mid tom drum hit, punchy medium-pitched round tone, between rack tom and floor tom, close-mic, dry studio, no reverb",
+  "generation_id": "xkJ7BNQY62ty2tm0ML19",
   "modell": "eleven_text_to_sound_v2"
  },
  "tom-tief": {

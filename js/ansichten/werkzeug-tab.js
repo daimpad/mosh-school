@@ -130,7 +130,7 @@ function spiele(el, daten) {
         if (!basis) continue;
         saitenStimme(ctx, ziel, zeit, {
           frequenz: basis * 2 ** (ev.bund / 12),
-          gedaempft: ev.technik === 'dead_note',
+          tot: ev.technik === 'dead_note',
           instrument,
         });
       }

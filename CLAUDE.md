@@ -209,16 +209,25 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
     bei einer fehlenden Datei. Kein Werkzeug darf stumm bleiben, weil ein Sample
     fehlt. **Klick und Referenzton sind bewusst reine Synthese:** beim Klick zählt
     die Flanke, beim Stimmgerät jeder Cent.
-  - `samples.js` — die Sample-Bank: 20 One-Shots aus ElevenLabs (Sound Effects),
+  - `samples.js` — die Sample-Bank: 58 One-Shots aus ElevenLabs (Sound Effects),
     aufbereitet von `scripts/build_samples.mjs` nach `assets/sounds/samples/`
     (Herkunft, Prompts, Auswahl: `HERKUNFT.txt` dort, Rohdateien + Generierungs-IDs
-    in `scripts/samples_quelle/`). Gitarre/Bass liegen in wenigen **gemessenen**
+    in `scripts/samples_quelle/`). Gitarre/Bass liegen in **gemessenen**
     Grundtönen vor (`grundton`, ±10 Cent nachgeprüft — ElevenLabs trifft eine
-    verlangte Tonhöhe nicht verlässlich); `waehleTon()` nimmt den nächsten und
-    stimmt über die Abspielrate um. `saite()` kennt `instrument` (`gitarre`/`bass`),
-    `klang` (`zerre`/`clean`), `gedaempft` (eigene Chug-Proben), `dauer`, `pegel`.
-    Die Mischpegel sind **gegen die Synthese eingemessen** (lautestes
-    50-ms-Fenster gleich laut), damit der Wechsel Sample ↔ Rückfall nicht springt.
+    verlangte Tonhöhe nicht verlässlich, man erzeugt viele Varianten und nimmt die,
+    die Lücken füllen; höchstens 5 Halbtöne Abstand); `waehleTon()` nimmt den
+    nächsten und stimmt über die Abspielrate um. `saite()` kennt `instrument`
+    (`gitarre`/`bass`), `klang` (`zerre`/`clean`), `gedaempft` (Chug- bzw.
+    gedämpfte Bass-Proben), `tot` (Dead Note), `dauer`, `pegel`. **Round-Robin:**
+    Einträge mit `wechsel: '<name>'` sind weitere Treffer derselben Stimme und
+    spielen reihum (Kick, Snare, Hi-Hat). `snare()` nimmt `betonung` und spielt bei
+    −1 die Ghost Note, bei +1 den Rimshot — die Hörbeispiele geben die Betonung
+    mit; der Pegel kommt weiter aus ihren Gain-Knoten. Neue Demo-Instrumente
+    `tom_mid`, `ride_bell`, `splash`, `stack`, `hihat_pedal` (Labels
+    `demo_instr_*`, `DEMO_INSTRUMENTE` in `validate.py`).
+    Die Mischpegel sind **eingemessen** (lautestes 50-ms-Fenster: neue Varianten
+    gegen ihr Hauptsample, neue Grundtöne gegen den Mittelwert ihrer Gruppe, die
+    ersten 20 gegen die Synthese), damit nichts springt.
     Geladen wird beim Erzeugen des Kontexts (braucht keine Geste); `aktiviere()`
     wartet höchstens 1,5 s darauf. **Fallstrick Grundton-Messung:** HPS über den
     ganzen Bereich greift bei verzerrten Tönen eine Oktave tiefer (beim Powerchord
@@ -226,6 +235,10 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
     deshalb nur im Fenster einer Quarte um den Sollwert. Pattern-Werkzeug,
     Loops, Hörbeispiele und Tab-Werkzeug laufen alle über diese Stimmen;
     `patterns.js` hatte bis dahin eine eigene, zweite Synthese.
+    **Reserve:** `scripts/samples_quelle/reserve.json` führt erzeugte und
+    ausgewählte, aber nicht eingebaute Klänge (Gesangstechniken, Live-Geräusche,
+    gesprochenes Einzählen, Gitarren-Effekte) mit `flow_id`/`session_id` — die
+    Dateien liegen im ElevenLabs-Konto, nicht im Repo; vor dem Einbau anhören.
   - `klangprobe.js` — lädt und dekodiert eine Datei zu einem `AudioBuffer`, mit
     Cache je URL. Bewusst schmal — **kein Sampler**, keine Tonhöhen-Zuordnung, keine
     Velocity-Schichten; was mit dem Puffer passiert, entscheidet der Aufrufer
@@ -251,10 +264,13 @@ Werkzeug eine eigene View + Route `#/werkzeug/<name>`.
   localStorage (Größe) und nicht im Zustand-Schema.
 - **SW-Pflege:** neue `js/audio/*`- und `js/ansichten/werkzeug*`-Module gehören in
   `SHELL` + `CACHE`-Bump (wie jedes Kern-Modul). **Die Sample-Bank
-  (`assets/sounds/samples/*.wav`, ~1,7 MB) steht in `SHELL`**, die Zerr-Labor-Proben
-  nicht: Die Bank trägt jedes Werkzeug mit Ton, die Zerr-Labor-Proben nur eines.
-  `validate.py` (`pruefe_samples()`) prüft je Eintrag in `SAMPLES` Datei, Format,
-  SHELL-Eintrag, Rohquelle und Herkunft. Zugänglichkeit: tastaturbedienbar,
+  (`assets/sounds/samples/*.wav`, gut 4 MB) steht NICHT in `SHELL`:** Die
+  Installation lädt die Hülle mit `cache: 'reload'` bei jeder neuen Version
+  komplett neu — bei einem Release je PR wären das jedes Mal 4 MB. Die Bank lädt
+  beim ersten Werkzeug mit Ton und landet über `bedieneRest()` im Cache; bis dahin
+  spielt die Synthese. `validate.py` (`pruefe_samples()`) prüft je Eintrag in
+  `SAMPLES` Datei, Format, Rohquelle und Herkunft und warnt, wenn ein Sample doch
+  in `SHELL` steht. Zugänglichkeit: tastaturbedienbar,
   ARIA; Tuner/Klick brauchen **nicht-farbliche** Signale (Zahl/Form, nicht nur Farbe).
 
 ## Neuen Inhalt einbinden (Content-Pipeline)

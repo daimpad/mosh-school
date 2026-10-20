@@ -12,14 +12,17 @@ import { t } from '../i18n.js';
 import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeAusgang, holeKontext, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
-import { china, crash, hihat, hihatOffen, kick, klick, ride, saite, snare, tomHoch, tomTief } from '../audio/stimmen.js';
+import {
+  china, crash, hihat, hihatOffen, hihatPedal, kick, klick, ride, rideGlocke, saite, snare, splash, stack, tomHoch, tomMitte, tomTief,
+} from '../audio/stimmen.js';
 import { frequenzVon } from './stimmungen.js';
 
 const DRUM_STIMME = {
   kick, snare, hihat_closed: hihat, hihat_open: hihatOffen,
-  tom_hi: tomHoch, tom_lo: tomTief, crash, ride, china,
+  tom_hi: tomHoch, tom_mid: tomMitte, tom_lo: tomTief, crash, ride, ride_bell: rideGlocke, china,
+  splash, stack, hihat_pedal: hihatPedal,
 };
-const GEDAEMPFT = new Set(['palm_mute', 'dead_note', 'chug']);
+const GEDAEMPFT = new Set(['palm_mute', 'chug']);
 
 let laufSched = null;
 let laufTimers = [];
@@ -239,8 +242,11 @@ function spieleStep(ctx, ziel, zeit, demo, step, pegelZiele) {
       // sie klingen live und im Offline-Rendern identisch). Der Unterschied
       // kommt deshalb aus drei vorbereiteten Gain-Knoten, nicht aus drei
       // Varianten jeder Stimme.
-      const ziel2 = pegelZiele?.[betonungVon(spur, step)] || ziel;
-      DRUM_STIMME[spur.instrument]?.(ctx, ziel2, zeit);
+      const betonung = betonungVon(spur, step);
+      const ziel2 = pegelZiele?.[betonung] || ziel;
+      // Die Snare wechselt bei Ghost Note und Akzent zusätzlich die Probe —
+      // ein leiser Schlag klingt anders, nicht nur leiser.
+      DRUM_STIMME[spur.instrument]?.(ctx, ziel2, zeit, { betonung });
     }
   } else {
     for (const ev of demo.events) {
@@ -250,6 +256,7 @@ function spieleStep(ctx, ziel, zeit, demo, step, pegelZiele) {
       saite(ctx, ziel2, zeit, {
         frequenz,
         gedaempft: GEDAEMPFT.has(ev.technik),
+        tot: ev.technik === 'dead_note',
         instrument: demo.instrument === 'bass' ? 'bass' : 'gitarre',
         klang: demo.klang === 'clean' ? 'clean' : 'zerre',
       });
