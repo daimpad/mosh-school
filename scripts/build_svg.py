@@ -87,30 +87,44 @@ S["metronom_prinzip"] = [L(60, 28, 40, 86, 3.5), C(40, 86, 5, fill=True)] + \
                         [L(x, 96, x, 104, 2.5) for x in (24, 42, 60, 78, 96)]
 
 # ================= BASS =================
-S["bass_grundhaltung"] = [L(60, 22, 60, 78, 6), C(60, 40, 11, 4), P("M26,88 Q60,72 94,88", 4)]
-S["bass_greifhand"] = [L(84, 18, 84, 102, 5)] + [C(68, y, 5, fill=True) for y in (28, 52, 76, 100)]
+# Bass hängt am Gurt: Figur + langer, schräger Hals quer vor dem Körper
+S["bass_grundhaltung"] = [L(48, 22, 48, 74, 4), C(48, 36, 9, 4), P("M48,48 Q66,44 80,58", 3),
+                          L(22, 92, 106, 50, 6), C(36, 85, 7, fill=True)]
+# Ein Finger pro Bund: vier Saiten (unten dicker), vier Punkte in vier Bünden nebeneinander
+S["bass_greifhand"] = [L(16, y, 104, y, w) for y, w in ((34, 2), (50, 3), (66, 4), (82, 5.5))] + \
+                     [L(x, 26, x, 90, 1.5) for x in (36, 56, 76, 96)] + \
+                     [C(x, 66, 5, fill=True) for x in (26, 46, 66, 86)]
 S["greifhand_daempfen"] = [L(20, 38, 100, 38, 3), L(20, 58, 100, 58, 3), P(wavepath(20, 100, 82, 10, 2), 4)]
 S["fingerstyle"] = [L(20, 66, 100, 66, 4), C(42, 44, 5, fill=True), L(42, 52, 42, 62, 3),
                     C(70, 44, 5, fill=True), L(70, 52, 70, 62, 3)]
 S["plektrum_technik"] = [TRI([(28, 40), (48, 40), (38, 60)])] + [L(x, 46, x + 10, 74, 4) for x in (60, 78, 96)]
 S["anschlagpunkt_ton"] = [L(16, 62, 104, 62, 3.5), P(wavepath(22, 52, 62, 14, 1), 3),
                           P(wavepath(70, 90, 62, 5, 1.6), 3), L(100, 48, 100, 76, 6)]
-S["palm_muting_bass"] = [P(wavepath(14, 50, 74, 15, 1.5), 4), L(60, 44, 104, 44, 10), P(wavepath(60, 106, 74, 3.5, 2.5), 4)]
+# Zwei dicke Saiten, der Handballen-Block am Steg, der Ton bricht nach kurzem Ausschlag ab
+S["palm_muting_bass"] = [L(14, 46, 88, 46, 6), L(14, 72, 88, 72, 8), RECT(92, 34, 14, 50),
+                        P(wavepath(18, 50, 96, 7, 1.5, env=lambda t: 1 - t), 3), L(56, 96, 80, 96, 3)]
 S["grundton_folgen"] = [P("M20,38 L36,30 L52,44 L68,32 L84,46 L100,36", 3),
                         L(20, 78, 100, 78, 2)] + [C(x, 78, 4.5, fill=True) for x in (20, 52, 84)]
 S["schnelles_fingerspiel"] = [ARC(x, 60, 8, 20, 160, 3.5) if i % 2 == 0 else ARC(x, 60, 8, 200, 340, 3.5)
                               for i, x in enumerate((22, 37, 52, 67, 82, 97))]
-S["galopp_bass"] = _galopp(46, 7.5) + _galopp(76, 7.5)
+# Galopp am Bass: eine Galopp-Reihe oben, darunter die Bassdrum-Punkte auf denselben Einsätzen
+S["galopp_bass"] = _galopp(40, 7.5) + [C(x, 84, 5, fill=True) for x in (16, 52, 70, 88)] + \
+                  [L(x, 52, x, 74, 1.5) for x in (16, 52, 70, 88)]
 S["lock_zur_bassdrum"] = [L(x, 82, x, 92, 3) for x in (24, 48, 72, 96)] + \
                          [C(x, 82, 2.5, fill=True) for x in (24, 72, 96)] + [C(48, 52, 14, 4), C(48, 52, 5, fill=True)]
-S["doom_bass"] = [L(18, 58, 62, 58, 16), ARC(76, 58, 13, -55, 55, 4), ARC(76, 58, 24, -50, 50, 3)]
+# Doom-Bass: eine langsame, schwere Welle über dem Boden
+S["doom_bass"] = [P(wavepath(14, 106, 54, 14, 1, step=2), 9), L(14, 92, 106, 92, 3)]
 S["einfache_basslinie"] = [L(x, 34, x, 34 + h, 3) for x, h in ((20, 14), (36, 8), (52, 16), (68, 8), (84, 14), (100, 10))] + \
                           [C(x, 78, 4.5, fill=True) for x in (20, 36, 52, 68, 84, 100)]
-S["bass_ton_gear"] = [L(20, 34, 100, 34, 3), L(28, 57, 92, 57, 8), L(20, 80, 100, 80, 5)]
-S["bass_aufwaermen"] = [C(32, 88, 4, fill=True), ARC(32, 88, 13, 8, 95, 4), ARC(32, 88, 25, 8, 92, 4), ARC(32, 88, 37, 8, 90, 4)]
-S["bass_timing_klick"] = [L(x, 76, x, 88, 3) for x in (24, 48, 72, 96)] + \
-                         [P(wavepath(24, 96, 46, 11, 1.5), 3.5)]
-
+# Ton & Durchsetzen: breites Fundament unten, darüber der Mittenbuckel, der durch den Mix sticht
+S["bass_ton_gear"] = [L(16, 88, 104, 88, 10), P("M16,64 Q40,64 50,46 Q60,24 70,46 Q80,64 104,64", 3.5),
+                     L(60, 30, 60, 18, 2.5)]
+# Aufwärmen am Bass: eine Hand spreizt sich — vier Fingerkuppen auf einem Bogen über dem Hals
+S["bass_aufwaermen"] = [L(16, 92, 104, 92, 5), P("M22,78 Q60,26 98,78", 2.5)] + \
+                      [C(x, y, 5, fill=True) for x, y in ((28, 68), (46, 50), (74, 50), (92, 68))]
+# Üben mit dem Klick: lange Basstöne setzen genau auf den Klick-Strichen ein
+S["bass_timing_klick"] = [L(x, 84, x, 98, 3) for x in (24, 48, 72, 96)] + \
+                        [L(x, 56, x + 7, 56, 9) for x in (24, 48, 72, 96)]
 # ================= SCHLAGZEUG =================
 S["kit_sitzhaltung"] = [C(60, 50, 6, fill=True), L(60, 56, 60, 96, 3.5), L(56, 62, 32, 94, 3.5),
                         L(64, 62, 88, 94, 3.5), P("M36,34 Q60,26 84,34", 3)]

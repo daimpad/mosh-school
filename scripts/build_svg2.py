@@ -80,7 +80,10 @@ S["tremolo_riffing"] = [P(wavepath(14, 44, 44, 8, 2.4, step=1.6), 2.2),
                         P(wavepath(82, 106, 52, 8, 2, step=1.6), 2.2)]
 def _dgal(y):
     return [L(14, y, 36, y, 6)] + [L(x, y, x + 8, y, 6) for x in (44, 58, 72, 86)] + [L(100, y, 104, y, 3)]
-S["doppel_galopp"] = _dgal(46) + _dgal(76)
+# Doppel-Galopp: zwei Galopp-Zellen pro Zählzeit, darunter die Zählzeiten
+S["doppel_galopp"] = [L(14, 50, 30, 50, 6), L(37, 50, 42, 50, 6), L(49, 50, 54, 50, 6),
+                      L(62, 50, 78, 50, 6), L(85, 50, 90, 50, 6), L(97, 50, 102, 50, 6)] + \
+                     [L(x, 74, x, 86, 3) for x in (14, 62)] + [L(x, 78, x, 86, 2) for x in (38, 86)]
 S["palm_mute_systeme"] = [L(14, 60, 26, 60, 5), P(wavepath(32, 48, 60, 6, 1), 3), L(54, 60, 66, 60, 5),
                           L(70, 60, 82, 60, 5), P(wavepath(88, 104, 60, 6, 1), 3)]
 S["string_skipping"] = [L(20, 38, 100, 38, 2.2), L(20, 58, 100, 58, 2.2), L(20, 78, 100, 78, 2.2),
@@ -126,9 +129,13 @@ S["uebe_architektur"] = [C(60, 58, 26, 3)] + \
 # ================= BASS FORTGESCHRITTEN =================
 S["bass_dreifinger"] = [L(18, 66, 102, 66, 4)] + \
                        [C(x, 44, 5, fill=True) for x in (38, 58, 78)] + [L(x, 52, x, 62, 3) for x in (38, 58, 78)]
-S["bass_downpicking"] = [L(x, 40, x - 13, 80, 5) for x in (32, 50, 68, 86, 104)]
-S["bass_galopp_varianten"] = [L(16, 46, 42, 46, 7), L(52, 46, 61, 46, 7), L(70, 46, 79, 46, 7),
-                              L(16, 76, 25, 76, 7), L(34, 76, 43, 76, 7), L(53, 76, 79, 76, 7)]
+# Downpicking-Ausdauer: eine lange Kette gleicher Abschläge über einer Zeitlinie
+S["bass_downpicking"] = [TRI([(x - 6, 40), (x + 6, 40), (x, 52)]) for x in (22, 41, 60, 79, 98)] + \
+                        [L(16, 76, 104, 76, 5), L(16, 92, 104, 92, 1.5)] + [L(x, 88, x, 96, 2) for x in (16, 60, 104)]
+# Galopp-Varianten: oben lang-kurz-kurz, unten umgedreht, rechts der Pfeil für das Tauschen
+S["bass_galopp_varianten"] = [L(14, 42, 38, 42, 7), L(48, 42, 56, 42, 7), L(66, 42, 74, 42, 7),
+                              L(14, 78, 22, 78, 7), L(32, 78, 40, 78, 7), L(50, 78, 74, 78, 7),
+                              P("M90,42 Q108,60 90,78", 3), TRI([(84, 74), (94, 72), (90, 82)])]
 S["bass_tremolo"] = [P(wavepath(16, 104, 60, 10, 6, step=1.8), 3)]
 S["bass_ghostnotes"] = [C(20, 60, 5.5, fill=True), C(72, 60, 5.5, fill=True)] + \
                        [C(x, 60, 2.5, 2) for x in (33, 46, 59, 85, 98)]
@@ -145,9 +152,10 @@ S["bass_blast_begleitung"] = [C(x, 52, 3, fill=True) for x in range(18, 105, 12)
                              [C(x, 76, 3, fill=True) for x in range(24, 111, 12)]
 S["bass_hand_sync"] = [L(x, 88, x, 96, 2) for x in (30, 60, 90)] + \
                       [P("M20,44 Q40,58 56,62", 4), P("M100,44 Q80,58 64,62", 4), C(60, 66, 5, fill=True)]
-S["bass_koerper_tempo"] = [C(30, 86, 4, fill=True), ARC(30, 86, 13, 8, 95, 4), ARC(30, 86, 25, 8, 92, 4),
-                           C(66, 86, 3, fill=True), ARC(92, 86, 13, 8, 95, 4)]
-
+# Belastung bei hohem Tempo: Last steigt, Pause, steigt wieder — statt Dauerlast
+S["bass_koerper_tempo"] = [RECT(18, 74, 10, 14), RECT(32, 64, 10, 24), RECT(46, 52, 10, 36),
+                          RECT(76, 74, 10, 14), RECT(90, 64, 10, 24), L(14, 94, 106, 94, 3),
+                          C(66, 82, 2.5, fill=True)]
 # ================= BASS EXPERTE =================
 S["bass_tapping"] = [L(16, 62, 104, 62, 4)] + \
                     [e for x in (40, 64, 88) for e in (L(x, 34, x, 54, 3), C(x, 62, 4, fill=True))]
@@ -210,8 +218,10 @@ S["drums_dynamik_architektur"] = [L(x, 64 - h / 2, x, 64 + h / 2, 6) for x, h in
 S["drums_fill_sprache"] = [C(x, 58, 3, fill=True) for x in (18, 27, 36)] + \
                           [L(52, 70, 60, 48, 3.5), L(64, 72, 72, 50, 3.5)] + \
                           [RECT(84, 52, 10, 10), C(106, 58, 3.5, fill=True)]
-S["drums_recording"] = [C(60, 26, 4, 2)] + [L(x, 40, x, 88, 1.5) for x in (30, 60, 90)] + \
-                       [L(x, 52, x, 76, 5) for x in (30, 60, 90)] + [L(x, 58, x, 70, 3) for x in (45, 75)]
+# Drums aufnehmen: Bassdrum und Tom, darüber der Kopfhörer mit Klick
+S["drums_recording"] = [C(42, 76, 20, 3.5), C(42, 76, 4, fill=True), C(88, 66, 12, 3),
+                        ARC(64, 34, 22, 15, 165, 3.5), RECT(38, 28, 8, 14), RECT(82, 28, 8, 14)] + \
+                       [L(x, 104, x, 110, 2) for x in (20, 40, 60, 80, 100)]
 S["drums_athletik_langzeit"] = [P("M16,84 L36,84 L36,74 L56,74 L56,64 L76,64", 3), C(86, 64, 3, fill=True),
                                 P("M94,64 L94,54 L108,54", 3)]
 
@@ -223,15 +233,18 @@ S["false_cord_ansatz"] = [L(24, 60, 96, 60, 4), P(roughpath(30, 90, 48, 2.5, ste
 S["growl_resonanz"] = [P(roughpath(24, 96, 76, 6, step=7, seed=23), 5),
                        ARC(60, 76, 26, 40, 140, 2.5), ARC(60, 76, 38, 45, 135, 2)]
 S["scream_hoehe"] = [P(roughline(22, 80, 94, 34, 3, step=5, seed=24), 3.5), P("M24,92 Q60,80 96,62", 3)]
-S["harsh_artikulation"] = [P(roughpath(16, 104, 60, 4, step=5, seed=25), 3.5)] + \
-                          [L(x, 48, x, 72, 4) for x in (36, 56, 76, 96)]
+# Harsche Artikulation: raue Linie, die Konsonanten stehen als scharfe Spitzen darauf
+S["harsh_artikulation"] = [P(roughpath(16, 104, 66, 4, step=5, seed=25), 3.5)] + \
+                         [TRI([(x - 5, 56), (x + 5, 56), (x, 38)]) for x in (32, 56, 80, 100)]
 S["harsh_phrasierung_atmung"] = [P(roughpath(16, 46, 58, 4, step=4.5, seed=26), 3.5), C(54, 58, 2.5, fill=True),
                                  P(roughpath(62, 88, 58, 4, step=4.5, seed=27), 3.5), C(96, 58, 2.5, fill=True),
                                  P(roughpath(102, 108, 58, 3, step=3, seed=28), 3)]
 S["clean_harsh_wechsel"] = [P(wavepath(16, 58, 60, 12, 1), 3.5), P(roughpath(62, 104, 60, 8, step=5, seed=29), 4)]
 S["harsh_dynamik_intensitaet"] = [P(roughpath(16, 104, 62, 9, step=4.5, seed=30, env=lambda t: 0.2 + 0.8 * t), 4)]
-S["mikrofon_harsh"] = [P(roughpath(10, 24, 60, 3, step=3.5, seed=31), 2.5), C(32, 60, 5, fill=True),
-                       ARC(32, 60, 13, -60, 60, 5), ARC(32, 60, 34, -50, 50, 2)]
+# Mikrofon für harsche Vocals: das raue Signal trifft frontal auf die Kapsel, Abstand bleibt
+S["mikrofon_harsh"] = [P(roughpath(12, 40, 52, 5, step=3.5, seed=31), 3), C(66, 52, 13, 3.5),
+                       L(58, 46, 74, 46, 1.5), L(56, 52, 76, 52, 1.5), L(58, 58, 74, 58, 1.5),
+                       L(66, 65, 66, 100, 7), C(45, 52, 1.8, fill=True), C(50, 52, 1.8, fill=True)]
 S["vocal_aufnahme_feedback"] = [P(wavepath(20, 100, 44, 8, 2), 3), P(wavepath(20, 100, 76, 8, 2), 2),
                                 P("M100,44 Q114,60 100,76", 2)]
 S["set_pacing"] = [L(14, 60, 30, 60, 7), L(38, 60, 50, 60, 7), L(58, 60, 86, 60, 7), L(94, 60, 104, 60, 4)] + \

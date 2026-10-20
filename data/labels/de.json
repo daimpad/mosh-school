@@ -2046,8 +2046,25 @@
     "double_bass_sechzehntel": "Durchgehende Double-Bass-Sechzehntel: die Kick (Punkte) auf allen 16 Sechzehnteln, Snare (Ringe) auf 2 und 4, Hi-Hat (x) in Achteln.",
     "blast_varianten": "Blast-Varianten: oben der Traditional Blast (Kick und Snare im Wechsel), unten der Hammer Blast (Kick und Snare gleichzeitig) — gleiche Dichte, andere Verteilung.",
     "felle_grundlagen": "Trommel im Querschnitt: dickes Schlagfell oben (worauf du spielst), dünnes Resonanzfell unten (formt den Ausklang), der Kessel dazwischen.",
-    "drum_stimmen_basis": "Stimmen von oben: die Schrauben ringsum werden über Kreuz (Pfeile) gleichmäßig gespannt — erst wenn alle denselben Ton geben, schwingt das Fell sauber.",
+    "drum_stimmen_basis": "Stimmen von oben: die Schrauben ringsum werden über Kreuz gleichmäßig gespannt — die Linie springt, beginnend beim Ring, immer zur gegenüberliegenden Schraube. Erst wenn alle denselben Ton geben, schwingt das Fell sauber.",
     "becken_typen": "Beckentypen auf der Ständer-Linie: Hi-Hat-Paar, Crash, das große Ride und das umgedrehte China (rechts) — Größe und Form bestimmen die Rolle.",
-    "fussmaschinen": "Die Fußmaschine: Trittbrett und Feder (Zickzack) treiben den Schlägel am Drehpunkt gegen das Fell — Federspannung und Schlägel-Härte formen Tempo und Attack."
+    "fussmaschinen": "Die Fußmaschine: Trittbrett und Feder (Zickzack) treiben den Schlägel am Drehpunkt gegen das Fell — Federspannung und Schlägel-Härte formen Tempo und Attack.",
+    "galopp_rhythmus": "Galopp im Sechzehntel-Raster: auf jeder Zählzeit ein langer Ton und zwei kurze — angeschlagen ab, ab, auf (Dreiecke).",
+    "downpicking": "Downpicking: jede Achtel ein Abschlag (Dreieck nach unten). Der Rückweg der Hand (gestrichelt) läuft über der Saite, ohne sie zu treffen.",
+    "wechselschlag": "Wechselschlag in Sechzehnteln: Abschlag und Aufschlag wechseln sich ab — der Abschlag fällt immer auf die Achtel des Rasters.",
+    "string_skipping": "String Skipping: Die Töne springen zwischen tiefer E-Saite (unten) und D-Saite hin und her. Die A-Saite dazwischen (gestrichelt, x) bleibt stumm; die Bögen zeigen den Sprung des Plektrums über sie hinweg.",
+    "legato": "Legato als Tonhöhe über der Zeit (Bund 5, 7, 9): Nur der erste Ton wird angeschlagen (Dreieck). Danach Hammer-ons aufwärts (durchgezogene Bögen) und Pull-offs abwärts (gestrichelt).",
+    "slides_bends": "Links der Slide: Der Ton gleitet ohne Absetzen zum Zielbund. Rechts der Bend: Die Saite wird hochgezogen, bis sie den Zielton (gestrichelte Linie, Ring) genau trifft.",
+    "vibrato": "Vibrato als Tonhöhe über der Zeit: Der Ton steht erst, dann schwingt er gleichmäßig über seine Höhe und zurück — oben eng und schnell, unten weit und langsam wie im Doom.",
+    "pinch_harmonics": "Pinch Harmonic: Direkt nach dem Plektrum (Dreieck) berührt der Daumen (Bogen) die Saite an einem Knoten des Obertons. Die Saite schwingt dann in Abschnitten statt als Ganzes — der hohe Oberton klingt.",
+    "sweep_picking_einstieg": "Sweep-Picking: ein Ton pro Saite (D-, G-, H-Saite). Das Plektrum zieht in einer einzigen Bewegung hindurch — links hin, rechts zurück.",
+    "pedalboard_grundlagen": "Die Signalkette von links nach rechts: Instrument, Stimmgerät, Kompressor, Verzerrung, Noise Gate, Verstärker. Delay und Reverb (unten) hängen im Effektweg des Verstärkers.",
+    "metronom_prinzip": "Oben sitzt jeder Ton genau auf dem Klick (senkrechte Linien). Unten rutschen die Töne mal davor, mal danach — die kurzen Striche zeigen, wie weit.",
+    "drums_ghostnotes": "Ghost Notes: Die Snare spielt laut auf 2 und 4 (große Ringe), dazwischen leise Ghost Notes (kleine Ringe). Darüber die Hi-Hat in Achteln, darunter die Bassdrum.",
+    "halftime_china": "Dasselbe Tempo, dieselben Achtel: oben normal (Snare auf 2 und 4), unten Half-Time — die Snare nur auf der 3, das China-Becken auf den schweren Schlägen.",
+    "triolen_fills": "Oben vier Schläge pro Zählzeit (Sechzehntel), unten drei (Triolen, Klammern). Beide Raster landen auf derselben nächsten Eins (großer Punkt).",
+    "rudiments_grundlage": "Oben der Einzelschlag: rechte Hand (über der Linie) und linke Hand (darunter) im Wechsel. Unten der Doppelschlag: je zwei Schläge pro Hand.",
+    "bass_ghostnotes": "Ghost Notes am Bass: klingende Töne (Punkte) im Wechsel mit tonlosen, abgedämpften Anschlägen (x) auf derselben Saite.",
+    "mikrofontechnik": "Oben die leise Passage nah am Mikrofon, unten die laute weiter weg (gestrichelt). Der Pegel rechts bleibt gleich — der Abstand übernimmt einen Teil der Lautstärkearbeit."
   }
 }
