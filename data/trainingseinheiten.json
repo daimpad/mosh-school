@@ -15,6 +15,12 @@
       "phasen": {
         "erwaermung": [
           {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
+          {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
               "de": "Langsam und leise — die Chromatik ist dein Aufwärmprogramm, kein Tempotest."
@@ -47,6 +53,12 @@
             "hinweis": {
               "de": "Zum Abschluss bewusst mit Minimaldruck spielen — locker aufhören, nicht ausgepowert."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -62,6 +74,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "anschlaghand_grundlagen",
             "hinweis": {
@@ -95,6 +113,12 @@
             "hinweis": {
               "de": "Nur mäßiges Tempo: Lockerheit spüren und entspannt ausklingen lassen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -110,6 +134,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "bass_greifhand",
             "hinweis": {
@@ -143,6 +173,12 @@
             "hinweis": {
               "de": "Leise, kurze Figuren — die Pausen wirklich still werden lassen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -158,6 +194,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "fingerstyle",
             "hinweis": {
@@ -191,6 +233,12 @@
             "hinweis": {
               "de": "Zum Schluss bewusst Klangfarben vergleichen — Steg gegen Hals."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -206,6 +254,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_kit",
+            "hinweis": {
+              "de": "Von groß nach klein: Schultern, Hände, Füße, dann leise Schläge. Laut und schnell wird es erst danach."
+            }
+          },
           {
             "baustein": "stockhaltung",
             "hinweis": {
@@ -239,6 +293,12 @@
             "hinweis": {
               "de": "Leise Sechzehntel mit wenigen Akzenten — Kontrolle statt Kraft."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -254,6 +314,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_kit",
+            "hinweis": {
+              "de": "Von groß nach klein: Schultern, Hände, Füße, dann leise Schläge. Laut und schnell wird es erst danach."
+            }
+          },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
@@ -287,6 +353,12 @@
             "hinweis": {
               "de": "Langsamer, schwerer Beat zum Runterkommen — jeder Schlag sitzt."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -302,6 +374,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_stimme",
+            "hinweis": {
+              "de": "Von leise zu verzerrt: Atem, Summen, Sirenen — Verzerrung erst, wenn alles davor frei läuft."
+            }
+          },
           {
             "baustein": "gesang_haltung_atmung",
             "hinweis": {
@@ -335,6 +413,12 @@
             "hinweis": {
               "de": "Leise Lip Trills und Sirenen zum Abwärmen — alles bleibt mühelos."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -350,6 +434,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_stimme",
+            "hinweis": {
+              "de": "Von leise zu verzerrt: Atem, Summen, Sirenen — Verzerrung erst, wenn alles davor frei läuft."
+            }
+          },
           {
             "baustein": "stimmuebungen_sanft",
             "hinweis": {
@@ -383,6 +473,12 @@
             "hinweis": {
               "de": "Eine ruhige, getragene Melodie in bequemer Lage zum Ausklang."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -398,6 +494,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "wechselschlag",
             "hinweis": {
@@ -431,6 +533,12 @@
             "hinweis": {
               "de": "Mit Minimaldruck ausklingen — die Hände locker in den Feierabend."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -446,6 +554,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "fingerstyle",
             "hinweis": {
@@ -479,6 +593,12 @@
             "hinweis": {
               "de": "Leise perkussive Figuren zum Runterkommen — Pausen wirklich still."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -494,6 +614,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_kit",
+            "hinweis": {
+              "de": "Von groß nach klein: Schultern, Hände, Füße, dann leise Schläge. Laut und schnell wird es erst danach."
+            }
+          },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
@@ -527,6 +653,12 @@
             "hinweis": {
               "de": "Langsam und schwer ausklingen — jeder Schlag sitzt."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -542,6 +674,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_stimme",
+            "hinweis": {
+              "de": "Von leise zu verzerrt: Atem, Summen, Sirenen — Verzerrung erst, wenn alles davor frei läuft."
+            }
+          },
           {
             "baustein": "stimmuebungen_sanft",
             "hinweis": {
@@ -575,6 +713,12 @@
             "hinweis": {
               "de": "Sanft abwärmen: leises Summen, bis sich die Stimme neutral anfühlt."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -590,6 +734,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "wechselschlag",
             "hinweis": {
@@ -623,6 +773,12 @@
             "hinweis": {
               "de": "Singen, dann spielen — ruhig und musikalisch ausklingen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -638,6 +794,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "fingerstyle",
             "hinweis": {
@@ -671,6 +833,12 @@
             "hinweis": {
               "de": "Feinhören zum Schluss: vor, auf, hinter dem Schlag — leise und konzentriert."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -686,6 +854,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_kit",
+            "hinweis": {
+              "de": "Von groß nach klein: Schultern, Hände, Füße, dann leise Schläge. Laut und schnell wird es erst danach."
+            }
+          },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
@@ -719,6 +893,12 @@
             "hinweis": {
               "de": "Ruhig ausklingen: Intensitätsebenen bewusst durchfahren."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -734,6 +914,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_stimme",
+            "hinweis": {
+              "de": "Von leise zu verzerrt: Atem, Summen, Sirenen — Verzerrung erst, wenn alles davor frei läuft."
+            }
+          },
           {
             "baustein": "stimmuebungen_sanft",
             "hinweis": {
@@ -766,6 +952,12 @@
             "baustein": "stimmuebungen_sanft",
             "hinweis": {
               "de": "Sanft abwärmen, bis sich die Stimme neutral anfühlt."
+            }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
             }
           }
         ]
@@ -831,6 +1023,12 @@
       "phasen": {
         "erwaermung": [
           {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
+          {
             "baustein": "doom_band_zeitgefuehl",
             "hinweis": {
               "de": "Als Einstieg gemeinsam (oder mit Aufnahme) das 55-BPM-Raster verankern — alles Weitere der Session lebt von diesem geteilten Puls."
@@ -863,6 +1061,12 @@
             "hinweis": {
               "de": "Zum Abschluss die Ohren: das Pendel und der Tritonus in Zeitlupe — wer mag, baut die Miniatur aus drei Tönen direkt mit den Sounds der Session."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -878,6 +1082,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "d_beat",
             "hinweis": {
@@ -911,6 +1121,12 @@
             "hinweis": {
               "de": "Zum Abschluss alle zusammen: kurze Parolen, exakt auf den Schlag, aus der Stütze — leise beginnen, bei Kratzen sofort stoppen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -926,6 +1142,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "blastbeat",
             "hinweis": {
@@ -959,6 +1181,12 @@
             "hinweis": {
               "de": "Zum Abschluss die Stimme, bewusst leise: Tief-Hoch-Wechsel mit großem Abstand — Tempo kommt über Wochen, nicht heute."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -974,6 +1202,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "d_beat",
             "hinweis": {
@@ -1007,6 +1241,12 @@
             "hinweis": {
               "de": "Zum Abschluss die Stimme, bewusst leise und kurz: dringlich, nicht gepresst — bei Kratzen sofort stoppen, danach Hände und Stimme ausruhen lassen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1022,6 +1262,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "tempo_wechsel_drums",
             "hinweis": {
@@ -1049,6 +1295,12 @@
             "hinweis": {
               "de": "Zum Abschluss das geteilte Raster in der Zeitlupe prüfen — genau das Tempogedächtnis, von dem die Abrisskanten leben."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1064,6 +1316,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "grundbeat",
             "hinweis": {
@@ -1097,6 +1355,12 @@
             "hinweis": {
               "de": "Im Schlepptempo ausklingen — lange Töne, viel Raum, Puls ruhig werden lassen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1112,6 +1376,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
@@ -1145,6 +1415,12 @@
             "hinweis": {
               "de": "Locker ausklingen lassen: minimaler Greifdruck, Hände bewusst entspannen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1160,6 +1436,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
@@ -1187,6 +1469,12 @@
             "hinweis": {
               "de": "Ausklingen mit minimaler Bewegung — Lockerheit ist der Djent-Kern."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1202,6 +1490,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
@@ -1229,6 +1523,12 @@
             "hinweis": {
               "de": "Entspannt ausklingen, Hände lockern."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1244,6 +1544,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_kit",
+            "hinweis": {
+              "de": "Von groß nach klein: Schultern, Hände, Füße, dann leise Schläge. Laut und schnell wird es erst danach."
+            }
+          },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
@@ -1277,6 +1583,12 @@
             "hinweis": {
               "de": "Ruhig ausklingen, Lockerheit prüfen, Ohren schonen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1292,6 +1604,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_kit",
+            "hinweis": {
+              "de": "Von groß nach klein: Schultern, Hände, Füße, dann leise Schläge. Laut und schnell wird es erst danach."
+            }
+          },
           {
             "baustein": "koordination",
             "hinweis": {
@@ -1319,6 +1637,12 @@
             "hinweis": {
               "de": "Ruhig und gerade ausklingen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1334,6 +1658,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "bass_greifhand",
             "hinweis": {
@@ -1361,6 +1691,12 @@
             "hinweis": {
               "de": "Ruhig ausklingen, sauber den Grundtönen folgen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1376,6 +1712,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
@@ -1409,6 +1751,12 @@
             "hinweis": {
               "de": "Kreativer Ausklang: aus wenig Material über ein Riff frei phrasieren."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1424,6 +1772,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_stimme",
+            "hinweis": {
+              "de": "Von leise zu verzerrt: Atem, Summen, Sirenen — Verzerrung erst, wenn alles davor frei läuft."
+            }
+          },
           {
             "baustein": "stimmuebungen_sanft",
             "hinweis": {
@@ -1451,6 +1805,12 @@
             "hinweis": {
               "de": "Ruhiger Ausklang auf einer sauberen Clean-Linie; danach Sprechtest, bei anhaltender Heiserkeit in die HNO-Praxis."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1466,6 +1826,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
@@ -1511,6 +1877,12 @@
             "hinweis": {
               "de": "Locker ausklingen: Verdopplung gegen eigene Linie hören, ohne auf Präzision zu drillen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1526,6 +1898,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
@@ -1577,6 +1955,12 @@
             "hinweis": {
               "de": "Locker ausklingen: einen Spannungsbogen gemeinsam tragen, alle zünden am selben Punkt."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1592,6 +1976,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
@@ -1625,6 +2015,12 @@
             "hinweis": {
               "de": "Zum Runterkommen nur leise und clean, ohne Umschlag: ruhige Arpeggien, bis Hände und Ohren entspannt sind."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1640,6 +2036,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_band",
+            "hinweis": {
+              "de": "Den ganzen Körper zuerst; danach wärmt jede und jeder das eigene Instrument mit der passenden Routine auf."
+            }
+          },
           {
             "baustein": "wechselschlag",
             "hinweis": {
@@ -1673,6 +2075,12 @@
             "hinweis": {
               "de": "Reibende Zusammenklänge mit einem festen Anker, damit die Figur nachvollziehbar bleibt."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1688,6 +2096,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
@@ -1721,6 +2135,12 @@
             "hinweis": {
               "de": "Eine Bassfigur schreiben, die allein trägt, und die Gitarre nur Fläche beisteuern lassen."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1736,6 +2156,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "greifhand_grundlagen",
             "hinweis": {
@@ -1769,6 +2195,12 @@
             "hinweis": {
               "de": "Zum Abschluss bewusst mit Minimaldruck spielen — die Greifhand entspannt aufhören lassen, nicht ausgepowert."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1784,6 +2216,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_kit",
+            "hinweis": {
+              "de": "Von groß nach klein: Schultern, Hände, Füße, dann leise Schläge. Laut und schnell wird es erst danach."
+            }
+          },
           {
             "baustein": "rudiments_grundlage",
             "hinweis": {
@@ -1817,6 +2255,12 @@
             "hinweis": {
               "de": "Im langsamen Kontrast ausklingen: volle Schläge ausklingen lassen und die langen Abstände exakt halten."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1832,6 +2276,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_haende",
+            "hinweis": {
+              "de": "Erst die Routine, dann das Instrument — warm sind die Hände, wenn die Chromatik mühelos läuft, nicht nach einer festen Zeit."
+            }
+          },
           {
             "baustein": "fingerstyle",
             "hinweis": {
@@ -1865,6 +2315,12 @@
             "hinweis": {
               "de": "Ruhig ausklingen: kurze Figuren, deren Pausen wirklich still sind."
             }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
+            }
           }
         ]
       }
@@ -1880,6 +2336,12 @@
       },
       "phasen": {
         "erwaermung": [
+          {
+            "baustein": "aufwaermen_routine_stimme",
+            "hinweis": {
+              "de": "Von leise zu verzerrt: Atem, Summen, Sirenen — Verzerrung erst, wenn alles davor frei läuft."
+            }
+          },
           {
             "baustein": "stimmuebungen_sanft",
             "hinweis": {
@@ -1912,6 +2374,12 @@
             "baustein": "gesang_haltung_atmung",
             "hinweis": {
               "de": "Zum Abschluss ruhig atmen: Bauch und Flanken weiten sich, die Ausatmung wird länger, ohne zu pressen."
+            }
+          },
+          {
+            "baustein": "abwaermen_routine",
+            "hinweis": {
+              "de": "Zum Schluss langsam raus: leiser spielen, lockern, kurz notieren, wo es heute gezogen hat."
             }
           }
         ]

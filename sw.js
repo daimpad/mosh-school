@@ -178,6 +178,7 @@ const SHELL = [
   'data/bausteine.stil-vertiefung-1.json',
   'data/bausteine.stil-vertiefung-2.json',
   'data/bausteine.koerper-athletik.json',
+  'data/bausteine.koerper-aufwaermen.json',
   'data/bausteine.pedalboard-gear.json',
   'data/bausteine.amp-box-gear.json',
   'data/bausteine.zerre-detail.json',

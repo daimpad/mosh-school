@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "einsteiger",
+    "domaene": "koerper-aufwaermen",
+    "hinweis": "Die ersten Übungen der Körper-Domäne: Aufwärm- und Abwärm-Routinen zum Mitmachen. Die Körper-Bausteine davor sind Reflexionsaufgaben und erklären das Warum (aufwaermen_handgesundheit, bass_aufwaermen, aufwaermen_gesundheit, aufwaermen_stimmgesundheit, abwaermen_koerper) — sie bleiben, wie sie sind, und sind hier die Voraussetzung. Diese Routinen tragen das Wie und stehen in der Erwärmung bzw. im Ausklang der Trainingseinheiten. Gesundheitsrahmen: Prinzip statt Dosierung, nie in den Schmerz, bei Warnzeichen stoppen und abklären lassen. Kein Vokabular-Block."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "aufwaermen_routine_haende",
+      "anzeigetitel": {
+        "de": "Aufwärm-Routine: Hände & Unterarme"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "lockere_greifhand"
+      ],
+      "voraussetzungen": [
+        "aufwaermen_handgesundheit",
+        "bass_aufwaermen"
+      ],
+      "erklaerteil": {
+        "de": "Warum Aufwärmen wichtig ist, steht in „Aufwärmen & Handgesundheit“. Hier geht es um den Ablauf, den du vor jeder Session an Gitarre oder Bass einfach abspulen kannst — ohne nachzudenken, in einigen Minuten.\n\nDie Routine geht von außen nach innen und von grob nach fein: erst Wärme und Durchblutung, dann Beweglichkeit in Schultern, Handgelenken und Fingern, zuletzt das Instrument — leise, langsam und mit wenig Kraft. Gedehnt wird nur sanft und nie bis zum Ziehen; kalte Sehnen mögen keine Kraft und kein Wippen.\n\nDer Maßstab ist das Gefühl, nicht die Uhr: Fertig bist du, wenn die Finger warm sind und die Bewegungen leicht laufen. An kalten Tagen oder nach einer Pause dauert das länger. Wer mit einem schnellen Riff „aufwärmt“, überspringt genau den Teil, der schützt."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von warm zu fein",
+          "ziel": "Hände und Unterarme so vorbereiten, dass die erste schnelle Passage leicht läuft statt zu ziehen.",
+          "schritte": [
+            "Wärme zuerst: Hände aneinander reiben, kurz unter warmes Wasser halten oder die Arme locker schwingen, bis die Finger nicht mehr kühl sind.",
+            "Schultern ein paarmal langsam nach hinten kreisen, dann die Handgelenke in beide Richtungen kreisen — klein, ruhig, ohne Knacken zu erzwingen.",
+            "Finger mehrmals ganz öffnen und locker zur Faust schließen, dann jeden Finger einzeln zum Daumen tippen. Sanft, ohne Druck.",
+            "Unterarm-Beuger und -Strecker nur so weit dehnen, bis du einen leichten Zug spürst, ein paar ruhige Atemzüge halten, nicht wippen.",
+            "Am Instrument: eine chromatische Ein-Finger-pro-Bund-Folge langsam und leise, mit möglichst wenig Druck. Erst wenn sie mühelos läuft, darf das Tempo steigen."
+          ],
+          "steigerung": "Wenn die Routine sitzt, häng eine Minute deines eigentlichen Übethemas in halbem Tempo an — so geht das Aufwärmen nahtlos in die Arbeit über. Bei Kribbeln, Taubheit oder Schmerz sofort aufhören; kommt es wieder, lass es ärztlich oder physiotherapeutisch abklären.",
+          "selbstkontrolle": "Fühlen sich die Finger nach der Routine warm und leicht an? Spielst du die Chromatik mit weniger Druck als ohne Aufwärmen? Und ehrlich: Hast du heute ausgelassen, weil du „nur kurz“ spielen wolltest?"
+        }
+      }
+    },
+    {
+      "id": "aufwaermen_routine_kit",
+      "anzeigetitel": {
+        "de": "Aufwärm-Routine am Kit: Schultern, Hände, Füße"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "lockere_haende"
+      ],
+      "voraussetzungen": [
+        "aufwaermen_gesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Am Schlagzeug arbeitet der ganze Körper: Schultern und Unterarme für die Stöcke, Rumpf für die Haltung, Sprunggelenke und Waden für die Pedale. Eine Aufwärm-Routine, die nur die Hände bedenkt, lässt genau die Partien kalt, die bei Double Bass und schnellen Passagen zuerst zumachen.\n\nDer Ablauf geht von groß nach klein und von leise nach laut: erst Bewegung und Wärme im ganzen Körper, dann Schultern, Handgelenke und Füße, zuletzt Schläge — auf dem Pad oder der Snare, locker, mit Rebound statt Kraft. Lautstärke und Tempo kommen erst, wenn die Bewegung von selbst läuft.\n\nMiss dich nicht an der Uhr, sondern am Gefühl: Locker sind die Hände, wenn der Stock von allein zurückkommt. Wer die ersten Minuten gleich mit Blasts füllt, holt sich eher eine Verspannung als Tempo."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von groß nach klein",
+          "ziel": "Schultern, Hände und Füße so vorbereiten, dass Rebound und Fußarbeit locker laufen, bevor es laut und schnell wird.",
+          "schritte": [
+            "Kurz auf der Stelle gehen oder locker mit den Armen schwingen, bis dir warm wird. Dann Schultern langsam nach hinten kreisen und den Nacken sanft von Seite zu Seite neigen — nicht kreisen, nicht ruckeln.",
+            "Handgelenke kreisen, Finger öffnen und schließen, Unterarme nur bis zu einem leichten Zug dehnen, ruhig atmen, nicht wippen.",
+            "Im Sitzen die Füße abwechselnd über die Ferse abrollen und die Sprunggelenke kreisen. Dann leise, langsame Schläge mit beiden Füßen auf den Pedalen, ohne Druck in die Felle zu stemmen.",
+            "Auf dem Pad oder der Snare: Single Strokes leise und langsam, der Stock fällt und springt zurück. Danach Doubles, ebenso locker.",
+            "Erst wenn alles mühelos läuft, Lautstärke und Tempo schrittweise anheben — Füße und Hände getrennt, dann zusammen."
+          ],
+          "steigerung": "Hängt die Routine sicher, setz am Ende einen ruhigen Grundbeat, in dem du nacheinander auf Hände, Füße und Atmung achtest. Bei Ziehen in Handgelenk, Unterarm oder Schienbein: Pause, nicht durchspielen; kommt es wieder, ärztlich oder physiotherapeutisch abklären lassen.",
+          "selbstkontrolle": "Springt der Stock nach der Routine von allein zurück? Sind deine Schultern beim ersten lauten Groove noch unten? Spürst du die Füße warm und beweglich, oder setzt du die Pedale noch steif ein?"
+        }
+      }
+    },
+    {
+      "id": "aufwaermen_routine_stimme",
+      "anzeigetitel": {
+        "de": "Aufwärm-Routine: Stimme von leise zu verzerrt"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen",
+        "stimmgesundheit"
+      ],
+      "voraussetzungen": [
+        "aufwaermen_stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Die Stimme ist ein Muskelsystem wie jedes andere — nur kannst du es nicht sehen. Kalt in einen Scream oder Growl zu gehen, ist wie kalt in einen Sprint: Es geht vielleicht gut, aber die Stimme bezahlt dafür. Warum das so ist, steht in „Aufwärmen & Abwärmen der Stimme“; hier ist der Ablauf.\n\nDie Routine baut die Stimme in derselben Reihenfolge auf, in der du sie danach brauchst: Körper und Atem, dann leise Töne mit wenig Widerstand, dann Tonhöhe und Resonanz, zuletzt die Verzerrung — und die nur leise und erst, wenn alles davor frei läuft. Verzerrt wird nie aus dem Stand.\n\nDie Routine ist fertig, wenn die Stimme leicht und frei klingt, nicht nach einer festen Zeit. Morgens, nach langem Reden oder bei Müdigkeit braucht sie länger — und an manchen Tagen ist die beste Entscheidung, gar nicht verzerrt zu singen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Von leise zu verzerrt",
+          "ziel": "Die Stimme so vorbereiten, dass Tonhöhe und Verzerrung ohne Druck kommen.",
+          "schritte": [
+            "Locker stehen, Schultern sinken lassen, Kiefer lösen. Ein paar ruhige Atemzüge in den Bauch und die Flanken, beim Ausatmen auf „s“ oder „f“ gleichmäßig Luft geben.",
+            "Leise summen auf bequemer Tonhöhe, dann Lippenflattern („brr“) — beides lässt die Stimmlippen mit wenig Widerstand schwingen.",
+            "Sanfte Sirenen auf „ng“ oder „u“ von unten nach oben und zurück, ohne Lautstärke, ohne die Höhe zu erzwingen.",
+            "Vokale auf mittlerer Lage sprechen und halb singen, entspannt und mit Resonanz vorne im Gesicht.",
+            "Erst jetzt, wenn alles frei läuft: einzelne leise Verzerrungs-Ansätze aus Luft und Resonanz, so wie du sie gelernt hast — kurz, mühelos, mit Pausen dazwischen."
+          ],
+          "steigerung": "Wenn die Routine sitzt, häng zwei, drei Zeilen deines Übematerials in halber Intensität an. Bei Kratzen, Druck, Hustenreiz oder Heiserkeit sofort aufhören und die Stimme ruhen lassen. Verzerrte Techniken erarbeitest du am sichersten mit einer Lehrperson für Extreme Vocals; hält eine Heiserkeit länger an, gehört das in eine HNO-Praxis.",
+          "selbstkontrolle": "Klingt deine Sprechstimme nach der Routine freier als davor? Kommt die Verzerrung leise und ohne Druck, oder brauchst du Kraft dafür? Und nach der Session: Ist die Stimme noch klar?"
+        }
+      }
+    },
+    {
+      "id": "aufwaermen_routine_band",
+      "anzeigetitel": {
+        "de": "Aufwärm-Routine vor Probe und Show: der ganze Körper"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen"
+      ],
+      "voraussetzungen": [
+        "aufwaermen_handgesundheit",
+        "aufwaermen_gesundheit",
+        "aufwaermen_stimmgesundheit"
+      ],
+      "erklaerteil": {
+        "de": "Vor einer Probe oder Show reicht es nicht, nur die Hände warm zu haben. Auf der Bühne stehst, springst und bangst du, schleppst vorher Equipment und spielst oft länger und härter als zu Hause. Der ganze Körper muss mitkommen — Kreislauf, Rücken, Nacken, Beine.\n\nDiese Routine ist der gemeinsame Teil: Ihr könnt sie als Band zusammen machen, in der Proberaum-Ecke oder im Backstage. Danach wärmt jede und jeder das eigene Instrument nach der passenden Routine auf (Hände, Kit oder Stimme). Bewegt wird ruhig und in schmerzfreien Bereichen; gerade der Nacken bekommt nur sanfte Bewegungen, keine schnellen Kreise.\n\nDer Nebeneffekt ist kaum kleiner als der Schutz: Wer zusammen aufwärmt, kommt als Band an, statt einzeln aus dem Alltag in den ersten Song zu stolpern."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Gemeinsam ankommen",
+          "ziel": "Kreislauf, Rücken, Nacken und Beine vor Probe oder Show in Gang bringen — als Grundlage für das instrumenten-eigene Aufwärmen.",
+          "schritte": [
+            "Ein paar Minuten locker bewegen: auf der Stelle gehen, die Arme schwingen, leicht federn, bis dir warm wird.",
+            "Schultern langsam nach hinten kreisen, dann die Arme seitlich öffnen und wieder schließen. Den Nacken sanft nach links und rechts neigen und das Kinn leicht Richtung Brust sinken lassen — nicht kreisen, nicht ruckeln.",
+            "Den Oberkörper im Stehen ruhig zu beiden Seiten drehen, die Hüfte kreisen, dann in einer leichten Kniebeuge ein paarmal auf und ab — nur so tief, wie es angenehm ist.",
+            "Hände und Handgelenke lockern, ausschütteln, ein paar tiefe Atemzüge gemeinsam.",
+            "Danach geht jede und jeder in die eigene Instrumenten-Routine (Hände, Kit oder Stimme), bevor der erste Song kommt."
+          ],
+          "steigerung": "Macht die Routine zum festen Ritual vor jeder Probe und Show, auch wenn die Zeit knapp ist — lieber kürzer als gar nicht. Wer beim Bangen oder Springen Nackenschmerzen, Schwindel oder Kribbeln in den Armen bekommt, hört auf; bei wiederkehrenden Beschwerden ärztlich abklären lassen.",
+          "selbstkontrolle": "Seid ihr nach der Routine warm, bevor der erste Song losgeht? Macht wirklich die ganze Band mit — oder nur, wer gerade Lust hat? Wie fühlen sich Nacken und Rücken am Tag nach einer Show an, mit und ohne Routine?"
+        }
+      }
+    },
+    {
+      "id": "abwaermen_routine",
+      "anzeigetitel": {
+        "de": "Abwärm-Routine: nach der Session runterfahren"
+      },
+      "domaene": [
+        "koerper"
+      ],
+      "kompetenzstufe": [
+        "einsteiger"
+      ],
+      "typ": "micro",
+      "spielziele": [
+        "schmerzfrei_spielen"
+      ],
+      "voraussetzungen": [
+        "abwaermen_koerper"
+      ],
+      "erklaerteil": {
+        "de": "Warum Abwärmen sinnvoll ist, steht in „Abwärmen: Hände & Körper runterfahren“. Hier ist die Routine dazu — kurz genug, dass du sie nach jeder Session machst, nicht nur nach den langen.\n\nSie dreht das Aufwärmen um: erst das Instrument leiser und langsamer, dann Hände, Schultern und Nacken lockern, zuletzt Atem und, wer gesungen hat, die Stimme ausschwingen lassen. Gedehnt wird sanft und ohne Zug bis zum Schmerz — nach einer harten Session sind Sehnen und Muskeln müde, nicht steif genug für Kraft.\n\nDer zweite Teil ist Aufmerksamkeit: Wo zieht es? Was war heute anders als sonst? Wer das kurz notiert, merkt früh, wenn sich eine Überlastung anbahnt — lange bevor sie zum Problem wird."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Langsam raus",
+          "ziel": "Nach dem Spielen Spannung abbauen und früh merken, wo sich etwas anbahnt.",
+          "schritte": [
+            "Spiel zum Schluss etwas Einfaches bewusst leiser und langsamer als dein Übetempo — eine Minute, locker, ohne Anspruch.",
+            "Hände ausschütteln, Finger öffnen und schließen, Unterarme und Schultern nur sanft dehnen, ruhig atmen, nicht wippen. Am Kit auch die Waden und Sprunggelenke lockern.",
+            "Schultern sinken lassen, den Nacken sanft zur Seite neigen, ein paar tiefe Atemzüge.",
+            "Wer gesungen hat: leise summen oder Lippenflattern auf bequemer Lage, bis die Stimme sich frei anfühlt. Danach Wasser trinken und eine Weile nicht schreien oder laut reden.",
+            "Kurz notieren: Wo hat es heute gezogen, was war anstrengender als sonst? Ein Satz im Übe-Tagebuch reicht."
+          ],
+          "steigerung": "Vergleich deine Notizen über ein paar Wochen: Taucht dieselbe Stelle immer wieder auf, ändere Haltung, Tempo oder Pausen, bevor daraus Schmerz wird. Bleiben Schmerzen, Taubheit oder Heiserkeit über Tage, gehört das in eine Arzt-, Physiotherapie- oder HNO-Praxis.",
+          "selbstkontrolle": "Fühlen sich Hände und Schultern nach der Routine lockerer an als direkt nach dem Spielen? Hast du heute etwas notiert? Und am nächsten Morgen: Sind die Hände steif — oder frei?"
+        }
+      }
+    }
+  ]
+}
