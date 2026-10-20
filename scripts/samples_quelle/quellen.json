@@ -49,6 +49,11 @@
   "generation_id": "ZpFeclaOm2HPRhp1uT2C",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/belting": {
+  "prompt": "Solo human rock singer belting one powerful, loud, bright high sustained note in full chest voice on an open \"ah\" vowel, strong and ringing, steady pitch, a cappella, dry close-mic studio recording, no music, no words, no reverb",
+  "generation_id": "6589roq8QJuX3P15iv5l",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/clean-ton-m": {
   "prompt": "Solo male singer, one clean sustained sung note on the vowel \"ah\", chest voice, steady pitch, about 2.5 seconds, dry close-mic studio, a cappella, no music, no instruments, no reverb, no words",
   "generation_id": "a1JzRGDyywrVQy4fRXuz",
@@ -64,6 +69,11 @@
   "generation_id": "QUjQrppU4XuaIMfUrPdo",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/doom-clean": {
+  "prompt": "Solo deep male baritone voice singing one low, slow, sustained, mournful clean note on an \"oh\" vowel, dark and solemn, doom metal style clean singing without distortion, a cappella, dry close-mic studio recording, no music, no words, no reverb",
+  "generation_id": "ZjuNkXFFMDytsrcbrReZ",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/false-cord": {
   "prompt": "Solo human vocalist, one false cord scream on the vowel \"ah\", rough gritty mid-high metal scream, sustained about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
   "generation_id": "QtFbZpnpYnNUmhvVyupe",
@@ -72,6 +82,11 @@
  "beispiele/fry-scream": {
   "prompt": "Solo human vocalist, one vocal fry scream on the vowel \"eh\", mid register, raspy crackling metalcore scream, about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
   "generation_id": "LKeJsKfDREO67uriGg5Y",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/gang-shout": {
+  "prompt": "Hardcore punk gang vocals: a group of five or six men shouting \"Hey!\" together exactly once, loud, short and in unison, then silence, dry studio recording, no music, no crowd noise, no reverb",
+  "generation_id": "9HD5vjD3O5yBT01T3Nuz",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/gitarre-feedback": {
@@ -107,6 +122,11 @@
  "beispiele/kabel-knacken": {
   "prompt": "Quarter-inch instrument cable being plugged into an electric guitar jack while the amp is on, loud crackle and pop through the amp followed by a short ground hum buzz [duration_seconds 1.5, prompt_influence 0.5]",
   "generation_id": "azRpksAUTgdYJK5i44y8",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/kopfstimme": {
+  "prompt": "Solo human male singer holding one clear, light, airy high note in head voice falsetto on an open \"ooh\" vowel, steady pitch, a cappella, dry studio recording, no music, no words, no reverb",
+  "generation_id": "PQvKWflFgUS68n1X5Bb1",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/lippenflattern": {
@@ -148,6 +168,11 @@
   "prompt": "Check, <break time=\"0.2s\" /> eins, zwei. <break time=\"0.5s\" /> Check. [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
   "generation_id": "iTwv1VDQvIhaae9LkWbV",
   "modell": "eleven_multilingual_v2"
+ },
+ "beispiele/vibrato-ton": {
+  "prompt": "Solo human singer holding one long sung note on an \"ah\" vowel with a wide, even, regular vibrato, the pitch gently wavering up and down about six times per second, classical operatic vibrato, a cappella, dry studio recording, no music, no words, no reverb",
+  "generation_id": "5Ov9ZhFqBQAnUPBXEiEW",
+  "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/vocal-fry": {
   "prompt": "Close-mic recording of one man making a quiet relaxed vocal fry sound: very low slow crackling glottal pulses, the creaky voice at the end of a lazy tired \"aah\" when the breath runs out, no growl, no scream, no singing, about 2 seconds, dry, no music, no reverb",
