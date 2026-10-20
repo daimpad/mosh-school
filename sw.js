@@ -17,7 +17,7 @@
 // Kern-Dateien den CACHE-Namen erhöhen — dann lädt der neue SW die Hülle frisch
 // und räumt die alten Caches weg.
 
-const CACHE = 'zerrer-v235';
+const CACHE = 'zerrer-v236';
 
 // App-Hülle: alles, was für den ersten Start ohne Netz nötig ist. Die
 // Baustein-Grafiken (images/G-XXX.png) sind bewusst NICHT dabei — sie sind viele
@@ -84,6 +84,30 @@ const SHELL = [
   'js/audio/zerre.js',
   'js/audio/box.js',
   'js/audio/klangprobe.js',
+  'js/audio/samples.js',
+  // Sample-Bank der Stimmen (Schlagzeug, Gitarre, Bass) — anders als die
+  // Klangproben des Zerr-Labors IN der Shell: Sie tragen jedes Werkzeug mit
+  // Ton, und offline soll es nicht auf die Synthese zurückfallen müssen.
+  'assets/sounds/samples/bass-b1.wav',
+  'assets/sounds/samples/bass-e1.wav',
+  'assets/sounds/samples/bass-e2.wav',
+  'assets/sounds/samples/china.wav',
+  'assets/sounds/samples/crash.wav',
+  'assets/sounds/samples/gitarre-chug-b2.wav',
+  'assets/sounds/samples/gitarre-chug-e2.wav',
+  'assets/sounds/samples/gitarre-clean-a3.wav',
+  'assets/sounds/samples/gitarre-zerre-a4.wav',
+  'assets/sounds/samples/gitarre-zerre-b2.wav',
+  'assets/sounds/samples/gitarre-zerre-e2.wav',
+  'assets/sounds/samples/gitarre-zerre-f4.wav',
+  'assets/sounds/samples/gitarre-zerre-fis3.wav',
+  'assets/sounds/samples/hihat-offen.wav',
+  'assets/sounds/samples/hihat.wav',
+  'assets/sounds/samples/kick.wav',
+  'assets/sounds/samples/ride.wav',
+  'assets/sounds/samples/snare.wav',
+  'assets/sounds/samples/tom-hoch.wav',
+  'assets/sounds/samples/tom-tief.wav',
   'js/tabulatur.js',
   'js/audio/tonhoehe.js',
   'js/audio/mikro.js',

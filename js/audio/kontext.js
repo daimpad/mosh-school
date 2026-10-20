@@ -9,6 +9,14 @@
 // aufrufen; danach liefert `holeKontext()` einen laufenden Kontext. `istBereit()`
 // sagt, ob schon aktiviert wurde (für den „Audio aktivieren"-Schritt der Views).
 
+import { ladeSamples } from './samples.js';
+
+// So lange wartet `aktiviere()` höchstens auf die Sample-Bank. Danach spielt,
+// was noch fehlt, vorerst die Synthese — ein „Audio aktivieren“, das bei
+// langsamer Leitung sekundenlang hängt, wäre schlimmer als ein synthetischer
+// erster Takt.
+const SAMPLE_WARTEZEIT_MS = 1500;
+
 let kontext = null;
 let masterGain = null;
 let rauschPuffer = null;
@@ -21,6 +29,9 @@ export function holeKontext() {
     masterGain = kontext.createGain();
     masterGain.gain.value = 0.9;
     masterGain.connect(kontext.destination);
+    // Laden und Dekodieren braucht keine Nutzergeste — die Bank kommt also
+    // schon, während die Ansicht noch auf „Audio aktivieren“ wartet.
+    ladeSamples(kontext);
   }
   return kontext;
 }
@@ -48,6 +59,8 @@ export async function aktiviere() {
          der Kontext suspended und die View zeigt weiter „Audio aktivieren". */
     }
   }
+  // Ein zweiter Ladeversuch, falls der erste (offline) unvollständig blieb.
+  await Promise.race([ladeSamples(ctx), new Promise((fertig) => setTimeout(fertig, SAMPLE_WARTEZEIT_MS))]);
   return ctx;
 }
 

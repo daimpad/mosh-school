@@ -1,7 +1,7 @@
 // Pattern-Werkzeug: interaktive Referenz typischer Riffs (TAB) und Drumpattern
-// pro Genre. Buildfrei, offline-fähig, keine Samples — Gitarrentöne als Oszillator
-// mit Hüllkurve, Drums synthetisch (Kick = fallende Sinus, Snare/Hi-Hat/China =
-// gefiltertes Rauschen). Referenzbereich wie das Stimmungs-Werkzeug: NICHT im
+// pro Genre. Buildfrei, offline-fähig. Klang aus den Stimmen des Audio-Kerns
+// (Sample-Bank für Schlagzeug, Gitarre und Bass; Synthese als Rückfall).
+// Referenzbereich wie das Stimmungs-Werkzeug: NICHT im
 // Baustein-Pool, kein Fortschritt.
 //
 // Zustand ist flüchtig und gerätelokal (Modul-State wie in der Suche): das gewählte
@@ -9,7 +9,8 @@
 
 import { label, t, text } from '../i18n.js';
 import { domaeneIcon, esc, registriereAufraeumen } from '../oberflaeche.js';
-import { holeAusgang, holeKontext as holeKernKontext, holeRauschen as holeKernRauschen } from '../audio/kontext.js';
+import { aktiviere, holeAusgang, holeKontext as holeKernKontext } from '../audio/kontext.js';
+import { crash, hihat, kick, saite, snare } from '../audio/stimmen.js';
 import { frequenzVon } from './stimmungen.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
@@ -64,86 +65,17 @@ function stoppeKlang() {
   aktiveKlaenge = [];
 }
 
-// Rauschen (Snare/Hi-Hat/China) kommt aus dem geteilten Puffer des Audio-Kerns —
-// dort steht dieselbe Erzeugung, es gab sie hier nur ein zweites Mal.
-const holeRauschen = holeKernRauschen;
-
-// --- Gitarrenton: weicher Dreieck-Oszillator, leicht überlappend gehalten. ---
-// `bass=true`: die Bass-Stimmungen liegen eine Oktave unter der Gitarre (E1/D1/C1,
-// ~32–41 Hz Grundton). So tiefe Töne geben kleine Laptop-/Handy-Lautsprecher kaum
-// wieder — sie klängen „stumm". Wir legen deshalb einen Oktav-Oberton dazu: die
-// gespielte Tonhöhe/Notation bleibt korrekt tief, die Linie wird aber hörbar.
-function spieleNote(ctx, frequenz, t0, dauer, pegel, bass = false) {
-  const spiele = (freq, p) => {
-    const osc = ctx.createOscillator();
-    const huelle = ctx.createGain();
-    osc.type = 'triangle';
-    osc.frequency.value = freq;
-    huelle.gain.setValueAtTime(0.0001, t0);
-    huelle.gain.exponentialRampToValueAtTime(p, t0 + 0.008);
-    huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer * 1.5);
-    osc.connect(huelle).connect(holeAusgang());
-    osc.start(t0);
-    osc.stop(t0 + dauer * 1.6);
-    merke(osc);
-  };
-  spiele(frequenz, pegel);
-  if (bass) spiele(frequenz * 2, pegel * 0.55); // hörbarer Oktav-Oberton
-}
-
-// --- Drum-Stimmen (synthetisch) ---
-function kick(ctx, t0) {
-  const osc = ctx.createOscillator();
-  const huelle = ctx.createGain();
-  osc.type = 'sine';
-  osc.frequency.setValueAtTime(125, t0);
-  osc.frequency.exponentialRampToValueAtTime(46, t0 + 0.11);
-  huelle.gain.setValueAtTime(0.9, t0);
-  huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.16);
-  osc.connect(huelle).connect(holeAusgang());
-  osc.start(t0);
-  osc.stop(t0 + 0.18);
-  merke(osc);
-}
-
-function rauschStimme(ctx, t0, { typ, frequenz, guete, dauer, pegel }) {
-  const quelle = ctx.createBufferSource();
-  quelle.buffer = holeRauschen(ctx);
-  const filter = ctx.createBiquadFilter();
-  filter.type = typ;
-  filter.frequency.value = frequenz;
-  if (guete) filter.Q.value = guete;
-  const huelle = ctx.createGain();
-  huelle.gain.setValueAtTime(pegel, t0);
-  huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer);
-  quelle.connect(filter).connect(huelle).connect(holeAusgang());
-  quelle.start(t0);
-  quelle.stop(t0 + dauer + 0.02);
-  merke(quelle);
-}
-
-function snare(ctx, t0) {
-  rauschStimme(ctx, t0, { typ: 'highpass', frequenz: 1400, dauer: 0.19, pegel: 0.5 });
-  const osc = ctx.createOscillator();
-  const huelle = ctx.createGain();
-  osc.type = 'triangle';
-  osc.frequency.value = 190;
-  huelle.gain.setValueAtTime(0.3, t0);
-  huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.12);
-  osc.connect(huelle).connect(holeAusgang());
-  osc.start(t0);
-  osc.stop(t0 + 0.14);
-}
-
-function hihat(ctx, t0) {
-  rauschStimme(ctx, t0, { typ: 'highpass', frequenz: 8000, dauer: 0.05, pegel: 0.22 });
-}
-
-function crash(ctx, t0) {
-  rauschStimme(ctx, t0, { typ: 'highpass', frequenz: 5200, dauer: 0.45, pegel: 0.3 });
-}
-
-const DRUM_STIMME = { kick, snare, hihat, crash };
+// Klang kommt aus den Stimmen des Audio-Kerns (Sample-Bank, Synthese als
+// Rückfall) — hier stand früher eine zweite, eigene Synthese, die beim Umstieg
+// auf echte Samples stehen geblieben wäre. Jede Stimme liefert ihre Quellen,
+// damit der Stopp-Knopf sie abbrechen kann.
+const merkeAlle = (quellen) => quellen.forEach(merke);
+const DRUM_STIMME = Object.fromEntries(
+  Object.entries({ kick, snare, hihat, crash }).map(([name, stimme]) => [
+    name,
+    (ctx, t0) => merkeAlle(stimme(ctx, holeAusgang(), t0)),
+  ])
+);
 // Anzeigereihenfolge oben→unten und Symbol je Spur (Beat-Raster-Konvention).
 const SPUR_ORDNUNG = ['crash', 'hihat', 'snare', 'kick'];
 
@@ -190,13 +122,17 @@ function markiereLauf(karte, ctx, start, step, anzahl) {
 function planeTab(pattern, karte, start) {
   const ctx = holeKontext();
   const step = schrittDauer(pattern);
-  const bass = pattern.domaene === 'bass';
+  const instrument = pattern.domaene === 'bass' ? 'bass' : 'gitarre';
+  const klang = pattern.klang === 'clean' ? 'clean' : 'zerre';
   pattern.schritte.forEach((schritt, i) => {
     const t0 = start + i * step;
-    const pegel = 0.16 / Math.max(1, schritt.length);
-    for (const { saite, bund } of schritt) {
-      const offen = frequenzVon(pattern.stimmung[saite]);
-      if (offen) spieleNote(ctx, offen * 2 ** (bund / 12), t0, step, pegel, bass);
+    // Ein Akkord soll nicht lauter sein als ein Einzelton — die Stimmen sind
+    // nicht phasengleich, ihre Pegel addieren sich also etwa im Quadrat.
+    const pegel = 0.7 / Math.sqrt(Math.max(1, schritt.length));
+    for (const { saite: nr, bund } of schritt) {
+      const offen = frequenzVon(pattern.stimmung[nr]);
+      if (!offen) continue;
+      merkeAlle(saite(ctx, holeAusgang(), t0, { frequenz: offen * 2 ** (bund / 12), instrument, klang, dauer: step * 1.5, pegel }));
     }
   });
   markiereLauf(karte, ctx, start, step, pattern.schritte.length);
@@ -238,9 +174,12 @@ function laufeEinmal(pattern, karte, start = null) {
 }
 
 // Frischer Start: laufende Wiedergabe abbrechen, dann eine Runde (ggf. Loop).
+// Startet, sobald Kontext und Sample-Bank bereit sind (aktiviere() wartet
+// höchstens kurz auf die Bank) — sonst spielte der erste Durchgang die
+// Synthese und der zweite die Samples.
 function startePattern(pattern, karte) {
   stoppeKlang();
-  laufeEinmal(pattern, karte);
+  aktiviere().then(() => laufeEinmal(pattern, karte));
 }
 
 // --- Rendern ---
