@@ -603,6 +603,388 @@ def _mikro(y, laut, abstand):
     return t
 S["mikrofontechnik"] = _mikro(32, False, 0) + _mikro(86, True, 70)
 
+# ======================================================================
+# Ergänzung v234: Bass und Gesang. Bis dahin hatten von 83 Bass-Bausteinen drei
+# eine Lehrgrafik, von 68 Gesangs-Bausteinen einer. Die Bass-Schemata folgen den
+# Tonfolgen ihres Hörbeispiels (Saite 4 = tiefe E, wie in `demonstration`). Die
+# Gesangs-Schemata zeigen, was sich nicht greifen lässt: Luftstrom, Tonhöhe und
+# Klangfarbe über der Zeit, dazu zwei Querschnitte (Rachenweite, Taschenfalten).
+# ======================================================================
+BASS_STAERKEN = (2, 2.8, 3.6, 4.4, 5.2)   # G, D, A, E, (H) — dünn oben, dick unten
+
+def bass_saiten(n=4, y0=30, y1=96, x0=40, x1=228):
+    """n Basssaiten, oben die dünnste; liefert (Elemente, y je Saite von oben)."""
+    ys = [y0 + (y1 - y0) * i / (n - 1) for i in range(n)]
+    return [L(x0, y, x1, y, BASS_STAERKEN[i]) for i, y in enumerate(ys)], ys
+
+def hz(x0, x1, cy, amp, zyklen, rauheit=0.0, saat=1, step=1.5, env=None):
+    """Welle mit deterministischer Rauheit (sin-Hash statt Zufall) — für verzerrte Stimme."""
+    n = max(2, int((x1 - x0) / step)); pts = []
+    for i in range(n + 1):
+        s = i / n
+        x = x0 + (x1 - x0) * s
+        a = amp * (env(s) if env else 1.0)
+        r = rauheit(s) if callable(rauheit) else rauheit
+        zitter = math.sin(i * 12.9898 + saat * 78.233) * 43758.5453
+        zitter = (zitter - math.floor(zitter)) * 2 - 1
+        y = cy - a * math.sin(2 * math.pi * zyklen * s) + r * zitter * a
+        pts.append(f"{x:.1f},{y:.1f}")
+    return "M" + " L".join(pts)
+
+# --- Bass ---
+# Ein Finger pro Bund: A-Saite, Bund 5 bis 8 (wie im Hörbeispiel) — vier Finger
+# auf vier Zellen; die Klammer darüber ist die Handspanne, die der Bass verlangt.
+def _bass_greifhand():
+    t, ys = bass_saiten(x0=24, x1=228)
+    zx = [24 + 51 * i for i in range(5)]
+    t += [L(x, 26, x, 100, 1.5) for x in zx]
+    mitten = [(zx[i] + zx[i + 1]) / 2 for i in range(4)]
+    t += [C(x, ys[2], 7, fill=True) for x in mitten]
+    t += [P(f"M{mitten[0]:.1f},16 L{mitten[0]:.1f},10 L{mitten[3]:.1f},10 L{mitten[3]:.1f},16", 2)]
+    t += [L(x, 10, x, 16, 1.5) for x in mitten[1:3]]
+    return t
+S["bass_greifhand"] = _bass_greifhand()
+
+# Greifhand dämpfen: Ton (Punkt) — gedämpfter Schlag (x) im Wechsel, Achtel-Raster.
+# Der dritte Ton liegt auf der A-Saite, alle Dämpfer auf der E-Saite.
+def _daempfen():
+    yA, yE = 54, 80
+    t = raster(8) + [L(X0, yA, X1, yA, 3.6), L(X0, yE, X1, yE, 4.4)]
+    for i in range(8):
+        if i % 2:
+            t.append(X(spalte(i), yE, 6, 3))
+        else:
+            t.append(C(spalte(i), yA if i == 4 else yE, 7, fill=True))
+    return t
+S["greifhand_daempfen"] = _daempfen()
+
+# Fingerstyle: acht Achtel auf der A-Saite; oben die Fingerfolge — Zeigefinger
+# (gefüllt) und Mittelfinger (Ring) streng im Wechsel.
+S["fingerstyle"] = (
+    raster(8) + [L(X0, 76, X1, 76, 4.4)]
+    + [C(spalte(i), 76, 4, fill=True) for i in range(8)]
+    + [C(spalte(i), 44, 7, fill=True) if i % 2 == 0 else C(spalte(i), 44, 7, 2.5) for i in range(8)]
+)
+
+# Lock zur Bassdrum: oben die Kick (Sechzehntel 0, 3, 6, 8, 10, 14), unten
+# derselbe Ton am Bass — jede Note genau unter ihrem Kick (gestrichelte Lote).
+LOCK_KICK = [0, 3, 6, 8, 10, 14]
+S["lock_zur_bassdrum"] = (
+    raster(16)
+    + [C(spalte(i, 16), 34, 6, fill=True) for i in LOCK_KICK]
+    + [L(X0, 80, X1, 80, 4.4)]
+    + [RECT(spalte(i, 16) - 5, 72, 10, 16) for i in LOCK_KICK]
+    + [PD(f"M{spalte(i, 16):.1f},42 L{spalte(i, 16):.1f},68", 1.2, "2 3") for i in LOCK_KICK]
+)
+
+# Grundton folgen: oben die Akkorde des Riffs (Blöcke), unten der Bass auf ihren
+# Grundtönen E — G — A — E, auf den Vierteln; die Höhe zeigt den Ton.
+def _grundton():
+    hoehe = {0: 96, 3: 82, 5: 72}
+    t = raster(8)
+    for k, ton in enumerate((0, 3, 5, 0)):
+        x = spalte(2 * k)
+        t += [RECT(x - 10, hoehe[ton] - 62, 40, 14), C(x, hoehe[ton], 7, fill=True),
+              PD(f"M{x:.1f},{hoehe[ton] - 46} L{x:.1f},{hoehe[ton] - 9}", 1.2, "2 3")]
+    return t
+S["grundton_folgen"] = _grundton()
+
+# Drei-Finger-Zyklus: drei Takte gerade Achtel; der Ringfinger (großer Punkt)
+# kommt alle drei Achtel und trifft die Eins erst im vierten Takt wieder.
+def _dreifinger():
+    n = 24; x0, x1 = 20, 220
+    xs = [x0 + (x1 - x0) * (i + 0.5) / n for i in range(n)]
+    t = [L(x0, 72, x1 + 8, 72, 1.5)] + [L(x0 + (x1 - x0) * b / 3, 56, x0 + (x1 - x0) * b / 3, 88, 2) for b in range(3)]
+    t += [L(x1 + 8, 56, x1 + 8, 88, 2)]
+    for i, x in enumerate(xs):
+        t.append(C(x, 72, 6, fill=True) if i % 3 == 0 else C(x, 72, 2.8, fill=True))
+    t += [P(f"M{xs[3 * k]:.1f},50 Q{(xs[3 * k] + xs[3 * k + 3]) / 2:.1f},36 {xs[3 * k + 3]:.1f},50", 1.4) for k in range(7)]
+    t += [C(x1 + 8, 72, 7, 2.5)]
+    return t
+S["bass_dreifinger"] = _dreifinger()
+
+# Synkopen: Sechzehntel-Raster, fünf kurze Schläge — vier davon neben der
+# Zählzeit (die Zählzeiten als hohe gestrichelte Linien); dazwischen Stille.
+SYNKOPEN = [0, 3, 6, 10, 14]
+S["bass_synkopen"] = (
+    raster(16)
+    + [PD(f"M{X0 + (X1 - X0) * b / 4:.1f},24 L{X0 + (X1 - X0) * b / 4:.1f},96", 1, "2 4") for b in range(4)]
+    + [L(X0, 70, X1, 70, 4.4)]
+    + [RECT(spalte(i, 16) - 5, 60, 10, 20) for i in SYNKOPEN]
+)
+
+# Akkordspiel: Grundton + Quinte auf A- und D-Saite (D5 bei Bund 5/7, gefüllt),
+# dann dieselbe Form zwei Bünde höher (E5 bei 7/9, Ringe); G- und E-Saite schweigen.
+def _akkord():
+    t, ys = bass_saiten(x0=40, x1=228)
+    zx = [40 + 37.6 * i for i in range(6)]   # Bund 5 … 9
+    t += [L(x, 26, x, 100, 1.5) for x in zx]
+    mitte = lambda b: (zx[b - 5] + zx[b - 4]) / 2
+    t += [C(mitte(5), ys[2], 7, fill=True), C(mitte(7), ys[1], 7, fill=True), L(mitte(5), ys[2], mitte(7), ys[1], 3)]
+    t += [C(mitte(7), ys[2], 7, 2.5), C(mitte(9), ys[1], 7, 2.5), PD(f"M{mitte(7):.1f},{ys[2]} L{mitte(9):.1f},{ys[1]}", 2)]
+    t += [X(26, ys[0], 4), X(26, ys[3], 4)]
+    return t
+S["bass_akkordspiel"] = _akkord()
+
+# Fill zum nächsten Teil (Tonhöhe über der Zeit): Takt 1 hält den Grundton,
+# Takt 2 läuft hinauf (Bund 3, 5, 7, A-Saite leer und 2) und landet auf der Eins.
+def _fill():
+    folge = [(0, 0), (2, 0), (4, 0), (6, 0), (8, 0), (10, 3), (12, 5), (13, 7), (14, 5), (15, 7)]
+    y = lambda h: 96 - 8 * h
+    t = raster(16) + [L(X1, 20, X1, 108, 2.5)]
+    pts = [(spalte(s, 16), y(h)) for s, h in folge]
+    t += [C(x, yy, 5.5, fill=True) for x, yy in pts]
+    t += [P("M" + " L".join(f"{x:.1f},{yy:.1f}" for x, yy in pts[4:]), 1.6)]
+    t += [PD(f"M{pts[-1][0]:.1f},{pts[-1][1]:.1f} L{X1 - 9:.1f},{pts[-1][1]:.1f}", 1.6), C(X1, pts[-1][1], 8, 2.5)]
+    return t
+S["bass_fills_uebergaenge"] = _fill()
+
+# Blast begleiten: oben der Blast (Kick und Snare im Wechsel, Sechzehntel), darunter
+# zwei Strategien aus dem Hörbeispiel — ausgehaltener Grundton oder Achtel.
+S["bass_blast_begleitung"] = (
+    [L(24, 26, 228, 26, 1.2)]
+    + [C(24 + 204 * (i + 0.5) / 16, 26, 3.5, fill=(i % 2 == 0)) if i % 2 == 0
+       else C(24 + 204 * (i + 0.5) / 16, 26, 3.5, 1.5) for i in range(16)]
+    + [RECT(24, 56, 204, 12)]
+    + [RECT(24 + 204 * k / 8 + 3, 88, 204 / 8 - 6, 12) for k in range(8)]
+)
+
+# Kontrapunkt (Tonhöhe über der Zeit, vier Takte): Die Anker auf der Eins
+# (große Punkte) gibt das Riff vor — dazwischen geht die Linie eigene Wege.
+def _kontra():
+    folge = [(0, 0), (2, 3), (4, 5), (6, 5), (8, 0), (10, 7), (12, 5), (14, 5),
+             (16, 3), (18, 5), (20, 5), (22, 7), (24, 0), (26, 3), (28, 5), (30, 0)]
+    x = lambda s: 24 + 204 * (s + 0.5) / 32
+    y = lambda h: 94 - 9 * h
+    t = [L(24 + 51 * b, 18, 24 + 51 * b, 106, 1.5) for b in range(5)]
+    t += [P("M" + " L".join(f"{x(s):.1f},{y(h):.1f}" for s, h in folge), 2)]
+    t += [C(x(s), y(h), 7, fill=True) if s % 8 == 0 else C(x(s), y(h), 3.5, fill=True) for s, h in folge]
+    return t
+S["bass_kontrapunkt"] = _kontra()
+
+# Fünfsaiter: links die Linie auf der tiefen H-Saite, rechts Töne auf der
+# A-Saite — der Daumen liegt dabei als Anker auf der H-Saite und hält sie stumm.
+def _fuenf():
+    t, ys = bass_saiten(n=5, y0=24, y1=100, x0=16, x1=228)
+    t += [L(122, 18, 122, 106, 1)]
+    t += [C(x, ys[4], 6.5, fill=True) for x in (36, 62, 88, 112)]
+    t += [C(x, ys[2], 6.5, fill=True) for x in (148, 200)]
+    t += [RECT(160, ys[4] - 7, 30, 14, filled=False, rx=7), X(212, ys[4], 5, 2.5)]
+    return t
+S["bass_fuenfsaiter"] = _fuenf()
+
+# Tapping (Tonhöhe über der Zeit): Zyklus Bund 12 – 7 – 5 auf der A-Saite. Den
+# hohen Ton tippt die Anschlaghand (Dreieck von oben), die beiden anderen klingen
+# per Pull-off (gestrichelte Bögen abwärts).
+def _tapping():
+    y = {12: 30, 7: 66, 5: 82}
+    t = [L(24, 104, 228, 104, 1.5)]
+    for z in range(4):
+        x0 = 30 + 52 * z
+        xs = [x0, x0 + 14, x0 + 28]
+        for x, b in zip(xs, (12, 7, 5)):
+            t.append(C(x, y[b], 5.5, fill=True))
+        t.append(TRI([(xs[0] - 5, 14), (xs[0] + 5, 14), (xs[0], 22)]))
+        t += [PD(f"M{xs[0] + 4:.1f},{y[12] + 4} Q{xs[0] + 9:.1f},{y[7] - 20} {xs[1] - 2:.1f},{y[7] - 5}", 1.4),
+              PD(f"M{xs[1] + 4:.1f},{y[7] + 2} Q{xs[1] + 9:.1f},{y[5] - 14} {xs[2] - 3:.1f},{y[5] - 5}", 1.4)]
+    return t
+S["bass_tapping"] = _tapping()
+
+# Mikrotiming: drei Zeilen gegen denselben Klick (senkrechte Linien) — oben
+# bewusst davor (treibend), Mitte genau auf, unten dahinter (schwer).
+def _mikro_bass():
+    xs = [48 + 56 * i for i in range(4)]
+    t = [L(x, 14, x, 106, 1.5) for x in xs]
+    for y, v in ((30, -9), (60, 0), (90, 9)):
+        t += [L(24, y, 228, y, 1)]
+        t += [C(x + v, y, 6, fill=True) for x in xs]
+    return t
+S["bass_mikrotiming"] = _mikro_bass()
+
+# Anschlagpunkt: dieselbe Saite vom Hals (links) bis zum Steg (rechts) — am Hals
+# angeschlagen klingt sie rund und weich, am Steg schlank und obertonreich.
+def _anschlagpunkt():
+    t = [L(16, 30, 210, 30, 4.4), L(16, 20, 16, 40, 5), RECT(210, 18, 12, 24)]
+    for x, rund in ((56, True), (124, None), (190, False)):
+        t.append(TRI([(x - 6, 12), (x + 6, 12), (x, 22)]))
+        if rund is True:
+            t.append(P(wavepath(x - 30, x + 30, 82, 20, 1.5, step=1), 2.5))
+        elif rund is False:
+            t.append(P(wavepath(x - 26, x + 26, 82, 9, 4, step=0.8), 1.8))
+            t.append(P(wavepath(x - 26, x + 26, 82, 4, 9, step=0.6), 1))
+        else:
+            t.append(P(wavepath(x - 28, x + 28, 82, 14, 2.5, step=1), 2))
+    return t
+S["anschlagpunkt_ton"] = _anschlagpunkt()
+
+# --- Gesang ---
+# Haltung und Atmung: Rumpf von vorn — beim Einatmen weiten sich Bauch und
+# Flanken (gestrichelt, Pfeile nach außen); die Schultern bleiben unten.
+def _atmung():
+    t = [P("M78,30 Q78,22 92,20 L148,20 Q162,22 162,30", 2.5)]       # Schulterlinie
+    t += [P("M84,32 Q80,70 90,108", 2.5), P("M156,32 Q160,70 150,108", 2.5)]
+    t += [PD("M84,52 Q64,78 88,108", 2), PD("M156,52 Q176,78 152,108", 2)]
+    for x0, x1 in ((70, 54), (170, 186)):
+        t += [L(x0, 80, x1, 80, 2), TRI([(x1 - (4 if x1 < x0 else -4), 80), (x1 + (4 if x1 < x0 else -4), 76), (x1 + (4 if x1 < x0 else -4), 84)])]
+    for x in (92, 148):   # Pfeil nach oben, durchgestrichen: die Schultern heben sich nicht
+        t += [L(x, 17, x, 7, 2), TRI([(x, 1), (x - 4, 8), (x + 4, 8)]), L(x - 6, 15, x + 6, 5, 2)]
+    return t
+S["gesang_haltung_atmung"] = _atmung()
+
+# Atemstütze (Luftstrom über der Zeit): kurz einatmen, dann ausatmen — ohne
+# Stütze fällt der Strom schnell ab (gestrichelt), mit Stütze bleibt er lang gleich.
+S["atemstuetze"] = [
+    L(20, 104, 228, 104, 1.5), L(20, 14, 20, 104, 1.5),
+    P("M20,104 Q34,40 48,36", 2.5),
+    PD("M48,36 Q78,40 96,80 Q110,104 130,104", 2),
+    P("M48,36 L200,38 Q210,40 214,104", 3),
+]
+
+# Sanfte Sirene: ein Gleiten von tief nach hoch und zurück; die feine Welle darauf
+# ist das Lippenflattern, das leise mitklingt.
+def _sirene():
+    pts = []
+    n = 220
+    for i in range(n + 1):
+        s = i / n
+        x = 20 + 208 * s
+        basis = 96 - 70 * math.sin(math.pi * s) ** 1.5
+        pts.append(f"{x:.1f},{basis - 3 * math.sin(2 * math.pi * 26 * s):.1f}")
+    return [L(20, 106, 228, 106, 1.5), P("M" + " L".join(pts), 2.2)]
+S["stimmuebungen_sanft"] = _sirene()
+
+# Tonhöhe treffen: der gehörte Ton (gestrichelte Linie, Punkt links) — die Stimme
+# gleitet von unten und von oben sanft auf ihn zu und bleibt dort.
+S["tonhoehe_clean"] = [
+    C(20, 60, 6, fill=True), PD("M30,60 L228,60", 1.5, "4 4"),
+    P("M40,98 Q76,98 92,66 Q100,60 124,60", 2.5), C(124, 60, 5, fill=True),
+    P("M138,22 Q170,22 184,54 Q190,60 214,60", 2.5), C(214, 60, 5, fill=True),
+]
+
+# Resonanz statt Druck: oben ein enger, gerader Kanal — derselbe Ton kommt
+# klein heraus; unten öffnet sich der Raum wie ein Trichter, der Ton trägt weiter.
+def _resonanz():
+    t = []
+    for y, offen in ((32, False), (88, True)):
+        t.append(P(wavepath(14, 44, y, 5, 3, step=1), 2))
+        if offen:
+            t += [P(f"M50,{y - 6} Q96,{y - 6} 130,{y - 24}", 2.5), P(f"M50,{y + 6} Q96,{y + 6} 130,{y + 24}", 2.5)]
+            t.append(P(wavepath(144, 226, y, 16, 3, step=1), 2.5))
+        else:
+            t += [L(50, y - 6, 130, y - 6, 2.5), L(50, y + 6, 130, y + 6, 2.5)]
+            t += [X(70, y - 13, 3, 1.5), X(100, y - 13, 3, 1.5)]
+            t.append(P(wavepath(144, 226, y, 5, 3, step=1), 2))
+    return t
+S["resonanz_projektion"] = _resonanz()
+
+# Rhythmisch phrasieren: Silben als Blöcke über dem Raster — die betonten
+# (groß, gefüllt) sitzen genau auf den Zählzeiten, die übrigen leicht dazwischen.
+S["rhythmus_phrasierung"] = (
+    raster(8)
+    + [RECT(spalte(i) - 9, 52, 18, 26) for i in (0, 2, 4, 6)]
+    + [RECT(spalte(i) - 6, 64, 12, 14, filled=False) for i in (1, 3, 5, 7)]
+)
+
+# Dynamik: eine Zeile, die von zurückgenommen zu intensiv wächst — der Klang
+# selbst wird größer (Welle), nicht nur lauter gedacht (Gabel).
+S["dynamik_ausdruck"] = [
+    L(20, 60, 228, 30, 1.5), L(20, 60, 228, 90, 1.5),
+    P(wavepath(26, 220, 60, 26, 9, step=0.8, env=lambda s: 0.08 + 0.92 * s), 2.2),
+]
+
+# Vom Fry zur Verzerrung: links einzelne, lockere Knarr-Impulse; nach rechts
+# verdichten sie sich mit mehr Stütze zu einem rauen, durchgehenden Klang.
+def _fry():
+    t = [L(20, 106, 228, 106, 1.5)]
+    x = 22.0; k = 0
+    while x < 110:
+        t.append(L(x, 64, x, 50 - 3 * (k % 2), 2.5))
+        x += 14 - 0.06 * (x - 22); k += 1
+    t.append(P(hz(112, 226, 58, 14, 14, rauheit=lambda s: 0.15 + 0.35 * s, saat=3, step=1.2), 1.8))
+    t += [L(40, 92, 210, 92, 2), TRI([(216, 92), (208, 88), (208, 96)])]
+    return t
+S["fry_verzerrung"] = _fry()
+
+# Taschenfalten im Querschnitt: unten die Stimmlippen, entlastet (ruhig, offen);
+# darüber die Taschenfalten, die auf dem gestützten Luftstrom schwingen (Zacken).
+def _falsecord():
+    t = [L(88, 8, 88, 112, 3), L(152, 8, 152, 112, 3)]
+    t += [P("M88,88 L110,92 L88,96", 2.5), P("M152,88 L130,92 L152,96", 2.5)]
+    t += [P("M88,46 L104,50 L88,56", 3), P("M152,46 L136,50 L152,56", 3)]
+    t += [P("M108,40 L112,46 L108,52 L112,58", 1.6), P("M132,40 L128,46 L132,52 L128,58", 1.6)]
+    t += [L(120, 112, 120, 70, 2.5), TRI([(120, 62), (115, 72), (125, 72)])]
+    t += [ARC(120, 24, 10 + 8 * i, 30, 150, 1.4) for i in range(3)]
+    return t
+S["false_cord_ansatz"] = _falsecord()
+
+# Growl: links ein enger, gepresster Kanal (x) mit kleinem Klang; rechts derselbe
+# Ansatz mit weitem Rachen (Gähn-Weite) — der Raum macht den Klang tief und groß.
+def _growl():
+    t = [L(48, 30, 48, 108, 3), L(64, 30, 64, 108, 3), X(56, 70, 4, 2)]
+    t += [ARC(56, 22, 8, 20, 160, 1.6)]
+    t += [P("M140,108 Q132,70 150,30", 3), P("M212,108 Q220,70 202,30", 3)]
+    t += [ARC(176, 20, 12 + 10 * i, 25, 155, 1.6) for i in range(3)]
+    t += [P(hz(150, 202, 76, 10, 3, rauheit=0.25, saat=5, step=1.2), 2)]
+    return t
+S["growl_resonanz"] = _growl()
+
+# Atemzeichen setzen: oben das Riff mit seinen Pausen, unten die Phrasen als
+# Bögen — geatmet wird (kleine Haken) genau in den Lücken des Riffs.
+def _atemzeichen():
+    t = raster(16)
+    riff = [(0, 6), (8, 13)]
+    for a, b in riff:
+        t.append(RECT(spalte(a, 16) - 5, 24, spalte(b - 1, 16) - spalte(a, 16) + 10, 14))
+    t += [P(f"M{spalte(0, 16):.1f},76 Q{(spalte(0, 16) + spalte(5, 16)) / 2:.1f},52 {spalte(5, 16):.1f},76", 3),
+          P(f"M{spalte(8, 16):.1f},76 Q{(spalte(8, 16) + spalte(12, 16)) / 2:.1f},52 {spalte(12, 16):.1f},76", 3)]
+    for i in (6.5, 14):
+        x = spalte(0, 16) + (spalte(1, 16) - spalte(0, 16)) * i
+        t += [P(f"M{x - 4:.1f},60 Q{x:.1f},70 {x + 3:.1f},78", 2.5)]
+    return t
+S["harsh_phrasierung_atmung"] = _atemzeichen()
+
+# Register-Reset: clean (glatte Welle) und harsch (raue Welle) im Wechsel —
+# die Pause dazwischen, in der neu angesetzt wird, schrumpft von Runde zu Runde.
+def _reset():
+    t = [L(14, 100, 228, 100, 1.5)]
+    x = 14
+    for k, pause in enumerate((26, 16, 8, 0)):
+        rau = k % 2 == 1
+        t.append(P(hz(x, x + 34, 56, 14, 3, rauheit=0.4 if rau else 0.0, saat=k + 1, step=1), 2.2))
+        if pause:
+            t += [L(x + 38, 100, x + 34 + pause, 100, 4)]
+        x += 34 + pause + 4
+    return t
+S["clean_harsh_wechsel"] = _reset()
+
+# Drei Intensitätsstufen auf derselben Zeile — die Rauheit wächst Stufe für Stufe,
+# getragen von mehr Stütze (die Stufen der Treppe), nicht von mehr Hals.
+def _stufen():
+    t = []
+    for k in range(3):
+        x0 = 18 + 72 * k
+        boden = 100 - 18 * k
+        t += [L(x0, boden, x0 + 66, boden, 3)]
+        if k:
+            t.append(L(x0, boden, x0, boden + 18, 3))
+        t.append(P(hz(x0 + 4, x0 + 62, boden - 30, 8 + 3 * k, 3, rauheit=0.12 + 0.2 * k, saat=k + 7, step=1), 2))
+    return t
+S["harsh_dynamik_intensitaet"] = _stufen()
+
+# Vibrato in der Stimme: der Ton steht gerade, erst am Phrasenende schwingt er
+# gleichmäßig — das Vibrato ist eine Entscheidung, kein Dauerzustand.
+S["clean_vibrato"] = [
+    PD("M20,60 L228,60", 1, "2 4"), C(20, 60, 4, fill=True), L(20, 60, 140, 60, 3),
+    P(wavepath(140, 228, 60, 9, 5, step=0.8, env=lambda s: min(1.0, 3 * s)), 3),
+]
+
+# Nahtloser Übergang: ein gehaltener Ton, auf dem die Verzerrung allmählich
+# aufblendet und wieder zurückgeht — die Stütze darunter (Linie) bleibt gleich.
+S["harsh_uebergaenge_nahtlos"] = [
+    P(hz(18, 226, 50, 18, 10, rauheit=lambda s: 0.45 * math.sin(math.pi * s) ** 2, saat=11, step=0.9), 2.2),
+    L(18, 96, 226, 96, 3),
+]
+
 # Abgleich mit dem Hörbeispiel: Snare und Kick eines Beat-Schemas müssen dort
 # liegen, wo die `demonstration` des gleichnamigen Bausteins sie spielt. Bis v222
 # zeigten drei Schemata (D-Beat, Blast, Skank) ein anderes Muster als ihr Klang —
@@ -626,6 +1008,18 @@ def _pruefe_beats():
             f"{bid}: Zeichnung Snare {sn} Kick {bd}, Hörbeispiel Snare {ist_sn} Kick {ist_bd}")
 _pruefe_beats()
 
+# Dasselbe für die Bass-Rhythmen, die ein Tab-Hörbeispiel haben: Die gezeichneten
+# Schläge müssen die Schritte sein, die die Demo spielt.
+def _pruefe_tab_rhythmen():
+    import glob, json
+    soll = {"lock_zur_bassdrum": LOCK_KICK, "bass_synkopen": SYNKOPEN}
+    for pfad in glob.glob(os.path.join(HERE, "..", "data", "bausteine.*.json")):
+        for b in json.load(open(pfad, encoding="utf-8")).get("bausteine", []):
+            if b["id"] in soll:
+                ist = sorted({e["schritt"] for e in b["demonstration"]["events"]})
+                assert ist == soll[b["id"]], f'{b["id"]}: Zeichnung {soll[b["id"]]}, Hörbeispiel {ist}'
+_pruefe_tab_rhythmen()
+
 ALLE = ["grundbeat", "d_beat", "blastbeat", "skank_beat", "powerchords", "palm_muting",
         "drop_tuning", "tremolo_picking", "chugs_breakdown", "plektrum_technik",
         "sludge_erstes_riff", "pv_stopp_spiel",
@@ -636,7 +1030,17 @@ ALLE = ["grundbeat", "d_beat", "blastbeat", "skank_beat", "powerchords", "palm_m
         "galopp_rhythmus", "downpicking", "wechselschlag", "string_skipping", "legato",
         "slides_bends", "vibrato", "pinch_harmonics", "sweep_picking_einstieg",
         "pedalboard_grundlagen", "metronom_prinzip", "drums_ghostnotes", "halftime_china",
-        "triolen_fills", "rudiments_grundlage", "bass_ghostnotes", "mikrofontechnik"]
+        "triolen_fills", "rudiments_grundlage", "bass_ghostnotes", "mikrofontechnik",
+        # v234: Bass
+        "bass_greifhand", "greifhand_daempfen", "fingerstyle", "lock_zur_bassdrum", "grundton_folgen",
+        "bass_dreifinger", "bass_synkopen", "bass_akkordspiel", "bass_fills_uebergaenge",
+        "bass_blast_begleitung", "bass_kontrapunkt", "bass_fuenfsaiter", "bass_tapping",
+        "bass_mikrotiming", "anschlagpunkt_ton",
+        # v234: Gesang
+        "gesang_haltung_atmung", "atemstuetze", "stimmuebungen_sanft", "tonhoehe_clean",
+        "resonanz_projektion", "rhythmus_phrasierung", "dynamik_ausdruck", "fry_verzerrung",
+        "false_cord_ansatz", "growl_resonanz", "harsh_phrasierung_atmung", "clean_harsh_wechsel",
+        "harsh_dynamik_intensitaet", "clean_vibrato", "harsh_uebergaenge_nahtlos"]
 assert sorted(ALLE) == sorted(S), sorted(set(ALLE) ^ set(S))
 
 for bid in ALLE:
