@@ -243,11 +243,7 @@ def standard_sortierschluessel(b):
 INSTRUMENTE = js_liste('js/mastery.js', 'INSTRUMENTE')
 INSTR_STUFEN = js_liste('js/ansichten/pfad.js', 'INSTR_STUFEN')
 INSTR_WERKZEUGE = js_objekt('js/ansichten/pfad.js', 'INSTR_WERKZEUGE')
-# Bleibt eine eigene Liste: in der App steckt diese Auswahl in einer Bedingung
-# (`INSTR_STIMMUNG.includes(domaene)`), nicht in einem Literal — es gibt dort
-# nichts zu lesen. Nur zwei Werte, und sie folgen aus der Physik: Saiten stimmt
-# man, Trommeln und Stimmbaender nicht.
-INSTR_STIMMUNG = ['gitarre', 'bass']
+INSTR_STIMMUNG = js_liste('js/ansichten/pfad.js', 'INSTR_STIMMUNG')
 
 
 def instrument_stufe(b):

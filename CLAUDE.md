@@ -299,8 +299,8 @@ zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artef
   einen Wert ergänzt, muss hier **nichts** nachziehen. Beide Leser **brechen hart ab**, wenn
   sie nicht parsen können (Umbenennung, geändertes Literal-Format): ein Leser, der im Zweifel
   leer liefert, wäre schlimmer als die Kopie — aus „läuft auseinander“ würde „ist lautlos
-  leer". Einzige verbleibende Ausnahme ist `INSTR_STIMMUNG`: das steckt in der App in einer
-  Bedingung, nicht in einem Literal. Das gilt nicht mehr: `js/ansichten/pfad.js` definiert es inzwischen als Literal (`const INSTR_STIMMUNG = ['gitarre', 'bass']`) — lesbar wäre es jetzt über `js_liste()`, `build_seiten.py` führt aber noch die Kopie.
+  leer". Das gilt inzwischen auch für `INSTR_STIMMUNG` (früher eine Kopie, weil die App die
+  Auswahl nur in einer Bedingung trug) — es gibt keine handgepflegte Liste mehr.
 - **Die Mengen-Logik lässt sich nicht lesen** (`instrument_mengen` ist ein Nachbau von
   `instrumentpfad` in `js/pfade.js` — Code, kein Literal). Dagegen wacht
   `pruefe_mengen_invarianten()` vor jedem Bau: Theorie/Praxis/Equipment müssen **paarweise
@@ -850,7 +850,10 @@ Tokens**, nie harte Farben.
   `python3 scripts/build_grafiken.py` führt sie in dieser Reihenfolge aus und bündelt das
   JSON — **Motive dort korrigieren und neu generieren, nie SVGs/Bundle von Hand editieren**.
   **Jedes Motiv braucht eine Quelle**: entweder einen Generator ODER eine Datei in
-  `svg_static/` — nie beides. `python3 scripts/build_grafiken.py --check` baut nur in den
+  `svg_static/` — nie beides. `build_grafiken.py` prüft das über die ID-Mengen (`S` je
+  Generator), nicht über den Inhalt: Bis v225 lagen alle 151 Tranche-3-Motive zusätzlich als
+  inhaltsgleiche Kopie in `svg_static/`, und das Strichraster brachte die beiden Fassungen
+  sofort auseinander. `python3 scripts/build_grafiken.py --check` baut nur in den
   Speicher und bricht ab, wenn das eingecheckte Bundle davon abweicht; damit fällt ein
   quellenloser Bundle-Eintrag sofort auf (genau so entstand einmal eine Drift von 183
   Motiven ohne Quelle, die den Vollbau unbrauchbar machte).
@@ -882,11 +885,10 @@ Tokens**, nie harte Farben.
   ohne diese Regel liefen nach dem ersten Raster die Kreise in `drums_ghostnotes` &
   Co. zu. Die Umformung ist idempotent. Die Dateien in `svg_static/` liegen selbst auf
   dem Raster: Der Normallauf von `build_grafiken.py` rastert sie in place, `--check`
-  meldet Abweichungen. **Fallstrick:** Alle Tranche-3-Motive stehen zusätzlich als Kopie
-  in `svg_static/`, und die Kopie muss gleich der Generatorausgabe sein. Aus dem schon
-  gerasterten Stand gerechnet, kommt an der Grenze Linie/Marke nicht immer dasselbe heraus
-  wie aus der Rohfassung — weichen beide nur in `stroke-width` ab, übernimmt der Normallauf
-  die Generatorfassung in die Kopie (jede andere Abweichung bricht weiter ab). Fehlerbilder
+  meldet Abweichungen. **Fallstrick:** Das Raster ist idempotent, aber nicht
+  wegunabhängig — aus dem schon gerasterten Stand gerechnet, kommt an der Grenze
+  Linie/Marke nicht immer dasselbe heraus wie aus der Rohfassung. Ein Motiv mit zwei
+  Quellen läuft deshalb auseinander (so geschehen, s. o.). Fehlerbilder
   rastern ihr Basis-Motiv in dessen Klasse mit, der Riss hat die Stufe „kräftig“. Wer ein
   neues Motiv zeichnet, muss die Stufen also nicht treffen — nur die Verhältnisse. **Gleiche Technik, eigenes Bild:** Bass-
   Gegenstücke von Gitarren-Bausteinen (Grundhaltung, Greifhand, Galopp, Palm Muting …) waren
