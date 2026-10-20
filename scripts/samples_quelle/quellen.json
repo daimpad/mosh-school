@@ -1,37 +1,27 @@
 {
- "bass-a1": {
-  "prompt": "Single low note on an electric bass guitar, deep sub-bass register, fingerstyle, warm round sustained tone, one note only, dry DI",
-  "generation_id": "N8DNwtC3FXTLuOkfbVS7",
-  "modell": "eleven_text_to_sound_v2"
- },
- "bass-b1": {
-  "prompt": "Single very deep low note on an electric bass guitar, lowest open string, sub-bass rumble, fingerstyle, one note, dry DI",
-  "generation_id": "HqcHxg2Ahg8IFYrQ2HsF",
+ "bass-ais2": {
+  "prompt": "Single low note on an electric bass guitar, E string 4th fret (note G#2), picked hard with a plectrum, gritty overdriven metal bass tone, growling and punchy, one note only ringing out, no chord, no drums, dry DI",
+  "generation_id": "MinbLiDg04qU1LsOUWtZ",
   "modell": "eleven_text_to_sound_v2"
  },
  "bass-d2": {
-  "prompt": "Single low note on an electric bass guitar, deep sub-bass register, fingerstyle, warm round sustained tone, one note only, dry DI",
-  "generation_id": "O9PjTuvpXRCQZ8HdBjLw",
+  "prompt": "Single low note on an electric bass guitar, D string 12th fret (note D3), picked hard with a plectrum, gritty overdriven metal bass tone, growling and punchy, one note only ringing out, no chord, no drums, dry DI",
+  "generation_id": "xSlky5klvOEKeGTi6SA9",
   "modell": "eleven_text_to_sound_v2"
  },
  "bass-d3": {
-  "prompt": "Single note on an electric bass guitar, D string at the 12th fret, upper-middle register, fingerstyle, clear round sustained tone ringing out, one note only, dry DI",
-  "generation_id": "msjn5aME21wsJighuYfZ",
+  "prompt": "Single bass guitar note D3 around 147 Hz, high register of the bass, D string 12th fret, bright upper octave note, picked hard with a plectrum, gritty overdriven metal bass tone, growling and punchy, one pure single note, no fifth, no power chord, no drums, dry DI",
+  "generation_id": "FdWj5Cl0mJHX3xmwIsKk",
   "modell": "eleven_text_to_sound_v2"
  },
  "bass-e1": {
-  "prompt": "Single very deep low note on an electric bass guitar, lowest open string, sub-bass rumble, fingerstyle, one note, dry DI",
-  "generation_id": "GqNuSLWJ5tNQeDlpGoL0",
+  "prompt": "Single very deep low note on an electric bass guitar, open low E string, picked hard with a plectrum, gritty overdriven metal bass tone, growling and punchy, one note only ringing out, no chord, no drums, dry DI",
+  "generation_id": "AO5ihkaFzp5mFAeY40Mn",
   "modell": "eleven_text_to_sound_v2"
  },
  "bass-e2": {
-  "prompt": "Single sustained note on an electric bass guitar, low E string, picked, punchy, one note only, dry DI",
-  "generation_id": "6dqj4V3loVRev94XCosK",
-  "modell": "eleven_text_to_sound_v2"
- },
- "bass-g3": {
-  "prompt": "Single high-register note on an electric bass guitar, G string at the 12th fret, fingerstyle, clear round sustained tone, one note only, dry DI",
-  "generation_id": "5scPB97eGwGwnbKPH6uZ",
+  "prompt": "Single low note on an electric bass guitar, open E string (note E2), picked hard with a plectrum, gritty overdriven metal bass tone, growling and punchy, one note only ringing out, no chord, no drums, dry DI",
+  "generation_id": "jeM80AnwOG8HGrFIkiLT",
   "modell": "eleven_text_to_sound_v2"
  },
  "bass-gedaempft-cis2": {
@@ -42,11 +32,6 @@
  "bass-gedaempft-g1": {
   "prompt": "Single short staccato note on an electric bass guitar, picked with a plectrum, palm muted at the bridge, deep low note, quick dead decay, one hit only, dry DI",
   "generation_id": "WVfG4yxgugZifoWeH4ve",
-  "modell": "eleven_text_to_sound_v2"
- },
- "bass-gis2": {
-  "prompt": "Single deep note on an electric bass guitar, open A string, fingerstyle, round sustained tone, one note only, dry DI",
-  "generation_id": "ZpFeclaOm2HPRhp1uT2C",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/belting": {
@@ -95,9 +80,10 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/gitarre-vibrato": {
-  "prompt": "Blues-rock style distorted electric guitar string bend, a single picked note, the note bends up a whole tone and is held at the higher pitch with slight vibrato, solo guitar, no drums, dry",
-  "generation_id": "uSzvcxNA2alWzqs1HNa2",
-  "modell": "eleven_text_to_sound_v2"
+  "prompt": "Heavy metal guitar solo, one long held distorted lead note with very wide, regular finger vibrato, the pitch clearly wobbling up and down about six times per second, like a singer's vibrato, high-gain amp, one single note, no chord, no drums, dry amp",
+  "generation_id": "knn1yznOe9m4SDP4K3jK",
+  "modell": "eleven_text_to_sound_v2",
+  "ausschnitt": "1,5–2,5 s (davor ein Lick, danach ein Slide)"
  },
  "beispiele/growl-rau": {
   "prompt": "Solo male death metal vocalist, one very deep, very rough, noisy cavernous growl on \"uhh\", pitchless and grainy like gravel and rumbling air from the chest, no clear note, sustained about 2 seconds, starts immediately, dry close-mic studio recording, human voice only, no music, no instruments, no reverb, no words",
@@ -276,8 +262,8 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-a4": {
-  "prompt": "Single sustained high note on a distorted electric guitar, lead tone, one single note, no chord, dry",
-  "generation_id": "gt7yh4DYSQobX3hlCdbX",
+  "prompt": "Single sustained lead note A4 on a high-gain distorted electric guitar, high E string 5th fret, heavy metal amp tone, tight and aggressive, one single note, no chord, no drums, dry amp",
+  "generation_id": "nWSKUBa5gLyZm5oGhAHj",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-b1": {
@@ -296,8 +282,8 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-b4": {
-  "prompt": "Single sustained lead note on a distorted electric guitar, B string at the 3rd fret, middle register, warm singing lead tone, one single note, no chord, dry",
-  "generation_id": "IR8vnQGbz0EtdLcxegVW",
+  "prompt": "Single sustained lead note D4 on a high-gain distorted electric guitar, B string 3rd fret, heavy metal amp tone, tight and aggressive, one single note, no chord, no drums, dry amp",
+  "generation_id": "jp0tA8hmKuhvT3KfJhSr",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-d3": {
@@ -306,13 +292,13 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-d4": {
-  "prompt": "Single sustained lead note on a distorted electric guitar, B string at the 3rd fret, middle register, warm singing lead tone, one single note, no chord, dry",
-  "generation_id": "pVs6KchgpKQQpdPetN6I",
+  "prompt": "Single sustained lead note D4 around 294 Hz on a high-gain distorted electric guitar, B string 3rd fret, picked once and held perfectly steady, no vibrato, heavy metal amp tone, tight and aggressive, one single note, no chord, no drums, dry amp",
+  "generation_id": "kAcsatmh0ZAAG349Esd5",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-dis5": {
-  "prompt": "Single sustained high note on a distorted electric guitar, lead tone, high register around the 14th fret of the high E string, one single note, no chord, dry",
-  "generation_id": "8usQm03NndElyBpsPptD",
+  "prompt": "Single sustained lead note D#5 on a high-gain distorted electric guitar, high E string 11th fret, heavy metal amp tone, tight and aggressive, one single note, no chord, no drums, dry amp",
+  "generation_id": "r1UqsEisDmAbf9OweqZs",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-e2": {
@@ -321,13 +307,13 @@
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-f4": {
-  "prompt": "Single sustained high note on a distorted electric guitar, lead tone, one single note, no chord, dry",
-  "generation_id": "vq1EeBszSsLNPwxXRVk6",
+  "prompt": "Single sustained lead note F4 on a high-gain distorted electric guitar, high E string 1st fret, heavy metal amp tone, tight and aggressive, one single note, no chord, no drums, dry amp",
+  "generation_id": "63cF1Q4Xe2AKN1n5G9sT",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-zerre-fis3": {
-  "prompt": "One picked note on the B string of a distorted electric guitar, middle register lead note, single string only, sustained, no chord, no bass, dry amp",
-  "generation_id": "xOlRzRiHDSTLCiNe1cQO",
+  "prompt": "Single sustained lead note F#3 on a high-gain distorted electric guitar, G string 11th fret, heavy metal amp tone, tight and aggressive, one single note, no chord, no drums, dry amp",
+  "generation_id": "HeeMhr07qObbvsk4f3TS",
   "modell": "eleven_text_to_sound_v2"
  },
  "hihat": {

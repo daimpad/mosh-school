@@ -3,7 +3,7 @@ Sample-Bank der Stimmen — Herkunft und Verwendung
 
 WAS DAS IST
 -----------
-62 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
+59 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
 js/audio/samples.js) statt der früheren Synthese spielt: im Pattern-Werkzeug,
 in den Play-along-Loops, in den Hörbeispielen der Bausteine und im
 Tabulatur-Werkzeug.
@@ -15,7 +15,8 @@ Tabulatur-Werkzeug.
                gitarre-chug-*   3 Grundtöne E2, A2, B2 (Palm Mute)
                gitarre-tot      Dead Note (Anschlag ohne Ton)
                gitarre-clean-*  8 Grundtöne A2 … E5, unverzerrt
-  Bass         bass-*           8 Grundtöne E1 … G3
+  Bass         bass-*           5 Grundtöne E1, D2, E2, A♯2, D3, gepickt und
+                                angezerrt (Metal-Bass)
                bass-gedaempft-* 2 Grundtöne G1, C♯2
   Sprache      zaehl-1 … zaehl-4  „Eins“ bis „Vier“ fürs Einzählen (Metronom,
                Loops, Hörbeispiele), aus EINER Aufnahme geschnitten (Sprach-
@@ -47,7 +48,14 @@ ERZEUGUNG
 ---------
 Erzeugt mit ElevenLabs, Sound Effects (Modell eleven_text_to_sound_v2), im
 Oktober 2026, in zwei Runden (20 Klänge, dann 38 weitere aus rund 220
-Varianten). Je Klang wurden mindestens vier Varianten erzeugt und eine
+Varianten). In einer dritten Runde wurden Bass und hohe Gitarren-Leads im
+Metal-Stil neu erzeugt (rund 90 Varianten): Die ersten Fassungen kamen aus
+Prompts mit „warm, round, fingerstyle“ bzw. „warm singing lead tone“ und
+klangen eher nach Pop oder Jazz. Neu sind sie gepickt und angezerrt bzw.
+High-Gain; ihr Spektralschwerpunkt liegt beim Bass 1,5- bis 5-mal so hoch, bei
+den Leads 20–160 % über dem der Vorgänger. A1, B1, G♯2 und G3 traf das
+Modell beim Bass nicht (es weicht auf E1/D2/E2 aus); die Lücken bleiben
+unter 5 Halbtönen, und die Hörbeispiele spielen den Bass nur von C1 bis G3. Je Klang wurden mindestens vier Varianten erzeugt und eine
 ausgewählt —
 nach Messung (Einsatz, Zahl der Anschläge, Ausklingzeit, Tonhöhe) und
 Spektrogramm. Verworfen wurden u. a. ein „Chug“ mit drei Anschlägen, eine

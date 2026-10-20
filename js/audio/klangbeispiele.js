@@ -46,7 +46,7 @@ export const BEISPIELE = {
   pinch_harmonic: { datei: 'pinch-harmonic.mp3', ab: 0, dauer: 1.6, pegel: 0.57 },
   dive_bomb: { datei: 'dive-bomb.mp3', ab: 0, dauer: 2.48, pegel: 0.32 },
   gitarre_feedback: { datei: 'gitarre-feedback.mp3', ab: 0, dauer: 3, pegel: 0.72 },
-  gitarre_vibrato: { datei: 'gitarre-vibrato.mp3', ab: 0.05, dauer: 1.7, pegel: 0.42 },
+  gitarre_vibrato: { datei: 'gitarre-vibrato.mp3', ab: 1.5, dauer: 1.0, pegel: 0.5 },
   slide_ab: { datei: 'slide-ab.mp3', ab: 0, dauer: 2, pegel: 0.41 },
 };
 
