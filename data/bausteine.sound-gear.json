@@ -50,6 +50,7 @@
     },
     {
       "id": "saiten_tunings_standards",
+      "klangbeispiele": ["flageolett"],
       "anzeigetitel": {
         "de": "Saiten & Tunings: die Standards"
       },
@@ -241,6 +242,7 @@
     },
     {
       "id": "noise_management",
+      "klangbeispiele": ["amp_brummen"],
       "anzeigetitel": {
         "de": "Noise-Management: die stille Profi-Disziplin"
       },

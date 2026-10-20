@@ -3,7 +3,7 @@ Sample-Bank der Stimmen — Herkunft und Verwendung
 
 WAS DAS IST
 -----------
-59 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
+60 One-Shots, die der Audio-Kern (js/audio/stimmen.js über
 js/audio/samples.js) statt der früheren Synthese spielt: im Pattern-Werkzeug,
 in den Play-along-Loops, in den Hörbeispielen der Bausteine und im
 Tabulatur-Werkzeug.
@@ -14,7 +14,7 @@ Tabulatur-Werkzeug.
   Gitarre      gitarre-zerre-*  13 Grundtöne A1 … D♯5, verzerrt
                gitarre-chug-*   3 Grundtöne E2, A2, B2 (Palm Mute)
                gitarre-tot      Dead Note (Anschlag ohne Ton)
-               gitarre-clean-*  8 Grundtöne A2 … E5, unverzerrt
+               gitarre-clean-*  9 Grundtöne E2 … E5, unverzerrt
   Bass         bass-*           5 Grundtöne E1, D2, E2, A♯2, D3, gepickt und
                                 angezerrt (Metal-Bass)
                bass-gedaempft-* 2 Grundtöne G1, C♯2
@@ -96,11 +96,12 @@ richtige Format hat und eine Rohquelle mit Herkunft hat.
 
 KLANGBEISPIELE (assets/sounds/beispiele/)
 -----------------------------------------
-28 kurze Aufnahmen zum Anhören neben Bausteinen: Gesangstechniken (Growl,
+33 kurze Aufnahmen zum Anhören neben Bausteinen: Gesangstechniken (Growl,
 Guttural, Fry, False Cord, hoher Scream, Shout, Gang-Shout, Clean, Kopfstimme,
 Belting, Vibrato, Doom-Clean, Vocal Fry, Atem- und Einsingübungen), Bühne und Proberaum (Publikum, Moshpit, Raumton, PA-
 Rückkopplung, Kabelknacken, Soundcheck-Ansage) und Gitarrentechniken (Pinch
-Harmonic, Dive Bomb, Feedback, Vibrato, Slide). Ausgeliefert wird die MP3-Rohdatei
+Harmonic, Dive Bomb, Feedback, Vibrato, Bend, Slide auf und ab,
+Flageolett), dazu Atem (Einatmen) und Netzbrummen (50 Hz). Ausgeliefert wird die MP3-Rohdatei
 selbst; Ausschnitt (ab/dauer) und Pegel stehen in js/audio/klangbeispiele.js,
 der Pegel ist gemessen (node scripts/build_samples.mjs --beispiele). Welche
 Übung welches Beispiel zeigt, steht am Baustein im Feld `klangbeispiele`.

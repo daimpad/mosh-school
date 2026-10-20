@@ -1,0 +1,57 @@
+[
+ {
+  "datei": "tom-hoch.mp3",
+  "dauer": 2,
+  "kanaele": 2,
+  "spitze": 0.238,
+  "einsatz_ms": 0,
+  "anschlaege": 0,
+  "abklingen_40db_ms": 880,
+  "f0_hps": 66.4,
+  "spektrale_spitzen": [
+   [
+    135.9,
+    0
+   ]
+  ],
+  "schwerpunkt_hz": 399
+ },
+ {
+  "datei": "tom-mitte.mp3",
+  "dauer": 1,
+  "kanaele": 2,
+  "spitze": 0.034,
+  "einsatz_ms": 0,
+  "anschlaege": 0,
+  "abklingen_40db_ms": 640,
+  "f0_hps": 40.1,
+  "spektrale_spitzen": [
+   [
+    117.1,
+    0
+   ]
+  ],
+  "schwerpunkt_hz": 1104
+ },
+ {
+  "datei": "tom-tief.mp3",
+  "dauer": 3,
+  "kanaele": 2,
+  "spitze": 0.478,
+  "einsatz_ms": 0,
+  "anschlaege": 0,
+  "abklingen_40db_ms": 890,
+  "f0_hps": 76.4,
+  "spektrale_spitzen": [
+   [
+    79.4,
+    0
+   ],
+   [
+    226.1,
+    -18
+   ]
+  ],
+  "schwerpunkt_hz": 577
+ }
+]

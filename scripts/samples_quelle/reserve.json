@@ -88,6 +88,42 @@
      "notiz": "A1, Sludge-Zerre"
     }
    }
+  },
+  "ZERRER Reserve Metal-Runde": {
+   "flow_id": "icybGZGXFc7cEJvaLLBW",
+   "url": "https://elevenlabs.io/app/flows/icybGZGXFc7cEJvaLLBW",
+   "klaenge": {
+    "chug_d3_2": {
+     "generation_id": "2WPXEWls3FcuAEVc7sc4",
+     "session_id": "7KbTjXIYpvt1x1rQpf3u",
+     "prompt": "Single palm-muted chug on a high-gain distorted electric guitar, heavy metal, tight and percussive, A string 5th fret, note D3 around 147 Hz, one short hit, no chord, no drums, dry amp",
+     "notiz": "D3-Chug, 146 Hz (−12 Cent); klingt laut Messung glatt, wenig Biss gegen gitarre-chug-e2 — anhören"
+    },
+    "tom_hoch_1": {
+     "generation_id": "rXGg7v6Ks0efyKcPAQjM",
+     "session_id": "THhfKuS14C7Sqd6PX2Nl",
+     "prompt": "Single high rack tom hit, small 10 inch tom, metal drum kit, punchy attack, tight, close-mic, dry, no reverb, one hit only",
+     "notiz": "Kandidat für metallischeren hohen Tom (140 Hz, Schwerpunkt 2016 Hz gegen 399 Hz alt) — anhören, nicht still tauschen"
+    },
+    "tom_mitte_3": {
+     "generation_id": "2K8xDr1vJFtzSkrlCq2D",
+     "session_id": "Rp7R3PX0WuhODUmy3ue9",
+     "prompt": "Single mid rack tom hit, 12 inch tom, metal drum kit, punchy attack, tight, close-mic, dry, no reverb, one hit only",
+     "notiz": "Kandidat für metallischeren mittleren Tom (121 Hz) — anhören"
+    },
+    "tom_tief_1": {
+     "generation_id": "RutUOUY8SJGjrzyWceF8",
+     "session_id": "6SLjzLsdyl9CiiaeErGK",
+     "prompt": "Single low floor tom hit, 16 inch floor tom, metal drum kit, punchy attack, deep and tight, close-mic, dry, no reverb, one hit only",
+     "notiz": "Kandidat für metallischeren tiefen Tom (93 Hz gegen 79 Hz alt) — anhören"
+    },
+    "clean_e2_3": {
+     "generation_id": "BR5AmOoqmuuQOnJEmC83",
+     "session_id": "ZlgK9hX92iyT6wXxpKIp",
+     "prompt": "Single clean electric guitar note, open low E string in standard tuning, note E2 around 82 Hz, plucked once with a pick, warm clean amp tone, no distortion, one note only, no chord, no drums, dry",
+     "notiz": "Clean-E3 (+6,5 Cent), Beifang"
+    }
+   }
   }
  }
 }

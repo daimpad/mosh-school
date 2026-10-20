@@ -32,7 +32,7 @@
   "bausteine": [
     {
       "id": "gesang_haltung_atmung",
-      "klangbeispiele": ["zischen"],
+      "klangbeispiele": ["zischen", "einatmen"],
       "anzeigetitel": {
         "de": "Haltung & Atmung"
       },

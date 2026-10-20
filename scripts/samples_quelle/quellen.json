@@ -34,9 +34,19 @@
   "generation_id": "WVfG4yxgugZifoWeH4ve",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/amp-brummen": {
+  "prompt": "Electric guitar amplifier mains hum, steady 50 Hz electrical buzz from a European power grid, ground loop hum with its 100 Hz harmonic, amp switched on and idle, nobody playing, no guitar notes, constant and even, close microphone in a rehearsal room",
+  "generation_id": "JH2pW2VbJog3JhKfEmmk",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/belting": {
   "prompt": "Solo human rock singer belting one powerful, loud, bright high sustained note in full chest voice on an open \"ah\" vowel, strong and ringing, steady pitch, a cappella, dry close-mic studio recording, no music, no words, no reverb",
   "generation_id": "6589roq8QJuX3P15iv5l",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/bend-auf": {
+  "prompt": "Heavy metal guitar, one picked distorted lead note, then the pitch rises smoothly upward by a whole step (two semitones) and is held at the higher pitch, high-gain distorted heavy metal amp tone, tight and aggressive, single note, no chord, no drums, dry amp",
+  "generation_id": "ruUpNJs8rPvAb0i0nI3J",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/clean-ton-m": {
@@ -59,9 +69,19 @@
   "generation_id": "ZjuNkXFFMDytsrcbrReZ",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/einatmen": {
+  "prompt": "Calm deep inhale through the mouth, one person, slow relaxed belly breathing before singing, a single long breath in, no exhale, no voice, no gasping, close microphone, quiet room, dry",
+  "generation_id": "jvIRzvBX02oXt57NY8UR",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/false-cord": {
   "prompt": "Solo human vocalist, one false cord scream on the vowel \"ah\", rough gritty mid-high metal scream, sustained about 2 seconds, dry close-mic studio, no music, no instruments, no reverb, no words",
   "generation_id": "QtFbZpnpYnNUmhvVyupe",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "beispiele/flageolett": {
+  "prompt": "Natural harmonic on the 12th fret of a clean electric guitar, one single pluck, bell-like chime tone, pure and glassy, ringing out, no chord, no distortion, no drums, dry",
+  "generation_id": "lmCXjSiSKZzo5nzh1Uag",
   "modell": "eleven_text_to_sound_v2"
  },
  "beispiele/fry-scream": {
@@ -155,6 +175,11 @@
   "generation_id": "rP5B0kNhe1j5xpfFip2R",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/slide-auf": {
+  "prompt": "Distorted heavy metal electric guitar, a single low note that glides smoothly upward in pitch, rising continuously from low to high over about half a second, then holds the higher note, ascending pitch only, high-gain heavy metal amp tone, tight and aggressive, single note, no chord, no drums, dry amp",
+  "generation_id": "5QqCie0A54U3IsV23RV7",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/soundcheck": {
   "prompt": "Check, <break time=\"0.2s\" /> eins, zwei. <break time=\"0.5s\" /> Check. [TTS eleven_multilingual_v2, voice A2eYGaZmwykOiEVBlQ7h]",
   "generation_id": "iTwv1VDQvIhaae9LkWbV",
@@ -229,6 +254,11 @@
  "gitarre-clean-d4": {
   "prompt": "Single clean electric guitar note, A note on the high E string at the 5th fret, plucked, clear sustained tone ringing out, one note only, no chord, dry",
   "generation_id": "K6qnbyEZKlGtx0hrduLc",
+  "modell": "eleven_text_to_sound_v2"
+ },
+ "gitarre-clean-e2": {
+  "prompt": "Single clean electric guitar note, deep low E2, the thickest sixth string played open, booming low register close to bass range, plucked once with a pick, warm clean amp tone, no distortion, one note only, no chord, no drums, dry",
+  "generation_id": "6wIa87NHYpBd4mQ5inyi",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-e5": {

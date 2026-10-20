@@ -98,6 +98,7 @@ const PROBEN = [
   { name: 'gitarre_zerre_dis5', dauer: 1.0, hochpass: 200 },
   { name: 'gitarre_chug_a2', dauer: 0.4, hochpass: 60 },
   { name: 'gitarre_tot', dauer: 0.25, hochpass: 80 },
+  { name: 'gitarre_clean_e2', dauer: 1.2, hochpass: 50 },
   { name: 'gitarre_clean_a2', dauer: 1.2, hochpass: 60 },
   { name: 'gitarre_clean_d3', dauer: 1.2, hochpass: 70 },
   { name: 'gitarre_clean_g3', dauer: 1.2, hochpass: 80 },
@@ -263,7 +264,7 @@ const hash = (b) => createHash('sha256').update(b).digest('hex').slice(0, 16);
 // Ziel-Lautheit der Klangbeispiele (lautestes 50-ms-Fenster nach Pegel).
 // Flächen (Raumton, Publikum) leiser als eine Stimme, Rückkopplungen leiser
 // als alles andere — die sind schon bei gleichem Messwert unangenehm.
-const BEISPIEL_LAUTHEIT = { raumton_club: 0.07, publikum_club: 0.16, moshpit: 0.16, pa_feedback: 0.12, gitarre_feedback: 0.14 };
+const BEISPIEL_LAUTHEIT = { raumton_club: 0.07, publikum_club: 0.16, moshpit: 0.16, pa_feedback: 0.12, gitarre_feedback: 0.14, einatmen: 0.08, amp_brummen: 0.08 };
 const BEISPIEL_STANDARD = 0.22;
 
 async function messeBeispiele() {

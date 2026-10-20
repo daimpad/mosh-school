@@ -47,6 +47,11 @@ export const BEISPIELE = {
   dive_bomb: { datei: 'dive-bomb.mp3', ab: 0, dauer: 2.48, pegel: 0.32 },
   gitarre_feedback: { datei: 'gitarre-feedback.mp3', ab: 0, dauer: 3, pegel: 0.72 },
   gitarre_vibrato: { datei: 'gitarre-vibrato.mp3', ab: 1.5, dauer: 1.0, pegel: 0.5 },
+  bend_auf: { datei: 'bend-auf.mp3', ab: 0.97, dauer: 1.15, pegel: 0.52 },
+  slide_auf: { datei: 'slide-auf.mp3', ab: 0, dauer: 1.38, pegel: 0.34 },
+  flageolett: { datei: 'flageolett.mp3', ab: 0, dauer: 1.7, pegel: 2.76 },
+  einatmen: { datei: 'einatmen.mp3', ab: 0, dauer: 2.7, pegel: 5.26 },
+  amp_brummen: { datei: 'amp-brummen.mp3', ab: 0, dauer: 4.0, pegel: 0.7 },
   slide_ab: { datei: 'slide-ab.mp3', ab: 0, dauer: 2, pegel: 0.41 },
 };
 
