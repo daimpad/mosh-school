@@ -138,6 +138,7 @@
     },
     {
       "id": "gitarre_kunstharmonics",
+      "klangbeispiele": ["pinch_harmonic"],
       "anzeigetitel": { "de": "Gitarre: Pinch Harmonics & künstliche Harmonics" },
       "domaene": ["gitarre"],
       "kompetenzstufe": ["experte"],

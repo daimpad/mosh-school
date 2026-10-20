@@ -185,6 +185,7 @@
     },
     {
       "id": "sludge_vocals_verzweiflung",
+      "klangbeispiele": ["false_cord"],
       "anzeigetitel": { "de": "Sludge-Vocals: der raue Schrei" },
       "domaene": ["gesang"],
       "kompetenzstufe": ["fortgeschritten"],

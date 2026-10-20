@@ -9,6 +9,7 @@
 import { label, t, text } from '../i18n.js';
 import { domaeneIcon, esc, registriereAufraeumen } from '../oberflaeche.js';
 import { holeAusgang, holeKontext } from '../audio/kontext.js';
+import { saite } from '../audio/stimmen.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
 
 let aktivesInstrument = 'gitarre';
@@ -49,47 +50,30 @@ export function frequenzVon(note) {
   return 440 * 2 ** (abstandZuA4 / 12);
 }
 
-// Referenzton: leise, weich, kurz — eine Stimm-Hilfe, kein Instrument.
+// Eine angetippte Saite klingt seit dem Ausbau der Sample-Bank wie das
+// Instrument, um das es geht — verzerrte Gitarre bzw. Bass —, statt als
+// Dreieckston. Gestimmt wird hier nicht (das macht das Stimmgerät mit seinem
+// synthetischen Referenzton); hier geht es darum, wie eine Stimmung KLINGT.
 function spieleTon(frequenz) {
   if (!frequenz) return;
-  const audioKontext = kontext();
-  const jetzt = audioKontext.currentTime;
-  const osc = audioKontext.createOscillator();
-  const huelle = audioKontext.createGain();
-  osc.type = 'triangle';
-  osc.frequency.value = frequenz;
-  huelle.gain.setValueAtTime(0.0001, jetzt);
-  huelle.gain.exponentialRampToValueAtTime(0.14, jetzt + 0.02);
-  huelle.gain.exponentialRampToValueAtTime(0.0001, jetzt + 1.6);
-  osc.connect(huelle).connect(holeAusgang());
-  merkeTon(osc);
-  osc.start(jetzt);
-  osc.stop(jetzt + 1.7);
+  const ctx = kontext();
+  const instrument = aktivesInstrument === 'bass' ? 'bass' : 'gitarre';
+  saite(ctx, holeAusgang(), ctx.currentTime + 0.02, { frequenz, instrument, dauer: 1.6, pegel: 0.5 }).forEach(merkeTon);
 }
 
 // Intervall/Akkord: mehrere Töne über einem Grundton gleichzeitig — so wird der
 // Klangcharakter (etwa die Reibung des Tritonus) hörbar. Grundton tiefes E (E2),
-// der klassische Metal-Bezugston. Halbtöne sind Offsets zum Grundton.
+// der klassische Metal-Bezugston. Halbtöne sind Offsets zum Grundton. Clean
+// gespielt: Verzerrt verschwämme genau die Reibung, um die es geht.
 function spieleAkkord(halbtoene, grundton = 'E2') {
   const basis = frequenzVon(grundton);
   if (!basis) return;
-  const audioKontext = kontext();
-  const jetzt = audioKontext.currentTime;
-  const summe = audioKontext.createGain();
+  const ctx = kontext();
+  const jetzt = ctx.currentTime + 0.02;
   // Gesamtpegel auf die Stimmenzahl normieren, damit ein Akkord nicht übersteuert.
-  const pegel = 0.13 / Math.max(1, halbtoene.length);
-  summe.gain.setValueAtTime(0.0001, jetzt);
-  summe.gain.exponentialRampToValueAtTime(pegel, jetzt + 0.02);
-  summe.gain.exponentialRampToValueAtTime(0.0001, jetzt + 1.9);
-  summe.connect(holeAusgang());
+  const pegel = 0.6 / Math.sqrt(Math.max(1, halbtoene.length));
   for (const h of halbtoene) {
-    const osc = audioKontext.createOscillator();
-    osc.type = 'triangle';
-    osc.frequency.value = basis * 2 ** (h / 12);
-    osc.connect(summe);
-    merkeTon(osc);
-    osc.start(jetzt);
-    osc.stop(jetzt + 2);
+    saite(ctx, holeAusgang(), jetzt, { frequenz: basis * 2 ** (h / 12), klang: 'clean', dauer: 1.9, pegel }).forEach(merkeTon);
   }
 }
 
@@ -98,22 +82,11 @@ function spieleAkkord(halbtoene, grundton = 'E2') {
 function spieleSequenz(halbtoene, grundton = 'E2') {
   const basis = frequenzVon(grundton);
   if (!basis) return;
-  const audioKontext = kontext();
-  const start = audioKontext.currentTime;
+  const ctx = kontext();
+  const start = ctx.currentTime + 0.02;
   const dauer = 0.22;
   halbtoene.forEach((h, i) => {
-    const t0 = start + i * dauer;
-    const osc = audioKontext.createOscillator();
-    const huelle = audioKontext.createGain();
-    osc.type = 'triangle';
-    osc.frequency.value = basis * 2 ** (h / 12);
-    huelle.gain.setValueAtTime(0.0001, t0);
-    huelle.gain.exponentialRampToValueAtTime(0.12, t0 + 0.02);
-    huelle.gain.exponentialRampToValueAtTime(0.0001, t0 + dauer * 0.95);
-    osc.connect(huelle).connect(holeAusgang());
-    merkeTon(osc);
-    osc.start(t0);
-    osc.stop(t0 + dauer);
+    saite(ctx, holeAusgang(), start + i * dauer, { frequenz: basis * 2 ** (h / 12), klang: 'clean', dauer: dauer * 1.4, pegel: 0.5 }).forEach(merkeTon);
   });
 }
 

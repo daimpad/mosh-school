@@ -9,6 +9,7 @@
   "bausteine": [
     {
       "id": "doom_sustain_feedback",
+      "klangbeispiele": ["gitarre_feedback"],
       "anzeigetitel": {
         "de": "Doom-Gitarre: Sustain & Feedback"
       },
@@ -223,6 +224,7 @@
     },
     {
       "id": "doom_vocals_getragen",
+      "klangbeispiele": ["clean_ton_tief", "growl_tief"],
       "anzeigetitel": {
         "de": "Doom-Vocals: getragen & schwer"
       },

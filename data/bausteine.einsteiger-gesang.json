@@ -32,6 +32,7 @@
   "bausteine": [
     {
       "id": "gesang_haltung_atmung",
+      "klangbeispiele": ["zischen"],
       "anzeigetitel": {
         "de": "Haltung & Atmung"
       },
@@ -65,6 +66,7 @@
     },
     {
       "id": "atemstuetze",
+      "klangbeispiele": ["zischen"],
       "anzeigetitel": {
         "de": "Atemstütze"
       },
@@ -104,6 +106,7 @@
     },
     {
       "id": "stimmuebungen_sanft",
+      "klangbeispiele": ["lippenflattern"],
       "anzeigetitel": {
         "de": "Sanfte Stimmübungen"
       },
@@ -141,6 +144,7 @@
     },
     {
       "id": "tonhoehe_clean",
+      "klangbeispiele": ["clean_ton_tief", "clean_ton_hoch"],
       "anzeigetitel": {
         "de": "Tonhöhe treffen"
       },
@@ -292,6 +296,7 @@
     },
     {
       "id": "clean_im_metal",
+      "klangbeispiele": ["clean_ton_tief", "clean_ton_hoch"],
       "anzeigetitel": {
         "de": "Clean-Gesang im Metal"
       },
@@ -454,6 +459,7 @@
     },
     {
       "id": "verzerrung_prinzip",
+      "klangbeispiele": ["vocal_fry", "fry_scream"],
       "anzeigetitel": {
         "de": "Verzerrung: das Prinzip"
       },
@@ -480,6 +486,7 @@
     },
     {
       "id": "harsh_stile_ueberblick",
+      "klangbeispiele": ["growl_rau", "guttural", "fry_scream", "false_cord", "high_scream", "hardcore_shout"],
       "anzeigetitel": {
         "de": "Harsh-Vocal-Stile im Überblick"
       },
@@ -517,6 +524,7 @@
     },
     {
       "id": "sanfter_einstieg_verzerrung",
+      "klangbeispiele": ["vocal_fry"],
       "anzeigetitel": {
         "de": "Sanfter Einstieg in die Verzerrung"
       },

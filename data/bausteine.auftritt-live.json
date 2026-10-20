@@ -28,6 +28,7 @@
     },
     {
       "id": "soundcheck_ablauf",
+      "klangbeispiele": ["soundcheck", "pa_feedback"],
       "anzeigetitel": {
         "de": "Soundcheck: Ablauf & Verhalten"
       },

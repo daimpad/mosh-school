@@ -205,6 +205,7 @@
     },
     {
       "id": "death_growl_tiefe",
+      "klangbeispiele": ["growl_rau", "growl_tief"],
       "anzeigetitel": { "de": "Death-Metal-Vocals: tiefe Growls über schnelle Riffs" },
       "domaene": ["gesang"],
       "kompetenzstufe": ["fortgeschritten"],

@@ -66,6 +66,7 @@
     },
     {
       "id": "konzert_selbst_organisieren",
+      "klangbeispiele": ["raumton_club", "soundcheck"],
       "anzeigetitel": {
         "de": "Ein Konzert selbst organisieren"
       },

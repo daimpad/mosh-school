@@ -776,6 +776,7 @@
     },
     {
       "id": "thrash_vocals_bellen",
+      "klangbeispiele": ["hardcore_shout"],
       "anzeigetitel": {
         "de": "Thrash-Vocals: gebellt, rhythmisch, verständlich"
       },

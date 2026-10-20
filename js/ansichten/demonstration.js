@@ -13,7 +13,7 @@ import { esc, registriereAufraeumen } from '../oberflaeche.js';
 import { aktiviere, holeAusgang, holeKontext, istBereit } from '../audio/kontext.js';
 import { erzeugeScheduler } from '../audio/scheduler.js';
 import {
-  china, crash, hihat, hihatOffen, hihatPedal, kick, klick, ride, rideGlocke, saite, snare, splash, stack, tomHoch, tomMitte, tomTief,
+  china, crash, hihat, hihatOffen, hihatPedal, kick, klick, ride, rideGlocke, saite, snare, splash, stack, tomHoch, tomMitte, tomTief, zaehlwort,
 } from '../audio/stimmen.js';
 import { frequenzVon } from './stimmungen.js';
 
@@ -306,7 +306,11 @@ function starteDemo(sektion, demo, cfg) {
     },
     beiSchritt: (zeit, i) => {
       if (i < countinSteps) {
-        if (i % stepsProBeat === 0) klick(ctx, ziel, zeit, { akzent: i === 0 });
+        // Gesprochen eingezählt, darunter ein leiser Klick als Flanke.
+        if (i % stepsProBeat === 0) {
+          zaehlwort(ctx, ziel, zeit, i / stepsProBeat + 1, { dauer: 54 / cfg.bpm });
+          klick(ctx, ziel, zeit, { leise: true });
+        }
         return;
       }
       const step = (i - countinSteps) % gesamt;

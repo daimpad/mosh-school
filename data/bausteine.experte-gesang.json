@@ -49,6 +49,7 @@
     },
     {
       "id": "harsh_texturen",
+      "klangbeispiele": ["fry_scream", "false_cord", "growl_rau"],
       "anzeigetitel": {
         "de": "Texturen mischen & Übergänge"
       },
@@ -221,6 +222,7 @@
     },
     {
       "id": "vocals_live_monitoring",
+      "klangbeispiele": ["pa_feedback"],
       "anzeigetitel": {
         "de": "Live: Monitoring als Stimmschutz"
       },

@@ -124,6 +124,7 @@
     },
     {
       "id": "crust_vocals_rau",
+      "klangbeispiele": ["fry_scream"],
       "anzeigetitel": {
         "de": "Crust-Vocals: rau & dringlich"
       },
@@ -605,6 +606,7 @@
     },
     {
       "id": "grind_vocals_wechsel",
+      "klangbeispiele": ["growl_rau", "high_scream"],
       "anzeigetitel": {
         "de": "Grind-Vocals: Tief-Hoch-Wechsel"
       },

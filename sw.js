@@ -85,6 +85,7 @@ const SHELL = [
   'js/audio/box.js',
   'js/audio/klangprobe.js',
   'js/audio/samples.js',
+  'js/audio/klangbeispiele.js',
   // Die Sample-Bank selbst (assets/sounds/samples/*.wav, gut 4 MB) steht bewusst
   // NICHT hier: Die Installation lädt die Hülle mit cache: 'reload', also bei
   // JEDER neuen Version komplett neu. Die Bank wird beim ersten Werkzeug mit Ton
@@ -97,6 +98,7 @@ const SHELL = [
   'js/audio/spuren-db.js',
   'js/ansichten/baustein.js',
   'js/ansichten/demonstration.js',
+  'js/ansichten/klangbeispiele.js',
   'js/ansichten/heim.js',
   'js/ansichten/info.js',
   'js/ansichten/onboarding.js',

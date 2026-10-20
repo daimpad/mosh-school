@@ -453,6 +453,7 @@
     },
     {
       "id": "metalcore_vocals_refrain",
+      "klangbeispiele": ["false_cord", "clean_ton_tief"],
       "anzeigetitel": {
         "de": "Metalcore-Vocals: Scream-Strophe, Clean-Hook"
       },

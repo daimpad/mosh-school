@@ -1410,6 +1410,7 @@
     },
     {
       "id": "black_shriek_luft",
+      "klangbeispiele": ["high_scream"],
       "anzeigetitel": { "de": "Black-Metal-Vocals: Shrieks aus Luft und Kopfresonanz" },
       "domaene": ["gesang"],
       "kompetenzstufe": ["fortgeschritten"],

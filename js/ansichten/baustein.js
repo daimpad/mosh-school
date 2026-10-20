@@ -10,6 +10,7 @@ import { bausteinIcon, domaeneIcon, esc, lehrgrafik, meilensteinLabel, neuRender
 import { pruefeMeilensteine } from '../mastery.js';
 import { absaetzeMitGlossar, baueGlossarVerlinker } from '../glossar-links.js';
 import { bindeDemonstration, demonstrationHtml } from './demonstration.js';
+import { bindeKlangbeispiele, klangbeispieleHtml } from './klangbeispiele.js';
 import { INSTRUMENTE, stationImKontext } from '../pfade.js';
 import { werkzeugeFuer, werkzeugRoute } from '../werkzeug-links.js';
 import { landingHeroHtml } from '../genre-inszenierung.js';
@@ -390,6 +391,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
       ${erklaerSektion}
       ${schemaSektion}
       ${demonstrationHtml(b.demonstration)}
+      ${klangbeispieleHtml(b)}
       ${werkzeugProminentHtml(b)}
       ${uebungsSektion}
       ${reflexionsSektion}
@@ -435,6 +437,7 @@ export function renderBaustein(el, daten, bausteinId, kontext) {
   }
 
   bindeDemonstration(el, b.demonstration);
+  bindeKlangbeispiele(el);
 
   // Nach einer Änderung: neu erreichte Meilensteine feiern, sonst neu rendern.
   const nachAenderung = () => {

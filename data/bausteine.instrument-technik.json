@@ -22,6 +22,7 @@
     },
     {
       "id": "steg_typen",
+      "klangbeispiele": ["dive_bomb"],
       "anzeigetitel": { "de": "Steg: feste und bewegliche Brücken" },
       "domaene": ["ausruestung", "gitarre", "bass"],
       "kompetenzstufe": ["einsteiger"],
