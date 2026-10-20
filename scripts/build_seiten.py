@@ -460,6 +460,11 @@ def seiten_fuss(tiefe, app_href):
     muessen die Texte ausgeschrieben werden — sonst stuende die Zeile auf den
     statischen Seiten leer. Sie kommen aus denselben Labels (`haltung_*`),
     damit die Aussage weiter an einer Stelle gepflegt wird.
+
+    Impressum und Datenschutz stehen hier in der Spalte „Info“, obwohl die
+    App-Fußzeile sie nicht mehr trägt: Die App hat dafür das Menü, diese Seiten
+    haben keins. Ohne die Links führte von hier kein Weg zum Impressum — und
+    das muss nach § 5 DDG von jeder Seite aus unmittelbar erreichbar sein.
     """
     w = wurzel(tiefe)
     haltung = ''.join(
@@ -493,6 +498,8 @@ def seiten_fuss(tiefe, app_href):
 <a href="{w}#/shows">Shows</a>
 <a href="{w}#/mitmachen">Mitmachen</a>
 <a href="{w}#/profil">Profil</a>
+<a href="{w}#/impressum">{esc(uitext("footer_impressum"))}</a>
+<a href="{w}#/datenschutz">{esc(uitext("footer_datenschutz"))}</a>
 </nav>
 <nav class="footer-spalte" aria-label="Alle Seiten">
 <span class="footer-titel">Alle Seiten</span>
