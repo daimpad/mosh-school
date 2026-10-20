@@ -1,0 +1,545 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-metalcore",
+    "hinweis": "Genre-Achse Metalcore: acht Bausteine quer durch die Domänen, alle stil:[metalcore] — Harmonie-Leads gegen Chugs, Breakdown-Lock und Fundament unter Leads, Feelwechsel Beat/Half-Time/Breakdown, Scream-Strophe und Clean-Hook, Songform und Dur-Farbe der Refrains, Studio gegen Live, Tiefenstaffelung, Bewegung auf der Bühne. Zusammen mit den bestehenden Metalcore-Bausteinen (metalcore_groove, chugs_breakdown, clean_harsh_wechsel, sound_core_tight u. a.) trägt sie den Pfad. Abgrenzung: Deathcore zielt auf extreme Tiefe und Zeitlupe, Metalcore auf den Wechsel von Groove, Melodie und Breakdown. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "metalcore_harmonie_leads",
+      "anzeigetitel": {
+        "de": "Metalcore-Gitarre: Harmonie-Leads gegen Chugs"
+      },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["rhythmus_lead_wechsel", "palm_mute_systeme", "drop_tuning"],
+      "erklaerteil": {
+        "de": "Das melodische Erbe des Metalcore stammt aus dem Melodic Death Metal: zweistimmige Leads in Terzen, die zwischen tiefen Chug-Riffs stehen. Der Reiz liegt im Gegensatz — unten die gedämpfte, perkussive Tiefe der Drop-Saite, oben eine singende Linie, die zwei Gitarren im Terzabstand tragen. Die zweite Stimme läuft dabei diatonisch mit: In C-Moll liegt unter dem C ein A♭, unter dem E♭ ein C — mal große, mal kleine Terz, je nachdem, was die Tonleiter hergibt. Wer stur um vier Halbtöne verschiebt, verlässt die Tonart und klingt schief statt hymnisch.\n\nAm Instrument heißt das: Beide Hände wechseln in Sekundenbruchteilen die Rolle. Im Chug liegt der Handballen am Steg, der Anschlag ist kurz und hart; im Lead löst sich die Dämpfung, und die Greifhand übernimmt mit Vibrato und sauberem Abstoppen der Nachbarsaiten. Die leere tiefe Saite will dabei weiterklingen — sie muss aktiv stumm bleiben.\n\nDie eigentliche Hürde ist das Zusammenspiel: Zwei Stimmen im Terzabstand verzeihen keine Abweichung in Timing, Vibrato und Tonende. Schon ein leicht anderes Vibrato lässt die Harmonie schwimmen. Zweistimmig klingt es nur, wenn beide Gitarren phrasieren wie eine."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Stimmen, eine Phrase",
+          "ziel": "Ein Chug-Riff und eine zweistimmige Terz-Linie im Wechsel sauber spielen — Timing, Vibrato und Dämpfung beider Stimmen deckungsgleich.",
+          "schritte": [
+            "Bau die Linie zuerst einstimmig: eine kurze Melodie in C-Moll (etwa E♭–D–C–D–E♭–F–G) auf den hohen Saiten in Achteln, langsam bei 80–90 BPM, bis sie ohne Hinschauen sitzt.",
+            "Leite die zweite Stimme diatonisch ab: zu jedem Melodieton den Ton zwei Tonleiterstufen tiefer (unter C das A♭, unter E♭ das C). Schreib beide Linien als Tab untereinander und spiel die zweite Stimme einzeln, bis sie genauso sicher sitzt.",
+            "Nimm Stimme eins auf und spiel Stimme zwei dazu — oder spiel beide als Doppelgriff auf zwei benachbarten Saiten. Tonwechsel, Vibrato-Tempo und Tonende müssen exakt zusammenfallen.",
+            "Setz die Linie hinter einen Takt Chugs auf der leeren tiefen Saite: Chugs mit dem Handballen am Steg, dann Dämpfung lösen und ohne Lücke in die Melodie. Die tiefe Saite bleibt dabei stumm.",
+            "Steigere in 5-BPM-Schritten Richtung Songtempo (Zielbereich 140–160 BPM) — aber nur, solange beide Stimmen deckungsgleich bleiben."
+          ],
+          "steigerung": "Spiel dieselbe Linie einmal in Quinten statt Terzen und vergleich die Wirkung: Terzen klingen melodisch, Quinten offener und härter. Oder lass die zweite Stimme erst in der Wiederholung einsetzen — der Moment, in dem die Harmonie dazukommt, ist ein eigener Höhepunkt.",
+          "selbstkontrolle": "Nimm beide Stimmen auf und hör sie zusammen: Schwimmt die Harmonie an den Tonenden oder im Vibrato? Klingt ein Zusammenklang schief (dann ist die Terz nicht diatonisch)? Und bleibt im Chug-Takt die Stille zwischen den Schlägen sauber, oder klingt die tiefe Saite in die Melodie hinein?"
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["C2", "G2", "C3", "F3", "A3", "D4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 130,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 2,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 2,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 2,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 6,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 24,
+            "saite": 3,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 2,
+            "bund": 6,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 3,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 2,
+            "bund": 8,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 3,
+            "bund": 10,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 2,
+            "bund": 10,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Ein Takt Chugs auf der leeren tiefen C-Saite, dann die zweistimmige Linie in diatonischen Terzen (C-Moll) auf der zweiten und dritten Saite, zweimal von einem Chug darunter gestützt."
+      }
+    },
+    {
+      "id": "metalcore_bass_lock_melodie",
+      "anzeigetitel": {
+        "de": "Metalcore-Bass: Breakdown-Lock & Fundament unter Leads"
+      },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["lock_zur_bassdrum", "duo_gb_chug_sync", "bass_synkopen"],
+      "erklaerteil": {
+        "de": "Im Metalcore hat der Bass zwei Gesichter, und beide sind Dienst am Song. Im Breakdown verschmilzt er mit der Bassdrum: Jeder Chug der Gitarre ist zugleich ein Kick-Schlag und ein Basston, und erst wenn alle drei gleichzeitig beginnen und gleichzeitig enden, entsteht der Einschlag, für den das Genre bekannt ist. Der Bass spielt dort meist dieselbe leere tiefe Saite wie die Gitarre, gedämpft und mit hartem Attack — ein Ton, der länger klingt als die Gitarre, verschmiert die Stille.\n\nUnter den melodischen Teilen kippt die Rolle. Spielen die Gitarren zweistimmig auf den hohen Saiten, fehlt unten die Harmonie — der Bass liefert sie. Statt die Chugs weiterzuspielen, legt er die Grundtöne der Akkordfolge als gleichmäßige Achtel oder gehaltene Töne darunter und macht hörbar, ob die Terzen gerade über A♭, B♭ oder C-Moll stehen. Diese Achtel sind der Motor des Refrains: Sie treiben, ohne die Melodie zu verdecken.\n\nDer Wechsel zwischen beiden Rollen sitzt auf einer Takt-Eins. Wer den Breakdown mit Melodie-Denken spielt (zu lang, zu verziert) oder den Refrain mit Breakdown-Denken (zu kurz, zu gedämpft), nimmt beiden Teilen die Wirkung."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Zwei Rollen, ein Bass",
+          "ziel": "Im Breakdown exakt mit Kick und Gitarre einschlagen und unter Leads die Akkordfolge als treibendes Fundament spielen — mit sauberem Wechsel auf der Eins.",
+          "schritte": [
+            "Klick dir ein Breakdown-Kick-Muster bei 100 BPM (oder nimm das Muster aus dem Metalcore-Drums-Baustein). Spiel jeden Kick als gedämpften Ton auf der leeren tiefen Saite — Anfang UND Ende mit der Kick, abgestoppt mit Greif- und Anschlagshand.",
+            "Spiel über dasselbe Tempo die Grundtöne einer Refrain-Folge (etwa C – A♭ – B♭ – C, je zwei Viertel lang) in gleichmäßigen Achteln, ohne Palm Mute. Jeder Ton klingt bis zum nächsten.",
+            "Verbinde beides: vier Takte Lock, auf der Eins harter Wechsel in vier Takte Achtel-Fundament, und zurück. Der erste Ton jedes Teils sitzt exakt auf dem Klick.",
+            "Steigere in 5-BPM-Schritten vom Start bei 100 BPM Richtung Songtempo (Zielbereich 130–150 BPM). Bleib bei einem Tempo, bis der Wechsel dreimal hintereinander sauber gelingt."
+          ],
+          "steigerung": "Ergänze unter dem Lead einzelne Durchgangstöne zwischen den Grundtönen (etwa von A♭ über A nach B♭) — aber nur auf der letzten Achtel vor dem Akkordwechsel: Bewegung, ohne der Melodie in die Quere zu kommen.",
+          "selbstkontrolle": "Nimm dich mit Klick oder Drums auf: Hörst du im Breakdown Bass und Kick als EINEN Schlag, oder kommt der Bass nach? Ist die Stille zwischen den Einschlägen wirklich still? Und im melodischen Teil: Erkennt man ohne Gitarre, welcher Akkord gerade gilt?"
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["C1", "G1", "C2", "F2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 130,
+        "aufloesung": 16,
+        "takte": 2,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 9,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 15,
+            "saite": 4,
+            "bund": 0,
+            "technik": "palm_mute"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 1,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Ein Takt Breakdown-Lock: dieselben gedämpften Einschläge wie die Gitarre, auf der leeren tiefen C-Saite. Dann das Fundament unter der Terz-Linie: die Grundtöne C – A♭ – B♭ – C in klingenden Achteln."
+      }
+    },
+    {
+      "id": "metalcore_drums_feelwechsel",
+      "anzeigetitel": {
+        "de": "Metalcore-Drums: Beat, Half-Time & Breakdown-Becken"
+      },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["metalcore_groove", "halftime_china", "double_bass_patterns"],
+      "erklaerteil": {
+        "de": "Metalcore-Drumming ist weniger eine Frage des Tempos als des Gefühls, das von Teil zu Teil wechselt — bei gleichbleibendem Puls. Die Strophe treibt mit einem geraden Beat: Hi-Hat-Achtel, Snare auf 2 und 4, eine Bassdrum, die die Chugs der Gitarre mitspielt, und kurze Double-Bass-Schübe am Taktende, die in die nächste Eins drücken. Im Refrain öffnet sich das Bild: Ride oder Crash statt Hi-Hat, damit die Clean-Melodie Raum und Schub bekommt.\n\nDann kippt das Feel. Im Half-Time rückt die Snare auf die Drei, das Tempo bleibt, aber alles fühlt sich doppelt so schwer an — der Two-Step-Moment, in dem der Pit zu tanzen beginnt. Im Breakdown wird das Schlagzeug Teil des Riffs: Die Bassdrum spielt jeden Chug, Crash und China markieren die schwersten Einschläge, dazwischen bleibt es leer. Anders als im Deathcore bleiben Metalcore-Breakdowns meist nah am Grundpuls und grooven, statt in extreme Zeitlupe abzustürzen.\n\nDie Kunst liegt in den Nahtstellen: Ein Fill, der in den Breakdown führt, darf kein Tempo kosten, und das erste Becken danach muss exakt mit der Gitarre einschlagen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Ein Puls, drei Gefühle",
+          "ziel": "Zwischen geradem Beat, Half-Time und Breakdown auf den Schlag wechseln, ohne dass das Grundtempo wandert.",
+          "schritte": [
+            "Spiel den geraden Beat (Hi-Hat-Achtel, Snare auf 2 und 4, Kick mit den Gitarren-Akzenten) zum Klick bei 110 BPM. Setz in jedem zweiten Takt eine kurze Double-Bass-Sechzehntelfigur auf Zählzeit 4 als Schub in die nächste Eins.",
+            "Wechsel nach vier Takten ins Half-Time: China auf den Vierteln, Snare nur auf der Drei, Kick reduziert. Zähl laut mit — das Tempo darf sich halbiert anfühlen, der Klick bleibt.",
+            "Übe den Breakdown-Takt einzeln: Kick auf jedem Einschlag eines gedachten Chug-Riffs, Crash auf der Eins, China auf den schwersten Akzenten, dazwischen nichts. Lass kein Becken aus Gewohnheit weiterlaufen.",
+            "Kette alles zur Songform: 4 Takte Beat → 4 Takte Half-Time → 4 Takte Breakdown, mit einem kurzen Fill am Ende jedes Blocks. Steigere vom Start bei 110 BPM in 5er-Schritten Richtung Zielbereich 140–160 BPM — mit Gehörschutz und Pausen zwischen den Durchläufen."
+          ],
+          "steigerung": "Spiel im Refrain-Block Ride oder Crash auf den Vierteln statt der Hi-Hat und hör, wie der Teil breiter wird, ohne schneller zu werden. Oder verschieb einen Breakdown-Einschlag auf eine Sechzehntel-Offbeat-Position und halt ihn trotzdem exakt.",
+          "selbstkontrolle": "Nimm einen Durchlauf zum Klick auf und hör ihn gegen das Metronom: Wirst du im Half-Time langsamer oder im Fill schneller? Sitzt das erste Becken nach dem Fill exakt? Und sind die Breakdown-Lücken wirklich leer, oder schwingt ein Becken hinein, das du nicht abgestoppt hast?"
+        }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "china",
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "hihat_closed",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0]
+          }
+        ],
+        "hinweis": "Takt 1–2 gerader Beat, im zweiten mit Double-Bass-Schub auf der Vier. Takt 3 Half-Time: China auf den Vierteln, Snare auf der Drei. Takt 4 Breakdown: Kick auf jedem Einschlag, Becken auf den schwersten. Gleiches Tempo, drei Gefühle."
+      }
+    },
+    {
+      "id": "metalcore_vocals_refrain",
+      "anzeigetitel": {
+        "de": "Metalcore-Vocals: Scream-Strophe, Clean-Hook"
+      },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["clean_harsh_wechsel", "clean_refrain_hook", "aufwaermen_stimmgesundheit"],
+      "erklaerteil": {
+        "de": "Die typische Rollenverteilung im Metalcore: harsche Strophe, cleaner Refrain, Breakdown wieder harsch. Wie du den einzelnen Wechsel stimmlich löst, zeigt der Baustein zum Clean-Harsh-Wechsel. Hier geht es um den ganzen Song — denn die Belastung entsteht in der Summe: Drei Minuten lang Register wechseln, während die Band laut ist, verführt zum Pressen, und der Refrain kommt immer genau dann, wenn die Stimme gerade aus dem Scream kommt.\n\nDrei Entscheidungen machen das tragfähig. Erstens die Tonlage der Hook: Der Refrain gehört in einen Bereich, den du auch müde noch frei erreichst, nicht an deine Obergrenze. Zweitens der Atemplan: Vor jedem Wechsel braucht es eine Lücke zum Einatmen und Lösen; fehlt sie, wird sie ins Arrangement eingebaut. Drittens die Mikrofonarbeit: nah für Clean, für Screams mit etwas Abstand — dann muss die Stimme nicht gegen die Band anschreien.\n\nDer Gesundheitsrahmen gilt ohne Abstriche: aufwärmen, leise aufbauen, bei Kratzen, Schmerz oder Engegefühl sofort stoppen. Begleite das mit einer Lehrperson für Extreme Vocals; anhaltende Heiserkeit gehört in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Der Song als Atemplan",
+          "ziel": "Einen Ablauf mit Scream-Strophe und Clean-Refrain so planen und singen, dass der Refrain auch im dritten Durchgang frei kommt.",
+          "schritte": [
+            "Wärm die Stimme gründlich auf (Lippenflattern, Summen, sanfte Sirenen), erst dann die verzerrten Ansätze — leise. Ohne Aufwärmen beginnt diese Übung nicht.",
+            "Nimm einen eigenen Songablauf (Strophe – Refrain – Strophe – Refrain – Breakdown – Refrain) und markier im Text jede Stelle, an der du einatmest. Fehlt vor einem Wechsel eine Atemlücke, kürz die Phrase davor oder lass eine Silbe weg.",
+            "Prüf die Tonlage der Hook: Sing den Refrain direkt nach einer Scream-Phrase bei halber Lautstärke. Wird er eng oder kippt er, leg die Melodie tiefer oder ersetze den höchsten Ton — statt ihn zu erzwingen.",
+            "Sing den ganzen Ablauf zu einem Playback in Probe-, nicht in Show-Lautstärke. Mikrofon nah beim Clean, mit etwas Abstand beim Scream.",
+            "Mach nach jedem Durchlauf den Sprechtest und eine echte Pause. Zwei saubere Durchläufe sind das Ziel, nicht zehn."
+          ],
+          "steigerung": "Wenn der Ablauf über Wochen beschwerdefrei sitzt: den letzten Refrain mit mehr Energie gestalten (Dynamik statt Höhe) oder eine zweite Clean-Stimme bzw. Gang-Vocals planen, die die Hauptstimme im Refrain entlasten.",
+          "selbstkontrolle": "Nimm dich auf und vergleich den ersten mit dem letzten Refrain: Klingt der letzte genauso frei — oder enger, heiserer, tiefer intoniert? Ist deine Sprechstimme nach der Einheit unverändert? Bei Kratzen, Schmerz oder Engegefühl sofort stoppen; Heiserkeit, die über einige Tage anhält, HNO-ärztlich abklären lassen."
+        }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "metalcore",
+        "hinweis": "Wie Scream-Strophe und Clean-Hook über einen Song verteilt sind, hörst du in echten Metalcore-Aufnahmen — achte darauf, wo vor den Wechseln die Atemlücken liegen."
+      }
+    },
+    {
+      "id": "metalcore_songform_harmonik",
+      "anzeigetitel": {
+        "de": "Metalcore-Songform: Refrain, Breakdown & Dur-Farbe"
+      },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["songstruktur_breakdown", "spannungsbogen", "moll_phrygisch"],
+      "erklaerteil": {
+        "de": "Metalcore baut seine Songs näher an der Popform als die meisten Extreme-Metal-Stile: Strophe, Pre-Chorus, Refrain, wieder Strophe und Refrain, dann Bridge oder Breakdown, oft ein letzter Refrain. Der Breakdown sitzt an einer festen Stelle — nach dem zweiten Refrain oder als Schluss —, nicht als Ziel des ganzen Songs wie im Deathcore. Der Bogen entsteht aus der Dichte: rhythmische Strophe, ein Pre-Chorus, der mit Half-Time oder Snare-Achteln Druck aufbaut, ein breiter Refrain, ein Breakdown, der alles auf die tiefste Saite reduziert.\n\nHarmonisch lebt der Refrain vom Farbwechsel. Die Strophe steht in Moll, oft phrygisch gefärbt auf der leeren tiefen Saite. Der Refrain bleibt in derselben Tonart, betont aber ihre Dur-Akkorde: In C-Moll sind das die Stufen VI, III und VII (A♭, E♭, B♭). Folgen wie VI–VII–i oder VI–III–VII–i klingen hymnisch, weil sie die Moll-Tonika umkreisen, statt auf ihr zu stehen. Darüber liegt die Clean-Melodie mit langen Tönen, die Gitarren lassen ihre Akkorde klingen statt sie zu dämpfen.\n\nDanach fällt der Breakdown zurück auf die Tonika — der Kontrast aus offenem Refrain und gedämpfter Tiefe trägt den Song."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei Metalcore-Songs vor und schreib ihre Form als Abfolge auf (Strophe, Pre-Chorus, Refrain, Breakdown …), mit ungefährer Taktzahl. Wo sitzt der Breakdown — nach dem zweiten Refrain, am Ende, an mehreren Stellen? Und was passiert unmittelbar davor: ein Bruch, ein Fill, eine Pause?\n\nHör dann auf die Harmonik der Refrains: Bleibt der Grundton der Strophe, oder beginnt der Refrain auf einem anderen Akkord (oft der VI. Stufe)? Klingt er heller, obwohl die Tonart dieselbe ist? Bau danach selbst eine Skizze: eine Strophe in Moll auf der tiefen Saite, einen Refrain über VI–VII–i oder VI–III–VII–i und einen Breakdown, der auf die Tonika zurückfällt. Prüf die Kernfrage: Wirkt der Refrain wie ein Öffnen und der Breakdown wie ein Absturz — oder klingen alle Teile gleich dicht?"
+      }
+    },
+    {
+      "id": "metalcore_studio_live",
+      "anzeigetitel": {
+        "de": "Metalcore-Kopf: Studio-Präzision gegen Live-Energie"
+      },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["kontext_aufnahme_tightness", "kontext_buehne_praesenz", "metronom_prinzip"],
+      "erklaerteil": {
+        "de": "Kaum ein Genre ist so stark von seiner Produktion geprägt wie Metalcore. Aufnahmen entstehen zum Klick, Gitarren werden mehrfach eingespielt, Drums editiert und oft mit Samples verstärkt, das Gate macht jede Pause schwarz. Das Publikum kennt die Songs in genau dieser Fassung und erwartet live etwas, das sich mindestens so tight anfühlt. Gleichzeitig ist eine Metalcore-Show Bewegung pur: springen, laufen, im Breakdown den Pit anheizen. Präzision und Energie ziehen in entgegengesetzte Richtungen.\n\nDie häufigste Falle ist das Adrenalin: Live wird fast jede Band schneller, Breakdowns werden gehetzt, Pausen verkürzt — genau die Stellen, die von Stille leben. Viele Bands spielen deshalb auch live mit Klick im Ohr, manche mit zusätzlichen Spuren (Synths, Gang-Vocals, Gitarren-Layer). Das ist Handwerk, verlangt aber Ehrlichkeit: Die Spuren sollen ergänzen, nicht verdecken, was die Band nicht spielen kann.\n\nDie umgekehrte Falle ist Studio-Perfektionismus im Proberaum. Wer jeden Durchlauf am editierten Album misst, verliert, was live trägt: Ausdruck, Risiko, Präsenz. Ziel ist eine Band, die zum Klick sicher genug sitzt, um sich auf der Bühne bewegen zu dürfen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm eine Probe oder Show von dir oder deiner Band auf (das Handy reicht) und vergleich sie mit eurer Studio- oder Demo-Fassung: Wo seid ihr live schneller geworden? Welche Pausen und Breakdowns sind kürzer oder unruhiger? Miss das Tempo an zwei, drei Stellen nach.\n\nBeantworte dann für dich: Woran misst du deine Leistung — am editierten Album oder an dem, was im Raum ankommt? Wo hilft dir der Klick, wo engt er dich ein? Und wenn ihr mit zusätzlichen Spuren spielt oder es plant: Welche ergänzen nur, und welche ersetzen etwas, das ihr eigentlich selbst spielen müsstet? Leg zum Schluss eine konkrete Regel fest, etwa: „Breakdowns proben wir immer mit Klick, die Bewegung auf der Bühne üben wir im Durchlauf mit.“"
+      }
+    },
+    {
+      "id": "metalcore_sound_staffelung",
+      "anzeigetitel": {
+        "de": "Metalcore-Sound: Gate, Tightness & Tiefenstaffelung"
+      },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["sound_core_tight", "gitarren_sound_architektur", "bass_ton_gear"],
+      "erklaerteil": {
+        "de": "Der moderne Metalcore-Sound ist kein einzelner Gitarrenton, sondern eine Ordnung von Ebenen. Vorne und breit stehen die Rhythmus-Gitarren — mindestens zwei getrennt eingespielte Spuren, links und rechts. In der Mitte die Stimme, schmaler oder etwas dahinter die Harmonie-Leads, ganz hinten cleane Gitarren und Flächen mit Hall. Diese Tiefenstaffelung entscheidet, ob ein Refrain groß klingt oder nur laut: Steht alles gleich nah, verdeckt sich alles gegenseitig.\n\nDie Tightness entsteht schon vor dem Mix. Ein Mittenbuckel-Booster vor der High-Gain-Vorstufe strafft den Bass, bevor er verzerrt wird; das Noise Gate schneidet zwischen den Chugs. Präziser wird es, wenn das Gate sein Steuersignal vom unverzerrten Instrument bekommt und erst hinter der Zerre schaltet — dann folgt es dem Anschlag statt dem Rauschen. Im Mix räumt ein Hochpass die Gitarren unterhalb von etwa 80–100 Hz frei, damit Bassdrum und Bass dort Platz haben.\n\nDer Bass wird oft in zwei Bänder geteilt: unten clean für das Fundament, darüber angezerrt für Kontur. Kick und Bass teilen sich das untere Spektrum bewusst — einer bekommt den Druck, der andere die Tonhöhe."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör zwei moderne Metalcore-Produktionen über Kopfhörer und zeichne für einen Refrain eine Bühne: Was steht vorne, was hinten, was links, rechts oder in der Mitte? Wo sitzen die Rhythmus-Gitarren, wo die Leads, wo Hall und Flächen? Hör dann einen Breakdown: Wie schnell schließt das Gate, und hörst du Bass und Kick als getrennte Ebenen?\n\nGeh danach deine eigene Kette oder Aufnahme durch: Strafft ein Booster vor der Zerre den Bass, oder versuchst du das mit noch mehr Gain? Wo sitzt dein Gate, und woher bekommt es sein Steuersignal? Haben Gitarre und Bass unten jeweils ihren Platz, oder kämpfen sie um dieselben Frequenzen? Notier die eine Ebene, die in deinem Mix am meisten verdeckt wird, und eine konkrete Maßnahme dagegen (Hochpass, Panorama, Hall, Aufteilung des Basses)."
+      }
+    },
+    {
+      "id": "metalcore_koerper_buehne",
+      "anzeigetitel": {
+        "de": "Metalcore-Körper: Bewegung, Ausdauer & Stimme"
+      },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["metalcore"],
+      "voraussetzungen": ["headbangen_nacken", "athletik_grundlage", "stimm_regeneration"],
+      "erklaerteil": {
+        "de": "Eine Metalcore-Show ist auch Sport: Springen auf die Eins des Breakdowns, Laufen über die Bühne, Headbangen im Half-Time, dazu Screams und Clean-Gesang, oft von mehreren Leuten. Das Instrument hängt am Körper, der sich bewegt — und die Präzision, die das Genre verlangt, muss trotzdem halten. Wer nur im Sitzen übt, merkt erst auf der Bühne, wie anders sich ein Riff anfühlt, wenn Puls und Atem hochgehen.\n\nDrei Baustellen. Erstens die Haltung in Bewegung: den Gurt so einstellen, dass das Handgelenk der Greifhand auch im Stehen und Springen nicht stark abknickt; weich aus den Knien landen, nicht steif. Zweitens die Ausdauer: Ein Set ohne Einbruch braucht Grundlagenausdauer und eine Setlist, die die Belastung verteilt — nicht jeder Song mit vollem Körpereinsatz. Drittens die Stimme: Wer springt und singt, braucht eine freie Atmung; beim Aufprall verspannen Bauch und Kehle leicht, gepresste Screams sind die Folge.\n\nDer Rahmen bleibt: Körper und Stimme vorher aufwärmen, Gehörschutz tragen, genug trinken. Bei Schmerz in Handgelenk, Rücken oder Nacken, bei Kratzen oder Heiserkeit sofort stoppen; anhaltende Beschwerden ärztlich oder physiotherapeutisch abklären, die Stimme in der HNO-Praxis."
+      },
+      "reflexionsaufgabe": {
+        "de": "Spiel oder sing drei Songs aus deinem Set einmal so, wie du dich live bewegst — im Stehen, mit Springen, Laufen, Headbangen — und nimm dich dabei auf. Wo leidet die Präzision zuerst: im Breakdown, beim Wechsel ins Lead, im Refrain? Wo geht dir die Luft aus?\n\nBenenne dann für jede der drei Baustellen eine Gewohnheit: für die Haltung etwa die Gurthöhe prüfen, für die Ausdauer eine Setlist, in der ruhigere Songs zwischen den intensivsten stehen, für die Stimme Atemlücken an den Stellen, an denen du springst. Wer die Ausdauer gezielt aufbauen will, holt sich Rat bei einem Coach. Leg außerdem dein Stoppsignal fest: Bei welchem Zeichen (Ziehen im Handgelenk, Stechen im Nacken, Kratzen in der Stimme, Schwindel) hörst du sofort auf, statt weiterzuspielen? Anhaltende Beschwerden gehören in ärztliche Hände, Heiserkeit in die HNO-Praxis."
+      }
+    }
+  ]
+}

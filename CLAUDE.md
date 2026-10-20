@@ -269,7 +269,7 @@ Title/Snippet. `scripts/build_seiten.py` erzeugt deshalb einen **zusätzlichen, 
 Seiten-Layer** unter echten Pfad-URLs, 1:1 auf die Hash-Routen gespiegelt (kein Build-Schritt
 zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artefakt):
 
-- `baustein/<id>/index.html` — je Pool-Baustein (derzeit 509), **nicht** für Fehlerbilder (keine
+- `baustein/<id>/index.html` — je Pool-Baustein (derzeit 541), **nicht** für Fehlerbilder (keine
   eigene Route; sie erscheinen stattdessen als Trainer-Layer-Abschnitt auf der Seite ihres
   Basis-Bausteins).
 - `pfad/stil/<stil>/`, `pfad/kompetenz/<stufe>/`, `pfad/themen/<domaene>/` — Landingpages,

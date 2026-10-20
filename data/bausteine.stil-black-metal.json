@@ -1,0 +1,1491 @@
+{
+  "_meta": {
+    "app": "Metal-Lernhandbuch",
+    "stufe": "fortgeschritten",
+    "domaene": "stil-black-metal",
+    "hinweis": "Genre-Achse Black Metal: acht Bausteine quer durch die Domänen, alle stil:[black_metal] — Tremolo-Flächen mit Bordun, eigene Basslinien, gleichmäßiger Blast mit Tempowechseln, Shrieks im Gesundheitsrahmen, modale Harmonik, Hypnose und Haltung zur Szene (kein NSBM), Lo-Fi gegen klaren Sound (Zerrtypen funktional), Ausdauer für Hand und Fuß. Zwei Bausteine auf Experten-Niveau (Gitarre, Schlagzeug). Zusammen mit den bestehenden black_metal-Bausteinen (tremolo_picking, schnelles_tremolo, blastbeat, sound_black_frost …) trägt sie den Pfad. Kein Vokabular-Block — der stil-Wert liegt in bausteine.einsteiger-gitarre.json."
+  },
+  "delta_bausteine": [],
+  "bausteine": [
+    {
+      "id": "black_tremolo_bordun",
+      "anzeigetitel": { "de": "Black-Metal-Gitarre: Tremolo-Akkorde über offenem Bordun" },
+      "domaene": ["gitarre"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["tremolo_riffing", "schnelles_tremolo"],
+      "erklaerteil": {
+        "de": "Das typische Black-Metal-Riff ist kein Powerchord-Riff, sondern eine Klangfläche: Zwei oder drei Saiten werden im Tremolo angeschlagen, und eine offene Saite klingt als Bordun mit. Die gegriffenen Töne wandern, der offene Ton bleibt stehen — dadurch reibt sich jeder neue Griff anders an ihm. Über Em ist die offene G-Saite die kleine Terz, über C die Quinte, über einem B-Griff die kleine Sexte: dieselbe Saite, drei verschiedene Farben. Daraus entsteht der kalte, schwebende Eindruck, ohne dass ein einziger Ton „falsch“ wäre.\n\nDie schwierigste Stelle ist der Akkordwechsel. Die Anschlaghand läuft ununterbrochen in Sechzehnteln weiter, die Greifhand wechselt exakt auf einem Anschlag — ohne die Lücke, die entsteht, wenn die Finger zu früh abheben, und ohne das Verschmieren, wenn sie zu spät landen. Weil die offene Saite durchklingt, hörst du jeden Fehler sofort: Ein zu früh gelöster Griff lässt für einen Moment nur den Bordun stehen.\n\nDer dritte Punkt ist Ausdauer: Ein solches Riff wirkt erst durch Wiederholung, oft acht- oder sechzehnmal am Stück. Gleichmäßigkeit ist dabei wichtiger als Tempo — eine Fläche, die in Lautstärke oder Dichte schwankt, reißt die Hypnose auf."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Die stehende Saite",
+          "ziel": "Eine Tremolo-Fläche mit offenem Bordun über vier Akkordwechsel ohne Lücke halten — erst im Übungstempo, dann im Zielbereich.",
+          "schritte": [
+            "Greif die vier Formen aus der Demo einzeln (A- und D-Saite gegriffen, G-Saite offen): Em (Bund 7/9), C5 (3/5), Dsus4 (5/7), B mit kleiner Sexte (2/4). Schlag jede Form langsam in Achteln an und hör, wie die offene G-Saite die Farbe des Griffs verändert.",
+            "Stell den Klick auf 100–120 BPM und spiel Sechzehntel-Tremolo, je einen Takt pro Form. Der Wechsel fällt genau auf die Eins: Die Finger der neuen Form landen in demselben Anschlag, in dem die alte sich löst.",
+            "Prüf die Wechselstelle gezielt: Spiel nur die letzte Zählzeit des einen und die erste des nächsten Takts als Schleife, zehnmal. Hörst du kurz nur die offene Saite, löst die Greifhand zu früh.",
+            "Spiel die ganze Folge achtmal ohne Unterbrechung. Ziel ist ein Strom, dessen Lautstärke und Dichte sich zwischen dem ersten und dem achten Durchgang nicht ändert."
+          ],
+          "steigerung": "Steigere das Tempo über Wochen in Schritten von 4–6 BPM Richtung 160–190 BPM (Sechzehntel). Bau danach eigene Folgen: eine andere offene Saite als Bordun (D oder hohe E) und vier Griffe, die sich unterschiedlich an ihr reiben. Wärm die Hände vorher auf; bei Ziehen oder Brennen im Unterarm sofort Pause und Tempo zurück.",
+          "selbstkontrolle": "Nimm einen Durchgang auf und hör die Wechselstellen einzeln ab: Läuft der Strom durch, oder gibt es ein kurzes Loch oder ein Verschmieren zweier Griffe? Klingt der Bordun gleichmäßig mit, oder dämpfst du ihn stellenweise versehentlich ab? Und: Ist der achte Durchgang so gleichmäßig wie der erste?"
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "gitarre",
+        "tuning": ["E2", "A2", "D3", "G3", "B3", "E4"],
+        "saiten_reihenfolge": "6_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 0,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 1,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 2,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 3,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 5,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 7,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 9,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 10,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 11,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 13,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 5,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 4,
+            "bund": 9,
+            "technik": "normal"
+          },
+          {
+            "schritt": 15,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 17,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 18,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 19,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 21,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 23,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 25,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 26,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 27,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 29,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 5,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 31,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 32,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 33,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 33,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 33,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 34,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 34,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 34,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 35,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 35,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 35,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 36,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 36,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 36,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 37,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 37,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 37,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 38,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 38,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 38,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 39,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 39,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 39,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 40,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 40,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 40,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 41,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 41,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 41,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 42,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 42,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 42,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 43,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 43,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 43,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 44,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 44,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 44,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 45,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 45,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 45,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 46,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 46,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 46,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 47,
+            "saite": 5,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 47,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 47,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 48,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 49,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 49,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 49,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 50,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 50,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 50,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 51,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 51,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 51,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 52,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 52,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 52,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 53,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 53,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 53,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 54,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 54,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 54,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 55,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 55,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 55,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 56,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 56,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 56,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 57,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 57,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 57,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 58,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 58,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 58,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 59,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 59,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 59,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 60,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 60,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 60,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 61,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 61,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 61,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 62,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 62,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 62,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 63,
+            "saite": 5,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 63,
+            "saite": 4,
+            "bund": 4,
+            "technik": "normal"
+          },
+          {
+            "schritt": 63,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Sechzehntel-Tremolo über vier Griffe auf A- und D-Saite, die G-Saite klingt offen als Bordun mit: Em, C5, Dsus4, B mit kleiner Sexte. Der Strom reißt an keinem Wechsel ab — nur die Greifhand bewegt sich."
+      }
+    },
+    {
+      "id": "black_bass_eigene_linie",
+      "anzeigetitel": { "de": "Black-Metal-Bass: eigene Linien unter der Wand" },
+      "domaene": ["bass"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["bass_tremolo", "bass_blast_begleitung"],
+      "erklaerteil": {
+        "de": "In vielen Black-Metal-Produktionen ist der Bass kaum zu hören — teils als Klangidee, teils aus Not. Dabei kann gerade er der Tremolo-Wand etwas geben, das ihr fehlt: Kontur. Wenn die Gitarren eine dichte, höhenreiche Fläche aus Sechzehnteln bilden, muss der Bass diese Dichte nicht verdoppeln. Mit längeren Notenwerten — Achteln oder Vierteln — legt er eine eigene, hörbare Linie unter die Fläche.\n\nDas Prinzip kennst du aus dem Kontrapunkt: Auf den Ankerpunkten, der Eins jedes Akkordwechsels, triffst du den Grundton, dazwischen bewegst du dich. Steigt die Gitarre, darfst du fallen; steht sie lange auf einem Griff, führen Durchgangstöne zum nächsten Anker. Weil die Gitarre oft mit offenen Bordunsaiten arbeitet, entscheidet der Bass sogar über die Harmonie mit: Derselbe Gitarrengriff klingt über einem anderen Basston wie ein anderer Akkord.\n\nDie Grenze ist die Verständlichkeit. Zu viele Töne verschwinden im Rauschen der Wand, tiefe Töne ohne Anschlag ebenfalls. Ein Ton mit klarer Attacke, etwas Mittenanteil und gleichmäßiger Lautstärke trägt weiter als eine laute, wummernde Linie. Und wo die Band in den Blast geht, darfst du auch einfach im Tremolo mitlaufen — die eigene Linie ist eine Wahl, keine Pflicht."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Eine Stimme unter der Fläche",
+          "ziel": "Unter einer Tremolo-Folge eine eigene Viertel-Linie spielen, die auf jeder Eins den Grundton trifft und dazwischen eigene Wege geht.",
+          "schritte": [
+            "Nimm die Folge Em – C – D – B (ein Takt pro Akkord) und spiel zuerst nur die Grundtöne als ganze Noten zum Klick bei 100–120 BPM. Das sind deine Anker.",
+            "Füll jeden Takt mit vier Vierteln: Anker auf der Eins, danach Töne aus E-Moll, die zum nächsten Anker führen. Die Demo zeigt eine mögliche Linie; bau danach eine eigene.",
+            "Spiel gegen eine Tremolo-Aufnahme (eigene oder aus der Probe): Bleibt deine Linie hörbar? Wenn nicht, prüf zuerst Anschlag und Mitten, erst dann die Lautstärke.",
+            "Wechsel bewusst die Rolle: vier Takte eigene Linie, vier Takte Sechzehntel-Tremolo mit der Gitarre. Der Wechsel sitzt auf der Eins, ohne dass das Tempo wackelt."
+          ],
+          "steigerung": "Bau eine Gegenbewegung: Wo die Gitarrengriffe steigen, fällt deine Linie und umgekehrt. Färb dann einen stehenden Gitarrengriff durch einen anderen Basston um (etwa C unter einem Em-Griff) und hör, wie sich die Stimmung ändert. Das Tempo steigerst du über Wochen Richtung 150–170 BPM.",
+          "selbstkontrolle": "Nimm Bass und Gitarre zusammen auf: Erkennst du deine Linie auch auf kleinen Lautsprechern? Treffen deine Anker exakt den Akkordwechsel? Und ehrlich: Dient die Linie dem Riff, oder lenkt sie davon ab?"
+        }
+      },
+      "demonstration": {
+        "typ": "tab",
+        "instrument": "bass",
+        "tuning": ["E1", "A1", "D2", "G2"],
+        "saiten_reihenfolge": "4_ist_tiefste",
+        "taktart": "4/4",
+        "bpm": 120,
+        "aufloesung": 8,
+        "takte": 4,
+        "loop": true,
+        "events": [
+          {
+            "schritt": 0,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 2,
+            "saite": 4,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 4,
+            "saite": 4,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 6,
+            "saite": 4,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 8,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 10,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 12,
+            "saite": 3,
+            "bund": 2,
+            "technik": "normal"
+          },
+          {
+            "schritt": 14,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 16,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 18,
+            "saite": 3,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 20,
+            "saite": 3,
+            "bund": 3,
+            "technik": "normal"
+          },
+          {
+            "schritt": 22,
+            "saite": 3,
+            "bund": 0,
+            "technik": "normal"
+          },
+          {
+            "schritt": 24,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal",
+            "betonung": 1
+          },
+          {
+            "schritt": 26,
+            "saite": 4,
+            "bund": 7,
+            "technik": "normal"
+          },
+          {
+            "schritt": 28,
+            "saite": 4,
+            "bund": 5,
+            "technik": "normal"
+          },
+          {
+            "schritt": 30,
+            "saite": 4,
+            "bund": 2,
+            "technik": "normal"
+          }
+        ],
+        "hinweis": "Eine eigene Viertel-Linie unter der Folge Em – C – D – B: Auf jeder Eins steht der Grundton (betont), dazwischen führen Durchgangstöne zum nächsten Anker. Die Gitarre darüber flirrt in Sechzehnteln — der Bass muss das nicht verdoppeln."
+      }
+    },
+    {
+      "id": "black_blast_wechsel",
+      "anzeigetitel": { "de": "Black-Metal-Drums: gleichmäßiger Blast & Wechsel ins Mid-Tempo" },
+      "domaene": ["schlagzeug"],
+      "kompetenzstufe": ["experte"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["blast_ausdauer", "skank_beat", "blast_varianten"],
+      "erklaerteil": {
+        "de": "Im Black Metal ist der Blast weniger Effekt als Untergrund: Er läuft oft minutenlang unter den Tremolo-Flächen und soll dabei nicht nach Anstrengung klingen, sondern nach Rauschen — ein gleichmäßiges Flirren, in dem kein Schlag lauter ist als der andere. Das ist schwerer als ein harter, kurzer Blast. Gleichmäßigkeit über lange Strecken verlangt kleine Bewegungen, niedrige Stockhöhe, lockere Handgelenke und einen Fuß, der aus dem Fußgelenk arbeitet statt aus dem Oberschenkel.\n\nDie zweite Kunst ist der Wechsel. Black-Metal-Songs leben vom Umschalten zwischen Raserei und getragenen Teilen: vom Blast in den Skank (Kick auf den Zählzeiten, Snare dazwischen), von dort in ein Mid-Tempo mit halbem Gefühl, oft mit Becken auf den Vierteln. Das Grundtempo bleibt meist gleich, nur die Dichte ändert sich. Wer beim Wechsel unbemerkt langsamer oder schneller wird, zerstört genau den Effekt, auf den der Song hinarbeitet.\n\nFür die Ausdauer gilt: Die Länge wächst über Wochen, nicht in einer Session. Atem weiterlaufen lassen, Schultern locker, Gehörschutz tragen. Bei Schmerz, Taubheit oder Kribbeln in Händen, Unterarmen oder Fußgelenken sofort stoppen, und anhaltende Beschwerden ärztlich oder physiotherapeutisch abklären lassen."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Rauschen, dann atmen",
+          "ziel": "Einen Blast mit gleichmäßiger Lautstärke halten und im selben Grundtempo über den Skank ins Mid-Tempo und zurück wechseln.",
+          "schritte": [
+            "Wärm Hände, Unterarme und Fußgelenke einige Minuten mit langsamen Einzelschlägen und lockeren Grooves auf. Dann Blast bei 120–140 BPM (Sechzehntel): Stockhöhe niedrig, Snare und Kick gleich laut. Nimm auf und hör, ob einzelne Schläge herausstechen.",
+            "Spiel die Demo-Folge im selben Tempo: zwei Takte Blast, ein Takt Skank, ein Takt Mid-Tempo mit der Snare auf der Drei. Der Crash markiert jeden Wechsel, der Klick läuft durch.",
+            "Verlängere die Blast-Strecke schrittweise auf 4, 8 und 16 Takte, jeweils gefolgt von vier Takten Mid-Tempo zur Erholung. Die nächste Länge kommt erst, wenn die vorige locker sitzt — über Wochen, nicht in einer Session.",
+            "Achte in jedem Blast-Block auf Atem und Schultern: Hältst du die Luft an oder ziehen die Schultern hoch, ist der Block zu lang oder zu schnell."
+          ],
+          "steigerung": "Steigere das Blast-Tempo in kleinen Schritten (4–6 BPM pro Woche) Richtung 180–200 BPM und darüber, aber nur so weit, wie die Lautstärke gleichmäßig bleibt. Variiere die Hand (Hi-Hat, Ride, Ride-Kuppe) und spring auch direkt vom Blast ins Mid-Tempo, ohne den Skank dazwischen.",
+          "selbstkontrolle": "Hör die Aufnahme mit geschlossenen Augen: Klingt der Blast wie ein gleichmäßiges Rauschen oder wie eine Folge einzelner Schläge? Sitzt der Klick nach jedem Wechsel noch exakt? Und nach dem längsten Block: Bist du müde, aber locker — oder spürst du Ziehen oder Taubheit? Dann sofort Schluss und beim nächsten Mal kürzer."
+        }
+      },
+      "demonstration": {
+        "typ": "pattern",
+        "taktart": "4/4",
+        "bpm": 140,
+        "aufloesung": 16,
+        "takte": 4,
+        "loop": true,
+        "spuren": [
+          {
+            "instrument": "crash",
+            "schritte": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "ride",
+            "schritte": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+          },
+          {
+            "instrument": "hihat_closed",
+            "schritte": [0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "snare",
+            "schritte": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+          },
+          {
+            "instrument": "kick",
+            "schritte": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+          }
+        ],
+        "hinweis": "Zwei Takte Traditional Blast, ein Takt Skank, ein Takt Mid-Tempo mit der Snare auf der Drei — alles im selben Grundtempo, nur die Dichte ändert sich. Der Crash markiert jeden Wechsel."
+      }
+    },
+    {
+      "id": "black_shriek_luft",
+      "anzeigetitel": { "de": "Black-Metal-Vocals: Shrieks aus Luft und Kopfresonanz" },
+      "domaene": ["gesang"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["scream_hoehe", "harsh_stile_ueberblick"],
+      "erklaerteil": {
+        "de": "Der typische Black-Metal-Gesang ist hoch, rau und dünn: ein Shriek, der eher kratzt und zischt als dröhnt. Er klingt nach äußerster Anstrengung — und verführt deshalb dazu, ihn mit Druck aus dem Hals zu erzeugen. Das ist der schnellste Weg zur Heiserkeit. Gesund entsteht die Verzerrung aus Luft und Resonanz: ein gleichmäßiger, gestützter Luftstrom, ein heller, nach vorn-oben gerichteter Klangsitz und ein Ansatz, der auf dem Fry oder dem False-Cord-Prinzip aufbaut, statt die Stimmlippen zusammenzupressen.\n\nFür den Black-Metal-Charakter zählen drei Stellgrößen. Die Vokalfarbe: Helle Vokale (Richtung „i“, „e“, „ä“) machen den Klang schneidend, dunkle machen ihn breiter. Der Luftanteil: Mehr hörbare Luft ergibt das zischende, geisterhafte Timbre vieler Black-Metal-Stimmen und schont zugleich. Die Phrasenlänge: Lange Linien über Tremolo-Flächen brauchen eine Atemplanung, sonst wird am Phrasenende gepresst.\n\nDer Gesundheitsrahmen gilt ohne Abstriche: immer aufwärmen, leise beginnen, nie in Heiserkeit hinein üben, bei Kratzen, Brennen oder Engegefühl sofort stoppen. Hohe Extreme Vocals lernst du am besten an der Seite einer erfahrenen Lehrperson, und anhaltende Heiserkeit oder Schmerzen gehören in die HNO-Praxis."
+      },
+      "uebungsteil": {
+        "de": {
+          "titel": "Hoch, hell, ohne Druck",
+          "ziel": "Einen hohen Shriek aus Luft und Kopfresonanz leise und beschwerdefrei aufbauen und in längere Phrasen über eine Tremolo-Fläche bringen.",
+          "schritte": [
+            "Wärm die Stimme gründlich auf: Lippenflattern, Summen, leichte Sirenen von unten nach oben. Erst danach kommen verzerrte Klänge.",
+            "Erzeug auf einem hellen Vokal („e“ oder „ä“) einen leisen, luftigen Fry-Klang und lass ihn nach vorn-oben wandern. Halte die Lautstärke gering — es geht um den Sitz, nicht um Kraft.",
+            "Spiel mit dem Luftanteil: dieselbe Silbe einmal kerniger, einmal mit mehr hörbarer Luft. Merk dir die Fassung, die sich am leichtesten anfühlt — oft ist es die luftigere.",
+            "Leg kurze Phrasen über eine langsame Tremolo-Fläche (Aufnahme oder Loop um 80–100 BPM). Atme vor jeder Phrase bewusst ein und hör auf, bevor die Luft ausgeht. Pressen am Phrasenende heißt: Phrase kürzen."
+          ],
+          "steigerung": "Verlängere die Phrasen über Wochen, nicht in einer Session, und erhöh die Lautstärke erst, wenn der leise Klang mühelos bleibt. Nimm dann Silben mit Konsonanten dazu — ein Text soll verständlich bleiben, ohne dass der Klang kippt.",
+          "selbstkontrolle": "Nach jeder kurzen Einheit der Sprechtest: Klingt deine Alltagsstimme frei und klar? Kratzt es, brennt es oder wird es eng, hörst du sofort auf. Hält eine Heiserkeit länger als ein paar Tage an, lass sie in einer HNO-Praxis abklären, statt weiterzuüben."
+        }
+      },
+      "demonstration": {
+        "typ": "hoerbeispiel",
+        "verweis_genre": "black_metal",
+        "hinweis": "Hohe, luftige Shrieks über Tremolo-Flächen hörst du im Black Metal in vielen Spielarten. Achte beim Hören auf den Luftanteil, nicht auf die Lautstärke."
+      }
+    },
+    {
+      "id": "black_harmonik_flaechen",
+      "anzeigetitel": { "de": "Black-Metal-Harmonik: dunkle Modi & Bordun" },
+      "domaene": ["theorie"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["moll_phrygisch", "modi_im_metal", "tritonus_dissonanz"],
+      "erklaerteil": {
+        "de": "Die Harmonik des Black Metal ist meist modal statt funktional: Statt Spannungsakkorden, die zur Tonika drängen, stehen Klangfarben nebeneinander. Die Grundfarbe ist natürliches Moll (Äolisch). Phrygisch verdunkelt sie mit der kleinen Sekunde über dem Grundton, Lokrisch geht weiter und ersetzt die reine Quinte durch die verminderte — damit fehlt der stabile Ruhepunkt, und die Musik klingt, als stünde sie nie fest. Typisch sind Folgen, die in Halbtönen oder kleinen Terzen wandern, etwa ein Moll-Akkord, der einen Halbton aufwärts und wieder zurück rückt.\n\nWeil die Gitarren oft mit Tremolo-Flächen und offenen Saiten spielen, entsteht Harmonik zusätzlich aus dem Bordun: Ein stehender Ton bleibt über wechselnden Griffen liegen und wird mal Grundton, mal Terz, mal Reibung. Aus zwei Gitarrenstimmen, die gegeneinander laufen, und einem Bass mit eigenen Tönen ergeben sich Klänge, die niemand gegriffen hat. Eine Tremolo-Fläche ist harmonisch mehr als die Summe ihrer Griffe.\n\nDie Wirkung beruht auf Dauer. Eine Reibung, die im Death Metal ein kurzer Durchgang wäre, wird hier über Takte ausgehalten — Dissonanz als Atmosphäre. Darum lohnt es sich, die Intervalle der eigenen Riffs zu kennen: Wer weiß, welche Reibung trägt, kann sie gezielt setzen."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm dir zwei Black-Metal-Stücke vor und hör auf die Flächen statt auf die Melodie: Steht ein Ton dauerhaft (Bordun), während sich die Griffe darüber ändern? Wandern die Akkorde in Halbtönen, in kleinen Terzen, oder folgen sie einer Moll-Kadenz? Klingt der Grundton stabil (Äolisch), bedrohlich eng (Phrygisch) oder ungeerdet (Lokrisch)?\n\nBau dann selbst eine Folge aus vier Griffen über einem stehenden Ton, etwa der offenen G-Saite. Bestimm für jeden Griff, welches Intervall der Bordun dazu bildet (Grundton, Sekunde, Terz, Quinte, Sexte), und notier, welcher Griff die stärkste Reibung erzeugt. Die Kernfrage: Trägt die Reibung über acht Wiederholungen — oder nutzt sie sich ab? Wenn sie sich abnutzt, ändere nicht das Tempo, sondern den Griff."
+      }
+    },
+    {
+      "id": "black_hypnose_haltung",
+      "anzeigetitel": { "de": "Black-Metal-Haltung: Hypnose durch Wiederholung, klare Kante" },
+      "domaene": ["mentales"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["motiv_und_wiederholung", "rechte_codes_erkennen"],
+      "erklaerteil": {
+        "de": "Black Metal arbeitet mit einem Mittel, das anderswo als Fehler gilt: Monotonie. Ein Riff läuft zehn-, zwanzigmal, der Blast minutenlang, die Harmonik bewegt sich kaum. Bewusst eingesetzt entsteht daraus ein Sog — das Ohr hört irgendwann keine einzelnen Töne mehr, sondern einen Zustand. Unbewusst eingesetzt entsteht Langeweile. Den Unterschied machen kleine Entscheidungen: Wann kommt eine zweite Gitarrenstimme dazu, wann wechselt das Becken, wann bricht die Fläche ins Mid-Tempo? Für die Spielenden ist Hypnose zudem Konzentrationsarbeit: lange gleichmäßig bleiben, ohne zu beschleunigen oder abzuschalten.\n\nZur Haltung gehört auch die Szene. Die frühe Geschichte des Genres ist mit Brandanschlägen und Morden verbunden — daran gibt es nichts zu verklären. Und bis heute existiert eine rechtsextreme Strömung, die sich National Socialist Black Metal (NSBM) nennt. Das ist keine Spielart unter vielen, sondern menschenverachtende Ideologie mit Musik als Transportmittel: kein Platz für Faschos, auch nicht „nur wegen der Musik“.\n\nDie Klangsprache gehört niemandem, du musst das Genre nicht meiden. Aber es lohnt sich, genau hinzusehen, mit wem du spielst, auf welchen Labels und Konzerten — und deine Position klar zu haben, bevor die Frage praktisch wird."
+      },
+      "reflexionsaufgabe": {
+        "de": "Nimm ein langes Black-Metal-Stück oder ein eigenes Riff, das du sechzehnmal wiederholst, und beobachte, wann es kippt: Ab welcher Wiederholung wird es zum Sog, ab welcher langweilig? Notier, welche kleinen Veränderungen (zweite Stimme, Beckenwechsel, Dynamik, Bruch ins Mid-Tempo) den Zustand verlängern, ohne ihn zu zerstören. Und bei dir selbst: Bleibst du über lange Strecken gleichmäßig, oder beschleunigst du, sobald die Aufmerksamkeit nachlässt?\n\nDann die Haltungsfrage, ehrlich beantwortet: Weißt du, auf welchen Labels die Bands erscheinen, die du hörst, und mit wem sie Konzerte teilen? Was würdest du — allein oder als Band — tun, wenn ihr ein Angebot bekommt, mit einer Band aus dem rechten Spektrum zu spielen? Schreibt eure Position auf, bevor die Frage praktisch wird, und sprecht sie innerhalb der Band ab."
+      }
+    },
+    {
+      "id": "black_sound_lofi_hell",
+      "anzeigetitel": { "de": "Black-Metal-Sound: Lo-Fi-Rauschen oder klare Höhen" },
+      "domaene": ["ausruestung"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["sound_black_frost", "verzerrer_typen"],
+      "erklaerteil": {
+        "de": "Beim Black-Metal-Sound gibt es zwei Pole, und beide sind gültig. Der Lo-Fi-Pol klingt rau, rauschig und eng: wenig Tiefbass, hörbares Grundrauschen, Mitten, die eher kratzen als drücken, oft eine Aufnahme, in der der Raum mitklingt. Der helle, moderne Pol klingt klar und breit: Die Höhen bleiben offen und definiert, die Tremolo-Flächen durchhörbar, Bass und Schlagzeug haben Kontur. Entscheidend ist, dass du die Wahl bewusst triffst — Lo-Fi aus Versehen klingt nicht nach Absicht, sondern nach kaputtem Kabel.\n\nBei der Zerre zählt die Bauart, nicht das Modell. Eine Dioden-gegen-Masse-Distortion liefert den kantigen, höhenreichen Grundcharakter; ein Höhen-Booster davor macht ihn spitzer, nimmt aber Fülle. Fuzz-Bauarten bringen für eine kalte Fläche oft zu viel Tiefbass und Breite, eine mehrstufige High-Gain-Distortion klingt schnell modern-komprimiert. Für das Tremolo ist weniger Gain häufig mehr: Bei zu viel Sättigung verschwimmen die Anschläge zu Brei, dabei soll gerade die Bewegung hörbar bleiben.\n\nDie übrigen Stellschrauben: Tiefbass vor der Zerre absenken, damit die Fläche nicht mulmt; die Mitten nicht ganz herausnehmen, sonst verschwindet die Gitarre im Bandkontext; Hall und Raum dosieren — sie machen weit, schlucken aber Kontur."
+      },
+      "reflexionsaufgabe": {
+        "de": "Hör zwei Black-Metal-Produktionen nacheinander, eine rohe, rauschige und eine klare, moderne. Beschreib für beide: Wie viel Tiefbass hat die Gitarre? Sind die einzelnen Tremolo-Anschläge hörbar oder verschmelzen sie? Wie weit klingt der Raum, und wo bleibt der Bass?\n\nEntscheide dann für dein eigenes Projekt, welchem Pol du dich nähern willst, und begründe es mit der Musik, nicht mit dem Image. Geh deine Kette durch: Welche Zerr-Bauart nutzt du, und wie viel Gain brauchst du wirklich? Nimm dasselbe Tremolo-Riff einmal mit deiner üblichen Einstellung und einmal mit deutlich weniger Gain auf und vergleich, welche Fassung die Bewegung besser trägt. Notier die eine Stellschraube — Gain, Tiefbass, Mitten oder Raum —, die deinen Ton am stärksten in die gewollte Richtung bringt."
+      }
+    },
+    {
+      "id": "black_ausdauer_hand_fuss",
+      "anzeigetitel": { "de": "Black-Metal-Körper: Ausdauer für Tremolo-Hand und Blast-Fuß" },
+      "domaene": ["koerper"],
+      "kompetenzstufe": ["fortgeschritten"],
+      "typ": "micro",
+      "stil": ["black_metal"],
+      "voraussetzungen": ["handgesundheit_tempo", "ueberlastung_praevention", "aufwaermen_gesundheit"],
+      "erklaerteil": {
+        "de": "Black Metal belastet den Körper anders als Stile mit kurzen, harten Spitzen: Die Last ist lang und gleichförmig. Die Tremolo-Hand macht über Minuten dieselbe kleine Bewegung, der Fuß am Blast oder an der Double Bass ebenso, dazu kommen oft hohe Screams über lange Phrasen. Solche Dauerbelastungen summieren sich unbemerkt, weil im Moment selten etwas wehtut — Sehnenreizungen in Unterarm und Handgelenk oder Beschwerden an Schienbein und Fußgelenk entstehen schleichend.\n\nDrei Prinzipien schützen. Erstens Ökonomie: Das Tremolo kommt aus einer kleinen, lockeren Bewegung, nicht aus einer verkrampften Faust; der Blast-Fuß arbeitet aus dem Fußgelenk mit Rückprall statt mit Kraft aus dem Oberschenkel. Spannung ist der Feind der Ausdauer — sie macht langsamer und belastet mehr. Zweitens Dosierung: lange Passagen in Blöcken aufbauen, mit echten Pausen dazwischen, und die Blocklänge über Wochen steigern, nicht in einer Session. Drittens Vorbereitung und Erholung: vor jedem schnellen Spiel aufwärmen, danach lockern, an Probentagen genug trinken und schlafen.\n\nDie Stoppsignale sind eindeutig: Ziehen, Brennen, Stechen, Taubheit oder Kribbeln heißt sofort aufhören, nicht durchspielen. Hält es an, lass es ärztlich oder physiotherapeutisch abklären — früh, bevor aus einer Reizung eine lange Zwangspause wird."
+      },
+      "reflexionsaufgabe": {
+        "de": "Beobachte dich bei deiner nächsten langen Black-Metal-Passage, am besten per Video: Wird die Tremolo-Hand im Lauf der Minuten fester? Wandert die Bewegung vom Handgelenk in den ganzen Arm, ziehen die Schultern hoch, hältst du die Luft an? Am Schlagzeug: Arbeitet der Fuß noch aus dem Fußgelenk, oder drückst du zunehmend aus dem Bein?\n\nPlan dann deine Übeeinheit neu: Wie wärmst du auf, wie lang ist ein Block, wie lang die Pause, und um wie viel wächst die Blocklänge pro Woche? Leg außerdem dein persönliches Stoppsignal fest — das Zeichen, bei dem du sofort aufhörst, statt weiterzuspielen — und schreib es auf. Klingen Beschwerden nach ein paar Tagen Pause nicht ab, lass sie ärztlich abklären."
+      }
+    }
+  ]
+}
