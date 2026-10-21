@@ -29,11 +29,6 @@
   "generation_id": "z7TswRu0dKgZPxB5uHyp",
   "modell": "eleven_text_to_sound_v2"
  },
- "bass-gedaempft-g1": {
-  "prompt": "Single short staccato note on an electric bass guitar, picked with a plectrum, palm muted at the bridge, deep low note, quick dead decay, one hit only, dry DI",
-  "generation_id": "WVfG4yxgugZifoWeH4ve",
-  "modell": "eleven_text_to_sound_v2"
- },
  "beispiele/amp-brummen": {
   "prompt": "Electric guitar amplifier mains hum, steady 50 Hz electrical buzz from a European power grid, ground loop hum with its 100 Hz harmonic, amp switched on and idle, nobody playing, no guitar notes, constant and even, close microphone in a rehearsal room",
   "generation_id": "JH2pW2VbJog3JhKfEmmk",
@@ -261,11 +256,6 @@
   "generation_id": "qUtKfi40DQP3d3sCse72",
   "modell": "eleven_text_to_sound_v2"
  },
- "gitarre-chug-b2": {
-  "prompt": "Single palm-muted chug on a distorted electric guitar, low E string, tight short metal chug, one hit, dry",
-  "generation_id": "ZY5wuMVOvtQspB5IeI3S",
-  "modell": "eleven_text_to_sound_v2"
- },
  "gitarre-chug-e2": {
   "prompt": "Single palm-muted chug on a high-gain distorted electric guitar, heavy metal, tight and percussive, open low E string, note E2, one short hit, no chord, no drums, dry amp",
   "generation_id": "1aSoK2SoqhCsiMsUilTW",
@@ -274,11 +264,6 @@
  "gitarre-clean-a2": {
   "prompt": "Single note A2 plucked on a steel-string acoustic guitar, open A string (5th string), picked with a plectrum, bright woody guitar tone with audible string attack and fret buzz, natural sustain ringing out, one note only, no chord, no piano, no keyboard, dry close-mic",
   "generation_id": "IXTokaYjRJOmwNMAl29p",
-  "modell": "eleven_text_to_sound_v2"
- },
- "gitarre-clean-a3": {
-  "prompt": "Single clean electric guitar note, plucked, clear sustained tone, one note only, no chord, dry",
-  "generation_id": "OUyow9r7OYJnopFIswJT",
   "modell": "eleven_text_to_sound_v2"
  },
  "gitarre-clean-b3": {
