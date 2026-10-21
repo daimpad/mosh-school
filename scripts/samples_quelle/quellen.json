@@ -205,6 +205,11 @@
   "generation_id": "RlAOXxilTBt1YlXeFBHY",
   "modell": "eleven_text_to_sound_v2"
  },
+ "beispiele/sirene": {
+  "prompt": "A singer's vocal warm-up siren on a hummed 'nnng', like a slow ambulance siren sung by a human: one up-and-down sweep, the voice slides continuously without any separate notes from a low pitch up to a high pitch an octave above, then slides continuously back down, ending low, smooth portamento glide, gentle and relaxed, solo human voice, dry, no music",
+  "generation_id": "LVaUnnDLNEO8MvtalVpa",
+  "modell": "eleven_text_to_sound_v2"
+ },
  "beispiele/slide-ab": {
   "prompt": "Distorted electric guitar slide down: one picked note on a single string, the fretting finger slides smoothly from the 12th fret down to the 1st fret, pitch falling continuously, solo guitar, no drums, dry [duration_seconds 2, prompt_influence 0.6]",
   "generation_id": "rP5B0kNhe1j5xpfFip2R",

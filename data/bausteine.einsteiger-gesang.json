@@ -106,7 +106,7 @@
     },
     {
       "id": "stimmuebungen_sanft",
-      "klangbeispiele": ["lippenflattern"],
+      "klangbeispiele": ["lippenflattern", "sirene"],
       "anzeigetitel": {
         "de": "Sanfte Stimmübungen"
       },
