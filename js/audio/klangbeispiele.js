@@ -60,6 +60,7 @@ export const BEISPIELE = {
   pick_scrape: { datei: 'pick-scrape.mp3', ab: 0, dauer: 1.0, pegel: 1 },
   bass_verzerrt_e1: { datei: 'bass-fuzz-e1.mp3', ab: 0, dauer: 2.0, pegel: 0.32 },
   bass_verzerrt_a1: { datei: 'bass-fuzz-a1.mp3', ab: 0, dauer: 2.3, pegel: 0.41 },
+  sirene: { datei: 'sirene.mp3', ab: 0, dauer: 4.9, pegel: 1.72 },
   slide_ab: { datei: 'slide-ab.mp3', ab: 0, dauer: 2, pegel: 0.41 },
 };
 
