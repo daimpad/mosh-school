@@ -18,8 +18,11 @@ in die Hash-Route ("In ZERRER ueben").
 Buildfrei, nur Standardbibliothek. Generiertes Artefakt (wie data/index.json/
 data/grafiken.json) — wird eingecheckt, kein Build-Schritt beim Deploy.
 Quellen: js/daten.js (INHALTSDATEIEN), data/bausteine.*.json, data/labels/
-de.json, data/genres.json, data/fehlerbilder.json.
+de.json, data/genres.json, data/patterns.json, data/tunings.json,
+data/fehlerbilder.json.
 """
+import datetime
+import hashlib
 import html
 import json
 import os
@@ -159,6 +162,8 @@ VOKABELN = LABELS.get('vokabeln', {})
 UI = LABELS.get('ui', {})
 
 GENRES = lade('data/genres.json').get('genres', {})
+PATTERNS = lade('data/patterns.json').get('patterns', [])
+STIMMUNGEN = lade('data/tunings.json').get('stimmungen', [])
 
 FB_VON_BASIS = {}
 for _fb in lade('data/fehlerbilder.json').get('fehlerbild_bausteine', []):
@@ -938,6 +943,85 @@ AUGENBRAUE = {'stil': 'Genre', 'kompetenz': 'Könnensstufe', 'themen': 'Thema'}
 SEO_BESCHREIBUNG = {'kompetenz': 'seo_beschreibung_kompetenz', 'themen': 'seo_beschreibung_themen'}
 
 
+# Reihenfolge der Einordnungs-Zeilen: gelesen, nicht kopiert (wie INSTRUMENTE).
+EINORDNUNG = js_liste('js/genre-inszenierung.js', 'EINORDNUNG')
+
+
+def genre_inszenierung_html(stil, tiefe):
+    """Port von `genreInszenierungHtml` (js/genre-inszenierung.js): Einordnung,
+    Klischees, verwandte Stile — dieselben Klassen, dieselben Labels.
+
+    Bis hierhin trug die statische Genre-Seite nur den Kurztext und die Liste —
+    bei kleinen Genres 50 bis 90 Woerter. Google hat solche Seiten als
+    „Gecrawlt – zurzeit nicht indexiert" liegen lassen, obwohl die App zu jedem
+    Genre eine ausfuehrliche Einordnung zeigt. Weggelassen ist nur das
+    dekorative Speichen-SVG (aria-hidden, kein Inhalt).
+    """
+    g = GENRES.get(stil) or {}
+    ein = g.get('einordnung') or {}
+    zeilen = ''.join(
+        f'<div class="genre-ein-zeile"><dt class="genre-ein-titel">{esc(uitext("genre_ein_" + f))}</dt>'
+        f'<dd class="genre-ein-text">{esc(ein[f])}</dd></div>'
+        for f in EINORDNUNG if ein.get(f)
+    )
+    teile = []
+    if zeilen:
+        teile.append(f'<section class="genre-einordnung"><h2 class="genre-abschnitt-titel">'
+                     f'{esc(uitext("genre_einordnung_titel"))}</h2><dl class="genre-ein-liste">{zeilen}</dl></section>')
+    klischees = [k for k in g.get('klischees') or [] if k]
+    if klischees:
+        teile.append(
+            f'<section class="genre-klischees"><h2 class="genre-abschnitt-titel">{esc(uitext("genre_klischees_titel"))}</h2>'
+            f'<p class="leise">{esc(uitext("genre_klischees_intro"))}</p><ul class="genre-klischee-liste">'
+            + ''.join(f'<li class="genre-klischee">{esc(k)}</li>' for k in klischees) + '</ul></section>')
+    verwandt = [v for v in g.get('verwandt') or [] if v in GENRES]
+    if verwandt:
+        chips = ''.join(f'<a class="chip genre-verwandt-chip" href="{wurzel(tiefe)}pfad/stil/{esc(v)}/">'
+                        f'{esc(label_vok("stil", v))}</a>' for v in verwandt)
+        teile.append(
+            f'<section class="genre-verwandt"><h2 class="genre-abschnitt-titel">{esc(uitext("genre_verwandt_titel"))}</h2>'
+            f'<div class="genre-verwandt-text"><p class="leise">{esc(uitext("genre_verwandt_intro"))}</p>'
+            f'<div class="genre-verwandt-chips">{chips}</div></div></section>')
+    return f'<div class="genre-inszenierung">{"".join(teile)}</div>' if teile else ''
+
+
+def genre_patterns_html(stil, titel, tiefe):
+    """Die Patterns des Genres (Riffs, Beats, Basslinien) als lesbarer Abschnitt.
+    Abspielen geht nur in der App — der Link fuehrt mit Genre-Vorauswahl hinein."""
+    eintraege = [p for p in PATTERNS if p.get('genre') == stil]
+    if not eintraege:
+        return ''
+    zeilen = ''.join(
+        f'<p><strong>{esc(p["titel"]["de"])}</strong> '
+        f'<span class="leise">· {esc(label_vok("domaene", p["domaene"]))}'
+        + (f' · {esc(uitext("pattern_bpm").replace("{n}", str(p["bpm"])))}' if p.get('bpm') else '') + '</span>'
+        + (f'<br>{esc(p["hinweis"]["de"])}' if (p.get('hinweis') or {}).get('de') else '')
+        + '</p>'
+        for p in eintraege
+    )
+    return (f'<section class="genre-patterns"><h2 class="genre-abschnitt-titel">{esc(uitext("seo_genre_patterns_titel"))}</h2>'
+            f'<p class="leise">{esc(uitext("seo_genre_patterns_intro").replace("{titel}", titel))}</p>'
+            f'{zeilen}'
+            f'<p><a href="{wurzel(tiefe)}#/patterns/{esc(stil)}">{esc(uitext("seo_genre_patterns_link"))}</a></p></section>')
+
+
+def genre_stimmungen_html(stil, titel, tiefe):
+    """Die Stimmungen aus data/tunings.json, die diesem Genre zugeordnet sind."""
+    eintraege = [s for s in STIMMUNGEN if stil in (s.get('genres') or [])]
+    if not eintraege:
+        return ''
+    zeilen = ''.join(
+        f'<p><strong>{esc(label_vok("stimmung", s["id"]))}</strong> '
+        f'<span class="leise">· {esc(label_vok("domaene", s["instrument"]))}</span><br>'
+        f'{esc(" ".join(s.get("saiten") or []))}</p>'
+        for s in eintraege
+    )
+    return (f'<section class="genre-stimmungen"><h2 class="genre-abschnitt-titel">{esc(uitext("seo_genre_stimmungen_titel"))}</h2>'
+            f'<p class="leise">{esc(uitext("seo_genre_stimmungen_intro").replace("{titel}", titel))}</p>'
+            f'{zeilen}'
+            f'<p><a href="{wurzel(tiefe)}#/stimmungen">{esc(uitext("seo_genre_stimmungen_link"))}</a></p></section>')
+
+
 def landing_html(art, schluessel, titel, blurb, mitglieder):
     tiefe = 3  # pfad/<art>/<schluessel>/index.html
     if blurb:
@@ -952,11 +1036,24 @@ def landing_html(art, schluessel, titel, blurb, mitglieder):
     # beim schlichten Namen, nur Kopftitel und JSON-LD bekommen den Zusatz.
     kopftitel = uitext('seo_themen_titel').replace('{titel}', titel) if art == 'themen' else titel
     hue = domaene_hue(schluessel) if art == 'themen' else 'pf-blau'
-    body = (
-        landing_hero(tiefe, f'{art}:{schluessel}', AUGENBRAUE.get(art, ''), titel, blurb, hue)
-        + f'<p class="leise">{len(mitglieder)} Bausteine</p>'
-        + stationsliste(mitglieder, tiefe)
-    )
+    if art == 'stil':
+        # Aufbau wie die App-Seite: Einordnung vor der Liste, die Liste mit
+        # eigener Ueberschrift; danach, was die App in Patterns/Tunings zeigt.
+        body = (
+            landing_hero(tiefe, f'{art}:{schluessel}', AUGENBRAUE.get(art, ''), titel, blurb, hue)
+            + genre_inszenierung_html(schluessel, tiefe)
+            + f'<h2 class="abschnitt-titel genre-bausteine-titel">{esc(uitext("genre_bausteine_titel"))}</h2>'
+            + f'<p class="leise">{len(mitglieder)} Bausteine</p>'
+            + stationsliste(mitglieder, tiefe)
+            + genre_patterns_html(schluessel, titel, tiefe)
+            + genre_stimmungen_html(schluessel, titel, tiefe)
+        )
+    else:
+        body = (
+            landing_hero(tiefe, f'{art}:{schluessel}', AUGENBRAUE.get(art, ''), titel, blurb, hue)
+            + f'<p class="leise">{len(mitglieder)} Bausteine</p>'
+            + stationsliste(mitglieder, tiefe)
+        )
     jsonld = {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
@@ -997,10 +1094,52 @@ def hub_html(art, titel, beschreibung, eintraege):
 # Sitemap
 # ---------------------------------------------------------------------------
 
-def sitemap_xml(pfade_prioritaet):
-    zeilen = ['<url><loc>' + SITE + '/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>']
-    for pfad, prio in pfade_prioritaet:
-        zeilen.append(f'<url><loc>{SITE}/{pfad}</loc><changefreq>monthly</changefreq><priority>{prio}</priority></url>')
+# lastmod: das Datum, an dem sich der INHALT einer Seite zuletzt geaendert hat.
+#
+# Ohne lastmod hat Google keinen Hinweis, welche der ~580 Seiten neu gelesen
+# werden sollte, und arbeitet sie nach eigenem Takt ab. Ein lastmod, das bei
+# jedem Bau auf „heute" springt, waere schlimmer als keins: Google lernt, dass
+# die Angabe nichts bedeutet, und ignoriert sie dann fuer die ganze Domain.
+#
+# Deshalb fuehrt STAND_DATEI je Adresse einen Hash und das Datum, an dem dieser
+# Hash zuletzt wechselte. Gehasht werden nur Titel, Beschreibung und <main> —
+# eine Aenderung an der Fusszeile betrifft alle Seiten gleich und ist kein
+# neuer Inhalt. --check rechnet den Stand mit und meldet Drift wie bei jeder
+# anderen generierten Datei; reproduzierbar bleibt er, weil ein unveraenderter
+# Hash sein altes Datum behaelt.
+STAND_DATEI = 'scripts/seiten_stand.json'
+INHALT_TEILE = (r'<title>.*?</title>', r'<meta name="description"[^>]*>', r'<main\b.*?</main>')
+
+
+def inhalt_hash(seite_html):
+    teile = (re.search(muster, seite_html, re.S) for muster in INHALT_TEILE)
+    roh = '\n'.join(m.group(0) for m in teile if m)
+    return hashlib.sha256(roh.encode('utf-8')).hexdigest()[:16]
+
+
+def lade_stand():
+    try:
+        return lade(STAND_DATEI)
+    except FileNotFoundError:
+        return {}
+
+
+def neuer_stand(seiten, alt, heute):
+    """seiten: {adresse: html}. Gleicher Hash behaelt sein Datum, sonst heute."""
+    stand = {}
+    for adresse, seite_html in seiten.items():
+        h = inhalt_hash(seite_html)
+        frueher = alt.get(adresse) or {}
+        datum = frueher.get('datum') if frueher.get('hash') == h else heute
+        stand[adresse] = {'hash': h, 'datum': datum}
+    return stand
+
+
+def sitemap_xml(pfade_prioritaet, stand):
+    zeilen = []
+    for pfad, prio in [('', '1.0')] + pfade_prioritaet:
+        zeilen.append(f'<url><loc>{SITE}/{pfad}</loc><lastmod>{stand[pfad]["datum"]}</lastmod>'
+                      f'<changefreq>monthly</changefreq><priority>{prio}</priority></url>')
     koerper = '\n  '.join(zeilen)
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -1014,7 +1153,7 @@ def sitemap_xml(pfade_prioritaet):
 # Alles bauen
 # ---------------------------------------------------------------------------
 
-def build_all():
+def build_all(heute=None):
     manifest = {}
     sitemap_eintraege = []
 
@@ -1087,7 +1226,13 @@ def build_all():
         manifest['kollektiv/index.html'] = kollektiv
         sitemap_eintraege.append(('kollektiv/', '0.6'))
 
-    manifest['sitemap.xml'] = sitemap_xml(sitemap_eintraege)
+    # Die Startseite baut dieses Skript nicht, sie traegt aber ein lastmod wie alle.
+    with open(os.path.join(ROOT, 'index.html'), encoding='utf-8') as f:
+        seiten = {'': f.read()}
+    seiten.update({rel[:-len('index.html')]: inhalt for rel, inhalt in manifest.items()})
+    stand = neuer_stand(seiten, lade_stand(), heute or datetime.date.today().isoformat())
+    manifest[STAND_DATEI] = json.dumps(stand, ensure_ascii=False, indent=1, sort_keys=True) + '\n'
+    manifest['sitemap.xml'] = sitemap_xml(sitemap_eintraege, stand)
     return manifest
 
 
@@ -1150,7 +1295,7 @@ def main(nur_pruefen=False):
             os.makedirs(os.path.dirname(voll), exist_ok=True)
             with open(voll, 'w', encoding='utf-8') as f:
                 f.write(inhalt)
-        seiten = len(manifest) - 1  # minus sitemap.xml
+        seiten = len(manifest) - 2  # minus sitemap.xml und Stand-Datei
         print(f'{seiten} statische Seiten + sitemap.xml geschrieben '
               f'({len(BAUSTEINE)} Bausteine, {len(STIL_ORDNUNG)} Genres, '
               f'{len(KOENNENS_ORDNUNG)} Könnensstufen, {len(DOMAENE_ORDNUNG)} Themen, '

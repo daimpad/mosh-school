@@ -2812,10 +2812,15 @@ td.tab-zelle.schritt-aktiv, .drum-zelle.schritt-aktiv { background: var(--flaech
 /* Abgenutzte Klischees: durchgestrichener Kreis (⊘) als nicht-farbliches Signal
    „nicht zwingend nötig" — die Aussage steht auch ohne die Akzentfarbe. */
 .genre-klischees { margin-bottom: 1.4rem; }
+/* Nur auf den statischen Genre-Seiten (scripts/build_seiten.py): Patterns und
+   Stimmungen stehen unter der Baustein-Liste und brauchen Abstand zu ihr. */
+.genre-patterns, .genre-stimmungen { margin-top: 1.6rem; }
 .genre-klischees .leise { margin: 0 0 0.7rem; }
 .genre-klischee-liste { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
 .genre-klischee {
-  position: relative; padding: 0.5rem 0.7rem 0.5rem 2rem;
+  /* 2.4rem: Das Zeichen ⊘ kommt aus der Ersatzschrift und ist breiter als
+     gedacht — bei 2rem stiess es an den ersten Buchstaben. */
+  position: relative; padding: 0.5rem 0.7rem 0.5rem 2.4rem;
   background: var(--flaeche); border: 1px solid var(--linie-stark);
   border-radius: var(--radius-klein); font-size: 0.92rem; line-height: 1.45;
 }

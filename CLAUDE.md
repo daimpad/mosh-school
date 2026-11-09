@@ -358,6 +358,17 @@ zur Laufzeit, wie `data/index.json`/`data/grafiken.json` ein eingechecktes Artef
 - Nach jeder Pool-Änderung neu bauen: `python3 scripts/build_seiten.py` (Normallauf,
   räumt `baustein/`+`pfad/` komplett auf und schreibt neu). `--check` (auch in
   `verify.yml`) baut nur im Speicher und meldet Drift/Waisen, schreibt nichts.
+- **`lastmod` in der Sitemap kommt aus `scripts/seiten_stand.json`** (generiert, eingecheckt):
+  je Adresse ein Hash über Titel, Beschreibung und `<main>` plus das Datum, an dem er
+  zuletzt wechselte. Ein lastmod, das bei jedem Bau auf „heute“ springt, wäre schlimmer als
+  keins — Google lernt, dass es nichts bedeutet. Eine reine Fußzeilen-Änderung ändert
+  deshalb kein Datum. Die Startseite (`index.html`, nicht generiert) läuft mit. Erzeugt
+  wird das Datum im Normallauf; `--check` meldet einen veralteten Stand wie jede Drift.
+- **Genre-Landings tragen mehr als die Liste:** Einordnung, Klischees und verwandte Stile
+  (Port von `genreInszenierungHtml`, Reihenfolge `EINORDNUNG` aus dem JS gelesen), dazu die
+  Patterns des Genres und die zugeordneten Stimmungen aus `data/tunings.json`. Vorher hatten
+  kleine Genres 50–90 Wörter, und Google ließ rund 70 Seiten im Oktober 2026 als
+  „Gecrawlt – zurzeit nicht indexiert“ liegen.
 - `sw.js`: **keine** Änderung nötig — die Seiten liegen bewusst außerhalb von `SHELL` (kein
   `cache.addAll`-Bloat durch hunderte Einträge) und werden nie als Unterressource geladen.
 - **Konstanten werden aus den JS-Quellen GELESEN, nicht kopiert.** `js_liste()`/`js_objekt()`
