@@ -1,0 +1,2338 @@
+{
+ "": {
+  "datum": "2026-09-30",
+  "hash": "bb4e697a2ba8a113"
+ },
+ "baustein/abwaermen_koerper/": {
+  "datum": "2026-10-20",
+  "hash": "cb4fd4ced17b457f"
+ },
+ "baustein/abwaermen_routine/": {
+  "datum": "2026-10-20",
+  "hash": "58119d45f53dc1a1"
+ },
+ "baustein/akkordfolgen_metal/": {
+  "datum": "2026-10-20",
+  "hash": "f78b1578fb30e4a8"
+ },
+ "baustein/akzente_verschieben/": {
+  "datum": "2026-10-20",
+  "hash": "c77cc9a580536468"
+ },
+ "baustein/amp_endstufe_saettigung/": {
+  "datum": "2026-10-20",
+  "hash": "13a3d7053c49c149"
+ },
+ "baustein/amp_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "1dc6de22b4100667"
+ },
+ "baustein/amp_oder_pedal/": {
+  "datum": "2026-10-20",
+  "hash": "933bb269bac1ea24"
+ },
+ "baustein/amp_vorstufe_zerre/": {
+  "datum": "2026-10-20",
+  "hash": "3b8142df7a1ecb42"
+ },
+ "baustein/anschlaghand_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "0ddfccf0d27f2bef"
+ },
+ "baustein/anschlagpunkt_ton/": {
+  "datum": "2026-10-20",
+  "hash": "360a8358563e17c2"
+ },
+ "baustein/anschlussfaehigkeit/": {
+  "datum": "2026-10-20",
+  "hash": "9b15e7f2f9862501"
+ },
+ "baustein/arrangement_dichte/": {
+  "datum": "2026-10-20",
+  "hash": "557d2e51b2911a6f"
+ },
+ "baustein/artikulation_text/": {
+  "datum": "2026-10-20",
+  "hash": "4ee4aef4a2adf41b"
+ },
+ "baustein/atemstuetze/": {
+  "datum": "2026-10-20",
+  "hash": "51ccb931a23bf32b"
+ },
+ "baustein/athletik_grundlage/": {
+  "datum": "2026-10-20",
+  "hash": "b72a218bcac8dd45"
+ },
+ "baustein/aufwaermen_gesundheit/": {
+  "datum": "2026-10-20",
+  "hash": "26f10ef4932ae228"
+ },
+ "baustein/aufwaermen_handgesundheit/": {
+  "datum": "2026-10-20",
+  "hash": "4de39828a2b36bb4"
+ },
+ "baustein/aufwaermen_routine_band/": {
+  "datum": "2026-10-20",
+  "hash": "0e1e9cabec450329"
+ },
+ "baustein/aufwaermen_routine_haende/": {
+  "datum": "2026-10-20",
+  "hash": "77c6ba4acf5b5be8"
+ },
+ "baustein/aufwaermen_routine_kit/": {
+  "datum": "2026-10-20",
+  "hash": "91b2945188c08c40"
+ },
+ "baustein/aufwaermen_routine_stimme/": {
+  "datum": "2026-10-20",
+  "hash": "1165a281ea94718a"
+ },
+ "baustein/aufwaermen_stimmgesundheit/": {
+  "datum": "2026-10-20",
+  "hash": "de2a89affc4f6e07"
+ },
+ "baustein/awareness_strukturen/": {
+  "datum": "2026-10-20",
+  "hash": "e753070345c62039"
+ },
+ "baustein/backline_ausfallsicherheit/": {
+  "datum": "2026-10-20",
+  "hash": "e4f277d8597d8333"
+ },
+ "baustein/band_absprachen/": {
+  "datum": "2026-10-20",
+  "hash": "db97662caea551c6"
+ },
+ "baustein/band_backline_pa/": {
+  "datum": "2026-10-20",
+  "hash": "b767f5d42110d22d"
+ },
+ "baustein/band_dynamik_aufbau/": {
+  "datum": "2026-10-20",
+  "hash": "371d2c63a8594823"
+ },
+ "baustein/band_erste_proben/": {
+  "datum": "2026-10-20",
+  "hash": "1727889635432bef"
+ },
+ "baustein/band_gehoerschutz/": {
+  "datum": "2026-10-20",
+  "hash": "b4d1a8a64d5cfd80"
+ },
+ "baustein/band_gemeinsamer_breakdown/": {
+  "datum": "2026-10-20",
+  "hash": "165b8876b04897de"
+ },
+ "baustein/band_gruenden/": {
+  "datum": "2026-10-20",
+  "hash": "c40c4244c3863f85"
+ },
+ "baustein/band_gruendung_ziele/": {
+  "datum": "2026-10-20",
+  "hash": "b65c400c4eb5d88a"
+ },
+ "baustein/band_konflikt_ausstieg/": {
+  "datum": "2026-10-20",
+  "hash": "d5c14c8a3a7b7cbd"
+ },
+ "baustein/band_proberaum_finden/": {
+  "datum": "2026-10-20",
+  "hash": "e6c65330e573a4eb"
+ },
+ "baustein/band_raum_akustik/": {
+  "datum": "2026-10-20",
+  "hash": "6b67a43271e6f4ea"
+ },
+ "baustein/band_stops_einsaetze/": {
+  "datum": "2026-10-20",
+  "hash": "d3b3343e6a227a10"
+ },
+ "baustein/bass_akkordspiel/": {
+  "datum": "2026-10-20",
+  "hash": "7814d126438b3d99"
+ },
+ "baustein/bass_aktiv_passiv/": {
+  "datum": "2026-10-20",
+  "hash": "05c97cc395ee1e8a"
+ },
+ "baustein/bass_aufwaermen/": {
+  "datum": "2026-10-20",
+  "hash": "894a6954a3d29a4f"
+ },
+ "baustein/bass_bauform_mensur/": {
+  "datum": "2026-10-20",
+  "hash": "edf92b0995698398"
+ },
+ "baustein/bass_blast_begleitung/": {
+  "datum": "2026-10-20",
+  "hash": "9c8689cd6f0c1f37"
+ },
+ "baustein/bass_buehnenpraesenz/": {
+  "datum": "2026-10-20",
+  "hash": "29e4dae2d8698921"
+ },
+ "baustein/bass_downpicking/": {
+  "datum": "2026-10-20",
+  "hash": "88531d07baa14f9e"
+ },
+ "baustein/bass_dreifinger/": {
+  "datum": "2026-10-20",
+  "hash": "a4c510bcd2920c93"
+ },
+ "baustein/bass_extremtempo/": {
+  "datum": "2026-10-20",
+  "hash": "0549151c8eb30c0c"
+ },
+ "baustein/bass_fills_uebergaenge/": {
+  "datum": "2026-10-20",
+  "hash": "a951ad6bcc40a079"
+ },
+ "baustein/bass_fuenfsaiter/": {
+  "datum": "2026-10-20",
+  "hash": "820c24a2dd71dbfc"
+ },
+ "baustein/bass_galopp_varianten/": {
+  "datum": "2026-10-20",
+  "hash": "da562575a28b68e8"
+ },
+ "baustein/bass_ghostnotes/": {
+  "datum": "2026-10-20",
+  "hash": "62aecbc5380ffa7a"
+ },
+ "baustein/bass_greifhand/": {
+  "datum": "2026-10-20",
+  "hash": "bac344c3e521e7a4"
+ },
+ "baustein/bass_grundhaltung/": {
+  "datum": "2026-10-20",
+  "hash": "84a7591393d0a17e"
+ },
+ "baustein/bass_hand_sync/": {
+  "datum": "2026-10-20",
+  "hash": "da39b046f18b60d4"
+ },
+ "baustein/bass_koerper_tempo/": {
+  "datum": "2026-10-20",
+  "hash": "6d0d7ac336f382b0"
+ },
+ "baustein/bass_kontrapunkt/": {
+  "datum": "2026-10-20",
+  "hash": "e467d17705eed8d1"
+ },
+ "baustein/bass_lead_melodisch/": {
+  "datum": "2026-10-20",
+  "hash": "7f779f1cf006acf8"
+ },
+ "baustein/bass_linien_schreiben/": {
+  "datum": "2026-10-20",
+  "hash": "7467eea593ca8010"
+ },
+ "baustein/bass_mikrotiming/": {
+  "datum": "2026-10-20",
+  "hash": "9c3396b9e5059520"
+ },
+ "baustein/bass_saiten_detail/": {
+  "datum": "2026-10-20",
+  "hash": "87e7b45d60fdcd4b"
+ },
+ "baustein/bass_setup_intonation/": {
+  "datum": "2026-10-20",
+  "hash": "0bec27a02103ea66"
+ },
+ "baustein/bass_signalkette/": {
+  "datum": "2026-10-20",
+  "hash": "f8e5549dfc0699ee"
+ },
+ "baustein/bass_signalkette_detail/": {
+  "datum": "2026-10-20",
+  "hash": "03efe8a8e4a9535a"
+ },
+ "baustein/bass_slides_legato/": {
+  "datum": "2026-10-20",
+  "hash": "fca3c3b20237044f"
+ },
+ "baustein/bass_synkopen/": {
+  "datum": "2026-10-20",
+  "hash": "8f7fee4492bc1b0d"
+ },
+ "baustein/bass_tapping/": {
+  "datum": "2026-10-20",
+  "hash": "e81bf48381623718"
+ },
+ "baustein/bass_timing_klick/": {
+  "datum": "2026-10-20",
+  "hash": "fbf7ac85c4d6dd3d"
+ },
+ "baustein/bass_ton_gear/": {
+  "datum": "2026-10-20",
+  "hash": "9465b435d3b9caa8"
+ },
+ "baustein/bass_tonabnehmer_detail/": {
+  "datum": "2026-10-20",
+  "hash": "36ffd84ee3c7a02f"
+ },
+ "baustein/bass_tremolo/": {
+  "datum": "2026-10-20",
+  "hash": "3ca47f0edd65fce2"
+ },
+ "baustein/bauform_ergonomie/": {
+  "datum": "2026-10-20",
+  "hash": "951dddce6176b1b0"
+ },
+ "baustein/bauform_kultur_buehne/": {
+  "datum": "2026-10-20",
+  "hash": "b3384762365acad6"
+ },
+ "baustein/bauform_und_bauteilpaket/": {
+  "datum": "2026-10-20",
+  "hash": "400dc02b619d203d"
+ },
+ "baustein/becken_detail/": {
+  "datum": "2026-10-20",
+  "hash": "0f6dfa15f8998e62"
+ },
+ "baustein/becken_typen/": {
+  "datum": "2026-10-20",
+  "hash": "584ab0b21072d205"
+ },
+ "baustein/beschraenkung_als_werkzeug/": {
+  "datum": "2026-10-20",
+  "hash": "411c95404c602876"
+ },
+ "baustein/betonung_und_luecke/": {
+  "datum": "2026-10-20",
+  "hash": "44bd231171adf5df"
+ },
+ "baustein/black_ausdauer_hand_fuss/": {
+  "datum": "2026-10-20",
+  "hash": "bc315df9ea6b3e88"
+ },
+ "baustein/black_bass_eigene_linie/": {
+  "datum": "2026-10-20",
+  "hash": "2679979e5e73c5ce"
+ },
+ "baustein/black_blast_wechsel/": {
+  "datum": "2026-10-20",
+  "hash": "82e9294b6d331ecc"
+ },
+ "baustein/black_harmonik_flaechen/": {
+  "datum": "2026-10-20",
+  "hash": "a1d2f8870f5bd2d5"
+ },
+ "baustein/black_hypnose_haltung/": {
+  "datum": "2026-10-20",
+  "hash": "61a1a80c8a98bc70"
+ },
+ "baustein/black_shriek_luft/": {
+  "datum": "2026-10-20",
+  "hash": "51c7092da5f80b78"
+ },
+ "baustein/black_sound_lofi_hell/": {
+  "datum": "2026-10-20",
+  "hash": "491853d6c583e777"
+ },
+ "baustein/black_tremolo_bordun/": {
+  "datum": "2026-10-20",
+  "hash": "b096ff8c95425e21"
+ },
+ "baustein/blast_ausdauer/": {
+  "datum": "2026-10-20",
+  "hash": "8527aae1c4826a64"
+ },
+ "baustein/blast_spezialformen/": {
+  "datum": "2026-10-20",
+  "hash": "b53caf31680b9d74"
+ },
+ "baustein/blast_tempo_riffing/": {
+  "datum": "2026-10-20",
+  "hash": "b6bcf212d4a280be"
+ },
+ "baustein/blast_varianten/": {
+  "datum": "2026-10-20",
+  "hash": "c381bdacced4c855"
+ },
+ "baustein/blastbeat/": {
+  "datum": "2026-10-20",
+  "hash": "a3f418c69f65803b"
+ },
+ "baustein/bordun_und_liegende_toene/": {
+  "datum": "2026-10-20",
+  "hash": "67203b0a71c5b28b"
+ },
+ "baustein/box_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "8c85933897bea69d"
+ },
+ "baustein/brand_alert/": {
+  "datum": "2026-10-20",
+  "hash": "7850151e8fac8b37"
+ },
+ "baustein/buehne_aufstellung_show/": {
+  "datum": "2026-10-20",
+  "hash": "87389a54c067f01a"
+ },
+ "baustein/chromatik_atonalitaet/": {
+  "datum": "2026-10-20",
+  "hash": "0a2fba856cc65244"
+ },
+ "baustein/chromatik_und_bewegung/": {
+  "datum": "2026-10-20",
+  "hash": "5d22b57189f33b82"
+ },
+ "baustein/chugs_breakdown/": {
+  "datum": "2026-10-20",
+  "hash": "48dec98b556ecf86"
+ },
+ "baustein/clean_belting/": {
+  "datum": "2026-10-20",
+  "hash": "d043b536600b9f91"
+ },
+ "baustein/clean_harmonien/": {
+  "datum": "2026-10-20",
+  "hash": "bbab005335ba1060"
+ },
+ "baustein/clean_harsh_wechsel/": {
+  "datum": "2026-10-20",
+  "hash": "48dd5836483aae4c"
+ },
+ "baustein/clean_im_metal/": {
+  "datum": "2026-10-20",
+  "hash": "6b7421d7dbf220fd"
+ },
+ "baustein/clean_intonation_druck/": {
+  "datum": "2026-10-20",
+  "hash": "2cda470df8921d2b"
+ },
+ "baustein/clean_kopfstimme/": {
+  "datum": "2026-10-20",
+  "hash": "61e065892e5ec8a7"
+ },
+ "baustein/clean_refrain_hook/": {
+  "datum": "2026-10-20",
+  "hash": "c9c2014e0dee6ee1"
+ },
+ "baustein/clean_vibrato/": {
+  "datum": "2026-10-20",
+  "hash": "3039fcffbb7c4e35"
+ },
+ "baustein/crust_bass_wand/": {
+  "datum": "2026-10-20",
+  "hash": "efaae7cb857d9d83"
+ },
+ "baustein/crust_dbeat_ausbau/": {
+  "datum": "2026-10-20",
+  "hash": "36b9f84c26c992b7"
+ },
+ "baustein/crust_ethos_haltung/": {
+  "datum": "2026-10-20",
+  "hash": "248b3bcb1491cc88"
+ },
+ "baustein/crust_gitarre_saege/": {
+  "datum": "2026-10-20",
+  "hash": "e9c18a2f4df23ace"
+ },
+ "baustein/crust_koerper_ausdauer/": {
+  "datum": "2026-10-20",
+  "hash": "a2d39dea92648adc"
+ },
+ "baustein/crust_songwriting_struktur/": {
+  "datum": "2026-10-20",
+  "hash": "57243591f59f6f9b"
+ },
+ "baustein/crust_sound_dreck/": {
+  "datum": "2026-10-20",
+  "hash": "57a6ec4337e35375"
+ },
+ "baustein/crust_vocals_rau/": {
+  "datum": "2026-10-20",
+  "hash": "7eb7c1595d270ceb"
+ },
+ "baustein/d_beat/": {
+  "datum": "2026-10-20",
+  "hash": "afa2ffe60f4d9eb8"
+ },
+ "baustein/daempfung_definition/": {
+  "datum": "2026-10-20",
+  "hash": "00288b9fe5643da8"
+ },
+ "baustein/death_bass_doppelung/": {
+  "datum": "2026-10-20",
+  "hash": "af321b20ebf1ac0f"
+ },
+ "baustein/death_blast_wechsel/": {
+  "datum": "2026-10-20",
+  "hash": "46e5cafff353c70b"
+ },
+ "baustein/death_gear_stimmung/": {
+  "datum": "2026-10-20",
+  "hash": "c67b25493d06db4d"
+ },
+ "baustein/death_growl_tiefe/": {
+  "datum": "2026-10-20",
+  "hash": "88c4f643d8b4334e"
+ },
+ "baustein/death_koerper_ausdauer/": {
+  "datum": "2026-10-20",
+  "hash": "820cfc3e3cb7a728"
+ },
+ "baustein/death_riff_collage/": {
+  "datum": "2026-10-20",
+  "hash": "708e7cecbacb4947"
+ },
+ "baustein/death_riff_gedaechtnis/": {
+  "datum": "2026-10-20",
+  "hash": "a60193244e4aa9bf"
+ },
+ "baustein/death_tremolo_chromatik/": {
+  "datum": "2026-10-20",
+  "hash": "ffb96997dcba9a97"
+ },
+ "baustein/deathcore_bass_fundament/": {
+  "datum": "2026-10-20",
+  "hash": "b43121e8b390e841"
+ },
+ "baustein/deathcore_breakdown_wucht/": {
+  "datum": "2026-10-20",
+  "hash": "68aaafc97b2642bb"
+ },
+ "baustein/deathcore_downtempo/": {
+  "datum": "2026-10-20",
+  "hash": "63c69d8541dace78"
+ },
+ "baustein/deathcore_dynamik_dramaturgie/": {
+  "datum": "2026-10-20",
+  "hash": "b062fd209002d518"
+ },
+ "baustein/deathcore_gesang_ausdauer/": {
+  "datum": "2026-10-20",
+  "hash": "12d07f6dd95f5cd1"
+ },
+ "baustein/deathcore_gravity_blast/": {
+  "datum": "2026-10-20",
+  "hash": "b6957e15d88076cd"
+ },
+ "baustein/deathcore_gutturals_squeals/": {
+  "datum": "2026-10-20",
+  "hash": "259bcc0fee038a86"
+ },
+ "baustein/deathcore_intro_atmosphaere/": {
+  "datum": "2026-10-20",
+  "hash": "1614a522810c48df"
+ },
+ "baustein/deathcore_koerper_intensitaet/": {
+  "datum": "2026-10-20",
+  "hash": "de4a2f4f20fa0ed9"
+ },
+ "baustein/deathcore_riff_dissonanz/": {
+  "datum": "2026-10-20",
+  "hash": "3b214f92d3a55a88"
+ },
+ "baustein/deathcore_sound_gear/": {
+  "datum": "2026-10-20",
+  "hash": "fd5f71793645559a"
+ },
+ "baustein/deload_periodisierung/": {
+  "datum": "2026-10-20",
+  "hash": "2ed0645ecfc419a4"
+ },
+ "baustein/demo_veroeffentlichen/": {
+  "datum": "2026-10-20",
+  "hash": "af93c20bc45facbe"
+ },
+ "baustein/demo_warum_wozu/": {
+  "datum": "2026-10-20",
+  "hash": "a06997181925d5ee"
+ },
+ "baustein/dioden_und_schwelle/": {
+  "datum": "2026-10-20",
+  "hash": "be156ee3084e8adc"
+ },
+ "baustein/dissonante_intervalle/": {
+  "datum": "2026-10-20",
+  "hash": "0eb5efbf75ba7aba"
+ },
+ "baustein/dissonanz_gezielt/": {
+  "datum": "2026-10-20",
+  "hash": "68d3ac6fffda1ae3"
+ },
+ "baustein/dissonanz_voicings/": {
+  "datum": "2026-10-20",
+  "hash": "e7ed9a7948714a29"
+ },
+ "baustein/djent_bass_lock/": {
+  "datum": "2026-10-20",
+  "hash": "9699f6926536dc37"
+ },
+ "baustein/djent_dramaturgie_raum/": {
+  "datum": "2026-10-20",
+  "hash": "08f09d5615ee6df0"
+ },
+ "baustein/djent_drums_polymetrik/": {
+  "datum": "2026-10-20",
+  "hash": "71666ca5ad0e2f1e"
+ },
+ "baustein/djent_gitarre_ambient/": {
+  "datum": "2026-10-20",
+  "hash": "0b698c926edd5767"
+ },
+ "baustein/djent_gitarre_pocket/": {
+  "datum": "2026-10-20",
+  "hash": "0878d8ed79d30149"
+ },
+ "baustein/djent_koerper_praezision/": {
+  "datum": "2026-10-20",
+  "hash": "43efed9139201481"
+ },
+ "baustein/djent_solo_lead/": {
+  "datum": "2026-10-20",
+  "hash": "1f780c81c0110752"
+ },
+ "baustein/djent_sound_gear/": {
+  "datum": "2026-10-20",
+  "hash": "59e984c311aa2d25"
+ },
+ "baustein/djent_studio_produktion/": {
+  "datum": "2026-10-20",
+  "hash": "b8898b5983559bdf"
+ },
+ "baustein/djent_technik/": {
+  "datum": "2026-10-20",
+  "hash": "087de905931df0e7"
+ },
+ "baustein/djent_theorie_polymetrik/": {
+  "datum": "2026-10-20",
+  "hash": "5ac5c92089a6be5b"
+ },
+ "baustein/djent_vocals_dynamik/": {
+  "datum": "2026-10-20",
+  "hash": "a2e526d0a46849d1"
+ },
+ "baustein/doom_band_zeitgefuehl/": {
+  "datum": "2026-10-20",
+  "hash": "53885ae6b1c0ceb6"
+ },
+ "baustein/doom_bass/": {
+  "datum": "2026-10-20",
+  "hash": "4fc35c17e30efc8d"
+ },
+ "baustein/doom_bass_fuzz/": {
+  "datum": "2026-10-20",
+  "hash": "3c18a6ac708fea52"
+ },
+ "baustein/doom_dramaturgie/": {
+  "datum": "2026-10-20",
+  "hash": "1abe4fd479894466"
+ },
+ "baustein/doom_drums_zeitdehnung/": {
+  "datum": "2026-10-20",
+  "hash": "73613a4feb9151f9"
+ },
+ "baustein/doom_feel/": {
+  "datum": "2026-10-20",
+  "hash": "c83934cadaf7c987"
+ },
+ "baustein/doom_harmonik/": {
+  "datum": "2026-10-20",
+  "hash": "3fb5c9162e088a25"
+ },
+ "baustein/doom_riffing/": {
+  "datum": "2026-10-20",
+  "hash": "9c2ff262fe528f04"
+ },
+ "baustein/doom_sound_gewicht/": {
+  "datum": "2026-10-20",
+  "hash": "4334c968478b9f32"
+ },
+ "baustein/doom_sustain_feedback/": {
+  "datum": "2026-10-20",
+  "hash": "a9ea41cc6504098e"
+ },
+ "baustein/doom_vocals_getragen/": {
+  "datum": "2026-10-20",
+  "hash": "905ec68260a0b0a3"
+ },
+ "baustein/doppel_galopp/": {
+  "datum": "2026-10-20",
+  "hash": "3dee10f1c508c5e6"
+ },
+ "baustein/double_bass/": {
+  "datum": "2026-10-20",
+  "hash": "684103504022bbea"
+ },
+ "baustein/double_bass_extremtempo/": {
+  "datum": "2026-10-20",
+  "hash": "3d51a3513b479766"
+ },
+ "baustein/double_bass_patterns/": {
+  "datum": "2026-10-20",
+  "hash": "88edc80605ab387e"
+ },
+ "baustein/double_bass_sechzehntel/": {
+  "datum": "2026-10-20",
+  "hash": "b63779cdfb0b05b0"
+ },
+ "baustein/downpicking/": {
+  "datum": "2026-10-20",
+  "hash": "29ece8ad36a9d519"
+ },
+ "baustein/drop_tuning/": {
+  "datum": "2026-10-20",
+  "hash": "3e808f599339f345"
+ },
+ "baustein/drum_mikrofonierung/": {
+  "datum": "2026-10-20",
+  "hash": "de9f0245bb0bb296"
+ },
+ "baustein/drum_stimmen_basis/": {
+  "datum": "2026-10-20",
+  "hash": "cbab36702f7277e2"
+ },
+ "baustein/drums_athletik_langzeit/": {
+  "datum": "2026-10-20",
+  "hash": "050d39114f2f2683"
+ },
+ "baustein/drums_aufnehmen_diy/": {
+  "datum": "2026-10-20",
+  "hash": "79944c9f12c05ea4"
+ },
+ "baustein/drums_dynamik_architektur/": {
+  "datum": "2026-10-20",
+  "hash": "5e61d9304099bccc"
+ },
+ "baustein/drums_fill_sprache/": {
+  "datum": "2026-10-20",
+  "hash": "6296ab22b8aa3c52"
+ },
+ "baustein/drums_ghostnotes/": {
+  "datum": "2026-10-20",
+  "hash": "cf032475ec0a6175"
+ },
+ "baustein/drums_koerper_ausdauer/": {
+  "datum": "2026-10-20",
+  "hash": "64719acad310f40a"
+ },
+ "baustein/drums_lineares_spiel/": {
+  "datum": "2026-10-20",
+  "hash": "0e71556dff46c3de"
+ },
+ "baustein/drums_polymetrik/": {
+  "datum": "2026-10-20",
+  "hash": "f2b2e8b8aaafb6dd"
+ },
+ "baustein/drums_recording/": {
+  "datum": "2026-10-20",
+  "hash": "454b8eecf3f2bd11"
+ },
+ "baustein/drums_wartung_backup/": {
+  "datum": "2026-10-20",
+  "hash": "211503208be4fb60"
+ },
+ "baustein/duo_bd_akzente_breaks/": {
+  "datum": "2026-10-20",
+  "hash": "cb61fbc14e079bec"
+ },
+ "baustein/duo_bd_blast_begleitung/": {
+  "datum": "2026-10-20",
+  "hash": "6c6be193ab5d41da"
+ },
+ "baustein/duo_bd_kick_lock/": {
+  "datum": "2026-10-20",
+  "hash": "c59e5a2aa51cabff"
+ },
+ "baustein/duo_bd_pocket_klick/": {
+  "datum": "2026-10-20",
+  "hash": "813cf1ab4e727b4c"
+ },
+ "baustein/duo_bv_groove_phrasierung/": {
+  "datum": "2026-10-20",
+  "hash": "5c0d407c637df283"
+ },
+ "baustein/duo_bv_raum_lassen/": {
+  "datum": "2026-10-20",
+  "hash": "e18c40bd0ab5ba3d"
+ },
+ "baustein/duo_bv_tonzentrum/": {
+  "datum": "2026-10-20",
+  "hash": "dd9ae4642bccb19b"
+ },
+ "baustein/duo_dv_akzent_silbe/": {
+  "datum": "2026-10-20",
+  "hash": "dc3ed9d75a9daccf"
+ },
+ "baustein/duo_dv_breakdown_druck/": {
+  "datum": "2026-10-20",
+  "hash": "5ff7426ab0a0e3e6"
+ },
+ "baustein/duo_dv_tempo_anker/": {
+  "datum": "2026-10-20",
+  "hash": "69bf9fcd1c928371"
+ },
+ "baustein/duo_gb_chug_sync/": {
+  "datum": "2026-10-20",
+  "hash": "e322546b143c3fa4"
+ },
+ "baustein/duo_gb_frequenztrennung/": {
+  "datum": "2026-10-20",
+  "hash": "35b5adc1ccf9b003"
+ },
+ "baustein/duo_gb_lock/": {
+  "datum": "2026-10-20",
+  "hash": "ab1d08f6d6f86249"
+ },
+ "baustein/duo_gb_rollen_riff/": {
+  "datum": "2026-10-20",
+  "hash": "a6f448d36fd3abc0"
+ },
+ "baustein/duo_gd_breaks/": {
+  "datum": "2026-10-20",
+  "hash": "687e457efd8a35ec"
+ },
+ "baustein/duo_gd_riff_kick/": {
+  "datum": "2026-10-20",
+  "hash": "d05ee0540bc68f6c"
+ },
+ "baustein/duo_gd_tempo_fuehrung/": {
+  "datum": "2026-10-20",
+  "hash": "069125b599a6ef2a"
+ },
+ "baustein/duo_gv_dynamik_aufbau/": {
+  "datum": "2026-10-20",
+  "hash": "b3ae814fcb308021"
+ },
+ "baustein/duo_gv_phrasierung_luecken/": {
+  "datum": "2026-10-20",
+  "hash": "e503785bc92683c2"
+ },
+ "baustein/duo_gv_tonart_melodie/": {
+  "datum": "2026-10-20",
+  "hash": "3c29cc3c8fd9b23b"
+ },
+ "baustein/duo_gv_vocals_timing_riff/": {
+  "datum": "2026-10-20",
+  "hash": "1d5bca127f5050f7"
+ },
+ "baustein/dynamik_akzente/": {
+  "datum": "2026-10-20",
+  "hash": "f1fe68e413615692"
+ },
+ "baustein/dynamik_ausdruck/": {
+  "datum": "2026-10-20",
+  "hash": "2af3d20aedfdf9c0"
+ },
+ "baustein/effektiv_ueben/": {
+  "datum": "2026-10-20",
+  "hash": "15dbb32bdbb72ba5"
+ },
+ "baustein/eigenen_sound_finden/": {
+  "datum": "2026-10-20",
+  "hash": "bac7709286768c5a"
+ },
+ "baustein/einen_ton_veraendern/": {
+  "datum": "2026-10-20",
+  "hash": "c7b00e16b23e47e5"
+ },
+ "baustein/einfache_basslinie/": {
+  "datum": "2026-10-20",
+  "hash": "ca917e3c730a7b3f"
+ },
+ "baustein/einfaches_riff/": {
+  "datum": "2026-10-20",
+  "hash": "d452c797ee8c6fce"
+ },
+ "baustein/energie_tempo_dichte/": {
+  "datum": "2026-10-20",
+  "hash": "5bb73fe9fca9da23"
+ },
+ "baustein/ergonomie_haltung/": {
+  "datum": "2026-10-20",
+  "hash": "e4b6a4ec32a67a89"
+ },
+ "baustein/ernaehrung_hydration/": {
+  "datum": "2026-10-20",
+  "hash": "d7986a272c68b771"
+ },
+ "baustein/erste_proben_struktur/": {
+  "datum": "2026-10-20",
+  "hash": "805c39a299715e16"
+ },
+ "baustein/erster_auftritt_vorbereitung/": {
+  "datum": "2026-10-20",
+  "hash": "775578c39134d02f"
+ },
+ "baustein/erstes_instrument_kaufen/": {
+  "datum": "2026-10-20",
+  "hash": "8889e44a75204e70"
+ },
+ "baustein/erstes_konzert_besuchen/": {
+  "datum": "2026-10-20",
+  "hash": "daf1c7f57e523ce6"
+ },
+ "baustein/erweiterte_harmonik/": {
+  "datum": "2026-10-20",
+  "hash": "3caf516aa171fae0"
+ },
+ "baustein/experiment_dokumentieren/": {
+  "datum": "2026-10-20",
+  "hash": "3984abd4295575b0"
+ },
+ "baustein/experiment_haltung/": {
+  "datum": "2026-10-20",
+  "hash": "da8e89f5e979e381"
+ },
+ "baustein/false_cord_ansatz/": {
+  "datum": "2026-10-20",
+  "hash": "59a44e36ae378919"
+ },
+ "baustein/feedback_als_instrument/": {
+  "datum": "2026-10-20",
+  "hash": "fce223feb0b8ff04"
+ },
+ "baustein/feedback_geben/": {
+  "datum": "2026-10-20",
+  "hash": "74f2a6ca33621b2f"
+ },
+ "baustein/fehler_frueh_erkennen/": {
+  "datum": "2026-10-20",
+  "hash": "cad68bcc666dd3ff"
+ },
+ "baustein/felle_detail/": {
+  "datum": "2026-10-20",
+  "hash": "29be4bfdc95520bd"
+ },
+ "baustein/felle_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "65d232887a1035be"
+ },
+ "baustein/felle_sound_genre/": {
+  "datum": "2026-10-20",
+  "hash": "a077446de05f4f7b"
+ },
+ "baustein/felle_stimmung/": {
+  "datum": "2026-10-20",
+  "hash": "1de2debabde42043"
+ },
+ "baustein/fills/": {
+  "datum": "2026-10-20",
+  "hash": "06b17ec52b519908"
+ },
+ "baustein/filter_vor_und_nach/": {
+  "datum": "2026-10-20",
+  "hash": "180259fa42662cd9"
+ },
+ "baustein/fingerdruck_oekonomie/": {
+  "datum": "2026-10-20",
+  "hash": "f3406d8a075ec4e0"
+ },
+ "baustein/fingerstyle/": {
+  "datum": "2026-10-20",
+  "hash": "aa139f9bfd94c7b9"
+ },
+ "baustein/fokus_konzentration/": {
+  "datum": "2026-10-20",
+  "hash": "7a53a1871e7b6b3e"
+ },
+ "baustein/form_skizzieren/": {
+  "datum": "2026-10-20",
+  "hash": "12a024cd170cb0a4"
+ },
+ "baustein/form_typen_im_genre/": {
+  "datum": "2026-10-20",
+  "hash": "8e960222cd240d20"
+ },
+ "baustein/fry_verzerrung/": {
+  "datum": "2026-10-20",
+  "hash": "9102a050b719cef0"
+ },
+ "baustein/fussmaschine_double/": {
+  "datum": "2026-10-20",
+  "hash": "7ee129e2cedcc35d"
+ },
+ "baustein/fussmaschinen/": {
+  "datum": "2026-10-20",
+  "hash": "388f264a9853da87"
+ },
+ "baustein/fusstechnik/": {
+  "datum": "2026-10-20",
+  "hash": "fa557323010784e9"
+ },
+ "baustein/gain_struktur_einstellen/": {
+  "datum": "2026-10-20",
+  "hash": "79fba59f5d82a87a"
+ },
+ "baustein/galopp_bass/": {
+  "datum": "2026-10-20",
+  "hash": "898bda7d23015bb0"
+ },
+ "baustein/galopp_rhythmus/": {
+  "datum": "2026-10-20",
+  "hash": "9fc1c3ad63b8869f"
+ },
+ "baustein/gefuehl_vor_genre/": {
+  "datum": "2026-10-20",
+  "hash": "f097936cf4d577d2"
+ },
+ "baustein/gehoer_stimme_langfristig/": {
+  "datum": "2026-10-20",
+  "hash": "857ccae59f51c553"
+ },
+ "baustein/gehoer_transkription/": {
+  "datum": "2026-10-20",
+  "hash": "3ac836b8186b1915"
+ },
+ "baustein/gehoerschutz_lautstaerke/": {
+  "datum": "2026-10-20",
+  "hash": "1e23c6c7f3991f14"
+ },
+ "baustein/gehoerschutz_tinnitus/": {
+  "datum": "2026-10-20",
+  "hash": "8b142218c6710975"
+ },
+ "baustein/genre_fusion_crossover/": {
+  "datum": "2026-10-20",
+  "hash": "2fe9e2ac1dac9bb3"
+ },
+ "baustein/genre_hoeren_erkennen/": {
+  "datum": "2026-10-20",
+  "hash": "54db3d5757ea9e14"
+ },
+ "baustein/genrekunde_extreme_familie/": {
+  "datum": "2026-10-20",
+  "hash": "05b253f1beb25dcb"
+ },
+ "baustein/genres_als_werkzeug/": {
+  "datum": "2026-10-20",
+  "hash": "9addafa3be507efa"
+ },
+ "baustein/gesang_haltung_atmung/": {
+  "datum": "2026-10-20",
+  "hash": "e54c062ef348875e"
+ },
+ "baustein/gesundheit_vermitteln/": {
+  "datum": "2026-10-20",
+  "hash": "673498ee5f05d8bf"
+ },
+ "baustein/gitarre_entscheiden/": {
+  "datum": "2026-10-20",
+  "hash": "5871ecb559942fd3"
+ },
+ "baustein/gitarre_improvisation/": {
+  "datum": "2026-10-20",
+  "hash": "b7cde422c569a285"
+ },
+ "baustein/gitarre_kunstharmonics/": {
+  "datum": "2026-10-20",
+  "hash": "8b20bc0ff43d21ea"
+ },
+ "baustein/gitarre_tapping_legato/": {
+  "datum": "2026-10-20",
+  "hash": "a34f5c92e36f9f94"
+ },
+ "baustein/gitarren_elektronik/": {
+  "datum": "2026-10-20",
+  "hash": "0c3763382885ecb4"
+ },
+ "baustein/gitarren_sound_architektur/": {
+  "datum": "2026-10-20",
+  "hash": "0b3bcbbaea793618"
+ },
+ "baustein/gleichrichter_und_sag/": {
+  "datum": "2026-10-20",
+  "hash": "0c67e9c303a4ea7c"
+ },
+ "baustein/greifhand_daempfen/": {
+  "datum": "2026-10-20",
+  "hash": "19ad3cb4a814fd51"
+ },
+ "baustein/greifhand_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "83327c26a1466514"
+ },
+ "baustein/grind_bass_verzahnung/": {
+  "datum": "2026-10-20",
+  "hash": "baf69b2d7ad42f25"
+ },
+ "baustein/grind_blast_uebergaenge/": {
+  "datum": "2026-10-20",
+  "hash": "11359372679b9645"
+ },
+ "baustein/grind_ethos_humor/": {
+  "datum": "2026-10-20",
+  "hash": "170764d5b3c23024"
+ },
+ "baustein/grind_kompression/": {
+  "datum": "2026-10-20",
+  "hash": "6a341eb3f20d5605"
+ },
+ "baustein/grind_riff_reduktion/": {
+  "datum": "2026-10-20",
+  "hash": "779f7893420f5f8a"
+ },
+ "baustein/grind_sound_buzzsaw/": {
+  "datum": "2026-10-20",
+  "hash": "6a5c2c3dade8ebe6"
+ },
+ "baustein/grind_vocals_extrem/": {
+  "datum": "2026-10-20",
+  "hash": "430b9c234d59624c"
+ },
+ "baustein/grind_vocals_wechsel/": {
+  "datum": "2026-10-20",
+  "hash": "3b121984941af50f"
+ },
+ "baustein/groove_und_synkope/": {
+  "datum": "2026-10-20",
+  "hash": "d073349ca9a2235a"
+ },
+ "baustein/growl_resonanz/": {
+  "datum": "2026-10-20",
+  "hash": "0d16553d5d061086"
+ },
+ "baustein/grundbeat/": {
+  "datum": "2026-10-20",
+  "hash": "e772da02c744e518"
+ },
+ "baustein/grundhaltung/": {
+  "datum": "2026-10-20",
+  "hash": "02e89694457951de"
+ },
+ "baustein/grundton_folgen/": {
+  "datum": "2026-10-20",
+  "hash": "593b2c7ea1179996"
+ },
+ "baustein/halftime_china/": {
+  "datum": "2026-10-20",
+  "hash": "eab1977911218fc4"
+ },
+ "baustein/halsprofil_griffbrett/": {
+  "datum": "2026-10-20",
+  "hash": "cf008902164072ac"
+ },
+ "baustein/handgesundheit_tempo/": {
+  "datum": "2026-10-20",
+  "hash": "b2351b3262cd8d6f"
+ },
+ "baustein/hardcore_bass_motor/": {
+  "datum": "2026-10-20",
+  "hash": "9b81791e9fbd4c22"
+ },
+ "baustein/hardcore_buehne_community/": {
+  "datum": "2026-10-20",
+  "hash": "9769d53641e07e21"
+ },
+ "baustein/hardcore_drums_energie/": {
+  "datum": "2026-10-20",
+  "hash": "b241b3a82cf3b1b1"
+ },
+ "baustein/hardcore_gangshouts/": {
+  "datum": "2026-10-20",
+  "hash": "5440d7747926f139"
+ },
+ "baustein/hardcore_groove_bounce/": {
+  "datum": "2026-10-20",
+  "hash": "178ce7171bab3853"
+ },
+ "baustein/hardcore_songwriting_direkt/": {
+  "datum": "2026-10-20",
+  "hash": "0c60ec82e651822b"
+ },
+ "baustein/hardware_ergonomie/": {
+  "datum": "2026-10-20",
+  "hash": "0fcf364e657f6086"
+ },
+ "baustein/hardware_stabilitaet/": {
+  "datum": "2026-10-20",
+  "hash": "fb11a18340450561"
+ },
+ "baustein/harmonik_riff_bauen/": {
+  "datum": "2026-10-20",
+  "hash": "f282b10f75744a0e"
+ },
+ "baustein/harmonisch_moll_exotik/": {
+  "datum": "2026-10-20",
+  "hash": "af8cabc0cd09b7b4"
+ },
+ "baustein/harsh_arrangement_schichten/": {
+  "datum": "2026-10-20",
+  "hash": "07bcd002305d0b11"
+ },
+ "baustein/harsh_artikulation/": {
+  "datum": "2026-10-20",
+  "hash": "4ad71a56a919bea2"
+ },
+ "baustein/harsh_dynamik_intensitaet/": {
+  "datum": "2026-10-20",
+  "hash": "19ba201cb073eace"
+ },
+ "baustein/harsh_phrasierung_atmung/": {
+  "datum": "2026-10-20",
+  "hash": "c25a8e0c3f1069c2"
+ },
+ "baustein/harsh_projektion_band/": {
+  "datum": "2026-10-20",
+  "hash": "7fd6d4456ff51046"
+ },
+ "baustein/harsh_range_erweiterung/": {
+  "datum": "2026-10-20",
+  "hash": "235c318fd88c3cdb"
+ },
+ "baustein/harsh_rhythmische_praezision/": {
+  "datum": "2026-10-20",
+  "hash": "5171880463c44523"
+ },
+ "baustein/harsh_stile_ueberblick/": {
+  "datum": "2026-10-20",
+  "hash": "6b204df23fc4cf18"
+ },
+ "baustein/harsh_texturen/": {
+  "datum": "2026-10-20",
+  "hash": "8af5891cd9111e47"
+ },
+ "baustein/harsh_uebergaenge_nahtlos/": {
+  "datum": "2026-10-20",
+  "hash": "97dadfb5dcdd7c6f"
+ },
+ "baustein/headbangen_nacken/": {
+  "datum": "2026-10-20",
+  "hash": "a51adbff6e66350b"
+ },
+ "baustein/herta_verzierungen/": {
+  "datum": "2026-10-20",
+  "hash": "00575735c6164ce8"
+ },
+ "baustein/holz_und_resonanz/": {
+  "datum": "2026-10-20",
+  "hash": "0feb66416e96c8d3"
+ },
+ "baustein/intervalle_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "1ae5c3b2f91d7047"
+ },
+ "baustein/intervalle_hoeren/": {
+  "datum": "2026-10-20",
+  "hash": "f2f0335a70d77db4"
+ },
+ "baustein/kessel_material_groesse/": {
+  "datum": "2026-10-20",
+  "hash": "c460a32189e6d33f"
+ },
+ "baustein/kit_ergonomie/": {
+  "datum": "2026-10-20",
+  "hash": "0001f76f7bcd4804"
+ },
+ "baustein/kit_sitzhaltung/": {
+  "datum": "2026-10-20",
+  "hash": "e919ff11043fe0da"
+ },
+ "baustein/klangregie_arrangement/": {
+  "datum": "2026-10-20",
+  "hash": "173f192ecf8ac985"
+ },
+ "baustein/klippung_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "e353629d23643b9e"
+ },
+ "baustein/klippung_ort/": {
+  "datum": "2026-10-20",
+  "hash": "da57dae7b82fcd5e"
+ },
+ "baustein/koerperhaltung_ergonomie/": {
+  "datum": "2026-10-20",
+  "hash": "a42be49f137ecba9"
+ },
+ "baustein/komposition_langform/": {
+  "datum": "2026-10-20",
+  "hash": "dde0d78aae6317e0"
+ },
+ "baustein/konsonanz_als_kontrast/": {
+  "datum": "2026-10-20",
+  "hash": "cbeb8d20b1bc0567"
+ },
+ "baustein/kontext_aufnahme_tightness/": {
+  "datum": "2026-10-20",
+  "hash": "12eba1eeca1a3265"
+ },
+ "baustein/kontext_aufnahme_vorbereitung/": {
+  "datum": "2026-10-20",
+  "hash": "69924d02edbcfe50"
+ },
+ "baustein/kontext_buehne_ablauf/": {
+  "datum": "2026-10-20",
+  "hash": "f3a96edd55e2fac4"
+ },
+ "baustein/kontext_buehne_praesenz/": {
+  "datum": "2026-10-20",
+  "hash": "481837fa8d6256a6"
+ },
+ "baustein/kontext_proberaum_effizienz/": {
+  "datum": "2026-10-20",
+  "hash": "8bfe13330af01879"
+ },
+ "baustein/kontext_proberaum_zusammenspiel/": {
+  "datum": "2026-10-20",
+  "hash": "10398bdd6c968a17"
+ },
+ "baustein/kontext_solo_ohne_band/": {
+  "datum": "2026-10-20",
+  "hash": "2268dd06bfbc6b9c"
+ },
+ "baustein/kontext_solo_struktur/": {
+  "datum": "2026-10-20",
+  "hash": "d6858624f20fc468"
+ },
+ "baustein/kontrapunkt_stimmfuehrung/": {
+  "datum": "2026-10-20",
+  "hash": "b8b92c4580c8f09d"
+ },
+ "baustein/konzert_selbst_organisieren/": {
+  "datum": "2026-10-20",
+  "hash": "0ebaab7716cc199f"
+ },
+ "baustein/koordination/": {
+  "datum": "2026-10-20",
+  "hash": "9c7dc2c80ac970d1"
+ },
+ "baustein/korpus_bauformen/": {
+  "datum": "2026-10-20",
+  "hash": "b89f78779bc4f8f1"
+ },
+ "baustein/labels_distros_zines/": {
+  "datum": "2026-10-20",
+  "hash": "3e4534752031b2bf"
+ },
+ "baustein/lampenfieber/": {
+  "datum": "2026-10-20",
+  "hash": "f135e45cc7d9315b"
+ },
+ "baustein/lampenfieber_umgang/": {
+  "datum": "2026-10-20",
+  "hash": "e23706b88cb5af19"
+ },
+ "baustein/lead_phrasierung/": {
+  "datum": "2026-10-20",
+  "hash": "c44d149e40ca5f1a"
+ },
+ "baustein/legato/": {
+  "datum": "2026-10-20",
+  "hash": "56c57569e4f5aa7d"
+ },
+ "baustein/lernweg_planen/": {
+  "datum": "2026-10-20",
+  "hash": "eb94737897cb487c"
+ },
+ "baustein/lock_zur_bassdrum/": {
+  "datum": "2026-10-20",
+  "hash": "cede18b14c4f6b24"
+ },
+ "baustein/mathcore_dissonanz/": {
+  "datum": "2026-10-20",
+  "hash": "619375a10e5c26ea"
+ },
+ "baustein/mathcore_stopps/": {
+  "datum": "2026-10-20",
+  "hash": "b1b5511fae4d6edb"
+ },
+ "baustein/mathcore_taktwechsel/": {
+  "datum": "2026-10-20",
+  "hash": "3f439c8dadb6fb6b"
+ },
+ "baustein/mensur_wahl_tuning/": {
+  "datum": "2026-10-20",
+  "hash": "26fcc1973c467812"
+ },
+ "baustein/mentale_temposteigerung/": {
+  "datum": "2026-10-20",
+  "hash": "c41878f8ed0b22b5"
+ },
+ "baustein/metalcore_bass_lock_melodie/": {
+  "datum": "2026-10-20",
+  "hash": "a137d6b4fdc55850"
+ },
+ "baustein/metalcore_drums_feelwechsel/": {
+  "datum": "2026-10-20",
+  "hash": "dbe8baff659e0531"
+ },
+ "baustein/metalcore_groove/": {
+  "datum": "2026-10-20",
+  "hash": "07f8c71a4d675d6a"
+ },
+ "baustein/metalcore_harmonie_leads/": {
+  "datum": "2026-10-20",
+  "hash": "57bd4e7a949be7f4"
+ },
+ "baustein/metalcore_koerper_buehne/": {
+  "datum": "2026-10-20",
+  "hash": "17ebf3d4d2f2aa9e"
+ },
+ "baustein/metalcore_songform_harmonik/": {
+  "datum": "2026-10-20",
+  "hash": "fa0533ce45471e1e"
+ },
+ "baustein/metalcore_sound_staffelung/": {
+  "datum": "2026-10-20",
+  "hash": "2b536bb882e4141b"
+ },
+ "baustein/metalcore_studio_live/": {
+  "datum": "2026-10-20",
+  "hash": "8fcb2112a17a131c"
+ },
+ "baustein/metalcore_vocals_refrain/": {
+  "datum": "2026-10-20",
+  "hash": "3f3a5af36a8ca0ae"
+ },
+ "baustein/metrische_modulation/": {
+  "datum": "2026-10-20",
+  "hash": "e065b63c54617f9c"
+ },
+ "baustein/metronom_prinzip/": {
+  "datum": "2026-10-20",
+  "hash": "ce1f6306d252000e"
+ },
+ "baustein/mikrofon_harsh/": {
+  "datum": "2026-10-20",
+  "hash": "f44b21d840bbbbd6"
+ },
+ "baustein/mikrofon_typen/": {
+  "datum": "2026-10-20",
+  "hash": "6cb614a8dbf34501"
+ },
+ "baustein/mikrofontechnik/": {
+  "datum": "2026-10-20",
+  "hash": "c94b91f743df43c7"
+ },
+ "baustein/mischen_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "8abf7a4054aa938c"
+ },
+ "baustein/mitmusiker_finden/": {
+  "datum": "2026-10-20",
+  "hash": "b0e799b09229f883"
+ },
+ "baustein/mobilitaet_routine/": {
+  "datum": "2026-10-20",
+  "hash": "8cdd9935b579f1ec"
+ },
+ "baustein/modale_faerbung/": {
+  "datum": "2026-10-20",
+  "hash": "79bd9a33c3f8fbf2"
+ },
+ "baustein/modeler_reamping/": {
+  "datum": "2026-10-20",
+  "hash": "d9e8f428ef2c7560"
+ },
+ "baustein/modi_im_metal/": {
+  "datum": "2026-10-20",
+  "hash": "8bcfe1818fc5b0b6"
+ },
+ "baustein/modulation_vertieft/": {
+  "datum": "2026-10-20",
+  "hash": "4c6e425f0ef60aca"
+ },
+ "baustein/moll_phrygisch/": {
+  "datum": "2026-10-20",
+  "hash": "0599dc7c9bff2186"
+ },
+ "baustein/motiv_und_wiederholung/": {
+  "datum": "2026-10-20",
+  "hash": "5415b099769a842b"
+ },
+ "baustein/motivation_disziplin/": {
+  "datum": "2026-10-20",
+  "hash": "b79dfcb8ecca8a10"
+ },
+ "baustein/motivation_dranbleiben/": {
+  "datum": "2026-10-20",
+  "hash": "c17a5e29d3bd527e"
+ },
+ "baustein/motivation_schueler/": {
+  "datum": "2026-10-20",
+  "hash": "b2d59670a4f30256"
+ },
+ "baustein/nach_der_show/": {
+  "datum": "2026-10-20",
+  "hash": "f2ee67797e4750be"
+ },
+ "baustein/neu_in_der_szene/": {
+  "datum": "2026-10-20",
+  "hash": "40ddb22467717e29"
+ },
+ "baustein/noise_bass_treibend/": {
+  "datum": "2026-10-20",
+  "hash": "b25d3a38c39818fc"
+ },
+ "baustein/noise_management/": {
+  "datum": "2026-10-20",
+  "hash": "fcd4b891e0256bf0"
+ },
+ "baustein/noise_tunings/": {
+  "datum": "2026-10-20",
+  "hash": "cd3b3bdecb8ad294"
+ },
+ "baustein/palm_mute_systeme/": {
+  "datum": "2026-10-20",
+  "hash": "eaf0b2138d5586d2"
+ },
+ "baustein/palm_muting/": {
+  "datum": "2026-10-20",
+  "hash": "6d613fdeba9765ea"
+ },
+ "baustein/palm_muting_bass/": {
+  "datum": "2026-10-20",
+  "hash": "097b697b78c23d2e"
+ },
+ "baustein/parts_verteilen/": {
+  "datum": "2026-10-20",
+  "hash": "543e9713b0f169d5"
+ },
+ "baustein/pedalboard_einsteiger/": {
+  "datum": "2026-10-20",
+  "hash": "06523b5031152096"
+ },
+ "baustein/pedalboard_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "2f174e869abd3fef"
+ },
+ "baustein/pedalboard_logik/": {
+  "datum": "2026-10-20",
+  "hash": "1f3d388ed3c79056"
+ },
+ "baustein/pentatonik_leads/": {
+  "datum": "2026-10-20",
+  "hash": "c44723ea4aa874d7"
+ },
+ "baustein/pickup_hoehe_einstellen/": {
+  "datum": "2026-10-20",
+  "hash": "182a0c633cb54df2"
+ },
+ "baustein/pinch_harmonics/": {
+  "datum": "2026-10-20",
+  "hash": "a527b6ba385c1fe2"
+ },
+ "baustein/pit_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "e9cda3be790aa0a4"
+ },
+ "baustein/pit_sicherheit/": {
+  "datum": "2026-10-20",
+  "hash": "7e9b34db44eb0f37"
+ },
+ "baustein/plateau_ueberwinden/": {
+  "datum": "2026-10-20",
+  "hash": "0b0f6e1c4d36b3ce"
+ },
+ "baustein/plateaus_ueberwinden/": {
+  "datum": "2026-10-20",
+  "hash": "57145e8d9fdf8a76"
+ },
+ "baustein/plektren_saitenpflege/": {
+  "datum": "2026-10-20",
+  "hash": "369620f3f3141ae1"
+ },
+ "baustein/plektrum_technik/": {
+  "datum": "2026-10-20",
+  "hash": "4e9bc2a50e86d998"
+ },
+ "baustein/polyrhythmik_einstieg/": {
+  "datum": "2026-10-20",
+  "hash": "2a1e82d7f9329cc5"
+ },
+ "baustein/polyrhythmik_theorie/": {
+  "datum": "2026-10-20",
+  "hash": "b27d7fe92d2ad92d"
+ },
+ "baustein/postmetal_drums_crescendo/": {
+  "datum": "2026-10-20",
+  "hash": "ea415262196e12d2"
+ },
+ "baustein/postmetal_koerper_ausdauer/": {
+  "datum": "2026-10-20",
+  "hash": "97857fca03014c07"
+ },
+ "baustein/postmetal_langform_geduld/": {
+  "datum": "2026-10-20",
+  "hash": "ae0abcfbc5c767c6"
+ },
+ "baustein/postmetal_textur_schichten/": {
+  "datum": "2026-10-20",
+  "hash": "ba4e3ab3a564a58b"
+ },
+ "baustein/postmetal_vocals_dynamik/": {
+  "datum": "2026-10-20",
+  "hash": "1a1b560ba368afca"
+ },
+ "baustein/powerchord_theorie/": {
+  "datum": "2026-10-20",
+  "hash": "f0c9bea5985a877b"
+ },
+ "baustein/powerchords/": {
+  "datum": "2026-10-20",
+  "hash": "ee7df2534bcae2dc"
+ },
+ "baustein/pre_production_plan/": {
+  "datum": "2026-10-20",
+  "hash": "5b33f8e1b99e206a"
+ },
+ "baustein/proberaum_ausruestung/": {
+  "datum": "2026-10-20",
+  "hash": "4c828a21fed94de4"
+ },
+ "baustein/proberaum_einrichten/": {
+  "datum": "2026-10-20",
+  "hash": "af824e8924e1730d"
+ },
+ "baustein/proberaum_pegel/": {
+  "datum": "2026-10-20",
+  "hash": "420c97c3f1d260b4"
+ },
+ "baustein/produktionswissen_frequenz/": {
+  "datum": "2026-10-20",
+  "hash": "c64cf6368d9829a5"
+ },
+ "baustein/puls_und_metrum/": {
+  "datum": "2026-10-20",
+  "hash": "5fccb18323d730b2"
+ },
+ "baustein/puls_zaehlzeiten/": {
+  "datum": "2026-10-20",
+  "hash": "05344a7078cbda67"
+ },
+ "baustein/pv_band_abrisskanten/": {
+  "datum": "2026-10-20",
+  "hash": "6423645ed3f9c7d2"
+ },
+ "baustein/pv_bass_chaos/": {
+  "datum": "2026-10-20",
+  "hash": "e387632b0d9ea0ef"
+ },
+ "baustein/pv_gitarre_zustaende/": {
+  "datum": "2026-10-20",
+  "hash": "4ac72399f5877389"
+ },
+ "baustein/pv_koerper_explosivitaet/": {
+  "datum": "2026-10-20",
+  "hash": "6fc66a57f8dc2c33"
+ },
+ "baustein/pv_miniatur_dramaturgie/": {
+  "datum": "2026-10-20",
+  "hash": "7ab589bbe7a8c056"
+ },
+ "baustein/pv_sound_roh/": {
+  "datum": "2026-10-20",
+  "hash": "dc0bb395daba8431"
+ },
+ "baustein/pv_start_stopp/": {
+  "datum": "2026-10-20",
+  "hash": "9f82ff53d26eb381"
+ },
+ "baustein/pv_stopp_spiel/": {
+  "datum": "2026-10-20",
+  "hash": "481d7b64680ef7cb"
+ },
+ "baustein/pv_vocals_ausbruch/": {
+  "datum": "2026-10-20",
+  "hash": "3bf64dd13d74dd1e"
+ },
+ "baustein/rechte_codes_erkennen/": {
+  "datum": "2026-10-20",
+  "hash": "d4634efd0c26e059"
+ },
+ "baustein/recording_grundausstattung/": {
+  "datum": "2026-10-20",
+  "hash": "d063c29d609e6881"
+ },
+ "baustein/recording_tightness/": {
+  "datum": "2026-10-20",
+  "hash": "ebd437823b5d2579"
+ },
+ "baustein/resonanz_projektion/": {
+  "datum": "2026-10-20",
+  "hash": "9e8618093c25969d"
+ },
+ "baustein/rhythmus_lead_wechsel/": {
+  "datum": "2026-10-20",
+  "hash": "f0c7eea38385dde0"
+ },
+ "baustein/rhythmus_phrasierung/": {
+  "datum": "2026-10-20",
+  "hash": "2f2caf2c6836777e"
+ },
+ "baustein/rhythmus_vor_tonhoehe/": {
+  "datum": "2026-10-20",
+  "hash": "5de77316458639d6"
+ },
+ "baustein/riff_aus_beschraenkung/": {
+  "datum": "2026-10-20",
+  "hash": "1187662562fe5b76"
+ },
+ "baustein/riff_baukasten/": {
+  "datum": "2026-10-20",
+  "hash": "2b923192ffc13597"
+ },
+ "baustein/riff_bewerten/": {
+  "datum": "2026-10-20",
+  "hash": "9d12419f75503e69"
+ },
+ "baustein/riff_zu_part_entwickeln/": {
+  "datum": "2026-10-20",
+  "hash": "03ae3eb4f49c78a3"
+ },
+ "baustein/rudiments_grundlage/": {
+  "datum": "2026-10-20",
+  "hash": "6ab3bf40ad379b8e"
+ },
+ "baustein/rumpf_kraft_stabilitaet/": {
+  "datum": "2026-10-20",
+  "hash": "a6899eb4576cec04"
+ },
+ "baustein/saiten_mensur/": {
+  "datum": "2026-10-20",
+  "hash": "f7bc4966fbc6a577"
+ },
+ "baustein/saiten_tunings_standards/": {
+  "datum": "2026-10-20",
+  "hash": "9796a1ccd2a23de1"
+ },
+ "baustein/saitenlage_setup/": {
+  "datum": "2026-10-20",
+  "hash": "fd45ba9efb941744"
+ },
+ "baustein/sanfter_einstieg_verzerrung/": {
+  "datum": "2026-10-20",
+  "hash": "5fa754cad0c62af4"
+ },
+ "baustein/sattel_typen/": {
+  "datum": "2026-10-20",
+  "hash": "32eae993c2338d31"
+ },
+ "baustein/schlaf_regeneration/": {
+  "datum": "2026-10-20",
+  "hash": "084eb808def72110"
+ },
+ "baustein/schlagzeug_komponenten/": {
+  "datum": "2026-10-20",
+  "hash": "b72957c8f2c85c11"
+ },
+ "baustein/schnelles_fingerspiel/": {
+  "datum": "2026-10-20",
+  "hash": "586c5912939dd7e1"
+ },
+ "baustein/schnelles_tremolo/": {
+  "datum": "2026-10-20",
+  "hash": "c529919626e6a899"
+ },
+ "baustein/scream_hoehe/": {
+  "datum": "2026-10-20",
+  "hash": "de86d69e21bfb7dc"
+ },
+ "baustein/screamo_dynamik/": {
+  "datum": "2026-10-20",
+  "hash": "7194492fb2c96b7d"
+ },
+ "baustein/screamo_vocals_sicher/": {
+  "datum": "2026-10-20",
+  "hash": "9f123bf370411478"
+ },
+ "baustein/serendipitaet_methode/": {
+  "datum": "2026-10-20",
+  "hash": "a11b2706ccd30d6f"
+ },
+ "baustein/set_pacing/": {
+  "datum": "2026-10-20",
+  "hash": "b4e0e93aa5aa98e6"
+ },
+ "baustein/set_ueber_genres/": {
+  "datum": "2026-10-20",
+  "hash": "dae514658ed11a8a"
+ },
+ "baustein/show_lautstaerke_gehoer/": {
+  "datum": "2026-10-20",
+  "hash": "54da516e0110ced9"
+ },
+ "baustein/signal_aufnehmen/": {
+  "datum": "2026-10-20",
+  "hash": "d889242583ed7b9c"
+ },
+ "baustein/signalkette_grundlagen/": {
+  "datum": "2026-10-20",
+  "hash": "cd5609018ae38ab3"
+ },
+ "baustein/skank_beat/": {
+  "datum": "2026-10-20",
+  "hash": "fc2e633707938807"
+ },
+ "baustein/slides_bends/": {
+  "datum": "2026-10-20",
+  "hash": "4663ef14d3d355dc"
+ },
+ "baustein/sludge_bass_wand/": {
+  "datum": "2026-10-20",
+  "hash": "6f1941227846f0fe"
+ },
+ "baustein/sludge_drums_hinterm_beat/": {
+  "datum": "2026-10-20",
+  "hash": "247bb40f1549d3e4"
+ },
+ "baustein/sludge_erstes_riff/": {
+  "datum": "2026-10-20",
+  "hash": "296e31e5db6f6ca6"
+ },
+ "baustein/sludge_langform/": {
+  "datum": "2026-10-20",
+  "hash": "f0efb6a8ebf6d614"
+ },
+ "baustein/sludge_riffing_dreck/": {
+  "datum": "2026-10-20",
+  "hash": "bace896044d148c1"
+ },
+ "baustein/sludge_sound_gear/": {
+  "datum": "2026-10-20",
+  "hash": "d0cda54c3e86c236"
+ },
+ "baustein/sludge_vocals_verzweiflung/": {
+  "datum": "2026-10-20",
+  "hash": "7369d87cf40f0316"
+ },
+ "baustein/song_arrangieren_ganz/": {
+  "datum": "2026-10-20",
+  "hash": "f749dfe61f791260"
+ },
+ "baustein/songidee_teilen/": {
+  "datum": "2026-10-20",
+  "hash": "c9a1ee316cbe2704"
+ },
+ "baustein/songstruktur_breakdown/": {
+  "datum": "2026-10-20",
+  "hash": "f44078d33a73de96"
+ },
+ "baustein/sound_black_frost/": {
+  "datum": "2026-10-20",
+  "hash": "76767848619ac481"
+ },
+ "baustein/sound_core_tight/": {
+  "datum": "2026-10-20",
+  "hash": "8ce0aba0043a2908"
+ },
+ "baustein/sound_death_wall/": {
+  "datum": "2026-10-20",
+  "hash": "02c9804706768754"
+ },
+ "baustein/sound_thrash_attack/": {
+  "datum": "2026-10-20",
+  "hash": "44ac9fa11524d395"
+ },
+ "baustein/soundcheck_ablauf/": {
+  "datum": "2026-10-20",
+  "hash": "021c450fc8e6ea9d"
+ },
+ "baustein/spannung_und_aufloesung/": {
+  "datum": "2026-10-20",
+  "hash": "92d4c2b45c786be8"
+ },
+ "baustein/spannung_zwischen_genres/": {
+  "datum": "2026-10-20",
+  "hash": "9edb5b1ed6f90e00"
+ },
+ "baustein/spannungsbogen/": {
+  "datum": "2026-10-20",
+  "hash": "c93cc97b24838515"
+ },
+ "baustein/stagediving_crowdsurfing/": {
+  "datum": "2026-10-20",
+  "hash": "5f50bfb6179cb694"
+ },
+ "baustein/steg_typen/": {
+  "datum": "2026-10-20",
+  "hash": "2364d98835c1ea03"
+ },
+ "baustein/stege_detail_ton/": {
+  "datum": "2026-10-20",
+  "hash": "a276923cc2d6536f"
+ },
+ "baustein/stimm_regeneration/": {
+  "datum": "2026-10-20",
+  "hash": "8f989416ea361749"
+ },
+ "baustein/stimme_schuetzen_alltag/": {
+  "datum": "2026-10-20",
+  "hash": "3da247974aa1d5c6"
+ },
+ "baustein/stimmen_systematik/": {
+  "datum": "2026-10-20",
+  "hash": "3897bf70109683df"
+ },
+ "baustein/stimmuebungen_sanft/": {
+  "datum": "2026-10-20",
+  "hash": "faee5e7ade5ab59e"
+ },
+ "baustein/stockhaltung/": {
+  "datum": "2026-10-20",
+  "hash": "7616db062145fd54"
+ },
+ "baustein/stoner_bass_fuzz_groove/": {
+  "datum": "2026-10-20",
+  "hash": "599cfc15d23e621c"
+ },
+ "baustein/stoner_groove_swing/": {
+  "datum": "2026-10-20",
+  "hash": "4c7ff74b879a9abe"
+ },
+ "baustein/stoner_jam/": {
+  "datum": "2026-10-20",
+  "hash": "77d04202d7ee5769"
+ },
+ "baustein/stoner_riff_fuzz/": {
+  "datum": "2026-10-20",
+  "hash": "71bdd4c980d7af7c"
+ },
+ "baustein/stoner_riff_harmonik/": {
+  "datum": "2026-10-20",
+  "hash": "7189c37a42eb3149"
+ },
+ "baustein/stoner_sound_gear/": {
+  "datum": "2026-10-20",
+  "hash": "cd00e330e8ada0ce"
+ },
+ "baustein/string_skipping/": {
+  "datum": "2026-10-20",
+  "hash": "aeeb9ff15a4d7538"
+ },
+ "baustein/stunde_strukturieren/": {
+  "datum": "2026-10-20",
+  "hash": "24f9fb0e53e26a37"
+ },
+ "baustein/sweep_ausbau/": {
+  "datum": "2026-10-20",
+  "hash": "555acfbba9ba4ac6"
+ },
+ "baustein/sweep_picking_einstieg/": {
+  "datum": "2026-10-20",
+  "hash": "77ebccb3381a4000"
+ },
+ "baustein/szene_haltung/": {
+  "datum": "2026-10-20",
+  "hash": "da26b17c27d956d3"
+ },
+ "baustein/szene_sprache/": {
+  "datum": "2026-10-20",
+  "hash": "94c4009399ef1a8e"
+ },
+ "baustein/taktarten_unterteilungen/": {
+  "datum": "2026-10-20",
+  "hash": "794805f45e5afd16"
+ },
+ "baustein/teile_und_funktion/": {
+  "datum": "2026-10-20",
+  "hash": "c91d30b9316f74d7"
+ },
+ "baustein/tempo_gefuehl_bauen/": {
+  "datum": "2026-10-20",
+  "hash": "74f83f82dfb1e26e"
+ },
+ "baustein/tempo_genres/": {
+  "datum": "2026-10-20",
+  "hash": "3bd5c0796fb3b2a9"
+ },
+ "baustein/tempo_wechsel_drums/": {
+  "datum": "2026-10-20",
+  "hash": "4a19bbf72c278655"
+ },
+ "baustein/text_thema_gesang/": {
+  "datum": "2026-10-20",
+  "hash": "2bc02bf1382015e0"
+ },
+ "baustein/thrash_bass_attack/": {
+  "datum": "2026-10-20",
+  "hash": "e3f62e4b75221a3e"
+ },
+ "baustein/thrash_downpicking_riff/": {
+  "datum": "2026-10-20",
+  "hash": "49c6fda87c165e09"
+ },
+ "baustein/thrash_koerper_unterarm/": {
+  "datum": "2026-10-20",
+  "hash": "670933bf8dab7cff"
+ },
+ "baustein/thrash_riffbau_kaskade/": {
+  "datum": "2026-10-20",
+  "hash": "e5207f81fe94d481"
+ },
+ "baustein/thrash_skank_double/": {
+  "datum": "2026-10-20",
+  "hash": "56a4efcf8e144066"
+ },
+ "baustein/thrash_sound_mitten/": {
+  "datum": "2026-10-20",
+  "hash": "df2273d40d9cc9b5"
+ },
+ "baustein/thrash_tightness_ethos/": {
+  "datum": "2026-10-20",
+  "hash": "2ccfa307a1aed039"
+ },
+ "baustein/thrash_vocals_bellen/": {
+  "datum": "2026-10-20",
+  "hash": "5efe404f924097f8"
+ },
+ "baustein/timing_klick/": {
+  "datum": "2026-10-20",
+  "hash": "8f1cab5802435653"
+ },
+ "baustein/tonabnehmer_detail/": {
+  "datum": "2026-10-20",
+  "hash": "3839e43a7c64f1ae"
+ },
+ "baustein/tonabnehmer_typen/": {
+  "datum": "2026-10-20",
+  "hash": "8580be0c9ade25e6"
+ },
+ "baustein/tonartwechsel_dramaturgie/": {
+  "datum": "2026-10-20",
+  "hash": "609e9f2396edc1c2"
+ },
+ "baustein/tonhoehe_clean/": {
+  "datum": "2026-10-20",
+  "hash": "c712416b500255e8"
+ },
+ "baustein/tracking_reihenfolge/": {
+  "datum": "2026-10-20",
+  "hash": "884db2ba856e9543"
+ },
+ "baustein/transfer_bass_rollen/": {
+  "datum": "2026-10-20",
+  "hash": "cf918b877bb14f68"
+ },
+ "baustein/transfer_groove_genrefarbe/": {
+  "datum": "2026-10-20",
+  "hash": "7c4a6bf6652fb61e"
+ },
+ "baustein/transfer_riff_genrefarbe/": {
+  "datum": "2026-10-20",
+  "hash": "3cee09926f22aa9e"
+ },
+ "baustein/transfer_vocals_genrefarbe/": {
+  "datum": "2026-10-20",
+  "hash": "7132f2366f4eb5e1"
+ },
+ "baustein/tremolo_ausbau/": {
+  "datum": "2026-10-20",
+  "hash": "1454cedd3247fa52"
+ },
+ "baustein/tremolo_picking/": {
+  "datum": "2026-10-20",
+  "hash": "72b4d7e0dd875f40"
+ },
+ "baustein/tremolo_riffing/": {
+  "datum": "2026-10-20",
+  "hash": "e74d5f1883e55cea"
+ },
+ "baustein/trigger_edrums/": {
+  "datum": "2026-10-20",
+  "hash": "671af157ed72d8e9"
+ },
+ "baustein/trio_engine_lock/": {
+  "datum": "2026-10-20",
+  "hash": "364786dcbd2dde7a"
+ },
+ "baustein/triolen_fills/": {
+  "datum": "2026-10-20",
+  "hash": "8c61788ecf3276f4"
+ },
+ "baustein/tritonus_dissonanz/": {
+  "datum": "2026-10-20",
+  "hash": "f94727140c2e6494"
+ },
+ "baustein/tuergeld_und_abrechnung/": {
+  "datum": "2026-10-20",
+  "hash": "40043f304d8badc3"
+ },
+ "baustein/tuning_landkarte/": {
+  "datum": "2026-10-20",
+  "hash": "260300dcf01fc12b"
+ },
+ "baustein/twinkly_arpeggien/": {
+  "datum": "2026-10-20",
+  "hash": "f7691301a1c94f64"
+ },
+ "baustein/uebe_architektur/": {
+  "datum": "2026-10-20",
+  "hash": "edfe1d9f31901606"
+ },
+ "baustein/uebe_tagebuch/": {
+  "datum": "2026-10-20",
+  "hash": "615bcfe0279aaf90"
+ },
+ "baustein/ueben_strukturieren/": {
+  "datum": "2026-10-20",
+  "hash": "c1e4b88b89b3510d"
+ },
+ "baustein/uebergaenge_arrangieren/": {
+  "datum": "2026-10-20",
+  "hash": "7520b43f76196977"
+ },
+ "baustein/uebergaenge_bauen/": {
+  "datum": "2026-10-20",
+  "hash": "34d765e873423595"
+ },
+ "baustein/ueberlastung_praevention/": {
+  "datum": "2026-10-20",
+  "hash": "8f5d6af27e5f8b34"
+ },
+ "baustein/ueberlastung_vermeiden/": {
+  "datum": "2026-10-20",
+  "hash": "892541097d688488"
+ },
+ "baustein/uebung_anpassen/": {
+  "datum": "2026-10-20",
+  "hash": "3e508b02cf167441"
+ },
+ "baustein/ungerade_metren/": {
+  "datum": "2026-10-20",
+  "hash": "907abacef32c52b6"
+ },
+ "baustein/ungerade_takte_drums/": {
+  "datum": "2026-10-20",
+  "hash": "fd2a52190ecd5a75"
+ },
+ "baustein/ungerade_takte_theorie/": {
+  "datum": "2026-10-20",
+  "hash": "0b48398e198994ec"
+ },
+ "baustein/unterrichten_grundhaltung/": {
+  "datum": "2026-10-20",
+  "hash": "d9baad6f17e8c6c5"
+ },
+ "baustein/verletzung_reha_rueckkehr/": {
+  "datum": "2026-10-20",
+  "hash": "5e0dac295149d243"
+ },
+ "baustein/verzahnung_gitarre_drums/": {
+  "datum": "2026-10-20",
+  "hash": "9c9697da54eca0a1"
+ },
+ "baustein/verzerrer_typen/": {
+  "datum": "2026-10-20",
+  "hash": "358381492e31f7cd"
+ },
+ "baustein/verzerrung_prinzip/": {
+  "datum": "2026-10-20",
+  "hash": "040927d260d54f2c"
+ },
+ "baustein/vibrato/": {
+  "datum": "2026-10-20",
+  "hash": "d7cf4ffc949394ad"
+ },
+ "baustein/vocal_aufnahme_feedback/": {
+  "datum": "2026-10-20",
+  "hash": "0edf6827202d74c4"
+ },
+ "baustein/vocal_identitaet/": {
+  "datum": "2026-10-20",
+  "hash": "fd21b4266d51d841"
+ },
+ "baustein/vocals_live_monitoring/": {
+  "datum": "2026-10-20",
+  "hash": "8606bd636b731b2a"
+ },
+ "baustein/vocals_studio/": {
+  "datum": "2026-10-20",
+  "hash": "76cb1cddeca4b852"
+ },
+ "baustein/vocals_tour_haushalt/": {
+  "datum": "2026-10-20",
+  "hash": "cd4ff45dde81e1ec"
+ },
+ "baustein/von_referenz_zum_eigenen/": {
+  "datum": "2026-10-20",
+  "hash": "f5f94354c61b52c5"
+ },
+ "baustein/warum_powerchords/": {
+  "datum": "2026-10-20",
+  "hash": "ab2910e864f33ea4"
+ },
+ "baustein/warum_toene_wirken/": {
+  "datum": "2026-10-20",
+  "hash": "f7b499c0d0d2921f"
+ },
+ "baustein/was_ist_ein_riff/": {
+  "datum": "2026-10-20",
+  "hash": "91849f84d0b529a0"
+ },
+ "baustein/wechselschlag/": {
+  "datum": "2026-10-20",
+  "hash": "d6251e5ac322f6d6"
+ },
+ "baustein/werkanalyse_repertoire/": {
+  "datum": "2026-10-20",
+  "hash": "825658697b669c28"
+ },
+ "baustein/wiederholung_im_grossen/": {
+  "datum": "2026-10-20",
+  "hash": "2e69c4db6c9eb5a4"
+ },
+ "baustein/zerre_stapeln/": {
+  "datum": "2026-10-20",
+  "hash": "6845a8fbaf26b824"
+ },
+ "baustein/zerre_waehlen/": {
+  "datum": "2026-10-20",
+  "hash": "89783af52cc7f443"
+ },
+ "baustein/zerrtypen_ueberblick/": {
+  "datum": "2026-10-20",
+  "hash": "4fc0ace075e18327"
+ },
+ "baustein/zur_musik_singen/": {
+  "datum": "2026-10-20",
+  "hash": "85248592b04bbaf0"
+ },
+ "baustein/zwei_genres_ein_riff/": {
+  "datum": "2026-10-20",
+  "hash": "1132a84e31c1f3d5"
+ },
+ "instrument/": {
+  "datum": "2026-10-20",
+  "hash": "1e057f968fd32fd1"
+ },
+ "instrument/bass/": {
+  "datum": "2026-10-20",
+  "hash": "3a29f2993dfd9a80"
+ },
+ "instrument/gesang/": {
+  "datum": "2026-10-20",
+  "hash": "802e8b23e1108fc1"
+ },
+ "instrument/gitarre/": {
+  "datum": "2026-10-20",
+  "hash": "1bccf077cf90467d"
+ },
+ "instrument/schlagzeug/": {
+  "datum": "2026-10-20",
+  "hash": "b5cffe35847af024"
+ },
+ "kollektiv/": {
+  "datum": "2026-10-20",
+  "hash": "28c1053d87cede33"
+ },
+ "pfad/kompetenz/": {
+  "datum": "2026-10-20",
+  "hash": "222c696614c69183"
+ },
+ "pfad/kompetenz/einsteiger/": {
+  "datum": "2026-10-20",
+  "hash": "e574f371fce55a1f"
+ },
+ "pfad/kompetenz/experte/": {
+  "datum": "2026-10-20",
+  "hash": "535e96c3a4adfc44"
+ },
+ "pfad/kompetenz/fortgeschritten/": {
+  "datum": "2026-10-20",
+  "hash": "e6b016a8d160adab"
+ },
+ "pfad/stil/": {
+  "datum": "2026-10-20",
+  "hash": "af02b70d0477f48f"
+ },
+ "pfad/stil/black_metal/": {
+  "datum": "2026-11-09",
+  "hash": "d03f16d120a6240f"
+ },
+ "pfad/stil/crust/": {
+  "datum": "2026-11-09",
+  "hash": "1ee3d5d76c7261fc"
+ },
+ "pfad/stil/death_metal/": {
+  "datum": "2026-11-09",
+  "hash": "fe3360b4593e9fb6"
+ },
+ "pfad/stil/deathcore/": {
+  "datum": "2026-11-09",
+  "hash": "671616c6a26960d7"
+ },
+ "pfad/stil/djent/": {
+  "datum": "2026-11-09",
+  "hash": "d170acbb5a119ce3"
+ },
+ "pfad/stil/doom/": {
+  "datum": "2026-11-09",
+  "hash": "3504d90852b39f27"
+ },
+ "pfad/stil/grindcore/": {
+  "datum": "2026-11-09",
+  "hash": "47dc2e490415c92f"
+ },
+ "pfad/stil/hardcore/": {
+  "datum": "2026-11-09",
+  "hash": "962a3d058614a803"
+ },
+ "pfad/stil/mathcore/": {
+  "datum": "2026-11-09",
+  "hash": "54dc1a9e94e62125"
+ },
+ "pfad/stil/metalcore/": {
+  "datum": "2026-11-09",
+  "hash": "048f07ece3802766"
+ },
+ "pfad/stil/noise_rock/": {
+  "datum": "2026-11-09",
+  "hash": "a0ecc12fe5ff8413"
+ },
+ "pfad/stil/powerviolence/": {
+  "datum": "2026-11-09",
+  "hash": "e8762e52cf21939f"
+ },
+ "pfad/stil/screamo/": {
+  "datum": "2026-11-09",
+  "hash": "e474c6837cd28189"
+ },
+ "pfad/stil/sludge/": {
+  "datum": "2026-11-09",
+  "hash": "566edcae90c20e7c"
+ },
+ "pfad/stil/stoner_post/": {
+  "datum": "2026-11-09",
+  "hash": "a07311f7db11f08c"
+ },
+ "pfad/stil/thrash/": {
+  "datum": "2026-11-09",
+  "hash": "7d9637934587ec7a"
+ },
+ "pfad/themen/": {
+  "datum": "2026-10-20",
+  "hash": "7adb9b08aef58cb3"
+ },
+ "pfad/themen/ausruestung/": {
+  "datum": "2026-10-20",
+  "hash": "215ea6bafcc933f5"
+ },
+ "pfad/themen/bass/": {
+  "datum": "2026-10-20",
+  "hash": "26e9d8dbbaeaa908"
+ },
+ "pfad/themen/gesang/": {
+  "datum": "2026-10-20",
+  "hash": "145da3243d58639b"
+ },
+ "pfad/themen/gitarre/": {
+  "datum": "2026-10-20",
+  "hash": "34fd1784b8738caa"
+ },
+ "pfad/themen/koerper/": {
+  "datum": "2026-10-20",
+  "hash": "6c4cea183caafacc"
+ },
+ "pfad/themen/kontext/": {
+  "datum": "2026-10-20",
+  "hash": "f9bce4241d7eb076"
+ },
+ "pfad/themen/mentales/": {
+  "datum": "2026-10-20",
+  "hash": "bc52327155b7afbe"
+ },
+ "pfad/themen/schlagzeug/": {
+  "datum": "2026-10-20",
+  "hash": "1988c71754a2878d"
+ },
+ "pfad/themen/theorie/": {
+  "datum": "2026-10-20",
+  "hash": "6fd0cbd46a8b52cf"
+ }
+}
